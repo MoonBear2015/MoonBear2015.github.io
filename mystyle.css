@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    display: block;
+}
+
+body {
+    background-color: #101010;
+    color: #b0b0b0;
+    margin: 0;
+    font-family: "游ゴシック",Verdana,sans-serif;
+}
+
+#site_header {
+    margin: 0;
+    top: 0;
+    position: fixed;
+    color: #f0f0f0;
+    background-color: #202020;
+    width: 100%;
+    background: url(./img/nothing.png);
+
+    /* background-size: 要素の背景画像の寸法を設定 
+        covor:画像の縦横比を崩すことなく、画像ができるだけ大きくなるよう拡大縮小*/
+    background-size: cover;
+}
+
+#header_title {
+    margin: auto;
+    padding: 24px;
+    text-align: center;
+}
+
+h1 .header_menu {
+    width: 100%;
+    position: relative 20vh;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    background-color: #202020;
+    opacity: 50%;
+}
+
+li {
+    float: left;
+    border-right: 1px solid;
+    border-radius: 50%;
+}
+li:last-child{
+    float: right;
+    border-right: none;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    font-weight: normal;
+    font-style: oblique;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(#active) {
+    color: yellow;
+    background-color: black;
+}
+#active {
+	color: #da3c41;
+}
+
+#site_main {
+    top: 20vh;
+    margin-top: 20vh;
+    padding: 20px;
+}
+
+#center_message{
+    position: relative;
+    top: 40vh;
+    text-align: center;
+    z-index: -1;
+}
+
+figure {
+    float: left;
+}
+
+#news_pic {
+    width: 200px;
+    /* margin: 10px 10px; */
+    padding: 10px 10px;
+}
+
+#news_pic img {
+    margin: 10px;
+}
+
+#news_box {
+    margin:     10px; 
+    padding:    10px; 
+    border:     0.5px solid #606060;
+    border-radius:  1%;
+}
+
+#news_title {
+    color: #e0e0e0;
+    margin: 0px 20px;
+}
+
+#news_doc {
+    margin: 0px;
+    padding: 0px;
+    color: #c0c0c0;
+}
+
+
