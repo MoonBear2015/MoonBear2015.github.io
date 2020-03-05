@@ -3,7 +3,7 @@ function set_news()
     let html : string = '';
     html += '<div id="main_title">'
     html += '<h1>';
-    html += 'NEWS R01.00';
+    html += 'NEWS R01.01';
     html += '</h1>';
     html += '</div>';
 
@@ -739,7 +739,7 @@ class selector_think extends NwsWrd_Selector implements INwsItm_Selector {
         this.itms = [
             new NwsWrd('不安')
             ,
-            new NwsWrd('警戒感')
+            new NwsWrd('警戒')
             ,
             new NwsWrd('絶望')
             ,
@@ -752,6 +752,16 @@ class selector_think extends NwsWrd_Selector implements INwsItm_Selector {
             new NwsWrd('怒り')
             ,
             new NwsWrd('失意')
+            ,
+            new NwsWrd('迷走')
+            ,
+            new NwsWrd('狂気')
+            ,
+            new NwsWrd('発狂')
+            ,
+            new NwsWrd('激怒')
+            ,
+            new NwsWrd('嘲笑')
         ];
     }
 }

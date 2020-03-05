@@ -3,7 +3,7 @@ function set_news() {
     let html = '';
     html += '<div id="main_title">';
     html += '<h1>';
-    html += 'NEWS R01.00';
+    html += 'NEWS R01.01';
     html += '</h1>';
     html += '</div>';
     for (let i = 0; i < 30; i++) {
@@ -465,13 +465,18 @@ class selector_think extends NwsWrd_Selector {
         super('#THINK');
         this.itms = [
             new NwsWrd('不安'),
-            new NwsWrd('警戒感'),
+            new NwsWrd('警戒'),
             new NwsWrd('絶望'),
             new NwsWrd('失望'),
             new NwsWrd('避難'),
             new NwsWrd('悲しみ'),
             new NwsWrd('怒り'),
-            new NwsWrd('失意')
+            new NwsWrd('失意'),
+            new NwsWrd('迷走'),
+            new NwsWrd('狂気'),
+            new NwsWrd('発狂'),
+            new NwsWrd('激怒'),
+            new NwsWrd('嘲笑')
         ];
     }
 }
