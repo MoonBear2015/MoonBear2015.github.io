@@ -443,6 +443,10 @@ class selector_whats extends NwsItm_SelectLocker implements INwsItm_Selector {
             ,
             new NwsItm('宇宙','WHAT/space.jpg')
             ,
+            new NwsItm('宇宙開発','WHAT/space.jpg')
+            ,
+            new NwsItm('天文学','WHAT/space.jpg')
+            ,
             new NwsItm('マスコミ','WHAT/MassMedia.jpg')
 
         ];
