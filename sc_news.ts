@@ -305,6 +305,8 @@ class selector_doc extends NwsWrd_Selector implements INwsItm_Selector {
             ,
             new NwsWrd('#WHOは、「#NEWS_C01、#NEWS_C02」との#ANSWERを#SAYしている。')
             ,
+            new NwsWrd('#WHOは、「#NEWS_C01、#NEWS_C02」との#ANSWERを#SAY。')
+            ,
             new NwsWrd('#WHOは#DATE、「#NEWS_C01、#NEWS_C02」との#ANSWERを#SAYした。')
             ,
             new NwsWrd('#WHOは#DATE、「#NEWS_C01、#NEWS_C02」との#ANSWERを#SAYした。')
@@ -352,6 +354,8 @@ class selector_c01 extends NwsWrd_Selector implements INwsItm_Selector {
             new NwsWrd('#WHATの#DOが#STATUSする#KEYによって')
             ,
             new NwsWrd('#KEYと#KEYが#STATUSする#WHATでは')
+            ,
+            new NwsWrd('#THEYによる#KEYが#STATUSする#WHATでは')
         ];
     }
 }
@@ -371,7 +375,7 @@ class selector_c02 extends NwsWrd_Selector implements INwsItm_Selector {
             ,
             new NwsWrd('#THEYの間で#THINKと#THINKが#STATUSしている')
             ,
-            new NwsWrd('#STATUSする#THINKが広まっている')
+            new NwsWrd('#KEYが#STATUSする#THINKが広まっている')
         ];
     }
 }
@@ -506,27 +510,21 @@ class selector_status extends NwsWrd_Selector implements INwsItm_Selector {
             ,
             new NwsWrd('拡大')
             ,
-            new NwsWrd('衰退')
-            ,
-            new NwsWrd('縮小')
-            ,
             new NwsWrd('増大')
             ,
-            new NwsWrd('消滅')
+            new NwsWrd('倍増')
             ,
-            new NwsWrd('死滅')
+            new NwsWrd('激増')
+            ,
+            new NwsWrd('沈静化')
             ,
             new NwsWrd('急拡大')
             ,
-            new NwsWrd('暴発')
-            ,
-            new NwsWrd('爆発')
-            ,
-            new NwsWrd('爆走')
-            ,
-            new NwsWrd('消失')
+            new NwsWrd('急増')
             ,
             new NwsWrd('浸食')
+            ,
+            new NwsWrd('浸透')
         ];
     }
 }
@@ -735,7 +733,7 @@ class selector_say extends NwsWrd_Selector implements INwsItm_Selector {
             ,
             new NwsWrd('分析')
             ,
-            new NwsWrd('注目')
+            new NwsWrd('発言')
         ];
     }
 }
@@ -754,6 +752,8 @@ class selector_answer extends NwsWrd_Selector implements INwsItm_Selector {
             new NwsWrd('推測')
             ,
             new NwsWrd('判断')
+            ,
+            new NwsWrd('戯れ言')
         ];
     }
 }
@@ -777,9 +777,17 @@ class selector_assessment extends NwsWrd_Selector implements INwsItm_Selector {
             ,
             new NwsWrd('評価が高い')
             ,
+            new NwsWrd('名高い')
+            ,
+            new NwsWrd('知られている')
+            ,
             new NwsWrd('期待されている')
             ,
             new NwsWrd('見放されている')
+            ,
+            new NwsWrd('見限られた')
+            ,
+            new NwsWrd('見捨てられた')
         ];
     }
 }
