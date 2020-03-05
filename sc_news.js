@@ -179,17 +179,11 @@ class selector_title extends NwsWrd_Selector {
             new NwsWrd('#WHATの#DO'),
             new NwsWrd('#WHAT、#DO'),
             new NwsWrd('#DOした#WHAT'),
-            new NwsWrd('なぜ#WHATは#DOするのか'),
-            new NwsWrd('#WHAT、#DO拡大'),
-            new NwsWrd('#STATUSする#WHATの#DO'),
-            new NwsWrd('#DOされた#WHATの#THEY'),
+            new NwsWrd('なぜ#WHATは#DOしたのか'),
             new NwsWrd('#WHATの#DOが#STATUS'),
             new NwsWrd('#WHAT、#DOの#STATUS'),
             new NwsWrd('#DATE、#WHATの#DO'),
-            new NwsWrd('#THEYによる#WHATの#DO'),
-            new NwsWrd('#WHATに#DOする#THEY'),
-            new NwsWrd('#DOした#WHATの#THEY'),
-            new NwsWrd('#DOする#WHATの#THEY')
+            new NwsWrd('#DOした#WHATの#THEY')
         ];
     }
 }
@@ -236,11 +230,11 @@ class selector_c01 extends NwsWrd_Selector {
     constructor() {
         super('#NEWS_C01');
         this.itms = [
-            new NwsWrd('#WHATの#DOにより'),
-            new NwsWrd('#DOする#WHATでは'),
-            new NwsWrd('#DOする#WHATは'),
+            new NwsWrd('#WHATの#KEYにより'),
+            new NwsWrd('#KEYに#THINKする#WHATでは'),
+            new NwsWrd('#THINKする#WHATは'),
             new NwsWrd('#WHATが#DOする中'),
-            new NwsWrd('#STATUSする#WHATの#KEYのため'),
+            new NwsWrd('#STATUSする#WHATの#KEYにより'),
             new NwsWrd('#KEYが#STATUSする#WHATの#DOにより'),
             new NwsWrd('#WHATの#DOが#STATUSする#KEYによって'),
             new NwsWrd('#KEYと#KEYが#STATUSする#WHATでは'),
@@ -290,6 +284,8 @@ class selector_whats extends NwsItm_SelectLocker {
             new NwsItm('教育', 'WHAT/stady.jpg'),
             new NwsItm('学校', 'WHAT/stady.jpg'),
             new NwsItm('宇宙', 'WHAT/space.jpg'),
+            new NwsItm('宇宙開発', 'WHAT/space.jpg'),
+            new NwsItm('天文学', 'WHAT/space.jpg'),
             new NwsItm('マスコミ', 'WHAT/MassMedia.jpg')
         ];
     }
@@ -318,6 +314,14 @@ class selector_key extends NwsWrd_Selector {
     constructor() {
         super('#KEY');
         this.itms = [
+            new NwsWrd('虐待'),
+            new NwsWrd('暴行'),
+            new NwsWrd('迫害'),
+            new NwsWrd('急落'),
+            new NwsWrd('暗黒化'),
+            new NwsWrd('殺戮'),
+            new NwsWrd('犯罪'),
+            new NwsWrd('崩壊'),
             new NwsWrd('犯罪行為'),
             new NwsWrd('殺戮行為'),
             new NwsWrd('迫害行為'),
@@ -329,7 +333,9 @@ class selector_key extends NwsWrd_Selector {
             new NwsWrd('暴走状態'),
             new NwsWrd('妨害工作'),
             new NwsWrd('差別化'),
-            new NwsWrd('無力化')
+            new NwsWrd('無力化'),
+            new NwsWrd('黙殺'),
+            new NwsWrd('暴力行為')
         ];
     }
 }
@@ -338,6 +344,8 @@ class selector_status extends NwsWrd_Selector {
     constructor() {
         super('#STATUS');
         this.itms = [
+            new NwsWrd('加速'),
+            new NwsWrd('増加'),
             new NwsWrd('蔓延'),
             new NwsWrd('拡大'),
             new NwsWrd('増大'),
@@ -345,9 +353,7 @@ class selector_status extends NwsWrd_Selector {
             new NwsWrd('激増'),
             new NwsWrd('増殖'),
             new NwsWrd('肥大化'),
-            new NwsWrd('急増'),
-            new NwsWrd('浸食'),
-            new NwsWrd('浸透')
+            new NwsWrd('急増')
         ];
     }
 }
