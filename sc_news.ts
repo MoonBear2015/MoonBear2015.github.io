@@ -365,7 +365,7 @@ class selector_c02 extends NwsWrd_Selector implements INwsItm_Selector {
     constructor(){
         super('#NEWS_C02');
         this.itms = [
-            new NwsWrd('#THINKが#THEYに#STATUSしている')
+            new NwsWrd('#KEYの#THINKが#STATUSしている')
             ,
             new NwsWrd('#THEYの#THINKが#STATUSしている')
             ,
