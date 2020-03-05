@@ -199,7 +199,12 @@ class selector_doc extends NwsWrd_Selector {
         this.itms = [
             new NwsWrd('#DATE、#NEWS_C02。'),
             new NwsWrd('#NEWS_C01、#NEWS_C02。'),
+            new NwsWrd('#NEWS_C01、#NEWS_C02。'),
+            new NwsWrd('#NEWS_C01、#NEWS_C02。'),
+            new NwsWrd('#NEWS_C01、#NEWS_C02。'),
+            new NwsWrd('#NEWS_C01、#NEWS_C02。'),
             new NwsWrd('#NEWS_C01、#DATE、#NEWS_C02。'),
+            new NwsWrd('#DATE、#NEWS_C01、#NEWS_C02。'),
             new NwsWrd('#DATE、#NEWS_C01、#NEWS_C02。'),
             new NwsWrd('#WHOは、#NEWS_C01、#NEWS_C02と#SAYしている。'),
             new NwsWrd('#WHOは#DATE、#NEWS_C01、#NEWS_C02との#ANSWERを#SAYしている。'),

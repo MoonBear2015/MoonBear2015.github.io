@@ -289,7 +289,17 @@ class selector_doc extends NwsWrd_Selector implements INwsItm_Selector {
             ,
             new NwsWrd('#NEWS_C01、#NEWS_C02。')
             ,
+            new NwsWrd('#NEWS_C01、#NEWS_C02。')
+            ,
+            new NwsWrd('#NEWS_C01、#NEWS_C02。')
+            ,
+            new NwsWrd('#NEWS_C01、#NEWS_C02。')
+            ,
+            new NwsWrd('#NEWS_C01、#NEWS_C02。')
+            ,
             new NwsWrd('#NEWS_C01、#DATE、#NEWS_C02。')
+            ,
+            new NwsWrd('#DATE、#NEWS_C01、#NEWS_C02。')
             ,
             new NwsWrd('#DATE、#NEWS_C01、#NEWS_C02。')
             ,
