@@ -349,15 +349,15 @@ class selector_c01 extends NwsWrd_Selector implements INwsItm_Selector {
     constructor(){
         super('#NEWS_C01');
         this.itms = [
-            new NwsWrd('#WHATの#DOにより')
+            new NwsWrd('#WHATの#KEYにより')
             ,
-            new NwsWrd('#DOする#WHATでは')
+            new NwsWrd('#KEYに#THINKする#WHATでは')
             ,
-            new NwsWrd('#DOする#WHATは')
+            new NwsWrd('#THINKする#WHATは')
             ,
             new NwsWrd('#WHATが#DOする中')
             ,
-            new NwsWrd('#STATUSする#WHATの#KEYのため')
+            new NwsWrd('#STATUSする#WHATの#KEYにより')
             ,
             new NwsWrd('#KEYが#STATUSする#WHATの#DOにより')
             ,
