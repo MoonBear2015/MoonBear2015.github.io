@@ -3,7 +3,7 @@ function set_news()
     let html : string = '';
     html += '<div id="main_title">'
     html += '<h1>';
-    html += 'NEWS';
+    html += 'NEWS R01.00';
     html += '</h1>';
     html += '</div>';
 
@@ -516,9 +516,9 @@ class selector_status extends NwsWrd_Selector implements INwsItm_Selector {
             ,
             new NwsWrd('激増')
             ,
-            new NwsWrd('沈静化')
+            new NwsWrd('増殖')
             ,
-            new NwsWrd('急拡大')
+            new NwsWrd('肥大化')
             ,
             new NwsWrd('急増')
             ,
@@ -540,13 +540,13 @@ class selector_they extends NwsWrd_Selector implements INwsItm_Selector {
             ,
             new NwsWrd('世論')
             ,
-            new NwsWrd('有識者間')
+            new NwsWrd('有識者')
             ,
             new NwsWrd('子供達')
             ,
             new NwsWrd('学生達')
             ,
-            new NwsWrd('女性陣')
+            new NwsWrd('女性達')
             ,
             new NwsWrd('男性陣')
             ,
@@ -555,6 +555,20 @@ class selector_they extends NwsWrd_Selector implements INwsItm_Selector {
             new NwsWrd('労働者達')
             ,
             new NwsWrd('兵士達')
+            ,
+            new NwsWrd('若年層')
+            ,
+            new NwsWrd('主婦層')
+            ,
+            new NwsWrd('乗組員')
+            ,
+            new NwsWrd('乗客')
+            ,
+            new NwsWrd('ドライバー')
+            ,
+            new NwsWrd('ビジネスマン')
+            ,
+            new NwsWrd('管理職')
         ];
     }
 }
