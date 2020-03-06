@@ -5,7 +5,7 @@ function set_news()
     let html : string = '';
     html += '<div id="main_title">'
     html += '<h1>';
-    html += 'NEWS R01.04';
+    html += 'NEWS R01.05';
     html += '</h1>';
     html += '</div>';
 
@@ -752,6 +752,46 @@ class selector_nickname extends NwsWrd_Selector implements INwsItm_Selector {
             new NwsWrd('蝿')
             ,
             new NwsWrd('コソ泥')
+            ,
+            new NwsWrd('ガン細胞')
+            ,
+            new NwsWrd('紙屑')
+            ,
+            new NwsWrd('公衆便所')
+            ,
+            new NwsWrd('病原菌')
+            ,
+            new NwsWrd('火薬庫')
+            ,
+            new NwsWrd('悪臭')
+            ,
+            new NwsWrd('食中毒')
+            ,
+            new NwsWrd('落とし穴')
+            ,
+            new NwsWrd('残飯')
+            ,
+            new NwsWrd('ヘドロ')
+            ,
+            new NwsWrd('嘔吐物')
+            ,
+            new NwsWrd('脇毛')
+            ,
+            new NwsWrd('鼻毛')
+            ,
+            new NwsWrd('吸い殻')
+            ,
+            new NwsWrd('影')
+            ,
+            new NwsWrd('闇')
+            ,
+            new NwsWrd('悪意')
+            ,
+            new NwsWrd('罪人')
+            ,
+            new NwsWrd('処刑人')
+            ,
+            new NwsWrd('番人')
         ];
     }
 }
