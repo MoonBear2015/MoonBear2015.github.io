@@ -5,7 +5,7 @@ function set_news()
     let html : string = '';
     html += '<div id="main_title">'
     html += '<h1>';
-    html += 'NEWS R01.06';
+    html += 'NEWS R01.07';
     html += '</h1>';
     html += '</div>';
 
@@ -260,10 +260,6 @@ class selector_title extends NwsWrd_Selector implements INwsItm_Selector {
             new NwsWrd('#WHATは#DOする')
             ,
             new NwsWrd('#DOする#WHATの#THEY')
-            ,
-            new NwsWrd('#DOした#WHATの#THEY')
-            ,
-            new NwsWrd('#WHATの#THEYは#DOした')
             ,
             new NwsWrd('#DOした#WHATの#KEY')
             ,

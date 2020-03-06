@@ -4,7 +4,7 @@ function set_news() {
     let html = '';
     html += '<div id="main_title">';
     html += '<h1>';
-    html += 'NEWS R01.06';
+    html += 'NEWS R01.07';
     html += '</h1>';
     html += '</div>';
     for (let i = 0; i < 30; i++) {
@@ -181,8 +181,6 @@ class selector_title extends NwsWrd_Selector {
             new NwsWrd('#WHATは#DOした'),
             new NwsWrd('#WHATは#DOする'),
             new NwsWrd('#DOする#WHATの#THEY'),
-            new NwsWrd('#DOした#WHATの#THEY'),
-            new NwsWrd('#WHATの#THEYは#DOした'),
             new NwsWrd('#DOした#WHATの#KEY'),
             new NwsWrd('#WHATの#DOが#STATUS'),
             new NwsWrd('#STATUSする#WHATの#DO'),
