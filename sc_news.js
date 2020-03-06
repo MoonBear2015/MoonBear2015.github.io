@@ -4,7 +4,7 @@ function set_news() {
     let html = '';
     html += '<div id="main_title">';
     html += '<h1>';
-    html += 'NEWS R01.05';
+    html += 'NEWS R01.06';
     html += '</h1>';
     html += '</div>';
     for (let i = 0; i < 30; i++) {
@@ -184,7 +184,6 @@ class selector_title extends NwsWrd_Selector {
             new NwsWrd('#DOした#WHATの#THEY'),
             new NwsWrd('#WHATの#THEYは#DOした'),
             new NwsWrd('#DOした#WHATの#KEY'),
-            new NwsWrd('#WHATの#KEYが#DOする'),
             new NwsWrd('#WHATの#DOが#STATUS'),
             new NwsWrd('#STATUSする#WHATの#DO'),
             new NwsWrd('#DOする#WHATの#NICK'),
@@ -368,25 +367,34 @@ class selector_they extends NwsWrd_Selector {
         super('#THEY');
         this.itms = [
             new NwsWrd('人々'),
-            new NwsWrd('民衆'),
-            new NwsWrd('世論'),
+            new NwsWrd('多くの人々'),
+            new NwsWrd('一部の人々'),
+            new NwsWrd('一般大衆'),
             new NwsWrd('有識者'),
+            new NwsWrd('多くの有識者'),
+            new NwsWrd('一部の有識者'),
             new NwsWrd('子供達'),
+            new NwsWrd('大多数の子供達'),
             new NwsWrd('学生達'),
             new NwsWrd('女性達'),
-            new NwsWrd('男性陣'),
+            new NwsWrd('ごく僅かな女性達'),
+            new NwsWrd('多くの女性達'),
+            new NwsWrd('男性'),
+            new NwsWrd('一部の男性'),
             new NwsWrd('先人達'),
             new NwsWrd('労働者達'),
             new NwsWrd('兵士達'),
             new NwsWrd('若年層'),
             new NwsWrd('主婦層'),
             new NwsWrd('乗組員'),
-            new NwsWrd('乗客'),
-            new NwsWrd('従業員'),
-            new NwsWrd('営業職'),
-            new NwsWrd('売春婦'),
+            new NwsWrd('多くの乗組員'),
+            new NwsWrd('大多数の乗客'),
+            new NwsWrd('一部の従業員'),
+            new NwsWrd('多くの営業職'),
+            new NwsWrd('ほとんどの売春婦'),
             new NwsWrd('暴走族'),
             new NwsWrd('マフィア'),
+            new NwsWrd('一部のマフィア'),
             new NwsWrd('過激派'),
             new NwsWrd('地下組織'),
             new NwsWrd('暗黒街'),
