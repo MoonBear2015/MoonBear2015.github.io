@@ -3,7 +3,7 @@ function set_news() {
     let html = '';
     html += '<div id="main_title">';
     html += '<h1>';
-    html += 'NEWS R01.02';
+    html += 'NEWS R01.03';
     html += '</h1>';
     html += '</div>';
     for (let i = 0; i < 30; i++) {
