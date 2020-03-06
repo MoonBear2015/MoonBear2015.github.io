@@ -585,13 +585,15 @@ class selector_they extends NwsWrd_Selector implements INwsItm_Selector {
             ,
             new NwsWrd('学生達')
             ,
+            new NwsWrd('一部の学生')
+            ,
             new NwsWrd('女性達')
             ,
             new NwsWrd('ごく僅かな女性達')
             ,
             new NwsWrd('多くの女性達')
             ,
-            new NwsWrd('男性')
+            new NwsWrd('大多数の男性')
             ,
             new NwsWrd('一部の男性')
             ,
