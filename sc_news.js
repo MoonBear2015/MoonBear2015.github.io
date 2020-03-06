@@ -30,16 +30,16 @@ function make_news() {
     html += 'background-size: ';
     html += 'cover;';
     html += '">';
-    html += '<div id="news_pic">';
-    html += '<figure>';
-    html += '<img src="pics/#PIC_WHAT" width="200">';
-    html += '</figure>';
-    html += '</div>';
     html += '<h2 id="news_title">';
     html += '<span style="border-bottom: solid 2px #FFFFFF;">';
     html += '#NEWS_TITLE';
     html += '</span>';
     html += '</h2>';
+    html += '<div id="news_pic">';
+    html += '<figure>';
+    html += '<img src="pics/#PIC_WHAT" width="200">';
+    html += '</figure>';
+    html += '</div>';
     html += '<p id="news_doc">';
     html += '#NEWS_DOC';
     for (let i = 0; i < rnd_minmax(5, 20); i++) {
@@ -178,8 +178,16 @@ class selector_title extends NwsWrd_Selector {
             new NwsWrd('#DOする#WHAT'),
             new NwsWrd('#DOした#WHAT'),
             new NwsWrd('#WHATは#DOした'),
+            new NwsWrd('#WHATは#DOする'),
             new NwsWrd('#DOする#WHATの#THEY'),
-            new NwsWrd('#THEYは#WHATを#DOする')
+            new NwsWrd('#DOした#WHATの#THEY'),
+            new NwsWrd('#WHATの#THEYは#DOした'),
+            new NwsWrd('#DOした#WHATの#KEY'),
+            new NwsWrd('#WHATの#KEYが#DOする'),
+            new NwsWrd('#WHATの#DOが#STATUS'),
+            new NwsWrd('#STATUSする#WHATの#DO'),
+            new NwsWrd('#DOする#WHATの#NICK'),
+            new NwsWrd('#WHATの#NICKが#DOする')
         ];
     }
 }
@@ -286,7 +294,7 @@ class selector_whats extends NwsItm_SelectLocker {
         ];
     }
 }
-// 動名詞 ～する・～した
+// 動名詞 の～
 class selector_do extends NwsItm_SelectLocker {
     constructor() {
         super('#DO', '#PIC_DO');
@@ -294,7 +302,7 @@ class selector_do extends NwsItm_SelectLocker {
             new NwsItm('壊滅', 'DO/break.jpg'),
             new NwsItm('死滅', 'DO/dead.jpg'),
             new NwsItm('崩壊', 'DO/City.jpg'),
-            new NwsItm('偽造', 'DO/fakeTelop.jpg'),
+            new NwsItm('捏造', 'DO/fakeTelop.jpg'),
             new NwsItm('絶望', 'DO/Lonly.jpg'),
             new NwsItm('孤立', 'DO/Lonly2.jpg'),
             new NwsItm('消滅', 'DO/Dis.jpg'),
@@ -373,9 +381,16 @@ class selector_they extends NwsWrd_Selector {
             new NwsWrd('主婦層'),
             new NwsWrd('乗組員'),
             new NwsWrd('乗客'),
-            new NwsWrd('ドライバー'),
-            new NwsWrd('ビジネスマン'),
-            new NwsWrd('管理職')
+            new NwsWrd('従業員'),
+            new NwsWrd('営業職'),
+            new NwsWrd('売春婦'),
+            new NwsWrd('暴走族'),
+            new NwsWrd('マフィア'),
+            new NwsWrd('過激派'),
+            new NwsWrd('地下組織'),
+            new NwsWrd('暗黒街'),
+            new NwsWrd('移住者'),
+            new NwsWrd('旅行者')
         ];
     }
 }
