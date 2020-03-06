@@ -1,9 +1,11 @@
 function set_news()
 {
+    scrollTo(0,0);
+
     let html : string = '';
     html += '<div id="main_title">'
     html += '<h1>';
-    html += 'NEWS R01.03';
+    html += 'NEWS R01.04';
     html += '</h1>';
     html += '</div>';
 

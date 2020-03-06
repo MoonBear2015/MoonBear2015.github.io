@@ -1,5 +1,6 @@
 "use strict";
 function set_news() {
+    scrollTo(0, 0);
     let html = '';
     html += '<div id="main_title">';
     html += '<h1>';
