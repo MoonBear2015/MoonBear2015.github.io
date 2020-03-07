@@ -6,7 +6,7 @@ function set_news()
     html += '<div id="main_title">'
     html += '<h1>';
     html += 'NEWS';
-    html += '<small>R01.08</small>';
+    html += '<small>R01.10</small>';
     html += '</h1>';
     html += '</div>';
 
@@ -333,40 +333,33 @@ class selector_c01 extends NwsWrd_Selector implements INwsItm_Selector {
     constructor(){
         super('#NEWS_C01');
         this.itms = [
-            // new NwsWrd('#WHATでの#KEYにより')
-            // ,
-            // new NwsWrd('#WHATの#DOにより')
-            // ,
-            // new NwsWrd('#KEYが#STATUSする#WHATでは')
-            // ,
-            // new NwsWrd('#WHATでの#KEYが#STATUSする中')
-            // ,
-            // new NwsWrd('#WHATが#DOする中')
-            // ,
-            new NwsWrd('#WHATの#THEYが#DOする中')
-            // ,
-            // new NwsWrd('#WHATの#THEYに#KEYが#STATUSする中')
-            // ,
-            // new NwsWrd('#WHATの#THEYに#THINKが#STATUSする中')
-            // ,
-            // new NwsWrd('#WHATの#THEYに#THINKや#THINKが#STATUSする中')
+            new NwsWrd('#WHATでの#KEYにより')
+            ,
+            new NwsWrd('#WHATの#DOにより')
+            ,
+            new NwsWrd('#KEYが#STATUSする#WHATでは')
+            ,
+            new NwsWrd('#WHATでの#KEYが#STATUSする中')
+            ,
+            new NwsWrd('#WHATが#DOしたため')
+            ,
+            new NwsWrd('#WHATの#THEYが#DOしたため')
+            ,
+            new NwsWrd('#WHATの#THEYに#KEYが#STATUSしたため')
+            ,
+            new NwsWrd('#WHATの#THEYに#THINKが#STATUSし')
+            ,
+            new NwsWrd('#WHATの#THEYに#THINKや#THINKが#STATUSする中')
             ,
             new NwsWrd('#WHATの#THEYに#THINKや#THINKが#STATUSし')
-            // new NwsWrd('#KEYに#THINKする#WHATでは')
-            // ,
-            // new NwsWrd('#THINKする#WHATは')
-            // ,
-            // new NwsWrd('#WHATが#DOする中')
-            // ,
-            // new NwsWrd('#STATUSする#WHATの#KEYにより')
-            // ,
-            // new NwsWrd('#KEYが#STATUSする#WHATの#DOにより')
-            // ,
-            // new NwsWrd('#WHATの#DOが#STATUSする#KEYによって')
-            // ,
-            // new NwsWrd('#KEYと#KEYが#STATUSする#WHATでは')
-            // ,
-            // new NwsWrd('#THEYによる#KEYが#STATUSする#WHATでは')
+            ,
+            new NwsWrd('#THINKや#THINKが#STATUSする#WHATでは')
+            ,
+            new NwsWrd('#THINKが#STATUSする#WHATでは')
+            ,
+            new NwsWrd('#THINKが#STATUSする#WHATの#THEYのため')
+            ,
+            new NwsWrd('#THINKが#STATUSする#WHATの#DOのため')
         ];
     }
 }
@@ -412,6 +405,8 @@ class selector_whats extends NwsItm_SelectLocker implements INwsItm_Selector {
             ,
             new NwsItm('ロシア','WHAT/Russia.jpg')
             ,
+            new NwsItm('インド','WHAT/india.jpg')
+            ,
             new NwsItm('経済','WHAT/Economy.jpg')
             ,
             new NwsItm('市場','WHAT/Economy.jpg')
@@ -448,7 +443,21 @@ class selector_whats extends NwsItm_SelectLocker implements INwsItm_Selector {
             ,
             new NwsItm('天文学','WHAT/space.jpg')
             ,
+            new NwsItm('NASA','WHAT/NASA.jpg')
+            ,
             new NwsItm('マスコミ','WHAT/MassMedia.jpg')
+            ,
+            new NwsItm('キリスト教','WHAT/christ.jpg')
+            ,
+            new NwsItm('仏教','WHAT/buddha.jpg')
+            ,
+            new NwsItm('宗教','WHAT/buddha.jpg')
+            ,
+            new NwsItm('歴史','WHAT/history.jpg')
+            ,
+            new NwsItm('世界史','WHAT/history.jpg')
+            ,
+            new NwsItm('人類','WHAT/human.jpg')
 
         ];
     }
