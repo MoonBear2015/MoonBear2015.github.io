@@ -5,7 +5,7 @@ function set_news() {
     html += '<div id="main_title">';
     html += '<h1>';
     html += 'NEWS';
-    html += '<small>R01.12</small>';
+    html += '<small>R01.13</small>';
     html += '</h1>';
     html += '</div>';
     for (let i = 0; i < 30; i++) {
