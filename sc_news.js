@@ -4,7 +4,8 @@ function set_news() {
     let html = '';
     html += '<div id="main_title">';
     html += '<h1>';
-    html += 'NEWS R01.07';
+    html += 'NEWS';
+    html += '<small>R01.08</small>';
     html += '</h1>';
     html += '</div>';
     for (let i = 0; i < 30; i++) {
@@ -193,26 +194,33 @@ class selector_doc extends NwsWrd_Selector {
     constructor() {
         super('#NEWS_DOC');
         this.itms = [
-            new NwsWrd('#DATE、#NEWS_C02。'),
-            new NwsWrd('#NEWS_C01、#NEWS_C02。'),
-            new NwsWrd('#NEWS_C01、#NEWS_C02。'),
-            new NwsWrd('#NEWS_C01、#NEWS_C02。'),
-            new NwsWrd('#NEWS_C01、#NEWS_C02。'),
             new NwsWrd('#NEWS_C01、#NEWS_C02。'),
             new NwsWrd('#NEWS_C01、#DATE、#NEWS_C02。'),
-            new NwsWrd('#DATE、#NEWS_C01、#NEWS_C02。'),
-            new NwsWrd('#DATE、#NEWS_C01、#NEWS_C02。'),
-            new NwsWrd('#WHOは、#NEWS_C01、#NEWS_C02と#SAYしている。'),
-            new NwsWrd('#WHOは#DATE、#NEWS_C01、#NEWS_C02との#ANSWERを#SAYしている。'),
-            new NwsWrd('#DATE、#WHOは「#NEWS_C01、#NEWS_C02」との#ANSWERを#SAYしている。'),
-            new NwsWrd('#WHOは#DATE、「#NEWS_C01、#NEWS_C02」との#ANSWERを#SAYした。'),
-            new NwsWrd('#WHOは、「#NEWS_C01、#NEWS_C02」との#ANSWERを#SAYした。'),
-            new NwsWrd('#WHOは、「#NEWS_C01、#NEWS_C02」との#ANSWERを#SAYしている。'),
-            new NwsWrd('#WHOは、「#NEWS_C01、#NEWS_C02」との#ANSWERを#SAY。'),
-            new NwsWrd('#WHOは#DATE、「#NEWS_C01、#NEWS_C02」との#ANSWERを#SAYした。'),
-            new NwsWrd('#WHOは#DATE、「#NEWS_C01、#NEWS_C02」との#ANSWERを#SAYした。'),
-            new NwsWrd('#CLASSの#HUMAN#AGEは、後に「#WHATの#NICK」と#ASSES。'),
-            new NwsWrd('#DATE、「#NEWS_C01、#NEWS_C02」との#THINKを#SAYした#WHOは、#THEYからは「#WHATの#NICK」と#ASSES。')
+            new NwsWrd('#DATE、#NEWS_C01、#NEWS_C02。')
+            // ,
+            // new NwsWrd('#DATE、#NEWS_C01、#NEWS_C02。')
+            // ,
+            // new NwsWrd('#WHOは、#NEWS_C01、#NEWS_C02と#SAYしている。')
+            // ,
+            // new NwsWrd('#WHOは#DATE、#NEWS_C01、#NEWS_C02との#ANSWERを#SAYしている。')
+            // ,
+            // new NwsWrd('#DATE、#WHOは「#NEWS_C01、#NEWS_C02」との#ANSWERを#SAYしている。')
+            // ,
+            // new NwsWrd('#WHOは#DATE、「#NEWS_C01、#NEWS_C02」との#ANSWERを#SAYした。')
+            // ,
+            // new NwsWrd('#WHOは、「#NEWS_C01、#NEWS_C02」との#ANSWERを#SAYした。')
+            // ,
+            // new NwsWrd('#WHOは、「#NEWS_C01、#NEWS_C02」との#ANSWERを#SAYしている。')
+            // ,
+            // new NwsWrd('#WHOは、「#NEWS_C01、#NEWS_C02」との#ANSWERを#SAY。')
+            // ,
+            // new NwsWrd('#WHOは#DATE、「#NEWS_C01、#NEWS_C02」との#ANSWERを#SAYした。')
+            // ,
+            // new NwsWrd('#WHOは#DATE、「#NEWS_C01、#NEWS_C02」との#ANSWERを#SAYした。')
+            // ,
+            // new NwsWrd('#CLASSの#HUMAN#AGEは、後に「#WHATの#NICK」と#ASSES。')
+            // ,
+            // new NwsWrd('#DATE、「#NEWS_C01、#NEWS_C02」との#THINKを#SAYした#WHOは、#THEYからは「#WHATの#NICK」と#ASSES。')
         ];
     }
 }
@@ -232,15 +240,40 @@ class selector_c01 extends NwsWrd_Selector {
     constructor() {
         super('#NEWS_C01');
         this.itms = [
-            new NwsWrd('#WHATの#KEYにより'),
-            new NwsWrd('#KEYに#THINKする#WHATでは'),
-            new NwsWrd('#THINKする#WHATは'),
-            new NwsWrd('#WHATが#DOする中'),
-            new NwsWrd('#STATUSする#WHATの#KEYにより'),
-            new NwsWrd('#KEYが#STATUSする#WHATの#DOにより'),
-            new NwsWrd('#WHATの#DOが#STATUSする#KEYによって'),
-            new NwsWrd('#KEYと#KEYが#STATUSする#WHATでは'),
-            new NwsWrd('#THEYによる#KEYが#STATUSする#WHATでは')
+            // new NwsWrd('#WHATでの#KEYにより')
+            // ,
+            // new NwsWrd('#WHATの#DOにより')
+            // ,
+            // new NwsWrd('#KEYが#STATUSする#WHATでは')
+            // ,
+            // new NwsWrd('#WHATでの#KEYが#STATUSする中')
+            // ,
+            // new NwsWrd('#WHATが#DOする中')
+            // ,
+            new NwsWrd('#WHATの#THEYが#DOする中')
+            // ,
+            // new NwsWrd('#WHATの#THEYに#KEYが#STATUSする中')
+            // ,
+            // new NwsWrd('#WHATの#THEYに#THINKが#STATUSする中')
+            // ,
+            // new NwsWrd('#WHATの#THEYに#THINKや#THINKが#STATUSする中')
+            ,
+            new NwsWrd('#WHATの#THEYに#THINKや#THINKが#STATUSし')
+            // new NwsWrd('#KEYに#THINKする#WHATでは')
+            // ,
+            // new NwsWrd('#THINKする#WHATは')
+            // ,
+            // new NwsWrd('#WHATが#DOする中')
+            // ,
+            // new NwsWrd('#STATUSする#WHATの#KEYにより')
+            // ,
+            // new NwsWrd('#KEYが#STATUSする#WHATの#DOにより')
+            // ,
+            // new NwsWrd('#WHATの#DOが#STATUSする#KEYによって')
+            // ,
+            // new NwsWrd('#KEYと#KEYが#STATUSする#WHATでは')
+            // ,
+            // new NwsWrd('#THEYによる#KEYが#STATUSする#WHATでは')
         ];
     }
 }
@@ -347,15 +380,18 @@ class selector_status extends NwsWrd_Selector {
         super('#STATUS');
         this.itms = [
             new NwsWrd('加速'),
-            new NwsWrd('増加'),
+            new NwsWrd('増長'),
             new NwsWrd('蔓延'),
             new NwsWrd('拡大'),
             new NwsWrd('増大'),
             new NwsWrd('倍増'),
-            new NwsWrd('激増'),
             new NwsWrd('増殖'),
             new NwsWrd('肥大化'),
-            new NwsWrd('急増')
+            new NwsWrd('急増'),
+            new NwsWrd('減少'),
+            new NwsWrd('迷走'),
+            new NwsWrd('拡張'),
+            new NwsWrd('暴発')
         ];
     }
 }
@@ -498,24 +534,25 @@ class selector_nickname extends NwsWrd_Selector {
         ];
     }
 }
-// 意識 ～が広がる、～に襲われる、～に包まれる、
+// 意識 ～する
 class selector_think extends NwsWrd_Selector {
     constructor() {
         super('#THINK');
         this.itms = [
-            new NwsWrd('不安'),
+            new NwsWrd('動揺'),
             new NwsWrd('警戒'),
             new NwsWrd('絶望'),
             new NwsWrd('失望'),
-            new NwsWrd('避難'),
-            new NwsWrd('悲しみ'),
-            new NwsWrd('怒り'),
+            new NwsWrd('苦悶'),
             new NwsWrd('失意'),
             new NwsWrd('迷走'),
             new NwsWrd('狂気'),
             new NwsWrd('発狂'),
             new NwsWrd('激怒'),
-            new NwsWrd('嘲笑')
+            new NwsWrd('嘲笑'),
+            new NwsWrd('驚喜'),
+            new NwsWrd('驚嘆'),
+            new NwsWrd('号泣')
         ];
     }
 }
