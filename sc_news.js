@@ -5,7 +5,7 @@ function set_news() {
     html += '<div id="main_title">';
     html += '<h1>';
     html += 'NEWS';
-    html += '<small>R01.10</small>';
+    html += '<small>R01.12</small>';
     html += '</h1>';
     html += '</div>';
     for (let i = 0; i < 30; i++) {
@@ -240,20 +240,43 @@ class selector_c01 extends NwsWrd_Selector {
     constructor() {
         super('#NEWS_C01');
         this.itms = [
-            new NwsWrd('#WHATでの#KEYにより'),
-            new NwsWrd('#WHATの#DOにより'),
-            new NwsWrd('#KEYが#STATUSする#WHATでは'),
-            new NwsWrd('#WHATでの#KEYが#STATUSする中'),
-            new NwsWrd('#WHATが#DOしたため'),
-            new NwsWrd('#WHATの#THEYが#DOしたため'),
-            new NwsWrd('#WHATの#THEYに#KEYが#STATUSしたため'),
-            new NwsWrd('#WHATの#THEYに#THINKが#STATUSし'),
-            new NwsWrd('#WHATの#THEYに#THINKや#THINKが#STATUSする中'),
-            new NwsWrd('#WHATの#THEYに#THINKや#THINKが#STATUSし'),
-            new NwsWrd('#THINKや#THINKが#STATUSする#WHATでは'),
-            new NwsWrd('#THINKが#STATUSする#WHATでは'),
-            new NwsWrd('#THINKが#STATUSする#WHATの#THEYのため'),
-            new NwsWrd('#THINKが#STATUSする#WHATの#DOのため')
+            new NwsWrd('#WHATでの#KEY#END01A'),
+            new NwsWrd('#WHATの#DO#END01B'),
+            new NwsWrd('#KEYが#STATUSする#WHAT#END01A'),
+            new NwsWrd('#WHATでの#KEYが#STATUS#END01B'),
+            new NwsWrd('#WHATが#DO#END01B'),
+            new NwsWrd('#WHATの#THEYが#DO#END01B'),
+            new NwsWrd('#WHATの#THEYに#KEYが#STATUS#END01B'),
+            new NwsWrd('#WHATの#THEYに#THINKが#STATUS#END01B'),
+            new NwsWrd('#WHATの#THEYに#THINKや#THINKが#STATUS#END01B'),
+            new NwsWrd('#THINKや#THINKが#STATUSする#WHAT#END01A'),
+            new NwsWrd('#THINKが#STATUSする#WHAT#END01A'),
+            new NwsWrd('#THINKが#STATUSする#WHATの#THEY#END01A'),
+            new NwsWrd('#THINKが#STATUSする#WHATの#DO#END01A')
+        ];
+    }
+}
+class selector_end01a extends NwsWrd_Selector {
+    constructor() {
+        super('#END01A');
+        this.itms = [
+            new NwsWrd('により'),
+            new NwsWrd('のため'),
+            new NwsWrd('は'),
+            new NwsWrd('には'),
+            new NwsWrd('では')
+        ];
+    }
+}
+class selector_end01b extends NwsWrd_Selector {
+    constructor() {
+        super('#END01B');
+        this.itms = [
+            new NwsWrd('し'),
+            new NwsWrd('する中'),
+            new NwsWrd('したため'),
+            new NwsWrd('により'),
+            new NwsWrd('するため')
         ];
     }
 }
@@ -261,12 +284,25 @@ class selector_c02 extends NwsWrd_Selector {
     constructor() {
         super('#NEWS_C02');
         this.itms = [
-            new NwsWrd('#KEYの#THINKが#STATUSしている'),
-            new NwsWrd('#THEYの#THINKが#STATUSしている'),
-            new NwsWrd('#THINKに包まれる#THEYが#STATUSした'),
-            new NwsWrd('#THEYに#THINKが#STATUSしている'),
-            new NwsWrd('#THEYの間で#THINKと#THINKが#STATUSしている'),
-            new NwsWrd('#KEYが#STATUSする#THINKが広まっている')
+            new NwsWrd('#THEYの#KEYが#STATUS#END02'),
+            new NwsWrd('#THEYの#KEYや#KEYが#STATUS#END02'),
+            new NwsWrd('#THEYの#THINKが#STATUS#END02'),
+            new NwsWrd('#THEYの#THINKと#THINKが#STATUS#END02')
+        ];
+    }
+}
+class selector_end02 extends NwsWrd_Selector {
+    constructor() {
+        super('#END02');
+        this.itms = [
+            new NwsWrd('している'),
+            new NwsWrd('していた'),
+            new NwsWrd('する'),
+            new NwsWrd('した'),
+            new NwsWrd('しようとしている'),
+            new NwsWrd('しようとしていた'),
+            new NwsWrd('していない'),
+            new NwsWrd('していなかった')
         ];
     }
 }
@@ -624,6 +660,9 @@ class news_docs_maker {
         this.selectors.push(new selector_doc());
         this.selectors.push(new selector_c01());
         this.selectors.push(new selector_c02());
+        this.selectors.push(new selector_end01a());
+        this.selectors.push(new selector_end01b());
+        this.selectors.push(new selector_end02());
         this.selectors.push(new selector_random_date());
         this.selectors.push(new selector_whats());
         this.selectors.push(new selector_do());
