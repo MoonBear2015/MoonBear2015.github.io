@@ -273,6 +273,7 @@ class selector_end01b extends NwsWrd_Selector {
         super('#END01B');
         this.itms = [
             new NwsWrd('し'),
+            new NwsWrd('したが'),
             new NwsWrd('する中'),
             new NwsWrd('したため'),
             new NwsWrd('により'),

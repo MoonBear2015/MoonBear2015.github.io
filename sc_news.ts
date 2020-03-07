@@ -385,6 +385,8 @@ class selector_end01b extends NwsWrd_Selector implements INwsItm_Selector {
         this.itms = [
             new NwsWrd('し')
             ,
+            new NwsWrd('したが')
+            ,
             new NwsWrd('する中')
             ,
             new NwsWrd('したため')
