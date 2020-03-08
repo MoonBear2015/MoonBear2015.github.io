@@ -5,7 +5,7 @@ function set_news() {
     html += '<div id="main_title">';
     html += '<h1>';
     html += 'NEWS';
-    html += '<small>R01.23</small>';
+    html += '<small>R01.24</small>';
     html += '</h1>';
     html += '</div>';
     for (let i = 0; i < 30; i++) {
@@ -333,6 +333,9 @@ class selector_whats extends NwsItm_SelectLocker {
             new NwsItm('ロシア', 'WHAT/Russia.jpg'),
             new NwsItm('インド', 'WHAT/india.jpg'),
             new NwsItm('イタリア', 'WHAT/Italy.jpg'),
+            new NwsItm('フランス', 'WHAT/France.jpg'),
+            new NwsItm('ドイツ', 'WHAT/German.jpg'),
+            new NwsItm('韓国', 'WHAT/koria.jpg'),
             new NwsItm('経済', 'WHAT/Economy.jpg'),
             new NwsItm('市場', 'WHAT/Economy.jpg'),
             new NwsItm('株価', 'WHAT/Economy.jpg'),
@@ -362,7 +365,8 @@ class selector_whats extends NwsItm_SelectLocker {
             new NwsItm('歴史', 'WHAT/history.jpg'),
             new NwsItm('世界史', 'WHAT/history.jpg'),
             new NwsItm('人類', 'WHAT/human.jpg'),
-            new NwsItm('女子校', 'WHAT/girlscoll.jpg')
+            new NwsItm('女子校', 'WHAT/girlscoll.jpg'),
+            new NwsItm('オリンピック', 'WHAT/Olympic.jpg')
         ];
     }
 }
@@ -411,7 +415,14 @@ class selector_key extends NwsWrd_Selector {
             new NwsWrd('差別化'),
             new NwsWrd('無力化'),
             new NwsWrd('黙殺'),
-            new NwsWrd('暴力行為')
+            new NwsWrd('暴力行為'),
+            new NwsWrd('乱痴気騒ぎ'),
+            new NwsWrd('乱交パーティー'),
+            new NwsWrd('雪合戦'),
+            new NwsWrd('運動会'),
+            new NwsWrd('密漁'),
+            new NwsWrd('乱獲'),
+            new NwsWrd('乱闘騒ぎ')
         ];
     }
 }
