@@ -1,71 +1,5 @@
 "use strict";
 // --------------------------------------------------------------
-// class nWord {
-//     word : string;
-//     constructor(inword : string)
-//     {
-//         this.word = inword;
-//     }
-// }
-// class nWordAry<T> {
-//     words : T[];
-//     rnd_index = -1; 
-//     constructor()
-//     {
-//         this.words = new Array<T>();
-//     }
-//     add(word : T)
-//     {
-//         this.words.push(word);
-//     }
-//     get count() : number
-//     {
-//         return this.words.length;
-//     }
-// }
-// function set_nTruth() : nWordAry<string> {
-//     let result = new nWordAry<string>();
-//     result.words = [
-//             '幻'
-//         ,   '幻想'
-//         ,   '妄想'
-//         ,   '蜃気楼'
-//         ,   '空想'
-//         ,   '模造品'
-//         ,   '偽物'
-//         ,   '模型'
-//         ,   '廃墟'
-//         ,   '抜け殻'
-//     ];
-//     return result;
-// }
-// // Act : 主役
-// class nAct extends nWord {
-//     nPic: string;
-//     constructor(inStr: string,inPic: string) {
-//         super(inStr);
-//         this.nPic = inPic;
-//     }
-// }
-// function get_nActs() : nAct[] {
-//     let result = [
-//             new nAct('日本','pics/Japan.jpg')
-//         ,   new nAct('アメリカ','pics/America.jpg')
-//         ,   new nAct('中国','pics/China.jpg')
-//     ];
-//     return result;
-// }
-// function rnd_nActs() : nAct {
-//     let acts = get_nActs();
-//     return acts[rnd_max(acts.length)];
-// }
-// function make_news_title() : string {
-//     let result : string = '';
-//     let acts = get_nActs();
-//     let act = acts[rnd_max(acts.length)];
-//     result += act.word;
-//     return result;
-// }
 function set_site_header() {
     let html = '';
     html += make_site_header();
@@ -79,7 +13,12 @@ function set_site_header() {
 function make_site_header() {
     let html = '';
     html += '<div id="header_title">';
-    html += '<h1>「空虚」</h1>';
+    html += '<h1>';
+    html += '「空虚」';
+    html += '<small>';
+    html += 'r01.00';
+    html += '</small>';
+    html += '</h1>';
     html += '</div>';
     html += '<div id="header_menu">';
     html += make_header_menu(0);

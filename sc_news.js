@@ -1,11 +1,14 @@
 "use strict";
 function set_news() {
+    set_header_menu(1);
     scrollTo(0, 0);
     let html = '';
     html += '<div id="main_title">';
     html += '<h1>';
     html += 'NEWS';
-    html += '<small>R01.24</small>';
+    html += '<small>';
+    html += 'R01.26';
+    html += '</small>';
     html += '</h1>';
     html += '</div>';
     for (let i = 0; i < 30; i++) {
@@ -27,7 +30,7 @@ function make_news() {
     html += 'border:     0.5px solid #606060;';
     html += 'border-radius:  1%;';
     html += 'background: ';
-    html += 'linear-gradient(135deg,rgba(0,0,0,0.8),rgba(60,60,60,0.8)),';
+    html += 'linear-gradient(135deg,rgba(30,30,30,0.8),rgba(120,120,120,0.8)),';
     html += 'url(./pics/#PIC_DO);';
     html += 'background-size: ';
     html += 'cover;';
@@ -361,12 +364,17 @@ class selector_whats extends NwsItm_SelectLocker {
             new NwsItm('芸能界', 'WHAT/media.jpg'),
             new NwsItm('キリスト教', 'WHAT/christ.jpg'),
             new NwsItm('仏教', 'WHAT/buddha.jpg'),
+            new NwsItm('イスラム教', 'WHAT/Islam.jpg'),
             new NwsItm('宗教', 'WHAT/buddha.jpg'),
             new NwsItm('歴史', 'WHAT/history.jpg'),
             new NwsItm('世界史', 'WHAT/history.jpg'),
             new NwsItm('人類', 'WHAT/human.jpg'),
             new NwsItm('女子校', 'WHAT/girlscoll.jpg'),
-            new NwsItm('オリンピック', 'WHAT/Olympic.jpg')
+            new NwsItm('オリンピック', 'WHAT/Olympic.jpg'),
+            new NwsItm('江戸幕府', 'WHAT/edo.jpg'),
+            new NwsItm('ホワイトハウス', 'WHAT/whitehouse.jpg'),
+            new NwsItm('紫禁城', 'WHAT/shikin.jpg'),
+            new NwsItm('イギリス王朝', 'WHAT/kingdom.jpg')
         ];
     }
 }
@@ -385,7 +393,9 @@ class selector_do extends NwsItm_SelectLocker {
             new NwsItm('感染', 'DO/infection.jpg'),
             new NwsItm('暴走', 'DO/Wild.jpg'),
             new NwsItm('発狂', 'DO/mad.jpg'),
-            new NwsItm('洗脳', 'DO/brainwash.jpg')
+            new NwsItm('洗脳', 'DO/brainwash.jpg'),
+            new NwsItm('終焉', 'DO/end.jpg'),
+            new NwsItm('自滅', 'DO/self.jpg')
         ];
     }
 }
@@ -690,7 +700,11 @@ class selector_answer extends NwsWrd_Selector {
             new NwsWrd('戯れ言'),
             new NwsWrd('疑問'),
             new NwsWrd('悩み'),
-            new NwsWrd('提案')
+            new NwsWrd('提案'),
+            new NwsWrd('議題'),
+            new NwsWrd('妄想'),
+            new NwsWrd('妄言'),
+            new NwsWrd('寝言')
         ];
     }
 }
@@ -713,7 +727,11 @@ class selector_assessment extends NwsWrd_Selector {
             new NwsWrd('見限られた'),
             new NwsWrd('見捨てられた'),
             new NwsWrd('恐れられた'),
-            new NwsWrd('おだてられている')
+            new NwsWrd('おだてられている'),
+            new NwsWrd('馬鹿にされている'),
+            new NwsWrd('讃えられている'),
+            new NwsWrd('言い伝えられた'),
+            new NwsWrd('丸め込まれた')
         ];
     }
 }
