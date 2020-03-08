@@ -6,7 +6,7 @@ function set_news()
     html += '<div id="main_title">'
     html += '<h1>';
     html += 'NEWS';
-    html += '<small>R01.13</small>';
+    html += '<small>R01.14</small>';
     html += '</h1>';
     html += '</div>';
 
@@ -333,31 +333,31 @@ class selector_c01 extends NwsWrd_Selector implements INwsItm_Selector {
     constructor(){
         super('#NEWS_C01');
         this.itms = [
-            new NwsWrd('#WHATでの#KEY#END01A')
+            new NwsWrd('#WHATによる#KEY#END01A')
             ,
             new NwsWrd('#WHATの#DO#END01B')
             ,
             new NwsWrd('#KEYが#STATUSする#WHAT#END01A')
             ,
-            new NwsWrd('#WHATでの#KEYが#STATUS#END01B')
+            new NwsWrd('#WHATによる#KEYが#STATUS#END01B')
             ,
             new NwsWrd('#WHATが#DO#END01B')
             ,
-            new NwsWrd('#WHATの#THEYが#DO#END01B')
+            new NwsWrd('#MANY#THEYが#DO#END01B')
             ,
-            new NwsWrd('#WHATの#THEYに#KEYが#STATUS#END01B')
+            new NwsWrd('#MANY#THEYに#KEYが#STATUS#END01B')
             ,
-            new NwsWrd('#WHATの#THEYに#THINKが#STATUS#END01B')
+            new NwsWrd('#MANY#THEYに#THINKが#STATUS#END01B')
             ,
-            new NwsWrd('#WHATの#THEYに#THINKや#THINKが#STATUS#END01B')
+            new NwsWrd('#MANY#THEYに#THINKや#THINKが#STATUS#END01B')
             ,
             new NwsWrd('#THINKや#THINKが#STATUSする#WHAT#END01A')
             ,
             new NwsWrd('#THINKが#STATUSする#WHAT#END01A')
             ,
-            new NwsWrd('#THINKが#STATUSする#WHATの#THEY#END01A')
+            new NwsWrd('#THINKが#STATUSする#THEY#END01A')
             ,
-            new NwsWrd('#THINKが#STATUSする#WHATの#DO#END01A')
+            new NwsWrd('#THINKが#STATUSする#DO#END01A')
         ];
     }
 }
@@ -403,13 +403,13 @@ class selector_c02 extends NwsWrd_Selector implements INwsItm_Selector {
     constructor(){
         super('#NEWS_C02');
         this.itms = [
-            new NwsWrd('#THEYの#KEYが#STATUS#END02')
+            new NwsWrd('#MANY#THEYの#KEYが#STATUS#END02')
             ,
-            new NwsWrd('#THEYの#KEYや#KEYが#STATUS#END02')
+            new NwsWrd('#MANY#THEYの#KEYや#KEYが#STATUS#END02')
             ,
-            new NwsWrd('#THEYの#THINKが#STATUS#END02')
+            new NwsWrd('#MANY#THEYの#THINKが#STATUS#END02')
             ,
-            new NwsWrd('#THEYの#THINKと#THINKが#STATUS#END02')
+            new NwsWrd('#MANY#THEYの#THINKと#THINKが#STATUS#END02')
         ];
     }
 }
@@ -429,10 +429,6 @@ class selector_end02 extends NwsWrd_Selector implements INwsItm_Selector {
             new NwsWrd('しようとしている')
             ,
             new NwsWrd('しようとしていた')
-            ,
-            new NwsWrd('していない')
-            ,
-            new NwsWrd('していなかった')
         ];
     }
 }
@@ -542,7 +538,7 @@ class selector_do extends NwsItm_SelectLocker implements INwsItm_Selector{
             ,
             new NwsItm('暴走','DO/Wild.jpg')
             ,
-            new NwsItm('狂気','DO/mad.jpg')
+            new NwsItm('発狂','DO/mad.jpg')
             ,
             new NwsItm('洗脳','DO/brainwash.jpg')
         ];
@@ -612,8 +608,6 @@ class selector_status extends NwsWrd_Selector implements INwsItm_Selector {
             ,
             new NwsWrd('蔓延')
             ,
-            new NwsWrd('拡大')
-            ,
             new NwsWrd('増大')
             ,
             new NwsWrd('倍増')
@@ -624,13 +618,19 @@ class selector_status extends NwsWrd_Selector implements INwsItm_Selector {
             ,
             new NwsWrd('急増')
             ,
-            new NwsWrd('減少')
-            ,
             new NwsWrd('迷走')
             ,
-            new NwsWrd('拡張')
-            ,
             new NwsWrd('暴発')
+            ,
+            new NwsWrd('定着')
+            ,
+            new NwsWrd('一掃')
+            ,
+            new NwsWrd('停滞')
+            ,
+            new NwsWrd('沈黙')
+            ,
+            new NwsWrd('沈静化')
         ];
     }
 }
@@ -642,35 +642,17 @@ class selector_they extends NwsWrd_Selector implements INwsItm_Selector {
         this.itms = [
             new NwsWrd('人々')
             ,
-            new NwsWrd('多くの人々')
-            ,
-            new NwsWrd('一部の人々')
-            ,
             new NwsWrd('一般大衆')
             ,
             new NwsWrd('有識者')
             ,
-            new NwsWrd('多くの有識者')
-            ,
-            new NwsWrd('一部の有識者')
-            ,
             new NwsWrd('子供達')
-            ,
-            new NwsWrd('大多数の子供達')
             ,
             new NwsWrd('学生達')
             ,
-            new NwsWrd('一部の学生')
-            ,
             new NwsWrd('女性達')
             ,
-            new NwsWrd('ごく僅かな女性達')
-            ,
-            new NwsWrd('多くの女性達')
-            ,
-            new NwsWrd('大多数の男性')
-            ,
-            new NwsWrd('一部の男性')
+            new NwsWrd('男性')
             ,
             new NwsWrd('先人達')
             ,
@@ -684,34 +666,77 @@ class selector_they extends NwsWrd_Selector implements INwsItm_Selector {
             ,
             new NwsWrd('乗組員')
             ,
-            new NwsWrd('多くの乗組員')
+            new NwsWrd('乗客')
             ,
-            new NwsWrd('大多数の乗客')
+            new NwsWrd('従業員')
             ,
-            new NwsWrd('一部の従業員')
-            ,
-            new NwsWrd('多くの営業職')
-            ,
-            new NwsWrd('ほとんどの売春婦')
+            new NwsWrd('売春婦')
             ,
             new NwsWrd('暴走族')
             ,
             new NwsWrd('マフィア')
             ,
-            new NwsWrd('一部のマフィア')
+            new NwsWrd('ヤクザ')
             ,
             new NwsWrd('過激派')
-            ,
-            new NwsWrd('地下組織')
-            ,
-            new NwsWrd('暗黒街')
             ,
             new NwsWrd('移住者')
             ,
             new NwsWrd('旅行者')
+            ,
+            new NwsWrd('スタントマン')
+            ,
+            new NwsWrd('旅芸人')
+            ,
+            new NwsWrd('パイロット')
+            ,
+            new NwsWrd('奴隷')
+            ,
+            new NwsWrd('飼い猫')
+            ,
+            new NwsWrd('首狩り族')
+            ,
+            new NwsWrd('僧侶達')
+            ,
+            new NwsWrd('盗賊達')
+            ,
+            new NwsWrd('海兵隊')
         ];
     }
 }
+
+// 団体の数 （一部の／多くの）人々
+class selector_many extends NwsWrd_Selector implements INwsItm_Selector {
+    constructor(){
+        super('#MANY');
+        this.itms = [
+            new NwsWrd('多くの')
+            ,
+            new NwsWrd('多くの')
+            ,
+            new NwsWrd('一部の')
+            ,
+            new NwsWrd('大多数の')
+            ,
+            new NwsWrd('ごく僅かな')
+            ,
+            new NwsWrd('ほとんどの')
+            ,
+            new NwsWrd('数名の')
+            ,
+            new NwsWrd('幾人もの')
+            ,
+            new NwsWrd('全ての')
+            ,
+            new NwsWrd('大半の')
+            ,
+            new NwsWrd('数え切れない程の')
+            ,
+            new NwsWrd('掃いて捨てるほどの')
+        ];
+    }
+}
+
 
 // 肩書き ～の
 class selector_class extends NwsWrd_Selector implements INwsItm_Selector {
@@ -1060,6 +1085,8 @@ class news_docs_maker {
         this.selectors.push(new selector_key());
         this.selectors.push(new selector_status());
         this.selectors.push(new selector_they());
+        this.selectors.push(new selector_many());
+
         this.selectors.push(new selector_think());
         this.selectors.push(new selector_who());
         this.selectors.push(new selector_human());
