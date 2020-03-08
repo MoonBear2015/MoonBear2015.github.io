@@ -6,7 +6,7 @@ function set_news()
     html += '<div id="main_title">'
     html += '<h1>';
     html += 'NEWS';
-    html += '<small>R01.17</small>';
+    html += '<small>R01.21</small>';
     html += '</h1>';
     html += '</div>';
 
@@ -282,30 +282,14 @@ class selector_doc extends NwsWrd_Selector implements INwsItm_Selector {
             new NwsWrd('#NEWS_C01、#DATE、#NEWS_C02。')
             ,
             new NwsWrd('#DATE、#NEWS_C01、#NEWS_C02。')
-            // ,
-            // new NwsWrd('#DATE、#NEWS_C01、#NEWS_C02。')
-            // ,
-            // new NwsWrd('#WHOは、#NEWS_C01、#NEWS_C02と#SAYしている。')
-            // ,
-            // new NwsWrd('#WHOは#DATE、#NEWS_C01、#NEWS_C02との#ANSWERを#SAYしている。')
-            // ,
-            // new NwsWrd('#DATE、#WHOは「#NEWS_C01、#NEWS_C02」との#ANSWERを#SAYしている。')
-            // ,
-            // new NwsWrd('#WHOは#DATE、「#NEWS_C01、#NEWS_C02」との#ANSWERを#SAYした。')
-            // ,
-            // new NwsWrd('#WHOは、「#NEWS_C01、#NEWS_C02」との#ANSWERを#SAYした。')
-            // ,
-            // new NwsWrd('#WHOは、「#NEWS_C01、#NEWS_C02」との#ANSWERを#SAYしている。')
-            // ,
-            // new NwsWrd('#WHOは、「#NEWS_C01、#NEWS_C02」との#ANSWERを#SAY。')
-            // ,
-            // new NwsWrd('#WHOは#DATE、「#NEWS_C01、#NEWS_C02」との#ANSWERを#SAYした。')
-            // ,
-            // new NwsWrd('#WHOは#DATE、「#NEWS_C01、#NEWS_C02」との#ANSWERを#SAYした。')
-            // ,
-            // new NwsWrd('#CLASSの#HUMAN#AGEは、後に「#WHATの#NICK」と#ASSES。')
-            // ,
-            // new NwsWrd('#DATE、「#NEWS_C01、#NEWS_C02」との#THINKを#SAYした#WHOは、#THEYからは「#WHATの#NICK」と#ASSES。')
+            ,
+            new NwsWrd('#DATE、#WHOは「#COMMENT」との#ANSWERを#SAY#END02B。')
+            ,
+            new NwsWrd('#WHOは「#COMMENT」との#ANSWERを#SAY#END02B。')
+            ,
+            new NwsWrd('#WHOは#DATE、「#COMMENT」との#ANSWERを#SAY#END02B。')
+            ,
+            new NwsWrd('「#COMMENT」との#ANSWERを#SAYしたのは、#WHO#END02A。')
         ];
     }
 }
@@ -333,7 +317,7 @@ class selector_c01 extends NwsWrd_Selector implements INwsItm_Selector {
         this.itms = [
             new NwsWrd('#WHATによる#KEY#END01A')
             ,
-            new NwsWrd('#WHATの#DO#END01B')
+            new NwsWrd('#WHATが#DO#END01B')
             ,
             new NwsWrd('#KEYが#STATUSする#WHAT#END01A')
             ,
@@ -389,9 +373,9 @@ class selector_end01b extends NwsWrd_Selector implements INwsItm_Selector {
             ,
             new NwsWrd('したため')
             ,
-            new NwsWrd('により')
-            ,
             new NwsWrd('するため')
+            ,
+            new NwsWrd('してしまったため')
         ];
     }
 }
@@ -401,20 +385,65 @@ class selector_c02 extends NwsWrd_Selector implements INwsItm_Selector {
     constructor(){
         super('#NEWS_C02');
         this.itms = [
-            new NwsWrd('#MANY#THEYの#KEYが#STATUS#END02')
+            new NwsWrd('#MANY#THEYの#KEYが#STATUS#END02B')
             ,
-            new NwsWrd('#MANY#THEYの#KEYや#KEYが#STATUS#END02')
+            new NwsWrd('#MANY#THEYの#KEYや#KEYが#STATUS#END02B')
             ,
-            new NwsWrd('#MANY#THEYの#THINKが#STATUS#END02')
+            new NwsWrd('#MANY#THEYの#THINKが#STATUS#END02B')
             ,
-            new NwsWrd('#MANY#THEYの#THINKと#THINKが#STATUS#END02')
+            new NwsWrd('#MANY#THEYの#THINKと#THINKが#STATUS#END02B')
         ];
     }
 }
 
-class selector_end02 extends NwsWrd_Selector implements INwsItm_Selector {
+class selector_comment extends NwsWrd_Selector implements INwsItm_Selector {
     constructor(){
-        super('#END02');
+        super('#COMMENT');
+        this.itms = [
+            new NwsWrd('#NEWS_C01、#NEWS_C02')
+            ,
+            new NwsWrd('どうして#MANY#THEYは#DOするのか')
+            ,
+            new NwsWrd('#WHATの#NICKが#STATUS#END02B')
+            ,
+            new NwsWrd('だから#WHATは#NICKと#ASSESのだ')
+            ,
+            new NwsWrd('それは#WHATが#NICK#END02A')
+            ,
+            new NwsWrd('つまり#THEYは#NICK#END02A')
+            ,
+            new NwsWrd('#THEYは#NICK#END02A。#WHATの#NICK#END02A')
+            ,
+            new NwsWrd('#NICKと#ASSESのは#WHATが#NICK#END02A')
+            ,
+            new NwsWrd('#MANY#THEYは#NICK#END02A')
+        ];
+    }
+}
+
+
+class selector_end02a extends NwsWrd_Selector implements INwsItm_Selector {
+    constructor(){
+        super('#END02A');
+        this.itms = [
+            new NwsWrd('だ')
+            ,
+            new NwsWrd('である')
+            ,
+            new NwsWrd('であった')
+            ,
+            new NwsWrd('だった')
+            ,
+            new NwsWrd('なのだ')
+            ,
+            new NwsWrd('なのだろう')
+        ];
+    }
+}
+
+class selector_end02b extends NwsWrd_Selector implements INwsItm_Selector {
+    constructor(){
+        super('#END02B');
         this.itms = [
             new NwsWrd('している')
             ,
@@ -430,7 +459,6 @@ class selector_end02 extends NwsWrd_Selector implements INwsItm_Selector {
         ];
     }
 }
-
 
 
 
@@ -481,7 +509,11 @@ class selector_whats extends NwsItm_SelectLocker implements INwsItm_Selector {
             ,
             new NwsItm('農業','WHAT/Agri.jpg')
             ,
+            new NwsItm('農場','WHAT/Agri.jpg')
+            ,
             new NwsItm('工業','WHAT/Factory.jpg')
+            ,
+            new NwsItm('工業地帯','WHAT/Factory.jpg')
             ,
             new NwsItm('人工知能','WHAT/AI.jpg')
             ,
@@ -654,7 +686,13 @@ class selector_they extends NwsWrd_Selector implements INwsItm_Selector {
             ,
             new NwsWrd('学生達')
             ,
+            new NwsWrd('女子校生')
+            ,
+            new NwsWrd('女子大生')
+            ,
             new NwsWrd('女性達')
+            ,
+            new NwsWrd('ＯＬ達')
             ,
             new NwsWrd('男性')
             ,
@@ -755,13 +793,13 @@ class selector_class extends NwsWrd_Selector implements INwsItm_Selector {
             ,
             new NwsWrd('経済学者')
             ,
-            new NwsWrd('評論家')
+            new NwsWrd('映画評論家')
             ,
             new NwsWrd('劇作家')
             ,
             new NwsWrd('映画監督')
             ,
-            new NwsWrd('小説家')
+            new NwsWrd('恋愛小説家')
             ,
             new NwsWrd('調理師')
             ,
@@ -787,6 +825,8 @@ class selector_class extends NwsWrd_Selector implements INwsItm_Selector {
             ,
             new NwsWrd('漫画家')
             ,
+            new NwsWrd('少女漫画家')
+            ,
             new NwsWrd('プロサーファー')
             ,
             new NwsWrd('ユーチューバー')
@@ -808,6 +848,16 @@ class selector_class extends NwsWrd_Selector implements INwsItm_Selector {
             new NwsWrd('保安官')
             ,
             new NwsWrd('ピアニスト')
+            ,
+            new NwsWrd('指揮者')
+            ,
+            new NwsWrd('ギターリスト')
+            ,
+            new NwsWrd('考古学者')
+            ,
+            new NwsWrd('ホテルマン')
+            ,
+            new NwsWrd('デザイナー')
         ];
     }
 }
@@ -820,6 +870,8 @@ class selector_nickname extends NwsWrd_Selector implements INwsItm_Selector {
             new NwsWrd('犬')
             ,
             new NwsWrd('死神')
+            ,
+            new NwsWrd('死霊')
             ,
             new NwsWrd('病')
             ,
@@ -837,6 +889,8 @@ class selector_nickname extends NwsWrd_Selector implements INwsItm_Selector {
             ,
             new NwsWrd('亡霊')
             ,
+            new NwsWrd('ミイラ')
+            ,
             new NwsWrd('蛇')
             ,
             new NwsWrd('奴隷')
@@ -845,6 +899,8 @@ class selector_nickname extends NwsWrd_Selector implements INwsItm_Selector {
             ,
             new NwsWrd('梅毒')
             ,
+            new NwsWrd('淋病')
+            ,
             new NwsWrd('疫病')
             ,
             new NwsWrd('粗大ゴミ')
@@ -852,6 +908,10 @@ class selector_nickname extends NwsWrd_Selector implements INwsItm_Selector {
             new NwsWrd('ゴミ')
             ,
             new NwsWrd('燃えないゴミ')
+            ,
+            new NwsWrd('ゴミ箱')
+            ,
+            new NwsWrd('ゴミの山')
             ,
             new NwsWrd('猛毒')
             ,
@@ -911,11 +971,47 @@ class selector_nickname extends NwsWrd_Selector implements INwsItm_Selector {
             ,
             new NwsWrd('悪意')
             ,
-            new NwsWrd('罪人')
-            ,
             new NwsWrd('処刑人')
             ,
             new NwsWrd('番人')
+            ,
+            new NwsWrd('悪夢')
+            ,
+            new NwsWrd('寝息')
+            ,
+            new NwsWrd('蚤')
+            ,
+            new NwsWrd('蟻')
+            ,
+            new NwsWrd('ネズミ')
+            ,
+            new NwsWrd('ハゲタカ')
+            ,
+            new NwsWrd('ポリバケツ')
+            ,
+            new NwsWrd('ブラックホール')
+            ,
+            new NwsWrd('サルガッソ')
+            ,
+            new NwsWrd('罪人')
+            ,
+            new NwsWrd('海賊')
+            ,
+            new NwsWrd('盗賊')
+            ,
+            new NwsWrd('山賊')
+            ,
+            new NwsWrd('夜盗')
+            ,
+            new NwsWrd('大泥棒')
+            ,
+            new NwsWrd('覗き魔')
+            ,
+            new NwsWrd('痴漢')
+            ,
+            new NwsWrd('変態')
+            ,
+            new NwsWrd('変質者')
         ];
     }
 }
@@ -971,6 +1067,10 @@ class selector_say extends NwsWrd_Selector implements INwsItm_Selector {
             new NwsWrd('分析')
             ,
             new NwsWrd('発言')
+            ,
+            new NwsWrd('発表')
+            ,
+            new NwsWrd('代弁')
         ];
     }
 }
@@ -991,6 +1091,12 @@ class selector_answer extends NwsWrd_Selector implements INwsItm_Selector {
             new NwsWrd('判断')
             ,
             new NwsWrd('戯れ言')
+            ,
+            new NwsWrd('疑問')
+            ,
+            new NwsWrd('悩み')
+            ,
+            new NwsWrd('提案')
         ];
     }
 }
@@ -1025,6 +1131,10 @@ class selector_assessment extends NwsWrd_Selector implements INwsItm_Selector {
             new NwsWrd('見限られた')
             ,
             new NwsWrd('見捨てられた')
+            ,
+            new NwsWrd('恐れられた')
+            ,
+            new NwsWrd('おだてられている')
         ];
     }
 }
@@ -1083,7 +1193,9 @@ class news_docs_maker {
         this.selectors.push(new selector_c02());
         this.selectors.push(new selector_end01a());
         this.selectors.push(new selector_end01b());
-        this.selectors.push(new selector_end02());
+        this.selectors.push(new selector_end02a());
+        this.selectors.push(new selector_end02b());
+        this.selectors.push(new selector_comment());
         
         this.selectors.push(new selector_random_date());
         this.selectors.push(new selector_whats());
