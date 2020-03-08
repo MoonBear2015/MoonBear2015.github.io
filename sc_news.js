@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'R01.26';
+    html += 'R01.27';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -374,7 +374,8 @@ class selector_whats extends NwsItm_SelectLocker {
             new NwsItm('江戸幕府', 'WHAT/edo.jpg'),
             new NwsItm('ホワイトハウス', 'WHAT/whitehouse.jpg'),
             new NwsItm('紫禁城', 'WHAT/shikin.jpg'),
-            new NwsItm('イギリス王朝', 'WHAT/kingdom.jpg')
+            new NwsItm('イギリス王朝', 'WHAT/kingdom.jpg'),
+            new NwsItm('国連', 'WHAT/nation.jpg')
         ];
     }
 }
@@ -565,7 +566,17 @@ class selector_class extends NwsWrd_Selector {
             new NwsWrd('考古学者'),
             new NwsWrd('ホテルマン'),
             new NwsWrd('デザイナー'),
-            new NwsWrd('靴磨き')
+            new NwsWrd('靴磨き'),
+            new NwsWrd('お侍様'),
+            new NwsWrd('王族'),
+            new NwsWrd('水呑百姓'),
+            new NwsWrd('ミイラ職人'),
+            new NwsWrd('花売り娘'),
+            new NwsWrd('大道芸人'),
+            new NwsWrd('吟遊詩人'),
+            new NwsWrd('連邦保安官'),
+            new NwsWrd('国家公務員'),
+            new NwsWrd('国選弁護人')
         ];
     }
 }
@@ -646,7 +657,10 @@ class selector_nickname extends NwsWrd_Selector {
             new NwsWrd('覗き魔'),
             new NwsWrd('痴漢'),
             new NwsWrd('変態'),
-            new NwsWrd('変質者')
+            new NwsWrd('変質者'),
+            new NwsWrd('物乞い'),
+            new NwsWrd('乞食'),
+            new NwsWrd('ペテン師')
         ];
     }
 }
