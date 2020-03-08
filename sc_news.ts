@@ -6,7 +6,7 @@ function set_news()
     html += '<div id="main_title">'
     html += '<h1>';
     html += 'NEWS';
-    html += '<small>R01.16</small>';
+    html += '<small>R01.17</small>';
     html += '</h1>';
     html += '</div>';
 
@@ -343,11 +343,11 @@ class selector_c01 extends NwsWrd_Selector implements INwsItm_Selector {
             ,
             new NwsWrd('#MANY#THEYが#DO#END01B')
             ,
-            new NwsWrd('#MANY#THEYに#KEYが#STATUS#END01B')
+            new NwsWrd('#MANY#THEYによる#KEYが#STATUS#END01B')
             ,
-            new NwsWrd('#MANY#THEYに#THINKが#STATUS#END01B')
+            new NwsWrd('#MANY#THEYの#THINKが#STATUS#END01B')
             ,
-            new NwsWrd('#MANY#THEYに#THINKや#THINKが#STATUS#END01B')
+            new NwsWrd('#MANY#THEYの#THINKや#THINKが#STATUS#END01B')
             ,
             new NwsWrd('#THINKや#THINKが#STATUSする#WHAT#END01A')
             ,
@@ -372,7 +372,7 @@ class selector_end01a extends NwsWrd_Selector implements INwsItm_Selector {
             ,
             new NwsWrd('には')
             ,
-            new NwsWrd('では')
+            new NwsWrd('が')
         ];
     }
 }
@@ -491,7 +491,7 @@ class selector_whats extends NwsItm_SelectLocker implements INwsItm_Selector {
             ,
             new NwsItm('宇宙','WHAT/space.jpg')
             ,
-            new NwsItm('宇宙開発','WHAT/space.jpg')
+            new NwsItm('宇宙開発','WHAT/NASA.jpg')
             ,
             new NwsItm('天文学','WHAT/space.jpg')
             ,

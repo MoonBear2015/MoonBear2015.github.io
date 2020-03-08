@@ -5,7 +5,7 @@ function set_news() {
     html += '<div id="main_title">';
     html += '<h1>';
     html += 'NEWS';
-    html += '<small>R01.16</small>';
+    html += '<small>R01.17</small>';
     html += '</h1>';
     html += '</div>';
     for (let i = 0; i < 30; i++) {
@@ -247,9 +247,9 @@ class selector_c01 extends NwsWrd_Selector {
             new NwsWrd('#WHATによる#KEYが#STATUS#END01B'),
             new NwsWrd('#WHATが#DO#END01B'),
             new NwsWrd('#MANY#THEYが#DO#END01B'),
-            new NwsWrd('#MANY#THEYに#KEYが#STATUS#END01B'),
-            new NwsWrd('#MANY#THEYに#THINKが#STATUS#END01B'),
-            new NwsWrd('#MANY#THEYに#THINKや#THINKが#STATUS#END01B'),
+            new NwsWrd('#MANY#THEYによる#KEYが#STATUS#END01B'),
+            new NwsWrd('#MANY#THEYの#THINKが#STATUS#END01B'),
+            new NwsWrd('#MANY#THEYの#THINKや#THINKが#STATUS#END01B'),
             new NwsWrd('#THINKや#THINKが#STATUSする#WHAT#END01A'),
             new NwsWrd('#THINKが#STATUSする#WHAT#END01A'),
             new NwsWrd('#THINKが#STATUSする#THEY#END01A'),
@@ -265,7 +265,7 @@ class selector_end01a extends NwsWrd_Selector {
             new NwsWrd('のため'),
             new NwsWrd('は'),
             new NwsWrd('には'),
-            new NwsWrd('では')
+            new NwsWrd('が')
         ];
     }
 }
@@ -337,7 +337,7 @@ class selector_whats extends NwsItm_SelectLocker {
             new NwsItm('教育', 'WHAT/stady.jpg'),
             new NwsItm('学校', 'WHAT/stady.jpg'),
             new NwsItm('宇宙', 'WHAT/space.jpg'),
-            new NwsItm('宇宙開発', 'WHAT/space.jpg'),
+            new NwsItm('宇宙開発', 'WHAT/NASA.jpg'),
             new NwsItm('天文学', 'WHAT/space.jpg'),
             new NwsItm('NASA', 'WHAT/NASA.jpg'),
             new NwsItm('マスコミ', 'WHAT/MassMedia.jpg'),
