@@ -5,7 +5,7 @@ function set_news() {
     html += '<div id="main_title">';
     html += '<h1>';
     html += 'NEWS';
-    html += '<small>R01.15</small>';
+    html += '<small>R01.16</small>';
     html += '</h1>';
     html += '</div>';
     for (let i = 0; i < 30; i++) {
@@ -320,6 +320,7 @@ class selector_whats extends NwsItm_SelectLocker {
             new NwsItm('大英帝国', 'WHAT/England.jpg'),
             new NwsItm('ロシア', 'WHAT/Russia.jpg'),
             new NwsItm('インド', 'WHAT/india.jpg'),
+            new NwsItm('イタリア', 'WHAT/Italy.jpg'),
             new NwsItm('経済', 'WHAT/Economy.jpg'),
             new NwsItm('市場', 'WHAT/Economy.jpg'),
             new NwsItm('株価', 'WHAT/Economy.jpg'),
@@ -340,12 +341,14 @@ class selector_whats extends NwsItm_SelectLocker {
             new NwsItm('天文学', 'WHAT/space.jpg'),
             new NwsItm('NASA', 'WHAT/NASA.jpg'),
             new NwsItm('マスコミ', 'WHAT/MassMedia.jpg'),
+            new NwsItm('芸能界', 'WHAT/media.jpg'),
             new NwsItm('キリスト教', 'WHAT/christ.jpg'),
             new NwsItm('仏教', 'WHAT/buddha.jpg'),
             new NwsItm('宗教', 'WHAT/buddha.jpg'),
             new NwsItm('歴史', 'WHAT/history.jpg'),
             new NwsItm('世界史', 'WHAT/history.jpg'),
-            new NwsItm('人類', 'WHAT/human.jpg')
+            new NwsItm('人類', 'WHAT/human.jpg'),
+            new NwsItm('女子校', 'WHAT/girlscoll.jpg')
         ];
     }
 }
@@ -514,7 +517,8 @@ class selector_class extends NwsWrd_Selector {
             new NwsWrd('外交官'),
             new NwsWrd('警備員'),
             new NwsWrd('警察官'),
-            new NwsWrd('保安官')
+            new NwsWrd('保安官'),
+            new NwsWrd('ピアニスト')
         ];
     }
 }

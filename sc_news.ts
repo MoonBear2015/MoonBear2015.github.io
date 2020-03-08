@@ -6,7 +6,7 @@ function set_news()
     html += '<div id="main_title">'
     html += '<h1>';
     html += 'NEWS';
-    html += '<small>R01.15</small>';
+    html += '<small>R01.16</small>';
     html += '</h1>';
     html += '</div>';
 
@@ -457,6 +457,8 @@ class selector_whats extends NwsItm_SelectLocker implements INwsItm_Selector {
             ,
             new NwsItm('インド','WHAT/india.jpg')
             ,
+            new NwsItm('イタリア','WHAT/Italy.jpg')
+            ,
             new NwsItm('経済','WHAT/Economy.jpg')
             ,
             new NwsItm('市場','WHAT/Economy.jpg')
@@ -497,6 +499,8 @@ class selector_whats extends NwsItm_SelectLocker implements INwsItm_Selector {
             ,
             new NwsItm('マスコミ','WHAT/MassMedia.jpg')
             ,
+            new NwsItm('芸能界','WHAT/media.jpg')
+            ,
             new NwsItm('キリスト教','WHAT/christ.jpg')
             ,
             new NwsItm('仏教','WHAT/buddha.jpg')
@@ -508,6 +512,8 @@ class selector_whats extends NwsItm_SelectLocker implements INwsItm_Selector {
             new NwsItm('世界史','WHAT/history.jpg')
             ,
             new NwsItm('人類','WHAT/human.jpg')
+            ,
+            new NwsItm('女子校','WHAT/girlscoll.jpg')
 
         ];
     }
@@ -800,6 +806,8 @@ class selector_class extends NwsWrd_Selector implements INwsItm_Selector {
             new NwsWrd('警察官')
             ,
             new NwsWrd('保安官')
+            ,
+            new NwsWrd('ピアニスト')
         ];
     }
 }
