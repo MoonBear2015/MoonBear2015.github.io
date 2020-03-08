@@ -5,7 +5,7 @@ function set_news() {
     html += '<div id="main_title">';
     html += '<h1>';
     html += 'NEWS';
-    html += '<small>R01.14</small>';
+    html += '<small>R01.15</small>';
     html += '</h1>';
     html += '</div>';
     for (let i = 0; i < 30; i++) {
@@ -95,9 +95,10 @@ class ItmSelector {
         let i = -1;
         while (true) {
             i = rnd_max(this.itms.length);
-            if (this.itms.length > 1 && i != this.bef_num) {
+            if (this.itms.length < 2)
                 break;
-            }
+            if (i != this.bef_num)
+                break;
         }
         this.bef_num = i;
         return this.itms[i];
