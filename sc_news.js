@@ -5,7 +5,7 @@ function set_news() {
     html += '<div id="main_title">';
     html += '<h1>';
     html += 'NEWS';
-    html += '<small>R01.21</small>';
+    html += '<small>R01.23</small>';
     html += '</h1>';
     html += '</div>';
     for (let i = 0; i < 30; i++) {
@@ -266,6 +266,9 @@ class selector_c02 extends NwsWrd_Selector {
     constructor() {
         super('#NEWS_C02');
         this.itms = [
+            new NwsWrd('#WHATの#MANY#THEYが#ASSES'),
+            new NwsWrd('#MANY#THEYが#DO#END02B'),
+            new NwsWrd('#MANY#THEYが#NICK#END02A'),
             new NwsWrd('#MANY#THEYの#KEYが#STATUS#END02B'),
             new NwsWrd('#MANY#THEYの#KEYや#KEYが#STATUS#END02B'),
             new NwsWrd('#MANY#THEYの#THINKが#STATUS#END02B'),
@@ -281,7 +284,7 @@ class selector_comment extends NwsWrd_Selector {
             new NwsWrd('どうして#MANY#THEYは#DOするのか'),
             new NwsWrd('#WHATの#NICKが#STATUS#END02B'),
             new NwsWrd('だから#WHATは#NICKと#ASSESのだ'),
-            new NwsWrd('それは#WHATが#NICK#END02A'),
+            new NwsWrd('#WHATが#NICK#END02A'),
             new NwsWrd('つまり#THEYは#NICK#END02A'),
             new NwsWrd('#THEYは#NICK#END02A。#WHATの#NICK#END02A'),
             new NwsWrd('#NICKと#ASSESのは#WHATが#NICK#END02A'),
@@ -427,9 +430,6 @@ class selector_status extends NwsWrd_Selector {
             new NwsWrd('急増'),
             new NwsWrd('迷走'),
             new NwsWrd('暴発'),
-            new NwsWrd('定着'),
-            new NwsWrd('一掃'),
-            new NwsWrd('停滞'),
             new NwsWrd('沈黙'),
             new NwsWrd('沈静化')
         ];
@@ -473,7 +473,12 @@ class selector_they extends NwsWrd_Selector {
             new NwsWrd('首狩り族'),
             new NwsWrd('僧侶達'),
             new NwsWrd('盗賊達'),
-            new NwsWrd('海兵隊')
+            new NwsWrd('海兵隊'),
+            new NwsWrd('囚人達'),
+            new NwsWrd('少年達'),
+            new NwsWrd('少女達'),
+            new NwsWrd('年長者'),
+            new NwsWrd('エリート')
         ];
     }
 }
@@ -482,7 +487,7 @@ class selector_many extends NwsWrd_Selector {
     constructor() {
         super('#MANY');
         this.itms = [
-            new NwsWrd('多くの'),
+            new NwsWrd('少数の'),
             new NwsWrd('多くの'),
             new NwsWrd('一部の'),
             new NwsWrd('大多数の'),
@@ -538,7 +543,8 @@ class selector_class extends NwsWrd_Selector {
             new NwsWrd('ギターリスト'),
             new NwsWrd('考古学者'),
             new NwsWrd('ホテルマン'),
-            new NwsWrd('デザイナー')
+            new NwsWrd('デザイナー'),
+            new NwsWrd('靴磨き')
         ];
     }
 }

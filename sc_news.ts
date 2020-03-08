@@ -6,7 +6,7 @@ function set_news()
     html += '<div id="main_title">'
     html += '<h1>';
     html += 'NEWS';
-    html += '<small>R01.21</small>';
+    html += '<small>R01.23</small>';
     html += '</h1>';
     html += '</div>';
 
@@ -385,6 +385,12 @@ class selector_c02 extends NwsWrd_Selector implements INwsItm_Selector {
     constructor(){
         super('#NEWS_C02');
         this.itms = [
+            new NwsWrd('#WHATの#MANY#THEYが#ASSES')
+            ,
+            new NwsWrd('#MANY#THEYが#DO#END02B')
+            ,
+            new NwsWrd('#MANY#THEYが#NICK#END02A')
+            ,
             new NwsWrd('#MANY#THEYの#KEYが#STATUS#END02B')
             ,
             new NwsWrd('#MANY#THEYの#KEYや#KEYが#STATUS#END02B')
@@ -408,7 +414,7 @@ class selector_comment extends NwsWrd_Selector implements INwsItm_Selector {
             ,
             new NwsWrd('だから#WHATは#NICKと#ASSESのだ')
             ,
-            new NwsWrd('それは#WHATが#NICK#END02A')
+            new NwsWrd('#WHATが#NICK#END02A')
             ,
             new NwsWrd('つまり#THEYは#NICK#END02A')
             ,
@@ -658,12 +664,6 @@ class selector_status extends NwsWrd_Selector implements INwsItm_Selector {
             ,
             new NwsWrd('暴発')
             ,
-            new NwsWrd('定着')
-            ,
-            new NwsWrd('一掃')
-            ,
-            new NwsWrd('停滞')
-            ,
             new NwsWrd('沈黙')
             ,
             new NwsWrd('沈静化')
@@ -743,6 +743,16 @@ class selector_they extends NwsWrd_Selector implements INwsItm_Selector {
             new NwsWrd('盗賊達')
             ,
             new NwsWrd('海兵隊')
+            ,
+            new NwsWrd('囚人達')
+            ,
+            new NwsWrd('少年達')
+            ,
+            new NwsWrd('少女達')
+            ,
+            new NwsWrd('年長者')
+            ,
+            new NwsWrd('エリート')
         ];
     }
 }
@@ -752,7 +762,7 @@ class selector_many extends NwsWrd_Selector implements INwsItm_Selector {
     constructor(){
         super('#MANY');
         this.itms = [
-            new NwsWrd('多くの')
+            new NwsWrd('少数の')
             ,
             new NwsWrd('多くの')
             ,
@@ -858,6 +868,8 @@ class selector_class extends NwsWrd_Selector implements INwsItm_Selector {
             new NwsWrd('ホテルマン')
             ,
             new NwsWrd('デザイナー')
+            ,
+            new NwsWrd('靴磨き')
         ];
     }
 }
