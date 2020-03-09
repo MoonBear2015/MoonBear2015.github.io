@@ -635,8 +635,6 @@ class selector_do extends NwsItm_SelectLocker implements INwsItm_Selector{
             new NwsItm('滅亡','DO/end.jpg')
             ,
             new NwsItm('自滅','DO/self.jpg')
-            ,
-            new NwsItm('末路','DO/fate.jpg')
         ];
     }
 }

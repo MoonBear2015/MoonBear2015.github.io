@@ -408,8 +408,7 @@ class selector_do extends NwsItm_SelectLocker {
             new NwsItm('洗脳', 'DO/brainwash.jpg'),
             new NwsItm('終焉', 'DO/end.jpg'),
             new NwsItm('滅亡', 'DO/end.jpg'),
-            new NwsItm('自滅', 'DO/self.jpg'),
-            new NwsItm('末路', 'DO/fate.jpg')
+            new NwsItm('自滅', 'DO/self.jpg')
         ];
     }
 }
