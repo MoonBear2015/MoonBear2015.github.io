@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'R01.28';
+    html += 'R01.29';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -432,7 +432,7 @@ class selector_comment extends NwsWrd_Selector implements INwsItm_Selector {
         this.itms = [
             new NwsWrd('#NEWS_C01、#NEWS_C02')
             ,
-            new NwsWrd('どうして#MANY#THEYは#DOするのか')
+            new NwsWrd('どうして#THEYは#DOするのか')
             ,
             new NwsWrd('#WHATの#NICKが#STATUS#END02B')
             ,
@@ -444,9 +444,11 @@ class selector_comment extends NwsWrd_Selector implements INwsItm_Selector {
             ,
             new NwsWrd('#THEYは#NICK#END02A。#WHATの#NICK#END02A')
             ,
-            new NwsWrd('#NICKと#ASSESのは#WHATが#NICK#END02A')
+            new NwsWrd('#WHATは#DO#END02B。#THEYが#KEY#END02B')
             ,
-            new NwsWrd('#MANY#THEYは#NICK#END02A')
+            new NwsWrd('#NICKと#ASSES#END01B、#WHATが#NICK#END02A')
+            ,
+            new NwsWrd('#THEYは#NICK#END02A。#NICK#END02A')
         ];
     }
 }
@@ -756,7 +758,7 @@ class selector_they extends NwsWrd_Selector implements INwsItm_Selector {
             ,
             new NwsWrd('ＯＬ達')
             ,
-            new NwsWrd('男性')
+            new NwsWrd('男性陣')
             ,
             new NwsWrd('先人達')
             ,

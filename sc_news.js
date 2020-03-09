@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'R01.28';
+    html += 'R01.29';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -294,14 +294,15 @@ class selector_comment extends NwsWrd_Selector {
         super('#COMMENT');
         this.itms = [
             new NwsWrd('#NEWS_C01、#NEWS_C02'),
-            new NwsWrd('どうして#MANY#THEYは#DOするのか'),
+            new NwsWrd('どうして#THEYは#DOするのか'),
             new NwsWrd('#WHATの#NICKが#STATUS#END02B'),
             new NwsWrd('だから#WHATは#NICKと#ASSESのだ'),
             new NwsWrd('#WHATが#NICK#END02A'),
             new NwsWrd('つまり#THEYは#NICK#END02A'),
             new NwsWrd('#THEYは#NICK#END02A。#WHATの#NICK#END02A'),
-            new NwsWrd('#NICKと#ASSESのは#WHATが#NICK#END02A'),
-            new NwsWrd('#MANY#THEYは#NICK#END02A')
+            new NwsWrd('#WHATは#DO#END02B。#THEYが#KEY#END02B'),
+            new NwsWrd('#NICKと#ASSES#END01B、#WHATが#NICK#END02A'),
+            new NwsWrd('#THEYは#NICK#END02A。#NICK#END02A')
         ];
     }
 }
@@ -481,7 +482,7 @@ class selector_they extends NwsWrd_Selector {
             new NwsWrd('女子大生'),
             new NwsWrd('女性達'),
             new NwsWrd('ＯＬ達'),
-            new NwsWrd('男性'),
+            new NwsWrd('男性陣'),
             new NwsWrd('先人達'),
             new NwsWrd('労働者達'),
             new NwsWrd('兵士達'),
