@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'R01.29';
+    html += 'R01.30';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -440,13 +440,13 @@ class selector_comment extends NwsWrd_Selector implements INwsItm_Selector {
             ,
             new NwsWrd('#WHATが#NICK#END02A')
             ,
-            new NwsWrd('つまり#THEYは#NICK#END02A')
+            new NwsWrd('#MANY#THEYは#NICK#END02A')
             ,
             new NwsWrd('#THEYは#NICK#END02A。#WHATの#NICK#END02A')
             ,
             new NwsWrd('#WHATは#DO#END02B。#THEYが#KEY#END02B')
             ,
-            new NwsWrd('#NICKと#ASSES#END01B、#WHATが#NICK#END02A')
+            new NwsWrd('#WHATは#NICKと#ASSES#NICK#END02A')
             ,
             new NwsWrd('#THEYは#NICK#END02A。#NICK#END02A')
         ];
@@ -632,7 +632,11 @@ class selector_do extends NwsItm_SelectLocker implements INwsItm_Selector{
             ,
             new NwsItm('終焉','DO/end.jpg')
             ,
+            new NwsItm('滅亡','DO/end.jpg')
+            ,
             new NwsItm('自滅','DO/self.jpg')
+            ,
+            new NwsItm('末路','DO/fate.jpg')
         ];
     }
 }
@@ -1173,6 +1177,12 @@ class selector_say extends NwsWrd_Selector implements INwsItm_Selector {
             new NwsWrd('発表')
             ,
             new NwsWrd('代弁')
+            ,
+            new NwsWrd('強弁')
+            ,
+            new NwsWrd('記録')
+            ,
+            new NwsWrd('記憶')
         ];
     }
 }
@@ -1198,9 +1208,7 @@ class selector_answer extends NwsWrd_Selector implements INwsItm_Selector {
             ,
             new NwsWrd('悩み')
             ,
-            new NwsWrd('提案')
-            ,
-            new NwsWrd('議題')
+            new NwsWrd('事例')
             ,
             new NwsWrd('妄想')
             ,
@@ -1253,6 +1261,8 @@ class selector_assessment extends NwsWrd_Selector implements INwsItm_Selector {
             new NwsWrd('言い伝えられた')
             ,
             new NwsWrd('丸め込まれた')
+            ,
+            new NwsWrd('知れ渡っている')
         ];
     }
 }
@@ -1284,6 +1294,12 @@ class selector_conect extends NwsWrd_Selector implements INwsItm_Selector {
             new NwsWrd('そこで')
             ,
             new NwsWrd('それを受けて')
+            ,
+            new NwsWrd('やはり')
+            ,
+            new NwsWrd('つまり')
+            ,
+            new NwsWrd('それはさておき')
         ];
     }
 }
