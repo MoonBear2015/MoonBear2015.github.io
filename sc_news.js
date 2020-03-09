@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'R01.27';
+    html += 'R01.28';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -182,15 +182,25 @@ class selector_title extends NwsWrd_Selector {
         this.itms = [
             new NwsWrd('#WHATの#DO'),
             new NwsWrd('#DOする#WHAT'),
+            new NwsWrd('#DOする#WHATの#NICK'),
             new NwsWrd('#DOした#WHAT'),
+            new NwsWrd('#DOした#WHATの#NICK'),
             new NwsWrd('#WHATは#DOした'),
+            new NwsWrd('#WHATは#DOした#NICK'),
             new NwsWrd('#WHATは#DOする'),
+            new NwsWrd('#WHATは#DOする#NICK'),
             new NwsWrd('#DOする#WHATの#THEY'),
             new NwsWrd('#DOした#WHATの#KEY'),
             new NwsWrd('#WHATの#DOが#STATUS'),
             new NwsWrd('#STATUSする#WHATの#DO'),
+            new NwsWrd('#STATUSする#WHATの#NICK'),
             new NwsWrd('#DOする#WHATの#NICK'),
-            new NwsWrd('#WHATの#NICKが#DOする')
+            new NwsWrd('#WHATの#NICKが#DO#END02B'),
+            new NwsWrd('#WHATの#NICK'),
+            new NwsWrd('#WHATの#NICKが#STATUS'),
+            new NwsWrd('#WHATは#NICKが#STATUS#END02B'),
+            new NwsWrd('#WHATは#DOする#NICK#END02A'),
+            new NwsWrd('#WHATを#DOさせた#NICK')
         ];
     }
 }
