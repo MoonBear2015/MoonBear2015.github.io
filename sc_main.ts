@@ -19,7 +19,7 @@ function make_site_header(): string {
     html += '<h1>';
     html += '「空虚」';
     html += '<small>';
-    html += 'r01.00';
+    html += 'R01.01';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -40,7 +40,7 @@ function get_menu_items() : menu_item[] {
     let menu_items : menu_item[] = [
         new menu_item('Home','select_menu(0)'),
         new menu_item('News','set_news()'),
-        new menu_item('Poem','select_menu(2)'),
+        new menu_item('Poem','set_poem()'),
         new menu_item('About','select_menu(3)')
     ];
     return menu_items;
