@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'R01.30';
+    html += 'R01.31';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -432,11 +432,15 @@ class selector_comment extends NwsWrd_Selector implements INwsItm_Selector {
         this.itms = [
             new NwsWrd('#NEWS_C01、#NEWS_C02')
             ,
+            new NwsWrd('#NEWS_C01、#NEWS_C02。#CONECT、#NEWS_C01、#NEWS_C02')
+            ,
+            new NwsWrd('#COMMENT。#CONECT、#COMMENTww')
+            ,
             new NwsWrd('どうして#THEYは#DOするのか')
             ,
             new NwsWrd('#WHATの#NICKが#STATUS#END02B')
             ,
-            new NwsWrd('だから#WHATは#NICKと#ASSESのだ')
+            new NwsWrd('#WHATは#NICKと#ASSES')
             ,
             new NwsWrd('#WHATが#NICK#END02A')
             ,
@@ -444,11 +448,19 @@ class selector_comment extends NwsWrd_Selector implements INwsItm_Selector {
             ,
             new NwsWrd('#THEYは#NICK#END02A。#WHATの#NICK#END02A')
             ,
+            new NwsWrd('#THEYは#WHATの#NICK#END02A。#WHATが#NICK#END02A')
+            ,
             new NwsWrd('#WHATは#DO#END02B。#THEYが#KEY#END02B')
             ,
             new NwsWrd('#WHATは#NICKと#ASSES#NICK#END02A')
             ,
             new NwsWrd('#THEYは#NICK#END02A。#NICK#END02A')
+            ,
+            new NwsWrd('#THEYは#NICK#END02A。#NICKで#NICK#END02A。')
+            ,
+            new NwsWrd('#WHATが#NICK？ いいえ、#THEYが#NICK#END02A')
+            ,
+            new NwsWrd('#THEYが#NICK？ だが、#WHATは#NICK#END02A')
         ];
     }
 }
