@@ -7,7 +7,7 @@ function set_poem() {
     html += '<h1>';
     html += 'POEM';
     html += '<small>';
-    html += 'R01.00';
+    html += 'R01.01';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -35,9 +35,11 @@ function make_poem() {
     html += 'background-size: ';
     html += 'cover;';
     html += '">';
-    html += '<h2 id="news_title">';
-    html += '秋の田の　刈り穂の色の とまをあらみ';
-    html += '</span>';
+    html += '<h3 id="poem_title">';
+    html += '金賞 受賞作';
+    html += '</h3>';
+    html += '<h2 id="poem_main">';
+    html += '古池や 蛙飛び込む　水の音';
     html += '</h2>';
     html += '</div>';
     return html;

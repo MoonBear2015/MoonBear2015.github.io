@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'R01.31';
+    html += 'R01.32';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -295,7 +295,7 @@ class selector_comment extends NwsWrd_Selector {
         this.itms = [
             new NwsWrd('#NEWS_C01、#NEWS_C02'),
             new NwsWrd('#NEWS_C01、#NEWS_C02。#CONECT、#NEWS_C01、#NEWS_C02'),
-            new NwsWrd('#COMMENT。#CONECT、#COMMENTww'),
+            new NwsWrd('#COMMENT。#CONECT、#COMMENT'),
             new NwsWrd('どうして#THEYは#DOするのか'),
             new NwsWrd('#WHATの#NICKが#STATUS#END02B'),
             new NwsWrd('#WHATは#NICKと#ASSES'),
@@ -306,9 +306,10 @@ class selector_comment extends NwsWrd_Selector {
             new NwsWrd('#WHATは#DO#END02B。#THEYが#KEY#END02B'),
             new NwsWrd('#WHATは#NICKと#ASSES#NICK#END02A'),
             new NwsWrd('#THEYは#NICK#END02A。#NICK#END02A'),
-            new NwsWrd('#THEYは#NICK#END02A。#NICKで#NICK#END02A。'),
+            new NwsWrd('#THEYは#NICK#END02A。#NICKで#NICK#END02A'),
             new NwsWrd('#WHATが#NICK？ いいえ、#THEYが#NICK#END02A'),
-            new NwsWrd('#THEYが#NICK？ だが、#WHATは#NICK#END02A')
+            new NwsWrd('#THEYが#NICK？ だが、#WHATは#NICK#END02A'),
+            new NwsWrd('#THEYが#NICK？ その通り、#WHATは#NICK#END02A')
         ];
     }
 }
@@ -356,6 +357,7 @@ class selector_whats extends NwsItm_SelectLocker {
             new NwsItm('フランス', 'WHAT/France.jpg'),
             new NwsItm('ドイツ', 'WHAT/German.jpg'),
             new NwsItm('韓国', 'WHAT/koria.jpg'),
+            new NwsItm('エジプト', 'WHAT/pyramid.jpg'),
             new NwsItm('経済', 'WHAT/Economy.jpg'),
             new NwsItm('市場', 'WHAT/Economy.jpg'),
             new NwsItm('株価', 'WHAT/Economy.jpg'),
@@ -392,6 +394,7 @@ class selector_whats extends NwsItm_SelectLocker {
             new NwsItm('ホワイトハウス', 'WHAT/whitehouse.jpg'),
             new NwsItm('紫禁城', 'WHAT/shikin.jpg'),
             new NwsItm('イギリス王朝', 'WHAT/kingdom.jpg'),
+            new NwsItm('ピラミッド', 'WHAT/pyramid.jpg'),
             new NwsItm('国連', 'WHAT/nation.jpg')
         ];
     }

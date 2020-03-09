@@ -124,4 +124,15 @@ small {
     font-size: 8px;
 }
 
+#poem_title {
+    font-size: 3vmax;
+    color: #c0c000;
+}
+
+#poem_main {
+    font-size: 5vmax;
+    color: #e0e0e0;
+    text-align: center;
+}
+
 
