@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'R01.32';
+    html += 'R01.34';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -225,8 +225,12 @@ class selector_who extends NwsWrd_Selector {
             new NwsWrd('#CLASSの#HUMAN#AGE'),
             new NwsWrd('「#WHATの#NICK」と#ASSES#CLASSの#HUMAN#AGE'),
             new NwsWrd('「#DOする#NICK」と#ASSES#CLASSの#HUMAN#AGE'),
+            new NwsWrd('「#STATUSする#NICK」と#ASSES#CLASSの#HUMAN#AGE'),
+            new NwsWrd('「#CLASSの#NICK」と#ASSES#CLASSの#HUMAN#AGE'),
             new NwsWrd('#THEYより「#WHATの#NICK」と#ASSES#CLASSの#HUMAN#AGE'),
-            new NwsWrd('#THEYより「#DOする#NICK」と#ASSES#CLASSの#HUMAN#AGE')
+            new NwsWrd('#THEYより「#DOする#NICK」と#ASSES#CLASSの#HUMAN#AGE'),
+            new NwsWrd('#THEYより「#STATUSする#NICK」と#ASSES#CLASSの#HUMAN#AGE'),
+            new NwsWrd('#THEYより「#CLASSの#NICK」と#ASSES#CLASSの#HUMAN#AGE')
         ];
     }
 }
@@ -307,9 +311,29 @@ class selector_comment extends NwsWrd_Selector {
             new NwsWrd('#WHATは#NICKと#ASSES#NICK#END02A'),
             new NwsWrd('#THEYは#NICK#END02A。#NICK#END02A'),
             new NwsWrd('#THEYは#NICK#END02A。#NICKで#NICK#END02A'),
-            new NwsWrd('#WHATが#NICK？ いいえ、#THEYが#NICK#END02A'),
-            new NwsWrd('#THEYが#NICK？ だが、#WHATは#NICK#END02A'),
-            new NwsWrd('#THEYが#NICK？ その通り、#WHATは#NICK#END02A')
+            new NwsWrd('#WHATが#NICK？ #YESNO、#WHATは#NICK#END02A'),
+            new NwsWrd('#WHATが#NICK？ #YESNO、#THEYが#NICK#END02A'),
+            new NwsWrd('#THEYが#NICK？ #YESNO、#WHATは#NICK#END02A'),
+            new NwsWrd('#THEYが#NICK？ #YESNO、#THEYは#NICK#END02A')
+        ];
+    }
+}
+// 肯定・否定 ・・・？　～、・・・
+class selector_YESNO extends NwsWrd_Selector {
+    constructor() {
+        super('#YESNO');
+        this.itms = [
+            new NwsWrd('しかし'),
+            new NwsWrd('だが'),
+            new NwsWrd('いえいえ'),
+            new NwsWrd('いいえ'),
+            new NwsWrd('いや'),
+            new NwsWrd('いいや'),
+            new NwsWrd('いやいや'),
+            new NwsWrd('それでも'),
+            new NwsWrd('確かに'),
+            new NwsWrd('その通り'),
+            new NwsWrd('そうだ')
         ];
     }
 }
@@ -431,6 +455,7 @@ class selector_key extends NwsWrd_Selector {
             new NwsWrd('迫害'),
             new NwsWrd('急落'),
             new NwsWrd('暗黒化'),
+            new NwsWrd('殺害'),
             new NwsWrd('殺戮'),
             new NwsWrd('犯罪'),
             new NwsWrd('崩壊'),
@@ -442,19 +467,22 @@ class selector_key extends NwsWrd_Selector {
             new NwsWrd('傷害事件'),
             new NwsWrd('虐待事件'),
             new NwsWrd('虐殺行為'),
+            new NwsWrd('大量虐殺'),
             new NwsWrd('暴走状態'),
             new NwsWrd('妨害工作'),
             new NwsWrd('差別化'),
             new NwsWrd('無力化'),
             new NwsWrd('黙殺'),
             new NwsWrd('暴力行為'),
+            new NwsWrd('レイプ'),
             new NwsWrd('乱痴気騒ぎ'),
             new NwsWrd('乱交パーティー'),
             new NwsWrd('雪合戦'),
             new NwsWrd('運動会'),
             new NwsWrd('密漁'),
             new NwsWrd('乱獲'),
-            new NwsWrd('乱闘騒ぎ')
+            new NwsWrd('乱闘騒ぎ'),
+            new NwsWrd('リンチ')
         ];
     }
 }
@@ -472,9 +500,7 @@ class selector_status extends NwsWrd_Selector {
             new NwsWrd('肥大化'),
             new NwsWrd('急増'),
             new NwsWrd('迷走'),
-            new NwsWrd('暴発'),
-            new NwsWrd('沈黙'),
-            new NwsWrd('沈静化')
+            new NwsWrd('暴発')
         ];
     }
 }
@@ -521,7 +547,8 @@ class selector_they extends NwsWrd_Selector {
             new NwsWrd('少年達'),
             new NwsWrd('少女達'),
             new NwsWrd('年長者'),
-            new NwsWrd('エリート')
+            new NwsWrd('エリート'),
+            new NwsWrd('傭兵達')
         ];
     }
 }
@@ -531,6 +558,7 @@ class selector_many extends NwsWrd_Selector {
         super('#MANY');
         this.itms = [
             new NwsWrd('少数の'),
+            new NwsWrd('数多くの'),
             new NwsWrd('多くの'),
             new NwsWrd('一部の'),
             new NwsWrd('大多数の'),
@@ -590,6 +618,8 @@ class selector_class extends NwsWrd_Selector {
             new NwsWrd('靴磨き'),
             new NwsWrd('お侍様'),
             new NwsWrd('王族'),
+            new NwsWrd('伯爵'),
+            new NwsWrd('皇族'),
             new NwsWrd('水呑百姓'),
             new NwsWrd('ミイラ職人'),
             new NwsWrd('花売り娘'),
@@ -597,7 +627,11 @@ class selector_class extends NwsWrd_Selector {
             new NwsWrd('吟遊詩人'),
             new NwsWrd('連邦保安官'),
             new NwsWrd('国家公務員'),
-            new NwsWrd('国選弁護人')
+            new NwsWrd('国選弁護人'),
+            new NwsWrd('メイド'),
+            new NwsWrd('執事'),
+            new NwsWrd('幼稚園児'),
+            new NwsWrd('駅員')
         ];
     }
 }
@@ -611,10 +645,15 @@ class selector_nickname extends NwsWrd_Selector {
             new NwsWrd('死霊'),
             new NwsWrd('病'),
             new NwsWrd('骸'),
-            new NwsWrd('功罪'),
+            new NwsWrd('髑髏'),
             new NwsWrd('恥'),
             new NwsWrd('恥部'),
             new NwsWrd('悪魔'),
+            new NwsWrd('堕天使'),
+            new NwsWrd('魔女'),
+            new NwsWrd('罰当たり'),
+            new NwsWrd('人で無し'),
+            new NwsWrd('蜥蜴'),
             new NwsWrd('害虫'),
             new NwsWrd('亡霊'),
             new NwsWrd('ミイラ'),
@@ -681,7 +720,8 @@ class selector_nickname extends NwsWrd_Selector {
             new NwsWrd('変質者'),
             new NwsWrd('物乞い'),
             new NwsWrd('乞食'),
-            new NwsWrd('ペテン師')
+            new NwsWrd('ペテン師'),
+            new NwsWrd('ゲス野郎')
         ];
     }
 }
@@ -741,7 +781,9 @@ class selector_answer extends NwsWrd_Selector {
             new NwsWrd('事例'),
             new NwsWrd('妄想'),
             new NwsWrd('妄言'),
-            new NwsWrd('寝言')
+            new NwsWrd('寝言'),
+            new NwsWrd('言い訳'),
+            new NwsWrd('世迷い言')
         ];
     }
 }
@@ -769,7 +811,9 @@ class selector_assessment extends NwsWrd_Selector {
             new NwsWrd('讃えられている'),
             new NwsWrd('言い伝えられた'),
             new NwsWrd('丸め込まれた'),
-            new NwsWrd('知れ渡っている')
+            new NwsWrd('知れ渡っている'),
+            new NwsWrd('語り継がれている'),
+            new NwsWrd('後ろ指を指された')
         ];
     }
 }
@@ -778,6 +822,7 @@ class selector_conect extends NwsWrd_Selector {
     constructor() {
         super('#CONECT');
         this.itms = [
+            new NwsWrd('#YESNO'),
             new NwsWrd('そして'),
             new NwsWrd('それに伴い'),
             new NwsWrd('しかし'),
@@ -791,7 +836,11 @@ class selector_conect extends NwsWrd_Selector {
             new NwsWrd('それを受けて'),
             new NwsWrd('やはり'),
             new NwsWrd('つまり'),
-            new NwsWrd('それはさておき')
+            new NwsWrd('それはさておき'),
+            new NwsWrd('その時'),
+            new NwsWrd('かつて'),
+            new NwsWrd('以前は'),
+            new NwsWrd('確かに')
         ];
     }
 }
@@ -813,6 +862,7 @@ class news_docs_maker {
         this.selectors.push(new selector_end02a());
         this.selectors.push(new selector_end02b());
         this.selectors.push(new selector_comment());
+        this.selectors.push(new selector_YESNO());
         this.selectors.push(new selector_random_date());
         this.selectors.push(new selector_whats());
         this.selectors.push(new selector_do());
