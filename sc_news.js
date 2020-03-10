@@ -7,12 +7,12 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'R01.35';
+    html += 'R01.37';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
-    for (let i = 0; i < 30; i++) {
-        html += make_news();
+    for (let i = 0; i < 20; i++) {
+        html += '<p>[' + i.toString() + ']</p>' + make_news();
     }
     let elem = document.getElementById('site_main');
     if (elem == null) {
@@ -30,7 +30,7 @@ function make_news() {
     html += 'border:     0.5px solid #606060;';
     html += 'border-radius:  1%;';
     html += 'background: ';
-    html += 'linear-gradient(135deg,rgba(30,30,30,0.8),rgba(120,120,120,0.8)),';
+    html += 'linear-gradient(0deg,rgba(80,80,80,0.3),rgba(0,0,0,0.8)),';
     html += 'url(./pics/#PIC_DO);';
     html += 'background-size: ';
     html += 'cover;';
@@ -47,7 +47,7 @@ function make_news() {
     html += '</div>';
     html += '<p id="news_doc">';
     html += '#NEWS_DOC';
-    for (let i = 0; i < rnd_minmax(5, 20); i++) {
+    for (let i = 0; i < rnd_minmax(5, 10); i++) {
         html += '#CONECT、';
         html += '#NEWS_DOC';
     }
@@ -57,85 +57,6 @@ function make_news() {
     html = maker.gene_docs(html);
     html = maker.gene_docs(html);
     return html;
-}
-class NwsItm {
-    constructor(Wrd, NwsPic) {
-        this.Wrd = Wrd;
-        this.NwsPic = NwsPic;
-    }
-    ;
-    static Copy(inItm) {
-        return new NwsItm(inItm.Wrd, inItm.NwsPic);
-    }
-    get Copy() {
-        return NwsItm.Copy(this);
-    }
-    set Copy(value) {
-        this.Wrd = value.Wrd;
-        this.NwsPic = value.NwsPic;
-    }
-}
-class NwsWrd extends NwsItm {
-    constructor(in_Wrd) {
-        super(in_Wrd, "");
-    }
-    static Copy(inWrd) {
-        return new NwsWrd(inWrd.Wrd);
-    }
-    get Copy() {
-        return NwsWrd.Copy(this);
-    }
-    set Copy(value) {
-        this.Wrd = value.Wrd;
-    }
-}
-class ItmSelector {
-    constructor() {
-        this.itms = new Array();
-        this.bef_num = -1;
-    }
-    get rnd_Itm() {
-        let i = -1;
-        while (true) {
-            i = rnd_max(this.itms.length);
-            if (this.itms.length < 2)
-                break;
-            if (i != this.bef_num)
-                break;
-        }
-        this.bef_num = i;
-        return this.itms[i];
-    }
-}
-class NwsItm_Selector extends ItmSelector {
-    constructor(news_key, pic_key) {
-        super();
-        this.news_key = news_key;
-        this.pic_key = pic_key;
-    }
-}
-class NwsItm_SelectLocker extends NwsItm_Selector {
-    constructor(news_key, pic_key) {
-        super(news_key, pic_key);
-        this.news_key = news_key;
-        this.pic_key = pic_key;
-        this.is_lock = false;
-        this.lock_item = new NwsItm('', '');
-    }
-    get rnd_Itm() {
-        if (this.is_lock) {
-            return this.lock_item;
-        }
-        this.is_lock = true;
-        let i = rnd_max(this.itms.length);
-        this.lock_item.Copy = this.itms[i];
-        return this.itms[i];
-    }
-}
-class NwsWrd_Selector extends NwsItm_Selector {
-    constructor(in_news_key) {
-        super(in_news_key, '');
-    }
 }
 class selector_random_date {
     constructor() {
@@ -436,8 +357,15 @@ class selector_do extends NwsItm_SelectLocker {
             new NwsItm('発狂', 'DO/mad.jpg'),
             new NwsItm('洗脳', 'DO/brainwash.jpg'),
             new NwsItm('終焉', 'DO/end.jpg'),
+            new NwsItm('衰退', 'DO/end.jpg'),
             new NwsItm('滅亡', 'DO/end.jpg'),
-            new NwsItm('自滅', 'DO/self.jpg')
+            new NwsItm('自滅', 'DO/self.jpg'),
+            new NwsItm('困惑', 'DO/panic.jpg'),
+            new NwsItm('混乱', 'DO/panic.jpg'),
+            new NwsItm('嘲笑', 'DO/laugh.jpg'),
+            new NwsItm('哄笑', 'DO/laugh.jpg'),
+            new NwsItm('罵倒', 'DO/laugh.jpg'),
+            new NwsItm('堕落', 'DO/depra.jpg')
         ];
     }
 }

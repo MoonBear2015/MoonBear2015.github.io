@@ -7,7 +7,7 @@ function set_poem() {
     html += '<h1>';
     html += 'POEM';
     html += '<small>';
-    html += 'R01.01';
+    html += 'R01.02';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -39,7 +39,12 @@ function make_poem() {
     html += '金賞 受賞作';
     html += '</h3>';
     html += '<h2 id="poem_main">';
-    html += '古池や 蛙飛び込む　水の音';
+    html += '<ruby>';
+    html += '<rb>古池</rb><rt>ふるいけ</rt>や　';
+    html += '</ruby>';
+    html += '<ruby><rb>蛙</rb><rt>かわず</rt></ruby>';
+    html += '<ruby><rb>飛</rb><rt>と</rt></ruby>び<ruby><rb>込</rb><rt>こ</rt></ruby>む';
+    html += '</ruby>';
     html += '</h2>';
     html += '</div>';
     return html;

@@ -9,13 +9,13 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'R01.35';
+    html += 'R01.38';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
 
-    for(let i = 0; i < 30; i++){
-        html += make_news();
+    for(let i = 0; i < 20; i++){
+        html += '<p>[' + i.toString() + ']</p>' + make_news();
     }
 
     let elem = document.getElementById('site_main');
@@ -38,7 +38,7 @@ function make_news()
     html += 'border:     0.5px solid #606060;';
     html += 'border-radius:  1%;';
     html += 'background: ';
-    html += 'linear-gradient(135deg,rgba(30,30,30,0.8),rgba(120,120,120,0.8)),';
+    html += 'linear-gradient(0deg,rgba(80,80,80,0.3),rgba(0,0,0,0.8)),';
     html += 'url(./pics/#PIC_DO);';
     html += 'background-size: ';
     html += 'cover;';
@@ -58,7 +58,7 @@ function make_news()
     
     html += '<p id="news_doc">';
     html += '#NEWS_DOC';
-    for(let i = 0;i < rnd_minmax(5,20);i++)
+    for(let i = 0;i < rnd_minmax(5,10);i++)
     {
         html += '#CONECT、';
         html += '#NEWS_DOC';
@@ -66,132 +66,12 @@ function make_news()
     html += '</p>';
     html += '</div>';
 
-
-
     let maker = new news_docs_maker();
     html = maker.gene_docs(html);
     html = maker.gene_docs(html);
     return html;
 }
 
-interface INwsItm {
-    Wrd : string;
-    NwsPic : string;
-
-}
-
-class NwsItm implements INwsItm {
-    constructor(
-        public Wrd : string
-        ,
-        public NwsPic : string
-    ){
-    };
-    static Copy(inItm : NwsItm) : NwsItm {
-        return new NwsItm(inItm.Wrd,inItm.NwsPic);
-    }
-    get Copy() : NwsItm {
-        return NwsItm.Copy(this);
-    }
-    set Copy(value : NwsItm){
-        this.Wrd = value.Wrd;
-        this.NwsPic = value.NwsPic;    
-    }
-}
-
-class NwsWrd extends NwsItm implements INwsItm {
-    constructor(
-        in_Wrd : string
-    )
-    {
-        super(in_Wrd,"");
-    }
-    static Copy(inWrd : NwsWrd) : NwsWrd {
-        return new NwsWrd(inWrd.Wrd);
-    }
-    get Copy() : NwsWrd {
-        return NwsWrd.Copy(this);
-    }
-    set Copy(value : NwsWrd){
-        this.Wrd = value.Wrd;
-    }
-}
-
-interface IItmSelector<T extends INwsItm> {
-    rnd_Itm : T;
-}
-
-class ItmSelector<T extends INwsItm> implements IItmSelector<T> {
-    protected itms : T[];
-    private bef_num : number;
-    constructor(){
-        this.itms = new Array<T>();
-        this.bef_num = -1;
-    }
-    get rnd_Itm() : T {
-        let i = -1;
-        while(true) {
-            i = rnd_max(this.itms.length);
-            if (this.itms.length < 2) break;
-            if (i != this.bef_num) break;
-        }
-        this.bef_num = i;
-        return this.itms[i];
-    }
-}
-
-interface INwsItm_Selector extends IItmSelector<NwsItm> {
-    // rnd_Itm : NwsItm;
-    news_key : string;
-    pic_key : string;
-}
-
-class NwsItm_Selector extends ItmSelector<NwsItm> implements INwsItm_Selector {
-    constructor(
-        public news_key : string
-        ,
-        public pic_key : string
-    )
-    {
-        super();
-    }
-}
-
-class NwsItm_SelectLocker extends NwsItm_Selector implements INwsItm_Selector {
-    private is_lock : boolean;
-    private lock_item : NwsItm;
-
-    constructor(
-        public news_key : string
-        ,
-        public pic_key : string
-    )
-    {
-        super(news_key,pic_key);
-        this.is_lock = false;
-        this.lock_item = new NwsItm('','');
-    }
-
-    get rnd_Itm() : NwsItm {
-        if (this.is_lock)
-        {
-            return this.lock_item;
-        }
-        this.is_lock = true;
-        let i = rnd_max(this.itms.length);
-        this.lock_item.Copy = this.itms[i];
-        return this.itms[i];
-    }
-}
-
-class NwsWrd_Selector extends NwsItm_Selector implements INwsItm_Selector {
-    constructor(
-        in_news_key : string
-    )
-    {
-        super(in_news_key,'');
-    }
-}
 
 class selector_random_date implements INwsItm_Selector {
     public news_key : string;
@@ -683,9 +563,23 @@ class selector_do extends NwsItm_SelectLocker implements INwsItm_Selector{
             ,
             new NwsItm('終焉','DO/end.jpg')
             ,
+            new NwsItm('衰退','DO/end.jpg')
+            ,
             new NwsItm('滅亡','DO/end.jpg')
             ,
             new NwsItm('自滅','DO/self.jpg')
+            ,
+            new NwsItm('困惑','DO/panic.jpg')
+            ,
+            new NwsItm('混乱','DO/panic.jpg')
+            ,
+            new NwsItm('嘲笑','DO/laugh.jpg')
+            ,
+            new NwsItm('哄笑','DO/laugh.jpg')
+            ,
+            new NwsItm('罵倒','DO/laugh.jpg')
+            ,
+            new NwsItm('堕落','DO/depra.jpg')
         ];
     }
 }
