@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'R01.34';
+    html += 'R01.35';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -195,11 +195,8 @@ class selector_title extends NwsWrd_Selector {
             new NwsWrd('#STATUSする#WHATの#DO'),
             new NwsWrd('#STATUSする#WHATの#NICK'),
             new NwsWrd('#DOする#WHATの#NICK'),
-            new NwsWrd('#WHATの#NICKが#DO#END02B'),
             new NwsWrd('#WHATの#NICK'),
             new NwsWrd('#WHATの#NICKが#STATUS'),
-            new NwsWrd('#WHATは#NICKが#STATUS#END02B'),
-            new NwsWrd('#WHATは#DOする#NICK#END02A'),
             new NwsWrd('#WHATを#DOさせた#NICK')
         ];
     }
@@ -309,12 +306,11 @@ class selector_comment extends NwsWrd_Selector {
             new NwsWrd('#THEYは#WHATの#NICK#END02A。#WHATが#NICK#END02A'),
             new NwsWrd('#WHATは#DO#END02B。#THEYが#KEY#END02B'),
             new NwsWrd('#WHATは#NICKと#ASSES#NICK#END02A'),
-            new NwsWrd('#THEYは#NICK#END02A。#NICK#END02A'),
-            new NwsWrd('#THEYは#NICK#END02A。#NICKで#NICK#END02A'),
+            new NwsWrd('#WHATは#NICK#END02A。#CONECT#NICK#END02A'),
+            new NwsWrd('#WHATは#NICK#END02A。#NICKで#NICK#END02A'),
             new NwsWrd('#WHATが#NICK？ #YESNO、#WHATは#NICK#END02A'),
             new NwsWrd('#WHATが#NICK？ #YESNO、#THEYが#NICK#END02A'),
-            new NwsWrd('#THEYが#NICK？ #YESNO、#WHATは#NICK#END02A'),
-            new NwsWrd('#THEYが#NICK？ #YESNO、#THEYは#NICK#END02A')
+            new NwsWrd('#THEYが#NICK？ #YESNO、#WHATは#NICK#END02A')
         ];
     }
 }
@@ -417,7 +413,7 @@ class selector_whats extends NwsItm_SelectLocker {
             new NwsItm('江戸幕府', 'WHAT/edo.jpg'),
             new NwsItm('ホワイトハウス', 'WHAT/whitehouse.jpg'),
             new NwsItm('紫禁城', 'WHAT/shikin.jpg'),
-            new NwsItm('イギリス王朝', 'WHAT/kingdom.jpg'),
+            new NwsItm('イギリス王家', 'WHAT/kingdom.jpg'),
             new NwsItm('ピラミッド', 'WHAT/pyramid.jpg'),
             new NwsItm('国連', 'WHAT/nation.jpg')
         ];
@@ -491,8 +487,8 @@ class selector_status extends NwsWrd_Selector {
     constructor() {
         super('#STATUS');
         this.itms = [
-            new NwsWrd('加速'),
-            new NwsWrd('増長'),
+            new NwsWrd('発生'),
+            new NwsWrd('勃発'),
             new NwsWrd('蔓延'),
             new NwsWrd('増大'),
             new NwsWrd('倍増'),
@@ -800,6 +796,7 @@ class selector_assessment extends NwsWrd_Selector {
             new NwsWrd('呼ばれている'),
             new NwsWrd('評価が高い'),
             new NwsWrd('名高い'),
+            new NwsWrd('噂の'),
             new NwsWrd('知られている'),
             new NwsWrd('期待されている'),
             new NwsWrd('見放されている'),
@@ -813,7 +810,10 @@ class selector_assessment extends NwsWrd_Selector {
             new NwsWrd('丸め込まれた'),
             new NwsWrd('知れ渡っている'),
             new NwsWrd('語り継がれている'),
-            new NwsWrd('後ろ指を指された')
+            new NwsWrd('後ろ指を指された'),
+            new NwsWrd('評判の'),
+            new NwsWrd('表彰された'),
+            new NwsWrd('罵られた')
         ];
     }
 }
