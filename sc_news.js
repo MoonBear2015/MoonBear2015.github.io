@@ -7,11 +7,11 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'R01.38';
+    html += 'R01.39';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 30; i++) {
         html += '<p>[' + i.toString() + ']</p>' + make_news();
     }
     let elem = document.getElementById('site_main');
@@ -30,7 +30,7 @@ function make_news() {
     html += 'border:     0.5px solid #606060;';
     html += 'border-radius:  1%;';
     html += 'background: ';
-    html += 'linear-gradient(0deg,rgba(80,80,80,0.3),rgba(0,0,0,0.8)),';
+    html += 'linear-gradient(0deg,rgba(0,0,0,0.3),rgba(0,0,0,0.8)),';
     html += 'url(./pics/#PIC_DO);';
     html += 'background-size: ';
     html += 'cover;';
@@ -47,7 +47,7 @@ function make_news() {
     html += '</div>';
     html += '<p id="news_doc">';
     html += '#NEWS_DOC';
-    for (let i = 0; i < rnd_minmax(5, 10); i++) {
+    for (let i = 0; i < rnd_minmax(5, 20); i++) {
         html += '#CONECT、';
         html += '#NEWS_DOC';
     }
@@ -316,6 +316,7 @@ class selector_whats extends NwsItm_SelectLocker {
             new NwsItm('人工知能', 'WHAT/AI.jpg'),
             new NwsItm('教育', 'WHAT/stady.jpg'),
             new NwsItm('学校', 'WHAT/stady.jpg'),
+            new NwsItm('小学校', 'WHAT/stady.jpg'),
             new NwsItm('宇宙', 'WHAT/space.jpg'),
             new NwsItm('宇宙開発', 'WHAT/NASA.jpg'),
             new NwsItm('天文学', 'WHAT/space.jpg'),
@@ -424,7 +425,9 @@ class selector_status extends NwsWrd_Selector {
             new NwsWrd('肥大化'),
             new NwsWrd('急増'),
             new NwsWrd('迷走'),
-            new NwsWrd('暴発')
+            new NwsWrd('暴発'),
+            new NwsWrd('拡散'),
+            new NwsWrd('リツイート')
         ];
     }
 }
@@ -555,7 +558,13 @@ class selector_class extends NwsWrd_Selector {
             new NwsWrd('メイド'),
             new NwsWrd('執事'),
             new NwsWrd('幼稚園児'),
-            new NwsWrd('駅員')
+            new NwsWrd('駅員'),
+            new NwsWrd('世界第三位'),
+            new NwsWrd('世界第一位'),
+            new NwsWrd('旅芸人'),
+            new NwsWrd('サーカス団員'),
+            new NwsWrd('カウボーイ'),
+            new NwsWrd('保育園児')
         ];
     }
 }
