@@ -30,7 +30,7 @@ function make_news() {
     html += 'border:     0.5px solid #606060;';
     html += 'border-radius:  1%;';
     html += 'background: ';
-    html += 'linear-gradient(0deg,rgba(0,0,0,0.3),rgba(0,0,0,0.8)),';
+    html += 'linear-gradient(0deg,rgba(0,0,0,0.6),rgba(0,0,0,0.8)),';
     html += 'url(./pics/#PIC_DO);';
     html += 'background-size: ';
     html += 'cover;';
