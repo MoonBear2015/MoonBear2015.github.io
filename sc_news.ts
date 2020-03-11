@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'R01.39';
+    html += 'R01.40';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -167,6 +167,8 @@ class selector_title extends NwsWrd_Selector implements INwsItm_Selector {
             new NwsWrd('#WHATの#NICKが#STATUS')
             ,
             new NwsWrd('#WHATを#DOさせた#NICK')
+            ,
+            new NwsWrd('#THEYに#ASSES#WHAT')
         ];
     }
 }
@@ -231,7 +233,7 @@ class selector_c01 extends NwsWrd_Selector implements INwsItm_Selector {
             ,
             new NwsWrd('#WHATが#DO#END01B')
             ,
-            new NwsWrd('#MANY#THEYが#DO#END01B')
+            new NwsWrd('#MANY#THEYは#DO#END01B')
             ,
             new NwsWrd('#MANY#THEYによる#KEYが#STATUS#END01B')
             ,
@@ -686,8 +688,6 @@ class selector_status extends NwsWrd_Selector implements INwsItm_Selector {
             new NwsWrd('暴発')
             ,
             new NwsWrd('拡散')
-            ,
-            new NwsWrd('リツイート')
         ];
     }
 }
@@ -1175,7 +1175,11 @@ class selector_say extends NwsWrd_Selector implements INwsItm_Selector {
             ,
             new NwsWrd('記録')
             ,
-            new NwsWrd('記憶')
+            new NwsWrd('コメント')
+            ,
+            new NwsWrd('メール')
+            ,
+            new NwsWrd('リツイート')
         ];
     }
 }
@@ -1212,6 +1216,16 @@ class selector_answer extends NwsWrd_Selector implements INwsItm_Selector {
             new NwsWrd('言い訳')
             ,
             new NwsWrd('世迷い言')
+            ,
+            new NwsWrd('予言')
+            ,
+            new NwsWrd('伝説')
+            ,
+            new NwsWrd('仮説')
+            ,
+            new NwsWrd('解説')
+            ,
+            new NwsWrd('推理')
         ];
     }
 }
