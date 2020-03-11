@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'R01.40';
+    html += 'R01.41';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -584,6 +584,8 @@ class selector_do extends NwsItm_SelectLocker implements INwsItm_Selector{
             new NwsItm('罵倒','DO/laugh.jpg')
             ,
             new NwsItm('堕落','DO/depra.jpg')
+            ,
+            new NwsItm('失業','DO/lostjob.jpg')
         ];
     }
 }
@@ -824,6 +826,8 @@ class selector_class extends NwsWrd_Selector implements INwsItm_Selector {
             ,
             new NwsWrd('高校教師')
             ,
+            new NwsWrd('数学教師')
+            ,
             new NwsWrd('物理学者')
             ,
             new NwsWrd('経済学者')
@@ -936,9 +940,53 @@ class selector_class extends NwsWrd_Selector implements INwsItm_Selector {
             ,
             new NwsWrd('サーカス団員')
             ,
+            new NwsWrd('保育園児')
+            ,
+            new NwsWrd('ラーメン屋')
+            ,
+            new NwsWrd('落語家')
+            ,
+            new NwsWrd('漫才師')
+            ,
+            new NwsWrd('漫才師')
+            ,
+            new NwsWrd('コメディアン')
+            ,
+            new NwsWrd('ストリッパー')
+            ,
+            new NwsWrd('キャバクラ嬢')
+            ,
+            new NwsWrd('飴細工師')
+            ,
+            new NwsWrd('マッチ売り')
+            ,
+            new NwsWrd('魔法使い')
+            ,
+            new NwsWrd('抜け忍')
+            ,
+            new NwsWrd('黒魔術師')
+            ,
+            new NwsWrd('祈祷師')
+            ,
+            new NwsWrd('インディアン')
+            ,
             new NwsWrd('カウボーイ')
             ,
-            new NwsWrd('保育園児')
+            new NwsWrd('カウボーイ')
+            ,
+            new NwsWrd('看板娘')
+            ,
+            new NwsWrd('カメラ屋')
+            ,
+            new NwsWrd('税理士')
+            ,
+            new NwsWrd('銀行マン')
+            ,
+            new NwsWrd('変身ヒーロー')
+            ,
+            new NwsWrd('ショッカー')
+            ,
+            new NwsWrd('仮面ライダー')
         ];
     }
 }
@@ -1111,6 +1159,8 @@ class selector_nickname extends NwsWrd_Selector implements INwsItm_Selector {
             new NwsWrd('ペテン師')
             ,
             new NwsWrd('ゲス野郎')
+            ,
+            new NwsWrd('ホモ野郎')
         ];
     }
 }
