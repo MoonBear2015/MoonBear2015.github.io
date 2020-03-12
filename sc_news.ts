@@ -328,7 +328,7 @@ class selector_comment extends NwsWrd_Selector implements INwsItm_Selector {
             ,
             new NwsWrd('#THEYは#WHATの#NICK#END02A。#WHATが#NICK#END02A')
             ,
-            new NwsWrd('#WHATは#DO#END02B。#THEYが#KEY#END02B')
+            new NwsWrd('#WHATは#DO#END02B。#THEYの#KEY#END02A')
             ,
             new NwsWrd('#WHATは#NICKと#ASSES#NICK#END02A')
             ,

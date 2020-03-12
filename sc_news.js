@@ -223,7 +223,7 @@ class selector_comment extends NwsWrd_Selector {
             new NwsWrd('#MANY#THEYは#NICK#END02A'),
             new NwsWrd('#THEYは#NICK#END02A。#WHATの#NICK#END02A'),
             new NwsWrd('#THEYは#WHATの#NICK#END02A。#WHATが#NICK#END02A'),
-            new NwsWrd('#WHATは#DO#END02B。#THEYが#KEY#END02B'),
+            new NwsWrd('#WHATは#DO#END02B。#THEYの#KEY#END02A'),
             new NwsWrd('#WHATは#NICKと#ASSES#NICK#END02A'),
             new NwsWrd('#WHATは#NICK#END02A。#CONECT、#NICK#END02A'),
             new NwsWrd('#WHATは#NICK#END02A。#NICKで#NICK#END02A'),
