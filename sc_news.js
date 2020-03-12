@@ -714,6 +714,7 @@ class selector_say extends NwsWrd_Selector {
             new NwsWrd('代弁'),
             new NwsWrd('強弁'),
             new NwsWrd('記録'),
+            new NwsWrd('メモ書き'),
             new NwsWrd('コメント'),
             new NwsWrd('メール'),
             new NwsWrd('リツイート')

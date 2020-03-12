@@ -1215,6 +1215,8 @@ class selector_say extends NwsWrd_Selector implements INwsItm_Selector {
             ,
             new NwsWrd('記録')
             ,
+            new NwsWrd('メモ書き')
+            ,
             new NwsWrd('コメント')
             ,
             new NwsWrd('メール')
