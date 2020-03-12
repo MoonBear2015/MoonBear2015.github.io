@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'R01.41';
+    html += 'R01.42';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -166,10 +166,7 @@ class selector_c01 extends NwsWrd_Selector {
             new NwsWrd('#MANY#THEYによる#KEYが#STATUS#END01B'),
             new NwsWrd('#MANY#THEYの#THINKが#STATUS#END01B'),
             new NwsWrd('#MANY#THEYの#THINKや#THINKが#STATUS#END01B'),
-            new NwsWrd('#THINKや#THINKが#STATUSする#WHAT#END01A'),
-            new NwsWrd('#THINKが#STATUSする#WHAT#END01A'),
-            new NwsWrd('#THINKが#STATUSする#THEY#END01A'),
-            new NwsWrd('#THINKが#STATUSする#DO#END01A')
+            new NwsWrd('#THINKや#THINKが#STATUSする#WHAT#END01A')
         ];
     }
 }
@@ -179,9 +176,9 @@ class selector_end01a extends NwsWrd_Selector {
         this.itms = [
             new NwsWrd('により'),
             new NwsWrd('のため'),
-            new NwsWrd('は'),
+            new NwsWrd('では'),
             new NwsWrd('には'),
-            new NwsWrd('が')
+            new NwsWrd('で')
         ];
     }
 }
@@ -228,11 +225,9 @@ class selector_comment extends NwsWrd_Selector {
             new NwsWrd('#THEYは#WHATの#NICK#END02A。#WHATが#NICK#END02A'),
             new NwsWrd('#WHATは#DO#END02B。#THEYが#KEY#END02B'),
             new NwsWrd('#WHATは#NICKと#ASSES#NICK#END02A'),
-            new NwsWrd('#WHATは#NICK#END02A。#CONECT#NICK#END02A'),
+            new NwsWrd('#WHATは#NICK#END02A。#CONECT、#NICK#END02A'),
             new NwsWrd('#WHATは#NICK#END02A。#NICKで#NICK#END02A'),
-            new NwsWrd('#WHATが#NICK？ #YESNO、#WHATは#NICK#END02A'),
-            new NwsWrd('#WHATが#NICK？ #YESNO、#THEYが#NICK#END02A'),
-            new NwsWrd('#THEYが#NICK？ #YESNO、#WHATは#NICK#END02A')
+            new NwsWrd('#WHATが#NICK？ #YESNO、#WHATは#NICK#END02A')
         ];
     }
 }
@@ -765,7 +760,6 @@ class selector_assessment extends NwsWrd_Selector {
             new NwsWrd('呼ばれている'),
             new NwsWrd('評価が高い'),
             new NwsWrd('名高い'),
-            new NwsWrd('噂の'),
             new NwsWrd('知られている'),
             new NwsWrd('期待されている'),
             new NwsWrd('見放されている'),
@@ -780,9 +774,8 @@ class selector_assessment extends NwsWrd_Selector {
             new NwsWrd('知れ渡っている'),
             new NwsWrd('語り継がれている'),
             new NwsWrd('後ろ指を指された'),
-            new NwsWrd('評判の'),
             new NwsWrd('表彰された'),
-            new NwsWrd('罵られた')
+            new NwsWrd('ささやかれている')
         ];
     }
 }
@@ -791,7 +784,6 @@ class selector_conect extends NwsWrd_Selector {
     constructor() {
         super('#CONECT');
         this.itms = [
-            new NwsWrd('#YESNO'),
             new NwsWrd('そして'),
             new NwsWrd('それに伴い'),
             new NwsWrd('しかし'),

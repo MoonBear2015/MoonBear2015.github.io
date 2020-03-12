@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'R01.41';
+    html += 'R01.42';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -242,12 +242,6 @@ class selector_c01 extends NwsWrd_Selector implements INwsItm_Selector {
             new NwsWrd('#MANY#THEYの#THINKや#THINKが#STATUS#END01B')
             ,
             new NwsWrd('#THINKや#THINKが#STATUSする#WHAT#END01A')
-            ,
-            new NwsWrd('#THINKが#STATUSする#WHAT#END01A')
-            ,
-            new NwsWrd('#THINKが#STATUSする#THEY#END01A')
-            ,
-            new NwsWrd('#THINKが#STATUSする#DO#END01A')
         ];
     }
 }
@@ -260,11 +254,11 @@ class selector_end01a extends NwsWrd_Selector implements INwsItm_Selector {
             ,
             new NwsWrd('のため')
             ,
-            new NwsWrd('は')
+            new NwsWrd('では')
             ,
             new NwsWrd('には')
             ,
-            new NwsWrd('が')
+            new NwsWrd('で')
         ];
     }
 }
@@ -338,15 +332,11 @@ class selector_comment extends NwsWrd_Selector implements INwsItm_Selector {
             ,
             new NwsWrd('#WHATは#NICKと#ASSES#NICK#END02A')
             ,
-            new NwsWrd('#WHATは#NICK#END02A。#CONECT#NICK#END02A')
+            new NwsWrd('#WHATは#NICK#END02A。#CONECT、#NICK#END02A')
             ,
             new NwsWrd('#WHATは#NICK#END02A。#NICKで#NICK#END02A')
             ,
             new NwsWrd('#WHATが#NICK？ #YESNO、#WHATは#NICK#END02A')
-            ,
-            new NwsWrd('#WHATが#NICK？ #YESNO、#THEYが#NICK#END02A')
-            ,
-            new NwsWrd('#THEYが#NICK？ #YESNO、#WHATは#NICK#END02A')
         ];
     }
 }
@@ -1301,8 +1291,6 @@ class selector_assessment extends NwsWrd_Selector implements INwsItm_Selector {
             ,
             new NwsWrd('名高い')
             ,
-            new NwsWrd('噂の')
-            ,
             new NwsWrd('知られている')
             ,
             new NwsWrd('期待されている')
@@ -1331,11 +1319,9 @@ class selector_assessment extends NwsWrd_Selector implements INwsItm_Selector {
             ,
             new NwsWrd('後ろ指を指された')
             ,
-            new NwsWrd('評判の')
-            ,
             new NwsWrd('表彰された')
             ,
-            new NwsWrd('罵られた')
+            new NwsWrd('ささやかれている')
         ];
     }
 }
@@ -1346,8 +1332,6 @@ class selector_conect extends NwsWrd_Selector implements INwsItm_Selector {
     constructor(){
         super('#CONECT');
         this.itms = [
-            new NwsWrd('#YESNO')
-            ,
             new NwsWrd('そして')
             ,
             new NwsWrd('それに伴い')
