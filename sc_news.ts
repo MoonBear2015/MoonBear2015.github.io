@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'R01.42';
+    html += 'R01.44';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -50,20 +50,37 @@ function make_news()
     html += '</span>';
     html += '</h2>';
 
-    html += '<div id="news_pic">';
+    html += '<div id="news_pic_L">';
     html += '<figure>';
-    html += '<img src="pics/#PIC_WHAT" width="200">';
+    html += '<img src="pics/#PIC_WHAT" width="300">';
     html += '</figure>';
     html += '</div>';
     
     html += '<p id="news_doc">';
-    html += '#NEWS_DOC';
-    for(let i = 0;i < rnd_minmax(5,20);i++)
+    html += '　#NEWS_DOC';
+    for(let i = 0;i < rnd_minmax(5,10);i++)
     {
         html += '#CONECT、';
         html += '#NEWS_DOC';
     }
     html += '</p>';
+
+    html += '<div id="news_pic_R">';
+    html += '<figure>';
+    html += '<img src="pics/#PIC_DO" width="300">';
+    html += '</figure>';
+    html += '</div>';
+
+    html += '<p id="news_doc">';
+    html += '　#NEWS_DOC';
+    for(let i = 0;i < rnd_minmax(5,10);i++)
+    {
+        html += '#CONECT、';
+        html += '#NEWS_DOC';
+    }
+    html += '</p>';
+
+
     html += '</div>';
 
     let maker = new news_docs_maker();
@@ -158,17 +175,11 @@ class selector_title extends NwsWrd_Selector implements INwsItm_Selector {
             ,
             new NwsWrd('#STATUSする#WHATの#DO')
             ,
-            new NwsWrd('#STATUSする#WHATの#NICK')
-            ,
             new NwsWrd('#DOする#WHATの#NICK')
             ,
-            new NwsWrd('#WHATの#NICK')
-            ,
-            new NwsWrd('#WHATの#NICKが#STATUS')
+            new NwsWrd('#WHATの#NICKが#DOする')
             ,
             new NwsWrd('#WHATを#DOさせた#NICK')
-            ,
-            new NwsWrd('#THEYに#ASSES#WHAT')
         ];
     }
 }
@@ -537,7 +548,7 @@ class selector_do extends NwsItm_SelectLocker implements INwsItm_Selector{
             ,
             new NwsItm('死滅','DO/dead.jpg')
             ,
-            new NwsItm('崩壊','DO/City.jpg')
+            new NwsItm('崩壊','DO/Collapse.jpg')
             ,
             new NwsItm('捏造','DO/fakeTelop.jpg')
             ,
@@ -551,15 +562,15 @@ class selector_do extends NwsItm_SelectLocker implements INwsItm_Selector{
             ,
             new NwsItm('暴走','DO/Wild.jpg')
             ,
-            new NwsItm('発狂','DO/mad.jpg')
+            new NwsItm('発狂','DO/crazy.jpg')
             ,
             new NwsItm('洗脳','DO/brainwash.jpg')
             ,
             new NwsItm('終焉','DO/end.jpg')
             ,
-            new NwsItm('衰退','DO/end.jpg')
+            new NwsItm('衰退','DO/decline.jpg')
             ,
-            new NwsItm('滅亡','DO/end.jpg')
+            new NwsItm('滅亡','DO/Destruction.jpg')
             ,
             new NwsItm('自滅','DO/self.jpg')
             ,
@@ -571,11 +582,13 @@ class selector_do extends NwsItm_SelectLocker implements INwsItm_Selector{
             ,
             new NwsItm('哄笑','DO/laugh.jpg')
             ,
-            new NwsItm('罵倒','DO/laugh.jpg')
+            new NwsItm('罵倒','DO/taunt.jpg')
             ,
             new NwsItm('堕落','DO/depra.jpg')
             ,
             new NwsItm('失業','DO/lostjob.jpg')
+            ,
+            new NwsItm('支配','DO/mad.jpg')
         ];
     }
 }

@@ -92,10 +92,18 @@ figure {
     float: left;
 }
 
-#news_pic {
-    width: 200px;
+#news_pic_L {
+    /* width: 300px; */
     /* margin: 10px 10px; */
     padding: 10px 10px;
+    float: left;
+}
+
+#news_pic_R {
+    /* width: 200px; */
+    /* margin: 10px 10px; */
+    padding: 10px 10px;
+    float: right;
 }
 
 #news_pic img {
