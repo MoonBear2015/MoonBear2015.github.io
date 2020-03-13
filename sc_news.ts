@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'R01.44';
+    html += 'R01.45';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -151,35 +151,29 @@ class selector_title extends NwsWrd_Selector implements INwsItm_Selector {
         this.itms = [
             new NwsWrd('#WHATの#DO')
             ,
-            new NwsWrd('#DOする#WHAT')
+            new NwsWrd('#WHATは#DO#END02C')
             ,
-            new NwsWrd('#DOする#WHATの#NICK')
+            new NwsWrd('#WHATは#DO#END02C#NICK')
             ,
-            new NwsWrd('#DOした#WHAT')
+            new NwsWrd('#WHATは#DO#END02C#THAY')
             ,
-            new NwsWrd('#DOした#WHATの#NICK')
+            new NwsWrd('#WHATを#DO#END02C#NICK')
             ,
-            new NwsWrd('#WHATは#DOした')
-            ,
-            new NwsWrd('#WHATは#DOした#NICK')
-            ,
-            new NwsWrd('#WHATは#DOする')
-            ,
-            new NwsWrd('#WHATは#DOする#NICK')
-            ,
-            new NwsWrd('#DOする#WHATの#THEY')
-            ,
-            new NwsWrd('#DOした#WHATの#KEY')
+            new NwsWrd('#WHATを#DO#END02C#THEY')
             ,
             new NwsWrd('#WHATの#DOが#STATUS')
             ,
-            new NwsWrd('#STATUSする#WHATの#DO')
+            new NwsWrd('#WHATの#NICKが#DO#END02C')
             ,
-            new NwsWrd('#DOする#WHATの#NICK')
+            new NwsWrd('#WHATの#THEYが#DO#END02C')
             ,
-            new NwsWrd('#WHATの#NICKが#DOする')
+            new NwsWrd('#DO#END02C#WHAT')
             ,
-            new NwsWrd('#WHATを#DOさせた#NICK')
+            new NwsWrd('#DO#END02C#WHAT')
+            ,
+            new NwsWrd('#DO#END02C#WHATの#NICK')
+            ,
+            new NwsWrd('#DO#END02C#WHATの#THEY')
         ];
     }
 }
@@ -415,13 +409,37 @@ class selector_end02b extends NwsWrd_Selector implements INwsItm_Selector {
             ,
             new NwsWrd('した')
             ,
+            new NwsWrd('させる')
+            ,
+            new NwsWrd('させた')
+            ,
             new NwsWrd('しようとしている')
             ,
             new NwsWrd('しようとしていた')
+            ,
+            new NwsWrd('してしまった')
         ];
     }
 }
 
+class selector_end02c extends NwsWrd_Selector implements INwsItm_Selector {
+    constructor(){
+        super('#END02C');
+        this.itms = [
+            new NwsWrd('していた')
+            ,
+            new NwsWrd('する')
+            ,
+            new NwsWrd('した')
+            ,
+            new NwsWrd('させる')
+            ,
+            new NwsWrd('させた')
+            ,
+            new NwsWrd('してしまった')
+        ];
+    }
+}
 
 
 // 名詞・人物・組織　～は・～が・～の
@@ -1411,6 +1429,7 @@ class news_docs_maker {
         this.selectors.push(new selector_end01b());
         this.selectors.push(new selector_end02a());
         this.selectors.push(new selector_end02b());
+        this.selectors.push(new selector_end02c());
         this.selectors.push(new selector_comment());
         this.selectors.push(new selector_YESNO());
         
