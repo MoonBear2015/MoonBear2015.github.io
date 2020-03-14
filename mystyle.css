@@ -136,13 +136,21 @@ small {
     font-size: 8px;
 }
 
+#poem_box {
+    margin:     10px; 
+    padding:    10px; 
+    border:     0.5px solid #606060;
+    border-radius:  1%;
+}
+
+
 #poem_title {
     font-size: 2vmax;
     color: #c0c000;
 }
 
 #poem_main {
-    font-size: 4vmax;
+    font-size: 3vmax;
     color: #e0e0e0;
     text-align: center;
 }

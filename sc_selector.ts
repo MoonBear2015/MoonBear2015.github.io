@@ -1,52 +1,52 @@
 //------------------------------------ selector's
 
-interface INwsItm {
+interface ISctItm {
     Wrd : string;
-    NwsPic : string;
+    SctPic : string;
 }
 
-class NwsItm implements INwsItm {
+class SctItm implements ISctItm {
     constructor(
         public Wrd : string
         ,
-        public NwsPic : string
+        public SctPic : string
     ){
     };
-    static Copy(inItm : NwsItm) : NwsItm {
-        return new NwsItm(inItm.Wrd,inItm.NwsPic);
+    static Copy(inItm : SctItm) : SctItm {
+        return new SctItm(inItm.Wrd,inItm.SctPic);
     }
-    get Copy() : NwsItm {
-        return NwsItm.Copy(this);
+    get Copy() : SctItm {
+        return SctItm.Copy(this);
     }
-    set Copy(value : NwsItm){
+    set Copy(value : SctItm){
         this.Wrd = value.Wrd;
-        this.NwsPic = value.NwsPic;    
+        this.SctPic = value.SctPic;    
     }
 }
 
-class NwsWrd extends NwsItm implements INwsItm {
+class SctWrd extends SctItm implements ISctItm {
     constructor(
         in_Wrd : string
     )
     {
         super(in_Wrd,"");
     }
-    static Copy(inWrd : NwsWrd) : NwsWrd {
-        return new NwsWrd(inWrd.Wrd);
+    static Copy(inWrd : SctWrd) : SctWrd {
+        return new SctWrd(inWrd.Wrd);
     }
-    get Copy() : NwsWrd {
-        return NwsWrd.Copy(this);
+    get Copy() : SctWrd {
+        return SctWrd.Copy(this);
     }
-    set Copy(value : NwsWrd){
+    set Copy(value : SctWrd){
         this.Wrd = value.Wrd;
     }
 }
 
-interface IItmSelector<T extends INwsItm> {
+interface IItmSelector<T extends ISctItm> {
     rnd_Itm : T;
 }
 
-class ItmSelector<T extends INwsItm> implements IItmSelector<T> {
+class ItmSelector<T extends ISctItm> implements IItmSelector<T> {
     protected itms : T[];
     private bef_num : number;
     constructor(){
@@ -65,7 +65,7 @@ class ItmSelector<T extends INwsItm> implements IItmSelector<T> {
     }
 }
 
-class ItmCounter<T extends INwsItm> implements IItmSelector<T> {
+class ItmCounter<T extends ISctItm> implements IItmSelector<T> {
     protected itms : T[];
     private bef_num : number;
     constructor(){
@@ -84,13 +84,13 @@ class ItmCounter<T extends INwsItm> implements IItmSelector<T> {
 }
 
 
-interface INwsItm_Selector extends IItmSelector<NwsItm> {
-    // rnd_Itm : NwsItm;
+interface ISctItm_Selector extends IItmSelector<SctItm> {
+    // rnd_Itm : SctItm;
     news_key : string;
     pic_key : string;
 }
 
-class NwsItm_Selector extends ItmSelector<NwsItm> implements INwsItm_Selector {
+class SctItm_Selector extends ItmSelector<SctItm> implements ISctItm_Selector {
     constructor(
         public news_key : string
         ,
@@ -101,7 +101,7 @@ class NwsItm_Selector extends ItmSelector<NwsItm> implements INwsItm_Selector {
     }
 }
 
-class NwsWrd_Selector extends NwsItm_Selector implements INwsItm_Selector {
+class SctWrd_Selector extends SctItm_Selector implements ISctItm_Selector {
     constructor(
         in_news_key : string
     )
@@ -111,9 +111,9 @@ class NwsWrd_Selector extends NwsItm_Selector implements INwsItm_Selector {
 }
 
 
-class NwsItm_SelectLocker extends NwsItm_Selector implements INwsItm_Selector {
+class SctItm_SelectLocker extends SctItm_Selector implements ISctItm_Selector {
     private is_lock : boolean;
-    private lock_item : NwsItm;
+    private lock_item : SctItm;
 
     constructor(
         public news_key : string
@@ -123,10 +123,10 @@ class NwsItm_SelectLocker extends NwsItm_Selector implements INwsItm_Selector {
     {
         super(news_key,pic_key);
         this.is_lock = false;
-        this.lock_item = new NwsItm('','');
+        this.lock_item = new SctItm('','');
     }
 
-    get rnd_Itm() : NwsItm {
+    get rnd_Itm() : SctItm {
         if (this.is_lock)
         {
             return this.lock_item;
@@ -138,9 +138,9 @@ class NwsItm_SelectLocker extends NwsItm_Selector implements INwsItm_Selector {
     }
 }
 
-class NwsWrd_SelectLocker extends NwsWrd_Selector implements INwsItm_Selector {
+class SctWrd_SelectLocker extends SctWrd_Selector implements ISctItm_Selector {
     private is_lock : boolean;
-    private lock_item : NwsWrd;
+    private lock_item : SctWrd;
 
     constructor(
         public news_key : string
@@ -148,10 +148,10 @@ class NwsWrd_SelectLocker extends NwsWrd_Selector implements INwsItm_Selector {
     {
         super(news_key);
         this.is_lock = false;
-        this.lock_item = new NwsWrd('');
+        this.lock_item = new SctWrd('');
     }
 
-    get rnd_Itm() : NwsItm {
+    get rnd_Itm() : SctItm {
         if (this.is_lock)
         {
             return this.lock_item;
@@ -163,9 +163,32 @@ class NwsWrd_SelectLocker extends NwsWrd_Selector implements INwsItm_Selector {
     }
 }
 
+class SctItm_FirstLocker extends SctItm_Selector implements ISctItm_Selector {
+    private is_first : boolean;
+    constructor(
+        public news_key : string
+        ,
+        public pic_key : string
+    )
+    {
+        super(news_key,pic_key);
+        this.is_first = true;
+    }
+
+    get rnd_Itm() : SctItm {
+        if (this.is_first)
+        {
+            this.is_first = false;
+            return this.itms[0];
+        }
+        let i = rnd_max(this.itms.length);
+        return this.itms[i];
+    }
+}
+
 //------------------------------------ poem
 
-class PmsItm_Counter extends ItmCounter<NwsItm> implements INwsItm_Selector {
+class SctItm_Counter extends ItmCounter<SctItm> implements ISctItm_Selector {
     constructor(
         public news_key : string
         ,
@@ -175,7 +198,7 @@ class PmsItm_Counter extends ItmCounter<NwsItm> implements INwsItm_Selector {
         super();
     }
 }
-class PmsWrd_Counter extends PmsItm_Counter implements INwsItm_Selector {
+class SctWrd_Counter extends SctItm_Counter implements ISctItm_Selector {
     constructor(
         in_news_key : string
     )

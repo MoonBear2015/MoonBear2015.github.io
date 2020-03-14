@@ -1,31 +1,31 @@
 "use strict";
 //------------------------------------ selector's
-class NwsItm {
-    constructor(Wrd, NwsPic) {
+class SctItm {
+    constructor(Wrd, SctPic) {
         this.Wrd = Wrd;
-        this.NwsPic = NwsPic;
+        this.SctPic = SctPic;
     }
     ;
     static Copy(inItm) {
-        return new NwsItm(inItm.Wrd, inItm.NwsPic);
+        return new SctItm(inItm.Wrd, inItm.SctPic);
     }
     get Copy() {
-        return NwsItm.Copy(this);
+        return SctItm.Copy(this);
     }
     set Copy(value) {
         this.Wrd = value.Wrd;
-        this.NwsPic = value.NwsPic;
+        this.SctPic = value.SctPic;
     }
 }
-class NwsWrd extends NwsItm {
+class SctWrd extends SctItm {
     constructor(in_Wrd) {
         super(in_Wrd, "");
     }
     static Copy(inWrd) {
-        return new NwsWrd(inWrd.Wrd);
+        return new SctWrd(inWrd.Wrd);
     }
     get Copy() {
-        return NwsWrd.Copy(this);
+        return SctWrd.Copy(this);
     }
     set Copy(value) {
         this.Wrd = value.Wrd;
@@ -63,25 +63,25 @@ class ItmCounter {
         return this.itms[i];
     }
 }
-class NwsItm_Selector extends ItmSelector {
+class SctItm_Selector extends ItmSelector {
     constructor(news_key, pic_key) {
         super();
         this.news_key = news_key;
         this.pic_key = pic_key;
     }
 }
-class NwsWrd_Selector extends NwsItm_Selector {
+class SctWrd_Selector extends SctItm_Selector {
     constructor(in_news_key) {
         super(in_news_key, '');
     }
 }
-class NwsItm_SelectLocker extends NwsItm_Selector {
+class SctItm_SelectLocker extends SctItm_Selector {
     constructor(news_key, pic_key) {
         super(news_key, pic_key);
         this.news_key = news_key;
         this.pic_key = pic_key;
         this.is_lock = false;
-        this.lock_item = new NwsItm('', '');
+        this.lock_item = new SctItm('', '');
     }
     get rnd_Itm() {
         if (this.is_lock) {
@@ -93,12 +93,12 @@ class NwsItm_SelectLocker extends NwsItm_Selector {
         return this.itms[i];
     }
 }
-class NwsWrd_SelectLocker extends NwsWrd_Selector {
+class SctWrd_SelectLocker extends SctWrd_Selector {
     constructor(news_key) {
         super(news_key);
         this.news_key = news_key;
         this.is_lock = false;
-        this.lock_item = new NwsWrd('');
+        this.lock_item = new SctWrd('');
     }
     get rnd_Itm() {
         if (this.is_lock) {
@@ -110,15 +110,31 @@ class NwsWrd_SelectLocker extends NwsWrd_Selector {
         return this.itms[i];
     }
 }
+class SctItm_FirstLocker extends SctItm_Selector {
+    constructor(news_key, pic_key) {
+        super(news_key, pic_key);
+        this.news_key = news_key;
+        this.pic_key = pic_key;
+        this.is_first = true;
+    }
+    get rnd_Itm() {
+        if (this.is_first) {
+            this.is_first = false;
+            return this.itms[0];
+        }
+        let i = rnd_max(this.itms.length);
+        return this.itms[i];
+    }
+}
 //------------------------------------ poem
-class PmsItm_Counter extends ItmCounter {
+class SctItm_Counter extends ItmCounter {
     constructor(news_key, pic_key) {
         super();
         this.news_key = news_key;
         this.pic_key = pic_key;
     }
 }
-class PmsWrd_Counter extends PmsItm_Counter {
+class SctWrd_Counter extends SctItm_Counter {
     constructor(in_news_key) {
         super(in_news_key, '');
     }

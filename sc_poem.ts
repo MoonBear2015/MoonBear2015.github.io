@@ -9,12 +9,12 @@ function set_poem()
     html += '<h1>';
     html += 'POEM';
     html += '<small>';
-    html += 'R01.05';
+    html += 'R01.06';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
 
-    for(let i = 0; i < 3; i++){
+    for(let i = 0; i < 5; i++){
         html += make_poem();
     }
 
@@ -30,10 +30,21 @@ function set_poem()
 function make_poem() : string
 {
     let html : string = '';
+    html += '<div id="poem_box" ';
+    html += 'style="';
+    html += 'margin:     10px; ';
+    html += 'padding:    10px; ';
+    html += 'border:     0.5px solid #606060;';
+    html += 'border-radius:  1%;';
+    html += 'background: ';
+    html += 'linear-gradient(135deg,rgba(30,30,30,0.8),rgba(120,120,120,0.8)),';
+    html += 'url(./pics/TEMA/#PIC_TEMA);';
+    html += 'background-size: ';
+    html += 'cover;';
+    html += '">';
     
-    html += '<div>';
     html += '<h2>';
-    html += 'テーマ：春';
+    html += 'テーマ：#TEMASL';
     html += '</h2>';
     for(let i = 0;i < rnd_minmax(10,20); i++) {
         html += make_poem_sub();
@@ -52,17 +63,12 @@ function make_poem_sub() : string
 {
     let html : string = '';
 
-    html += '<div id="poem_box" ';
+    html += '<div id="poem_sub" ';
     html += 'style="';
     html += 'margin:     10px; ';
     html += 'padding:    10px; ';
     html += 'border:     0.5px solid #606060;';
     html += 'border-radius:  1%;';
-    html += 'background: ';
-    html += 'linear-gradient(135deg,rgba(30,30,30,0.8),rgba(120,120,120,0.8)),';
-    html += 'url(./pics/#PIC_KEY);';
-    html += 'background-size: ';
-    html += 'cover;';
     html += '">';
 
     html += '<h3 id="poem_title">';
@@ -71,12 +77,12 @@ function make_poem_sub() : string
 
     html += '<div>';
     html += '<figure>';
-    html += '<img src="pics/TITLE/#PIC_TITLE" width="50">';
+    html += '<img src="pics/TITLE/#PIC_TITLE" width="40">';
     html += '</figure>';
     html += '</div>';
 
     html += '<h2 id="poem_main">';
-    html += '#POEM';
+    html += '#TEMASL';
     html += '</h2>';
     html += '</div>';
 
@@ -85,11 +91,13 @@ function make_poem_sub() : string
 }
 
 class poem_docs_maker {
-    protected selectors : INwsItm_Selector[];
+    protected selectors : ISctItm_Selector[];
     constructor(){
-        this.selectors  = new Array<INwsItm_Selector>();
+        this.selectors  = new Array<ISctItm_Selector>();
+        this.selectors.push(new poemer_tema());
         this.selectors.push(new poemer_title());
         this.selectors.push(new poemer_titlepic());
+        this.selectors.push(new poemer_tema01());
     }
 
     public gene_docs(temp_doc : string) : string {
@@ -102,7 +110,7 @@ class poem_docs_maker {
                         result = result.replace(value.news_key,itm.Wrd);
                         if (value.pic_key != ''){
                             while(result.search(value.pic_key) != -1){
-                                result = result.replace(value.pic_key,itm.NwsPic);
+                                result = result.replace(value.pic_key,itm.SctPic);
                             }
                         }
                     }
@@ -113,58 +121,84 @@ class poem_docs_maker {
     }
 }
 
-
 // 受賞
-class poemer_title extends PmsWrd_Counter implements INwsItm_Selector{
+class poemer_title extends SctWrd_Counter implements ISctItm_Selector{
     constructor(){
         super('#TITLE');
         this.itms = [
-            new NwsWrd('金賞 受賞作')
+            new SctWrd('金賞 受賞作')
             ,
-            new NwsWrd('銀賞 受賞作')
+            new SctWrd('銀賞 受賞作')
             ,
-            new NwsWrd('銅賞 受賞作')
+            new SctWrd('銅賞 受賞作')
             ,
-            new NwsWrd('佳作')
+            new SctWrd('佳作')
             ,
-            new NwsWrd('入選')
+            new SctWrd('佳作')
+            ,
+            new SctWrd('佳作')
+            ,
+            new SctWrd('佳作')
+            ,
+            new SctWrd('入選')
         ];
     }
 }
 
 // 受賞アイコン
-class poemer_titlepic extends PmsWrd_Counter implements INwsItm_Selector{
+class poemer_titlepic extends SctWrd_Counter implements ISctItm_Selector{
     constructor(){
         super('#PIC_TITLE');
         this.itms = [
-            new NwsWrd('gold.png')
+            new SctWrd('gold.png')
             ,
-            new NwsWrd('silver.png')
+            new SctWrd('silver.png')
             ,
-            new NwsWrd('bronze.png')
+            new SctWrd('bronze.png')
             ,
-            new NwsWrd('blue.png')
+            new SctWrd('blue.png')
             ,
-            new NwsWrd('green.png')
+            new SctWrd('blue.png')
+            ,
+            new SctWrd('blue.png')
+            ,
+            new SctWrd('blue.png')
+            ,
+            new SctWrd('green.png')
         ];
     }
 }
 
-class poemer_tema extends NwsWrd_SelectLocker implements INwsItm_Selector{
+class poemer_tema extends SctWrd_SelectLocker implements ISctItm_Selector{
     constructor(){
         super('#TEMASL');
         this.itms = [
-            new NwsWrd('TEMA01')
+            new SctWrd('#TEMA01')
             ,
-            new NwsWrd('TEMA02')
+            new SctWrd('#TEMA02')
             ,
-            new NwsWrd('TEMA03')
+            new SctWrd('#TEMA03')
             ,
-            new NwsWrd('TEMA04')
+            new SctWrd('#TEMA04')
             ,
-            new NwsWrd('TEMA05')
+            new SctWrd('#TEMA05')
         ];
     }
-
 }
+
+class poemer_tema01 extends SctItm_FirstLocker implements ISctItm_Selector {
+    constructor(){
+        super('#TEMA01','#PIC_TEMA');
+        this.itms = [
+            new SctItm('春' ,'spring.jpg')
+            ,
+            new SctItm('花','')
+            ,
+            new SctItm('蝶','')
+            ,
+            new SctItm('梅','')
+        ];
+    }
+}
+
 
