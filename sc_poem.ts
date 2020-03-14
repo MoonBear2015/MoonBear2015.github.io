@@ -9,7 +9,7 @@ function set_poem()
     html += '<h1>';
     html += 'POEM';
     html += '<small>';
-    html += 'R01.04';
+    html += 'R01.05';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -69,6 +69,12 @@ function make_poem_sub() : string
     html += '#TITLE'
     html += '</h3>';
 
+    html += '<div>';
+    html += '<figure>';
+    html += '<img src="pics/TITLE/#PIC_TITLE" width="50">';
+    html += '</figure>';
+    html += '</div>';
+
     html += '<h2 id="poem_main">';
     html += '#POEM';
     html += '</h2>';
@@ -83,6 +89,7 @@ class poem_docs_maker {
     constructor(){
         this.selectors  = new Array<INwsItm_Selector>();
         this.selectors.push(new poemer_title());
+        this.selectors.push(new poemer_titlepic());
     }
 
     public gene_docs(temp_doc : string) : string {
@@ -107,7 +114,7 @@ class poem_docs_maker {
 }
 
 
-// 動名詞 の～
+// 受賞
 class poemer_title extends PmsWrd_Counter implements INwsItm_Selector{
     constructor(){
         super('#TITLE');
@@ -123,5 +130,41 @@ class poemer_title extends PmsWrd_Counter implements INwsItm_Selector{
             new NwsWrd('入選')
         ];
     }
+}
+
+// 受賞アイコン
+class poemer_titlepic extends PmsWrd_Counter implements INwsItm_Selector{
+    constructor(){
+        super('#PIC_TITLE');
+        this.itms = [
+            new NwsWrd('gold.png')
+            ,
+            new NwsWrd('silver.png')
+            ,
+            new NwsWrd('bronze.png')
+            ,
+            new NwsWrd('blue.png')
+            ,
+            new NwsWrd('green.png')
+        ];
+    }
+}
+
+class poemer_tema extends NwsWrd_SelectLocker implements INwsItm_Selector{
+    constructor(){
+        super('#TEMASL');
+        this.itms = [
+            new NwsWrd('TEMA01')
+            ,
+            new NwsWrd('TEMA02')
+            ,
+            new NwsWrd('TEMA03')
+            ,
+            new NwsWrd('TEMA04')
+            ,
+            new NwsWrd('TEMA05')
+        ];
+    }
+
 }
 

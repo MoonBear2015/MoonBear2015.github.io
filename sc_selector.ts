@@ -101,6 +101,16 @@ class NwsItm_Selector extends ItmSelector<NwsItm> implements INwsItm_Selector {
     }
 }
 
+class NwsWrd_Selector extends NwsItm_Selector implements INwsItm_Selector {
+    constructor(
+        in_news_key : string
+    )
+    {
+        super(in_news_key,'');
+    }
+}
+
+
 class NwsItm_SelectLocker extends NwsItm_Selector implements INwsItm_Selector {
     private is_lock : boolean;
     private lock_item : NwsItm;
@@ -128,16 +138,32 @@ class NwsItm_SelectLocker extends NwsItm_Selector implements INwsItm_Selector {
     }
 }
 
-class NwsWrd_Selector extends NwsItm_Selector implements INwsItm_Selector {
+class NwsWrd_SelectLocker extends NwsWrd_Selector implements INwsItm_Selector {
+    private is_lock : boolean;
+    private lock_item : NwsWrd;
+
     constructor(
-        in_news_key : string
+        public news_key : string
     )
     {
-        super(in_news_key,'');
+        super(news_key);
+        this.is_lock = false;
+        this.lock_item = new NwsWrd('');
+    }
+
+    get rnd_Itm() : NwsItm {
+        if (this.is_lock)
+        {
+            return this.lock_item;
+        }
+        this.is_lock = true;
+        let i = rnd_max(this.itms.length);
+        this.lock_item.Copy = this.itms[i];
+        return this.itms[i];
     }
 }
 
-//------------------------------------ selector's
+//------------------------------------ poem
 
 class PmsItm_Counter extends ItmCounter<NwsItm> implements INwsItm_Selector {
     constructor(

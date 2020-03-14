@@ -7,7 +7,7 @@ function set_poem() {
     html += '<h1>';
     html += 'POEM';
     html += '<small>';
-    html += 'R01.04';
+    html += 'R01.05';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -53,6 +53,11 @@ function make_poem_sub() {
     html += '<h3 id="poem_title">';
     html += '#TITLE';
     html += '</h3>';
+    html += '<div>';
+    html += '<figure>';
+    html += '<img src="pics/TITLE/#PIC_TITLE" width="50">';
+    html += '</figure>';
+    html += '</div>';
     html += '<h2 id="poem_main">';
     html += '#POEM';
     html += '</h2>';
@@ -63,6 +68,7 @@ class poem_docs_maker {
     constructor() {
         this.selectors = new Array();
         this.selectors.push(new poemer_title());
+        this.selectors.push(new poemer_titlepic());
     }
     gene_docs(temp_doc) {
         let result = temp_doc;
@@ -82,7 +88,7 @@ class poem_docs_maker {
         return result;
     }
 }
-// 動名詞 の～
+// 受賞
 class poemer_title extends PmsWrd_Counter {
     constructor() {
         super('#TITLE');
@@ -92,6 +98,31 @@ class poemer_title extends PmsWrd_Counter {
             new NwsWrd('銅賞 受賞作'),
             new NwsWrd('佳作'),
             new NwsWrd('入選')
+        ];
+    }
+}
+// 受賞アイコン
+class poemer_titlepic extends PmsWrd_Counter {
+    constructor() {
+        super('#PIC_TITLE');
+        this.itms = [
+            new NwsWrd('gold.png'),
+            new NwsWrd('silver.png'),
+            new NwsWrd('bronze.png'),
+            new NwsWrd('blue.png'),
+            new NwsWrd('green.png')
+        ];
+    }
+}
+class poemer_tema extends NwsWrd_SelectLocker {
+    constructor() {
+        super('#TEMASL');
+        this.itms = [
+            new NwsWrd('TEMA01'),
+            new NwsWrd('TEMA02'),
+            new NwsWrd('TEMA03'),
+            new NwsWrd('TEMA04'),
+            new NwsWrd('TEMA05')
         ];
     }
 }

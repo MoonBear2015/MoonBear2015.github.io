@@ -137,12 +137,12 @@ small {
 }
 
 #poem_title {
-    font-size: 3vmax;
+    font-size: 2vmax;
     color: #c0c000;
 }
 
 #poem_main {
-    font-size: 5vmax;
+    font-size: 4vmax;
     color: #e0e0e0;
     text-align: center;
 }
