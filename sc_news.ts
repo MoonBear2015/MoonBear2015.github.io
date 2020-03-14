@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'R01.46';
+    html += 'R01.47';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -157,9 +157,9 @@ class selector_title extends NwsWrd_Selector implements INwsItm_Selector {
             ,
             new NwsWrd('#WHATは#DO#END02C#THEY')
             ,
-            new NwsWrd('#WHATを#DO#END02C#NICK')
+            new NwsWrd('#WHATは#DO#END02C#NICK')
             ,
-            new NwsWrd('#WHATを#DO#END02C#THEY')
+            new NwsWrd('#WHATは#DO#END02C#THEY')
             ,
             new NwsWrd('#WHATの#DOが#STATUS')
             ,
@@ -1415,7 +1415,6 @@ class news_doc {
         this.pics = new Array<string>();
     }
 }
-
 
 class news_docs_maker {
     protected selectors : INwsItm_Selector[];

@@ -7,11 +7,11 @@ function set_poem() {
     html += '<h1>';
     html += 'POEM';
     html += '<small>';
-    html += 'R01.02';
+    html += 'R01.04';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 3; i++) {
         html += make_poem();
     }
     let elem = document.getElementById('site_main');
@@ -23,6 +23,21 @@ function set_poem() {
 }
 function make_poem() {
     let html = '';
+    html += '<div>';
+    html += '<h2>';
+    html += 'テーマ：春';
+    html += '</h2>';
+    for (let i = 0; i < rnd_minmax(10, 20); i++) {
+        html += make_poem_sub();
+    }
+    html += '</div>';
+    let maker = new poem_docs_maker();
+    html = maker.gene_docs(html);
+    html = maker.gene_docs(html);
+    return ruby_change(html);
+}
+function make_poem_sub() {
+    let html = '';
     html += '<div id="poem_box" ';
     html += 'style="';
     html += 'margin:     10px; ';
@@ -31,21 +46,52 @@ function make_poem() {
     html += 'border-radius:  1%;';
     html += 'background: ';
     html += 'linear-gradient(135deg,rgba(30,30,30,0.8),rgba(120,120,120,0.8)),';
-    html += 'url(./pics/WHAT/christ.jpg);';
+    html += 'url(./pics/#PIC_KEY);';
     html += 'background-size: ';
     html += 'cover;';
     html += '">';
     html += '<h3 id="poem_title">';
-    html += '金賞 受賞作';
+    html += '#TITLE';
     html += '</h3>';
     html += '<h2 id="poem_main">';
-    html += '<ruby>';
-    html += '<rb>古池</rb><rt>ふるいけ</rt>や　';
-    html += '</ruby>';
-    html += '<ruby><rb>蛙</rb><rt>かわず</rt></ruby>';
-    html += '<ruby><rb>飛</rb><rt>と</rt></ruby>び<ruby><rb>込</rb><rt>こ</rt></ruby>む';
-    html += '</ruby>';
+    html += '#POEM';
     html += '</h2>';
     html += '</div>';
     return html;
+}
+class poem_docs_maker {
+    constructor() {
+        this.selectors = new Array();
+        this.selectors.push(new poemer_title());
+    }
+    gene_docs(temp_doc) {
+        let result = temp_doc;
+        this.selectors.forEach((value) => {
+            if (value.news_key != '') {
+                while (result.search(value.news_key) != -1) {
+                    let itm = value.rnd_Itm;
+                    result = result.replace(value.news_key, itm.Wrd);
+                    if (value.pic_key != '') {
+                        while (result.search(value.pic_key) != -1) {
+                            result = result.replace(value.pic_key, itm.NwsPic);
+                        }
+                    }
+                }
+            }
+        });
+        return result;
+    }
+}
+// 動名詞 の～
+class poemer_title extends PmsWrd_Counter {
+    constructor() {
+        super('#TITLE');
+        this.itms = [
+            new NwsWrd('金賞 受賞作'),
+            new NwsWrd('銀賞 受賞作'),
+            new NwsWrd('銅賞 受賞作'),
+            new NwsWrd('佳作'),
+            new NwsWrd('入選')
+        ];
+    }
 }

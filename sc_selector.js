@@ -49,6 +49,20 @@ class ItmSelector {
         return this.itms[i];
     }
 }
+class ItmCounter {
+    constructor() {
+        this.itms = new Array();
+        this.bef_num = -1;
+    }
+    get rnd_Itm() {
+        let i = this.bef_num + 1;
+        if (i == this.itms.length) {
+            i = this.itms.length - 1;
+        }
+        this.bef_num = i;
+        return this.itms[i];
+    }
+}
 class NwsItm_Selector extends ItmSelector {
     constructor(news_key, pic_key) {
         super();
@@ -80,3 +94,15 @@ class NwsWrd_Selector extends NwsItm_Selector {
     }
 }
 //------------------------------------ selector's
+class PmsItm_Counter extends ItmCounter {
+    constructor(news_key, pic_key) {
+        super();
+        this.news_key = news_key;
+        this.pic_key = pic_key;
+    }
+}
+class PmsWrd_Counter extends PmsItm_Counter {
+    constructor(in_news_key) {
+        super(in_news_key, '');
+    }
+}

@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'R01.46';
+    html += 'R01.47';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -117,8 +117,8 @@ class selector_title extends NwsWrd_Selector {
             new NwsWrd('#WHATは#DO#END02C'),
             new NwsWrd('#WHATは#DO#END02C#NICK'),
             new NwsWrd('#WHATは#DO#END02C#THEY'),
-            new NwsWrd('#WHATを#DO#END02C#NICK'),
-            new NwsWrd('#WHATを#DO#END02C#THEY'),
+            new NwsWrd('#WHATは#DO#END02C#NICK'),
+            new NwsWrd('#WHATは#DO#END02C#THEY'),
             new NwsWrd('#WHATの#DOが#STATUS'),
             new NwsWrd('#WHATの#NICKが#DO#END02C'),
             new NwsWrd('#WHATの#THEYが#DO#END02C'),

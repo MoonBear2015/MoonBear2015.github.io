@@ -1,6 +1,4 @@
 
-// --------------------------------------------------------------
-
 function set_site_header(){
     let html = '';
     html += make_site_header();
@@ -19,7 +17,7 @@ function make_site_header(): string {
     html += '<h1>';
     html += '「空虚」';
     html += '<small>';
-    html += 'R01.01';
+    html += 'R01.02';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -112,12 +110,3 @@ function set_center_message(mess : menu_item) {
     }
     elem.innerHTML = html;
 }
-
-function make_news_box() : string {
-    let html : string = '';
-    
-
-
-    return html;
-}
-

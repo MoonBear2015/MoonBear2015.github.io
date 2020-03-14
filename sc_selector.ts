@@ -65,6 +65,25 @@ class ItmSelector<T extends INwsItm> implements IItmSelector<T> {
     }
 }
 
+class ItmCounter<T extends INwsItm> implements IItmSelector<T> {
+    protected itms : T[];
+    private bef_num : number;
+    constructor(){
+        this.itms = new Array<T>();
+        this.bef_num = -1;
+    }
+    get rnd_Itm() : T {
+        let i = this.bef_num + 1;
+        if (i == this.itms.length)
+        {
+            i = this.itms.length - 1;
+        }
+        this.bef_num = i;
+        return this.itms[i];
+    }
+}
+
+
 interface INwsItm_Selector extends IItmSelector<NwsItm> {
     // rnd_Itm : NwsItm;
     news_key : string;
@@ -119,3 +138,22 @@ class NwsWrd_Selector extends NwsItm_Selector implements INwsItm_Selector {
 }
 
 //------------------------------------ selector's
+
+class PmsItm_Counter extends ItmCounter<NwsItm> implements INwsItm_Selector {
+    constructor(
+        public news_key : string
+        ,
+        public pic_key : string
+    )
+    {
+        super();
+    }
+}
+class PmsWrd_Counter extends PmsItm_Counter implements INwsItm_Selector {
+    constructor(
+        in_news_key : string
+    )
+    {
+        super(in_news_key,'');
+    }
+}
