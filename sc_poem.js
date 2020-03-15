@@ -7,7 +7,7 @@ function set_poem() {
     html += '<h1>';
     html += 'POEM';
     html += '<small>';
-    html += 'R01.07';
+    html += 'R01.08';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -31,12 +31,12 @@ function make_poem() {
     html += 'border-radius:  1%;';
     html += 'background: ';
     html += 'linear-gradient(135deg,rgba(30,30,30,0.8),rgba(120,120,120,0.8)),';
-    html += 'url(./pics/TEMA/#PIC_TEMA);';
+    html += 'url(./pics/TEMA/@PIC_TEMA);';
     html += 'background-size: ';
     html += 'cover;';
     html += '">';
     html += '<h2>';
-    html += 'テーマ：#TEMASL';
+    html += 'テーマ：@TEMASL';
     html += '</h2>';
     for (let i = 0; i < rnd_minmax(10, 20); i++) {
         html += make_poem_sub();
@@ -57,15 +57,15 @@ function make_poem_sub() {
     html += 'border-radius:  1%;';
     html += '">';
     html += '<h3 id="poem_title">';
-    html += '#TITLE';
+    html += '@TITLE';
     html += '</h3>';
     html += '<div>';
     html += '<figure>';
-    html += '<img src="pics/TITLE/#PIC_TITLE" width="40">';
+    html += '<img src="pics/TITLE/@PIC_TITLE" width="40">';
     html += '</figure>';
     html += '</div>';
     html += '<h2 id="poem_main">';
-    html += '#TEMASL';
+    html += '@POEM_TYPE';
     html += '</h2>';
     html += '</div>';
     return html;
@@ -73,6 +73,9 @@ function make_poem_sub() {
 class poem_docs_maker {
     constructor() {
         this.selectors = new Array();
+        this.selectors.push(new poemer_type());
+        this.selectors.push(new poemer_pattern_A());
+        this.selectors.push(new poemer_pattern_B());
         this.selectors.push(new poemer_tema());
         this.selectors.push(new poemer_title());
         this.selectors.push(new poemer_titlepic());
@@ -100,10 +103,41 @@ class poem_docs_maker {
         return result;
     }
 }
+class poemer_type extends SctWrd_SelectLocker {
+    constructor() {
+        super('@POEM_TYPE');
+        this.itms = [
+            new SctWrd('@TYPE_A'),
+            new SctWrd('@TYPE_B')
+        ];
+    }
+}
+class poemer_pattern_A extends SctWrd_Selector {
+    constructor() {
+        super('@TYPE_A');
+        this.itms = [
+            new SctWrd('@TM05 @ST07 @ST05'),
+            new SctWrd('@ST05 @TM07 @ST05'),
+            new SctWrd('@ST05 @ST07 @TM05')
+        ];
+    }
+}
+class poemer_pattern_B extends SctWrd_Selector {
+    constructor() {
+        super('@TYPE_B');
+        this.itms = [
+            new SctWrd('@TM05 @ST07 @ST05 @ST07 @ST07'),
+            new SctWrd('@ST05 @TM07 @ST05 @ST07 @ST07'),
+            new SctWrd('@ST05 @ST07 @TM05 @ST07 @ST07'),
+            new SctWrd('@ST05 @ST07 @ST05 @TM07 @ST07'),
+            new SctWrd('@ST05 @ST07 @ST05 @ST07 @TM07')
+        ];
+    }
+}
 // 受賞
 class poemer_title extends SctWrd_Counter {
     constructor() {
-        super('#TITLE');
+        super('@TITLE');
         this.itms = [
             new SctWrd('金賞 受賞作'),
             new SctWrd('銀賞 受賞作'),
@@ -119,7 +153,7 @@ class poemer_title extends SctWrd_Counter {
 // 受賞アイコン
 class poemer_titlepic extends SctWrd_Counter {
     constructor() {
-        super('#PIC_TITLE');
+        super('@PIC_TITLE');
         this.itms = [
             new SctWrd('gold.png'),
             new SctWrd('silver.png'),
@@ -134,20 +168,20 @@ class poemer_titlepic extends SctWrd_Counter {
 }
 class poemer_tema extends SctWrd_SelectLocker {
     constructor() {
-        super('#TEMASL');
+        super('@TEMASL');
         this.itms = [
-            new SctWrd('#TEMA01'),
-            new SctWrd('#TEMA02'),
-            new SctWrd('#TEMA03'),
-            new SctWrd('#TEMA04'),
-            new SctWrd('#TEMA05')
+            new SctWrd('@TEMA01'),
+            new SctWrd('@TEMA02'),
+            new SctWrd('@TEMA03'),
+            new SctWrd('@TEMA04'),
+            new SctWrd('@TEMA05')
         ];
     }
 }
-// 季語：２文字（１字余り可）
+// 季語：春
 class poemer_tema01 extends SctItm_FirstLocker {
     constructor() {
-        super('#TEMA01', '#PIC_TEMA');
+        super('@TEMA01', '@PIC_TEMA');
         this.itms = [
             new SctItm('|春|はる|', 'spring.jpg'),
             new SctItm('|花|はな|', ''),
@@ -158,10 +192,10 @@ class poemer_tema01 extends SctItm_FirstLocker {
         ];
     }
 }
-// 季語：２文字（１字余り可）
+// 季語：夏
 class poemer_tema02 extends SctItm_FirstLocker {
     constructor() {
-        super('#TEMA02', '#PIC_TEMA');
+        super('@TEMA02', '@PIC_TEMA');
         this.itms = [
             new SctItm('|夏|なつ|', 'summer.jpg'),
             new SctItm('|虹|にじ|', ''),
@@ -170,10 +204,10 @@ class poemer_tema02 extends SctItm_FirstLocker {
         ];
     }
 }
-// 季語：２文字（１字余り可）
+// 季語：秋
 class poemer_tema03 extends SctItm_FirstLocker {
     constructor() {
-        super('#TEMA03', '#PIC_TEMA');
+        super('@TEMA03', '@PIC_TEMA');
         this.itms = [
             new SctItm('|秋|あき|', 'autumn.jpg'),
             new SctItm('|月|つき|', ''),
@@ -184,10 +218,10 @@ class poemer_tema03 extends SctItm_FirstLocker {
         ];
     }
 }
-// 季語：２文字（１字余り可）
+// 季語：冬
 class poemer_tema04 extends SctItm_FirstLocker {
     constructor() {
-        super('#TEMA04', '#PIC_TEMA');
+        super('@TEMA04', '@PIC_TEMA');
         this.itms = [
             new SctItm('|冬|ふゆ|', 'winter.jpg'),
             new SctItm('|雪|ゆき|', ''),
@@ -196,10 +230,10 @@ class poemer_tema04 extends SctItm_FirstLocker {
         ];
     }
 }
-// 季語：２文字（１字余り可）
+// 季語：天
 class poemer_tema05 extends SctItm_FirstLocker {
     constructor() {
-        super('#TEMA05', '#PIC_TEMA');
+        super('@TEMA05', '@PIC_TEMA');
         this.itms = [
             new SctItm('|天|てん|', 'sky.jpg'),
             new SctItm('|月|つき|', ''),
