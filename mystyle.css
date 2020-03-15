@@ -138,7 +138,7 @@ small {
 
 #poem_box {
     margin:     10px; 
-    padding:    10px; 
+    padding:    0px; 
     border:     0.5px solid #606060;
     border-radius:  1%;
 }
@@ -147,12 +147,14 @@ small {
 #poem_title {
     font-size: 2vmax;
     color: #c0c000;
+    text-shadow: 2px 2px 0px #000000;
 }
 
 #poem_main {
     font-size: 3vmax;
     color: #e0e0e0;
     text-align: center;
+    text-shadow: 2px 2px 0px #000000;
 }
 
 

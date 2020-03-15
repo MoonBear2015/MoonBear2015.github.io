@@ -9,7 +9,7 @@ function set_poem()
     html += '<h1>';
     html += 'POEM';
     html += '<small>';
-    html += 'R01.06';
+    html += 'R01.07';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -32,8 +32,8 @@ function make_poem() : string
     let html : string = '';
     html += '<div id="poem_box" ';
     html += 'style="';
-    html += 'margin:     10px; ';
-    html += 'padding:    10px; ';
+    html += 'margin:     5px; ';
+    html += 'padding:    5px; ';
     html += 'border:     0.5px solid #606060;';
     html += 'border-radius:  1%;';
     html += 'background: ';
@@ -65,8 +65,8 @@ function make_poem_sub() : string
 
     html += '<div id="poem_sub" ';
     html += 'style="';
-    html += 'margin:     10px; ';
-    html += 'padding:    10px; ';
+    html += 'margin:     5px; ';
+    html += 'padding:    5px; ';
     html += 'border:     0.5px solid #606060;';
     html += 'border-radius:  1%;';
     html += '">';
@@ -98,6 +98,10 @@ class poem_docs_maker {
         this.selectors.push(new poemer_title());
         this.selectors.push(new poemer_titlepic());
         this.selectors.push(new poemer_tema01());
+        this.selectors.push(new poemer_tema02());
+        this.selectors.push(new poemer_tema03());
+        this.selectors.push(new poemer_tema04());
+        this.selectors.push(new poemer_tema05());
     }
 
     public gene_docs(temp_doc : string) : string {
@@ -186,19 +190,93 @@ class poemer_tema extends SctWrd_SelectLocker implements ISctItm_Selector{
     }
 }
 
+// 季語：２文字（１字余り可）
 class poemer_tema01 extends SctItm_FirstLocker implements ISctItm_Selector {
     constructor(){
         super('#TEMA01','#PIC_TEMA');
         this.itms = [
-            new SctItm('春' ,'spring.jpg')
+            new SctItm('|春|はる|' ,'spring.jpg')
             ,
-            new SctItm('花','')
+            new SctItm('|花|はな|','')
             ,
-            new SctItm('蝶','')
+            new SctItm('|蝶|ちょう|','')
             ,
-            new SctItm('梅','')
+            new SctItm('|梅|うめ|','')
+            ,
+            new SctItm('|土筆|つくし|','')
+            ,
+            new SctItm('|蛙|かえる|','')
         ];
     }
 }
 
+// 季語：２文字（１字余り可）
+class poemer_tema02 extends SctItm_FirstLocker implements ISctItm_Selector {
+    constructor(){
+        super('#TEMA02','#PIC_TEMA');
+        this.itms = [
+            new SctItm('|夏|なつ|' ,'summer.jpg')
+            ,
+            new SctItm('|虹|にじ|','')
+            ,
+            new SctItm('|浴衣|ゆかた|','')
+            ,
+            new SctItm('|祭|まつり|','')
+        ];
+    }
+}
+
+// 季語：２文字（１字余り可）
+class poemer_tema03 extends SctItm_FirstLocker implements ISctItm_Selector {
+    constructor(){
+        super('#TEMA03','#PIC_TEMA');
+        this.itms = [
+            new SctItm('|秋|あき|' ,'autumn.jpg')
+            ,
+            new SctItm('|月|つき|','')
+            ,
+            new SctItm('|紅葉|もみじ|','')
+            ,
+            new SctItm('|栗|くり|','')
+            ,
+            new SctItm('|柿|かき|','')
+            ,
+            new SctItm('|芋|いも|','')
+        ];
+    }
+}
+
+// 季語：２文字（１字余り可）
+class poemer_tema04 extends SctItm_FirstLocker implements ISctItm_Selector {
+    constructor(){
+        super('#TEMA04','#PIC_TEMA');
+        this.itms = [
+            new SctItm('|冬|ふゆ|' ,'winter.jpg')
+            ,
+            new SctItm('|雪|ゆき|','')
+            ,
+            new SctItm('|氷|こおり|','')
+            ,
+            new SctItm('|霜|しも|','')
+        ];
+    }
+}
+
+// 季語：２文字（１字余り可）
+class poemer_tema05 extends SctItm_FirstLocker implements ISctItm_Selector {
+    constructor(){
+        super('#TEMA05','#PIC_TEMA');
+        this.itms = [
+            new SctItm('|天|てん|' ,'sky.jpg')
+            ,
+            new SctItm('|月|つき|','')
+            ,
+            new SctItm('|星|ほし|','')
+            ,
+            new SctItm('|雲|くも|','')
+            ,
+            new SctItm('|空|そら|','')
+        ];
+    }
+}
 

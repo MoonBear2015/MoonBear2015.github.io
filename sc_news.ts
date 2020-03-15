@@ -33,7 +33,7 @@ function make_news()
 
     html += '<div id="news_box" ';
     html += 'style="';
-    html += 'margin:     10px; ';
+    html += 'margin:     5px; ';
     html += 'padding:    10px; ';
     html += 'border:     0.5px solid #606060;';
     html += 'border-radius:  1%;';
@@ -1316,8 +1316,6 @@ class selector_assessment extends SctWrd_Selector implements ISctItm_Selector {
             ,
             new SctWrd('罵倒されている')
             ,
-            new SctWrd('称されている')
-            ,
             new SctWrd('呼ばれている')
             ,
             new SctWrd('評価が高い')
@@ -1355,6 +1353,18 @@ class selector_assessment extends SctWrd_Selector implements ISctItm_Selector {
             new SctWrd('表彰された')
             ,
             new SctWrd('ささやかれている')
+            ,
+            new SctWrd('驚嘆した')
+            ,
+            new SctWrd('驚かせた')
+            ,
+            new SctWrd('感動させた')
+            ,
+            new SctWrd('感謝されている')
+            ,
+            new SctWrd('太鼓判を押された')
+            ,
+            new SctWrd('名付けられた')
         ];
     }
 }
