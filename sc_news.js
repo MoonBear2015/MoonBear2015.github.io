@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'R01.47';
+    html += 'R01.48';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -31,37 +31,37 @@ function make_news() {
     html += 'border-radius:  1%;';
     html += 'background: ';
     html += 'linear-gradient(0deg,rgba(0,0,0,0.6),rgba(0,0,0,0.8)),';
-    html += 'url(./pics/#PIC_DO);';
+    html += 'url(./pics/@PIC_DO);';
     html += 'background-size: ';
     html += 'cover;';
     html += '">';
     html += '<h2 id="news_title">';
     html += '<span style="border-bottom: solid 2px #FFFFFF;">';
-    html += '#NEWS_TITLE';
+    html += '@NEWS_TITLE';
     html += '</span>';
     html += '</h2>';
     html += '<div id="news_pic_L">';
     html += '<figure>';
-    html += '<img src="pics/#PIC_WHAT" width="300">';
+    html += '<img src="pics/@PIC_WHAT" width="300">';
     html += '</figure>';
     html += '</div>';
     html += '<p id="news_doc">';
-    html += '　#NEWS_DOC';
+    html += '　@NEWS_DOC';
     for (let i = 0; i < rnd_minmax(5, 10); i++) {
-        html += '#CONECT、';
-        html += '#NEWS_DOC';
+        html += '@CONECT、';
+        html += '@NEWS_DOC';
     }
     html += '</p>';
     html += '<div id="news_pic_R">';
     html += '<figure>';
-    html += '<img src="pics/#PIC_DO" width="300">';
+    html += '<img src="pics/@PIC_DO" width="300">';
     html += '</figure>';
     html += '</div>';
     html += '<p id="news_doc">';
-    html += '　#NEWS_DOC';
+    html += '　@NEWS_DOC';
     for (let i = 0; i < rnd_minmax(5, 10); i++) {
-        html += '#CONECT、';
-        html += '#NEWS_DOC';
+        html += '@CONECT、';
+        html += '@NEWS_DOC';
     }
     html += '</p>';
     html += '</div>';
@@ -72,7 +72,7 @@ function make_news() {
 }
 class selector_random_date {
     constructor() {
-        this.news_key = "#DATE";
+        this.news_key = "@DATE";
         this.pic_key = "";
     }
     get rnd_Itm() {
@@ -88,7 +88,7 @@ class selector_random_date {
 }
 class selector_human {
     constructor() {
-        this.news_key = "#HUMAN";
+        this.news_key = "@HUMAN";
         this.pic_key = "";
         this.nameMaker = new NameMakerAll();
     }
@@ -99,7 +99,7 @@ class selector_human {
 }
 class selector_age {
     constructor() {
-        this.news_key = "#AGE";
+        this.news_key = "@AGE";
         this.pic_key = "";
         this.nameMaker = new NameMakerAll();
     }
@@ -111,74 +111,74 @@ class selector_age {
 }
 class selector_title extends SctWrd_Selector {
     constructor() {
-        super('#NEWS_TITLE');
+        super('@NEWS_TITLE');
         this.itms = [
-            new SctWrd('#WHATの#DO'),
-            new SctWrd('#WHATは#DO#END02C'),
-            new SctWrd('#WHATは#DO#END02C#NICK'),
-            new SctWrd('#WHATは#DO#END02C#THEY'),
-            new SctWrd('#WHATは#DO#END02C#NICK'),
-            new SctWrd('#WHATは#DO#END02C#THEY'),
-            new SctWrd('#WHATの#DOが#STATUS'),
-            new SctWrd('#WHATの#NICKが#DO#END02C'),
-            new SctWrd('#WHATの#THEYが#DO#END02C'),
-            new SctWrd('#DO#END02C#WHAT'),
-            new SctWrd('#DO#END02C#WHAT'),
-            new SctWrd('#DO#END02C#WHATの#NICK'),
-            new SctWrd('#DO#END02C#WHATの#THEY')
+            new SctWrd('@WHATの@DO'),
+            new SctWrd('@WHATは@DO@END02C'),
+            new SctWrd('@WHATは@DO@END02C@NICK'),
+            new SctWrd('@WHATは@DO@END02C@THEY'),
+            new SctWrd('@WHATは@DO@END02C@NICK'),
+            new SctWrd('@WHATは@DO@END02C@THEY'),
+            new SctWrd('@WHATの@DOが@STATUS'),
+            new SctWrd('@WHATの@NICKが@DO@END02C'),
+            new SctWrd('@WHATの@THEYが@DO@END02C'),
+            new SctWrd('@DO@END02C@WHAT'),
+            new SctWrd('@DO@END02C@WHAT'),
+            new SctWrd('@DO@END02C@WHATの@NICK'),
+            new SctWrd('@DO@END02C@WHATの@THEY')
         ];
     }
 }
 class selector_doc extends SctWrd_Selector {
     constructor() {
-        super('#NEWS_DOC');
+        super('@NEWS_DOC');
         this.itms = [
-            new SctWrd('#NEWS_C01、#NEWS_C02。'),
-            new SctWrd('#NEWS_C01、#DATE、#NEWS_C02。'),
-            new SctWrd('#DATE、#NEWS_C01、#NEWS_C02。'),
-            new SctWrd('#DATE、#WHOは「#COMMENT」との#ANSWERを#SAY#END02B。'),
-            new SctWrd('#WHOは「#COMMENT」との#ANSWERを#SAY#END02B。'),
-            new SctWrd('#WHOは#DATE、「#COMMENT」との#ANSWERを#SAY#END02B。'),
-            new SctWrd('「#COMMENT」との#ANSWERを#SAYしたのは、#WHO#END02A。')
+            new SctWrd('@NEWS_C01、@NEWS_C02。'),
+            new SctWrd('@NEWS_C01、@DATE、@NEWS_C02。'),
+            new SctWrd('@DATE、@NEWS_C01、@NEWS_C02。'),
+            new SctWrd('@DATE、@WHOは「@COMMENT」との@ANSWERを@SAY@END02B。'),
+            new SctWrd('@WHOは「@COMMENT」との@ANSWERを@SAY@END02B。'),
+            new SctWrd('@WHOは@DATE、「@COMMENT」との@ANSWERを@SAY@END02B。'),
+            new SctWrd('「@COMMENT」との@ANSWERを@SAYしたのは、@WHO@END02A。')
         ];
     }
 }
 class selector_who extends SctWrd_Selector {
     constructor() {
-        super('#WHO');
+        super('@WHO');
         this.itms = [
-            new SctWrd('#CLASSの#HUMAN#AGE'),
-            new SctWrd('「#WHATの#NICK」と#ASSES#CLASSの#HUMAN#AGE'),
-            new SctWrd('「#DOする#NICK」と#ASSES#CLASSの#HUMAN#AGE'),
-            new SctWrd('「#STATUSする#NICK」と#ASSES#CLASSの#HUMAN#AGE'),
-            new SctWrd('「#CLASSの#NICK」と#ASSES#CLASSの#HUMAN#AGE'),
-            new SctWrd('#THEYより「#WHATの#NICK」と#ASSES#CLASSの#HUMAN#AGE'),
-            new SctWrd('#THEYより「#DOする#NICK」と#ASSES#CLASSの#HUMAN#AGE'),
-            new SctWrd('#THEYより「#STATUSする#NICK」と#ASSES#CLASSの#HUMAN#AGE'),
-            new SctWrd('#THEYより「#CLASSの#NICK」と#ASSES#CLASSの#HUMAN#AGE')
+            new SctWrd('@CLASSの@HUMAN@AGE'),
+            new SctWrd('「@WHATの@NICK」と@ASSES@CLASSの@HUMAN@AGE'),
+            new SctWrd('「@DOする@NICK」と@ASSES@CLASSの@HUMAN@AGE'),
+            new SctWrd('「@STATUSする@NICK」と@ASSES@CLASSの@HUMAN@AGE'),
+            new SctWrd('「@CLASSの@NICK」と@ASSES@CLASSの@HUMAN@AGE'),
+            new SctWrd('@THEYより「@WHATの@NICK」と@ASSES@CLASSの@HUMAN@AGE'),
+            new SctWrd('@THEYより「@DOする@NICK」と@ASSES@CLASSの@HUMAN@AGE'),
+            new SctWrd('@THEYより「@STATUSする@NICK」と@ASSES@CLASSの@HUMAN@AGE'),
+            new SctWrd('@THEYより「@CLASSの@NICK」と@ASSES@CLASSの@HUMAN@AGE')
         ];
     }
 }
 class selector_c01 extends SctWrd_Selector {
     constructor() {
-        super('#NEWS_C01');
+        super('@NEWS_C01');
         this.itms = [
-            new SctWrd('#WHATによる#KEY#END01A'),
-            new SctWrd('#WHATが#DO#END01B'),
-            new SctWrd('#KEYが#STATUSする#WHAT#END01A'),
-            new SctWrd('#WHATによる#KEYが#STATUS#END01B'),
-            new SctWrd('#WHATが#DO#END01B'),
-            new SctWrd('#MANY#THEYは#DO#END01B'),
-            new SctWrd('#MANY#THEYによる#KEYが#STATUS#END01B'),
-            new SctWrd('#MANY#THEYの#THINKが#STATUS#END01B'),
-            new SctWrd('#MANY#THEYの#THINKや#THINKが#STATUS#END01B'),
-            new SctWrd('#THINKや#THINKが#STATUSする#WHAT#END01A')
+            new SctWrd('@WHATによる@KEY@END01A'),
+            new SctWrd('@WHATが@DO@END01B'),
+            new SctWrd('@KEYが@STATUSする@WHAT@END01A'),
+            new SctWrd('@WHATによる@KEYが@STATUS@END01B'),
+            new SctWrd('@WHATが@DO@END01B'),
+            new SctWrd('@MANY@THEYは@DO@END01B'),
+            new SctWrd('@MANY@THEYによる@KEYが@STATUS@END01B'),
+            new SctWrd('@MANY@THEYの@THINKが@STATUS@END01B'),
+            new SctWrd('@MANY@THEYの@THINKや@THINKが@STATUS@END01B'),
+            new SctWrd('@THINKや@THINKが@STATUSする@WHAT@END01A')
         ];
     }
 }
 class selector_end01a extends SctWrd_Selector {
     constructor() {
-        super('#END01A');
+        super('@END01A');
         this.itms = [
             new SctWrd('により'),
             new SctWrd('のため'),
@@ -190,7 +190,7 @@ class selector_end01a extends SctWrd_Selector {
 }
 class selector_end01b extends SctWrd_Selector {
     constructor() {
-        super('#END01B');
+        super('@END01B');
         this.itms = [
             new SctWrd('し'),
             new SctWrd('したが'),
@@ -203,44 +203,44 @@ class selector_end01b extends SctWrd_Selector {
 }
 class selector_c02 extends SctWrd_Selector {
     constructor() {
-        super('#NEWS_C02');
+        super('@NEWS_C02');
         this.itms = [
-            new SctWrd('#WHATの#MANY#THEYが#ASSES'),
-            new SctWrd('#MANY#THEYが#DO#END02B'),
-            new SctWrd('#MANY#THEYが#NICK#END02A'),
-            new SctWrd('#MANY#THEYの#KEYが#STATUS#END02B'),
-            new SctWrd('#MANY#THEYの#KEYや#KEYが#STATUS#END02B'),
-            new SctWrd('#MANY#THEYの#THINKが#STATUS#END02B'),
-            new SctWrd('#MANY#THEYの#THINKと#THINKが#STATUS#END02B')
+            new SctWrd('@WHATの@MANY@THEYが@ASSES'),
+            new SctWrd('@MANY@THEYが@DO@END02B'),
+            new SctWrd('@MANY@THEYが@NICK@END02A'),
+            new SctWrd('@MANY@THEYの@KEYが@STATUS@END02B'),
+            new SctWrd('@MANY@THEYの@KEYや@KEYが@STATUS@END02B'),
+            new SctWrd('@MANY@THEYの@THINKが@STATUS@END02B'),
+            new SctWrd('@MANY@THEYの@THINKと@THINKが@STATUS@END02B')
         ];
     }
 }
 class selector_comment extends SctWrd_Selector {
     constructor() {
-        super('#COMMENT');
+        super('@COMMENT');
         this.itms = [
-            new SctWrd('#NEWS_C01、#NEWS_C02'),
-            new SctWrd('#NEWS_C01、#NEWS_C02。#CONECT、#NEWS_C01、#NEWS_C02'),
-            new SctWrd('#COMMENT。#CONECT、#COMMENT'),
-            new SctWrd('どうして#THEYは#DOするのか'),
-            new SctWrd('#WHATの#NICKが#STATUS#END02B'),
-            new SctWrd('#WHATは#NICKと#ASSES'),
-            new SctWrd('#WHATが#NICK#END02A'),
-            new SctWrd('#MANY#THEYは#NICK#END02A'),
-            new SctWrd('#THEYは#NICK#END02A。#WHATの#NICK#END02A'),
-            new SctWrd('#THEYは#WHATの#NICK#END02A。#WHATが#NICK#END02A'),
-            new SctWrd('#WHATは#DO#END02B。#THEYの#KEY#END02A'),
-            new SctWrd('#WHATは#NICKと#ASSES#NICK#END02A'),
-            new SctWrd('#WHATは#NICK#END02A。#CONECT、#NICK#END02A'),
-            new SctWrd('#WHATは#NICK#END02A。#NICKで#NICK#END02A'),
-            new SctWrd('#WHATが#NICK？ #YESNO、#WHATは#NICK#END02A')
+            new SctWrd('@NEWS_C01、@NEWS_C02'),
+            new SctWrd('@NEWS_C01、@NEWS_C02。@CONECT、@NEWS_C01、@NEWS_C02'),
+            new SctWrd('@COMMENT。@CONECT、@COMMENT'),
+            new SctWrd('どうして@THEYは@DOするのか'),
+            new SctWrd('@WHATの@NICKが@STATUS@END02B'),
+            new SctWrd('@WHATは@NICKと@ASSES'),
+            new SctWrd('@WHATが@NICK@END02A'),
+            new SctWrd('@MANY@THEYは@NICK@END02A'),
+            new SctWrd('@THEYは@NICK@END02A。@WHATの@NICK@END02A'),
+            new SctWrd('@THEYは@WHATの@NICK@END02A。@WHATが@NICK@END02A'),
+            new SctWrd('@WHATは@DO@END02B。@THEYの@KEY@END02A'),
+            new SctWrd('@WHATは@NICKと@ASSES@NICK@END02A'),
+            new SctWrd('@WHATは@NICK@END02A。@CONECT、@NICK@END02A'),
+            new SctWrd('@WHATは@NICK@END02A。@NICKで@NICK@END02A'),
+            new SctWrd('@WHATが@NICK？ @YESNO、@WHATは@NICK@END02A')
         ];
     }
 }
 // 肯定・否定 ・・・？　～、・・・
 class selector_YESNO extends SctWrd_Selector {
     constructor() {
-        super('#YESNO');
+        super('@YESNO');
         this.itms = [
             new SctWrd('しかし'),
             new SctWrd('だが'),
@@ -258,7 +258,7 @@ class selector_YESNO extends SctWrd_Selector {
 }
 class selector_end02a extends SctWrd_Selector {
     constructor() {
-        super('#END02A');
+        super('@END02A');
         this.itms = [
             new SctWrd('だ'),
             new SctWrd('である'),
@@ -271,7 +271,7 @@ class selector_end02a extends SctWrd_Selector {
 }
 class selector_end02b extends SctWrd_Selector {
     constructor() {
-        super('#END02B');
+        super('@END02B');
         this.itms = [
             new SctWrd('している'),
             new SctWrd('していた'),
@@ -287,7 +287,7 @@ class selector_end02b extends SctWrd_Selector {
 }
 class selector_end02c extends SctWrd_Selector {
     constructor() {
-        super('#END02C');
+        super('@END02C');
         this.itms = [
             new SctWrd('していた'),
             new SctWrd('する'),
@@ -301,7 +301,7 @@ class selector_end02c extends SctWrd_Selector {
 // 名詞・人物・組織　～は・～が・～の
 class selector_whats extends SctItm_SelectLocker {
     constructor() {
-        super('#WHAT', '#PIC_WHAT');
+        super('@WHAT', '@PIC_WHAT');
         this.itms = [
             new SctItm('日本', 'WHAT/Japan.jpg'),
             new SctItm('アメリカ', 'WHAT/America.jpg'),
@@ -362,7 +362,7 @@ class selector_whats extends SctItm_SelectLocker {
 // 動名詞 の～
 class selector_do extends SctItm_SelectLocker {
     constructor() {
-        super('#DO', '#PIC_DO');
+        super('@DO', '@PIC_DO');
         this.itms = [
             new SctItm('壊滅', 'DO/break.jpg'),
             new SctItm('死滅', 'DO/dead.jpg'),
@@ -393,7 +393,7 @@ class selector_do extends SctItm_SelectLocker {
 // 事象・事件・事故
 class selector_key extends SctWrd_Selector {
     constructor() {
-        super('#KEY');
+        super('@KEY');
         this.itms = [
             new SctWrd('虐待'),
             new SctWrd('暴行'),
@@ -434,7 +434,7 @@ class selector_key extends SctWrd_Selector {
 // 物量・増減・拡縮 ～する・～した・～し、
 class selector_status extends SctWrd_Selector {
     constructor() {
-        super('#STATUS');
+        super('@STATUS');
         this.itms = [
             new SctWrd('発生'),
             new SctWrd('勃発'),
@@ -453,7 +453,7 @@ class selector_status extends SctWrd_Selector {
 // 団体 ～の間に・～の間で
 class selector_they extends SctWrd_Selector {
     constructor() {
-        super('#THEY');
+        super('@THEY');
         this.itms = [
             new SctWrd('人々'),
             new SctWrd('一般大衆'),
@@ -501,7 +501,7 @@ class selector_they extends SctWrd_Selector {
 // 団体の数 （一部の／多くの）人々
 class selector_many extends SctWrd_Selector {
     constructor() {
-        super('#MANY');
+        super('@MANY');
         this.itms = [
             new SctWrd('少数の'),
             new SctWrd('数多くの'),
@@ -522,7 +522,7 @@ class selector_many extends SctWrd_Selector {
 // 肩書き ～の
 class selector_class extends SctWrd_Selector {
     constructor() {
-        super('#CLASS');
+        super('@CLASS');
         this.itms = [
             new SctWrd('大学教授'),
             new SctWrd('高校教師'),
@@ -613,7 +613,7 @@ class selector_class extends SctWrd_Selector {
 // 敬称 の～
 class selector_nickname extends SctWrd_Selector {
     constructor() {
-        super('#NICK');
+        super('@NICK');
         this.itms = [
             new SctWrd('犬'),
             new SctWrd('死神'),
@@ -704,7 +704,7 @@ class selector_nickname extends SctWrd_Selector {
 // 意識 ～する
 class selector_think extends SctWrd_Selector {
     constructor() {
-        super('#THINK');
+        super('@THINK');
         this.itms = [
             new SctWrd('動揺'),
             new SctWrd('警戒'),
@@ -726,7 +726,7 @@ class selector_think extends SctWrd_Selector {
 // 発言・主張 ～している
 class selector_say extends SctWrd_Selector {
     constructor() {
-        super('#SAY');
+        super('@SAY');
         this.itms = [
             new SctWrd('主張'),
             new SctWrd('強調'),
@@ -747,7 +747,7 @@ class selector_say extends SctWrd_Selector {
 // 判断 ～を
 class selector_answer extends SctWrd_Selector {
     constructor() {
-        super('#ANSWER');
+        super('@ANSWER');
         this.itms = [
             new SctWrd('見方'),
             new SctWrd('意見'),
@@ -774,7 +774,7 @@ class selector_answer extends SctWrd_Selector {
 // 評価 と～（る・た・い）。
 class selector_assessment extends SctWrd_Selector {
     constructor() {
-        super('#ASSES');
+        super('@ASSES');
         this.itms = [
             new SctWrd('親しまれている'),
             new SctWrd('賞賛された'),
@@ -811,7 +811,7 @@ class selector_assessment extends SctWrd_Selector {
 // 接続詞
 class selector_conect extends SctWrd_Selector {
     constructor() {
-        super('#CONECT');
+        super('@CONECT');
         this.itms = [
             new SctWrd('そして'),
             new SctWrd('それに伴い'),
