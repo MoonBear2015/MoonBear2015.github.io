@@ -17,13 +17,14 @@ function make_site_header(): string {
     html += '<h1>';
     html += '「空虚」';
     html += '<small>';
-    html += 'R01.02';
+    html += 'M01.02';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
     html += '<div id="header_menu">';
     html += make_header_menu(0);
     html += '</div>';
+
     return html;
 }
 

@@ -1,8 +1,13 @@
+
 //------------------------------------ selector's
 
 interface ISctItm {
     Wrd : string;
     SctPic : string;
+}
+
+interface ISctCod extends ISctItm {
+    CodLength : number;
 }
 
 class SctItm implements ISctItm {
@@ -22,6 +27,38 @@ class SctItm implements ISctItm {
         this.Wrd = value.Wrd;
         this.SctPic = value.SctPic;    
     }
+}
+
+class SctCod extends SctItm implements ISctCod {
+    constructor(
+        inWrd : string
+        ,
+        inSctPic : string
+        ,
+        public CodLength : number
+    )
+    {
+        super(inWrd,inSctPic);
+    }
+
+    get to_SctItm() : ISctItm {
+        return new SctItm(this.Wrd,this.SctPic);
+    }
+
+    to_length(in_length : number,in_key : string) : Array<ISctItm> {
+        let results = new Array<ISctItm>();
+
+
+        return results;
+    }
+
+    add(inCod : ISctCod) : ISctCod {
+        let resWrd = this.Wrd + inCod.Wrd;
+        let resPic = this.SctPic;
+        let resLen = this.CodLength + inCod.CodLength;
+        return new SctCod(resWrd,resPic,resLen);
+    }
+
 }
 
 class SctWrd extends SctItm implements ISctItm {
@@ -86,13 +123,13 @@ class ItmCounter<T extends ISctItm> implements IItmSelector<T> {
 
 interface ISctItm_Selector extends IItmSelector<SctItm> {
     // rnd_Itm : SctItm;
-    news_key : string;
+    itm_key : string;
     pic_key : string;
 }
 
 class SctItm_Selector extends ItmSelector<SctItm> implements ISctItm_Selector {
     constructor(
-        public news_key : string
+        public itm_key : string
         ,
         public pic_key : string
     )
@@ -103,10 +140,10 @@ class SctItm_Selector extends ItmSelector<SctItm> implements ISctItm_Selector {
 
 class SctWrd_Selector extends SctItm_Selector implements ISctItm_Selector {
     constructor(
-        in_news_key : string
+        in_itm_key : string
     )
     {
-        super(in_news_key,'');
+        super(in_itm_key,'');
     }
 }
 
@@ -116,12 +153,12 @@ class SctItm_SelectLocker extends SctItm_Selector implements ISctItm_Selector {
     private lock_item : SctItm;
 
     constructor(
-        public news_key : string
+        public itm_key : string
         ,
         public pic_key : string
     )
     {
-        super(news_key,pic_key);
+        super(itm_key,pic_key);
         this.is_lock = false;
         this.lock_item = new SctItm('','');
     }
@@ -143,10 +180,10 @@ class SctWrd_SelectLocker extends SctWrd_Selector implements ISctItm_Selector {
     private lock_item : SctWrd;
 
     constructor(
-        public news_key : string
+        public itm_key : string
     )
     {
-        super(news_key);
+        super(itm_key);
         this.is_lock = false;
         this.lock_item = new SctWrd('');
     }
@@ -166,12 +203,12 @@ class SctWrd_SelectLocker extends SctWrd_Selector implements ISctItm_Selector {
 class SctItm_FirstLocker extends SctItm_Selector implements ISctItm_Selector {
     private is_first : boolean;
     constructor(
-        public news_key : string
+        public itm_key : string
         ,
         public pic_key : string
     )
     {
-        super(news_key,pic_key);
+        super(itm_key,pic_key);
         this.is_first = true;
     }
 
@@ -190,7 +227,7 @@ class SctItm_FirstLocker extends SctItm_Selector implements ISctItm_Selector {
 
 class SctItm_Counter extends ItmCounter<SctItm> implements ISctItm_Selector {
     constructor(
-        public news_key : string
+        public itm_key : string
         ,
         public pic_key : string
     )
@@ -200,9 +237,39 @@ class SctItm_Counter extends ItmCounter<SctItm> implements ISctItm_Selector {
 }
 class SctWrd_Counter extends SctItm_Counter implements ISctItm_Selector {
     constructor(
-        in_news_key : string
+        in_itm_key : string
     )
     {
-        super(in_news_key,'');
+        super(in_itm_key,'');
+    }
+}
+
+class Selector_Generator<T extends ISctCod> {
+    protected itms : T[];
+    constructor(
+        public itm_key : string
+        ,
+        public pic_key : string
+    )
+    {
+        this.itms = new Array<T>();
+    }
+
+    Generate(
+                in_max : number
+                ,
+                in_selector : ISctItm_Selector
+                ) : Array<ISctItm_Selector>{
+
+        let results = new Array<ISctItm_Selector>();
+
+        for(let c = 1; c <= in_max; c++)
+        {
+            let is = new Array<T>();
+            
+        }
+
+        return results;
+
     }
 }

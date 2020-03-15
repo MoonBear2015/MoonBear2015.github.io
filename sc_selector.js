@@ -17,6 +17,25 @@ class SctItm {
         this.SctPic = value.SctPic;
     }
 }
+class SctCod extends SctItm {
+    constructor(inWrd, inSctPic, CodLength) {
+        super(inWrd, inSctPic);
+        this.CodLength = CodLength;
+    }
+    get to_SctItm() {
+        return new SctItm(this.Wrd, this.SctPic);
+    }
+    to_length(in_length, in_key) {
+        let results = new Array();
+        return results;
+    }
+    add(inCod) {
+        let resWrd = this.Wrd + inCod.Wrd;
+        let resPic = this.SctPic;
+        let resLen = this.CodLength + inCod.CodLength;
+        return new SctCod(resWrd, resPic, resLen);
+    }
+}
 class SctWrd extends SctItm {
     constructor(in_Wrd) {
         super(in_Wrd, "");
@@ -64,21 +83,21 @@ class ItmCounter {
     }
 }
 class SctItm_Selector extends ItmSelector {
-    constructor(news_key, pic_key) {
+    constructor(itm_key, pic_key) {
         super();
-        this.news_key = news_key;
+        this.itm_key = itm_key;
         this.pic_key = pic_key;
     }
 }
 class SctWrd_Selector extends SctItm_Selector {
-    constructor(in_news_key) {
-        super(in_news_key, '');
+    constructor(in_itm_key) {
+        super(in_itm_key, '');
     }
 }
 class SctItm_SelectLocker extends SctItm_Selector {
-    constructor(news_key, pic_key) {
-        super(news_key, pic_key);
-        this.news_key = news_key;
+    constructor(itm_key, pic_key) {
+        super(itm_key, pic_key);
+        this.itm_key = itm_key;
         this.pic_key = pic_key;
         this.is_lock = false;
         this.lock_item = new SctItm('', '');
@@ -94,9 +113,9 @@ class SctItm_SelectLocker extends SctItm_Selector {
     }
 }
 class SctWrd_SelectLocker extends SctWrd_Selector {
-    constructor(news_key) {
-        super(news_key);
-        this.news_key = news_key;
+    constructor(itm_key) {
+        super(itm_key);
+        this.itm_key = itm_key;
         this.is_lock = false;
         this.lock_item = new SctWrd('');
     }
@@ -111,9 +130,9 @@ class SctWrd_SelectLocker extends SctWrd_Selector {
     }
 }
 class SctItm_FirstLocker extends SctItm_Selector {
-    constructor(news_key, pic_key) {
-        super(news_key, pic_key);
-        this.news_key = news_key;
+    constructor(itm_key, pic_key) {
+        super(itm_key, pic_key);
+        this.itm_key = itm_key;
         this.pic_key = pic_key;
         this.is_first = true;
     }
@@ -128,14 +147,25 @@ class SctItm_FirstLocker extends SctItm_Selector {
 }
 //------------------------------------ poem
 class SctItm_Counter extends ItmCounter {
-    constructor(news_key, pic_key) {
+    constructor(itm_key, pic_key) {
         super();
-        this.news_key = news_key;
+        this.itm_key = itm_key;
         this.pic_key = pic_key;
     }
 }
 class SctWrd_Counter extends SctItm_Counter {
-    constructor(in_news_key) {
-        super(in_news_key, '');
+    constructor(in_itm_key) {
+        super(in_itm_key, '');
+    }
+}
+class Selector_Generator {
+    constructor(itm_key, pic_key) {
+        this.itm_key = itm_key;
+        this.pic_key = pic_key;
+        this.itms = new Array();
+    }
+    Generate(in_selector) {
+        let results = new Array();
+        return results;
     }
 }

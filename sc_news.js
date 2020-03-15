@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'R01.48';
+    html += 'N01.48';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -72,7 +72,7 @@ function make_news() {
 }
 class selector_random_date {
     constructor() {
-        this.news_key = "@DATE";
+        this.itm_key = "@DATE";
         this.pic_key = "";
     }
     get rnd_Itm() {
@@ -88,7 +88,7 @@ class selector_random_date {
 }
 class selector_human {
     constructor() {
-        this.news_key = "@HUMAN";
+        this.itm_key = "@HUMAN";
         this.pic_key = "";
         this.nameMaker = new NameMakerAll();
     }
@@ -99,7 +99,7 @@ class selector_human {
 }
 class selector_age {
     constructor() {
-        this.news_key = "@AGE";
+        this.itm_key = "@AGE";
         this.pic_key = "";
         this.nameMaker = new NameMakerAll();
     }
@@ -875,10 +875,10 @@ class news_docs_maker {
     gene_docs(temp_doc) {
         let result = temp_doc;
         this.selectors.forEach((value) => {
-            if (value.news_key != '') {
-                while (result.search(value.news_key) != -1) {
+            if (value.itm_key != '') {
+                while (result.search(value.itm_key) != -1) {
                     let itm = value.rnd_Itm;
-                    result = result.replace(value.news_key, itm.Wrd);
+                    result = result.replace(value.itm_key, itm.Wrd);
                     if (value.pic_key != '') {
                         while (result.search(value.pic_key) != -1) {
                             result = result.replace(value.pic_key, itm.SctPic);

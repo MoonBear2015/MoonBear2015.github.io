@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'R01.48';
+    html += 'N01.48';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -91,11 +91,11 @@ function make_news()
 
 
 class selector_random_date implements ISctItm_Selector {
-    public news_key : string;
+    public itm_key : string;
     public pic_key : string;
     constructor()
     {
-        this.news_key = "@DATE";
+        this.itm_key = "@DATE";
         this.pic_key = "";
     }
     get rnd_Itm() : SctItm {
@@ -113,11 +113,11 @@ class selector_random_date implements ISctItm_Selector {
 
 class selector_human implements ISctItm_Selector {
     public nameMaker : INameMaker;
-    public news_key : string;
+    public itm_key : string;
     public pic_key : string;
     constructor()
     {
-        this.news_key = "@HUMAN";
+        this.itm_key = "@HUMAN";
         this.pic_key = "";
         this.nameMaker = new NameMakerAll();
     }
@@ -130,11 +130,11 @@ class selector_human implements ISctItm_Selector {
 
 class selector_age implements ISctItm_Selector {
     public nameMaker : INameMaker;
-    public news_key : string;
+    public itm_key : string;
     public pic_key : string;
     constructor()
     {
-        this.news_key = "@AGE";
+        this.itm_key = "@AGE";
         this.pic_key = "";
         this.nameMaker = new NameMakerAll();
     }
@@ -1467,10 +1467,10 @@ class news_docs_maker {
 
         this.selectors.forEach(
             (value) => {
-                if (value.news_key != ''){
-                    while(result.search(value.news_key) != -1){
+                if (value.itm_key != ''){
+                    while(result.search(value.itm_key) != -1){
                         let itm = value.rnd_Itm;
-                        result = result.replace(value.news_key,itm.Wrd);
+                        result = result.replace(value.itm_key,itm.Wrd);
                         if (value.pic_key != ''){
                             while(result.search(value.pic_key) != -1){
                                 result = result.replace(value.pic_key,itm.SctPic);

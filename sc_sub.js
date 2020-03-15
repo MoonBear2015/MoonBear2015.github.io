@@ -1,4 +1,19 @@
 "use strict";
+//------------------------------------ etc
+const zP2 = new Intl.NumberFormat('ja', { minimumIntegerDigits: 2 });
+class AB {
+    constructor(A, B) {
+        this.A = A;
+        this.B = B;
+    }
+}
+function sepalate_number(num) {
+    let results = new Array();
+    for (let i = 0; i <= num; i++) {
+        results.push(new AB(i, num - i));
+    }
+    return results;
+}
 function ruby_change(in_html) {
     let result = '';
     let rubytags = [

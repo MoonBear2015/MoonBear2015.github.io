@@ -15,7 +15,7 @@ function make_site_header() {
     html += '<h1>';
     html += '「空虚」';
     html += '<small>';
-    html += 'R01.02';
+    html += 'M01.02';
     html += '</small>';
     html += '</h1>';
     html += '</div>';

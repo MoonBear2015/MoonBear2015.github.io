@@ -9,7 +9,7 @@ function set_poem()
     html += '<h1>';
     html += 'POEM';
     html += '<small>';
-    html += 'R01.08';
+    html += 'P01.08';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -111,10 +111,10 @@ class poem_docs_maker {
         let result = temp_doc;
         this.selectors.forEach(
             (value) => {
-                if (value.news_key != ''){
-                    while(result.search(value.news_key) != -1){
+                if (value.itm_key != ''){
+                    while(result.search(value.itm_key) != -1){
                         let itm = value.rnd_Itm;
-                        result = result.replace(value.news_key,itm.Wrd);
+                        result = result.replace(value.itm_key,itm.Wrd);
                         if (value.pic_key != ''){
                             while(result.search(value.pic_key) != -1){
                                 result = result.replace(value.pic_key,itm.SctPic);
