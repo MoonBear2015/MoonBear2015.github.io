@@ -22,6 +22,13 @@ function make_site_header() {
     html += '<div id="header_menu">';
     html += make_header_menu(0);
     html += '</div>';
+    let testcod = new SctCod('###', 'Pic', 5);
+    let tests = testcod.to_length_itms(10, '@akey', '@bkey');
+    let msg = '';
+    for (let i = 0; i < tests.length; i++) {
+        msg += tests[i].ToString() + '\r\n';
+    }
+    alert(msg);
     return html;
 }
 class menu_item {

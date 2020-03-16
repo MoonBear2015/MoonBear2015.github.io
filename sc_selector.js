@@ -1,5 +1,8 @@
 "use strict";
-//------------------------------------ selector's
+//------------------------------------ etc's
+function to_key_with_length(in_key, in_length) {
+    return in_key + zP2.format(in_length);
+}
 class SctItm {
     constructor(Wrd, SctPic) {
         this.Wrd = Wrd;
@@ -16,6 +19,9 @@ class SctItm {
         this.Wrd = value.Wrd;
         this.SctPic = value.SctPic;
     }
+    ToString() {
+        return '(' + this.Wrd + '/' + this.SctPic + ')';
+    }
 }
 class SctCod extends SctItm {
     constructor(inWrd, inSctPic, CodLength) {
@@ -25,8 +31,27 @@ class SctCod extends SctItm {
     get to_SctItm() {
         return new SctItm(this.Wrd, this.SctPic);
     }
-    to_length(in_length, in_key) {
+    to_length_itms(in_length, in_AKey, in_BKey) {
         let results = new Array();
+        if (in_length < this.CodLength) {
+            return results;
+        }
+        if (in_length == this.CodLength) {
+            results.push(this.to_SctItm);
+            return results;
+        }
+        let l = in_length - this.CodLength;
+        let abs = sepalate_number(l);
+        alert(abs.length);
+        for (let i = 0; i < abs.length; i++) {
+            if (abs[i].A < 2)
+                continue;
+            let key = "";
+            key += to_key_with_length(in_AKey, abs[i].A);
+            key += this.Wrd;
+            key += to_key_with_length(in_BKey, abs[i].B);
+            results.push(new SctItm(key, this.SctPic));
+        }
         return results;
     }
     add(inCod) {
@@ -164,8 +189,11 @@ class Selector_Generator {
         this.pic_key = pic_key;
         this.itms = new Array();
     }
-    Generate(in_selector) {
+    Generate(in_max, in_selector) {
         let results = new Array();
+        for (let c = 1; c <= in_max; c++) {
+            let is = new Array();
+        }
         return results;
     }
 }

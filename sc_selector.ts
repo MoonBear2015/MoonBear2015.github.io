@@ -1,9 +1,18 @@
+//------------------------------------ etc's
+
+function to_key_with_length(in_key : string,in_length : number)
+{
+    return in_key + zP2.format(in_length);
+}
+
 
 //------------------------------------ selector's
 
 interface ISctItm {
     Wrd : string;
     SctPic : string;
+
+    ToString() : string;
 }
 
 interface ISctCod extends ISctItm {
@@ -27,6 +36,10 @@ class SctItm implements ISctItm {
         this.Wrd = value.Wrd;
         this.SctPic = value.SctPic;    
     }
+
+    ToString() : string {
+        return '(' + this.Wrd + '/' + this.SctPic + ')';
+    }
 }
 
 class SctCod extends SctItm implements ISctCod {
@@ -45,10 +58,31 @@ class SctCod extends SctItm implements ISctCod {
         return new SctItm(this.Wrd,this.SctPic);
     }
 
-    to_length(in_length : number,in_key : string) : Array<ISctItm> {
+    to_length_itms(in_length : number,in_AKey : string,in_BKey : string)
+     : Array<ISctItm>
+    {
         let results = new Array<ISctItm>();
-
-
+        if (in_length < this.CodLength)
+        {
+            return results;
+        }
+        if (in_length == this.CodLength)
+        {
+            results.push(this.to_SctItm);
+            return results;
+        }
+        let l = in_length - this.CodLength;
+        let abs = sepalate_number(l);
+        alert(abs.length);
+        for(let i = 0;i < abs.length;i++)
+        {
+            if (abs[i].A < 2) continue;
+            let key = "";
+            key += to_key_with_length(in_AKey,abs[i].A);
+            key += this.Wrd;
+            key += to_key_with_length(in_BKey,abs[i].B);
+            results.push(new SctItm(key,this.SctPic));
+        }
         return results;
     }
 
@@ -273,3 +307,5 @@ class Selector_Generator<T extends ISctCod> {
 
     }
 }
+
+
