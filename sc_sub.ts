@@ -1,13 +1,31 @@
+//------------------------------------ test
+interface ITest {
+    ToString() : string;
+}
+
+function tests_alert(in_tests : Array<ITest>)
+{
+    let str = '';
+    in_tests.forEach(test => {
+        str += test.ToString() + '\r\n';
+    });
+    alert(str);
+}
+
 //------------------------------------ etc
 const zP2 = new Intl.NumberFormat('ja', { minimumIntegerDigits: 2 })
 
-class AB {
+class AB implements ITest {
     constructor(
         public A : number
         ,
         public B : number
     )
     {}
+
+    ToString() : string {
+        return '(' + this.A + ',' + this.B + ')';
+    }
 }
 
 function sepalate_number(num : number) : Array<AB>

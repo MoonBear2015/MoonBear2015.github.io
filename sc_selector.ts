@@ -19,7 +19,7 @@ interface ISctCod extends ISctItm {
     CodLength : number;
 }
 
-class SctItm implements ISctItm {
+class SctItm implements ISctItm,ITest {
     constructor(
         public Wrd : string
         ,
@@ -73,14 +73,22 @@ class SctCod extends SctItm implements ISctCod {
         }
         let l = in_length - this.CodLength;
         let abs = sepalate_number(l);
-        alert(abs.length);
+        
+        tests_alert(abs);
+        
         for(let i = 0;i < abs.length;i++)
         {
-            if (abs[i].A < 2) continue;
+            if (abs[i].A == 1) continue;
             let key = "";
-            key += to_key_with_length(in_AKey,abs[i].A);
+            if (abs[i].A > 1)
+            {
+                key += to_key_with_length(in_AKey,abs[i].A);
+            }
             key += this.Wrd;
-            key += to_key_with_length(in_BKey,abs[i].B);
+            if (abs[i].B > 0)
+            {
+                key += to_key_with_length(in_BKey,abs[i].B);
+            }
             results.push(new SctItm(key,this.SctPic));
         }
         return results;

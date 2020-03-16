@@ -1,10 +1,20 @@
 "use strict";
+function tests_alert(in_tests) {
+    let str = '';
+    in_tests.forEach(test => {
+        str += test.ToString() + '\r\n';
+    });
+    alert(str);
+}
 //------------------------------------ etc
 const zP2 = new Intl.NumberFormat('ja', { minimumIntegerDigits: 2 });
 class AB {
     constructor(A, B) {
         this.A = A;
         this.B = B;
+    }
+    ToString() {
+        return '(' + this.A + ',' + this.B + ')';
     }
 }
 function sepalate_number(num) {

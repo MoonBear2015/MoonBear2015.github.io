@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N01.48';
+    html += 'N01.49';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -289,7 +289,6 @@ class selector_end02c extends SctWrd_Selector {
     constructor() {
         super('@END02C');
         this.itms = [
-            new SctWrd('していた'),
             new SctWrd('する'),
             new SctWrd('した'),
             new SctWrd('させる'),
@@ -317,6 +316,7 @@ class selector_whats extends SctItm_SelectLocker {
             new SctItm('ドイツ', 'WHAT/German.jpg'),
             new SctItm('韓国', 'WHAT/koria.jpg'),
             new SctItm('エジプト', 'WHAT/pyramid.jpg'),
+            new SctItm('ガミラス帝国', 'WHAT/gamilas.jpg'),
             new SctItm('経済', 'WHAT/Economy.jpg'),
             new SctItm('市場', 'WHAT/Economy.jpg'),
             new SctItm('株価', 'WHAT/Economy.jpg'),
@@ -386,7 +386,10 @@ class selector_do extends SctItm_SelectLocker {
             new SctItm('罵倒', 'DO/taunt.jpg'),
             new SctItm('堕落', 'DO/depra.jpg'),
             new SctItm('失業', 'DO/lostjob.jpg'),
-            new SctItm('支配', 'DO/mad.jpg')
+            new SctItm('支配', 'DO/mad.jpg'),
+            new SctItm('追放', 'DO/getout.jpg'),
+            new SctItm('虐待', 'DO/depression.jpg'),
+            new SctItm('束縛', 'DO/sm.jpg')
         ];
     }
 }

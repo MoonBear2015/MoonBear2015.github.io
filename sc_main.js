@@ -15,20 +15,16 @@ function make_site_header() {
     html += '<h1>';
     html += '「空虚」';
     html += '<small>';
-    html += 'M01.02';
+    html += 'M01.03';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
     html += '<div id="header_menu">';
     html += make_header_menu(0);
     html += '</div>';
-    let testcod = new SctCod('###', 'Pic', 5);
-    let tests = testcod.to_length_itms(10, '@akey', '@bkey');
-    let msg = '';
-    for (let i = 0; i < tests.length; i++) {
-        msg += tests[i].ToString() + '\r\n';
-    }
-    alert(msg);
+    // let testcod = new SctCod('####','Pic',4);
+    // let tests = testcod.to_length_itms(7,'@akey','@bkey');
+    // tests_alert(tests);
     return html;
 }
 class menu_item {
