@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N01.49';
+    html += 'N01.50';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -159,11 +159,11 @@ class selector_title extends SctWrd_Selector implements ISctItm_Selector {
             ,
             new SctWrd('@WHATは@DO@END02C@NICK')
             ,
-            new SctWrd('@WHATは@DO@END02C@THEY')
+            new SctWrd('@WHATの@DO@END02C@THEY')
             ,
-            new SctWrd('@WHATの@DOが@STATUS')
+            new SctWrd('@WHATで@DOが@STATUS')
             ,
-            new SctWrd('@WHATの@NICKが@DO@END02C')
+            new SctWrd('@WHATで@NICKが@DO@END02C')
             ,
             new SctWrd('@WHATの@THEYが@DO@END02C')
             ,
@@ -552,6 +552,14 @@ class selector_whats extends SctItm_SelectLocker implements ISctItm_Selector {
             new SctItm('ピラミッド','WHAT/pyramid.jpg')
             ,
             new SctItm('国連','WHAT/nation.jpg')
+            ,
+            new SctItm('東京','WHAT/tokyo.jpg')
+            ,
+            new SctItm('大阪','WHAT/osaka.jpg')
+            ,
+            new SctItm('ニューヨーク','WHAT/newyork.jpg')
+            ,
+            new SctItm('パリ','WHAT/Paris.jpg')
 
         ];
     }
@@ -613,6 +621,8 @@ class selector_do extends SctItm_SelectLocker implements ISctItm_Selector{
             new SctItm('虐待','DO/depression.jpg')
             ,
             new SctItm('束縛','DO/sm.jpg')
+            ,
+            new SctItm('拘束','DO/sm.jpg')
         ];
     }
 }
@@ -826,6 +836,8 @@ class selector_many extends SctWrd_Selector implements ISctItm_Selector {
             ,
             new SctWrd('ごく僅かな')
             ,
+            new SctWrd('一握りの')
+            ,
             new SctWrd('ほとんどの')
             ,
             new SctWrd('数名の')
@@ -835,6 +847,8 @@ class selector_many extends SctWrd_Selector implements ISctItm_Selector {
             new SctWrd('全ての')
             ,
             new SctWrd('大半の')
+            ,
+            new SctWrd('大勢の')
             ,
             new SctWrd('数え切れない程の')
             ,
@@ -1014,6 +1028,36 @@ class selector_class extends SctWrd_Selector implements ISctItm_Selector {
             new SctWrd('ショッカー')
             ,
             new SctWrd('仮面ライダー')
+            ,
+            new SctWrd('学級委員')
+            ,
+            new SctWrd('図書委員')
+            ,
+            new SctWrd('ＰＴＡ会長')
+            ,
+            new SctWrd('会社員')
+            ,
+            new SctWrd('専業主婦')
+            ,
+            new SctWrd('家政婦')
+            ,
+            new SctWrd('アニメ声優')
+            ,
+            new SctWrd('アナウンサー')
+            ,
+            new SctWrd('新聞記者')
+            ,
+            new SctWrd('牛乳配達員')
+            ,
+            new SctWrd('郵便局員')
+            ,
+            new SctWrd('公務員')
+            ,
+            new SctWrd('機関士')
+            ,
+            new SctWrd('野鳥の会')
+            ,
+            new SctWrd('神主')
         ];
     }
 }
