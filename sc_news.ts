@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N01.59';
+    html += 'N01.61';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -180,8 +180,6 @@ class selector_people extends SctWrd_Selector implements ISctItm_Selector {
         super('@PEOPLE');
         this.itms = [
             new SctWrd('@NICK')
-            ,
-            new SctWrd('@THEY')
             ,
             new SctWrd('@CLASS')
         ];
@@ -429,6 +427,8 @@ class selector_end02b extends SctWrd_Selector implements ISctItm_Selector {
             new SctWrd('しようとしていた')
             ,
             new SctWrd('してしまった')
+            ,
+            new SctWrd('するべきであった')
         ];
     }
 }
@@ -441,7 +441,11 @@ class selector_end02c extends SctWrd_Selector implements ISctItm_Selector {
             ,
             new SctWrd('した')
             ,
+            new SctWrd('していた')
+            ,
             new SctWrd('してしまった')
+            ,
+            new SctWrd('すべき')
         ];
     }
 }
@@ -757,8 +761,6 @@ class selector_key extends SctWrd_Selector implements ISctItm_Selector {
             new SctWrd('運動会')
             ,
             new SctWrd('祝賀会')
-            ,
-            new SctWrd('交流')
         ];
     }
 }
@@ -1350,6 +1352,24 @@ class selector_nickname extends SctWrd_Selector implements ISctItm_Selector {
             new SctWrd('赤い彗星')
             ,
             new SctWrd('白い悪魔')
+            ,
+            new SctWrd('星')
+            ,
+            new SctWrd('希望')
+            ,
+            new SctWrd('鉄人')
+            ,
+            new SctWrd('偉人')
+            ,
+            new SctWrd('魔法使い')
+            ,
+            new SctWrd('魔術師')
+            ,
+            new SctWrd('マジシャン')
+            ,
+            new SctWrd('テクニシャン')
+            ,
+            new SctWrd('達人')
         ];
     }
 }
