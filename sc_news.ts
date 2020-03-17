@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N01.50';
+    html += 'N01.51';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -155,28 +155,30 @@ class selector_title extends SctWrd_Selector implements ISctItm_Selector {
             ,
             new SctWrd('@WHATは@DO@END02C@NICK')
             ,
-            new SctWrd('@WHATは@DO@END02C@THEY')
-            ,
-            new SctWrd('@WHATは@DO@END02C@NICK')
-            ,
-            new SctWrd('@WHATの@DO@END02C@THEY')
-            ,
-            new SctWrd('@WHATで@DOが@STATUS')
-            ,
-            new SctWrd('@WHATで@NICKが@DO@END02C')
-            ,
-            new SctWrd('@WHATの@THEYが@DO@END02C')
+            new SctWrd('@WHATの@NICKが@DO@END02C')
             ,
             new SctWrd('@DO@END02C@WHAT')
             ,
-            new SctWrd('@DO@END02C@WHAT')
-            ,
-            new SctWrd('@DO@END02C@WHATの@NICK')
-            ,
-            new SctWrd('@DO@END02C@WHATの@THEY')
+            new SctWrd('@DO@END02C@WHATの@PEOPLE')
         ];
     }
 }
+
+class selector_people extends SctWrd_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@PEOPLE');
+        this.itms = [
+            new SctWrd('@NICK')
+            ,
+            new SctWrd('@THEY')
+            ,
+            new SctWrd('@CLASS')
+            ,
+            new SctWrd('@HUMAN')
+        ];
+    }
+}
+
 
 class selector_doc extends SctWrd_Selector implements ISctItm_Selector {
     constructor(){
@@ -371,7 +373,7 @@ class selector_YESNO extends SctWrd_Selector implements ISctItm_Selector {
             ,
             new SctWrd('その通り')
             ,
-            new SctWrd('そうだ')
+            new SctWrd('すなわち')
         ];
     }
 }
@@ -429,10 +431,6 @@ class selector_end02c extends SctWrd_Selector implements ISctItm_Selector {
             new SctWrd('する')
             ,
             new SctWrd('した')
-            ,
-            new SctWrd('させる')
-            ,
-            new SctWrd('させた')
             ,
             new SctWrd('してしまった')
         ];
@@ -1460,7 +1458,11 @@ class selector_conect extends SctWrd_Selector implements ISctItm_Selector {
             new SctWrd('以前は')
             ,
             new SctWrd('確かに')
-        ];
+            ,
+            new SctWrd('流石に')
+            ,
+            new SctWrd('兎に角')
+          ];
     }
 }
 
@@ -1510,6 +1512,8 @@ class news_docs_maker {
         this.selectors.push(new selector_conect());
         this.selectors.push(new selector_nickname());
         this.selectors.push(new selector_assessment());
+        this.selectors.push(new selector_people());
+
     }
 
     public gene_docs(temp_doc : string) : string {
