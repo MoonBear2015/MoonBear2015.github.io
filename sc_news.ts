@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N01.55';
+    html += 'N01.58';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -160,15 +160,17 @@ class selector_title extends SctWrd_Selector implements ISctItm_Selector {
             ,
             new SctWrd('@WHATの@NICKが@DO@END02C')
             ,
-            new SctWrd('@WHATの@NICK、@HUMAN')
+            new SctWrd('@WHATの@PEOPLE、@HUMANが@DO@END02C')
+            ,
+            new SctWrd('@WHATを@DO@END02C@PEOPLE、@HUMAN')
             ,
             new SctWrd('@DO@END02C@WHAT')
             ,
             new SctWrd('@DO@END02C@WHATの@PEOPLE')
             ,
-            new SctWrd('@WHATの@NICK、@HUMAN')
+            new SctWrd('@WHATが@DO@END02C@NICK、@HUMAN')
             ,
-            new SctWrd('@WHATの@NICK、@HUMANが@DOする')
+            new SctWrd('@WHATの@NICK、@HUMANが@DO@END02C')
         ];
     }
 }
@@ -182,8 +184,6 @@ class selector_people extends SctWrd_Selector implements ISctItm_Selector {
             new SctWrd('@THEY')
             ,
             new SctWrd('@CLASS')
-            ,
-            new SctWrd('@HUMAN')
         ];
     }
 }
@@ -512,11 +512,7 @@ class selector_whats extends SctItm_SelectLocker implements ISctItm_Selector {
             ,
             new SctItm('人工知能','WHAT/AI.jpg')
             ,
-            new SctItm('教育','WHAT/stady.jpg')
-            ,
-            new SctItm('学校','WHAT/stady.jpg')
-            ,
-            new SctItm('小学校','WHAT/stady.jpg')
+            new SctItm('学校教育','WHAT/stady.jpg')
             ,
             new SctItm('宇宙','WHAT/space.jpg')
             ,

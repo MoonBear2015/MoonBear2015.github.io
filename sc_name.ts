@@ -8,6 +8,8 @@ class NameMakerAll implements INameMaker {
         this.makers.push(new NameMaker_eng());
         this.makers.push(new NameMaker_rus());
         this.makers.push(new NameMaker_jpn());
+        this.makers.push(new NameMaker_kor());
+
     }
 
     public create() : string {
@@ -38,7 +40,122 @@ class NameMaker implements INameMaker {
     }
 }
 
-class NameMaker_cha extends NameMaker implements INameMaker  {
+class NameMaker_ruby extends NameMaker implements INameMaker {
+    public create(){
+        return ruby_change(super.create());
+    }
+}
+
+class NameMaker_kor extends NameMaker_ruby implements INameMaker  {
+    constructor(){
+        super('');
+        this.name01 = [
+		'|김|キム|'
+		,
+		'|이|イ|'
+		,
+		'|박|パク|'
+		,
+		'|정|チョン|'
+		,
+		'|최|チェ|'
+		,
+		'|조|チョ|'
+		,
+		'|강|カン|'
+		,
+		'|장|チャン|'
+		,
+		'|윤|ユン|'
+		,
+		'|임|イム|'
+		,
+		'|신|シン|'
+		,
+		'|유|ユ|'
+		,
+		'|한|ハン|'
+		,
+		'|오|オ	|'
+		,
+		'|서|ソ|'
+		,
+		'|전|ジョン|'
+		,
+		'|권|クォン|'
+		,
+		'|황|ファン|'
+		,
+		'|안|アン|'
+		,
+		'|송|ソン|'
+		,
+		'|홍|ホン|'
+		,
+		'|양|ヤン|'
+		,
+		'|고|コ|'
+		,
+		'|문|ムン|'
+		,
+		'|손|ソン|'
+		,
+		'|배|ペ|'
+		,
+		'|백|ペク|'
+		,
+		'|허|ホ|'
+		,
+		'|노|ノ|'
+		,
+		'|남|ナム|'
+        ];
+        this.name02 = [
+		'|지안|チアン|'
+		,
+		'|서아|ソア|'
+		,
+		'|하윤|ハユン|'
+		,
+		'|서윤|ソユン|'
+		,
+		'|하은|ハウン|'
+		,
+		'|하린|ハリン|'
+		,
+		'|서연|ソヨン|'
+		,
+		'|수아|スア|'
+		,
+		'|지우|チウ|'
+		,
+		'|지유|チユ|'
+		,
+		'|서준|ソジュン|'
+		,
+		'|하준|ハジュン|'
+		,
+		'|도윤|トユン|'
+		,
+		'|시우|シウ|'
+		,
+		'|민준|ミンジュン|'
+		,
+		'|지호|チホ|'
+		,
+		'|예준|イェジュン|'
+		,
+		'|주원|チュウォン|'
+		,
+		'|은우|ウヌ|'
+		,
+		'|유준|ユジュン|'
+        ];
+    }
+}
+
+
+class NameMaker_cha extends NameMaker_ruby implements INameMaker  {
     constructor(){
         super('');
         this.name01 = [
@@ -104,75 +221,71 @@ class NameMaker_cha extends NameMaker implements INameMaker  {
             '|佳怡|ジャ イー|'
         ];
     }
-
-    public create(){
-        return ruby_change(super.create());
-    }
 }
 
 
-class NameMaker_rus extends NameMaker implements INameMaker {
+class NameMaker_rus extends NameMaker_ruby implements INameMaker {
     constructor(){
-        super('・');
+        super(' ');
         this.name01 = [
-            'アレクサンドル'
+            '|Александр|アレクサンドル|'
             ,
-            'ミハイル'
+            '|Михаил|ミハイル|'
             ,
-            'アルチョム'
+            '|Артём|アルチョム|'
             ,
-            'マクシム'
+            '|Максим|マクシム|'
             ,
-            'ダニール'
+            '|Даниил|ダニール|'
             ,
-            'イヴァン'
+            '|Иван|イヴァン|'
             ,
-            'ドミトリー'
+            '|Дмитрий|ドミトリー|'
             ,
-            'キリル'
+            '|Кирилл|キリル|'
             ,
-            'マトヴェイ'
+            '|Матвей|マトヴェイ|'
             ,
-            'ソフィア'
+            '|Софья|ソフィア|'
             ,
-            'マリヤ'
+            '|Мария|マリヤ|'
             ,
-            'アンナ'
+            '|Анна|アンナ|'
             ,
-            'アリサ'
+            '|Алиса|アリサ|'
             ,
-            'ヴィクトリア'
+            '|Виктория|ヴィクトリア|'
             ,
-            'アナスタシア'
+            '|Анастасия|アナスタシア|'
             ,
-            'ポリーナ'
+            '|Полина|ポリーナ|'
             ,
-            'アレクサンドラ'
+            '|Александра|アレクサンドラ|'
             ,
-            'エリザヴェータ'
+            '|Елизавета|エリザヴェータ|'
             ,
-            'エカチェリーナ'
+            '|Екатерина|エカチェリーナ|'
         ];
         this.name02 = [
-            'スミルノフ'
+            '|Cмирно́в|スミルノフ|'
             ,
-            'イワノフ'
+            '|Иванов|イワノフ|'
             ,
-            'クズネツォフ'
+            '|Кузнецов|クズネツォフ|'
             ,
-            'ポポフ'
+            '|Попов|ポポフ|'
             ,
-            'ソコロフ'
+            '|Соколов|ソコロフ|'
             ,
-            'レベジェフ'
+            '|Лебедев|レベジェフ|'
             ,
-            'コズロフ'
+            '|Козлов|コズロフ|'
             ,
-            'ノヴィコフ'
+            '|Новиков|ノヴィコフ|'
             ,
-            'モロゾフ'
+            '|Морозов|モロゾフ|'
             ,
-            'ペトロフ'
+            '|Петров|ペトロフ|'
         ];
     }
 }
