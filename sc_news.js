@@ -849,6 +849,8 @@ class selector_say extends SctWrd_Selector {
             new SctWrd('メモ書き'),
             new SctWrd('コメント'),
             new SctWrd('メール'),
+            new SctWrd('家族にメール'),
+            new SctWrd('娘にメール'),
             new SctWrd('リツイート')
         ];
     }

@@ -1440,6 +1440,10 @@ class selector_say extends SctWrd_Selector implements ISctItm_Selector {
             ,
             new SctWrd('メール')
             ,
+            new SctWrd('家族にメール')
+            ,
+            new SctWrd('娘にメール')
+            ,
             new SctWrd('リツイート')
         ];
     }
