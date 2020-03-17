@@ -178,6 +178,8 @@ class NameMaker_cha extends NameMaker_ruby implements INameMaker  {
             '|呉|ウー|'
             ,
             '|周|ヂョウ|'
+            ,
+            '|孙|スン|'
         ];
         this.name02 = [
             '|浩宇|ハオ ユー|'
@@ -219,6 +221,8 @@ class NameMaker_cha extends NameMaker_ruby implements INameMaker  {
             '|可馨|クァ シン|'
             ,
             '|佳怡|ジャ イー|'
+            ,
+            '|悟空|ウー コン|'
         ];
     }
 }

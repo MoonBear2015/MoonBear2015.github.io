@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N01.61';
+    html += 'N01.64';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -67,6 +67,10 @@ function make_news() {
         html += '@NEWS_DOC';
     }
     html += '</p>';
+    html += '<h4 id="news_writer" align="right">';
+    html += 'Copyright (C) @WRITER';
+    html += '<br>@DATE';
+    html += '</h4>';
     html += '</div>';
     let maker = new news_docs_maker();
     html = maker.gene_docs(html);
@@ -110,6 +114,14 @@ class selector_age {
         let age = "";
         age = "(" + rnd_minmax(16, 90).toString() + ")";
         return new SctItm(age, '');
+    }
+}
+class selector_writer extends SctWrd_Selector {
+    constructor() {
+        super('@WRITER');
+        this.itms = [
+            new SctWrd('@WH2')
+        ];
     }
 }
 class selector_title extends SctWrd_Selector {
@@ -165,6 +177,18 @@ class selector_who extends SctWrd_Selector {
             new SctWrd('@THEYより「@DOする@NICK」と@ASSES@CLASSの@HUMAN@AGE'),
             new SctWrd('@THEYより「@STATUSする@NICK」と@ASSES@CLASSの@HUMAN@AGE'),
             new SctWrd('@THEYより「@CLASSの@NICK」と@ASSES@CLASSの@HUMAN@AGE')
+        ];
+    }
+}
+class selector_who2 extends SctWrd_Selector {
+    constructor() {
+        super('@WH2');
+        this.itms = [
+            new SctWrd('@CLASS @HUMAN@AGE'),
+            new SctWrd('「@STATUSする@NICK」と@ASSES@CLASS @HUMAN@AGE'),
+            new SctWrd('「@CLASSの@NICK」と@ASSES@CLASS @HUMAN@AGE'),
+            new SctWrd('@THEYより「@STATUSする@NICK」と@ASSES@CLASS @HUMAN@AGE'),
+            new SctWrd('@THEYより「@CLASSの@NICK」と@ASSES@CLASS @HUMAN@AGE')
         ];
     }
 }
@@ -776,7 +800,8 @@ class selector_nickname extends SctWrd_Selector {
             new SctWrd('ペテン師'),
             new SctWrd('ゲス野郎'),
             new SctWrd('ホモ野郎'),
-            new SctWrd('ヒットラー')
+            new SctWrd('ヒットラー'),
+            new SctWrd('おっさん')
             //
             // posi
             //
@@ -806,7 +831,32 @@ class selector_nickname extends SctWrd_Selector {
             new SctWrd('魔術師'),
             new SctWrd('マジシャン'),
             new SctWrd('テクニシャン'),
-            new SctWrd('達人')
+            new SctWrd('達人'),
+            new SctWrd('種馬'),
+            new SctWrd('馬車馬'),
+            new SctWrd('重戦車'),
+            new SctWrd('妖精'),
+            new SctWrd('天使'),
+            new SctWrd('神様'),
+            new SctWrd('鬼神'),
+            new SctWrd('魔神'),
+            new SctWrd('狂戦士'),
+            new SctWrd('コンピューター')
+            //
+            // nomal
+            //
+            ,
+            new SctWrd('男'),
+            new SctWrd('女'),
+            new SctWrd('少年'),
+            new SctWrd('少女'),
+            new SctWrd('教師'),
+            new SctWrd('先生'),
+            new SctWrd('老師'),
+            new SctWrd('おじさん'),
+            new SctWrd('おばさん'),
+            new SctWrd('おじいちゃん'),
+            new SctWrd('おばあちゃん')
         ];
     }
 }
@@ -956,6 +1006,7 @@ class news_doc {
 class news_docs_maker {
     constructor() {
         this.selectors = new Array();
+        this.selectors.push(new selector_writer());
         this.selectors.push(new selector_title());
         this.selectors.push(new selector_doc());
         this.selectors.push(new selector_c01());
@@ -976,6 +1027,7 @@ class news_docs_maker {
         this.selectors.push(new selector_many());
         this.selectors.push(new selector_think());
         this.selectors.push(new selector_who());
+        this.selectors.push(new selector_who2());
         this.selectors.push(new selector_human());
         this.selectors.push(new selector_class());
         this.selectors.push(new selector_age());

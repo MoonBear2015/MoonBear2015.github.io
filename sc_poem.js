@@ -7,7 +7,7 @@ function set_poem() {
     html += '<h1>';
     html += 'POEM';
     html += '<small>';
-    html += 'P01.08';
+    html += 'P01.09';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -67,6 +67,9 @@ function make_poem_sub() {
     html += '<h2 id="poem_main">';
     html += '@POEM_TYPE';
     html += '</h2>';
+    html += '<h4 id="poem_writer" align="right">';
+    html += '@WRITER';
+    html += '</h4>';
     html += '</div>';
     return html;
 }
@@ -84,6 +87,16 @@ class poem_docs_maker {
         this.selectors.push(new poemer_tema03());
         this.selectors.push(new poemer_tema04());
         this.selectors.push(new poemer_tema05());
+        // newsより流用
+        this.selectors.push(new selector_writer());
+        this.selectors.push(new selector_who2());
+        this.selectors.push(new selector_they());
+        this.selectors.push(new selector_class());
+        this.selectors.push(new selector_age());
+        this.selectors.push(new selector_nickname());
+        this.selectors.push(new selector_assessment());
+        this.selectors.push(new selector_human());
+        this.selectors.push(new selector_status());
     }
     gene_docs(temp_doc) {
         let result = temp_doc;
