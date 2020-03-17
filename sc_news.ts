@@ -574,6 +574,8 @@ class selector_whats extends SctItm_SelectLocker implements ISctItm_Selector {
             new SctItm('ディズニーランド','WHAT/disney.jpg')
             ,
             new SctItm('ジオン公国','WHAT/jion.jpg')
+            ,
+            new SctItm('ナチス・ドイツ','WHAT/nachi.jpg')
 
         ];
     }
@@ -669,6 +671,10 @@ class selector_do extends SctItm_SelectLocker implements ISctItm_Selector{
             new SctItm('救助','DO/rescue.jpg')
             ,
             new SctItm('生還','DO/surviving.jpg')
+            ,
+            new SctItm('達成','DO/affir.jpg')
+            ,
+            new SctItm('勝利','DO/vict.jpg')
 
         ];
     }
@@ -750,6 +756,10 @@ class selector_key extends SctWrd_Selector implements ISctItm_Selector {
             new SctWrd('雪合戦')
             ,
             new SctWrd('運動会')
+            ,
+            new SctWrd('祝賀会')
+            ,
+            new SctWrd('交流')
         ];
     }
 }
@@ -780,6 +790,18 @@ class selector_status extends SctWrd_Selector implements ISctItm_Selector {
             new SctWrd('暴発')
             ,
             new SctWrd('拡散')
+            ,
+            new SctWrd('復活')
+            ,
+            new SctWrd('衰退')
+            ,
+            new SctWrd('消耗')
+            ,
+            new SctWrd('減少')
+            ,
+            new SctWrd('消失')
+            ,
+            new SctWrd('離散')
         ];
     }
 }
@@ -803,11 +825,11 @@ class selector_they extends SctWrd_Selector implements ISctItm_Selector {
             ,
             new SctWrd('女子大生')
             ,
-            new SctWrd('女性達')
+            new SctWrd('彼女達')
             ,
             new SctWrd('ＯＬ達')
             ,
-            new SctWrd('男性陣')
+            new SctWrd('彼ら')
             ,
             new SctWrd('先人達')
             ,
@@ -868,6 +890,8 @@ class selector_they extends SctWrd_Selector implements ISctItm_Selector {
             new SctWrd('エリート')
             ,
             new SctWrd('傭兵達')
+            ,
+            new SctWrd('民衆')
         ];
     }
 }
@@ -1288,6 +1312,8 @@ class selector_nickname extends SctWrd_Selector implements ISctItm_Selector {
             new SctWrd('ゲス野郎')
             ,
             new SctWrd('ホモ野郎')
+            ,
+            new SctWrd('ヒットラー')
             //
             // posi
             //
@@ -1321,6 +1347,10 @@ class selector_nickname extends SctWrd_Selector implements ISctItm_Selector {
             new SctWrd('希望')
             ,
             new SctWrd('夢')
+            ,
+            new SctWrd('赤い彗星')
+            ,
+            new SctWrd('白い悪魔')
         ];
     }
 }
