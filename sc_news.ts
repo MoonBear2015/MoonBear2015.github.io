@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N01.53';
+    html += 'N01.54';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -157,9 +157,15 @@ class selector_title extends SctWrd_Selector implements ISctItm_Selector {
             ,
             new SctWrd('@WHATの@NICKが@DO@END02C')
             ,
+            new SctWrd('@WHATの@NICK、@HUMAN')
+            ,
             new SctWrd('@DO@END02C@WHAT')
             ,
             new SctWrd('@DO@END02C@WHATの@PEOPLE')
+            ,
+            new SctWrd('@WHATの@NICK、@HUMAN')
+            ,
+            new SctWrd('@WHATの@NICK、@HUMANが@DOする')
         ];
     }
 }
@@ -564,6 +570,10 @@ class selector_whats extends SctItm_SelectLocker implements ISctItm_Selector {
             new SctItm('天国','WHAT/heaven.jpg')
             ,
             new SctItm('極楽浄土','WHAT/heaven2.jpg')
+            ,
+            new SctItm('ディズニーランド','WHAT/disney.jpg')
+            ,
+            new SctItm('ジオン公国','WHAT/jion.jpg')
 
         ];
     }
@@ -632,6 +642,8 @@ class selector_do extends SctItm_SelectLocker implements ISctItm_Selector{
             new SctItm('拘束','DO/sm.jpg')
             ,
             new SctItm('否定','DO/no.jpg')
+            ,
+            new SctItm('警告','DO/warning.jpg')
             //
             // posi 
             //
@@ -655,6 +667,8 @@ class selector_do extends SctItm_SelectLocker implements ISctItm_Selector{
             new SctItm('祝福','DO/bless.jpg')
             ,
             new SctItm('救助','DO/rescue.jpg')
+            ,
+            new SctItm('生還','DO/surviving.jpg')
 
         ];
     }
