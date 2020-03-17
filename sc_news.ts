@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N01.52';
+    html += 'N01.53';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -558,6 +558,12 @@ class selector_whats extends SctItm_SelectLocker implements ISctItm_Selector {
             new SctItm('ニューヨーク','WHAT/newyork.jpg')
             ,
             new SctItm('パリ','WHAT/Paris.jpg')
+            ,
+            new SctItm('地獄','WHAT/hell.jpg')
+            ,
+            new SctItm('天国','WHAT/heaven.jpg')
+            ,
+            new SctItm('極楽浄土','WHAT/heaven2.jpg')
 
         ];
     }
@@ -568,6 +574,9 @@ class selector_do extends SctItm_SelectLocker implements ISctItm_Selector{
     constructor(){
         super('@DO','@PIC_DO');
         this.itms = [
+            //
+            // nega 
+            //
             new SctItm('壊滅','DO/break.jpg')
             ,
             new SctItm('死滅','DO/dead.jpg')
@@ -621,6 +630,32 @@ class selector_do extends SctItm_SelectLocker implements ISctItm_Selector{
             new SctItm('束縛','DO/sm.jpg')
             ,
             new SctItm('拘束','DO/sm.jpg')
+            ,
+            new SctItm('否定','DO/no.jpg')
+            //
+            // posi 
+            //
+            ,
+            new SctItm('誕生','DO/birth.jpg')
+            ,
+            new SctItm('復活','DO/rebirth.jpg')
+            ,
+            new SctItm('成長','DO/grow.jpg')
+            ,
+            new SctItm('成功','DO/success.jpg')
+            ,
+            new SctItm('承認','DO/yes.jpg')
+            ,
+            new SctItm('解放','DO/release.jpg')
+            ,
+            new SctItm('独立','DO/independence.jpg')
+            ,
+            new SctItm('賞賛','DO/praise.jpg')
+            ,
+            new SctItm('祝福','DO/bless.jpg')
+            ,
+            new SctItm('救助','DO/rescue.jpg')
+
         ];
     }
 }
@@ -630,6 +665,9 @@ class selector_key extends SctWrd_Selector implements ISctItm_Selector {
     constructor(){
         super('@KEY');
         this.itms = [
+            //
+            // nega 
+            //
             new SctWrd('虐待')
             ,
             new SctWrd('暴行')
@@ -684,10 +722,6 @@ class selector_key extends SctWrd_Selector implements ISctItm_Selector {
             ,
             new SctWrd('乱交パーティー')
             ,
-            new SctWrd('雪合戦')
-            ,
-            new SctWrd('運動会')
-            ,
             new SctWrd('密漁')
             ,
             new SctWrd('乱獲')
@@ -695,6 +729,13 @@ class selector_key extends SctWrd_Selector implements ISctItm_Selector {
             new SctWrd('乱闘騒ぎ')
             ,
             new SctWrd('リンチ')
+            ,
+            //
+            // posi 
+            //
+            new SctWrd('雪合戦')
+            ,
+            new SctWrd('運動会')
         ];
     }
 }
@@ -1065,6 +1106,9 @@ class selector_nickname extends SctWrd_Selector implements ISctItm_Selector {
     constructor(){
         super('@NICK');
         this.itms = [
+            //
+            // nega
+            //
             new SctWrd('犬')
             ,
             new SctWrd('死神')
@@ -1230,6 +1274,39 @@ class selector_nickname extends SctWrd_Selector implements ISctItm_Selector {
             new SctWrd('ゲス野郎')
             ,
             new SctWrd('ホモ野郎')
+            //
+            // posi
+            //
+            ,
+            new SctWrd('鷹')
+            ,
+            new SctWrd('鷲')
+            ,
+            new SctWrd('韋駄天')
+            ,
+            new SctWrd('勇者')
+            ,
+            new SctWrd('英雄')
+            ,
+            new SctWrd('ヒーロー')
+            ,
+            new SctWrd('天才')
+            ,
+            new SctWrd('秀才')
+            ,
+            new SctWrd('仙人')
+            ,
+            new SctWrd('切れ者')
+            ,
+            new SctWrd('麗人')
+            ,
+            new SctWrd('看板娘')
+            ,
+            new SctWrd('花')
+            ,
+            new SctWrd('希望')
+            ,
+            new SctWrd('夢')
         ];
     }
 }
