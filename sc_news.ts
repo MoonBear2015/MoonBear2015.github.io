@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N01.54';
+    html += 'N01.55';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -40,8 +40,11 @@ function make_news()
     html += 'background: ';
     html += 'linear-gradient(0deg,rgba(0,0,0,0.6),rgba(0,0,0,0.8)),';
     html += 'url(./pics/@PIC_DO);';
-    html += 'background-size: ';
-    html += 'cover;';
+    //html += 'width: 100%;';
+    //html += 'height: 0;';
+    html += 'url(./pics/@PIC_DO);';
+    html += 'background-position: center center;';
+    html += 'background-size: cover;';
     html += '">';
 
     html += '<h2 id="news_title">';
