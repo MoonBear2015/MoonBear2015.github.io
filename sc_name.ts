@@ -371,7 +371,7 @@ class NameMaker_jpn extends NameMaker_ruby implements INameMaker {
             ,
             '|小太郎|こたろう|'
             ,
-            '|味兵|あじへい|'
+            '|味平|あじへい|'
             ,
             '|聖子|せいこ|'
             ,
@@ -435,6 +435,10 @@ class NameMaker_eng extends NameMaker_ruby implements INameMaker {
             ,
             '|Bob|ボブ|'
             ,
+            '|Amuro|アムロ|'
+            ,
+            '|Char|シャア|'
+            ,
             '|Mary|メアリー|'
             ,
             '|Jane|ジェーン|'
@@ -483,6 +487,10 @@ class NameMaker_eng extends NameMaker_ruby implements INameMaker {
             '|Taylor|テイラー|'
             ,
             '|Johnson|ジョンソン|'
+            ,
+            '|Ray|レイ|'
+            ,
+            '|Aznable|アズナブル|'
         ];
 
     }

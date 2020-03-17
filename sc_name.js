@@ -210,7 +210,7 @@ class NameMaker_jpn extends NameMaker_ruby {
             '|徹也|てつや|',
             '|哲平|てっぺい|',
             '|小太郎|こたろう|',
-            '|味兵|あじへい|',
+            '|味平|あじへい|',
             '|聖子|せいこ|',
             '|久美子|くみこ|',
             '|佐知子|さちこ|',
@@ -245,6 +245,8 @@ class NameMaker_eng extends NameMaker_ruby {
             '|Bill|ビル|',
             '|Tony|トニー|',
             '|Bob|ボブ|',
+            '|Amuro|アムロ|',
+            '|Char|シャア|',
             '|Mary|メアリー|',
             '|Jane|ジェーン|',
             '|Candy|キャンディー|',
@@ -270,7 +272,9 @@ class NameMaker_eng extends NameMaker_ruby {
             '|Jones|ジョーンズ|',
             '|Smith|スミス|',
             '|Taylor|テイラー|',
-            '|Johnson|ジョンソン|'
+            '|Johnson|ジョンソン|',
+            '|Ray|レイ|',
+            '|Aznable|アズナブル|'
         ];
     }
 }
