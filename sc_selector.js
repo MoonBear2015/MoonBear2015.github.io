@@ -20,7 +20,7 @@ class SctItm {
         this.SctPic = value.SctPic;
     }
     ToString() {
-        return '(' + this.Wrd + '/' + this.SctPic + ')';
+        return this.Wrd + '(' + this.SctPic + ")";
     }
 }
 class SctCod extends SctItm {
@@ -28,7 +28,7 @@ class SctCod extends SctItm {
         super(inWrd, inSctPic);
         this.CodLength = CodLength;
     }
-    get to_SctItm() {
+    to_SctItm() {
         return new SctItm(this.Wrd, this.SctPic);
     }
     to_length_itms(in_length, in_AKey, in_BKey) {
@@ -37,7 +37,7 @@ class SctCod extends SctItm {
             return results;
         }
         if (in_length == this.CodLength) {
-            results.push(this.to_SctItm);
+            results.push(this.to_SctItm());
             return results;
         }
         let l = in_length - this.CodLength;
@@ -64,6 +64,9 @@ class SctCod extends SctItm {
         let resLen = this.CodLength + inCod.CodLength;
         return new SctCod(resWrd, resPic, resLen);
     }
+    ToString() {
+        return super.ToString() + this.CodLength.toString();
+    }
 }
 class SctWrd extends SctItm {
     constructor(in_Wrd) {
@@ -79,9 +82,19 @@ class SctWrd extends SctItm {
         this.Wrd = value.Wrd;
     }
 }
-class ItmSelector {
+class ItmArray {
     constructor() {
         this.itms = new Array();
+    }
+    Clone(new_selector, in_array) {
+        let result = new_selector;
+        result.itms = in_array.slice(0, in_array.length);
+        return result;
+    }
+}
+class ItmSelector extends ItmArray {
+    constructor() {
+        super();
         this.bef_num = -1;
     }
     get rnd_Itm() {
@@ -97,9 +110,9 @@ class ItmSelector {
         return this.itms[i];
     }
 }
-class ItmCounter {
+class ItmCounter extends ItmArray {
     constructor() {
-        this.itms = new Array();
+        super();
         this.bef_num = -1;
     }
     get rnd_Itm() {
@@ -191,12 +204,11 @@ class Selector_Generator {
     constructor(itm_key, pic_key) {
         this.itm_key = itm_key;
         this.pic_key = pic_key;
-        this.itms = new Array();
+        this.cods = new Array();
     }
     Generate(in_max, in_selector) {
         let results = new Array();
         for (let c = 1; c <= in_max; c++) {
-            let is = new Array();
         }
         return results;
     }

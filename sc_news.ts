@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N01.64';
+    html += 'N01.65';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -97,11 +97,15 @@ function make_news()
 }
 
 
-class selector_random_date implements ISctItm_Selector {
+class selector_random_date
+    extends ItmArray<SctItm>
+    implements ISctItm_Selector
+{
     public itm_key : string;
     public pic_key : string;
     constructor()
     {
+        super();
         this.itm_key = "@DATE";
         this.pic_key = "";
     }
@@ -118,12 +122,16 @@ class selector_random_date implements ISctItm_Selector {
     } 
 }
 
-class selector_human implements ISctItm_Selector {
+class selector_human 
+    extends ItmArray<SctItm>
+    implements ISctItm_Selector 
+{
     public nameMaker : INameMaker;
     public itm_key : string;
     public pic_key : string;
     constructor()
     {
+        super();
         this.itm_key = "@HUMAN";
         this.pic_key = "";
         this.nameMaker = new NameMakerAll();
@@ -135,12 +143,16 @@ class selector_human implements ISctItm_Selector {
 }
 
 
-class selector_age implements ISctItm_Selector {
+class selector_age
+    extends ItmArray<SctItm>
+    implements ISctItm_Selector 
+{
     public nameMaker : INameMaker;
     public itm_key : string;
     public pic_key : string;
     constructor()
     {
+        super();
         this.itm_key = "@AGE";
         this.pic_key = "";
         this.nameMaker = new NameMakerAll();

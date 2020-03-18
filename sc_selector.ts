@@ -17,6 +17,9 @@ interface ISctItm {
 
 interface ISctCod extends ISctItm {
     CodLength : number;
+    to_SctItm() : ISctItm;
+    to_length_itms(in_length : number,in_AKey : string,in_BKey : string)
+     : Array<ISctItm>;
 }
 
 class SctItm implements ISctItm,ITest {
@@ -36,9 +39,9 @@ class SctItm implements ISctItm,ITest {
         this.Wrd = value.Wrd;
         this.SctPic = value.SctPic;    
     }
-
-    ToString() : string {
-        return '(' + this.Wrd + '/' + this.SctPic + ')';
+    ToString() : string
+    {
+        return this.Wrd + '(' + this.SctPic + ")";
     }
 }
 
@@ -54,7 +57,7 @@ class SctCod extends SctItm implements ISctCod {
         super(inWrd,inSctPic);
     }
 
-    get to_SctItm() : ISctItm {
+    to_SctItm() : ISctItm {
         return new SctItm(this.Wrd,this.SctPic);
     }
 
@@ -68,7 +71,7 @@ class SctCod extends SctItm implements ISctCod {
         }
         if (in_length == this.CodLength)
         {
-            results.push(this.to_SctItm);
+            results.push(this.to_SctItm());
             return results;
         }
         let l = in_length - this.CodLength;
@@ -101,6 +104,11 @@ class SctCod extends SctItm implements ISctCod {
         return new SctCod(resWrd,resPic,resLen);
     }
 
+    ToString() : string
+    {
+        return super.ToString() + this.CodLength.toString(); 
+    }
+
 }
 
 class SctWrd extends SctItm implements ISctItm {
@@ -121,15 +129,36 @@ class SctWrd extends SctItm implements ISctItm {
     }
 }
 
-interface IItmSelector<T extends ISctItm> {
+interface IItmArray<T extends ISctItm> {
+    itms : T[];
+    Clone(new_selector : IItmSelector<T>,in_array : Array<T>) : IItmSelector<T>
+}
+
+class ItmArray<T extends ISctItm> implements IItmArray<T> {
+    public itms : T[];
+    constructor(){
+        this.itms = new Array<T>();
+    }
+    Clone(new_selector : IItmSelector<T>,in_array : Array<T>) : IItmSelector<T>
+    {
+        let result = new_selector;
+        result.itms = in_array.slice(0,in_array.length);
+        return result;
+    }
+}
+
+interface IItmSelector<T extends ISctItm> extends IItmArray<T> {
     rnd_Itm : T;
 }
 
-class ItmSelector<T extends ISctItm> implements IItmSelector<T> {
-    protected itms : T[];
+
+class ItmSelector<T extends ISctItm> extends 
+    ItmArray<T> 
+    implements IItmSelector<T> 
+{
     private bef_num : number;
     constructor(){
-        this.itms = new Array<T>();
+        super();
         this.bef_num = -1;
     }
     get rnd_Itm() : T {
@@ -142,13 +171,16 @@ class ItmSelector<T extends ISctItm> implements IItmSelector<T> {
         this.bef_num = i;
         return this.itms[i];
     }
+
 }
 
-class ItmCounter<T extends ISctItm> implements IItmSelector<T> {
-    protected itms : T[];
+class ItmCounter<T extends ISctItm> 
+    extends ItmArray<T>
+    implements IItmSelector<T> 
+{
     private bef_num : number;
     constructor(){
-        this.itms = new Array<T>();
+        super();
         this.bef_num = -1;
     }
     get rnd_Itm() : T {
@@ -286,29 +318,29 @@ class SctWrd_Counter extends SctItm_Counter implements ISctItm_Selector {
     }
 }
 
-class Selector_Generator<T extends ISctCod> {
-    protected itms : T[];
+class Selector_Generator {
+    protected cods : ISctCod[];
     constructor(
         public itm_key : string
         ,
         public pic_key : string
     )
     {
-        this.itms = new Array<T>();
+        this.cods = new Array<ISctCod>();
     }
 
     Generate(
                 in_max : number
                 ,
                 in_selector : ISctItm_Selector
-                ) : Array<ISctItm_Selector>{
+            ) 
+            : Array<ISctItm_Selector>
+    {
 
         let results = new Array<ISctItm_Selector>();
 
         for(let c = 1; c <= in_max; c++)
         {
-            let is = new Array<T>();
-            
         }
 
         return results;

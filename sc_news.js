@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N01.64';
+    html += 'N01.65';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -77,8 +77,9 @@ function make_news() {
     html = maker.gene_docs(html);
     return html;
 }
-class selector_random_date {
+class selector_random_date extends ItmArray {
     constructor() {
+        super();
         this.itm_key = "@DATE";
         this.pic_key = "";
     }
@@ -93,8 +94,9 @@ class selector_random_date {
         }
     }
 }
-class selector_human {
+class selector_human extends ItmArray {
     constructor() {
+        super();
         this.itm_key = "@HUMAN";
         this.pic_key = "";
         this.nameMaker = new NameMakerAll();
@@ -104,8 +106,9 @@ class selector_human {
         return new SctItm(name, '');
     }
 }
-class selector_age {
+class selector_age extends ItmArray {
     constructor() {
+        super();
         this.itm_key = "@AGE";
         this.pic_key = "";
         this.nameMaker = new NameMakerAll();
