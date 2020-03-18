@@ -29,13 +29,13 @@ class SctItm implements ISctItm,ITest {
         public SctPic : string
     ){
     };
-    static Copy(inItm : SctItm) : SctItm {
+    static Copy(inItm : SctItm) : ISctItm {
         return new SctItm(inItm.Wrd,inItm.SctPic);
     }
-    get Copy() : SctItm {
+    get Copy() : ISctItm {
         return SctItm.Copy(this);
     }
-    set Copy(value : SctItm){
+    set Copy(value : ISctItm){
         this.Wrd = value.Wrd;
         this.SctPic = value.SctPic;    
     }
@@ -118,13 +118,13 @@ class SctWrd extends SctItm implements ISctItm {
     {
         super(in_Wrd,"");
     }
-    static Copy(inWrd : SctWrd) : SctWrd {
+    static Copy(inWrd : ISctItm) : ISctItm {
         return new SctWrd(inWrd.Wrd);
     }
-    get Copy() : SctWrd {
+    get Copy() : ISctItm {
         return SctWrd.Copy(this);
     }
-    set Copy(value : SctWrd){
+    set Copy(value : ISctItm){
         this.Wrd = value.Wrd;
     }
 }
