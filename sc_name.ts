@@ -443,6 +443,10 @@ class NameMaker_eng extends NameMaker_ruby implements INameMaker {
             ,
             '|Char|シャア|'
             ,
+            '|Frodo|フロド|'
+            ,
+            '|Bilbo|ビルボ|'
+            ,
             '|Mary|メアリー|'
             ,
             '|Jane|ジェーン|'
@@ -495,6 +499,8 @@ class NameMaker_eng extends NameMaker_ruby implements INameMaker {
             '|Ray|レイ|'
             ,
             '|Aznable|アズナブル|'
+            ,
+            '|Baggins|バギンズ|'
         ];
 
     }

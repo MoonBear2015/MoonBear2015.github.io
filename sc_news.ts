@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N01.65';
+    html += 'N01.66';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -622,6 +622,8 @@ class selector_whats extends SctItm_SelectLocker implements ISctItm_Selector {
             new SctItm('ジオン公国','WHAT/jion.jpg')
             ,
             new SctItm('ナチス・ドイツ','WHAT/nachi.jpg')
+            ,
+            new SctItm('ホビット床','WHAT/Shire.jpg')
 
         ];
     }
@@ -794,8 +796,6 @@ class selector_key extends SctWrd_Selector implements ISctItm_Selector {
             ,
             new SctWrd('乱闘騒ぎ')
             ,
-            new SctWrd('リンチ')
-            ,
             //
             // posi 
             //
@@ -813,8 +813,6 @@ class selector_status extends SctWrd_Selector implements ISctItm_Selector {
     constructor(){
         super('@STATUS');
         this.itms = [
-            new SctWrd('発生')
-            ,
             new SctWrd('勃発')
             ,
             new SctWrd('蔓延')
@@ -846,6 +844,10 @@ class selector_status extends SctWrd_Selector implements ISctItm_Selector {
             new SctWrd('消失')
             ,
             new SctWrd('離散')
+            ,
+            new SctWrd('開催')
+            ,
+            new SctWrd('再開')
         ];
     }
 }
@@ -1432,9 +1434,23 @@ class selector_nickname extends SctWrd_Selector implements ISctItm_Selector {
             ,
             new SctWrd('魔神')
             ,
-            new SctWrd('狂戦士')
-            ,
             new SctWrd('コンピューター')
+            ,
+            new SctWrd('薔薇')
+            ,
+            new SctWrd('百合の花')
+            ,
+            new SctWrd('野菊')
+            ,
+            new SctWrd('ダイヤモンド')
+            ,
+            new SctWrd('ルビー')
+            ,
+            new SctWrd('宝石')
+            ,
+            new SctWrd('宝石箱')
+            ,
+            new SctWrd('宝')
             //
             // nomal
             //
