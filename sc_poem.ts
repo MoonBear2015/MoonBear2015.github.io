@@ -252,21 +252,21 @@ class poemer_tema extends SctWrd_SelectLocker implements ISctItm_Selector{
 }
 
 // 季語：春
-class Gene_tema01 extends SctItm_FirstLocker implements ISctItm_Selector {
+class Gene_tema01 extends Selector_Generator {
     constructor(){
         super('@TEMA01','@PIC_TEMA');
-        this.itms = [
-            new SctItm('|春|はる|' ,'spring.jpg')
+        this.cods = [
+            new SctCod('|春|はる|' ,'spring.jpg',2)
             ,
-            new SctItm('|花|はな|','')
+            new SctCod('|花|はな|','',2)
             ,
-            new SctItm('|蝶|ちょう|','')
+            new SctCod('|蝶|ちょう|','',2)
             ,
-            new SctItm('|梅|うめ|','')
+            new SctCod('|梅|うめ|','',2)
             ,
-            new SctItm('|土筆|つくし|','')
+            new SctCod('|土筆|つくし|','',3)
             ,
-            new SctItm('|蛙|かえる|','')
+            new SctCod('|蛙|かえる|','',3)
         ];
     }
 }

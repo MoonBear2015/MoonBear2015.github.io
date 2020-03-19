@@ -41,7 +41,7 @@ class SctItm implements ISctItm,ITest {
     }
 }
 
-class SctCod extends SctItm implements ISctCod {
+class SctCod extends SctItm implements ISctCod,ITest {
     constructor(
         inWrd : string
         ,
