@@ -251,6 +251,8 @@ class NameMaker_eng extends NameMaker_ruby {
             '|Char|シャア|',
             '|Frodo|フロド|',
             '|Bilbo|ビルボ|',
+            '|Anakin|アナキン|',
+            '|Luke|ルーク|',
             '|Mary|メアリー|',
             '|Jane|ジェーン|',
             '|Candy|キャンディー|',
@@ -279,7 +281,8 @@ class NameMaker_eng extends NameMaker_ruby {
             '|Johnson|ジョンソン|',
             '|Ray|レイ|',
             '|Aznable|アズナブル|',
-            '|Baggins|バギンズ|'
+            '|Baggins|バギンズ|',
+            '|Skywalker|スカイウォーカー|'
         ];
     }
 }

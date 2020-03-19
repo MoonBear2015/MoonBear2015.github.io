@@ -9,11 +9,8 @@ class SctItm {
         this.SctPic = SctPic;
     }
     ;
-    static Copy(inItm) {
-        return new SctItm(inItm.Wrd, inItm.SctPic);
-    }
     get Copy() {
-        return SctItm.Copy(this);
+        return new SctItm(this.Wrd, this.SctPic);
     }
     set Copy(value) {
         this.Wrd = value.Wrd;
@@ -70,31 +67,46 @@ class SctCod extends SctItm {
 }
 class SctWrd extends SctItm {
     constructor(in_Wrd) {
-        super(in_Wrd, "");
-    }
-    static Copy(inWrd) {
-        return new SctWrd(inWrd.Wrd);
+        super(in_Wrd, '');
     }
     get Copy() {
-        return SctWrd.Copy(this);
+        return new SctWrd(this.Wrd);
     }
     set Copy(value) {
         this.Wrd = value.Wrd;
     }
+    ToString() {
+        return super.ToString();
+    }
 }
 class ItmArray {
-    constructor() {
+    constructor(in_array) {
         this.itms = new Array();
+        if (in_array) {
+            this.Paste(in_array);
+        }
     }
-    Clone(new_selector, in_array) {
-        let result = new_selector;
-        result.itms = in_array.slice(0, in_array.length);
+    Paste(in_array) {
+        this.itms = new Array();
+        this.itms.length = 0;
+        in_array.forEach(it => {
+            this.itms.push(it);
+        });
+    }
+    Copy() {
+        let result = new ItmArray();
+        result.Paste(this.itms);
         return result;
     }
 }
 class ItmSelector extends ItmArray {
-    constructor() {
-        super();
+    constructor(in_array) {
+        if (in_array) {
+            super(in_array);
+        }
+        else {
+            super();
+        }
         this.bef_num = -1;
     }
     get rnd_Itm() {
@@ -109,10 +121,20 @@ class ItmSelector extends ItmArray {
         this.bef_num = i;
         return this.itms[i];
     }
+    Copy() {
+        let result = new ItmSelector();
+        result.Paste(this.itms);
+        return result;
+    }
 }
 class ItmCounter extends ItmArray {
-    constructor() {
-        super();
+    constructor(in_array) {
+        if (in_array) {
+            super(in_array);
+        }
+        else {
+            super();
+        }
         this.bef_num = -1;
     }
     get rnd_Itm() {
@@ -123,22 +145,27 @@ class ItmCounter extends ItmArray {
         this.bef_num = i;
         return this.itms[i];
     }
+    Copy() {
+        let result = new ItmCounter();
+        result.Paste(this.itms);
+        return result;
+    }
 }
 class SctItm_Selector extends ItmSelector {
-    constructor(itm_key, pic_key) {
-        super();
+    constructor(itm_key, pic_key, in_array) {
+        super(in_array);
         this.itm_key = itm_key;
         this.pic_key = pic_key;
     }
 }
 class SctWrd_Selector extends SctItm_Selector {
-    constructor(in_itm_key) {
-        super(in_itm_key, '');
+    constructor(in_itm_key, in_array) {
+        super(in_itm_key, '', in_array);
     }
 }
 class SctItm_SelectLocker extends SctItm_Selector {
-    constructor(itm_key, pic_key) {
-        super(itm_key, pic_key);
+    constructor(itm_key, pic_key, in_array) {
+        super(itm_key, pic_key, in_array);
         this.itm_key = itm_key;
         this.pic_key = pic_key;
         this.is_lock = false;
@@ -155,8 +182,8 @@ class SctItm_SelectLocker extends SctItm_Selector {
     }
 }
 class SctWrd_SelectLocker extends SctWrd_Selector {
-    constructor(itm_key) {
-        super(itm_key);
+    constructor(itm_key, in_array) {
+        super(itm_key, in_array);
         this.itm_key = itm_key;
         this.is_lock = false;
         this.lock_item = new SctWrd('');

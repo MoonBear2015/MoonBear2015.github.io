@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N01.66';
+    html += 'N01.68';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -624,6 +624,10 @@ class selector_whats extends SctItm_SelectLocker implements ISctItm_Selector {
             new SctItm('ナチス・ドイツ','WHAT/nachi.jpg')
             ,
             new SctItm('ホビット床','WHAT/Shire.jpg')
+            ,
+            new SctItm('銀河帝国','WHAT/GalaxyEmpire.jpg')
+            ,
+            new SctItm('ローマ帝国','WHAT/Rome.jpg')
 
         ];
     }
@@ -1181,6 +1185,14 @@ class selector_class extends SctWrd_Selector implements ISctItm_Selector {
             new SctWrd('野鳥の会')
             ,
             new SctWrd('神主')
+            ,
+            new SctWrd('皇帝')
+            ,
+            new SctWrd('国王')
+            ,
+            new SctWrd('大統領')
+            ,
+            new SctWrd('女王')
         ];
     }
 }

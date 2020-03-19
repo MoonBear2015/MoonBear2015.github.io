@@ -11,8 +11,7 @@ function to_key_with_length(in_key : string,in_length : number)
 interface ISctItm {
     Wrd : string;
     SctPic : string;
-
-    ToString() : string;
+    Copy : ISctItm;
 }
 
 interface ISctCod extends ISctItm {
@@ -29,17 +28,14 @@ class SctItm implements ISctItm,ITest {
         public SctPic : string
     ){
     };
-    static Copy(inItm : SctItm) : ISctItm {
-        return new SctItm(inItm.Wrd,inItm.SctPic);
+    public get Copy() : ISctItm {
+        return new SctItm(this.Wrd,this.SctPic);
     }
-    get Copy() : ISctItm {
-        return SctItm.Copy(this);
-    }
-    set Copy(value : ISctItm){
+    public set Copy(value : ISctItm){
         this.Wrd = value.Wrd;
         this.SctPic = value.SctPic;    
     }
-    ToString() : string
+    public ToString() : string
     {
         return this.Wrd + '(' + this.SctPic + ")";
     }
@@ -108,41 +104,56 @@ class SctCod extends SctItm implements ISctCod {
     {
         return super.ToString() + this.CodLength.toString(); 
     }
-
 }
 
-class SctWrd extends SctItm implements ISctItm {
+class SctWrd extends SctItm implements ISctItm,ITest {
     constructor(
         in_Wrd : string
     )
     {
-        super(in_Wrd,"");
+        super(in_Wrd,'');
     }
-    static Copy(inWrd : ISctItm) : ISctItm {
-        return new SctWrd(inWrd.Wrd);
+    public get Copy() : ISctItm {
+        return new SctWrd(this.Wrd);
     }
-    get Copy() : ISctItm {
-        return SctWrd.Copy(this);
-    }
-    set Copy(value : ISctItm){
+    public set Copy(value : ISctItm){
         this.Wrd = value.Wrd;
+    }
+    public ToString() : string
+    {
+        return super.ToString();
     }
 }
 
 interface IItmArray<T extends ISctItm> {
     itms : T[];
-    Clone(new_selector : IItmSelector<T>,in_array : Array<T>) : IItmSelector<T>
+    
+    Paste(in_array : Array<T>): void;
+    Copy():IItmArray<T>;
 }
 
 class ItmArray<T extends ISctItm> implements IItmArray<T> {
-    public itms : T[];
-    constructor(){
+    public itms : Array<T>;
+    constructor(in_array? : Array<T>){
         this.itms = new Array<T>();
+        if (in_array)
+        {
+            this.Paste(in_array);
+        }
     }
-    Clone(new_selector : IItmSelector<T>,in_array : Array<T>) : IItmSelector<T>
+    public Paste(in_array : Array<T>)
     {
-        let result = new_selector;
-        result.itms = in_array.slice(0,in_array.length);
+        this.itms = new Array<T>();
+        this.itms.length = 0;
+        in_array.forEach(it => {
+            this.itms.push(it);
+        }
+        );
+    }
+    public Copy() : IItmArray<T>
+    {
+        let result = new ItmArray<T>();
+        result.Paste(this.itms);
         return result;
     }
 }
@@ -157,8 +168,13 @@ class ItmSelector<T extends ISctItm> extends
     implements IItmSelector<T> 
 {
     private bef_num : number;
-    constructor(){
-        super();
+    constructor(in_array? : Array<T>){
+        if (in_array) {
+            super(in_array);
+        }
+        else {
+            super();
+        }
         this.bef_num = -1;
     }
     get rnd_Itm() : T {
@@ -172,6 +188,13 @@ class ItmSelector<T extends ISctItm> extends
         return this.itms[i];
     }
 
+    public Copy() : IItmArray<T>
+    {
+        let result = new ItmSelector<T>();
+        result.Paste(this.itms);
+        return result;
+    }
+
 }
 
 class ItmCounter<T extends ISctItm> 
@@ -179,8 +202,13 @@ class ItmCounter<T extends ISctItm>
     implements IItmSelector<T> 
 {
     private bef_num : number;
-    constructor(){
-        super();
+    constructor(in_array? : Array<T>){
+        if (in_array) {
+            super(in_array);
+        }
+        else {
+            super();
+        }
         this.bef_num = -1;
     }
     get rnd_Itm() : T {
@@ -192,6 +220,13 @@ class ItmCounter<T extends ISctItm>
         this.bef_num = i;
         return this.itms[i];
     }
+    Copy()
+    {
+        let result = new ItmCounter<T>();
+        result.Paste(this.itms);
+        return result;
+    }
+
 }
 
 
@@ -206,18 +241,22 @@ class SctItm_Selector extends ItmSelector<SctItm> implements ISctItm_Selector {
         public itm_key : string
         ,
         public pic_key : string
+        ,
+        in_array? : Array<SctItm>
     )
     {
-        super();
+        super(in_array);
     }
 }
 
 class SctWrd_Selector extends SctItm_Selector implements ISctItm_Selector {
     constructor(
         in_itm_key : string
+        ,
+        in_array? : Array<SctItm>
     )
     {
-        super(in_itm_key,'');
+        super(in_itm_key,'',in_array);
     }
 }
 
@@ -230,9 +269,11 @@ class SctItm_SelectLocker extends SctItm_Selector implements ISctItm_Selector {
         public itm_key : string
         ,
         public pic_key : string
+        ,
+        in_array? : Array<SctItm>
     )
     {
-        super(itm_key,pic_key);
+        super(itm_key,pic_key,in_array);
         this.is_lock = false;
         this.lock_item = new SctItm('','');
     }
@@ -255,9 +296,11 @@ class SctWrd_SelectLocker extends SctWrd_Selector implements ISctItm_Selector {
 
     constructor(
         public itm_key : string
+        ,
+        in_array? : Array<SctWrd>
     )
     {
-        super(itm_key);
+        super(itm_key,in_array);
         this.is_lock = false;
         this.lock_item = new SctWrd('');
     }
