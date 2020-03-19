@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N01.68';
+    html += 'N01.69';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -199,7 +199,7 @@ class selector_c01 extends SctWrd_Selector {
     constructor() {
         super('@NEWS_C01');
         this.itms = [
-            new SctWrd('@WHATによる@KEY@END01A'),
+            new SctWrd('@WHATでの@KEY@END01A'),
             new SctWrd('@WHATが@DO@END01B'),
             new SctWrd('@KEYが@STATUSする@WHAT@END01A'),
             new SctWrd('@WHATによる@KEYが@STATUS@END01B'),
