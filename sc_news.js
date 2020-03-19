@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N01.69';
+    html += 'N01.70';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -258,7 +258,6 @@ class selector_comment extends SctWrd_Selector {
             new SctWrd('@NEWS_C01、@NEWS_C02'),
             new SctWrd('@NEWS_C01、@NEWS_C02。@CONECT、@NEWS_C01、@NEWS_C02'),
             new SctWrd('@COMMENT。@CONECT、@COMMENT'),
-            new SctWrd('どうして@THEYは@DOするのか'),
             new SctWrd('@WHATの@NICKが@STATUS@END02B'),
             new SctWrd('@WHATは@NICKと@ASSES'),
             new SctWrd('@WHATが@NICK@END02A'),
@@ -269,7 +268,11 @@ class selector_comment extends SctWrd_Selector {
             new SctWrd('@WHATは@NICKと@ASSES@NICK@END02A'),
             new SctWrd('@WHATは@NICK@END02A。@CONECT、@NICK@END02A'),
             new SctWrd('@WHATは@NICK@END02A。@NICKで@NICK@END02A'),
-            new SctWrd('@WHATが@NICK？ @YESNO、@WHATは@NICK@END02A')
+            new SctWrd('@WHATが@NICK？ @YESNO、@WHATは@NICK@END02A'),
+            new SctWrd('@DO@END02C@NICK、@YESNO、それが@WHAT@END02A'),
+            new SctWrd('@NICK、@NICK、@NICK、@NICK・・・、@YESNO、それは@WHAT@END02A'),
+            new SctWrd('@WHATの@DO・・・@YESNO、それは@PEOPLEの@KEY@END02A ww'),
+            new SctWrd('それは@PEOPLEの@KEY@END02A')
         ];
     }
 }
@@ -288,7 +291,13 @@ class selector_YESNO extends SctWrd_Selector {
             new SctWrd('それでも'),
             new SctWrd('確かに'),
             new SctWrd('その通り'),
-            new SctWrd('すなわち')
+            new SctWrd('すなわち'),
+            new SctWrd('正に'),
+            new SctWrd('正しく'),
+            new SctWrd('間違いなく'),
+            new SctWrd('確かに'),
+            new SctWrd('紛れもなく'),
+            new SctWrd('疑いようも無く')
         ];
     }
 }
