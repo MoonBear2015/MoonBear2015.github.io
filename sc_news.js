@@ -484,8 +484,8 @@ class selector_key extends SctWrd_Selector {
             new SctWrd('犯罪行為'),
             new SctWrd('殺戮行為'),
             new SctWrd('迫害行為'),
-            new SctWrd('事件発生'),
-            new SctWrd('災害発生'),
+            new SctWrd('重大事件'),
+            new SctWrd('大災害'),
             new SctWrd('傷害事件'),
             new SctWrd('虐待事件'),
             new SctWrd('虐殺行為'),
@@ -496,7 +496,6 @@ class selector_key extends SctWrd_Selector {
             new SctWrd('無力化'),
             new SctWrd('黙殺'),
             new SctWrd('暴力行為'),
-            new SctWrd('レイプ'),
             new SctWrd('乱痴気騒ぎ'),
             new SctWrd('乱交パーティー'),
             new SctWrd('密漁'),
@@ -505,9 +504,10 @@ class selector_key extends SctWrd_Selector {
             //
             // posi 
             //
-            new SctWrd('雪合戦'),
             new SctWrd('運動会'),
-            new SctWrd('祝賀会')
+            new SctWrd('文化祭'),
+            new SctWrd('祝賀会'),
+            new SctWrd('雪合戦')
         ];
     }
 }
@@ -619,20 +619,25 @@ class selector_class extends SctWrd_Selector {
             new SctWrd('数学教師'),
             new SctWrd('物理学者'),
             new SctWrd('経済学者'),
+            new SctWrd('政治評論家'),
             new SctWrd('映画評論家'),
-            new SctWrd('劇作家'),
             new SctWrd('映画監督'),
+            new SctWrd('舞台監督'),
+            new SctWrd('舞台作家'),
             new SctWrd('恋愛小説家'),
             new SctWrd('調理師'),
-            new SctWrd('陸軍少佐'),
-            new SctWrd('元海兵隊'),
+            new SctWrd('ケーキ職人'),
             new SctWrd('工場長'),
             new SctWrd('店主'),
-            new SctWrd('舞台監督'),
             new SctWrd('元警察官'),
+            new SctWrd('陸軍少佐'),
+            new SctWrd('元海兵隊'),
             new SctWrd('空軍少佐'),
+            new SctWrd('海軍将校'),
             new SctWrd('陶芸家'),
             new SctWrd('タクシードライバー'),
+            new SctWrd('トラックの運転手'),
+            new SctWrd('バスの運転手'),
             new SctWrd('アニメーター'),
             new SctWrd('漫画家'),
             new SctWrd('少女漫画家'),
