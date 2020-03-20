@@ -7,11 +7,11 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N01.75';
+    html += 'N01.77';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
-    for (let i = 0; i < 30; i++) {
+    for (let i = 0; i < 20; i++) {
         html += '<p>[' + i.toString() + ']</p>' + make_news();
     }
     let elem = document.getElementById('site_main');
@@ -50,7 +50,7 @@ function make_news() {
     html += '</div>';
     html += '<p id="news_doc">';
     html += '　@NEWS_DOC';
-    for (let i = 0; i < rnd_minmax(5, 10); i++) {
+    for (let i = 0; i < rnd_minmax(3, 5); i++) {
         html += '@CONECT、';
         html += '@NEWS_DOC';
     }
@@ -62,11 +62,12 @@ function make_news() {
     html += '</div>';
     html += '<p id="news_doc">';
     html += '　@NEWS_DOC';
-    for (let i = 0; i < rnd_minmax(5, 10); i++) {
+    for (let i = 0; i < rnd_minmax(3, 5); i++) {
         html += '@CONECT、';
         html += '@NEWS_DOC';
     }
     html += '</p>';
+    html += '<br>';
     html += '<h4 id="news_writer" align="right">';
     html += 'Copyright (C) @WRITER';
     html += '<br>@DATE';

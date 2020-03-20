@@ -15,7 +15,7 @@ function make_site_header() {
     html += '<h1>';
     html += '「空虚」';
     html += '<small>';
-    html += 'M01.03';
+    html += 'M01.04';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -66,12 +66,11 @@ function make_header_menu(num) {
         // var cmd = 'select_menu(' + String(i) + ')';
         // let cmd : string = 'set_news()';
         html += '<li>';
+        html += '<a ';
         if (i == num) {
-            html += '<a id="active">';
+            html += 'id="active"';
         }
-        else {
-            html += '<a onclick="' + cmd + '">';
-        }
+        html += ' onclick="' + cmd + '">';
         html += items[i].itemName;
         html += '</a></li>' + '\r\n';
     }
