@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N01.70';
+    html += 'N01.71';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -45,7 +45,7 @@ function make_news() {
     html += '</h2>';
     html += '<div id="news_pic_L">';
     html += '<figure>';
-    html += '<img src="pics/@PIC_WHAT" width="300">';
+    html += '<img src="pics/@PIC_WHAT" width="500">';
     html += '</figure>';
     html += '</div>';
     html += '<p id="news_doc">';
@@ -73,8 +73,17 @@ function make_news() {
     html += '</h4>';
     html += '</div>';
     let maker = new news_docs_maker();
-    html = maker.gene_docs(html);
-    html = maker.gene_docs(html);
+    let cnt = 0;
+    while (true) {
+        html = maker.gene_docs(html);
+        cnt++;
+        if (html.indexOf('@') < 0)
+            break;
+        if (cnt > 10) {
+            alert('overdrive!');
+            break;
+        }
+    }
     return html;
 }
 class selector_random_date extends ItmArray {
@@ -133,7 +142,7 @@ class selector_title extends SctWrd_Selector {
         this.itms = [
             new SctWrd('@WHATの@DO'),
             new SctWrd('@WHATは@DO@END02C'),
-            new SctWrd('@WHATは@DO@END02C@NICK'),
+            new SctWrd('@WHATで@DO@END02C@NICK'),
             new SctWrd('@WHATの@NICKが@DO@END02C'),
             new SctWrd('@WHATの@PEOPLE、@HUMANが@DO@END02C'),
             new SctWrd('@WHATを@DO@END02C@PEOPLE、@HUMAN'),
@@ -199,12 +208,13 @@ class selector_c01 extends SctWrd_Selector {
     constructor() {
         super('@NEWS_C01');
         this.itms = [
+            new SctWrd('@WHATが@DO@END01B'),
             new SctWrd('@WHATでの@KEY@END01A'),
-            new SctWrd('@WHATが@DO@END01B'),
+            new SctWrd('@WHATで@KEYが@STATUS@END01B'),
+            new SctWrd('@WHATでは@KEYや@KEYが@STATUS@END01B'),
             new SctWrd('@KEYが@STATUSする@WHAT@END01A'),
-            new SctWrd('@WHATによる@KEYが@STATUS@END01B'),
-            new SctWrd('@WHATが@DO@END01B'),
-            new SctWrd('@MANY@THEYは@DO@END01B'),
+            new SctWrd('@KEYや@KEYが@STATUSする@WHAT@END01A'),
+            new SctWrd('@MANY@THEYが@DO@END01B'),
             new SctWrd('@MANY@THEYによる@KEYが@STATUS@END01B'),
             new SctWrd('@MANY@THEYの@THINKが@STATUS@END01B'),
             new SctWrd('@MANY@THEYの@THINKや@THINKが@STATUS@END01B'),
@@ -241,7 +251,7 @@ class selector_c02 extends SctWrd_Selector {
     constructor() {
         super('@NEWS_C02');
         this.itms = [
-            new SctWrd('@WHATの@MANY@THEYが@ASSES'),
+            new SctWrd('@WHATの@MANY@PEOPLEが@ASSES'),
             new SctWrd('@MANY@THEYが@DO@END02B'),
             new SctWrd('@MANY@THEYが@NICK@END02A'),
             new SctWrd('@MANY@THEYの@KEYが@STATUS@END02B'),
@@ -271,8 +281,7 @@ class selector_comment extends SctWrd_Selector {
             new SctWrd('@WHATが@NICK？ @YESNO、@WHATは@NICK@END02A'),
             new SctWrd('@DO@END02C@NICK、@YESNO、それが@WHAT@END02A'),
             new SctWrd('@NICK、@NICK、@NICK、@NICK・・・、@YESNO、それは@WHAT@END02A'),
-            new SctWrd('@WHATの@DO・・・@YESNO、それは@PEOPLEの@KEY@END02A ww'),
-            new SctWrd('それは@PEOPLEの@KEY@END02A')
+            new SctWrd('@WHATの@DO――@YESNO、それは@PEOPLEの@KEY@END02A')
         ];
     }
 }
@@ -481,15 +490,12 @@ class selector_key extends SctWrd_Selector {
             //
             // nega 
             //
-            new SctWrd('虐待'),
-            new SctWrd('暴行'),
-            new SctWrd('迫害'),
-            new SctWrd('急落'),
+            new SctWrd('虐待行為'),
+            new SctWrd('婦女暴行'),
+            new SctWrd('人種差別'),
             new SctWrd('暗黒化'),
-            new SctWrd('殺害'),
-            new SctWrd('殺戮'),
-            new SctWrd('犯罪'),
-            new SctWrd('崩壊'),
+            new SctWrd('無差別殺人'),
+            new SctWrd('殺戮行為'),
             new SctWrd('犯罪行為'),
             new SctWrd('殺戮行為'),
             new SctWrd('迫害行為'),
@@ -501,22 +507,33 @@ class selector_key extends SctWrd_Selector {
             new SctWrd('大量虐殺'),
             new SctWrd('暴走状態'),
             new SctWrd('妨害工作'),
-            new SctWrd('差別化'),
+            new SctWrd('人種差別'),
             new SctWrd('無力化'),
-            new SctWrd('黙殺'),
             new SctWrd('暴力行為'),
             new SctWrd('乱痴気騒ぎ'),
             new SctWrd('乱交パーティー'),
-            new SctWrd('密漁'),
-            new SctWrd('乱獲'),
             new SctWrd('乱闘騒ぎ'),
+            new SctWrd('葬儀'),
             //
             // posi 
             //
+            new SctWrd('新年会'),
+            new SctWrd('卒業式'),
+            new SctWrd('記念撮影'),
+            new SctWrd('入学式'),
+            new SctWrd('海水浴'),
             new SctWrd('運動会'),
+            new SctWrd('フォークダンス'),
             new SctWrd('文化祭'),
             new SctWrd('祝賀会'),
-            new SctWrd('雪合戦')
+            new SctWrd('大掃除'),
+            new SctWrd('餅つき大会'),
+            new SctWrd('忘年会'),
+            new SctWrd('雪合戦'),
+            new SctWrd('結婚式'),
+            new SctWrd('送別会'),
+            new SctWrd('お誕生日会'),
+            new SctWrd('同窓会')
         ];
     }
 }
@@ -551,6 +568,7 @@ class selector_they extends SctWrd_Selector {
     constructor() {
         super('@THEY');
         this.itms = [
+            new SctWrd('@CLASS'),
             new SctWrd('人々'),
             new SctWrd('一般大衆'),
             new SctWrd('有識者'),
