@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N01.74';
+    html += 'N01.75';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -197,13 +197,11 @@ class selector_title extends SctWrd_Selector implements ISctItm_Selector {
             ,
             new SctWrd('@WHATの@PEOPLE、@HUMANが@DO@END02C')
             ,
-            new SctWrd('@WHATを@DO@END02C@PEOPLE、@HUMAN')
-            ,
             new SctWrd('@DO@END02C@WHAT')
             ,
             new SctWrd('@DO@END02C@WHATの@PEOPLE')
             ,
-            new SctWrd('@WHATが@DO@END02C@NICK、@HUMAN')
+            new SctWrd('@WHATが@DO@END02C@PEOPLE、@HUMAN')
             ,
             new SctWrd('@WHATの@NICK、@HUMANが@DO@END02C')
         ];
@@ -217,6 +215,8 @@ class selector_people extends SctWrd_Selector implements ISctItm_Selector {
             new SctWrd('@NICK')
             ,
             new SctWrd('@CLASS')
+            ,
+            new SctWrd('@THEY')
         ];
     }
 }
@@ -557,8 +557,6 @@ class selector_whats extends SctItm_SelectLocker implements ISctItm_Selector {
             new SctItm('ガミラス帝国','WHAT/gamilas.jpg')
             ,
             new SctItm('経済','WHAT/Economy.jpg')
-            ,
-            new SctItm('市場','WHAT/Economy.jpg')
             ,
             new SctItm('株価','WHAT/Economy.jpg')
             ,
@@ -938,8 +936,6 @@ class selector_they extends SctWrd_Selector implements ISctItm_Selector {
             ,
             new SctWrd('乗組員')
             ,
-            new SctWrd('乗客')
-            ,
             new SctWrd('従業員')
             ,
             new SctWrd('売春婦')
@@ -987,6 +983,47 @@ class selector_they extends SctWrd_Selector implements ISctItm_Selector {
             new SctWrd('傭兵達')
             ,
             new SctWrd('民衆')
+            ,
+            new SctWrd('観客')
+            ,
+            new SctWrd('乗客')
+            ,
+            new SctWrd('通行人')
+            ,
+            new SctWrd('視聴者')
+            ,
+            new SctWrd('ユーザー')
+            ,
+            new SctWrd('株主')
+            ,
+            new SctWrd('株主')
+            ,
+            new SctWrd('皇族')
+            ,
+            new SctWrd('貴族')
+            ,
+            new SctWrd('家族')
+            ,
+            new SctWrd('親戚一同')
+            ,
+            new SctWrd('親類縁者')
+            ,
+            new SctWrd('先祖代々')
+            ,
+            new SctWrd('犠牲者')
+            ,
+            new SctWrd('生徒一同')
+            ,
+            new SctWrd('兄弟弟子')
+            ,
+            new SctWrd('メンバー')
+            ,
+            new SctWrd('チームメイト')
+            ,
+            new SctWrd('ルームメイト')
+            ,
+            new SctWrd('クラスメイト')
+
         ];
     }
 }
@@ -1129,8 +1166,6 @@ class selector_class extends SctWrd_Selector implements ISctItm_Selector {
             ,
             new SctWrd('伯爵')
             ,
-            new SctWrd('皇族')
-            ,
             new SctWrd('水呑百姓')
             ,
             new SctWrd('ミイラ職人')
@@ -1239,6 +1274,8 @@ class selector_class extends SctWrd_Selector implements ISctItm_Selector {
             ,
             new SctWrd('野鳥の会')
             ,
+            new SctWrd('牧師')
+            ,
             new SctWrd('神主')
             ,
             new SctWrd('皇帝')
@@ -1247,7 +1284,13 @@ class selector_class extends SctWrd_Selector implements ISctItm_Selector {
             ,
             new SctWrd('大統領')
             ,
-            new SctWrd('女王')
+            new SctWrd('女王様')
+            ,
+            new SctWrd('道化師')
+            ,
+            new SctWrd('庭師')
+            ,
+            new SctWrd('狩人')
         ];
     }
 }
@@ -1380,8 +1423,6 @@ class selector_nickname extends SctWrd_Selector implements ISctItm_Selector {
             ,
             new SctWrd('悪夢')
             ,
-            new SctWrd('寝息')
-            ,
             new SctWrd('蚤')
             ,
             new SctWrd('蟻')
@@ -1429,6 +1470,8 @@ class selector_nickname extends SctWrd_Selector implements ISctItm_Selector {
             new SctWrd('ヒットラー')
             ,
             new SctWrd('おっさん')
+            ,
+            new SctWrd('餓鬼')
             //
             // posi
             //
@@ -1543,7 +1586,6 @@ class selector_nickname extends SctWrd_Selector implements ISctItm_Selector {
             new SctWrd('おじいちゃん')
             ,
             new SctWrd('おばあちゃん')
-
         ];
     }
 }

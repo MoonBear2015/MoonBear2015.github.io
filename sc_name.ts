@@ -339,6 +339,8 @@ class NameMaker_jpn extends NameMaker_ruby implements INameMaker {
             '|谷口|たにぐち|'
             ,
             '|塩見|しおみ|'
+            ,
+            '|渚|なぎさ|'
         ];
         this.name02 = [
             '|一郎|いちろう|'
