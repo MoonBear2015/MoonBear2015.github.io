@@ -45,7 +45,7 @@ function make_news() {
     html += '</h2>';
     html += '<div id="news_pic_L">';
     html += '<figure>';
-    html += '<img src="pics/@PIC_WHAT" width="500">';
+    html += '<img src="pics/@PIC_WHAT" width="100%">';
     html += '</figure>';
     html += '</div>';
     html += '<p id="news_doc">';
@@ -57,7 +57,7 @@ function make_news() {
     html += '</p>';
     html += '<div id="news_pic_R">';
     html += '<figure>';
-    html += '<img src="pics/@PIC_DO" width="300">';
+    html += '<img src="pics/@PIC_DO" width="250">';
     html += '</figure>';
     html += '</div>';
     html += '<p id="news_doc">';
