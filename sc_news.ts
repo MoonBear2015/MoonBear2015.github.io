@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N01.78';
+    html += 'N01.79';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -651,6 +651,8 @@ class selector_whats extends SctItm_SelectLocker implements ISctItm_Selector {
             ,
             new SctItm('銀河帝国','WHAT/GalaxyEmpire.jpg')
             ,
+            new SctItm('暗黒面','WHAT/darkside.jpg')
+            ,
             new SctItm('ローマ帝国','WHAT/Rome.jpg')
 
         ];
@@ -1099,7 +1101,19 @@ class selector_class extends SctWrd_Selector implements ISctItm_Selector {
             ,
             new SctWrd('工場長')
             ,
+            new SctWrd('会社員')
+            ,
+            new SctWrd('事務員')
+            ,
+            new SctWrd('飼育員')
+            ,
+            new SctWrd('店員')
+            ,
             new SctWrd('店主')
+            ,
+            new SctWrd('アルバイター')
+            ,
+            new SctWrd('釣り師')
             ,
             new SctWrd('元警察官')
             ,
@@ -1229,8 +1243,6 @@ class selector_class extends SctWrd_Selector implements ISctItm_Selector {
             ,
             new SctWrd('カウボーイ')
             ,
-            new SctWrd('カウボーイ')
-            ,
             new SctWrd('看板娘')
             ,
             new SctWrd('カメラ屋')
@@ -1290,6 +1302,16 @@ class selector_class extends SctWrd_Selector implements ISctItm_Selector {
             new SctWrd('庭師')
             ,
             new SctWrd('狩人')
+            ,
+            new SctWrd('騎士')
+            ,
+            new SctWrd('忍者')
+            ,
+            new SctWrd('抜け忍')
+            ,
+            new SctWrd('諜報員')
+            ,
+            new SctWrd('狙撃兵')
         ];
     }
 }
