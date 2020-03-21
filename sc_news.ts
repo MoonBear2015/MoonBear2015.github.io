@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N01.79';
+    html += 'N01.81';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -205,6 +205,12 @@ class selector_title extends SctWrd_Selector implements ISctItm_Selector {
             new SctWrd('@WHATが@DO@END02C@PEOPLE、@HUMAN')
             ,
             new SctWrd('@WHATの@NICK、@HUMANが@DO@END02C')
+            ,
+            new SctWrd('@NICKの@WHAT、@DO@END02C')
+            ,
+            new SctWrd('@WHATの@NICKと@ASSES@CLASS、@HUMAN')
+            ,
+            new SctWrd('@WHATで@DO@END02C@CLASS、@HUMAN ww')
         ];
     }
 }
@@ -487,9 +493,9 @@ class selector_end02b extends SctWrd_Selector implements ISctItm_Selector {
             ,
             new SctWrd('した')
             ,
-            new SctWrd('させる')
+            new SctWrd('させている')
             ,
-            new SctWrd('させた')
+            new SctWrd('させていた')
             ,
             new SctWrd('しようとしている')
             ,
@@ -497,7 +503,11 @@ class selector_end02b extends SctWrd_Selector implements ISctItm_Selector {
             ,
             new SctWrd('してしまった')
             ,
+            new SctWrd('してしまう')
+            ,
             new SctWrd('するべきであった')
+            ,
+            new SctWrd('するべきである')
         ];
     }
 }
