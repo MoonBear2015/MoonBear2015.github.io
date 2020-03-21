@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N01.77';
+    html += 'N01.78';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -216,8 +216,6 @@ class selector_people extends SctWrd_Selector implements ISctItm_Selector {
             new SctWrd('@NICK')
             ,
             new SctWrd('@CLASS')
-            ,
-            new SctWrd('@THEY')
         ];
     }
 }
