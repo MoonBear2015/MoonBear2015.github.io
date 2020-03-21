@@ -148,11 +148,13 @@ class selector_title extends SctWrd_Selector {
             new SctWrd('@WHATの@PEOPLE、@HUMANが@DO@END02C'),
             new SctWrd('@DO@END02C@WHAT'),
             new SctWrd('@DO@END02C@WHATの@PEOPLE'),
-            new SctWrd('@WHATが@DO@END02C@PEOPLE、@HUMAN'),
+            new SctWrd('@WHATの@NICK、@HUMAN'),
+            new SctWrd('@WHATの@NICK、@HUMANが@ASSES'),
             new SctWrd('@WHATの@NICK、@HUMANが@DO@END02C'),
+            new SctWrd('@WHATで@ASSES@PEOPLE、@HUMAN'),
             new SctWrd('@NICKの@WHAT、@DO@END02C'),
-            new SctWrd('@WHATの@NICKと@ASSES@CLASS、@HUMAN'),
-            new SctWrd('@WHATで@DO@END02C@CLASS、@HUMAN ww')
+            new SctWrd('@WHATの@NICKと@ASSES@PEOPLE、@HUMAN'),
+            new SctWrd('@WHATで@DO@END02C@PEOPLE、@HUMAN')
         ];
     }
 }
