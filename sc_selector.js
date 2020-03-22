@@ -39,7 +39,6 @@ class SctCod extends SctItm {
         }
         let l = in_length - this.CodLength;
         let abs = sepalate_number(l);
-        tests_alert(abs);
         for (let i = 0; i < abs.length; i++) {
             if (abs[i].A == 1)
                 continue;
@@ -97,6 +96,9 @@ class ItmArray {
         let result = new ItmArray();
         result.Paste(this.itms);
         return result;
+    }
+    ToString() {
+        return tests_string(this.itms);
     }
 }
 class ItmSelector extends ItmArray {
@@ -156,6 +158,11 @@ class SctItm_Selector extends ItmSelector {
         super(in_array);
         this.itm_key = itm_key;
         this.pic_key = pic_key;
+    }
+    ToString() {
+        return '[itm_key = ' + this.itm_key + ']\r\n'
+            + '[pic_key = ' + this.pic_key + ']\r\n'
+            + super.ToString();
     }
 }
 class SctWrd_Selector extends SctItm_Selector {
@@ -233,9 +240,19 @@ class Selector_Generator {
         this.pic_key = pic_key;
         this.cods = new Array();
     }
+    Generate_Itm(in_length, in_AKey, in_BKey) {
+        let results = new Array();
+        this.cods.forEach(cod => {
+            cod.to_length_itms(in_length, in_AKey, in_BKey).forEach(itm => {
+                results.push(itm);
+            });
+        });
+        return results;
+    }
     Generate(in_max, in_selector) {
         let results = new Array();
         for (let c = 1; c <= in_max; c++) {
+            let new_selector = in_selector.Copy();
         }
         return results;
     }

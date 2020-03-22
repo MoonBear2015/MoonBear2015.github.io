@@ -8,13 +8,13 @@ function to_key_with_length(in_key : string,in_length : number)
 
 //------------------------------------ selector's
 
-interface ISctItm {
+interface ISctItm extends ITest {
     Wrd : string;
     SctPic : string;
     Copy : ISctItm;
 }
 
-interface ISctCod extends ISctItm {
+interface ISctCod extends ISctItm,ITest {
     CodLength : number;
     to_SctItm() : ISctItm;
     to_length_itms(in_length : number,in_AKey : string,in_BKey : string)
@@ -73,8 +73,6 @@ class SctCod extends SctItm implements ISctCod,ITest {
         let l = in_length - this.CodLength;
         let abs = sepalate_number(l);
         
-        tests_alert(abs);
-        
         for(let i = 0;i < abs.length;i++)
         {
             if (abs[i].A == 1) continue;
@@ -125,7 +123,7 @@ class SctWrd extends SctItm implements ISctItm,ITest {
     }
 }
 
-interface IItmArray<T extends ISctItm> {
+interface IItmArray<T extends ISctItm> extends ITest {
     itms : T[];
     
     Paste(in_array : Array<T>): void;
@@ -155,6 +153,10 @@ class ItmArray<T extends ISctItm> implements IItmArray<T> {
         let result = new ItmArray<T>();
         result.Paste(this.itms);
         return result;
+    }
+
+    public ToString() : string {
+        return tests_string(this.itms);
     }
 }
 
@@ -246,6 +248,12 @@ class SctItm_Selector extends ItmSelector<SctItm> implements ISctItm_Selector {
     )
     {
         super(in_array);
+    }
+
+    public ToString() : string {
+        return '[itm_key = ' + this.itm_key + ']\r\n'
+        + '[pic_key = ' + this.pic_key + ']\r\n'
+        + super.ToString();
     }
 }
 
@@ -362,7 +370,7 @@ class SctWrd_Counter extends SctItm_Counter implements ISctItm_Selector {
 }
 
 class Selector_Generator {
-    protected cods : ISctCod[];
+    public cods : ISctCod[];
     constructor(
         public itm_key : string
         ,
@@ -370,6 +378,18 @@ class Selector_Generator {
     )
     {
         this.cods = new Array<ISctCod>();
+    }
+
+    Generate_Itm(in_length : number,in_AKey : string,in_BKey : string)
+     : Array<ISctItm>
+    {
+        let results = new Array<ISctItm>();
+        this.cods.forEach(cod => {
+            cod.to_length_itms(in_length,in_AKey,in_BKey).forEach(itm => {
+                results.push(itm);
+            });
+        });
+        return results;
     }
 
     Generate(
@@ -384,6 +404,7 @@ class Selector_Generator {
 
         for(let c = 1; c <= in_max; c++)
         {
+            let new_selector = in_selector.Copy();
         }
 
         return results;

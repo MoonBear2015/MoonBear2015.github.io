@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N01.81';
+    html += 'N01.82';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -39,54 +39,54 @@ function make_news()
     html += 'border-radius:  1%;';
     html += 'background: ';
     html += 'linear-gradient(0deg,rgba(0,0,0,0.6),rgba(0,0,0,0.8)),';
-    html += 'url(./pics/@PIC_DO);';
+    html += 'url(./pics/@PIC_DO@);';
     //html += 'width: 100%;';
     //html += 'height: 0;';
-    html += 'url(./pics/@PIC_DO);';
+    html += 'url(./pics/@PIC_DO@);';
     html += 'background-position: center center;';
     html += 'background-size: cover;';
     html += '">';
 
     html += '<h2 id="news_title">';
     html += '<span style="border-bottom: solid 2px #FFFFFF;">';
-    html += '@NEWS_TITLE';
+    html += '@NEWS_TITLE@';
     html += '</span>';
     html += '</h2>';
 
     html += '<div id="news_pic_L">';
     html += '<figure>';
-    html += '<img src="pics/@PIC_WHAT" width="300">';
+    html += '<img src="pics/@PIC_WHAT@" width="300">';
     html += '</figure>';
     html += '</div>';
     
     html += '<p id="news_doc">';
-    html += '　@NEWS_DOC';
+    html += '　@NEWS_DOC@';
     for(let i = 0;i < rnd_minmax(3,5);i++)
     {
-        html += '@CONECT、';
-        html += '@NEWS_DOC';
+        html += '@CONECT@、';
+        html += '@NEWS_DOC@';
     }
     html += '</p>';
 
     html += '<div id="news_pic_R">';
     html += '<figure>';
-    html += '<img src="pics/@PIC_DO" width="300">';
+    html += '<img src="pics/@PIC_DO@" width="300">';
     html += '</figure>';
     html += '</div>';
 
     html += '<p id="news_doc">';
-    html += '　@NEWS_DOC';
+    html += '　@NEWS_DOC@';
     for(let i = 0;i < rnd_minmax(3,5);i++)
     {
-        html += '@CONECT、';
-        html += '@NEWS_DOC';
+        html += '@CONECT@、';
+        html += '@NEWS_DOC@';
     }
     html += '</p>';
     html += '<br>';
 
     html += '<h4 id="news_writer" align="right">';
-    html += 'Copyright (C) @WRITER';
-    html += '<br>@DATE'
+    html += 'Copyright (C) @WRITER@';
+    html += '<br>@DATE@'
     html += '</h4>';
 
     html += '</div>';
@@ -117,7 +117,7 @@ class selector_random_date
     constructor()
     {
         super();
-        this.itm_key = "@DATE";
+        this.itm_key = "@DATE@";
         this.pic_key = "";
     }
     get rnd_Itm() : SctItm {
@@ -143,7 +143,7 @@ class selector_human
     constructor()
     {
         super();
-        this.itm_key = "@HUMAN";
+        this.itm_key = "@HUMAN@";
         this.pic_key = "";
         this.nameMaker = new NameMakerAll();
     }
@@ -164,7 +164,7 @@ class selector_age
     constructor()
     {
         super();
-        this.itm_key = "@AGE";
+        this.itm_key = "@AGE@";
         this.pic_key = "";
         this.nameMaker = new NameMakerAll();
     }
@@ -177,76 +177,76 @@ class selector_age
 
 class selector_writer extends SctWrd_Selector implements ISctItm_Selector{
     constructor(){
-        super('@WRITER');
+        super('@WRITER@');
         this.itms = [
-            new SctWrd('@WH2')
+            new SctWrd('@WH2@')
         ];
     }
 }
 
 class selector_title extends SctWrd_Selector implements ISctItm_Selector {
     constructor(){
-        super('@NEWS_TITLE');
+        super('@NEWS_TITLE@');
         this.itms = [
-            new SctWrd('@WHATの@DO')
+            new SctWrd('@WHAT@の@DO@')
             ,
-            new SctWrd('@WHATは@DO@END02C')
+            new SctWrd('@WHAT@は@DO@@END02C@')
             ,
-            new SctWrd('@WHATで@DO@END02C@NICK')
+            new SctWrd('@WHAT@で@DO@@END02C@@NICK@')
             ,
-            new SctWrd('@WHATの@NICKが@DO@END02C')
+            new SctWrd('@WHAT@の@NICK@が@DO@@END02C@')
             ,
-            new SctWrd('@WHATの@PEOPLE、@HUMANが@DO@END02C')
+            new SctWrd('@WHAT@の@PEOPLE@、@HUMAN@が@DO@@END02C@')
             ,
-            new SctWrd('@DO@END02C@WHAT')
+            new SctWrd('@DO@@END02C@@WHAT@')
             ,
-            new SctWrd('@DO@END02C@WHATの@PEOPLE')
+            new SctWrd('@DO@@END02C@@WHAT@の@PEOPLE@')
             ,
-            new SctWrd('@WHATの@NICK、@HUMAN')
+            new SctWrd('@WHAT@の@NICK@、@HUMAN@')
             ,
-            new SctWrd('@WHATの@NICK、@HUMANが@ASSES')
+            new SctWrd('@WHAT@の@NICK@、@HUMAN@が@ASSES@')
             ,
-            new SctWrd('@WHATの@NICK、@HUMANが@DO@END02C')
+            new SctWrd('@WHAT@の@NICK@、@HUMAN@が@DO@@END02C@')
             ,
-            new SctWrd('@WHATで@ASSES@PEOPLE、@HUMAN')
+            new SctWrd('@WHAT@で@ASSES@@PEOPLE@、@HUMAN@')
             ,
-            new SctWrd('@NICKの@WHAT、@DO@END02C')
+            new SctWrd('@NICK@の@WHAT@、@DO@@END02C@')
             ,
-            new SctWrd('@WHATの@NICKと@ASSES@PEOPLE、@HUMAN')
+            new SctWrd('@WHAT@の@NICK@と@ASSES@@PEOPLE@、@HUMAN@')
             ,
-            new SctWrd('@WHATで@DO@END02C@PEOPLE、@HUMAN')
+            new SctWrd('@WHAT@で@DO@@END02C@@PEOPLE@、@HUMAN@')
         ];
     }
 }
 
 class selector_people extends SctWrd_Selector implements ISctItm_Selector {
     constructor(){
-        super('@PEOPLE');
+        super('@PEOPLE@');
         this.itms = [
-            new SctWrd('@NICK')
+            new SctWrd('@NICK@')
             ,
-            new SctWrd('@CLASS')
+            new SctWrd('@CLASS@')
         ];
     }
 }
 
 class selector_doc extends SctWrd_Selector implements ISctItm_Selector {
     constructor(){
-        super('@NEWS_DOC');
+        super('@NEWS_DOC@');
         this.itms = [
-            new SctWrd('@NEWS_C01、@NEWS_C02。')
+            new SctWrd('@NEWS_C01@、@NEWS_C02@。')
             ,
-            new SctWrd('@NEWS_C01、@DATE、@NEWS_C02。')
+            new SctWrd('@NEWS_C01@、@DATE@、@NEWS_C02@。')
             ,
-            new SctWrd('@DATE、@NEWS_C01、@NEWS_C02。')
+            new SctWrd('@DATE@、@NEWS_C01@、@NEWS_C02@。')
             ,
-            new SctWrd('@DATE、@WHOは「@COMMENT」との@ANSWERを@SAY@END02B。')
+            new SctWrd('@DATE@、@WHOは「@COMMENT」との@ANSWER@を@SAY@@END02B@。')
             ,
-            new SctWrd('@WHOは「@COMMENT」との@ANSWERを@SAY@END02B。')
+            new SctWrd('@WHOは「@COMMENT」との@ANSWER@を@SAY@@END02B@。')
             ,
-            new SctWrd('@WHOは@DATE、「@COMMENT」との@ANSWERを@SAY@END02B。')
+            new SctWrd('@WHOは@DATE@、「@COMMENT」との@ANSWER@を@SAY@@END02B@。')
             ,
-            new SctWrd('「@COMMENT」との@ANSWERを@SAYしたのは、@WHO@END02A。')
+            new SctWrd('「@COMMENT」との@ANSWER@を@SAY@したのは、@WHO@END02A@。')
         ];
     }
 }
@@ -255,40 +255,40 @@ class selector_who extends SctWrd_Selector implements ISctItm_Selector {
     constructor(){
         super('@WHO');
         this.itms = [
-            new SctWrd('@CLASSの@HUMAN@AGE')
+            new SctWrd('@CLASS@の@HUMAN@@AGE@')
             ,
-            new SctWrd('「@WHATの@NICK」と@ASSES@CLASSの@HUMAN@AGE')
+            new SctWrd('「@WHAT@の@NICK@」と@ASSES@@CLASS@の@HUMAN@@AGE@')
             ,
-            new SctWrd('「@DOする@NICK」と@ASSES@CLASSの@HUMAN@AGE')
+            new SctWrd('「@DO@する@NICK@」と@ASSES@@CLASS@の@HUMAN@@AGE@')
             ,
-            new SctWrd('「@STATUSする@NICK」と@ASSES@CLASSの@HUMAN@AGE')
+            new SctWrd('「@STATUS@する@NICK@」と@ASSES@@CLASS@の@HUMAN@@AGE@')
             ,
-            new SctWrd('「@CLASSの@NICK」と@ASSES@CLASSの@HUMAN@AGE')
+            new SctWrd('「@CLASS@の@NICK@」と@ASSES@@CLASS@の@HUMAN@@AGE@')
             ,
-            new SctWrd('@THEYより「@WHATの@NICK」と@ASSES@CLASSの@HUMAN@AGE')
+            new SctWrd('@THEY@より「@WHAT@の@NICK@」と@ASSES@@CLASS@の@HUMAN@@AGE@')
             ,
-            new SctWrd('@THEYより「@DOする@NICK」と@ASSES@CLASSの@HUMAN@AGE')
+            new SctWrd('@THEY@より「@DO@する@NICK@」と@ASSES@@CLASS@の@HUMAN@@AGE@')
             ,
-            new SctWrd('@THEYより「@STATUSする@NICK」と@ASSES@CLASSの@HUMAN@AGE')
+            new SctWrd('@THEY@より「@STATUS@する@NICK@」と@ASSES@@CLASS@の@HUMAN@@AGE@')
             ,
-            new SctWrd('@THEYより「@CLASSの@NICK」と@ASSES@CLASSの@HUMAN@AGE')
+            new SctWrd('@THEY@より「@CLASS@の@NICK@」と@ASSES@@CLASS@の@HUMAN@@AGE@')
         ];
     }
 }
 
 class selector_who2 extends SctWrd_Selector implements ISctItm_Selector {
     constructor(){
-        super('@WH2');
+        super('@WH2@');
         this.itms = [
-            new SctWrd('@CLASS @HUMAN@AGE')
+            new SctWrd('@CLASS@ @HUMAN@@AGE@')
             ,
-            new SctWrd('「@STATUSする@NICK」と@ASSES@CLASS @HUMAN@AGE')
+            new SctWrd('「@STATUS@する@NICK@」と@ASSES@@CLASS@ @HUMAN@@AGE@')
             ,
-            new SctWrd('「@CLASSの@NICK」と@ASSES@CLASS @HUMAN@AGE')
+            new SctWrd('「@CLASS@の@NICK@」と@ASSES@@CLASS@ @HUMAN@@AGE@')
             ,
-            new SctWrd('@THEYより「@STATUSする@NICK」と@ASSES@CLASS @HUMAN@AGE')
+            new SctWrd('@THEY@より「@STATUS@する@NICK@」と@ASSES@@CLASS@ @HUMAN@@AGE@')
             ,
-            new SctWrd('@THEYより「@CLASSの@NICK」と@ASSES@CLASS @HUMAN@AGE')
+            new SctWrd('@THEY@より「@CLASS@の@NICK@」と@ASSES@@CLASS@ @HUMAN@@AGE@')
         ];
     }
 }
@@ -296,36 +296,36 @@ class selector_who2 extends SctWrd_Selector implements ISctItm_Selector {
 
 class selector_c01 extends SctWrd_Selector implements ISctItm_Selector {
     constructor(){
-        super('@NEWS_C01');
+        super('@NEWS_C01@');
         this.itms = [
-            new SctWrd('@WHATが@DO@END01B')
+            new SctWrd('@WHAT@が@DO@@END01B@')
             ,
-            new SctWrd('@WHATでの@KEY@END01A')
+            new SctWrd('@WHAT@での@KEY@@END01A@')
             ,
-            new SctWrd('@WHATで@KEYが@STATUS@END01B')
+            new SctWrd('@WHAT@で@KEY@が@STATUS@@END01B@')
             ,
-            new SctWrd('@WHATでは@KEYや@KEYが@STATUS@END01B')
+            new SctWrd('@WHAT@では@KEY@や@KEY@が@STATUS@@END01B@')
             ,
-            new SctWrd('@KEYが@STATUSする@WHAT@END01A')
+            new SctWrd('@KEY@が@STATUS@する@WHAT@@END01A@')
             ,
-            new SctWrd('@KEYや@KEYが@STATUSする@WHAT@END01A')
+            new SctWrd('@KEY@や@KEY@が@STATUS@する@WHAT@@END01A@')
             ,
-            new SctWrd('@MANY@THEYが@DO@END01B')
+            new SctWrd('@MANY@@THEY@が@DO@@END01B@')
             ,
-            new SctWrd('@MANY@THEYによる@KEYが@STATUS@END01B')
+            new SctWrd('@MANY@@THEY@による@KEY@が@STATUS@@END01B@')
             ,
-            new SctWrd('@MANY@THEYの@THINKが@STATUS@END01B')
+            new SctWrd('@MANY@@THEY@の@THINK@が@STATUS@@END01B@')
             ,
-            new SctWrd('@MANY@THEYの@THINKや@THINKが@STATUS@END01B')
+            new SctWrd('@MANY@@THEY@の@THINK@や@THINK@が@STATUS@@END01B@')
             ,
-            new SctWrd('@THINKや@THINKが@STATUSする@WHAT@END01A')
+            new SctWrd('@THINK@や@THINK@が@STATUS@する@WHAT@@END01A@')
         ];
     }
 }
 
 class selector_end01a extends SctWrd_Selector implements ISctItm_Selector {
     constructor(){
-        super('@END01A');
+        super('@END01A@');
         this.itms = [
             new SctWrd('により')
             ,
@@ -342,7 +342,7 @@ class selector_end01a extends SctWrd_Selector implements ISctItm_Selector {
 
 class selector_end01b extends SctWrd_Selector implements ISctItm_Selector {
     constructor(){
-        super('@END01B');
+        super('@END01B@');
         this.itms = [
             new SctWrd('し')
             ,
@@ -362,21 +362,21 @@ class selector_end01b extends SctWrd_Selector implements ISctItm_Selector {
 
 class selector_c02 extends SctWrd_Selector implements ISctItm_Selector {
     constructor(){
-        super('@NEWS_C02');
+        super('@NEWS_C02@');
         this.itms = [
-            new SctWrd('@WHATの@MANY@PEOPLEが@ASSES')
+            new SctWrd('@WHAT@の@MANY@@PEOPLE@が@ASSES@')
             ,
-            new SctWrd('@MANY@THEYが@DO@END02B')
+            new SctWrd('@MANY@@THEY@が@DO@@END02B@')
             ,
-            new SctWrd('@MANY@THEYが@NICK@END02A')
+            new SctWrd('@MANY@@THEY@が@NICK@@END02A@')
             ,
-            new SctWrd('@MANY@THEYの@KEYが@STATUS@END02B')
+            new SctWrd('@MANY@@THEY@の@KEY@が@STATUS@@END02B@')
             ,
-            new SctWrd('@MANY@THEYの@KEYや@KEYが@STATUS@END02B')
+            new SctWrd('@MANY@@THEY@の@KEY@や@KEY@が@STATUS@@END02B@')
             ,
-            new SctWrd('@MANY@THEYの@THINKが@STATUS@END02B')
+            new SctWrd('@MANY@@THEY@の@THINK@が@STATUS@@END02B@')
             ,
-            new SctWrd('@MANY@THEYの@THINKと@THINKが@STATUS@END02B')
+            new SctWrd('@MANY@@THEY@の@THINK@と@THINK@が@STATUS@@END02B@')
         ];
     }
 }
@@ -385,39 +385,39 @@ class selector_comment extends SctWrd_Selector implements ISctItm_Selector {
     constructor(){
         super('@COMMENT');
         this.itms = [
-            new SctWrd('@NEWS_C01、@NEWS_C02')
+            new SctWrd('@NEWS_C01@、@NEWS_C02@')
             ,
-            new SctWrd('@NEWS_C01、@NEWS_C02。@CONECT、@NEWS_C01、@NEWS_C02')
+            new SctWrd('@NEWS_C01@、@NEWS_C02@。@CONECT@、@NEWS_C01@、@NEWS_C02@')
             ,
-            new SctWrd('@COMMENT。@CONECT、@COMMENT')
+            new SctWrd('@COMMENT。@CONECT@、@COMMENT')
             ,
-            new SctWrd('@WHATの@NICKが@STATUS@END02B')
+            new SctWrd('@WHAT@の@NICK@が@STATUS@@END02B@')
             ,
-            new SctWrd('@WHATは@NICKと@ASSES')
+            new SctWrd('@WHAT@は@NICK@と@ASSES@')
             ,
-            new SctWrd('@WHATが@NICK@END02A')
+            new SctWrd('@WHAT@が@NICK@@END02A@')
             ,
-            new SctWrd('@MANY@THEYは@NICK@END02A')
+            new SctWrd('@MANY@@THEY@は@NICK@@END02A@')
             ,
-            new SctWrd('@THEYは@NICK@END02A。@WHATの@NICK@END02A')
+            new SctWrd('@THEY@は@NICK@@END02A@。@WHAT@の@NICK@@END02A@')
             ,
-            new SctWrd('@THEYは@WHATの@NICK@END02A。@WHATが@NICK@END02A')
+            new SctWrd('@THEY@は@WHAT@の@NICK@@END02A@。@WHAT@が@NICK@@END02A@')
             ,
-            new SctWrd('@WHATは@DO@END02B。@THEYの@KEY@END02A')
+            new SctWrd('@WHAT@は@DO@@END02B@。@THEY@の@KEY@@END02A@')
             ,
-            new SctWrd('@WHATは@NICKと@ASSES@NICK@END02A')
+            new SctWrd('@WHAT@は@NICK@と@ASSES@@NICK@@END02A@')
             ,
-            new SctWrd('@WHATは@NICK@END02A。@CONECT、@NICK@END02A')
+            new SctWrd('@WHAT@は@NICK@@END02A@。@CONECT@、@NICK@@END02A@')
             ,
-            new SctWrd('@WHATは@NICK@END02A。@NICKで@NICK@END02A')
+            new SctWrd('@WHAT@は@NICK@@END02A@。@NICK@で@NICK@@END02A@')
             ,
-            new SctWrd('@WHATが@NICK？ @YESNO、@WHATは@NICK@END02A')
+            new SctWrd('@WHAT@が@NICK@？ @YESNO@、@WHAT@は@NICK@@END02A@')
             ,
-            new SctWrd('@DO@END02C@NICK、@YESNO、それが@WHAT@END02A')
+            new SctWrd('@WHAT@の@DO@？ @YESNO@、それは@PEOPLE@の@KEY@@END02A@')
             ,
-            new SctWrd('@NICK、@NICK、@NICK、@NICK・・・、@YESNO、それは@WHAT@END02A')
+            new SctWrd('@DO@@END02C@@NICK@、@YESNO@、それが@WHAT@@END02A@')
             ,
-            new SctWrd('@WHATの@DO――@YESNO、それは@PEOPLEの@KEY@END02A')
+            new SctWrd('@NICK@、@NICK@、@NICK@、@NICK@・・・、@YESNO@、それは@WHAT@@END02A@')
         ];
     }
 }
@@ -425,7 +425,7 @@ class selector_comment extends SctWrd_Selector implements ISctItm_Selector {
 // 肯定・否定 ・・・？　～、・・・
 class selector_YESNO extends SctWrd_Selector implements ISctItm_Selector {
     constructor(){
-        super('@YESNO');
+        super('@YESNO@');
         this.itms = [
             new SctWrd('しかし')
             ,
@@ -468,7 +468,7 @@ class selector_YESNO extends SctWrd_Selector implements ISctItm_Selector {
 
 class selector_end02a extends SctWrd_Selector implements ISctItm_Selector {
     constructor(){
-        super('@END02A');
+        super('@END02A@');
         this.itms = [
             new SctWrd('だ')
             ,
@@ -487,7 +487,7 @@ class selector_end02a extends SctWrd_Selector implements ISctItm_Selector {
 
 class selector_end02b extends SctWrd_Selector implements ISctItm_Selector {
     constructor(){
-        super('@END02B');
+        super('@END02B@');
         this.itms = [
             new SctWrd('している')
             ,
@@ -518,7 +518,7 @@ class selector_end02b extends SctWrd_Selector implements ISctItm_Selector {
 
 class selector_end02c extends SctWrd_Selector implements ISctItm_Selector {
     constructor(){
-        super('@END02C');
+        super('@END02C@');
         this.itms = [
             new SctWrd('する')
             ,
@@ -537,7 +537,7 @@ class selector_end02c extends SctWrd_Selector implements ISctItm_Selector {
 // 名詞・人物・組織　～は・～が・～の
 class selector_whats extends SctItm_SelectLocker implements ISctItm_Selector {
     constructor(){
-        super('@WHAT','@PIC_WHAT');
+        super('@WHAT@','@PIC_WHAT@');
         this.itms = [
             new SctItm('日本' ,'WHAT/Japan.jpg')
             ,
@@ -676,7 +676,7 @@ class selector_whats extends SctItm_SelectLocker implements ISctItm_Selector {
 // 動名詞 の～
 class selector_do extends SctItm_SelectLocker implements ISctItm_Selector{
     constructor(){
-        super('@DO','@PIC_DO');
+        super('@DO@','@PIC_DO@');
         this.itms = [
             //
             // nega 
@@ -775,7 +775,7 @@ class selector_do extends SctItm_SelectLocker implements ISctItm_Selector{
 // 事象・事件・事故
 class selector_key extends SctWrd_Selector implements ISctItm_Selector {
     constructor(){
-        super('@KEY');
+        super('@KEY@');
         this.itms = [
             //
             // nega 
@@ -871,7 +871,7 @@ class selector_key extends SctWrd_Selector implements ISctItm_Selector {
 // 物量・増減・拡縮 ～する・～した・～し、
 class selector_status extends SctWrd_Selector implements ISctItm_Selector {
     constructor(){
-        super('@STATUS');
+        super('@STATUS@');
         this.itms = [
             new SctWrd('勃発')
             ,
@@ -915,9 +915,9 @@ class selector_status extends SctWrd_Selector implements ISctItm_Selector {
 // 団体 ～の間に・～の間で
 class selector_they extends SctWrd_Selector implements ISctItm_Selector {
     constructor(){
-        super('@THEY');
+        super('@THEY@');
         this.itms = [
-            new SctWrd('@CLASS')
+            new SctWrd('@CLASS@')
             ,
             new SctWrd('人々')
             ,
@@ -1046,7 +1046,7 @@ class selector_they extends SctWrd_Selector implements ISctItm_Selector {
 // 団体の数 （一部の／多くの）人々
 class selector_many extends SctWrd_Selector implements ISctItm_Selector {
     constructor(){
-        super('@MANY');
+        super('@MANY@');
         this.itms = [
             new SctWrd('少数の')
             ,
@@ -1085,7 +1085,7 @@ class selector_many extends SctWrd_Selector implements ISctItm_Selector {
 // 肩書き ～の
 class selector_class extends SctWrd_Selector implements ISctItm_Selector {
     constructor(){
-        super('@CLASS');
+        super('@CLASS@');
         this.itms = [
             new SctWrd('大学教授')
             ,
@@ -1333,7 +1333,7 @@ class selector_class extends SctWrd_Selector implements ISctItm_Selector {
 // 敬称 の～
 class selector_nickname extends SctWrd_Selector implements ISctItm_Selector {
     constructor(){
-        super('@NICK');
+        super('@NICK@');
         this.itms = [
             //
             // nega
@@ -1355,6 +1355,8 @@ class selector_nickname extends SctWrd_Selector implements ISctItm_Selector {
             new SctWrd('恥部')
             ,
             new SctWrd('悪魔')
+            ,
+            new SctWrd('小悪魔')
             ,
             new SctWrd('堕天使')
             ,
@@ -1409,8 +1411,6 @@ class selector_nickname extends SctWrd_Selector implements ISctItm_Selector {
             new SctWrd('贅肉')
             ,
             new SctWrd('無駄骨')
-            ,
-            new SctWrd('無駄')
             ,
             new SctWrd('穀潰し')
             ,
@@ -1505,8 +1505,6 @@ class selector_nickname extends SctWrd_Selector implements ISctItm_Selector {
             new SctWrd('ヒットラー')
             ,
             new SctWrd('おっさん')
-            ,
-            new SctWrd('餓鬼')
             //
             // posi
             //
@@ -1520,6 +1518,8 @@ class selector_nickname extends SctWrd_Selector implements ISctItm_Selector {
             new SctWrd('勇者')
             ,
             new SctWrd('英雄')
+            ,
+            new SctWrd('勝利者')
             ,
             new SctWrd('ヒーロー')
             ,
@@ -1569,6 +1569,10 @@ class selector_nickname extends SctWrd_Selector implements ISctItm_Selector {
             ,
             new SctWrd('重戦車')
             ,
+            new SctWrd('航空母艦')
+            ,
+            new SctWrd('大砲')
+            ,
             new SctWrd('妖精')
             ,
             new SctWrd('天使')
@@ -1596,9 +1600,39 @@ class selector_nickname extends SctWrd_Selector implements ISctItm_Selector {
             new SctWrd('宝石箱')
             ,
             new SctWrd('宝')
+            ,
+            new SctWrd('骨')
+            ,
+            new SctWrd('魂')
+            ,
+            new SctWrd('神髄')
+            ,
+            new SctWrd('真骨頂')
+            ,
+            new SctWrd('真の姿')
+            ,
+            new SctWrd('化身')
+            ,
+            new SctWrd('スター')
+            ,
+            new SctWrd('スーパースター')
+            ,
+            new SctWrd('紳士')
+            ,
+            new SctWrd('淑女')
+            ,
+            new SctWrd('レディ')
+            ,
+            new SctWrd('貴公子')
+            ,
+            new SctWrd('貴人')
+            ,
+            new SctWrd('貴婦人')
             //
             // nomal
             //
+            ,
+            new SctWrd('人')
             ,
             new SctWrd('男')
             ,
@@ -1621,6 +1655,8 @@ class selector_nickname extends SctWrd_Selector implements ISctItm_Selector {
             new SctWrd('おじいちゃん')
             ,
             new SctWrd('おばあちゃん')
+            ,
+            new SctWrd('若者')
         ];
     }
 }
@@ -1629,7 +1665,7 @@ class selector_nickname extends SctWrd_Selector implements ISctItm_Selector {
 // 意識 ～する
 class selector_think extends SctWrd_Selector implements ISctItm_Selector {
     constructor(){
-        super('@THINK');
+        super('@THINK@');
         this.itms = [
             new SctWrd('動揺')
             ,
@@ -1665,7 +1701,7 @@ class selector_think extends SctWrd_Selector implements ISctItm_Selector {
 // 発言・主張 ～している
 class selector_say extends SctWrd_Selector implements ISctItm_Selector {
     constructor(){
-        super('@SAY');
+        super('@SAY@');
         this.itms = [
             new SctWrd('主張')
             ,
@@ -1703,7 +1739,7 @@ class selector_say extends SctWrd_Selector implements ISctItm_Selector {
 // 判断 ～を
 class selector_answer extends SctWrd_Selector implements ISctItm_Selector {
     constructor(){
-        super('@ANSWER');
+        super('@ANSWER@');
         this.itms = [
             new SctWrd('見方')
             ,
@@ -1749,7 +1785,7 @@ class selector_answer extends SctWrd_Selector implements ISctItm_Selector {
 // 評価 と～（る・た・い）。
 class selector_assessment extends SctWrd_Selector implements ISctItm_Selector {
     constructor(){
-        super('@ASSES');
+        super('@ASSES@');
         this.itms = [
             new SctWrd('親しまれている')
             ,
@@ -1816,7 +1852,7 @@ class selector_assessment extends SctWrd_Selector implements ISctItm_Selector {
 // 接続詞
 class selector_conect extends SctWrd_Selector implements ISctItm_Selector {
     constructor(){
-        super('@CONECT');
+        super('@CONECT@');
         this.itms = [
             new SctWrd('そして')
             ,
