@@ -165,7 +165,6 @@ class selector_title extends SctWrd_Selector {
             new SctWrd('@DO@@END02C@@WHAT@の@NICK@、@HUMAN@'),
             new SctWrd('@WHAT@の@NICK@、@HUMAN@が@DO@'),
             new SctWrd('@WHAT@の@NICK@、@HUMAN@が@DO@@END02C@'),
-            new SctWrd('@WHAT@で@ASSES@@PEOPLE@、@HUMAN@'),
             new SctWrd('@WHAT@の@NICK@、@DO@@END02C@'),
             new SctWrd('@WHAT@で@DO@@END02C@@PEOPLE@、@HUMAN@'),
             new SctWrd('@HUMAN@が@DO@@END02C@@WHAT@'),

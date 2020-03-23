@@ -228,8 +228,6 @@ class selector_title extends SctWrd_Selector implements ISctItm_Selector {
             ,
             new SctWrd('@WHAT@の@NICK@、@HUMAN@が@DO@@END02C@')
             ,
-            new SctWrd('@WHAT@で@ASSES@@PEOPLE@、@HUMAN@')
-            ,
             new SctWrd('@WHAT@の@NICK@、@DO@@END02C@')
             ,
             new SctWrd('@WHAT@で@DO@@END02C@@PEOPLE@、@HUMAN@')
