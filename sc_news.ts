@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N01.85';
+    html += 'N01.86';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -55,7 +55,7 @@ function make_news()
 
     html += '<div id="news_pic_L">';
     html += '<figure>';
-    html += '<img src="pics/@PIC_WHAT@" width="400">';
+    html += '<img src="pics/@PIC_WHAT@" width="300px">';
     html += '</figure>';
     html += '</div>';
     
@@ -70,13 +70,13 @@ function make_news()
 
     html += '<div id="news_pic_R">';
     html += '<figure>';
-    html += '<img src="pics/@PIC_DO@" width="300">';
+    html += '<img src="pics/@PIC_DO@" width="300px">';
     html += '</figure>';
     html += '</div>';
 
     html += '<p id="news_doc">';
     html += '　@NEWS_DOC@';
-    for(let i = 0;i < rnd_minmax(3,5);i++)
+    for(let i = 0;i < rnd_minmax(5,10);i++)
     {
         html += '@CONECT@、';
         html += '@NEWS_DOC@';
@@ -713,6 +713,14 @@ class selector_whats extends SctItm_SelectLocker implements ISctItm_Selector {
             ,
             new SctItm('ディズニーランド','WHAT/disney.jpg')
             ,
+            new SctItm('ディズニーランド','WHAT/disney2.jpg')
+            ,
+            new SctItm('ひらかたパーク','WHAT/hirapa-.jpg')
+            ,
+            new SctItm('ひらかたパーク','WHAT/hirapa-2.jpg')
+            ,
+            new SctItm('ひらかたパーク','WHAT/hirapa-3.jpg')
+            ,
             new SctItm('ジオン公国','WHAT/jion.jpg')
             ,
             new SctItm('ナチス・ドイツ','WHAT/nachi.jpg')
@@ -726,7 +734,14 @@ class selector_whats extends SctItm_SelectLocker implements ISctItm_Selector {
             new SctItm('ローマ帝国','WHAT/Rome.jpg')
             ,
             new SctItm('未来','WHAT/future.jpg')
-
+            ,
+            new SctItm('縄文時代','WHAT/joumon.jpg')
+            ,
+            new SctItm('スラム街','WHAT/slum.jpg')
+            ,
+            new SctItm('九竜城','WHAT/coulomb.jpg')
+            ,
+            new SctItm('邪馬台国','WHAT/yama.jpg')
         ];
     }
 }
@@ -828,7 +843,9 @@ class selector_do extends SctItm_SelectLocker implements ISctItm_Selector{
             ,
             new SctItm('勝利','DO/vict.jpg')
             ,
-            new SctItm('勝利','DO/vict.jpg')
+            new SctItm('優勝','DO/topwin.jpg')
+            ,
+            new SctItm('発明','DO/Edison.jpg')
 
         ];
     }
