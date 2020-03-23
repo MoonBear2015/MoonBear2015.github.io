@@ -22,11 +22,19 @@ interface ISctCod extends ISctItm,ITest {
 }
 
 class SctItm implements ISctItm,ITest {
+    public Wrd : string;
+    public SctPic : string;
     constructor(
-        public Wrd : string
+        in_Wrd : string
         ,
-        public SctPic : string
+        in_SctPic? : string
     ){
+        this.Wrd = in_Wrd;
+        if (in_SctPic) {
+            this.SctPic = in_SctPic;
+        } else {
+            this.SctPic = '';
+        }
     };
     public get Copy() : ISctItm {
         return new SctItm(this.Wrd,this.SctPic);
@@ -37,7 +45,10 @@ class SctItm implements ISctItm,ITest {
     }
     public ToString() : string
     {
-        return this.Wrd + '(' + this.SctPic + ")";
+        if (this.SctPic != '') {
+            return this.Wrd + '(' + this.SctPic + ")";
+        }
+        return this.Wrd;
     }
 }
 
@@ -101,25 +112,6 @@ class SctCod extends SctItm implements ISctCod,ITest {
     ToString() : string
     {
         return super.ToString() + this.CodLength.toString(); 
-    }
-}
-
-class SctWrd extends SctItm implements ISctItm,ITest {
-    constructor(
-        in_Wrd : string
-    )
-    {
-        super(in_Wrd,'');
-    }
-    public get Copy() : ISctItm {
-        return new SctWrd(this.Wrd);
-    }
-    public set Copy(value : ISctItm){
-        this.Wrd = value.Wrd;
-    }
-    public ToString() : string
-    {
-        return super.ToString();
     }
 }
 
@@ -241,15 +233,24 @@ interface ISctItm_Selector extends IItmSelector<SctItm> {
 }
 
 class SctItm_Selector extends ItmSelector<SctItm> implements ISctItm_Selector {
+    public itm_key : string;
+    public pic_key : string;
+    
     constructor(
-        public itm_key : string
+        in_itm_key : string
         ,
-        public pic_key : string
+        in_pic_key? : string
         ,
         in_array? : Array<SctItm>
     )
     {
         super(in_array);
+        this.itm_key = in_itm_key;
+        if (in_pic_key) {
+            this.pic_key = in_pic_key;
+        } else {
+            this.pic_key = '';
+        }
     }
 
     public ToString() : string {
@@ -267,39 +268,19 @@ class SctItm_Selector extends ItmSelector<SctItm> implements ISctItm_Selector {
 
 }
 
-class SctWrd_Selector extends SctItm_Selector implements ISctItm_Selector {
-    constructor(
-        in_itm_key : string
-        ,
-        in_array? : Array<SctItm>
-    )
-    {
-        super(in_itm_key,'',in_array);
-    }
-
-    Copy() : ISctItm_Selector
-    {
-        let result = new SctWrd_Selector(this.itm_key);
-        result.Paste(this.itms);
-        return result;
-    }
-
-}
-
-
 class SctItm_SelectLocker extends SctItm_Selector implements ISctItm_Selector {
     private is_lock : boolean;
     private lock_item : SctItm;
 
     constructor(
-        public itm_key : string
+        in_itm_key : string
         ,
-        public pic_key : string
+        in_pic_key? : string
         ,
         in_array? : Array<SctItm>
     )
     {
-        super(itm_key,pic_key,in_array);
+        super(in_itm_key,in_pic_key,in_array);
         this.is_lock = false;
         this.lock_item = new SctItm('','');
     }
@@ -324,56 +305,17 @@ class SctItm_SelectLocker extends SctItm_Selector implements ISctItm_Selector {
 
 }
 
-class SctWrd_SelectLocker 
-    extends SctWrd_Selector 
-    implements ISctItm_Selector {
-    
-        private is_lock : boolean;
-    private lock_item : SctWrd;
-
-    constructor(
-        public itm_key : string
-        ,
-        in_array? : Array<SctWrd>
-    )
-    {
-        super(itm_key,in_array);
-        this.is_lock = false;
-        this.lock_item = new SctWrd('');
-    }
-
-    get rnd_Itm() : SctItm {
-        if (this.is_lock)
-        {
-            return this.lock_item;
-        }
-        this.is_lock = true;
-        let i = rnd_max(this.itms.length);
-        this.lock_item.Copy = this.itms[i];
-        return this.itms[i];
-    }
-
-    Copy() : ISctItm_Selector
-    {
-        let result = new SctWrd_SelectLocker(this.itm_key);
-        result.Paste(this.itms);
-        return result;
-    }
-
-}
-
 class SctItm_FirstLocker 
     extends SctItm_Selector 
     implements ISctItm_Selector {
-    
     private is_first : boolean;
     constructor(
-        public itm_key : string
+        in_itm_key : string
         ,
-        public pic_key : string
+        in_pic_key? : string
     )
     {
-        super(itm_key,pic_key);
+        super(in_itm_key,in_pic_key);
         this.is_first = true;
     }
 
@@ -399,34 +341,26 @@ class SctItm_FirstLocker
 //------------------------------------ poem
 
 class SctItm_Counter extends ItmCounter<SctItm> implements ISctItm_Selector {
+    public itm_key : string;
+    public pic_key : string;
     constructor(
-        public itm_key : string
+        in_itm_key : string
         ,
-        public pic_key : string
+        in_pic_key? : string
     )
     {
         super();
+        this.itm_key = in_itm_key;
+        if (in_pic_key) {
+            this.pic_key = in_pic_key;
+        } else {
+            this.pic_key = '';
+        }
     }
 
     Copy() : ISctItm_Selector
     {
         let result = new SctItm_Counter(this.itm_key,this.pic_key);
-        result.Paste(this.itms);
-        return result;
-    }
-
-}
-class SctWrd_Counter extends SctItm_Counter implements ISctItm_Selector {
-    constructor(
-        in_itm_key : string
-    )
-    {
-        super(in_itm_key,'');
-    }
-
-    Copy() : ISctItm_Selector
-    {
-        let result = new SctWrd_Counter(this.itm_key);
         result.Paste(this.itms);
         return result;
     }

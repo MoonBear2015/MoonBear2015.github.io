@@ -19,6 +19,7 @@ function set_poem()
     html += '</div>';
 
     let gt1 = new Gene_tema01();
+    let arys = gt1.Generate(8,new SctItm_Selector('',''));
 
     let itms_no = gt1.Gene_Itm_no_length();
     html += '[NO]<br>';
@@ -108,7 +109,7 @@ function make_poem_sub() : string
     html += '</h2>';
 
     html += '<h4 id="poem_writer" align="right">';
-    html += '@WRITER';
+    html += '@WRITER@';
     html += '</h4>';
 
     html += '</div>';
@@ -166,109 +167,109 @@ class poem_docs_maker {
     }
 }
 
-class poemer_type extends SctWrd_SelectLocker implements ISctItm_Selector{
+class poemer_type extends SctItm_SelectLocker implements ISctItm_Selector{
     constructor(){
         super('@POEM_TYPE@');
         this.itms = [
-            new SctWrd('@TYPE_A@')
+            new SctItm('@TYPE_A@')
             ,
-            new SctWrd('@TYPE_B@')
+            new SctItm('@TYPE_B@')
         ];
     }
 }
 
-class poemer_pattern_A extends SctWrd_Selector implements ISctItm_Selector{
+class poemer_pattern_A extends SctItm_Selector implements ISctItm_Selector{
     constructor(){
         super('@TYPE_A@');
         this.itms = [
-            new SctWrd('@TM05@ @ST07@ @ST05@')
+            new SctItm('@TM05@ @ST07@ @ST05@')
             ,
-            new SctWrd('@ST05@ @TM07@ @ST05@')
+            new SctItm('@ST05@ @TM07@ @ST05@')
             ,
-            new SctWrd('@ST05@ @ST07@ @TM05@')
+            new SctItm('@ST05@ @ST07@ @TM05@')
         ];
     }
 }
 
-class poemer_pattern_B extends SctWrd_Selector implements ISctItm_Selector{
+class poemer_pattern_B extends SctItm_Selector implements ISctItm_Selector{
     constructor(){
         super('@TYPE_B@');
         this.itms = [
-            new SctWrd('@TM05@ @ST07@ @ST05@ @ST07@ @ST07@')
+            new SctItm('@TM05@ @ST07@ @ST05@ @ST07@ @ST07@')
             ,
-            new SctWrd('@ST05@ @TM07@ @ST05@ @ST07@ @ST07@')
+            new SctItm('@ST05@ @TM07@ @ST05@ @ST07@ @ST07@')
             ,
-            new SctWrd('@ST05@ @ST07@ @TM05@ @ST07@ @ST07@')
+            new SctItm('@ST05@ @ST07@ @TM05@ @ST07@ @ST07@')
             ,
-            new SctWrd('@ST05@ @ST07@ @ST05@ @TM07@ @ST07@')
+            new SctItm('@ST05@ @ST07@ @ST05@ @TM07@ @ST07@')
             ,
-            new SctWrd('@ST05@ @ST07@ @ST05@ @ST07@ @TM07@')
+            new SctItm('@ST05@ @ST07@ @ST05@ @ST07@ @TM07@')
         ];
     }
 }
 
 
 // 受賞
-class poemer_title extends SctWrd_Counter implements ISctItm_Selector{
+class poemer_title extends SctItm_Counter implements ISctItm_Selector{
     constructor(){
         super('@TITLE@');
         this.itms = [
-            new SctWrd('金賞 受賞作')
+            new SctItm('金賞 受賞作')
             ,
-            new SctWrd('銀賞 受賞作')
+            new SctItm('銀賞 受賞作')
             ,
-            new SctWrd('銅賞 受賞作')
+            new SctItm('銅賞 受賞作')
             ,
-            new SctWrd('佳作')
+            new SctItm('佳作')
             ,
-            new SctWrd('佳作')
+            new SctItm('佳作')
             ,
-            new SctWrd('佳作')
+            new SctItm('佳作')
             ,
-            new SctWrd('佳作')
+            new SctItm('佳作')
             ,
-            new SctWrd('入選')
+            new SctItm('入選')
         ];
     }
 }
 
 // 受賞アイコン
-class poemer_titlepic extends SctWrd_Counter implements ISctItm_Selector{
+class poemer_titlepic extends SctItm_Counter implements ISctItm_Selector{
     constructor(){
         super('@PIC_TITLE@');
         this.itms = [
-            new SctWrd('gold.png')
+            new SctItm('gold.png')
             ,
-            new SctWrd('silver.png')
+            new SctItm('silver.png')
             ,
-            new SctWrd('bronze.png')
+            new SctItm('bronze.png')
             ,
-            new SctWrd('blue.png')
+            new SctItm('blue.png')
             ,
-            new SctWrd('blue.png')
+            new SctItm('blue.png')
             ,
-            new SctWrd('blue.png')
+            new SctItm('blue.png')
             ,
-            new SctWrd('blue.png')
+            new SctItm('blue.png')
             ,
-            new SctWrd('green.png')
+            new SctItm('green.png')
         ];
     }
 }
 
-class poemer_tema extends SctWrd_SelectLocker implements ISctItm_Selector{
+class poemer_tema extends SctItm_SelectLocker implements ISctItm_Selector{
     constructor(){
         super('@TEMASL@');
         this.itms = [
-            new SctWrd('@TEMA01@')
+            new SctItm('@TEMA01@')
             ,
-            new SctWrd('@TEMA02@')
+            new SctItm('@TEMA02@')
             ,
-            new SctWrd('@TEMA03@')
+            new SctItm('@TEMA03@')
             ,
-            new SctWrd('@TEMA04@')
+            new SctItm('@TEMA04@')
             ,
-            new SctWrd('@TEMA05@')
+            new SctItm('@TEMA05@')
         ];
     }
 }

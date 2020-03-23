@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N01.88';
+    html += 'N01.89';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -195,386 +195,398 @@ class selector_age
 
 }
 
-class selector_writer extends SctWrd_Selector implements ISctItm_Selector{
+class selector_writer extends SctItm_Selector implements ISctItm_Selector{
     constructor(){
         super('@WRITER@');
         this.itms = [
-            new SctWrd('@WH2@')
+            new SctItm('@WH2@')
         ];
     }
 }
 
-class selector_title extends SctWrd_Selector implements ISctItm_Selector {
+class selector_title extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@NEWS_TITLE@');
         this.itms = [
-            new SctWrd('@WHAT@の@DO@')
+            new SctItm('@WHAT@の@DO@')
             ,
-            new SctWrd('@WHAT@は@DO@@END02C@')
+            new SctItm('@WHAT@は@DO@@END02C@')
             ,
-            new SctWrd('@WHAT@で@DO@@END02C@@NICK@')
+            new SctItm('@WHAT@で@DO@@END02C@@NICK@')
             ,
-            new SctWrd('@WHAT@の@NICK@が@DO@@END02C@')
+            new SctItm('@WHAT@の@NICK@が@DO@@END02C@')
             ,
-            new SctWrd('@WHAT@の@PEOPLE@、@HUMAN@が@DO@@END02C@')
+            new SctItm('@WHAT@の@PEOPLE@、@HUMAN@が@DO@@END02C@')
             ,
-            new SctWrd('@DO@@END02C@@WHAT@')
+            new SctItm('@DO@@END02C@@WHAT@')
             ,
-            new SctWrd('@DO@@END02C@@WHAT@の@PEOPLE@')
+            new SctItm('@DO@@END02C@@WHAT@の@PEOPLE@')
             ,
-            new SctWrd('@DO@@END02C@@WHAT@の@NICK@、@HUMAN@')
+            new SctItm('@DO@@END02C@@WHAT@の@NICK@、@HUMAN@')
             ,
-            new SctWrd('@WHAT@の@NICK@、@HUMAN@が@DO@')
+            new SctItm('@WHAT@の@NICK@、@HUMAN@が@DO@')
             ,
-            new SctWrd('@WHAT@の@NICK@、@HUMAN@が@DO@@END02C@')
+            new SctItm('@WHAT@の@NICK@、@HUMAN@が@DO@@END02C@')
             ,
-            new SctWrd('@WHAT@の@NICK@、@DO@@END02C@')
+            new SctItm('@WHAT@の@NICK@、@DO@@END02C@')
             ,
-            new SctWrd('@WHAT@で@DO@@END02C@@PEOPLE@、@HUMAN@')
+            new SctItm('@WHAT@で@DO@@END02C@@PEOPLE@、@HUMAN@')
             ,
-            new SctWrd('@HUMAN@が@DO@@END02C@@WHAT@')
+            new SctItm('@HUMAN@が@DO@@END02C@@WHAT@')
             ,
-            new SctWrd('@PEOPLE@の@NICK@、@HUMAN@が@DO@@END02C@@WHAT@')
+            new SctItm('@PEOPLE@の@NICK@、@HUMAN@が@DO@@END02C@@WHAT@')
             ,
-            new SctWrd('@HUMAN@、@WHAT@で@DO@@END02C@')
+            new SctItm('@HUMAN@、@WHAT@で@DO@@END02C@')
         ];
     }
 }
 
-class selector_people extends SctWrd_Selector implements ISctItm_Selector {
+class selector_people extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@PEOPLE@');
         this.itms = [
-            new SctWrd('@NICK@')
+            new SctItm('@NICK@')
             ,
-            new SctWrd('@CLASS@')
+            new SctItm('@CLASS@')
+            ,
+            new SctItm('@PART@')
         ];
     }
 }
 
-class selector_doc extends SctWrd_Selector implements ISctItm_Selector {
+class selector_doc extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@NEWS_DOC@');
         this.itms = [
-            new SctWrd('@NEWS_C01@、@NEWS_C02@。')
+            new SctItm('@NEWS_C01@、@NEWS_C02@。')
             ,
-            new SctWrd('@NEWS_C01@、@DATE@、@NEWS_C02@。')
+            new SctItm('@NEWS_C01@、@DATE@、@NEWS_C02@。')
             ,
-            new SctWrd('@DATE@、@NEWS_C01@、@NEWS_C02@。')
+            new SctItm('@DATE@、@NEWS_C01@、@NEWS_C02@。')
             ,
-            new SctWrd('@DATE@、@WHO@は「@COMMENT@」との@ANSWER@を@SAY@@END02B@。')
+            new SctItm('@DATE@、@WHO@は「@COMMENT@」との@ANSWER@を@SAY@@END02B@。')
             ,
-            new SctWrd('@WHO@は「@COMMENT@」との@ANSWER@を@SAY@@END02B@。')
+            new SctItm('@WHO@は「@COMMENT@」との@ANSWER@を@SAY@@END02B@。')
             ,
-            new SctWrd('@WHO@は@DATE@、「@COMMENT@」との@ANSWER@を@SAY@@END02B@。')
+            new SctItm('@WHO@は@DATE@、「@COMMENT@」との@ANSWER@を@SAY@@END02B@。')
             ,
-            new SctWrd('「@COMMENT@」との@ANSWER@を@SAY@したのは、@WHO@@END02A@。')
+            new SctItm('「@COMMENT@」との@ANSWER@を@SAY@したのは、@WHO@@END02A@。')
         ];
     }
 }
 
-class selector_who extends SctWrd_Selector implements ISctItm_Selector {
+class selector_who extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@WHO@');
         this.itms = [
-            new SctWrd('@CLASS@の@HUMAN@@AGE@')
+            new SctItm('@CLASS@の@HUMAN@@AGE@')
             ,
-            new SctWrd('「@WHAT@の@NICK@」と@ASSES@@CLASS@の@HUMAN@@AGE@')
+            new SctItm('「@WHAT@の@PEOPLE@」と@ASSES@@HUMAN@@AGE@')
             ,
-            new SctWrd('「@DO@する@NICK@」と@ASSES@@CLASS@の@HUMAN@@AGE@')
+            new SctItm('「@WHAT@の@NICK@」と@ASSES@@CLASS@の@HUMAN@@AGE@')
             ,
-            new SctWrd('「@STATUS@する@NICK@」と@ASSES@@CLASS@の@HUMAN@@AGE@')
+            new SctItm('「@DO@する@NICK@」と@ASSES@@CLASS@の@HUMAN@@AGE@')
             ,
-            new SctWrd('「@CLASS@の@NICK@」と@ASSES@@CLASS@の@HUMAN@@AGE@')
+            new SctItm('「@STATUS@する@NICK@」と@ASSES@@CLASS@の@HUMAN@@AGE@')
             ,
-            new SctWrd('@THEY@より「@WHAT@の@NICK@」と@ASSES@@CLASS@の@HUMAN@@AGE@')
+            new SctItm('「@CLASS@の@NICK@」と@ASSES@@CLASS@の@HUMAN@@AGE@')
             ,
-            new SctWrd('@THEY@より「@DO@する@NICK@」と@ASSES@@CLASS@の@HUMAN@@AGE@')
+            new SctItm('@THEY@より「@WHAT@の@NICK@」と@ASSES@@CLASS@の@HUMAN@@AGE@')
             ,
-            new SctWrd('@THEY@より「@STATUS@する@NICK@」と@ASSES@@CLASS@の@HUMAN@@AGE@')
+            new SctItm('@THEY@より「@DO@する@NICK@」と@ASSES@@CLASS@の@HUMAN@@AGE@')
             ,
-            new SctWrd('@THEY@より「@CLASS@の@NICK@」と@ASSES@@CLASS@の@HUMAN@@AGE@')
+            new SctItm('@THEY@より「@STATUS@する@NICK@」と@ASSES@@CLASS@の@HUMAN@@AGE@')
+            ,
+            new SctItm('@THEY@より「@CLASS@の@NICK@」と@ASSES@@CLASS@の@HUMAN@@AGE@')
+            ,
+            new SctItm('@THEY@より「@WHAT@の@PEOPLE@」と@ASSES@@CLASS@の@HUMAN@@AGE@')
         ];
     }
 }
 
-class selector_who2 extends SctWrd_Selector implements ISctItm_Selector {
+class selector_who2 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@WH2@');
         this.itms = [
-            new SctWrd('@CLASS@ @HUMAN@@AGE@')
+            new SctItm('@CLASS@ @HUMAN@@AGE@')
             ,
-            new SctWrd('「@STATUS@する@NICK@」と@ASSES@@CLASS@ @HUMAN@@AGE@')
+            new SctItm('「@WHAT@の@PEOPLE@」 @HUMAN@@AGE@')
             ,
-            new SctWrd('「@CLASS@の@NICK@」と@ASSES@@CLASS@ @HUMAN@@AGE@')
+            new SctItm('「@STATUS@する@NICK@」と@ASSES@@CLASS@ @HUMAN@@AGE@')
             ,
-            new SctWrd('@THEY@より「@STATUS@する@NICK@」と@ASSES@@CLASS@ @HUMAN@@AGE@')
+            new SctItm('「@CLASS@の@NICK@」と@ASSES@@CLASS@ @HUMAN@@AGE@')
             ,
-            new SctWrd('@THEY@より「@CLASS@の@NICK@」と@ASSES@@CLASS@ @HUMAN@@AGE@')
+            new SctItm('「@WHAT@の@PEOPLE@」と@ASSES@@NICK@ @HUMAN@@AGE@')
+            ,
+            new SctItm('@THEY@より「@STATUS@する@NICK@」と@ASSES@@CLASS@ @HUMAN@@AGE@')
+            ,
+            new SctItm('@THEY@より「@CLASS@の@NICK@」と@ASSES@@CLASS@ @HUMAN@@AGE@')
+            ,
+            new SctItm('@THEY@より「@WHAT@の@PEOPLE@」と@ASSES@@NICK@ @HUMAN@@AGE@')
         ];
     }
 }
 
 
-class selector_c01 extends SctWrd_Selector implements ISctItm_Selector {
+class selector_c01 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@NEWS_C01@');
         this.itms = [
-            new SctWrd('@WHAT@が@DO@@END01B@')
+            new SctItm('@WHAT@が@DO@@END01B@')
             ,
-            new SctWrd('@WHAT@での@KEY@@END01A@')
+            new SctItm('@WHAT@での@KEY@@END01A@')
             ,
-            new SctWrd('@WHAT@で@KEY@が@STATUS@@END01B@')
+            new SctItm('@WHAT@で@KEY@が@STATUS@@END01B@')
             ,
-            new SctWrd('@WHAT@では@KEY@や@KEY@が@STATUS@@END01B@')
+            new SctItm('@WHAT@では@KEY@や@KEY@が@STATUS@@END01B@')
             ,
-            new SctWrd('@KEY@が@STATUS@する@WHAT@@END01A@')
+            new SctItm('@KEY@が@STATUS@する@WHAT@@END01A@')
             ,
-            new SctWrd('@KEY@や@KEY@が@STATUS@する@WHAT@@END01A@')
+            new SctItm('@KEY@や@KEY@が@STATUS@する@WHAT@@END01A@')
             ,
-            new SctWrd('@MANY@@THEY@が@DO@@END01B@')
+            new SctItm('@MANY@@THEY@が@DO@@END01B@')
             ,
-            new SctWrd('@MANY@@THEY@による@KEY@が@STATUS@@END01B@')
+            new SctItm('@MANY@@THEY@による@KEY@が@STATUS@@END01B@')
             ,
-            new SctWrd('@MANY@@THEY@の@THINK@が@STATUS@@END01B@')
+            new SctItm('@MANY@@THEY@の@THINK@が@STATUS@@END01B@')
             ,
-            new SctWrd('@MANY@@THEY@の@THINK@や@THINK@が@STATUS@@END01B@')
+            new SctItm('@MANY@@THEY@の@THINK@や@THINK@が@STATUS@@END01B@')
             ,
-            new SctWrd('@THINK@や@THINK@が@STATUS@する@WHAT@@END01A@')
+            new SctItm('@THINK@や@THINK@が@STATUS@する@WHAT@@END01A@')
         ];
     }
 }
 
-class selector_end01a extends SctWrd_Selector implements ISctItm_Selector {
+class selector_end01a extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@END01A@');
         this.itms = [
-            new SctWrd('により')
+            new SctItm('により')
             ,
-            new SctWrd('のため')
+            new SctItm('のため')
             ,
-            new SctWrd('では')
+            new SctItm('では')
             ,
-            new SctWrd('には')
+            new SctItm('には')
             ,
-            new SctWrd('で')
+            new SctItm('で')
         ];
     }
 }
 
-class selector_end01b extends SctWrd_Selector implements ISctItm_Selector {
+class selector_end01b extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@END01B@');
         this.itms = [
-            new SctWrd('し')
+            new SctItm('し')
             ,
-            new SctWrd('したが')
+            new SctItm('したが')
             ,
-            new SctWrd('する中')
+            new SctItm('する中')
             ,
-            new SctWrd('したため')
+            new SctItm('したため')
             ,
-            new SctWrd('するため')
+            new SctItm('するため')
             ,
-            new SctWrd('してしまったため')
+            new SctItm('してしまったため')
         ];
     }
 }
 
 
-class selector_c02 extends SctWrd_Selector implements ISctItm_Selector {
+class selector_c02 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@NEWS_C02@');
         this.itms = [
-            new SctWrd('@WHAT@の@MANY@@PEOPLE@が@ASSES@')
+            new SctItm('@WHAT@の@MANY@@PEOPLE@が@ASSES@')
             ,
-            new SctWrd('@MANY@@THEY@が@DO@@END02B@')
+            new SctItm('@MANY@@THEY@が@DO@@END02B@')
             ,
-            new SctWrd('@MANY@@THEY@が@NICK@@END02A@')
+            new SctItm('@MANY@@THEY@が@NICK@@END02A@')
             ,
-            new SctWrd('@MANY@@THEY@の@KEY@が@STATUS@@END02B@')
+            new SctItm('@MANY@@THEY@の@KEY@が@STATUS@@END02B@')
             ,
-            new SctWrd('@MANY@@THEY@の@KEY@や@KEY@が@STATUS@@END02B@')
+            new SctItm('@MANY@@THEY@の@KEY@や@KEY@が@STATUS@@END02B@')
             ,
-            new SctWrd('@MANY@@THEY@の@THINK@が@STATUS@@END02B@')
+            new SctItm('@MANY@@THEY@の@THINK@が@STATUS@@END02B@')
             ,
-            new SctWrd('@MANY@@THEY@の@THINK@と@THINK@が@STATUS@@END02B@')
+            new SctItm('@MANY@@THEY@の@THINK@と@THINK@が@STATUS@@END02B@')
         ];
     }
 }
 
-class selector_comment extends SctWrd_Selector implements ISctItm_Selector {
+class selector_comment extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@COMMENT@');
         this.itms = [
-            new SctWrd('@NEWS_C01@、@NEWS_C02@')
+            new SctItm('@NEWS_C01@、@NEWS_C02@')
             ,
-            new SctWrd('@NEWS_C01@、@NEWS_C02@。@CONECT@、@NEWS_C01@、@NEWS_C02@')
+            new SctItm('@NEWS_C01@、@NEWS_C02@。@CONECT@、@NEWS_C01@、@NEWS_C02@')
             ,
-            new SctWrd('@COMMENT@。@CONECT@、@COMMENT@')
+            new SctItm('@COMMENT@。@CONECT@、@COMMENT@')
             ,
-            new SctWrd('@WHAT@の@NICK@が@STATUS@@END02B@')
+            new SctItm('@WHAT@の@NICK@が@STATUS@@END02B@')
             ,
-            new SctWrd('@WHAT@は@NICK@と@ASSES@')
+            new SctItm('@WHAT@は@NICK@と@ASSES@')
             ,
-            new SctWrd('@WHAT@が@NICK@@END02A@')
+            new SctItm('@WHAT@が@NICK@@END02A@')
             ,
-            new SctWrd('@MANY@@THEY@は@NICK@@END02A@')
+            new SctItm('@MANY@@THEY@は@NICK@@END02A@')
             ,
-            new SctWrd('@THEY@は@NICK@@END02A@。@WHAT@の@NICK@@END02A@')
+            new SctItm('@THEY@は@NICK@@END02A@。@WHAT@の@NICK@@END02A@')
             ,
-            new SctWrd('@THEY@は@WHAT@の@NICK@@END02A@。@WHAT@が@NICK@@END02A@')
+            new SctItm('@THEY@は@WHAT@の@NICK@@END02A@。@WHAT@が@NICK@@END02A@')
             ,
-            new SctWrd('@WHAT@は@DO@@END02B@。@THEY@の@KEY@@END02A@')
+            new SctItm('@WHAT@は@DO@@END02B@。@THEY@の@KEY@@END02A@')
             ,
-            new SctWrd('@WHAT@は@NICK@と@ASSES@@NICK@@END02A@')
+            new SctItm('@WHAT@は@NICK@と@ASSES@@NICK@@END02A@')
             ,
-            new SctWrd('@WHAT@は@NICK@@END02A@。@CONECT@、@NICK@@END02A@')
+            new SctItm('@WHAT@は@NICK@@END02A@。@CONECT@、@NICK@@END02A@')
             ,
-            new SctWrd('@WHAT@は@NICK@@END02A@。@NICK@で@NICK@@END02A@')
+            new SctItm('@WHAT@は@NICK@@END02A@。@NICK@で@NICK@@END02A@')
             ,
-            new SctWrd('@WHAT@が@NICK@？ @YESNO@、@WHAT@は@NICK@@END02A@')
+            new SctItm('@WHAT@が@NICK@？ @YESNO@、@WHAT@は@NICK@@END02A@')
             ,
-            new SctWrd('@WHAT@の@DO@？ @YESNO@、それは@PEOPLE@の@KEY@@END02A@')
+            new SctItm('@WHAT@の@DO@？ @YESNO@、それは@PEOPLE@の@KEY@@END02A@')
             ,
-            new SctWrd('@DO@@END02C@@NICK@、@YESNO@、それが@WHAT@@END02A@')
+            new SctItm('@DO@@END02C@@NICK@、@YESNO@、それが@WHAT@@END02A@')
             ,
-            new SctWrd('@NICK@、@NICK@、@NICK@、@NICK@・・・、@YESNO@、それは@WHAT@@END02A@')
+            new SctItm('@NICK@、@NICK@、@NICK@、@NICK@・・・、@YESNO@、それは@WHAT@@END02A@')
         ];
     }
 }
 
 // 肯定・否定 ・・・？　～、・・・
-class selector_YESNO extends SctWrd_Selector implements ISctItm_Selector {
+class selector_YESNO extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@YESNO@');
         this.itms = [
-            new SctWrd('しかし')
+            new SctItm('しかし')
             ,
-            new SctWrd('だが')
+            new SctItm('だが')
             ,
-            new SctWrd('いえいえ')
+            new SctItm('いえいえ')
             ,
-            new SctWrd('いいえ')
+            new SctItm('いいえ')
             ,
-            new SctWrd('いや')
+            new SctItm('いや')
             ,
-            new SctWrd('いいや')
+            new SctItm('いいや')
             ,
-            new SctWrd('いやいや')
+            new SctItm('いやいや')
             ,
-            new SctWrd('それでも')
+            new SctItm('それでも')
             ,
-            new SctWrd('確かに')
+            new SctItm('確かに')
             ,
-            new SctWrd('その通り')
+            new SctItm('その通り')
             ,
-            new SctWrd('すなわち')
+            new SctItm('すなわち')
             ,
-            new SctWrd('正に')
+            new SctItm('正に')
             ,
-            new SctWrd('正しく')
+            new SctItm('正しく')
             ,
-            new SctWrd('間違いなく')
+            new SctItm('間違いなく')
             ,
-            new SctWrd('確かに')
+            new SctItm('確かに')
             ,
-            new SctWrd('紛れもなく')
+            new SctItm('紛れもなく')
             ,
-            new SctWrd('疑いようも無く')
+            new SctItm('疑いようも無く')
         ];
     }
 }
 
 
 
-class selector_end02a extends SctWrd_Selector implements ISctItm_Selector {
+class selector_end02a extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@END02A@');
         this.itms = [
-            new SctWrd('だ')
+            new SctItm('だ')
             ,
-            new SctWrd('である')
+            new SctItm('である')
             ,
-            new SctWrd('であった')
+            new SctItm('であった')
             ,
-            new SctWrd('だった')
+            new SctItm('だった')
             ,
-            new SctWrd('なのだ')
+            new SctItm('なのだ')
             ,
-            new SctWrd('なのだろう')
+            new SctItm('なのだろう')
         ];
     }
 }
 
-class selector_end02b extends SctWrd_Selector implements ISctItm_Selector {
+class selector_end02b extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@END02B@');
         this.itms = [
-            new SctWrd('している')
+            new SctItm('している')
             ,
-            new SctWrd('していた')
+            new SctItm('していた')
             ,
-            new SctWrd('する')
+            new SctItm('する')
             ,
-            new SctWrd('した')
+            new SctItm('した')
             ,
-            new SctWrd('させている')
+            new SctItm('させている')
             ,
-            new SctWrd('させていた')
+            new SctItm('させていた')
             ,
-            new SctWrd('しようとしている')
+            new SctItm('しようとしている')
             ,
-            new SctWrd('しようとしていた')
+            new SctItm('しようとしていた')
             ,
-            new SctWrd('してしまった')
+            new SctItm('してしまった')
             ,
-            new SctWrd('してしまう')
+            new SctItm('してしまう')
             ,
-            new SctWrd('するべきであった')
+            new SctItm('するべきであった')
             ,
-            new SctWrd('するべきである')
+            new SctItm('するべきである')
             ,
-            new SctWrd('させる')
+            new SctItm('させる')
             ,
-            new SctWrd('させた')
+            new SctItm('させた')
             ,
-            new SctWrd('させたかった')
+            new SctItm('させたかった')
             ,
-            new SctWrd('したかった')
+            new SctItm('したかった')
         ];
     }
 }
 
-class selector_end02c extends SctWrd_Selector implements ISctItm_Selector {
+class selector_end02c extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@END02C@');
         this.itms = [
-            new SctWrd('する')
+            new SctItm('する')
             ,
-            new SctWrd('した')
+            new SctItm('した')
             ,
-            new SctWrd('していた')
+            new SctItm('していた')
             ,
-            new SctWrd('している')
+            new SctItm('している')
             ,
-            new SctWrd('してしまった')
+            new SctItm('してしまった')
             ,
-            new SctWrd('してしまう')
+            new SctItm('してしまう')
             ,
-            new SctWrd('すべき')
+            new SctItm('すべき')
             ,
-            new SctWrd('すべきである')
+            new SctItm('すべきである')
             ,
-            new SctWrd('すべきであった')
+            new SctItm('すべきであった')
             ,
-            new SctWrd('したかった')
+            new SctItm('したかった')
             ,
-            new SctWrd('させる')
+            new SctItm('させる')
             ,
-            new SctWrd('させた')
+            new SctItm('させた')
             ,
-            new SctWrd('させたかった')
+            new SctItm('させたかった')
         ];
     }
 }
@@ -856,1075 +868,1075 @@ class selector_do extends SctItm_SelectLocker implements ISctItm_Selector{
 }
 
 // 事象・事件・事故
-class selector_key extends SctWrd_Selector implements ISctItm_Selector {
+class selector_key extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@KEY@');
         this.itms = [
             //
             // nega 
             //
-            new SctWrd('虐待行為')
+            new SctItm('虐待行為')
             ,
-            new SctWrd('婦女暴行')
+            new SctItm('婦女暴行')
             ,
-            new SctWrd('人種差別')
+            new SctItm('人種差別')
             ,
-            new SctWrd('暗黒化')
+            new SctItm('暗黒化')
             ,
-            new SctWrd('無差別殺人')
+            new SctItm('無差別殺人')
             ,
-            new SctWrd('殺戮行為')
+            new SctItm('殺戮行為')
             ,
-            new SctWrd('犯罪行為')
+            new SctItm('犯罪行為')
             ,
-            new SctWrd('殺戮行為')
+            new SctItm('殺戮行為')
             ,
-            new SctWrd('迫害行為')
+            new SctItm('迫害行為')
             ,
-            new SctWrd('重大事件')
+            new SctItm('重大事件')
             ,
-            new SctWrd('大災害')
+            new SctItm('大災害')
             ,
-            new SctWrd('傷害事件')
+            new SctItm('傷害事件')
             ,
-            new SctWrd('虐待事件')
+            new SctItm('虐待事件')
             ,
-            new SctWrd('虐殺行為')
+            new SctItm('虐殺行為')
             ,
-            new SctWrd('大量虐殺')
+            new SctItm('大量虐殺')
             ,
-            new SctWrd('暴走状態')
+            new SctItm('暴走状態')
             ,
-            new SctWrd('妨害工作')
+            new SctItm('妨害工作')
             ,
-            new SctWrd('人種差別')
+            new SctItm('人種差別')
             ,
-            new SctWrd('無力化')
+            new SctItm('無力化')
             ,
-            new SctWrd('暴力行為')
+            new SctItm('暴力行為')
             ,
-            new SctWrd('乱痴気騒ぎ')
+            new SctItm('乱痴気騒ぎ')
             ,
-            new SctWrd('乱交パーティー')
+            new SctItm('乱交パーティー')
             ,
-            new SctWrd('乱闘騒ぎ')
+            new SctItm('乱闘騒ぎ')
             ,
-            new SctWrd('葬儀')
+            new SctItm('葬儀')
             ,
             //
             // posi 
             //
-            new SctWrd('新年会')
+            new SctItm('新年会')
             ,
-            new SctWrd('卒業式')
+            new SctItm('卒業式')
             ,
-            new SctWrd('記念撮影')
+            new SctItm('記念撮影')
             ,
-            new SctWrd('入学式')
+            new SctItm('入学式')
             ,
-            new SctWrd('海水浴')
+            new SctItm('海水浴')
             ,
-            new SctWrd('運動会')
+            new SctItm('運動会')
             ,
-            new SctWrd('フォークダンス')
+            new SctItm('フォークダンス')
             ,
-            new SctWrd('文化祭')
+            new SctItm('文化祭')
             ,
-            new SctWrd('祝賀会')
+            new SctItm('祝賀会')
             ,
-            new SctWrd('大掃除')
+            new SctItm('大掃除')
             ,
-            new SctWrd('餅つき大会')
+            new SctItm('餅つき大会')
             ,
-            new SctWrd('忘年会')
+            new SctItm('忘年会')
             ,
-            new SctWrd('雪合戦')
+            new SctItm('雪合戦')
             ,
-            new SctWrd('結婚式')
+            new SctItm('結婚式')
             ,
-            new SctWrd('送別会')
+            new SctItm('送別会')
             ,
-            new SctWrd('お誕生日会')
+            new SctItm('お誕生日会')
             ,
-            new SctWrd('同窓会')
+            new SctItm('同窓会')
         ];
     }
 }
 
 // 物量・増減・拡縮 ～する・～した・～し、
-class selector_status extends SctWrd_Selector implements ISctItm_Selector {
+class selector_status extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@STATUS@');
         this.itms = [
-            new SctWrd('勃発')
+            new SctItm('勃発')
             ,
-            new SctWrd('蔓延')
+            new SctItm('蔓延')
             ,
-            new SctWrd('増大')
+            new SctItm('増大')
             ,
-            new SctWrd('倍増')
+            new SctItm('倍増')
             ,
-            new SctWrd('増殖')
+            new SctItm('増殖')
             ,
-            new SctWrd('肥大化')
+            new SctItm('肥大化')
             ,
-            new SctWrd('急増')
+            new SctItm('急増')
             ,
-            new SctWrd('迷走')
+            new SctItm('迷走')
             ,
-            new SctWrd('暴発')
+            new SctItm('暴発')
             ,
-            new SctWrd('拡散')
+            new SctItm('拡散')
             ,
-            new SctWrd('復活')
+            new SctItm('復活')
             ,
-            new SctWrd('衰退')
+            new SctItm('衰退')
             ,
-            new SctWrd('消耗')
+            new SctItm('消耗')
             ,
-            new SctWrd('減少')
+            new SctItm('減少')
             ,
-            new SctWrd('消失')
+            new SctItm('消失')
             ,
-            new SctWrd('離散')
+            new SctItm('離散')
             ,
-            new SctWrd('開催')
+            new SctItm('開催')
             ,
-            new SctWrd('再開')
+            new SctItm('再開')
         ];
     }
 }
 
 // 団体 ～の間に・～の間で
-class selector_they extends SctWrd_Selector implements ISctItm_Selector {
+class selector_they extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@THEY@');
         this.itms = [
-            new SctWrd('@CLASS@')
+            new SctItm('@CLASS@')
             ,
-            new SctWrd('人々')
+            new SctItm('人々')
             ,
-            new SctWrd('一般大衆')
+            new SctItm('一般大衆')
             ,
-            new SctWrd('有識者')
+            new SctItm('有識者')
             ,
-            new SctWrd('子供達')
+            new SctItm('子供達')
             ,
-            new SctWrd('学生達')
+            new SctItm('学生達')
             ,
-            new SctWrd('女子校生')
+            new SctItm('女子校生')
             ,
-            new SctWrd('女子大生')
+            new SctItm('女子大生')
             ,
-            new SctWrd('彼女達')
+            new SctItm('彼女達')
             ,
-            new SctWrd('ＯＬ達')
+            new SctItm('ＯＬ達')
             ,
-            new SctWrd('彼ら')
+            new SctItm('彼ら')
             ,
-            new SctWrd('先人達')
+            new SctItm('先人達')
             ,
-            new SctWrd('労働者達')
+            new SctItm('労働者達')
             ,
-            new SctWrd('兵士達')
+            new SctItm('兵士達')
             ,
-            new SctWrd('若年層')
+            new SctItm('若年層')
             ,
-            new SctWrd('主婦層')
+            new SctItm('主婦層')
             ,
-            new SctWrd('乗組員')
+            new SctItm('乗組員')
             ,
-            new SctWrd('従業員')
+            new SctItm('従業員')
             ,
-            new SctWrd('売春婦')
+            new SctItm('売春婦')
             ,
-            new SctWrd('暴走族')
+            new SctItm('暴走族')
             ,
-            new SctWrd('マフィア')
+            new SctItm('マフィア')
             ,
-            new SctWrd('ヤクザ')
+            new SctItm('ヤクザ')
             ,
-            new SctWrd('過激派')
+            new SctItm('過激派')
             ,
-            new SctWrd('移住者')
+            new SctItm('移住者')
             ,
-            new SctWrd('旅行者')
+            new SctItm('旅行者')
             ,
-            new SctWrd('スタントマン')
+            new SctItm('スタントマン')
             ,
-            new SctWrd('旅芸人')
+            new SctItm('旅芸人')
             ,
-            new SctWrd('パイロット')
+            new SctItm('パイロット')
             ,
-            new SctWrd('奴隷')
+            new SctItm('奴隷')
             ,
-            new SctWrd('飼い猫')
+            new SctItm('飼い猫')
             ,
-            new SctWrd('首狩り族')
+            new SctItm('首狩り族')
             ,
-            new SctWrd('僧侶達')
+            new SctItm('僧侶達')
             ,
-            new SctWrd('盗賊達')
+            new SctItm('盗賊達')
             ,
-            new SctWrd('海兵隊')
+            new SctItm('海兵隊')
             ,
-            new SctWrd('囚人達')
+            new SctItm('囚人達')
             ,
-            new SctWrd('少年達')
+            new SctItm('少年達')
             ,
-            new SctWrd('少女達')
+            new SctItm('少女達')
             ,
-            new SctWrd('年長者')
+            new SctItm('年長者')
             ,
-            new SctWrd('エリート')
+            new SctItm('エリート')
             ,
-            new SctWrd('傭兵達')
+            new SctItm('傭兵達')
             ,
-            new SctWrd('民衆')
+            new SctItm('民衆')
             ,
-            new SctWrd('観客')
+            new SctItm('観客')
             ,
-            new SctWrd('乗客')
+            new SctItm('乗客')
             ,
-            new SctWrd('通行人')
+            new SctItm('通行人')
             ,
-            new SctWrd('視聴者')
+            new SctItm('視聴者')
             ,
-            new SctWrd('ユーザー')
+            new SctItm('ユーザー')
             ,
-            new SctWrd('株主')
+            new SctItm('株主')
             ,
-            new SctWrd('株主')
+            new SctItm('株主')
             ,
-            new SctWrd('皇族')
+            new SctItm('皇族')
             ,
-            new SctWrd('貴族')
+            new SctItm('貴族')
             ,
-            new SctWrd('家族')
+            new SctItm('家族')
             ,
-            new SctWrd('親戚一同')
+            new SctItm('親戚一同')
             ,
-            new SctWrd('親類縁者')
+            new SctItm('親類縁者')
             ,
-            new SctWrd('先祖代々')
+            new SctItm('先祖代々')
             ,
-            new SctWrd('犠牲者')
+            new SctItm('犠牲者')
             ,
-            new SctWrd('生徒一同')
+            new SctItm('生徒一同')
             ,
-            new SctWrd('兄弟弟子')
+            new SctItm('兄弟弟子')
             ,
-            new SctWrd('メンバー')
+            new SctItm('メンバー')
             ,
-            new SctWrd('チームメイト')
+            new SctItm('チームメイト')
             ,
-            new SctWrd('ルームメイト')
+            new SctItm('ルームメイト')
             ,
-            new SctWrd('クラスメイト')
+            new SctItm('クラスメイト')
 
         ];
     }
 }
 
 // 団体の数 （一部の／多くの）人々
-class selector_many extends SctWrd_Selector implements ISctItm_Selector {
+class selector_many extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@MANY@');
         this.itms = [
-            new SctWrd('少数の')
+            new SctItm('少数の')
             ,
-            new SctWrd('数多くの')
+            new SctItm('数多くの')
             ,
-            new SctWrd('多くの')
+            new SctItm('多くの')
             ,
-            new SctWrd('一部の')
+            new SctItm('一部の')
             ,
-            new SctWrd('大多数の')
+            new SctItm('大多数の')
             ,
-            new SctWrd('ごく僅かな')
+            new SctItm('ごく僅かな')
             ,
-            new SctWrd('一握りの')
+            new SctItm('一握りの')
             ,
-            new SctWrd('ほとんどの')
+            new SctItm('ほとんどの')
             ,
-            new SctWrd('数名の')
+            new SctItm('数名の')
             ,
-            new SctWrd('幾人もの')
+            new SctItm('幾人もの')
             ,
-            new SctWrd('全ての')
+            new SctItm('全ての')
             ,
-            new SctWrd('大半の')
+            new SctItm('大半の')
             ,
-            new SctWrd('大勢の')
+            new SctItm('大勢の')
             ,
-            new SctWrd('数え切れない程の')
+            new SctItm('数え切れない程の')
             ,
-            new SctWrd('掃いて捨てるほどの')
+            new SctItm('掃いて捨てるほどの')
         ];
     }
 }
 
 
 // 肩書き ～の
-class selector_class extends SctWrd_Selector implements ISctItm_Selector {
+class selector_class extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@CLASS@');
         this.itms = [
-            new SctWrd('大学教授')
+            new SctItm('大学教授')
             ,
-            new SctWrd('高校教師')
+            new SctItm('高校教師')
             ,
-            new SctWrd('数学教師')
+            new SctItm('数学教師')
             ,
-            new SctWrd('物理学者')
+            new SctItm('物理学者')
             ,
-            new SctWrd('経済学者')
+            new SctItm('経済学者')
             ,
-            new SctWrd('政治評論家')
+            new SctItm('政治評論家')
             ,
-            new SctWrd('映画評論家')
+            new SctItm('映画評論家')
             ,
-            new SctWrd('映画監督')
+            new SctItm('映画監督')
             ,
-            new SctWrd('舞台監督')
+            new SctItm('舞台監督')
             ,
-            new SctWrd('舞台作家')
+            new SctItm('舞台作家')
             ,
-            new SctWrd('恋愛小説家')
+            new SctItm('恋愛小説家')
             ,
-            new SctWrd('調理師')
+            new SctItm('調理師')
             ,
-            new SctWrd('ケーキ職人')
+            new SctItm('ケーキ職人')
             ,
-            new SctWrd('工場長')
+            new SctItm('工場長')
             ,
-            new SctWrd('会社員')
+            new SctItm('会社員')
             ,
-            new SctWrd('事務員')
+            new SctItm('事務員')
             ,
-            new SctWrd('飼育員')
+            new SctItm('飼育員')
             ,
-            new SctWrd('店員')
+            new SctItm('店員')
             ,
-            new SctWrd('店主')
+            new SctItm('店主')
             ,
-            new SctWrd('アルバイター')
+            new SctItm('アルバイター')
             ,
-            new SctWrd('釣り師')
+            new SctItm('釣り師')
             ,
-            new SctWrd('元警察官')
+            new SctItm('元警察官')
             ,
-            new SctWrd('陸軍少佐')
+            new SctItm('陸軍少佐')
             ,
-            new SctWrd('元海兵隊')
+            new SctItm('元海兵隊')
             ,
-            new SctWrd('空軍少佐')
+            new SctItm('空軍少佐')
             ,
-            new SctWrd('海軍将校')
+            new SctItm('海軍将校')
             ,
-            new SctWrd('陶芸家')
+            new SctItm('陶芸家')
             ,
-            new SctWrd('タクシードライバー')
+            new SctItm('タクシードライバー')
             ,
-            new SctWrd('トラックの運転手')
+            new SctItm('トラックの運転手')
             ,
-            new SctWrd('バスの運転手')
+            new SctItm('バスの運転手')
             ,
-            new SctWrd('アニメーター')
+            new SctItm('アニメーター')
             ,
-            new SctWrd('漫画家')
+            new SctItm('漫画家')
             ,
-            new SctWrd('少女漫画家')
+            new SctItm('少女漫画家')
             ,
-            new SctWrd('プロサーファー')
+            new SctItm('プロサーファー')
             ,
-            new SctWrd('ユーチューバー')
+            new SctItm('ユーチューバー')
             ,
-            new SctWrd('プログラマー')
+            new SctItm('プログラマー')
             ,
-            new SctWrd('システムエンジニア')
+            new SctItm('システムエンジニア')
             ,
-            new SctWrd('助産婦')
+            new SctItm('助産婦')
             ,
-            new SctWrd('ケアマネージャー')
+            new SctItm('ケアマネージャー')
             ,
-            new SctWrd('外交官')
+            new SctItm('外交官')
             ,
-            new SctWrd('警備員')
+            new SctItm('警備員')
             ,
-            new SctWrd('警察官')
+            new SctItm('警察官')
             ,
-            new SctWrd('保安官')
+            new SctItm('保安官')
             ,
-            new SctWrd('ピアニスト')
+            new SctItm('ピアニスト')
             ,
-            new SctWrd('指揮者')
+            new SctItm('指揮者')
             ,
-            new SctWrd('ギターリスト')
+            new SctItm('ギターリスト')
             ,
-            new SctWrd('考古学者')
+            new SctItm('考古学者')
             ,
-            new SctWrd('ホテルマン')
+            new SctItm('ホテルマン')
             ,
-            new SctWrd('デザイナー')
+            new SctItm('デザイナー')
             ,
-            new SctWrd('靴磨き')
+            new SctItm('靴磨き')
             ,
-            new SctWrd('武士')
+            new SctItm('武士')
             ,
-            new SctWrd('野武士')
+            new SctItm('野武士')
             ,
-            new SctWrd('伯爵')
+            new SctItm('伯爵')
             ,
-            new SctWrd('水呑百姓')
+            new SctItm('水呑百姓')
             ,
-            new SctWrd('ミイラ職人')
+            new SctItm('ミイラ職人')
             ,
-            new SctWrd('花売り娘')
+            new SctItm('花売り娘')
             ,
-            new SctWrd('大道芸人')
+            new SctItm('大道芸人')
             ,
-            new SctWrd('吟遊詩人')
+            new SctItm('吟遊詩人')
             ,
-            new SctWrd('連邦保安官')
+            new SctItm('連邦保安官')
             ,
-            new SctWrd('国家公務員')
+            new SctItm('国家公務員')
             ,
-            new SctWrd('国選弁護人')
+            new SctItm('国選弁護人')
             ,
-            new SctWrd('メイド')
+            new SctItm('メイド')
             ,
-            new SctWrd('執事')
+            new SctItm('執事')
             ,
-            new SctWrd('幼稚園児')
+            new SctItm('幼稚園児')
             ,
-            new SctWrd('駅員')
+            new SctItm('駅員')
             ,
-            new SctWrd('世界第三位')
+            new SctItm('世界第三位')
             ,
-            new SctWrd('世界第一位')
+            new SctItm('世界第一位')
             ,
-            new SctWrd('旅芸人')
+            new SctItm('旅芸人')
             ,
-            new SctWrd('サーカス団員')
+            new SctItm('サーカス団員')
             ,
-            new SctWrd('保育園児')
+            new SctItm('保育園児')
             ,
-            new SctWrd('ラーメン屋')
+            new SctItm('ラーメン屋')
             ,
-            new SctWrd('落語家')
+            new SctItm('落語家')
             ,
-            new SctWrd('漫才師')
+            new SctItm('漫才師')
             ,
-            new SctWrd('漫才師')
+            new SctItm('漫才師')
             ,
-            new SctWrd('コメディアン')
+            new SctItm('コメディアン')
             ,
-            new SctWrd('ストリッパー')
+            new SctItm('ストリッパー')
             ,
-            new SctWrd('キャバクラ嬢')
+            new SctItm('キャバクラ嬢')
             ,
-            new SctWrd('飴細工師')
+            new SctItm('飴細工師')
             ,
-            new SctWrd('マッチ売り')
+            new SctItm('マッチ売り')
             ,
-            new SctWrd('魔法使い')
+            new SctItm('魔法使い')
             ,
-            new SctWrd('抜け忍')
+            new SctItm('抜け忍')
             ,
-            new SctWrd('黒魔術師')
+            new SctItm('黒魔術師')
             ,
-            new SctWrd('祈祷師')
+            new SctItm('祈祷師')
             ,
-            new SctWrd('インディアン')
+            new SctItm('インディアン')
             ,
-            new SctWrd('カウボーイ')
+            new SctItm('カウボーイ')
             ,
-            new SctWrd('看板娘')
+            new SctItm('看板娘')
             ,
-            new SctWrd('カメラ屋')
+            new SctItm('カメラ屋')
             ,
-            new SctWrd('税理士')
+            new SctItm('税理士')
             ,
-            new SctWrd('銀行マン')
+            new SctItm('銀行マン')
             ,
-            new SctWrd('変身ヒーロー')
+            new SctItm('変身ヒーロー')
             ,
-            new SctWrd('ショッカー')
+            new SctItm('ショッカー')
             ,
-            new SctWrd('仮面ライダー')
+            new SctItm('仮面ライダー')
             ,
-            new SctWrd('学級委員')
+            new SctItm('学級委員')
             ,
-            new SctWrd('図書委員')
+            new SctItm('図書委員')
             ,
-            new SctWrd('ＰＴＡ会長')
+            new SctItm('ＰＴＡ会長')
             ,
-            new SctWrd('会社員')
+            new SctItm('会社員')
             ,
-            new SctWrd('専業主婦')
+            new SctItm('専業主婦')
             ,
-            new SctWrd('家政婦')
+            new SctItm('家政婦')
             ,
-            new SctWrd('アニメ声優')
+            new SctItm('アニメ声優')
             ,
-            new SctWrd('アナウンサー')
+            new SctItm('アナウンサー')
             ,
-            new SctWrd('新聞記者')
+            new SctItm('新聞記者')
             ,
-            new SctWrd('牛乳配達員')
+            new SctItm('牛乳配達員')
             ,
-            new SctWrd('郵便局員')
+            new SctItm('郵便局員')
             ,
-            new SctWrd('公務員')
+            new SctItm('公務員')
             ,
-            new SctWrd('機関士')
+            new SctItm('機関士')
             ,
-            new SctWrd('野鳥の会')
+            new SctItm('野鳥の会')
             ,
-            new SctWrd('牧師')
+            new SctItm('牧師')
             ,
-            new SctWrd('神主')
+            new SctItm('神主')
             ,
-            new SctWrd('村長')
+            new SctItm('村長')
             ,
-            new SctWrd('町長')
+            new SctItm('町長')
             ,
-            new SctWrd('市長')
+            new SctItm('市長')
             ,
-            new SctWrd('皇帝')
+            new SctItm('皇帝')
             ,
-            new SctWrd('国王')
+            new SctItm('国王')
             ,
-            new SctWrd('大統領')
+            new SctItm('大統領')
             ,
-            new SctWrd('女王')
+            new SctItm('女王')
             ,
-            new SctWrd('総理大臣')
+            new SctItm('総理大臣')
             ,
-            new SctWrd('道化師')
+            new SctItm('道化師')
             ,
-            new SctWrd('庭師')
+            new SctItm('庭師')
             ,
-            new SctWrd('狩人')
+            new SctItm('狩人')
             ,
-            new SctWrd('騎士')
+            new SctItm('騎士')
             ,
-            new SctWrd('忍者')
+            new SctItm('忍者')
             ,
-            new SctWrd('抜け忍')
+            new SctItm('抜け忍')
             ,
-            new SctWrd('諜報員')
+            new SctItm('諜報員')
             ,
-            new SctWrd('狙撃兵')
+            new SctItm('狙撃兵')
         ];
     }
 }
 
 // 敬称 の～
-class selector_nickname extends SctWrd_Selector implements ISctItm_Selector {
+class selector_nickname extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@NICK@');
         this.itms = [
             //
             // nega
             //
-            new SctWrd('犬')
+            new SctItm('犬')
             ,
-            new SctWrd('死神')
+            new SctItm('死神')
             ,
-            new SctWrd('死霊')
+            new SctItm('死霊')
             ,
-            new SctWrd('病')
+            new SctItm('病')
             ,
-            new SctWrd('骸')
+            new SctItm('骸')
             ,
-            new SctWrd('髑髏')
+            new SctItm('髑髏')
             ,
-            new SctWrd('恥')
+            new SctItm('恥')
             ,
-            new SctWrd('恥部')
+            new SctItm('恥部')
             ,
-            new SctWrd('悪魔')
+            new SctItm('悪魔')
             ,
-            new SctWrd('小悪魔')
+            new SctItm('小悪魔')
             ,
-            new SctWrd('堕天使')
+            new SctItm('堕天使')
             ,
-            new SctWrd('魔女')
+            new SctItm('魔女')
             ,
-            new SctWrd('魔王')
+            new SctItm('魔王')
             ,
-            new SctWrd('世紀末覇者')
+            new SctItm('世紀末覇者')
             ,
-            new SctWrd('罰当たり')
+            new SctItm('罰当たり')
             ,
-            new SctWrd('蜥蜴')
+            new SctItm('蜥蜴')
             ,
-            new SctWrd('害虫')
+            new SctItm('害虫')
             ,
-            new SctWrd('亡霊')
+            new SctItm('亡霊')
             ,
-            new SctWrd('ミイラ')
+            new SctItm('ミイラ')
             ,
-            new SctWrd('蛇')
+            new SctItm('蛇')
             ,
-            new SctWrd('奴隷')
+            new SctItm('奴隷')
             ,
-            new SctWrd('疫病神')
+            new SctItm('疫病神')
             ,
-            new SctWrd('梅毒')
+            new SctItm('梅毒')
             ,
-            new SctWrd('淋病')
+            new SctItm('淋病')
             ,
-            new SctWrd('疫病')
+            new SctItm('疫病')
             ,
-            new SctWrd('粗大ゴミ')
+            new SctItm('粗大ゴミ')
             ,
-            new SctWrd('ゴミ')
+            new SctItm('ゴミ')
             ,
-            new SctWrd('燃えないゴミ')
+            new SctItm('燃えないゴミ')
             ,
-            new SctWrd('ゴミ箱')
+            new SctItm('ゴミ箱')
             ,
-            new SctWrd('ゴミの山')
+            new SctItm('ゴミの山')
             ,
-            new SctWrd('猛毒')
+            new SctItm('猛毒')
             ,
-            new SctWrd('公害')
+            new SctItm('公害')
             ,
-            new SctWrd('腐敗')
+            new SctItm('腐敗')
             ,
-            new SctWrd('腐敗臭')
+            new SctItm('腐敗臭')
             ,
-            new SctWrd('死臭')
+            new SctItm('死臭')
             ,
-            new SctWrd('贅肉')
+            new SctItm('贅肉')
             ,
-            new SctWrd('無駄骨')
+            new SctItm('無駄骨')
             ,
-            new SctWrd('穀潰し')
+            new SctItm('穀潰し')
             ,
-            new SctWrd('蝿')
+            new SctItm('蝿')
             ,
-            new SctWrd('コソ泥')
+            new SctItm('コソ泥')
             ,
-            new SctWrd('ガン細胞')
+            new SctItm('ガン細胞')
             ,
-            new SctWrd('紙屑')
+            new SctItm('紙屑')
             ,
-            new SctWrd('公衆便所')
+            new SctItm('公衆便所')
             ,
-            new SctWrd('病原菌')
+            new SctItm('病原菌')
             ,
-            new SctWrd('火薬庫')
+            new SctItm('火薬庫')
             ,
-            new SctWrd('悪臭')
+            new SctItm('悪臭')
             ,
-            new SctWrd('食中毒')
+            new SctItm('食中毒')
             ,
-            new SctWrd('落とし穴')
+            new SctItm('落とし穴')
             ,
-            new SctWrd('残飯')
+            new SctItm('残飯')
             ,
-            new SctWrd('ヘドロ')
+            new SctItm('ヘドロ')
             ,
-            new SctWrd('脇毛')
+            new SctItm('脇毛')
             ,
-            new SctWrd('鼻毛')
+            new SctItm('鼻毛')
             ,
-            new SctWrd('吸い殻')
+            new SctItm('吸い殻')
             ,
-            new SctWrd('影')
+            new SctItm('影')
             ,
-            new SctWrd('闇')
+            new SctItm('闇')
             ,
-            new SctWrd('悪意')
+            new SctItm('悪意')
             ,
-            new SctWrd('処刑人')
+            new SctItm('処刑人')
             ,
-            new SctWrd('番人')
+            new SctItm('番人')
             ,
-            new SctWrd('悪夢')
+            new SctItm('悪夢')
             ,
-            new SctWrd('蚤')
+            new SctItm('蚤')
             ,
-            new SctWrd('蟻')
+            new SctItm('蟻')
             ,
-            new SctWrd('ネズミ')
+            new SctItm('ネズミ')
             ,
-            new SctWrd('ハゲタカ')
+            new SctItm('ハゲタカ')
             ,
-            new SctWrd('ポリバケツ')
+            new SctItm('ポリバケツ')
             ,
-            new SctWrd('ブラックホール')
+            new SctItm('ブラックホール')
             ,
-            new SctWrd('サルガッソ')
+            new SctItm('サルガッソ')
             ,
-            new SctWrd('罪人')
+            new SctItm('罪人')
             ,
-            new SctWrd('海賊')
+            new SctItm('海賊')
             ,
-            new SctWrd('盗賊')
+            new SctItm('盗賊')
             ,
-            new SctWrd('山賊')
+            new SctItm('山賊')
             ,
-            new SctWrd('夜盗')
+            new SctItm('夜盗')
             ,
-            new SctWrd('大泥棒')
+            new SctItm('大泥棒')
             ,
-            new SctWrd('覗き魔')
+            new SctItm('覗き魔')
             ,
-            new SctWrd('痴漢')
+            new SctItm('痴漢')
             ,
-            new SctWrd('変態')
+            new SctItm('変態')
             ,
-            new SctWrd('変質者')
+            new SctItm('変質者')
             ,
-            new SctWrd('物乞い')
+            new SctItm('物乞い')
             ,
-            new SctWrd('乞食')
+            new SctItm('乞食')
             ,
-            new SctWrd('ペテン師')
+            new SctItm('ペテン師')
             ,
-            new SctWrd('ゲス野郎')
+            new SctItm('ゲス野郎')
             ,
-            new SctWrd('ホモ野郎')
+            new SctItm('ホモ野郎')
             ,
-            new SctWrd('ヒットラー')
+            new SctItm('ヒットラー')
             ,
-            new SctWrd('独裁者')
+            new SctItm('独裁者')
             ,
-            new SctWrd('おっさん')
+            new SctItm('おっさん')
             //
             // posi
             //
             ,
-            new SctWrd('鷹')
+            new SctItm('鷹')
             ,
-            new SctWrd('鷲')
+            new SctItm('鷲')
             ,
-            new SctWrd('韋駄天')
+            new SctItm('韋駄天')
             ,
-            new SctWrd('勇者')
+            new SctItm('勇者')
             ,
-            new SctWrd('英雄')
+            new SctItm('英雄')
             ,
-            new SctWrd('勝利者')
+            new SctItm('勝利者')
             ,
-            new SctWrd('ヒーロー')
+            new SctItm('ヒーロー')
             ,
-            new SctWrd('天才')
+            new SctItm('天才')
             ,
-            new SctWrd('秀才')
+            new SctItm('秀才')
             ,
-            new SctWrd('仙人')
+            new SctItm('仙人')
             ,
-            new SctWrd('切れ者')
+            new SctItm('切れ者')
             ,
-            new SctWrd('麗人')
+            new SctItm('麗人')
             ,
-            new SctWrd('看板娘')
+            new SctItm('看板娘')
             ,
-            new SctWrd('花')
+            new SctItm('花')
             ,
-            new SctWrd('希望')
+            new SctItm('希望')
             ,
-            new SctWrd('夢')
+            new SctItm('夢')
             ,
-            new SctWrd('赤い彗星')
+            new SctItm('赤い彗星')
             ,
-            new SctWrd('白い悪魔')
+            new SctItm('白い悪魔')
             ,
-            new SctWrd('星')
+            new SctItm('星')
             ,
-            new SctWrd('希望')
+            new SctItm('希望')
             ,
-            new SctWrd('鉄人')
+            new SctItm('鉄人')
             ,
-            new SctWrd('偉人')
+            new SctItm('偉人')
             ,
-            new SctWrd('魔法使い')
+            new SctItm('魔法使い')
             ,
-            new SctWrd('魔術師')
+            new SctItm('魔術師')
             ,
-            new SctWrd('マジシャン')
+            new SctItm('マジシャン')
             ,
-            new SctWrd('テクニシャン')
+            new SctItm('テクニシャン')
             ,
-            new SctWrd('達人')
+            new SctItm('達人')
             ,
-            new SctWrd('種馬')
+            new SctItm('種馬')
             ,
-            new SctWrd('馬車馬')
+            new SctItm('馬車馬')
             ,
-            new SctWrd('重戦車')
+            new SctItm('重戦車')
             ,
-            new SctWrd('航空母艦')
+            new SctItm('航空母艦')
             ,
-            new SctWrd('巨砲')
+            new SctItm('巨砲')
             ,
-            new SctWrd('妖精')
+            new SctItm('妖精')
             ,
-            new SctWrd('天使')
+            new SctItm('天使')
             ,
-            new SctWrd('神様')
+            new SctItm('神様')
             ,
-            new SctWrd('鬼神')
+            new SctItm('鬼神')
             ,
-            new SctWrd('魔神')
+            new SctItm('魔神')
             ,
-            new SctWrd('コンピューター')
+            new SctItm('コンピューター')
             ,
-            new SctWrd('薔薇')
+            new SctItm('薔薇')
             ,
-            new SctWrd('百合の花')
+            new SctItm('百合の花')
             ,
-            new SctWrd('野菊')
+            new SctItm('野菊')
             ,
-            new SctWrd('ダイヤモンド')
+            new SctItm('ダイヤモンド')
             ,
-            new SctWrd('ルビー')
+            new SctItm('ルビー')
             ,
-            new SctWrd('宝石')
+            new SctItm('宝石')
             ,
-            new SctWrd('宝石箱')
+            new SctItm('宝石箱')
             ,
-            new SctWrd('宝')
+            new SctItm('宝')
             ,
-            new SctWrd('骨')
+            new SctItm('骨')
             ,
-            new SctWrd('魂')
+            new SctItm('魂')
             ,
-            new SctWrd('神髄')
+            new SctItm('神髄')
             ,
-            new SctWrd('真骨頂')
+            new SctItm('真骨頂')
             ,
-            new SctWrd('真の姿')
+            new SctItm('真の姿')
             ,
-            new SctWrd('化身')
+            new SctItm('化身')
             ,
-            new SctWrd('スター')
+            new SctItm('スター')
             ,
-            new SctWrd('スーパースター')
+            new SctItm('スーパースター')
             ,
-            new SctWrd('紳士')
+            new SctItm('紳士')
             ,
-            new SctWrd('淑女')
+            new SctItm('淑女')
             ,
-            new SctWrd('レディ')
+            new SctItm('レディ')
             ,
-            new SctWrd('貴公子')
+            new SctItm('貴公子')
             ,
-            new SctWrd('貴人')
+            new SctItm('貴人')
             ,
-            new SctWrd('貴婦人')
+            new SctItm('貴婦人')
             ,
-            new SctWrd('王様')
+            new SctItm('王様')
             ,
-            new SctWrd('女王様')
+            new SctItm('女王様')
             ,
-            new SctWrd('お殿様')
+            new SctItm('お殿様')
             ,
-            new SctWrd('大統領')
+            new SctItm('大統領')
             ,
-            new SctWrd('酋長')
+            new SctItm('酋長')
             //
             // nomal
             //
             ,
-            new SctWrd('人')
+            new SctItm('人')
             ,
-            new SctWrd('男')
+            new SctItm('男')
             ,
-            new SctWrd('女')
+            new SctItm('女')
             ,
-            new SctWrd('少年')
+            new SctItm('少年')
             ,
-            new SctWrd('少女')
+            new SctItm('少女')
             ,
-            new SctWrd('教師')
+            new SctItm('教師')
             ,
-            new SctWrd('先生')
+            new SctItm('先生')
             ,
-            new SctWrd('老師')
+            new SctItm('老師')
             ,
-            new SctWrd('おじさん')
+            new SctItm('おじさん')
             ,
-            new SctWrd('おばさん')
+            new SctItm('おばさん')
             ,
-            new SctWrd('おじいちゃん')
+            new SctItm('おじいちゃん')
             ,
-            new SctWrd('おばあちゃん')
+            new SctItm('おばあちゃん')
             ,
-            new SctWrd('若者')
+            new SctItm('若者')
         ];
     }
 }
 
 
 // 意識 ～する
-class selector_think extends SctWrd_Selector implements ISctItm_Selector {
+class selector_think extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@THINK@');
         this.itms = [
-            new SctWrd('動揺')
+            new SctItm('動揺')
             ,
-            new SctWrd('警戒')
+            new SctItm('警戒')
             ,
-            new SctWrd('絶望')
+            new SctItm('絶望')
             ,
-            new SctWrd('失望')
+            new SctItm('失望')
             ,
-            new SctWrd('苦悶')
+            new SctItm('苦悶')
             ,
-            new SctWrd('失意')
+            new SctItm('失意')
             ,
-            new SctWrd('迷走')
+            new SctItm('迷走')
             ,
-            new SctWrd('狂気')
+            new SctItm('狂気')
             ,
-            new SctWrd('発狂')
+            new SctItm('発狂')
             ,
-            new SctWrd('激怒')
+            new SctItm('激怒')
             ,
-            new SctWrd('嘲笑')
+            new SctItm('嘲笑')
             ,
-            new SctWrd('驚喜')
+            new SctItm('驚喜')
             ,
-            new SctWrd('驚嘆')
+            new SctItm('驚嘆')
             ,
-            new SctWrd('号泣')
+            new SctItm('号泣')
         ];
     }
 }
 
 // 発言・主張 ～している
-class selector_say extends SctWrd_Selector implements ISctItm_Selector {
+class selector_say extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@SAY@');
         this.itms = [
-            new SctWrd('主張')
+            new SctItm('主張')
             ,
-            new SctWrd('強調')
+            new SctItm('強調')
             ,
-            new SctWrd('公表')
+            new SctItm('公表')
             ,
-            new SctWrd('分析')
+            new SctItm('分析')
             ,
-            new SctWrd('発言')
+            new SctItm('発言')
             ,
-            new SctWrd('発表')
+            new SctItm('発表')
             ,
-            new SctWrd('代弁')
+            new SctItm('代弁')
             ,
-            new SctWrd('強弁')
+            new SctItm('強弁')
             ,
-            new SctWrd('記録')
+            new SctItm('記録')
             ,
-            new SctWrd('メモ書き')
+            new SctItm('メモ書き')
             ,
-            new SctWrd('コメント')
+            new SctItm('コメント')
             ,
-            new SctWrd('@PART@にメール')
+            new SctItm('@PART@にメール')
             ,
-            new SctWrd('@PART@に電話')
+            new SctItm('@PART@に電話')
             ,
-            new SctWrd('@PART@に相談')
+            new SctItm('@PART@に相談')
             ,
-            new SctWrd('@PART@に連絡')
+            new SctItm('@PART@に連絡')
             ,
-            new SctWrd('@PART@に説明')
+            new SctItm('@PART@に説明')
             ,
-            new SctWrd('@PART@にFAX')
+            new SctItm('@PART@にFAX')
             ,
-            new SctWrd('リツイート')
+            new SctItm('リツイート')
         ];
     }
 }
 
 // 判断 ～を
-class selector_partner extends SctWrd_Selector implements ISctItm_Selector {
+class selector_partner extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@PART@');
         this.itms = [
-            new SctWrd('知り合い')
+            new SctItm('知り合い')
             ,
-            new SctWrd('友達')
+            new SctItm('友達')
             ,
-            new SctWrd('彼女')
+            new SctItm('彼女')
             ,
-            new SctWrd('彼氏')
+            new SctItm('彼氏')
             ,
-            new SctWrd('家族')
+            new SctItm('家族')
             ,
-            new SctWrd('恋人')
+            new SctItm('恋人')
             ,
-            new SctWrd('婚約者')
+            new SctItm('婚約者')
             ,
-            new SctWrd('嫁')
+            new SctItm('嫁')
             ,
-            new SctWrd('夫')
+            new SctItm('夫')
             ,
-            new SctWrd('父')
+            new SctItm('父')
             ,
-            new SctWrd('母')
+            new SctItm('母')
             ,
-            new SctWrd('娘')
+            new SctItm('娘')
             ,
-            new SctWrd('息子')
+            new SctItm('息子')
             ,
-            new SctWrd('孫')
+            new SctItm('孫')
             ,
-            new SctWrd('ひ孫')
+            new SctItm('ひ孫')
             ,
-            new SctWrd('妹')
+            new SctItm('妹')
             ,
-            new SctWrd('弟')
+            new SctItm('弟')
             ,
-            new SctWrd('姉')
+            new SctItm('姉')
             ,
-            new SctWrd('兄')
+            new SctItm('兄')
             ,
-            new SctWrd('師匠')
+            new SctItm('師匠')
             ,
-            new SctWrd('弟子')
+            new SctItm('弟子')
             ,
-            new SctWrd('恩師')
+            new SctItm('恩師')
             ,
-            new SctWrd('愛弟子')
+            new SctItm('愛弟子')
             ,
-            new SctWrd('雇い主')
+            new SctItm('雇い主')
             ,
-            new SctWrd('上司')
+            new SctItm('上司')
             ,
-            new SctWrd('部下')
+            new SctItm('部下')
             ,
-            new SctWrd('お客様')
+            new SctItm('お客様')
             ,
-            new SctWrd('顧客')
+            new SctItm('顧客')
             ,
-            new SctWrd('取引先')
+            new SctItm('取引先')
             ,
-            new SctWrd('メイド')
+            new SctItm('メイド')
             ,
-            new SctWrd('執事')
+            new SctItm('執事')
             ,
-            new SctWrd('秘書')
+            new SctItm('秘書')
             ,
-            new SctWrd('ボス')
+            new SctItm('ボス')
             ,
-            new SctWrd('愛人')
+            new SctItm('愛人')
             ,
-            new SctWrd('不倫相手')
+            new SctItm('不倫相手')
             ,
-            new SctWrd('相方')
+            new SctItm('相方')
             ,
-            new SctWrd('ライバル')
+            new SctItm('ライバル')
             ,
-            new SctWrd('親の仇')
+            new SctItm('親の仇')
             ,
-            new SctWrd('マスコミ')
+            new SctItm('マスコミ')
         ];
     }
 }
@@ -1932,162 +1944,162 @@ class selector_partner extends SctWrd_Selector implements ISctItm_Selector {
 
 
 // 判断 ～を
-class selector_answer extends SctWrd_Selector implements ISctItm_Selector {
+class selector_answer extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@ANSWER@');
         this.itms = [
-            new SctWrd('見方')
+            new SctItm('見方')
             ,
-            new SctWrd('意見')
+            new SctItm('意見')
             ,
-            new SctWrd('見解')
+            new SctItm('見解')
             ,
-            new SctWrd('推測')
+            new SctItm('推測')
             ,
-            new SctWrd('判断')
+            new SctItm('判断')
             ,
-            new SctWrd('戯れ言')
+            new SctItm('戯れ言')
             ,
-            new SctWrd('疑問')
+            new SctItm('疑問')
             ,
-            new SctWrd('悩み')
+            new SctItm('悩み')
             ,
-            new SctWrd('事例')
+            new SctItm('事例')
             ,
-            new SctWrd('妄想')
+            new SctItm('妄想')
             ,
-            new SctWrd('妄言')
+            new SctItm('妄言')
             ,
-            new SctWrd('寝言')
+            new SctItm('寝言')
             ,
-            new SctWrd('言い訳')
+            new SctItm('言い訳')
             ,
-            new SctWrd('世迷い言')
+            new SctItm('世迷い言')
             ,
-            new SctWrd('予言')
+            new SctItm('予言')
             ,
-            new SctWrd('伝説')
+            new SctItm('伝説')
             ,
-            new SctWrd('仮説')
+            new SctItm('仮説')
             ,
-            new SctWrd('解説')
+            new SctItm('解説')
             ,
-            new SctWrd('推理')
+            new SctItm('推理')
         ];
     }
 }
 
 // 評価 と～（る・た・い）。
-class selector_assessment extends SctWrd_Selector implements ISctItm_Selector {
+class selector_assessment extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@ASSES@');
         this.itms = [
-            new SctWrd('親しまれている')
+            new SctItm('親しまれている')
             ,
-            new SctWrd('賞賛された')
+            new SctItm('賞賛された')
             ,
-            new SctWrd('蔑まれている')
+            new SctItm('蔑まれている')
             ,
-            new SctWrd('罵倒されている')
+            new SctItm('罵倒されている')
             ,
-            new SctWrd('呼ばれている')
+            new SctItm('呼ばれている')
             ,
-            new SctWrd('評価が高い')
+            new SctItm('評価が高い')
             ,
-            new SctWrd('名高い')
+            new SctItm('名高い')
             ,
-            new SctWrd('知られている')
+            new SctItm('知られている')
             ,
-            new SctWrd('期待されている')
+            new SctItm('期待されている')
             ,
-            new SctWrd('見放されている')
+            new SctItm('見放されている')
             ,
-            new SctWrd('見限られた')
+            new SctItm('見限られた')
             ,
-            new SctWrd('見捨てられた')
+            new SctItm('見捨てられた')
             ,
-            new SctWrd('恐れられた')
+            new SctItm('恐れられた')
             ,
-            new SctWrd('おだてられている')
+            new SctItm('おだてられている')
             ,
-            new SctWrd('馬鹿にされている')
+            new SctItm('馬鹿にされている')
             ,
-            new SctWrd('讃えられている')
+            new SctItm('讃えられている')
             ,
-            new SctWrd('言い伝えられた')
+            new SctItm('言い伝えられた')
             ,
-            new SctWrd('丸め込まれた')
+            new SctItm('丸め込まれた')
             ,
-            new SctWrd('知れ渡っている')
+            new SctItm('知れ渡っている')
             ,
-            new SctWrd('語り継がれている')
+            new SctItm('語り継がれている')
             ,
-            new SctWrd('後ろ指を指された')
+            new SctItm('後ろ指を指された')
             ,
-            new SctWrd('表彰された')
+            new SctItm('表彰された')
             ,
-            new SctWrd('ささやかれている')
+            new SctItm('ささやかれている')
             ,
-            new SctWrd('驚嘆した')
+            new SctItm('驚嘆した')
             ,
-            new SctWrd('驚かせた')
+            new SctItm('驚かせた')
             ,
-            new SctWrd('感動させた')
+            new SctItm('感動させた')
             ,
-            new SctWrd('感謝されている')
+            new SctItm('感謝されている')
             ,
-            new SctWrd('太鼓判を押された')
+            new SctItm('太鼓判を押された')
             ,
-            new SctWrd('名付けられた')
+            new SctItm('名付けられた')
         ];
     }
 }
 
 
 // 接続詞
-class selector_conect extends SctWrd_Selector implements ISctItm_Selector {
+class selector_conect extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@CONECT@');
         this.itms = [
-            new SctWrd('そして')
+            new SctItm('そして')
             ,
-            new SctWrd('それに伴い')
+            new SctItm('それに伴い')
             ,
-            new SctWrd('しかし')
+            new SctItm('しかし')
             ,
-            new SctWrd('そのため')
+            new SctItm('そのため')
             ,
-            new SctWrd('その後')
+            new SctItm('その後')
             ,
-            new SctWrd('それにより')
+            new SctItm('それにより')
             ,
-            new SctWrd('その一方')
+            new SctItm('その一方')
             ,
-            new SctWrd('一方')
+            new SctItm('一方')
             ,
-            new SctWrd('しかるに')
+            new SctItm('しかるに')
             ,
-            new SctWrd('そこで')
+            new SctItm('そこで')
             ,
-            new SctWrd('それを受けて')
+            new SctItm('それを受けて')
             ,
-            new SctWrd('やはり')
+            new SctItm('やはり')
             ,
-            new SctWrd('つまり')
+            new SctItm('つまり')
             ,
-            new SctWrd('それはさておき')
+            new SctItm('それはさておき')
             ,
-            new SctWrd('その時')
+            new SctItm('その時')
             ,
-            new SctWrd('かつて')
+            new SctItm('かつて')
             ,
-            new SctWrd('以前は')
+            new SctItm('以前は')
             ,
-            new SctWrd('確かに')
+            new SctItm('確かに')
             ,
-            new SctWrd('流石に')
+            new SctItm('流石に')
             ,
-            new SctWrd('兎に角')
+            new SctItm('兎に角')
           ];
     }
 }

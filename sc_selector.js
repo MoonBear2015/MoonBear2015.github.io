@@ -4,9 +4,14 @@ function to_key_with_length(in_key, in_length) {
     return in_key + zP2.format(in_length) + '@';
 }
 class SctItm {
-    constructor(Wrd, SctPic) {
-        this.Wrd = Wrd;
-        this.SctPic = SctPic;
+    constructor(in_Wrd, in_SctPic) {
+        this.Wrd = in_Wrd;
+        if (in_SctPic) {
+            this.SctPic = in_SctPic;
+        }
+        else {
+            this.SctPic = '';
+        }
     }
     ;
     get Copy() {
@@ -17,7 +22,10 @@ class SctItm {
         this.SctPic = value.SctPic;
     }
     ToString() {
-        return this.Wrd + '(' + this.SctPic + ")";
+        if (this.SctPic != '') {
+            return this.Wrd + '(' + this.SctPic + ")";
+        }
+        return this.Wrd;
     }
 }
 class SctCod extends SctItm {
@@ -62,20 +70,6 @@ class SctCod extends SctItm {
     }
     ToString() {
         return super.ToString() + this.CodLength.toString();
-    }
-}
-class SctWrd extends SctItm {
-    constructor(in_Wrd) {
-        super(in_Wrd, '');
-    }
-    get Copy() {
-        return new SctWrd(this.Wrd);
-    }
-    set Copy(value) {
-        this.Wrd = value.Wrd;
-    }
-    ToString() {
-        return super.ToString();
     }
 }
 class ItmArray {
@@ -154,10 +148,15 @@ class ItmCounter extends ItmArray {
     }
 }
 class SctItm_Selector extends ItmSelector {
-    constructor(itm_key, pic_key, in_array) {
+    constructor(in_itm_key, in_pic_key, in_array) {
         super(in_array);
-        this.itm_key = itm_key;
-        this.pic_key = pic_key;
+        this.itm_key = in_itm_key;
+        if (in_pic_key) {
+            this.pic_key = in_pic_key;
+        }
+        else {
+            this.pic_key = '';
+        }
     }
     ToString() {
         return '[itm_key = ' + this.itm_key + ']\r\n'
@@ -170,21 +169,9 @@ class SctItm_Selector extends ItmSelector {
         return result;
     }
 }
-class SctWrd_Selector extends SctItm_Selector {
-    constructor(in_itm_key, in_array) {
-        super(in_itm_key, '', in_array);
-    }
-    Copy() {
-        let result = new SctWrd_Selector(this.itm_key);
-        result.Paste(this.itms);
-        return result;
-    }
-}
 class SctItm_SelectLocker extends SctItm_Selector {
-    constructor(itm_key, pic_key, in_array) {
-        super(itm_key, pic_key, in_array);
-        this.itm_key = itm_key;
-        this.pic_key = pic_key;
+    constructor(in_itm_key, in_pic_key, in_array) {
+        super(in_itm_key, in_pic_key, in_array);
         this.is_lock = false;
         this.lock_item = new SctItm('', '');
     }
@@ -203,33 +190,9 @@ class SctItm_SelectLocker extends SctItm_Selector {
         return result;
     }
 }
-class SctWrd_SelectLocker extends SctWrd_Selector {
-    constructor(itm_key, in_array) {
-        super(itm_key, in_array);
-        this.itm_key = itm_key;
-        this.is_lock = false;
-        this.lock_item = new SctWrd('');
-    }
-    get rnd_Itm() {
-        if (this.is_lock) {
-            return this.lock_item;
-        }
-        this.is_lock = true;
-        let i = rnd_max(this.itms.length);
-        this.lock_item.Copy = this.itms[i];
-        return this.itms[i];
-    }
-    Copy() {
-        let result = new SctWrd_SelectLocker(this.itm_key);
-        result.Paste(this.itms);
-        return result;
-    }
-}
 class SctItm_FirstLocker extends SctItm_Selector {
-    constructor(itm_key, pic_key) {
-        super(itm_key, pic_key);
-        this.itm_key = itm_key;
-        this.pic_key = pic_key;
+    constructor(in_itm_key, in_pic_key) {
+        super(in_itm_key, in_pic_key);
         this.is_first = true;
     }
     get rnd_Itm() {
@@ -248,23 +211,18 @@ class SctItm_FirstLocker extends SctItm_Selector {
 }
 //------------------------------------ poem
 class SctItm_Counter extends ItmCounter {
-    constructor(itm_key, pic_key) {
+    constructor(in_itm_key, in_pic_key) {
         super();
-        this.itm_key = itm_key;
-        this.pic_key = pic_key;
+        this.itm_key = in_itm_key;
+        if (in_pic_key) {
+            this.pic_key = in_pic_key;
+        }
+        else {
+            this.pic_key = '';
+        }
     }
     Copy() {
         let result = new SctItm_Counter(this.itm_key, this.pic_key);
-        result.Paste(this.itms);
-        return result;
-    }
-}
-class SctWrd_Counter extends SctItm_Counter {
-    constructor(in_itm_key) {
-        super(in_itm_key, '');
-    }
-    Copy() {
-        let result = new SctWrd_Counter(this.itm_key);
         result.Paste(this.itms);
         return result;
     }
