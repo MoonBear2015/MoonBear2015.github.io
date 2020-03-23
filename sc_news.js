@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N01.87';
+    html += 'N01.88';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -509,7 +509,8 @@ class selector_do extends SctItm_SelectLocker {
             new SctItm('拘束', 'DO/sm.jpg'),
             new SctItm('否定', 'DO/no.jpg'),
             new SctItm('警告', 'DO/warning.jpg'),
-            new SctItm('漏洩', 'DO/infoleak.jpg')
+            new SctItm('漏洩', 'DO/infoleak.jpg'),
+            new SctItm('復讐', 'DO/revenge.jpg')
             //
             // posi 
             //
@@ -1058,10 +1059,60 @@ class selector_say extends SctWrd_Selector {
             new SctWrd('記録'),
             new SctWrd('メモ書き'),
             new SctWrd('コメント'),
-            new SctWrd('メール'),
-            new SctWrd('家族にメール'),
-            new SctWrd('娘にメール'),
+            new SctWrd('@PART@にメール'),
+            new SctWrd('@PART@に電話'),
+            new SctWrd('@PART@に相談'),
+            new SctWrd('@PART@に連絡'),
+            new SctWrd('@PART@に説明'),
+            new SctWrd('@PART@にFAX'),
             new SctWrd('リツイート')
+        ];
+    }
+}
+// 判断 ～を
+class selector_partner extends SctWrd_Selector {
+    constructor() {
+        super('@PART@');
+        this.itms = [
+            new SctWrd('知り合い'),
+            new SctWrd('友達'),
+            new SctWrd('彼女'),
+            new SctWrd('彼氏'),
+            new SctWrd('家族'),
+            new SctWrd('恋人'),
+            new SctWrd('婚約者'),
+            new SctWrd('嫁'),
+            new SctWrd('夫'),
+            new SctWrd('父'),
+            new SctWrd('母'),
+            new SctWrd('娘'),
+            new SctWrd('息子'),
+            new SctWrd('孫'),
+            new SctWrd('ひ孫'),
+            new SctWrd('妹'),
+            new SctWrd('弟'),
+            new SctWrd('姉'),
+            new SctWrd('兄'),
+            new SctWrd('師匠'),
+            new SctWrd('弟子'),
+            new SctWrd('恩師'),
+            new SctWrd('愛弟子'),
+            new SctWrd('雇い主'),
+            new SctWrd('上司'),
+            new SctWrd('部下'),
+            new SctWrd('お客様'),
+            new SctWrd('顧客'),
+            new SctWrd('取引先'),
+            new SctWrd('メイド'),
+            new SctWrd('執事'),
+            new SctWrd('秘書'),
+            new SctWrd('ボス'),
+            new SctWrd('愛人'),
+            new SctWrd('不倫相手'),
+            new SctWrd('相方'),
+            new SctWrd('ライバル'),
+            new SctWrd('親の仇'),
+            new SctWrd('マスコミ')
         ];
     }
 }
@@ -1197,6 +1248,7 @@ class news_docs_maker {
         this.selectors.push(new selector_nickname());
         this.selectors.push(new selector_assessment());
         this.selectors.push(new selector_people());
+        this.selectors.push(new selector_partner());
     }
     gene_docs(temp_doc) {
         let result = temp_doc;
