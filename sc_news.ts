@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N01.86';
+    html += 'N01.87';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -844,6 +844,10 @@ class selector_do extends SctItm_SelectLocker implements ISctItm_Selector{
             new SctItm('優勝','DO/topwin.jpg')
             ,
             new SctItm('発明','DO/Edison.jpg')
+            ,
+            new SctItm('開発','DO/debelop.jpg')
+            ,
+            new SctItm('革命','DO/revolution.jpg')
 
         ];
     }
