@@ -1,7 +1,7 @@
 "use strict";
 //------------------------------------ etc's
 function to_key_with_length(in_key, in_length) {
-    return in_key + zP2.format(in_length);
+    return in_key + zP2.format(in_length) + '@';
 }
 class SctItm {
     constructor(Wrd, SctPic) {
@@ -164,10 +164,20 @@ class SctItm_Selector extends ItmSelector {
             + '[pic_key = ' + this.pic_key + ']\r\n'
             + super.ToString();
     }
+    Copy() {
+        let result = new SctItm_Selector(this.itm_key, this.pic_key);
+        result.Paste(this.itms);
+        return result;
+    }
 }
 class SctWrd_Selector extends SctItm_Selector {
     constructor(in_itm_key, in_array) {
         super(in_itm_key, '', in_array);
+    }
+    Copy() {
+        let result = new SctWrd_Selector(this.itm_key);
+        result.Paste(this.itms);
+        return result;
     }
 }
 class SctItm_SelectLocker extends SctItm_Selector {
@@ -187,6 +197,11 @@ class SctItm_SelectLocker extends SctItm_Selector {
         this.lock_item.Copy = this.itms[i];
         return this.itms[i];
     }
+    Copy() {
+        let result = new SctItm_SelectLocker(this.itm_key, this.pic_key);
+        result.Paste(this.itms);
+        return result;
+    }
 }
 class SctWrd_SelectLocker extends SctWrd_Selector {
     constructor(itm_key, in_array) {
@@ -204,6 +219,11 @@ class SctWrd_SelectLocker extends SctWrd_Selector {
         this.lock_item.Copy = this.itms[i];
         return this.itms[i];
     }
+    Copy() {
+        let result = new SctWrd_SelectLocker(this.itm_key);
+        result.Paste(this.itms);
+        return result;
+    }
 }
 class SctItm_FirstLocker extends SctItm_Selector {
     constructor(itm_key, pic_key) {
@@ -220,6 +240,11 @@ class SctItm_FirstLocker extends SctItm_Selector {
         let i = rnd_max(this.itms.length);
         return this.itms[i];
     }
+    Copy() {
+        let result = new SctItm_FirstLocker(this.itm_key, this.pic_key);
+        result.Paste(this.itms);
+        return result;
+    }
 }
 //------------------------------------ poem
 class SctItm_Counter extends ItmCounter {
@@ -228,10 +253,20 @@ class SctItm_Counter extends ItmCounter {
         this.itm_key = itm_key;
         this.pic_key = pic_key;
     }
+    Copy() {
+        let result = new SctItm_Counter(this.itm_key, this.pic_key);
+        result.Paste(this.itms);
+        return result;
+    }
 }
 class SctWrd_Counter extends SctItm_Counter {
     constructor(in_itm_key) {
         super(in_itm_key, '');
+    }
+    Copy() {
+        let result = new SctWrd_Counter(this.itm_key);
+        result.Paste(this.itms);
+        return result;
     }
 }
 class Selector_Generator {
@@ -240,7 +275,14 @@ class Selector_Generator {
         this.pic_key = pic_key;
         this.cods = new Array();
     }
-    Generate_Itm(in_length, in_AKey, in_BKey) {
+    Gene_Itm_no_length() {
+        let results = new Array();
+        this.cods.forEach(cod => {
+            results.push(cod.to_SctItm());
+        });
+        return results;
+    }
+    Gene_Itm_length(in_length, in_AKey, in_BKey) {
         let results = new Array();
         this.cods.forEach(cod => {
             cod.to_length_itms(in_length, in_AKey, in_BKey).forEach(itm => {
@@ -251,8 +293,10 @@ class Selector_Generator {
     }
     Generate(in_max, in_selector) {
         let results = new Array();
+        let selector_no_length = in_selector.Copy();
+        selector_no_length.Paste(this.Gene_Itm_no_length());
+        results.push(selector_no_length);
         for (let c = 1; c <= in_max; c++) {
-            let new_selector = in_selector.Copy();
         }
         return results;
     }

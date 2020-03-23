@@ -1,3 +1,7 @@
+const KEY_A : string = 'A';
+const KEY_B : string = 'B';
+
+
 function set_poem()
 {
     set_header_menu(2);
@@ -9,17 +13,22 @@ function set_poem()
     html += '<h1>';
     html += 'POEM';
     html += '<small>';
-    html += 'P01.11 test';
+    html += 'P01.12 test';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
+
+    let gt1 = new Gene_tema01();
+
+    let itms_no = gt1.Gene_Itm_no_length();
+    html += '[NO]<br>';
+    html += string_html(new SctItm_Selector('@A@','',itms_no).ToString());
 
     // test
     for(let i = 1; i < 9; i++)
     {
         html += '[' + i + ']<br>';
-        let gt1 = new Gene_tema01();
-        let itms = gt1.Generate_Itm(i,'A','B');
+        let itms = gt1.Gene_Itm_length(i,'@A','@B');
         let selector = new SctItm_Selector('@A@','',itms);
 
         html += string_html(selector.ToString());
