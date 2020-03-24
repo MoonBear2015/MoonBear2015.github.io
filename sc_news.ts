@@ -254,6 +254,25 @@ class selector_people extends SctItm_Selector implements ISctItm_Selector {
     }
 }
 
+class selector_manypeople extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@MANYPEOPLE@');
+        this.itms = [
+            new SctItm('@THEY@')
+            ,
+            new SctItm('@MANYPEOPLE@')
+            ,
+            new SctItm('@MANY@@CLASS@')
+            ,
+            new SctItm('@MANY@@PART@')
+            ,
+            new SctItm('「@CALL@」と@ASSES@@MANY@@PEOPLE@')
+
+        ];
+    }
+}
+
+
 class selector_doc extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@NEWS_DOC@');
@@ -281,25 +300,11 @@ class selector_who extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('@CLASS@の@HUMAN@@AGE@')
             ,
-            new SctItm('「@WHAT@の@PEOPLE@」と@ASSES@@HUMAN@@AGE@')
+            new SctItm('「@CALL@」と@ASSES@@HUMAN@@AGE@')
             ,
-            new SctItm('「@WHAT@の@NICK@」と@ASSES@@CLASS@の@HUMAN@@AGE@')
+            new SctItm('「@CALL@」と@ASSES@@CLASS@の@HUMAN@@AGE@')
             ,
-            new SctItm('「@DO@する@NICK@」と@ASSES@@CLASS@の@HUMAN@@AGE@')
-            ,
-            new SctItm('「@STATUS@する@NICK@」と@ASSES@@CLASS@の@HUMAN@@AGE@')
-            ,
-            new SctItm('「@CLASS@の@NICK@」と@ASSES@@CLASS@の@HUMAN@@AGE@')
-            ,
-            new SctItm('@THEY@より「@WHAT@の@NICK@」と@ASSES@@CLASS@の@HUMAN@@AGE@')
-            ,
-            new SctItm('@THEY@より「@DO@する@NICK@」と@ASSES@@CLASS@の@HUMAN@@AGE@')
-            ,
-            new SctItm('@THEY@より「@STATUS@する@NICK@」と@ASSES@@CLASS@の@HUMAN@@AGE@')
-            ,
-            new SctItm('@THEY@より「@CLASS@の@NICK@」と@ASSES@@CLASS@の@HUMAN@@AGE@')
-            ,
-            new SctItm('@THEY@より「@WHAT@の@PEOPLE@」と@ASSES@@CLASS@の@HUMAN@@AGE@')
+            new SctItm('@MANYPEOPLE@より「@CALL@」と@ASSES@@CLASS@の@HUMAN@@AGE@')
         ];
     }
 }
@@ -310,22 +315,30 @@ class selector_who2 extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('@CLASS@ @HUMAN@@AGE@')
             ,
-            new SctItm('「@WHAT@の@PEOPLE@」 @HUMAN@@AGE@')
+            new SctItm('「@CALL@」 @HUMAN@@AGE@')
             ,
-            new SctItm('「@STATUS@する@NICK@」と@ASSES@@CLASS@ @HUMAN@@AGE@')
+            new SctItm('「@CALL@」と@ASSES@@PEOPLE@ @HUMAN@@AGE@')
             ,
-            new SctItm('「@CLASS@の@NICK@」と@ASSES@@CLASS@ @HUMAN@@AGE@')
-            ,
-            new SctItm('「@WHAT@の@PEOPLE@」と@ASSES@@NICK@ @HUMAN@@AGE@')
-            ,
-            new SctItm('@THEY@より「@STATUS@する@NICK@」と@ASSES@@CLASS@ @HUMAN@@AGE@')
-            ,
-            new SctItm('@THEY@より「@CLASS@の@NICK@」と@ASSES@@CLASS@ @HUMAN@@AGE@')
-            ,
-            new SctItm('@THEY@より「@WHAT@の@PEOPLE@」と@ASSES@@NICK@ @HUMAN@@AGE@')
+            new SctItm('@MANYPEOPLE@より「@CALL@」と@ASSES@@PEOPLE@ @HUMAN@@AGE@')
         ];
     }
 }
+
+class selector_call extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@CALL@');
+        this.itms = [
+            new SctItm('@WHAT@の@PEOPLE@')
+            ,
+            new SctItm('@DO@する@PEOPLE@')
+            ,
+            new SctItm('@STATUS@する@PEOPLE@')
+            ,
+            new SctItm('@CLASS@の@PEOPLE@')
+        ];
+    }
+}
+
 
 
 class selector_c01 extends SctItm_Selector implements ISctItm_Selector {
@@ -344,13 +357,11 @@ class selector_c01 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@KEY@や@KEY@が@STATUS@する@WHAT@@END01A@')
             ,
-            new SctItm('@MANY@@THEY@が@DO@@END01B@')
+            new SctItm('@MANYPEOPLE@が@DO@@END01B@')
             ,
-            new SctItm('@MANY@@THEY@による@KEY@が@STATUS@@END01B@')
+            new SctItm('@MANYPEOPLE@による@KEY@が@STATUS@@END01B@')
             ,
-            // new SctItm('@MANY@@THEY@の@THINK@や@THINK@が@STATUS@@END01B@')
-            // ,
-            new SctItm('ww @THINK@や@THINK@@STATUS2@@WHAT@@END01A@')
+            new SctItm('@THINK@や@THINK@@STATUS2@@WHAT@@END01A@')
         ];
     }
 }
@@ -398,17 +409,17 @@ class selector_c02 extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('@WHAT@の@MANY@@PEOPLE@が@ASSES@')
             ,
-            new SctItm('@MANY@@THEY@が@DO@@END02B@')
+            new SctItm('@MANYPEOPLE@が@DO@@END02B@')
             ,
-            new SctItm('@MANY@@THEY@が@NICK@@END02A@')
+            new SctItm('@MANYPEOPLE@が@NICK@@END02A@')
             ,
-            new SctItm('@MANY@@THEY@の@KEY@が@STATUS@@END02B@')
+            new SctItm('@MANYPEOPLE@の@KEY@が@STATUS@@END02B@')
             ,
-            new SctItm('@MANY@@THEY@の@KEY@や@KEY@が@STATUS@@END02B@')
+            new SctItm('@MANYPEOPLE@の@KEY@や@KEY@が@STATUS@@END02B@')
             ,
-            new SctItm('@MANY@@THEY@の@THINK@@STATUS2@ ww')
+            new SctItm('@MANYPEOPLE@の@THINK@@STATUS2@')
             ,
-            new SctItm('@MANY@@THEY@の@THINK@と@THINK@@STATUS2@ ww')
+            new SctItm('@MANYPEOPLE@の@THINK@と@THINK@@STATUS2@')
         ];
     }
 }
@@ -425,17 +436,17 @@ class selector_comment extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@WHAT@の@NICK@が@STATUS@@END02B@')
             ,
-            new SctItm('@WHAT@は@NICK@と@ASSES@')
+            new SctItm('@WHAT@は@DO@@END02C@@NICK@と@ASSES@')
             ,
-            new SctItm('@WHAT@が@NICK@@END02A@')
+            new SctItm('@WHAT@が@DO@@END02C@@NICK@@END02A@')
             ,
-            new SctItm('@MANY@@THEY@は@NICK@@END02A@')
+            new SctItm('@MANYPEOPLE@は@DO@@END02C@@NICK@@END02A@')
             ,
-            new SctItm('@THEY@は@NICK@@END02A@。@WHAT@の@NICK@@END02A@')
+            new SctItm('@MANYPEOPLE@は@NICK@@END02A@。@WHAT@の@DO@@END02C@@NICK@@END02A@')
             ,
-            new SctItm('@THEY@は@WHAT@の@NICK@@END02A@。@WHAT@が@NICK@@END02A@')
+            new SctItm('@MANYPEOPLE@は@WHAT@の@NICK@@END02A@。@WHAT@が@NICK@@END02A@')
             ,
-            new SctItm('@WHAT@は@DO@@END02B@。@THEY@の@KEY@@END02A@')
+            new SctItm('@WHAT@は@DO@@END02B@。@MANYPEOPLE@の@KEY@@END02A@')
             ,
             new SctItm('@WHAT@は@NICK@と@ASSES@@NICK@@END02A@')
             ,
@@ -449,7 +460,7 @@ class selector_comment extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@DO@@END02C@@NICK@、@YESNO@、それが@WHAT@@END02A@')
             ,
-            new SctItm('@NICK@、@NICK@、@NICK@、@NICK@・・・、@YESNO@、それは@WHAT@@END02A@')
+            new SctItm('@NICK@、@NICK@、@NICK@、@NICK@・・・、@YESNO@、それが@WHAT@@END02A@')
         ];
     }
 }
@@ -2163,6 +2174,7 @@ class news_docs_maker {
         this.selectors.push(new selector_who2());
         this.selectors.push(new selector_human());
         this.selectors.push(new selector_class());
+        this.selectors.push(new selector_call());
         this.selectors.push(new selector_age());
         this.selectors.push(new selector_say());
         this.selectors.push(new selector_answer());
@@ -2170,6 +2182,7 @@ class news_docs_maker {
         this.selectors.push(new selector_nickname());
         this.selectors.push(new selector_assessment());
         this.selectors.push(new selector_people());
+        this.selectors.push(new selector_manypeople());
         this.selectors.push(new selector_partner());
 
     }
