@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N01.89';
+    html += 'N01.90';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -348,11 +348,9 @@ class selector_c01 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@MANY@@THEY@による@KEY@が@STATUS@@END01B@')
             ,
-            new SctItm('@MANY@@THEY@の@THINK@が@STATUS@@END01B@')
-            ,
-            new SctItm('@MANY@@THEY@の@THINK@や@THINK@が@STATUS@@END01B@')
-            ,
-            new SctItm('@THINK@や@THINK@が@STATUS@する@WHAT@@END01A@')
+            // new SctItm('@MANY@@THEY@の@THINK@や@THINK@が@STATUS@@END01B@')
+            // ,
+            new SctItm('ww @THINK@や@THINK@@STATUS2@@WHAT@@END01A@')
         ];
     }
 }
@@ -408,9 +406,9 @@ class selector_c02 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@MANY@@THEY@の@KEY@や@KEY@が@STATUS@@END02B@')
             ,
-            new SctItm('@MANY@@THEY@の@THINK@が@STATUS@@END02B@')
+            new SctItm('@MANY@@THEY@の@THINK@@STATUS2@ ww')
             ,
-            new SctItm('@MANY@@THEY@の@THINK@と@THINK@が@STATUS@@END02B@')
+            new SctItm('@MANY@@THEY@の@THINK@と@THINK@@STATUS2@ ww')
         ];
     }
 }
@@ -572,21 +570,15 @@ class selector_end02c extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('してしまった')
             ,
-            new SctItm('してしまう')
-            ,
             new SctItm('すべき')
             ,
             new SctItm('すべきである')
             ,
             new SctItm('すべきであった')
             ,
-            new SctItm('したかった')
-            ,
             new SctItm('させる')
             ,
             new SctItm('させた')
-            ,
-            new SctItm('させたかった')
         ];
     }
 }
@@ -913,8 +905,6 @@ class selector_key extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('人種差別')
             ,
-            new SctItm('無力化')
-            ,
             new SctItm('暴力行為')
             ,
             new SctItm('乱痴気騒ぎ')
@@ -922,8 +912,6 @@ class selector_key extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('乱交パーティー')
             ,
             new SctItm('乱闘騒ぎ')
-            ,
-            new SctItm('葬儀')
             ,
             //
             // posi 
@@ -965,8 +953,8 @@ class selector_key extends SctItm_Selector implements ISctItm_Selector {
     }
 }
 
-// 物量・増減・拡縮 ～する・～した・～し、
-class selector_status extends SctItm_Selector implements ISctItm_Selector {
+// 出来事の増減・発生 ～する・～した・～し、
+class selector_status1 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@STATUS@');
         this.itms = [
@@ -974,40 +962,65 @@ class selector_status extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('蔓延')
             ,
-            new SctItm('増大')
-            ,
-            new SctItm('倍増')
-            ,
-            new SctItm('増殖')
-            ,
             new SctItm('肥大化')
             ,
             new SctItm('急増')
             ,
-            new SctItm('迷走')
-            ,
             new SctItm('暴発')
             ,
-            new SctItm('拡散')
+            new SctItm('多発')
             ,
             new SctItm('復活')
             ,
             new SctItm('衰退')
             ,
-            new SctItm('消耗')
-            ,
-            new SctItm('減少')
+            new SctItm('解消')
             ,
             new SctItm('消失')
             ,
-            new SctItm('離散')
-            ,
             new SctItm('開催')
             ,
-            new SctItm('再開')
+            new SctItm('流行')
+            ,
+            new SctItm('禁止')
+            ,
+            new SctItm('奨励')
+            ,
+            new SctItm('推奨')
+            ,
+            new SctItm('計画')
         ];
     }
 }
+
+// 感情の増減（２） （感情）～。（悲しみが広がっている）
+class selector_status2 extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@STATUS2@');
+        this.itms = [
+            new SctItm('が広がっている')
+            ,
+            new SctItm('が巻き起こっている')
+            ,
+            new SctItm('が訴えられている')
+            ,
+            new SctItm('が蔓延している')
+            ,
+            new SctItm('に包まれている')
+            ,
+            new SctItm('で混乱している')
+            ,
+            new SctItm('で困惑している')
+            ,
+            new SctItm('で言葉を失っている')
+            ,
+            new SctItm('に満ちあふれている')
+            ,
+            new SctItm('に輝いている')
+        ];
+    }
+}
+
 
 // 団体 ～の間に・～の間で
 class selector_they extends SctItm_Selector implements ISctItm_Selector {
@@ -2140,7 +2153,8 @@ class news_docs_maker {
         this.selectors.push(new selector_whats());
         this.selectors.push(new selector_do());
         this.selectors.push(new selector_key());
-        this.selectors.push(new selector_status());
+        this.selectors.push(new selector_status1());
+        this.selectors.push(new selector_status2());
         this.selectors.push(new selector_they());
         this.selectors.push(new selector_many());
 

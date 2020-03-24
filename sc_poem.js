@@ -105,7 +105,8 @@ class poem_docs_maker {
         this.selectors.push(new selector_nickname());
         this.selectors.push(new selector_assessment());
         this.selectors.push(new selector_human());
-        this.selectors.push(new selector_status());
+        this.selectors.push(new selector_status1());
+        this.selectors.push(new selector_status2());
     }
     gene_docs(temp_doc) {
         let result = temp_doc;
