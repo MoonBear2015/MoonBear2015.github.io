@@ -825,6 +825,8 @@ class selector_do extends SctItm_SelectLocker implements ISctItm_Selector{
             new SctItm('漏洩','DO/infoleak.jpg')
             ,
             new SctItm('復讐','DO/revenge.jpg')
+            ,
+            new SctItm('号泣','DO/cry.jpg')
             //
             // posi 
             //
