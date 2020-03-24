@@ -1,11 +1,18 @@
 "use strict";
 //------------------------------------ etc's
 function to_key_with_length(in_key, in_length) {
-    return in_key + zP2.format(in_length) + '@';
+    let result = in_key;
+    result = replaceAll(result, '@', '');
+    return '@' + result + zP2.format(in_length) + '@';
 }
 class SctItm {
     constructor(in_Wrd, in_SctPic) {
-        this.Wrd = in_Wrd;
+        if (in_Wrd) {
+            this.Wrd = in_Wrd;
+        }
+        else {
+            this.Wrd = '';
+        }
         if (in_SctPic) {
             this.SctPic = in_SctPic;
         }
@@ -29,9 +36,14 @@ class SctItm {
     }
 }
 class SctCod extends SctItm {
-    constructor(inWrd, inSctPic, CodLength) {
-        super(inWrd, inSctPic);
-        this.CodLength = CodLength;
+    constructor(in_Wrd, in_CodLength, in_SctPic) {
+        super(in_Wrd, in_SctPic);
+        if (in_CodLength) {
+            this.CodLength = in_CodLength;
+        }
+        else {
+            this.CodLength = this.Wrd.length;
+        }
     }
     to_SctItm() {
         return new SctItm(this.Wrd, this.SctPic);
@@ -66,7 +78,7 @@ class SctCod extends SctItm {
         let resWrd = this.Wrd + inCod.Wrd;
         let resPic = this.SctPic;
         let resLen = this.CodLength + inCod.CodLength;
-        return new SctCod(resWrd, resPic, resLen);
+        return new SctCod(resWrd, resLen, resPic);
     }
     ToString() {
         return super.ToString() + this.CodLength.toString();
@@ -150,7 +162,12 @@ class ItmCounter extends ItmArray {
 class SctItm_Selector extends ItmSelector {
     constructor(in_itm_key, in_pic_key, in_array) {
         super(in_array);
-        this.itm_key = in_itm_key;
+        if (in_itm_key) {
+            this.itm_key = in_itm_key;
+        }
+        else {
+            this.itm_key = '';
+        }
         if (in_pic_key) {
             this.pic_key = in_pic_key;
         }
@@ -213,7 +230,12 @@ class SctItm_FirstLocker extends SctItm_Selector {
 class SctItm_Counter extends ItmCounter {
     constructor(in_itm_key, in_pic_key) {
         super();
-        this.itm_key = in_itm_key;
+        if (in_itm_key) {
+            this.itm_key = in_itm_key;
+        }
+        else {
+            this.itm_key = '';
+        }
         if (in_pic_key) {
             this.pic_key = in_pic_key;
         }
@@ -228,10 +250,20 @@ class SctItm_Counter extends ItmCounter {
     }
 }
 class Selector_Generator {
-    constructor(itm_key, pic_key) {
-        this.itm_key = itm_key;
-        this.pic_key = pic_key;
+    constructor(in_itm_key, in_pic_key) {
         this.cods = new Array();
+        if (in_itm_key) {
+            this.itm_key = in_itm_key;
+        }
+        else {
+            this.itm_key = '';
+        }
+        if (in_pic_key) {
+            this.pic_key = in_pic_key;
+        }
+        else {
+            this.pic_key = '';
+        }
     }
     Gene_Itm_no_length() {
         let results = new Array();
@@ -251,10 +283,23 @@ class Selector_Generator {
     }
     Generate(in_max, in_selector) {
         let results = new Array();
-        let selector_no_length = in_selector.Copy();
-        selector_no_length.Paste(this.Gene_Itm_no_length());
-        results.push(selector_no_length);
+        let itms_no_length = this.Gene_Itm_no_length();
+        if (itms_no_length.length > 0) {
+            let selector_no_length = in_selector.Copy();
+            selector_no_length.itm_key = this.itm_key;
+            selector_no_length.pic_key = this.pic_key;
+            selector_no_length.Paste(itms_no_length);
+            results.push(selector_no_length);
+        }
         for (let c = 1; c <= in_max; c++) {
+            let itms_length = this.Gene_Itm_length(c, KEY_A, KEY_B);
+            if (itms_length.length > 0) {
+                let selector_length = in_selector.Copy();
+                selector_length.itm_key = to_key_with_length(this.itm_key, c);
+                selector_length.pic_key = this.pic_key;
+                selector_length.Paste(itms_length);
+                results.push(selector_length);
+            }
         }
         return results;
     }

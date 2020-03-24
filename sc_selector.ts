@@ -2,7 +2,9 @@
 
 function to_key_with_length(in_key : string,in_length : number)
 {
-    return in_key + zP2.format(in_length) + '@';
+    let result = in_key;
+    result = replaceAll(result,'@','');
+    return '@' + result + zP2.format(in_length) + '@';
 }
 
 
@@ -25,11 +27,15 @@ class SctItm implements ISctItm,ITest {
     public Wrd : string;
     public SctPic : string;
     constructor(
-        in_Wrd : string
+        in_Wrd? : string
         ,
         in_SctPic? : string
     ){
-        this.Wrd = in_Wrd;
+        if (in_Wrd) {
+            this.Wrd = in_Wrd;
+        } else {
+            this.Wrd = '';
+        }
         if (in_SctPic) {
             this.SctPic = in_SctPic;
         } else {
@@ -53,15 +59,21 @@ class SctItm implements ISctItm,ITest {
 }
 
 class SctCod extends SctItm implements ISctCod,ITest {
+    public CodLength : number;
     constructor(
-        inWrd : string
+        in_Wrd? : string
         ,
-        inSctPic : string
+        in_CodLength? : number
         ,
-        public CodLength : number
+        in_SctPic? : string
     )
     {
-        super(inWrd,inSctPic);
+        super(in_Wrd,in_SctPic);
+        if (in_CodLength) {
+            this.CodLength = in_CodLength;
+        } else {
+            this.CodLength = this.Wrd.length;
+        }
     }
 
     to_SctItm() : ISctItm {
@@ -106,7 +118,7 @@ class SctCod extends SctItm implements ISctCod,ITest {
         let resWrd = this.Wrd + inCod.Wrd;
         let resPic = this.SctPic;
         let resLen = this.CodLength + inCod.CodLength;
-        return new SctCod(resWrd,resPic,resLen);
+        return new SctCod(resWrd,resLen,resPic);
     }
 
     ToString() : string
@@ -237,7 +249,7 @@ class SctItm_Selector extends ItmSelector<SctItm> implements ISctItm_Selector {
     public pic_key : string;
     
     constructor(
-        in_itm_key : string
+        in_itm_key? : string
         ,
         in_pic_key? : string
         ,
@@ -245,7 +257,11 @@ class SctItm_Selector extends ItmSelector<SctItm> implements ISctItm_Selector {
     )
     {
         super(in_array);
-        this.itm_key = in_itm_key;
+        if (in_itm_key) {
+            this.itm_key = in_itm_key;
+        } else {
+            this.itm_key = '';
+        }
         if (in_pic_key) {
             this.pic_key = in_pic_key;
         } else {
@@ -273,7 +289,7 @@ class SctItm_SelectLocker extends SctItm_Selector implements ISctItm_Selector {
     private lock_item : SctItm;
 
     constructor(
-        in_itm_key : string
+        in_itm_key? : string
         ,
         in_pic_key? : string
         ,
@@ -310,7 +326,7 @@ class SctItm_FirstLocker
     implements ISctItm_Selector {
     private is_first : boolean;
     constructor(
-        in_itm_key : string
+        in_itm_key? : string
         ,
         in_pic_key? : string
     )
@@ -344,13 +360,17 @@ class SctItm_Counter extends ItmCounter<SctItm> implements ISctItm_Selector {
     public itm_key : string;
     public pic_key : string;
     constructor(
-        in_itm_key : string
+        in_itm_key? : string
         ,
         in_pic_key? : string
     )
     {
         super();
-        this.itm_key = in_itm_key;
+        if (in_itm_key) {
+            this.itm_key = in_itm_key;
+        } else {
+            this.itm_key = '';
+        }
         if (in_pic_key) {
             this.pic_key = in_pic_key;
         } else {
@@ -369,13 +389,25 @@ class SctItm_Counter extends ItmCounter<SctItm> implements ISctItm_Selector {
 
 class Selector_Generator {
     public cods : ISctCod[];
+    public itm_key : string;
+    public pic_key : string;
     constructor(
-        public itm_key : string
+        in_itm_key : string
         ,
-        public pic_key : string
+        in_pic_key : string
     )
     {
         this.cods = new Array<ISctCod>();
+        if (in_itm_key) {
+            this.itm_key = in_itm_key;
+        } else {
+            this.itm_key = '';
+        }
+        if (in_pic_key) {
+            this.pic_key = in_pic_key;
+        } else {
+            this.pic_key = '';
+        }
     }
 
     Gene_Itm_no_length() : Array<ISctItm>
@@ -409,18 +441,27 @@ class Selector_Generator {
 
         let results = new Array<ISctItm_Selector>();
 
-        let selector_no_length = in_selector.Copy();
-        selector_no_length.Paste(this.Gene_Itm_no_length());
-        results.push(selector_no_length);
-
-
+        let itms_no_length = this.Gene_Itm_no_length();
+        if (itms_no_length.length > 0) {
+            let selector_no_length = in_selector.Copy();
+            selector_no_length.itm_key = this.itm_key;
+            selector_no_length.pic_key = this.pic_key;
+            selector_no_length.Paste(itms_no_length);
+            results.push(selector_no_length);
+        }
         for(let c = 1; c <= in_max; c++)
         {
-
+            let itms_length = this.Gene_Itm_length(c,KEY_A,KEY_B);
+            if (itms_length.length > 0) {
+                let selector_length = in_selector.Copy();
+                selector_length.itm_key = to_key_with_length(this.itm_key,c);
+                selector_length.pic_key = this.pic_key;
+                selector_length.Paste(itms_length);
+                results.push(selector_length);
+            }
         }
 
         return results;
-
     }
 }
 

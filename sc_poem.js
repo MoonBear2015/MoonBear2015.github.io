@@ -1,6 +1,6 @@
 "use strict";
-const KEY_A = 'A';
-const KEY_B = 'B';
+const KEY_A = '@A';
+const KEY_B = '@B';
 function set_poem() {
     set_header_menu(2);
     scrollTo(0, 0);
@@ -9,23 +9,17 @@ function set_poem() {
     html += '<h1>';
     html += 'POEM';
     html += '<small>';
-    html += 'P01.12 test';
+    html += 'P01.13 test';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
     let gt1 = new Gene_tema01();
-    let arys = gt1.Generate(8, new SctItm_Selector('', ''));
-    let itms_no = gt1.Gene_Itm_no_length();
-    html += '[NO]<br>';
-    html += string_html(new SctItm_Selector('@A@', '', itms_no).ToString());
-    // test
-    for (let i = 1; i < 9; i++) {
-        html += '[' + i + ']<br>';
-        let itms = gt1.Gene_Itm_length(i, '@A', '@B');
-        let selector = new SctItm_Selector('@A@', '', itms);
-        html += string_html(selector.ToString());
-    }
-    // test
+    let arys = gt1.Generate(8, new SctItm_Selector());
+    // test start
+    arys.forEach(ary => {
+        html += string_html(ary.ToString());
+    });
+    // test end
     for (let i = 0; i < 5; i++) {
         html += make_poem();
     }
@@ -196,27 +190,27 @@ class poemer_titlepic extends SctItm_Counter {
 }
 class poemer_tema extends SctItm_SelectLocker {
     constructor() {
-        super('@TEMASL@');
+        super('@TEMA@');
         this.itms = [
-            new SctItm('@TEMA01@'),
-            new SctItm('@TEMA02@'),
-            new SctItm('@TEMA03@'),
-            new SctItm('@TEMA04@'),
-            new SctItm('@TEMA05@')
+            new SctItm('@TM01@'),
+            new SctItm('@TM02@'),
+            new SctItm('@TM03@'),
+            new SctItm('@TM04@'),
+            new SctItm('@TM05@')
         ];
     }
 }
 // 季語：春
 class Gene_tema01 extends Selector_Generator {
     constructor() {
-        super('@TEMA01@', '@PIC_TEMA@');
+        super('@TM01@', '@PIC_TEMA@');
         this.cods = [
-            new SctCod('|春|はる|', 'spring.jpg', 2),
-            new SctCod('|花|はな|', '', 2),
-            new SctCod('|蝶|ちょう|', '', 2),
-            new SctCod('|梅|うめ|', '', 2),
-            new SctCod('|土筆|つくし|', '', 3),
-            new SctCod('|蛙|かえる|', '', 3)
+            new SctCod('|春|はる|', 2, 'spring.jpg'),
+            new SctCod('|花|はな|', 2),
+            new SctCod('|蝶|ちょう|', 2),
+            new SctCod('|梅|うめ|', 2),
+            new SctCod('|土筆|つくし|', 3),
+            new SctCod('|蛙|かえる|', 3)
         ];
     }
 }
@@ -226,11 +220,11 @@ class poemer_tema01 extends SctItm_FirstLocker {
         super('@TEMA01@', '@PIC_TEMA@');
         this.itms = [
             new SctItm('|春|はる|', 'spring.jpg'),
-            new SctItm('|花|はな|', ''),
-            new SctItm('|蝶|ちょう|', ''),
-            new SctItm('|梅|うめ|', ''),
-            new SctItm('|土筆|つくし|', ''),
-            new SctItm('|蛙|かえる|', '')
+            new SctItm('|花|はな|'),
+            new SctItm('|蝶|ちょう|'),
+            new SctItm('|梅|うめ|'),
+            new SctItm('|土筆|つくし|'),
+            new SctItm('|蛙|かえる|')
         ];
     }
 }
@@ -240,9 +234,9 @@ class poemer_tema02 extends SctItm_FirstLocker {
         super('@TEMA02@', '@PIC_TEMA@');
         this.itms = [
             new SctItm('|夏|なつ|', 'summer.jpg'),
-            new SctItm('|虹|にじ|', ''),
-            new SctItm('|浴衣|ゆかた|', ''),
-            new SctItm('|祭|まつり|', '')
+            new SctItm('|虹|にじ|'),
+            new SctItm('|浴衣|ゆかた|'),
+            new SctItm('|祭|まつり|')
         ];
     }
 }
@@ -252,11 +246,11 @@ class poemer_tema03 extends SctItm_FirstLocker {
         super('@TEMA03@', '@PIC_TEMA@');
         this.itms = [
             new SctItm('|秋|あき|', 'autumn.jpg'),
-            new SctItm('|月|つき|', ''),
-            new SctItm('|紅葉|もみじ|', ''),
-            new SctItm('|栗|くり|', ''),
-            new SctItm('|柿|かき|', ''),
-            new SctItm('|芋|いも|', '')
+            new SctItm('|月|つき|'),
+            new SctItm('|紅葉|もみじ|'),
+            new SctItm('|栗|くり|'),
+            new SctItm('|柿|かき|'),
+            new SctItm('|芋|いも|')
         ];
     }
 }
@@ -266,9 +260,9 @@ class poemer_tema04 extends SctItm_FirstLocker {
         super('@TEMA04@', '@PIC_TEMA@');
         this.itms = [
             new SctItm('|冬|ふゆ|', 'winter.jpg'),
-            new SctItm('|雪|ゆき|', ''),
-            new SctItm('|氷|こおり|', ''),
-            new SctItm('|霜|しも|', '')
+            new SctItm('|雪|ゆき|'),
+            new SctItm('|氷|こおり|'),
+            new SctItm('|霜|しも|')
         ];
     }
 }
@@ -278,10 +272,10 @@ class poemer_tema05 extends SctItm_FirstLocker {
         super('@TEMA05@', '@PIC_TEMA@');
         this.itms = [
             new SctItm('|天|てん|', 'sky.jpg'),
-            new SctItm('|月|つき|', ''),
-            new SctItm('|星|ほし|', ''),
-            new SctItm('|雲|くも|', ''),
-            new SctItm('|空|そら|', '')
+            new SctItm('|月|つき|'),
+            new SctItm('|星|ほし|'),
+            new SctItm('|雲|くも|'),
+            new SctItm('|空|そら|')
         ];
     }
 }

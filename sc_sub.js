@@ -35,6 +35,9 @@ function tests_alert(in_tests) {
 }
 //------------------------------------ etc
 const zP2 = new Intl.NumberFormat('ja', { minimumIntegerDigits: 2 });
+let replaceAll = function (str, before, after) {
+    return str.split(before).join(after);
+};
 class AB {
     constructor(A, B) {
         this.A = A;

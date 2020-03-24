@@ -52,6 +52,11 @@ function tests_alert(in_tests : Array<ITest>)
 //------------------------------------ etc
 const zP2 = new Intl.NumberFormat('ja', { minimumIntegerDigits: 2 })
 
+let replaceAll = function(str : string, before : string, after : string) : string
+{
+    return str.split(before).join(after);
+};
+
 class AB implements ITest {
     constructor(
         public A : number
@@ -105,3 +110,5 @@ function ruby_change(in_html : string) : string {
     }
     return result;
 }
+
+
