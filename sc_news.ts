@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N01.96';
+    html += 'N01.97';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -434,17 +434,13 @@ class selector_comment extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@COMMENT2@。@COMMENT2@')
             ,
-            new SctItm('@COMMENT2@。@COMMENT@')
-            ,
             new SctItm('@COMMENT2@。@CONECT@、@COMMENT2@')
-            ,
-            new SctItm('@COMMENT2@。@CONECT@、@COMMENT@')
             ,
             new SctItm('@COMMENT2@。@YESNO@、@COMMENT2@')
             ,
-            new SctItm('@COMMENT2@。@YESNO@、@COMMENT@')
-            ,
             new SctItm('@WHAT@？ @COMMENT2@')
+            ,
+            new SctItm('@WHAT@！？ @COMMENT2@！')
             ,
             new SctItm('@WHAT@の@NICK@！ @WHAT@の@NICK@！ @WHAT@の@NICK@！ @WHAT@の@NICK@！')
             ,
@@ -478,13 +474,15 @@ class selector_comment2 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@WHAT@は@NICK@@END02A@。@CALL@で@CALL@@END02A@')
             ,
-            new SctItm('@WHAT@が@NICK@？ @YESNO@、@CALL@@END02A@')
+            new SctItm('@WHAT@が@NICK@？ @YESNO@、@CALL@と@ASSES@')
             ,
             new SctItm('@WHAT@の@DO@？ @YESNO@、それは@PEOPLE@の@KEY@@END02A@')
             ,
-            new SctItm('@CALL@、@YESNO@、それが@WHAT@@END02A@')
+            new SctItm('@CALL@？ @YESNO@、それが@WHAT@@END02A@')
             ,
-            new SctItm('@NICK@、@NICK@、@NICK@、@NICK@……、@YESNO@、それが@WHAT@@END02A@')
+            new SctItm('@NICK@、@NICK@、@NICK@、@NICK@……')
+            ,
+            new SctItm('@YESNO@、それが@WHAT@@END02A@')
         ];
     }
 }
@@ -564,10 +562,6 @@ class selector_end02b extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('した')
             ,
-            new SctItm('させている')
-            ,
-            new SctItm('させていた')
-            ,
             new SctItm('しようとしている')
             ,
             new SctItm('しようとしていた')
@@ -579,8 +573,6 @@ class selector_end02b extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('するべきであった')
             ,
             new SctItm('するべきである')
-            ,
-            new SctItm('させたかった')
             ,
             new SctItm('したかった')
         ];
