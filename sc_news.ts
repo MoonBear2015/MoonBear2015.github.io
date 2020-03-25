@@ -2217,7 +2217,7 @@ class news_doc {
 }
 
 class docs_maker {
-    protected selectors : ISctItm_Selector[];
+    public selectors : ISctItm_Selector[];
     constructor(){
         this.selectors  = new Array<ISctItm_Selector>();
     }

@@ -9,14 +9,15 @@ function set_poem() {
     html += '<h1>';
     html += 'POEM';
     html += '<small>';
-    html += 'P01.13 test';
+    html += 'P01.14 test';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
     let gt1 = new Gene_tema01();
-    let arys = gt1.Generate(8, new SctItm_Selector());
+    let arys = gt1.Generate();
     // test start
-    arys.forEach(ary => {
+    let maker = new poem_docs_maker();
+    maker.selectors.forEach(ary => {
         html += string_html(ary.ToString());
     });
     // test end
@@ -45,7 +46,7 @@ function make_poem() {
     html += 'cover;';
     html += '">';
     html += '<h2>';
-    html += 'テーマ：@TEMASL@';
+    html += 'テーマ：@TEMA@';
     html += '</h2>';
     for (let i = 0; i < rnd_minmax(10, 20); i++) {
         html += make_poem_sub();
@@ -91,11 +92,8 @@ class poem_docs_maker extends news_docs_maker {
         this.selectors.push(new poemer_tema());
         this.selectors.push(new poemer_title());
         this.selectors.push(new poemer_titlepic());
-        this.selectors.push(new poemer_tema01());
-        this.selectors.push(new poemer_tema02());
-        this.selectors.push(new poemer_tema03());
-        this.selectors.push(new poemer_tema04());
-        this.selectors.push(new poemer_tema05());
+        let tm01 = new Gene_tema01().Generate();
+        this.selectors = this.selectors.concat(new Gene_tema01().Generate());
     }
 }
 class poemer_type extends SctItm_SelectLocker {
@@ -111,9 +109,9 @@ class poemer_pattern_A extends SctItm_Selector {
     constructor() {
         super('@TYPE_A@');
         this.itms = [
-            new SctItm('@TM05@ @ST07@ @ST05@'),
-            new SctItm('@ST05@ @TM07@ @ST05@'),
-            new SctItm('@ST05@ @ST07@ @TM05@')
+            new SctItm('@TEMA05@ @SENT07@ @SENT05@'),
+            new SctItm('@SENT05@ @TEMA07@ @SENT05@'),
+            new SctItm('@SENT05@ @SENT07@ @TEMA05@')
         ];
     }
 }
@@ -121,11 +119,11 @@ class poemer_pattern_B extends SctItm_Selector {
     constructor() {
         super('@TYPE_B@');
         this.itms = [
-            new SctItm('@TM05@ @ST07@ @ST05@ @ST07@ @ST07@'),
-            new SctItm('@ST05@ @TM07@ @ST05@ @ST07@ @ST07@'),
-            new SctItm('@ST05@ @ST07@ @TM05@ @ST07@ @ST07@'),
-            new SctItm('@ST05@ @ST07@ @ST05@ @TM07@ @ST07@'),
-            new SctItm('@ST05@ @ST07@ @ST05@ @ST07@ @TM07@')
+            new SctItm('@TEMA05@ @SENT07@ @SENT05@ @SENT07@ @SENT07@'),
+            new SctItm('@SENT05@ @TEMA07@ @SENT05@ @SENT07@ @SENT07@'),
+            new SctItm('@SENT05@ @SENT07@ @TEMA05@ @SENT07@ @SENT07@'),
+            new SctItm('@SENT05@ @SENT07@ @SENT05@ @TEMA07@ @SENT07@'),
+            new SctItm('@SENT05@ @SENT07@ @SENT05@ @SENT07@ @TEMA07@')
         ];
     }
 }
@@ -163,20 +161,20 @@ class poemer_titlepic extends SctItm_Counter {
 }
 class poemer_tema extends SctItm_SelectLocker {
     constructor() {
-        super('@TEMA@');
+        super('@TEMA');
         this.itms = [
-            new SctItm('@TM01@'),
-            new SctItm('@TM02@'),
-            new SctItm('@TM03@'),
-            new SctItm('@TM04@'),
-            new SctItm('@TM05@')
+            new SctItm('@TM01'),
+            new SctItm('@TM02'),
+            new SctItm('@TM03'),
+            new SctItm('@TM04'),
+            new SctItm('@TM05')
         ];
     }
 }
 // 季語：春
 class Gene_tema01 extends Selector_Generator {
     constructor() {
-        super('@TM01@', '@PIC_TEMA@');
+        super('@TM01', '@PIC_TEMA@');
         this.cods = [
             new SctCod('|春|はる|', 2, 'spring.jpg'),
             new SctCod('|花|はな|', 2),
@@ -185,6 +183,9 @@ class Gene_tema01 extends Selector_Generator {
             new SctCod('|土筆|つくし|', 3),
             new SctCod('|蛙|かえる|', 3)
         ];
+    }
+    Generate() {
+        return super.Generate(7, new SctItm_Selector());
     }
 }
 // 季語：春

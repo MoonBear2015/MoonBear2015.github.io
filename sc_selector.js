@@ -286,7 +286,7 @@ class Selector_Generator {
         let itms_no_length = this.Gene_Itm_no_length();
         if (itms_no_length.length > 0) {
             let selector_no_length = in_selector.Copy();
-            selector_no_length.itm_key = this.itm_key;
+            selector_no_length.itm_key = this.itm_key + '@';
             selector_no_length.pic_key = this.pic_key;
             selector_no_length.Paste(itms_no_length);
             results.push(selector_no_length);
