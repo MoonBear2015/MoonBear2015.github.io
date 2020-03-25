@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N01.92';
+    html += 'N01.93';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -587,10 +587,6 @@ class selector_end02c extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('すべきである')
             ,
             new SctItm('すべきであった')
-            ,
-            new SctItm('させる')
-            ,
-            new SctItm('させた')
         ];
     }
 }
@@ -719,11 +715,19 @@ class selector_whats extends SctItm_SelectLocker implements ISctItm_Selector {
             ,
             new SctItm('パリ','WHAT/Paris.jpg')
             ,
-            new SctItm('地獄','WHAT/hell.jpg')
+            new SctItm('ロンドン','WHAT/london.jpg')
+            ,
+            new SctItm('ハワイ','WHAT/Hawaii.jpg')
+            ,
+            new SctItm('ラスベガス','WHAT/LasVegas.jpg')
+            ,
+            new SctItm('魔界','WHAT/hell.jpg')
             ,
             new SctItm('天国','WHAT/heaven.jpg')
             ,
             new SctItm('極楽浄土','WHAT/heaven2.jpg')
+            ,
+            new SctItm('地獄','WHAT/enma.jpg')
             ,
             new SctItm('ディズニーランド','WHAT/disney.jpg')
             ,
@@ -2147,10 +2151,37 @@ class news_doc {
     }
 }
 
-class news_docs_maker {
+class docs_maker {
     protected selectors : ISctItm_Selector[];
     constructor(){
         this.selectors  = new Array<ISctItm_Selector>();
+    }
+    public gene_docs(temp_doc : string) : string {
+        let result = temp_doc;
+
+        this.selectors.forEach(
+            (value) => {
+                if (value.itm_key != ''){
+                    while(result.search(value.itm_key) != -1){
+                        let itm = value.rnd_Itm;
+                        result = result.replace(value.itm_key,itm.Wrd);
+                        if (value.pic_key != ''){
+                            while(result.search(value.pic_key) != -1){
+                                result = result.replace(value.pic_key,itm.SctPic);
+                            }
+                        }
+                    }
+                }
+            }
+        );
+        return result;
+    }
+
+}
+
+class news_docs_maker extends docs_maker {
+    constructor(){
+        super();
 
         this.selectors.push(new selector_writer());
         this.selectors.push(new selector_title());
@@ -2189,27 +2220,5 @@ class news_docs_maker {
         this.selectors.push(new selector_people());
         this.selectors.push(new selector_manypeople());
         this.selectors.push(new selector_partner());
-
-    }
-
-    public gene_docs(temp_doc : string) : string {
-        let result = temp_doc;
-
-        this.selectors.forEach(
-            (value) => {
-                if (value.itm_key != ''){
-                    while(result.search(value.itm_key) != -1){
-                        let itm = value.rnd_Itm;
-                        result = result.replace(value.itm_key,itm.Wrd);
-                        if (value.pic_key != ''){
-                            while(result.search(value.pic_key) != -1){
-                                result = result.replace(value.pic_key,itm.SctPic);
-                            }
-                        }
-                    }
-                }
-            }
-        );
-        return result;
     }
 }
