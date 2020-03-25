@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N01.95';
+    html += 'N01.96';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -305,13 +305,14 @@ class selector_comment extends SctItm_Selector {
         this.itms = [
             new SctItm('@COMMENT2@'),
             new SctItm('@COMMENT2@。@COMMENT2@'),
+            new SctItm('@COMMENT2@。@COMMENT@'),
             new SctItm('@COMMENT2@。@CONECT@、@COMMENT2@'),
-            new SctItm('@COMMENT2@。 @YESNO@、 @COMMENT2@'),
-            new SctItm('@COMMENT2@？ @YESNO@！ @COMMENT2@！'),
+            new SctItm('@COMMENT2@。@CONECT@、@COMMENT@'),
+            new SctItm('@COMMENT2@。@YESNO@、@COMMENT2@'),
+            new SctItm('@COMMENT2@。@YESNO@、@COMMENT@'),
             new SctItm('@WHAT@？ @COMMENT2@'),
-            new SctItm('@WHAT@の@NICK@！'),
             new SctItm('@WHAT@の@NICK@！ @WHAT@の@NICK@！ @WHAT@の@NICK@！ @WHAT@の@NICK@！'),
-            new SctItm('@NICK@……？ @YESNO@！ それが@WHAT@@END02A@！')
+            new SctItm('@YESNO@ッ！ @WHAT@が@NICK@@END02A@ッ！')
         ];
     }
 }
