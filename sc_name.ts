@@ -449,6 +449,8 @@ class NameMaker_eng extends NameMaker_ruby implements INameMaker {
             ,
             '|Bilbo|ビルボ|'
             ,
+            '|Samwise|サムワイズ|'
+            ,
             '|Anakin|アナキン|'
             ,
             '|Luke|ルーク|'
@@ -509,6 +511,8 @@ class NameMaker_eng extends NameMaker_ruby implements INameMaker {
             '|Baggins|バギンズ|'
             ,
             '|Skywalker|スカイウォーカー|'
+            ,
+            '|Gamgee|ギャムジー|'
         ];
 
     }

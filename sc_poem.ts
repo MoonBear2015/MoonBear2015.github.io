@@ -125,15 +125,42 @@ class poem_docs_maker {
         this.selectors.push(new poemer_tema05());
         // newsより流用
         this.selectors.push(new selector_writer());
-        this.selectors.push(new selector_who2());
-        this.selectors.push(new selector_they());
-        this.selectors.push(new selector_class());
-        this.selectors.push(new selector_age());
-        this.selectors.push(new selector_nickname());
-        this.selectors.push(new selector_assessment());
-        this.selectors.push(new selector_human());
+        this.selectors.push(new selector_title());
+        this.selectors.push(new selector_doc());
+        this.selectors.push(new selector_c01());
+        this.selectors.push(new selector_c02());
+        this.selectors.push(new selector_end01a());
+        this.selectors.push(new selector_end01b());
+        this.selectors.push(new selector_end02a());
+        this.selectors.push(new selector_end02b());
+        this.selectors.push(new selector_end02c());
+        this.selectors.push(new selector_comment());
+        this.selectors.push(new selector_YESNO());
+        
+        this.selectors.push(new selector_random_date());
+        this.selectors.push(new selector_whats());
+        this.selectors.push(new selector_do());
+        this.selectors.push(new selector_key());
         this.selectors.push(new selector_status1());
         this.selectors.push(new selector_status2());
+        this.selectors.push(new selector_they());
+        this.selectors.push(new selector_many());
+
+        this.selectors.push(new selector_think());
+        this.selectors.push(new selector_who());
+        this.selectors.push(new selector_who2());
+        this.selectors.push(new selector_human());
+        this.selectors.push(new selector_class());
+        this.selectors.push(new selector_call());
+        this.selectors.push(new selector_age());
+        this.selectors.push(new selector_say());
+        this.selectors.push(new selector_answer());
+        this.selectors.push(new selector_conect());
+        this.selectors.push(new selector_nickname());
+        this.selectors.push(new selector_assessment());
+        this.selectors.push(new selector_people());
+        this.selectors.push(new selector_manypeople());
+        this.selectors.push(new selector_partner());
 
     }
 
