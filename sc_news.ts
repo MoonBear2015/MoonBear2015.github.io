@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N01.93';
+    html += 'N01.95';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -425,15 +425,38 @@ class selector_c02 extends SctItm_Selector implements ISctItm_Selector {
     }
 }
 
+// 発言の・句読点をつけられると困る
 class selector_comment extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@COMMENT@');
         this.itms = [
+            new SctItm('@COMMENT2@')
+            ,
+            new SctItm('@COMMENT2@。@COMMENT2@')
+            ,
+            new SctItm('@COMMENT2@。@CONECT@、@COMMENT2@')
+            ,
+            new SctItm('@COMMENT2@。 @YESNO@、 @COMMENT2@')
+            ,
+            new SctItm('@COMMENT2@？ @YESNO@！ @COMMENT2@！')
+            ,
+            new SctItm('@WHAT@？ @COMMENT2@')
+            ,
+            new SctItm('@WHAT@の@NICK@！')
+            ,
+            new SctItm('@WHAT@の@NICK@！ @WHAT@の@NICK@！ @WHAT@の@NICK@！ @WHAT@の@NICK@！')
+            ,
+            new SctItm('@NICK@……？ @YESNO@！ それが@WHAT@@END02A@！')
+        ];
+    }
+}
+
+// 発言・句読点をつけられても困らない
+class selector_comment2 extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@COMMENT2@');
+        this.itms = [
             new SctItm('@NEWS_C01@、@NEWS_C02@')
-            ,
-            new SctItm('@NEWS_C01@、@NEWS_C02@。@CONECT@、@NEWS_C01@、@NEWS_C02@')
-            ,
-            new SctItm('@COMMENT@。@CONECT@、@COMMENT@')
             ,
             new SctItm('@CALL@が@STATUS@@END02B@')
             ,
@@ -459,9 +482,7 @@ class selector_comment extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@CALL@、@YESNO@、それが@WHAT@@END02A@')
             ,
-            new SctItm('@NICK@、@NICK@、@NICK@、@NICK@・・・、@YESNO@、それが@WHAT@@END02A@')
-            ,
-            new SctItm('@WHAT@の@NICK@、 @WHAT@の@NICK@、　@WHAT@の@NICK@、 @WHAT@の@NICK@・・・')
+            new SctItm('@NICK@、@NICK@、@NICK@、@NICK@……、@YESNO@、それが@WHAT@@END02A@')
         ];
     }
 }
@@ -556,10 +577,6 @@ class selector_end02b extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('するべきであった')
             ,
             new SctItm('するべきである')
-            ,
-            new SctItm('させる')
-            ,
-            new SctItm('させた')
             ,
             new SctItm('させたかった')
             ,
@@ -739,6 +756,14 @@ class selector_whats extends SctItm_SelectLocker implements ISctItm_Selector {
             ,
             new SctItm('ひらかたパーク','WHAT/hirapa-3.jpg')
             ,
+            new SctItm('ＵＳＪ','WHAT/USJ.jpg')
+            ,
+            new SctItm('ＵＳＪ','WHAT/USJ2.jpg')
+            ,
+            new SctItm('としまえん','WHAT/toshimaen.jpg')
+            ,
+            new SctItm('上野動物園','WHAT/ueno_zoo.jpg')
+            ,
             new SctItm('ジオン公国','WHAT/jion.jpg')
             ,
             new SctItm('ナチス・ドイツ','WHAT/nachi.jpg')
@@ -899,7 +924,9 @@ class selector_key extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('犯罪行為')
             ,
-            new SctItm('殺戮行為')
+            new SctItm('強盗殺人')
+            ,
+            new SctItm('辻斬り')
             ,
             new SctItm('迫害行為')
             ,
@@ -929,6 +956,8 @@ class selector_key extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('乱闘騒ぎ')
             ,
+            new SctItm('大喧嘩')
+            ,
             //
             // posi 
             //
@@ -943,6 +972,8 @@ class selector_key extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('海水浴')
             ,
             new SctItm('運動会')
+            ,
+            new SctItm('キャンプファイヤー')
             ,
             new SctItm('フォークダンス')
             ,
@@ -965,6 +996,14 @@ class selector_key extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('お誕生日会')
             ,
             new SctItm('同窓会')
+            ,
+            new SctItm('座談会')
+            ,
+            new SctItm('街頭演説')
+            ,
+            new SctItm('大道芸')
+            ,
+            new SctItm('選挙運動')
         ];
     }
 }
@@ -1847,6 +1886,22 @@ class selector_say extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@SAY@');
         this.itms = [
+            new SctItm('興奮気味に@SAY@')
+            ,
+            new SctItm('声高らかに@SAY@')
+            ,
+            new SctItm('鼻息荒く@SAY@')
+            ,
+            new SctItm('落ち着いた様子で@SAY@')
+            ,
+            new SctItm('嬉々として@SAY@')
+            ,
+            new SctItm('笑いを堪えながら@SAY@')
+            ,
+            new SctItm('怒りと共に@SAY@')
+            ,
+            new SctItm('涙ながらに@SAY@')
+            ,
             new SctItm('主張')
             ,
             new SctItm('強調')
@@ -1898,8 +1953,6 @@ class selector_partner extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('彼女')
             ,
             new SctItm('彼氏')
-            ,
-            new SctItm('家族')
             ,
             new SctItm('恋人')
             ,
@@ -2014,6 +2067,16 @@ class selector_answer extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('解説')
             ,
             new SctItm('推理')
+            ,
+            new SctItm('叫び')
+            ,
+            new SctItm('絶叫')
+            ,
+            new SctItm('哀願')
+            ,
+            new SctItm('熱唱')
+            ,
+            new SctItm('告白')
         ];
     }
 }
@@ -2194,6 +2257,7 @@ class news_docs_maker extends docs_maker {
         this.selectors.push(new selector_end02b());
         this.selectors.push(new selector_end02c());
         this.selectors.push(new selector_comment());
+        this.selectors.push(new selector_comment2());
         this.selectors.push(new selector_YESNO());
         
         this.selectors.push(new selector_random_date());
