@@ -177,7 +177,6 @@ class selector_people extends SctItm_Selector {
     constructor() {
         super('@PEOPLE@');
         this.itms = [
-            new SctItm('@NICK@'),
             new SctItm('@CLASS@'),
             new SctItm('@PART@')
         ];
@@ -190,7 +189,21 @@ class selector_manypeople extends SctItm_Selector {
             new SctItm('@THEY@'),
             new SctItm('@MANY@@THEY@'),
             new SctItm('@MANY@@CLASS@'),
-            new SctItm('@MANY@@PART@')
+            new SctItm('@MANY@@PART@'),
+            new SctItm('@MANY@@PEOPLE@')
+        ];
+    }
+}
+class selector_call extends SctItm_Selector {
+    constructor() {
+        super('@CALL@');
+        this.itms = [
+            new SctItm('@WHAT@の@PEOPLE@'),
+            new SctItm('@DO@@END02C@@PEOPLE@'),
+            new SctItm('@THINK@@END02C@@PEOPLE@'),
+            new SctItm('@WHAT@に@ASSES@@PEOPLE@'),
+            new SctItm('@PEOPLE@に@ASSES@@PEOPLE@'),
+            new SctItm('@NICK@と@ASSES@@PEOPLE@')
         ];
     }
 }
@@ -227,19 +240,6 @@ class selector_who2 extends SctItm_Selector {
             new SctItm('「@CALL@」 @HUMAN@@AGE@'),
             new SctItm('「@CALL@」と@ASSES@@PEOPLE@ @HUMAN@@AGE@'),
             new SctItm('@MANYPEOPLE@より「@CALL@」と@ASSES@@PEOPLE@ @HUMAN@@AGE@')
-        ];
-    }
-}
-class selector_call extends SctItm_Selector {
-    constructor() {
-        super('@CALL@');
-        this.itms = [
-            new SctItm('@WHAT@の@PEOPLE@'),
-            new SctItm('@DO@@END02C@@PEOPLE@'),
-            new SctItm('@STATUS@@END02C@@PEOPLE@'),
-            new SctItm('@CLASS@の@PEOPLE@'),
-            new SctItm('@WHAT@の@THINK@'),
-            new SctItm('@KEY@の@PEOPLE@')
         ];
     }
 }
@@ -308,14 +308,8 @@ class selector_comment extends SctItm_Selector {
             new SctItm('@COMMENT2@。@COMMENT2@。@COMMENT2@'),
             new SctItm('@COMMENT2@。@CONECT@、@COMMENT2@'),
             new SctItm('@COMMENT2@。@YESNO@、@COMMENT2@'),
-            new SctItm('@COMMENT2@？ @YESNO@、@COMMENT2@'),
-            new SctItm('@WHAT@？ ……@COMMENT2@'),
-            new SctItm('@WHAT@！？ @COMMENT2@！'),
-            new SctItm('@WHAT@が@NICK@？ @COMMENT2@'),
-            new SctItm('@WHAT@が@NICK@？ @YESNO@、@WHAT@が@NICK@！'),
-            new SctItm('@WHAT@の@NICK@！ @WHAT@の@NICK@！ @WHAT@の@NICK@！ @WHAT@の@NICK@！'),
             new SctItm('@YESNO@ッ！ @WHAT@が@NICK@@END02A@ッ！'),
-            new SctItm('@HUMAN@……@YESNO@、@THEY@に@ASSES@@PART@の@PART@@END02A@'),
+            new SctItm('@HUMAN@？ @YESNO@、@THEY@に@ASSES@@PART@の@PART@@END02A@'),
             new SctItm('@HUMAN@？ @YESNO@、@PART@の@PART@@END02A@')
         ];
     }
@@ -338,13 +332,12 @@ class selector_comment2 extends SctItm_Selector {
             new SctItm('@WHAT@は@NICK@と@ASSES@。@CALL@@END02A@'),
             new SctItm('@WHAT@は@NICK@@END02A@。@CONECT@、@CALL@@END02A@'),
             new SctItm('@WHAT@は@NICK@@END02A@。@CALL@で@CALL@@END02A@'),
-            new SctItm('@WHAT@が@NICK@？ @YESNO@、@CALL@と@ASSES@'),
+            new SctItm('@WHAT@が@NICK@@END02A@。@YESNO@、@CALL@と@ASSES@'),
             new SctItm('@WHAT@の@DO@？ @YESNO@、それは@PEOPLE@の@KEY@@END02A@'),
-            new SctItm('@CALL@？ @YESNO@、それが@WHAT@@END02A@'),
             new SctItm('@YESNO@、それが@WHAT@@END02A@'),
             new SctItm('@NICK@、@NICK@、@NICK@、@NICK@……'),
             new SctItm('@YESNO@、@PART@が@SAY@@END02B@'),
-            new SctItm('@PART@の@PART@、それが@WHAT@の@CLASS@@END02A@ ww')
+            new SctItm('@CALL@、それが@PART@の@PART@@END02A@')
         ];
     }
 }
@@ -382,8 +375,7 @@ class selector_end02a extends SctItm_Selector {
             new SctItm('である'),
             new SctItm('であった'),
             new SctItm('だった'),
-            new SctItm('なのだ'),
-            new SctItm('なのだろう')
+            new SctItm('なのだ')
         ];
     }
 }
@@ -395,13 +387,9 @@ class selector_end02b extends SctItm_Selector {
             new SctItm('していた'),
             new SctItm('する'),
             new SctItm('した'),
-            new SctItm('しようとしている'),
-            new SctItm('しようとしていた'),
+            new SctItm('した'),
             new SctItm('してしまった'),
-            new SctItm('してしまう'),
-            new SctItm('するべきであった'),
-            new SctItm('するべきである'),
-            new SctItm('したかった')
+            new SctItm('させた')
         ];
     }
 }
@@ -411,12 +399,7 @@ class selector_end02c extends SctItm_Selector {
         this.itms = [
             new SctItm('する'),
             new SctItm('した'),
-            new SctItm('していた'),
-            new SctItm('している'),
-            new SctItm('してしまった'),
-            new SctItm('すべき'),
-            new SctItm('すべきである'),
-            new SctItm('すべきであった')
+            new SctItm('すべき')
         ];
     }
 }
@@ -469,8 +452,7 @@ class selector_whats extends SctItm_SelectLocker {
             new SctItm('仏教', 'WHAT/buddha.jpg'),
             new SctItm('イスラム教', 'WHAT/Islam.jpg'),
             new SctItm('宗教', 'WHAT/buddha.jpg'),
-            new SctItm('歴史', 'WHAT/history.jpg'),
-            new SctItm('世界史', 'WHAT/history.jpg'),
+            new SctItm('世界', 'WHAT/history.jpg'),
             new SctItm('人類', 'WHAT/human.jpg'),
             new SctItm('女子校', 'WHAT/girlscoll.jpg'),
             new SctItm('オリンピック', 'WHAT/Olympic.jpg'),
@@ -482,6 +464,7 @@ class selector_whats extends SctItm_SelectLocker {
             new SctItm('国連', 'WHAT/nation.jpg'),
             new SctItm('東京', 'WHAT/tokyo.jpg'),
             new SctItm('大阪', 'WHAT/osaka.jpg'),
+            new SctItm('香港', 'WHAT/hongkong.jpg'),
             new SctItm('ニューヨーク', 'WHAT/newyork.jpg'),
             new SctItm('パリ', 'WHAT/Paris.jpg'),
             new SctItm('ロンドン', 'WHAT/london.jpg'),
@@ -507,10 +490,14 @@ class selector_whats extends SctItm_SelectLocker {
             new SctItm('暗黒面', 'WHAT/darkside.jpg'),
             new SctItm('ローマ帝国', 'WHAT/Rome.jpg'),
             new SctItm('未来', 'WHAT/future.jpg'),
+            new SctItm('近未来', 'WHAT/nearfuture.jpg'),
             new SctItm('縄文時代', 'WHAT/joumon.jpg'),
             new SctItm('スラム街', 'WHAT/slum.jpg'),
             new SctItm('九竜城', 'WHAT/coulomb.jpg'),
-            new SctItm('邪馬台国', 'WHAT/yama.jpg')
+            new SctItm('邪馬台国', 'WHAT/yama.jpg'),
+            new SctItm('戦場', 'WHAT/war.jpg'),
+            new SctItm('戦場', 'WHAT/war.jpg'),
+            new SctItm('竜宮城', 'WHAT/ryugu.jpg')
         ];
     }
 }
@@ -553,7 +540,8 @@ class selector_do extends SctItm_SelectLocker {
             new SctItm('警告', 'DO/warning.jpg'),
             new SctItm('漏洩', 'DO/infoleak.jpg'),
             new SctItm('復讐', 'DO/revenge.jpg'),
-            new SctItm('号泣', 'DO/cry.jpg')
+            new SctItm('号泣', 'DO/cry.jpg'),
+            new SctItm('荒廃', 'DO/devastation.jpg')
             //
             // posi 
             //
@@ -1260,7 +1248,11 @@ class selector_assessment extends SctItm_Selector {
             new SctItm('名付けられた'),
             new SctItm('見守られている'),
             new SctItm('訴えられている'),
-            new SctItm('見間違えられた')
+            new SctItm('見間違えられた'),
+            new SctItm('間違えられた'),
+            new SctItm('誤解されている'),
+            new SctItm('勘違いされた'),
+            new SctItm('決めつけられた')
         ];
     }
 }
@@ -1279,7 +1271,6 @@ class selector_conect extends SctItm_Selector {
             new SctItm('一方'),
             new SctItm('しかるに'),
             new SctItm('そこで'),
-            new SctItm('それを受けて'),
             new SctItm('やはり'),
             new SctItm('つまり'),
             new SctItm('それはさておき'),
@@ -1288,7 +1279,9 @@ class selector_conect extends SctItm_Selector {
             new SctItm('以前は'),
             new SctItm('確かに'),
             new SctItm('流石に'),
-            new SctItm('兎に角')
+            new SctItm('兎に角'),
+            new SctItm('恐らく'),
+            new SctItm('多分')
         ];
     }
 }
