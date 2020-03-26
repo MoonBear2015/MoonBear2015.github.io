@@ -423,8 +423,9 @@ class selector_whats extends SctItm_SelectLocker {
             new SctItm('韓国', 'WHAT/koria.jpg'),
             new SctItm('エジプト', 'WHAT/pyramid.jpg'),
             new SctItm('ガミラス帝国', 'WHAT/gamilas.jpg'),
+            new SctItm('イスカンダル', 'WHAT/iskandar.jpg'),
             new SctItm('経済', 'WHAT/Economy.jpg'),
-            new SctItm('株価', 'WHAT/Economy.jpg'),
+            new SctItm('株式市場', 'WHAT/Economy.jpg'),
             new SctItm('科学', 'WHAT/Science.jpg'),
             new SctItm('現代科学', 'WHAT/Science.jpg'),
             new SctItm('先進科学', 'WHAT/Science.jpg'),
@@ -451,7 +452,7 @@ class selector_whats extends SctItm_SelectLocker {
             new SctItm('キリスト教', 'WHAT/christ.jpg'),
             new SctItm('仏教', 'WHAT/buddha.jpg'),
             new SctItm('イスラム教', 'WHAT/Islam.jpg'),
-            new SctItm('宗教', 'WHAT/buddha.jpg'),
+            new SctItm('宗教', 'WHAT/religion.jpg'),
             new SctItm('世界', 'WHAT/history.jpg'),
             new SctItm('人類', 'WHAT/human.jpg'),
             new SctItm('女子校', 'WHAT/girlscoll.jpg'),
@@ -487,6 +488,7 @@ class selector_whats extends SctItm_SelectLocker {
             new SctItm('ナチス・ドイツ', 'WHAT/nachi.jpg'),
             new SctItm('ホビット床', 'WHAT/Shire.jpg'),
             new SctItm('銀河帝国', 'WHAT/GalaxyEmpire.jpg'),
+            new SctItm('デス・スター', 'WHAT/deathstar.jpg'),
             new SctItm('暗黒面', 'WHAT/darkside.jpg'),
             new SctItm('ローマ帝国', 'WHAT/Rome.jpg'),
             new SctItm('未来', 'WHAT/future.jpg'),
@@ -495,9 +497,9 @@ class selector_whats extends SctItm_SelectLocker {
             new SctItm('スラム街', 'WHAT/slum.jpg'),
             new SctItm('九竜城', 'WHAT/coulomb.jpg'),
             new SctItm('邪馬台国', 'WHAT/yama.jpg'),
+            new SctItm('竜宮城', 'WHAT/ryugu.jpg'),
             new SctItm('戦場', 'WHAT/war.jpg'),
-            new SctItm('戦場', 'WHAT/war.jpg'),
-            new SctItm('竜宮城', 'WHAT/ryugu.jpg')
+            new SctItm('火星', 'WHAT/mars.jpg')
         ];
     }
 }
@@ -562,7 +564,8 @@ class selector_do extends SctItm_SelectLocker {
             new SctItm('優勝', 'DO/topwin.jpg'),
             new SctItm('発明', 'DO/Edison.jpg'),
             new SctItm('開発', 'DO/debelop.jpg'),
-            new SctItm('革命', 'DO/revolution.jpg')
+            new SctItm('革命', 'DO/revolution.jpg'),
+            new SctItm('移住', 'DO/emigration.jpg')
         ];
     }
 }
@@ -981,14 +984,16 @@ class selector_nickname extends SctItm_Selector {
             new SctItm('ホモ野郎'),
             new SctItm('ヒットラー'),
             new SctItm('独裁者'),
-            new SctItm('おっさん'),
-            new SctItm('じじい'),
-            new SctItm('おばはん'),
+            new SctItm('中年男'),
             new SctItm('年増女'),
             new SctItm('浮気者'),
             new SctItm('ナンパ野郎'),
             new SctItm('軟弱者'),
-            new SctItm('糸コンニャク')
+            new SctItm('糸コンニャク'),
+            new SctItm('乱暴者'),
+            new SctItm('狼藉者'),
+            new SctItm('無法者'),
+            new SctItm('風来坊')
             //
             // posi
             //

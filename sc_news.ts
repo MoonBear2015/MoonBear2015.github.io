@@ -627,9 +627,11 @@ class selector_whats extends SctItm_SelectLocker implements ISctItm_Selector {
             ,
             new SctItm('ガミラス帝国','WHAT/gamilas.jpg')
             ,
+            new SctItm('イスカンダル','WHAT/iskandar.jpg')
+            ,
             new SctItm('経済','WHAT/Economy.jpg')
             ,
-            new SctItm('株価','WHAT/Economy.jpg')
+            new SctItm('株式市場','WHAT/Economy.jpg')
             ,
             new SctItm('科学','WHAT/Science.jpg')
             ,
@@ -683,7 +685,7 @@ class selector_whats extends SctItm_SelectLocker implements ISctItm_Selector {
             ,
             new SctItm('イスラム教','WHAT/Islam.jpg')
             ,
-            new SctItm('宗教','WHAT/buddha.jpg')
+            new SctItm('宗教','WHAT/religion.jpg')
             ,
             new SctItm('世界','WHAT/history.jpg')
             ,
@@ -755,6 +757,8 @@ class selector_whats extends SctItm_SelectLocker implements ISctItm_Selector {
             ,
             new SctItm('銀河帝国','WHAT/GalaxyEmpire.jpg')
             ,
+            new SctItm('デス・スター','WHAT/deathstar.jpg')
+            ,
             new SctItm('暗黒面','WHAT/darkside.jpg')
             ,
             new SctItm('ローマ帝国','WHAT/Rome.jpg')
@@ -771,11 +775,11 @@ class selector_whats extends SctItm_SelectLocker implements ISctItm_Selector {
             ,
             new SctItm('邪馬台国','WHAT/yama.jpg')
             ,
-            new SctItm('戦場','WHAT/war.jpg')
-            ,
-            new SctItm('戦場','WHAT/war.jpg')
-            ,
             new SctItm('竜宮城','WHAT/ryugu.jpg')
+            ,
+            new SctItm('戦場','WHAT/war.jpg')
+            ,
+            new SctItm('火星','WHAT/mars.jpg')
         ];
     }
 }
@@ -890,7 +894,8 @@ class selector_do extends SctItm_SelectLocker implements ISctItm_Selector{
             new SctItm('開発','DO/debelop.jpg')
             ,
             new SctItm('革命','DO/revolution.jpg')
-
+            ,
+            new SctItm('移住','DO/emigration.jpg')
         ];
     }
 }
@@ -1666,11 +1671,7 @@ class selector_nickname extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('独裁者')
             ,
-            new SctItm('おっさん')
-            ,
-            new SctItm('じじい')
-            ,
-            new SctItm('おばはん')
+            new SctItm('中年男')
             ,
             new SctItm('年増女')
             ,
@@ -1681,6 +1682,14 @@ class selector_nickname extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('軟弱者')
             ,
             new SctItm('糸コンニャク')
+            ,
+            new SctItm('乱暴者')
+            ,
+            new SctItm('狼藉者')
+            ,
+            new SctItm('無法者')
+            ,
+            new SctItm('風来坊')
             //
             // posi
             //

@@ -392,9 +392,9 @@ class Selector_Generator {
     public itm_key : string;
     public pic_key : string;
     constructor(
-        in_itm_key : string
+        in_itm_key? : string
         ,
-        in_pic_key : string
+        in_pic_key? : string
     )
     {
         this.cods = new Array<ISctCod>();
@@ -434,7 +434,9 @@ class Selector_Generator {
     Generate(
                 in_max : number
                 ,
-                in_selector : ISctItm_Selector
+                in_selector_no_length : ISctItm_Selector
+                ,
+                in_selector_length : ISctItm_Selector
             ) 
             : Array<ISctItm_Selector>
     {
@@ -443,7 +445,7 @@ class Selector_Generator {
 
         let itms_no_length = this.Gene_Itm_no_length();
         if (itms_no_length.length > 0) {
-            let selector_no_length = in_selector.Copy();
+            let selector_no_length = in_selector_no_length.Copy();
             selector_no_length.itm_key = this.itm_key + '@';
             selector_no_length.pic_key = this.pic_key;
             selector_no_length.Paste(itms_no_length);
@@ -453,7 +455,7 @@ class Selector_Generator {
         {
             let itms_length = this.Gene_Itm_length(c,KEY_A,KEY_B);
             if (itms_length.length > 0) {
-                let selector_length = in_selector.Copy();
+                let selector_length = in_selector_length.Copy();
                 selector_length.itm_key = to_key_with_length(this.itm_key,c);
                 selector_length.pic_key = this.pic_key;
                 selector_length.Paste(itms_length);

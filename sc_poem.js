@@ -9,18 +9,18 @@ function set_poem() {
     html += '<h1>';
     html += 'POEM';
     html += '<small>';
-    html += 'P01.14 test';
+    html += 'P01.15 test';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
     let gt1 = new Gene_tema01();
     let arys = gt1.Generate();
-    // test start
-    let maker = new poem_docs_maker();
-    maker.selectors.forEach(ary => {
-        html += string_html(ary.ToString());
-    });
-    // test end
+    // // test start
+    // let maker = new poem_docs_maker();
+    // maker.selectors.forEach(ary => {
+    //     html += string_html(ary.ToString());
+    // });
+    // // test end
     for (let i = 0; i < 5; i++) {
         html += make_poem();
     }
@@ -41,7 +41,7 @@ function make_poem() {
     html += 'border-radius:  1%;';
     html += 'background: ';
     html += 'linear-gradient(135deg,rgba(30,30,30,0.8),rgba(120,120,120,0.8)),';
-    html += 'url(./pics/TEMA/@PIC_TEMA);';
+    html += 'url(./pics/TEMA/@PIC_TEMA@);';
     html += 'background-size: ';
     html += 'cover;';
     html += '">';
@@ -82,19 +82,6 @@ function make_poem_sub() {
     html += '</h4>';
     html += '</div>';
     return html;
-}
-class poem_docs_maker extends news_docs_maker {
-    constructor() {
-        super();
-        this.selectors.push(new poemer_type());
-        this.selectors.push(new poemer_pattern_A());
-        this.selectors.push(new poemer_pattern_B());
-        this.selectors.push(new poemer_tema());
-        this.selectors.push(new poemer_title());
-        this.selectors.push(new poemer_titlepic());
-        let tm01 = new Gene_tema01().Generate();
-        this.selectors = this.selectors.concat(new Gene_tema01().Generate());
-    }
 }
 class poemer_type extends SctItm_SelectLocker {
     constructor() {
@@ -171,8 +158,16 @@ class poemer_tema extends SctItm_SelectLocker {
         ];
     }
 }
+class Gene_Poemer extends Selector_Generator {
+    constructor(in_itm_key, in_pic_key) {
+        super(in_itm_key, in_pic_key);
+    }
+    Generate() {
+        return super.Generate(7, new SctItm_FirstLocker(), new SctItm_Selector);
+    }
+}
 // 季語：春
-class Gene_tema01 extends Selector_Generator {
+class Gene_tema01 extends Gene_Poemer {
     constructor() {
         super('@TM01', '@PIC_TEMA@');
         this.cods = [
@@ -184,8 +179,63 @@ class Gene_tema01 extends Selector_Generator {
             new SctCod('|蛙|かえる|', 3)
         ];
     }
-    Generate() {
-        return super.Generate(7, new SctItm_Selector());
+}
+// 季語：夏
+class Gene_tema02 extends Gene_Poemer {
+    constructor() {
+        super('@TM02', '@PIC_TEMA@');
+        this.cods = [
+            new SctCod('|夏|なつ|', 2, 'summer.jpg'),
+            new SctCod('|虹|にじ|', 2),
+            new SctCod('|浴衣|ゆかた|', 3),
+            new SctCod('|祭|まつり|', 3),
+            new SctCod('|花火|はなび|', 3),
+            new SctCod('|浜辺|はまべ|', 3),
+            new SctCod('|向日葵|ひまわり|', 4)
+        ];
+    }
+}
+// 季語：秋
+class Gene_tema03 extends Gene_Poemer {
+    constructor() {
+        super('@TM03', '@PIC_TEMA@');
+        this.cods = [
+            new SctCod('|秋|あき|', 2, 'autumn.jpg'),
+            new SctCod('|月|つき|', 2),
+            new SctCod('|紅葉|もみじ|', 3),
+            new SctCod('|栗|くり|', 2),
+            new SctCod('|柿|かき|', 2),
+            new SctCod('|芋|いも|', 2)
+        ];
+    }
+}
+// 季語：冬
+class Gene_tema04 extends Gene_Poemer {
+    constructor() {
+        super('@TM04', '@PIC_TEMA@');
+        this.cods = [
+            new SctCod('|冬|ふゆ|', 2, 'winter.jpg'),
+            new SctCod('|雪|ゆき|', 2),
+            new SctCod('|氷|こおり|', 3),
+            new SctCod('|霜|しも|', 2)
+        ];
+    }
+}
+// 季語：冬
+class Gene_tema05 extends Gene_Poemer {
+    constructor() {
+        super('@TM05', '@PIC_TEMA@');
+        this.cods = [
+            new SctCod('|天|てん|', 2, 'sky.jpg'),
+            new SctCod('|月|つき|', 2),
+            new SctCod('|星|ほし|', 2),
+            new SctCod('|雲|くも|', 2),
+            new SctCod('|空|そら|', 2),
+            new SctCod('|陽|ひ|', 1),
+            new SctCod('|太陽|たいよう|', 4),
+            new SctCod('|朝日|あさひ|', 3),
+            new SctCod('|夕陽|ゆうひ|', 3)
+        ];
     }
 }
 // 季語：春
@@ -251,5 +301,21 @@ class poemer_tema05 extends SctItm_FirstLocker {
             new SctItm('|雲|くも|'),
             new SctItm('|空|そら|')
         ];
+    }
+}
+class poem_docs_maker extends news_docs_maker {
+    constructor() {
+        super();
+        this.selectors.push(new poemer_type());
+        this.selectors.push(new poemer_pattern_A());
+        this.selectors.push(new poemer_pattern_B());
+        this.selectors.push(new poemer_tema());
+        this.selectors.push(new poemer_title());
+        this.selectors.push(new poemer_titlepic());
+        this.selectors = this.selectors.concat(new Gene_tema01().Generate());
+        this.selectors = this.selectors.concat(new Gene_tema02().Generate());
+        this.selectors = this.selectors.concat(new Gene_tema03().Generate());
+        this.selectors = this.selectors.concat(new Gene_tema04().Generate());
+        this.selectors = this.selectors.concat(new Gene_tema05().Generate());
     }
 }
