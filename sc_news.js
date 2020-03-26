@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N01.97';
+    html += 'N01.98';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -305,12 +305,18 @@ class selector_comment extends SctItm_Selector {
         this.itms = [
             new SctItm('@COMMENT2@'),
             new SctItm('@COMMENT2@。@COMMENT2@'),
+            new SctItm('@COMMENT2@。@COMMENT2@。@COMMENT2@'),
             new SctItm('@COMMENT2@。@CONECT@、@COMMENT2@'),
             new SctItm('@COMMENT2@。@YESNO@、@COMMENT2@'),
-            new SctItm('@WHAT@？ @COMMENT2@'),
+            new SctItm('@COMMENT2@？ @YESNO@、@COMMENT2@'),
+            new SctItm('@WHAT@？ ……@COMMENT2@'),
             new SctItm('@WHAT@！？ @COMMENT2@！'),
+            new SctItm('@WHAT@が@NICK@？ @COMMENT2@'),
+            new SctItm('@WHAT@が@NICK@？ @YESNO@、@WHAT@が@NICK@！'),
             new SctItm('@WHAT@の@NICK@！ @WHAT@の@NICK@！ @WHAT@の@NICK@！ @WHAT@の@NICK@！'),
-            new SctItm('@YESNO@ッ！ @WHAT@が@NICK@@END02A@ッ！')
+            new SctItm('@YESNO@ッ！ @WHAT@が@NICK@@END02A@ッ！'),
+            new SctItm('@HUMAN@……@YESNO@、@THEY@に@ASSES@@PART@の@PART@@END02A@'),
+            new SctItm('@HUMAN@？ @YESNO@、@PART@の@PART@@END02A@')
         ];
     }
 }
@@ -320,6 +326,9 @@ class selector_comment2 extends SctItm_Selector {
         super('@COMMENT2@');
         this.itms = [
             new SctItm('@NEWS_C01@、@NEWS_C02@'),
+            new SctItm('@COMMENT2@。@COMMENT2@'),
+            new SctItm('@CONECT@、@COMMENT2@'),
+            new SctItm('@YESNO@、@COMMENT2@'),
             new SctItm('@CALL@が@STATUS@@END02B@'),
             new SctItm('@WHAT@は@NICK@と@ASSES@'),
             new SctItm('@MANYPEOPLE@は@CALL@@END02A@'),
@@ -332,8 +341,10 @@ class selector_comment2 extends SctItm_Selector {
             new SctItm('@WHAT@が@NICK@？ @YESNO@、@CALL@と@ASSES@'),
             new SctItm('@WHAT@の@DO@？ @YESNO@、それは@PEOPLE@の@KEY@@END02A@'),
             new SctItm('@CALL@？ @YESNO@、それが@WHAT@@END02A@'),
+            new SctItm('@YESNO@、それが@WHAT@@END02A@'),
             new SctItm('@NICK@、@NICK@、@NICK@、@NICK@……'),
-            new SctItm('@YESNO@、それが@WHAT@@END02A@')
+            new SctItm('@YESNO@、@PART@が@SAY@@END02B@'),
+            new SctItm('@PART@の@PART@、それが@WHAT@の@CLASS@@END02A@ ww')
         ];
     }
 }
@@ -342,6 +353,7 @@ class selector_YESNO extends SctItm_Selector {
     constructor() {
         super('@YESNO@');
         this.itms = [
+            new SctItm('そうだ'),
             new SctItm('しかし'),
             new SctItm('だが'),
             new SctItm('いえいえ'),
@@ -704,7 +716,7 @@ class selector_they extends SctItm_Selector {
             new SctItm('飼い猫'),
             new SctItm('首狩り族'),
             new SctItm('僧侶達'),
-            new SctItm('盗賊達'),
+            new SctItm('盗賊'),
             new SctItm('海兵隊'),
             new SctItm('囚人達'),
             new SctItm('少年達'),
@@ -903,10 +915,10 @@ class selector_nickname extends SctItm_Selector {
             new SctItm('犬'),
             new SctItm('死神'),
             new SctItm('死霊'),
-            new SctItm('病'),
+            new SctItm('病人'),
             new SctItm('骸'),
             new SctItm('髑髏'),
-            new SctItm('恥'),
+            new SctItm('恥知らず'),
             new SctItm('恥部'),
             new SctItm('悪魔'),
             new SctItm('小悪魔'),
@@ -919,7 +931,7 @@ class selector_nickname extends SctItm_Selector {
             new SctItm('害虫'),
             new SctItm('亡霊'),
             new SctItm('ミイラ'),
-            new SctItm('蛇'),
+            new SctItm('冷血漢'),
             new SctItm('奴隷'),
             new SctItm('疫病神'),
             new SctItm('梅毒'),
@@ -927,8 +939,10 @@ class selector_nickname extends SctItm_Selector {
             new SctItm('疫病'),
             new SctItm('粗大ゴミ'),
             new SctItm('ゴミ'),
+            new SctItm('ゴミ野郎'),
             new SctItm('燃えないゴミ'),
             new SctItm('ゴミ箱'),
+            new SctItm('ゴミ捨て場'),
             new SctItm('ゴミの山'),
             new SctItm('猛毒'),
             new SctItm('公害'),
@@ -953,14 +967,10 @@ class selector_nickname extends SctItm_Selector {
             new SctItm('脇毛'),
             new SctItm('鼻毛'),
             new SctItm('吸い殻'),
-            new SctItm('影'),
-            new SctItm('闇'),
-            new SctItm('悪意'),
+            new SctItm('悪霊'),
             new SctItm('処刑人'),
             new SctItm('番人'),
             new SctItm('悪夢'),
-            new SctItm('蚤'),
-            new SctItm('蟻'),
             new SctItm('ネズミ'),
             new SctItm('ハゲタカ'),
             new SctItm('ポリバケツ'),
@@ -983,7 +993,14 @@ class selector_nickname extends SctItm_Selector {
             new SctItm('ホモ野郎'),
             new SctItm('ヒットラー'),
             new SctItm('独裁者'),
-            new SctItm('おっさん')
+            new SctItm('おっさん'),
+            new SctItm('じじい'),
+            new SctItm('おばはん'),
+            new SctItm('年増女'),
+            new SctItm('浮気者'),
+            new SctItm('ナンパ野郎'),
+            new SctItm('軟弱者'),
+            new SctItm('糸コンニャク')
             //
             // posi
             //
@@ -1000,6 +1017,8 @@ class selector_nickname extends SctItm_Selector {
             new SctItm('仙人'),
             new SctItm('切れ者'),
             new SctItm('麗人'),
+            new SctItm('男前'),
+            new SctItm('色男'),
             new SctItm('看板娘'),
             new SctItm('花'),
             new SctItm('希望'),
@@ -1057,9 +1076,6 @@ class selector_nickname extends SctItm_Selector {
             // nomal
             //
             ,
-            new SctItm('人'),
-            new SctItm('男'),
-            new SctItm('女'),
             new SctItm('少年'),
             new SctItm('少女'),
             new SctItm('教師'),
@@ -1238,12 +1254,13 @@ class selector_assessment extends SctItm_Selector {
             new SctItm('ささやかれている'),
             new SctItm('驚嘆した'),
             new SctItm('驚かせた'),
-            new SctItm('感動させた'),
+            new SctItm('感動した'),
             new SctItm('感謝されている'),
             new SctItm('太鼓判を押された'),
             new SctItm('名付けられた'),
             new SctItm('見守られている'),
-            new SctItm('訴えられている')
+            new SctItm('訴えられている'),
+            new SctItm('見間違えられた')
         ];
     }
 }
