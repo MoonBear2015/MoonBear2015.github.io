@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N02.01';
+    html += 'N02.02';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -1282,7 +1282,7 @@ class selector_conect extends SctItm_Selector {
             new SctItm('それはさておき'),
             new SctItm('その時'),
             new SctItm('かつて'),
-            new SctItm('以前は'),
+            new SctItm('以前'),
             new SctItm('確かに'),
             new SctItm('流石に'),
             new SctItm('兎に角'),
