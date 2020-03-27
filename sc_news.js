@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N02.00';
+    html += 'N02.01';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -561,7 +561,9 @@ class selector_do extends SctItm_SelectLocker {
             new SctItm('発明', 'DO/Edison.jpg'),
             new SctItm('開発', 'DO/debelop.jpg'),
             new SctItm('革命', 'DO/revolution.jpg'),
-            new SctItm('移住', 'DO/emigration.jpg')
+            new SctItm('移住', 'DO/emigration.jpg'),
+            new SctItm('降臨', 'DO/advent.jpg'),
+            new SctItm('覚醒', 'DO/awaken.jpg')
         ];
     }
 }

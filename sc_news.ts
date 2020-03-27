@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N02.00';
+    html += 'N02.01';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -888,6 +888,10 @@ class selector_do extends SctItm_SelectLocker implements ISctItm_Selector{
             new SctItm('革命','DO/revolution.jpg')
             ,
             new SctItm('移住','DO/emigration.jpg')
+            ,
+            new SctItm('降臨','DO/advent.jpg')
+            ,
+            new SctItm('覚醒','DO/awaken.jpg')
         ];
     }
 }
