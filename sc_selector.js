@@ -303,4 +303,7 @@ class Selector_Generator {
         }
         return results;
     }
+    Add_cods(in_cods) {
+        this.cods = this.cods.concat(in_cods);
+    }
 }

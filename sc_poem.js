@@ -9,7 +9,7 @@ function set_poem() {
     html += '<h1>';
     html += 'POEM';
     html += '<small>';
-    html += 'P01.15 test';
+    html += 'P01.16 test';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -170,137 +170,36 @@ class Gene_Poemer extends Selector_Generator {
 class Gene_tema01 extends Gene_Poemer {
     constructor() {
         super('@TM01', '@PIC_TEMA@');
-        this.cods = [
-            new SctCod('|春|はる|', 2, 'spring.jpg'),
-            new SctCod('|花|はな|', 2),
-            new SctCod('|蝶|ちょう|', 2),
-            new SctCod('|梅|うめ|', 2),
-            new SctCod('|土筆|つくし|', 3),
-            new SctCod('|蛙|かえる|', 3)
-        ];
+        this.Add_cods(cods_spring);
+        this.Add_cods(cods_flower_spring);
     }
 }
 // 季語：夏
 class Gene_tema02 extends Gene_Poemer {
     constructor() {
         super('@TM02', '@PIC_TEMA@');
-        this.cods = [
-            new SctCod('|夏|なつ|', 2, 'summer.jpg'),
-            new SctCod('|虹|にじ|', 2),
-            new SctCod('|浴衣|ゆかた|', 3),
-            new SctCod('|祭|まつり|', 3),
-            new SctCod('|花火|はなび|', 3),
-            new SctCod('|浜辺|はまべ|', 3),
-            new SctCod('|向日葵|ひまわり|', 4)
-        ];
+        this.Add_cods(cods_summer);
     }
 }
 // 季語：秋
 class Gene_tema03 extends Gene_Poemer {
     constructor() {
         super('@TM03', '@PIC_TEMA@');
-        this.cods = [
-            new SctCod('|秋|あき|', 2, 'autumn.jpg'),
-            new SctCod('|月|つき|', 2),
-            new SctCod('|紅葉|もみじ|', 3),
-            new SctCod('|栗|くり|', 2),
-            new SctCod('|柿|かき|', 2),
-            new SctCod('|芋|いも|', 2)
-        ];
+        this.Add_cods(cods_autumn);
     }
 }
 // 季語：冬
 class Gene_tema04 extends Gene_Poemer {
     constructor() {
         super('@TM04', '@PIC_TEMA@');
-        this.cods = [
-            new SctCod('|冬|ふゆ|', 2, 'winter.jpg'),
-            new SctCod('|雪|ゆき|', 2),
-            new SctCod('|氷|こおり|', 3),
-            new SctCod('|霜|しも|', 2)
-        ];
+        this.Add_cods(cods_winter);
     }
 }
 // 季語：冬
 class Gene_tema05 extends Gene_Poemer {
     constructor() {
         super('@TM05', '@PIC_TEMA@');
-        this.cods = [
-            new SctCod('|天|てん|', 2, 'sky.jpg'),
-            new SctCod('|月|つき|', 2),
-            new SctCod('|星|ほし|', 2),
-            new SctCod('|雲|くも|', 2),
-            new SctCod('|空|そら|', 2),
-            new SctCod('|陽|ひ|', 1),
-            new SctCod('|太陽|たいよう|', 4),
-            new SctCod('|朝日|あさひ|', 3),
-            new SctCod('|夕陽|ゆうひ|', 3)
-        ];
-    }
-}
-// 季語：春
-class poemer_tema01 extends SctItm_FirstLocker {
-    constructor() {
-        super('@TEMA01@', '@PIC_TEMA@');
-        this.itms = [
-            new SctItm('|春|はる|', 'spring.jpg'),
-            new SctItm('|花|はな|'),
-            new SctItm('|蝶|ちょう|'),
-            new SctItm('|梅|うめ|'),
-            new SctItm('|土筆|つくし|'),
-            new SctItm('|蛙|かえる|')
-        ];
-    }
-}
-// 季語：夏
-class poemer_tema02 extends SctItm_FirstLocker {
-    constructor() {
-        super('@TEMA02@', '@PIC_TEMA@');
-        this.itms = [
-            new SctItm('|夏|なつ|', 'summer.jpg'),
-            new SctItm('|虹|にじ|'),
-            new SctItm('|浴衣|ゆかた|'),
-            new SctItm('|祭|まつり|')
-        ];
-    }
-}
-// 季語：秋
-class poemer_tema03 extends SctItm_FirstLocker {
-    constructor() {
-        super('@TEMA03@', '@PIC_TEMA@');
-        this.itms = [
-            new SctItm('|秋|あき|', 'autumn.jpg'),
-            new SctItm('|月|つき|'),
-            new SctItm('|紅葉|もみじ|'),
-            new SctItm('|栗|くり|'),
-            new SctItm('|柿|かき|'),
-            new SctItm('|芋|いも|')
-        ];
-    }
-}
-// 季語：冬
-class poemer_tema04 extends SctItm_FirstLocker {
-    constructor() {
-        super('@TEMA04@', '@PIC_TEMA@');
-        this.itms = [
-            new SctItm('|冬|ふゆ|', 'winter.jpg'),
-            new SctItm('|雪|ゆき|'),
-            new SctItm('|氷|こおり|'),
-            new SctItm('|霜|しも|')
-        ];
-    }
-}
-// 季語：天
-class poemer_tema05 extends SctItm_FirstLocker {
-    constructor() {
-        super('@TEMA05@', '@PIC_TEMA@');
-        this.itms = [
-            new SctItm('|天|てん|', 'sky.jpg'),
-            new SctItm('|月|つき|'),
-            new SctItm('|星|ほし|'),
-            new SctItm('|雲|くも|'),
-            new SctItm('|空|そら|')
-        ];
+        this.Add_cods(cods_sky);
     }
 }
 class poem_docs_maker extends news_docs_maker {

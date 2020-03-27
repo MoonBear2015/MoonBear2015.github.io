@@ -465,6 +465,11 @@ class Selector_Generator {
 
         return results;
     }
+
+    Add_cods(in_cods : ISctCod[])
+    {
+        this.cods = this.cods.concat(in_cods);
+    }
 }
 
 
