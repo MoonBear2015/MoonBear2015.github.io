@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N01.99';
+    html += 'N02.00';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -157,19 +157,14 @@ class selector_title extends SctItm_Selector {
         this.itms = [
             new SctItm('@WHAT@の@DO@'),
             new SctItm('@WHAT@は@DO@@END02C@'),
-            new SctItm('@WHAT@で@DO@@END02C@@NICK@'),
-            new SctItm('@WHAT@の@NICK@が@DO@@END02C@'),
+            new SctItm('@WHAT@で@DO@@END02C@@PEOPLE@'),
+            new SctItm('@WHAT@の@PEOPLE@が@DO@'),
             new SctItm('@WHAT@の@PEOPLE@、@HUMAN@が@DO@@END02C@'),
             new SctItm('@DO@@END02C@@WHAT@'),
-            new SctItm('@DO@@END02C@@WHAT@の@PEOPLE@'),
-            new SctItm('@DO@@END02C@@WHAT@の@NICK@、@HUMAN@'),
-            new SctItm('@WHAT@の@NICK@、@HUMAN@が@DO@'),
-            new SctItm('@WHAT@の@NICK@、@HUMAN@が@DO@@END02C@'),
-            new SctItm('@WHAT@の@NICK@、@DO@@END02C@'),
-            new SctItm('@WHAT@で@DO@@END02C@@PEOPLE@、@HUMAN@'),
-            new SctItm('@HUMAN@が@DO@@END02C@@WHAT@'),
-            new SctItm('@PEOPLE@の@NICK@、@HUMAN@が@DO@@END02C@@WHAT@'),
-            new SctItm('@HUMAN@、@WHAT@で@DO@@END02C@')
+            new SctItm('@DO@@END02C@@WHAT@の@THEY@'),
+            new SctItm('@PEOPLE@が@DO@@END02C@@WHAT@'),
+            new SctItm('@HUMAN@、@WHAT@で@DO@@END02C@'),
+            new SctItm('@HUMAN@、@WHAT@を@DO@')
         ];
     }
 }
@@ -381,13 +376,15 @@ class selector_end02b extends SctItm_Selector {
     constructor() {
         super('@END02B@');
         this.itms = [
-            new SctItm('している'),
-            new SctItm('していた'),
             new SctItm('する'),
             new SctItm('した'),
-            new SctItm('した'),
-            new SctItm('してしまった'),
-            new SctItm('させた')
+            new SctItm('される'),
+            new SctItm('された'),
+            new SctItm('させる'),
+            new SctItm('させた'),
+            new SctItm('している'),
+            new SctItm('していた'),
+            new SctItm('してしまった')
         ];
     }
 }
@@ -397,7 +394,8 @@ class selector_end02c extends SctItm_Selector {
         this.itms = [
             new SctItm('する'),
             new SctItm('した'),
-            new SctItm('すべき')
+            new SctItm('された'),
+            new SctItm('される')
         ];
     }
 }
@@ -478,8 +476,8 @@ class selector_whats extends SctItm_SelectLocker {
             new SctItm('ひらかたパーク', 'WHAT/hirapa-.jpg'),
             new SctItm('ひらかたパーク', 'WHAT/hirapa-2.jpg'),
             new SctItm('ひらかたパーク', 'WHAT/hirapa-3.jpg'),
-            new SctItm('ＵＳＪ', 'WHAT/USJ.jpg'),
-            new SctItm('ＵＳＪ', 'WHAT/USJ2.jpg'),
+            new SctItm('ＵＳＪ', 'WHAT/usj.jpg'),
+            new SctItm('ＵＳＪ', 'WHAT/usj2.jpg'),
             new SctItm('としまえん', 'WHAT/toshimaen.jpg'),
             new SctItm('上野動物園', 'WHAT/ueno_zoo.jpg'),
             new SctItm('ジオン公国', 'WHAT/jion.jpg'),
@@ -678,15 +676,15 @@ class selector_they extends SctItm_Selector {
             new SctItm('一般大衆'),
             new SctItm('有識者'),
             new SctItm('子供達'),
-            new SctItm('学生達'),
+            new SctItm('学生'),
             new SctItm('女子校生'),
             new SctItm('女子大生'),
             new SctItm('彼女達'),
-            new SctItm('ＯＬ達'),
+            new SctItm('ＯＬ'),
             new SctItm('彼ら'),
             new SctItm('先人達'),
-            new SctItm('労働者達'),
-            new SctItm('兵士達'),
+            new SctItm('労働者'),
+            new SctItm('兵士'),
             new SctItm('若年層'),
             new SctItm('主婦層'),
             new SctItm('乗組員'),
@@ -696,11 +694,9 @@ class selector_they extends SctItm_Selector {
             new SctItm('マフィア'),
             new SctItm('ヤクザ'),
             new SctItm('過激派'),
-            new SctItm('移住者'),
-            new SctItm('旅行者'),
-            new SctItm('スタントマン'),
+            new SctItm('移住者達'),
+            new SctItm('旅行者達'),
             new SctItm('旅芸人'),
-            new SctItm('パイロット'),
             new SctItm('奴隷'),
             new SctItm('飼い猫'),
             new SctItm('首狩り族'),
@@ -710,6 +706,7 @@ class selector_they extends SctItm_Selector {
             new SctItm('囚人達'),
             new SctItm('少年達'),
             new SctItm('少女達'),
+            new SctItm('少年少女'),
             new SctItm('年長者'),
             new SctItm('エリート'),
             new SctItm('傭兵達'),
@@ -719,7 +716,6 @@ class selector_they extends SctItm_Selector {
             new SctItm('通行人'),
             new SctItm('視聴者'),
             new SctItm('ユーザー'),
-            new SctItm('株主'),
             new SctItm('株主'),
             new SctItm('皇族'),
             new SctItm('貴族'),
@@ -889,7 +885,12 @@ class selector_class extends SctItm_Selector {
             new SctItm('忍者'),
             new SctItm('抜け忍'),
             new SctItm('諜報員'),
-            new SctItm('狙撃兵')
+            new SctItm('狙撃兵'),
+            new SctItm('株主'),
+            new SctItm('筆頭株主'),
+            new SctItm('投資家'),
+            new SctItm('証券マン'),
+            new SctItm('セールスマン')
         ];
     }
 }
