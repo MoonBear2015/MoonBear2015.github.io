@@ -1,10 +1,15 @@
 "use strict";
 const cods_spring = [
     new SctCod('|春|はる|', 2, 'spring.jpg'),
-    new SctCod('|花|はな|', 2),
-    new SctCod('|蝶|ちょう|', 2),
+    new SctCod('|立春|りっしゅん|', 4),
     new SctCod('|土筆|つくし|', 3),
-    new SctCod('|蛙|かえる|', 3)
+    new SctCod('|蛙|かえる|', 3),
+    new SctCod('|蛙|かわず|', 3),
+    new SctCod('お|玉杓子|たまじゃくし|', 6),
+    new SctCod('|蛤|はまぐり|', 4),
+    new SctCod('|浅蜊|あさり|', 3),
+    new SctCod('|雛祭|ひなまつり|', 5),
+    new SctCod('|雛祭|ひなまつり|', 5)
 ];
 const cods_flower_spring = [
     new SctCod('|春|はる|の|花|はな|', 5, 'flower_spring.jpg'),
@@ -20,11 +25,17 @@ const cods_flower_spring = [
 ];
 const cods_summer = [
     new SctCod('|夏|なつ|', 2, 'summer.jpg'),
+    new SctCod('|初夏|しょか|', 2),
+    new SctCod('|猛暑|もうしょ|', 3),
+    new SctCod('|酷暑|こくしょ|', 3),
+    new SctCod('|残暑|ざんしょ|', 3),
     new SctCod('|虹|にじ|', 2),
     new SctCod('|浴衣|ゆかた|', 3),
     new SctCod('|祭|まつり|', 3),
     new SctCod('|花火|はなび|', 3),
     new SctCod('|浜辺|はまべ|', 3),
+    new SctCod('|蛍|ほたる|', 3),
+    new SctCod('|蝉|せみ|', 3),
     new SctCod('|風鈴|ふうりん|', 4)
 ];
 const cods_flower_summer = [
@@ -42,11 +53,14 @@ const cods_flower_summer = [
 ];
 const cods_autumn = [
     new SctCod('|秋|あき|', 2, 'autumn.jpg'),
+    new SctCod('|夜長|よなが|', 3),
     new SctCod('|月|つき|', 2),
     new SctCod('|紅葉|もみじ|', 3),
     new SctCod('|栗|くり|', 2),
     new SctCod('|柿|かき|', 2),
-    new SctCod('|芋|いも|', 2)
+    new SctCod('|芋|いも|', 2),
+    new SctCod('|梨|なし|', 2),
+    new SctCod('|鈴虫|すずむし|', 2)
 ];
 const cods_flower_autumn = [
     new SctCod('|秋|あき|の|花|はな|', 5, 'flower_autumn.jpg'),
@@ -101,7 +115,10 @@ const cods_moon = [
     new SctCod('|上弦|じょうげん|の|月|つき|', 7),
     new SctCod('|十六夜|いざよい|', 4),
     new SctCod('|下弦|かげん|の|月|つき|', 6),
-    new SctCod('|月食|げっしょく|', 4)
+    new SctCod('|月食|げっしょく|', 4),
+    new SctCod('|月夜|つきよ|', 3),
+    new SctCod('|朧月|おぼろづき|', 5),
+    new SctCod('|名月|めいげつ|', 4)
 ];
 const cods_sun = [
     new SctCod('|太陽|たいよう|', 4, 'sun.jpg'),
@@ -110,7 +127,10 @@ const cods_sun = [
     new SctCod('|夕陽|ゆうひ|', 3),
     new SctCod('|夕焼|ゆうや|け', 4),
     new SctCod('|日食|にっしょく|', 4),
-    new SctCod('|皆既日食|かいきにっしょく|', 7)
+    new SctCod('|皆既日食|かいきにっしょく|', 7),
+    new SctCod('|日|ひ|の|出|で|', 3),
+    new SctCod('|初日|はつひ|の|出|で|', 5),
+    new SctCod('|落日|らくじつ|', 4)
 ];
 const cods_star = [
     new SctCod('|星|ほし|', 2, 'star.jpg'),
@@ -128,7 +148,11 @@ const cods_star = [
 const cods_sky = [
     new SctCod('|空|そら|', 2, 'sky.jpg'),
     new SctCod('|天|てん|', 2),
-    new SctCod('|満天|まんてん|', 4)
+    new SctCod('|満天|まんてん|', 4),
+    new SctCod('|虹|にじ|', 2),
+    new SctCod('|青空|あおぞら|', 4),
+    new SctCod('|夜空|よぞら|', 3),
+    new SctCod('|星空|ほしぞら|', 4)
 ];
 const cods_weather = [
     new SctCod('|天気|てんき|', 2, 'weather.jpg'),
@@ -202,4 +226,20 @@ const cods_bird_winter = [
     new SctCod('|鴛鴦|おしどり|', 4),
     new SctCod('|鶴|つる|', 2),
     new SctCod('|白鳥|はくちょう|', 4)
+];
+const cods_move_run = [
+    new SctCod('|走|はし|る', 3, 'run.jpg'),
+    new SctCod('|駆|か|ける', 3),
+    new SctCod('|駆|か|け|抜|ぬ|ける', 5),
+    new SctCod('|突|つ|っ|走|ぱし|る', 5),
+    new SctCod('|風|かぜ|を|切|き|る', 5)
+];
+const cods_move_fly = [
+    new SctCod('|飛|と|ぶ', 3, 'fly.jpg'),
+    new SctCod('|飛|と|び|上|あ|がる', 3),
+    new SctCod('|飛|と|び|越|こ|える', 3)
+];
+const cods_move_walk = [
+    new SctCod('|歩|ある|く', 3, 'walk.jpg'),
+    new SctCod('|歩|あゆ|む', 3)
 ];

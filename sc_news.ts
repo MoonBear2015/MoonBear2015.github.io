@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N02.03';
+    html += 'N02.04';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -417,19 +417,43 @@ class selector_comment extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('@COMMENT2@')
             ,
+            new SctItm('@COMMENT2@')
+            ,
+            new SctItm('@COMMENT2@')
+            ,
+            new SctItm('@COMMENT2@')
+            ,
+            new SctItm('@YESNO@、@COMMENT2@')
+            ,
+            new SctItm('@YESNO@、@COMMENT2@')
+            ,
+            new SctItm('@CONECT@、@COMMENT2@')
+            ,
+            new SctItm('@CONECT@、@COMMENT2@')
+            ,
             new SctItm('@COMMENT2@。@COMMENT2@')
+            ,
+            new SctItm('@COMMENT2@。@COMMENT2@')
+            ,
+            new SctItm('@COMMENT2@。@COMMENT2@')
+            ,
+            new SctItm('@COMMENT2@。@COMMENT2@。@COMMENT2@')
+            ,
+            new SctItm('@COMMENT2@。@COMMENT2@。@COMMENT2@')
             ,
             new SctItm('@COMMENT2@。@COMMENT2@。@COMMENT2@')
             ,
             new SctItm('@COMMENT2@。@CONECT@、@COMMENT2@')
             ,
+            new SctItm('@COMMENT2@。@CONECT@、@COMMENT2@')
+            ,
+            new SctItm('@COMMENT2@。@YESNO@、@COMMENT2@')
+            ,
             new SctItm('@COMMENT2@。@YESNO@、@COMMENT2@')
             ,
             new SctItm('@YESNO@ッ！ @WHAT@が@NICK@@END02A@ッ！')
             ,
-            new SctItm('@HUMAN@？ @YESNO@、@THEY@に@ASSES@@PART@の@PART@@END02A@')
-            ,
-            new SctItm('@HUMAN@？ @YESNO@、@PART@の@PART@@END02A@')
+            new SctItm('@WHAT@の@NICK@！ @WHAT@の@NICK@！ @WHAT@の@NICK@！ @WHAT@の@NICK@！ ')
         ];
     }
 }
