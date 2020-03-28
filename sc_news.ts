@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N02.02';
+    html += 'N02.03';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -575,10 +575,6 @@ class selector_end02c extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('する')
             ,
             new SctItm('した')
-            ,
-            new SctItm('された')
-            ,
-            new SctItm('される')
         ];
     }
 }
