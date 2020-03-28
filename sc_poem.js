@@ -9,7 +9,7 @@ function set_poem() {
     html += '<h1>';
     html += 'POEM';
     html += '<small>';
-    html += 'P01.16 test';
+    html += 'P01.17 test';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -43,7 +43,7 @@ function make_poem() {
     html += 'linear-gradient(135deg,rgba(30,30,30,0.8),rgba(120,120,120,0.8)),';
     html += 'url(./pics/TEMA/@PIC_TEMA@);';
     html += 'background-size: ';
-    html += 'cover;';
+    html += 'contain;';
     html += '">';
     html += '<h2>';
     html += 'テーマ：@TEMA@';
@@ -154,7 +154,20 @@ class poemer_tema extends SctItm_SelectLocker {
             new SctItm('@TM02'),
             new SctItm('@TM03'),
             new SctItm('@TM04'),
-            new SctItm('@TM05')
+            new SctItm('@TM05'),
+            new SctItm('@TM06'),
+            new SctItm('@TM07'),
+            new SctItm('@TM08'),
+            new SctItm('@TM09'),
+            new SctItm('@TM10'),
+            new SctItm('@TM11'),
+            new SctItm('@TM12'),
+            new SctItm('@TM13'),
+            new SctItm('@TM14'),
+            new SctItm('@TM15'),
+            new SctItm('@TM16'),
+            new SctItm('@TM17'),
+            new SctItm('@TM18')
         ];
     }
 }
@@ -172,6 +185,7 @@ class Gene_tema01 extends Gene_Poemer {
         super('@TM01', '@PIC_TEMA@');
         this.Add_cods(cods_spring);
         this.Add_cods(cods_flower_spring);
+        this.Add_cods(cods_bird_spring);
     }
 }
 // 季語：夏
@@ -179,6 +193,8 @@ class Gene_tema02 extends Gene_Poemer {
     constructor() {
         super('@TM02', '@PIC_TEMA@');
         this.Add_cods(cods_summer);
+        this.Add_cods(cods_flower_summer);
+        this.Add_cods(cods_bird_summer);
     }
 }
 // 季語：秋
@@ -186,6 +202,8 @@ class Gene_tema03 extends Gene_Poemer {
     constructor() {
         super('@TM03', '@PIC_TEMA@');
         this.Add_cods(cods_autumn);
+        this.Add_cods(cods_flower_autumn);
+        this.Add_cods(cods_bird_autumn);
     }
 }
 // 季語：冬
@@ -193,28 +211,148 @@ class Gene_tema04 extends Gene_Poemer {
     constructor() {
         super('@TM04', '@PIC_TEMA@');
         this.Add_cods(cods_winter);
+        this.Add_cods(cods_flower_winter);
+        this.Add_cods(cods_bird_winter);
     }
 }
-// 季語：冬
+// 季語：空
 class Gene_tema05 extends Gene_Poemer {
     constructor() {
         super('@TM05', '@PIC_TEMA@');
         this.Add_cods(cods_sky);
+        this.Add_cods(cods_star);
+        this.Add_cods(cods_sun);
+        this.Add_cods(cods_moon);
+        this.Add_cods(cods_weather);
+    }
+}
+// 季語：花
+class Gene_tema06 extends Gene_Poemer {
+    constructor() {
+        super('@TM06', '@PIC_TEMA@');
+        this.Add_cods(cods_flower);
+        this.Add_cods(cods_flower_spring);
+        this.Add_cods(cods_flower_summer);
+        this.Add_cods(cods_flower_autumn);
+        this.Add_cods(cods_flower_winter);
+    }
+}
+// 季語：星
+class Gene_tema07 extends Gene_Poemer {
+    constructor() {
+        super('@TM07', '@PIC_TEMA@');
+        this.Add_cods(cods_star);
+        this.Add_cods(cods_sun);
+        this.Add_cods(cods_moon);
+    }
+}
+// 季語：天気
+class Gene_tema08 extends Gene_Poemer {
+    constructor() {
+        super('@TM08', '@PIC_TEMA@');
+        this.Add_cods(cods_weather);
+    }
+}
+// 季語：月
+class Gene_tema09 extends Gene_Poemer {
+    constructor() {
+        super('@TM09', '@PIC_TEMA@');
+        this.Add_cods(cods_moon);
+    }
+}
+// 季語：春の花
+class Gene_tema10 extends Gene_Poemer {
+    constructor() {
+        super('@TM10', '@PIC_TEMA@');
+        this.Add_cods(cods_flower_spring);
+    }
+}
+// 季語：夏の花
+class Gene_tema11 extends Gene_Poemer {
+    constructor() {
+        super('@TM11', '@PIC_TEMA@');
+        this.Add_cods(cods_flower_summer);
+    }
+}
+// 季語：秋の花
+class Gene_tema12 extends Gene_Poemer {
+    constructor() {
+        super('@TM12', '@PIC_TEMA@');
+        this.Add_cods(cods_flower_autumn);
+    }
+}
+// 季語：冬の花
+class Gene_tema13 extends Gene_Poemer {
+    constructor() {
+        super('@TM13', '@PIC_TEMA@');
+        this.Add_cods(cods_flower_winter);
+    }
+}
+// 季語：鳥
+class Gene_tema14 extends Gene_Poemer {
+    constructor() {
+        super('@TM14', '@PIC_TEMA@');
+        this.Add_cods(cods_bird);
+        this.Add_cods(cods_bird_spring);
+        this.Add_cods(cods_bird_summer);
+        this.Add_cods(cods_bird_autumn);
+        this.Add_cods(cods_bird_winter);
+    }
+}
+// 季語：春の鳥
+class Gene_tema15 extends Gene_Poemer {
+    constructor() {
+        super('@TM15', '@PIC_TEMA@');
+        this.Add_cods(cods_bird_spring);
+    }
+}
+// 季語：夏の鳥
+class Gene_tema16 extends Gene_Poemer {
+    constructor() {
+        super('@TM16', '@PIC_TEMA@');
+        this.Add_cods(cods_bird_summer);
+    }
+}
+// 季語：秋の鳥
+class Gene_tema17 extends Gene_Poemer {
+    constructor() {
+        super('@TM17', '@PIC_TEMA@');
+        this.Add_cods(cods_bird_autumn);
+    }
+}
+// 季語：冬の鳥
+class Gene_tema18 extends Gene_Poemer {
+    constructor() {
+        super('@TM18', '@PIC_TEMA@');
+        this.Add_cods(cods_bird_winter);
     }
 }
 class poem_docs_maker extends news_docs_maker {
     constructor() {
         super();
-        this.selectors.push(new poemer_type());
-        this.selectors.push(new poemer_pattern_A());
-        this.selectors.push(new poemer_pattern_B());
-        this.selectors.push(new poemer_tema());
-        this.selectors.push(new poemer_title());
-        this.selectors.push(new poemer_titlepic());
-        this.selectors = this.selectors.concat(new Gene_tema01().Generate());
-        this.selectors = this.selectors.concat(new Gene_tema02().Generate());
-        this.selectors = this.selectors.concat(new Gene_tema03().Generate());
-        this.selectors = this.selectors.concat(new Gene_tema04().Generate());
-        this.selectors = this.selectors.concat(new Gene_tema05().Generate());
+        this.dic_push(new poemer_type());
+        this.dic_push(new poemer_pattern_A());
+        this.dic_push(new poemer_pattern_B());
+        this.dic_push(new poemer_tema());
+        this.dic_push(new poemer_title());
+        this.dic_push(new poemer_titlepic());
+        this.dic_concat(new Gene_tema01().Generate());
+        this.dic_concat(new Gene_tema02().Generate());
+        this.dic_concat(new Gene_tema03().Generate());
+        this.dic_concat(new Gene_tema04().Generate());
+        this.dic_concat(new Gene_tema05().Generate());
+        this.dic_concat(new Gene_tema06().Generate());
+        this.dic_concat(new Gene_tema07().Generate());
+        this.dic_concat(new Gene_tema08().Generate());
+        this.dic_concat(new Gene_tema09().Generate());
+        this.dic_concat(new Gene_tema10().Generate());
+        this.dic_concat(new Gene_tema11().Generate());
+        this.dic_concat(new Gene_tema12().Generate());
+        this.dic_concat(new Gene_tema13().Generate());
+        this.dic_concat(new Gene_tema14().Generate());
+        this.dic_concat(new Gene_tema15().Generate());
+        this.dic_concat(new Gene_tema16().Generate());
+        this.dic_concat(new Gene_tema17().Generate());
+        this.dic_concat(new Gene_tema18().Generate());
     }
 }

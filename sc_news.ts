@@ -2264,49 +2264,58 @@ class docs_maker {
         return result;
     }
 
+    dic_push(in_selector : ISctItm_Selector)
+    {
+        this.selectors.push(in_selector);
+    }
+    dic_concat(in_selectors : ISctItm_Selector[])
+    {
+        this.selectors = this.selectors.concat(in_selectors);
+    }
+
 }
 
 class news_docs_maker extends docs_maker {
     constructor(){
         super();
 
-        this.selectors.push(new selector_writer());
-        this.selectors.push(new selector_title());
-        this.selectors.push(new selector_doc());
-        this.selectors.push(new selector_c01());
-        this.selectors.push(new selector_c02());
-        this.selectors.push(new selector_end01a());
-        this.selectors.push(new selector_end01b());
-        this.selectors.push(new selector_end02a());
-        this.selectors.push(new selector_end02b());
-        this.selectors.push(new selector_end02c());
-        this.selectors.push(new selector_comment());
-        this.selectors.push(new selector_comment2());
-        this.selectors.push(new selector_YESNO());
+        this.dic_push(new selector_writer());
+        this.dic_push(new selector_title());
+        this.dic_push(new selector_doc());
+        this.dic_push(new selector_c01());
+        this.dic_push(new selector_c02());
+        this.dic_push(new selector_end01a());
+        this.dic_push(new selector_end01b());
+        this.dic_push(new selector_end02a());
+        this.dic_push(new selector_end02b());
+        this.dic_push(new selector_end02c());
+        this.dic_push(new selector_comment());
+        this.dic_push(new selector_comment2());
+        this.dic_push(new selector_YESNO());
         
-        this.selectors.push(new selector_random_date());
-        this.selectors.push(new selector_whats());
-        this.selectors.push(new selector_do());
-        this.selectors.push(new selector_key());
-        this.selectors.push(new selector_status1());
-        this.selectors.push(new selector_status2());
-        this.selectors.push(new selector_they());
-        this.selectors.push(new selector_many());
+        this.dic_push(new selector_random_date());
+        this.dic_push(new selector_whats());
+        this.dic_push(new selector_do());
+        this.dic_push(new selector_key());
+        this.dic_push(new selector_status1());
+        this.dic_push(new selector_status2());
+        this.dic_push(new selector_they());
+        this.dic_push(new selector_many());
 
-        this.selectors.push(new selector_think());
-        this.selectors.push(new selector_who());
-        this.selectors.push(new selector_who2());
-        this.selectors.push(new selector_human());
-        this.selectors.push(new selector_class());
-        this.selectors.push(new selector_call());
-        this.selectors.push(new selector_age());
-        this.selectors.push(new selector_say());
-        this.selectors.push(new selector_answer());
-        this.selectors.push(new selector_conect());
-        this.selectors.push(new selector_nickname());
-        this.selectors.push(new selector_assessment());
-        this.selectors.push(new selector_people());
-        this.selectors.push(new selector_manypeople());
-        this.selectors.push(new selector_partner());
+        this.dic_push(new selector_think());
+        this.dic_push(new selector_who());
+        this.dic_push(new selector_who2());
+        this.dic_push(new selector_human());
+        this.dic_push(new selector_class());
+        this.dic_push(new selector_call());
+        this.dic_push(new selector_age());
+        this.dic_push(new selector_say());
+        this.dic_push(new selector_answer());
+        this.dic_push(new selector_conect());
+        this.dic_push(new selector_nickname());
+        this.dic_push(new selector_assessment());
+        this.dic_push(new selector_people());
+        this.dic_push(new selector_manypeople());
+        this.dic_push(new selector_partner());
     }
 }
