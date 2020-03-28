@@ -169,7 +169,9 @@ const cods_weather = [
     new SctCod('|豪雪|ごうせつ|', 4),
     new SctCod('|雷|かみなり|', 4),
     new SctCod('|霧|きり|', 2),
-    new SctCod('|靄|もや|', 2)
+    new SctCod('|靄|もや|', 2),
+    new SctCod('|風|かぜ|', 2),
+    new SctCod('|台風|たいふう|', 4)
 ];
 const cods_bird = [
     new SctCod('|鳥|とり|', 2, 'sky.jpg'),
@@ -227,6 +229,25 @@ const cods_bird_winter = [
     new SctCod('|鶴|つる|', 2),
     new SctCod('|白鳥|はくちょう|', 4)
 ];
+const cods_nature = [
+    new SctCod('|自然|しぜん|', 3, 'nature.jpg'),
+    new SctCod('|山|やま|', 2),
+    new SctCod('|川|かわ|', 2),
+    new SctCod('|河|かわ|', 2),
+    new SctCod('|滝|かわ|', 2),
+    new SctCod('|森|かわ|', 2),
+    new SctCod('|林|はやし|', 3),
+    new SctCod('|野|の|', 1),
+    new SctCod('|野原|のはら|', 3),
+    new SctCod('|池|いけ|', 2),
+    new SctCod('|古池|ふるいけ|', 4),
+    new SctCod('|湖|みずうみ|', 4),
+    new SctCod('|海|うみ|', 2)
+];
+const cods_move = [
+    new SctCod('|動|うご|く', 3, 'active.jpg'),
+    new SctCod('|進|すす|む', 3)
+];
 const cods_move_run = [
     new SctCod('|走|はし|る', 3, 'run.jpg'),
     new SctCod('|駆|か|ける', 3),
@@ -237,9 +258,77 @@ const cods_move_run = [
 const cods_move_fly = [
     new SctCod('|飛|と|ぶ', 3, 'fly.jpg'),
     new SctCod('|飛|と|び|上|あ|がる', 3),
-    new SctCod('|飛|と|び|越|こ|える', 3)
+    new SctCod('|飛|と|び|越|こ|える', 5),
+    new SctCod('|飛|と|び|込|こ|む', 4)
 ];
 const cods_move_walk = [
     new SctCod('|歩|ある|く', 3, 'walk.jpg'),
     new SctCod('|歩|あゆ|む', 3)
+];
+const cods_stop = [
+    new SctCod('|止|と|まる', 3, 'stop.jpg'),
+    new SctCod('|留|とど|まる', 4),
+    new SctCod('|立|た|ち|止|ど|まる', 5),
+    new SctCod('|佇|たたず|む', 4),
+    new SctCod('|終|お|わる', 5)
+];
+const cods_open = [
+    new SctCod('|開|ひら|く', 3, 'open.jpg'),
+    new SctCod('|空|あ|く', 4),
+    new SctCod('|開|ひら|ける', 4)
+];
+const cods_life = [
+    new SctCod('|生|い|きる', 3, 'life.jpg'),
+    new SctCod('|咲|さ|く', 2),
+    new SctCod('|活|い|きる', 3),
+    new SctCod('|実|みの|る', 3),
+    new SctCod('|産|う|まれる', 4),
+    new SctCod('|始|はじ|まる', 4)
+];
+const cods_death = [
+    new SctCod('|死|し|ぬ|', 2, 'death.jpg'),
+    new SctCod('|倒|たお|れる', 4),
+    new SctCod('|枯|か|れる', 3),
+    new SctCod('|散|ち|る', 2),
+    new SctCod('|朽|く|ち|果|は|てる', 5),
+    new SctCod('|尽|つ|きる', 3),
+    new SctCod('|終|お|える', 3),
+    new SctCod('|失|うしな|う', 4)
+];
+const cods_body = [
+    new SctCod('|体|からだ|', 3, 'body.jpg'),
+    new SctCod('|肉体|にくたい|', 4),
+    new SctCod('|頭|あたま|', 3),
+    new SctCod('|目|め|', 1),
+    new SctCod('|耳|みみ|', 2),
+    new SctCod('|鼻|はな|', 2),
+    new SctCod('|口|くち|', 2),
+    new SctCod('|首|くび|', 2),
+    new SctCod('|肩|かた|', 2),
+    new SctCod('|腕|うで|', 2),
+    new SctCod('|手|て|', 1),
+    new SctCod('|指|ゆび|', 2),
+    new SctCod('|拳|こぶし|', 3),
+    new SctCod('|胸|むね|', 2),
+    new SctCod('|腰|こし|', 2),
+    new SctCod('|尻|しり|', 2),
+    new SctCod('|足|あし|', 2)
+];
+const cods_it = [
+    new SctCod('これ', 2),
+    new SctCod('それ', 2),
+    new SctCod('あれ', 2),
+    new SctCod('どれ', 2),
+    new SctCod('この', 2),
+    new SctCod('その', 2),
+    new SctCod('あの', 2),
+    new SctCod('どの', 2)
+];
+const cods_conect = [
+    new SctCod('は', 1),
+    new SctCod('で', 1),
+    new SctCod('に', 1),
+    new SctCod('を', 1),
+    new SctCod('と', 1),
+    new SctCod('や', 1)
 ];

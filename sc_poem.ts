@@ -13,7 +13,7 @@ function set_poem()
     html += '<h1>';
     html += 'POEM';
     html += '<small>';
-    html += 'P01.17 test';
+    html += 'P01.18 test';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
