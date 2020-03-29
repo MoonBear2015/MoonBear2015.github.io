@@ -73,6 +73,7 @@ function make_poem() : string
     let maker_ABCon = new poem_docs_maker_ABCon();
 
     html = maker.gene_docs(html);
+    html = maker.gene_docs(html);
 
     html = maker_tema.gene_docs(html);
     html = maker_ABCon.gene_docs(html);

@@ -58,6 +58,7 @@ function make_poem() {
     let maker_AB = new poem_docs_maker_AB();
     let maker_ABCon = new poem_docs_maker_ABCon();
     html = maker.gene_docs(html);
+    html = maker.gene_docs(html);
     html = maker_tema.gene_docs(html);
     html = maker_ABCon.gene_docs(html);
     html = maker_sent.gene_docs(html);
