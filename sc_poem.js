@@ -9,7 +9,7 @@ function set_poem() {
     html += '<h1>';
     html += 'POEM';
     html += '<small>';
-    html += 'P01.19 test';
+    html += 'P01.20 test';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -52,16 +52,16 @@ function make_poem() {
         html += make_poem_sub();
     }
     html += '</div>';
-    let maker01 = new poem_docs_maker_01();
-    let maker02 = new poem_docs_maker_02();
-    let maker03 = new poem_docs_maker_03();
-    let maker04 = new poem_docs_maker_04();
-    html = maker01.gene_docs(html);
-    html = maker03.gene_docs(html);
-    html = maker04.gene_docs(html);
-    html = maker02.gene_docs(html);
-    html = maker03.gene_docs(html);
-    html = maker03.gene_docs(html);
+    let maker = new poem_docs_maker();
+    let maker_tema = new poem_docs_maker_tema();
+    let maker_sent = new poem_docs_maker_sent();
+    let maker_AB = new poem_docs_maker_AB();
+    let maker_ABCon = new poem_docs_maker_ABCon();
+    html = maker.gene_docs(html);
+    html = maker_tema.gene_docs(html);
+    html = maker_ABCon.gene_docs(html);
+    html = maker_sent.gene_docs(html);
+    // html = maker_AB.gene_docs(html);
     return ruby_change(html);
 }
 function make_poem_sub() {
@@ -391,22 +391,21 @@ class Gene_B extends Gene_Poemer {
         this.Add_cods(cods_open);
         this.Add_cods(cods_life);
         this.Add_cods(cods_death);
-    }
-}
-class Gene_A_Con extends Gene_Poemer {
-    constructor() {
-        super('@A');
         this.Add_cods(cods_it);
     }
 }
+// class Gene_A_Con extends Gene_Poemer {
+//     constructor(){
+//         super('@A');
+//     }
+// }
 class Gene_B_Con extends Gene_Poemer {
     constructor() {
         super('@B');
-        this.Add_cods(cods_it);
         this.Add_cods(cods_conect);
     }
 }
-class poem_docs_maker_01 extends news_docs_maker {
+class poem_docs_maker extends news_docs_maker {
     constructor() {
         super();
         this.dic_push(new poemer_type());
@@ -415,6 +414,11 @@ class poem_docs_maker_01 extends news_docs_maker {
         this.dic_push(new poemer_tema());
         this.dic_push(new poemer_title());
         this.dic_push(new poemer_titlepic());
+    }
+}
+class poem_docs_maker_tema extends docs_maker {
+    constructor() {
+        super();
         this.dic_concat(new Gene_tema01().Generate());
         this.dic_concat(new Gene_tema02().Generate());
         this.dic_concat(new Gene_tema03().Generate());
@@ -435,23 +439,23 @@ class poem_docs_maker_01 extends news_docs_maker {
         this.dic_concat(new Gene_tema18().Generate());
     }
 }
-class poem_docs_maker_02 extends news_docs_maker {
+class poem_docs_maker_sent extends docs_maker {
     constructor() {
         super();
         this.dic_concat(new Gene_sent().Generate());
     }
 }
-class poem_docs_maker_03 extends news_docs_maker {
+class poem_docs_maker_AB extends docs_maker {
     constructor() {
         super();
         this.dic_concat(new Gene_A().Generate());
         this.dic_concat(new Gene_B().Generate());
     }
 }
-class poem_docs_maker_04 extends news_docs_maker {
+class poem_docs_maker_ABCon extends docs_maker {
     constructor() {
         super();
-        this.dic_concat(new Gene_A_Con().Generate());
+        // this.dic_concat(new Gene_A_Con().Generate());
         this.dic_concat(new Gene_B_Con().Generate());
     }
 }
