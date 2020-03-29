@@ -62,7 +62,7 @@ function make_poem() {
     html = maker_tema.gene_docs(html);
     html = maker_ABCon.gene_docs(html);
     html = maker_sent.gene_docs(html);
-    // html = maker_AB.gene_docs(html);
+    html = maker_AB.gene_docs(html);
     return ruby_change(html);
 }
 function make_poem_sub() {
@@ -395,11 +395,11 @@ class Gene_B extends Gene_Poemer {
         this.Add_cods(cods_it);
     }
 }
-// class Gene_A_Con extends Gene_Poemer {
-//     constructor(){
-//         super('@A');
-//     }
-// }
+class Gene_A_Con extends Gene_Poemer {
+    constructor() {
+        super('@A');
+    }
+}
 class Gene_B_Con extends Gene_Poemer {
     constructor() {
         super('@B');
@@ -456,7 +456,7 @@ class poem_docs_maker_AB extends docs_maker {
 class poem_docs_maker_ABCon extends docs_maker {
     constructor() {
         super();
-        // this.dic_concat(new Gene_A_Con().Generate());
+        this.dic_concat(new Gene_A_Con().Generate());
         this.dic_concat(new Gene_B_Con().Generate());
     }
 }
