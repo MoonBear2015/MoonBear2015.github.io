@@ -62,6 +62,7 @@ class SctCod extends SctItm {
         for (let i = 0; i < abs.length; i++) {
             if (abs[i].A == 1)
                 continue;
+            //if (abs[i].B == 1) continue;
             let key = "";
             if (abs[i].A > 1) {
                 key += to_key_with_length(in_AKey, abs[i].A);

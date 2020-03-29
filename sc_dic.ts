@@ -17,7 +17,7 @@ const   cods_spring = [
     ,
     new SctCod('|雛祭|ひなまつり|',5)
     ,
-    new SctCod('|雛祭|ひなまつり|',5)
+    new SctCod('|花見|はなみ|',3)
 ];
 
 const   cods_flower_spring = [
@@ -37,7 +37,7 @@ const   cods_flower_spring = [
     ,
     new SctCod('ハナミズキ',5)
     ,
-    new SctCod('|撫子|なでしこ|',3)
+    new SctCod('|撫子|なでしこ|',4)
     ,
     new SctCod('|牡丹|ぼたん|',3)
 ];
@@ -185,7 +185,7 @@ const   cods_flower_winter = [
 ];
 
 const   cods_flower = [
-    new SctCod('|花|はな|',5,'flower.jpg')
+    new SctCod('|花|はな|',2,'flower.jpg')
     ,
     new SctCod('|花見|はなみ|',3)
     ,
@@ -291,13 +291,13 @@ const   cods_weather = [
     ,
     new SctCod('|晴|は|れ',2)
     ,
-    new SctCod('|晴天|せいてん|',2)
+    new SctCod('|晴天|せいてん|',4)
     ,
     new SctCod('|雨|あめ|',2)
     ,
-    new SctCod('|小雨|こさめ|',2)
+    new SctCod('|小雨|こさめ|',3)
     ,
-    new SctCod('|春雨|はるさめ|',2)
+    new SctCod('|春雨|はるさめ|',4)
     ,
     new SctCod('|梅雨|つゆ|',2)
     ,
@@ -435,9 +435,9 @@ const   cods_nature = [
     ,
     new SctCod('|河|かわ|',2)
     ,
-    new SctCod('|滝|かわ|',2)
+    new SctCod('|滝|たき|',2)
     ,
-    new SctCod('|森|かわ|',2)
+    new SctCod('|森|もり|',2)
     ,
     new SctCod('|林|はやし|',3)
     ,
@@ -474,9 +474,9 @@ const   cods_move_run = [
 ];
 
 const   cods_move_fly = [
-    new SctCod('|飛|と|ぶ',3,'fly.jpg')
+    new SctCod('|飛|と|ぶ',2,'fly.jpg')
     ,
-    new SctCod('|飛|と|び|上|あ|がる',3)
+    new SctCod('|飛|と|び|上|あ|がる',5)
     ,
     new SctCod('|飛|と|び|越|こ|える',5)
     ,
@@ -498,13 +498,13 @@ const   cods_stop = [
     ,
     new SctCod('|佇|たたず|む',4)
     ,
-    new SctCod('|終|お|わる',5)
+    new SctCod('|終|お|わる',3)
 ];
 
 const   cods_open = [
     new SctCod('|開|ひら|く',3,'open.jpg')
     ,
-    new SctCod('|空|あ|く',4)
+    new SctCod('|空|あ|く',2)
     ,
     new SctCod('|開|ひら|ける',4)
 ];
@@ -524,7 +524,7 @@ const   cods_life = [
 ];
 
 const   cods_death = [
-    new SctCod('|死|し|ぬ|',2,'death.jpg')
+    new SctCod('|死|し|ぬ',2,'death.jpg')
     ,
     new SctCod('|倒|たお|れる',4)
     ,
@@ -593,14 +593,19 @@ const   cods_it = [
     new SctCod('あの',2)
     ,
     new SctCod('どの',2)
+    ,
+    new SctCod('から',2)
+    ,
+    new SctCod('まで',2)
+
 ];
 
 
 const   cods_conect = [
     new SctCod('は',1)
     ,
-    new SctCod('で',1)
-    ,
+    // new SctCod('で',1)
+    // ,
     new SctCod('に',1)
     ,
     new SctCod('を',1)

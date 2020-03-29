@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N02.07';
+    html += 'N02.08';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -507,9 +507,11 @@ class selector_comment2 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@CALL@、@YESNO@、それが@PART@の@PART@@END02A@')
             ,
-            new SctItm('@CALL@と@ASSES@@THEY@、@YESNO@、それが@WHAT@@END02A@')
+            new SctItm('@NICK@と@ASSES@@THEY@、@YESNO@、それが@WHAT@@END02A@')
             ,
             new SctItm('@DO@@END02B@@THEY@、@YESNO@、それが@WHAT@@END02A@')
+            ,
+            new SctItm('@WHAT@の@PART@、@YESNO@、それが@CLASS@@END02A@')
         ];
     }
 }
@@ -1035,8 +1037,6 @@ class selector_status1 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('蔓延')
             ,
-            new SctItm('肥大化')
-            ,
             new SctItm('急増')
             ,
             new SctItm('暴発')
@@ -1060,6 +1060,14 @@ class selector_status1 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('影響')
             ,
             new SctItm('無力化')
+            ,
+            new SctItm('活性化')
+            ,
+            new SctItm('肥大化')
+            ,
+            new SctItm('無力化')
+            ,
+            new SctItm('大型化')
         ];
     }
 }
@@ -2242,8 +2250,6 @@ class selector_conect extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('兎に角')
             ,
             new SctItm('恐らく')
-            ,
-            new SctItm('多分')
           ];
     }
 }

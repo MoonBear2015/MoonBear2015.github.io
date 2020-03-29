@@ -99,6 +99,7 @@ class SctCod extends SctItm implements ISctCod,ITest {
         for(let i = 0;i < abs.length;i++)
         {
             if (abs[i].A == 1) continue;
+            //if (abs[i].B == 1) continue;
             let key = "";
             if (abs[i].A > 1)
             {
