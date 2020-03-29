@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N02.05';
+    html += 'N02.07';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -393,15 +393,13 @@ class selector_c02 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@NEWS_C02@');
         this.itms = [
-            new SctItm('@WHAT@の@MANY@@PEOPLE@が@ASSES@')
-            ,
             new SctItm('@MANYPEOPLE@が@DO@@END02B@')
             ,
             new SctItm('@MANYPEOPLE@が@NICK@@END02A@')
             ,
-            new SctItm('@MANYPEOPLE@の@KEY@が@STATUS@@END02B@')
+            new SctItm('@MANYPEOPLE@による@KEY@が@STATUS@@END02B@')
             ,
-            new SctItm('@MANYPEOPLE@の@KEY@や@KEY@が@STATUS@@END02B@')
+            new SctItm('@MANYPEOPLE@による@KEY@や@KEY@が@STATUS@@END02B@')
             ,
             new SctItm('@MANYPEOPLE@の@THINK@@STATUS2@')
             ,
@@ -454,6 +452,10 @@ class selector_comment extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@YESNO@ッ！ @WHAT@が@NICK@@END02A@ッ！')
             ,
             new SctItm('@WHAT@の@NICK@！ @WHAT@の@NICK@！ @WHAT@の@NICK@！ @WHAT@の@NICK@！ ')
+            ,
+            new SctItm('@WHAT@は@NICK@？ @COMMENT@')
+            ,
+            new SctItm('@WHAT@が@DO@@END02B@？ @COMMENT@')
         ];
     }
 }
@@ -479,27 +481,35 @@ class selector_comment2 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@CALL@@END02A@')
             ,
-            new SctItm('@MANYPEOPLE@は@CALL@@END02A@。@CALL@@END02A@')
+            new SctItm('@MANYPEOPLE@は、@CALL@@END02A@')
             ,
-            new SctItm('@WHAT@は@DO@@END02B@。@MANYPEOPLE@の@KEY@@END02A@')
+            new SctItm('@MANYPEOPLE@の@KEY@@END02A@')
             ,
-            new SctItm('@WHAT@は@NICK@と@ASSES@。@CALL@@END02A@')
+            new SctItm('@WHAT@は@DO@@END02B@')
             ,
-            new SctItm('@WHAT@は@NICK@@END02A@。@CONECT@、@CALL@@END02A@')
+            new SctItm('@WHAT@は@NICK@と@ASSES@')
             ,
-            new SctItm('@WHAT@は@NICK@@END02A@。@CALL@で@CALL@@END02A@')
+            new SctItm('@WHAT@は@NICK@@END02A@')
             ,
-            new SctItm('@WHAT@が@NICK@@END02A@。@YESNO@、@CALL@と@ASSES@')
+            new SctItm('@CALL@で、@CALL@@END02A@')
             ,
-            new SctItm('@WHAT@の@DO@？ @YESNO@、それは@PEOPLE@の@KEY@@END02A@')
+            new SctItm('@YESNO@、@CALL@と@ASSES@')
             ,
-            new SctItm('@YESNO@、それが@WHAT@@END02A@')
+            new SctItm('@YESNO@、@PEOPLE@の@KEY@@END02A@')
+            ,
+            new SctItm('@YESNO@、@WHAT@が@NICK@@END02A@')
             ,
             new SctItm('@NICK@、@NICK@、@NICK@、@NICK@……')
             ,
+            new SctItm('@KEY@、@KEY@、@KEY@、@KEY@……')
+            ,
             new SctItm('@YESNO@、@PART@が@SAY@@END02B@')
             ,
-            new SctItm('@CALL@、それが@PART@の@PART@@END02A@')
+            new SctItm('@CALL@、@YESNO@、それが@PART@の@PART@@END02A@')
+            ,
+            new SctItm('@CALL@と@ASSES@@THEY@、@YESNO@、それが@WHAT@@END02A@')
+            ,
+            new SctItm('@DO@@END02B@@THEY@、@YESNO@、それが@WHAT@@END02A@')
         ];
     }
 }
@@ -515,17 +525,9 @@ class selector_YESNO extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('だが')
             ,
-            new SctItm('いえいえ')
-            ,
-            new SctItm('いいえ')
-            ,
-            new SctItm('いや')
-            ,
-            new SctItm('いいや')
-            ,
-            new SctItm('いやいや')
-            ,
             new SctItm('それでも')
+            ,
+            new SctItm('結局')
             ,
             new SctItm('確かに')
             ,
@@ -563,6 +565,8 @@ class selector_end02a extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('だった')
             ,
             new SctItm('なのだ')
+            ,
+            new SctItm('だったのだ')
         ];
     }
 }
@@ -575,13 +579,13 @@ class selector_end02b extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('した')
             ,
-            new SctItm('される')
+            new SctItm('されている')
             ,
-            new SctItm('された')
+            new SctItm('されていた')
             ,
-            new SctItm('させる')
+            new SctItm('させている')
             ,
-            new SctItm('させた')
+            new SctItm('させていた')
             ,
             new SctItm('している')
             ,
@@ -1831,8 +1835,6 @@ class selector_nickname extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('紳士')
             ,
             new SctItm('淑女')
-            ,
-            new SctItm('レディ')
             ,
             new SctItm('貴公子')
             ,
