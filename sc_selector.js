@@ -48,7 +48,7 @@ class SctCod extends SctItm {
     to_SctItm() {
         return new SctItm(this.Wrd, this.SctPic);
     }
-    to_length_itms(in_length, in_AKey, in_BKey) {
+    to_length_itms(in_length, in_KeyA, in_KeyB, in_MinA, in_MinB) {
         let results = new Array();
         if (in_length < this.CodLength) {
             return results;
@@ -60,16 +60,21 @@ class SctCod extends SctItm {
         let l = in_length - this.CodLength;
         let abs = sepalate_number(l);
         for (let i = 0; i < abs.length; i++) {
-            if (abs[i].A == 1)
+            if (abs[i].A != 0 && abs[i].A < in_MinA)
                 continue;
-            //if (abs[i].B == 1) continue;
+            if (abs[i].B != 0 && abs[i].B < in_MinB)
+                continue;
+            if (abs[i].A > 0 && in_KeyA == '')
+                continue;
+            if (abs[i].B > 0 && in_KeyB == '')
+                continue;
             let key = "";
-            if (abs[i].A > 1) {
-                key += to_key_with_length(in_AKey, abs[i].A);
+            if (abs[i].A > 0 && in_KeyA != '') {
+                key += to_key_with_length(in_KeyA, abs[i].A);
             }
             key += this.Wrd;
-            if (abs[i].B > 0) {
-                key += to_key_with_length(in_BKey, abs[i].B);
+            if (abs[i].B > 0 && in_KeyB != '') {
+                key += to_key_with_length(in_KeyB, abs[i].B);
             }
             results.push(new SctItm(key, this.SctPic));
         }
@@ -251,7 +256,7 @@ class SctItm_Counter extends ItmCounter {
     }
 }
 class Selector_Generator {
-    constructor(in_itm_key, in_pic_key) {
+    constructor(in_itm_key, in_pic_key, in_key_a, in_key_b, in_min_a, in_min_b) {
         this.cods = new Array();
         if (in_itm_key) {
             this.itm_key = in_itm_key;
@@ -265,6 +270,30 @@ class Selector_Generator {
         else {
             this.pic_key = '';
         }
+        if (in_key_a) {
+            this.key_a = in_key_a;
+        }
+        else {
+            this.key_a = '';
+        }
+        if (in_key_b) {
+            this.key_b = in_key_b;
+        }
+        else {
+            this.key_b = '';
+        }
+        if (in_min_a) {
+            this.min_a = in_min_a;
+        }
+        else {
+            this.min_a = 2;
+        }
+        if (in_min_b) {
+            this.min_b = in_min_b;
+        }
+        else {
+            this.min_b = 1;
+        }
     }
     Gene_Itm_no_length() {
         let results = new Array();
@@ -273,10 +302,10 @@ class Selector_Generator {
         });
         return results;
     }
-    Gene_Itm_length(in_length, in_AKey, in_BKey) {
+    Gene_Itm_length(in_length) {
         let results = new Array();
         this.cods.forEach(cod => {
-            cod.to_length_itms(in_length, in_AKey, in_BKey).forEach(itm => {
+            cod.to_length_itms(in_length, this.key_a, this.key_b, this.min_a, this.min_b).forEach(itm => {
                 results.push(itm);
             });
         });
@@ -293,7 +322,7 @@ class Selector_Generator {
             results.push(selector_no_length);
         }
         for (let c = 1; c <= in_max; c++) {
-            let itms_length = this.Gene_Itm_length(c, KEY_A, KEY_B);
+            let itms_length = this.Gene_Itm_length(c);
             if (itms_length.length > 0) {
                 let selector_length = in_selector_length.Copy();
                 selector_length.itm_key = to_key_with_length(this.itm_key, c);

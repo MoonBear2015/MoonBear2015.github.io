@@ -13,7 +13,7 @@ function set_poem()
     html += '<h1>';
     html += 'POEM';
     html += '<small>';
-    html += 'P01.20 test';
+    html += 'P01.21 test';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -21,12 +21,12 @@ function set_poem()
     let gt1 = new Gene_tema01();
     let arys = gt1.Generate();
 
-    // // test start
-    // let maker = new poem_docs_maker_04();
-    // maker.selectors.forEach(ary => {
-    //     html += string_html(ary.ToString());
-    // });
-    // // test end
+    // test start
+    let maker_test = new poem_docs_maker_ATest();
+    maker_test.selectors.forEach(ary => {
+        html += string_html(ary.ToString());
+    });
+    // test end
 
     for(let i = 0; i < 5; i++){
         html += make_poem();
@@ -76,9 +76,10 @@ function make_poem() : string
     html = maker.gene_docs(html);
 
     html = maker_tema.gene_docs(html);
-    html = maker_ABCon.gene_docs(html);
     html = maker_sent.gene_docs(html);
-    html = maker_AB.gene_docs(html);
+
+    // html = maker_ABCon.gene_docs(html);
+    // html = maker_AB.gene_docs(html);
 
     return ruby_change(html);
 }
@@ -259,7 +260,7 @@ class Gene_Poemer extends Selector_Generator {
         in_pic_key? : string
     )
     {
-        super(in_itm_key,in_pic_key);
+        super(in_itm_key,in_pic_key,'',KEY_B,2,2);
     }
     Generate() : ISctItm_Selector[] {
         return super.Generate(7,new SctItm_FirstLocker(),new SctItm_Selector);
@@ -441,7 +442,12 @@ class Gene_sent extends Gene_Poemer {
         this.Add_cods(cods_sky);
         this.Add_cods(cods_nature);
         this.Add_cods(cods_body);
+    }
+}
 
+class Gene_move extends Gene_Poemer {
+    constructor(){
+        super('@move');
         this.Add_cods(cods_move);
         this.Add_cods(cods_move_run);
         this.Add_cods(cods_move_fly);
@@ -453,7 +459,7 @@ class Gene_sent extends Gene_Poemer {
     }
 }
 
-class Gene_A extends Gene_Poemer {
+class Gene_A_item extends Gene_Poemer {
     constructor(){
         super('@A');
         this.Add_cods(cods_bird);
@@ -475,7 +481,18 @@ class Gene_A extends Gene_Poemer {
     }
 }
 
-class Gene_B extends Gene_Poemer {
+
+class Gene_A extends Selector_Generator {
+    constructor(){
+        super('@A','','@x','@y',2,2);
+        this.cods = [
+            new SctCod('@',1)
+        ];
+    }
+}
+
+
+class Gene_B_Item extends Gene_Poemer {
     constructor(){
         super('@B');
         this.Add_cods(cods_bird);
@@ -561,8 +578,8 @@ class poem_docs_maker_sent extends docs_maker {
 class poem_docs_maker_AB extends docs_maker {
     constructor(){
         super();
-        this.dic_concat(new Gene_A().Generate());
-        this.dic_concat(new Gene_B().Generate());
+        this.dic_concat(new Gene_A_item().Generate());
+        this.dic_concat(new Gene_B_Item().Generate());
     }
 }
 
@@ -574,3 +591,35 @@ class poem_docs_maker_ABCon extends docs_maker {
         this.dic_concat(new Gene_B_Con().Generate());
     }
 }
+
+class Gene_ATest extends Selector_Generator {
+    constructor(){
+        super('@A','','','',2,2);
+        this.cods = [
+            new SctCod('@M1@',1)
+            ,
+            new SctCod('@M2@',2)
+            ,
+            new SctCod('@M3@',3)
+            ,
+            new SctCod('@M4@',4)
+            ,
+            new SctCod('@M5@',5)
+            ,
+            new SctCod('@M6@',6)
+            ,
+            new SctCod('@M7@',7)
+            ,
+            new SctCod('@M8@',8)
+        ];
+    }
+}
+
+class poem_docs_maker_ATest extends docs_maker {
+    constructor(){
+        super();
+        this.dic_concat(new Gene_ATest().Generate(7,new SctItm_Selector(),new SctItm_Selector()));
+    }
+}
+
+
