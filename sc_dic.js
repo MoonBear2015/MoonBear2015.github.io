@@ -121,10 +121,8 @@ const cods_moon = [
     new SctCod_It('|名月|めいげつ|', 4)
 ];
 const cods_sun = [
-    new SctCod_It('|太陽|たいよう|', 4, 'sun.jpg')
-    // ,
-    // new SctCod_It('|陽|ひ|',1)
-    ,
+    new SctCod_It('|太陽|たいよう|', 4, 'sun.jpg'),
+    new SctCod_It('|陽|ひ|', 1),
     new SctCod_It('|朝日|あさひ|', 3),
     new SctCod_It('|夕陽|ゆうひ|', 3),
     new SctCod_It('|夕焼|ゆうや|け', 4),
@@ -220,7 +218,7 @@ const cods_bird_autumn = [
     new SctCod_It('|椋鳥|むくどり|', 4),
     new SctCod_It('|鶉|うずら|', 3),
     new SctCod_It('|啄木鳥|きつつき|', 4),
-    new SctCod_It('|雁|かり|', 4)
+    new SctCod_It('|雁|かり|', 2)
 ];
 const cods_bird_winter = [
     new SctCod_It('|冬|ふゆ|の|鳥|とり|', 5, 'bird_winter.jpg'),
@@ -239,7 +237,8 @@ const cods_nature = [
     new SctCod_It('|滝|たき|', 2),
     new SctCod_It('|森|もり|', 2),
     new SctCod_It('|林|はやし|', 3),
-    new SctCod_It('|野|の|', 1),
+    // new SctCod_It('|野|の|',1)
+    // ,
     new SctCod_It('|野原|のはら|', 3),
     new SctCod_It('|池|いけ|', 2),
     new SctCod_It('|古池|ふるいけ|', 4),
@@ -288,9 +287,7 @@ const cods_move_stop = [
     new SctCod_Mv('|留|とど|まる', 4),
     new SctCod_Mv('|立|た|ち|止|ど|まる', 5),
     new SctCod_Mv('|佇|たたず|む', 4),
-    new SctCod_Mv('|終|お|わる', 3),
-    new SctCod_It('|停止|ていし|', 3),
-    new SctCod_It('|終了|しゅうりょう|', 4)
+    new SctCod_Mv('|終|お|わる', 3)
 ];
 const cods_move_open = [
     new SctCod_Mv('|開|ひら|く', 3, 'open.jpg'),
@@ -319,14 +316,16 @@ const cods_body = [
     new SctCod_It('|体|からだ|', 3, 'body.jpg'),
     new SctCod_It('|肉体|にくたい|', 4),
     new SctCod_It('|頭|あたま|', 3),
-    new SctCod_It('|目|め|', 1),
+    // new SctCod_It('|目|め|',1)
+    // ,
     new SctCod_It('|耳|みみ|', 2),
     new SctCod_It('|鼻|はな|', 2),
     new SctCod_It('|口|くち|', 2),
     new SctCod_It('|首|くび|', 2),
     new SctCod_It('|肩|かた|', 2),
     new SctCod_It('|腕|うで|', 2),
-    new SctCod_It('|手|て|', 1),
+    // new SctCod_It('|手|て|',1)
+    // ,
     new SctCod_It('|指|ゆび|', 2),
     new SctCod_It('|拳|こぶし|', 3),
     new SctCod_It('|胸|むね|', 2),
@@ -334,7 +333,7 @@ const cods_body = [
     new SctCod_It('|尻|しり|', 2),
     new SctCod_It('|足|あし|', 2)
 ];
-const cods_whitch = [
+const cods_move_which = [
     new SctCod_Mv('この', 2),
     new SctCod_Mv('その', 2),
     new SctCod_Mv('あの', 2),

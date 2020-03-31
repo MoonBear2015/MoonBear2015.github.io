@@ -511,7 +511,7 @@ class selector_comment2 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@DO@@END02B@@THEY@、@YESNO@、それが@WHAT@@END02A@')
             ,
-            new SctItm('@WHAT@の@PART@、@YESNO@、それが@CLASS@@END02A@')
+            new SctItm('@WHAT@の@CLASS@、それが@PEOPLE@の@PEOPLE@@END02A@')
         ];
     }
 }

@@ -9,7 +9,7 @@ function set_poem() {
     html += '<h1>';
     html += 'POEM';
     html += '<small>';
-    html += 'P01.22';
+    html += 'P01.23';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -57,18 +57,22 @@ function make_poem() {
     let maker_sent = new poem_docs_maker_sent();
     let maker_im = new poem_docs_maker_im();
     let maker_c = new poem_docs_maker_c();
-    html = maker.gene_docs(html);
-    html = maker.gene_docs(html);
-    html = maker_tema.gene_docs(html);
-    html = maker_sent.gene_docs(html);
-    html = maker_im.gene_docs(html);
-    html = maker_c.gene_docs(html);
-    html = maker.gene_docs(html);
-    html = maker.gene_docs(html);
-    html = maker_tema.gene_docs(html);
-    html = maker_sent.gene_docs(html);
-    html = maker_im.gene_docs(html);
-    html = maker_c.gene_docs(html);
+    let cnt = 0;
+    while (true) {
+        html = maker.gene_docs(html);
+        html = maker_tema.gene_docs(html);
+        html = maker_sent.gene_docs(html);
+        html = maker_im.gene_docs(html);
+        html = maker_c.gene_docs(html);
+        cnt++;
+        let chk = html.indexOf('@');
+        if (chk < 0)
+            break;
+        if (cnt > 10) {
+            alert('over work : ' + chk.toString());
+            break;
+        }
+    }
     return ruby_change(html);
 }
 function make_poem_sub() {
@@ -363,6 +367,7 @@ class Gene_move extends Gene_Poemer {
         this.Add_cods(cods_move_open);
         this.Add_cods(cods_move_life);
         this.Add_cods(cods_move_death);
+        // this.Add_cods(cods_move_which);
     }
 }
 class Gene_item extends Gene_Poemer {
@@ -376,6 +381,9 @@ class Gene_item extends Gene_Poemer {
         this.Add_cods(cods_nature);
         this.Add_cods(cods_body);
         this.Add_cods(cods_home);
+        // this.Add_cods(cods_what);
+        this.Add_cods(cods_where);
+        this.Add_cods(cods_when);
     }
 }
 class Gene_conect extends Gene_Poemer {

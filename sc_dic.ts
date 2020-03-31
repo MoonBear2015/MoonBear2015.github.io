@@ -225,8 +225,8 @@ const cods_moon = [
 
 const cods_sun = [
     new SctCod_It('|太陽|たいよう|',4,'sun.jpg')
-    // ,
-    // new SctCod_It('|陽|ひ|',1)
+    ,
+    new SctCod_It('|陽|ひ|',1)
     ,
     new SctCod_It('|朝日|あさひ|',3)
     ,
@@ -407,7 +407,7 @@ const   cods_bird_autumn = [
     ,
     new SctCod_It('|啄木鳥|きつつき|',4)
     ,
-    new SctCod_It('|雁|かり|',4)
+    new SctCod_It('|雁|かり|',2)
 ];
 
 const   cods_bird_winter = [
@@ -441,8 +441,8 @@ const   cods_nature = [
     ,
     new SctCod_It('|林|はやし|',3)
     ,
-    new SctCod_It('|野|の|',1)
-    ,
+    // new SctCod_It('|野|の|',1)
+    // ,
     new SctCod_It('|野原|のはら|',3)
     ,
     new SctCod_It('|池|いけ|',2)
@@ -530,10 +530,6 @@ const   cods_move_stop = [
     new SctCod_Mv('|佇|たたず|む',4)
     ,
     new SctCod_Mv('|終|お|わる',3)
-    ,
-    new SctCod_It('|停止|ていし|',3)
-    ,
-    new SctCod_It('|終了|しゅうりょう|',4)
 ];
 
 const   cods_move_open = [
@@ -583,8 +579,8 @@ const   cods_body = [
     ,
     new SctCod_It('|頭|あたま|',3)
     ,
-    new SctCod_It('|目|め|',1)
-    ,
+    // new SctCod_It('|目|め|',1)
+    // ,
     new SctCod_It('|耳|みみ|',2)
     ,
     new SctCod_It('|鼻|はな|',2)
@@ -597,8 +593,8 @@ const   cods_body = [
     ,
     new SctCod_It('|腕|うで|',2)
     ,
-    new SctCod_It('|手|て|',1)
-    ,
+    // new SctCod_It('|手|て|',1)
+    // ,
     new SctCod_It('|指|ゆび|',2)
     ,
     new SctCod_It('|拳|こぶし|',3)
@@ -612,7 +608,7 @@ const   cods_body = [
     new SctCod_It('|足|あし|',2)
 ];
 
-const   cods_whitch = [
+const   cods_move_which = [
     new SctCod_Mv('この',2)
     ,
     new SctCod_Mv('その',2)
