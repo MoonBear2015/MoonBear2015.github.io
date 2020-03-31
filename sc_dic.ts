@@ -376,7 +376,7 @@ const   cods_bird_summer = [
     ,
     new SctCod_It('|翡翠|かわせみ|',4)
     ,
-    new SctCod_It('|杜鵑草|ほととぎす|',4)
+    new SctCod_It('|杜鵑草|ほととぎす|',5)
     ,
     new SctCod_It('|雷鳥|らいちょう|',4)
     ,
