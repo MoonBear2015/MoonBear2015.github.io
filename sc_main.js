@@ -15,7 +15,7 @@ function make_site_header() {
     html += '<h1>';
     html += '「空虚」';
     html += '<small>';
-    html += 'M01.04';
+    html += 'M01.10';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -36,7 +36,7 @@ class menu_item {
 }
 function get_menu_items() {
     let menu_items = [
-        new menu_item('Home', 'select_menu(0)'),
+        new menu_item('Home', 'set_main()'),
         new menu_item('News', 'set_news()'),
         new menu_item('Poem', 'set_poem()'),
         new menu_item('About', 'select_menu(3)')
@@ -46,7 +46,7 @@ function get_menu_items() {
 function select_menu(num) {
     set_header_menu(num);
     let items = get_menu_items();
-    set_center_message(items[num]);
+    set_center_item(items[num]);
 }
 function set_header_menu(num) {
     let html = make_header_menu(num);
@@ -78,11 +78,14 @@ function make_header_menu(num) {
     html += '</div>' + '\r\n';
     return html;
 }
+function set_center_item(mess) {
+    set_center_message(mess.itemName);
+}
 function set_center_message(mess) {
     let html = '';
     html += '<div id="center_message">';
     html += '<p>';
-    html += mess.itemName;
+    html += mess;
     html += '</p>';
     html += '</div>';
     let elem = document.getElementById('site_main');
@@ -91,4 +94,19 @@ function set_center_message(mess) {
         return;
     }
     elem.innerHTML = html;
+}
+function set_main() {
+    set_header_menu(0);
+    scrollTo(0, 0);
+    let html = '';
+    let msgs = [
+        'ここには、何もありません。<br>何の意味もありません。<br>何の意図もありません。',
+        '書かせたのは私ですが、<br>書いたのはあなたのブラウザです。',
+        'ここには誰の意図も込められていません。<br>安心して、ご閲覧ください。',
+        '支離滅裂が好きなあなたへ。',
+        'どうぞ、錯乱したい時にお読みください。',
+        'ここは、あなたを写した鏡です。'
+    ];
+    let a = rnd_max(msgs.length);
+    set_center_message(msgs[a]);
 }
