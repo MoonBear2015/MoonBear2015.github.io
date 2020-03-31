@@ -44,11 +44,16 @@ class SctCod extends SctItm {
         else {
             this.CodLength = this.Wrd.length;
         }
+        this.KeyA = '';
+        this.KeyB = '';
+        this.KeyC = '';
+        this.MinA = 0;
+        this.MinB = 0;
     }
     to_SctItm() {
         return new SctItm(this.Wrd, this.SctPic);
     }
-    to_length_itms(in_length, in_KeyA, in_KeyB, in_MinA, in_MinB) {
+    to_length_itms(in_length) {
         let results = new Array();
         if (in_length < this.CodLength) {
             return results;
@@ -60,21 +65,31 @@ class SctCod extends SctItm {
         let l = in_length - this.CodLength;
         let abs = sepalate_number(l);
         for (let i = 0; i < abs.length; i++) {
-            if (abs[i].A != 0 && abs[i].A < in_MinA)
+            if (abs[i].A != 0 && abs[i].A < this.MinA)
                 continue;
-            if (abs[i].B != 0 && abs[i].B < in_MinB)
+            if (abs[i].B != 0 && abs[i].B < this.MinB)
                 continue;
-            if (abs[i].A > 0 && in_KeyA == '')
+            if (abs[i].A > 0 && this.KeyA == '')
                 continue;
-            if (abs[i].B > 0 && in_KeyB == '')
+            if (abs[i].B > 0 && this.KeyB == '')
                 continue;
             let key = "";
-            if (abs[i].A > 0 && in_KeyA != '') {
-                key += to_key_with_length(in_KeyA, abs[i].A);
+            if (abs[i].A > 0 && this.KeyA != '') {
+                if (this.KeyC != '' && abs[i].A == 1) {
+                    key += to_key_with_length(this.KeyC, 1);
+                }
+                else {
+                    key += to_key_with_length(this.KeyA, abs[i].A);
+                }
             }
             key += this.Wrd;
-            if (abs[i].B > 0 && in_KeyB != '') {
-                key += to_key_with_length(in_KeyB, abs[i].B);
+            if (abs[i].B > 0 && this.KeyB != '') {
+                if (this.KeyC != '' && abs[i].B == 1) {
+                    key += to_key_with_length(this.KeyC, 1);
+                }
+                else {
+                    key += to_key_with_length(this.KeyB, abs[i].B);
+                }
             }
             results.push(new SctItm(key, this.SctPic));
         }
@@ -88,6 +103,25 @@ class SctCod extends SctItm {
     }
     ToString() {
         return super.ToString() + this.CodLength.toString();
+    }
+}
+class SctCod_It extends SctCod {
+    constructor(in_Wrd, in_CodLength, in_SctPic) {
+        super(in_Wrd, in_CodLength, in_SctPic);
+        this.KeyA = '@M';
+        this.KeyB = '@M';
+        this.KeyC = '@C';
+        this.MinA = 2;
+        this.MinB = 1;
+    }
+}
+class SctCod_Mv extends SctCod {
+    constructor(in_Wrd, in_CodLength, in_SctPic) {
+        super(in_Wrd, in_CodLength, in_SctPic);
+        this.KeyA = '@I';
+        this.KeyB = '@I';
+        this.MinA = 2;
+        this.MinB = 2;
     }
 }
 class ItmArray {

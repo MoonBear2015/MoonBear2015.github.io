@@ -60,6 +60,12 @@ class SctItm implements ISctItm,ITest {
 
 class SctCod extends SctItm implements ISctCod,ITest {
     public CodLength : number;
+    public KeyA : string;
+    public KeyB : string;
+    public KeyC : string;
+    public MinA : number;
+    public MinB : number;
+
     constructor(
         in_Wrd? : string
         ,
@@ -74,13 +80,19 @@ class SctCod extends SctItm implements ISctCod,ITest {
         } else {
             this.CodLength = this.Wrd.length;
         }
+
+        this.KeyA = '';
+        this.KeyB = '';
+        this.KeyC = '';
+        this.MinA = 0;
+        this.MinB = 0;
     }
 
     to_SctItm() : ISctItm {
         return new SctItm(this.Wrd,this.SctPic);
     }
 
-    to_length_itms(in_length : number,in_KeyA : string,in_KeyB : string,in_MinA : number,in_MinB : number)
+    to_length_itms(in_length : number)
      : Array<ISctItm>
     {
         let results = new Array<ISctItm>();
@@ -98,20 +110,28 @@ class SctCod extends SctItm implements ISctCod,ITest {
         
         for(let i = 0;i < abs.length;i++)
         {
-            if (abs[i].A != 0 && abs[i].A < in_MinA) continue;
-            if (abs[i].B != 0 && abs[i].B < in_MinB) continue;
-            if (abs[i].A > 0 && in_KeyA == '') continue;
-            if (abs[i].B > 0 && in_KeyB == '') continue;
+            if (abs[i].A != 0 && abs[i].A < this.MinA) continue;
+            if (abs[i].B != 0 && abs[i].B < this.MinB) continue;
+            if (abs[i].A > 0 && this.KeyA == '') continue;
+            if (abs[i].B > 0 && this.KeyB == '') continue;
 
             let key = "";
-            if (abs[i].A > 0 && in_KeyA != '')
+            if (abs[i].A > 0 && this.KeyA != '')
             {
-                key += to_key_with_length(in_KeyA,abs[i].A);
+                if (this.KeyC != '' && abs[i].A == 1) {
+                    key += to_key_with_length(this.KeyC,1);
+                } else {
+                    key += to_key_with_length(this.KeyA,abs[i].A);
+                }
             }
             key += this.Wrd;
-            if (abs[i].B > 0 && in_KeyB != '')
+            if (abs[i].B > 0 && this.KeyB != '')
             {
-                key += to_key_with_length(in_KeyB,abs[i].B);
+                if (this.KeyC != '' && abs[i].B == 1) {
+                    key += to_key_with_length(this.KeyC,1);
+                } else {
+                    key += to_key_with_length(this.KeyB,abs[i].B);
+                }
             }
             results.push(new SctItm(key,this.SctPic));
         }
@@ -130,6 +150,44 @@ class SctCod extends SctItm implements ISctCod,ITest {
         return super.ToString() + this.CodLength.toString(); 
     }
 }
+
+class SctCod_It extends SctCod implements ISctCod,ITest {
+    constructor(
+        in_Wrd? : string
+        ,
+        in_CodLength? : number
+        ,
+        in_SctPic? : string
+    )
+    {
+        super(in_Wrd,in_CodLength,in_SctPic);
+
+        this.KeyA = '@M';
+        this.KeyB = '@M';
+        this.KeyC = '@C';
+        this.MinA = 2;
+        this.MinB = 1;
+    }
+}
+
+class SctCod_Mv extends SctCod implements ISctCod,ITest {
+    constructor(
+        in_Wrd? : string
+        ,
+        in_CodLength? : number
+        ,
+        in_SctPic? : string
+    )
+    {
+        super(in_Wrd,in_CodLength,in_SctPic);
+
+        this.KeyA = '@I';
+        this.KeyB = '@I';
+        this.MinA = 2;
+        this.MinB = 2;
+    }
+}
+
 
 interface IItmArray<T extends ISctItm> extends ITest {
     itms : T[];

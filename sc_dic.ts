@@ -1,611 +1,677 @@
 const   cods_spring = [
-    new SctCod('|春|はる|' ,2,'spring.jpg')
+    new SctCod_It('|春|はる|' ,2,'spring.jpg')
     ,
-    new SctCod('|立春|りっしゅん|' ,4)
+    new SctCod_It('|立春|りっしゅん|' ,4)
     ,
-    new SctCod('|土筆|つくし|',3)
+    new SctCod_It('|土筆|つくし|',3)
     ,
-    new SctCod('|蛙|かえる|',3)
+    new SctCod_It('|蛙|かえる|',3)
     ,
-    new SctCod('|蛙|かわず|',3)
+    new SctCod_It('|蛙|かわず|',3)
     ,
-    new SctCod('お|玉杓子|たまじゃくし|',6)
+    new SctCod_It('お|玉杓子|たまじゃくし|',6)
     ,
-    new SctCod('|蛤|はまぐり|',4)
+    new SctCod_It('|蛤|はまぐり|',4)
     ,
-    new SctCod('|浅蜊|あさり|',3)
+    new SctCod_It('|浅蜊|あさり|',3)
     ,
-    new SctCod('|雛祭|ひなまつり|',5)
+    new SctCod_It('|雛祭|ひなまつり|',5)
     ,
-    new SctCod('|花見|はなみ|',3)
+    new SctCod_It('|花見|はなみ|',3)
 ];
 
 const   cods_flower_spring = [
-    new SctCod('|春|はる|の|花|はな|',5,'flower_spring.jpg')
+    new SctCod_It('|春|はる|の|花|はな|',5,'flower_spring.jpg')
     ,
-    new SctCod('|梅|うめ|',2)
+    new SctCod_It('|梅|うめ|',2)
     ,
-    new SctCod('|桜|さくら|',3)
+    new SctCod_It('|桜|さくら|',3)
     ,
-    new SctCod('|椿|つばき|',3)
+    new SctCod_It('|椿|つばき|',3)
     ,
-    new SctCod('|菜|な|の|花|はな|',4)
+    new SctCod_It('|菜|な|の|花|はな|',4)
     ,
-    new SctCod('チューリップ',5)
+    new SctCod_It('チューリップ',5)
     ,
-    new SctCod('|蒲公英|たんぽぽ|',4)
+    new SctCod_It('|蒲公英|たんぽぽ|',4)
     ,
-    new SctCod('ハナミズキ',5)
+    new SctCod_It('ハナミズキ',5)
     ,
-    new SctCod('|撫子|なでしこ|',4)
+    new SctCod_It('|撫子|なでしこ|',4)
     ,
-    new SctCod('|牡丹|ぼたん|',3)
+    new SctCod_It('|牡丹|ぼたん|',3)
 ];
 
 
 const   cods_summer = [
-    new SctCod('|夏|なつ|' ,2,'summer.jpg')
+    new SctCod_It('|夏|なつ|' ,2,'summer.jpg')
     ,
-    new SctCod('|初夏|しょか|',2)
+    new SctCod_It('|初夏|しょか|',2)
     ,
-    new SctCod('|猛暑|もうしょ|',3)
+    new SctCod_It('|猛暑|もうしょ|',3)
     ,
-    new SctCod('|酷暑|こくしょ|',3)
+    new SctCod_It('|酷暑|こくしょ|',3)
     ,
-    new SctCod('|残暑|ざんしょ|',3)
+    new SctCod_It('|残暑|ざんしょ|',3)
     ,
-    new SctCod('|虹|にじ|',2)
+    new SctCod_It('|虹|にじ|',2)
     ,
-    new SctCod('|浴衣|ゆかた|',3)
+    new SctCod_It('|浴衣|ゆかた|',3)
     ,
-    new SctCod('|祭|まつり|',3)
+    new SctCod_It('|祭|まつり|',3)
     ,
-    new SctCod('|花火|はなび|',3)
+    new SctCod_It('|花火|はなび|',3)
     ,
-    new SctCod('|浜辺|はまべ|',3)
+    new SctCod_It('|浜辺|はまべ|',3)
     ,
-    new SctCod('|蛍|ほたる|',3)
+    new SctCod_It('|蛍|ほたる|',3)
     ,
-    new SctCod('|蝉|せみ|',3)
+    new SctCod_It('|蝉|せみ|',3)
     ,
-    new SctCod('|風鈴|ふうりん|',4)
+    new SctCod_It('|風鈴|ふうりん|',4)
 ];
 
 const   cods_flower_summer = [
-    new SctCod('|夏|なつ|の|花|はな|',5,'flower_summer.jpg')
+    new SctCod_It('|夏|なつ|の|花|はな|',5,'flower_summer.jpg')
     ,
-    new SctCod('|紫陽花|あじさい|',4)
+    new SctCod_It('|紫陽花|あじさい|',4)
     ,
-    new SctCod('|梔子|くちなし|',3)
+    new SctCod_It('|梔子|くちなし|',3)
     ,
-    new SctCod('ハイビスカス',6)
+    new SctCod_It('ハイビスカス',6)
     ,
-    new SctCod('ブーゲンビリア',7)
+    new SctCod_It('ブーゲンビリア',7)
     ,
-    new SctCod('|向日葵|ひまわり|',4)
+    new SctCod_It('|向日葵|ひまわり|',4)
     ,
-    new SctCod('|花菖蒲|はなしょうぶ|',5)
+    new SctCod_It('|花菖蒲|はなしょうぶ|',5)
     ,
-    new SctCod('|水芭蕉|みずばしょう|',5)
+    new SctCod_It('|水芭蕉|みずばしょう|',5)
     ,
-    new SctCod('|朝顔|あさがお|',4)
+    new SctCod_It('|朝顔|あさがお|',4)
     ,
-    new SctCod('ダリア',3)
+    new SctCod_It('ダリア',3)
     ,
-    new SctCod('|桔梗|ききょう|',3)
+    new SctCod_It('|桔梗|ききょう|',3)
 ];
 
 
 const   cods_autumn = [
-    new SctCod('|秋|あき|',2,'autumn.jpg')
+    new SctCod_It('|秋|あき|',2,'autumn.jpg')
     ,
-    new SctCod('|夜長|よなが|',3)
+    new SctCod_It('|夜長|よなが|',3)
     ,
-    new SctCod('|月|つき|',2)
+    new SctCod_It('|月|つき|',2)
     ,
-    new SctCod('|紅葉|もみじ|',3)
+    new SctCod_It('|紅葉|もみじ|',3)
     ,
-    new SctCod('|栗|くり|',2)
+    new SctCod_It('|栗|くり|',2)
     ,
-    new SctCod('|柿|かき|',2)
+    new SctCod_It('|柿|かき|',2)
     ,
-    new SctCod('|芋|いも|',2)
+    new SctCod_It('|芋|いも|',2)
     ,
-    new SctCod('|梨|なし|',2)
+    new SctCod_It('|梨|なし|',2)
     ,
-    new SctCod('|鈴虫|すずむし|',2)
+    new SctCod_It('|鈴虫|すずむし|',2)
 ];
 
 const   cods_flower_autumn = [
-    new SctCod('|秋|あき|の|花|はな|',5,'flower_autumn.jpg')
+    new SctCod_It('|秋|あき|の|花|はな|',5,'flower_autumn.jpg')
     ,
-    new SctCod('|萩|はぎ|',2)
+    new SctCod_It('|萩|はぎ|',2)
     ,
-    new SctCod('|尾花|おばな|',3)
+    new SctCod_It('|尾花|おばな|',3)
     ,
-    new SctCod('|葛|くず|',2)
+    new SctCod_It('|葛|くず|',2)
     ,
-    new SctCod('|撫子|なでしこ|',4)
+    new SctCod_It('|撫子|なでしこ|',4)
     ,
-    new SctCod('|桔梗|ききょう|',3)
+    new SctCod_It('|桔梗|ききょう|',3)
     ,
-    new SctCod('|竜胆|りんどう|',4)
+    new SctCod_It('|竜胆|りんどう|',4)
     ,
-    new SctCod('|秋桜|こすもす|',4)
+    new SctCod_It('|秋桜|こすもす|',4)
     ,
-    new SctCod('|彼岸花|ひがんばな|',5)
+    new SctCod_It('|彼岸花|ひがんばな|',5)
     ,
-    new SctCod('|金木犀|きんもくせい|',5)
+    new SctCod_It('|金木犀|きんもくせい|',5)
     ,
-    new SctCod('サフラン',4)
+    new SctCod_It('サフラン',4)
     ,
-    new SctCod('|葉牡丹|はぼたん|',5)
+    new SctCod_It('|葉牡丹|はぼたん|',4)
     ,
-    new SctCod('|杜鵑草|ほととぎす|',5)
+    new SctCod_It('|杜鵑草|ほととぎす|',5)
     ,
-    new SctCod('サルビア',4)
+    new SctCod_It('サルビア',4)
     ,
-    new SctCod('パンジー',4)
+    new SctCod_It('パンジー',4)
 ];
 
 const   cods_winter = [
-    new SctCod('|冬|ふゆ|',2,'winter.jpg')
+    new SctCod_It('|冬|ふゆ|',2,'winter.jpg')
     ,
-    new SctCod('|雪|ゆき|',2)
+    new SctCod_It('|雪|ゆき|',2)
     ,
-    new SctCod('|氷|こおり|',3)
+    new SctCod_It('|氷|こおり|',3)
     ,
-    new SctCod('|霜|しも|',2)
+    new SctCod_It('|霜|しも|',2)
 ];
 
 const   cods_flower_winter = [
-    new SctCod('|冬|ふゆ|の|花|はな|',5,'flower_winter.jpg')
+    new SctCod_It('|冬|ふゆ|の|花|はな|',5,'flower_winter.jpg')
     ,
-    new SctCod('スノードロップ',7)
+    new SctCod_It('スノードロップ',7)
     ,
-    new SctCod('クリスマスローズ',8)
+    new SctCod_It('クリスマスローズ',8)
     ,
-    new SctCod('|水仙|すいせん|',4)
+    new SctCod_It('|水仙|すいせん|',4)
     ,
-    new SctCod('マーガレット',6)
+    new SctCod_It('マーガレット',6)
     ,
-    new SctCod('|柊|ひいらぎ|',4)
+    new SctCod_It('|柊|ひいらぎ|',4)
     ,
-    new SctCod('|福寿草|ふくじゅそう|',5)
+    new SctCod_It('|福寿草|ふくじゅそう|',5)
     ,
-    new SctCod('アネモネ',4)
+    new SctCod_It('アネモネ',4)
     ,
-    new SctCod('|黄梅|おうばい|',4)
+    new SctCod_It('|黄梅|おうばい|',4)
     ,
-    new SctCod('カトレア',4)
+    new SctCod_It('カトレア',4)
     ,
-    new SctCod('|山茶花|さざんか|',4)
+    new SctCod_It('|山茶花|さざんか|',4)
     ,
-    new SctCod('シクラメン',5)
+    new SctCod_It('シクラメン',5)
 ];
 
 const   cods_flower = [
-    new SctCod('|花|はな|',2,'flower.jpg')
+    new SctCod_It('|花|はな|',2,'flower.jpg')
     ,
-    new SctCod('|花見|はなみ|',3)
+    new SctCod_It('|花見|はなみ|',3)
     ,
-    new SctCod('|花屋|はなや|',3)
+    new SctCod_It('|花屋|はなや|',3)
     ,
-    new SctCod('|花束|はなたば|',4)
+    new SctCod_It('|花束|はなたば|',4)
     ,
-    new SctCod('|花売|はなう|り|娘|むすめ|',7)
+    new SctCod_It('|花売|はなう|り|娘|むすめ|',7)
 ];
 
 
 const cods_moon = [
-    new SctCod('|月|つき|',2,'moon.jpg')
+    new SctCod_It('|月|つき|',2,'moon.jpg')
     ,
-    new SctCod('|満月|まんげつ|',4)
+    new SctCod_It('|満月|まんげつ|',4)
     ,
-    new SctCod('|三日月|みかづき|',4)
+    new SctCod_It('|三日月|みかづき|',4)
     ,
-    new SctCod('|半月|はんげつ|',4)
+    new SctCod_It('|半月|はんげつ|',4)
     ,
-    new SctCod('|新月|しんげつ|',4)
+    new SctCod_It('|新月|しんげつ|',4)
     ,
-    new SctCod('|上弦|じょうげん|の|月|つき|',7)
+    new SctCod_It('|上弦|じょうげん|の|月|つき|',7)
     ,
-    new SctCod('|十六夜|いざよい|',4)
+    new SctCod_It('|十六夜|いざよい|',4)
     ,
-    new SctCod('|下弦|かげん|の|月|つき|',6)
+    new SctCod_It('|下弦|かげん|の|月|つき|',6)
     ,
-    new SctCod('|月食|げっしょく|',4)
+    new SctCod_It('|月食|げっしょく|',4)
     ,
-    new SctCod('|月夜|つきよ|',3)
+    new SctCod_It('|月夜|つきよ|',3)
     ,
-    new SctCod('|朧月|おぼろづき|',5)
+    new SctCod_It('|朧月|おぼろづき|',5)
     ,
-    new SctCod('|名月|めいげつ|',4)
+    new SctCod_It('|名月|めいげつ|',4)
 ];
 
 const cods_sun = [
-    new SctCod('|太陽|たいよう|',4,'sun.jpg')
+    new SctCod_It('|太陽|たいよう|',4,'sun.jpg')
+    // ,
+    // new SctCod_It('|陽|ひ|',1)
     ,
-    new SctCod('|陽|ひ|',1)
+    new SctCod_It('|朝日|あさひ|',3)
     ,
-    new SctCod('|朝日|あさひ|',3)
+    new SctCod_It('|夕陽|ゆうひ|',3)
     ,
-    new SctCod('|夕陽|ゆうひ|',3)
+    new SctCod_It('|夕焼|ゆうや|け',4)
     ,
-    new SctCod('|夕焼|ゆうや|け',4)
+    new SctCod_It('|日食|にっしょく|',4)
     ,
-    new SctCod('|日食|にっしょく|',4)
+    new SctCod_It('|皆既日食|かいきにっしょく|',7)
     ,
-    new SctCod('|皆既日食|かいきにっしょく|',7)
+    new SctCod_It('|日|ひ|の|出|で|',3)
     ,
-    new SctCod('|日|ひ|の|出|で|',3)
+    new SctCod_It('|初日|はつひ|の|出|で|',5)
     ,
-    new SctCod('|初日|はつひ|の|出|で|',5)
-    ,
-    new SctCod('|落日|らくじつ|',4)
+    new SctCod_It('|落日|らくじつ|',4)
 ];
 
 
 const   cods_star = [
-    new SctCod('|星|ほし|',2,'star.jpg')
+    new SctCod_It('|星|ほし|',2,'star.jpg')
     ,
-    new SctCod('|水星|すいせい|',4)
+    new SctCod_It('|水星|すいせい|',4)
     ,
-    new SctCod('|金星|きんせい|',4)
+    new SctCod_It('|金星|きんせい|',4)
     ,
-    new SctCod('|地球|ちきゅう|',4)
+    new SctCod_It('|地球|ちきゅう|',4)
     ,
-    new SctCod('|火星|かせい|',3)
+    new SctCod_It('|火星|かせい|',3)
     ,
-    new SctCod('|木星|もくせい|',4)
+    new SctCod_It('|木星|もくせい|',4)
     ,
-    new SctCod('|土星|どせい|',3)
+    new SctCod_It('|土星|どせい|',3)
     ,
-    new SctCod('|天王星|てんのうせい|',6)
+    new SctCod_It('|天王星|てんのうせい|',6)
     ,
-    new SctCod('|海王星|かいおうせい|',6)
+    new SctCod_It('|海王星|かいおうせい|',6)
     ,
-    new SctCod('|冥王星|めいおうせい|',6)
+    new SctCod_It('|冥王星|めいおうせい|',6)
     ,
-    new SctCod('|彗星|すいせい|',6)
+    new SctCod_It('|彗星|すいせい|',6)
 ];
 
 const   cods_sky = [
-    new SctCod('|空|そら|',2,'sky.jpg')
+    new SctCod_It('|空|そら|',2,'sky.jpg')
     ,
-    new SctCod('|天|てん|',2)
+    new SctCod_It('|天|てん|',2)
     ,
-    new SctCod('|満天|まんてん|',4)
+    new SctCod_It('|満天|まんてん|',4)
     ,
-    new SctCod('|虹|にじ|',2)
+    new SctCod_It('|虹|にじ|',2)
     ,
-    new SctCod('|青空|あおぞら|',4)
+    new SctCod_It('|青空|あおぞら|',4)
     ,
-    new SctCod('|夜空|よぞら|',3)
+    new SctCod_It('|夜空|よぞら|',3)
     ,
-    new SctCod('|星空|ほしぞら|',4)
+    new SctCod_It('|星空|ほしぞら|',4)
 ];
 
 const   cods_weather = [
-    new SctCod('|天気|てんき|',2,'weather.jpg')
+    new SctCod_It('|天気|てんき|',2,'weather.jpg')
     ,
-    new SctCod('|晴|は|れ',2)
+    new SctCod_It('|晴|は|れ',2)
     ,
-    new SctCod('|晴天|せいてん|',4)
+    new SctCod_It('|晴天|せいてん|',4)
     ,
-    new SctCod('|雨|あめ|',2)
+    new SctCod_It('|雨|あめ|',2)
     ,
-    new SctCod('|小雨|こさめ|',3)
+    new SctCod_It('|小雨|こさめ|',3)
     ,
-    new SctCod('|春雨|はるさめ|',4)
+    new SctCod_It('|春雨|はるさめ|',4)
     ,
-    new SctCod('|梅雨|つゆ|',2)
+    new SctCod_It('|梅雨|つゆ|',2)
     ,
-    new SctCod('|雷雨|らいう|',3)
+    new SctCod_It('|雷雨|らいう|',3)
     ,
-    new SctCod('|豪雨|ごうう|',3)
+    new SctCod_It('|豪雨|ごうう|',3)
     ,
-    new SctCod('|曇|くも|り',3)
+    new SctCod_It('|曇|くも|り',3)
     ,
-    new SctCod('|雪|ゆき|',2)
+    new SctCod_It('|雪|ゆき|',2)
     ,
-    new SctCod('|豪雪|ごうせつ|',4)
+    new SctCod_It('|豪雪|ごうせつ|',4)
     ,
-    new SctCod('|雷|かみなり|',4)
+    new SctCod_It('|雷|かみなり|',4)
     ,
-    new SctCod('|霧|きり|',2)
+    new SctCod_It('|霧|きり|',2)
     ,
-    new SctCod('|靄|もや|',2)
+    new SctCod_It('|靄|もや|',2)
     ,
-    new SctCod('|風|かぜ|',2)
+    new SctCod_It('|風|かぜ|',2)
     ,
-    new SctCod('|台風|たいふう|',4)
+    new SctCod_It('|台風|たいふう|',4)
 
 ];
 
 const   cods_bird = [
-    new SctCod('|鳥|とり|',2,'sky.jpg')
+    new SctCod_It('|鳥|とり|',2,'sky.jpg')
     ,
-    new SctCod('|烏|からす|',3)
+    new SctCod_It('|烏|からす|',3)
     ,
-    new SctCod('|雀|すずめ|',3)
+    new SctCod_It('|雀|すずめ|',3)
     ,
-    new SctCod('|鳩|はと|',2)
+    new SctCod_It('|鳩|はと|',2)
     ,
-    new SctCod('|鷹|たか|',2)
+    new SctCod_It('|鷹|たか|',2)
     ,
-    new SctCod('|鷲|わし|',2)
+    new SctCod_It('|鷲|わし|',2)
     ,
-    new SctCod('|鳶|とんび|',3)
+    new SctCod_It('|鳶|とんび|',3)
     ,
-    new SctCod('|梟|ふくろう|',4)
+    new SctCod_It('|梟|ふくろう|',4)
     ,
-    new SctCod('|鴎|かもめ|',3)
+    new SctCod_It('|鴎|かもめ|',3)
     ,
-    new SctCod('|辺銀|ぺんぎん|',4)
+    new SctCod_It('|辺銀|ぺんぎん|',4)
 ];
 
 const   cods_bird_spring = [
-    new SctCod('|春|なつ|の|鳥|とり|',5,'bird_spring.jpg')
+    new SctCod_It('|春|なつ|の|鳥|とり|',5,'bird_spring.jpg')
     ,
-    new SctCod('|鶯|うぐいす|',4)
+    new SctCod_It('|鶯|うぐいす|',4)
     ,
-    new SctCod('|雉|きじ|',2)
+    new SctCod_It('|雉|きじ|',2)
     ,
-    new SctCod('|雲雀|ひばり|',3)
+    new SctCod_It('|雲雀|ひばり|',3)
     ,
-    new SctCod('|燕|つばめ|',3)
+    new SctCod_It('|燕|つばめ|',3)
     ,
-    new SctCod('|岩燕|いわつばめ|',3)
+    new SctCod_It('|岩燕|いわつばめ|',5)
 ];
 
 const   cods_bird_summer = [
-    new SctCod('|夏|なつ|の|鳥|とり|',5,'bird_summer.jpg')
+    new SctCod_It('|夏|なつ|の|鳥|とり|',5,'bird_summer.jpg')
     ,
-    new SctCod('|日雀|ひがら|',3)
+    new SctCod_It('|日雀|ひがら|',3)
     ,
-    new SctCod('|眼白|めじろ|',3)
+    new SctCod_It('|眼白|めじろ|',3)
     ,
-    new SctCod('|五十雀|ごじゅうから|',5)
+    new SctCod_It('|五十雀|ごじゅうから|',5)
     ,
-    new SctCod('|駒鳥|こまどり|',4)
+    new SctCod_It('|駒鳥|こまどり|',4)
     ,
-    new SctCod('|山雀|やまがら|',4)
+    new SctCod_It('|山雀|やまがら|',4)
     ,
-    new SctCod('|四十雀|しじゅうから|',5)
+    new SctCod_It('|四十雀|しじゅうから|',5)
     ,
-    new SctCod('|翡翠|かわせみ|',4)
+    new SctCod_It('|翡翠|かわせみ|',4)
     ,
-    new SctCod('|杜鵑草|ほととぎす|',4)
+    new SctCod_It('|杜鵑草|ほととぎす|',4)
     ,
-    new SctCod('|雷鳥|らいちょう|',4)
+    new SctCod_It('|雷鳥|らいちょう|',4)
     ,
-    new SctCod('|水鶏|くいな|',3)
+    new SctCod_It('|水鶏|くいな|',3)
     ,
-    new SctCod('|海猫|うみねこ|',3)
+    new SctCod_It('|海猫|うみねこ|',4)
     ,
-    new SctCod('|白鷺|しらさぎ|',3)
+    new SctCod_It('|白鷺|しらさぎ|',4)
     ,
-    new SctCod('|青鷺|あおさぎ|',3)
+    new SctCod_It('|青鷺|あおさぎ|',4)
 ];
 
 
 const   cods_bird_autumn = [
-    new SctCod('|秋|あき|の|鳥|とり|',5,'bird_autumn.jpg')
+    new SctCod_It('|秋|あき|の|鳥|とり|',5,'bird_autumn.jpg')
     ,
-    new SctCod('|渡|わた|り|鳥|どり|',5)
+    new SctCod_It('|渡|わた|り|鳥|どり|',5)
     ,
-    new SctCod('|百舌鳥|もず|',2)
+    new SctCod_It('|百舌鳥|もず|',2)
     ,
-    new SctCod('|鶫|つぐみ|',3)
+    new SctCod_It('|鶫|つぐみ|',3)
     ,
-    new SctCod('|鵯|ひよどり|',4)
+    new SctCod_It('|鵯|ひよどり|',4)
     ,
-    new SctCod('|椋鳥|むくどり|',4)
+    new SctCod_It('|椋鳥|むくどり|',4)
     ,
-    new SctCod('|鶉|うずら|',3)
+    new SctCod_It('|鶉|うずら|',3)
     ,
-    new SctCod('|啄木鳥|きつつき|',4)
+    new SctCod_It('|啄木鳥|きつつき|',4)
     ,
-    new SctCod('|雁|かり|',4)
+    new SctCod_It('|雁|かり|',4)
 ];
 
 const   cods_bird_winter = [
-    new SctCod('|冬|ふゆ|の|鳥|とり|',5,'bird_winter.jpg')
+    new SctCod_It('|冬|ふゆ|の|鳥|とり|',5,'bird_winter.jpg')
     ,
-    new SctCod('|水鳥|みずとり|',4)
+    new SctCod_It('|水鳥|みずとり|',4)
     ,
-    new SctCod('|寒雁|かんがん|',4)
+    new SctCod_It('|寒雁|かんがん|',4)
     ,
-    new SctCod('|鴨|かも|',2)
+    new SctCod_It('|鴨|かも|',2)
     ,
-    new SctCod('|鴛鴦|おしどり|',4)
+    new SctCod_It('|鴛鴦|おしどり|',4)
     ,
-    new SctCod('|鶴|つる|',2)
+    new SctCod_It('|鶴|つる|',2)
     ,
-    new SctCod('|白鳥|はくちょう|',4)
+    new SctCod_It('|白鳥|はくちょう|',4)
 ];
 
 const   cods_nature = [
-    new SctCod('|自然|しぜん|',3,'nature.jpg')
+    new SctCod_It('|自然|しぜん|',3,'nature.jpg')
     ,
-    new SctCod('|山|やま|',2)
+    new SctCod_It('|山|やま|',2)
     ,
-    new SctCod('|川|かわ|',2)
+    new SctCod_It('|川|かわ|',2)
     ,
-    new SctCod('|河|かわ|',2)
+    new SctCod_It('|河|かわ|',2)
     ,
-    new SctCod('|滝|たき|',2)
+    new SctCod_It('|滝|たき|',2)
     ,
-    new SctCod('|森|もり|',2)
+    new SctCod_It('|森|もり|',2)
     ,
-    new SctCod('|林|はやし|',3)
+    new SctCod_It('|林|はやし|',3)
     ,
-    new SctCod('|野|の|',1)
+    new SctCod_It('|野|の|',1)
     ,
-    new SctCod('|野原|のはら|',3)
+    new SctCod_It('|野原|のはら|',3)
     ,
-    new SctCod('|池|いけ|',2)
+    new SctCod_It('|池|いけ|',2)
     ,
-    new SctCod('|古池|ふるいけ|',4)
+    new SctCod_It('|古池|ふるいけ|',4)
     ,
-    new SctCod('|湖|みずうみ|',4)
+    new SctCod_It('|湖|みずうみ|',4)
     ,
-    new SctCod('|海|うみ|',2)
+    new SctCod_It('|海|うみ|',2)
+];
+
+
+const   cods_home = [
+    new SctCod_It('|家|いえ|',2,'home.jpg')
+    ,
+    new SctCod_It('|扉|とびら|',3)
+    ,
+    new SctCod_It('|壁|かべ|',2)
+    ,
+    new SctCod_It('|柱|はしら|',3)
+    ,
+    new SctCod_It('|窓|まど|',2)
+    ,
+    new SctCod_It('|天井|てんじょう|',4)
+    ,
+    new SctCod_It('|屋根|やね|',2)
+    ,
+    new SctCod_It('|瓦|かわら|',3)
+    ,
+    new SctCod_It('|屏|へい|',2)
+    ,
+    new SctCod_It('|門|もん|',2)
+    ,
+    new SctCod_It('|台所|だいどころ|',5)
+    ,
+    new SctCod_It('|風呂|ふろ|',2)
+    ,
+    new SctCod_It('|湯船|ゆぶね|',3)
+    ,
+    new SctCod_It('|寝床|ねどこ|',3)
 ];
 
 
 const   cods_move = [
-    new SctCod('|動|うご|く',3,'active.jpg')
+    new SctCod_Mv('|動|うご|く',3,'active.jpg')
     ,
-    new SctCod('|進|すす|む',3)
+    new SctCod_Mv('|進|すす|む',3)
 ];
 
 const   cods_move_run = [
-    new SctCod('|走|はし|る',3,'run.jpg')
+    new SctCod_Mv('|走|はし|る',3,'run.jpg')
     ,
-    new SctCod('|駆|か|ける',3)
+    new SctCod_Mv('|駆|か|ける',3)
     ,
-    new SctCod('|駆|か|け|抜|ぬ|ける',5)
+    new SctCod_Mv('|駆|か|け|抜|ぬ|ける',5)
     ,
-    new SctCod('|突|つ|っ|走|ぱし|る',5)
+    new SctCod_Mv('|突|つ|っ|走|ぱし|る',5)
     ,
-    new SctCod('|風|かぜ|を|切|き|る',5)
+    new SctCod_Mv('|風|かぜ|を|切|き|る',5)
 ];
 
 const   cods_move_fly = [
-    new SctCod('|飛|と|ぶ',2,'fly.jpg')
+    new SctCod_Mv('|飛|と|ぶ',2,'fly.jpg')
     ,
-    new SctCod('|飛|と|び|上|あ|がる',5)
+    new SctCod_Mv('|飛|と|び|上|あ|がる',5)
     ,
-    new SctCod('|飛|と|び|越|こ|える',5)
+    new SctCod_Mv('|飛|と|び|越|こ|える',5)
     ,
-    new SctCod('|飛|と|び|込|こ|む',4)
+    new SctCod_Mv('|飛|と|び|込|こ|む',4)
 ];
 
 const   cods_move_walk = [
-    new SctCod('|歩|ある|く',3,'walk.jpg')
+    new SctCod_Mv('|歩|ある|く',3,'walk.jpg')
     ,
-    new SctCod('|歩|あゆ|む',3)
+    new SctCod_Mv('|歩|あゆ|む',3)
 ];
 
-const   cods_stop = [
-    new SctCod('|止|と|まる',3,'stop.jpg')
+const   cods_move_stop = [
+    new SctCod_Mv('|止|と|まる',3,'stop.jpg')
     ,
-    new SctCod('|留|とど|まる',4)
+    new SctCod_Mv('|留|とど|まる',4)
     ,
-    new SctCod('|立|た|ち|止|ど|まる',5)
+    new SctCod_Mv('|立|た|ち|止|ど|まる',5)
     ,
-    new SctCod('|佇|たたず|む',4)
+    new SctCod_Mv('|佇|たたず|む',4)
     ,
-    new SctCod('|終|お|わる',3)
+    new SctCod_Mv('|終|お|わる',3)
+    ,
+    new SctCod_It('|停止|ていし|',3)
+    ,
+    new SctCod_It('|終了|しゅうりょう|',4)
 ];
 
-const   cods_open = [
-    new SctCod('|開|ひら|く',3,'open.jpg')
+const   cods_move_open = [
+    new SctCod_Mv('|開|ひら|く',3,'open.jpg')
     ,
-    new SctCod('|空|あ|く',2)
+    new SctCod_Mv('|空|あ|く',2)
     ,
-    new SctCod('|開|ひら|ける',4)
+    new SctCod_Mv('|開|ひら|ける',4)
 ];
 
-const   cods_life = [
-    new SctCod('|生|い|きる',3,'life.jpg')
+const   cods_move_life = [
+    new SctCod_Mv('|生|い|きる',3,'life.jpg')
     ,
-    new SctCod('|咲|さ|く',2)
+    new SctCod_Mv('|咲|さ|く',2)
     ,
-    new SctCod('|活|い|きる',3)
+    new SctCod_Mv('|活|い|きる',3)
     ,
-    new SctCod('|実|みの|る',3)
+    new SctCod_Mv('|実|みの|る',3)
     ,
-    new SctCod('|産|う|まれる',4)
+    new SctCod_Mv('|産|う|まれる',4)
     ,
-    new SctCod('|始|はじ|まる',4)
+    new SctCod_Mv('|始|はじ|まる',4)
 ];
 
-const   cods_death = [
-    new SctCod('|死|し|ぬ',2,'death.jpg')
+const   cods_move_death = [
+    new SctCod_Mv('|死|し|ぬ',2,'death.jpg')
     ,
-    new SctCod('|倒|たお|れる',4)
+    new SctCod_Mv('|倒|たお|れる',4)
     ,
-    new SctCod('|枯|か|れる',3)
+    new SctCod_Mv('|枯|か|れる',3)
     ,
-    new SctCod('|散|ち|る',2)
+    new SctCod_Mv('|散|ち|る',2)
     ,
-    new SctCod('|朽|く|ち|果|は|てる',5)
+    new SctCod_Mv('|朽|く|ち|果|は|てる',5)
     ,
-    new SctCod('|尽|つ|きる',3)
+    new SctCod_Mv('|尽|つ|きる',3)
     ,
-    new SctCod('|終|お|える',3)
+    new SctCod_Mv('|終|お|える',3)
     ,
-    new SctCod('|失|うしな|う',4)
+    new SctCod_Mv('|失|うしな|う',4)
 ];
 
 const   cods_body = [
-    new SctCod('|体|からだ|',3,'body.jpg')
+    new SctCod_It('|体|からだ|',3,'body.jpg')
     ,
-    new SctCod('|肉体|にくたい|',4)
+    new SctCod_It('|肉体|にくたい|',4)
     ,
-    new SctCod('|頭|あたま|',3)
+    new SctCod_It('|頭|あたま|',3)
     ,
-    new SctCod('|目|め|',1)
+    new SctCod_It('|目|め|',1)
     ,
-    new SctCod('|耳|みみ|',2)
+    new SctCod_It('|耳|みみ|',2)
     ,
-    new SctCod('|鼻|はな|',2)
+    new SctCod_It('|鼻|はな|',2)
     ,
-    new SctCod('|口|くち|',2)
+    new SctCod_It('|口|くち|',2)
     ,
-    new SctCod('|首|くび|',2)
+    new SctCod_It('|首|くび|',2)
     ,
-    new SctCod('|肩|かた|',2)
+    new SctCod_It('|肩|かた|',2)
     ,
-    new SctCod('|腕|うで|',2)
+    new SctCod_It('|腕|うで|',2)
     ,
-    new SctCod('|手|て|',1)
+    new SctCod_It('|手|て|',1)
     ,
-    new SctCod('|指|ゆび|',2)
+    new SctCod_It('|指|ゆび|',2)
     ,
-    new SctCod('|拳|こぶし|',3)
+    new SctCod_It('|拳|こぶし|',3)
     ,
-    new SctCod('|胸|むね|',2)
+    new SctCod_It('|胸|むね|',2)
     ,
-    new SctCod('|腰|こし|',2)
+    new SctCod_It('|腰|こし|',2)
     ,
-    new SctCod('|尻|しり|',2)
+    new SctCod_It('|尻|しり|',2)
     ,
-    new SctCod('|足|あし|',2)
+    new SctCod_It('|足|あし|',2)
 ];
 
-const   cods_it = [
-    new SctCod('これ',2)
+const   cods_whitch = [
+    new SctCod_Mv('この',2)
     ,
-    new SctCod('それ',2)
+    new SctCod_Mv('その',2)
     ,
-    new SctCod('あれ',2)
+    new SctCod_Mv('あの',2)
     ,
-    new SctCod('どれ',2)
-    ,
-    new SctCod('この',2)
-    ,
-    new SctCod('その',2)
-    ,
-    new SctCod('あの',2)
-    ,
-    new SctCod('どの',2)
-    ,
-    new SctCod('から',2)
-    ,
-    new SctCod('まで',2)
+    new SctCod_Mv('どの',2)
+];
 
+const   cods_what = [
+    new SctCod_It('これ',2)
+    ,
+    new SctCod_It('それ',2)
+    ,
+    new SctCod_It('あれ',2)
+    ,
+    new SctCod_It('どれ',2)
+];
+
+const   cods_where = [
+    new SctCod_It('ここ',2)
+    ,
+    new SctCod_It('そこ',2)
+    ,
+    new SctCod_It('あそこ',3)
+    ,
+    new SctCod_It('どこ',2)
+];
+
+const   cods_when = [
+    new SctCod_It('いま',2)
+    ,
+    new SctCod_It('あと',2)
+    ,
+    new SctCod_It('|今日|きょう|',2)
+    ,
+    new SctCod_It('|明日|あす|',2)
+    ,
+    new SctCod_It('|明日|あした|',3)
+    ,
+    new SctCod_It('|明後日|あさって|',4)
+    ,
+    new SctCod_It('|明明後日|しあさって|',5)
+    ,
+    new SctCod_It('|昨日|きのう|',3)
+    ,
+    new SctCod_It('|一昨日|おととい|',4)
+    ,
+    new SctCod_It('|一昨昨日|さきおととい|',6)
+    ,
+    new SctCod_It('いつ',2)
 ];
 
 
 const   cods_conect = [
     new SctCod('は',1)
     ,
-    // new SctCod('で',1)
-    // ,
+    new SctCod('で',1)
+    ,
     new SctCod('に',1)
     ,
     new SctCod('を',1)
@@ -613,5 +679,7 @@ const   cods_conect = [
     new SctCod('と',1)
     ,
     new SctCod('や',1)
+    ,
+    new SctCod('も',1)
 ];
 
