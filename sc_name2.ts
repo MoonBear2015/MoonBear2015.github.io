@@ -269,364 +269,365 @@ class NameCreater_kor extends NameCreater implements INameCreater  {
 }
 
 
-class NameCreater_cha extends NameCreater_ruby implements INameCreater  {
+class NameCreater_cha extends NameCreater implements INameCreater  {
     constructor(){
         super('');
         this.name01 = [
-            '|王|ワン|'
+            new NmNon('|王|ワン|')
             ,
-            '|李|リー|'
+            new NmNon('|李|リー|')
             ,
-            '|張|ヂャン|'
+            new NmNon('|張|ヂャン|')
             ,
-            '|劉|リィゥ|'
+            new NmNon('|劉|リィゥ|')
             ,
-            '|陳|チェン|'
+            new NmNon('|陳|チェン|')
             ,
-            '|楊|ヤン|'
+            new NmNon('|楊|ヤン|')
             ,
-            '|黄|フゥァン|'
+            new NmNon('|黄|フゥァン|')
             ,
-            '|趙|ヂャオ|'
+            new NmNon('|趙|ヂャオ|')
             ,
-            '|呉|ウー|'
+            new NmNon('|呉|ウー|')
             ,
-            '|周|ヂョウ|'
+            new NmNon('|周|ヂョウ|')
             ,
-            '|孙|スン|'
+            new NmNon('|孙|スン|')
         ];
         this.name02 = [
-            '|浩宇|ハオ ユー|'
+            new NmAgM('|浩宇|ハオ ユー|')
             ,
-            '|浩然|ハオ ラン|'
+            new NmAgM('|浩然|ハオ ラン|')
             ,
-            '|宇轩|ユー シュェン|'
+            new NmAgM('|宇轩|ユー シュェン|')
             ,
-            '|宇航|ユー ハン|'
+            new NmAgM('|宇航|ユー ハン|')
             ,
-            '|宇泽|ユー ゼァ|'
+            new NmAgM('|宇泽|ユー ゼァ|')
             ,
-            '|梓豪|ズー ハオ|'
+            new NmAgM('|梓豪|ズー ハオ|')
             ,
-            '|子轩|ジー シュェン|'
+            new NmAgM('|子轩|ジー シュェン|')
             ,
-            '|浩轩|ハオ シュェン|'
+            new NmAgM('|浩轩|ハオ シュェン|')
             ,
-            '|宇辰|ユー チェン|'
+            new NmAgM('|宇辰|ユー チェン|')
             ,
-            '|子豪|ズー ハオ|'
+            new NmAgM('|子豪|ズー ハオ|')
             ,
-            '|梓涵|ズー ハン|'
+            new NmAgM('|悟空|ウー コン|')
             ,
-            '|一诺|イー ヌオ|'
+            new NmAgF('|子豪|ズー ハオ|')
             ,
-            '|欣怡|シン イー|'
+            new NmAgF('|梓涵|ズー ハン|')
             ,
-            '|诗涵|シー ハン|'
+            new NmAgF('|一诺|イー ヌオ|')
             ,
-            '|依诺|イー ヌオ|'
+            new NmAgF('|欣怡|シン イー|')
             ,
-            '|欣妍|シン イェン|'
+            new NmAgF('|诗涵|シー ハン|')
             ,
-            '|雨桐|ユー トン|'
+            new NmAgF('|依诺|イー ヌオ|')
             ,
-            '|梓萱|ズー シュェン|'
+            new NmAgF('|欣妍|シン イェン|')
             ,
-            '|可馨|クァ シン|'
+            new NmAgF('|雨桐|ユー トン|')
             ,
-            '|佳怡|ジャ イー|'
+            new NmAgF('|梓萱|ズー シュェン|')
             ,
-            '|悟空|ウー コン|'
+            new NmAgF('|可馨|クァ シン|')
+            ,
+            new NmAgF('|佳怡|ジャ イー|')
         ];
     }
 }
 
-
-class NameCreater_rus extends NameCreater_ruby implements INameCreater {
+class NameCreater_rus extends NameCreater implements INameCreater {
     constructor(){
         super(' ');
         this.name01 = [
-            '|Александр|アレクサンドル|'
+            new NmWsM('|Александр|アレクサンドル|')
             ,
-            '|Михаил|ミハイル|'
+            new NmWsM('|Михаил|ミハイル|')
             ,
-            '|Артём|アルチョム|'
+            new NmWsM('|Артём|アルチョム|')
             ,
-            '|Максим|マクシム|'
+            new NmWsM('|Максим|マクシム|')
             ,
-            '|Даниил|ダニール|'
+            new NmWsM('|Даниил|ダニール|')
             ,
-            '|Иван|イヴァン|'
+            new NmWsM('|Иван|イヴァン|')
             ,
-            '|Дмитрий|ドミトリー|'
+            new NmWsM('|Дмитрий|ドミトリー|')
             ,
-            '|Кирилл|キリル|'
+            new NmWsM('|Кирилл|キリル|')
             ,
-            '|Матвей|マトヴェイ|'
+            new NmWsM('|Матвей|マトヴェイ|')
             ,
-            '|Софья|ソフィア|'
+            new NmWsF('|Софья|ソフィア|')
             ,
-            '|Мария|マリヤ|'
+            new NmWsF('|Мария|マリヤ|')
             ,
-            '|Анна|アンナ|'
+            new NmWsF('|Анна|アンナ|')
             ,
-            '|Алиса|アリサ|'
+            new NmWsF('|Алиса|アリサ|')
             ,
-            '|Виктория|ヴィクトリア|'
+            new NmWsF('|Виктория|ヴィクトリア|')
             ,
-            '|Анастасия|アナスタシア|'
+            new NmWsF('|Анастасия|アナスタシア|')
             ,
-            '|Полина|ポリーナ|'
+            new NmWsF('|Полина|ポリーナ|')
             ,
-            '|Александра|アレクサンドラ|'
+            new NmWsF('|Александра|アレクサンドラ|')
             ,
-            '|Елизавета|エリザヴェータ|'
+            new NmWsF('|Елизавета|エリザヴェータ|')
             ,
-            '|Екатерина|エカチェリーナ|'
+            new NmWsF('|Екатерина|エカチェリーナ|')
         ];
         this.name02 = [
-            '|Cмирно́в|スミルノフ|'
+            new NmNon('|Cмирно́в|スミルノフ|')
             ,
-            '|Иванов|イワノフ|'
+            new NmNon('|Иванов|イワノフ|')
             ,
-            '|Кузнецов|クズネツォフ|'
+            new NmNon('|Кузнецов|クズネツォフ|')
             ,
-            '|Попов|ポポフ|'
+            new NmNon('|Попов|ポポフ|')
             ,
-            '|Соколов|ソコロフ|'
+            new NmNon('|Соколов|ソコロフ|')
             ,
-            '|Лебедев|レベジェフ|'
+            new NmNon('|Лебедев|レベジェフ|')
             ,
-            '|Козлов|コズロフ|'
+            new NmNon('|Козлов|コズロフ|')
             ,
-            '|Новиков|ノヴィコフ|'
+            new NmNon('|Новиков|ノヴィコフ|')
             ,
-            '|Морозов|モロゾフ|'
+            new NmNon('|Морозов|モロゾフ|')
             ,
-            '|Петров|ペトロフ|'
+            new NmNon('|Петров|ペトロフ|')
         ];
     }
 }
 
-class NameCreater_jpn extends NameCreater_ruby implements INameCreater {
+class NameCreater_jpn extends NameCreater implements INameCreater {
     constructor(){
         super('');
         this.name01 = [
-            '|鈴木|すずき|'
+            new NmNon('|鈴木|すずき|')
             ,
-            '|田中|たなか|'
+            new NmNon('|田中|たなか|')
             ,
-            '|川村|かわむら|'
+            new NmNon('|川村|かわむら|')
             ,
-            '|加藤|かとう|'
+            new NmNon('|加藤|かとう|')
             ,
-            '|佐藤|さとう|'
+            new NmNon('|佐藤|さとう|')
             ,
-            '|伊藤|いとう|'
+            new NmNon('|伊藤|いとう|')
             ,
-            '|斉藤|さいとう|'
+            new NmNon('|斉藤|さいとう|')
             ,
-            '|渡辺|わたなべ|'
+            new NmNon('|渡辺|わたなべ|')
             ,
-            '|山田|やまだ|'
+            new NmNon('|山田|やまだ|')
             ,
-            '|高橋|たかはし|'
+            new NmNon('|高橋|たかはし|')
             ,
-            '|吉田|よしだ|'
+            new NmNon('|吉田|よしだ|')
             ,
-            '|佐々木|ささき|'
+            new NmNon('|佐々木|ささき|')
             ,
-            '|徳川|とくがわ|'
+            new NmNon('|徳川|とくがわ|')
             ,
-            '|織田|おだ|'
+            new NmNon('|織田|おだ|')
             ,
-            '|藤原|ふじわら|'
+            new NmNon('|藤原|ふじわら|')
             ,
-            '|坂本|さかもと|'
+            new NmNon('|坂本|さかもと|')
             ,
-            '|大川|おおかわ|'
+            new NmNon('|大川|おおかわ|')
             ,
-            '|松本|まつもと|'
+            new NmNon('|松本|まつもと|')
             ,
-            '|山本|やまもと|'
+            new NmNon('|山本|やまもと|')
             ,
-            '|谷口|たにぐち|'
+            new NmNon('|谷口|たにぐち|')
             ,
-            '|塩見|しおみ|'
+            new NmNon('|塩見|しおみ|')
             ,
-            '|渚|なぎさ|'
+            new NmNon('|渚|なぎさ|')
         ];
         this.name02 = [
-            '|一郎|いちろう|'
+            new NmAgM('|一郎|いちろう|')
             ,
-            '|次郎|じろう|'
+            new NmAgM('|次郎|じろう|')
             ,
-            '|三郎|さぶろう|'
+            new NmAgM('|三郎|さぶろう|')
             ,
-            '|四郎|しろう|'
+            new NmAgM('|四郎|しろう|')
             ,
-            '|吾郎|ごろう|'
+            new NmAgM('|吾郎|ごろう|')
             ,
-            '|太郎|たろう|'
+            new NmAgM('|太郎|たろう|')
             ,
-            '|隆太|りゅうた|'
+            new NmAgM('|隆太|りゅうた|')
             ,
-            '|竜太|りゅうた|'
+            new NmAgM('|竜太|りゅうた|')
             ,
-            '|孝史|たかし|'
+            new NmAgM('|孝史|たかし|')
             ,
-            '|健二|けんじ|'
+            new NmAgM('|健二|けんじ|')
             ,
-            '|健一|けんいち|'
+            new NmAgM('|健一|けんいち|')
             ,
-            '|浩一|こういち|'
+            new NmAgM('|浩一|こういち|')
             ,
-            '|仁|ひとし|'
+            new NmAgM('|仁|ひとし|')
             ,
-            '|和彦|かずひこ|'
+            new NmAgM('|和彦|かずひこ|')
             ,
-            '|徹也|てつや|'
+            new NmAgM('|徹也|てつや|')
             ,
-            '|哲平|てっぺい|'
+            new NmAgM('|哲平|てっぺい|')
             ,
-            '|小太郎|こたろう|'
+            new NmAgM('|小太郎|こたろう|')
             ,
-            '|味平|あじへい|'
+            new NmAgM('|味平|あじへい|')
             ,
-            '|聖子|せいこ|'
+            new NmAgF('|聖子|せいこ|')
             ,
-            '|久美子|くみこ|'
+            new NmAgF('|久美子|くみこ|')
             ,
-            '|佐知子|さちこ|'
+            new NmAgF('|佐知子|さちこ|')
             ,
-            '|花子|はなこ|'
+            new NmAgF('|花子|はなこ|')
             ,
-            '|美由紀|みゆき|'
+            new NmAgF('|美由紀|みゆき|')
             ,
-            '|真弓|まゆみ|'
+            new NmAgF('|真弓|まゆみ|')
             ,
-            '|貞子|さだこ|'
+            new NmAgF('|貞子|さだこ|')
             ,
-            '|由美子|ゆみこ|'
+            new NmAgF('|由美子|ゆみこ|')
             ,
-            '|薫|かをる|'
+            new NmAgF('|薫|かをる|')
             ,
-            '|桜子|さくらこ|'
+            new NmAgF('|桜子|さくらこ|')
             ,
-            '|順子|じゅんこ|'
+            new NmAgF('|順子|じゅんこ|')
         ];
 
     }
 }
 
-class NameCreater_eng extends NameCreater_ruby implements INameCreater {
+class NameCreater_eng extends NameCreater implements INameCreater {
     constructor(){
         super(' ');
         this.name01 = [
-            '|John|ジョン|'
+            new NmWsM('|John|ジョン|')
             ,
-            '|Robert|ロバート|'
+            new NmWsM('|Robert|ロバート|')
             ,
-            '|Joseph|ジョセフ|'
+            new NmWsM('|Joseph|ジョセフ|')
             ,
-            '|Thomas|トーマス|'
+            new NmWsM('|Thomas|トーマス|')
             ,
-            '|Richard|リチャード|'
+            new NmWsM('|Richard|リチャード|')
             ,
-            '|James|ジェームズ|'
+            new NmWsM('|James|ジェームズ|')
             ,
-            '|Tom|トム|'
+            new NmWsM('|Tom|トム|')
             ,
-            '|Sam|サム|'
+            new NmWsM('|Sam|サム|')
             ,
-            '|Jim|ジム|'
+            new NmWsM('|Jim|ジム|')
             ,
-            '|Michael|マイケル|'
+            new NmWsM('|Michael|マイケル|')
             ,
-            '|David|デイビッド|'
+            new NmWsM('|David|デイビッド|')
             ,
-            '|Kenny|ケニー|'
+            new NmWsM('|Kenny|ケニー|')
             ,
-            '|Ryan|ライアン|'
+            new NmWsM('|Ryan|ライアン|')
             ,
-            '|Bill|ビル|'
+            new NmWsM('|Bill|ビル|')
             ,
-            '|Tony|トニー|'
+            new NmWsM('|Tony|トニー|')
             ,
-            '|Bob|ボブ|'
+            new NmWsM('|Bob|ボブ|')
             ,
-            '|Amuro|アムロ|'
+            new NmWsM('|Amuro|アムロ|')
             ,
-            '|Char|シャア|'
+            new NmWsM('|Char|シャア|')
             ,
-            '|Frodo|フロド|'
+            new NmWsM('|Frodo|フロド|')
             ,
-            '|Bilbo|ビルボ|'
+            new NmWsM('|Bilbo|ビルボ|')
             ,
-            '|Samwise|サムワイズ|'
+            new NmWsM('|Samwise|サムワイズ|')
             ,
-            '|Anakin|アナキン|'
+            new NmWsM('|Anakin|アナキン|')
             ,
-            '|Luke|ルーク|'
+            new NmWsM('|Luke|ルーク|')
             ,
-            '|Mary|メアリー|'
+            new NmWsF('|Mary|メアリー|')
             ,
-            '|Jane|ジェーン|'
+            new NmWsF('|Jane|ジェーン|')
             ,
-            '|Candy|キャンディー|'
+            new NmWsF('|Candy|キャンディー|')
             ,
-            '|Rinda|リンダ|'
+            new NmWsF('|Rinda|リンダ|')
             ,
-            '|Barbara|バーバラ|'
+            new NmWsF('|Barbara|バーバラ|')
             ,
-            '|Elizabeth|エリザベス|'
+            new NmWsF('|Elizabeth|エリザベス|')
             ,
-            '|Margaret|マーガレット|'
+            new NmWsF('|Margaret|マーガレット|')
             ,
-            '|Dorothy|ドロシー|'
+            new NmWsF('|Dorothy|ドロシー|')
             ,
-            '|Jennifer|ジェニファー|'
+            new NmWsF('|Jennifer|ジェニファー|')
         ];
         this.name02 = [
-            '|Gates|ゲイツ|'
+            new NmNon('|Gates|ゲイツ|')
             ,
-            '|Jackson|ジャクソン|'
+            new NmNon('|Jackson|ジャクソン|')
             ,
-            '|McGregor|マクレガー|'
+            new NmNon('|McGregor|マクレガー|')
             ,
-            '|McEnroe|マッケンロー|'
+            new NmNon('|McEnroe|マッケンロー|')
             ,
-            '|Kimberly|キンバリー|'
+            new NmNon('|Kimberly|キンバリー|')
             ,
-            '|Carpenter|カーペンター|'
+            new NmNon('|Carpenter|カーペンター|')
             ,
-            '|Rogers|ロジャース|'
+            new NmNon('|Rogers|ロジャース|')
             ,
-            '|Hopkins|ホプキンス|'
+            new NmNon('|Hopkins|ホプキンス|')
             ,
-            '|Brown|ブラウン|'
+            new NmNon('|Brown|ブラウン|')
             ,
-            '|Miller|ミラー|'
+            new NmNon('|Miller|ミラー|')
             ,
-            '|Wilson|ウィルソン|'
+            new NmNon('|Wilson|ウィルソン|')
             ,
-            '|Jones|ジョーンズ|'
+            new NmNon('|Jones|ジョーンズ|')
             ,
-            '|Smith|スミス|'
+            new NmNon('|Smith|スミス|')
             ,
-            '|Taylor|テイラー|'
+            new NmNon('|Taylor|テイラー|')
             ,
-            '|Johnson|ジョンソン|'
+            new NmNon('|Johnson|ジョンソン|')
             ,
-            '|Ray|レイ|'
+            new NmNon('|Ray|レイ|')
             ,
-            '|Aznable|アズナブル|'
+            new NmNon('|Aznable|アズナブル|')
             ,
-            '|Baggins|バギンズ|'
+            new NmNon('|Baggins|バギンズ|')
             ,
-            '|Skywalker|スカイウォーカー|'
+            new NmNon('|Skywalker|スカイウォーカー|')
             ,
-            '|Gamgee|ギャムジー|'
+            new NmNon('|Gamgee|ギャムジー|')
         ];
 
     }
