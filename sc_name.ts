@@ -1,3 +1,100 @@
+const FACE_PATH = 'pics/FACE/@FACE_PATH@';
+
+interface INmItm {
+    NmStr : string;
+    NmSex : string;
+    NmTyp : string;
+    NmAge : string;
+}
+
+class NmItm implements INmItm {
+    public NmStr : string;
+    public NmSex : string;
+    public NmTyp : string;
+    public NmAge : string;
+    constructor(in_NmStr : string,in_NmSex : string,in_NmTyp : string, in_NmAge : string)
+    {
+        this.NmStr = in_NmStr;
+        this.NmSex = in_NmSex;
+        this.NmTyp = in_NmTyp;
+        this.NmAge = in_NmAge;
+    }
+
+    Copy() : INmItm {
+        return new NmItm(this.NmStr,this.NmSex,this.NmTyp,this.NmAge);
+    }
+    
+    set Paset(in_Nm : INmItm) {
+        this.NmStr = in_Nm.NmStr;
+        this.NmSex = in_Nm.NmSex;
+        this.NmTyp = in_Nm.NmTyp;
+        this.NmAge = in_Nm.NmAge;
+    }
+
+    Add(in_Nm : INmItm)
+    {
+        if (in_Nm.NmStr != '') this.NmStr = in_Nm.NmStr;
+        if (in_Nm.NmSex != '') this.NmSex = in_Nm.NmSex;
+        if (in_Nm.NmTyp != '') this.NmTyp = in_Nm.NmTyp;
+        if (in_Nm.NmAge != '') this.NmAge = in_Nm.NmAge;
+    }
+
+    to_NmCode(in_Age? : string) : string
+    {
+        if (in_Age) this.NmAge = in_Age; 
+        return (this.NmTyp + this.NmAge + this.NmSex) 
+    }
+
+    to_FilePath(in_Age? : string) : string
+    {
+        let code = this.to_NmCode(in_Age);
+        let nm = rnd_max(10);
+        let result = code + '/' + code + zP3.format(nm) + '.jpg';
+        return result; 
+    }
+}
+
+class NmNon extends NmItm implements INmItm {
+    constructor(in_Str : string)
+    {
+        super(in_Str,'','','');
+    }
+}
+
+class NmAgM extends NmItm implements INmItm {
+    constructor(in_Str : string)
+    {
+        super(in_Str,'','','');
+        this.NmSex = 'M';
+        this.NmTyp = 'A';
+    }
+}
+class NmAgF extends NmItm implements INmItm {
+    constructor(in_Str : string)
+    {
+        super(in_Str,'','','');
+        this.NmSex = 'F';
+        this.NmTyp = 'A';
+    }
+}
+
+class NmWsM extends NmItm implements INmItm {
+    constructor(in_Str : string)
+    {
+        super(in_Str,'','','');
+        this.NmSex = 'M';
+        this.NmTyp = 'W';
+    }
+}
+class NmWsF extends NmItm implements INmItm {
+    constructor(in_Str : string)
+    {
+        super(in_Str,'','','');
+        this.NmSex = 'F';
+        this.NmTyp = 'W';
+    }
+}
+
 class NameMakerAll implements INameMaker {
     private makers : Array<INameMaker>;
 

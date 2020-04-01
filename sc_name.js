@@ -1,4 +1,76 @@
 "use strict";
+const FACE_PATH = 'pics/FACE/@FACE_PATH@';
+class NmItm {
+    constructor(in_NmStr, in_NmSex, in_NmTyp, in_NmAge) {
+        this.NmStr = in_NmStr;
+        this.NmSex = in_NmSex;
+        this.NmTyp = in_NmTyp;
+        this.NmAge = in_NmAge;
+    }
+    Copy() {
+        return new NmItm(this.NmStr, this.NmSex, this.NmTyp, this.NmAge);
+    }
+    set Paset(in_Nm) {
+        this.NmStr = in_Nm.NmStr;
+        this.NmSex = in_Nm.NmSex;
+        this.NmTyp = in_Nm.NmTyp;
+        this.NmAge = in_Nm.NmAge;
+    }
+    Add(in_Nm) {
+        if (in_Nm.NmStr != '')
+            this.NmStr = in_Nm.NmStr;
+        if (in_Nm.NmSex != '')
+            this.NmSex = in_Nm.NmSex;
+        if (in_Nm.NmTyp != '')
+            this.NmTyp = in_Nm.NmTyp;
+        if (in_Nm.NmAge != '')
+            this.NmAge = in_Nm.NmAge;
+    }
+    to_NmCode(in_Age) {
+        if (in_Age)
+            this.NmAge = in_Age;
+        return (this.NmTyp + this.NmAge + this.NmSex);
+    }
+    to_FilePath(in_Age) {
+        let code = this.to_NmCode(in_Age);
+        let nm = rnd_max(10);
+        let result = code + '/' + code + zP3.format(nm) + '.jpg';
+        return result;
+    }
+}
+class NmNon extends NmItm {
+    constructor(in_Str) {
+        super(in_Str, '', '', '');
+    }
+}
+class NmAgM extends NmItm {
+    constructor(in_Str) {
+        super(in_Str, '', '', '');
+        this.NmSex = 'M';
+        this.NmTyp = 'A';
+    }
+}
+class NmAgF extends NmItm {
+    constructor(in_Str) {
+        super(in_Str, '', '', '');
+        this.NmSex = 'F';
+        this.NmTyp = 'A';
+    }
+}
+class NmWsM extends NmItm {
+    constructor(in_Str) {
+        super(in_Str, '', '', '');
+        this.NmSex = 'M';
+        this.NmTyp = 'W';
+    }
+}
+class NmWsF extends NmItm {
+    constructor(in_Str) {
+        super(in_Str, '', '', '');
+        this.NmSex = 'F';
+        this.NmTyp = 'W';
+    }
+}
 class NameMakerAll {
     constructor() {
         this.makers = new Array();

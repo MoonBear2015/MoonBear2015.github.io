@@ -51,6 +51,7 @@ function tests_alert(in_tests : Array<ITest>)
 
 //------------------------------------ etc
 const zP2 = new Intl.NumberFormat('ja', { minimumIntegerDigits: 2 })
+const zP3 = new Intl.NumberFormat('ja', { minimumIntegerDigits: 3 })
 
 let replaceAll = function(str : string, before : string, after : string) : string
 {
