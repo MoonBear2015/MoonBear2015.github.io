@@ -1,161 +1,275 @@
-class NameMakerAll implements INameMaker {
-    private makers : Array<INameMaker>;
+const FACE_PATH = 'pics/FACE/@FACE_PATH@';
+
+function Age_to_AgeCode(in_Age_Num : number) : string
+{
+    if (in_Age_Num < 13) return 'C';
+    if (in_Age_Num < 30) return 'Y';
+    return 'O';
+}
+
+
+interface INmItm {
+    NmStr : string;
+    NmSex : string;
+    NmTyp : string;
+    NmAge : string;
+    Copy() : INmItm;
+
+    Paset : INmItm;
+
+    Add(in_Nm : INmItm): any;
+
+    to_NmCode(in_Age? : string) : string;
+
+    to_FilePath(in_Age? : string) : string;
+}
+
+class NmItm implements INmItm {
+    public NmStr : string;
+    public NmSex : string;
+    public NmTyp : string;
+    public NmAge : string;
+    constructor(in_NmStr : string,in_NmSex : string,in_NmTyp : string, in_NmAge : string)
+    {
+        this.NmStr = in_NmStr;
+        this.NmSex = in_NmSex;
+        this.NmTyp = in_NmTyp;
+        this.NmAge = in_NmAge;
+    }
+
+    Copy() : INmItm {
+        return new NmItm(this.NmStr,this.NmSex,this.NmTyp,this.NmAge);
+    }
+    
+    set Paset(in_Nm : INmItm) {
+        this.NmStr = in_Nm.NmStr;
+        this.NmSex = in_Nm.NmSex;
+        this.NmTyp = in_Nm.NmTyp;
+        this.NmAge = in_Nm.NmAge;
+    }
+
+    Add(in_Nm : INmItm)
+    {
+        if (in_Nm.NmStr != '') this.NmStr += in_Nm.NmStr;
+        if (in_Nm.NmSex != '') this.NmSex = in_Nm.NmSex;
+        if (in_Nm.NmTyp != '') this.NmTyp = in_Nm.NmTyp;
+        if (in_Nm.NmAge != '') this.NmAge = in_Nm.NmAge;
+    }
+
+    to_NmCode(in_Age? : string) : string
+    {
+        if (in_Age) this.NmAge = in_Age; 
+        return (this.NmTyp + this.NmAge + this.NmSex) 
+    }
+
+    to_FilePath(in_Age? : string) : string
+    {
+        let code = this.to_NmCode(in_Age);
+        let nm = rnd_max(10);
+        let result = code + '/' + code + zP3.format(nm) + '.jpg';
+        return result; 
+    }
+
+}
+
+class NmNon extends NmItm implements INmItm {
+    constructor(in_Str : string)
+    {
+        super(in_Str,'','','');
+    }
+}
+
+class NmAgM extends NmItm implements INmItm {
+    constructor(in_Str : string)
+    {
+        super(in_Str,'','','');
+        this.NmSex = 'M';
+        this.NmTyp = 'A';
+    }
+}
+class NmAgF extends NmItm implements INmItm {
+    constructor(in_Str : string)
+    {
+        super(in_Str,'','','');
+        this.NmSex = 'F';
+        this.NmTyp = 'A';
+    }
+}
+
+class NmWsM extends NmItm implements INmItm {
+    constructor(in_Str : string)
+    {
+        super(in_Str,'','','');
+        this.NmSex = 'M';
+        this.NmTyp = 'W';
+    }
+}
+class NmWsF extends NmItm implements INmItm {
+    constructor(in_Str : string)
+    {
+        super(in_Str,'','','');
+        this.NmSex = 'F';
+        this.NmTyp = 'W';
+    }
+}
+
+class NameCreaterAll implements INameCreater {
+    private creaters : Array<INameCreater>;
 
     constructor()
     {
-        this.makers = new Array<INameMaker>();
-        this.makers.push(new NameMaker_cha());
-        this.makers.push(new NameMaker_eng());
-        this.makers.push(new NameMaker_rus());
-        this.makers.push(new NameMaker_jpn());
-        this.makers.push(new NameMaker_kor());
+        this.creaters = new Array<INameCreater>();
+        this.creaters.push(new NameCreater_cha());
+        this.creaters.push(new NameCreater_eng());
+        this.creaters.push(new NameCreater_rus());
+        this.creaters.push(new NameCreater_jpn());
+        this.creaters.push(new NameCreater_kor());
 
     }
 
-    public create() : string {
-        let i = rnd_max(this.makers.length);
-        return this.makers[i].create();
+    public create() : INmItm {
+        let i = rnd_max(this.creaters.length);
+        return this.creaters[i].create();
     }
 }
 
-interface INameMaker{
-    create() : string;
+interface INameCreater{
+    create() : INmItm;
 }
 
-class NameMaker implements INameMaker {
-    protected name01 : string[];
-    protected name02 : string[];
+class NameCreater implements INameCreater {
+    protected name01 : INmItm[];
+    protected name02 : INmItm[];
 
     constructor(
         public conect : string
     ){
-        this.name01 = new Array<string>();
-        this.name02 = new Array<string>();
+        this.name01 = new Array<INmItm>();
+        this.name02 = new Array<INmItm>();
     }
 
-    public create() : string {
+    public create() : INmItm {
         let n01 : number = rnd_max(this.name01.length);
         let n02 : number = rnd_max(this.name02.length);
-        return this.name01[n01] + this.conect + this.name02[n02];
+        let nm01 = this.name01[n01].Copy();
+        let nm02 = this.name02[n02].Copy();
+        if (this.conect != '') nm01.NmStr += this.conect;
+        nm01.Add(nm02);
+        nm01.NmStr = ruby_change(nm01.NmStr);
+        return nm01;
     }
 }
 
-class NameMaker_ruby extends NameMaker implements INameMaker {
-    public create(){
-        return ruby_change(super.create());
-    }
-}
-
-class NameMaker_kor extends NameMaker_ruby implements INameMaker  {
+class NameCreater_kor extends NameCreater implements INameCreater  {
     constructor(){
         super('');
         this.name01 = [
-		'|김|キム|'
-		,
-		'|이|イ|'
-		,
-		'|박|パク|'
-		,
-		'|정|チョン|'
-		,
-		'|최|チェ|'
-		,
-		'|조|チョ|'
-		,
-		'|강|カン|'
-		,
-		'|장|チャン|'
-		,
-		'|윤|ユン|'
-		,
-		'|임|イム|'
-		,
-		'|신|シン|'
-		,
-		'|유|ユ|'
-		,
-		'|한|ハン|'
-		,
-		'|오|オ	|'
-		,
-		'|서|ソ|'
-		,
-		'|전|ジョン|'
-		,
-		'|권|クォン|'
-		,
-		'|황|ファン|'
-		,
-		'|안|アン|'
-		,
-		'|송|ソン|'
-		,
-		'|홍|ホン|'
-		,
-		'|양|ヤン|'
-		,
-		'|고|コ|'
-		,
-		'|문|ムン|'
-		,
-		'|손|ソン|'
-		,
-		'|배|ペ|'
-		,
-		'|백|ペク|'
-		,
-		'|허|ホ|'
-		,
-		'|노|ノ|'
-		,
-		'|남|ナム|'
+            new NmNon('|김|キム|')
+            ,
+            new NmNon('|이|イ|')
+            ,
+            new NmNon('|박|パク|')
+            ,
+            new NmNon('|정|チョン|')
+            ,
+            new NmNon('|최|チェ|')
+            ,
+            new NmNon('|조|チョ|')
+            ,
+            new NmNon('|강|カン|')
+            ,
+            new NmNon('|장|チャン|')
+            ,
+            new NmNon('|윤|ユン|')
+            ,
+            new NmNon('|임|イム|')
+            ,
+            new NmNon('|신|シン|')
+            ,
+            new NmNon('|유|ユ|')
+            ,
+            new NmNon('|한|ハン|')
+            ,
+            new NmNon('|오|オ	|')
+            ,
+            new NmNon('|서|ソ|')
+            ,
+            new NmNon('|전|ジョン|')
+            ,
+            new NmNon('|권|クォン|')
+            ,
+            new NmNon('|황|ファン|')
+            ,
+            new NmNon('|안|アン|')
+            ,
+            new NmNon('|송|ソン|')
+            ,
+            new NmNon('|홍|ホン|')
+            ,
+            new NmNon('|양|ヤン|')
+            ,
+            new NmNon('|고|コ|')
+            ,
+            new NmNon('|문|ムン|')
+            ,
+            new NmNon('|손|ソン|')
+            ,
+            new NmNon('|배|ペ|')
+            ,
+            new NmNon('|백|ペク|')
+            ,
+            new NmNon('|허|ホ|')
+            ,
+            new NmNon('|노|ノ|')
+            ,
+            new NmNon('|남|ナム|')
         ];
         this.name02 = [
-		'|지안|チアン|'
-		,
-		'|서아|ソア|'
-		,
-		'|하윤|ハユン|'
-		,
-		'|서윤|ソユン|'
-		,
-		'|하은|ハウン|'
-		,
-		'|하린|ハリン|'
-		,
-		'|서연|ソヨン|'
-		,
-		'|수아|スア|'
-		,
-		'|지우|チウ|'
-		,
-		'|지유|チユ|'
-		,
-		'|서준|ソジュン|'
-		,
-		'|하준|ハジュン|'
-		,
-		'|도윤|トユン|'
-		,
-		'|시우|シウ|'
-		,
-		'|민준|ミンジュン|'
-		,
-		'|지호|チホ|'
-		,
-		'|예준|イェジュン|'
-		,
-		'|주원|チュウォン|'
-		,
-		'|은우|ウヌ|'
-		,
-		'|유준|ユジュン|'
+            new NmAgF('|지안|チアン|')
+            ,
+            new NmAgF('|서아|ソア|')
+            ,
+            new NmAgF('|하윤|ハユン|')
+            ,
+            new NmAgF('|서윤|ソユン|')
+            ,
+            new NmAgF('|하은|ハウン|')
+            ,
+            new NmAgF('|하린|ハリン|')
+            ,
+            new NmAgF('|서연|ソヨン|')
+            ,
+            new NmAgF('|수아|スア|')
+            ,
+            new NmAgF('|지우|チウ|')
+            ,
+            new NmAgF('|지유|チユ|')
+            ,
+            new NmAgM('|서준|ソジュン|')
+            ,
+            new NmAgM('|하준|ハジュン|')
+            ,
+            new NmAgM('|도윤|トユン|')
+            ,
+            new NmAgM('|시우|シウ|')
+            ,
+            new NmAgM('|민준|ミンジュン|')
+            ,
+            new NmAgM('|지호|チホ|')
+            ,
+            new NmAgM('|예준|イェジュン|')
+            ,
+            new NmAgM('|주원|チュウォン|')
+            ,
+            new NmAgM('|은우|ウヌ|')
+            ,
+            new NmAgM('|유준|ユジュン|')
         ];
     }
 }
 
 
-class NameMaker_cha extends NameMaker_ruby implements INameMaker  {
+class NameCreater_cha extends NameCreater_ruby implements INameCreater  {
     constructor(){
         super('');
         this.name01 = [
@@ -228,7 +342,7 @@ class NameMaker_cha extends NameMaker_ruby implements INameMaker  {
 }
 
 
-class NameMaker_rus extends NameMaker_ruby implements INameMaker {
+class NameCreater_rus extends NameCreater_ruby implements INameCreater {
     constructor(){
         super(' ');
         this.name01 = [
@@ -294,7 +408,7 @@ class NameMaker_rus extends NameMaker_ruby implements INameMaker {
     }
 }
 
-class NameMaker_jpn extends NameMaker_ruby implements INameMaker {
+class NameCreater_jpn extends NameCreater_ruby implements INameCreater {
     constructor(){
         super('');
         this.name01 = [
@@ -405,7 +519,7 @@ class NameMaker_jpn extends NameMaker_ruby implements INameMaker {
     }
 }
 
-class NameMaker_eng extends NameMaker_ruby implements INameMaker {
+class NameCreater_eng extends NameCreater_ruby implements INameCreater {
     constructor(){
         super(' ');
         this.name01 = [
