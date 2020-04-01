@@ -312,6 +312,15 @@ const cods_move_death = [
     new SctCod_Mv('|終|お|える', 3),
     new SctCod_Mv('|失|うしな|う', 4)
 ];
+const cods_move_light = [
+    new SctCod_Mv('|光|ひか|る', 3, 'light.jpg'),
+    new SctCod_Mv('|輝|かがや|く', 4),
+    new SctCod_Mv('|照|て|る', 2),
+    new SctCod_Mv('|目映|まばゆ|い', 4),
+    new SctCod_Mv('|眩|まぶ|しい', 4),
+    new SctCod_Mv('|光|ひか|り|輝|かがや|く', 7),
+    new SctCod_Mv('|照|て|らす', 3)
+];
 const cods_body = [
     new SctCod_It('|体|からだ|', 3, 'body.jpg'),
     new SctCod_It('|肉体|にくたい|', 4),

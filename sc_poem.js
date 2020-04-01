@@ -9,7 +9,7 @@ function set_poem() {
     html += '<h1>';
     html += 'POEM';
     html += '<small>';
-    html += 'P01.23';
+    html += 'P01.24';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -367,6 +367,7 @@ class Gene_move extends Gene_Poemer {
         this.Add_cods(cods_move_open);
         this.Add_cods(cods_move_life);
         this.Add_cods(cods_move_death);
+        this.Add_cods(cods_move_light);
         // this.Add_cods(cods_move_which);
     }
 }
