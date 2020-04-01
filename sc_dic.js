@@ -121,8 +121,10 @@ const cods_moon = [
     new SctCod_It('|名月|めいげつ|', 4)
 ];
 const cods_sun = [
-    new SctCod_It('|太陽|たいよう|', 4, 'sun.jpg'),
-    new SctCod_It('|陽|ひ|', 1),
+    new SctCod_It('|太陽|たいよう|', 4, 'sun.jpg')
+    // ,
+    // new SctCod_It('|陽|ひ|',1)
+    ,
     new SctCod_It('|朝日|あさひ|', 3),
     new SctCod_It('|夕陽|ゆうひ|', 3),
     new SctCod_It('|夕焼|ゆうや|け', 4),
@@ -136,7 +138,7 @@ const cods_star = [
     new SctCod_It('|星|ほし|', 2, 'star.jpg'),
     new SctCod_It('|水星|すいせい|', 4),
     new SctCod_It('|金星|きんせい|', 4),
-    new SctCod_It('|地球|ちきゅう|', 4),
+    new SctCod_It('|地球|ちきゅう|', 3),
     new SctCod_It('|火星|かせい|', 3),
     new SctCod_It('|木星|もくせい|', 4),
     new SctCod_It('|土星|どせい|', 3),
@@ -232,6 +234,8 @@ const cods_bird_winter = [
 const cods_nature = [
     new SctCod_It('|自然|しぜん|', 3, 'nature.jpg'),
     new SctCod_It('|山|やま|', 2),
+    new SctCod_It('|谷|たに|', 2),
+    new SctCod_It('|崖|がけ|', 2),
     new SctCod_It('|川|かわ|', 2),
     new SctCod_It('|河|かわ|', 2),
     new SctCod_It('|滝|たき|', 2),
@@ -291,8 +295,10 @@ const cods_move_stop = [
 ];
 const cods_move_open = [
     new SctCod_Mv('|開|ひら|く', 3, 'open.jpg'),
-    new SctCod_Mv('|空|あ|く', 2),
-    new SctCod_Mv('|開|ひら|ける', 4)
+    new SctCod_Mv('|開|あ|ける', 3),
+    new SctCod_Mv('|開|ひら|ける', 4),
+    new SctCod_Mv('|広|ひろ|がる', 4),
+    new SctCod_Mv('|広|ひろ|げる', 4)
 ];
 const cods_move_life = [
     new SctCod_Mv('|生|い|きる', 3, 'life.jpg'),
@@ -315,7 +321,6 @@ const cods_move_death = [
 const cods_move_light = [
     new SctCod_Mv('|光|ひか|る', 3, 'light.jpg'),
     new SctCod_Mv('|輝|かがや|く', 4),
-    new SctCod_Mv('|照|て|る', 2),
     new SctCod_Mv('|目映|まばゆ|い', 4),
     new SctCod_Mv('|眩|まぶ|しい', 4),
     new SctCod_Mv('|光|ひか|り|輝|かがや|く', 7),

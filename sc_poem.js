@@ -89,7 +89,7 @@ function make_poem_sub() {
     html += '</h3>';
     html += '<div>';
     html += '<figure>';
-    html += '<img src="pics/TITLE/@PIC_TITLE@" width="40">';
+    html += '<img src="pics/TITLE/@PIC_TITLE@" width="80px">';
     html += '</figure>';
     html += '</div>';
     html += '<h2 id="poem_main">';
