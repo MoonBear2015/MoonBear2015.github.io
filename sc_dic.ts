@@ -287,7 +287,7 @@ const   cods_sky = [
 ];
 
 const   cods_weather = [
-    new SctCod_It('|天気|てんき|',2,'weather.jpg')
+    new SctCod_It('|天気|てんき|',3,'weather.jpg')
     ,
     new SctCod_It('|晴|は|れ',2)
     ,
@@ -602,8 +602,8 @@ const   cods_body = [
     ,
     new SctCod_It('|頭|あたま|',3)
     ,
-    // new SctCod_It('|目|め|',1)
-    // ,
+    new SctCod_It('|眼|まなこ|',3)
+    ,
     new SctCod_It('|耳|みみ|',2)
     ,
     new SctCod_It('|鼻|はな|',2)
@@ -616,8 +616,10 @@ const   cods_body = [
     ,
     new SctCod_It('|腕|うで|',2)
     ,
-    // new SctCod_It('|手|て|',1)
-    // ,
+    new SctCod_It('|手足|てあし|',3)
+    ,
+    new SctCod_It('|足腰|あしこし|',4)
+    ,
     new SctCod_It('|指|ゆび|',2)
     ,
     new SctCod_It('|拳|こぶし|',3)
@@ -662,9 +664,11 @@ const   cods_where = [
 ];
 
 const   cods_when = [
-    new SctCod_It('いま',2)
+    new SctCod_It('|今|いま|',2)
     ,
-    new SctCod_It('あと',2)
+    new SctCod_It('|後|あと|で',3)
+    ,
+    new SctCod_It('|後|のち|に',3)
     ,
     new SctCod_It('|今日|きょう|',2)
     ,
@@ -682,7 +686,7 @@ const   cods_when = [
     ,
     new SctCod_It('|一昨昨日|さきおととい|',6)
     ,
-    new SctCod_It('いつ',2)
+    new SctCod_It('|何時|いつ|',2)
 ];
 
 
