@@ -698,20 +698,20 @@ const   cods_adject_color = [
 ];
 
 const   cods_item_color = [
-    new SctCod_It('|赤|あか|',2)
-    ,
-    new SctCod_It('|青|あお|',2)
-    ,
-    new SctCod_It('|緑|みどり|',3)
-    ,
-    new SctCod_It('|黄色|きいろ|',3)
-    ,
-    new SctCod_It('|白|しろ|',2)
-    ,
-    new SctCod_It('|黒|くろ|',2)
-    ,
-    new SctCod_It('|紫|むらさき|',4)
-    ,
+    // new SctCod_It('|赤|あか|',2)
+    // ,
+    // new SctCod_It('|青|あお|',2)
+    // ,
+    // new SctCod_It('|緑|みどり|',3)
+    // ,
+    // new SctCod_It('|黄色|きいろ|',3)
+    // ,
+    // new SctCod_It('|白|しろ|',2)
+    // ,
+    // new SctCod_It('|黒|くろ|',2)
+    // ,
+    // new SctCod_It('|紫|むらさき|',4)
+    // ,
     new SctCod_It('|赤|あか|く',3)
     ,
     new SctCod_It('|青|あお|く',3)
