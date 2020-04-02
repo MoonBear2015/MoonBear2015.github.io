@@ -13,7 +13,7 @@ function set_poem()
     html += '<h1>';
     html += 'POEM';
     html += '<small>';
-    html += 'P01.25';
+    html += 'P01.26';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -155,6 +155,12 @@ class poemer_pattern_A extends SctItm_Selector implements ISctItm_Selector{
             new SctItm('@SENT05@ @TEMA07@ @SENT05@')
             ,
             new SctItm('@SENT05@ @SENT07@ @TEMA05@')
+            ,
+            new SctItm('@TEMA05@ @TEMA07@ @SENT05@')
+            ,
+            new SctItm('@SENT05@ @TEMA07@ @TEMA05@')
+            ,
+            new SctItm('@TEMA05@ @TEMA07@ @TEMA05@')
         ];
     }
 }
@@ -172,6 +178,14 @@ class poemer_pattern_B extends SctItm_Selector implements ISctItm_Selector{
             new SctItm('@SENT05@ @SENT07@ @SENT05@ @TEMA07@ @SENT07@')
             ,
             new SctItm('@SENT05@ @SENT07@ @SENT05@ @SENT07@ @TEMA07@')
+            ,
+            new SctItm('@TEMA05@ @TEMA07@ @SENT05@ @SENT07@ @SENT07@')
+            ,
+            new SctItm('@TEMA05@ @TEMA07@ @TEMA05@ @SENT07@ @SENT07@')
+            ,
+            new SctItm('@TEMA05@ @TEMA07@ @TEMA05@ @TEMA07@ @SENT07@')
+            ,
+            new SctItm('@TEMA05@ @TEMA07@ @TEMA05@ @TEMA07@ @TEMA07@')
         ];
     }
 }
@@ -264,6 +278,8 @@ class poemer_tema extends SctItm_SelectLocker implements ISctItm_Selector{
             new SctItm('@TM17')
             ,
             new SctItm('@TM18')
+            ,
+            new SctItm('@TM19')
         ];
     }
 }
@@ -446,17 +462,41 @@ class Gene_tema18 extends Gene_Poemer {
     }
 }
 
+// 季語：獣
+class Gene_tema19 extends Gene_Poemer {
+    constructor(){
+        super('@TM19','@PIC_TEMA@');
+        this.Add_cods(cods_animal);
+    }
+}
+
+
 // 一般
 class Gene_sent extends Gene_Poemer {
     constructor(){
         super('@SENT');
-        this.Add_cods(cods_bird);
-        this.Add_cods(cods_flower);
-        this.Add_cods(cods_moon);
-        this.Add_cods(cods_sun);
-        this.Add_cods(cods_sky);
         this.Add_cods(cods_nature);
-        this.Add_cods(cods_body);
+        // this.Add_cods(cods_body);
+        this.Add_cods(cods_home);
+        this.Add_cods(cods_weather);
+        // this.Add_cods(cods_what);
+        // this.Add_cods(cods_where);
+        this.Add_cods(cods_when);
+        this.Add_cods(cods_item_color);
+
+        this.Add_cods(cods_move);
+        this.Add_cods(cods_move_run);
+        this.Add_cods(cods_move_fly);
+        this.Add_cods(cods_move_walk);
+        this.Add_cods(cods_move_stop);
+        this.Add_cods(cods_move_open);
+        this.Add_cods(cods_move_life);
+        this.Add_cods(cods_move_death);
+        this.Add_cods(cods_move_light);
+        this.Add_cods(cods_move_dark);
+        this.Add_cods(cods_adject_color);
+        this.Add_cods(cods_adject_beauty);
+
     }
 }
 
@@ -472,6 +512,9 @@ class Gene_move extends Gene_Poemer {
         this.Add_cods(cods_move_life);
         this.Add_cods(cods_move_death);
         this.Add_cods(cods_move_light);
+        this.Add_cods(cods_move_dark);
+        this.Add_cods(cods_adject_color);
+        this.Add_cods(cods_adject_beauty);
         // this.Add_cods(cods_move_which);
     }
 }
@@ -479,17 +522,14 @@ class Gene_move extends Gene_Poemer {
 class Gene_item extends Gene_Poemer {
     constructor(){
         super('@I');
-        this.Add_cods(cods_bird);
-        this.Add_cods(cods_flower);
-        this.Add_cods(cods_moon);
-        this.Add_cods(cods_sun);
-        this.Add_cods(cods_sky);
         this.Add_cods(cods_nature);
-        this.Add_cods(cods_body);
-        this.Add_cods(cods_home);
+        // this.Add_cods(cods_body);
+        // this.Add_cods(cods_home);
+        this.Add_cods(cods_weather);
         // this.Add_cods(cods_what);
-        this.Add_cods(cods_where);
+        // this.Add_cods(cods_where);
         this.Add_cods(cods_when);
+        this.Add_cods(cods_item_color);
 
     }
 }
@@ -536,6 +576,7 @@ class poem_docs_maker_tema extends docs_maker {
         this.dic_concat(new Gene_tema16().Generate());
         this.dic_concat(new Gene_tema17().Generate());
         this.dic_concat(new Gene_tema18().Generate());
+        this.dic_concat(new Gene_tema19().Generate());
     }
 }
 

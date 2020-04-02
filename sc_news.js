@@ -517,6 +517,7 @@ class selector_whats extends SctItm_SelectLocker {
             new SctItm('天国', 'WHAT/heaven.jpg'),
             new SctItm('極楽浄土', 'WHAT/heaven2.jpg'),
             new SctItm('地獄', 'WHAT/enma.jpg'),
+            new SctItm('南国', 'WHAT/seaside.jpg'),
             new SctItm('ディズニーランド', 'WHAT/disney.jpg'),
             new SctItm('ディズニーランド', 'WHAT/disney2.jpg'),
             new SctItm('ひらかたパーク', 'WHAT/hirapa-.jpg'),

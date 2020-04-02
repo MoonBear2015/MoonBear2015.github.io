@@ -808,6 +808,8 @@ class selector_whats extends SctItm_SelectLocker implements ISctItm_Selector {
             ,
             new SctItm('地獄','WHAT/enma.jpg')
             ,
+            new SctItm('南国','WHAT/seaside.jpg')
+            ,
             new SctItm('ディズニーランド','WHAT/disney.jpg')
             ,
             new SctItm('ディズニーランド','WHAT/disney2.jpg')
