@@ -76,7 +76,7 @@ const   cods_flower_summer = [
     ,
     new SctCod_It('|紫陽花|あじさい|',4)
     ,
-    new SctCod_It('|梔子|くちなし|',3)
+    new SctCod_It('|梔子|くちなし|',4)
     ,
     new SctCod_It('ハイビスカス',6)
     ,

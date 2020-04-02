@@ -41,7 +41,7 @@ const cods_summer = [
 const cods_flower_summer = [
     new SctCod_It('|夏|なつ|の|花|はな|', 5, 'flower_summer.jpg'),
     new SctCod_It('|紫陽花|あじさい|', 4),
-    new SctCod_It('|梔子|くちなし|', 3),
+    new SctCod_It('|梔子|くちなし|', 4),
     new SctCod_It('ハイビスカス', 6),
     new SctCod_It('ブーゲンビリア', 7),
     new SctCod_It('|向日葵|ひまわり|', 4),
