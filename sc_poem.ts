@@ -13,7 +13,7 @@ function set_poem()
     html += '<h1>';
     html += 'POEM';
     html += '<small>';
-    html += 'P01.26';
+    html += 'P01.27';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -169,23 +169,23 @@ class poemer_pattern_B extends SctItm_Selector implements ISctItm_Selector{
     constructor(){
         super('@TYPE_B@');
         this.itms = [
-            new SctItm('@TEMA05@ @SENT07@ @SENT05@ @SENT07@ @SENT07@')
+            new SctItm('@TEMA05@ @SENT07@ @SENT05@<br>@SENT07@ @SENT07@')
             ,
-            new SctItm('@SENT05@ @TEMA07@ @SENT05@ @SENT07@ @SENT07@')
+            new SctItm('@SENT05@ @TEMA07@ @SENT05@<br>@SENT07@ @SENT07@')
             ,
-            new SctItm('@SENT05@ @SENT07@ @TEMA05@ @SENT07@ @SENT07@')
+            new SctItm('@SENT05@ @SENT07@ @TEMA05@<br>@SENT07@ @SENT07@')
             ,
-            new SctItm('@SENT05@ @SENT07@ @SENT05@ @TEMA07@ @SENT07@')
+            new SctItm('@SENT05@ @SENT07@ @SENT05@<br>@TEMA07@ @SENT07@')
             ,
-            new SctItm('@SENT05@ @SENT07@ @SENT05@ @SENT07@ @TEMA07@')
+            new SctItm('@SENT05@ @SENT07@ @SENT05@<br>@SENT07@ @TEMA07@')
             ,
-            new SctItm('@TEMA05@ @TEMA07@ @SENT05@ @SENT07@ @SENT07@')
+            new SctItm('@TEMA05@ @TEMA07@ @SENT05@<br>@SENT07@ @SENT07@')
             ,
-            new SctItm('@TEMA05@ @TEMA07@ @TEMA05@ @SENT07@ @SENT07@')
+            new SctItm('@TEMA05@ @TEMA07@ @TEMA05@<br>@SENT07@ @SENT07@')
             ,
-            new SctItm('@TEMA05@ @TEMA07@ @TEMA05@ @TEMA07@ @SENT07@')
+            new SctItm('@TEMA05@ @TEMA07@ @TEMA05@<br>@TEMA07@ @SENT07@')
             ,
-            new SctItm('@TEMA05@ @TEMA07@ @TEMA05@ @TEMA07@ @TEMA07@')
+            new SctItm('@TEMA05@ @TEMA07@ @TEMA05@<br>@TEMA07@ @TEMA07@')
         ];
     }
 }
