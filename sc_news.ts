@@ -141,6 +141,32 @@ class selector_random_date
  
 }
 
+
+class selector_random_year
+    extends ItmArray<SctItm>
+    implements ISctItm_Selector
+{
+    public itm_key : string;
+    public pic_key : string;
+    constructor()
+    {
+        super();
+        this.itm_key = "@YEAR@";
+        this.pic_key = "";
+    }
+    get rnd_Itm() : SctItm {
+        return new SctItm(random_Y_string(),"");
+    }
+    Copy() : ISctItm_Selector
+    {
+        let result = new selector_random_date();
+        result.Paste(this.itms);
+        return result;
+    }
+ 
+}
+
+
 class selector_human 
     extends ItmArray<SctItm>
     implements ISctItm_Selector 
@@ -2339,6 +2365,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_YESNO());
         
         this.dic_push(new selector_random_date());
+        this.dic_push(new selector_random_year());
         this.dic_push(new selector_whats());
         this.dic_push(new selector_do());
         this.dic_push(new selector_key());

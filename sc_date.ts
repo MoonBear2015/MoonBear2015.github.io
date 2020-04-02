@@ -32,7 +32,12 @@ function date_YM_string(inDate: Date) : string
     return result;
 }
 
-
+function date_Y_string(inDate: Date) : string
+{
+    let result: string = '';
+    result += inDate.getFullYear().toString();
+    return result;
+}
 
 function random_MD_string() : string
 {
@@ -43,6 +48,12 @@ function random_YM_string() : string
 {
     return date_YM_string(date_random());
 }
+
+function random_Y_string() : string
+{
+    return date_Y_string(date_random());
+}
+
 
 function date_random() : Date
 {

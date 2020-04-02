@@ -108,6 +108,21 @@ class selector_random_date extends ItmArray {
         return result;
     }
 }
+class selector_random_year extends ItmArray {
+    constructor() {
+        super();
+        this.itm_key = "@YEAR@";
+        this.pic_key = "";
+    }
+    get rnd_Itm() {
+        return new SctItm(random_Y_string(), "");
+    }
+    Copy() {
+        let result = new selector_random_date();
+        result.Paste(this.itms);
+        return result;
+    }
+}
 class selector_human extends ItmArray {
     constructor() {
         super();
@@ -1362,6 +1377,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_comment2());
         this.dic_push(new selector_YESNO());
         this.dic_push(new selector_random_date());
+        this.dic_push(new selector_random_year());
         this.dic_push(new selector_whats());
         this.dic_push(new selector_do());
         this.dic_push(new selector_key());

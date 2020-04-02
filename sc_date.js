@@ -27,11 +27,19 @@ function date_YM_string(inDate) {
         + '月';
     return result;
 }
+function date_Y_string(inDate) {
+    let result = '';
+    result += inDate.getFullYear().toString();
+    return result;
+}
 function random_MD_string() {
     return date_MD_string(date_random());
 }
 function random_YM_string() {
     return date_YM_string(date_random());
+}
+function random_Y_string() {
+    return date_Y_string(date_random());
 }
 function date_random() {
     let nowyear = new Date().getFullYear();

@@ -39,6 +39,7 @@ class NmItm {
         html += '</figure>';
         html += '</div>';
         html += '<h4 id="poem_writer" align="right">';
+        // html += '©All rights reserved @YEAR@<br>';
         html += '@WHO2@ ' + this.NameAge;
         html += '</h4>';
         return html;
