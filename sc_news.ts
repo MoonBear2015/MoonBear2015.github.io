@@ -86,7 +86,7 @@ function make_news()
     
     html += '<div id="face_pic_R">';
     html += '<figure>';
-    html += '<img src="pics/FACE/@PIC_WRITER@" width="80px">';
+    html += '<img src="pics/FACE/@PIC_WRITER@" width="70px">';
     html += '</figure>';
     html += '</div>';
 

@@ -95,6 +95,7 @@ function make_poem_sub() {
     html += '<h2 id="poem_main">';
     html += '@POEM_TYPE@';
     html += '</h2>';
+    html += '<br>';
     html += '<div id="face_pic_R">';
     html += '<figure>';
     html += '<img src="pics/FACE/@PIC_WRITER@" width="50px">';

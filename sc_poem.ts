@@ -123,6 +123,8 @@ function make_poem_sub() : string
     html += '@POEM_TYPE@';
     html += '</h2>';
 
+    html += '<br>';
+
     html += '<div id="face_pic_R">';
     html += '<figure>';
     html += '<img src="pics/FACE/@PIC_WRITER@" width="50px">';
