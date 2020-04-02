@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N02.10';
+    html += 'N02.11';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -83,17 +83,9 @@ function make_news()
     }
     html += '</p>';
 
+    html += '<br>';
     
-    html += '<div id="face_pic_R">';
-    html += '<figure>';
-    html += '<img src="pics/FACE/@PIC_WRITER@" width="70px">';
-    html += '</figure>';
-    html += '</div>';
-
-    html += '<h4 id="news_writer" align="right">';
-    html += 'Copyright (C) @WRITER@';
-    html += '<br>@DATE@'
-    html += '</h4>';
+    html += '@WRITER@';
 
     html += '<br>';
 
@@ -185,13 +177,13 @@ class selector_writer
     constructor()
     {
         super();
-        this.itm_key = "@NAMEAGE@";
-        this.pic_key = "@PIC_WRITER@";
+        this.itm_key = "@WRITER@";
+        this.pic_key = "";
         this.nameCreater = new NameCreaterAll();
     }
     get rnd_Itm() : SctItm {
         let name = this.nameCreater.create();
-        return new SctItm(name.NameAge,name.to_FilePath());
+        return new SctItm(name.html(70),'');
     }
     Copy() : ISctItm_Selector
     {
@@ -337,15 +329,15 @@ class selector_who extends SctItm_Selector implements ISctItm_Selector {
 
 class selector_who2 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
-        super('@WRITER@');
+        super('@WHO2@');
         this.itms = [
-            new SctItm('@CLASS@ @NAMEAGE@')
+            new SctItm('@CLASS@')
             ,
-            new SctItm('「@CALL@」 @NAMEAGE@')
+            new SctItm('「@CALL@」')
             ,
-            new SctItm('「@CALL@」と@ASSES@@PEOPLE@ @NAMEAGE@')
+            new SctItm('「@CALL@」と@ASSES@@PEOPLE@')
             ,
-            new SctItm('@MANYPEOPLE@より「@CALL@」と@ASSES@@PEOPLE@ @NAMEAGE@')
+            new SctItm('@MANYPEOPLE@より「@CALL@」と@ASSES@@PEOPLE@')
         ];
     }
 }
@@ -2306,10 +2298,9 @@ class docs_maker {
                         let itm = value.rnd_Itm;
                         result = result.replace(value.itm_key,itm.Wrd);
                         if (value.pic_key != ''){
-                            result = result.replace(value.pic_key,itm.SctPic);
-                            // while(result.search(value.pic_key) != -1){
-                            //     result = result.replace(value.pic_key,itm.SctPic);
-                            // }
+                            while(result.search(value.pic_key) != -1){
+                                result = result.replace(value.pic_key,itm.SctPic);
+                            }
                         }
                     }
                 }

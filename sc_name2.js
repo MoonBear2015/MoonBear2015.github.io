@@ -31,6 +31,18 @@ class NmItm {
         this.NmTyp = in_NmTyp;
         this.NmAgeNum = AgeCode_to_Num(in_NmAge);
     }
+    html(in_picsize) {
+        let html = '';
+        html += '<div id="face_pic_R">';
+        html += '<figure>';
+        html += '<img src="pics/FACE/' + this.to_FilePath() + '" width="50px">';
+        html += '</figure>';
+        html += '</div>';
+        html += '<h4 id="poem_writer" align="right">';
+        html += '@WHO2@ ' + this.NameAge;
+        html += '</h4>';
+        return html;
+    }
     get NameAge() {
         return this.NmStr + '(' + this.NmAgeNum.toString() + ')';
     }

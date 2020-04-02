@@ -43,6 +43,9 @@ interface INmItm {
     to_NmCode(in_Age? : string) : string;
 
     to_FilePath(in_Age? : string) : string;
+
+    html(in_picsize : number) : string;
+
 }
 
 class NmItm implements INmItm {
@@ -56,6 +59,20 @@ class NmItm implements INmItm {
         this.NmSex = in_NmSex;
         this.NmTyp = in_NmTyp;
         this.NmAgeNum = AgeCode_to_Num(in_NmAge);
+    }
+
+    html(in_picsize : number) {
+        let html = '';
+        html += '<div id="face_pic_R">';
+        html += '<figure>';
+        html += '<img src="pics/FACE/' + this.to_FilePath() + '" width="50px">';
+        html += '</figure>';
+        html += '</div>';
+    
+        html += '<h4 id="poem_writer" align="right">';
+        html += '@WHO2@ ' + this.NameAge;
+        html += '</h4>';
+        return html;
     }
 
     get NameAge() {

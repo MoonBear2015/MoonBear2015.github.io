@@ -87,7 +87,7 @@ function make_poem() : string
         cnt++;
         let chk = html.indexOf('@');
         if (chk < 0) break;
-        if (cnt > 10)
+        if (cnt > 20)
         {
             alert('over work : ' + chk.toString());
             break;
@@ -124,19 +124,10 @@ function make_poem_sub() : string
     html += '</h2>';
 
     html += '<br>';
-
-    html += '<div id="face_pic_R">';
-    html += '<figure>';
-    html += '<img src="pics/FACE/@PIC_WRITER@" width="50px">';
-    html += '</figure>';
-    html += '</div>';
-
-    html += '<h4 id="poem_writer" align="right">';
+    
     html += '@WRITER@';
-    html += '</h4>';
 
     html += '<br>';
-    
 
     html += '</div>';
 
