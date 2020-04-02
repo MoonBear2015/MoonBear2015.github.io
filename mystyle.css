@@ -107,6 +107,14 @@ figure {
     float: right;
 }
 
+#face_pic_R {
+    /* width: 200px; */
+    /* margin: 10px 10px; */
+    padding: 10px 10px;
+    float: right;
+}
+
+
 #news_pic img {
     margin: 10px;
 }

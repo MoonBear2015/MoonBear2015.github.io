@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N02.08';
+    html += 'N02.10';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -67,11 +67,16 @@ function make_news() {
         html += '@NEWS_DOC@';
     }
     html += '</p>';
-    html += '<br>';
+    html += '<div id="face_pic_R">';
+    html += '<figure>';
+    html += '<img src="pics/FACE/@PIC_WRITER@" width="80px">';
+    html += '</figure>';
+    html += '</div>';
     html += '<h4 id="news_writer" align="right">';
     html += 'Copyright (C) @WRITER@';
     html += '<br>@DATE@';
     html += '</h4>';
+    html += '<br>';
     html += '</div>';
     let maker = new news_docs_maker();
     let cnt = 0;
@@ -115,11 +120,27 @@ class selector_human extends ItmArray {
         super();
         this.itm_key = "@HUMAN@";
         this.pic_key = "";
-        this.nameMaker = new NameMakerAll();
+        this.nameCreater = new NameCreaterAll();
     }
     get rnd_Itm() {
-        let name = this.nameMaker.create();
-        return new SctItm(name, '');
+        let name = this.nameCreater.create();
+        return new SctItm(name.NmStr, '');
+    }
+    Copy() {
+        let result = new selector_human();
+        return result;
+    }
+}
+class selector_writer extends ItmArray {
+    constructor() {
+        super();
+        this.itm_key = "@NAMEAGE@";
+        this.pic_key = "@PIC_WRITER@";
+        this.nameCreater = new NameCreaterAll();
+    }
+    get rnd_Itm() {
+        let name = this.nameCreater.create();
+        return new SctItm(name.NameAge, name.to_FilePath());
     }
     Copy() {
         let result = new selector_human();
@@ -141,14 +162,6 @@ class selector_age extends ItmArray {
     Copy() {
         let result = new selector_age();
         return result;
-    }
-}
-class selector_writer extends SctItm_Selector {
-    constructor() {
-        super('@WRITER@');
-        this.itms = [
-            new SctItm('@WH2@')
-        ];
     }
 }
 class selector_title extends SctItm_Selector {
@@ -227,12 +240,12 @@ class selector_who extends SctItm_Selector {
 }
 class selector_who2 extends SctItm_Selector {
     constructor() {
-        super('@WH2@');
+        super('@WRITER@');
         this.itms = [
-            new SctItm('@CLASS@ @HUMAN@@AGE@'),
-            new SctItm('「@CALL@」 @HUMAN@@AGE@'),
-            new SctItm('「@CALL@」と@ASSES@@PEOPLE@ @HUMAN@@AGE@'),
-            new SctItm('@MANYPEOPLE@より「@CALL@」と@ASSES@@PEOPLE@ @HUMAN@@AGE@')
+            new SctItm('@CLASS@ @NAMEAGE@'),
+            new SctItm('「@CALL@」 @NAMEAGE@'),
+            new SctItm('「@CALL@」と@ASSES@@PEOPLE@ @NAMEAGE@'),
+            new SctItm('@MANYPEOPLE@より「@CALL@」と@ASSES@@PEOPLE@ @NAMEAGE@')
         ];
     }
 }
@@ -1323,9 +1336,10 @@ class docs_maker {
                     let itm = value.rnd_Itm;
                     result = result.replace(value.itm_key, itm.Wrd);
                     if (value.pic_key != '') {
-                        while (result.search(value.pic_key) != -1) {
-                            result = result.replace(value.pic_key, itm.SctPic);
-                        }
+                        result = result.replace(value.pic_key, itm.SctPic);
+                        // while(result.search(value.pic_key) != -1){
+                        //     result = result.replace(value.pic_key,itm.SctPic);
+                        // }
                     }
                 }
             }

@@ -1,10 +1,29 @@
 const FACE_PATH = 'pics/FACE/@FACE_PATH@';
 
-function Age_to_AgeCode(in_Age_Num : number) : string
+function Num_to_AgeCode(in_Age_Num : number) : string
 {
     if (in_Age_Num < 13) return 'C';
-    if (in_Age_Num < 30) return 'Y';
+    if (in_Age_Num < 40) return 'Y';
     return 'O';
+}
+function AgeCode_to_Num(in_AgeCode : string) : number
+{
+    switch(in_AgeCode)
+    {
+        case 'C':
+            {
+                return rnd_minmax(8,13);
+            }
+        case 'Y':
+            {
+                return rnd_minmax(13,40);
+            }
+        case 'O':
+            {
+                return rnd_minmax(40,60);
+            }
+    }
+    return rnd_minmax(8,60);
 }
 
 
@@ -13,6 +32,8 @@ interface INmItm {
     NmSex : string;
     NmTyp : string;
     NmAge : string;
+    NmAgeNum : number;
+    NameAge : string;
     Copy() : INmItm;
 
     Paset : INmItm;
@@ -28,13 +49,24 @@ class NmItm implements INmItm {
     public NmStr : string;
     public NmSex : string;
     public NmTyp : string;
-    public NmAge : string;
+    public NmAgeNum : number;
     constructor(in_NmStr : string,in_NmSex : string,in_NmTyp : string, in_NmAge : string)
     {
         this.NmStr = in_NmStr;
         this.NmSex = in_NmSex;
         this.NmTyp = in_NmTyp;
-        this.NmAge = in_NmAge;
+        this.NmAgeNum = AgeCode_to_Num(in_NmAge);
+    }
+
+    get NameAge() {
+        return this.NmStr + '(' + this.NmAgeNum.toString() + ')';
+    }
+
+    get NmAge() {
+        return Num_to_AgeCode(this.NmAgeNum);
+    }
+    set NmAge(in_NmAge : string) {
+        this.NmAgeNum = AgeCode_to_Num(in_NmAge);
     }
 
     Copy() : INmItm {
@@ -190,7 +222,7 @@ class NameCreater_kor extends NameCreater implements INameCreater  {
             ,
             new NmNon('|한|ハン|')
             ,
-            new NmNon('|오|オ	|')
+            new NmNon('|오|オ|')
             ,
             new NmNon('|서|ソ|')
             ,
@@ -345,7 +377,7 @@ class NameCreater_cha extends NameCreater implements INameCreater  {
 
 class NameCreater_rus extends NameCreater implements INameCreater {
     constructor(){
-        super(' ');
+        super('・');
         this.name01 = [
             new NmWsM('|Александр|アレクサンドル|')
             ,
@@ -522,7 +554,7 @@ class NameCreater_jpn extends NameCreater implements INameCreater {
 
 class NameCreater_eng extends NameCreater implements INameCreater {
     constructor(){
-        super(' ');
+        super('・');
         this.name01 = [
             new NmWsM('|John|ジョン|')
             ,

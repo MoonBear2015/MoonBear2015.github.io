@@ -95,9 +95,15 @@ function make_poem_sub() {
     html += '<h2 id="poem_main">';
     html += '@POEM_TYPE@';
     html += '</h2>';
+    html += '<div id="face_pic_R">';
+    html += '<figure>';
+    html += '<img src="pics/FACE/@PIC_WRITER@" width="50px">';
+    html += '</figure>';
+    html += '</div>';
     html += '<h4 id="poem_writer" align="right">';
     html += '@WRITER@';
     html += '</h4>';
+    html += '<br>';
     html += '</div>';
     return html;
 }

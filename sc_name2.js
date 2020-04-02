@@ -1,18 +1,44 @@
 "use strict";
 const FACE_PATH = 'pics/FACE/@FACE_PATH@';
-function Age_to_AgeCode(in_Age_Num) {
+function Num_to_AgeCode(in_Age_Num) {
     if (in_Age_Num < 13)
         return 'C';
-    if (in_Age_Num < 30)
+    if (in_Age_Num < 40)
         return 'Y';
     return 'O';
+}
+function AgeCode_to_Num(in_AgeCode) {
+    switch (in_AgeCode) {
+        case 'C':
+            {
+                return rnd_minmax(8, 13);
+            }
+        case 'Y':
+            {
+                return rnd_minmax(13, 40);
+            }
+        case 'O':
+            {
+                return rnd_minmax(40, 60);
+            }
+    }
+    return rnd_minmax(8, 60);
 }
 class NmItm {
     constructor(in_NmStr, in_NmSex, in_NmTyp, in_NmAge) {
         this.NmStr = in_NmStr;
         this.NmSex = in_NmSex;
         this.NmTyp = in_NmTyp;
-        this.NmAge = in_NmAge;
+        this.NmAgeNum = AgeCode_to_Num(in_NmAge);
+    }
+    get NameAge() {
+        return this.NmStr + '(' + this.NmAgeNum.toString() + ')';
+    }
+    get NmAge() {
+        return Num_to_AgeCode(this.NmAgeNum);
+    }
+    set NmAge(in_NmAge) {
+        this.NmAgeNum = AgeCode_to_Num(in_NmAge);
     }
     Copy() {
         return new NmItm(this.NmStr, this.NmSex, this.NmTyp, this.NmAge);
@@ -127,7 +153,7 @@ class NameCreater_kor extends NameCreater {
             new NmNon('|신|シン|'),
             new NmNon('|유|ユ|'),
             new NmNon('|한|ハン|'),
-            new NmNon('|오|オ	|'),
+            new NmNon('|오|オ|'),
             new NmNon('|서|ソ|'),
             new NmNon('|전|ジョン|'),
             new NmNon('|권|クォン|'),
@@ -213,7 +239,7 @@ class NameCreater_cha extends NameCreater {
 }
 class NameCreater_rus extends NameCreater {
     constructor() {
-        super(' ');
+        super('・');
         this.name01 = [
             new NmWsM('|Александр|アレクサンドル|'),
             new NmWsM('|Михаил|ミハイル|'),
@@ -311,7 +337,7 @@ class NameCreater_jpn extends NameCreater {
 }
 class NameCreater_eng extends NameCreater {
     constructor() {
-        super(' ');
+        super('・');
         this.name01 = [
             new NmWsM('|John|ジョン|'),
             new NmWsM('|Robert|ロバート|'),
