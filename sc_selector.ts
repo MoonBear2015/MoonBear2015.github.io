@@ -181,8 +181,8 @@ class SctCod_Mv extends SctCod implements ISctCod,ITest {
     {
         super(in_Wrd,in_CodLength,in_SctPic);
 
-        this.KeyA = '';
-        this.KeyB = '';
+        this.KeyA = '@I';
+        this.KeyB = '@I';
         this.MinA = 2;
         this.MinB = 2;
     }

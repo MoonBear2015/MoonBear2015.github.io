@@ -13,17 +13,17 @@ function set_poem()
     html += '<h1>';
     html += 'POEM';
     html += '<small>';
-    html += 'P01.27';
+    html += 'P01.28';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
 
-    let gt1 = new Gene_tema01();
-    let arys = gt1.Generate();
-
     // // test start
-    // let maker_test = new poem_docs_maker_ATest();
-    // maker_test.selectors.forEach(ary => {
+
+    // let gt1 = new Gene_tema20();
+    // let arys = gt1.Generate();
+
+    // arys.forEach(ary => {
     //     html += string_html(ary.ToString());
     // });
     // // test end
@@ -280,6 +280,8 @@ class poemer_tema extends SctItm_SelectLocker implements ISctItm_Selector{
             new SctItm('@TM18')
             ,
             new SctItm('@TM19')
+            ,
+            new SctItm('@TM20')
         ];
     }
 }
@@ -470,6 +472,13 @@ class Gene_tema19 extends Gene_Poemer {
     }
 }
 
+// 季語：舞う
+class Gene_tema20 extends Gene_Poemer {
+    constructor(){
+        super('@TM20','@PIC_TEMA@');
+        this.Add_cods(cods_move_dance);
+    }
+}
 
 // 一般
 class Gene_sent extends Gene_Poemer {
@@ -482,9 +491,10 @@ class Gene_sent extends Gene_Poemer {
         // this.Add_cods(cods_what);
         // this.Add_cods(cods_where);
         this.Add_cods(cods_when);
-        this.Add_cods(cods_item_color);
+        // this.Add_cods(cods_item_color);
 
         this.Add_cods(cods_move);
+        this.Add_cods(cods_move_dance);
         this.Add_cods(cods_move_run);
         this.Add_cods(cods_move_fly);
         this.Add_cods(cods_move_walk);
@@ -504,6 +514,7 @@ class Gene_move extends Gene_Poemer {
     constructor(){
         super('@M');
         this.Add_cods(cods_move);
+        this.Add_cods(cods_move_dance);
         this.Add_cods(cods_move_run);
         this.Add_cods(cods_move_fly);
         this.Add_cods(cods_move_walk);
@@ -529,7 +540,7 @@ class Gene_item extends Gene_Poemer {
         // this.Add_cods(cods_what);
         // this.Add_cods(cods_where);
         this.Add_cods(cods_when);
-        this.Add_cods(cods_item_color);
+        // this.Add_cods(cods_item_color);
 
     }
 }
@@ -577,6 +588,7 @@ class poem_docs_maker_tema extends docs_maker {
         this.dic_concat(new Gene_tema17().Generate());
         this.dic_concat(new Gene_tema18().Generate());
         this.dic_concat(new Gene_tema19().Generate());
+        this.dic_concat(new Gene_tema20().Generate());
     }
 }
 

@@ -118,8 +118,8 @@ class SctCod_It extends SctCod {
 class SctCod_Mv extends SctCod {
     constructor(in_Wrd, in_CodLength, in_SctPic) {
         super(in_Wrd, in_CodLength, in_SctPic);
-        this.KeyA = '';
-        this.KeyB = '';
+        this.KeyA = '@I';
+        this.KeyB = '@I';
         this.MinA = 2;
         this.MinB = 2;
     }

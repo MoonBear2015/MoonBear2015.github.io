@@ -66,7 +66,7 @@ const   cods_summer = [
     ,
     new SctCod_It('|蛍|ほたる|',3)
     ,
-    new SctCod_It('|蝉|せみ|',3)
+    new SctCod_It('|蝉|せみ|',2)
     ,
     new SctCod_It('|風鈴|ふうりん|',4)
 ];
@@ -113,7 +113,7 @@ const   cods_autumn = [
     ,
     new SctCod_It('|梨|なし|',2)
     ,
-    new SctCod_It('|鈴虫|すずむし|',2)
+    new SctCod_It('|鈴虫|すずむし|',4)
 ];
 
 const   cods_flower_autumn = [
@@ -269,7 +269,7 @@ const   cods_star = [
     ,
     new SctCod_It('|冥王星|めいおうせい|',6)
     ,
-    new SctCod_It('|彗星|すいせい|',6)
+    new SctCod_It('|彗星|すいせい|',4)
 ];
 
 const   cods_sky = [
@@ -564,6 +564,41 @@ const   cods_move = [
     new SctCod_Mv('|動|うご|く',3,'active.jpg')
     ,
     new SctCod_Mv('|進|すす|む',3)
+    ,
+    new SctCod_Mv('|戻|もど|る',3)
+    ,
+    new SctCod_Mv('|上|あ|がる',3)
+    ,
+    new SctCod_Mv('|下|さ|がる',3)
+    ,
+    new SctCod_Mv('|昇|のぼ|る',3)
+    ,
+    new SctCod_Mv('|降|くだ|る',3)
+    ,
+    new SctCod_Mv('|降|お|りる',3)
+    ,
+    new SctCod_Mv('|落|お|ちる',3)
+];
+
+const   cods_move_dance = [
+    new SctCod_Mv('|舞|ま|う',2,'dance.jpg')
+    ,
+    new SctCod_Mv('|舞|ま|い|上|あ|がる',5)
+    ,
+    new SctCod_Mv('|舞|ま|い|降|お|りる',5)
+    ,
+    new SctCod_Mv('|舞|ま|い|戻|もど|る',5)
+    ,
+    new SctCod_Mv('|舞|ま|い|戻|もど|る',5)
+    ,
+    new SctCod_Mv('|舞|ま|い|散|ち|る',4)
+    ,
+    new SctCod_Mv('|踊|おど|る',3)
+    ,
+    new SctCod_Mv('|踊|おど|り|狂|くる|う',6)
+    ,
+    new SctCod_Mv('|舞|ま|い|踊|おど|る',5)
+
 ];
 
 const   cods_move_run = [
