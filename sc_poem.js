@@ -9,7 +9,7 @@ function set_poem() {
     html += '<h1>';
     html += 'POEM';
     html += '<small>';
-    html += 'P01.28';
+    html += 'P01.29';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -358,11 +358,11 @@ class Gene_tema19 extends Gene_Poemer {
         this.Add_cods(cods_animal);
     }
 }
-// 季語：舞う
+// 季語：道
 class Gene_tema20 extends Gene_Poemer {
     constructor() {
         super('@TM20', '@PIC_TEMA@');
-        this.Add_cods(cods_move_dance);
+        this.Add_cods(cods_load);
     }
 }
 // 一般
@@ -372,6 +372,8 @@ class Gene_sent extends Gene_Poemer {
         this.Add_cods(cods_nature);
         // this.Add_cods(cods_body);
         this.Add_cods(cods_home);
+        this.Add_cods(cods_town);
+        this.Add_cods(cods_load);
         this.Add_cods(cods_weather);
         // this.Add_cods(cods_what);
         // this.Add_cods(cods_where);
@@ -417,6 +419,8 @@ class Gene_item extends Gene_Poemer {
         this.Add_cods(cods_nature);
         // this.Add_cods(cods_body);
         // this.Add_cods(cods_home);
+        // this.Add_cods(cods_town);
+        // this.Add_cods(cods_load);
         this.Add_cods(cods_weather);
         // this.Add_cods(cods_what);
         // this.Add_cods(cods_where);

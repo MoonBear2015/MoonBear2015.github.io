@@ -151,7 +151,11 @@ const cods_star = [
     new SctCod_It('|天王星|てんのうせい|', 6),
     new SctCod_It('|海王星|かいおうせい|', 6),
     new SctCod_It('|冥王星|めいおうせい|', 6),
-    new SctCod_It('|彗星|すいせい|', 4)
+    new SctCod_It('|彗星|すいせい|', 4),
+    new SctCod_It('|星雲|せいうん|', 4),
+    new SctCod_It('|天|あま|の|川|がわ|', 5),
+    new SctCod_It('|銀河|ぎんが|', 3),
+    new SctCod_It('|流|なが|れ|星|ぼし|', 5)
 ];
 const cods_sky = [
     new SctCod_It('|空|そら|', 2, 'sky.jpg'),
@@ -292,22 +296,46 @@ const cods_nature = [
 ];
 const cods_home = [
     new SctCod_It('|家|いえ|', 2, 'home.jpg'),
+    new SctCod_It('|建物|たてもの|', 4),
+    new SctCod_It('|住居|じゅうきょ|', 3),
     new SctCod_It('|扉|とびら|', 3),
     new SctCod_It('|壁|かべ|', 2),
     new SctCod_It('|柱|はしら|', 3),
+    new SctCod_It('|大黒柱|だいこくばしら|', 7),
     new SctCod_It('|窓|まど|', 2),
     new SctCod_It('|天井|てんじょう|', 4),
     new SctCod_It('|屋根|やね|', 2),
-    new SctCod_It('|瓦|かわら|', 3)
-    // ,
-    // new SctCod_It('|屏|へい|',2)
-    ,
+    new SctCod_It('|瓦|かわら|', 3),
     new SctCod_It('|門|もん|', 2),
     new SctCod_It('|台所|だいどころ|', 5),
     new SctCod_It('|風呂|ふろ|', 2),
     new SctCod_It('|湯船|ゆぶね|', 3),
     new SctCod_It('|寝床|ねどこ|', 3),
     new SctCod_It('|井戸|いど|', 2)
+];
+const cods_town = [
+    new SctCod_It('|街|まち|', 2, 'town.jpg'),
+    new SctCod_It('|町|まち|', 2),
+    new SctCod_It('|町並|まちな|み', 4),
+    new SctCod_It('|街並|まちな|み', 4),
+    new SctCod_It('|村|むら|', 2),
+    new SctCod_It('|家々|いえいえ|', 4)
+];
+const cods_load = [
+    new SctCod_It('|道|みち|', 2, 'load.jpg'),
+    new SctCod_It('|小径|こみち|', 3),
+    new SctCod_It('|枝道|えだみち|', 3),
+    new SctCod_It('|枝道|えだみち|', 3),
+    new SctCod_It('|別|わか|れ|道|みち|', 5),
+    new SctCod_It('|通|とお|り|道|みち|', 5),
+    new SctCod_It('|獣道|けものみち|', 5),
+    new SctCod_It('|進路|しんろ|', 3),
+    new SctCod_It('|道路|どうろ|', 3),
+    new SctCod_It('|十字路|じゅうじろ|', 4),
+    new SctCod_It('|街道|かいどう|', 4),
+    new SctCod_It('|軌道|きどう|', 3),
+    new SctCod_It('|路線|ろせん|', 3),
+    new SctCod_It('|道順|みちじゅん|', 4)
 ];
 const cods_move = [
     new SctCod_Mv('|動|うご|く', 3, 'active.jpg'),
