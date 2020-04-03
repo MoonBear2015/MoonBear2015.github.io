@@ -297,7 +297,8 @@ const cods_nature = [
 const cods_home = [
     new SctCod_It('|家|いえ|', 2, 'home.jpg'),
     new SctCod_It('|建物|たてもの|', 4),
-    new SctCod_It('|住居|じゅうきょ|', 3),
+    new SctCod_It('|住|す|まい', 3),
+    new SctCod_It('|佇|たたず|まい', 5),
     new SctCod_It('|扉|とびら|', 3),
     new SctCod_It('|壁|かべ|', 2),
     new SctCod_It('|柱|はしら|', 3),
@@ -324,8 +325,7 @@ const cods_town = [
 const cods_load = [
     new SctCod_It('|道|みち|', 2, 'load.jpg'),
     new SctCod_It('|小径|こみち|', 3),
-    new SctCod_It('|枝道|えだみち|', 3),
-    new SctCod_It('|枝道|えだみち|', 3),
+    new SctCod_It('|枝道|えだみち|', 4),
     new SctCod_It('|別|わか|れ|道|みち|', 5),
     new SctCod_It('|通|とお|り|道|みち|', 5),
     new SctCod_It('|獣道|けものみち|', 5),

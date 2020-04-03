@@ -251,7 +251,7 @@ class NameCreater_cha extends NameCreater {
 }
 class NameCreater_rus extends NameCreater {
     constructor() {
-        super('・');
+        super(' ');
         this.name01 = [
             new NmWsM('|Александр|アレクサンドル|'),
             new NmWsM('|Михаил|ミハイル|'),
@@ -349,7 +349,7 @@ class NameCreater_jpn extends NameCreater {
 }
 class NameCreater_eng extends NameCreater {
     constructor() {
-        super('・');
+        super(' ');
         this.name01 = [
             new NmWsM('|John|ジョン|'),
             new NmWsM('|Robert|ロバート|'),

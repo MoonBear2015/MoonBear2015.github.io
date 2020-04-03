@@ -9,7 +9,7 @@ function set_poem() {
     html += '<h1>';
     html += 'POEM';
     html += '<small>';
-    html += 'P01.29';
+    html += 'P01.30';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -88,7 +88,7 @@ function make_poem_sub() {
     html += '</h3>';
     html += '<div>';
     html += '<figure>';
-    html += '<img src="pics/TITLE/@PIC_TITLE@" width="80px">';
+    html += '<img src="pics/TITLE/@PIC_TITLE@" width="70px">';
     html += '</figure>';
     html += '</div>';
     html += '<h2 id="poem_main">';
@@ -131,9 +131,8 @@ class poemer_pattern_B extends SctItm_Selector {
             new SctItm('@SENT05@ @SENT07@ @TEMA05@<br>@SENT07@ @SENT07@'),
             new SctItm('@SENT05@ @SENT07@ @SENT05@<br>@TEMA07@ @SENT07@'),
             new SctItm('@SENT05@ @SENT07@ @SENT05@<br>@SENT07@ @TEMA07@'),
-            new SctItm('@TEMA05@ @TEMA07@ @SENT05@<br>@SENT07@ @SENT07@'),
+            new SctItm('@SENT05@ @SENT07@ @SENT05@<br>@TEMA07@ @TEMA07@'),
             new SctItm('@TEMA05@ @TEMA07@ @TEMA05@<br>@SENT07@ @SENT07@'),
-            new SctItm('@TEMA05@ @TEMA07@ @TEMA05@<br>@TEMA07@ @SENT07@'),
             new SctItm('@TEMA05@ @TEMA07@ @TEMA05@<br>@TEMA07@ @TEMA07@')
         ];
     }
