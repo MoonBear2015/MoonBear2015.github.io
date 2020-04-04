@@ -18,6 +18,8 @@ const   cods_spring = [
     new SctCod_It('|雛祭|ひなまつり|',5)
     ,
     new SctCod_It('|花見|はなみ|',3)
+    ,
+    new SctCod_It('|春雨|はるさめ|',4)
 ];
 
 const   cods_flower_spring = [
@@ -53,6 +55,10 @@ const   cods_summer = [
     new SctCod_It('|酷暑|こくしょ|',3)
     ,
     new SctCod_It('|残暑|ざんしょ|',3)
+    ,
+    new SctCod_It('|梅雨|つゆ|',2)
+    ,
+    new SctCod_It('|夕立|ゆうだち|',4)
     ,
     new SctCod_It('|虹|にじ|',2)
     ,
@@ -155,6 +161,8 @@ const   cods_winter = [
     ,
     new SctCod_It('|雪|ゆき|',2)
     ,
+    new SctCod_It('|豪雪|ごうせつ|',4)
+    ,
     new SctCod_It('|氷|こおり|',3)
     ,
     new SctCod_It('|霜|しも|',2)
@@ -196,6 +204,10 @@ const   cods_flower = [
     new SctCod_It('|花束|はなたば|',4)
     ,
     new SctCod_It('|花売|はなう|り|娘|むすめ|',7)
+    ,
+    new SctCod_It('|花道|はなみち|',4)
+    ,
+    new SctCod_It('|花畑|はなばたけ|',5)
 ];
 
 
@@ -311,19 +323,11 @@ const   cods_weather = [
     ,
     new SctCod_It('|小雨|こさめ|',3)
     ,
-    new SctCod_It('|春雨|はるさめ|',4)
-    ,
-    new SctCod_It('|梅雨|つゆ|',2)
-    ,
     new SctCod_It('|雷雨|らいう|',3)
     ,
     new SctCod_It('|豪雨|ごうう|',3)
     ,
     new SctCod_It('|曇|くも|り',3)
-    ,
-    new SctCod_It('|雪|ゆき|',2)
-    ,
-    new SctCod_It('|豪雪|ごうせつ|',4)
     ,
     new SctCod_It('|雷|かみなり|',4)
     ,
@@ -847,6 +851,10 @@ const   cods_adject_beauty = [
     new SctCod_Mv('|愛|いと|おしい',5)
     ,
     new SctCod_Mv('|綺麗|きれい|な',4)
+    ,
+    new SctCod_Mv('|華麗|かれい|に',4)
+    ,
+    new SctCod_Mv('|優雅|ゆうが|に',4)
     // ,
     // new SctCod_Mv('|醜|みにく|い',4)
     // ,
@@ -933,6 +941,8 @@ const   cods_where = [
 ];
 
 const   cods_when = [
+    new SctCod_It('|時|とき|',2,'time.jpg')
+    ,
     new SctCod_It('|今|いま|',2)
     ,
     new SctCod_It('|後|あと|で',3)
@@ -954,8 +964,8 @@ const   cods_when = [
     new SctCod_It('|一昨日|おととい|',4)
     ,
     new SctCod_It('|一昨昨日|さきおととい|',6)
-    ,
-    new SctCod_It('|何時|いつ|',2)
+    // ,
+    // new SctCod_It('|何時|いつ|',2)
 ];
 
 

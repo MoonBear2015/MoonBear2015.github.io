@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N02.11';
+    html += 'N02.12';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -566,7 +566,7 @@ class selector_comment2 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@CALL@、@YESNO@、それが@PART@の@PART@@END02A@')
             ,
-            new SctItm('@NICK@と@ASSES@@THEY@、@YESNO@、それが@WHAT@@END02A@')
+            new SctItm('@DO@する@NICK@と@ASSES@@THEY@、@YESNO@、それが@WHAT@の@PEOPLE@@END02A@')
             ,
             new SctItm('@DO@@END02B@@THEY@、@YESNO@、それが@WHAT@@END02A@')
             ,
