@@ -53,6 +53,7 @@ const cods_flower_summer = [
 ];
 const cods_autumn = [
     new SctCod_It('|秋|あき|', 2, 'autumn.jpg'),
+    new SctCod_It('|仲秋|ちゅうしゅう|', 4),
     new SctCod_It('|夜長|よなが|', 3),
     new SctCod_It('|月|つき|', 2),
     new SctCod_It('|紅葉|もみじ|', 3),
