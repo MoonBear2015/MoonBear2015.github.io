@@ -292,6 +292,38 @@ const   cods_star = [
     new SctCod_It('|銀河|ぎんが|',3)
     ,
     new SctCod_It('|流|なが|れ|星|ぼし|',5)
+    ,
+    new SctCod_It('|星座|せいざ|',5)
+    ,
+    new SctCod_It('|北極星|ほっきょくせい|',6)
+    ,
+    new SctCod_It('|北斗七星|ほくとしちせい|',7)
+    ,
+    new SctCod_It('カシオペア',5)
+    ,
+    new SctCod_It('|牡羊座|おひつじざ|',5)
+    ,
+    new SctCod_It('|牡牛座|おうしざ|',4)
+    ,
+    new SctCod_It('|双子座|ふたござ|',4)
+    ,
+    new SctCod_It('|蟹座|かにざ|',3)
+    ,
+    new SctCod_It('|獅子座|ししざ|',3)
+    ,
+    new SctCod_It('|乙女座|おとめざ|',4)
+    ,
+    new SctCod_It('|天秤座|てんびんざ|',5)
+    ,
+    new SctCod_It('|蠍座|さそりざ|',4)
+    ,
+    new SctCod_It('|射手座|いてざ|',3)
+    ,
+    new SctCod_It('|山羊座|やぎざ|',3)
+    ,
+    new SctCod_It('|水瓶座|みずがめざ|',5)
+    ,
+    new SctCod_It('|魚座|うおざ|',3)
 ];
 
 const   cods_sky = [
@@ -354,6 +386,10 @@ const   cods_bird = [
     ,
     new SctCod_It('|鶏|にわとり|',4)
     ,
+    new SctCod_It('|雛|ひよこ|',3)
+    ,
+    new SctCod_It('|雛|ひな|',2)
+    ,
     new SctCod_It('|烏|からす|',3)
     ,
     new SctCod_It('|雀|すずめ|',3)
@@ -371,6 +407,8 @@ const   cods_bird = [
     new SctCod_It('|鴎|かもめ|',3)
     ,
     new SctCod_It('|辺銀|ぺんぎん|',4)
+    ,
+    new SctCod_It('|家鴨|あひる|',3)
 ];
 
 const   cods_bird_spring = [
@@ -526,6 +564,8 @@ const   cods_nature = [
     ,
     new SctCod_It('|海|うみ|',2)
     ,
+    new SctCod_It('|水辺|みずべ|',3)
+    ,
     new SctCod_It('|木|こ|の|葉|は|',3)
     ,
     new SctCod_It('|木|き|の|実|み|',3)
@@ -591,6 +631,8 @@ const   cods_town = [
     new SctCod_It('|村|むら|',2)
     ,
     new SctCod_It('|家々|いえいえ|',4)
+    ,
+    new SctCod_It('|市場|いちば|',4)
 ];
 
 const   cods_load = [

@@ -465,8 +465,10 @@ class selector_whats extends SctItm_SelectLocker {
             new SctItm('韓国', 'WHAT/koria.jpg'),
             new SctItm('エジプト', 'WHAT/pyramid.jpg'),
             new SctItm('ガミラス帝国', 'WHAT/gamilas.jpg'),
-            new SctItm('イスカンダル', 'WHAT/iskandar.jpg'),
-            new SctItm('経済', 'WHAT/Economy.jpg'),
+            new SctItm('イスカンダル', 'WHAT/iskandar.jpg')
+            // ,
+            // new SctItm('経済','WHAT/Economy.jpg')
+            ,
             new SctItm('株式市場', 'WHAT/Economy.jpg'),
             new SctItm('科学', 'WHAT/Science.jpg'),
             new SctItm('現代科学', 'WHAT/Science.jpg'),
