@@ -382,7 +382,7 @@ const   cods_weather = [
 ];
 
 const   cods_bird = [
-    new SctCod_It('|鳥|とり|','sky.jpg')
+    new SctCod_It('|鳥|とり|','bird.jpg')
     ,
     new SctCod_It('|鶏|にわとり|')
     ,
@@ -409,6 +409,12 @@ const   cods_bird = [
     new SctCod_It('|辺銀|ぺんぎん|')
     ,
     new SctCod_It('|家鴨|あひる|')
+    ,
+    new SctCod_It('|孔雀|くじゃく|')
+    ,
+    new SctCod_It('|鳳凰|ほうおう|')
+    ,
+    new SctCod_It('|朱雀|すじゃく|')
 ];
 
 const   cods_bird_spring = [
@@ -771,6 +777,10 @@ const   cods_move_fly = [
     new SctCod_Mv('|飛|と|び|越|こ|える')
     ,
     new SctCod_Mv('|飛|と|び|込|こ|む')
+    ,
+    new SctCod_Mv('|羽|は|ばたく')
+    ,
+    new SctCod_Mv('|浮|う|き|上|あ|がる')
 ];
 
 const   cods_move_walk = [
@@ -885,6 +895,35 @@ const   cods_move_dark = [
     new SctCod_Mv('|影射|かげさ|す')
     ,
     new SctCod_Mv('|影|かげ|が|射|さ|す')
+];
+
+
+const   cods_move_think = [
+    new SctCod_Mv('|想|おも|う','think.jpg')
+    ,
+    new SctCod_Mv('|想|おも|い')
+    ,
+    new SctCod_Mv('|考|かんが|える')
+    ,
+    new SctCod_Mv('|祈|いの|る')
+    ,
+    new SctCod_Mv('|願|ねが|う')
+    ,
+    new SctCod_Mv('|忍|しの|ぶ')
+    ,
+    new SctCod_Mv('|恋|こ|い|慕|した|う')
+    ,
+    new SctCod_Mv('|愛|あい|する')
+    ,
+    new SctCod_Mv('|愛|いと|おしむ')
+    ,
+    new SctCod_Mv('|感|かん|じる')
+    ,
+    new SctCod_Mv('|思|おも|い|返|かえ|す')
+    ,
+    new SctCod_Mv('|思|おも|い|出|だ|す')
+    ,
+    new SctCod_Mv('|思|おも|い|起|お|こす')
 ];
 
 
@@ -1059,10 +1098,10 @@ const   cods_when = [
     ,
     new SctCod_It('|今|いま|')
     ,
-    new SctCod_It('|後|あと|で')
-    ,
-    new SctCod_It('|後|のち|に')
-    ,
+    // new SctCod_It('|後|あと|で')
+    // ,
+    // new SctCod_It('|後|のち|に')
+    // ,
     new SctCod_It('|今日|きょう|')
     ,
     new SctCod_It('|明日|あす|')
@@ -1099,3 +1138,52 @@ const   cods_conect = [
     new SctCod('も')
 ];
 
+const   cods_gundam = [
+    new SctCod_It('ガンダム','gundam.jpg')
+    ,
+    new SctCod_It('ホワイトベース')
+    ,
+    new SctCod_It('|木馬|もくば|')
+    ,
+    new SctCod_It('ガンキャノン')
+    ,
+    new SctCod_It('ガンタンク')
+    ,
+    new SctCod_It('ハロ')
+    ,
+    new SctCod_It('|白|しろ|い|悪魔|あくま|')
+    ,
+    new SctCod_It('|弾幕|だんまく|')
+];
+
+const   cods_zeon = [
+    new SctCod_It('ジオン','zeon.jpg')
+    ,
+    new SctCod_It('ジーク・ジオン')
+    ,
+    new SctCod_It('ザク')
+    ,
+    new SctCod_It('グフ')
+    ,
+    new SctCod_It('ドム')
+    ,
+    new SctCod_It('リック・ドム')
+    ,
+    new SctCod_It('ゴッグ')
+    ,
+    new SctCod_It('ズゴック')
+    ,
+    new SctCod_It('アッガイ')
+    ,
+    new SctCod_It('ゾック')
+    ,
+    new SctCod_It('ギャン')
+    ,
+    new SctCod_It('ゲルググ')
+    ,
+    new SctCod_It('ジオング')
+    ,
+    new SctCod_It('シャア|専用|せんよう|')
+    ,
+    new SctCod_It('コロニー|落|お|とし')
+];

@@ -127,7 +127,7 @@ function ruby_kana(in_str : string) : string {
 
 function ruby_beat(in_str : string) : number {
     let str = ruby_kana(in_str);
-    str = char_del(str,'ゃゅょャュョ');
+    str = char_del(str,'ゃゅょャュョ・');
     return str.length;
 }
 
