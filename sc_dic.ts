@@ -669,6 +669,10 @@ const   cods_load = [
 const   cods_move = [
     new SctCod_Mv('|動|うご|く',3,'active.jpg')
     ,
+    new SctCod_Mv('|動|うご|け',3)
+    ,
+    new SctCod_Mv('|動|うご|かない',5)
+    ,
     new SctCod_Mv('|進|すす|む',3)
     ,
     new SctCod_Mv('|戻|もど|る',3)

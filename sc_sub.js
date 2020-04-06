@@ -36,6 +36,16 @@ function tests_alert(in_tests) {
 //------------------------------------ etc
 const zP2 = new Intl.NumberFormat('ja', { minimumIntegerDigits: 2 });
 const zP3 = new Intl.NumberFormat('ja', { minimumIntegerDigits: 3 });
+function char_cnt(in_str, in_chr) {
+    return in_str.split(in_chr).length - 1;
+}
+function char_del(in_str, in_chr) {
+    let result = in_str;
+    for (let i = 0; i < in_chr.length; i++) {
+        result = replaceAll(result, in_chr[i], '');
+    }
+    return result;
+}
 let replaceAll = function (str, before, after) {
     return str.split(before).join(after);
 };
@@ -55,6 +65,36 @@ function sepalate_number(num) {
     }
     return results;
 }
+//------------------------------------ japanese text
+function ruby_check(in_str) {
+    let cnt = char_cnt(in_str, '\|');
+    let sts = ((cnt % 3) == 0);
+    return ((cnt % 3) == 0);
+}
+function ruby_kana(in_str) {
+    //if (!ruby_check(in_str)) return in_str;
+    let strs = in_str.split('|');
+    let result = '';
+    let sts = 0;
+    strs.forEach((str) => {
+        switch (sts) {
+            case 0:
+                result += str;
+                break;
+            case 1:
+                break;
+            case 2:
+                result += str;
+                break;
+            default:
+                result += str;
+                sts = 0;
+                break;
+        }
+        sts++;
+    });
+    return result;
+}
 function ruby_change(in_html) {
     let result = '';
     let rubytags = [
@@ -63,6 +103,9 @@ function ruby_change(in_html) {
         '</rt></ruby>'
     ];
     let rcnt = -1;
+    if (!ruby_check(in_html)) {
+        alert('[ruby error] ' + in_html);
+    }
     for (let i = 0; i < in_html.length; i++) {
         let ch = in_html[i];
         if (ch == '|') {
