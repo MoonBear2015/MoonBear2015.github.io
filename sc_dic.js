@@ -340,6 +340,33 @@ const cods_home = [
     new SctCod_It('|寝床|ねどこ|'),
     new SctCod_It('|井戸|いど|')
 ];
+const cods_family = [
+    new SctCod_It('|家族|かぞく|', 'family.jpg'),
+    new SctCod_It('|父|ちち|'),
+    new SctCod_It('|兄|あに|'),
+    new SctCod_It('|姉|あね|'),
+    new SctCod_It('|弟|おとうと|'),
+    new SctCod_It('|妹|いもうと|'),
+    new SctCod_It('|息子|むすこ|'),
+    new SctCod_It('|娘|むすめ|'),
+    new SctCod_It('|夫|おっと|'),
+    new SctCod_It('|嫁|よめ|'),
+    new SctCod_It('|妻|つま|'),
+    new SctCod_It('|女房|にょうぼう|'),
+    new SctCod_It('|恋女房|こいにょうぼう|'),
+    new SctCod_It('|鬼嫁|おによめ|'),
+    new SctCod_It('|亭主|ていしゅ|'),
+    new SctCod_It('|祖父|そふ|'),
+    new SctCod_It('|祖母|そぼ|'),
+    new SctCod_It('|叔父|おじ|'),
+    new SctCod_It('|叔母|おば|'),
+    new SctCod_It('|従兄弟|いとこ|'),
+    new SctCod_It('|従姉妹|いとこ|'),
+    new SctCod_It('|孫|まご|'),
+    new SctCod_It('|玄孫|やしゃご|'),
+    new SctCod_It('|舅|しゅうと|'),
+    new SctCod_It('|小姑|こじゅうと|')
+];
 const cods_town = [
     new SctCod_It('|街|まち|', 'town.jpg'),
     new SctCod_It('|町|まち|'),
