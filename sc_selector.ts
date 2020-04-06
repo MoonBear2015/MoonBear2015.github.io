@@ -69,16 +69,16 @@ class SctCod extends SctItm implements ISctCod,ITest {
     constructor(
         in_Wrd? : string
         ,
-        in_CodLength? : number
-        ,
         in_SctPic? : string
+        ,
+        in_CodLength? : number
     )
     {
         super(in_Wrd,in_SctPic);
         if (in_CodLength) {
             this.CodLength = in_CodLength;
         } else {
-            this.CodLength = this.Wrd.length;
+            this.CodLength = ruby_beat(this.Wrd);
         }
 
         this.KeyA = '';
@@ -142,7 +142,7 @@ class SctCod extends SctItm implements ISctCod,ITest {
         let resWrd = this.Wrd + inCod.Wrd;
         let resPic = this.SctPic;
         let resLen = this.CodLength + inCod.CodLength;
-        return new SctCod(resWrd,resLen,resPic);
+        return new SctCod(resWrd,resPic,resLen);
     }
 
     ToString() : string
@@ -155,12 +155,12 @@ class SctCod_It extends SctCod implements ISctCod,ITest {
     constructor(
         in_Wrd? : string
         ,
-        in_CodLength? : number
-        ,
         in_SctPic? : string
+        ,
+        in_CodLength? : number
     )
     {
-        super(in_Wrd,in_CodLength,in_SctPic);
+        super(in_Wrd,in_SctPic,in_CodLength);
 
         this.KeyA = '';
         this.KeyB = '@M';
@@ -174,12 +174,12 @@ class SctCod_Mv extends SctCod implements ISctCod,ITest {
     constructor(
         in_Wrd? : string
         ,
-        in_CodLength? : number
-        ,
         in_SctPic? : string
+        ,
+        in_CodLength? : number
     )
     {
-        super(in_Wrd,in_CodLength,in_SctPic);
+        super(in_Wrd,in_SctPic,in_CodLength);
 
         this.KeyA = '';
         this.KeyB = '@I';

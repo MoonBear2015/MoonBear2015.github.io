@@ -95,6 +95,11 @@ function ruby_kana(in_str) {
     });
     return result;
 }
+function ruby_beat(in_str) {
+    let str = ruby_kana(in_str);
+    str = char_del(str, 'ゃゅょャュョ');
+    return str.length;
+}
 function ruby_change(in_html) {
     let result = '';
     let rubytags = [

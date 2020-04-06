@@ -125,6 +125,12 @@ function ruby_kana(in_str : string) : string {
     return result;
 }
 
+function ruby_beat(in_str : string) : number {
+    let str = ruby_kana(in_str);
+    str = char_del(str,'ゃゅょャュョ');
+    return str.length;
+}
+
 function ruby_change(in_html : string) : string {
     let result : string = '';
     let rubytags = [
