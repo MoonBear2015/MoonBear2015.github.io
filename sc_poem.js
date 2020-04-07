@@ -9,7 +9,7 @@ function set_poem() {
     html += '<h1>';
     html += 'POEM';
     html += '<small>';
-    html += 'P01.36';
+    html += 'P01.37';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -118,9 +118,7 @@ class poemer_pattern_A extends SctItm_Selector {
             new SctItm('@SENT05@ @SENT07@ @TEMA05@'),
             new SctItm('@TEMA05@ @TEMA07@ @SENT05@'),
             new SctItm('@SENT05@ @TEMA07@ @TEMA05@'),
-            new SctItm('@TEMA05@ @TEMA07@ @TEMA05@'),
-            new SctItm('@TEMA07@ @TEMA07@ @TEMA05@（字余り）'),
-            new SctItm('@TEMA05@ @TEMA07@ @TEMA07@（字余り）')
+            new SctItm('@TEMA05@ @TEMA07@ @TEMA05@')
         ];
     }
 }
