@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N02.12';
+    html += 'N02.13';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -61,7 +61,7 @@ function make_news()
     
     html += '<p id="news_doc">';
     html += '　@NEWS_DOC@';
-    for(let i = 0;i < rnd_minmax(3,5);i++)
+    for(let i = 0;i < rnd_minmax(2,3);i++)
     {
         html += '@CONECT@、';
         html += '@NEWS_DOC@';
@@ -76,7 +76,7 @@ function make_news()
 
     html += '<p id="news_doc">';
     html += '　@NEWS_DOC@';
-    for(let i = 0;i < rnd_minmax(5,10);i++)
+    for(let i = 0;i < rnd_minmax(3,5);i++)
     {
         html += '@CONECT@、';
         html += '@NEWS_DOC@';

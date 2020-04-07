@@ -881,12 +881,12 @@ const   cods_move_life = [
 ];
 
 const   cods_move_death = [
-    new SctCod_Mv('|死|し|ぬ','death.jpg')
-    ,
-    new SctCod_Mv('|死|し|す')
-    ,
-    new SctCod_Mv('|死|し|ね')
-    ,
+    // new SctCod_Mv('|死|し|ぬ','death.jpg')
+    // ,
+    // new SctCod_Mv('|死|し|す')
+    // ,
+    // new SctCod_Mv('|死|し|ね')
+    // ,
     new SctCod_Mv('|倒|たお|れる')
     ,
     new SctCod_Mv('|倒|たお|れし')
@@ -912,6 +912,8 @@ const   cods_move_death = [
     new SctCod_Mv('|失|うしな|う')
     ,
     new SctCod_Mv('|失|うしな|われる')
+    ,
+    new SctCod_Mv('|損|そこ|なう')
 ];
 
 const   cods_move_light = [

@@ -114,6 +114,10 @@ figure {
     float: right;
 }
 
+#writer {
+    font-size: 1.5vmax;
+    color: #b0b0b0;
+}
 
 #news_pic img {
     margin: 10px;
@@ -127,14 +131,14 @@ figure {
 }
 
 #news_title {
-    font-size: 32px;
+    font-size: 3vmax;
     color: #f0f0f0;
     margin: 0px 20px;
     text-shadow: 2px 2px 0px #000000;
 }
 
 #news_doc {
-    font-size: 18px;
+    font-size: 2.1vmax;
     margin: 0px;
     padding: 0px;
     color: #f0f0f0;

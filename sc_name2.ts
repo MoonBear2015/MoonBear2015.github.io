@@ -69,14 +69,14 @@ class NmItm implements INmItm {
         html += '</figure>';
         html += '</div>';
     
-        html += '<h4 id="poem_writer" align="right">';
+        html += '<h4 id="writer" align="right">';
         html += '©@YEAR@ @WHO2@ ' + this.NameAge + ' @CO@';
         html += '</h4>';
         return html;
     }
 
     get NameAge() {
-        return this.NmStr + '(' + this.NmAgeNum.toString() + ')';
+        return '<big>' + this.NmStr + '</big>' + '(' + this.NmAgeNum.toString() + ')';
     }
 
     get NmAge() {
