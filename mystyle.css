@@ -115,7 +115,7 @@ figure {
 }
 
 #writer {
-    font-size: 1.5vmax;
+    font-size: 2vmax;
     color: #b0b0b0;
 }
 
@@ -131,14 +131,14 @@ figure {
 }
 
 #news_title {
-    font-size: 3vmax;
+    font-size: 4vmax;
     color: #f0f0f0;
     margin: 0px 20px;
     text-shadow: 2px 2px 0px #000000;
 }
 
 #news_doc {
-    font-size: 2.1vmax;
+    font-size: 2.5vmax;
     margin: 0px;
     padding: 0px;
     color: #f0f0f0;
@@ -164,7 +164,7 @@ small {
 }
 
 #poem_main {
-    font-size: 3vmax;
+    font-size: 2.8vmax;
     color: #e0e0e0;
     text-align: center;
     text-shadow: 2px 2px 0px #000000;
