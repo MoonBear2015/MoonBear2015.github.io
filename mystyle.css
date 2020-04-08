@@ -156,6 +156,13 @@ small {
     border-radius:  1%;
 }
 
+#poem_tema {
+    font-size: 4vmax;
+    text-indent: 0.5ex;
+    color: #c0c0c0;
+    text-shadow: 2px 2px 0px #000000;
+}
+
 
 #poem_title {
     font-size: 2vmax;

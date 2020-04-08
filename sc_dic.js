@@ -411,7 +411,11 @@ const cods_move = [
     new SctCod_Mv('|降|お|りる'),
     new SctCod_Mv('|降|お|りろ'),
     new SctCod_Mv('|落|お|ちる'),
-    new SctCod_Mv('|落|お|ちよ')
+    new SctCod_Mv('|滑|すべ|る'),
+    new SctCod_Mv('|転|ころ|がる'),
+    new SctCod_Mv('|立|た|つ'),
+    new SctCod_Mv('|立|た|ち|上|あ|がる'),
+    new SctCod_Mv('|座|すわ|る')
 ];
 const cods_move_dance = [
     new SctCod_Mv('|舞|ま|う', 'dance.jpg'),
@@ -452,14 +456,23 @@ const cods_move_fly = [
 ];
 const cods_move_walk = [
     new SctCod_Mv('|歩|ある|く', 'walk.jpg'),
-    new SctCod_Mv('|歩|あゆ|む')
+    new SctCod_Mv('|歩|あゆ|む'),
+    new SctCod_Mv('|往|ゆ|く')
+    // ,
+    // new SctCod_Mv('|行|い|く')
+    ,
+    new SctCod_Mv('|進|すす|む'),
+    new SctCod_Mv('|戻|もど|る'),
+    new SctCod_Mv('|帰|かえ|る'),
+    new SctCod_Mv('|去|さ|る'),
+    new SctCod_Mv('|立|た|ち|去|さ|る'),
+    new SctCod_Mv('|目指|めざ|す')
 ];
 const cods_move_stop = [
     new SctCod_Mv('|止|と|まる', 'stop.jpg'),
     new SctCod_Mv('|留|とど|まる'),
     new SctCod_Mv('|立|た|ち|止|ど|まる'),
-    new SctCod_Mv('|佇|たたず|む'),
-    new SctCod_Mv('|終|お|わる')
+    new SctCod_Mv('|佇|たたず|む')
 ];
 const cods_move_open = [
     new SctCod_Mv('|開|ひら|く', 'open.jpg'),
@@ -474,7 +487,10 @@ const cods_move_life = [
     new SctCod_Mv('|活|い|きる'),
     new SctCod_Mv('|実|みの|る'),
     new SctCod_Mv('|産|う|まれる'),
-    new SctCod_Mv('|始|はじ|まる')
+    new SctCod_Mv('|始|はじ|まる'),
+    new SctCod_Mv('|目覚|めざ|める'),
+    new SctCod_Mv('|眠|ねむ|る'),
+    new SctCod_Mv('|起|お|きる')
 ];
 const cods_move_death = [
     // new SctCod_Mv('|死|し|ぬ','death.jpg')
@@ -492,11 +508,14 @@ const cods_move_death = [
     new SctCod_Mv('|朽|く|ち|果|は|てる'),
     new SctCod_Mv('|尽|つ|きる'),
     new SctCod_Mv('|尽|つ|きた'),
+    new SctCod_Mv('|終|お|わる'),
     new SctCod_Mv('|終|お|える'),
     new SctCod_Mv('|終|お|えた'),
     new SctCod_Mv('|失|うしな|う'),
     new SctCod_Mv('|失|うしな|われる'),
-    new SctCod_Mv('|損|そこ|なう')
+    new SctCod_Mv('|見失|みうしな|う'),
+    new SctCod_Mv('|損|そこ|なう'),
+    new SctCod_Mv('|消|き|える')
 ];
 const cods_move_light = [
     new SctCod_Mv('|光|ひか|る', 'light.jpg'),

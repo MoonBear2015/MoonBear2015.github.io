@@ -9,7 +9,7 @@ function set_poem() {
     html += '<h1>';
     html += 'POEM';
     html += '<small>';
-    html += 'P01.37';
+    html += 'P01.38';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -44,7 +44,7 @@ function make_poem() {
     html += 'background-size: ';
     html += 'contain;';
     html += '">';
-    html += '<h2>';
+    html += '<h2 id="poem_tema">';
     html += '季語：@TEMA@';
     html += '</h2>';
     for (let i = 0; i < rnd_minmax(10, 20); i++) {

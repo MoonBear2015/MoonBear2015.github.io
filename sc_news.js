@@ -160,7 +160,7 @@ class selector_age extends ItmArray {
         super();
         this.itm_key = "@AGE@";
         this.pic_key = "";
-        this.nameMaker = new NameMakerAll();
+        this.nameCreater = new NameCreaterAll();
     }
     get rnd_Itm() {
         let age = "";

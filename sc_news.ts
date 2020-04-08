@@ -224,7 +224,7 @@ class selector_age
     extends ItmArray<SctItm>
     implements ISctItm_Selector 
 {
-    public nameMaker : INameMaker;
+    public nameCreater : INameCreater;
     public itm_key : string;
     public pic_key : string;
     constructor()
@@ -232,7 +232,7 @@ class selector_age
         super();
         this.itm_key = "@AGE@";
         this.pic_key = "";
-        this.nameMaker = new NameMakerAll();
+        this.nameCreater = new NameCreaterAll();
     }
     get rnd_Itm() : SctItm {
         let age : string = "";
