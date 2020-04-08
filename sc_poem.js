@@ -197,7 +197,8 @@ class poemer_tema extends SctItm_SelectLocker {
             new SctItm('@TM22'),
             new SctItm('@TM23'),
             new SctItm('@TM24'),
-            new SctItm('@TM25')
+            new SctItm('@TM25'),
+            new SctItm('@TM26')
         ];
     }
 }
@@ -405,6 +406,13 @@ class Gene_tema25 extends Gene_Poemer {
         this.Add_cods(cods_family);
     }
 }
+// 季語：世界各国
+class Gene_tema26 extends Gene_Poemer {
+    constructor() {
+        super('@TM26', '@PIC_TEMA@');
+        this.Add_cods(cods_country);
+    }
+}
 // 一般
 class Gene_sent extends Gene_Poemer {
     constructor() {
@@ -419,6 +427,7 @@ class Gene_sent extends Gene_Poemer {
         // this.Add_cods(cods_where);
         this.Add_cods(cods_when);
         // this.Add_cods(cods_item_color);
+        this.Add_cods(cods_make);
         this.Add_cods(cods_move);
         this.Add_cods(cods_move_dance);
         this.Add_cods(cods_move_run);
@@ -431,6 +440,8 @@ class Gene_sent extends Gene_Poemer {
         this.Add_cods(cods_move_light);
         this.Add_cods(cods_move_dark);
         this.Add_cods(cods_move_think);
+        this.Add_cods(cods_move_sense);
+        this.Add_cods(cods_move_make);
         this.Add_cods(cods_adject_color);
         this.Add_cods(cods_adject_beauty);
     }
@@ -450,6 +461,8 @@ class Gene_move extends Gene_Poemer {
         this.Add_cods(cods_move_light);
         this.Add_cods(cods_move_dark);
         this.Add_cods(cods_move_think);
+        this.Add_cods(cods_move_sense);
+        this.Add_cods(cods_move_make);
         this.Add_cods(cods_adject_color);
         this.Add_cods(cods_adject_beauty);
         // this.Add_cods(cods_move_which);
@@ -468,6 +481,7 @@ class Gene_item extends Gene_Poemer {
         // this.Add_cods(cods_where);
         this.Add_cods(cods_when);
         // this.Add_cods(cods_item_color);
+        this.Add_cods(cods_make);
     }
 }
 class Gene_conect extends Gene_Poemer {
@@ -515,6 +529,7 @@ class poem_docs_maker_tema extends docs_maker {
         this.dic_concat(new Gene_tema23().Generate());
         this.dic_concat(new Gene_tema24().Generate());
         this.dic_concat(new Gene_tema25().Generate());
+        this.dic_concat(new Gene_tema26().Generate());
     }
 }
 class poem_docs_maker_sent extends docs_maker {

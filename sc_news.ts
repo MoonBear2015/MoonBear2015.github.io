@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N02.13';
+    html += 'N02.14';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -607,6 +607,10 @@ class selector_YESNO extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('紛れもなく')
             ,
             new SctItm('疑いようも無く')
+            ,
+            new SctItm('やはり')
+            ,
+            new SctItm('つまり')
         ];
     }
 }
@@ -1129,6 +1133,14 @@ class selector_status1 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('無力化')
             ,
             new SctItm('大型化')
+            ,
+            new SctItm('禁止')
+            ,
+            new SctItm('停止')
+            ,
+            new SctItm('中止')
+            ,
+            new SctItm('延期')
         ];
     }
 }
@@ -1157,6 +1169,8 @@ class selector_status2 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('に満ちあふれている')
             ,
             new SctItm('に輝いている')
+            ,
+            new SctItm('に囚われている')
         ];
     }
 }
@@ -1284,6 +1298,8 @@ class selector_they extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('ルームメイト')
             ,
             new SctItm('クラスメイト')
+            ,
+            new SctItm('野次馬達')
 
         ];
     }
@@ -1354,6 +1370,8 @@ class selector_class extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('舞台作家')
             ,
             new SctItm('恋愛小説家')
+            ,
+            new SctItm('絵本作家')
             ,
             new SctItm('調理師')
             ,
@@ -1592,6 +1610,8 @@ class selector_class extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('証券マン')
             ,
             new SctItm('セールスマン')
+            ,
+            new SctItm('庖丁人')
         ];
     }
 }
@@ -1961,6 +1981,10 @@ class selector_think extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('失望')
             ,
+            new SctItm('落胆')
+            ,
+            new SctItm('幻滅')
+            ,
             new SctItm('苦悶')
             ,
             new SctItm('失意')
@@ -2005,6 +2029,12 @@ class selector_say extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('涙ながらに@SAY@')
             ,
+            new SctItm('あっけらかんと@SAY@')
+            ,
+            new SctItm('大声で@SAY@')
+            ,
+            new SctItm('声を潜めて@SAY@')
+            ,
             new SctItm('主張')
             ,
             new SctItm('強調')
@@ -2039,6 +2069,8 @@ class selector_say extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@PART@にFAX')
             ,
+            new SctItm('@PART@に耳打ち')
+            ,
             new SctItm('リツイート')
         ];
     }
@@ -2049,6 +2081,8 @@ class selector_partner extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@PART@');
         this.itms = [
+            new SctItm('@PART@の@PART@')
+            ,
             new SctItm('知り合い')
             ,
             new SctItm('友達')
@@ -2311,6 +2345,8 @@ class selector_conect extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('兎に角')
             ,
             new SctItm('恐らく')
+            ,
+            new SctItm('すなわち')
           ];
     }
 }

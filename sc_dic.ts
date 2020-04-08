@@ -166,6 +166,8 @@ const   cods_winter = [
     new SctCod_It('|氷|こおり|')
     ,
     new SctCod_It('|霜|しも|')
+    ,
+    new SctCod_It('|雪化粧|ゆきげしょう|')
 ];
 
 const   cods_flower_winter = [
@@ -694,6 +696,16 @@ const   cods_town = [
     new SctCod_It('|市場|いちば|')
 ];
 
+const   cods_make = [
+    new SctCod_It('|化粧|けしょう|','make.jpg')
+    ,
+    new SctCod_It('|衣装|いしょう|')
+    ,
+    new SctCod_It('|衣|ころも|')
+    ,
+    new SctCod_It('|飾|かざ|り')
+];
+
 const   cods_load = [
     new SctCod_It('|道|みち|','load.jpg')
     ,
@@ -706,22 +718,370 @@ const   cods_load = [
     new SctCod_It('|通|とお|り|道|みち|')
     ,
     new SctCod_It('|獣道|けものみち|')
-    ,
-    new SctCod_It('|進路|しんろ|')
-    ,
-    new SctCod_It('|道路|どうろ|')
+    // ,
+    // new SctCod_It('|進路|しんろ|')
+    // ,
+    // new SctCod_It('|道路|どうろ|')
     ,
     new SctCod_It('|十字路|じゅうじろ|')
     ,
     new SctCod_It('|街道|かいどう|')
     ,
     new SctCod_It('|軌道|きどう|')
-    ,
-    new SctCod_It('|路線|ろせん|')
-    ,
-    new SctCod_It('|道順|みちじゅん|')
+    // ,
+    // new SctCod_It('|路線|ろせん|')
+    // ,
+    // new SctCod_It('|道順|みちじゅん|')
 
 ];
+
+const   cods_country = [
+    new SctCod_It('|国々|くにぐに|','worldcountry.jpg')
+    ,
+    new SctCod_It('|氷島|アイスランド|')
+    ,
+    new SctCod_It('愛蘭、|愛蘭土|アイルランド|')
+    ,
+    new SctCod_It('|阿塞拜疆|アゼルバイジャン|')
+    ,
+    new SctCod_It('|阿富汗斯坦|アフガニスタン|')
+    ,
+    new SctCod_It('|亜米利加|アメリカ|')
+    ,
+    new SctCod_It('阿爾及、|阿留世里屋|アルジェリア|')
+    ,
+    new SctCod_It('|亜爾然丁|アルゼンチン|')
+    ,
+    new SctCod_It('|阿爾巴尼亜|アルバニア|')
+    ,
+    new SctCod_It('|亜美尼亜|アルメニア|')
+    ,
+    new SctCod_It('|諳喀剌|アンゴラ|')
+    ,
+    new SctCod_It('|安道爾|アンドラ|')
+    ,
+    new SctCod_It('|也門|イエメン|')
+    ,
+    new SctCod_It('|英吉利|イギリス|')
+    ,
+    new SctCod_It('|伊色剌|イスラエル|')
+    ,
+    new SctCod_It('|伊太利亜|イタリア|')
+    ,
+    new SctCod_It('|伊拉久|イラク|')
+    ,
+    new SctCod_It('|伊蘭|イラン|')
+    ,
+    new SctCod_It('|印度|インド|')
+    ,
+    new SctCod_It('|印度尼西亜|インドネシア|')
+    ,
+    new SctCod_It('|宇岸陀|ウガンダ|')
+    ,
+    new SctCod_It('|烏克蘭|ウクライナ|')
+    ,
+    new SctCod_It('|月即別|ウズベキスタン|')
+    ,
+    new SctCod_It('|宇柳具|ウルグアイ|')
+    ,
+    new SctCod_It('|厄瓜多|エクアドル|')
+    ,
+    new SctCod_It('|埃及|エジプト|')
+    ,
+    new SctCod_It('|愛沙尼亜|エストニア|')
+    ,
+    new SctCod_It('|哀提伯|エチオピア|')
+    ,
+    new SctCod_It('|厄立特里亜|エリトリア|')
+    ,
+    new SctCod_It('|救世主国|エルサルバドル|')
+    ,
+    new SctCod_It('|濠太剌利|オーストラリア|')
+    ,
+    new SctCod_It('|墺太利|オーストリア|')
+    ,
+    new SctCod_It('|阿曼|オマーン|')
+    ,
+    new SctCod_It('|和蘭|オランダ|')
+    ,
+    new SctCod_It('|加納|ガーナ|')
+    ,
+    new SctCod_It('|辺瑠出角|カーボベルデ|')
+    ,
+    new SctCod_It('|圭亜那|ガイアナ|')
+    ,
+    new SctCod_It('|香佐富斯坦|カザフスタン|')
+    ,
+    new SctCod_It('|華太瑠|カタール|')
+    ,
+    new SctCod_It('|加奈陀|カナダ|')
+    ,
+    new SctCod_It('|加蓬|ガボン|')
+    ,
+    new SctCod_It('|夏麦論|カメルーン|')
+    ,
+    new SctCod_It('|岡比亜|ガンビア|')
+    ,
+    new SctCod_It('|柬埔寨|カンボジア|')
+    ,
+    new SctCod_It('|幾内亜|ギニア|')
+    ,
+    new SctCod_It('|幾内亜美須|ギニアビサウ|')
+    ,
+    new SctCod_It('|塞浦路斯|キプロス|')
+    ,
+    new SctCod_It('|玖馬|キューバ|')
+    ,
+    new SctCod_It('|希臘|ギリシャ|')
+    ,
+    new SctCod_It('|基里巴斯|キリバス|')
+    ,
+    new SctCod_It('|黠戞斯|キルギス|')
+    ,
+    new SctCod_It('|危地馬拉|グアテマラ|')
+    ,
+    new SctCod_It('|科威都|クウェート|')
+    ,
+    new SctCod_It('|具琉耳|グルジア|')
+    ,
+    new SctCod_It('|格林納達|グレナダ|')
+    ,
+    new SctCod_It('|克羅地亜|クロアチア|')
+    ,
+    new SctCod_It('|肯尼亜|ケニア|')
+    ,
+    new SctCod_It('|象牙海岸|コートジボワール|')
+    ,
+    new SctCod_It('|哥斯達利加|コスタリカ|')
+    ,
+    new SctCod_It('|科摩羅|コモロ|')
+    ,
+    new SctCod_It('|哥倫比亜|コロンビア|')
+    ,
+    new SctCod_It('|沙地亜剌比亜|サウジアラビア|')
+    ,
+    new SctCod_It('|薩摩亜|サモア|')
+    ,
+    new SctCod_It('|賛比亜|ザンビア|')
+    ,
+    new SctCod_It('|聖馬力諾|サンマリノ|')
+    ,
+    new SctCod_It('|獅子山|シエラレオネ|')
+    ,
+    new SctCod_It('|吉武地|ジブチ|')
+    ,
+    new SctCod_It('|牙買加|ジャマイカ|')
+    ,
+    new SctCod_It('|叙利亜|シリア|')
+    ,
+    new SctCod_It('|新嘉坡|シンガポール|')
+    ,
+    new SctCod_It('|津巴布韋|ジンバブエ|')
+    ,
+    new SctCod_It('|瑞西|スイス|')
+    ,
+    new SctCod_It('|瑞典|スウェーデン|')
+    ,
+    new SctCod_It('|蘇丹|スーダン|')
+    ,
+    new SctCod_It('|西班牙|スペイン|')
+    ,
+    new SctCod_It('|蘇里南|スリナム|')
+    ,
+    new SctCod_It('|錫蘭|スリランカ|')
+    ,
+    new SctCod_It('|斯洛伐克|スロバキア|')
+    ,
+    new SctCod_It('|斯洛文尼亜|スロベニア|')
+    ,
+    new SctCod_It('|斯威士蘭|スワジランド|')
+    ,
+    new SctCod_It('|塞舌爾|セーシェル|')
+    ,
+    new SctCod_It('|塞内牙|セネガル|')
+    ,
+    new SctCod_It('|聖盧西亜|セントルシア|')
+    ,
+    new SctCod_It('|蘇摩利亜|ソマリア|')
+    ,
+    new SctCod_It('|泰|タイ|')
+    ,
+    new SctCod_It('|汰爾奇斯坦|タジキスタン|')
+    ,
+    new SctCod_It('|坦桑尼亜|タンザニア|')
+    ,
+    new SctCod_It('|捷克|チェコ|')
+    ,
+    new SctCod_It('|茶都|チャド|')
+    ,
+    new SctCod_It('|突尼斯|チュニジア|')
+    ,
+    new SctCod_It('|智利|チリ|')
+    ,
+    new SctCod_It('|津張|ツバル|')
+    ,
+    new SctCod_It('|丁抹|デンマーク|')
+    ,
+    new SctCod_It('|独逸|ドイツ|')
+    ,
+    new SctCod_It('|多哥|トーゴ|')
+    ,
+    new SctCod_It('|土弥尼加|ドミニカ|')
+    ,
+    new SctCod_It('|特多|トバゴ|')
+    ,
+    new SctCod_It('|土耳古斯坦|トルクメニスタン|')
+    ,
+    new SctCod_It('|土耳古|トルコ|')
+    ,
+    new SctCod_It('|湯加|トンガ|')
+    ,
+    new SctCod_It('|尼日利亜|ナイジェリア|')
+    ,
+    new SctCod_It('|瑙魯|ナウル|')
+    ,
+    new SctCod_It('|納米比亜|ナミビア|')
+    ,
+    new SctCod_It('|尼加拉瓦|ニカラグア|')
+    ,
+    new SctCod_It('|尼日爾|ニジェール|')
+    ,
+    new SctCod_It('|新西伊蘭土|ニュージーランド|')
+    ,
+    new SctCod_It('|泥婆羅|ネパール|')
+    ,
+    new SctCod_It('|諾威|ノルウェー|')
+    ,
+    new SctCod_It('|巴林|バーレーン|')
+    ,
+    new SctCod_It('|海地|ハイチ|')
+    ,
+    new SctCod_It('|巴基斯坦|パキスタン|')
+    ,
+    new SctCod_It('|和地関|バチカン|')
+    ,
+    new SctCod_It('|巴奈馬|パナマ|')
+    ,
+    new SctCod_It('|瓦努阿図|バヌアツ|')
+    ,
+    new SctCod_It('|巴哈馬|バハマ|')
+    ,
+    new SctCod_It('|巴布亜新几内亜|パプアニューギニア|')
+    ,
+    new SctCod_It('|帛琉|パラオ|')
+    ,
+    new SctCod_It('|巴拉圭|パラグアイ|')
+    ,
+    new SctCod_It('|巴巴多斯|バルバドス|')
+    ,
+    new SctCod_It('|洪牙利|ハンガリー|')
+    ,
+    new SctCod_It('|孟加拉国|バングラデシュ|')
+    ,
+    new SctCod_It('|斐済|フィジー|')
+    ,
+    new SctCod_It('|比律賓|フィリピン|')
+    ,
+    new SctCod_It('|芬蘭|フィンランド|')
+    ,
+    new SctCod_It('|不丹|ブータン|')
+    ,
+    new SctCod_It('|伯剌西爾|ブラジル|')
+    ,
+    new SctCod_It('|仏蘭西|フランス|')
+    ,
+    new SctCod_It('|勃牙利|ブルガリア|')
+    ,
+    new SctCod_It('|布基納法索|ブルキナファソ|')
+    ,
+    new SctCod_It('|文莱|ブルネイ|')
+    ,
+    new SctCod_It('|布隆迪|ブルンジ|')
+    ,
+    new SctCod_It('|越南|ベトナム|')
+    ,
+    new SctCod_It('|貝甯|ベナン|')
+    ,
+    new SctCod_It('|委内瑞拉|ベネズエラ|')
+    ,
+    new SctCod_It('|白露西亜|ベラルーシ|')
+    ,
+    new SctCod_It('|秘露|ペルー|')
+    ,
+    new SctCod_It('|白耳義|ベルギー|')
+    ,
+    new SctCod_It('|波蘭|ポーランド|')
+    ,
+    new SctCod_It('|博茨瓦納|ボツワナ|')
+    ,
+    new SctCod_It('|暮利比亜|ボリビア|')
+    ,
+    new SctCod_It('|葡萄牙|ポルトガル|')
+    ,
+    new SctCod_It('|洪都拉斯|ホンジュラス|')
+    ,
+    new SctCod_It('|馬歇爾諸島|マーシャしょとう|')
+    ,
+    new SctCod_It('|馬其頓|マケドニア|')
+    ,
+    new SctCod_It('|馬達加斯加|マダガスカル|')
+    ,
+    new SctCod_It('|馬拉維|マラウイ|')
+    ,
+    new SctCod_It('|馬耳他|マルタ|')
+    ,
+    new SctCod_It('|馬来西亜|マレーシア|')
+    ,
+    new SctCod_It('|密克羅尼西亜|ミクロネシア|')
+    ,
+    new SctCod_It('|南阿弗利加|アフリカ|')
+    ,
+    new SctCod_It('|緬甸|ミャンマー|')
+    ,
+    new SctCod_It('|墨西哥|メキシコ|')
+    ,
+    new SctCod_It('|毛利西亜|モーリシャス|')
+    ,
+    new SctCod_It('|毛里塔尼亜|モーリタニア|')
+    ,
+    new SctCod_It('|莫三鼻給|モザンビーク|')
+    ,
+    new SctCod_It('|摩納哥|モナコ|')
+    ,
+    new SctCod_It('|馬爾代夫|モルディブ|')
+    ,
+    new SctCod_It('|摩爾多瓦|モルドバ|')
+    ,
+    new SctCod_It('|摩洛哥|モロッコ|')
+    ,
+    new SctCod_It('|蒙古|モンゴル|')
+    ,
+    new SctCod_It('|約旦|ヨルダン|')
+    ,
+    new SctCod_It('|羅宇|ラオス|')
+    ,
+    new SctCod_It('|拉脱維亜|ラトビア|')
+    ,
+    new SctCod_It('|立陶宛|リトアニア|')
+    ,
+    new SctCod_It('|利比亜|リビア|')
+    ,
+    new SctCod_It('|列支敦士登|リヒテンシュタイン|')
+    ,
+    new SctCod_It('|利比里亜|リベリア|')
+    ,
+    new SctCod_It('|羅馬尼亜|ルーマニア|')
+    ,
+    new SctCod_It('|盧森堡|ルクセンブルク|')
+    ,
+    new SctCod_It('|路安達|ルワンダ|')
+    ,
+    new SctCod_It('|莱索托|レソト|')
+    ,
+    new SctCod_It('|黎巴嫩|レバノン|')
+    ,
+    new SctCod_It('|露西亜|ロシア|')
+]
 
 const   cods_move = [
     new SctCod_Mv('|動|うご|く','active.jpg')
@@ -837,10 +1197,14 @@ const   cods_move_fly = [
     ,
     new SctCod_Mv('|飛|と|び|込|こ|む')
     ,
+    new SctCod_Mv('|飛|と|び|出|だ|す')
+    ,
     new SctCod_Mv('|羽|は|ばたく')
     ,
     new SctCod_Mv('|浮|う|き|上|あ|がる')
 ];
+
+
 
 const   cods_move_walk = [
     new SctCod_Mv('|歩|ある|く','walk.jpg')
@@ -1005,13 +1369,49 @@ const   cods_move_think = [
     ,
     new SctCod_Mv('|愛|いと|おしむ')
     ,
-    new SctCod_Mv('|感|かん|じる')
-    ,
     new SctCod_Mv('|思|おも|い|返|かえ|す')
     ,
     new SctCod_Mv('|思|おも|い|出|だ|す')
     ,
     new SctCod_Mv('|思|おも|い|起|お|こす')
+];
+
+const   cods_move_sense = [
+    new SctCod_Mv('|感|かん|じる','sense.jpg')
+    ,
+    new SctCod_Mv('|見|み|る')
+    ,
+    new SctCod_Mv('|見|み|える')
+    ,
+    new SctCod_Mv('|聞|き|く')
+    ,
+    new SctCod_Mv('|聞|き|こえる')
+    ,
+    new SctCod_Mv('|聞|き|こえし')
+    ,
+    new SctCod_Mv('|匂|にお|う')
+    ,
+    new SctCod_Mv('|嗅|か|ぐわしい')
+    ,
+    new SctCod_Mv('|甘|あま|い')
+    ,
+    new SctCod_Mv('|辛|から|い')
+    ,
+    new SctCod_Mv('|苦|にが|い')
+    ,
+    new SctCod_Mv('|響|ひび|く')
+];
+
+const   cods_move_make = [
+    new SctCod_Mv('|着飾|きかざ|る','make.jpg')
+    ,
+    new SctCod_Mv('|纏|まと|う')
+    ,
+    new SctCod_Mv('|着|き|る')
+    ,
+    new SctCod_Mv('|化|ば|ける')
+    ,
+    new SctCod_Mv('|脱|ぬ|ぐ')
 ];
 
 

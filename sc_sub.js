@@ -97,7 +97,7 @@ function ruby_kana(in_str) {
 }
 function ruby_beat(in_str) {
     let str = ruby_kana(in_str);
-    str = char_del(str, 'ゃゅょャュョ・');
+    str = char_del(str, 'ぁぃぅぇぉゎゃゅょァィゥェォヮャュョ・');
     return str.length;
 }
 function ruby_change(in_html) {
