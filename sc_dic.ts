@@ -27,8 +27,6 @@ const   cods_flower_spring = [
     ,
     new SctCod_It('|梅|うめ|')
     ,
-    new SctCod_It('|桜|さくら|')
-    ,
     new SctCod_It('|椿|つばき|')
     ,
     new SctCod_It('|菜|な|の|花|はな|')
@@ -44,6 +42,169 @@ const   cods_flower_spring = [
     new SctCod_It('|牡丹|ぼたん|')
 ];
 
+const   cods_flower_sakura = [
+    new SctCod_It('|桜|さくら|','sakura.jpg')
+    ,
+    new SctCod_It('|花曇り|はなぐもり|')
+    ,
+    new SctCod_It('|八重桜|やえざくら|')
+    ,
+    new SctCod_It('|牡丹桜|ぼたんざくら|')
+    ,
+    new SctCod_It('|桜紅葉|さくらもみじ|')
+    ,
+    new SctCod_It('|秋桜|あきざくら|')
+    ,
+    new SctCod_It('|朝桜|あさざくら|')
+    ,
+    new SctCod_It('|徒桜|あだざくら|')
+    ,
+    new SctCod_It('|有明桜|ありあけざくら|')
+    ,
+    new SctCod_It('|石割桜|いしわりざくら|')
+    ,
+    new SctCod_It('|犬桜|いぬざくら|')
+    ,
+    new SctCod_It('|薄桜|うすざくら|')
+    ,
+    new SctCod_It('|雲珠桜|うずざくら|')
+    ,
+    new SctCod_It('|薄墨桜|うすずみざくら|')
+    ,
+    new SctCod_It('|薄花桜|うすはなざくら|')
+    ,
+    new SctCod_It('|姥桜|うばざくら|')
+    ,
+    new SctCod_It('|上溝桜|うわみずざくら|')
+    ,
+    new SctCod_It('|江戸桜|えどざくら|')
+    ,
+    new SctCod_It('|桜雲|おううん|')
+    ,
+    new SctCod_It('|大島桜|おおしまざくら|')
+    ,
+    new SctCod_It('|大山桜|おおやまざくら|')
+    ,
+    new SctCod_It('|遅桜|おそざくら|')
+    ,
+    new SctCod_It('|霞桜|かすみざくら|')
+    ,
+    new SctCod_It('|観桜|かんおう|')
+    ,
+    new SctCod_It('|寒桜|かんざくら|')
+    ,
+    new SctCod_It('|緋寒桜|ひかんざくら|')
+    ,
+    new SctCod_It('|祇園|ぎおん|の|夜桜|よざくら|')
+    ,
+    new SctCod_It('|黄桜|きざくら|')
+    ,
+    new SctCod_It('|熊谷桜|くまがいざくら|')
+    ,
+    new SctCod_It('|雲居|くもい|の|桜|さくら|')
+    ,
+    new SctCod_It('|小桜|こざくら|')
+    ,
+    new SctCod_It('|零|こぼ|れ|桜|ざくら|')
+    ,
+    new SctCod_It('|桜色|さくらいろ|')
+    ,
+    new SctCod_It('|桜狩|さくらが|り')
+    ,
+    new SctCod_It('|桜前線|さくらぜんせん|')
+    ,
+    new SctCod_It('|桜人|さくらびと|')
+    ,
+    new SctCod_It('|桜吹雪|さくらふぶき|')
+    ,
+    new SctCod_It('|里桜|さとざくら|')
+    ,
+    new SctCod_It('|残桜|ざんおう|')
+    ,
+    new SctCod_It('|残花|ざんか|')
+    ,
+    new SctCod_It('|四季桜|しきざくら|')
+    ,
+    new SctCod_It('|垂|しだ|れ|桜|ざくら|')
+    ,
+    new SctCod_It('|芝桜|しばざくら|')
+    ,
+    new SctCod_It('|十月桜|じゅうがつざくら|')
+    ,
+    new SctCod_It('|墨染桜|すみぞめざくら|')
+    ,
+    new SctCod_It('|高嶺桜|たかねざくら|')
+    ,
+    new SctCod_It('|栂桜|つがざくら|')
+    ,
+    new SctCod_It('|名残|なごり|の|花|はな|')
+    ,
+    new SctCod_It('|匂|にお|い|桜|ざくら|')
+    ,
+    new SctCod_It('|葉桜|はざくら|')
+    ,
+    new SctCod_It('|初桜|はつざくら|')
+    ,
+    new SctCod_It('|花明|はなあ|かり')
+    ,
+    new SctCod_It('|花嵐|はなあらし|')
+    ,
+    new SctCod_It('|花霞|はながすみ|')
+    ,
+    new SctCod_It('|花風|はなかぜ|')
+    ,
+    new SctCod_It('|花屑|はなくず|')
+    ,
+    new SctCod_It('|花桜|はなざくら|')
+    ,
+    new SctCod_It('|花|はな|の|雨|あめ|')
+    ,
+    new SctCod_It('|花|はな|の|宴|えん|')
+    ,
+    new SctCod_It('|花|はな|の|賀|が|')
+    ,
+    new SctCod_It('|花|はな|の|雲|くも|')
+    ,
+    new SctCod_It('|桜|さくら|の|便|たよ|り')
+    ,
+    new SctCod_It('|花|はな|の|寺|はなのてら|')
+    ,
+    new SctCod_It('|花吹雪|はなふぶき|')
+    ,
+    new SctCod_It('|花見|はなみ|')
+    ,
+    new SctCod_It('|飛花|ひか|')
+    ,
+    new SctCod_It('|緋寒桜|ひかんざくら|')
+    ,
+    new SctCod_It('|彼岸桜|ひがんざくら|')
+    ,
+    new SctCod_It('|不断桜|ふだんざくら|')
+    ,
+    new SctCod_It('|冬桜|ふゆざくら|')
+    ,
+    new SctCod_It('|豆桜|まめざくら|')
+    ,
+    new SctCod_It('|御階|みはし|の|桜|さくら|')
+    ,
+    new SctCod_It('|深山桜|みやまざくら|')
+    ,
+    new SctCod_It('|山桜|やまざくら|')
+    ,
+    new SctCod_It('|夕桜|ゆうざくら|')
+    ,
+    new SctCod_It('|夕山桜|ゆうやまざくら|')
+    ,
+    new SctCod_It('|余花|よか|')
+    ,
+    new SctCod_It('|吉野桜|よしのざくら|')
+    ,
+    new SctCod_It('|稚木|わかき|の|桜|さくら|')
+    ,
+    new SctCod_It('|若桜|わかざくら|')
+    ,
+    new SctCod_It('|侘桜|わびざくら|')
+];
 
 const   cods_summer = [
     new SctCod_It('|夏|なつ|' ,'summer.jpg')

@@ -9,7 +9,7 @@ function set_poem() {
     html += '<h1>';
     html += 'POEM';
     html += '<small>';
-    html += 'P01.38';
+    html += 'P01.39';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -198,7 +198,8 @@ class poemer_tema extends SctItm_SelectLocker {
             new SctItm('@TM23'),
             new SctItm('@TM24'),
             new SctItm('@TM25'),
-            new SctItm('@TM26')
+            new SctItm('@TM26'),
+            new SctItm('@TM27')
         ];
     }
 }
@@ -217,6 +218,7 @@ class Gene_tema01 extends Gene_Poemer {
         this.Add_cods(cods_spring);
         this.Add_cods(cods_flower_spring);
         this.Add_cods(cods_bird_spring);
+        this.Add_cods(cods_flower_sakura);
     }
 }
 // 季語：夏
@@ -263,6 +265,7 @@ class Gene_tema06 extends Gene_Poemer {
         super('@TM06', '@PIC_TEMA@');
         this.Add_cods(cods_flower);
         this.Add_cods(cods_flower_spring);
+        this.Add_cods(cods_flower_sakura);
         this.Add_cods(cods_flower_summer);
         this.Add_cods(cods_flower_autumn);
         this.Add_cods(cods_flower_winter);
@@ -294,6 +297,7 @@ class Gene_tema10 extends Gene_Poemer {
     constructor() {
         super('@TM10', '@PIC_TEMA@');
         this.Add_cods(cods_flower_spring);
+        this.Add_cods(cods_flower_sakura);
     }
 }
 // 季語：夏の花
@@ -413,6 +417,13 @@ class Gene_tema26 extends Gene_Poemer {
         this.Add_cods(cods_country);
     }
 }
+// 季語：桜
+class Gene_tema27 extends Gene_Poemer {
+    constructor() {
+        super('@TM27', '@PIC_TEMA@');
+        this.Add_cods(cods_flower_sakura);
+    }
+}
 // 一般
 class Gene_sent extends Gene_Poemer {
     constructor() {
@@ -530,6 +541,7 @@ class poem_docs_maker_tema extends docs_maker {
         this.dic_concat(new Gene_tema24().Generate());
         this.dic_concat(new Gene_tema25().Generate());
         this.dic_concat(new Gene_tema26().Generate());
+        this.dic_concat(new Gene_tema27().Generate());
     }
 }
 class poem_docs_maker_sent extends docs_maker {
