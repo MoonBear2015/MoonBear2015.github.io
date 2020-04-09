@@ -115,7 +115,7 @@ figure {
 }
 
 #writer {
-    font-size: 2vmax;
+    font-size: 1.5vmax;
     color: #b0b0b0;
 }
 
@@ -131,14 +131,14 @@ figure {
 }
 
 #news_title {
-    font-size: 4vmax;
+    font-size: 3vmax;
     color: #f0f0f0;
     margin: 0px 20px;
     text-shadow: 2px 2px 0px #000000;
 }
 
 #news_doc {
-    font-size: 2.5vmax;
+    font-size: 1.8vmax;
     margin: 0px;
     padding: 0px;
     color: #f0f0f0;
