@@ -164,7 +164,7 @@ class selector_age extends ItmArray {
     }
     get rnd_Itm() {
         let age = "";
-        age = "(" + rnd_minmax(16, 90).toString() + ")";
+        age = "(" + rnd_minmax(10, 60).toString() + ")";
         return new SctItm(age, '');
     }
     Copy() {
@@ -363,14 +363,14 @@ class selector_comment2 extends SctItm_Selector {
             new SctItm('@CONECT@、@COMMENT2@'),
             new SctItm('@YESNO@、@COMMENT2@'),
             new SctItm('@CALL@が@STATUS@@END02B@'),
-            new SctItm('@WHAT@は@NICK@と@ASSES@'),
+            new SctItm('@WHAT@は@DO@する@NICK@と@ASSES@'),
             new SctItm('@MANYPEOPLE@は@CALL@@END02A@'),
             new SctItm('@CALL@@END02A@'),
             new SctItm('@MANYPEOPLE@は、@CALL@@END02A@'),
             new SctItm('@MANYPEOPLE@の@KEY@@END02A@'),
             new SctItm('@WHAT@は@DO@@END02B@'),
-            new SctItm('@WHAT@は@NICK@と@ASSES@'),
-            new SctItm('@WHAT@は@NICK@@END02A@'),
+            new SctItm('@WHAT@は@NICK@の@PART@と@ASSES@'),
+            new SctItm('@WHAT@は@DO@する@THEY@@END02A@'),
             new SctItm('@CALL@で、@CALL@@END02A@'),
             new SctItm('@YESNO@、@CALL@と@ASSES@'),
             new SctItm('@YESNO@、@PEOPLE@の@KEY@@END02A@'),

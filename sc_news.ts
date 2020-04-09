@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N02.14';
+    html += 'N02.15';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -236,7 +236,7 @@ class selector_age
     }
     get rnd_Itm() : SctItm {
         let age : string = "";
-        age = "(" + rnd_minmax(16,90).toString() + ")";
+        age = "(" + rnd_minmax(10,60).toString() + ")";
         return new SctItm(age,'');
     }
     Copy() : ISctItm_Selector
@@ -534,7 +534,7 @@ class selector_comment2 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@CALL@が@STATUS@@END02B@')
             ,
-            new SctItm('@WHAT@は@NICK@と@ASSES@')
+            new SctItm('@WHAT@は@DO@する@NICK@と@ASSES@')
             ,
             new SctItm('@MANYPEOPLE@は@CALL@@END02A@')
             ,
@@ -546,9 +546,9 @@ class selector_comment2 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@WHAT@は@DO@@END02B@')
             ,
-            new SctItm('@WHAT@は@NICK@と@ASSES@')
+            new SctItm('@WHAT@は@NICK@の@PART@と@ASSES@')
             ,
-            new SctItm('@WHAT@は@NICK@@END02A@')
+            new SctItm('@WHAT@は@DO@する@THEY@@END02A@')
             ,
             new SctItm('@CALL@で、@CALL@@END02A@')
             ,

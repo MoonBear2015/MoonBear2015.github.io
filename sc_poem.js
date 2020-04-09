@@ -9,7 +9,7 @@ function set_poem() {
     html += '<h1>';
     html += 'POEM';
     html += '<small>';
-    html += 'P01.39';
+    html += 'P01.40';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -218,7 +218,6 @@ class Gene_tema01 extends Gene_Poemer {
         this.Add_cods(cods_spring);
         this.Add_cods(cods_flower_spring);
         this.Add_cods(cods_bird_spring);
-        this.Add_cods(cods_flower_sakura);
     }
 }
 // 季語：夏
@@ -255,7 +254,6 @@ class Gene_tema05 extends Gene_Poemer {
         this.Add_cods(cods_sky);
         this.Add_cods(cods_star);
         this.Add_cods(cods_sun);
-        this.Add_cods(cods_moon);
         this.Add_cods(cods_weather);
     }
 }
@@ -297,7 +295,6 @@ class Gene_tema10 extends Gene_Poemer {
     constructor() {
         super('@TM10', '@PIC_TEMA@');
         this.Add_cods(cods_flower_spring);
-        this.Add_cods(cods_flower_sakura);
     }
 }
 // 季語：夏の花
@@ -401,6 +398,7 @@ class Gene_tema24 extends Gene_Poemer {
     constructor() {
         super('@TM24', '@PIC_TEMA@');
         this.Add_cods(cods_move_think);
+        this.Add_cods(cods_think);
     }
 }
 // 季語：家族
