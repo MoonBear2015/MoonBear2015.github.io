@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N02.14';
+    html += 'N02.15';
     html += '</small>';
     html += '</h1>';
     html += '</div>';

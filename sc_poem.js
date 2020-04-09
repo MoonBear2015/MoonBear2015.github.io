@@ -199,7 +199,8 @@ class poemer_tema extends SctItm_SelectLocker {
             new SctItm('@TM24'),
             new SctItm('@TM25'),
             new SctItm('@TM26'),
-            new SctItm('@TM27')
+            new SctItm('@TM27'),
+            new SctItm('@TM28')
         ];
     }
 }
@@ -422,6 +423,13 @@ class Gene_tema27 extends Gene_Poemer {
         this.Add_cods(cods_flower_sakura);
     }
 }
+// 季語：魚
+class Gene_tema28 extends Gene_Poemer {
+    constructor() {
+        super('@TM28', '@PIC_TEMA@');
+        this.Add_cods(cods_fish);
+    }
+}
 // 一般
 class Gene_sent extends Gene_Poemer {
     constructor() {
@@ -540,6 +548,7 @@ class poem_docs_maker_tema extends docs_maker {
         this.dic_concat(new Gene_tema25().Generate());
         this.dic_concat(new Gene_tema26().Generate());
         this.dic_concat(new Gene_tema27().Generate());
+        this.dic_concat(new Gene_tema28().Generate());
     }
 }
 class poem_docs_maker_sent extends docs_maker {
