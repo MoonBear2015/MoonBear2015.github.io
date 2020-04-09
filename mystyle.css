@@ -131,14 +131,14 @@ figure {
 }
 
 #news_title {
-    font-size: 3vmax;
+    font-size: 32px;
     color: #f0f0f0;
     margin: 0px 20px;
     text-shadow: 2px 2px 0px #000000;
 }
 
 #news_doc {
-    font-size: 1.8vmax;
+    font-size: 18px;
     margin: 0px;
     padding: 0px;
     color: #f0f0f0;
