@@ -1371,6 +1371,7 @@ const cods_gundam = [
 const cods_zeon = [
     new SctCod_It('ジオン', 'zeon.jpg'),
     new SctCod_It('ジーク・ジオン'),
+    new SctCod_It('|旧|きゅう|ザク'),
     new SctCod_It('ザク'),
     new SctCod_It('グフ'),
     new SctCod_It('ドム'),
@@ -1382,6 +1383,9 @@ const cods_zeon = [
     new SctCod_It('ギャン'),
     new SctCod_It('ゲルググ'),
     new SctCod_It('ジオング'),
+    new SctCod_It('ビグ・ザム'),
+    new SctCod_It('エルメス'),
     new SctCod_It('シャア|専用|せんよう|'),
+    new SctCod_It('|赤|あか|い|彗星|すいせい|'),
     new SctCod_It('コロニー|落|お|とし')
 ];
