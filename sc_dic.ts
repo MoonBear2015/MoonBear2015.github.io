@@ -827,6 +827,76 @@ const   cods_bird_winter = [
     new SctCod_It('|白鳥|はくちょう|')
 ];
 
+const   cods_fruit = [
+    new SctCod_It('|果実|かじつ|','fruit.jpg')
+    ,
+	new SctCod_It('|木通|あけび|')
+	,
+	new SctCod_It('|杏子|あんず|')
+	,
+	new SctCod_It('|苺|いちご|')
+	,
+	new SctCod_It('|無花果|いちじく|')
+	,
+	new SctCod_It('|桜桃|さくらんぼ|')
+	,
+	new SctCod_It('|臭橙|かぼす|')
+	,
+	new SctCod_It('|金柑|きんかん|')
+	,
+	new SctCod_It('|茱萸|ぐみ|')
+	,
+	new SctCod_It('|胡桃|くるみ|')
+	,
+	new SctCod_It('|柑子|こうじ|')
+	,
+	new SctCod_It('|柘榴|ざくろ|')
+	,
+	new SctCod_It('|朱欒|ザボン|')
+	,
+	new SctCod_It('|山査子|さんざし|')
+	,
+	new SctCod_It('|酢橘|すだち|')
+	,
+	new SctCod_It('|李|すもも|')
+	,
+	new SctCod_It('|橙|だいだい|')
+	,
+	new SctCod_It('|椿桃|つばいもも|')
+	,
+	new SctCod_It('|棗|なつめ|')
+	,
+	new SctCod_It('|甘蕉|ばなな|')
+	,
+	new SctCod_It('|万寿果|ぱぱいあ|')
+	,
+	new SctCod_It('|枇杷|びわ|')
+	,
+	new SctCod_It('|仏手柑|ぶしゅかん|')
+	,
+	new SctCod_It('|葡萄|ぶどう|')
+	,
+	new SctCod_It('|椪柑|ぽんかん|')
+	,
+	new SctCod_It('|檬果|まんごー|')
+	,
+	new SctCod_It('|蜜柑|みかん|')
+	,
+	new SctCod_It('|郁子|むべ|')
+	,
+	new SctCod_It('|椰子|やし|')
+	,
+	new SctCod_It('|柚子|ゆず|')
+	,
+	new SctCod_It('|梅桃|ゆすらうめ|')
+	,
+	new SctCod_It('|林檎|りんご|')
+	,
+	new SctCod_It('|茘枝|れいし|')
+	,
+	new SctCod_It('|檸檬|れもん|')
+];
+
 const   cods_animal = [
     new SctCod_It('|獣|けもの|','animal.jpg')
     ,

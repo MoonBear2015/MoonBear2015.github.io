@@ -13,7 +13,7 @@ function set_poem()
     html += '<h1>';
     html += 'POEM';
     html += '<small>';
-    html += 'P01.42';
+    html += 'P01.43';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -296,6 +296,8 @@ class poemer_tema extends SctItm_SelectLocker implements ISctItm_Selector{
             new SctItm('@TM27')
             ,
             new SctItm('@TM28')
+            ,
+            new SctItm('@TM29')
         ];
     }
 }
@@ -559,6 +561,13 @@ class Gene_tema28 extends Gene_Poemer {
         this.Add_cods(cods_fish);
     }
 }
+// 季語：果実
+class Gene_tema29 extends Gene_Poemer {
+    constructor(){
+        super('@TM29','@PIC_TEMA@');
+        this.Add_cods(cods_fruit);
+    }
+}
 
 
 // 一般
@@ -692,6 +701,7 @@ class poem_docs_maker_tema extends docs_maker {
         this.dic_concat(new Gene_tema26().Generate());
         this.dic_concat(new Gene_tema27().Generate());
         this.dic_concat(new Gene_tema28().Generate());
+        this.dic_concat(new Gene_tema29().Generate());
     }
 }
 
