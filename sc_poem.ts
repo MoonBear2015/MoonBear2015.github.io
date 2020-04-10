@@ -13,7 +13,7 @@ function set_poem()
     html += '<h1>';
     html += 'POEM';
     html += '<small>';
-    html += 'P01.45';
+    html += 'P01.46';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -488,11 +488,11 @@ class Gene_tema20 extends Gene_Poemer {
     }
 }
 
-// 季語：家
+// 季語：舞う
 class Gene_tema21 extends Gene_Poemer {
     constructor(){
         super('@TM21','@PIC_TEMA@');
-        this.Add_cods(cods_home);
+        this.Add_cods(cods_move_dance);
     }
 }
 

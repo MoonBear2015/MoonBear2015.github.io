@@ -105,6 +105,26 @@ class SctCod extends SctItm {
         return super.ToString() + this.CodLength.toString();
     }
 }
+class SctCod_TI extends SctCod {
+    constructor(in_Wrd, in_SctPic, in_CodLength) {
+        super(in_Wrd, in_SctPic, in_CodLength);
+        this.KeyA = '@M';
+        this.KeyB = '@M';
+        this.KeyC = '@C';
+        this.MinA = 2;
+        this.MinB = 1;
+    }
+}
+class SctCod_TM extends SctCod {
+    constructor(in_Wrd, in_SctPic, in_CodLength) {
+        super(in_Wrd, in_SctPic, in_CodLength);
+        this.KeyA = '@I';
+        this.KeyB = '@I';
+        this.KeyC = '';
+        this.MinA = 2;
+        this.MinB = 2;
+    }
+}
 class SctCod_It extends SctCod {
     constructor(in_Wrd, in_SctPic, in_CodLength) {
         super(in_Wrd, in_SctPic, in_CodLength);

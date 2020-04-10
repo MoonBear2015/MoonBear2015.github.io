@@ -151,6 +151,46 @@ class SctCod extends SctItm implements ISctCod,ITest {
     }
 }
 
+class SctCod_TI extends SctCod implements ISctCod,ITest {
+    constructor(
+        in_Wrd? : string
+        ,
+        in_SctPic? : string
+        ,
+        in_CodLength? : number
+    )
+    {
+        super(in_Wrd,in_SctPic,in_CodLength);
+
+        this.KeyA = '@M';
+        this.KeyB = '@M';
+        this.KeyC = '@C';
+        this.MinA = 2;
+        this.MinB = 1;
+    }
+}
+
+class SctCod_TM extends SctCod implements ISctCod,ITest {
+    constructor(
+        in_Wrd? : string
+        ,
+        in_SctPic? : string
+        ,
+        in_CodLength? : number
+    )
+    {
+        super(in_Wrd,in_SctPic,in_CodLength);
+
+        this.KeyA = '@I';
+        this.KeyB = '@I';
+        this.KeyC = '';
+        this.MinA = 2;
+        this.MinB = 2;
+    }
+}
+
+
+
 class SctCod_It extends SctCod implements ISctCod,ITest {
     constructor(
         in_Wrd? : string
