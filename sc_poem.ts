@@ -13,7 +13,7 @@ function set_poem()
     html += '<h1>';
     html += 'POEM';
     html += '<small>';
-    html += 'P01.43';
+    html += 'P01.45';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -150,13 +150,11 @@ class poemer_pattern_A extends SctItm_Selector implements ISctItm_Selector{
     constructor(){
         super('@TYPE_A@');
         this.itms = [
-            new SctItm('@TEMA05@ @SENT07@ @SENT05@')
-            ,
             new SctItm('@SENT05@ @TEMA07@ @SENT05@')
             ,
             new SctItm('@SENT05@ @SENT07@ @TEMA05@')
             ,
-            new SctItm('@TEMA05@ @TEMA07@ @SENT05@')
+            new SctItm('@TEMA05@ @SENT07@ @TEMA05@')
             ,
             new SctItm('@SENT05@ @TEMA07@ @TEMA05@')
             ,
@@ -169,19 +167,13 @@ class poemer_pattern_B extends SctItm_Selector implements ISctItm_Selector{
     constructor(){
         super('@TYPE_B@');
         this.itms = [
-            new SctItm('@TEMA05@ @SENT07@ @SENT05@<br>@SENT07@ @SENT07@')
+            new SctItm('@TEMA05@ @SENT07@ @TEMA05@<br>@SENT07@ @TEMA07@')
             ,
-            new SctItm('@SENT05@ @TEMA07@ @SENT05@<br>@SENT07@ @SENT07@')
+            new SctItm('@SENT05@ @SENT07@ @TEMA05@<br>@SENT07@ @TEMA07@')
             ,
-            new SctItm('@SENT05@ @SENT07@ @TEMA05@<br>@SENT07@ @SENT07@')
+            new SctItm('@TEMA05@ @SENT07@ @TEMA05@<br>@SENT07@ @TEMA07@')
             ,
-            new SctItm('@SENT05@ @SENT07@ @SENT05@<br>@TEMA07@ @SENT07@')
-            ,
-            new SctItm('@SENT05@ @SENT07@ @SENT05@<br>@SENT07@ @TEMA07@')
-            ,
-            new SctItm('@SENT05@ @SENT07@ @SENT05@<br>@TEMA07@ @TEMA07@')
-            ,
-            new SctItm('@TEMA05@ @TEMA07@ @TEMA05@<br>@SENT07@ @SENT07@')
+            new SctItm('@TEMA05@ @SENT07@ @SENT05@<br>@SENT07@ @TEMA07@')
             ,
             new SctItm('@TEMA05@ @TEMA07@ @TEMA05@<br>@TEMA07@ @TEMA07@')
         ];
@@ -496,11 +488,11 @@ class Gene_tema20 extends Gene_Poemer {
     }
 }
 
-// 季語：踊る
+// 季語：家
 class Gene_tema21 extends Gene_Poemer {
     constructor(){
         super('@TM21','@PIC_TEMA@');
-        this.Add_cods(cods_move_dance);
+        this.Add_cods(cods_home);
     }
 }
 
@@ -586,6 +578,8 @@ class Gene_sent extends Gene_Poemer {
         // this.Add_cods(cods_item_color);
         this.Add_cods(cods_make);
 
+        this.Add_cods(cods_jougo);
+
         this.Add_cods(cods_move);
         this.Add_cods(cods_move_dance);
         this.Add_cods(cods_move_run);
@@ -603,7 +597,6 @@ class Gene_sent extends Gene_Poemer {
 
         this.Add_cods(cods_adject_color);
         this.Add_cods(cods_adject_beauty);
-
     }
 }
 
@@ -645,6 +638,8 @@ class Gene_item extends Gene_Poemer {
         this.Add_cods(cods_when);
         // this.Add_cods(cods_item_color);
         this.Add_cods(cods_make);
+
+        this.Add_cods(cods_jougo);
 
     }
 }
