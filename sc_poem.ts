@@ -579,6 +579,7 @@ class Gene_sent extends Gene_Poemer {
         this.Add_cods(cods_make);
 
         this.Add_cods(cods_jougo);
+        this.Add_cods(cods_keiyo);
 
         this.Add_cods(cods_move);
         this.Add_cods(cods_move_dance);
@@ -640,17 +641,24 @@ class Gene_item extends Gene_Poemer {
         this.Add_cods(cods_make);
 
         this.Add_cods(cods_jougo);
+        this.Add_cods(cods_keiyo);
 
     }
 }
 
-class Gene_conect extends Gene_Poemer {
+class Gene_conect1 extends Gene_Poemer {
     constructor(){
-        super('@C');
-        this.Add_cods(cods_conect);
+        super('@C1');
+        this.Add_cods(cods_conect1);
     }
 }
 
+class Gene_conect2 extends Gene_Poemer {
+    constructor(){
+        super('@C2');
+        this.Add_cods(cods_conect2);
+    }
+}
 
 
 class poem_docs_maker extends news_docs_maker {
@@ -718,7 +726,8 @@ class poem_docs_maker_im extends docs_maker {
 class poem_docs_maker_c extends docs_maker {
     constructor(){
         super();
-        this.dic_concat(new Gene_conect().Generate());
+        this.dic_concat(new Gene_conect1().Generate());
+        this.dic_concat(new Gene_conect2().Generate());
     }
 }
 

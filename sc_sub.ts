@@ -94,6 +94,15 @@ function sepalate_number(num : number) : Array<AB>
 
 //------------------------------------ japanese text
 
+function cods_to_itms(in_cods : ISctCod[]) : ISctItm[]
+{
+    let results = new Array<ISctItm>();
+    in_cods.forEach((cod) => {
+        results.push(cod.to_SctItm_NoRubi());
+    });
+    return results;
+}
+
 function ruby_check(in_str : string) : boolean {
     let cnt = char_cnt(in_str,'\|');
     let sts : boolean = ((cnt % 3) == 0);
@@ -123,6 +132,32 @@ function ruby_kana(in_str : string) : string {
         sts++;
     });
     return result;
+}
+
+function ruby_no(in_str : string) : string {
+    if (!ruby_check(in_str)) return in_str;
+    let strs = in_str.split('|');
+    let result : string = '';
+    let sts : number = 0;
+    strs.forEach((str) => {
+        switch(sts) {
+            case 0:
+                result += str;
+                break;
+            case 1:
+                result += str;
+                break;
+            case 2:
+                break;
+            default:
+                result += str;
+                sts = 0;
+                break;
+        }
+        sts++;
+    });
+    return result;
+
 }
 
 function ruby_beat(in_str : string) : number {

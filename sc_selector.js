@@ -53,6 +53,9 @@ class SctCod extends SctItm {
     to_SctItm() {
         return new SctItm(this.Wrd, this.SctPic);
     }
+    to_SctItm_NoRubi() {
+        return new SctItm(ruby_no(this.Wrd), this.SctPic);
+    }
     to_length_itms(in_length) {
         let results = new Array();
         if (in_length < this.CodLength) {
@@ -110,7 +113,7 @@ class SctCod_TI extends SctCod {
         super(in_Wrd, in_SctPic, in_CodLength);
         this.KeyA = '@M';
         this.KeyB = '@M';
-        this.KeyC = '@C';
+        this.KeyC = '@C1';
         this.MinA = 2;
         this.MinB = 1;
     }
@@ -130,7 +133,7 @@ class SctCod_It extends SctCod {
         super(in_Wrd, in_SctPic, in_CodLength);
         this.KeyA = '@M';
         this.KeyB = '@M';
-        this.KeyC = '@C';
+        this.KeyC = '@C1';
         this.MinA = 2;
         this.MinB = 1;
     }
@@ -142,6 +145,16 @@ class SctCod_Mv extends SctCod {
         this.KeyB = '';
         this.MinA = 2;
         this.MinB = 2;
+    }
+}
+class SctCod_Km extends SctCod {
+    constructor(in_Wrd, in_SctPic, in_CodLength) {
+        super(in_Wrd, in_SctPic, in_CodLength);
+        this.KeyA = '@M';
+        this.KeyB = '@M';
+        this.KeyC = '@C2';
+        this.MinA = 2;
+        this.MinB = 1;
     }
 }
 class ItmArray {

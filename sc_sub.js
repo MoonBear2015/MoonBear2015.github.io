@@ -66,6 +66,13 @@ function sepalate_number(num) {
     return results;
 }
 //------------------------------------ japanese text
+function cods_to_itms(in_cods) {
+    let results = new Array();
+    in_cods.forEach((cod) => {
+        results.push(cod.to_SctItm_NoRubi());
+    });
+    return results;
+}
 function ruby_check(in_str) {
     let cnt = char_cnt(in_str, '\|');
     let sts = ((cnt % 3) == 0);
@@ -85,6 +92,31 @@ function ruby_kana(in_str) {
                 break;
             case 2:
                 result += str;
+                break;
+            default:
+                result += str;
+                sts = 0;
+                break;
+        }
+        sts++;
+    });
+    return result;
+}
+function ruby_no(in_str) {
+    if (!ruby_check(in_str))
+        return in_str;
+    let strs = in_str.split('|');
+    let result = '';
+    let sts = 0;
+    strs.forEach((str) => {
+        switch (sts) {
+            case 0:
+                result += str;
+                break;
+            case 1:
+                result += str;
+                break;
+            case 2:
                 break;
             default:
                 result += str;

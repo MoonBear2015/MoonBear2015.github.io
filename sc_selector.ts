@@ -19,6 +19,7 @@ interface ISctItm extends ITest {
 interface ISctCod extends ISctItm,ITest {
     CodLength : number;
     to_SctItm() : ISctItm;
+    to_SctItm_NoRubi() : ISctItm;
     to_length_itms(in_length : number,in_KeyA : string,in_KeyB : string,in_MinA : number,in_MinB : number)
      : Array<ISctItm>;
 }
@@ -90,6 +91,10 @@ class SctCod extends SctItm implements ISctCod,ITest {
 
     to_SctItm() : ISctItm {
         return new SctItm(this.Wrd,this.SctPic);
+    }
+
+    to_SctItm_NoRubi() : ISctItm {
+        return new SctItm(ruby_no(this.Wrd),this.SctPic);
     }
 
     to_length_itms(in_length : number)
@@ -164,7 +169,7 @@ class SctCod_TI extends SctCod implements ISctCod,ITest {
 
         this.KeyA = '@M';
         this.KeyB = '@M';
-        this.KeyC = '@C';
+        this.KeyC = '@C1';
         this.MinA = 2;
         this.MinB = 1;
     }
@@ -204,7 +209,7 @@ class SctCod_It extends SctCod implements ISctCod,ITest {
 
         this.KeyA = '@M';
         this.KeyB = '@M';
-        this.KeyC = '@C';
+        this.KeyC = '@C1';
         this.MinA = 2;
         this.MinB = 1;
     }
@@ -227,6 +232,26 @@ class SctCod_Mv extends SctCod implements ISctCod,ITest {
         this.MinB = 2;
     }
 }
+
+class SctCod_Km extends SctCod implements ISctCod,ITest {
+    constructor(
+        in_Wrd? : string
+        ,
+        in_SctPic? : string
+        ,
+        in_CodLength? : number
+    )
+    {
+        super(in_Wrd,in_SctPic,in_CodLength);
+
+        this.KeyA = '@M';
+        this.KeyB = '@M';
+        this.KeyC = '@C2';
+        this.MinA = 2;
+        this.MinB = 1;
+    }
+}
+
 
 
 interface IItmArray<T extends ISctItm> extends ITest {
