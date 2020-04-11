@@ -271,7 +271,11 @@ class selector_title extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@KEI3@@HUMAN@、@WHAT@を@KEI2@に@DO@')
             ,
+            new SctItm('@KEI2@なる@PEOPLE@、@HUMAN@が@WHAT@を@DO@@END02C@')
+            ,
             new SctItm('@CLASS@の@HUMAN@、@WHAT@を@KEI2@に@DO@')
+            ,
+            new SctItm('@WHAT@を@KEI2@に@DO@@END02C@@CLASS@、@HUMAN@')
         ];
     }
 }
@@ -1199,41 +1203,41 @@ class selector_they extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('一般大衆')
             ,
-            new SctItm('有識者')
+            new SctItm('有識者達')
             ,
             new SctItm('子供達')
             ,
-            new SctItm('学生')
+            new SctItm('学生達')
             ,
-            new SctItm('女子校生')
+            new SctItm('女子校生達')
             ,
-            new SctItm('女子大生')
+            new SctItm('女子大生達')
             ,
             new SctItm('彼女達')
             ,
-            new SctItm('ＯＬ')
+            new SctItm('ＯＬ達')
             ,
             new SctItm('彼ら')
             ,
             new SctItm('先人達')
             ,
-            new SctItm('労働者')
+            new SctItm('労働者達')
             ,
-            new SctItm('兵士')
+            new SctItm('兵士達')
             ,
             new SctItm('若年層')
             ,
             new SctItm('主婦層')
             ,
-            new SctItm('乗組員')
+            new SctItm('全乗組員')
             ,
-            new SctItm('従業員')
+            new SctItm('従業員達')
             ,
-            new SctItm('売春婦')
+            new SctItm('売春婦達')
             ,
             new SctItm('暴走族')
             ,
-            new SctItm('マフィア')
+            new SctItm('マフィア達')
             ,
             new SctItm('ヤクザ')
             ,
@@ -1243,17 +1247,17 @@ class selector_they extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('旅行者達')
             ,
-            new SctItm('旅芸人')
+            new SctItm('旅芸人達')
             ,
-            new SctItm('奴隷')
+            new SctItm('奴隷達')
             ,
-            new SctItm('飼い猫')
+            new SctItm('飼い猫達')
             ,
             new SctItm('首狩り族')
             ,
             new SctItm('僧侶達')
             ,
-            new SctItm('盗賊')
+            new SctItm('盗賊達')
             ,
             new SctItm('海兵隊')
             ,
@@ -1265,25 +1269,25 @@ class selector_they extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('少年少女')
             ,
-            new SctItm('年長者')
+            new SctItm('年長者達')
             ,
-            new SctItm('エリート')
+            new SctItm('エリート層')
             ,
             new SctItm('傭兵達')
             ,
             new SctItm('民衆')
             ,
-            new SctItm('観客')
+            new SctItm('観客達')
             ,
-            new SctItm('乗客')
+            new SctItm('乗客達')
             ,
             new SctItm('通行人')
             ,
-            new SctItm('視聴者')
+            new SctItm('視聴者達')
             ,
-            new SctItm('ユーザー')
+            new SctItm('ユーザー達')
             ,
-            new SctItm('株主')
+            new SctItm('株主達')
             ,
             new SctItm('皇族')
             ,
@@ -1297,19 +1301,19 @@ class selector_they extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('先祖代々')
             ,
-            new SctItm('犠牲者')
+            new SctItm('犠牲者達')
             ,
             new SctItm('生徒一同')
             ,
             new SctItm('兄弟弟子')
             ,
-            new SctItm('メンバー')
+            new SctItm('メンバー達')
             ,
-            new SctItm('チームメイト')
+            new SctItm('チームメイト達')
             ,
-            new SctItm('ルームメイト')
+            new SctItm('ルームメイト達')
             ,
-            new SctItm('クラスメイト')
+            new SctItm('クラスメイト達')
             ,
             new SctItm('野次馬達')
 
