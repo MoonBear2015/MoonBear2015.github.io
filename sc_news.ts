@@ -1630,17 +1630,39 @@ class selector_keiyo extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@KEI@');
         this.itms = [
-            //
-            // nega
-            //
-            new SctItm('@KEI@で@KEI@')
+            new SctItm('@KEI2@な')
             ,
-            new SctItm('@KEI@で@KEI@で@KEI@')
+            new SctItm('@KEI2@で@KEI2@な')
+            ,
+            new SctItm('@KEI2@で@KEI2@で@KEI2@な')
+            ,
+            new SctItm('@KEI3@')
+            ,
+            new SctItm('@KEI2@で@KEI3@')
+            ,
+            new SctItm('@KEI2@で@KEI2@で@KEI3@')
         ];
-        let itms = cods_to_itms(cods_keiyo);
-        this.Paste(itms);
     }
 }
+
+class selector_km extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@KEI2@');
+        this.Paste(cods_to_itms(cods_km));
+    }
+}
+
+
+class selector_k extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@KEI3@');
+        this.Paste(cods_to_itms(cods_adject_beauty));
+        this.Paste(cods_to_itms(cods_adject_danger));
+        this.Paste(cods_to_itms(cods_adject_sense));
+        this.Paste(cods_to_itms(cods_adject_color));
+    }
+}
+
 
 
 // 敬称 の～
@@ -2455,6 +2477,8 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_they());
         this.dic_push(new selector_many());
         this.dic_push(new selector_keiyo());
+        this.dic_push(new selector_km());
+        this.dic_push(new selector_k());
 
         this.dic_push(new selector_think());
         this.dic_push(new selector_who());

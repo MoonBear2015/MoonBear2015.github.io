@@ -13,7 +13,7 @@ function set_poem()
     html += '<h1>';
     html += 'POEM';
     html += '<small>';
-    html += 'P01.46';
+    html += 'P01.47';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -579,7 +579,7 @@ class Gene_sent extends Gene_Poemer {
         this.Add_cods(cods_make);
 
         this.Add_cods(cods_jougo);
-        this.Add_cods(cods_keiyo);
+        this.Add_cods(cods_km);
 
         this.Add_cods(cods_move);
         this.Add_cods(cods_move_dance);
@@ -598,6 +598,8 @@ class Gene_sent extends Gene_Poemer {
 
         this.Add_cods(cods_adject_color);
         this.Add_cods(cods_adject_beauty);
+        this.Add_cods(cods_adject_danger);
+        this.Add_cods(cods_adject_sense);
     }
 }
 
@@ -621,6 +623,8 @@ class Gene_move extends Gene_Poemer {
 
         this.Add_cods(cods_adject_color);
         this.Add_cods(cods_adject_beauty);
+        this.Add_cods(cods_adject_danger);
+        this.Add_cods(cods_adject_sense);
         // this.Add_cods(cods_move_which);
     }
 }
@@ -641,7 +645,7 @@ class Gene_item extends Gene_Poemer {
         this.Add_cods(cods_make);
 
         this.Add_cods(cods_jougo);
-        this.Add_cods(cods_keiyo);
+        this.Add_cods(cods_km);
 
     }
 }

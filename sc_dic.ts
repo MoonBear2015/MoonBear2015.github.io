@@ -2370,12 +2370,6 @@ const   cods_move_sense = [
     ,
     new SctCod_Mv('|嗅|か|ぐわしい')
     ,
-    new SctCod_Mv('|甘|あま|い')
-    ,
-    new SctCod_Mv('|辛|から|い')
-    ,
-    new SctCod_Mv('|苦|にが|い')
-    ,
     new SctCod_Mv('|響|ひび|く')
 ];
 
@@ -2391,6 +2385,34 @@ const   cods_move_make = [
     new SctCod_Mv('|脱|ぬ|ぐ')
 ];
 
+const   cods_adject_sense = [
+    new SctCod_Mv('|美味|おい|しい')
+    ,
+    new SctCod_Mv('|不味|まず|い')
+    ,
+    new SctCod_Mv('|甘|あま|い')
+    ,
+    new SctCod_Mv('|辛|から|い')
+    ,
+    new SctCod_Mv('|苦|にが|い')
+    ,
+    new SctCod_Mv('|熱|あつ|い')
+    ,
+    new SctCod_Mv('|冷|つめ|たい')
+    ,
+    new SctCod_Mv('|暑|あつ|い')
+    ,
+    new SctCod_Mv('|寒|さむ|い')
+    ,
+    new SctCod_Mv('|涼|すず|しい')
+    ,
+    new SctCod_Mv('|暖|あたた|かい')
+    ,
+    new SctCod_Mv('|明|あか|るい')
+    ,
+    new SctCod_Mv('|暗|くら|い')
+];
+
 
 const   cods_adject_color = [
     // new SctCod_Mv('|色|いろ|','color.png')
@@ -2398,8 +2420,8 @@ const   cods_adject_color = [
     new SctCod_Mv('|赤|あか|い')
     ,
     new SctCod_Mv('|青|あお|い')
-    ,
-    new SctCod_Mv('|緑|みどり|の')
+    // ,
+    // new SctCod_Mv('|緑|みどり|の')
     ,
     new SctCod_Mv('|黄色|きいろ|い')
     ,
@@ -2410,8 +2432,8 @@ const   cods_adject_color = [
     new SctCod_Mv('|淡|あわ|い')
     ,
     new SctCod_Mv('|薄|うす|い')
-    // ,
-    // new SctCod_Mv('|濃|こ|い')
+    ,
+    new SctCod_Mv('|濃|こ|い')
 ];
 
 const   cods_item_color = [
@@ -2448,7 +2470,6 @@ const   cods_item_color = [
     // new SctCod_It('|濃|こ|い')
 ];
 
-
 const   cods_adject_beauty = [
     new SctCod_Mv('|美|うつく|しい','beauty.png')
     ,
@@ -2473,19 +2494,38 @@ const   cods_adject_beauty = [
     new SctCod_Mv('|華麗|かれい|に')
     ,
     new SctCod_Mv('|優雅|ゆうが|に')
-    // ,
-    // new SctCod_Mv('|醜|みにく|い')
-    // ,
-    // new SctCod_Mv('|見苦|みぐる|しい')
-    // ,
-    // new SctCod_Mv('|不味|まず|い')
-    // ,
-    // new SctCod_Mv('|汚|きたな|い')
-    // ,
-    // new SctCod_Mv('|汚|きたな|い')
-    // ,
-    // new SctCod_Mv('|卑|いや|しい')
+    ,
+    new SctCod_Mv('|可愛|かわい|い')
 ];
+
+const   cods_adject_danger = [
+    new SctCod_Mv('|危|あぶ|ない','danger.png')
+    ,
+    new SctCod_Mv('|危|あや|うい')
+    ,
+    new SctCod_Mv('|恐|おそ|ろしい')
+    ,
+    new SctCod_Mv('|怖|こわ|い')
+    ,
+    new SctCod_Mv('|凄|すさ|まじい')
+    ,
+    new SctCod_Mv('|空恐|そらおそ|ろしい')
+    ,
+    new SctCod_Mv('|酷|ひど|い')
+    ,
+    new SctCod_Mv('|険|けわ|しい')
+    ,
+    new SctCod_Mv('|怪|あや|しい')
+    ,
+    new SctCod_Mv('|如何|いかが|わしい')
+    ,
+    new SctCod_Mv('|心許|こころもと|ない')
+    ,
+    new SctCod_Mv('|疑|うたが|わしい')
+    ,
+    new SctCod_Mv('|覚束|おぼつか|ない')
+];
+
 
 
 
@@ -2689,10 +2729,7 @@ const   cods_zeon = [
 
 ];
 
-
-
-
-const   cods_keiyo = [
+const   cods_km = [
     new SctCod_Km('|曖昧|あいまい|')
     ,
     new SctCod_Km('|陰鬱|いんうつ|')
