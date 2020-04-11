@@ -167,6 +167,9 @@ class ItmArray {
     Paste(in_array) {
         this.itms = new Array();
         this.itms.length = 0;
+        this.Add(in_array);
+    }
+    Add(in_array) {
         in_array.forEach(it => {
             this.itms.push(it);
         });

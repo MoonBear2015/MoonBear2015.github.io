@@ -258,6 +258,7 @@ interface IItmArray<T extends ISctItm> extends ITest {
     itms : T[];
     
     Paste(in_array : Array<T>): void;
+    Add(in_array : Array<T>): void;
     Copy() : IItmArray<T>;
 }
 
@@ -274,11 +275,16 @@ class ItmArray<T extends ISctItm> implements IItmArray<T> {
     {
         this.itms = new Array<T>();
         this.itms.length = 0;
+        this.Add(in_array);
+    }
+    public Add(in_array : Array<T>)
+    {
         in_array.forEach(it => {
             this.itms.push(it);
         }
         );
     }
+
     public Copy()
     {
         let result = new ItmArray<T>();

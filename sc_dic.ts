@@ -2908,8 +2908,8 @@ const   cods_km = [
     ,
     new SctCod_Km('|不憫|ふびん|')
     ,
-    new SctCod_Km('|不満|ふまん|')
-    ,
+    // new SctCod_Km('|不満|ふまん|')
+    // ,
     new SctCod_Km('|不毛|ふもう|')
     ,
     new SctCod_Km('|不愉快|ふゆかい|')
