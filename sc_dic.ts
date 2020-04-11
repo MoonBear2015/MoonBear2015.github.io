@@ -2394,6 +2394,12 @@ const   cods_adject_sense = [
     ,
     new SctCod_Mv('|辛|から|い')
     ,
+    new SctCod_Mv('|塩辛|しおから|い')
+    ,
+    new SctCod_Mv('しょっぱい')
+    ,
+    new SctCod_Mv('|甘辛|あまから|い')
+    ,
     new SctCod_Mv('|苦|にが|い')
     ,
     new SctCod_Mv('|熱|あつ|い')
@@ -2401,6 +2407,8 @@ const   cods_adject_sense = [
     new SctCod_Mv('|冷|つめ|たい')
     ,
     new SctCod_Mv('|暑|あつ|い')
+    ,
+    new SctCod_Mv('|蒸|む|し|暑|あつ|い')
     ,
     new SctCod_Mv('|寒|さむ|い')
     ,
@@ -2411,6 +2419,8 @@ const   cods_adject_sense = [
     new SctCod_Mv('|明|あか|るい')
     ,
     new SctCod_Mv('|暗|くら|い')
+    ,
+    new SctCod_Mv('|薄暗|うすぐら|い')
 ];
 
 
