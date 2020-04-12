@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N02.18';
+    html += 'N02.19';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -34,7 +34,7 @@ function make_news() {
     html += 'url(./pics/@PIC_DO@);';
     //html += 'width: 100%;';
     //html += 'height: 0;';
-    html += 'url(./pics/@PIC_DO@);';
+    // html += 'url(./pics/@PIC_DO@);';
     html += 'background-position: center center;';
     html += 'background-size: cover;';
     html += '">';
