@@ -447,7 +447,7 @@ class Gene_sent extends Gene_Poemer {
         // this.Add_cods(cods_what);
         // this.Add_cods(cods_where);
         this.Add_cods(cods_when);
-        // this.Add_cods(cods_item_color);
+        // this.Add_cods(cods_adv_color);
         this.Add_cods(cods_make);
         this.Add_cods(cods_jougo);
         this.Add_cods(cods_km);
@@ -465,10 +465,13 @@ class Gene_sent extends Gene_Poemer {
         this.Add_cods(cods_move_think);
         this.Add_cods(cods_move_sense);
         this.Add_cods(cods_move_make);
-        this.Add_cods(cods_adject_color);
-        this.Add_cods(cods_adject_beauty);
-        this.Add_cods(cods_adject_danger);
-        this.Add_cods(cods_adject_sense);
+        this.Add_cods(cods_ad_color);
+        this.Add_cods(cods_ad_beauty);
+        this.Add_cods(cods_ad_danger);
+        this.Add_cods(cods_ad_sense);
+        this.Add_cods(cods_adv_color);
+        this.Add_cods(cods_adv_sense);
+        this.Add_cods(cods_adv_beauty);
     }
 }
 class Gene_move extends Gene_Poemer {
@@ -488,10 +491,10 @@ class Gene_move extends Gene_Poemer {
         this.Add_cods(cods_move_think);
         this.Add_cods(cods_move_sense);
         this.Add_cods(cods_move_make);
-        this.Add_cods(cods_adject_color);
-        this.Add_cods(cods_adject_beauty);
-        this.Add_cods(cods_adject_danger);
-        this.Add_cods(cods_adject_sense);
+        this.Add_cods(cods_ad_color);
+        this.Add_cods(cods_ad_beauty);
+        this.Add_cods(cods_ad_danger);
+        this.Add_cods(cods_ad_sense);
         // this.Add_cods(cods_move_which);
     }
 }
@@ -507,7 +510,9 @@ class Gene_item extends Gene_Poemer {
         // this.Add_cods(cods_what);
         // this.Add_cods(cods_where);
         this.Add_cods(cods_when);
-        // this.Add_cods(cods_item_color);
+        this.Add_cods(cods_adv_color);
+        this.Add_cods(cods_adv_sense);
+        this.Add_cods(cods_adv_beauty);
         this.Add_cods(cods_make);
         this.Add_cods(cods_jougo);
         this.Add_cods(cods_km);

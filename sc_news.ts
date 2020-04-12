@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N02.17';
+    html += 'N02.18';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -253,29 +253,29 @@ class selector_title extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('@WHAT@の@DO@')
             ,
-            new SctItm('@WHAT@は@KEI2@に@DO@@END02C@')
+            new SctItm('@WHAT@は@KEID@@DO@@END02C@')
             ,
-            new SctItm('@WHAT@で@KEI2@に@DO@@END02C@@PEOPLE@')
+            new SctItm('@WHAT@で@KEID@@DO@@END02C@@PEOPLE@')
             ,
-            new SctItm('@WHAT@の@PEOPLE@が@KEI2@に@DO@')
+            new SctItm('@WHAT@の@PEOPLE@が@KEID@@DO@')
             ,
-            new SctItm('@WHAT@の@PEOPLE@、@HUMAN@が@KEI2@に@DO@@END02C@')
+            new SctItm('@WHAT@の@PEOPLE@、@HUMAN@が@KEID@@DO@@END02C@')
             ,
-            new SctItm('@KEI2@に@DO@@END02C@@WHAT@')
+            new SctItm('@KEID@@DO@@END02C@@WHAT@')
             ,
-            new SctItm('@KEI2@に@DO@@END02C@@WHAT@の@THEY@')
+            new SctItm('@KEID@@DO@@END02C@@WHAT@の@THEY@')
             ,
-            new SctItm('@PEOPLE@が@KEI2@に@DO@@END02C@@WHAT@')
+            new SctItm('@PEOPLE@が@KEID@@DO@@END02C@@WHAT@')
             ,
-            new SctItm('@CLASS@の@HUMAN@、@WHAT@で@KEI2@に@DO@@END02C@')
+            new SctItm('@CLASS@の@HUMAN@、@WHAT@で@KEID@@DO@@END02C@')
             ,
-            new SctItm('@KEI3@@HUMAN@、@WHAT@を@KEI2@に@DO@')
+            new SctItm('@KEI3@@HUMAN@、@WHAT@を@KEID@@DO@')
             ,
-            new SctItm('@KEI2@なる@PEOPLE@、@HUMAN@が@WHAT@を@DO@@END02C@')
+            new SctItm('@KEI2@な@PEOPLE@、@HUMAN@が@WHAT@を@DO@@END02C@')
             ,
-            new SctItm('@CLASS@の@HUMAN@、@WHAT@を@KEI2@に@DO@')
+            new SctItm('@CLASS@の@HUMAN@、@WHAT@を@KEID@@DO@')
             ,
-            new SctItm('@WHAT@を@KEI2@に@DO@@END02C@@CLASS@、@HUMAN@')
+            new SctItm('@WHAT@を@KEID@@DO@@END02C@@CLASS@、@HUMAN@')
         ];
     }
 }
@@ -320,13 +320,13 @@ class selector_call extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@CALL@');
         this.itms = [
-            new SctItm('@WHAT@の@PEOPLE@')
+            new SctItm('@KEI@@WHAT@の@KEI@@PEOPLE@')
             ,
-            new SctItm('@KEI2@に@DO@@END02C@@PEOPLE@')
+            new SctItm('@KEID@@DO@@END02C@@PEOPLE@')
             ,
             new SctItm('@THINK@@END02C@@PEOPLE@')
             ,
-            new SctItm('@WHAT@の@NICK@')
+            new SctItm('@WHAT@の@KEI@@NICK@')
             ,
             new SctItm('@KEI@@PEOPLE@')
         ];
@@ -406,7 +406,7 @@ class selector_c01 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@NEWS_C01@');
         this.itms = [
-            new SctItm('@WHAT@が@KEI2@に@DO@@END01B@')
+            new SctItm('@WHAT@が@KEID@@DO@@END01B@')
             ,
             new SctItm('@WHAT@での@KEI@@KEY@@END01A@')
             ,
@@ -418,7 +418,7 @@ class selector_c01 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@KEI@@KEY@や@KEY@が@STATUS@する@WHAT@@END01A@')
             ,
-            new SctItm('@MANYPEOPLE@が@KEI2@に@DO@@END01B@')
+            new SctItm('@MANYPEOPLE@が@KEID@@DO@@END01B@')
             ,
             new SctItm('@MANYPEOPLE@による@KEI@@KEY@が@STATUS@@END01B@')
             ,
@@ -468,7 +468,7 @@ class selector_c02 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@NEWS_C02@');
         this.itms = [
-            new SctItm('@MANYPEOPLE@が@KEI2@に@DO@@END02B@')
+            new SctItm('@MANYPEOPLE@が@KEID@@DO@@END02B@')
             ,
             new SctItm('@MANYPEOPLE@が@NICK@@END02A@')
             ,
@@ -550,7 +550,7 @@ class selector_comment2 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@CALL@が@STATUS@@END02B@')
             ,
-            new SctItm('@WHAT@は@KEI2@に@DO@する@KEI@@NICK@と@ASSES@')
+            new SctItm('@WHAT@は@KEID@@DO@する@KEI@@NICK@と@ASSES@')
             ,
             new SctItm('@MANYPEOPLE@は@CALL@@END02A@')
             ,
@@ -564,7 +564,7 @@ class selector_comment2 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@WHAT@は@KEI@@NICK@の@PART@と@ASSES@')
             ,
-            new SctItm('@WHAT@は@KEI2@に@DO@する@KEI@@THEY@@END02A@')
+            new SctItm('@WHAT@は@KEID@@DO@する@KEI@@THEY@@END02A@')
             ,
             new SctItm('@CALL@で、@CALL@@END02A@')
             ,
@@ -574,17 +574,17 @@ class selector_comment2 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@YESNO@、@WHAT@が@KEI@@NICK@@END02A@')
             ,
-            new SctItm('@NICK@、@NICK@、@NICK@、@NICK@……')
+            new SctItm('@WHAT@の@NICK@、@WHAT@の@NICK@、@WHAT@の@NICK@、@WHAT@の@NICK@……')
             ,
-            new SctItm('@KEY@、@KEY@、@KEY@、@KEY@……')
+            new SctItm('@KEI2@な@KEY@、@KEI2@な@KEY@、@KEI2@な@KEY@、@KEI2@な@KEY@……')
             ,
-            new SctItm('@YESNO@、@PART@が@SAY@@END02B@')
+            new SctItm('@YESNO@、@KEI2@な@PART@が@SAY@@END02B@')
             ,
             new SctItm('@CALL@、@YESNO@、それが@PART@の@PART@@END02A@')
             ,
-            new SctItm('@KEI2@に@DO@する@KEI@@NICK@と@ASSES@@THEY@、@YESNO@、それが@WHAT@の@PEOPLE@@END02A@')
+            new SctItm('@KEID@@DO@する@KEI@@NICK@と@ASSES@@THEY@、@YESNO@、それが@WHAT@の@PEOPLE@@END02A@')
             ,
-            new SctItm('@KEI2@に@DO@@END02B@@THEY@、@YESNO@、それが@WHAT@@END02A@')
+            new SctItm('@KEID@@DO@@END02B@@THEY@、@YESNO@、それが@WHAT@@END02A@')
             ,
             new SctItm('@WHAT@の@CLASS@、それが@PEOPLE@の@PEOPLE@@END02A@')
         ];
@@ -1029,21 +1029,15 @@ class selector_key extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('辻斬り')
             ,
-            new SctItm('迫害行為')
-            ,
             new SctItm('重大事件')
             ,
             new SctItm('大災害')
             ,
             new SctItm('傷害事件')
             ,
-            new SctItm('虐待事件')
-            ,
             new SctItm('虐殺行為')
             ,
             new SctItm('大量虐殺')
-            ,
-            new SctItm('暴走状態')
             ,
             new SctItm('妨害工作')
             ,
@@ -1058,6 +1052,12 @@ class selector_key extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('乱闘騒ぎ')
             ,
             new SctItm('大喧嘩')
+            ,
+            new SctItm('不法侵入')
+            ,
+            new SctItm('同時多発テロ')
+            ,
+            new SctItm('スパイ容疑')
             ,
             //
             // posi 
@@ -1239,7 +1239,7 @@ class selector_they extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('マフィア達')
             ,
-            new SctItm('ヤクザ')
+            new SctItm('ヤクザ達')
             ,
             new SctItm('過激派')
             ,
@@ -1636,17 +1636,37 @@ class selector_keiyo extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@KEI@');
         this.itms = [
+            new SctItm('')
+            ,
             new SctItm('@KEI2@な')
             ,
             new SctItm('@KEI2@で@KEI2@な')
-            ,
-            new SctItm('@KEI2@で@KEI2@、そして@KEI2@な')
+            // ,
+            // new SctItm('@KEI2@で@KEI2@、そして@KEI2@な')
             ,
             new SctItm('@KEI3@')
             ,
             new SctItm('@KEI2@で@KEI3@')
+            // ,
+            // new SctItm('@KEI2@で@KEI2@、そして@KEI3@')
+        ];
+    }
+}
+class selector_keido extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@KEID@');
+        this.itms = [
+            new SctItm('')
             ,
-            new SctItm('@KEI2@で@KEI2@、そして@KEI3@')
+            new SctItm('@KEI2@に')
+            ,
+            new SctItm('@KEI4@')
+            // ,
+            // new SctItm('@KEI2@、そして、@KEI2@に')
+            // ,
+            // new SctItm('@KEI2@、そして、@KEI4@')
+            // ,
+            // new SctItm('@KEI4@、そして、@KEI4@')
         ];
     }
 }
@@ -1658,16 +1678,24 @@ class selector_km extends SctItm_Selector implements ISctItm_Selector {
     }
 }
 
-
 class selector_k extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@KEI3@');
-        this.Add(cods_to_itms(cods_adject_beauty));
-        this.Add(cods_to_itms(cods_adject_danger));
-        this.Add(cods_to_itms(cods_adject_sense));
-        this.Add(cods_to_itms(cods_adject_color));
+        this.Add(cods_to_itms(cods_ad_beauty));
+        this.Add(cods_to_itms(cods_ad_danger));
+        this.Add(cods_to_itms(cods_ad_sense));
+        this.Add(cods_to_itms(cods_ad_color));
     }
 }
+
+class selector_kd extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@KEI4@');
+        this.Add(cods_to_itms(cods_adv_beauty));
+        this.Add(cods_to_itms(cods_adv_sense));
+    }
+}
+
 
 
 
@@ -2090,6 +2118,10 @@ class selector_say extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('声を潜めて@SAY@')
             ,
+            new SctItm('狼狽えながらも@SAY@')
+            ,
+            new SctItm('怯えた様子で@SAY@')
+            ,
             new SctItm('主張')
             ,
             new SctItm('強調')
@@ -2483,8 +2515,10 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_they());
         this.dic_push(new selector_many());
         this.dic_push(new selector_keiyo());
+        this.dic_push(new selector_keido());
         this.dic_push(new selector_km());
         this.dic_push(new selector_k());
+        this.dic_push(new selector_kd());
 
         this.dic_push(new selector_think());
         this.dic_push(new selector_who());

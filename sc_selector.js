@@ -133,9 +133,8 @@ class SctCod_It extends SctCod {
         super(in_Wrd, in_SctPic, in_CodLength);
         this.KeyA = '@M';
         this.KeyB = '@M';
-        this.KeyC = '@C1';
         this.MinA = 2;
-        this.MinB = 1;
+        this.MinB = 2;
     }
 }
 class SctCod_Mv extends SctCod {

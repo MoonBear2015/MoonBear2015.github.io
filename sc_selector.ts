@@ -209,9 +209,8 @@ class SctCod_It extends SctCod implements ISctCod,ITest {
 
         this.KeyA = '@M';
         this.KeyB = '@M';
-        this.KeyC = '@C1';
         this.MinA = 2;
-        this.MinB = 1;
+        this.MinB = 2;
     }
 }
 
