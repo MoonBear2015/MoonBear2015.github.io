@@ -320,15 +320,15 @@ class selector_call extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@CALL@');
         this.itms = [
-            new SctItm('@KEI@@WHAT@の@KEI@@PEOPLE@')
+            new SctItm('@WHAT@の@KEI@@PEOPLE@')
             ,
             new SctItm('@KEID@@DO@@END02C@@PEOPLE@')
             ,
-            new SctItm('@THINK@@END02C@@PEOPLE@')
+            new SctItm('@KEID@@THINK@@END02C@@PEOPLE@')
             ,
             new SctItm('@WHAT@の@KEI@@NICK@')
             ,
-            new SctItm('@KEI@@PEOPLE@')
+            new SctItm('@KEI@@WHAT@の@PEOPLE@')
         ];
     }
 }

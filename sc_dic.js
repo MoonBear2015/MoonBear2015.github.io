@@ -1463,15 +1463,20 @@ const cods_zeon = [
 ];
 const cods_km = [
     new SctCod_Km('|曖昧|あいまい|'),
+    new SctCod_Km('|圧倒的|あっとうてき|'),
     new SctCod_Km('|陰鬱|いんうつ|'),
     new SctCod_Km('|陰惨|いんさん|'),
+    new SctCod_Km('|快適|かいてき|'),
     new SctCod_Km('|過酷|かこく|'),
     new SctCod_Km('|過激|かげき|'),
     new SctCod_Km('|華奢|かしゃ|'),
     new SctCod_Km('|果断|かだん|'),
     new SctCod_Km('|華美|かび|'),
     new SctCod_Km('|可憐|かれん|'),
-    new SctCod_Km('|甘美|かんび|')
+    new SctCod_Km('|甘美|かんび|'),
+    new SctCod_Km('|感動的|かんどうてき|'),
+    new SctCod_Km('|官能的|かんのうてき|'),
+    new SctCod_Km('|奇跡的|きせきてき|')
     // ,
     // new SctCod_Km('|毅然|きぜん|')
     ,
@@ -1486,7 +1491,12 @@ const cods_km = [
     new SctCod_Km('|愚直|ぐちょく|'),
     new SctCod_Km('|激烈|げきれつ|'),
     new SctCod_Km('|愚直|ぐちょく|'),
-    new SctCod_Km('|厳格|げんかく|')
+    new SctCod_Km('|経済的|けいざいてき|'),
+    new SctCod_Km('|劇的|げきてき|'),
+    new SctCod_Km('|決定的|けっていてき|'),
+    new SctCod_Km('|厳格|げんかく|'),
+    new SctCod_Km('|攻撃的|こうげきてき|'),
+    new SctCod_Km('|残酷|ざんこく|')
     // ,
     // new SctCod_Km('|殺伐|さつばつ|')
     // ,
@@ -1494,6 +1504,7 @@ const cods_km = [
     // ,
     // new SctCod_Km('|純潔|じゅんけつ|')
     ,
+    new SctCod_Km('|幸|しあわ|せ'),
     new SctCod_Km('|純粋|じゅんすい|'),
     new SctCod_Km('|精悍|せいかん|'),
     new SctCod_Km('|凄惨|せいさん|'),
@@ -1549,6 +1560,8 @@ const cods_km = [
     new SctCod_Km('|煩雑|はんざつ|'),
     new SctCod_Km('|卑怯|ひきょう|'),
     new SctCod_Km('|卑屈|ひくつ|'),
+    new SctCod_Km('|非科学的|ひかがくてき|'),
+    new SctCod_Km('|悲劇的|ひげきてき|'),
     new SctCod_Km('|微細|びさい|'),
     new SctCod_Km('|悲惨|ひさん|'),
     new SctCod_Km('|悲愴|ひそう|'),
@@ -1626,6 +1639,7 @@ const cods_km = [
     new SctCod_Km('|真|ま|っ|直|す|ぐ'),
     new SctCod_Km('|真|ま|っ|青|さお|'),
     new SctCod_Km('|真|ま|っ|当|とう|'),
+    new SctCod_Km('|真|ま|っ|平|たい|ら'),
     new SctCod_Km('|無意味|むいみ|'),
     new SctCod_Km('|無害|むがい|'),
     new SctCod_Km('|無価値|むかち|'),
@@ -1653,7 +1667,8 @@ const cods_km = [
     ,
     new SctCod_Km('|猛烈|もうれつ|'),
     new SctCod_Km('|野性的|やせいてき|'),
-    new SctCod_Km('|厄介|やっかい|'),
+    // new SctCod_Km('|厄介|やっかい|')
+    // ,
     new SctCod_Km('|野蛮|やばん|'),
     new SctCod_Km('|有名|ゆうめい|'),
     new SctCod_Km('|勇猛|ゆうもう|'),

@@ -2771,9 +2771,13 @@ const   cods_zeon = [
 const   cods_km = [
     new SctCod_Km('|曖昧|あいまい|')
     ,
+    new SctCod_Km('|圧倒的|あっとうてき|')
+    ,
     new SctCod_Km('|陰鬱|いんうつ|')
     ,
     new SctCod_Km('|陰惨|いんさん|')
+    ,
+    new SctCod_Km('|快適|かいてき|')
     ,
     new SctCod_Km('|過酷|かこく|')
     ,
@@ -2788,6 +2792,12 @@ const   cods_km = [
     new SctCod_Km('|可憐|かれん|')
     ,
     new SctCod_Km('|甘美|かんび|')
+    ,
+    new SctCod_Km('|感動的|かんどうてき|')
+    ,
+    new SctCod_Km('|官能的|かんのうてき|')
+    ,
+    new SctCod_Km('|奇跡的|きせきてき|')
     // ,
     // new SctCod_Km('|毅然|きぜん|')
     ,
@@ -2809,13 +2819,25 @@ const   cods_km = [
     ,
     new SctCod_Km('|愚直|ぐちょく|')
     ,
+    new SctCod_Km('|経済的|けいざいてき|')
+    ,
+    new SctCod_Km('|劇的|げきてき|')
+    ,
+    new SctCod_Km('|決定的|けっていてき|')
+    ,
     new SctCod_Km('|厳格|げんかく|')
+    ,
+    new SctCod_Km('|攻撃的|こうげきてき|')
+    ,
+    new SctCod_Km('|残酷|ざんこく|')
     // ,
     // new SctCod_Km('|殺伐|さつばつ|')
     // ,
     // new SctCod_Km('|粛正|しゅくせい|')
     // ,
     // new SctCod_Km('|純潔|じゅんけつ|')
+    ,
+    new SctCod_Km('|幸|しあわ|せ')
     ,
     new SctCod_Km('|純粋|じゅんすい|')
     ,
@@ -2902,6 +2924,10 @@ const   cods_km = [
     new SctCod_Km('|卑怯|ひきょう|')
     ,
     new SctCod_Km('|卑屈|ひくつ|')
+    ,
+    new SctCod_Km('|非科学的|ひかがくてき|')
+    ,
+    new SctCod_Km('|悲劇的|ひげきてき|')
     ,
     new SctCod_Km('|微細|びさい|')
     ,
@@ -3017,6 +3043,8 @@ const   cods_km = [
     ,
     new SctCod_Km('|真|ま|っ|当|とう|')
     ,
+    new SctCod_Km('|真|ま|っ|平|たい|ら')
+    ,
     new SctCod_Km('|無意味|むいみ|')
     ,
     new SctCod_Km('|無害|むがい|')
@@ -3059,8 +3087,8 @@ const   cods_km = [
     ,
     new SctCod_Km('|野性的|やせいてき|')
     ,
-    new SctCod_Km('|厄介|やっかい|')
-    ,
+    // new SctCod_Km('|厄介|やっかい|')
+    // ,
     new SctCod_Km('|野蛮|やばん|')
     ,
     new SctCod_Km('|有名|ゆうめい|')
