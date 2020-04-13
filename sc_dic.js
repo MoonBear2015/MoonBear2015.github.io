@@ -1483,6 +1483,7 @@ const cods_km = [
     new SctCod_Km('|希薄|きはく|'),
     new SctCod_Km('|凶猛|きょうもう|'),
     new SctCod_Km('|気|き|の|毒|どく|'),
+    new SctCod_Km('|綺麗|きれい|'),
     new SctCod_Km('|勤勉|きんべん|')
     // ,
     // new SctCod_Km('|空虚|くうきょ|')
@@ -1491,11 +1492,15 @@ const cods_km = [
     new SctCod_Km('|愚直|ぐちょく|'),
     new SctCod_Km('|激烈|げきれつ|'),
     new SctCod_Km('|愚直|ぐちょく|'),
+    new SctCod_Km('|計画的|けいかくてき|'),
     new SctCod_Km('|経済的|けいざいてき|'),
+    new SctCod_Km('|形式的|けいしきてき|'),
     new SctCod_Km('|劇的|げきてき|'),
     new SctCod_Km('|決定的|けっていてき|'),
     new SctCod_Km('|厳格|げんかく|'),
     new SctCod_Km('|攻撃的|こうげきてき|'),
+    new SctCod_Km('|肯定的|こうていてき|'),
+    new SctCod_Km('|困難|こんなん|'),
     new SctCod_Km('|残酷|ざんこく|')
     // ,
     // new SctCod_Km('|殺伐|さつばつ|')
@@ -1534,6 +1539,7 @@ const cods_km = [
     new SctCod_Km('|突兀|とっこつ|'),
     new SctCod_Km('|貪欲|どんよく|'),
     new SctCod_Km('|軟弱|なんじゃく|'),
+    new SctCod_Km('|難解|なんかい|'),
     new SctCod_Km('|柔弱|にゅうじゃく|'),
     new SctCod_Km('|佞奸|ねいかん|'),
     new SctCod_Km('|熱烈|ねつれつ|'),
@@ -1580,14 +1586,14 @@ const cods_km = [
     // new SctCod_Km('|不安|ふあん|')
     // ,
     // new SctCod_Km('|不意|ふい|')
-    ,
-    new SctCod_Km('|不気味|ぶきみ|')
     // ,
     // new SctCod_Km('|不可欠|ふかけつ|')
     // ,
     // new SctCod_Km('|不可能|ふかのう|')
     ,
     new SctCod_Km('|不完全|ふかんぜん|'),
+    new SctCod_Km('|不可解|ふかかい|'),
+    new SctCod_Km('|不気味|ぶきみ|'),
     new SctCod_Km('|無粋|ぶすい|'),
     new SctCod_Km('|不揃|ふぞろ|い')
     // ,
@@ -1677,6 +1683,7 @@ const cods_km = [
     new SctCod_Km('|緩|ゆる|やか'),
     new SctCod_Km('ゆるゆる'),
     new SctCod_Km('|陽気|ようき|'),
+    new SctCod_Km('|楽観的|らっかんてき|'),
     new SctCod_Km('|乱暴|らんぼう|'),
     new SctCod_Km('|流暢|りゅうちょう|'),
     new SctCod_Km('|良好|りょうこう|'),
