@@ -2416,6 +2416,10 @@ const   cods_ad_sense = [
     ,
     new SctCod_Mv('|暖|あたた|かい')
     ,
+    new SctCod_It('ぬるい')
+    ,
+    new SctCod_It('|生|なま|ぬるい')
+    ,
     new SctCod_Mv('|明|あか|るい')
     ,
     new SctCod_Mv('|暗|くら|い')
@@ -2439,10 +2443,6 @@ const   cods_adv_sense = [
     new SctCod_It('|苦|にが|く')
     ,
     new SctCod_It('|熱|あつ|く')
-    ,
-    new SctCod_It('ぬるい')
-    ,
-    new SctCod_It('|生|なま|ぬるい')
     ,
     new SctCod_It('|冷|つめ|たく')
     ,
@@ -2576,27 +2576,23 @@ const   cods_ad_danger = [
 const   cods_ad_etc = [
     new SctCod_Mv('|新|あたら|しい')
     ,
-    new SctCod_Mv('|上手|うま|い')
+    new SctCod_Mv('|勇|いさ|ましい')
     ,
-    new SctCod_Mv('|嬉|うれ|しい')
-    ,
-    new SctCod_Mv('|偉|えら|い')
+    new SctCod_Mv('|五月蠅|うるさ|い')
     ,
     new SctCod_Mv('|大|おお|きい')
-    ,
-    new SctCod_Mv('|遅|おそ|い')
     ,
     new SctCod_Mv('|賢|かしこ|い')
     ,
     new SctCod_Mv('|固|かた|い')
     ,
-    new SctCod_Mv('|悲|かな|しい')
+    new SctCod_Mv('|口|くち|うるさい')
     ,
     new SctCod_Mv('|素晴|すば|らしい')
     ,
     new SctCod_Mv('|凄|すご|い')
     ,
-    new SctCod_Mv('|凄|すご|い')
+    new SctCod_Mv('|切|せつ|ない')
     ,
     new SctCod_Mv('|小|ちい|さい')
     ,
@@ -2606,10 +2602,12 @@ const   cods_ad_etc = [
     ,
     new SctCod_Mv('|憎|にく|たらしい')
     ,
-    new SctCod_Mv('|眠|ねむ|い')
+    new SctCod_Mv('|物凄|ものすご|い')
+    ,
+    new SctCod_Mv('|柔|やわ|らかい')
+    ,
+    new SctCod_Mv('|喜|よろこ|ばしい')
 ];
-
-
 
 const   cods_body = [
     new SctCod_It('|体|からだ|','body.jpg')
@@ -2816,6 +2814,12 @@ const   cods_km = [
     ,
     new SctCod_Km('|圧倒的|あっとうてき|')
     ,
+    new SctCod_Km('|意外|いがい|')
+    ,
+    new SctCod_Km('|偉大|いだい|')
+    ,
+    new SctCod_Km('|異例|いれい|')
+    ,
     new SctCod_Km('|陰鬱|いんうつ|')
     ,
     new SctCod_Km('|陰惨|いんさん|')
@@ -2831,6 +2835,8 @@ const   cods_km = [
     new SctCod_Km('|果断|かだん|')
     ,
     new SctCod_Km('|華美|かび|')
+    ,
+    new SctCod_Km('|華麗|かれい|')
     ,
     new SctCod_Km('|可憐|かれん|')
     ,
@@ -2875,6 +2881,8 @@ const   cods_km = [
     new SctCod_Km('|形式的|けいしきてき|')
     ,
     new SctCod_Km('|劇的|げきてき|')
+    ,
+    new SctCod_Km('|桁違|けたちが|い')
     ,
     new SctCod_Km('|決定的|けっていてき|')
     ,

@@ -9,7 +9,7 @@ function set_poem() {
     html += '<h1>';
     html += 'POEM';
     html += '<small>';
-    html += 'P01.47';
+    html += 'P01.48';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -37,9 +37,9 @@ function make_poem() {
     html += 'margin:     5px; ';
     html += 'padding:    5px; ';
     html += 'border:     0.5px solid #606060;';
-    html += 'border-radius:  1%;';
+    html += 'border-radius:  0.5%;';
     html += 'background: ';
-    html += 'linear-gradient(135deg,rgba(30,30,30,0.8),rgba(120,120,120,0.8)),';
+    html += 'linear-gradient(135deg,rgba(30,30,30,0.8),rgba(30,30,30,0.8)),';
     html += 'url(./pics/TEMA/@PIC_TEMA@);';
     html += 'background-size: ';
     html += 'contain;';
@@ -82,6 +82,7 @@ function make_poem_sub() {
     html += 'padding:    5px; ';
     html += 'border:     0.5px solid #606060;';
     html += 'border-radius:  1%;';
+    html += 'background: ';
     html += '">';
     html += '<h3 id="poem_title">';
     html += '@TITLE@';
@@ -469,6 +470,7 @@ class Gene_sent extends Gene_Poemer {
         this.Add_cods(cods_ad_beauty);
         this.Add_cods(cods_ad_danger);
         this.Add_cods(cods_ad_sense);
+        this.Add_cods(cods_ad_etc);
         this.Add_cods(cods_adv_color);
         this.Add_cods(cods_adv_sense);
         this.Add_cods(cods_adv_beauty);
@@ -495,6 +497,7 @@ class Gene_move extends Gene_Poemer {
         this.Add_cods(cods_ad_beauty);
         this.Add_cods(cods_ad_danger);
         this.Add_cods(cods_ad_sense);
+        this.Add_cods(cods_ad_etc);
         // this.Add_cods(cods_move_which);
     }
 }

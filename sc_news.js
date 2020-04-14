@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N02.20';
+    html += 'N02.21';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -1009,6 +1009,7 @@ class selector_k extends SctItm_Selector {
         this.Add(cods_to_itms(cods_ad_danger));
         this.Add(cods_to_itms(cods_ad_sense));
         this.Add(cods_to_itms(cods_ad_color));
+        this.Add(cods_to_itms(cods_ad_etc));
     }
 }
 class selector_kd extends SctItm_Selector {

@@ -1263,6 +1263,8 @@ const cods_ad_sense = [
     new SctCod_Mv('|寒|さむ|い'),
     new SctCod_Mv('|涼|すず|しい'),
     new SctCod_Mv('|暖|あたた|かい'),
+    new SctCod_It('ぬるい'),
+    new SctCod_It('|生|なま|ぬるい'),
     new SctCod_Mv('|明|あか|るい'),
     new SctCod_Mv('|暗|くら|い'),
     new SctCod_Mv('|薄暗|うすぐら|い')
@@ -1350,6 +1352,25 @@ const cods_ad_danger = [
     new SctCod_Mv('|心許|こころもと|ない'),
     new SctCod_Mv('|疑|うたが|わしい'),
     new SctCod_Mv('|覚束|おぼつか|ない')
+];
+const cods_ad_etc = [
+    new SctCod_Mv('|新|あたら|しい'),
+    new SctCod_Mv('|勇|いさ|ましい'),
+    new SctCod_Mv('|五月蠅|うるさ|い'),
+    new SctCod_Mv('|大|おお|きい'),
+    new SctCod_Mv('|賢|かしこ|い'),
+    new SctCod_Mv('|固|かた|い'),
+    new SctCod_Mv('|口|くち|うるさい'),
+    new SctCod_Mv('|素晴|すば|らしい'),
+    new SctCod_Mv('|凄|すご|い'),
+    new SctCod_Mv('|切|せつ|ない'),
+    new SctCod_Mv('|小|ちい|さい'),
+    new SctCod_Mv('|尊|とうと|い'),
+    new SctCod_Mv('|憎|にく|い'),
+    new SctCod_Mv('|憎|にく|たらしい'),
+    new SctCod_Mv('|物凄|ものすご|い'),
+    new SctCod_Mv('|柔|やわ|らかい'),
+    new SctCod_Mv('|喜|よろこ|ばしい')
 ];
 const cods_body = [
     new SctCod_It('|体|からだ|', 'body.jpg'),
@@ -1464,6 +1485,9 @@ const cods_zeon = [
 const cods_km = [
     new SctCod_Km('|曖昧|あいまい|'),
     new SctCod_Km('|圧倒的|あっとうてき|'),
+    new SctCod_Km('|意外|いがい|'),
+    new SctCod_Km('|偉大|いだい|'),
+    new SctCod_Km('|異例|いれい|'),
     new SctCod_Km('|陰鬱|いんうつ|'),
     new SctCod_Km('|陰惨|いんさん|'),
     new SctCod_Km('|快適|かいてき|'),
@@ -1472,6 +1496,7 @@ const cods_km = [
     new SctCod_Km('|華奢|かしゃ|'),
     new SctCod_Km('|果断|かだん|'),
     new SctCod_Km('|華美|かび|'),
+    new SctCod_Km('|華麗|かれい|'),
     new SctCod_Km('|可憐|かれん|'),
     new SctCod_Km('|甘美|かんび|'),
     new SctCod_Km('|感動的|かんどうてき|'),
@@ -1482,9 +1507,11 @@ const cods_km = [
     ,
     new SctCod_Km('|希薄|きはく|'),
     new SctCod_Km('|凶猛|きょうもう|'),
+    new SctCod_Km('|巨大|きょだい|'),
     new SctCod_Km('|気|き|の|毒|どく|'),
     new SctCod_Km('|綺麗|きれい|'),
-    new SctCod_Km('|勤勉|きんべん|')
+    new SctCod_Km('|勤勉|きんべん|'),
+    new SctCod_Km('|近代的|きんだいてき|')
     // ,
     // new SctCod_Km('|空虚|くうきょ|')
     ,
@@ -1496,6 +1523,7 @@ const cods_km = [
     new SctCod_Km('|経済的|けいざいてき|'),
     new SctCod_Km('|形式的|けいしきてき|'),
     new SctCod_Km('|劇的|げきてき|'),
+    new SctCod_Km('|桁違|けたちが|い'),
     new SctCod_Km('|決定的|けっていてき|'),
     new SctCod_Km('|厳格|げんかく|'),
     new SctCod_Km('|攻撃的|こうげきてき|'),
@@ -1530,7 +1558,8 @@ const cods_km = [
     ,
     new SctCod_Km('|低俗|ていぞく|'),
     new SctCod_Km('|丁重|ていちょう|'),
-    new SctCod_Km('|適切|てきせつ|')
+    new SctCod_Km('|適切|てきせつ|'),
+    new SctCod_Km('てへぺろ')
     // ,
     // new SctCod_Km('|天下一品|てんかいっぴん|')
     ,
@@ -1619,12 +1648,15 @@ const cods_km = [
     new SctCod_Km('|無礼|ぶれい|'),
     new SctCod_Km('|平安|へいあん|'),
     new SctCod_Km('|平穏|へいおん|'),
+    new SctCod_Km('|平均的|へいきんてき|'),
     new SctCod_Km('|閉鎖的|へいさてき|'),
     new SctCod_Km('|平坦|へいたん|'),
     new SctCod_Km('|平凡|へいぼん|'),
     new SctCod_Km('|平和|へいわ|'),
     new SctCod_Km('|平和的|へいわてき|'),
+    new SctCod_Km('へろへろ'),
     new SctCod_Km('べろべろ'),
+    new SctCod_Km('ぺろぺろ'),
     new SctCod_Km('|便利|べんり|'),
     new SctCod_Km('|暴虐|ぼうぎゃく|')
     // ,
