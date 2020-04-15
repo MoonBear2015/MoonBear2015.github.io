@@ -7,7 +7,7 @@ function set_qa() {
     html += '<h1>';
     html += 'Q&A';
     html += '<small>';
-    html += 'N00.02 test';
+    html += 'Q00.02 test';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -72,7 +72,7 @@ function make_qa() {
     // html += '<br>';
     //---- this Q&A END
     html += '</div>';
-    let maker = new news_docs_maker();
+    let maker = new qa_docs_maker();
     let cnt = 0;
     while (true) {
         html = maker.gene_docs(html);
@@ -103,7 +103,28 @@ function Make_Q() {
     html += '">';
     html += '@QUESTER@';
     html += '<br>';
-    html += '@PART@が、@KEY@ばかりして@THINK@しています。';
+    html += '<p id="q_title">';
+    html += '私の@L_PART@が、@KEY@ばかりして@THINK@しています。';
+    html += '</p>';
+    html += '<p id="q_doc">';
+    html += '私の@L_PART@が、@KEY@ばかりして@THINK@しています。';
+    html += '私の@L_PART@が、@KEY@ばかりして@THINK@しています。';
+    html += '私の@L_PART@が、@KEY@ばかりして@THINK@しています。';
+    html += '私の@L_PART@が、@KEY@ばかりして@THINK@しています。';
+    html += '</p>';
     html += '</div>';
     return html;
+}
+class qa_docs_maker extends news_docs_maker {
+    constructor() {
+        super();
+        this.dic_push(new locker_part());
+    }
+}
+// 問題の相手
+class locker_part extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_PART@');
+        this.Add(itms_partner);
+    }
 }
