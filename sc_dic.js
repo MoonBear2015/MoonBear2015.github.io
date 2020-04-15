@@ -2287,22 +2287,21 @@ const itms_partner = [
     new SctItm('マスコミ')
 ];
 const itms_accident = [
-    new SctItm('虐待行為'),
+    new SctItm('児童虐待'),
     new SctItm('婦女暴行'),
-    new SctItm('人種差別'),
-    new SctItm('暗黒化'),
+    new SctItm('人種差別')
+    // ,
+    // new SctItm('暗黒化')
+    ,
     new SctItm('無差別殺人'),
     new SctItm('殺戮行為'),
     new SctItm('犯罪行為'),
     new SctItm('強盗殺人'),
     new SctItm('辻斬り'),
-    new SctItm('重大事件'),
-    new SctItm('大災害'),
     new SctItm('傷害事件'),
     new SctItm('虐殺行為'),
     new SctItm('大量虐殺'),
     new SctItm('妨害工作'),
-    new SctItm('人種差別'),
     new SctItm('暴力行為'),
     new SctItm('乱痴気騒ぎ'),
     new SctItm('乱交パーティー'),

@@ -46,6 +46,7 @@ interface INmItm {
 
     html_WRITER(in_picsize : number) : string;
     html_QUESTER(in_picsize : number) : string;
+    html_ADVICER(in_picsize : number) : string;
 
 }
 
@@ -93,6 +94,23 @@ class NmItm implements INmItm {
         html += '</h4>';
         return html;
     }
+
+    html_ADVICER(in_picsize : number) {
+        let html = '';
+        html += '<div id="face_pic_R">';
+        html += '<figure>';
+        html += '<img src="pics/FACE/' + this.to_FilePath() + '" width="' 
+            + in_picsize.toString() 
+            + 'px">';
+        html += '</figure>';
+        html += '</div>';
+    
+        html += '<h4 id="quester" align="right">';
+        html += '<big>' + this.NameAge + '</big>' + ' @WHO2@ ';
+        html += '</h4>';
+        return html;
+    }
+
 
 
     get NameAge() {

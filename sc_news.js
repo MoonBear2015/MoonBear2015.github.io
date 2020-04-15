@@ -152,22 +152,6 @@ class selector_writer extends ItmArray {
         return result;
     }
 }
-class selector_quester extends ItmArray {
-    constructor() {
-        super();
-        this.itm_key = "@QUESTER@";
-        this.pic_key = "";
-        this.nameCreater = new NameCreaterAll();
-    }
-    get rnd_Itm() {
-        let name = this.nameCreater.create();
-        return new SctItm(name.html_QUESTER(100), '');
-    }
-    Copy() {
-        let result = new selector_human();
-        return result;
-    }
-}
 class selector_age extends ItmArray {
     constructor() {
         super();
@@ -1424,7 +1408,6 @@ class news_docs_maker extends docs_maker {
     constructor() {
         super();
         this.dic_push(new selector_writer());
-        this.dic_push(new selector_quester());
         this.dic_push(new selector_title());
         this.dic_push(new selector_doc());
         this.dic_push(new selector_c01());

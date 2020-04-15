@@ -215,30 +215,6 @@ class selector_writer
     }
 }
 
-class selector_quester 
-    extends ItmArray<SctItm>
-    implements ISctItm_Selector 
-{
-    public nameCreater : INameCreater;
-    public itm_key : string;
-    public pic_key : string;
-    constructor()
-    {
-        super();
-        this.itm_key = "@QUESTER@";
-        this.pic_key = "";
-        this.nameCreater = new NameCreaterAll();
-    }
-    get rnd_Itm() : SctItm {
-        let name = this.nameCreater.create();
-        return new SctItm(name.html_QUESTER(100),'');
-    }
-    Copy() : ISctItm_Selector
-    {
-        let result = new selector_human();
-        return result;
-    }
-}
 
 
 
@@ -2419,7 +2395,6 @@ class news_docs_maker extends docs_maker {
         super();
 
         this.dic_push(new selector_writer());
-        this.dic_push(new selector_quester());
         this.dic_push(new selector_title());
         this.dic_push(new selector_doc());
         this.dic_push(new selector_c01());

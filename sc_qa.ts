@@ -1,6 +1,6 @@
 function set_qa()
 {
-    set_header_menu(1);
+    set_header_menu(3);
 
     scrollTo(0,0);
 
@@ -9,7 +9,7 @@ function set_qa()
     html += '<h1>';
     html += 'Q&A';
     html += '<small>';
-    html += 'Q00.02 test';
+    html += ' Q00.03 test';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -45,6 +45,8 @@ function make_qa()
     html += '">';
 
     html += Make_Q();
+    html += Make_A();
+
 
     // html += '<h2 id="qa_title">';
     // html += '<span style="border-bottom: solid 2px #FFFFFF;">';
@@ -118,11 +120,11 @@ function Make_Q() : string {
     html += 'padding:    10px; ';
     html += 'border:     0.5px solid #606060;';
     html += 'border-radius:  1%;';
-    // html += 'background: ';
-    // html += 'linear-gradient(0deg,rgba(0,0,0,0.6),rgba(0,0,0,0.8)),';
-    // html += 'url(./pics/@PIC_Q@);';
-    // html += 'background-position: center center;';
-    // html += 'background-size: cover;';
+    html += 'background: ';
+    html += 'linear-gradient(0deg,rgba(10,0,30,0.6),rgba(10,0,30,0.8)),';
+    html += 'url(./pics/QA/@PIC_Q@);';
+    html += 'background-position: center center;';
+    html += 'background-size: cover;';
     html += '">';
     
     html += '@QUESTER@';
@@ -146,13 +148,137 @@ function Make_Q() : string {
     return html;
 }
 
+function Make_A() : string {
+    let html = '';
+    html += '<div id="q_box" ';
+    html += 'style="';
+    html += 'margin:     5px; ';
+    html += 'padding:    10px; ';
+    html += 'border:     0.5px solid #606060;';
+    html += 'border-radius:  1%;';
+    html += 'background: ';
+    html += 'linear-gradient(0deg,rgba(80,80,50,0.6),rgba(80,80,50,0.8)),';
+    html += 'url(./pics/QA/@PIC_A@);';
+    html += 'background-position: center center;';
+    html += 'background-size: cover;';
+    html += '">';
+    
+    html += '@ADVICER@';
+
+    html += '<br>';
+
+    html += '<p id="q_title">';
+    html += '私の@L_PART@が、@KEY@ばかりして@THINK@しています。';
+    html += '</p>';
+
+    html += '<p id="q_doc">';
+    html += '私の@L_PART@が、@KEY@ばかりして@THINK@しています。';
+    html += '私の@L_PART@が、@KEY@ばかりして@THINK@しています。';
+    html += '私の@L_PART@が、@KEY@ばかりして@THINK@しています。';
+    html += '私の@L_PART@が、@KEY@ばかりして@THINK@しています。';
+    html += '私の@L_PART@が、@KEY@ばかりして@THINK@しています。';
+    html += '私の@L_PART@が、@KEY@ばかりして@THINK@しています。';
+    html += '私の@L_PART@が、@KEY@ばかりして@THINK@しています。';
+    html += '私の@L_PART@が、@KEY@ばかりして@THINK@しています。';
+    html += '</p>';
+
+
+    html += '</div>';
+
+    return html;
+}
+
+
 class qa_docs_maker extends news_docs_maker {
     constructor(){
         super();
+        this.dic_push(new selector_pic_q());
+        this.dic_push(new selector_pic_a());
+        this.dic_push(new selector_quester());
+        this.dic_push(new selector_advicer());
         this.dic_push(new locker_part());
     }
 }
 
+class selector_quester 
+    extends ItmArray<SctItm>
+    implements ISctItm_Selector 
+{
+    public nameCreater : INameCreater;
+    public itm_key : string;
+    public pic_key : string;
+    constructor()
+    {
+        super();
+        this.itm_key = "@QUESTER@";
+        this.pic_key = "";
+        this.nameCreater = new NameCreaterAll();
+    }
+    get rnd_Itm() : SctItm {
+        let name = this.nameCreater.create();
+        return new SctItm(name.html_QUESTER(100),'');
+    }
+    Copy() : ISctItm_Selector
+    {
+        let result = new selector_human();
+        return result;
+    }
+}
+class selector_advicer 
+    extends ItmArray<SctItm>
+    implements ISctItm_Selector 
+{
+    public nameCreater : INameCreater;
+    public itm_key : string;
+    public pic_key : string;
+    constructor()
+    {
+        super();
+        this.itm_key = "@ADVICER@";
+        this.pic_key = "";
+        this.nameCreater = new NameCreaterAll();
+    }
+    get rnd_Itm() : SctItm {
+        let name = this.nameCreater.create();
+        return new SctItm(name.html_ADVICER(100),'');
+    }
+    Copy() : ISctItm_Selector
+    {
+        let result = new selector_human();
+        return result;
+    }
+}
+
+
+class selector_pic_q extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@PIC_Q@');
+        this.itms = [
+            new SctItm('Q01.jpg')
+            ,
+            new SctItm('Q02.jpg')
+            ,
+            new SctItm('Q03.jpg')
+            ,
+            new SctItm('Q04.jpg')
+        ]
+    }
+}
+class selector_pic_a extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@PIC_A@');
+        this.itms = [
+            new SctItm('A01.jpg')
+            ,
+            new SctItm('A02.jpg')
+            ,
+            new SctItm('A03.jpg')
+            ,
+            new SctItm('A04.jpg')
+        ]
+    }
+}
+    
 
 // 問題の相手
 class locker_part extends SctItm_SelectLocker implements ISctItm_Selector{
@@ -161,6 +287,15 @@ class locker_part extends SctItm_SelectLocker implements ISctItm_Selector{
         this.Add(itms_partner);
     }
 }
+
+// 問題
+class locker_KEY extends SctItm_SelectLocker implements ISctItm_Selector{
+    constructor(){
+        super('@L_KEY@');
+        this.Add(itms_accident);
+    }
+}
+
 
 
 
