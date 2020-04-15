@@ -44,7 +44,8 @@ interface INmItm {
 
     to_FilePath(in_Age? : string) : string;
 
-    html(in_picsize : number) : string;
+    html_WRITER(in_picsize : number) : string;
+    html_QUESTER(in_picsize : number) : string;
 
 }
 
@@ -61,11 +62,13 @@ class NmItm implements INmItm {
         this.NmAgeNum = AgeCode_to_Num(in_NmAge);
     }
 
-    html(in_picsize : number) {
+    html_WRITER(in_picsize : number) {
         let html = '';
         html += '<div id="face_pic_R">';
         html += '<figure>';
-        html += '<img src="pics/FACE/' + this.to_FilePath() + '" width="50px">';
+        html += '<img src="pics/FACE/' + this.to_FilePath() + '" width="' 
+            + in_picsize.toString() 
+            + 'px">';
         html += '</figure>';
         html += '</div>';
     
@@ -75,8 +78,30 @@ class NmItm implements INmItm {
         return html;
     }
 
+    html_QUESTER(in_picsize : number) {
+        let html = '';
+        html += '<div id="face_pic_L">';
+        html += '<figure>';
+        html += '<img src="pics/FACE/' + this.to_FilePath() + '" width="' 
+            + in_picsize.toString() 
+            + 'px">';
+        html += '</figure>';
+        html += '</div>';
+    
+        html += '<h4 id="quester" align="left">';
+        html += '<big>' + this.NameAge + '</big>' + ' @WHO2@ ';
+        html += '</h4>';
+        return html;
+    }
+
+
     get NameAge() {
-        return '<big>' + this.NmStr + '</big>' + '(' + this.NmAgeNum.toString() + ')';
+        return '<big>' 
+        + this.NmStr 
+        + '</big>' 
+        + '(' 
+        + this.NmAgeNum.toString() 
+        + ')';
     }
 
     get NmAge() {

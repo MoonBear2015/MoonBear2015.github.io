@@ -2572,7 +2572,6 @@ const   cods_ad_danger = [
     new SctCod_Mv('|覚束|おぼつか|ない')
 ];
 
-
 const   cods_ad_etc = [
     new SctCod_Mv('|新|あたら|しい')
     ,
@@ -2597,6 +2596,8 @@ const   cods_ad_etc = [
     new SctCod_Mv('|小|ちい|さい')
     ,
     new SctCod_Mv('|尊|とうと|い')
+    ,
+    new SctCod_Mv('|年若|としわか|い')
     ,
     new SctCod_Mv('|憎|にく|い')
     ,
@@ -4218,5 +4219,179 @@ const   cods_jougo = [
     new SctCod_Km('|戦々|わなわな|')
     ,
     new SctCod_Km('|我々|われわれ|')
+];
+
+const itms_partner = [
+    new SctItm('知り合い')
+    ,
+    new SctItm('友達')
+    ,
+    new SctItm('彼女')
+    ,
+    new SctItm('彼氏')
+    ,
+    new SctItm('恋人')
+    ,
+    new SctItm('婚約者')
+    ,
+    new SctItm('嫁')
+    ,
+    new SctItm('夫')
+    ,
+    new SctItm('父')
+    ,
+    new SctItm('母')
+    ,
+    new SctItm('娘')
+    ,
+    new SctItm('息子')
+    ,
+    new SctItm('孫')
+    ,
+    new SctItm('ひ孫')
+    ,
+    new SctItm('妹')
+    ,
+    new SctItm('弟')
+    ,
+    new SctItm('姉')
+    ,
+    new SctItm('兄')
+    ,
+    new SctItm('師匠')
+    ,
+    new SctItm('弟子')
+    ,
+    new SctItm('恩師')
+    ,
+    new SctItm('愛弟子')
+    ,
+    new SctItm('雇い主')
+    ,
+    new SctItm('上司')
+    ,
+    new SctItm('部下')
+    ,
+    new SctItm('お客様')
+    ,
+    new SctItm('顧客')
+    ,
+    new SctItm('取引先')
+    ,
+    new SctItm('メイド')
+    ,
+    new SctItm('執事')
+    ,
+    new SctItm('秘書')
+    ,
+    new SctItm('ボス')
+    ,
+    new SctItm('愛人')
+    ,
+    new SctItm('不倫相手')
+    ,
+    new SctItm('相方')
+    ,
+    new SctItm('ライバル')
+    ,
+    new SctItm('親の仇')
+    ,
+    new SctItm('マスコミ')
+]
+
+const   itms_accident = [
+    new SctItm('虐待行為')
+    ,
+    new SctItm('婦女暴行')
+    ,
+    new SctItm('人種差別')
+    ,
+    new SctItm('暗黒化')
+    ,
+    new SctItm('無差別殺人')
+    ,
+    new SctItm('殺戮行為')
+    ,
+    new SctItm('犯罪行為')
+    ,
+    new SctItm('強盗殺人')
+    ,
+    new SctItm('辻斬り')
+    ,
+    new SctItm('重大事件')
+    ,
+    new SctItm('大災害')
+    ,
+    new SctItm('傷害事件')
+    ,
+    new SctItm('虐殺行為')
+    ,
+    new SctItm('大量虐殺')
+    ,
+    new SctItm('妨害工作')
+    ,
+    new SctItm('人種差別')
+    ,
+    new SctItm('暴力行為')
+    ,
+    new SctItm('乱痴気騒ぎ')
+    ,
+    new SctItm('乱交パーティー')
+    ,
+    new SctItm('乱闘騒ぎ')
+    ,
+    new SctItm('大喧嘩')
+    ,
+    new SctItm('不法侵入')
+    ,
+    new SctItm('同時多発テロ')
+    ,
+    new SctItm('スパイ容疑')
+];
+
+const   itms_festival = [
+    new SctItm('新年会')
+    ,
+    new SctItm('卒業式')
+    ,
+    new SctItm('記念撮影')
+    ,
+    new SctItm('入学式')
+    ,
+    new SctItm('海水浴')
+    ,
+    new SctItm('運動会')
+    ,
+    new SctItm('キャンプファイヤー')
+    ,
+    new SctItm('フォークダンス')
+    ,
+    new SctItm('文化祭')
+    ,
+    new SctItm('祝賀会')
+    ,
+    new SctItm('大掃除')
+    ,
+    new SctItm('餅つき大会')
+    ,
+    new SctItm('忘年会')
+    ,
+    new SctItm('雪合戦')
+    ,
+    new SctItm('結婚式')
+    ,
+    new SctItm('送別会')
+    ,
+    new SctItm('お誕生日会')
+    ,
+    new SctItm('同窓会')
+    ,
+    new SctItm('座談会')
+    ,
+    new SctItm('街頭演説')
+    ,
+    new SctItm('大道芸')
+    ,
+    new SctItm('選挙運動')
 ];
 

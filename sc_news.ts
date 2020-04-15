@@ -206,7 +206,7 @@ class selector_writer
     }
     get rnd_Itm() : SctItm {
         let name = this.nameCreater.create();
-        return new SctItm(name.html(70),'');
+        return new SctItm(name.html_WRITER(50),'');
     }
     Copy() : ISctItm_Selector
     {
@@ -214,6 +214,32 @@ class selector_writer
         return result;
     }
 }
+
+class selector_quester 
+    extends ItmArray<SctItm>
+    implements ISctItm_Selector 
+{
+    public nameCreater : INameCreater;
+    public itm_key : string;
+    public pic_key : string;
+    constructor()
+    {
+        super();
+        this.itm_key = "@QUESTER@";
+        this.pic_key = "";
+        this.nameCreater = new NameCreaterAll();
+    }
+    get rnd_Itm() : SctItm {
+        let name = this.nameCreater.create();
+        return new SctItm(name.html_QUESTER(100),'');
+    }
+    Copy() : ISctItm_Selector
+    {
+        let result = new selector_human();
+        return result;
+    }
+}
+
 
 
 
@@ -1000,109 +1026,12 @@ class selector_do extends SctItm_SelectLocker implements ISctItm_Selector{
     }
 }
 
-// 事象・事件・事故
+// 事象・事件・事故・行事
 class selector_key extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@KEY@');
-        this.itms = [
-            //
-            // nega 
-            //
-            new SctItm('虐待行為')
-            ,
-            new SctItm('婦女暴行')
-            ,
-            new SctItm('人種差別')
-            ,
-            new SctItm('暗黒化')
-            ,
-            new SctItm('無差別殺人')
-            ,
-            new SctItm('殺戮行為')
-            ,
-            new SctItm('犯罪行為')
-            ,
-            new SctItm('強盗殺人')
-            ,
-            new SctItm('辻斬り')
-            ,
-            new SctItm('重大事件')
-            ,
-            new SctItm('大災害')
-            ,
-            new SctItm('傷害事件')
-            ,
-            new SctItm('虐殺行為')
-            ,
-            new SctItm('大量虐殺')
-            ,
-            new SctItm('妨害工作')
-            ,
-            new SctItm('人種差別')
-            ,
-            new SctItm('暴力行為')
-            ,
-            new SctItm('乱痴気騒ぎ')
-            ,
-            new SctItm('乱交パーティー')
-            ,
-            new SctItm('乱闘騒ぎ')
-            ,
-            new SctItm('大喧嘩')
-            ,
-            new SctItm('不法侵入')
-            ,
-            new SctItm('同時多発テロ')
-            ,
-            new SctItm('スパイ容疑')
-            ,
-            //
-            // posi 
-            //
-            new SctItm('新年会')
-            ,
-            new SctItm('卒業式')
-            ,
-            new SctItm('記念撮影')
-            ,
-            new SctItm('入学式')
-            ,
-            new SctItm('海水浴')
-            ,
-            new SctItm('運動会')
-            ,
-            new SctItm('キャンプファイヤー')
-            ,
-            new SctItm('フォークダンス')
-            ,
-            new SctItm('文化祭')
-            ,
-            new SctItm('祝賀会')
-            ,
-            new SctItm('大掃除')
-            ,
-            new SctItm('餅つき大会')
-            ,
-            new SctItm('忘年会')
-            ,
-            new SctItm('雪合戦')
-            ,
-            new SctItm('結婚式')
-            ,
-            new SctItm('送別会')
-            ,
-            new SctItm('お誕生日会')
-            ,
-            new SctItm('同窓会')
-            ,
-            new SctItm('座談会')
-            ,
-            new SctItm('街頭演説')
-            ,
-            new SctItm('大道芸')
-            ,
-            new SctItm('選挙運動')
-        ];
+        this.Add(itms_accident);
+        this.Add(itms_festival);
     }
 }
 
@@ -2490,6 +2419,7 @@ class news_docs_maker extends docs_maker {
         super();
 
         this.dic_push(new selector_writer());
+        this.dic_push(new selector_quester());
         this.dic_push(new selector_title());
         this.dic_push(new selector_doc());
         this.dic_push(new selector_c01());

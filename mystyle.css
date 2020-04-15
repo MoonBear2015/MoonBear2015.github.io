@@ -113,8 +113,18 @@ figure {
     padding: 10px 10px;
     float: right;
 }
+#face_pic_L {
+    /* width: 200px; */
+    /* margin: 10px 10px; */
+    padding: 10px 10px;
+    float: left;
+}
 
 #writer {
+    font-size: 14px;
+    color: #b0b0b0;
+}
+#quester {
     font-size: 14px;
     color: #b0b0b0;
 }
