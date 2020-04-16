@@ -38,7 +38,7 @@ function set_poem()
         alert('not found "site_main"');
         return;
     }
-    elem.innerHTML = html;
+    elem.innerHTML = ruby_change(html);
 }
 
 function make_poem() : string
@@ -94,7 +94,7 @@ function make_poem() : string
         }
     }
 
-    return ruby_change(html);
+    return html;
 }
 
 function make_poem_sub() : string

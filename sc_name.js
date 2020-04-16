@@ -25,7 +25,8 @@ function AgeCode_to_Num(in_AgeCode) {
     return rnd_minmax(8, 60);
 }
 class NmItm {
-    constructor(in_NmStr, in_NmSex, in_NmTyp, in_NmAge) {
+    constructor(in_FstNmStr, in_NmStr, in_NmSex, in_NmTyp, in_NmAge) {
+        this.FstNmStr = in_FstNmStr;
         this.NmStr = in_NmStr;
         this.NmSex = in_NmSex;
         this.NmTyp = in_NmTyp;
@@ -88,15 +89,18 @@ class NmItm {
         this.NmAgeNum = AgeCode_to_Num(in_NmAge);
     }
     Copy() {
-        return new NmItm(this.NmStr, this.NmSex, this.NmTyp, this.NmAge);
+        return new NmItm(this.FstNmStr, this.NmStr, this.NmSex, this.NmTyp, this.NmAge);
     }
-    set Paset(in_Nm) {
+    set Past(in_Nm) {
+        this.FstNmStr = in_Nm.FstNmStr;
         this.NmStr = in_Nm.NmStr;
         this.NmSex = in_Nm.NmSex;
         this.NmTyp = in_Nm.NmTyp;
         this.NmAge = in_Nm.NmAge;
     }
     Add(in_Nm) {
+        if (in_Nm.FstNmStr != '')
+            this.FstNmStr = in_Nm.FstNmStr;
         if (in_Nm.NmStr != '')
             this.NmStr += in_Nm.NmStr;
         if (in_Nm.NmSex != '')
@@ -120,33 +124,33 @@ class NmItm {
 }
 class NmNon extends NmItm {
     constructor(in_Str) {
-        super(in_Str, '', '', '');
+        super('', in_Str, '', '', '');
     }
 }
 class NmAgM extends NmItm {
     constructor(in_Str) {
-        super(in_Str, '', '', '');
+        super(in_Str, in_Str, '', '', '');
         this.NmSex = 'M';
         this.NmTyp = 'A';
     }
 }
 class NmAgF extends NmItm {
     constructor(in_Str) {
-        super(in_Str, '', '', '');
+        super(in_Str, in_Str, '', '', '');
         this.NmSex = 'F';
         this.NmTyp = 'A';
     }
 }
 class NmWsM extends NmItm {
     constructor(in_Str) {
-        super(in_Str, '', '', '');
+        super(in_Str, in_Str, '', '', '');
         this.NmSex = 'M';
         this.NmTyp = 'W';
     }
 }
 class NmWsF extends NmItm {
     constructor(in_Str) {
-        super(in_Str, '', '', '');
+        super(in_Str, in_Str, '', '', '');
         this.NmSex = 'F';
         this.NmTyp = 'W';
     }
@@ -179,7 +183,7 @@ class NameCreater {
         if (this.conect != '')
             nm01.NmStr += this.conect;
         nm01.Add(nm02);
-        nm01.NmStr = ruby_change(nm01.NmStr);
+        // nm01.NmStr = ruby_change(nm01.NmStr);
         return nm01;
     }
 }

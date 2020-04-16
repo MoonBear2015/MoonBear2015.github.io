@@ -19,7 +19,7 @@ function set_news() {
         alert('not found "site_main"');
         return;
     }
-    elem.innerHTML = html;
+    elem.innerHTML = ruby_change(html);
 }
 function make_news() {
     let html = '';

@@ -28,6 +28,7 @@ function AgeCode_to_Num(in_AgeCode : string) : number
 
 
 interface INmItm {
+    FstNmStr : string;
     NmStr : string;
     NmSex : string;
     NmTyp : string;
@@ -36,7 +37,7 @@ interface INmItm {
     NameAge : string;
     Copy() : INmItm;
 
-    Paset : INmItm;
+    Past : INmItm;
 
     Add(in_Nm : INmItm): any;
 
@@ -51,12 +52,14 @@ interface INmItm {
 }
 
 class NmItm implements INmItm {
+    public FstNmStr : string;
     public NmStr : string;
     public NmSex : string;
     public NmTyp : string;
     public NmAgeNum : number;
-    constructor(in_NmStr : string,in_NmSex : string,in_NmTyp : string, in_NmAge : string)
+    constructor(in_FstNmStr : string, in_NmStr : string,in_NmSex : string,in_NmTyp : string, in_NmAge : string)
     {
+        this.FstNmStr = in_FstNmStr;
         this.NmStr = in_NmStr;
         this.NmSex = in_NmSex;
         this.NmTyp = in_NmTyp;
@@ -111,8 +114,6 @@ class NmItm implements INmItm {
         return html;
     }
 
-
-
     get NameAge() {
         return '<big>' 
         + this.NmStr 
@@ -130,10 +131,11 @@ class NmItm implements INmItm {
     }
 
     Copy() : INmItm {
-        return new NmItm(this.NmStr,this.NmSex,this.NmTyp,this.NmAge);
+        return new NmItm(this.FstNmStr,this.NmStr,this.NmSex,this.NmTyp,this.NmAge);
     }
     
-    set Paset(in_Nm : INmItm) {
+    set Past(in_Nm : INmItm) {
+        this.FstNmStr = in_Nm.FstNmStr;
         this.NmStr = in_Nm.NmStr;
         this.NmSex = in_Nm.NmSex;
         this.NmTyp = in_Nm.NmTyp;
@@ -142,6 +144,7 @@ class NmItm implements INmItm {
 
     Add(in_Nm : INmItm)
     {
+        if (in_Nm.FstNmStr != '') this.FstNmStr = in_Nm.FstNmStr;
         if (in_Nm.NmStr != '') this.NmStr += in_Nm.NmStr;
         if (in_Nm.NmSex != '') this.NmSex = in_Nm.NmSex;
         if (in_Nm.NmTyp != '') this.NmTyp = in_Nm.NmTyp;
@@ -167,14 +170,14 @@ class NmItm implements INmItm {
 class NmNon extends NmItm implements INmItm {
     constructor(in_Str : string)
     {
-        super(in_Str,'','','');
+        super('',in_Str,'','','');
     }
 }
 
 class NmAgM extends NmItm implements INmItm {
     constructor(in_Str : string)
     {
-        super(in_Str,'','','');
+        super(in_Str,in_Str,'','','');
         this.NmSex = 'M';
         this.NmTyp = 'A';
     }
@@ -182,7 +185,7 @@ class NmAgM extends NmItm implements INmItm {
 class NmAgF extends NmItm implements INmItm {
     constructor(in_Str : string)
     {
-        super(in_Str,'','','');
+        super(in_Str,in_Str,'','','');
         this.NmSex = 'F';
         this.NmTyp = 'A';
     }
@@ -191,7 +194,7 @@ class NmAgF extends NmItm implements INmItm {
 class NmWsM extends NmItm implements INmItm {
     constructor(in_Str : string)
     {
-        super(in_Str,'','','');
+        super(in_Str,in_Str,'','','');
         this.NmSex = 'M';
         this.NmTyp = 'W';
     }
@@ -199,7 +202,7 @@ class NmWsM extends NmItm implements INmItm {
 class NmWsF extends NmItm implements INmItm {
     constructor(in_Str : string)
     {
-        super(in_Str,'','','');
+        super(in_Str,in_Str,'','','');
         this.NmSex = 'F';
         this.NmTyp = 'W';
     }
@@ -216,7 +219,6 @@ class NameCreaterAll implements INameCreater {
         this.creaters.push(new NameCreater_rus());
         this.creaters.push(new NameCreater_jpn());
         this.creaters.push(new NameCreater_kor());
-
     }
 
     public create() : INmItm {
@@ -247,7 +249,7 @@ class NameCreater implements INameCreater {
         let nm02 = this.name02[n02].Copy();
         if (this.conect != '') nm01.NmStr += this.conect;
         nm01.Add(nm02);
-        nm01.NmStr = ruby_change(nm01.NmStr);
+        // nm01.NmStr = ruby_change(nm01.NmStr);
         return nm01;
     }
 }
