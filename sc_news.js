@@ -169,6 +169,23 @@ class selector_age extends ItmArray {
         return result;
     }
 }
+class selector_age2 extends ItmArray {
+    constructor() {
+        super();
+        this.itm_key = "@AGE2@";
+        this.pic_key = "";
+        this.nameCreater = new NameCreaterAll();
+    }
+    get rnd_Itm() {
+        let age = "";
+        age = rnd_minmax(10, 60).toString() + "歳";
+        return new SctItm(age, '');
+    }
+    Copy() {
+        let result = new selector_age();
+        return result;
+    }
+}
 class selector_title extends SctItm_Selector {
     constructor() {
         super('@NEWS_TITLE@');
@@ -1442,6 +1459,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_class());
         this.dic_push(new selector_call());
         this.dic_push(new selector_age());
+        this.dic_push(new selector_age2());
         this.dic_push(new selector_say());
         this.dic_push(new selector_answer());
         this.dic_push(new selector_conect());

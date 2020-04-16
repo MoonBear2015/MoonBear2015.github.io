@@ -246,6 +246,34 @@ class selector_age
 
 }
 
+class selector_age2
+    extends ItmArray<SctItm>
+    implements ISctItm_Selector 
+{
+    public nameCreater : INameCreater;
+    public itm_key : string;
+    public pic_key : string;
+    constructor()
+    {
+        super();
+        this.itm_key = "@AGE2@";
+        this.pic_key = "";
+        this.nameCreater = new NameCreaterAll();
+    }
+    get rnd_Itm() : SctItm {
+        let age : string = "";
+        age = rnd_minmax(10,60).toString() + "歳";
+        return new SctItm(age,'');
+    }
+    Copy() : ISctItm_Selector
+    {
+        let result = new selector_age();
+        return result;
+    }
+
+}
+
+
 class selector_title extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@NEWS_TITLE@');
@@ -2431,6 +2459,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_class());
         this.dic_push(new selector_call());
         this.dic_push(new selector_age());
+        this.dic_push(new selector_age2());
         this.dic_push(new selector_say());
         this.dic_push(new selector_answer());
         this.dic_push(new selector_conect());

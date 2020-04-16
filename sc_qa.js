@@ -7,7 +7,7 @@ function set_qa() {
     html += '<h1>';
     html += 'Q&A';
     html += '<small>';
-    html += ' Q00.04 test';
+    html += ' Q00.05 test';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -113,7 +113,6 @@ class qa_docs_maker extends news_docs_maker {
     constructor() {
         super();
         this.dic_push(new selector_q_title());
-        this.dic_push(new selector_my_part());
         this.dic_push(new selector_q_init());
         this.dic_push(new selector_pic_q());
         this.dic_push(new selector_pic_a());
@@ -197,20 +196,8 @@ class selector_q_title extends SctItm_Selector {
             new SctItm('@L_PART@が@L_KEY@を起こしてしまいました'),
             new SctItm('助けて！ @L_PART@がまるで@NICK@なんです'),
             new SctItm('私の@L_PART@が@NICK@にしか見えません'),
+            new SctItm('私の@L_PART@が@KEI2@で仕方がありません'),
             new SctItm('最近、私の@L_PART@が@KEI2@で@THINK@しています')
-        ];
-    }
-}
-class selector_my_part extends SctItm_Selector {
-    constructor() {
-        super('@MY_PART@');
-        this.itms = [
-            new SctItm('@L_PART@'),
-            new SctItm('@KEI@@L_PART@'),
-            new SctItm('@CLASS@をしている@L_PART@'),
-            new SctItm('@KEY@に夢中の@L_PART@'),
-            new SctItm('@KEY@ばかりしている@L_PART@'),
-            new SctItm(rnd_minmax(10, 60).toString() + '歳になる@L_PART@')
         ];
     }
 }
@@ -218,9 +205,12 @@ class selector_q_init extends SctItm_Selector {
     constructor() {
         super('@Q_INIT@');
         this.itms = [
-            new SctItm('私には@MY_PART@がいます'),
-            new SctItm('私の@MY_PART@は、いつも@KEY@ばかりしています'),
-            new SctItm('私の@MY_PART@の話です')
+            new SctItm('私の@L_PART@に@THINK@しています'),
+            new SctItm('私の@KEI@@L_PART@に@THINK@しています'),
+            new SctItm('私には@AGE2@になる@L_PART@がいます'),
+            new SctItm('私には@L_KEY@ばかりしている@L_PART@がいます'),
+            new SctItm('私が@AGE2@の頃の話です'),
+            new SctItm('私が@AGE2@の頃の話です')
         ];
     }
 }
