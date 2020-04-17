@@ -20,6 +20,7 @@ interface ISctCod extends ISctItm,ITest {
     CodLength : number;
     to_SctItm() : ISctItm;
     to_SctItm_NoRubi() : ISctItm;
+    to_SctItm_Rubi() : ISctItm;
     to_length_itms(in_length : number,in_KeyA : string,in_KeyB : string,in_MinA : number,in_MinB : number)
      : Array<ISctItm>;
 }
@@ -96,6 +97,11 @@ class SctCod extends SctItm implements ISctCod,ITest {
     to_SctItm_NoRubi() : ISctItm {
         return new SctItm(ruby_no(this.Wrd),this.SctPic);
     }
+
+    to_SctItm_Rubi() : ISctItm {
+        return new SctItm(ruby_kana(this.Wrd),this.SctPic);
+    }
+
 
     to_length_itms(in_length : number)
      : Array<ISctItm>

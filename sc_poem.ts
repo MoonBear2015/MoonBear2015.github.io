@@ -536,6 +536,7 @@ class Gene_tema26 extends Gene_Poemer {
     constructor(){
         super('@TM26','@PIC_TEMA@');
         this.Add_cods(cods_country);
+        this.Add_cods(cods_country2);
     }
 }
 

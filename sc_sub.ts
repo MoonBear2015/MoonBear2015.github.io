@@ -103,6 +103,16 @@ function cods_to_itms(in_cods : ISctCod[]) : ISctItm[]
     return results;
 }
 
+function cods_ruby_to_itms(in_cods : ISctCod[]) : ISctItm[]
+{
+    let results = new Array<ISctItm>();
+    in_cods.forEach((cod) => {
+        results.push(cod.to_SctItm_Rubi());
+    });
+    return results;
+}
+
+
 function ruby_check(in_str : string) : boolean {
     let cnt = char_cnt(in_str,'\|');
     let sts : boolean = ((cnt % 3) == 0);

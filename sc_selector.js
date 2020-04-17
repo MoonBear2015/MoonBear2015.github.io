@@ -56,6 +56,9 @@ class SctCod extends SctItm {
     to_SctItm_NoRubi() {
         return new SctItm(ruby_no(this.Wrd), this.SctPic);
     }
+    to_SctItm_Rubi() {
+        return new SctItm(ruby_kana(this.Wrd), this.SctPic);
+    }
     to_length_itms(in_length) {
         let results = new Array();
         if (in_length < this.CodLength) {

@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N02.21';
+    html += 'N02.22';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -262,6 +262,9 @@ class selector_who extends SctItm_Selector {
         super('@WHO@');
         this.itms = [
             new SctItm('@CLASS@の@HUMAN@@AGE@'),
+            new SctItm('@COUNTRY@出身の@HUMAN@@AGE@'),
+            new SctItm('@COUNTRY@在住の@HUMAN@@AGE@'),
+            new SctItm('@COUNTRY@で@KEID@@ASSES@@HUMAN@@AGE@'),
             new SctItm('「@CALL@」と@KEID@@ASSES@@HUMAN@@AGE@'),
             new SctItm('「@CALL@」と@KEID@@ASSES@@CLASS@の@HUMAN@@AGE@'),
             new SctItm('@MANYPEOPLE@より「@CALL@」と@ASSES@@CLASS@の@HUMAN@@AGE@')
@@ -273,6 +276,8 @@ class selector_who2 extends SctItm_Selector {
         super('@WHO2@');
         this.itms = [
             new SctItm('@CLASS@'),
+            new SctItm('@COUNTRY@出身'),
+            new SctItm('@COUNTRY@在住'),
             new SctItm('「@CALL@」'),
             new SctItm('「@CALL@」と@KEID@@ASSES@@PEOPLE@'),
             new SctItm('@MANYPEOPLE@より「@CALL@」と@KEID@@ASSES@@PEOPLE@')
@@ -984,6 +989,13 @@ class selector_kd extends SctItm_Selector {
         this.Add(cods_to_itms(cods_adv_sense));
     }
 }
+class selector_country extends SctItm_Selector {
+    constructor() {
+        super('@COUNTRY@');
+        this.Add(cods_ruby_to_itms(cods_country));
+        this.Add(cods_to_itms(cods_country2));
+    }
+}
 // 敬称 の～
 class selector_nickname extends SctItm_Selector {
     constructor() {
@@ -1448,6 +1460,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_many());
         this.dic_push(new selector_keiyo());
         this.dic_push(new selector_keido());
+        this.dic_push(new selector_country());
         this.dic_push(new selector_km());
         this.dic_push(new selector_k());
         this.dic_push(new selector_kd());

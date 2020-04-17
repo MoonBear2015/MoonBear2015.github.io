@@ -899,11 +899,11 @@ const cods_load = [
 const cods_country = [
     new SctCod_TI('|国々|くにぐに|', 'worldcountry.jpg'),
     new SctCod_TI('|氷島|アイスランド|'),
-    new SctCod_TI('愛蘭、|愛蘭土|アイルランド|'),
+    new SctCod_TI('|愛蘭土|アイルランド|'),
     new SctCod_TI('|阿塞拜疆|アゼルバイジャン|'),
     new SctCod_TI('|阿富汗斯坦|アフガニスタン|'),
     new SctCod_TI('|亜米利加|アメリカ|'),
-    new SctCod_TI('阿爾及、|阿留世里屋|アルジェリア|'),
+    new SctCod_TI('|阿留世里屋|アルジェリア|'),
     new SctCod_TI('|亜爾然丁|アルゼンチン|'),
     new SctCod_TI('|阿爾巴尼亜|アルバニア|'),
     new SctCod_TI('|亜美尼亜|アルメニア|'),
@@ -1039,14 +1039,14 @@ const cods_country = [
     new SctCod_TI('|暮利比亜|ボリビア|'),
     new SctCod_TI('|葡萄牙|ポルトガル|'),
     new SctCod_TI('|洪都拉斯|ホンジュラス|'),
-    new SctCod_TI('|馬歇爾諸島|マーシャしょとう|'),
+    new SctCod_TI('|馬歇爾|マーシャ|'),
     new SctCod_TI('|馬其頓|マケドニア|'),
     new SctCod_TI('|馬達加斯加|マダガスカル|'),
     new SctCod_TI('|馬拉維|マラウイ|'),
     new SctCod_TI('|馬耳他|マルタ|'),
     new SctCod_TI('|馬来西亜|マレーシア|'),
     new SctCod_TI('|密克羅尼西亜|ミクロネシア|'),
-    new SctCod_TI('|南阿弗利加|みなみアフリカ|'),
+    new SctCod_TI('|阿弗利加|アフリカ|'),
     new SctCod_TI('|緬甸|ミャンマー|'),
     new SctCod_TI('|墨西哥|メキシコ|'),
     new SctCod_TI('|毛利西亜|モーリシャス|'),
@@ -1070,6 +1070,14 @@ const cods_country = [
     new SctCod_TI('|莱索托|レソト|'),
     new SctCod_TI('|黎巴嫩|レバノン|'),
     new SctCod_TI('|露西亜|ロシア|')
+];
+const cods_country2 = [
+    new SctCod_TI('|日本|にほん|'),
+    new SctCod_TI('|韓国|かんこく|'),
+    new SctCod_TI('|北朝鮮|きたちょうせん|'),
+    new SctCod_TI('|台湾|たいわん|'),
+    new SctCod_TI('|邪馬台国|やまたいこく|'),
+    new SctCod_TI('ガミラス|帝国|ていこく|')
 ];
 const cods_think = [
     new SctCod_TI('|想|おも|い', 'think.jpg'),

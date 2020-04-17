@@ -192,12 +192,11 @@ class selector_q_title extends SctItm_Selector {
     constructor() {
         super('@Q_TITLE@');
         this.itms = [
-            new SctItm('@L_PART@が@L_KEY@ばかりして@THINK@しています'),
-            new SctItm('@L_PART@が@L_KEY@を起こしてしまいました'),
+            new SctItm('私の@L_PART@に@THINK@しています'),
+            new SctItm('私の@L_PART@が@L_KEY@ばかりしています'),
             new SctItm('助けて！ @L_PART@がまるで@NICK@なんです'),
             new SctItm('私の@L_PART@が@NICK@にしか見えません'),
-            new SctItm('私の@L_PART@が@KEI2@で仕方がありません'),
-            new SctItm('最近、私の@L_PART@が@KEI2@で@THINK@しています')
+            new SctItm('私の@L_PART@が@KEI2@で仕方がありません')
         ];
     }
 }
