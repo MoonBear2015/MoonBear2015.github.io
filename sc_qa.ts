@@ -9,7 +9,7 @@ function set_qa()
     html += '<h1>';
     html += 'Q&A';
     html += '<small>';
-    html += ' Q00.06 test';
+    html += ' Q00.05 test';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -271,12 +271,6 @@ class selector_q_title extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('私の@L_PART@が@NICK@にしか見えません')
             ,
             new SctItm('私の@L_PART@が@KEI2@で仕方がありません')
-            ,
-            new SctItm('@L_PART@の@L_KEY@を止めさせたいんです')
-            ,
-            new SctItm('@L_PART@の@L_KEY@が長続きしません')
-            ,
-            new SctItm('@L_PART@と@L_KEY@をしたいのですが')
         ]
     }
 }
