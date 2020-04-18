@@ -988,6 +988,8 @@ class selector_kd extends SctItm_Selector {
         super('@KEI4@');
         this.Add(cods_to_itms(cods_adv_beauty));
         this.Add(cods_to_itms(cods_adv_sense));
+        this.Add(cods_to_itms(cods_adv_danger));
+        this.Add(cods_to_itms(cods_adv_etc));
     }
 }
 class selector_country extends SctItm_Selector {

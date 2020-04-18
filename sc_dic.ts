@@ -2587,6 +2587,33 @@ const   cods_ad_danger = [
     ,
     new SctCod_Mv('|覚束|おぼつか|ない')
 ];
+const   cods_adv_danger = [
+    new SctCod_It('|危|あぶ|なく','danger.png')
+    ,
+    new SctCod_It('|危|あや|うく')
+    ,
+    new SctCod_It('|恐|おそ|ろしく')
+    ,
+    new SctCod_It('|怖|こわ|く')
+    ,
+    new SctCod_It('|凄|すさ|まじく')
+    ,
+    new SctCod_It('|空恐|そらおそ|ろしく')
+    ,
+    new SctCod_It('|酷|ひど|く')
+    ,
+    new SctCod_It('|険|けわ|しく')
+    ,
+    new SctCod_It('|怪|あや|しく')
+    ,
+    new SctCod_It('|如何|いかが|わしく')
+    ,
+    new SctCod_It('|心許|こころもと|なく')
+    ,
+    new SctCod_It('|疑|うたが|わしく')
+    ,
+    new SctCod_It('|覚束|おぼつか|なく')
+];
 
 const   cods_ad_etc = [
     new SctCod_Mv('|新|あたら|しい')
@@ -2625,6 +2652,45 @@ const   cods_ad_etc = [
     ,
     new SctCod_Mv('|喜|よろこ|ばしい')
 ];
+
+const   cods_adv_etc = [
+    new SctCod_It('|新|あたら|しく')
+    ,
+    new SctCod_It('|勇|いさ|ましく')
+    ,
+    new SctCod_It('|五月蠅|うるさ|く')
+    ,
+    new SctCod_It('|大|おお|きく')
+    ,
+    new SctCod_It('|賢|かしこ|く')
+    ,
+    new SctCod_It('|固|かた|く')
+    ,
+    new SctCod_It('|口|くち|うるさく')
+    ,
+    new SctCod_It('|素晴|すば|らしく')
+    ,
+    new SctCod_It('|凄|すご|く')
+    ,
+    new SctCod_It('|切|せつ|なく')
+    ,
+    new SctCod_It('|小|ちい|さく')
+    ,
+    new SctCod_It('|尊|とうと|く')
+    ,
+    new SctCod_It('|年若|としわか|く')
+    ,
+    new SctCod_It('|憎|にく|く')
+    ,
+    new SctCod_It('|憎|にく|たらしく')
+    ,
+    new SctCod_It('|物凄|ものすご|く')
+    ,
+    new SctCod_It('|柔|やわ|らかく')
+    ,
+    new SctCod_It('|喜|よろこ|ばしく')
+];
+
 
 const   cods_body = [
     new SctCod_It('|体|からだ|','body.jpg')
