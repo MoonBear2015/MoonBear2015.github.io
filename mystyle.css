@@ -84,7 +84,7 @@ li a:hover:not(#active) {
 
 #center_message{
     position: relative;
-    top: 40vh;
+    top: 20vh;
     text-align: center;
     z-index: -1;
 }

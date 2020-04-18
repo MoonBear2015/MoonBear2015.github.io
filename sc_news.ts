@@ -1592,12 +1592,30 @@ class selector_keiyo extends SctItm_Selector implements ISctItm_Selector {
         ];
     }
 }
+class selector_keiyo1 extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@KEI1@');
+        this.itms = [
+            new SctItm('@KEI2@な')
+            ,
+            new SctItm('@KEI2@で@KEI2@な')
+            // ,
+            // new SctItm('@KEI2@で@KEI2@、そして@KEI2@な')
+            ,
+            new SctItm('@KEI3@')
+            ,
+            new SctItm('@KEI2@で@KEI3@')
+            // ,
+            // new SctItm('@KEI2@で@KEI2@、そして@KEI3@')
+        ];
+    }
+}
 class selector_keido extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@KEID@');
         this.itms = [
-            new SctItm('')
-            ,
+            // new SctItm('')
+            // ,
             new SctItm('@KEI2@に')
             ,
             new SctItm('@KEI4@')
@@ -2044,6 +2062,28 @@ class selector_think extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('驚嘆')
             ,
             new SctItm('希望')
+            ,
+            new SctItm('夢想')
+            ,
+            new SctItm('妄想')
+            ,
+            new SctItm('欲情')
+            ,
+            new SctItm('嫉妬')
+            ,
+            new SctItm('軽蔑')
+            ,
+            new SctItm('後悔')
+            ,
+            new SctItm('恋慕')
+            ,
+            new SctItm('嫌悪')
+            ,
+            new SctItm('愛')
+            ,
+            new SctItm('満足')
+            ,
+            new SctItm('興奮')
         ];
     }
 }
@@ -2474,6 +2514,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_they());
         this.dic_push(new selector_many());
         this.dic_push(new selector_keiyo());
+        this.dic_push(new selector_keiyo1());
         this.dic_push(new selector_keido());
         this.dic_push(new selector_country());
         this.dic_push(new selector_km());

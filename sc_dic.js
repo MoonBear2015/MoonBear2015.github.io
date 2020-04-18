@@ -1327,7 +1327,8 @@ const cods_adv_color = [
 ];
 const cods_ad_beauty = [
     new SctCod_Mv('|美|うつく|しい', 'beauty.png'),
-    new SctCod_Mv('|美|うつく|しき'),
+    // new SctCod_Mv('|美|うつく|しき')
+    // ,
     new SctCod_Mv('|美々|びび|しい'),
     new SctCod_Mv('|神々|こうごう|しい'),
     new SctCod_Mv('|愛|あい|らしい'),
@@ -1577,6 +1578,11 @@ const cods_km = [
     new SctCod_Km('|攻撃的|こうげきてき|'),
     new SctCod_Km('|肯定的|こうていてき|'),
     new SctCod_Km('|困難|こんなん|'),
+    new SctCod_Km('|最悪|さいあく|'),
+    new SctCod_Km('|最高|さいこう|'),
+    new SctCod_Km('|最新|さいしん|'),
+    new SctCod_Km('|最低|さいてい|'),
+    new SctCod_Km('|災難|さいなん|'),
     new SctCod_Km('|残酷|ざんこく|')
     // ,
     // new SctCod_Km('|殺伐|さつばつ|')
