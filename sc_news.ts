@@ -1614,6 +1614,24 @@ class selector_keido extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@KEID@');
         this.itms = [
+            new SctItm('')
+            ,
+            new SctItm('@KEI2@に')
+            ,
+            new SctItm('@KEI4@')
+            // ,
+            // new SctItm('@KEI2@、そして、@KEI2@に')
+            // ,
+            // new SctItm('@KEI2@、そして、@KEI4@')
+            // ,
+            // new SctItm('@KEI4@、そして、@KEI4@')
+        ];
+    }
+}
+class selector_keido1 extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@KEID1@');
+        this.itms = [
             // new SctItm('')
             // ,
             new SctItm('@KEI2@に')
@@ -1643,7 +1661,7 @@ class selector_k extends SctItm_Selector implements ISctItm_Selector {
         this.Add(cods_to_itms(cods_ad_beauty));
         this.Add(cods_to_itms(cods_ad_danger));
         this.Add(cods_to_itms(cods_ad_sense));
-        this.Add(cods_to_itms(cods_ad_color));
+        // this.Add(cods_to_itms(cods_ad_color));
         this.Add(cods_to_itms(cods_ad_etc));
     }
 }
@@ -2516,6 +2534,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_keiyo());
         this.dic_push(new selector_keiyo1());
         this.dic_push(new selector_keido());
+        this.dic_push(new selector_keido1());
         this.dic_push(new selector_country());
         this.dic_push(new selector_km());
         this.dic_push(new selector_k());
