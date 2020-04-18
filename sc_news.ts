@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N02.22';
+    html += 'N02.23';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -1615,6 +1615,7 @@ class selector_km extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@KEI2@');
         this.Add(cods_to_itms(cods_km));
+        this.Add(itms_km);
     }
 }
 
@@ -1645,6 +1646,12 @@ class selector_country extends SctItm_Selector implements ISctItm_Selector {
     }
 }
 
+class selector_when extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@WHEN@');
+        this.Add(cods_to_itms(cods_when));
+    }
+}
 
 
 // 敬称 の～
@@ -2382,6 +2389,8 @@ class selector_conect extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('恐らく')
             ,
             new SctItm('すなわち')
+            ,
+            new SctItm('ところが')
           ];
     }
 }
@@ -2472,6 +2481,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_think());
         this.dic_push(new selector_who());
         this.dic_push(new selector_who2());
+        this.dic_push(new selector_when());
         this.dic_push(new selector_co());
         this.dic_push(new selector_human());
         this.dic_push(new selector_class());

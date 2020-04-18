@@ -1331,7 +1331,8 @@ const cods_ad_beauty = [
     new SctCod_Mv('|美々|びび|しい'),
     new SctCod_Mv('|神々|こうごう|しい'),
     new SctCod_Mv('|愛|あい|らしい'),
-    new SctCod_Mv('|愛|あい|らしき'),
+    // new SctCod_Mv('|愛|あい|らしき')
+    // ,
     new SctCod_Mv('|愛|あい|くるしい'),
     new SctCod_Mv('|愛|いと|おしい'),
     new SctCod_Mv('|可愛|かわい|い'),
@@ -1422,6 +1423,9 @@ const cods_where = [
 const cods_when = [
     new SctCod_It('|時|とき|', 'time.jpg'),
     new SctCod_It('|今|いま|'),
+    new SctCod_It('|過去|かこ|'),
+    new SctCod_It('|現在|げんざい|'),
+    new SctCod_It('|未来|みらい|'),
     // new SctCod_It('|後|あと|で')
     // ,
     // new SctCod_It('|後|のち|に')
@@ -1744,6 +1748,11 @@ const cods_km = [
     new SctCod_Km('|我|わ|が|儘|まま|')
     // ,
     // new SctCod_Km('|和気藹々|わきあいあい|')
+];
+const itms_km = [
+    new SctItm('@PART@の様'),
+    new SctItm('@NICK@の様'),
+    new SctItm('@COUNTRY@人の様')
 ];
 const cods_jougo = [
     new SctCod_Km('|連々|れんれん|'),
