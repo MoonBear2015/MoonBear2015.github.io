@@ -15,7 +15,7 @@ function make_site_header() {
     html += '<h1>';
     html += '「空虚」';
     html += '<small>';
-    html += 'M01.17';
+    html += 'M01.18';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -283,10 +283,16 @@ function set_main() {
         '@CLASS@は@KEI2@であり、<br>つねに@CLASS@の@ANSWER@によって<br>@THINK@すべきものである。',
         // 津田梅子（日本の教育者、日本女子教育の先駆者 / 1864～1929）
         // 環境より学ぶ意志があればいい。
-        '@THEY@より学ぶ@THINK@があればいい。'
+        '@THEY@より学ぶ@CLASS@が居たら良いのに。',
+        // 稲盛和夫（日本の実業家、京セラ、KDDIの創業者 / 1932～）
+        // 今日の成果は過去の努力の結果であり、未来はこれからの努力で決まる。
+        '@THEY@の@THINK@は@CLASS@の@THINK@であり、<br>@CLASS@は@THEY@の@THINK@で決まる。',
+        // 荘子（中国戦国時代の思想家、道教の始祖の一人 / 紀元前369～前286）
+        // 井の中の蛙、大海を知らず。
+        '@THEY@の中の@CLASS@、<br>@THINK@を知らず。'
     ];
-    let msg = msgs[rnd_max(msgs.length)];
-    // let msg = msgs[msgs.length - 1];
+    // let msg = msgs[rnd_max(msgs.length)];
+    let msg = msgs[msgs.length - 1];
     // msg += '<br><br><br><br><br>';
     // msg += '@WRITER@';
     let maker = new news_docs_maker();
