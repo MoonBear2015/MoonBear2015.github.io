@@ -1597,14 +1597,14 @@ class selector_keiyo1 extends SctItm_Selector implements ISctItm_Selector {
         super('@KEI1@');
         this.itms = [
             new SctItm('@KEI2@な')
-            ,
-            new SctItm('@KEI2@で@KEI2@な')
+            // ,
+            // new SctItm('@KEI2@で@KEI2@な')
             // ,
             // new SctItm('@KEI2@で@KEI2@、そして@KEI2@な')
             ,
             new SctItm('@KEI3@')
-            ,
-            new SctItm('@KEI2@で@KEI3@')
+            // ,
+            // new SctItm('@KEI2@で@KEI3@')
             // ,
             // new SctItm('@KEI2@で@KEI2@、そして@KEI3@')
         ];
@@ -1675,6 +1675,26 @@ class selector_kd extends SctItm_Selector implements ISctItm_Selector {
         this.Add(cods_to_itms(cods_adv_etc));
     }
 }
+
+class selector_move extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@MOVE@');
+        this.Add(cods_to_itms(cods_move));
+        this.Add(cods_to_itms(cods_move_dance));
+        this.Add(cods_to_itms(cods_move_run));
+        this.Add(cods_to_itms(cods_move_fly));
+        this.Add(cods_to_itms(cods_move_walk));
+        this.Add(cods_to_itms(cods_move_stop));
+        this.Add(cods_to_itms(cods_move_open));
+        this.Add(cods_to_itms(cods_move_life));
+        this.Add(cods_to_itms(cods_move_death));
+        this.Add(cods_to_itms(cods_move_light));
+        this.Add(cods_to_itms(cods_move_think));
+        this.Add(cods_to_itms(cods_move_sense));
+        this.Add(cods_to_itms(cods_move_make));
+    }
+}
+
 
 class selector_country extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
@@ -2098,6 +2118,8 @@ class selector_think extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('嫌悪')
             ,
             new SctItm('愛')
+            ,
+            new SctItm('恋')
             ,
             new SctItm('満足')
             ,
@@ -2539,6 +2561,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_km());
         this.dic_push(new selector_k());
         this.dic_push(new selector_kd());
+        this.dic_push(new selector_move());
 
         this.dic_push(new selector_think());
         this.dic_push(new selector_who());

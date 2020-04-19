@@ -1180,16 +1180,13 @@ const cods_move_life = [
     new SctCod_Mv('|起|お|きる')
 ];
 const cods_move_death = [
-    // new SctCod_Mv('|死|し|ぬ','death.jpg')
-    // ,
-    // new SctCod_Mv('|死|し|す')
-    // ,
-    // new SctCod_Mv('|死|し|ね')
-    // ,
+    new SctCod_Mv('|死|し|ぬ', 'death.jpg'),
     new SctCod_Mv('|倒|たお|れる'),
-    new SctCod_Mv('|倒|たお|れし'),
+    // new SctCod_Mv('|倒|たお|れし')
+    // ,
     new SctCod_Mv('|枯|か|れる'),
-    new SctCod_Mv('|枯|か|れた'),
+    // new SctCod_Mv('|枯|か|れた')
+    // ,
     new SctCod_Mv('|散|ち|る'),
     new SctCod_Mv('|散|ち|りゆく'),
     new SctCod_Mv('|朽|く|ち|果|は|てる'),
@@ -1197,7 +1194,6 @@ const cods_move_death = [
     new SctCod_Mv('|尽|つ|きた'),
     new SctCod_Mv('|終|お|わる'),
     new SctCod_Mv('|終|お|える'),
-    new SctCod_Mv('|終|お|えた'),
     new SctCod_Mv('|失|うしな|う'),
     new SctCod_Mv('|失|うしな|われる'),
     new SctCod_Mv('|見失|みうしな|う'),
@@ -1207,11 +1203,7 @@ const cods_move_death = [
 const cods_move_light = [
     new SctCod_Mv('|光|ひか|る', 'light.jpg'),
     new SctCod_Mv('|輝|かがや|く'),
-    new SctCod_Mv('|輝|かがや|かしい'),
-    new SctCod_Mv('|目映|まばゆ|い'),
-    new SctCod_Mv('|眩|まぶ|しい'),
     new SctCod_Mv('|光|ひか|り|輝|かがや|く'),
-    new SctCod_Mv('|光|ひか|り|輝|かがや|け'),
     new SctCod_Mv('|照|て|らす')
 ];
 const cods_move_dark = [
@@ -1224,7 +1216,6 @@ const cods_move_dark = [
 ];
 const cods_move_think = [
     new SctCod_Mv('|想|おも|う', 'think.jpg'),
-    new SctCod_Mv('|想|おも|い'),
     new SctCod_Mv('|考|かんが|える'),
     new SctCod_Mv('|祈|いの|る'),
     new SctCod_Mv('|願|ねが|う'),
@@ -1243,7 +1234,6 @@ const cods_move_sense = [
     new SctCod_Mv('|見|み|える'),
     new SctCod_Mv('|聞|き|く'),
     new SctCod_Mv('|聞|き|こえる'),
-    new SctCod_Mv('|聞|き|こえし'),
     new SctCod_Mv('|匂|にお|う'),
     new SctCod_Mv('|嗅|か|ぐわしい'),
     new SctCod_Mv('|響|ひび|く')
@@ -1275,7 +1265,9 @@ const cods_ad_sense = [
     new SctCod_It('|生|なま|ぬるい'),
     new SctCod_Mv('|明|あか|るい'),
     new SctCod_Mv('|暗|くら|い'),
-    new SctCod_Mv('|薄暗|うすぐら|い')
+    new SctCod_Mv('|薄暗|うすぐら|い'),
+    new SctCod_Mv('|目映|まばゆ|い'),
+    new SctCod_Mv('|眩|まぶ|しい')
 ];
 const cods_adv_sense = [
     new SctCod_It('|美味|おい|しく'),
@@ -1337,7 +1329,8 @@ const cods_ad_beauty = [
     new SctCod_Mv('|愛|あい|くるしい'),
     new SctCod_Mv('|愛|いと|おしい'),
     new SctCod_Mv('|可愛|かわい|い'),
-    new SctCod_Mv('|可愛|かわい|らしい')
+    new SctCod_Mv('|可愛|かわい|らしい'),
+    new SctCod_Mv('|輝|かがや|かしい')
 ];
 const cods_adv_beauty = [
     new SctCod_It('|美|うつく|しく', 'beauty.png'),

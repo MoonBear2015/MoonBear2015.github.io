@@ -2267,20 +2267,16 @@ const   cods_move_life = [
 ];
 
 const   cods_move_death = [
-    // new SctCod_Mv('|死|し|ぬ','death.jpg')
-    // ,
-    // new SctCod_Mv('|死|し|す')
-    // ,
-    // new SctCod_Mv('|死|し|ね')
-    // ,
+    new SctCod_Mv('|死|し|ぬ','death.jpg')
+    ,
     new SctCod_Mv('|倒|たお|れる')
     ,
-    new SctCod_Mv('|倒|たお|れし')
-    ,
+    // new SctCod_Mv('|倒|たお|れし')
+    // ,
     new SctCod_Mv('|枯|か|れる')
     ,
-    new SctCod_Mv('|枯|か|れた')
-    ,
+    // new SctCod_Mv('|枯|か|れた')
+    // ,
     new SctCod_Mv('|散|ち|る')
     ,
     new SctCod_Mv('|散|ち|りゆく')
@@ -2294,8 +2290,6 @@ const   cods_move_death = [
     new SctCod_Mv('|終|お|わる')
     ,
     new SctCod_Mv('|終|お|える')
-    ,
-    new SctCod_Mv('|終|お|えた')
     ,
     new SctCod_Mv('|失|うしな|う')
     ,
@@ -2313,15 +2307,7 @@ const   cods_move_light = [
     ,
     new SctCod_Mv('|輝|かがや|く')
     ,
-    new SctCod_Mv('|輝|かがや|かしい')
-    ,
-    new SctCod_Mv('|目映|まばゆ|い')
-    ,
-    new SctCod_Mv('|眩|まぶ|しい')
-    ,
     new SctCod_Mv('|光|ひか|り|輝|かがや|く')
-    ,
-    new SctCod_Mv('|光|ひか|り|輝|かがや|け')
     ,
     new SctCod_Mv('|照|て|らす')
 ];
@@ -2343,8 +2329,6 @@ const   cods_move_dark = [
 
 const   cods_move_think = [
     new SctCod_Mv('|想|おも|う','think.jpg')
-    ,
-    new SctCod_Mv('|想|おも|い')
     ,
     new SctCod_Mv('|考|かんが|える')
     ,
@@ -2379,8 +2363,6 @@ const   cods_move_sense = [
     new SctCod_Mv('|聞|き|く')
     ,
     new SctCod_Mv('|聞|き|こえる')
-    ,
-    new SctCod_Mv('|聞|き|こえし')
     ,
     new SctCod_Mv('|匂|にお|う')
     ,
@@ -2441,6 +2423,11 @@ const   cods_ad_sense = [
     new SctCod_Mv('|暗|くら|い')
     ,
     new SctCod_Mv('|薄暗|うすぐら|い')
+    ,
+    new SctCod_Mv('|目映|まばゆ|い')
+    ,
+    new SctCod_Mv('|眩|まぶ|しい')
+
 ];
 
 const   cods_adv_sense = [
@@ -2541,6 +2528,8 @@ const   cods_ad_beauty = [
     new SctCod_Mv('|可愛|かわい|い')
     ,
     new SctCod_Mv('|可愛|かわい|らしい')
+    ,
+    new SctCod_Mv('|輝|かがや|かしい')
 ];
 
 const   cods_adv_beauty = [
