@@ -1001,6 +1001,24 @@ class selector_keido1 extends SctItm_Selector {
         ];
     }
 }
+class selector_keime1 extends SctItm_Selector {
+    constructor() {
+        super('@KEIM1@');
+        this.itms = [
+            new SctItm('@KEI2@だ'),
+            new SctItm('@KEI3@')
+        ];
+    }
+}
+class selector_keime2 extends SctItm_Selector {
+    constructor() {
+        super('@KEIM2@');
+        this.itms = [
+            new SctItm('@KEI2@'),
+            new SctItm('@KEI3@')
+        ];
+    }
+}
 class selector_km extends SctItm_Selector {
     constructor() {
         super('@KEI2@');
@@ -1048,8 +1066,14 @@ class selector_move extends SctItm_Selector {
 class selector_country extends SctItm_Selector {
     constructor() {
         super('@COUNTRY@');
-        this.Add(cods_ruby_to_itms(cods_country));
+        this.Add(cods_ruby_to_itms(cods_country.slice(1)));
         this.Add(cods_to_itms(cods_country2));
+    }
+}
+class selector_animal extends SctItm_Selector {
+    constructor() {
+        super('@ANIMAL@');
+        this.Add(cods_to_itms(cods_animal));
     }
 }
 class selector_when extends SctItm_Selector {
@@ -1244,7 +1268,7 @@ class selector_nickname extends SctItm_Selector {
         ];
     }
 }
-// 意識 ～する
+// 意識 ？？に～する
 class selector_think extends SctItm_Selector {
     constructor() {
         super('@THINK@');
@@ -1272,8 +1296,10 @@ class selector_think extends SctItm_Selector {
             new SctItm('軽蔑'),
             new SctItm('後悔'),
             new SctItm('恋慕'),
-            new SctItm('嫌悪'),
-            new SctItm('愛'),
+            new SctItm('嫌悪')
+            // ,
+            // new SctItm('愛')
+            ,
             new SctItm('恋'),
             new SctItm('満足'),
             new SctItm('興奮')
@@ -1537,7 +1563,10 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_keiyo1());
         this.dic_push(new selector_keido());
         this.dic_push(new selector_keido1());
+        this.dic_push(new selector_keime1());
+        this.dic_push(new selector_keime2());
         this.dic_push(new selector_country());
+        this.dic_push(new selector_animal());
         this.dic_push(new selector_km());
         this.dic_push(new selector_k());
         this.dic_push(new selector_kd());

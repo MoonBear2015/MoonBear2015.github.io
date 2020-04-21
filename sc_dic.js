@@ -1786,6 +1786,7 @@ const cods_km = [
 const itms_km = [
     new SctItm('@PART@の様'),
     new SctItm('@NICK@の様'),
+    new SctItm('@ANIMAL@の様'),
     new SctItm('@COUNTRY@人の様')
 ];
 const cods_jougo = [

@@ -3307,6 +3307,8 @@ const   itms_km = [
     ,
     new SctItm('@NICK@の様')
     ,
+    new SctItm('@ANIMAL@の様')
+    ,
     new SctItm('@COUNTRY@人の様')
 ];
 
