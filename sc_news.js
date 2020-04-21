@@ -1292,11 +1292,15 @@ class selector_think extends SctItm_Selector {
             new SctItm('夢想'),
             new SctItm('妄想'),
             new SctItm('欲情'),
+            new SctItm('発情'),
             new SctItm('嫉妬'),
             new SctItm('軽蔑'),
-            new SctItm('後悔'),
-            new SctItm('恋慕'),
-            new SctItm('嫌悪')
+            new SctItm('後悔')
+            // ,
+            // new SctItm('恋慕')
+            ,
+            new SctItm('嫌悪'),
+            new SctItm('憎悪')
             // ,
             // new SctItm('愛')
             ,
