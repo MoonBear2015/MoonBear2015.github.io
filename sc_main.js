@@ -441,8 +441,8 @@ function set_main() {
         // // できると思うからこそできるのだ。
         // '@KEI3@と思うからこそ@KEI1@のだ。'
     ];
-    // let msg = msgs[rnd_max(msgs.length)];
-    let msg = msgs[msgs.length - 1];
+    let msg = msgs[rnd_max(msgs.length)];
+    // let msg = msgs[msgs.length - 1];
     // msg += '<br><br><br><br><br>';
     // msg += '@WRITER@';
     let maker = new news_docs_maker();

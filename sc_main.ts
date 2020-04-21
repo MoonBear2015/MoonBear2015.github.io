@@ -490,8 +490,8 @@ function set_main()
         // '@KEI3@と思うからこそ@KEI1@のだ。'
     ]
 
-    // let msg = msgs[rnd_max(msgs.length)];
-    let msg = msgs[msgs.length - 1];
+    let msg = msgs[rnd_max(msgs.length)];
+    // let msg = msgs[msgs.length - 1];
 
     // msg += '<br><br><br><br><br>';
     // msg += '@WRITER@';
