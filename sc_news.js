@@ -1355,7 +1355,8 @@ class selector_partner extends SctItm_Selector {
     constructor() {
         super('@PART@');
         this.itms = [
-            new SctItm('@PART@の@PART@'),
+            // new SctItm('@PART@の@PART@')
+            // ,
             new SctItm('知り合い'),
             new SctItm('友達'),
             new SctItm('彼女'),
@@ -1393,7 +1394,9 @@ class selector_partner extends SctItm_Selector {
             new SctItm('相方'),
             new SctItm('ライバル'),
             new SctItm('親の仇'),
-            new SctItm('マスコミ')
+            new SctItm('恋敵')
+            // ,
+            // new SctItm('マスコミ')
         ];
     }
 }
