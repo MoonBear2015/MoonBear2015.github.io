@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N02.23';
+    html += 'N02.25';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -1033,6 +1033,7 @@ class selector_k extends SctItm_Selector {
         this.Add(cods_to_itms(cods_ad_danger));
         this.Add(cods_to_itms(cods_ad_sense));
         // this.Add(cods_to_itms(cods_ad_color));
+        this.Add(cods_to_itms(cods_ad_jougo));
         this.Add(cods_to_itms(cods_ad_etc));
     }
 }
@@ -1273,38 +1274,42 @@ class selector_think extends SctItm_Selector {
     constructor() {
         super('@THINK@');
         this.itms = [
-            new SctItm('動揺'),
+            new SctItm('安心'),
+            new SctItm('感謝'),
+            new SctItm('希望'),
+            new SctItm('驚愕'),
+            new SctItm('狂気'),
+            new SctItm('驚喜'),
+            new SctItm('驚嘆'),
+            new SctItm('苦悶'),
             new SctItm('警戒'),
+            new SctItm('激怒'),
+            new SctItm('軽蔑'),
+            new SctItm('嫌悪'),
+            new SctItm('恋'),
+            new SctItm('後悔'),
+            new SctItm('興奮'),
+            new SctItm('動揺'),
             new SctItm('絶望'),
             new SctItm('失望'),
             new SctItm('落胆'),
             new SctItm('幻滅'),
-            new SctItm('苦悶'),
             new SctItm('失意'),
             new SctItm('迷走'),
-            new SctItm('狂気'),
             new SctItm('発狂'),
-            new SctItm('激怒'),
             new SctItm('嘲笑'),
-            new SctItm('驚喜'),
-            new SctItm('驚嘆'),
-            new SctItm('希望'),
             new SctItm('夢想'),
             new SctItm('妄想'),
             new SctItm('欲情'),
             new SctItm('発情'),
-            new SctItm('嫉妬'),
-            new SctItm('軽蔑'),
-            new SctItm('後悔')
+            new SctItm('嫉妬')
             // ,
             // new SctItm('恋慕')
             ,
-            new SctItm('嫌悪'),
             new SctItm('憎悪')
             // ,
             // new SctItm('愛')
             ,
-            new SctItm('恋'),
             new SctItm('満足'),
             new SctItm('興奮')
         ];

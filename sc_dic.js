@@ -2298,6 +2298,34 @@ const cods_jougo = [
     new SctCod_Km('|戦々|わなわな|'),
     new SctCod_Km('|我々|われわれ|')
 ];
+const cods_ad_jougo = [
+    new SctCod_Mv('|貴々|あてあて|しい'),
+    new SctCod_Mv('|厳々|いかいか|しい'),
+    new SctCod_Mv('|疎々|うとうと|しい'),
+    new SctCod_Mv('|長々|おさおさ|しい'),
+    new SctCod_Mv('|軽々|かるがる|しい'),
+    new SctCod_Mv('|図々|ずうずう|しい'),
+    new SctCod_Mv('|清々|すがすが|しい'),
+    new SctCod_Mv('|騒々|そうぞう|しい'),
+    new SctCod_Mv('|空々|そらぞら|しい'),
+    new SctCod_Mv('|猛々|たけだけ|しい'),
+    new SctCod_Mv('|辿々|たどたど|しい'),
+    new SctCod_Mv('|生々|なまなま|しい'),
+    new SctCod_Mv('|苦々|にがにが|しい'),
+    new SctCod_Mv('|賑々|にぎにぎ|しい'),
+    new SctCod_Mv('|憎々|にくにく|しい'),
+    new SctCod_Mv('|呪々|のろのろ|しい'),
+    new SctCod_Mv('|映々|はえばえ|しい'),
+    new SctCod_Mv('|捗々|はかばか|しい'),
+    new SctCod_Mv('|太々|ふてぶて|しい'),
+    new SctCod_Mv('|惚々|ほけほけ|しい'),
+    new SctCod_Mv('|程々|ほどほど|しい'),
+    new SctCod_Mv('|禍々|まがまが|しい'),
+    new SctCod_Mv('|瑞々|みずみず|しい'),
+    new SctCod_Mv('|宗々|むねむね|しい'),
+    new SctCod_Mv('|宜々|むべむべ|しい'),
+    new SctCod_Mv('|由々|よしよし|しい')
+];
 const itms_partner = [
     new SctItm('知り合い'),
     new SctItm('友達'),
