@@ -2102,6 +2102,8 @@ class selector_think extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('感謝')
             ,
+            new SctItm('期待')
+            ,
             new SctItm('希望')
             ,
             new SctItm('驚愕')
@@ -2111,6 +2113,10 @@ class selector_think extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('驚喜')
             ,
             new SctItm('驚嘆')
+            ,
+            new SctItm('恐怖')
+            ,
+            new SctItm('緊張')
             ,
             new SctItm('苦悶')
             ,
@@ -2122,49 +2128,59 @@ class selector_think extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('嫌悪')
             ,
+            new SctItm('幻滅')
+            ,
             new SctItm('恋')
+            ,
+            new SctItm('興奮')
             ,
             new SctItm('後悔')
             ,
             new SctItm('興奮')
             ,
-            new SctItm('動揺')
-            ,
-            new SctItm('絶望')
+            new SctItm('嫉妬')
+            // ,
+            // new SctItm('失意')
             ,
             new SctItm('失望')
             ,
-            new SctItm('落胆')
+            new SctItm('心配')
             ,
-            new SctItm('幻滅')
+            new SctItm('心配')
             ,
-            new SctItm('失意')
+            new SctItm('絶望')
             ,
-            new SctItm('迷走')
+            new SctItm('憎悪')
+            ,
+            new SctItm('尊敬')
+            ,
+            new SctItm('嘲笑')
+            ,
+            new SctItm('動揺')
+            ,
+            new SctItm('発情')
             ,
             new SctItm('発狂')
             ,
-            new SctItm('嘲笑')
+            new SctItm('服従')
+            ,
+            new SctItm('満足')
+            ,
+            new SctItm('迷走')
             ,
             new SctItm('夢想')
             ,
             new SctItm('妄想')
             ,
             new SctItm('欲情')
-            ,
-            new SctItm('発情')
-            ,
-            new SctItm('嫉妬')
             // ,
             // new SctItm('恋慕')
-            ,
-            new SctItm('憎悪')
             // ,
             // new SctItm('愛')
             ,
-            new SctItm('満足')
+            new SctItm('落胆')
             ,
-            new SctItm('興奮')
+            new SctItm('楽観')
         ];
     }
 }
