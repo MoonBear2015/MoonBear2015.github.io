@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N02.26';
+    html += 'N02.27';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -1040,7 +1040,7 @@ class selector_kd extends SctItm_Selector {
         super('@KEI4@');
         this.Add(cods_to_itms(cods_adv_beauty));
         this.Add(cods_to_itms(cods_adv_sense));
-        this.Add(cods_to_itms(cods_adv_danger));
+        // this.Add(cods_to_itms(cods_adv_danger));
         this.Add(cods_to_itms(cods_adv_etc));
     }
 }

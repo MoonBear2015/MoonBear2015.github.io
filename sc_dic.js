@@ -1356,21 +1356,33 @@ const cods_ad_danger = [
     new SctCod_Mv('|疑|うたが|わしい'),
     new SctCod_Mv('|覚束|おぼつか|ない')
 ];
-const cods_adv_danger = [
-    new SctCod_It('|危|あぶ|なく', 'danger.png'),
-    new SctCod_It('|危|あや|うく'),
-    new SctCod_It('|恐|おそ|ろしく'),
-    new SctCod_It('|怖|こわ|く'),
-    new SctCod_It('|凄|すさ|まじく'),
-    new SctCod_It('|空恐|そらおそ|ろしく'),
-    new SctCod_It('|酷|ひど|く'),
-    new SctCod_It('|険|けわ|しく'),
-    new SctCod_It('|怪|あや|しく'),
-    new SctCod_It('|如何|いかが|わしく'),
-    new SctCod_It('|心許|こころもと|なく'),
-    new SctCod_It('|疑|うたが|わしく'),
-    new SctCod_It('|覚束|おぼつか|なく')
-];
+// const   cods_adv_danger = [
+//     new SctCod_It('|危|あぶ|なく','danger.png')
+//     ,
+//     new SctCod_It('|危|あや|うく')
+//     ,
+//     new SctCod_It('|恐|おそ|ろしく')
+//     ,
+//     new SctCod_It('|怖|こわ|く')
+//     ,
+//     new SctCod_It('|凄|すさ|まじく')
+//     ,
+//     new SctCod_It('|空恐|そらおそ|ろしく')
+//     ,
+//     new SctCod_It('|酷|ひど|く')
+//     ,
+//     new SctCod_It('|険|けわ|しく')
+//     ,
+//     new SctCod_It('|怪|あや|しく')
+//     ,
+//     new SctCod_It('|如何|いかが|わしく')
+//     ,
+//     new SctCod_It('|心許|こころもと|なく')
+//     ,
+//     new SctCod_It('|疑|うたが|わしく')
+//     ,
+//     new SctCod_It('|覚束|おぼつか|なく')
+// ];
 const cods_ad_etc = [
     new SctCod_Mv('|新|あたら|しい'),
     new SctCod_Mv('|勇|いさ|ましい'),
