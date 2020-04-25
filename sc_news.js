@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N02.25';
+    html += 'N02.26';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -191,18 +191,10 @@ class selector_title extends SctItm_Selector {
         super('@NEWS_TITLE@');
         this.itms = [
             new SctItm('@WHAT@の@DO@'),
-            new SctItm('@WHAT@は@KEID@@DO@@END02C@'),
-            new SctItm('@WHAT@で@KEID@@DO@@END02C@@PEOPLE@'),
-            new SctItm('@WHAT@の@PEOPLE@が@KEID@@DO@'),
-            new SctItm('@WHAT@の@PEOPLE@、@HUMAN@が@KEID@@DO@@END02C@'),
+            new SctItm('@WHAT@で@KEID@@DO@@END02C@@THEY@'),
             new SctItm('@KEID@@DO@@END02C@@WHAT@'),
             new SctItm('@KEID@@DO@@END02C@@WHAT@の@THEY@'),
-            new SctItm('@PEOPLE@が@KEID@@DO@@END02C@@WHAT@'),
-            new SctItm('@CLASS@の@HUMAN@、@WHAT@で@KEID@@DO@@END02C@'),
-            new SctItm('@KEI3@@HUMAN@、@WHAT@を@KEID@@DO@'),
-            new SctItm('@KEI2@な@PEOPLE@、@HUMAN@が@WHAT@を@DO@@END02C@'),
-            new SctItm('@CLASS@の@HUMAN@、@WHAT@を@KEID@@DO@'),
-            new SctItm('@WHAT@を@KEID@@DO@@END02C@@CLASS@、@HUMAN@')
+            new SctItm('@PEOPLE@が@KEID@@DO@@END02C@@WHAT@')
         ];
     }
 }
@@ -501,14 +493,18 @@ class selector_whats extends SctItm_SelectLocker {
             new SctItm('株式市場', 'WHAT/Economy.jpg'),
             new SctItm('科学', 'WHAT/Science.jpg'),
             new SctItm('現代科学', 'WHAT/Science.jpg'),
-            new SctItm('先進科学', 'WHAT/Science.jpg'),
-            new SctItm('医療', 'WHAT/Medical.jpg'),
-            new SctItm('医療現場', 'WHAT/Medical.jpg'),
-            new SctItm('医学', 'WHAT/Medical.jpg'),
+            new SctItm('先進科学', 'WHAT/Science.jpg')
+            // ,
+            // new SctItm('医療','WHAT/Medical.jpg')
+            ,
+            new SctItm('医療現場', 'WHAT/Medical.jpg')
+            // ,
+            // new SctItm('医学','WHAT/Medical.jpg')
+            ,
             new SctItm('現代医学', 'WHAT/Medical.jpg'),
             new SctItm('農業', 'WHAT/Agri.jpg'),
             new SctItm('農場', 'WHAT/Agri.jpg'),
-            new SctItm('工業', 'WHAT/Factory.jpg'),
+            new SctItm('工場', 'WHAT/Factory.jpg'),
             new SctItm('工業地帯', 'WHAT/Factory.jpg'),
             new SctItm('人工知能', 'WHAT/AI.jpg'),
             new SctItm('学校教育', 'WHAT/stady.jpg'),
@@ -742,7 +738,7 @@ class selector_they extends SctItm_Selector {
             new SctItm('囚人達'),
             new SctItm('少年達'),
             new SctItm('少女達'),
-            new SctItm('少年少女'),
+            new SctItm('少年少女達'),
             new SctItm('年長者達'),
             new SctItm('エリート層'),
             new SctItm('傭兵達'),
@@ -757,8 +753,10 @@ class selector_they extends SctItm_Selector {
             new SctItm('貴族'),
             new SctItm('家族'),
             new SctItm('親戚一同'),
-            new SctItm('親類縁者'),
-            new SctItm('先祖代々'),
+            new SctItm('親類縁者')
+            // ,
+            // new SctItm('先祖代々')
+            ,
             new SctItm('犠牲者達'),
             new SctItm('生徒一同'),
             new SctItm('兄弟弟子'),

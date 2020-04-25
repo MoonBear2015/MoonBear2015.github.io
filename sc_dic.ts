@@ -3025,8 +3025,8 @@ const   cods_km = [
     new SctCod_Km('|丁重|ていちょう|')
     ,
     new SctCod_Km('|適切|てきせつ|')
-    ,
-    new SctCod_Km('てへぺろ')
+    // ,
+    // new SctCod_Km('てへぺろ')
     // ,
     // new SctCod_Km('|天下一品|てんかいっぴん|')
     ,
@@ -3063,12 +3063,12 @@ const   cods_km = [
     new SctCod_Km('|薄弱|はくじゃく|')
     ,
     new SctCod_Km('|破天荒|はてんこう|')
-    ,
-    new SctCod_Km('ばらばら')
-    ,
-    new SctCod_Km('ぱらぱら')
-    ,
-    new SctCod_Km('はらぺこ')
+    // ,
+    // new SctCod_Km('ばらばら')
+    // ,
+    // new SctCod_Km('ぱらぱら')
+    // ,
+    // new SctCod_Km('はらぺこ')
     // ,
     // new SctCod_Km('ばりばり')
     ,
@@ -3148,12 +3148,12 @@ const   cods_km = [
     ,
     new SctCod_Km('|不埒|ふらち|')
     ,
-    new SctCod_Km('ふらふら')
-    ,
-    new SctCod_Km('ぶらぶら')
-    ,
-    new SctCod_Km('ぷらぷら')
-    ,
+    // new SctCod_Km('ふらふら')
+    // ,
+    // new SctCod_Km('ぶらぶら')
+    // ,
+    // new SctCod_Km('ぷらぷら')
+    // ,
     // new SctCod_Km('|不利|ふり|')
     // ,
     new SctCod_Km('|無礼|ぶれい|')
@@ -3174,12 +3174,12 @@ const   cods_km = [
     ,
     new SctCod_Km('|平和的|へいわてき|')
     ,
-    new SctCod_Km('へろへろ')
-    ,
-    new SctCod_Km('べろべろ')
-    ,
-    new SctCod_Km('ぺろぺろ')
-    ,
+    // new SctCod_Km('へろへろ')
+    // ,
+    // new SctCod_Km('べろべろ')
+    // ,
+    // new SctCod_Km('ぺろぺろ')
+    // ,
     new SctCod_Km('|便利|べんり|')
     ,
     new SctCod_Km('|暴虐|ぼうぎゃく|')
@@ -3192,10 +3192,10 @@ const   cods_km = [
     ,
     new SctCod_Km('|豊満|ほうまん|')
     ,
-    new SctCod_Km('ほかほか')
-    ,
-    new SctCod_Km('ぽかぽか')
-    ,
+    // new SctCod_Km('ほかほか')
+    // ,
+    // new SctCod_Km('ぽかぽか')
+    // ,
     new SctCod_Km('|本格的|ほんかくてき|')
     // ,
     // new SctCod_Km('|本当|ほんとう|')
@@ -3266,8 +3266,8 @@ const   cods_km = [
     ,
     new SctCod_Km('|緩|ゆる|やか')
     ,
-    new SctCod_Km('ゆるゆる')
-    ,
+    // new SctCod_Km('ゆるゆる')
+    // ,
     new SctCod_Km('|陽気|ようき|')
     ,
     new SctCod_Km('|楽観的|らっかんてき|')
@@ -3314,1021 +3314,1021 @@ const   itms_km = [
 
 
 
-const   cods_jougo = [
-    new SctCod_Km('|連々|れんれん|')
-    ,
-    new SctCod_Km('|哀々|あいあい|')
-    ,
-    new SctCod_Km('|藹々|あいあい|')
-    ,
-    new SctCod_Km('|青々|あおあお|')
-    ,
-    new SctCod_Km('|明々|あかあか|')
-    ,
-    new SctCod_Km('|赤々|あかあか|')
-    ,
-    new SctCod_Km('|足々|あしあし|')
-    ,
-    new SctCod_Km('|厚々|あつあつ|')
-    ,
-    new SctCod_Km('|熱々|あつあつ|')
-    ,
-    new SctCod_Km('|宛々|あてあて|')
-    ,
-    new SctCod_Km('|荒々|あらあら|')
-    ,
-    new SctCod_Km('|粗々|あらあら|')
-    ,
-    new SctCod_Km('|在々|ありあり|')
-    ,
-    new SctCod_Km('|暗々|あんあん|')
-    ,
+// const   cods_jougo = [
+    // new SctCod_Km('|連々|れんれん|')
+    // ,
+    // new SctCod_Km('|哀々|あいあい|')
+    // ,
+    // new SctCod_Km('|藹々|あいあい|')
+    // ,
+    // new SctCod_Km('|青々|あおあお|')
+    // ,
+    // new SctCod_Km('|明々|あかあか|')
+    // ,
+    // new SctCod_Km('|赤々|あかあか|')
+    // ,
+    // new SctCod_Km('|足々|あしあし|')
+    // ,
+    // new SctCod_Km('|厚々|あつあつ|')
+    // ,
+    // new SctCod_Km('|熱々|あつあつ|')
+    // ,
+    // new SctCod_Km('|宛々|あてあて|')
+    // ,
+    // new SctCod_Km('|荒々|あらあら|')
+    // ,
+    // new SctCod_Km('|粗々|あらあら|')
+    // ,
+    // new SctCod_Km('|在々|ありあり|')
+    // ,
+    // new SctCod_Km('|暗々|あんあん|')
+    // ,
     // new SctCod_Km('|唯々|いい|')
     // ,
     // new SctCod_Km('|易々|いい|')
     // ,
-    new SctCod_Km('|家々|いえいえ|')
-    ,
-    new SctCod_Km('|厳々|いかいか|')
-    ,
-    new SctCod_Km('|郁々|いくいく|')
-    ,
-    new SctCod_Km('|一々|いちいち|')
-    ,
-    new SctCod_Km('|否々|いないな|')
-    ,
-    new SctCod_Km('|否々|いやいや|')
-    ,
-    new SctCod_Km('|弥々|いやいや|')
-    ,
-    new SctCod_Km('|嫌々|いやいや|')
-    ,
-    new SctCod_Km('|愈々|いよいよ|')
-    ,
-    new SctCod_Km('|苛々|いらいら|')
-    ,
-    new SctCod_Km('|色々|いろいろ|')
-    ,
-    new SctCod_Km('|殷々|いんいん|')
-    ,
-    new SctCod_Km('|陰々|いんいん|')
-    ,
-    new SctCod_Km('|隠々|いんいん|')
-    ,
-    new SctCod_Km('|薄々|うすうす|')
-    ,
-    new SctCod_Km('|内々|うちうち|')
-    ,
-    new SctCod_Km('|疎々|うとうと|')
-    ,
-    new SctCod_Km('|畝々|うねうね|')
-    ,
-    new SctCod_Km('|宣々|うべうべ|')
-    ,
-    new SctCod_Km('|浦々|うらうら|')
-    ,
-    new SctCod_Km('|云々|うんぬん|')
-    ,
-    new SctCod_Km('|曳々|えいえい|')
-    ,
-    new SctCod_Km('|永々|えいえい|')
-    ,
-    new SctCod_Km('|営々|えいえい|')
-    ,
-    new SctCod_Km('|英々|えいえい|')
-    ,
-    new SctCod_Km('|役々|えきえき|')
-    ,
-    new SctCod_Km('|繹々|えきえき|')
-    ,
-    new SctCod_Km('|枝々|えだえだ|')
-    ,
-    new SctCod_Km('|延々|えんえん|')
-    ,
-    new SctCod_Km('|炎々|えんえん|')
-    ,
-    new SctCod_Km('|焔々|えんえん|')
-    ,
-    new SctCod_Km('|奄々|えんえん|')
-    ,
-    new SctCod_Km('|追々|おいおい|')
-    ,
-    new SctCod_Km('|往々|おうおう|')
-    ,
-    new SctCod_Km('|怏々|おうおう|')
-    ,
+    // new SctCod_Km('|家々|いえいえ|')
+    // ,
+    // new SctCod_Km('|厳々|いかいか|')
+    // ,
+    // new SctCod_Km('|郁々|いくいく|')
+    // ,
+    // new SctCod_Km('|一々|いちいち|')
+    // ,
+    // new SctCod_Km('|否々|いないな|')
+    // ,
+    // new SctCod_Km('|否々|いやいや|')
+    // ,
+    // new SctCod_Km('|弥々|いやいや|')
+    // ,
+    // new SctCod_Km('|嫌々|いやいや|')
+    // ,
+    // new SctCod_Km('|愈々|いよいよ|')
+    // ,
+    // new SctCod_Km('|苛々|いらいら|')
+    // ,
+    // new SctCod_Km('|色々|いろいろ|')
+    // ,
+    // new SctCod_Km('|殷々|いんいん|')
+    // ,
+    // new SctCod_Km('|陰々|いんいん|')
+    // ,
+    // new SctCod_Km('|隠々|いんいん|')
+    // ,
+    // new SctCod_Km('|薄々|うすうす|')
+    // ,
+    // new SctCod_Km('|内々|うちうち|')
+    // ,
+    // new SctCod_Km('|疎々|うとうと|')
+    // ,
+    // new SctCod_Km('|畝々|うねうね|')
+    // ,
+    // new SctCod_Km('|宣々|うべうべ|')
+    // ,
+    // new SctCod_Km('|浦々|うらうら|')
+    // ,
+    // new SctCod_Km('|云々|うんぬん|')
+    // ,
+    // new SctCod_Km('|曳々|えいえい|')
+    // ,
+    // new SctCod_Km('|永々|えいえい|')
+    // ,
+    // new SctCod_Km('|営々|えいえい|')
+    // ,
+    // new SctCod_Km('|英々|えいえい|')
+    // ,
+    // new SctCod_Km('|役々|えきえき|')
+    // ,
+    // new SctCod_Km('|繹々|えきえき|')
+    // ,
+    // new SctCod_Km('|枝々|えだえだ|')
+    // ,
+    // new SctCod_Km('|延々|えんえん|')
+    // ,
+    // new SctCod_Km('|炎々|えんえん|')
+    // ,
+    // new SctCod_Km('|焔々|えんえん|')
+    // ,
+    // new SctCod_Km('|奄々|えんえん|')
+    // ,
+    // new SctCod_Km('|追々|おいおい|')
+    // ,
+    // new SctCod_Km('|往々|おうおう|')
+    // ,
+    // new SctCod_Km('|怏々|おうおう|')
+    // ,
     // new SctCod_Km('|唯々|おお|')
     // ,
-    new SctCod_Km('|長々|おさおさ|')
-    ,
-    new SctCod_Km('|怖々|おじおじ|')
-    ,
-    new SctCod_Km('|怖々|おずおず|')
-    ,
-    new SctCod_Km('|条々|おちおち|')
-    ,
-    new SctCod_Km('|重々|おもおも|')
-    ,
-    new SctCod_Km('|折々|おりおり|')
-    ,
-    new SctCod_Km('|恢々|かいかい|')
-    ,
-    new SctCod_Km('|痒々|かいかい|')
-    ,
-    new SctCod_Km('|皚々|がいがい|')
-    ,
+    // new SctCod_Km('|長々|おさおさ|')
+    // ,
+    // new SctCod_Km('|怖々|おじおじ|')
+    // ,
+    // new SctCod_Km('|怖々|おずおず|')
+    // ,
+    // new SctCod_Km('|条々|おちおち|')
+    // ,
+    // new SctCod_Km('|重々|おもおも|')
+    // ,
+    // new SctCod_Km('|折々|おりおり|')
+    // ,
+    // new SctCod_Km('|恢々|かいかい|')
+    // ,
+    // new SctCod_Km('|痒々|かいかい|')
+    // ,
+    // new SctCod_Km('|皚々|がいがい|')
+    // ,
     // new SctCod_Km('|呵々|かか|')
     // ,
     // new SctCod_Km('|峨々|がが|')
     // ,
-    new SctCod_Km('|諤々|がくがく|')
-    ,
-    new SctCod_Km('|数々|かずかず|')
-    ,
-    new SctCod_Km('|方々|かたがた|')
-    ,
-    new SctCod_Km('|旁々|かたがた|')
-    ,
-    new SctCod_Km('|戞々|かつかつ|')
-    ,
-    new SctCod_Km('|角々|かどかど|')
-    ,
-    new SctCod_Km('|兼々|かねがね|')
-    ,
-    new SctCod_Km('|呵々|からから|')
-    ,
-    new SctCod_Km('|辛々|からがら|')
-    ,
-    new SctCod_Km('|我利我利|がりがり|')
-    ,
-    new SctCod_Km('|軽々|かるがる|')
-    ,
-    new SctCod_Km('|侃々|かんかん|')
-    ,
-    new SctCod_Km('|閑々|かんかん|')
-    ,
-    new SctCod_Km('|関々|かんかん|')
-    ,
-    new SctCod_Km('|緩々|かんかん|')
-    ,
-    new SctCod_Km('|巌々|がんがん|')
-    ,
-    new SctCod_Km('|奇々|きき|')
-    ,
-    new SctCod_Km('|暿々|きき|')
-    ,
-    new SctCod_Km('|喜々|きき|')
-    ,
-    new SctCod_Km('|木々|きぎ|')
-    ,
-    new SctCod_Km('|気々|きぎ|')
-    ,
-    new SctCod_Km('|巍々|ぎぎ|')
-    ,
-    new SctCod_Km('|刻々|ぎざぎざ|')
-    ,
-    new SctCod_Km('|段々|きだきだ|')
-    ,
-    new SctCod_Km('|屹々|きつきつ|')
-    ,
-    new SctCod_Km('|拮々|きつきつ|')
-    ,
-    new SctCod_Km('|岌々|きゅうきゅう|')
-    ,
-    new SctCod_Km('|汲々|きゅうきゅう|')
-    ,
-    new SctCod_Km('|急々|きゅうきゅう|')
-    ,
-    new SctCod_Km('|糾々|きゅうきゅう|')
-    ,
-    new SctCod_Km('|恟々|きょうきょう|')
-    ,
-    new SctCod_Km('|恐々|きょうきょう|')
-    ,
-    new SctCod_Km('|軽々|きょうきょう|')
-    ,
-    new SctCod_Km('|兢々|きょうきょう|')
-    ,
-    new SctCod_Km('|煌々|きらきら|')
-    ,
-    new SctCod_Km('|煌々|ぎらぎら|')
-    ,
-    new SctCod_Km('|限々|ぎりぎり|')
-    ,
-    new SctCod_Km('|近々|きんきん|')
-    ,
-    new SctCod_Km('|僅々|きんきん|')
-    ,
-    new SctCod_Km('|欣々|きんきん|')
-    ,
-    new SctCod_Km('|金々|きんきん|')
-    ,
-    new SctCod_Km('|空々|くうくう|')
-    ,
-    new SctCod_Km('|区々|くく|')
-    ,
-    new SctCod_Km('|句々|くく|')
-    ,
-    new SctCod_Km('|種々|くさぐさ|')
-    ,
-    new SctCod_Km('|癖々|くせぐせ|')
-    ,
-    new SctCod_Km('|口々|くちくち|')
-    ,
-    new SctCod_Km('|諄々|くどくど|')
-    ,
-    new SctCod_Km('|国々|くにぐに|')
-    ,
-    new SctCod_Km('|隈々|くまぐま|')
-    ,
-    new SctCod_Km('|暗々|くらくら|')
-    ,
-    new SctCod_Km('|黒々|くろぐろ|')
-    ,
-    new SctCod_Km('|炯々|けいけい|')
-    ,
-    new SctCod_Km('|軽々|けいけい|')
-    ,
-    new SctCod_Km('|下々|げげ|')
-    ,
-    new SctCod_Km('|孑々|けつけつ|')
-    ,
-    new SctCod_Km('|決々|けつけつ|')
-    ,
-    new SctCod_Km('|月々|げつげつ|')
-    ,
-    new SctCod_Km('|毳々|けばけば|')
-    ,
-    new SctCod_Km('|拳々|けんけん|')
-    ,
-    new SctCod_Km('|涓々|けんけん|')
-    ,
-    new SctCod_Km('|娟々|けんけん|')
-    ,
-    new SctCod_Km('|眷々|けんけん|')
-    ,
-    new SctCod_Km('|喧々|けんけん|')
-    ,
-    new SctCod_Km('|蹇々|けんけん|')
-    ,
-    new SctCod_Km('|件々|けんけん|')
-    ,
-    new SctCod_Km('|玄々|げんげん|')
-    ,
-    new SctCod_Km('|言々|げんげん|')
-    ,
-    new SctCod_Km('|舷々|げんげん|')
-    ,
-    new SctCod_Km('|行々|こうこう|')
-    ,
-    new SctCod_Km('|浩々|こうこう|')
-    ,
-    new SctCod_Km('|耿々|こうこう|')
-    ,
-    new SctCod_Km('|皓々|こうこう|')
-    ,
-    new SctCod_Km('|煌々|こうこう|')
-    ,
-    new SctCod_Km('|曠々|こうこう|')
-    ,
-    new SctCod_Km('|轟々|ごうごう|')
-    ,
-    new SctCod_Km('|囂々|ごうごう|')
-    ,
-    new SctCod_Km('|声々|こえごえ|')
-    ,
-    new SctCod_Km('|極々|ごくごく|')
-    ,
-    new SctCod_Km('|戸々|ここ|')
-    ,
-    new SctCod_Km('|呱々|ここ|')
-    ,
-    new SctCod_Km('|個々|ここ|')
-    ,
-    new SctCod_Km('|心々|こころごころ|')
-    ,
-    new SctCod_Km('|兀々|こつこつ|')
-    ,
-    new SctCod_Km('|忽々|こつこつ|')
-    ,
-    new SctCod_Km('|異々|ことごと|')
-    ,
-    new SctCod_Km('|事々|ことごと|')
-    ,
-    new SctCod_Km('|粉々|こなごな|')
-    ,
-    new SctCod_Km('|瘤々|こぶこぶ|')
-    ,
-    new SctCod_Km('|細々|こまごま|')
-    ,
-    new SctCod_Km('|交々|こもごも|')
-    ,
-    new SctCod_Km('|此々|これこれ|')
-    ,
-    new SctCod_Km('|恐々|こわごわ|')
-    ,
-    new SctCod_Km('|強々|こわごわ|')
-    ,
-    new SctCod_Km('|昏々|こんこん|')
-    ,
-    new SctCod_Km('|滾々|こんこん|')
-    ,
-    new SctCod_Km('|混々|こんこん|')
-    ,
-    new SctCod_Km('|懇々|こんこん|')
-    ,
-    new SctCod_Km('|再々|さいさい|')
-    ,
-    new SctCod_Km('|騒々|さいさい|')
-    ,
-    new SctCod_Km('|済々|さいさい|')
-    ,
-    new SctCod_Km('|細々|さいさい|')
-    ,
-    new SctCod_Km('|歳々|さいさい|')
-    ,
-    new SctCod_Km('|在々|さいざい|')
-    ,
-    new SctCod_Km('|騒々|さえさえ|')
-    ,
-    new SctCod_Km('|冴|さ|え|冴|ざ|え')
-    ,
-    new SctCod_Km('|先々|さきざき|')
-    ,
-    new SctCod_Km('|索々|さくさく|')
-    ,
-    new SctCod_Km('|嘖々|さくさく|')
-    ,
-    new SctCod_Km('|些々|ささ|')
-    ,
-    new SctCod_Km('|瑣々|ささ|')
-    ,
-    new SctCod_Km('|察々|さっさつ|')
-    ,
-    new SctCod_Km('|颯々|さっさつ|')
-    ,
-    new SctCod_Km('|爽々|さばさば|')
-    ,
-    new SctCod_Km('|様々|さまざま|')
-    ,
-    new SctCod_Km('|寒々|さむざむ|')
-    ,
-    new SctCod_Km('|潸々|さめざめ|')
-    ,
-    new SctCod_Km('|更々|さらさら|')
-    ,
-    new SctCod_Km('|騒々|さわさわ|')
-    ,
-    new SctCod_Km('|騒々|ざわざわ|')
-    ,
-    new SctCod_Km('|潸々|さんさん|')
-    ,
-    new SctCod_Km('|燦々|さんさん|')
-    ,
-    new SctCod_Km('|散々|さんざん|')
-    ,
-    new SctCod_Km('|悄々|しおしお|')
-    ,
-    new SctCod_Km('|塩々|しおじお|')
-    ,
-    new SctCod_Km('|然々|しかしか|')
-    ,
-    new SctCod_Km('|然々|しかじか|')
-    ,
-    new SctCod_Km('|直々|じきじき|')
-    ,
-    new SctCod_Km('|頻々|しくしく|')
-    ,
-    new SctCod_Km('|繁々|しげしげ|')
-    ,
-    new SctCod_Km('|孜々|しし|')
-    ,
-    new SctCod_Km('|時々|じじ|')
-    ,
-    new SctCod_Km('|静々|しずしず|')
-    ,
-    new SctCod_Km('|下々|したじた|')
-    ,
-    new SctCod_Km('|七々|しちしち|')
-    ,
-    new SctCod_Km('|瑟々|しつしつ|')
-    ,
-    new SctCod_Km('|嫋々|しなしな|')
-    ,
-    new SctCod_Km('|品々|しなじな|')
-    ,
-    new SctCod_Km('|渋々|しぶしぶ|')
-    ,
-    new SctCod_Km('|島々|しまじま|')
-    ,
-    new SctCod_Km('|染々|しみじみ|')
-    ,
-    new SctCod_Km('|下々|しもじも|')
-    ,
-    new SctCod_Km('|灼々|しゃくしゃく|')
-    ,
-    new SctCod_Km('|綽々|しゃくしゃく|')
-    ,
-    new SctCod_Km('|習々|しゅうしゅう|')
-    ,
-    new SctCod_Km('|啾々|しゅうしゅう|')
-    ,
-    new SctCod_Km('|重々|じゅうじゅう|')
-    ,
-    new SctCod_Km('|粛々|しゅくしゅく|')
-    ,
-    new SctCod_Km('|種々|しゅじゅ|')
-    ,
-    new SctCod_Km('|醇々|じゅんじゅん|')
-    ,
-    new SctCod_Km('|順々|じゅんじゅん|')
-    ,
-    new SctCod_Km('|昭々|しょうしょう|')
-    ,
-    new SctCod_Km('|悚々|しょうしょう|')
-    ,
-    new SctCod_Km('|悄々|しょうしょう|')
-    ,
-    new SctCod_Km('|彰々|しょうしょう|')
-    ,
-    new SctCod_Km('|蕭々|しょうしょう|')
-    ,
-    new SctCod_Km('|瀟々|しょうしょう|')
-    ,
-    new SctCod_Km('|少々|しょうしょう|')
-    ,
-    new SctCod_Km('|蒸々|じょうじょう|')
-    ,
-    new SctCod_Km('|畳々|じょうじょう|')
-    ,
-    new SctCod_Km('|擾々|じょうじょう|')
-    ,
-    new SctCod_Km('|嫋々|じょうじょう|')
-    ,
-    new SctCod_Km('|穰々|じょうじょう|')
-    ,
-    new SctCod_Km('|上々|じょうじょう|')
-    ,
-    new SctCod_Km('|条々|じょうじょう|')
-    ,
-    new SctCod_Km('|常々|じょうじょう|')
-    ,
-    new SctCod_Km('|生々世々|しょうじょうせぜ|')
-    ,
-    new SctCod_Km('|惻々|しょくしょく|')
-    ,
-    new SctCod_Km('|喞々|しょくしょく|')
-    ,
-    new SctCod_Km('|処々|しょしょ|')
-    ,
-    new SctCod_Km('|徐々|じょじょ|')
-    ,
-    new SctCod_Km('|白々|しらしら|')
-    ,
-    new SctCod_Km('|白々|しらじら|')
-    ,
-    new SctCod_Km('|痴|し|れ|痴|じ|れ')
-    ,
-    new SctCod_Km('|白々|しろじろ|')
-    ,
-    new SctCod_Km('|岑々|しんしん|')
-    ,
-    new SctCod_Km('|津々|しんしん|')
-    ,
-    new SctCod_Km('|振々|しんしん|')
-    ,
-    new SctCod_Km('|深々|しんしん|')
-    ,
-    new SctCod_Km('|森々|しんしん|')
-    ,
-    new SctCod_Km('|蓁々|しんしん|')
-    ,
-    new SctCod_Km('|駸々|しんしん|')
-    ,
-    new SctCod_Km('|惴々|ずいずい|')
-    ,
-    new SctCod_Km('|図々|ずうずう|')
-    ,
-    new SctCod_Km('|末々|すえずえ|')
-    ,
-    new SctCod_Km('|清々|すがすが|')
-    ,
-    new SctCod_Km('|好|す|き|好|ず|き')
-    ,
-    new SctCod_Km('|隙々|すきずき|')
-    ,
-    new SctCod_Km('|悄々|すごすご|')
-    ,
-    new SctCod_Km('|筋々|すじすじ|')
-    ,
-    new SctCod_Km('|寸々|ずたずた|')
-    ,
-    new SctCod_Km('|滑々|すべすべ|')
-    ,
-    new SctCod_Km('|隅々|すみずみ|')
-    ,
-    new SctCod_Km('|寸々|すんずん|')
-    ,
-    new SctCod_Km('|井々|せいせい|')
-    ,
-    new SctCod_Km('|生々|せいせい|')
-    ,
-    new SctCod_Km('|正々|せいせい|')
-    ,
-    new SctCod_Km('|青々|せいせい|')
-    ,
-    new SctCod_Km('|済々|せいせい|')
-    ,
-    new SctCod_Km('|萋々|せいせい|')
-    ,
-    new SctCod_Km('|整々|せいせい|')
-    ,
-    new SctCod_Km('|世々|せいせい|')
-    ,
-    new SctCod_Km('|精々|せいぜい|')
-    ,
-    new SctCod_Km('|寂々|せきせき|')
-    ,
-    new SctCod_Km('|戚々|せきせき|')
-    ,
-    new SctCod_Km('|世々|せせ|')
-    ,
-    new SctCod_Km('|瀬々|せぜ|')
-    ,
-    new SctCod_Km('|節々|せつせつ|')
-    ,
-    new SctCod_Km('|切々|せつせつ|')
-    ,
-    new SctCod_Km('|屑々|せつせつ|')
-    ,
-    new SctCod_Km('|晢々|せつせつ|')
-    ,
-    new SctCod_Km('|忙々|せわせわ|')
-    ,
-    new SctCod_Km('|閃々|せんせん|')
-    ,
-    new SctCod_Km('|戦々|せんせん|')
-    ,
-    new SctCod_Km('|潺々|せんせん|')
-    ,
-    new SctCod_Km('|濺々|せんせん|')
-    ,
-    new SctCod_Km('|繊々|せんせん|')
-    ,
-    new SctCod_Km('|冉々|ぜんぜん|')
-    ,
-    new SctCod_Km('|漸々|ぜんぜん|')
-    ,
-    new SctCod_Km('|草々|そうそう|')
-    ,
-    new SctCod_Km('|早々|そうそう|')
-    ,
-    new SctCod_Km('|怱々|そうそう|')
-    ,
-    new SctCod_Km('|匆々|そうそう|')
-    ,
-    new SctCod_Km('|淙々|そうそう|')
-    ,
-    new SctCod_Km('|層々|そうそう|')
-    ,
-    new SctCod_Km('|蒼々|そうそう|')
-    ,
-    new SctCod_Km('|錚々|そうそう|')
-    ,
-    new SctCod_Km('|簇々|そうそう|')
-    ,
-    new SctCod_Km('|蹌々|そうそう|')
-    ,
-    new SctCod_Km('|叢々|そうそう|')
-    ,
-    new SctCod_Km('|鏘々|そうそう|')
-    ,
-    new SctCod_Km('|雑々|ぞうぞう|')
-    ,
-    new SctCod_Km('|続々|ぞくぞく|')
-    ,
-    new SctCod_Km('|簇々|ぞくぞく|')
-    ,
-    new SctCod_Km('|楚々|そそ|')
-    ,
-    new SctCod_Km('|卒々|そつそつ|')
-    ,
-    new SctCod_Km('|空々|そらぞら|')
-    ,
-    new SctCod_Km('|対々|たいたい|')
-    ,
-    new SctCod_Km('|高々|たかだか|')
-    ,
-    new SctCod_Km('|諾々|だくだく|')
-    ,
-    new SctCod_Km('|猛々|たけだけ|')
-    ,
-    new SctCod_Km('|只々|ただただ|')
-    ,
-    new SctCod_Km('|辿々|たどたど|')
-    ,
-    new SctCod_Km('|度々|たびたび|')
-    ,
-    new SctCod_Km('|偶々|たまたま|')
-    ,
-    new SctCod_Km('|滴々|たらたら|')
-    ,
-    new SctCod_Km('|坦々|たんたん|')
-    ,
-    new SctCod_Km('|淡々|たんたん|')
-    ,
-    new SctCod_Km('|耽々|たんたん|')
-    ,
-    new SctCod_Km('|湛々|たんたん|')
-    ,
-    new SctCod_Km('|潭々|たんたん|')
-    ,
-    new SctCod_Km('|団々|だんだん|')
-    ,
-    new SctCod_Km('|段々|だんだん|')
-    ,
-    new SctCod_Km('|近々|ちかぢか|')
-    ,
-    new SctCod_Km('|遅々|ちち|')
-    ,
-    new SctCod_Km('|千々|ちぢ|')
-    ,
-    new SctCod_Km('|着々|ちゃくちゃく|')
-    ,
-    new SctCod_Km('|嫡々|ちゃくちゃく|')
-    ,
-    new SctCod_Km('|茶々|ちゃちゃ|')
-    ,
-    new SctCod_Km('|丁々|ちょうちょう|')
-    ,
-    new SctCod_Km('|蝶々|ちょうちょう|')
-    ,
-    new SctCod_Km('|沈々|ちんちん|')
-    ,
-    new SctCod_Km('|月々|つきづき|')
-    ,
-    new SctCod_Km('|継々|つきづき|')
-    ,
-    new SctCod_Km('|辻々|つじつじ|')
-    ,
-    new SctCod_Km('|端々|つまづま|')
-    ,
-    new SctCod_Km('|艶々|つやつや|')
-    ,
-    new SctCod_Km('|滑々|つらつら|')
-    ,
-    new SctCod_Km('|熟々|つらつら|')
-    ,
-    new SctCod_Km('|丁々|ていてい|')
-    ,
-    new SctCod_Km('|亭々|ていてい|')
-    ,
-    new SctCod_Km('|滴々|てきてき|')
-    ,
-    new SctCod_Km('|点々|てんてん|')
-    ,
-    new SctCod_Km('|転々|てんてん|')
-    ,
-    new SctCod_Km('|田々|でんでん|')
-    ,
-    new SctCod_Km('|等々|とうとう|')
-    ,
-    new SctCod_Km('|丁々|とうとう|')
-    ,
-    new SctCod_Km('|滔々|とうとう|')
-    ,
-    new SctCod_Km('|蕩々|とうとう|')
-    ,
-    new SctCod_Km('|鼕々|とうとう|')
-    ,
-    new SctCod_Km('|堂々|どうどう|')
-    ,
-    new SctCod_Km('|時々|ときどき|')
-    ,
-    new SctCod_Km('|得々|とくとく|')
-    ,
-    new SctCod_Km('|棘々|とげとげ|')
-    ,
-    new SctCod_Km('|年々|としとし|')
-    ,
-    new SctCod_Km('|咄々|とつとつ|')
-    ,
-    new SctCod_Km('|訥々|とつとつ|')
-    ,
-    new SctCod_Km('|度々|どど|')
-    ,
-    new SctCod_Km('|呶々|どど|')
-    ,
-    new SctCod_Km('|共々|ともども|')
-    ,
-    new SctCod_Km('|尚々|なおなお|')
-    ,
-    new SctCod_Km('|中々|なかなか|')
-    ,
-    new SctCod_Km('|長々|ながなが|')
-    ,
-    new SctCod_Km('|謎々|なぞなぞ|')
-    ,
-    new SctCod_Km('|何々|なになに|')
-    ,
-    new SctCod_Km('|生々|なまなま|')
-    ,
-    new SctCod_Km('|波々|なみなみ|')
-    ,
-    new SctCod_Km('|喃々|なんなん|')
-    ,
-    new SctCod_Km('|苦々|にがにが|')
-    ,
-    new SctCod_Km('|賑々|にぎにぎ|')
-    ,
-    new SctCod_Km('|憎々|にくにく|')
-    ,
-    new SctCod_Km('|日々|にちにち|')
-    ,
-    new SctCod_Km('|温々|ぬくぬく|')
-    ,
-    new SctCod_Km('|粘々|ねばねば|')
-    ,
-    new SctCod_Km('|年々|ねんねん|')
-    ,
-    new SctCod_Km('|後々|のちのち|')
-    ,
-    new SctCod_Km('|呪々|のろのろ|')
-    ,
-    new SctCod_Km('|映々|はえばえ|')
-    ,
-    new SctCod_Km('|捗々|はかばか|')
-    ,
-    new SctCod_Km('|白々|はくはく|')
-    ,
-    new SctCod_Km('|寞々|ばくばく|')
-    ,
-    new SctCod_Km('|漠々|ばくばく|')
-    ,
-    new SctCod_Km('|端々|はしばし|')
-    ,
-    new SctCod_Km('|八々|はちはち|')
-    ,
-    new SctCod_Km('|早々|はやばや|')
-    ,
-    new SctCod_Km('|散々|ばらばら|')
-    ,
-    new SctCod_Km('|春々|はるはる|')
-    ,
-    new SctCod_Km('|遥々|はるばる|')
-    ,
-    new SctCod_Km('|半々|はんはん|')
-    ,
-    new SctCod_Km('|泛々|はんぱん|')
-    ,
-    new SctCod_Km('|万々|ばんばん|')
-    ,
-    new SctCod_Km('|久々|ひさびさ|')
-    ,
-    new SctCod_Km('|緊々|ひしひし|')
-    ,
-    new SctCod_Km('|人々|ひとびと|')
-    ,
-    new SctCod_Km('|比々|ひひ|')
-    ,
-    new SctCod_Km('|霏々|ひひ|')
-    ,
-    new SctCod_Km('|日々|ひび|')
-    ,
-    new SctCod_Km('|微々|びび|')
-    ,
-    new SctCod_Km('|美々|びび|')
-    ,
-    new SctCod_Km('|飄々|ひょうひょう|')
-    ,
-    new SctCod_Km('|眇々|びょうびょう|')
-    ,
-    new SctCod_Km('|渺々|びょうびょう|')
-    ,
-    new SctCod_Km('|片々|ひらひら|')
-    ,
-    new SctCod_Km('|広々|ひろびろ|')
-    ,
-    new SctCod_Km('|彬々|ひんぴん|')
-    ,
-    new SctCod_Km('|頻々|ひんぴん|')
-    ,
-    new SctCod_Km('|深々|ふかぶか|')
-    ,
-    new SctCod_Km('|福々|ふくふく|')
-    ,
-    new SctCod_Km('|総々|ふさふさ|')
-    ,
-    new SctCod_Km('|節々|ふしぶし|')
-    ,
-    new SctCod_Km('|物々|ぶつぶつ|')
-    ,
-    new SctCod_Km('|芬々|ふんぷん|')
-    ,
-    new SctCod_Km('|紛々|ふんぷん|')
-    ,
-    new SctCod_Km('|平々|ヘいへい|')
-    ,
-    new SctCod_Km('|別々|べつべつ|')
-    ,
-    new SctCod_Km('|片々|へんぺん|')
-    ,
-    new SctCod_Km('|翩々|へんぺん|')
-    ,
-    new SctCod_Km('|便々|べんべん|')
-    ,
-    new SctCod_Km('|蓬々|ほうほう|')
-    ,
-    new SctCod_Km('|茫々|ぼうぼう|')
-    ,
-    new SctCod_Km('|某々|ぼうぼう|')
-    ,
-    new SctCod_Km('|惚々|ほけほけ|')
-    ,
-    new SctCod_Km('|細々|ほそぼそ|')
-    ,
-    new SctCod_Km('|勃々|ぼつぼつ|')
-    ,
-    new SctCod_Km('|程々|ほどほど|')
-    ,
-    new SctCod_Km('|仄々|ほのぼの|')
-    ,
-    new SctCod_Km('|歩々|ほほ|')
-    ,
-    new SctCod_Km('|舞々|まいまい|')
-    ,
-    new SctCod_Km('|毎々|まいまい|')
-    ,
-    new SctCod_Km('|前々|まえまえ|')
-    ,
-    new SctCod_Km('|禍々|まがまが|')
-    ,
-    new SctCod_Km('|益々|ますます|')
-    ,
-    new SctCod_Km('|又々|またまた|')
-    ,
-    new SctCod_Km('|区々|まちまち|')
-    ,
-    new SctCod_Km('|間々|まま|')
-    ,
-    new SctCod_Km('|丸々|まるまる|')
-    ,
-    new SctCod_Km('|万々|まんまん|')
-    ,
-    new SctCod_Km('|漫々|まんまん|')
-    ,
-    new SctCod_Km('|満々|まんまん|')
-    ,
-    new SctCod_Km('|瑞々|みずみず|')
-    ,
-    new SctCod_Km('|道々|みちみち|')
-    ,
-    new SctCod_Km('|密々|みつみつ|')
-    ,
-    new SctCod_Km('|皆々|みなみな|')
-    ,
-    new SctCod_Km('|身々|みみ|')
-    ,
-    new SctCod_Km('|宗々|むねむね|')
-    ,
-    new SctCod_Km('|宜々|むべむべ|')
-    ,
-    new SctCod_Km('|明々|めいめい|')
-    ,
-    new SctCod_Km('|冥々|めいめい|')
-    ,
-    new SctCod_Km('|綿々|めんめん|')
-    ,
-    new SctCod_Km('|面々|めんめん|')
-    ,
-    new SctCod_Km('|濛々|もうもう|')
-    ,
-    new SctCod_Km('|朦々|もうもう|')
-    ,
-    new SctCod_Km('|黙々|もくもく|')
-    ,
-    new SctCod_Km('|元々|もともと|')
-    ,
-    new SctCod_Km('|物々|ものもの|')
-    ,
-    new SctCod_Km('|諸々|もろもろ|')
-    ,
-    new SctCod_Km('|悶々|もんもん|')
-    ,
-    new SctCod_Km('|安々|やすやす|')
-    ,
-    new SctCod_Km('|易々|やすやす|')
-    ,
-    new SctCod_Km('|痩々|やすやす|')
-    ,
-    new SctCod_Km('|闇々|やみやみ|')
-    ,
-    new SctCod_Km('|稍々|やや|')
-    ,
-    new SctCod_Km('|悒々|ゆうゆう|')
-    ,
-    new SctCod_Km('|悠々|ゆうゆう|')
-    ,
-    new SctCod_Km('|優々|ゆうゆう|')
-    ,
-    new SctCod_Km('|努々|ゆめゆめ|')
-    ,
-    new SctCod_Km('|緩々|ゆるゆる|')
-    ,
-    new SctCod_Km('|夭々|ようよう|')
-    ,
-    new SctCod_Km('|洋々|ようよう|')
-    ,
-    new SctCod_Km('|杳々|ようよう|')
-    ,
-    new SctCod_Km('|揺々|ようよう|')
-    ,
-    new SctCod_Km('|溶々|ようよう|')
-    ,
-    new SctCod_Km('|揚々|ようよう|')
-    ,
-    new SctCod_Km('|永々|ようよう|')
-    ,
-    new SctCod_Km('|翌々|よくよく|')
-    ,
-    new SctCod_Km('|翼々|よくよく|')
-    ,
-    new SctCod_Km('|由々|よしよし|')
-    ,
-    new SctCod_Km('|代々|よよ|')
-    ,
-    new SctCod_Km('|夜々|よよ|')
-    ,
-    new SctCod_Km('|夜々|よるよる|')
-    ,
-    new SctCod_Km('|磊々|らいらい|')
-    ,
-    new SctCod_Km('|楽々|らくらく|')
-    ,
-    new SctCod_Km('|落々|らくらく|')
-    ,
-    new SctCod_Km('|爛々|らんらん|')
-    ,
-    new SctCod_Km('|隆々|りゅうりゅう|')
-    ,
-    new SctCod_Km('|流々|りゅうりゅう|')
-    ,
-    new SctCod_Km('|粒々|りゅうりゅう|')
-    ,
-    new SctCod_Km('|両々|りょうりょう|')
-    ,
-    new SctCod_Km('|了々|りょうりょう|')
-    ,
-    new SctCod_Km('|喨々|りょうりょう|')
-    ,
-    new SctCod_Km('|寥々|りょうりょう|')
-    ,
-    new SctCod_Km('|稜々|りょうりょう|')
-    ,
-    new SctCod_Km('|離々|りり|')
-    ,
-    new SctCod_Km('|凛々|りんりん|')
-    ,
-    new SctCod_Km('|累々|るいるい|')
-    ,
-    new SctCod_Km('|縷々|るる|')
-    ,
-    new SctCod_Km('|玲々|れいれい|')
-    ,
-    new SctCod_Km('|麗々|れいれい|')
-    ,
-    new SctCod_Km('|烈々|れつれつ|')
-    ,
-    new SctCod_Km('|恋々|れんれん|')
-    ,
-    new SctCod_Km('|琅々|ろうろう|')
-    ,
-    new SctCod_Km('|浪々|ろうろう|')
-    ,
-    new SctCod_Km('|朗々|ろうろう|')
-    ,
-    new SctCod_Km('|朧々|ろうろう|')
-    ,
-    new SctCod_Km('|陸々|ろくろく|')
-    ,
-    new SctCod_Km('|碌々|ろくろく|')
-    ,
-    new SctCod_Km('|態々|わざわざ|')
-    ,
-    new SctCod_Km('|戦々|わなわな|')
-    ,
-    new SctCod_Km('|我々|われわれ|')
-];
+//     new SctCod_Km('|諤々|がくがく|')
+//     ,
+//     new SctCod_Km('|数々|かずかず|')
+//     ,
+//     new SctCod_Km('|方々|かたがた|')
+//     ,
+//     new SctCod_Km('|旁々|かたがた|')
+//     ,
+//     new SctCod_Km('|戞々|かつかつ|')
+//     ,
+//     new SctCod_Km('|角々|かどかど|')
+//     ,
+//     new SctCod_Km('|兼々|かねがね|')
+//     ,
+//     new SctCod_Km('|呵々|からから|')
+//     ,
+//     new SctCod_Km('|辛々|からがら|')
+//     ,
+//     new SctCod_Km('|我利我利|がりがり|')
+//     ,
+//     new SctCod_Km('|軽々|かるがる|')
+//     ,
+//     new SctCod_Km('|侃々|かんかん|')
+//     ,
+//     new SctCod_Km('|閑々|かんかん|')
+//     ,
+//     new SctCod_Km('|関々|かんかん|')
+//     ,
+//     new SctCod_Km('|緩々|かんかん|')
+//     ,
+//     new SctCod_Km('|巌々|がんがん|')
+//     ,
+//     new SctCod_Km('|奇々|きき|')
+//     ,
+//     new SctCod_Km('|暿々|きき|')
+//     ,
+//     new SctCod_Km('|喜々|きき|')
+//     ,
+//     new SctCod_Km('|木々|きぎ|')
+//     ,
+//     new SctCod_Km('|気々|きぎ|')
+//     ,
+//     new SctCod_Km('|巍々|ぎぎ|')
+//     ,
+//     new SctCod_Km('|刻々|ぎざぎざ|')
+//     ,
+//     new SctCod_Km('|段々|きだきだ|')
+//     ,
+//     new SctCod_Km('|屹々|きつきつ|')
+//     ,
+//     new SctCod_Km('|拮々|きつきつ|')
+//     ,
+//     new SctCod_Km('|岌々|きゅうきゅう|')
+//     ,
+//     new SctCod_Km('|汲々|きゅうきゅう|')
+//     ,
+//     new SctCod_Km('|急々|きゅうきゅう|')
+//     ,
+//     new SctCod_Km('|糾々|きゅうきゅう|')
+//     ,
+//     new SctCod_Km('|恟々|きょうきょう|')
+//     ,
+//     new SctCod_Km('|恐々|きょうきょう|')
+//     ,
+//     new SctCod_Km('|軽々|きょうきょう|')
+//     ,
+//     new SctCod_Km('|兢々|きょうきょう|')
+//     ,
+//     new SctCod_Km('|煌々|きらきら|')
+//     ,
+//     new SctCod_Km('|煌々|ぎらぎら|')
+//     ,
+//     new SctCod_Km('|限々|ぎりぎり|')
+//     ,
+//     new SctCod_Km('|近々|きんきん|')
+//     ,
+//     new SctCod_Km('|僅々|きんきん|')
+//     ,
+//     new SctCod_Km('|欣々|きんきん|')
+//     ,
+//     new SctCod_Km('|金々|きんきん|')
+//     ,
+//     new SctCod_Km('|空々|くうくう|')
+//     ,
+//     new SctCod_Km('|区々|くく|')
+//     ,
+//     new SctCod_Km('|句々|くく|')
+//     ,
+//     new SctCod_Km('|種々|くさぐさ|')
+//     ,
+//     new SctCod_Km('|癖々|くせぐせ|')
+//     ,
+//     new SctCod_Km('|口々|くちくち|')
+//     ,
+//     new SctCod_Km('|諄々|くどくど|')
+//     ,
+//     new SctCod_Km('|国々|くにぐに|')
+//     ,
+//     new SctCod_Km('|隈々|くまぐま|')
+//     ,
+//     new SctCod_Km('|暗々|くらくら|')
+//     ,
+//     new SctCod_Km('|黒々|くろぐろ|')
+//     ,
+//     new SctCod_Km('|炯々|けいけい|')
+//     ,
+//     new SctCod_Km('|軽々|けいけい|')
+//     ,
+//     new SctCod_Km('|下々|げげ|')
+//     ,
+//     new SctCod_Km('|孑々|けつけつ|')
+//     ,
+//     new SctCod_Km('|決々|けつけつ|')
+//     ,
+//     new SctCod_Km('|月々|げつげつ|')
+//     ,
+//     new SctCod_Km('|毳々|けばけば|')
+//     ,
+//     new SctCod_Km('|拳々|けんけん|')
+//     ,
+//     new SctCod_Km('|涓々|けんけん|')
+//     ,
+//     new SctCod_Km('|娟々|けんけん|')
+//     ,
+//     new SctCod_Km('|眷々|けんけん|')
+//     ,
+//     new SctCod_Km('|喧々|けんけん|')
+//     ,
+//     new SctCod_Km('|蹇々|けんけん|')
+//     ,
+//     new SctCod_Km('|件々|けんけん|')
+//     ,
+//     new SctCod_Km('|玄々|げんげん|')
+//     ,
+//     new SctCod_Km('|言々|げんげん|')
+//     ,
+//     new SctCod_Km('|舷々|げんげん|')
+//     ,
+//     new SctCod_Km('|行々|こうこう|')
+//     ,
+//     new SctCod_Km('|浩々|こうこう|')
+//     ,
+//     new SctCod_Km('|耿々|こうこう|')
+//     ,
+//     new SctCod_Km('|皓々|こうこう|')
+//     ,
+//     new SctCod_Km('|煌々|こうこう|')
+//     ,
+//     new SctCod_Km('|曠々|こうこう|')
+//     ,
+//     new SctCod_Km('|轟々|ごうごう|')
+//     ,
+//     new SctCod_Km('|囂々|ごうごう|')
+//     ,
+//     new SctCod_Km('|声々|こえごえ|')
+//     ,
+//     new SctCod_Km('|極々|ごくごく|')
+//     ,
+//     new SctCod_Km('|戸々|ここ|')
+//     ,
+//     new SctCod_Km('|呱々|ここ|')
+//     ,
+//     new SctCod_Km('|個々|ここ|')
+//     ,
+//     new SctCod_Km('|心々|こころごころ|')
+//     ,
+//     new SctCod_Km('|兀々|こつこつ|')
+//     ,
+//     new SctCod_Km('|忽々|こつこつ|')
+//     ,
+//     new SctCod_Km('|異々|ことごと|')
+//     ,
+//     new SctCod_Km('|事々|ことごと|')
+//     ,
+//     new SctCod_Km('|粉々|こなごな|')
+//     ,
+//     new SctCod_Km('|瘤々|こぶこぶ|')
+//     ,
+//     new SctCod_Km('|細々|こまごま|')
+//     ,
+//     new SctCod_Km('|交々|こもごも|')
+//     ,
+//     new SctCod_Km('|此々|これこれ|')
+//     ,
+//     new SctCod_Km('|恐々|こわごわ|')
+//     ,
+//     new SctCod_Km('|強々|こわごわ|')
+//     ,
+//     new SctCod_Km('|昏々|こんこん|')
+//     ,
+//     new SctCod_Km('|滾々|こんこん|')
+//     ,
+//     new SctCod_Km('|混々|こんこん|')
+//     ,
+//     new SctCod_Km('|懇々|こんこん|')
+//     ,
+//     new SctCod_Km('|再々|さいさい|')
+//     ,
+//     new SctCod_Km('|騒々|さいさい|')
+//     ,
+//     new SctCod_Km('|済々|さいさい|')
+//     ,
+//     new SctCod_Km('|細々|さいさい|')
+//     ,
+//     new SctCod_Km('|歳々|さいさい|')
+//     ,
+//     new SctCod_Km('|在々|さいざい|')
+//     ,
+//     new SctCod_Km('|騒々|さえさえ|')
+//     ,
+//     new SctCod_Km('|冴|さ|え|冴|ざ|え')
+//     ,
+//     new SctCod_Km('|先々|さきざき|')
+//     ,
+//     new SctCod_Km('|索々|さくさく|')
+//     ,
+//     new SctCod_Km('|嘖々|さくさく|')
+//     ,
+//     new SctCod_Km('|些々|ささ|')
+//     ,
+//     new SctCod_Km('|瑣々|ささ|')
+//     ,
+//     new SctCod_Km('|察々|さっさつ|')
+//     ,
+//     new SctCod_Km('|颯々|さっさつ|')
+//     ,
+//     new SctCod_Km('|爽々|さばさば|')
+//     ,
+//     new SctCod_Km('|様々|さまざま|')
+//     ,
+//     new SctCod_Km('|寒々|さむざむ|')
+//     ,
+//     new SctCod_Km('|潸々|さめざめ|')
+//     ,
+//     new SctCod_Km('|更々|さらさら|')
+//     ,
+//     new SctCod_Km('|騒々|さわさわ|')
+//     ,
+//     new SctCod_Km('|騒々|ざわざわ|')
+//     ,
+//     new SctCod_Km('|潸々|さんさん|')
+//     ,
+//     new SctCod_Km('|燦々|さんさん|')
+//     ,
+//     new SctCod_Km('|散々|さんざん|')
+//     ,
+//     new SctCod_Km('|悄々|しおしお|')
+//     ,
+//     new SctCod_Km('|塩々|しおじお|')
+//     ,
+//     new SctCod_Km('|然々|しかしか|')
+//     ,
+//     new SctCod_Km('|然々|しかじか|')
+//     ,
+//     new SctCod_Km('|直々|じきじき|')
+//     ,
+//     new SctCod_Km('|頻々|しくしく|')
+//     ,
+//     new SctCod_Km('|繁々|しげしげ|')
+//     ,
+//     new SctCod_Km('|孜々|しし|')
+//     ,
+//     new SctCod_Km('|時々|じじ|')
+//     ,
+//     new SctCod_Km('|静々|しずしず|')
+//     ,
+//     new SctCod_Km('|下々|したじた|')
+//     ,
+//     new SctCod_Km('|七々|しちしち|')
+//     ,
+//     new SctCod_Km('|瑟々|しつしつ|')
+//     ,
+//     new SctCod_Km('|嫋々|しなしな|')
+//     ,
+//     new SctCod_Km('|品々|しなじな|')
+//     ,
+//     new SctCod_Km('|渋々|しぶしぶ|')
+//     ,
+//     new SctCod_Km('|島々|しまじま|')
+//     ,
+//     new SctCod_Km('|染々|しみじみ|')
+//     ,
+//     new SctCod_Km('|下々|しもじも|')
+//     ,
+//     new SctCod_Km('|灼々|しゃくしゃく|')
+//     ,
+//     new SctCod_Km('|綽々|しゃくしゃく|')
+//     ,
+//     new SctCod_Km('|習々|しゅうしゅう|')
+//     ,
+//     new SctCod_Km('|啾々|しゅうしゅう|')
+//     ,
+//     new SctCod_Km('|重々|じゅうじゅう|')
+//     ,
+//     new SctCod_Km('|粛々|しゅくしゅく|')
+//     ,
+//     new SctCod_Km('|種々|しゅじゅ|')
+//     ,
+//     new SctCod_Km('|醇々|じゅんじゅん|')
+//     ,
+//     new SctCod_Km('|順々|じゅんじゅん|')
+//     ,
+//     new SctCod_Km('|昭々|しょうしょう|')
+//     ,
+//     new SctCod_Km('|悚々|しょうしょう|')
+//     ,
+//     new SctCod_Km('|悄々|しょうしょう|')
+//     ,
+//     new SctCod_Km('|彰々|しょうしょう|')
+//     ,
+//     new SctCod_Km('|蕭々|しょうしょう|')
+//     ,
+//     new SctCod_Km('|瀟々|しょうしょう|')
+//     ,
+//     new SctCod_Km('|少々|しょうしょう|')
+//     ,
+//     new SctCod_Km('|蒸々|じょうじょう|')
+//     ,
+//     new SctCod_Km('|畳々|じょうじょう|')
+//     ,
+//     new SctCod_Km('|擾々|じょうじょう|')
+//     ,
+//     new SctCod_Km('|嫋々|じょうじょう|')
+//     ,
+//     new SctCod_Km('|穰々|じょうじょう|')
+//     ,
+//     new SctCod_Km('|上々|じょうじょう|')
+//     ,
+//     new SctCod_Km('|条々|じょうじょう|')
+//     ,
+//     new SctCod_Km('|常々|じょうじょう|')
+//     ,
+//     new SctCod_Km('|生々世々|しょうじょうせぜ|')
+//     ,
+//     new SctCod_Km('|惻々|しょくしょく|')
+//     ,
+//     new SctCod_Km('|喞々|しょくしょく|')
+//     ,
+//     new SctCod_Km('|処々|しょしょ|')
+//     ,
+//     new SctCod_Km('|徐々|じょじょ|')
+//     ,
+//     new SctCod_Km('|白々|しらしら|')
+//     ,
+//     new SctCod_Km('|白々|しらじら|')
+//     ,
+//     new SctCod_Km('|痴|し|れ|痴|じ|れ')
+//     ,
+//     new SctCod_Km('|白々|しろじろ|')
+//     ,
+//     new SctCod_Km('|岑々|しんしん|')
+//     ,
+//     new SctCod_Km('|津々|しんしん|')
+//     ,
+//     new SctCod_Km('|振々|しんしん|')
+//     ,
+//     new SctCod_Km('|深々|しんしん|')
+//     ,
+//     new SctCod_Km('|森々|しんしん|')
+//     ,
+//     new SctCod_Km('|蓁々|しんしん|')
+//     ,
+//     new SctCod_Km('|駸々|しんしん|')
+//     ,
+//     new SctCod_Km('|惴々|ずいずい|')
+//     ,
+//     new SctCod_Km('|図々|ずうずう|')
+//     ,
+//     new SctCod_Km('|末々|すえずえ|')
+//     ,
+//     new SctCod_Km('|清々|すがすが|')
+//     ,
+//     new SctCod_Km('|好|す|き|好|ず|き')
+//     ,
+//     new SctCod_Km('|隙々|すきずき|')
+//     ,
+//     new SctCod_Km('|悄々|すごすご|')
+//     ,
+//     new SctCod_Km('|筋々|すじすじ|')
+//     ,
+//     new SctCod_Km('|寸々|ずたずた|')
+//     ,
+//     new SctCod_Km('|滑々|すべすべ|')
+//     ,
+//     new SctCod_Km('|隅々|すみずみ|')
+//     ,
+//     new SctCod_Km('|寸々|すんずん|')
+//     ,
+//     new SctCod_Km('|井々|せいせい|')
+//     ,
+//     new SctCod_Km('|生々|せいせい|')
+//     ,
+//     new SctCod_Km('|正々|せいせい|')
+//     ,
+//     new SctCod_Km('|青々|せいせい|')
+//     ,
+//     new SctCod_Km('|済々|せいせい|')
+//     ,
+//     new SctCod_Km('|萋々|せいせい|')
+//     ,
+//     new SctCod_Km('|整々|せいせい|')
+//     ,
+//     new SctCod_Km('|世々|せいせい|')
+//     ,
+//     new SctCod_Km('|精々|せいぜい|')
+//     ,
+//     new SctCod_Km('|寂々|せきせき|')
+//     ,
+//     new SctCod_Km('|戚々|せきせき|')
+//     ,
+//     new SctCod_Km('|世々|せせ|')
+//     ,
+//     new SctCod_Km('|瀬々|せぜ|')
+//     ,
+//     new SctCod_Km('|節々|せつせつ|')
+//     ,
+//     new SctCod_Km('|切々|せつせつ|')
+//     ,
+//     new SctCod_Km('|屑々|せつせつ|')
+//     ,
+//     new SctCod_Km('|晢々|せつせつ|')
+//     ,
+//     new SctCod_Km('|忙々|せわせわ|')
+//     ,
+//     new SctCod_Km('|閃々|せんせん|')
+//     ,
+//     new SctCod_Km('|戦々|せんせん|')
+//     ,
+//     new SctCod_Km('|潺々|せんせん|')
+//     ,
+//     new SctCod_Km('|濺々|せんせん|')
+//     ,
+//     new SctCod_Km('|繊々|せんせん|')
+//     ,
+//     new SctCod_Km('|冉々|ぜんぜん|')
+//     ,
+//     new SctCod_Km('|漸々|ぜんぜん|')
+//     ,
+//     new SctCod_Km('|草々|そうそう|')
+//     ,
+//     new SctCod_Km('|早々|そうそう|')
+//     ,
+//     new SctCod_Km('|怱々|そうそう|')
+//     ,
+//     new SctCod_Km('|匆々|そうそう|')
+//     ,
+//     new SctCod_Km('|淙々|そうそう|')
+//     ,
+//     new SctCod_Km('|層々|そうそう|')
+//     ,
+//     new SctCod_Km('|蒼々|そうそう|')
+//     ,
+//     new SctCod_Km('|錚々|そうそう|')
+//     ,
+//     new SctCod_Km('|簇々|そうそう|')
+//     ,
+//     new SctCod_Km('|蹌々|そうそう|')
+//     ,
+//     new SctCod_Km('|叢々|そうそう|')
+//     ,
+//     new SctCod_Km('|鏘々|そうそう|')
+//     ,
+//     new SctCod_Km('|雑々|ぞうぞう|')
+//     ,
+//     new SctCod_Km('|続々|ぞくぞく|')
+//     ,
+//     new SctCod_Km('|簇々|ぞくぞく|')
+//     ,
+//     new SctCod_Km('|楚々|そそ|')
+//     ,
+//     new SctCod_Km('|卒々|そつそつ|')
+//     ,
+//     new SctCod_Km('|空々|そらぞら|')
+//     ,
+//     new SctCod_Km('|対々|たいたい|')
+//     ,
+//     new SctCod_Km('|高々|たかだか|')
+//     ,
+//     new SctCod_Km('|諾々|だくだく|')
+//     ,
+//     new SctCod_Km('|猛々|たけだけ|')
+//     ,
+//     new SctCod_Km('|只々|ただただ|')
+//     ,
+//     new SctCod_Km('|辿々|たどたど|')
+//     ,
+//     new SctCod_Km('|度々|たびたび|')
+//     ,
+//     new SctCod_Km('|偶々|たまたま|')
+//     ,
+//     new SctCod_Km('|滴々|たらたら|')
+//     ,
+//     new SctCod_Km('|坦々|たんたん|')
+//     ,
+//     new SctCod_Km('|淡々|たんたん|')
+//     ,
+//     new SctCod_Km('|耽々|たんたん|')
+//     ,
+//     new SctCod_Km('|湛々|たんたん|')
+//     ,
+//     new SctCod_Km('|潭々|たんたん|')
+//     ,
+//     new SctCod_Km('|団々|だんだん|')
+//     ,
+//     new SctCod_Km('|段々|だんだん|')
+//     ,
+//     new SctCod_Km('|近々|ちかぢか|')
+//     ,
+//     new SctCod_Km('|遅々|ちち|')
+//     ,
+//     new SctCod_Km('|千々|ちぢ|')
+//     ,
+//     new SctCod_Km('|着々|ちゃくちゃく|')
+//     ,
+//     new SctCod_Km('|嫡々|ちゃくちゃく|')
+//     ,
+//     new SctCod_Km('|茶々|ちゃちゃ|')
+//     ,
+//     new SctCod_Km('|丁々|ちょうちょう|')
+//     ,
+//     new SctCod_Km('|蝶々|ちょうちょう|')
+//     ,
+//     new SctCod_Km('|沈々|ちんちん|')
+//     ,
+//     new SctCod_Km('|月々|つきづき|')
+//     ,
+//     new SctCod_Km('|継々|つきづき|')
+//     ,
+//     new SctCod_Km('|辻々|つじつじ|')
+//     ,
+//     new SctCod_Km('|端々|つまづま|')
+//     ,
+//     new SctCod_Km('|艶々|つやつや|')
+//     ,
+//     new SctCod_Km('|滑々|つらつら|')
+//     ,
+//     new SctCod_Km('|熟々|つらつら|')
+//     ,
+//     new SctCod_Km('|丁々|ていてい|')
+//     ,
+//     new SctCod_Km('|亭々|ていてい|')
+//     ,
+//     new SctCod_Km('|滴々|てきてき|')
+//     ,
+//     new SctCod_Km('|点々|てんてん|')
+//     ,
+//     new SctCod_Km('|転々|てんてん|')
+//     ,
+//     new SctCod_Km('|田々|でんでん|')
+//     ,
+//     new SctCod_Km('|等々|とうとう|')
+//     ,
+//     new SctCod_Km('|丁々|とうとう|')
+//     ,
+//     new SctCod_Km('|滔々|とうとう|')
+//     ,
+//     new SctCod_Km('|蕩々|とうとう|')
+//     ,
+//     new SctCod_Km('|鼕々|とうとう|')
+//     ,
+//     new SctCod_Km('|堂々|どうどう|')
+//     ,
+//     new SctCod_Km('|時々|ときどき|')
+//     ,
+//     new SctCod_Km('|得々|とくとく|')
+//     ,
+//     new SctCod_Km('|棘々|とげとげ|')
+//     ,
+//     new SctCod_Km('|年々|としとし|')
+//     ,
+//     new SctCod_Km('|咄々|とつとつ|')
+//     ,
+//     new SctCod_Km('|訥々|とつとつ|')
+//     ,
+//     new SctCod_Km('|度々|どど|')
+//     ,
+//     new SctCod_Km('|呶々|どど|')
+//     ,
+//     new SctCod_Km('|共々|ともども|')
+//     ,
+//     new SctCod_Km('|尚々|なおなお|')
+//     ,
+//     new SctCod_Km('|中々|なかなか|')
+//     ,
+//     new SctCod_Km('|長々|ながなが|')
+//     ,
+//     new SctCod_Km('|謎々|なぞなぞ|')
+//     ,
+//     new SctCod_Km('|何々|なになに|')
+//     ,
+//     new SctCod_Km('|生々|なまなま|')
+//     ,
+//     new SctCod_Km('|波々|なみなみ|')
+//     ,
+//     new SctCod_Km('|喃々|なんなん|')
+//     ,
+//     new SctCod_Km('|苦々|にがにが|')
+//     ,
+//     new SctCod_Km('|賑々|にぎにぎ|')
+//     ,
+//     new SctCod_Km('|憎々|にくにく|')
+//     ,
+//     new SctCod_Km('|日々|にちにち|')
+//     ,
+//     new SctCod_Km('|温々|ぬくぬく|')
+//     ,
+//     new SctCod_Km('|粘々|ねばねば|')
+//     ,
+//     new SctCod_Km('|年々|ねんねん|')
+//     ,
+//     new SctCod_Km('|後々|のちのち|')
+//     ,
+//     new SctCod_Km('|呪々|のろのろ|')
+//     ,
+//     new SctCod_Km('|映々|はえばえ|')
+//     ,
+//     new SctCod_Km('|捗々|はかばか|')
+//     ,
+//     new SctCod_Km('|白々|はくはく|')
+//     ,
+//     new SctCod_Km('|寞々|ばくばく|')
+//     ,
+//     new SctCod_Km('|漠々|ばくばく|')
+//     ,
+//     new SctCod_Km('|端々|はしばし|')
+//     ,
+//     new SctCod_Km('|八々|はちはち|')
+//     ,
+//     new SctCod_Km('|早々|はやばや|')
+//     ,
+//     new SctCod_Km('|散々|ばらばら|')
+//     ,
+//     new SctCod_Km('|春々|はるはる|')
+//     ,
+//     new SctCod_Km('|遥々|はるばる|')
+//     ,
+//     new SctCod_Km('|半々|はんはん|')
+//     ,
+//     new SctCod_Km('|泛々|はんぱん|')
+//     ,
+//     new SctCod_Km('|万々|ばんばん|')
+//     ,
+//     new SctCod_Km('|久々|ひさびさ|')
+//     ,
+//     new SctCod_Km('|緊々|ひしひし|')
+//     ,
+//     new SctCod_Km('|人々|ひとびと|')
+//     ,
+//     new SctCod_Km('|比々|ひひ|')
+//     ,
+//     new SctCod_Km('|霏々|ひひ|')
+//     ,
+//     new SctCod_Km('|日々|ひび|')
+//     ,
+//     new SctCod_Km('|微々|びび|')
+//     ,
+//     new SctCod_Km('|美々|びび|')
+//     ,
+//     new SctCod_Km('|飄々|ひょうひょう|')
+//     ,
+//     new SctCod_Km('|眇々|びょうびょう|')
+//     ,
+//     new SctCod_Km('|渺々|びょうびょう|')
+//     ,
+//     new SctCod_Km('|片々|ひらひら|')
+//     ,
+//     new SctCod_Km('|広々|ひろびろ|')
+//     ,
+//     new SctCod_Km('|彬々|ひんぴん|')
+//     ,
+//     new SctCod_Km('|頻々|ひんぴん|')
+//     ,
+//     new SctCod_Km('|深々|ふかぶか|')
+//     ,
+//     new SctCod_Km('|福々|ふくふく|')
+//     ,
+//     new SctCod_Km('|総々|ふさふさ|')
+//     ,
+//     new SctCod_Km('|節々|ふしぶし|')
+//     ,
+//     new SctCod_Km('|物々|ぶつぶつ|')
+//     ,
+//     new SctCod_Km('|芬々|ふんぷん|')
+//     ,
+//     new SctCod_Km('|紛々|ふんぷん|')
+//     ,
+//     new SctCod_Km('|平々|ヘいへい|')
+//     ,
+//     new SctCod_Km('|別々|べつべつ|')
+//     ,
+//     new SctCod_Km('|片々|へんぺん|')
+//     ,
+//     new SctCod_Km('|翩々|へんぺん|')
+//     ,
+//     new SctCod_Km('|便々|べんべん|')
+//     ,
+//     new SctCod_Km('|蓬々|ほうほう|')
+//     ,
+//     new SctCod_Km('|茫々|ぼうぼう|')
+//     ,
+//     new SctCod_Km('|某々|ぼうぼう|')
+//     ,
+//     new SctCod_Km('|惚々|ほけほけ|')
+//     ,
+//     new SctCod_Km('|細々|ほそぼそ|')
+//     ,
+//     new SctCod_Km('|勃々|ぼつぼつ|')
+//     ,
+//     new SctCod_Km('|程々|ほどほど|')
+//     ,
+//     new SctCod_Km('|仄々|ほのぼの|')
+//     ,
+//     new SctCod_Km('|歩々|ほほ|')
+//     ,
+//     new SctCod_Km('|舞々|まいまい|')
+//     ,
+//     new SctCod_Km('|毎々|まいまい|')
+//     ,
+//     new SctCod_Km('|前々|まえまえ|')
+//     ,
+//     new SctCod_Km('|禍々|まがまが|')
+//     ,
+//     new SctCod_Km('|益々|ますます|')
+//     ,
+//     new SctCod_Km('|又々|またまた|')
+//     ,
+//     new SctCod_Km('|区々|まちまち|')
+//     ,
+//     new SctCod_Km('|間々|まま|')
+//     ,
+//     new SctCod_Km('|丸々|まるまる|')
+//     ,
+//     new SctCod_Km('|万々|まんまん|')
+//     ,
+//     new SctCod_Km('|漫々|まんまん|')
+//     ,
+//     new SctCod_Km('|満々|まんまん|')
+//     ,
+//     new SctCod_Km('|瑞々|みずみず|')
+//     ,
+//     new SctCod_Km('|道々|みちみち|')
+//     ,
+//     new SctCod_Km('|密々|みつみつ|')
+//     ,
+//     new SctCod_Km('|皆々|みなみな|')
+//     ,
+//     new SctCod_Km('|身々|みみ|')
+//     ,
+//     new SctCod_Km('|宗々|むねむね|')
+//     ,
+//     new SctCod_Km('|宜々|むべむべ|')
+//     ,
+//     new SctCod_Km('|明々|めいめい|')
+//     ,
+//     new SctCod_Km('|冥々|めいめい|')
+//     ,
+//     new SctCod_Km('|綿々|めんめん|')
+//     ,
+//     new SctCod_Km('|面々|めんめん|')
+//     ,
+//     new SctCod_Km('|濛々|もうもう|')
+//     ,
+//     new SctCod_Km('|朦々|もうもう|')
+//     ,
+//     new SctCod_Km('|黙々|もくもく|')
+//     ,
+//     new SctCod_Km('|元々|もともと|')
+//     ,
+//     new SctCod_Km('|物々|ものもの|')
+//     ,
+//     new SctCod_Km('|諸々|もろもろ|')
+//     ,
+//     new SctCod_Km('|悶々|もんもん|')
+//     ,
+//     new SctCod_Km('|安々|やすやす|')
+//     ,
+//     new SctCod_Km('|易々|やすやす|')
+//     ,
+//     new SctCod_Km('|痩々|やすやす|')
+//     ,
+//     new SctCod_Km('|闇々|やみやみ|')
+//     ,
+//     new SctCod_Km('|稍々|やや|')
+//     ,
+//     new SctCod_Km('|悒々|ゆうゆう|')
+//     ,
+//     new SctCod_Km('|悠々|ゆうゆう|')
+//     ,
+//     new SctCod_Km('|優々|ゆうゆう|')
+//     ,
+//     new SctCod_Km('|努々|ゆめゆめ|')
+//     ,
+//     new SctCod_Km('|緩々|ゆるゆる|')
+//     ,
+//     new SctCod_Km('|夭々|ようよう|')
+//     ,
+//     new SctCod_Km('|洋々|ようよう|')
+//     ,
+//     new SctCod_Km('|杳々|ようよう|')
+//     ,
+//     new SctCod_Km('|揺々|ようよう|')
+//     ,
+//     new SctCod_Km('|溶々|ようよう|')
+//     ,
+//     new SctCod_Km('|揚々|ようよう|')
+//     ,
+//     new SctCod_Km('|永々|ようよう|')
+//     ,
+//     new SctCod_Km('|翌々|よくよく|')
+//     ,
+//     new SctCod_Km('|翼々|よくよく|')
+//     ,
+//     new SctCod_Km('|由々|よしよし|')
+//     ,
+//     new SctCod_Km('|代々|よよ|')
+//     ,
+//     new SctCod_Km('|夜々|よよ|')
+//     ,
+//     new SctCod_Km('|夜々|よるよる|')
+//     ,
+//     new SctCod_Km('|磊々|らいらい|')
+//     ,
+//     new SctCod_Km('|楽々|らくらく|')
+//     ,
+//     new SctCod_Km('|落々|らくらく|')
+//     ,
+//     new SctCod_Km('|爛々|らんらん|')
+//     ,
+//     new SctCod_Km('|隆々|りゅうりゅう|')
+//     ,
+//     new SctCod_Km('|流々|りゅうりゅう|')
+//     ,
+//     new SctCod_Km('|粒々|りゅうりゅう|')
+//     ,
+//     new SctCod_Km('|両々|りょうりょう|')
+//     ,
+//     new SctCod_Km('|了々|りょうりょう|')
+//     ,
+//     new SctCod_Km('|喨々|りょうりょう|')
+//     ,
+//     new SctCod_Km('|寥々|りょうりょう|')
+//     ,
+//     new SctCod_Km('|稜々|りょうりょう|')
+//     ,
+//     new SctCod_Km('|離々|りり|')
+//     ,
+//     new SctCod_Km('|凛々|りんりん|')
+//     ,
+//     new SctCod_Km('|累々|るいるい|')
+//     ,
+//     new SctCod_Km('|縷々|るる|')
+//     ,
+//     new SctCod_Km('|玲々|れいれい|')
+//     ,
+//     new SctCod_Km('|麗々|れいれい|')
+//     ,
+//     new SctCod_Km('|烈々|れつれつ|')
+//     ,
+//     new SctCod_Km('|恋々|れんれん|')
+//     ,
+//     new SctCod_Km('|琅々|ろうろう|')
+//     ,
+//     new SctCod_Km('|浪々|ろうろう|')
+//     ,
+//     new SctCod_Km('|朗々|ろうろう|')
+//     ,
+//     new SctCod_Km('|朧々|ろうろう|')
+//     ,
+//     new SctCod_Km('|陸々|ろくろく|')
+//     ,
+//     new SctCod_Km('|碌々|ろくろく|')
+//     ,
+//     new SctCod_Km('|態々|わざわざ|')
+//     ,
+//     new SctCod_Km('|戦々|わなわな|')
+//     ,
+//     new SctCod_Km('|我々|われわれ|')
+// ];
 
 const   cods_ad_jougo = [
-    new SctCod_Mv('|貴々|あてあて|しい')
-    ,
-    new SctCod_Mv('|厳々|いかいか|しい')
-    ,
-    new SctCod_Mv('|疎々|うとうと|しい')
-    ,
-    new SctCod_Mv('|長々|おさおさ|しい')
-    ,
+    // new SctCod_Mv('|貴々|あてあて|しい')
+    // ,
+    // new SctCod_Mv('|厳々|いかいか|しい')
+    // ,
+    // new SctCod_Mv('|疎々|うとうと|しい')
+    // ,
+    // new SctCod_Mv('|長々|おさおさ|しい')
+    // ,
     new SctCod_Mv('|軽々|かるがる|しい')
     ,
     new SctCod_Mv('|図々|ずうずう|しい')
@@ -4341,37 +4341,37 @@ const   cods_ad_jougo = [
     ,
     new SctCod_Mv('|猛々|たけだけ|しい')
     ,
-    new SctCod_Mv('|辿々|たどたど|しい')
-    ,
+    // new SctCod_Mv('|辿々|たどたど|しい')
+    // ,
     new SctCod_Mv('|生々|なまなま|しい')
     ,
-    new SctCod_Mv('|苦々|にがにが|しい')
-    ,
-    new SctCod_Mv('|賑々|にぎにぎ|しい')
-    ,
-    new SctCod_Mv('|憎々|にくにく|しい')
-    ,
-    new SctCod_Mv('|呪々|のろのろ|しい')
-    ,
-    new SctCod_Mv('|映々|はえばえ|しい')
-    ,
-    new SctCod_Mv('|捗々|はかばか|しい')
-    ,
+    // new SctCod_Mv('|苦々|にがにが|しい')
+    // ,
+    // new SctCod_Mv('|賑々|にぎにぎ|しい')
+    // ,
+    // new SctCod_Mv('|憎々|にくにく|しい')
+    // ,
+    // new SctCod_Mv('|呪々|のろのろ|しい')
+    // ,
+    // new SctCod_Mv('|映々|はえばえ|しい')
+    // ,
+    // new SctCod_Mv('|捗々|はかばか|しい')
+    // ,
     new SctCod_Mv('|太々|ふてぶて|しい')
     ,
-    new SctCod_Mv('|惚々|ほけほけ|しい')
-    ,
-    new SctCod_Mv('|程々|ほどほど|しい')
-    ,
+    // new SctCod_Mv('|惚々|ほけほけ|しい')
+    // ,
+    // new SctCod_Mv('|程々|ほどほど|しい')
+    // ,
     new SctCod_Mv('|禍々|まがまが|しい')
     ,
     new SctCod_Mv('|瑞々|みずみず|しい')
     ,
-    new SctCod_Mv('|宗々|むねむね|しい')
-    ,
-    new SctCod_Mv('|宜々|むべむべ|しい')
-    ,
-    new SctCod_Mv('|由々|よしよし|しい')
+    // new SctCod_Mv('|宗々|むねむね|しい')
+    // ,
+    // new SctCod_Mv('|宜々|むべむべ|しい')
+    // ,
+    // new SctCod_Mv('|由々|よしよし|しい')
 ];
 
 
