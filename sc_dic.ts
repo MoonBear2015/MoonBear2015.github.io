@@ -4480,6 +4480,8 @@ const   itms_accident = [
     ,
     new SctItm('妨害工作')
     ,
+    new SctItm('破壊工作')
+    ,
     new SctItm('暴力行為')
     ,
     new SctItm('乱痴気騒ぎ')
@@ -4494,7 +4496,7 @@ const   itms_accident = [
     ,
     new SctItm('同時多発テロ')
     ,
-    new SctItm('スパイ容疑')
+    new SctItm('諜報活動')
 ];
 
 const   itms_festival = [

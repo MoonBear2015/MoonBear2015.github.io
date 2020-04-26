@@ -191,10 +191,10 @@ class selector_title extends SctItm_Selector {
         super('@NEWS_TITLE@');
         this.itms = [
             new SctItm('@WHAT@の@DO@'),
-            new SctItm('@WHAT@で@KEID@@DO@@END02C@@THEY@'),
-            new SctItm('@KEID@@DO@@END02C@@WHAT@'),
-            new SctItm('@KEID@@DO@@END02C@@WHAT@の@THEY@'),
-            new SctItm('@PEOPLE@が@KEID@@DO@@END02C@@WHAT@')
+            new SctItm('@KEI@@WHAT@で@DO@@END02C@@THEY@'),
+            new SctItm('@DO@@END02C@@KEI@@WHAT@'),
+            new SctItm('@DO@@END02C@@WHAT@の@KEI@@THEY@'),
+            new SctItm('@KEI@@PEOPLE@が@DO@@END02C@@WHAT@')
         ];
     }
 }

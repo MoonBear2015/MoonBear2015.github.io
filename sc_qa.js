@@ -97,14 +97,14 @@ function Make_A() {
     html += '@QUESTER@さん、それは大変ですね。';
     html += '</p>';
     html += '<p id="qa_doc">';
-    html += '私の@L_PART@が、@KEY@ばかりして@THINK@しています。';
-    html += '私の@L_PART@が、@KEY@ばかりして@THINK@しています。';
-    html += '私の@L_PART@が、@KEY@ばかりして@THINK@しています。';
-    html += '私の@L_PART@が、@KEY@ばかりして@THINK@しています。';
-    html += '私の@L_PART@が、@KEY@ばかりして@THINK@しています。';
-    html += '私の@L_PART@が、@KEY@ばかりして@THINK@しています。';
-    html += '私の@L_PART@が、@KEY@ばかりして@THINK@しています。';
-    html += '私の@L_PART@が、@KEY@ばかりして@THINK@しています。';
+    html += '@KEI1@@QUESTER@さん、私は@CLASS@をしている@ADVICER@と言います。';
+    html += '@KEI1@@QUESTER@さん、私は@CLASS@をしている@ADVICER@と言います。';
+    html += '@KEI1@@QUESTER@さん、私は@CLASS@をしている@ADVICER@と言います。';
+    html += '@KEI1@@QUESTER@さん、私は@CLASS@をしている@ADVICER@と言います。';
+    html += '@KEI1@@QUESTER@さん、私は@CLASS@をしている@ADVICER@と言います。';
+    html += '@KEI1@@QUESTER@さん、私は@CLASS@をしている@ADVICER@と言います。';
+    html += '@KEI1@@QUESTER@さん、私は@CLASS@をしている@ADVICER@と言います。';
+    html += '@KEI1@@QUESTER@さん、私は@CLASS@をしている@ADVICER@と言います。';
     html += '</p>';
     html += '</div>';
     return html;
@@ -199,7 +199,9 @@ class selector_q_title extends SctItm_Selector {
             new SctItm('@L_PART@が@KEI2@で仕方がありません ww'),
             new SctItm('@L_PART@の@L_KEY@を止めさせたいんです'),
             new SctItm('@L_PART@の@L_KEY@が長続きしません'),
-            new SctItm('@L_PART@と@L_KEY@をしたいのですが')
+            new SctItm('@L_PART@と@L_KEY@をしたいのですが'),
+            new SctItm('@L_PART@が@L_KEY@で捕まっています'),
+            new SctItm('@L_PART@が@L_KEY@で疑われています')
         ];
     }
 }
