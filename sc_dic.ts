@@ -2627,6 +2627,8 @@ const   cods_ad_etc = [
     ,
     new SctCod_Mv('|小|ちい|さい')
     ,
+    new SctCod_Mv('|手堅|てがた|い')
+    ,
     new SctCod_Mv('|尊|とうと|い')
     ,
     new SctCod_Mv('|年若|としわか|い')
@@ -2665,7 +2667,7 @@ const   cods_adv_etc = [
     ,
     new SctCod_It('|小|ちい|さく')
     ,
-    new SctCod_It('|尊|とうと|く')
+    new SctCod_It('|手堅|てがた|く')
     ,
     new SctCod_It('|年若|としわか|く')
     ,

@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N02.27';
+    html += 'N02.28';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -280,13 +280,21 @@ class selector_title extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('@WHAT@の@DO@')
             ,
-            new SctItm('@KEI@@WHAT@で@DO@@END02C@@THEY@')
+            new SctItm('@KEI@@WHAT@の@DO@')
             ,
-            new SctItm('@DO@@END02C@@KEI@@WHAT@')
+            new SctItm('@WHAT@で@DO@@END02C@@THEY@')
             ,
-            new SctItm('@DO@@END02C@@WHAT@の@KEI@@THEY@')
+            new SctItm('@DO@@END02C@@WHAT@')
             ,
-            new SctItm('@KEI@@PEOPLE@が@DO@@END02C@@WHAT@')
+            new SctItm('@DO@@END02C@@WHAT@の@THINK@')
+            ,
+            new SctItm('@DO@@END02C@@WHAT@の@THEY@')
+            ,
+            new SctItm('@DO@@END02C@@WHAT@の@PEOPLE@')
+            ,
+            new SctItm('@PEOPLE@が@DO@@END02C@@WHAT@')
+            ,
+            new SctItm('@THEY@が@DO@@END02C@@WHAT@')
         ];
     }
 }
