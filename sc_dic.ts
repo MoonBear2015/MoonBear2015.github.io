@@ -1692,7 +1692,7 @@ const   cods_make = [
 ];
 
 const   cods_load = [
-    new SctCod_TI('|道|みち|','load.jpg')
+    new SctCod_TI('|道|みち|','road.jpg')
     ,
     new SctCod_TI('|小径|こみち|')
     ,

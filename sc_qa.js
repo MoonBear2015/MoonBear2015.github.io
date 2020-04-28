@@ -7,7 +7,7 @@ function set_qa() {
     html += '<h1>';
     html += 'Q&A';
     html += '<small>';
-    html += ' Q00.06 test';
+    html += ' Q00.07 test';
     html += '</small>';
     html += '</h1>';
     html += '</div>';

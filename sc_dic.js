@@ -877,7 +877,7 @@ const cods_make = [
     new SctCod_TI('|飾|かざ|り')
 ];
 const cods_load = [
-    new SctCod_TI('|道|みち|', 'load.jpg'),
+    new SctCod_TI('|道|みち|', 'road.jpg'),
     new SctCod_TI('|小径|こみち|'),
     new SctCod_TI('|枝道|えだみち|'),
     new SctCod_TI('|別|わか|れ|道|みち|'),
