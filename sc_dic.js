@@ -2935,6 +2935,7 @@ const itms_festival = [
     new SctItm('フォークダンス'),
     new SctItm('文化祭'),
     new SctItm('祝賀会'),
+    new SctItm('飲み会'),
     new SctItm('大掃除'),
     new SctItm('餅つき大会'),
     new SctItm('忘年会'),
@@ -2946,5 +2947,17 @@ const itms_festival = [
     new SctItm('座談会'),
     new SctItm('街頭演説'),
     new SctItm('大道芸'),
-    new SctItm('選挙運動')
+    new SctItm('選挙運動'),
+    new SctItm('デモ行進'),
+    new SctItm('ボランティア活動'),
+    new SctItm('海外旅行'),
+    new SctItm('畑仕事'),
+    new SctItm('工場勤務'),
+    new SctItm('飛び込み営業'),
+    new SctItm('アルバイト'),
+    new SctItm('客商売'),
+    new SctItm('トイレ掃除'),
+    new SctItm('ティッシュ配り'),
+    new SctItm('新聞配達'),
+    new SctItm('水商売')
 ];
