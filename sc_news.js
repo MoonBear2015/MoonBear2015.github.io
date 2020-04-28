@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N02.28';
+    html += 'N02.29';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -549,18 +549,30 @@ class selector_whats extends SctItm_SelectLocker {
             new SctItm('極楽浄土', 'WHAT/heaven2.jpg'),
             new SctItm('地獄', 'WHAT/enma.jpg'),
             new SctItm('南国', 'WHAT/seaside.jpg'),
-            new SctItm('ディズニーランド', 'WHAT/disney.jpg'),
-            new SctItm('ディズニーランド', 'WHAT/disney2.jpg'),
-            new SctItm('ひらかたパーク', 'WHAT/hirapa-.jpg'),
-            new SctItm('ひらかたパーク', 'WHAT/hirapa-2.jpg'),
-            new SctItm('ひらかたパーク', 'WHAT/hirapa-3.jpg'),
-            new SctItm('ＵＳＪ', 'WHAT/usj.jpg'),
-            new SctItm('ＵＳＪ', 'WHAT/usj2.jpg'),
-            new SctItm('としまえん', 'WHAT/toshimaen.jpg'),
-            new SctItm('上野動物園', 'WHAT/ueno_zoo.jpg'),
-            new SctItm('ジオン公国', 'WHAT/jion.jpg'),
-            new SctItm('ナチス・ドイツ', 'WHAT/nachi.jpg'),
-            new SctItm('ホビット床', 'WHAT/Shire.jpg'),
+            new SctItm('ディズニーランド', 'WHAT/disney.jpg')
+            // ,
+            // new SctItm('ディズニーランド','WHAT/disney2.jpg')
+            // ,
+            // new SctItm('ひらかたパーク','WHAT/hirapa-.jpg')
+            // ,
+            // new SctItm('ひらかたパーク','WHAT/hirapa-2.jpg')
+            // ,
+            // new SctItm('ひらかたパーク','WHAT/hirapa-3.jpg')
+            // ,
+            // new SctItm('ＵＳＪ','WHAT/usj.jpg')
+            // ,
+            // new SctItm('ＵＳＪ','WHAT/usj2.jpg')
+            // ,
+            // new SctItm('としまえん','WHAT/toshimaen.jpg')
+            // ,
+            // new SctItm('上野動物園','WHAT/ueno_zoo.jpg')
+            // ,
+            // new SctItm('ジオン公国','WHAT/jion.jpg')
+            ,
+            new SctItm('ナチス・ドイツ', 'WHAT/nachi.jpg')
+            // ,
+            // new SctItm('ホビット床','WHAT/Shire.jpg')
+            ,
             new SctItm('銀河帝国', 'WHAT/GalaxyEmpire.jpg'),
             new SctItm('デス・スター', 'WHAT/deathstar.jpg'),
             new SctItm('暗黒面', 'WHAT/darkside.jpg'),
