@@ -91,6 +91,12 @@ function Make_Q() : string {
     html += '私の@L_PART@が、@KEY@ばかりして@THINK@しています。';
     html += '私の@L_PART@が、@KEY@ばかりして@THINK@しています。';
     html += '私の@L_PART@が、@KEY@ばかりして@THINK@しています。';
+    html += '私の@L_PART@が、@KEY@ばかりして@THINK@しています。';
+    html += '私の@L_PART@が、@KEY@ばかりして@THINK@しています。';
+    html += '私の@L_PART@が、@KEY@ばかりして@THINK@しています。';
+    html += '私の@L_PART@が、@KEY@ばかりして@THINK@しています。';
+    html += '私の@L_PART@が、@KEY@ばかりして@THINK@しています。';
+    html += '私の@L_PART@が、@KEY@ばかりして@THINK@しています。';
     html += '</p>';
 
 

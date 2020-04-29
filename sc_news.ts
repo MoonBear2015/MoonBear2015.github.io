@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += 'N02.29';
+    html += 'N02.30';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -750,10 +750,10 @@ class selector_whats extends SctItm_SelectLocker implements ISctItm_Selector {
             new SctItm('韓国','WHAT/koria.jpg')
             ,
             new SctItm('エジプト','WHAT/pyramid.jpg')
-            ,
-            new SctItm('ガミラス帝国','WHAT/gamilas.jpg')
-            ,
-            new SctItm('イスカンダル','WHAT/iskandar.jpg')
+            // ,
+            // new SctItm('ガミラス帝国','WHAT/gamilas.jpg')
+            // ,
+            // new SctItm('イスカンダル','WHAT/iskandar.jpg')
             // ,
             // new SctItm('経済','WHAT/Economy.jpg')
             ,
@@ -812,8 +812,8 @@ class selector_whats extends SctItm_SelectLocker implements ISctItm_Selector {
             new SctItm('イスラム教','WHAT/Islam.jpg')
             ,
             new SctItm('宗教','WHAT/religion.jpg')
-            ,
-            new SctItm('世界','WHAT/history.jpg')
+            // ,
+            // new SctItm('世界','WHAT/history.jpg')
             ,
             new SctItm('人類','WHAT/human.jpg')
             ,
@@ -852,12 +852,12 @@ class selector_whats extends SctItm_SelectLocker implements ISctItm_Selector {
             new SctItm('魔界','WHAT/hell.jpg')
             ,
             new SctItm('天国','WHAT/heaven.jpg')
-            ,
-            new SctItm('極楽浄土','WHAT/heaven2.jpg')
-            ,
-            new SctItm('地獄','WHAT/enma.jpg')
-            ,
-            new SctItm('南国','WHAT/seaside.jpg')
+            // ,
+            // new SctItm('極楽浄土','WHAT/heaven2.jpg')
+            // ,
+            // new SctItm('地獄','WHAT/enma.jpg')
+            // ,
+            // new SctItm('南国','WHAT/seaside.jpg')
             ,
             new SctItm('ディズニーランド','WHAT/disney.jpg')
             // ,
@@ -898,12 +898,12 @@ class selector_whats extends SctItm_SelectLocker implements ISctItm_Selector {
             new SctItm('縄文時代','WHAT/joumon.jpg')
             ,
             new SctItm('スラム街','WHAT/slum.jpg')
-            ,
-            new SctItm('九竜城','WHAT/coulomb.jpg')
-            ,
-            new SctItm('邪馬台国','WHAT/yama.jpg')
-            ,
-            new SctItm('竜宮城','WHAT/ryugu.jpg')
+            // ,
+            // new SctItm('九竜城','WHAT/coulomb.jpg')
+            // ,
+            // new SctItm('邪馬台国','WHAT/yama.jpg')
+            // ,
+            // new SctItm('竜宮城','WHAT/ryugu.jpg')
             ,
             new SctItm('戦場','WHAT/war.jpg')
             ,
