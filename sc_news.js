@@ -531,13 +531,17 @@ class selector_whats extends SctItm_SelectLocker {
             // ,
             // new SctItm('世界','WHAT/history.jpg')
             ,
-            new SctItm('人類', 'WHAT/human.jpg'),
-            new SctItm('女子校', 'WHAT/girlscoll.jpg'),
+            new SctItm('人類', 'WHAT/human.jpg')
+            // ,
+            // new SctItm('女子校','WHAT/girlscoll.jpg')
+            ,
             new SctItm('オリンピック', 'WHAT/Olympic.jpg'),
             new SctItm('江戸幕府', 'WHAT/edo.jpg'),
             new SctItm('ホワイトハウス', 'WHAT/whitehouse.jpg'),
-            new SctItm('紫禁城', 'WHAT/shikin.jpg'),
-            new SctItm('イギリス王家', 'WHAT/kingdom.jpg'),
+            new SctItm('紫禁城', 'WHAT/shikin.jpg')
+            // ,
+            // new SctItm('イギリス王家','WHAT/kingdom.jpg')
+            ,
             new SctItm('ピラミッド', 'WHAT/pyramid.jpg'),
             new SctItm('国連', 'WHAT/nation.jpg'),
             new SctItm('東京', 'WHAT/tokyo.jpg'),
@@ -587,7 +591,8 @@ class selector_whats extends SctItm_SelectLocker {
             new SctItm('ローマ帝国', 'WHAT/Rome.jpg'),
             new SctItm('未来', 'WHAT/future.jpg'),
             new SctItm('近未来', 'WHAT/nearfuture.jpg'),
-            new SctItm('縄文時代', 'WHAT/joumon.jpg'),
+            // new SctItm('縄文時代','WHAT/joumon.jpg')
+            // ,
             new SctItm('スラム街', 'WHAT/slum.jpg')
             // ,
             // new SctItm('九竜城','WHAT/coulomb.jpg')

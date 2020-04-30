@@ -51,7 +51,7 @@ function make_poem() : string
     html += 'border:     0.5px solid #606060;';
     html += 'border-radius:  0.5%;';
     html += 'background: ';
-    html += 'linear-gradient(135deg,rgba(30,30,30,0.8),rgba(30,30,30,0.8)),';
+    html += 'linear-gradient(135deg,rgba(80,80,80,0.8),rgba(80,80,80,0.8)),';
     html += 'url(./pics/TEMA/@PIC_TEMA@);';
     html += 'background-size: ';
     html += 'contain;';
