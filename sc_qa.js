@@ -7,7 +7,7 @@ function set_qa() {
     html += '<h1>';
     html += 'Q&A';
     html += '<small>';
-    html += ' Q00.07 test';
+    html += ' Q00.08 test';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -69,16 +69,18 @@ function Make_Q() {
     html += '@Q_TITLE@';
     html += '</p>';
     html += '<p id="qa_doc">';
-    html += '　@Q_INIT@。';
-    html += '私の@L_PART@が、@KEY@ばかりして@THINK@しています。';
-    html += '私の@L_PART@が、@KEY@ばかりして@THINK@しています。';
-    html += '私の@L_PART@が、@KEY@ばかりして@THINK@しています。';
-    html += '私の@L_PART@が、@KEY@ばかりして@THINK@しています。';
-    html += '私の@L_PART@が、@KEY@ばかりして@THINK@しています。';
-    html += '私の@L_PART@が、@KEY@ばかりして@THINK@しています。';
-    html += '私の@L_PART@が、@KEY@ばかりして@THINK@しています。';
-    html += '私の@L_PART@が、@KEY@ばかりして@THINK@しています。';
-    html += '私の@L_PART@が、@KEY@ばかりして@THINK@しています。';
+    html += '　@Q_MSG@';
+    html += '　@Q_MSG@';
+    html += '　@Q_MSG@';
+    html += '　@Q_MSG@';
+    html += '　@Q_MSG@';
+    html += '　@Q_MSG@';
+    html += '　@Q_MSG@';
+    html += '　@Q_MSG@';
+    html += '　@Q_MSG@';
+    html += '　@Q_MSG@';
+    html += '　@Q_MSG@';
+    html += '　@Q_MSG@';
     html += '</p>';
     html += '</div>';
     return html;
@@ -119,7 +121,11 @@ class qa_docs_maker extends news_docs_maker {
     constructor() {
         super();
         this.dic_push(new selector_q_title());
-        this.dic_push(new selector_q_init());
+        this.dic_push(new selector_q_msg());
+        this.dic_push(new selector_q_msg01());
+        this.dic_push(new selector_q_msg02());
+        this.dic_push(new selector_q_msg03());
+        this.dic_push(new selector_q_msg04());
         this.dic_push(new selector_pic_q());
         this.dic_push(new selector_pic_a());
         this.dic_push(new selector_quester());
@@ -202,25 +208,66 @@ class selector_q_title extends SctItm_Selector {
             new SctItm('@L_PART@が@L_KEY@ばかりしています'),
             new SctItm('助けて！ @L_PART@がまるで@NICK@なんです'),
             new SctItm('@L_PART@が@NICK@にしか見えません'),
-            new SctItm('@L_PART@が@KEI2@で仕方がありません ww'),
+            new SctItm('@L_PART@が@KEI2@で仕方がありません'),
             new SctItm('@L_PART@の@L_KEY@を止めさせたいんです'),
             new SctItm('@L_PART@の@L_KEY@が長続きしません'),
             new SctItm('@L_PART@と@L_KEY@をしたいのですが'),
             new SctItm('@L_PART@が@L_KEY@で捕まっています'),
-            new SctItm('@L_PART@が@L_KEY@で疑われています')
+            new SctItm('@L_PART@が@L_KEY@で疑われています'),
+            new SctItm('どうして、@CLASS@は@KEI1@のでしょうか ww'),
+            new SctItm('どうして、@L_PART@は@KEI1@のでしょうか')
         ];
     }
 }
-class selector_q_init extends SctItm_Selector {
+class selector_q_msg extends SctItm_Selector {
     constructor() {
-        super('@Q_INIT@');
+        super('@Q_MSG@');
         this.itms = [
-            new SctItm('私の@L_PART@に@THINK@しています'),
-            new SctItm('私の@KEI@@L_PART@に@THINK@しています'),
-            new SctItm('私には@AGE2@になる@L_PART@がいます'),
-            new SctItm('私には@L_KEY@ばかりしている@L_PART@がいます'),
-            new SctItm('私が@AGE2@の頃の話です'),
-            new SctItm('私が@AGE2@の頃の話です')
+            new SctItm('@Q_MSG01@@Q_MSG02@、@Q_MSG03@、@Q_MSG04@。'),
+            new SctItm('@Q_MSG01@@Q_MSG02@、@Q_MSG03@、@Q_MSG04@。')
+        ];
+    }
+}
+class selector_q_msg01 extends SctItm_Selector {
+    constructor() {
+        super('@Q_MSG01@');
+        this.itms = [
+            new SctItm('私は'),
+            new SctItm('私の@KEI@@L_PART@は、'),
+            new SctItm('私が@AGE2@の頃、'),
+            new SctItm('私が@COUNTRY@にいた頃、')
+        ];
+    }
+}
+class selector_q_msg02 extends SctItm_Selector {
+    constructor() {
+        super('@Q_MSG02@');
+        this.itms = [
+            new SctItm('@L_KEY@が止められず'),
+            new SctItm('@L_KEY@が出来なくて'),
+            new SctItm('@L_KEY@がしたいのですが'),
+            new SctItm('@L_KEY@が禁止されていて')
+        ];
+    }
+}
+class selector_q_msg03 extends SctItm_Selector {
+    constructor() {
+        super('@Q_MSG03@');
+        this.itms = [
+            new SctItm('@KEY@ばかりしてしまい'),
+            new SctItm('@MANY@@THEY@に反対され'),
+            new SctItm('@CLASS@が邪魔で')
+        ];
+    }
+}
+class selector_q_msg04 extends SctItm_Selector {
+    constructor() {
+        super('@Q_MSG04@');
+        this.itms = [
+            new SctItm('とても困っているのです'),
+            new SctItm('悔しくて仕方がありません'),
+            new SctItm('涙が止まらないのです'),
+            new SctItm('嬉しくて仕方がありません')
         ];
     }
 }
