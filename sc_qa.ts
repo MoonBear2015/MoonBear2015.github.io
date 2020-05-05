@@ -9,7 +9,7 @@ function set_qa()
     html += '<h1>';
     html += 'Q&A';
     html += '<small>';
-    html += ' Q00.08 test';
+    html += ' Q00.09 test';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -153,10 +153,10 @@ class qa_docs_maker extends news_docs_maker {
         super();
         this.dic_push(new selector_q_title());
         this.dic_push(new selector_q_msg());
-        this.dic_push(new selector_q_msg01());
-        this.dic_push(new selector_q_msg02());
-        this.dic_push(new selector_q_msg03());
-        this.dic_push(new selector_q_msg04());
+        this.dic_push(new selector_q01_me());
+        this.dic_push(new selector_q02_issue());
+        this.dic_push(new selector_q03_quest());
+        this.dic_push(new selector_q04_result());
 
         this.dic_push(new selector_pic_q());
         this.dic_push(new selector_pic_a());
@@ -294,7 +294,7 @@ class selector_q_title extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@L_PART@が@L_KEY@で疑われています')
             ,
-            new SctItm('どうして、@CLASS@は@KEI1@のでしょうか ww')
+            new SctItm('どうして、@CLASS@は@KEI1@のでしょうか')
             ,
             new SctItm('どうして、@L_PART@は@KEI1@のでしょうか')
         ]
@@ -305,29 +305,35 @@ class selector_q_msg extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@Q_MSG@');
         this.itms = [
-            new SctItm('@Q_MSG01@@Q_MSG02@、@Q_MSG03@、@Q_MSG04@。')
+            new SctItm('@Q_MSG01@、@Q_MSG04@。')
             ,
-            new SctItm('@Q_MSG01@@Q_MSG02@、@Q_MSG03@、@Q_MSG04@。')
+            new SctItm('@Q_MSG02@、@Q_MSG04@。')
+            ,
+            new SctItm('@Q_MSG01@、@Q_MSG02@、@Q_MSG03@、@Q_MSG04@。')
+            ,
+            new SctItm('@Q_MSG01@、@Q_MSG02@、@Q_MSG03@、@Q_MSG04@。')
         ]
     }
 }
 
-class selector_q_msg01 extends SctItm_Selector implements ISctItm_Selector {
+// 自己紹介
+class selector_q01_me extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@Q_MSG01@');
         this.itms = [
             new SctItm('私は')
             ,
-            new SctItm('私の@KEI@@L_PART@は、')
+            new SctItm('私の@KEI@@L_PART@は')
             ,
-            new SctItm('私が@AGE2@の頃、')
+            new SctItm('私が@AGE2@の頃')
             ,
-            new SctItm('私が@COUNTRY@にいた頃、')
+            new SctItm('私が@COUNTRY@にいた頃')
         ]
     }
 }
 
-class selector_q_msg02 extends SctItm_Selector implements ISctItm_Selector {
+// 問題
+class selector_q02_issue extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@Q_MSG02@');
         this.itms = [
@@ -342,7 +348,8 @@ class selector_q_msg02 extends SctItm_Selector implements ISctItm_Selector {
     }
 }
 
-class selector_q_msg03 extends SctItm_Selector implements ISctItm_Selector {
+// 理由
+class selector_q03_quest extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@Q_MSG03@');
         this.itms = [
@@ -355,8 +362,8 @@ class selector_q_msg03 extends SctItm_Selector implements ISctItm_Selector {
     }
 }
 
-
-class selector_q_msg04 extends SctItm_Selector implements ISctItm_Selector {
+// 結果
+class selector_q04_result extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@Q_MSG04@');
         this.itms = [
