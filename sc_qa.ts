@@ -9,7 +9,7 @@ function set_qa()
     html += '<h1>';
     html += 'Q&A';
     html += '<small>';
-    html += ' Q00.10 test';
+    html += ' Q00.11 test';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -72,7 +72,7 @@ function Make_Q() : string {
     html += 'border:     0.5px solid #606060;';
     html += 'border-radius:  1%;';
     html += 'background: ';
-    html += 'linear-gradient(0deg,rgba(10,0,30,0.6),rgba(10,0,30,0.8)),';
+    html += 'linear-gradient(0deg,rgba(0,0,80,0.3),rgba(0,0,30,0.8)),';
     html += 'url(./pics/QA/@PIC_Q@);';
     html += 'background-position: center center;';
     html += 'background-size: cover;';
@@ -87,18 +87,18 @@ function Make_Q() : string {
     html += '</p>';
 
     html += '<p id="qa_doc">';
-    html += '　@Q_MSG@';
-    html += '　@Q_MSG@';
-    html += '　@Q_MSG@';
-    html += '　@Q_MSG@';
-    html += '　@Q_MSG@';
-    html += '　@Q_MSG@';
-    html += '　@Q_MSG@';
-    html += '　@Q_MSG@';
-    html += '　@Q_MSG@';
-    html += '　@Q_MSG@';
-    html += '　@Q_MSG@';
-    html += '　@Q_MSG@';
+    html += '@Q_MSG@';
+    html += '@Q_MSG@';
+    html += '@Q_MSG@';
+    html += '@Q_MSG@';
+    html += '@Q_MSG@';
+    html += '@Q_MSG@';
+    html += '@Q_MSG@';
+    html += '@Q_MSG@';
+    html += '@Q_MSG@';
+    html += '@Q_MSG@';
+    html += '@Q_MSG@';
+    html += '@Q_MSG@';
     html += '</p>';
 
 
@@ -116,7 +116,7 @@ function Make_A() : string {
     html += 'border:     0.5px solid #606060;';
     html += 'border-radius:  1%;';
     html += 'background: ';
-    html += 'linear-gradient(0deg,rgba(80,80,50,0.6),rgba(80,80,50,0.8)),';
+    html += 'linear-gradient(0deg,rgba(30,30,30,0.8),rgba(120,120,60,0.3)),';
     html += 'url(./pics/QA/@PIC_A@);';
     html += 'background-position: center center;';
     html += 'background-size: cover;';
@@ -316,7 +316,7 @@ class selector_q_msg extends SctItm_Selector implements ISctItm_Selector {
     }
 }
 
-// 自己紹介
+// 自己紹介・誰が
 class selector_q01_me extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@Q_MSG01@');
@@ -325,9 +325,9 @@ class selector_q01_me extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('私の@KEI@@L_PART@は')
             ,
-            new SctItm('私が@AGE2@の頃')
+            new SctItm('私の@KEI@@L_PART@の話ですが')
             ,
-            new SctItm('私が@COUNTRY@にいた頃')
+            new SctItm('私は@CLASS@をしているのですが')
         ]
     }
 }
@@ -358,6 +358,8 @@ class selector_q03_quest extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@MANY@@THEY@に反対され')
             ,
             new SctItm('@CLASS@が邪魔で')
+            ,
+            new SctItm('私には@PART@がいて')
         ]
     }
 }
@@ -371,9 +373,15 @@ class selector_q04_result extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('悔しくて仕方がありません')
             ,
+            new SctItm('嬉しくて仕方がありません')
+            ,
             new SctItm('涙が止まらないのです')
             ,
-            new SctItm('嬉しくて仕方がありません')
+            new SctItm('笑いが止まりません')
+            ,
+            new SctItm('どうしようもありません')
+            ,
+            new SctItm('とても堪えきれません')
         ]
     }
 }
