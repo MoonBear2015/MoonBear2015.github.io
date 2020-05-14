@@ -1552,6 +1552,27 @@ class selector_conect extends SctItm_Selector {
         ];
     }
 }
+// 接続詞
+class selector_conect2 extends SctItm_Selector {
+    constructor() {
+        super('@CONECT2@');
+        this.itms = [
+            new SctItm('ですから'),
+            new SctItm('ですので'),
+            new SctItm('そうだとしても'),
+            new SctItm('そのためには'),
+            new SctItm('それから'),
+            new SctItm('そんなことより'),
+            new SctItm('つまりは'),
+            new SctItm('そういうことなら'),
+            new SctItm('とりあえず'),
+            new SctItm('とにかく'),
+            new SctItm('ともかく'),
+            new SctItm('ところが'),
+            new SctItm('そういうわけで')
+        ];
+    }
+}
 class news_doc {
     constructor(doc) {
         this.doc = doc;
@@ -1636,6 +1657,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_say());
         this.dic_push(new selector_answer());
         this.dic_push(new selector_conect());
+        this.dic_push(new selector_conect2());
         this.dic_push(new selector_nickname());
         this.dic_push(new selector_assessment());
         this.dic_push(new selector_people());
