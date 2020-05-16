@@ -9,7 +9,7 @@ function set_qa()
     html += '<h1>';
     html += 'Q&A';
     html += '<small>';
-    html += ' Q00.15 test';
+    html += ' Q00.16 test';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -313,25 +313,23 @@ class selector_q_init extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('いつもお世話になっております、@Q_INIT@')
             ,
-            new SctItm('@Q_MSG@')
-            ,
-            new SctItm('私は@COUNTRY@で@CLASS@をしているのですが、')
+            new SctItm('私は@COUNTRY@で@CLASS@をしています。')
             ,
             new SctItm('私は@CLASS@をしている@QUESTER@と云います。')
             ,
-            new SctItm('私が@AGE2@の頃、')
+            new SctItm('私が@AGE2@の頃、@Q_MSG@')
             ,
-            new SctItm('私が@CLASS@をしていた頃、')
+            new SctItm('私が@CLASS@をしていた頃、@Q_MSG@')
             ,
-            new SctItm('私が@COUNTRY@にいた頃、')
+            new SctItm('私が@COUNTRY@にいた頃、@Q_MSG@')
             ,
-            new SctItm('私には@KEI@@L_PART@がいるのですが、')
+            new SctItm('私には@KEI@@L_PART@がいるのですが、@Q_MSG@')
             ,
-            new SctItm('私には@CLASS@をしている@AGE2@の@L_PART@がいるのですが、')
+            new SctItm('私には@CLASS@をしている@AGE2@の@L_PART@がいるのですが、@Q_MSG@')
             ,
-            new SctItm('つい昨日の話なのですが、')
+            new SctItm('つい昨日の話なのですが、@Q_MSG@')
             ,
-            new SctItm('おとといの話なのですが、')
+            new SctItm('おとといの話なのですが、@Q_MSG@')
 
         ]
     }
@@ -453,8 +451,6 @@ class selector_q04_result extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('嬉しくて仕方がありません')
             ,
-            new SctItm('@THINK@で仕方がありません')
-            ,
             new SctItm('涙が止まらないのです')
             ,
             new SctItm('笑いが止まりません')
@@ -552,7 +548,7 @@ class selector_a_msg extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('@A_MSG01@@A_MSG04@。')
             ,
-            new SctItm('@A_MSG02@@A_MSG04@。')
+            new SctItm('@A_MSG02@、@A_MSG04@。')
             ,
             new SctItm('@A_MSG01@@A_MSG02@、@A_MSG03@@A_MSG04@。')
             ,
@@ -573,9 +569,9 @@ class selector_a01_you extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@QUESTER@さんが')
             ,
-            new SctItm('あなたの@KEI@@L_PART@さんが')
+            new SctItm('あなたの@KEI@@L_PART@さんが、')
             ,
-            new SctItm('@QUESTER@さんの@KEI@@L_PART@さんが')
+            new SctItm('@QUESTER@さんの@KEI@@L_PART@さんが、')
         ]
     }
 }
@@ -589,9 +585,13 @@ class selector_a02_quest extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@CLASS@でないなら')
             ,
-            new SctItm('とても@KEI@ので')
+            new SctItm('@CLASS@は@KEI1@ので')
+            ,
+            new SctItm('@CALL@と@ASSES@なら')
             ,
             new SctItm('@COUNTRY@にいるなら')
+            ,
+            new SctItm('@COUNTRY@には@MANYPEOPLE@がいるので')
         ]
     }
 }
@@ -617,8 +617,6 @@ class selector_a04_result extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@A_MSG04@');
         this.itms = [
-            new SctItm('とても@THINK@な話ですね')
-            ,
             new SctItm('@THINK@しているのは判ります')
             ,
             new SctItm('@THINK@してしまうのは仕方がありません')
@@ -627,9 +625,9 @@ class selector_a04_result extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@THINK@している場合ではありませんよ')
             ,
-            new SctItm('@THINK@するしか有りません')
+            new SctItm('@THINK@するしか有りませんね')
             ,
-            new SctItm('どうしようもありませんね')
+            new SctItm('@THINK@するのは当然でしょう')
         ]
     }
 }

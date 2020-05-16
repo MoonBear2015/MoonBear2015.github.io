@@ -1570,22 +1570,20 @@ class selector_conect2 extends SctItm_Selector {
     constructor() {
         super('@CONECT2@');
         this.itms = [
-            new SctItm('ですから'),
-            new SctItm('ですので'),
-            new SctItm('そうだとしても'),
-            new SctItm('そのためには'),
-            new SctItm('それから'),
+            new SctItm('それはそうと'),
+            new SctItm('実は'),
+            new SctItm('正直いいますと'),
+            new SctItm('話は変わりますが'),
             new SctItm('そんなことより'),
             new SctItm('つまりは'),
-            new SctItm('そういうことなら'),
+            new SctItm('そういう訳で'),
             new SctItm('とりあえず'),
             new SctItm('とにかく'),
             new SctItm('ともかく'),
-            new SctItm('ところが'),
+            new SctItm('ところで'),
             new SctItm('そういうわけで'),
-            new SctItm('今は'),
             new SctItm('これまでは'),
-            new SctItm('今後')
+            new SctItm('実際には')
         ];
     }
 }
