@@ -280,6 +280,19 @@ class selector_who2 extends SctItm_Selector {
         ];
     }
 }
+// 自己紹介 ～（名前） ～@PART@
+class selector_who3 extends SctItm_Selector {
+    constructor() {
+        super('@WHO3@');
+        this.itms = [
+            new SctItm('@CLASS@をしている'),
+            new SctItm('@COUNTRY@出身の'),
+            new SctItm('@COUNTRY@在住の'),
+            new SctItm('「@CALL@」と呼ばれている'),
+            new SctItm('@MANYPEOPLE@より@ASSES@')
+        ];
+    }
+}
 class selector_co extends SctItm_Selector {
     constructor() {
         super('@CO@');
@@ -1506,9 +1519,9 @@ class selector_assessment extends SctItm_Selector {
             new SctItm('推薦された'),
             new SctItm('表彰された'),
             new SctItm('ささやかれている'),
-            new SctItm('驚嘆した'),
+            new SctItm('驚嘆された'),
             new SctItm('驚かせた'),
-            new SctItm('感動した'),
+            new SctItm('感動された'),
             new SctItm('感謝されている'),
             new SctItm('太鼓判を押された'),
             new SctItm('名付けられた'),
@@ -1569,7 +1582,10 @@ class selector_conect2 extends SctItm_Selector {
             new SctItm('とにかく'),
             new SctItm('ともかく'),
             new SctItm('ところが'),
-            new SctItm('そういうわけで')
+            new SctItm('そういうわけで'),
+            new SctItm('今は'),
+            new SctItm('これまでは'),
+            new SctItm('今後')
         ];
     }
 }
@@ -1647,6 +1663,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_think());
         this.dic_push(new selector_who());
         this.dic_push(new selector_who2());
+        this.dic_push(new selector_who3());
         this.dic_push(new selector_when());
         this.dic_push(new selector_co());
         this.dic_push(new selector_human());
