@@ -2578,6 +2578,12 @@ class selector_conect2 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('これまでは')
             ,
             new SctItm('実際には')
+            ,
+            new SctItm('もし')
+            ,
+            new SctItm('例えば')
+            ,
+            new SctItm('仮に')
           ];
     }
 }

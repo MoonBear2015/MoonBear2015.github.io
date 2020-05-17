@@ -9,7 +9,7 @@ function set_qa()
     html += '<h1>';
     html += 'Q&A';
     html += '<small>';
-    html += ' Q00.16 test';
+    html += ' Q00.17';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -572,6 +572,8 @@ class selector_a01_you extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('あなたの@KEI@@L_PART@さんが、')
             ,
             new SctItm('@QUESTER@さんの@KEI@@L_PART@さんが、')
+            ,
+            new SctItm('私が')
         ]
     }
 }
@@ -583,7 +585,7 @@ class selector_a02_quest extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('@CLASS@をしているなら')
             ,
-            new SctItm('@CLASS@でないなら')
+            new SctItm('@MANYPEOPLE@のために')
             ,
             new SctItm('@CLASS@は@KEI1@ので')
             ,
@@ -623,9 +625,11 @@ class selector_a04_result extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@THINK@しても仕方がありません')
             ,
-            new SctItm('@THINK@している場合ではありませんよ')
+            new SctItm('@THINK@しているとは実におかしな話です')
             ,
-            new SctItm('@THINK@するしか有りませんね')
+            new SctItm('@THINK@するとはおかしな話です')
+            ,
+            new SctItm('@THINK@したってどうしようもありません')
             ,
             new SctItm('@THINK@するのは当然でしょう')
         ]

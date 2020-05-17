@@ -1583,7 +1583,10 @@ class selector_conect2 extends SctItm_Selector {
             new SctItm('ところで'),
             new SctItm('そういうわけで'),
             new SctItm('これまでは'),
-            new SctItm('実際には')
+            new SctItm('実際には'),
+            new SctItm('もし'),
+            new SctItm('例えば'),
+            new SctItm('仮に')
         ];
     }
 }
