@@ -7,7 +7,7 @@ function set_qa() {
     html += '<h1>';
     html += 'Q&A';
     html += '<small>';
-    html += ' Q00.17';
+    html += ' Q00.18';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -212,8 +212,12 @@ class selector_q_title extends SctItm_Selector {
             new SctItm('@L_PART@と@L_KEY@をしたいのですが'),
             new SctItm('@L_PART@が@L_KEY@で捕まっています'),
             new SctItm('@L_PART@が@L_KEY@で疑われています'),
+            new SctItm('私の@KEI@@L_PART@を知りませんか'),
             new SctItm('どうして、@CLASS@は@KEI1@のでしょうか'),
-            new SctItm('どうして、@L_PART@は@KEI1@のでしょうか')
+            new SctItm('どうして、@L_PART@は@KEI1@のでしょうか'),
+            new SctItm('どうすれば@CLASS@になれますか'),
+            new SctItm('「@CALL@」と呼ばれて@THINK@しています'),
+            new SctItm('@CLASS@になりたくて@THINK@しています')
         ];
     }
 }
@@ -272,10 +276,12 @@ class selector_q01_me extends SctItm_Selector {
             new SctItm('今、私は@CLASS@をしているのですが、'),
             new SctItm('以前、私は@CLASS@をしていたのですが、'),
             new SctItm('これから、私は@CLASS@になろうと思うのですが、'),
+            new SctItm('@CLASS@になったばかりなのですが、'),
             new SctItm('現在、私は@COUNTRY@に住んでいるのですが、'),
             new SctItm('以前、私は@COUNTRY@に住んでいたのですが、'),
             new SctItm('私は@COUNTRY@に移住するつもりですが、'),
-            new SctItm('私は@COUNTRY@から帰ってきたのですが、')
+            new SctItm('私は@COUNTRY@から帰ってきたのですが、'),
+            new SctItm('初めて@COUNTRY@に来たのですが、')
         ];
     }
 }
@@ -288,8 +294,11 @@ class selector_q02_quest extends SctItm_Selector {
             new SctItm('@KEY@ばかりしてしまい'),
             new SctItm('@KEY@に巻き込まれてしまい'),
             new SctItm('@MANYPEOPLE@に反対され'),
-            new SctItm('@PART@が邪魔で'),
-            new SctItm('@PART@が@KEI1@ので')
+            new SctItm('@MANYPEOPLE@がやってきて'),
+            new SctItm('@MANYPEOPLE@がいなくなったので'),
+            new SctItm('@MANYPEOPLE@に取り囲まれ'),
+            new SctItm('@PART@が@KEI1@ので'),
+            new SctItm('本当は@CLASS@になりくて')
         ];
     }
 }
@@ -302,8 +311,9 @@ class selector_q03_issue extends SctItm_Selector {
             new SctItm('@L_KEY@が出来なくて'),
             new SctItm('@L_KEY@がしたいのですが'),
             new SctItm('@L_KEY@が禁止されていて'),
-            new SctItm('@L_KEY@が禁止されていて'),
-            new SctItm('@MANYPEOPLE@が@ASSES@ので')
+            new SctItm('@MANYPEOPLE@が@ASSES@ので'),
+            new SctItm('@PART@がいなくなってしまい'),
+            new SctItm('@PART@が邪魔で')
         ];
     }
 }
@@ -345,13 +355,22 @@ class selector_a_title extends SctItm_Selector {
     constructor() {
         super('@A_TITLE@');
         this.itms = [
+            new SctItm('ようこそ、@QUESTER@さん'),
             new SctItm('初めまして、@QUESTER@さん'),
             new SctItm('こんにちは、@QUESTER@さん'),
-            new SctItm('@QUESTER@さん、それは大変ですね'),
+            new SctItm('お久しぶりですね、@QUESTER@さん'),
+            new SctItm('それは大変ですね、@QUESTER@さん'),
             new SctItm('それは@QUESTER@さん自身の問題では？'),
             new SctItm('それは@QUESTER@さんの思い過ごしですよ'),
             new SctItm('それは@QUESTER@さんの責任です'),
-            new SctItm('いいえ、@QUESTER@さんは悪くありません')
+            new SctItm('@QUESTER@さんは悪くありません'),
+            new SctItm('@QUESTER@さんなら大丈夫ですよ'),
+            new SctItm('@QUESTER@さん、もう諦めましょう'),
+            new SctItm('@QUESTER@さん、良かったですね'),
+            new SctItm('@QUESTER@さんの仰るとおりです'),
+            new SctItm('@QUESTER@さん、もういい加減にして下さい'),
+            new SctItm('@QUESTER@さん、もう来ないで下さい。'),
+            new SctItm('@QUESTER@さん、もう来ないで下さいといったはずです。')
         ];
     }
 }
@@ -399,7 +418,8 @@ class selector_a01_you extends SctItm_Selector {
             new SctItm('@QUESTER@さんが'),
             new SctItm('あなたの@KEI@@L_PART@さんが、'),
             new SctItm('@QUESTER@さんの@KEI@@L_PART@さんが、'),
-            new SctItm('私が')
+            new SctItm('私が'),
+            new SctItm('@MANYPEOPLE@が')
         ];
     }
 }
@@ -409,8 +429,9 @@ class selector_a02_quest extends SctItm_Selector {
         super('@A_MSG02@');
         this.itms = [
             new SctItm('@CLASS@をしているなら'),
+            new SctItm('@CLASS@になりたいなら'),
             new SctItm('@MANYPEOPLE@のために'),
-            new SctItm('@CLASS@は@KEI1@ので'),
+            new SctItm('@MANYPEOPLE@のせいで'),
             new SctItm('@CALL@と@ASSES@なら'),
             new SctItm('@COUNTRY@にいるなら'),
             new SctItm('@COUNTRY@には@MANYPEOPLE@がいるので')
@@ -425,7 +446,8 @@ class selector_a03_issue extends SctItm_Selector {
             new SctItm('@L_KEY@が止められなくて'),
             new SctItm('@L_KEY@が出来なくて'),
             new SctItm('@L_KEY@がしたくて'),
-            new SctItm('@L_KEY@が禁止されていて')
+            new SctItm('@L_KEY@が禁止され'),
+            new SctItm('@CALL@と呼ばれて')
         ];
     }
 }
@@ -437,10 +459,11 @@ class selector_a04_result extends SctItm_Selector {
             new SctItm('@THINK@しているのは判ります'),
             new SctItm('@THINK@してしまうのは仕方がありません'),
             new SctItm('@THINK@しても仕方がありません'),
-            new SctItm('@THINK@しているとは実におかしな話です'),
-            new SctItm('@THINK@するとはおかしな話です'),
+            new SctItm('@THINK@しているとは実に@KEI1@話です'),
+            new SctItm('@THINK@するとは@KEI1@話です'),
             new SctItm('@THINK@したってどうしようもありません'),
-            new SctItm('@THINK@するのは当然でしょう')
+            new SctItm('@THINK@するのは当然でしょう'),
+            new SctItm('@ASSES@のは当然でしょう')
         ];
     }
 }

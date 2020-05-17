@@ -2894,6 +2894,8 @@ const   cods_km = [
     ,
     new SctCod_Km('|圧倒的|あっとうてき|')
     ,
+    new SctCod_Km('いい|加減|かげん|')
+    ,
     new SctCod_Km('|意外|いがい|')
     ,
     new SctCod_Km('|偉大|いだい|')
@@ -3027,10 +3029,14 @@ const   cods_km = [
     new SctCod_Km('|丁重|ていちょう|')
     ,
     new SctCod_Km('|適切|てきせつ|')
+    ,
+    new SctCod_Km('|適当|てきとう|')
     // ,
     // new SctCod_Km('てへぺろ')
     // ,
     // new SctCod_Km('|天下一品|てんかいっぴん|')
+    ,
+    new SctCod_Km('|天才的|てんさいてき|')
     ,
     new SctCod_Km('|伝統的|でんとうてき|')
     ,
