@@ -9,7 +9,7 @@ function set_qa()
     html += '<h1>';
     html += 'Q&A';
     html += '<small>';
-    html += ' Q00.19';
+    html += ' Q00.20';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -366,8 +366,6 @@ class selector_q_msg extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@Q_MSG01@@Q_MSG02@、@Q_MSG03@@Q_MSG04@。')
             ,
-            new SctItm('私は@WHO3@@L_PART@の話です。')
-            ,
             new SctItm('私の@WHO3@@L_PART@の話です。')
             ,
             new SctItm('私の@L_PART@をご存じでしょうか。')
@@ -643,7 +641,7 @@ class selector_a02_quest extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@COUNTRY@にいるなら')
             ,
-            new SctItm('@COUNTRY@には@MANYPEOPLE@がいるので')
+            new SctItm('@MANYPEOPLE@に@ASSES@のなら')
         ]
     }
 }
