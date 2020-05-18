@@ -306,6 +306,8 @@ class selector_people extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@CLASS@')
             ,
             new SctItm('@PART@')
+            ,
+            new SctItm('@COUNTRY@人')
         ];
     }
 }
@@ -1706,6 +1708,15 @@ class selector_kd extends SctItm_Selector implements ISctItm_Selector {
         this.Add(cods_to_itms(cods_adv_etc));
     }
 }
+class selector_grade extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@GRADE@');
+        this.itms = [
+            new SctItm('')
+        ];
+        this.Add(itms_grade);
+    }
+}
 
 class selector_move extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
@@ -2676,6 +2687,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_km());
         this.dic_push(new selector_k());
         this.dic_push(new selector_kd());
+        this.dic_push(new selector_grade());
         this.dic_push(new selector_move());
 
         this.dic_push(new selector_think());

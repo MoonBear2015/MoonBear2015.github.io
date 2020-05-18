@@ -7,7 +7,7 @@ function set_qa() {
     html += '<h1>';
     html += 'Q&A';
     html += '<small>';
-    html += ' Q00.18';
+    html += ' Q00.19';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -216,8 +216,8 @@ class selector_q_title extends SctItm_Selector {
             new SctItm('どうして、@CLASS@は@KEI1@のでしょうか'),
             new SctItm('どうして、@L_PART@は@KEI1@のでしょうか'),
             new SctItm('どうすれば@CLASS@になれますか'),
-            new SctItm('「@CALL@」と呼ばれて@THINK@しています'),
-            new SctItm('@CLASS@になりたくて@THINK@しています')
+            new SctItm('「@CALL@」と呼ばれて@GRADE@@THINK@しています'),
+            new SctItm('@CLASS@になりたくて@GRADE@@THINK@しています')
         ];
     }
 }
@@ -258,6 +258,7 @@ class selector_q_msg extends SctItm_Selector {
             new SctItm('@Q_MSG02@@Q_MSG04@。'),
             new SctItm('@Q_MSG01@@Q_MSG03@@Q_MSG04@。'),
             new SctItm('@Q_MSG01@@Q_MSG02@、@Q_MSG03@@Q_MSG04@。'),
+            new SctItm('私は@WHO3@@L_PART@の話です。'),
             new SctItm('私の@WHO3@@L_PART@の話です。'),
             new SctItm('私の@L_PART@をご存じでしょうか。')
         ];
@@ -322,18 +323,18 @@ class selector_q04_result extends SctItm_Selector {
     constructor() {
         super('@Q_MSG04@');
         this.itms = [
-            new SctItm('とても困っているのです'),
-            new SctItm('悔しくて仕方がありません'),
-            new SctItm('悲しくて仕方がありません'),
-            new SctItm('嬉しくて仕方がありません'),
+            new SctItm('@GRADE@困っているのです'),
+            new SctItm('@GRADE@悔しくて仕方がありません'),
+            new SctItm('@GRADE@悲しくて仕方がありません'),
+            new SctItm('@GRADE@嬉しくて仕方がありません'),
             new SctItm('涙が止まらないのです'),
             new SctItm('笑いが止まりません'),
-            new SctItm('とても堪えきれません'),
-            new SctItm('とても我慢が出来ません'),
+            new SctItm('@GRADE@堪えきれません'),
+            new SctItm('@GRADE@我慢が出来ません'),
             new SctItm('途方に暮れています'),
             new SctItm('取り付く島もありません'),
             new SctItm('どうしようもありません'),
-            new SctItm('とても@THINK@しているのです')
+            new SctItm('@GRADE@@THINK@しているのです')
         ];
     }
 }
@@ -359,15 +360,15 @@ class selector_a_title extends SctItm_Selector {
             new SctItm('初めまして、@QUESTER@さん'),
             new SctItm('こんにちは、@QUESTER@さん'),
             new SctItm('お久しぶりですね、@QUESTER@さん'),
-            new SctItm('それは大変ですね、@QUESTER@さん'),
+            new SctItm('それは@GRADE@大変ですね、@QUESTER@さん'),
             new SctItm('それは@QUESTER@さん自身の問題では？'),
             new SctItm('それは@QUESTER@さんの思い過ごしですよ'),
             new SctItm('それは@QUESTER@さんの責任です'),
             new SctItm('@QUESTER@さんは悪くありません'),
-            new SctItm('@QUESTER@さんなら大丈夫ですよ'),
+            new SctItm('@KEI@@QUESTER@さんなら大丈夫ですよ'),
             new SctItm('@QUESTER@さん、もう諦めましょう'),
             new SctItm('@QUESTER@さん、良かったですね'),
-            new SctItm('@QUESTER@さんの仰るとおりです'),
+            new SctItm('@KEI@@QUESTER@さんの仰るとおりです'),
             new SctItm('@QUESTER@さん、もういい加減にして下さい'),
             new SctItm('@QUESTER@さん、もう来ないで下さい。'),
             new SctItm('@QUESTER@さん、もう来ないで下さいといったはずです。')
@@ -405,7 +406,10 @@ class selector_a_msg extends SctItm_Selector {
             new SctItm('@A_MSG02@、@A_MSG04@。'),
             new SctItm('@A_MSG01@@A_MSG02@、@A_MSG03@@A_MSG04@。'),
             new SctItm('@A_MSG01@@A_MSG02@、@A_MSG03@@A_MSG04@。'),
-            new SctItm('私は@MANYPEOPLE@より「@CALL@」と@ASSES@のです。')
+            new SctItm('私は@MANYPEOPLE@より「@CALL@」と@GRADE@@ASSES@のです。'),
+            new SctItm('@KEI@@QUESTER@さんならご存じでしょう。'),
+            new SctItm('それは@KEI@@QUESTER@さんが@GRADE@@ASSES@からでしょう。'),
+            new SctItm('それは@KEI@@L_PART@さんが@GRADE@@ASSES@からでしょう。')
         ];
     }
 }
@@ -456,13 +460,13 @@ class selector_a04_result extends SctItm_Selector {
     constructor() {
         super('@A_MSG04@');
         this.itms = [
-            new SctItm('@THINK@しているのは判ります'),
-            new SctItm('@THINK@してしまうのは仕方がありません'),
-            new SctItm('@THINK@しても仕方がありません'),
-            new SctItm('@THINK@しているとは実に@KEI1@話です'),
-            new SctItm('@THINK@するとは@KEI1@話です'),
-            new SctItm('@THINK@したってどうしようもありません'),
-            new SctItm('@THINK@するのは当然でしょう'),
+            new SctItm('@GRADE@@THINK@しているのは判ります'),
+            new SctItm('@GRADE@@THINK@してしまうのは仕方がありません'),
+            new SctItm('@GRADE@@THINK@しても仕方がありません'),
+            new SctItm('@GRADE@@THINK@しているとは実に@KEI1@話です'),
+            new SctItm('@GRADE@@THINK@するとは@KEI1@話です'),
+            new SctItm('@GRADE@@THINK@したってどうしようもありません'),
+            new SctItm('@GRADE@@THINK@するのは当然でしょう'),
             new SctItm('@ASSES@のは当然でしょう')
         ];
     }

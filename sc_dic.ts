@@ -4382,6 +4382,29 @@ const   cods_ad_jougo = [
     // new SctCod_Mv('|由々|よしよし|しい')
 ];
 
+const itms_grade = [
+    new SctItm('わずかに')
+    ,
+    new SctItm('少し')
+    ,
+    new SctItm('なんとなく')
+    ,
+    new SctItm('ちょっと')
+    ,
+    new SctItm('おおいに')
+    ,
+    new SctItm('とても')
+    ,
+    new SctItm('非常に')
+    ,
+    new SctItm('盛大に')
+    ,
+    new SctItm('@NICK@の様に')
+    ,
+    new SctItm('@PEOPLE@の様に')
+];
+
+
 
 const itms_partner = [
     new SctItm('知り合い')
