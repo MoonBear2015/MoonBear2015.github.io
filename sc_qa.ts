@@ -9,7 +9,7 @@ function set_qa()
     html += '<h1>';
     html += 'Q&A';
     html += '<small>';
-    html += ' Q00.20';
+    html += ' Q00.21';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -315,29 +315,29 @@ class selector_q_init extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('お早うございます。@Q_INIT@')
             ,
-            new SctItm('こんにちは、@Q_INIT@')
+            new SctItm('こんにちは。@Q_INIT@')
             ,
-            new SctItm('ご無沙汰しております、@Q_INIT@')
+            new SctItm('ご無沙汰しております。@Q_INIT@')
             ,
-            new SctItm('いつもお世話になっております、@Q_INIT@')
+            new SctItm('いつもお世話になっております。@Q_INIT@')
             ,
             new SctItm('私は@COUNTRY@で@CLASS@をしています。')
             ,
             new SctItm('私は@CLASS@をしている@QUESTER@と云います。')
             ,
-            new SctItm('私が@AGE2@の頃、@Q_MSG@')
+            new SctItm('私が@AGE2@の頃、@Q_SENT@')
             ,
-            new SctItm('私が@CLASS@をしていた頃、@Q_MSG@')
+            new SctItm('私が@CLASS@をしていた頃、@Q_SENT@')
             ,
-            new SctItm('私が@COUNTRY@にいた頃、@Q_MSG@')
+            new SctItm('私が@COUNTRY@にいた頃、@Q_SENT@')
             ,
-            new SctItm('私には@KEI@@L_PART@がいるのですが、@Q_MSG@')
+            new SctItm('私には@KEI@@L_PART@がいるのですが、@Q_SENT@')
             ,
-            new SctItm('私には@CLASS@をしている@AGE2@の@L_PART@がいるのですが、@Q_MSG@')
+            new SctItm('私には@CLASS@をしている@AGE2@の@L_PART@がいるのですが、@Q_SENT@')
             ,
-            new SctItm('つい昨日の話なのですが、@Q_MSG@')
+            new SctItm('つい昨日の話なのですが、@Q_SENT@')
             ,
-            new SctItm('おとといの話なのですが、@Q_MSG@')
+            new SctItm('おとといの話なのですが、@Q_SENT@')
 
         ]
     }
@@ -346,9 +346,13 @@ class selector_q_sent extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@Q_SENT@');
         this.itms = [
-            new SctItm('@Q_MSG@')
+            new SctItm('@Q_MSG@。')
             ,
-            new SctItm('@CONECT2@、@Q_MSG@')
+            new SctItm('@CONECT2@、@Q_MSG@。')
+            ,
+            new SctItm('@Q_MSG@が、@Q_SENT@')
+            ,
+            new SctItm('私の@L_PART@をご存じでしょうか。')
         ]
     }
 }
@@ -358,17 +362,17 @@ class selector_q_msg extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@Q_MSG@');
         this.itms = [
-            new SctItm('@Q_MSG01@@Q_MSG04@。')
+            new SctItm('@Q_MSG01@@Q_MSG04@')
             ,
-            new SctItm('@Q_MSG02@@Q_MSG04@。')
+            new SctItm('@Q_MSG02@@Q_MSG04@')
             ,
-            new SctItm('@Q_MSG01@@Q_MSG03@@Q_MSG04@。')
+            new SctItm('@Q_MSG01@@Q_MSG03@@Q_MSG04@')
             ,
-            new SctItm('@Q_MSG01@@Q_MSG02@、@Q_MSG03@@Q_MSG04@。')
+            new SctItm('@Q_MSG01@@Q_MSG02@、@Q_MSG03@@Q_MSG04@')
             ,
-            new SctItm('私の@WHO3@@L_PART@の話です。')
+            new SctItm('私の@WHO3@@L_PART@の話です')
             ,
-            new SctItm('私の@L_PART@をご存じでしょうか。')
+            new SctItm('私の「@CALL@」と@GRADE@@ASSES@@L_PART@のことです')
         ]
     }
 }
@@ -431,7 +435,7 @@ class selector_q02_quest extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@PART@が@KEI1@ので')
             ,
-            new SctItm('本当は@CLASS@になりくて')
+            new SctItm('本当は@CLASS@になりたくて')
         ]
     }
 }
@@ -491,8 +495,6 @@ class selector_q04_result extends SctItm_Selector implements ISctItm_Selector {
     }
 }
 
-
-
 // 問題の相手
 class locker_part extends SctItm_SelectLocker implements ISctItm_Selector{
     constructor(){
@@ -541,9 +543,9 @@ class selector_a_title extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@QUESTER@さん、もういい加減にして下さい')
             ,
-            new SctItm('@QUESTER@さん、もう来ないで下さい。')
+            new SctItm('@QUESTER@さん、もう来ないで下さい')
             ,
-            new SctItm('@QUESTER@さん、もう来ないで下さいといったはずです。')
+            new SctItm('@QUESTER@さん、もう来ないで下さいといったはずです')
         ]
     }
 }
@@ -559,7 +561,7 @@ class selector_a_init extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('ご無沙汰しております、@A_INIT@')
             ,
-            new SctItm('@A_MSG@')
+            new SctItm('@A_SENT@')
             ,
             new SctItm('私は@CLASS@をしている@ADVICER@と云います。')
             ,
@@ -574,9 +576,17 @@ class selector_a_sent extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@A_SENT@');
         this.itms = [
-            new SctItm('@A_MSG@')
+            new SctItm('@A_MSG@。')
             ,
-            new SctItm('@CONECT2@、@A_MSG@')
+            new SctItm('@CONECT2@、@A_MSG@。')
+            ,
+            new SctItm('@A_MSG@が、@A_SENT@')
+            ,
+            new SctItm('@KEI@@QUESTER@さんならご存じでしょう。')
+            ,
+            new SctItm('それは@KEI@@QUESTER@さんが@GRADE@@ASSES@からでしょう。')
+            ,
+            new SctItm('それは@KEI@@L_PART@さんが@GRADE@@ASSES@からでしょう。')
         ]
     }
 }
@@ -584,21 +594,15 @@ class selector_a_msg extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@A_MSG@');
         this.itms = [
-            new SctItm('@A_MSG01@@A_MSG04@。')
+            new SctItm('@A_MSG01@@A_MSG04@')
             ,
-            new SctItm('@A_MSG02@、@A_MSG04@。')
+            new SctItm('@A_MSG02@、@A_MSG04@')
             ,
-            new SctItm('@A_MSG01@@A_MSG02@、@A_MSG03@@A_MSG04@。')
+            new SctItm('@A_MSG01@@A_MSG02@、@A_MSG03@@A_MSG04@')
             ,
-            new SctItm('@A_MSG01@@A_MSG02@、@A_MSG03@@A_MSG04@。')
+            new SctItm('@A_MSG01@@A_MSG02@、@A_MSG03@@A_MSG04@')
             ,
-            new SctItm('私は@MANYPEOPLE@より「@CALL@」と@GRADE@@ASSES@のです。')
-            ,
-            new SctItm('@KEI@@QUESTER@さんならご存じでしょう。')
-            ,
-            new SctItm('それは@KEI@@QUESTER@さんが@GRADE@@ASSES@からでしょう。')
-            ,
-            new SctItm('それは@KEI@@L_PART@さんが@GRADE@@ASSES@からでしょう。')
+            new SctItm('私は@MANYPEOPLE@より「@CALL@」と@GRADE@@ASSES@のです')
         ]
     }
 }

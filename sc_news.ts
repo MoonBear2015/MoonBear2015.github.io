@@ -2564,15 +2564,13 @@ class selector_conect2 extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('それはそうと')
             ,
-            new SctItm('実は')
-            ,
             new SctItm('正直いいますと')
             ,
             new SctItm('話は変わりますが')
             ,
             new SctItm('そんなことより')
             ,
-            new SctItm('つまりは')
+            new SctItm('つまり')
             ,
             new SctItm('そういう訳で')
             ,
@@ -2580,15 +2578,11 @@ class selector_conect2 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('とにかく')
             ,
-            new SctItm('ともかく')
-            ,
             new SctItm('ところで')
             ,
             new SctItm('そういうわけで')
             ,
-            new SctItm('これまでは')
-            ,
-            new SctItm('実際には')
+            new SctItm('正直に言うと')
             ,
             new SctItm('例えば')
             ,

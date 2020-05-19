@@ -2910,8 +2910,7 @@ const itms_partner = [
     new SctItm('不倫相手'),
     new SctItm('相方'),
     new SctItm('ライバル'),
-    new SctItm('親の仇'),
-    new SctItm('マスコミ')
+    new SctItm('親の仇')
 ];
 const itms_accident = [
     new SctItm('児童虐待'),

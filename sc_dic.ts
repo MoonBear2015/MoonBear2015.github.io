@@ -4480,8 +4480,6 @@ const itms_partner = [
     new SctItm('ライバル')
     ,
     new SctItm('親の仇')
-    ,
-    new SctItm('マスコミ')
 ]
 
 const   itms_accident = [
