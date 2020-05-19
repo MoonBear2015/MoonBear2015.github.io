@@ -9,7 +9,7 @@ function set_qa()
     html += '<h1>';
     html += 'Q&A';
     html += '<small>';
-    html += ' Q00.21';
+    html += ' Q00.22';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -351,8 +351,8 @@ class selector_q_sent extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@CONECT2@、@Q_MSG@。')
             ,
             new SctItm('@Q_MSG@が、@Q_SENT@')
-            ,
-            new SctItm('私の@L_PART@をご存じでしょうか。')
+            // ,
+            // new SctItm('私の@L_PART@をご存じでしょうか。')
         ]
     }
 }
@@ -366,7 +366,11 @@ class selector_q_msg extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@Q_MSG02@@Q_MSG04@')
             ,
-            new SctItm('@Q_MSG01@@Q_MSG03@@Q_MSG04@')
+            new SctItm('@Q_MSG01@@Q_MSG03@、@Q_MSG04@')
+            ,
+            new SctItm('@Q_MSG01@@Q_MSG02@@Q_MSG04@')
+            ,
+            new SctItm('@Q_MSG02@、@Q_MSG03@、@Q_MSG04@')
             ,
             new SctItm('@Q_MSG01@@Q_MSG02@、@Q_MSG03@@Q_MSG04@')
             ,
@@ -470,15 +474,15 @@ class selector_q04_result extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('@GRADE@困っているのです')
             ,
-            new SctItm('@GRADE@悔しくて仕方がありません')
+            new SctItm('@GRADE@悔しくて仕方がないのです')
             ,
-            new SctItm('@GRADE@悲しくて仕方がありません')
+            new SctItm('@GRADE@悲しくて仕方がないのです')
             ,
-            new SctItm('@GRADE@嬉しくて仕方がありません')
+            new SctItm('@GRADE@嬉しくて仕方がないのです')
             ,
             new SctItm('涙が止まらないのです')
             ,
-            new SctItm('笑いが止まりません')
+            new SctItm('笑いが止まらないのです')
             ,
             new SctItm('@GRADE@堪えきれません')
             ,
@@ -581,12 +585,6 @@ class selector_a_sent extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@CONECT2@、@A_MSG@。')
             ,
             new SctItm('@A_MSG@が、@A_SENT@')
-            ,
-            new SctItm('@KEI@@QUESTER@さんならご存じでしょう。')
-            ,
-            new SctItm('それは@KEI@@QUESTER@さんが@GRADE@@ASSES@からでしょう。')
-            ,
-            new SctItm('それは@KEI@@L_PART@さんが@GRADE@@ASSES@からでしょう。')
         ]
     }
 }
@@ -598,11 +596,17 @@ class selector_a_msg extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@A_MSG02@、@A_MSG04@')
             ,
-            new SctItm('@A_MSG01@@A_MSG02@、@A_MSG03@@A_MSG04@')
+            new SctItm('@A_MSG02@、@A_MSG03@@A_MSG04@')
+            ,
+            new SctItm('@A_MSG01@@A_MSG03@@A_MSG04@')
             ,
             new SctItm('@A_MSG01@@A_MSG02@、@A_MSG03@@A_MSG04@')
             ,
             new SctItm('私は@MANYPEOPLE@より「@CALL@」と@GRADE@@ASSES@のです')
+            ,
+            new SctItm('それは@KEI@@QUESTER@さんが@GRADE@@ASSES@からです')
+            ,
+            new SctItm('それは@KEI@@L_PART@さんが@GRADE@@ASSES@からです')
         ]
     }
 }
