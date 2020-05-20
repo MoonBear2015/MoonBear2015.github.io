@@ -7,7 +7,7 @@ function set_qa() {
     html += '<h1>';
     html += 'Q&A';
     html += '<small>';
-    html += ' Q00.23';
+    html += ' Q00.24';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -260,9 +260,9 @@ class selector_q_msg extends SctItm_Selector {
         this.itms = [
             new SctItm('@Q_MSG01@@Q_MSG04@'),
             new SctItm('@Q_MSG02@@Q_MSG04@'),
-            new SctItm('@Q_MSG01@@Q_MSG03@、@Q_MSG04@'),
+            new SctItm('@Q_MSG01@@Q_MSG03@@Q_MSG04@'),
             new SctItm('@Q_MSG01@@Q_MSG02@@Q_MSG04@'),
-            new SctItm('@Q_MSG02@、@Q_MSG03@、@Q_MSG04@'),
+            new SctItm('@Q_MSG02@、@Q_MSG03@@Q_MSG04@'),
             new SctItm('@Q_MSG01@@Q_MSG02@、@Q_MSG03@@Q_MSG04@'),
             new SctItm('私の@WHO3@@L_PART@の話です'),
             new SctItm('私の「@CALL@」と@GRADE@@ASSES@@L_PART@のことです')
@@ -279,12 +279,11 @@ class selector_q01_me extends SctItm_Selector {
             new SctItm('私の@KEI@@L_PART@は、'),
             new SctItm('私の@KEI@@L_PART@の話なのですが、'),
             new SctItm('私は@KEY@がしたいのですが、'),
-            new SctItm('今、私は@CLASS@をしているのですが、'),
-            new SctItm('以前、私は@CLASS@をしていたのですが、'),
-            new SctItm('これから、私は@CLASS@になろうと思うのですが、'),
+            new SctItm('私は@CLASS@をしているのですが、'),
+            new SctItm('私は@CLASS@をしていたのですが、'),
+            new SctItm('私は@CLASS@になろうと思うのですが、'),
             new SctItm('@CLASS@になったばかりなのですが、'),
-            new SctItm('現在、私は@COUNTRY@に住んでいるのですが、'),
-            new SctItm('以前、私は@COUNTRY@に住んでいたのですが、'),
+            new SctItm('私は@COUNTRY@に住んでいるのですが、'),
             new SctItm('私は@COUNTRY@に移住するつもりですが、'),
             new SctItm('私は@COUNTRY@から帰ってきたのですが、'),
             new SctItm('初めて@COUNTRY@に来たのですが、')
@@ -304,7 +303,7 @@ class selector_q02_quest extends SctItm_Selector {
             new SctItm('@MANYPEOPLE@がいなくなったので'),
             new SctItm('@MANYPEOPLE@に取り囲まれ'),
             new SctItm('@PART@が@KEI1@ので'),
-            new SctItm('本当は@CLASS@になりたくて')
+            new SctItm('本当は@CLASS@になりたいので')
         ];
     }
 }

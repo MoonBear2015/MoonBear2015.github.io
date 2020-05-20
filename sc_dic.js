@@ -2833,6 +2833,7 @@ const cods_ad_jougo = [
     // new SctCod_Mv('|長々|おさおさ|しい')
     // ,
     new SctCod_Mv('|軽々|かるがる|しい'),
+    new SctCod_Mv('|白々|しらじら|しい'),
     new SctCod_Mv('|図々|ずうずう|しい'),
     new SctCod_Mv('|清々|すがすが|しい'),
     new SctCod_Mv('|騒々|そうぞう|しい'),
@@ -2866,7 +2867,7 @@ const itms_grade = [
     new SctItm('少し'),
     new SctItm('なんとなく'),
     new SctItm('ちょっと'),
-    new SctItm('おおいに'),
+    new SctItm('大いに'),
     new SctItm('とても'),
     new SctItm('非常に'),
     new SctItm('盛大に'),
@@ -2931,7 +2932,8 @@ const itms_accident = [
     new SctItm('破壊工作'),
     new SctItm('暴力行為'),
     new SctItm('乱痴気騒ぎ'),
-    new SctItm('乱交パーティー'),
+    // new SctItm('乱交パーティー')
+    // ,
     new SctItm('乱闘騒ぎ'),
     new SctItm('大喧嘩'),
     new SctItm('不法侵入'),
@@ -2973,5 +2975,6 @@ const itms_festival = [
     new SctItm('トイレ掃除'),
     new SctItm('ティッシュ配り'),
     new SctItm('新聞配達'),
+    new SctItm('牛乳配達'),
     new SctItm('水商売')
 ];
