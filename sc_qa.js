@@ -7,7 +7,7 @@ function set_qa() {
     html += '<h1>';
     html += 'Q&A';
     html += '<small>';
-    html += ' Q00.22';
+    html += ' Q00.23';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -70,7 +70,7 @@ function Make_Q() {
     html += '</p>';
     html += '<p id="qa_doc">';
     html += '@Q_INIT@';
-    for (let i = 0; i < rnd_minmax(10, 5); i++) {
+    for (let i = 0; i < rnd_minmax(3, 5); i++) {
         html += '@Q_SENT@';
     }
     html += '</p>';
@@ -98,7 +98,7 @@ function Make_A() {
     html += '</p>';
     html += '<p id="qa_doc">';
     html += '@A_INIT@';
-    for (let i = 0; i < rnd_minmax(10, 5); i++) {
+    for (let i = 0; i < rnd_minmax(3, 5); i++) {
         html += '@A_SENT@';
     }
     html += '</p>';
@@ -247,9 +247,10 @@ class selector_q_sent extends SctItm_Selector {
         this.itms = [
             new SctItm('@Q_MSG@。'),
             new SctItm('@CONECT2@、@Q_MSG@。'),
-            new SctItm('@Q_MSG@が、@Q_SENT@')
+            new SctItm('@Q_MSG@が、@Q_SENT@'),
+            new SctItm('@Q_MSG@けど、@Q_SENT@')
             // ,
-            // new SctItm('私の@L_PART@をご存じでしょうか。')
+            // new SctItm('私の@KEI@@L_PART@をご存じでしょうか。')
         ];
     }
 }
@@ -317,6 +318,7 @@ class selector_q03_issue extends SctItm_Selector {
             new SctItm('@L_KEY@がしたいのですが'),
             new SctItm('@L_KEY@が禁止されていて'),
             new SctItm('@MANYPEOPLE@が@ASSES@ので'),
+            new SctItm('@KEI@@PEOPLE@と@ASSES@ので'),
             new SctItm('@PART@がいなくなってしまい'),
             new SctItm('@PART@が邪魔で')
         ];
@@ -383,9 +385,9 @@ class selector_a_init extends SctItm_Selector {
     constructor() {
         super('@A_INIT@');
         this.itms = [
-            new SctItm('おはよう御座います、@A_INIT@'),
-            new SctItm('こんにちは、@A_INIT@'),
-            new SctItm('ご無沙汰しております、@A_INIT@'),
+            new SctItm('おはよう御座います。@A_INIT@'),
+            new SctItm('こんにちは。@A_INIT@'),
+            new SctItm('ご無沙汰しております。@A_INIT@'),
             new SctItm('@A_SENT@'),
             new SctItm('私は@CLASS@をしている@ADVICER@と云います。'),
             new SctItm('私は@WHO3@@ADVICER@と云います。'),
@@ -399,7 +401,9 @@ class selector_a_sent extends SctItm_Selector {
         this.itms = [
             new SctItm('@A_MSG@。'),
             new SctItm('@CONECT2@、@A_MSG@。'),
-            new SctItm('@A_MSG@が、@A_SENT@')
+            new SctItm('@A_MSG@が、@A_SENT@'),
+            new SctItm('@A_MSG@けど、@A_SENT@'),
+            new SctItm('@A_MSG@ので、@A_SENT@')
         ];
     }
 }
@@ -443,7 +447,8 @@ class selector_a02_quest extends SctItm_Selector {
             new SctItm('@MANYPEOPLE@のせいで'),
             new SctItm('@CALL@と@ASSES@なら'),
             new SctItm('@COUNTRY@にいるなら'),
-            new SctItm('@MANYPEOPLE@に@ASSES@のなら')
+            new SctItm('@MANYPEOPLE@に@ASSES@のなら'),
+            new SctItm('@KEI@@PEOPLE@と@ASSES@なら')
         ];
     }
 }
@@ -472,7 +477,7 @@ class selector_a04_result extends SctItm_Selector {
             new SctItm('@GRADE@@THINK@するとは@KEI1@話です'),
             new SctItm('@GRADE@@THINK@したってどうしようもありません'),
             new SctItm('@GRADE@@THINK@するのは当然でしょう'),
-            new SctItm('@ASSES@のは当然でしょう')
+            new SctItm('@KEI@@PEOPLE@と@ASSES@のは当然でしょう')
         ];
     }
 }
