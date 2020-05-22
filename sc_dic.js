@@ -2978,3 +2978,17 @@ const itms_festival = [
     new SctItm('牛乳配達'),
     new SctItm('水商売')
 ];
+const itms_habit = [
+    new SctItm('朝寝坊'),
+    new SctItm('女遊び'),
+    new SctItm('買い食い'),
+    new SctItm('賭け事'),
+    new SctItm('衝動買い'),
+    new SctItm('ストーカー'),
+    new SctItm('ホスト通い'),
+    new SctItm('ひったくり'),
+    new SctItm('万引き'),
+    new SctItm('薬物'),
+    new SctItm('夜這い'),
+    new SctItm('夜更かし')
+];
