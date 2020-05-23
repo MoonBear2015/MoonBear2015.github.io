@@ -7,7 +7,7 @@ function set_qa() {
     html += '<h1>';
     html += 'Q&A';
     html += '<small>';
-    html += ' Q00.25';
+    html += ' Q00.26';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -129,7 +129,7 @@ class qa_docs_maker extends news_docs_maker {
         this.dic_push(new selector_quester());
         this.dic_push(new selector_advicer());
         this.dic_push(new locker_part());
-        this.dic_push(new locker_KEY());
+        this.dic_push(new locker_HABIT());
     }
 }
 class selector_NameLocker extends ItmArray {
@@ -203,15 +203,16 @@ class selector_q_title extends SctItm_Selector {
         super('@Q_TITLE@');
         this.itms = [
             new SctItm('@L_PART@に@THINK@しています'),
-            new SctItm('@L_PART@が@L_KEY@ばかりしています'),
+            new SctItm('@L_PART@が@L_HABIT@ばかりしています'),
             new SctItm('助けて！ @L_PART@がまるで@NICK@なんです'),
             new SctItm('@L_PART@が@NICK@にしか見えません'),
+            new SctItm('@L_PART@を@CLASS@にしたいのですが'),
             new SctItm('@L_PART@が@KEI2@で仕方がありません'),
-            new SctItm('@L_PART@の@L_KEY@を止めさせたいんです'),
-            new SctItm('@L_PART@の@L_KEY@が長続きしません'),
-            new SctItm('@L_PART@と@L_KEY@をしたいのですが'),
-            new SctItm('@L_PART@が@L_KEY@で捕まっています'),
-            new SctItm('@L_PART@が@L_KEY@で疑われています'),
+            new SctItm('@L_PART@の@L_HABIT@を止めさせたいんです'),
+            new SctItm('@L_PART@の@L_HABIT@が長続きしません'),
+            new SctItm('@L_PART@と@L_HABIT@をしたいのですが'),
+            new SctItm('@L_PART@が@L_HABIT@で捕まっています'),
+            new SctItm('@L_PART@が@L_HABIT@で疑われています'),
             new SctItm('私の@KEI@@L_PART@を知りませんか'),
             new SctItm('どうして、@CLASS@は@KEI1@のでしょうか'),
             new SctItm('どうして、@L_PART@は@KEI1@のでしょうか'),
@@ -312,10 +313,10 @@ class selector_q03_issue extends SctItm_Selector {
     constructor() {
         super('@Q_MSG03@');
         this.itms = [
-            new SctItm('@L_KEY@が止められず'),
-            new SctItm('@L_KEY@が出来なくて'),
-            new SctItm('@L_KEY@がしたいのですが'),
-            new SctItm('@L_KEY@が禁止されていて'),
+            new SctItm('@L_HABIT@が止められず'),
+            new SctItm('@L_HABIT@が出来なくて'),
+            new SctItm('@L_HABIT@がしたいのですが'),
+            new SctItm('@L_HABIT@が禁止されていて'),
             new SctItm('@MANYPEOPLE@が@ASSES@ので'),
             new SctItm('@KEI@@PEOPLE@と@ASSES@ので'),
             new SctItm('@PART@がいなくなってしまい'),
@@ -351,10 +352,11 @@ class locker_part extends SctItm_SelectLocker {
     }
 }
 // 問題
-class locker_KEY extends SctItm_SelectLocker {
+class locker_HABIT extends SctItm_SelectLocker {
     constructor() {
-        super('@L_KEY@');
-        this.Add(itms_accident);
+        super('@L_HABIT@');
+        this.Add(itms_badhabit);
+        this.Add(itms_goodhabit);
     }
 }
 class selector_a_title extends SctItm_Selector {
@@ -365,15 +367,18 @@ class selector_a_title extends SctItm_Selector {
             new SctItm('初めまして、@QUESTER@さん'),
             new SctItm('こんにちは、@QUESTER@さん'),
             new SctItm('お久しぶりですね、@QUESTER@さん'),
-            new SctItm('それは@GRADE@大変ですね、@QUESTER@さん'),
-            new SctItm('それは@QUESTER@さん自身の問題では？'),
+            new SctItm('@GRADE@大変ですね、@QUESTER@さん'),
+            new SctItm('それは@QUESTER@さんの問題では？'),
             new SctItm('それは@QUESTER@さんの思い過ごしですよ'),
             new SctItm('それは@QUESTER@さんの責任です'),
+            new SctItm('それは@QUESTER@さんの勘違いでは？'),
             new SctItm('@QUESTER@さんは悪くありません'),
-            new SctItm('@KEI@@QUESTER@さんなら大丈夫ですよ'),
+            new SctItm('@QUESTER@さんなら大丈夫ですよ'),
             new SctItm('@QUESTER@さん、もう諦めましょう'),
             new SctItm('@QUESTER@さん、良かったですね'),
-            new SctItm('@KEI@@QUESTER@さんの仰るとおりです'),
+            new SctItm('@QUESTER@さんの仰るとおりです'),
+            new SctItm('@QUESTER@さん、もう寝ましょう'),
+            new SctItm('@QUESTER@さん、お薬の時間ですよ'),
             new SctItm('@QUESTER@さん、もういい加減にして下さい'),
             new SctItm('@QUESTER@さん、もう来ないで下さい'),
             new SctItm('@QUESTER@さん、もう来ないで下さいといったはずです')
@@ -456,10 +461,10 @@ class selector_a03_issue extends SctItm_Selector {
     constructor() {
         super('@A_MSG03@');
         this.itms = [
-            new SctItm('@L_KEY@が止められなくて'),
-            new SctItm('@L_KEY@が出来なくて'),
-            new SctItm('@L_KEY@がしたくて'),
-            new SctItm('@L_KEY@が禁止され'),
+            new SctItm('@L_HABIT@が止められなくて'),
+            new SctItm('@L_HABIT@が出来なくて'),
+            new SctItm('@L_HABIT@がしたくて'),
+            new SctItm('@L_HABIT@が禁止され'),
             new SctItm('@CALL@と呼ばれて')
         ];
     }
