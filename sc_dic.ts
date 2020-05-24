@@ -4585,11 +4585,17 @@ const   itms_badhabit = [
     ,
     new SctItm('押し売り')
     ,
+    new SctItm('男あさり')
+    ,
     new SctItm('女遊び')
     ,
     new SctItm('買い食い')
     ,
     new SctItm('賭け事')
+    ,
+    new SctItm('ギャンブル')
+    ,
+    new SctItm('切り取り強盗')
     ,
     new SctItm('衝動買い')
     ,
@@ -4613,6 +4619,8 @@ const   itms_badhabit = [
     ,
     new SctItm('万引き')
     ,
+    new SctItm('無駄遣い')
+    ,
     new SctItm('夜這い')
     ,
     new SctItm('夜更かし')
@@ -4623,6 +4631,8 @@ const   itms_goodhabit = [
     ,
     new SctItm('海外旅行')
     ,
+    new SctItm('家事手伝い')
+    ,
     new SctItm('切手収集')
     ,
     new SctItm('客商売')
@@ -4631,13 +4641,21 @@ const   itms_goodhabit = [
     ,
     new SctItm('筋トレ')
     ,
+    new SctItm('靴磨き')
+    ,
     new SctItm('工場勤務')
+    ,
+    new SctItm('婚活')
     ,
     new SctItm('散歩')
     ,
     new SctItm('サイクリング')
     ,
     new SctItm('慈善事業')
+    ,
+    new SctItm('塾通い')
+    ,
+    new SctItm('受験勉強')
     ,
     new SctItm('ジョギング')
     ,
@@ -4649,9 +4667,11 @@ const   itms_goodhabit = [
     ,
     new SctItm('飛び込み営業')
     ,
-    new SctItm('飛び込み営業')
+    new SctItm('習い事')
     ,
     new SctItm('畑仕事')
+    ,
+    new SctItm('花嫁修業')
     ,
     new SctItm('ボランティア活動')
     ,
