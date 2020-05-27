@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N02.31';
+    html += ' N02.32';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -1445,9 +1445,9 @@ class selector_class extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('執事')
             ,
-            new SctItm('幼稚園児')
-            ,
             new SctItm('駅員')
+            ,
+            new SctItm('車掌')
             ,
             new SctItm('世界第三位')
             ,
@@ -1457,7 +1457,17 @@ class selector_class extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('サーカス団員')
             ,
+            new SctItm('幼稚園児')
+            ,
             new SctItm('保育園児')
+            ,
+            new SctItm('小学生')
+            ,
+            new SctItm('中学生')
+            ,
+            new SctItm('高校生')
+            ,
+            new SctItm('大学生')
             ,
             new SctItm('ラーメン屋')
             ,
