@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N02.32';
+    html += ' N02.33';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -1492,6 +1492,7 @@ class selector_assessment extends SctItm_Selector {
             new SctItm('後ろ指を指された'),
             new SctItm('推薦された'),
             new SctItm('表彰された'),
+            new SctItm('認定された'),
             new SctItm('ささやかれている'),
             new SctItm('驚嘆された'),
             new SctItm('驚かせた'),

@@ -570,6 +570,10 @@ class selector_a_title extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@QUESTER@さん、もう諦めましょう')
             ,
+            new SctItm('頑張りましょう、@QUESTER@さん')
+            ,
+            new SctItm('止めて下さい、@QUESTER@さん')
+            ,
             new SctItm('残念でしたね、@QUESTER@さん')
             ,
             new SctItm('良かったですね、@QUESTER@さん')

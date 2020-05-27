@@ -391,6 +391,8 @@ class selector_a_title extends SctItm_Selector {
             new SctItm('@QUESTER@さんは悪くありません'),
             new SctItm('@QUESTER@さんなら大丈夫ですよ'),
             new SctItm('@QUESTER@さん、もう諦めましょう'),
+            new SctItm('頑張りましょう、@QUESTER@さん'),
+            new SctItm('止めて下さい、@QUESTER@さん'),
             new SctItm('残念でしたね、@QUESTER@さん'),
             new SctItm('良かったですね、@QUESTER@さん'),
             new SctItm('仕方が無いですよ、@QUESTER@さん')
