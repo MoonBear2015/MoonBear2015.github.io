@@ -156,6 +156,9 @@ class selector_NameLocker extends ItmArray {
         let result = new selector_human();
         return result;
     }
+    Gene_Docs(temp_doc) {
+        return replace_docs(temp_doc, this);
+    }
 }
 class selector_quester extends selector_NameLocker {
     constructor() {

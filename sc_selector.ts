@@ -380,6 +380,25 @@ interface ISctItm_Selector extends IItmSelector<SctItm> {
     itm_key : string;
     pic_key : string;
     Copy() : ISctItm_Selector;
+    
+    Gene_Docs(temp_doc : string) : string;
+
+}
+
+function replace_docs(temp_doc : string,selector : ISctItm_Selector) : string {
+    let result = temp_doc;
+    if (selector.itm_key != ''){
+        while(result.search(selector.itm_key) != -1){
+            let itm = selector.rnd_Itm;
+            result = result.replace(selector.itm_key,itm.Wrd);
+            if (selector.pic_key != ''){
+                while(result.search(selector.pic_key) != -1){
+                    result = result.replace(selector.pic_key,itm.SctPic);
+                }
+            }
+        }
+    }
+    return result;
 }
 
 class SctItm_Selector extends ItmSelector<SctItm> implements ISctItm_Selector {
@@ -420,6 +439,9 @@ class SctItm_Selector extends ItmSelector<SctItm> implements ISctItm_Selector {
         return result;
     }
 
+    public Gene_Docs(temp_doc : string) : string {
+        return replace_docs(temp_doc,this);
+    }
 }
 
 class SctItm_SelectLocker extends SctItm_Selector implements ISctItm_Selector {
@@ -521,6 +543,10 @@ class SctItm_Counter extends ItmCounter<SctItm> implements ISctItm_Selector {
         let result = new SctItm_Counter(this.itm_key,this.pic_key);
         result.Paste(this.itms);
         return result;
+    }
+
+    public Gene_Docs(temp_doc : string) : string {
+        return replace_docs(temp_doc,this);
     }
 
 }
@@ -643,6 +669,34 @@ class Selector_Generator {
         this.cods = this.cods.concat(in_cods);
     }
 }
+
+class docs_maker {
+    public selectors : ISctItm_Selector[];
+    constructor(){
+        this.selectors  = new Array<ISctItm_Selector>();
+    }
+    public gene_docs(temp_doc : string) : string {
+        let result = temp_doc;
+
+        this.selectors.forEach(
+            (value) => {
+                result = value.Gene_Docs(result);
+            }
+        );
+        return result;
+    }
+
+    dic_push(in_selector : ISctItm_Selector)
+    {
+        this.selectors.push(in_selector);
+    }
+    dic_concat(in_selectors : ISctItm_Selector[])
+    {
+        this.selectors = this.selectors.concat(in_selectors);
+    }
+
+}
+
 
 
 

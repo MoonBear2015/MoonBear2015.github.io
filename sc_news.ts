@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N02.33';
+    html += ' N02.34';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -135,6 +135,11 @@ class selector_random_date
         result.Paste(this.itms);
         return result;
     }
+
+    public Gene_Docs(temp_doc : string) : string {
+        return replace_docs(temp_doc,this);
+    }
+
  
 }
 
@@ -159,6 +164,10 @@ class selector_random_year
         let result = new selector_random_date();
         result.Paste(this.itms);
         return result;
+    }
+
+    public Gene_Docs(temp_doc : string) : string {
+        return replace_docs(temp_doc,this);
     }
  
 }
@@ -187,6 +196,11 @@ class selector_human
         let result = new selector_human();
         return result;
     }
+
+    public Gene_Docs(temp_doc : string) : string {
+        return replace_docs(temp_doc,this);
+    }
+
 }
 
 
@@ -213,6 +227,11 @@ class selector_writer
         let result = new selector_human();
         return result;
     }
+
+    public Gene_Docs(temp_doc : string) : string {
+        return replace_docs(temp_doc,this);
+    }
+
 }
 
 
@@ -243,6 +262,9 @@ class selector_age
         let result = new selector_age();
         return result;
     }
+    public Gene_Docs(temp_doc : string) : string {
+        return replace_docs(temp_doc,this);
+    }
 
 }
 
@@ -269,6 +291,9 @@ class selector_age2
     {
         let result = new selector_age();
         return result;
+    }
+    public Gene_Docs(temp_doc : string) : string {
+        return replace_docs(temp_doc,this);
     }
 
 }
@@ -2542,42 +2567,6 @@ class news_doc {
     }
 }
 
-class docs_maker {
-    public selectors : ISctItm_Selector[];
-    constructor(){
-        this.selectors  = new Array<ISctItm_Selector>();
-    }
-    public gene_docs(temp_doc : string) : string {
-        let result = temp_doc;
-
-        this.selectors.forEach(
-            (value) => {
-                if (value.itm_key != ''){
-                    while(result.search(value.itm_key) != -1){
-                        let itm = value.rnd_Itm;
-                        result = result.replace(value.itm_key,itm.Wrd);
-                        if (value.pic_key != ''){
-                            while(result.search(value.pic_key) != -1){
-                                result = result.replace(value.pic_key,itm.SctPic);
-                            }
-                        }
-                    }
-                }
-            }
-        );
-        return result;
-    }
-
-    dic_push(in_selector : ISctItm_Selector)
-    {
-        this.selectors.push(in_selector);
-    }
-    dic_concat(in_selectors : ISctItm_Selector[])
-    {
-        this.selectors = this.selectors.concat(in_selectors);
-    }
-
-}
 
 class news_docs_maker extends docs_maker {
     constructor(){

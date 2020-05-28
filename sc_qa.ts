@@ -205,6 +205,10 @@ abstract class selector_NameLocker
         let result = new selector_human();
         return result;
     }
+    public Gene_Docs(temp_doc : string) : string {
+        return replace_docs(temp_doc,this);
+    }
+
 }
 
 

@@ -237,6 +237,21 @@ class ItmCounter extends ItmArray {
         return result;
     }
 }
+function replace_docs(temp_doc, selector) {
+    let result = temp_doc;
+    if (selector.itm_key != '') {
+        while (result.search(selector.itm_key) != -1) {
+            let itm = selector.rnd_Itm;
+            result = result.replace(selector.itm_key, itm.Wrd);
+            if (selector.pic_key != '') {
+                while (result.search(selector.pic_key) != -1) {
+                    result = result.replace(selector.pic_key, itm.SctPic);
+                }
+            }
+        }
+    }
+    return result;
+}
 class SctItm_Selector extends ItmSelector {
     constructor(in_itm_key, in_pic_key, in_array) {
         super(in_array);
@@ -262,6 +277,9 @@ class SctItm_Selector extends ItmSelector {
         let result = new SctItm_Selector(this.itm_key, this.pic_key);
         result.Paste(this.itms);
         return result;
+    }
+    Gene_Docs(temp_doc) {
+        return replace_docs(temp_doc, this);
     }
 }
 class SctItm_SelectLocker extends SctItm_Selector {
@@ -325,6 +343,9 @@ class SctItm_Counter extends ItmCounter {
         let result = new SctItm_Counter(this.itm_key, this.pic_key);
         result.Paste(this.itms);
         return result;
+    }
+    Gene_Docs(temp_doc) {
+        return replace_docs(temp_doc, this);
     }
 }
 class Selector_Generator {
@@ -407,5 +428,23 @@ class Selector_Generator {
     }
     Add_cods(in_cods) {
         this.cods = this.cods.concat(in_cods);
+    }
+}
+class docs_maker {
+    constructor() {
+        this.selectors = new Array();
+    }
+    gene_docs(temp_doc) {
+        let result = temp_doc;
+        this.selectors.forEach((value) => {
+            result = value.Gene_Docs(result);
+        });
+        return result;
+    }
+    dic_push(in_selector) {
+        this.selectors.push(in_selector);
+    }
+    dic_concat(in_selectors) {
+        this.selectors = this.selectors.concat(in_selectors);
     }
 }

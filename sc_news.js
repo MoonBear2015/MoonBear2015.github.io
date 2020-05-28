@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N02.33';
+    html += ' N02.34';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -104,6 +104,9 @@ class selector_random_date extends ItmArray {
         result.Paste(this.itms);
         return result;
     }
+    Gene_Docs(temp_doc) {
+        return replace_docs(temp_doc, this);
+    }
 }
 class selector_random_year extends ItmArray {
     constructor() {
@@ -118,6 +121,9 @@ class selector_random_year extends ItmArray {
         let result = new selector_random_date();
         result.Paste(this.itms);
         return result;
+    }
+    Gene_Docs(temp_doc) {
+        return replace_docs(temp_doc, this);
     }
 }
 class selector_human extends ItmArray {
@@ -135,6 +141,9 @@ class selector_human extends ItmArray {
         let result = new selector_human();
         return result;
     }
+    Gene_Docs(temp_doc) {
+        return replace_docs(temp_doc, this);
+    }
 }
 class selector_writer extends ItmArray {
     constructor() {
@@ -150,6 +159,9 @@ class selector_writer extends ItmArray {
     Copy() {
         let result = new selector_human();
         return result;
+    }
+    Gene_Docs(temp_doc) {
+        return replace_docs(temp_doc, this);
     }
 }
 class selector_age extends ItmArray {
@@ -168,6 +180,9 @@ class selector_age extends ItmArray {
         let result = new selector_age();
         return result;
     }
+    Gene_Docs(temp_doc) {
+        return replace_docs(temp_doc, this);
+    }
 }
 class selector_age2 extends ItmArray {
     constructor() {
@@ -184,6 +199,9 @@ class selector_age2 extends ItmArray {
     Copy() {
         let result = new selector_age();
         return result;
+    }
+    Gene_Docs(temp_doc) {
+        return replace_docs(temp_doc, this);
     }
 }
 class selector_title extends SctItm_Selector {
@@ -1567,34 +1585,6 @@ class news_doc {
     constructor(doc) {
         this.doc = doc;
         this.pics = new Array();
-    }
-}
-class docs_maker {
-    constructor() {
-        this.selectors = new Array();
-    }
-    gene_docs(temp_doc) {
-        let result = temp_doc;
-        this.selectors.forEach((value) => {
-            if (value.itm_key != '') {
-                while (result.search(value.itm_key) != -1) {
-                    let itm = value.rnd_Itm;
-                    result = result.replace(value.itm_key, itm.Wrd);
-                    if (value.pic_key != '') {
-                        while (result.search(value.pic_key) != -1) {
-                            result = result.replace(value.pic_key, itm.SctPic);
-                        }
-                    }
-                }
-            }
-        });
-        return result;
-    }
-    dic_push(in_selector) {
-        this.selectors.push(in_selector);
-    }
-    dic_concat(in_selectors) {
-        this.selectors = this.selectors.concat(in_selectors);
     }
 }
 class news_docs_maker extends docs_maker {
