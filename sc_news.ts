@@ -234,10 +234,6 @@ class selector_writer
 
 }
 
-
-
-
-
 class selector_age
     extends ItmArray<SctItm>
     implements ISctItm_Selector 

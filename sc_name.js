@@ -74,6 +74,20 @@ class NmItm {
         html += '</h4>';
         return html;
     }
+    html_ABOUTER(in_picsize) {
+        let html = '';
+        html += '<div id="face_pic_L">';
+        html += '<figure>';
+        html += '<img src="pics/FACE/' + this.to_FilePath() + '" width="'
+            + in_picsize.toString()
+            + 'px">';
+        html += '</figure>';
+        html += '</div>';
+        html += '<h3 id="quester" align="left">';
+        html += '<big>' + this.NameAge + '</big>';
+        html += '</h3>';
+        return html;
+    }
     get NameAge() {
         return '<big>'
             + this.NmStr

@@ -13,11 +13,7 @@ function set_about()
     html += '</small>';
     html += '</h1>';
     html += '</div>';
-
-    
-    for(let i = 0; i < 10; i++){
-        html += '<p>[' + i.toString() + ']</p>' + make_about();
-    }
+    html += make_about();
 
     let elem = document.getElementById('site_main');
     if (elem == null)
@@ -32,67 +28,47 @@ function make_about()
 {
     let html : string = '';
 
-    html += '<div id="about_box" ';
-    html += 'style="';
-    html += 'margin:     5px; ';
-    html += 'padding:    10px; ';
-    html += 'border:     0.5px solid #606060;';
-    html += 'border-radius:  1%;';
-    html += 'background: ';
-    html += 'linear-gradient(0deg,rgba(0,0,0,0.6),rgba(0,0,0,0.8)),';
-    html += 'url(./pics/@PIC_DO@);';
-    html += 'background-position: center center;';
-    html += 'background-size: cover;';
-    html += '">';
 
-    html += '<h2 id="news_title">';
-    html += '<span style="border-bottom: solid 2px #FFFFFF;">';
-    html += '@NEWS_TITLE@';
-    html += '</span>';
-    html += '</h2>';
 
-    html += '<div id="news_pic_L">';
-    html += '<figure>';
-    html += '<img src="pics/@PIC_WHAT@" width="300px">';
-    html += '</figure>';
-    html += '</div>';
-    
-    html += '<p id="news_doc">';
-    html += '　@NEWS_DOC@';
-    for(let i = 0;i < rnd_minmax(2,3);i++)
-    {
-        html += '@CONECT@、';
-        html += '@NEWS_DOC@';
+    for(let i = 0; i < rnd_minmax(10,30); i++){
+        html += '<div id="about_box" ';
+        html += 'style="';
+        html += 'margin:     5px; ';
+        html += 'padding:    10px; ';
+        html += 'border:     0.5px solid #606060;';
+        html += 'border-radius:  1%;';
+        html += '">';
+
+        html += '<h2 id="about_title">';
+        html += '<span style="border-bottom: solid 1px #FFFFFF;">';
+        html += '@ABOUT_TITLE@';
+        html += '</span>';
+        html += '</h2>';
+
+        html += '<br>';
+
+        html += '@ABOUTER@';
+        html += '<div id="about_doc">';
+        html += 'NICKNAME:@CALL@<br>'
+        html += 'JOB:@CLASS@<br>'
+        html += 'COUNTRY:@COUNTRY@出身<br>';
+        html += 'ADDRESS:@COUNTRY@在住<br>';
+        html += 'HOBBY:<bir>@HABIT@<br>';
+        html += '<br>';
+        html += '</div>';
+
+        html += '</div>';
+        html += '<br><br>';
     }
-    html += '</p>';
-
-    html += '<div id="news_pic_R">';
-    html += '<figure>';
-    html += '<img src="pics/@PIC_DO@" width="300px">';
-    html += '</figure>';
-    html += '</div>';
-
-    html += '<p id="news_doc">';
-    html += '　@NEWS_DOC@';
-    for(let i = 0;i < rnd_minmax(3,5);i++)
-    {
-        html += '@CONECT@、';
-        html += '@NEWS_DOC@';
-    }
-    html += '</p>';
-
-    html += '<br>';
-    
-    html += '@WRITER@';
-
-    html += '<br>';
 
     html += '</div>';
 
+    let maker_about = new about_docs_maker();
     let maker = new news_docs_maker();
     let cnt = 0;
     while(true)
     {
+        html = maker_about.gene_docs(html);
         html = maker.gene_docs(html);
         cnt++;
         let chk = html.indexOf('@');
@@ -105,4 +81,68 @@ function make_about()
     }
     return html;
 }
+
+class about_docs_maker extends news_docs_maker {
+    constructor(){
+        super();
+        this.dic_push(new about_title());
+        this.dic_push(new selector_abouter());
+        this.dic_push(new selector_habit());
+    }
+}
+
+class selector_abouter 
+    extends ItmArray<SctItm>
+    implements ISctItm_Selector 
+{
+    public nameCreater : INameCreater;
+    public itm_key : string;
+    public pic_key : string;
+    constructor()
+    {
+        super();
+        this.itm_key = "@ABOUTER@";
+        this.pic_key = "";
+        this.nameCreater = new NameCreaterAll();
+    }
+    get rnd_Itm() : SctItm {
+        let name = this.nameCreater.create();
+        return new SctItm(name.html_ABOUTER(150),'');
+    }
+    Copy() : ISctItm_Selector
+    {
+        let result = new selector_human();
+        return result;
+    }
+
+    public Gene_Docs(temp_doc : string) : string {
+        return replace_docs(temp_doc,this);
+    }
+
+}
+
+// スタッフ
+class about_title extends SctItm_Counter implements ISctItm_Selector{
+    constructor(){
+        super('@ABOUT_TITLE@');
+        this.itms = [
+            new SctItm('Producer')
+            ,
+            new SctItm('"News" Editor')
+            ,
+            new SctItm('"Poem" Editor')
+            ,
+            new SctItm('"Q&A" Editor')
+            ,
+            new SctItm('Web Designer')
+            ,
+            new SctItm('Web Designer')
+            ,
+            new SctItm('Web Designer')
+            ,
+            new SctItm('Programer')
+        ];
+    }
+}
+
 
