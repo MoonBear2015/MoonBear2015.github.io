@@ -1,6 +1,6 @@
 function set_about()
 {
-    set_header_menu(1);
+    set_header_menu(4);
 
     scrollTo(0,0);
 
@@ -9,7 +9,7 @@ function set_about()
     html += '<h1>';
     html += 'ABOUT';
     html += '<small>';
-    html += ' A00.01';
+    html += ' A00.02';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
