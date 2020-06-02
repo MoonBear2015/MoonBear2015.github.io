@@ -370,9 +370,6 @@ class locker_habit extends SctItm_SelectLocker {
 class selector_habit extends SctItm_Selector {
     constructor() {
         super('@HABIT@');
-        this.itms = [
-            new SctItm('')
-        ];
         this.Add(itms_badhabit);
         this.Add(itms_goodhabit);
     }

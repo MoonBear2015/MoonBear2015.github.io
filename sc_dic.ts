@@ -4617,6 +4617,8 @@ const   itms_badhabit = [
     ,
     new SctItm('ホスト通い')
     ,
+    new SctItm('賭け麻雀')
+    ,
     new SctItm('万引き')
     ,
     new SctItm('無駄遣い')
@@ -4627,6 +4629,8 @@ const   itms_badhabit = [
 ];
 
 const   itms_goodhabit = [
+    new SctItm('編み物')
+    ,
     new SctItm('アルバイト')
     ,
     new SctItm('海外旅行')
@@ -4661,6 +4665,8 @@ const   itms_goodhabit = [
     ,
     new SctItm('新聞配達')
     ,
+    new SctItm('断食')
+    ,
     new SctItm('ティッシュ配り')
     ,
     new SctItm('トイレ掃除')
@@ -4672,6 +4678,10 @@ const   itms_goodhabit = [
     new SctItm('畑仕事')
     ,
     new SctItm('花嫁修業')
+    ,
+    new SctItm('ヒッチハイク')
+    ,
+    new SctItm('ひとり旅')
     ,
     new SctItm('ボランティア活動')
     ,
@@ -4686,6 +4696,8 @@ const   itms_goodhabit = [
     new SctItm('窓拭き')
     ,
     new SctItm('マラソン')
+    ,
+    new SctItm('瞑想')
     ,
     new SctItm('ラジオ体操')
 ];
