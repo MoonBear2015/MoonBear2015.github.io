@@ -372,7 +372,7 @@ class selector_call extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@KEI@@WHAT@の@PEOPLE@')
             ,
-            new SctItm('ww @KEID1@@MOVE@@PEOPLE@')
+            new SctItm('@KEID1@@MOVE@@PEOPLE@')
         ];
     }
 }
