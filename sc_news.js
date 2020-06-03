@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N02.34';
+    html += ' N02.35';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -254,7 +254,8 @@ class selector_call extends SctItm_Selector {
             new SctItm('@KEID@@DO@@END02C@@PEOPLE@'),
             new SctItm('@KEID@@THINK@@END02C@@PEOPLE@'),
             new SctItm('@WHAT@の@KEI@@NICK@'),
-            new SctItm('@KEI@@WHAT@の@PEOPLE@')
+            new SctItm('@KEI@@WHAT@の@PEOPLE@'),
+            new SctItm('ww @KEID1@@MOVE@@PEOPLE@')
         ];
     }
 }

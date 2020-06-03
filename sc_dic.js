@@ -1077,7 +1077,10 @@ const cods_country2 = [
     new SctCod_TI('|北朝鮮|きたちょうせん|'),
     new SctCod_TI('|台湾|たいわん|'),
     new SctCod_TI('|邪馬台国|やまたいこく|'),
-    new SctCod_TI('ガミラス|帝国|ていこく|')
+    new SctCod_TI('ガミラス|帝国|ていこく|'),
+    new SctCod_TI('ジオン|公国|こうこく|'),
+    new SctCod_TI('|銀河帝国|ぎんがていこく|'),
+    new SctCod_TI('ローマ|帝国|ていこく|')
 ];
 const cods_think = [
     new SctCod_TI('|想|おも|い', 'think.jpg'),
@@ -1129,8 +1132,7 @@ const cods_move_run = [
     new SctCod_Mv('|駆|か|ける'),
     new SctCod_Mv('|駆|か|け|抜|ぬ|ける'),
     new SctCod_Mv('|突|つ|っ|走|ぱし|る'),
-    new SctCod_Mv('|風|かぜ|を|切|き|る'),
-    new SctCod_Mv('|風|かぜ|を|切|き|り')
+    new SctCod_Mv('|風|かぜ|を|切|き|る')
 ];
 const cods_move_fly = [
     new SctCod_Mv('|飛|と|ぶ', 'fly.jpg'),
@@ -2967,6 +2969,7 @@ const itms_festival = [
     new SctItm('デモ行進')
 ];
 const itms_badhabit = [
+    new SctItm('空き巣'),
     new SctItm('朝寝坊'),
     new SctItm('押し売り'),
     new SctItm('男あさり'),
@@ -2975,10 +2978,12 @@ const itms_badhabit = [
     new SctItm('賭け事'),
     new SctItm('ギャンブル'),
     new SctItm('切り取り強盗'),
+    new SctItm('自転車泥棒'),
     new SctItm('衝動買い'),
     new SctItm('ストーカー'),
     new SctItm('辻斬り'),
     new SctItm('つまみ食い'),
+    new SctItm('転売'),
     new SctItm('盗み食い'),
     new SctItm('早弁'),
     new SctItm('ひったくり'),
@@ -2993,8 +2998,10 @@ const itms_badhabit = [
 ];
 const itms_goodhabit = [
     new SctItm('編み物'),
+    new SctItm('映画鑑賞'),
     new SctItm('アルバイト'),
     new SctItm('海外旅行'),
+    new SctItm('買い物'),
     new SctItm('家事手伝い'),
     new SctItm('切手収集'),
     new SctItm('客商売'),
@@ -3010,6 +3017,7 @@ const itms_goodhabit = [
     new SctItm('受験勉強'),
     new SctItm('ジョギング'),
     new SctItm('新聞配達'),
+    new SctItm('スキューバダイビング'),
     new SctItm('断食'),
     new SctItm('ティッシュ配り'),
     new SctItm('トイレ掃除'),
@@ -3019,6 +3027,7 @@ const itms_goodhabit = [
     new SctItm('花嫁修業'),
     new SctItm('ヒッチハイク'),
     new SctItm('ひとり旅'),
+    new SctItm('ボーリング'),
     new SctItm('ボランティア活動'),
     new SctItm('募金活動'),
     new SctItm('読書'),
