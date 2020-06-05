@@ -49,7 +49,7 @@ function make_about()
 
         html += '@ABOUTER@';
         html += '<div id="about_doc">';
-        html += 'NICKNAME:@CALL@<br>'
+        html += 'NICKNAME:@CALL2@<br>'
         html += 'JOB:@CLASS@<br>'
         html += 'COUNTRY:@COUNTRY@出身<br>';
         html += 'ADDRESS:@COUNTRY@在住<br>';

@@ -221,7 +221,7 @@ class selector_q_title extends SctItm_Selector {
             new SctItm('どうして、@CLASS@は@KEI1@のでしょうか'),
             new SctItm('どうして、@L_PART@は@KEI1@のでしょうか'),
             new SctItm('どうすれば@CLASS@になれますか'),
-            new SctItm('「@CALL@」と呼ばれて@GRADE@@THINK@しています'),
+            new SctItm('「@CALL2@」と呼ばれて@GRADE@@THINK@しています'),
             new SctItm('@CLASS@になりたくて@GRADE@@THINK@しています')
         ];
     }
@@ -270,7 +270,7 @@ class selector_q_msg extends SctItm_Selector {
             new SctItm('@Q_MSG02@、@Q_MSG03@@Q_MSG04@'),
             new SctItm('@Q_MSG01@@Q_MSG02@、@Q_MSG03@@Q_MSG04@'),
             new SctItm('私の@WHO3@@L_PART@の話です'),
-            new SctItm('私の「@CALL@」と@GRADE@@ASSES@@L_PART@のことです')
+            new SctItm('私の「@CALL2@」と@GRADE@@ASSES@@L_PART@のことです')
         ];
     }
 }
@@ -415,7 +415,7 @@ class selector_a_init extends SctItm_Selector {
             new SctItm('@A_SENT@'),
             new SctItm('私は@CLASS@をしている@ADVICER@と云います。'),
             new SctItm('私は@WHO3@@ADVICER@と云います。'),
-            new SctItm('私は@MANYPEOPLE@より「@CALL@」と@ASSES@@ADVICER@と云います。')
+            new SctItm('私は@MANYPEOPLE@より「@CALL2@」と@ASSES@@ADVICER@と云います。')
         ];
     }
 }
@@ -440,7 +440,7 @@ class selector_a_msg extends SctItm_Selector {
             new SctItm('@A_MSG02@、@A_MSG03@@A_MSG04@'),
             new SctItm('@A_MSG01@@A_MSG03@、@A_MSG04@'),
             new SctItm('@A_MSG01@@A_MSG02@、@A_MSG03@@A_MSG04@'),
-            new SctItm('私は@MANYPEOPLE@より「@CALL@」と@GRADE@@ASSES@のです'),
+            new SctItm('私は@MANYPEOPLE@より「@CALL2@」と@GRADE@@ASSES@のです'),
             new SctItm('それは@KEI@@QUESTER@さんが@GRADE@@ASSES@からです'),
             new SctItm('それは@KEI@@L_PART@さんが@GRADE@@ASSES@からです')
         ];
@@ -470,7 +470,7 @@ class selector_a02_quest extends SctItm_Selector {
             new SctItm('@CLASS@になりたいなら'),
             new SctItm('@MANYPEOPLE@のために'),
             new SctItm('@MANYPEOPLE@のせいで'),
-            new SctItm('@CALL@と@ASSES@なら'),
+            new SctItm('@CALL2@と@ASSES@なら'),
             new SctItm('@COUNTRY@にいるなら'),
             new SctItm('@MANYPEOPLE@に@ASSES@のなら'),
             new SctItm('@KEI@@PEOPLE@と@ASSES@なら')
@@ -486,7 +486,7 @@ class selector_a03_issue extends SctItm_Selector {
             new SctItm('@L_HABIT@が出来なくて'),
             new SctItm('@L_HABIT@がしたくて'),
             new SctItm('@L_HABIT@が禁止され'),
-            new SctItm('@CALL@と呼ばれて')
+            new SctItm('@CALL2@と呼ばれて')
         ];
     }
 }

@@ -309,7 +309,7 @@ class selector_q_title extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('どうすれば@CLASS@になれますか')
             ,
-            new SctItm('「@CALL@」と呼ばれて@GRADE@@THINK@しています')
+            new SctItm('「@CALL2@」と呼ばれて@GRADE@@THINK@しています')
             ,
             new SctItm('@CLASS@になりたくて@GRADE@@THINK@しています')
         ]
@@ -385,7 +385,7 @@ class selector_q_msg extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('私の@WHO3@@L_PART@の話です')
             ,
-            new SctItm('私の「@CALL@」と@GRADE@@ASSES@@L_PART@のことです')
+            new SctItm('私の「@CALL2@」と@GRADE@@ASSES@@L_PART@のことです')
         ]
     }
 }
@@ -609,7 +609,7 @@ class selector_a_init extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('私は@WHO3@@ADVICER@と云います。')
             ,
-            new SctItm('私は@MANYPEOPLE@より「@CALL@」と@ASSES@@ADVICER@と云います。')
+            new SctItm('私は@MANYPEOPLE@より「@CALL2@」と@ASSES@@ADVICER@と云います。')
 
         ]
     }
@@ -644,7 +644,7 @@ class selector_a_msg extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@A_MSG01@@A_MSG02@、@A_MSG03@@A_MSG04@')
             ,
-            new SctItm('私は@MANYPEOPLE@より「@CALL@」と@GRADE@@ASSES@のです')
+            new SctItm('私は@MANYPEOPLE@より「@CALL2@」と@GRADE@@ASSES@のです')
             ,
             new SctItm('それは@KEI@@QUESTER@さんが@GRADE@@ASSES@からです')
             ,
@@ -687,7 +687,7 @@ class selector_a02_quest extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@MANYPEOPLE@のせいで')
             ,
-            new SctItm('@CALL@と@ASSES@なら')
+            new SctItm('@CALL2@と@ASSES@なら')
             ,
             new SctItm('@COUNTRY@にいるなら')
             ,
@@ -711,7 +711,7 @@ class selector_a03_issue extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@L_HABIT@が禁止され')
             ,
-            new SctItm('@CALL@と呼ばれて')
+            new SctItm('@CALL2@と呼ばれて')
         ]
     }
 }

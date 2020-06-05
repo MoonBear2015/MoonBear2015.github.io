@@ -56,7 +56,7 @@ class NmItm {
         html += '</figure>';
         html += '</div>';
         html += '<h4 id="quester" align="left">';
-        html += '<big>' + this.NameAge + '</big>' + ' @WHO2@ ';
+        html += '<big>' + this.NameAge + '</big>' + ' @WHO4@ ';
         html += '</h4>';
         return html;
     }
@@ -70,7 +70,7 @@ class NmItm {
         html += '</figure>';
         html += '</div>';
         html += '<h4 id="quester" align="right">';
-        html += ' @WHO2@ <big>' + this.NameAge + '</big>';
+        html += ' @WHO4@ <big>' + this.NameAge + '</big>';
         html += '</h4>';
         return html;
     }
