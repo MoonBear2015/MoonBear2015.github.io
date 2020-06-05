@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N02.36';
+    html += ' N02.37';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -203,7 +203,6 @@ class selector_human
 
 }
 
-
 class selector_writer 
     extends ItmArray<SctItm>
     implements ISctItm_Selector 
@@ -233,6 +232,37 @@ class selector_writer
     }
 
 }
+
+class selector_writer2 
+    extends ItmArray<SctItm>
+    implements ISctItm_Selector 
+{
+    public nameCreater : INameCreater;
+    public itm_key : string;
+    public pic_key : string;
+    constructor()
+    {
+        super();
+        this.itm_key = "@WRITER2@";
+        this.pic_key = "";
+        this.nameCreater = new NameCreaterAll();
+    }
+    get rnd_Itm() : SctItm {
+        let name = this.nameCreater.create();
+        return new SctItm(name.html_WRITER(50),'');
+    }
+    Copy() : ISctItm_Selector
+    {
+        let result = new selector_human();
+        return result;
+    }
+
+    public Gene_Docs(temp_doc : string) : string {
+        return replace_docs(temp_doc,this);
+    }
+
+}
+
 
 class selector_age
     extends ItmArray<SctItm>
@@ -358,15 +388,22 @@ class selector_manypeople extends SctItm_Selector implements ISctItm_Selector {
     }
 }
 
+// News(WHO,DO)特化の呼称
 class selector_call extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@CALL@');
         this.itms = [
+            new SctItm('@KEID@@KEI1@@WHAT@')
+            ,
             new SctItm('@WHAT@の@KEI@@PEOPLE@')
             ,
             new SctItm('@KEID@@DO@@END02C@@PEOPLE@')
             ,
             new SctItm('@KEI@@WHAT@の@PEOPLE@')
+            ,
+            new SctItm('@WHAT@の@NICK@')
+            ,
+            new SctItm('@DO@@END02C@@NICK@')
         ];
     }
 }
@@ -376,6 +413,10 @@ class selector_call2 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@CALL2@');
         this.itms = [
+            new SctItm('@KEID@@KEI1@@NICK@')
+            ,
+            new SctItm('@KEID@@KEI1@@PEOPLE@')
+            ,
             new SctItm('@COUNTRY@の@KEI@@PEOPLE@')
             ,
             new SctItm('@COUNTRY@の@KEI@@NICK@')
@@ -1830,7 +1871,11 @@ class selector_nickname extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('死霊')
             ,
+            new SctItm('幽霊')
+            ,
             new SctItm('病人')
+            ,
+            new SctItm('怪我人')
             ,
             new SctItm('骸')
             ,
@@ -1861,6 +1906,8 @@ class selector_nickname extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('亡霊')
             ,
             new SctItm('ミイラ')
+            ,
+            new SctItm('ミイラ男')
             ,
             new SctItm('冷血漢')
             ,
@@ -2144,6 +2191,10 @@ class selector_nickname extends SctItm_Selector implements ISctItm_Selector {
             // nomal
             //
             ,
+            new SctItm('男')
+            ,
+            new SctItm('女')
+            ,
             new SctItm('少年')
             ,
             new SctItm('少女')
@@ -2163,6 +2214,30 @@ class selector_nickname extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('おばあちゃん')
             ,
             new SctItm('若者')
+            ,
+            new SctItm('一般市民')
+            ,
+            new SctItm('村人')
+            ,
+            new SctItm('町人')
+            ,
+            new SctItm('市民')
+            ,
+            new SctItm('国民')
+            ,
+            new SctItm('村長')
+            ,
+            new SctItm('市長')
+            ,
+            new SctItm('国王')
+            ,
+            new SctItm('一般大衆')
+            ,
+            new SctItm('旅人')
+            ,
+            new SctItm('住人')
+            ,
+            new SctItm('人')
         ];
     }
 }
@@ -2588,6 +2663,7 @@ class news_docs_maker extends docs_maker {
         super();
 
         this.dic_push(new selector_writer());
+        this.dic_push(new selector_writer2());
         this.dic_push(new selector_title());
         this.dic_push(new selector_doc());
         this.dic_push(new selector_c01());

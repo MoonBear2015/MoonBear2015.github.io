@@ -96,7 +96,7 @@ function make_poem_sub() {
     html += '@POEM_TYPE@';
     html += '</h2>';
     html += '<br>';
-    html += '@WRITER@';
+    html += '@WRITER2@';
     html += '<br>';
     html += '</div>';
     return html;

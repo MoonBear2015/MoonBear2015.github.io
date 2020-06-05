@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N02.36';
+    html += ' N02.37';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -164,6 +164,25 @@ class selector_writer extends ItmArray {
         return replace_docs(temp_doc, this);
     }
 }
+class selector_writer2 extends ItmArray {
+    constructor() {
+        super();
+        this.itm_key = "@WRITER2@";
+        this.pic_key = "";
+        this.nameCreater = new NameCreaterAll();
+    }
+    get rnd_Itm() {
+        let name = this.nameCreater.create();
+        return new SctItm(name.html_WRITER(50), '');
+    }
+    Copy() {
+        let result = new selector_human();
+        return result;
+    }
+    Gene_Docs(temp_doc) {
+        return replace_docs(temp_doc, this);
+    }
+}
 class selector_age extends ItmArray {
     constructor() {
         super();
@@ -246,13 +265,17 @@ class selector_manypeople extends SctItm_Selector {
         ];
     }
 }
+// News(WHO,DO)特化の呼称
 class selector_call extends SctItm_Selector {
     constructor() {
         super('@CALL@');
         this.itms = [
+            new SctItm('@KEID@@KEI1@@WHAT@'),
             new SctItm('@WHAT@の@KEI@@PEOPLE@'),
             new SctItm('@KEID@@DO@@END02C@@PEOPLE@'),
-            new SctItm('@KEI@@WHAT@の@PEOPLE@')
+            new SctItm('@KEI@@WHAT@の@PEOPLE@'),
+            new SctItm('@WHAT@の@NICK@'),
+            new SctItm('@DO@@END02C@@NICK@')
         ];
     }
 }
@@ -260,6 +283,8 @@ class selector_call2 extends SctItm_Selector {
     constructor() {
         super('@CALL2@');
         this.itms = [
+            new SctItm('@KEID@@KEI1@@NICK@'),
+            new SctItm('@KEID@@KEI1@@PEOPLE@'),
             new SctItm('@COUNTRY@の@KEI@@PEOPLE@'),
             new SctItm('@COUNTRY@の@KEI@@NICK@'),
             new SctItm('@KEID@@THINK@@END02C@@PEOPLE@'),
@@ -1188,7 +1213,9 @@ class selector_nickname extends SctItm_Selector {
             new SctItm('犬'),
             new SctItm('死神'),
             new SctItm('死霊'),
+            new SctItm('幽霊'),
             new SctItm('病人'),
+            new SctItm('怪我人'),
             new SctItm('骸'),
             new SctItm('髑髏'),
             new SctItm('恥知らず'),
@@ -1204,6 +1231,7 @@ class selector_nickname extends SctItm_Selector {
             new SctItm('害虫'),
             new SctItm('亡霊'),
             new SctItm('ミイラ'),
+            new SctItm('ミイラ男'),
             new SctItm('冷血漢'),
             new SctItm('奴隷'),
             new SctItm('疫病神'),
@@ -1350,6 +1378,8 @@ class selector_nickname extends SctItm_Selector {
             // nomal
             //
             ,
+            new SctItm('男'),
+            new SctItm('女'),
             new SctItm('少年'),
             new SctItm('少女'),
             new SctItm('教師'),
@@ -1359,7 +1389,19 @@ class selector_nickname extends SctItm_Selector {
             new SctItm('おばさん'),
             new SctItm('おじいちゃん'),
             new SctItm('おばあちゃん'),
-            new SctItm('若者')
+            new SctItm('若者'),
+            new SctItm('一般市民'),
+            new SctItm('村人'),
+            new SctItm('町人'),
+            new SctItm('市民'),
+            new SctItm('国民'),
+            new SctItm('村長'),
+            new SctItm('市長'),
+            new SctItm('国王'),
+            new SctItm('一般大衆'),
+            new SctItm('旅人'),
+            new SctItm('住人'),
+            new SctItm('人')
         ];
     }
 }
@@ -1606,6 +1648,7 @@ class news_docs_maker extends docs_maker {
     constructor() {
         super();
         this.dic_push(new selector_writer());
+        this.dic_push(new selector_writer2());
         this.dic_push(new selector_title());
         this.dic_push(new selector_doc());
         this.dic_push(new selector_c01());

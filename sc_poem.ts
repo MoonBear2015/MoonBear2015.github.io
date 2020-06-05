@@ -126,7 +126,7 @@ function make_poem_sub() : string
 
     html += '<br>';
     
-    html += '@WRITER@';
+    html += '@WRITER2@';
 
     html += '<br>';
 
