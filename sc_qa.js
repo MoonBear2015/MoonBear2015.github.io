@@ -7,11 +7,11 @@ function set_qa() {
     html += '<h1>';
     html += 'Q&A';
     html += '<small>';
-    html += ' Q00.29';
+    html += ' Q01.00';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 40; i++) {
         html += '<p>[' + i.toString() + ']</p>' + make_qa();
     }
     let elem = document.getElementById('site_main');
@@ -70,7 +70,7 @@ function Make_Q() {
     html += '</p>';
     html += '<p id="qa_doc">';
     html += '@Q_INIT@';
-    for (let i = 0; i < rnd_minmax(3, 5); i++) {
+    for (let i = 0; i < rnd_minmax(2, 4); i++) {
         html += '@Q_SENT@';
     }
     html += '</p>';
@@ -98,7 +98,7 @@ function Make_A() {
     html += '</p>';
     html += '<p id="qa_doc">';
     html += '@A_INIT@';
-    for (let i = 0; i < rnd_minmax(3, 5); i++) {
+    for (let i = 0; i < rnd_minmax(2, 4); i++) {
         html += '@A_SENT@';
     }
     html += '</p>';
