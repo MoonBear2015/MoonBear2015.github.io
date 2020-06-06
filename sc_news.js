@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N02.37';
+    html += ' N02.38';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -173,7 +173,7 @@ class selector_writer2 extends ItmArray {
     }
     get rnd_Itm() {
         let name = this.nameCreater.create();
-        return new SctItm(name.html_WRITER(50), '');
+        return new SctItm(name.html_WRITER2(50), '');
     }
     Copy() {
         let result = new selector_human();
@@ -1037,7 +1037,39 @@ class selector_class extends SctItm_Selector {
             new SctItm('投資家'),
             new SctItm('証券マン'),
             new SctItm('セールスマン'),
-            new SctItm('庖丁人')
+            new SctItm('庖丁人'),
+            new SctItm('用心棒'),
+            new SctItm('ハスラー'),
+            new SctItm('花火職人'),
+            new SctItm('皿洗い'),
+            new SctItm('薬剤師'),
+            new SctItm('ペンキ屋'),
+            new SctItm('パン屋'),
+            new SctItm('八百屋'),
+            new SctItm('肉屋'),
+            new SctItm('豆腐屋'),
+            new SctItm('魚屋'),
+            new SctItm('コック'),
+            new SctItm('ウェイトレス'),
+            new SctItm('バーテンダー'),
+            new SctItm('バニーガール'),
+            new SctItm('芸者'),
+            new SctItm('ショーガール'),
+            new SctItm('スチュワーデス'),
+            new SctItm('バスガイド'),
+            new SctItm('お茶汲み'),
+            new SctItm('コンビニ店員'),
+            new SctItm('店員'),
+            new SctItm('組員'),
+            new SctItm('組長'),
+            new SctItm('ボス'),
+            new SctItm('会長'),
+            new SctItm('酋長'),
+            new SctItm('課長'),
+            new SctItm('部長'),
+            new SctItm('本部長'),
+            new SctItm('取締役'),
+            new SctItm('社長')
         ];
     }
 }

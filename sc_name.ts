@@ -46,6 +46,7 @@ interface INmItm {
     to_FilePath(in_Age? : string) : string;
 
     html_WRITER(in_picsize : number) : string;
+    html_WRITER2(in_picsize : number) : string;
     html_QUESTER(in_picsize : number) : string;
     html_ADVICER(in_picsize : number) : string;
     html_ABOUTER(in_picsize : number) : string;
