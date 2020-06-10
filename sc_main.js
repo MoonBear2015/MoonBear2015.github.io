@@ -15,7 +15,7 @@ function make_site_header() {
     html += '<h1>';
     html += '「空虚」';
     html += '<small>';
-    html += 'M01.27';
+    html += 'M01.28';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -40,6 +40,7 @@ function get_menu_items() {
         new menu_item('News', 'set_news()'),
         new menu_item('Poem', 'set_poem()'),
         new menu_item('Q&A', 'set_qa()'),
+        new menu_item('Shop', 'set_qa()'),
         new menu_item('About', 'set_about()')
     ];
     return menu_items;
