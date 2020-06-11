@@ -1,5 +1,5 @@
 "use strict";
-class SctKwd {
+class SctKwd_St {
     constructor(in_Ky, in_Wd, in_Pc) {
         if (in_Ky) {
             this.Ky = in_Ky;
@@ -21,7 +21,7 @@ class SctKwd {
         }
     }
     get Copy() {
-        return new SctKwd(this.Ky, this.Wd, this.Pc);
+        return new SctKwd_St(this.Ky, this.Wd, this.Pc);
     }
     ToString() {
         let result = '';
@@ -32,5 +32,38 @@ class SctKwd {
         if (this.Pc != '')
             result += '(' + this.Pc + ')';
         return result;
+    }
+}
+class KwdArray_St {
+    constructor() {
+        this.Ky = '';
+        this.Itms = new Array();
+    }
+    Push(in_Kwd) {
+        if (this.Ky == '') {
+            this.Ky = in_Kwd.Ky;
+        }
+        if (this.Ky != in_Kwd.Ky) {
+            return;
+        }
+        this.Itms.push(in_Kwd);
+    }
+    Add(in_array) {
+        in_array.forEach(it => {
+            this.Push(it);
+        });
+    }
+    Paste(in_array) {
+        this.Itms = new Array();
+        this.Itms.length = 0;
+        this.Add(in_array);
+    }
+    Copy() {
+        let result = new KwdArray_St();
+        result.Paste(this.Itms);
+        return result;
+    }
+    ToString() {
+        return tests_string(this.Itms);
     }
 }

@@ -1,11 +1,11 @@
 
-interface ISctKwd extends ITest {
+interface SctKwd extends ITest {
     Ky : string;
     Wd : string;
     Pc : string;
-    Copy : ISctKwd;
+    Copy : SctKwd;
 }
-class SctKwd implements ISctKwd {
+class SctKwd_St implements SctKwd {
     public Ky : string;
     public Wd : string;
     public Pc : string;
@@ -33,8 +33,8 @@ class SctKwd implements ISctKwd {
             this.Pc = '';
         }
     }
-    public get Copy() : ISctKwd {
-        return new SctKwd(this.Ky,this.Wd,this.Pc);
+    public get Copy() : SctKwd {
+        return new SctKwd_St(this.Ky,this.Wd,this.Pc);
     }
 
     public ToString() : string
@@ -47,13 +47,52 @@ class SctKwd implements ISctKwd {
     }
 }
 
-interface IKwdArray<T extends ISctKwd> extends ITest {
-    itms : T[];
+interface KwdArray<T extends SctKwd> extends ITest {
+    Ky : string;
+    Itms : T[];
+    Push(in_Kwd : T): void;
     Add(in_array : Array<T>): void;
     
     Paste(in_array : Array<T>): void;
-    Copy() : IKwdArray<T>;
+    Copy() : KwdArray<T>;
 }
+class KwdArray_St<T extends SctKwd> implements KwdArray<T> {
+    public Ky : string;
+    public Itms : T[];
+    constructor(){
+        this.Ky = '';
+        this.Itms = new Array<T>();
+    }
+    public Push(in_Kwd : T) {
+        if (this.Ky == '') {
+            this.Ky = in_Kwd.Ky;
+        }
+        if (this.Ky != in_Kwd.Ky) {
+            return;
+        }
+        this.Itms.push(in_Kwd);
+    }
+    public Add(in_array : Array<T>) {
+        in_array.forEach(it => {
+            this.Push(it);
+        }
+        );
+    }
+    public Paste(in_array : Array<T>) {
+        this.Itms = new Array<T>();
+        this.Itms.length = 0;
+        this.Add(in_array);
+    }
+    public Copy() : KwdArray<T> {
+        let result = new KwdArray_St<T>();
+        result.Paste(this.Itms);
+        return result;
+    }
+    public ToString() : string {
+        return tests_string(this.Itms);
+    }
+
+} 
 
 
 
