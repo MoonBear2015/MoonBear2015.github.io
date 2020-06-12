@@ -5,7 +5,7 @@ interface Kwd extends TestItem {
     Pc : string;
     Copy : Kwd;
 }
-class KwdStndard implements Kwd {
+class Kwd_Stndard implements Kwd {
     public Ky : string;
     public Wd : string;
     public Pc : string;
@@ -34,7 +34,7 @@ class KwdStndard implements Kwd {
         }
     }
     public get Copy() : Kwd {
-        return new KwdStndard(this.Ky,this.Wd,this.Pc);
+        return new Kwd_Stndard(this.Ky,this.Wd,this.Pc);
     }
 
     public ToString() : string
@@ -56,7 +56,7 @@ interface KwdArray<T extends Kwd> extends TestItem {
     Paste(in_array : Array<T>): void;
     Copy() : KwdArray<T>;
 }
-class KwdArray_St<T extends Kwd> implements KwdArray<T> {
+class KwdArray_Standard<T extends Kwd> implements KwdArray<T> {
     public Ky : string;
     public Itms : T[];
     constructor(){
@@ -84,7 +84,7 @@ class KwdArray_St<T extends Kwd> implements KwdArray<T> {
         this.Add(in_array);
     }
     public Copy() : KwdArray<T> {
-        let result = new KwdArray_St<T>();
+        let result = new KwdArray_Standard<T>();
         result.Paste(this.Itms);
         return result;
     }
