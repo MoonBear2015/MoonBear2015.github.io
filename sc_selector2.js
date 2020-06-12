@@ -1,27 +1,49 @@
 "use strict";
-class Kwd_Stndard {
-    constructor(in_Ky, in_Wd, in_Pc) {
-        if (in_Ky) {
-            this.Ky = in_Ky;
-        }
-        else {
-            this.Ky = '';
-        }
-        if (in_Wd) {
-            this.Wd = in_Wd;
+class Itm_Standard {
+    constructor(inWd, inPc) {
+        if (inWd) {
+            this.Wd = inWd;
         }
         else {
             this.Wd = '';
         }
-        if (in_Pc) {
-            this.Pc = in_Pc;
+        if (inPc) {
+            this.Pc = inPc;
         }
         else {
             this.Pc = '';
         }
     }
     get Copy() {
-        return new Kwd_Stndard(this.Ky, this.Wd, this.Pc);
+        return new Itm_Standard(this.Wd, this.Pc);
+    }
+    ToKwd(inKy) {
+        return new Kwd_Standard(inKy, this.Wd, this.Pc);
+    }
+    ToString() {
+        let result = '';
+        if (this.Wd != '')
+            result += '"' + this.Wd + '"';
+        if (this.Pc != '')
+            result += '(' + this.Pc + ')';
+        return result;
+    }
+}
+class Kwd_Standard extends Itm_Standard {
+    constructor(inKy, inWd, inPc) {
+        super(inWd, inPc);
+        if (inKy) {
+            this.Ky = inKy;
+        }
+        else {
+            this.Ky = '';
+        }
+    }
+    get Copy() {
+        return new Kwd_Standard(this.Ky, this.Wd, this.Pc);
+    }
+    ToItm() {
+        return new Itm_Standard(this.Wd, this.Pc);
     }
     ToString() {
         let result = '';
@@ -39,24 +61,24 @@ class KwdArray_Standard {
         this.Ky = '';
         this.Itms = new Array();
     }
-    Push(in_Kwd) {
+    Push(inKwd) {
         if (this.Ky == '') {
-            this.Ky = in_Kwd.Ky;
+            this.Ky = inKwd.Ky;
         }
-        if (this.Ky != in_Kwd.Ky) {
+        if (this.Ky != inKwd.Ky) {
             return;
         }
-        this.Itms.push(in_Kwd);
+        this.Itms.push(inKwd);
     }
-    Add(in_array) {
-        in_array.forEach(it => {
+    Add(inArray) {
+        inArray.forEach(it => {
             this.Push(it);
         });
     }
-    Paste(in_array) {
+    Paste(inArray) {
         this.Itms = new Array();
         this.Itms.length = 0;
-        this.Add(in_array);
+        this.Add(inArray);
     }
     Copy() {
         let result = new KwdArray_Standard();

@@ -1,40 +1,74 @@
-
-interface Kwd extends TestItem {
-    Ky : string;
+interface Itm extends TestItem {
     Wd : string;
     Pc : string;
-    Copy : Kwd;
+    Copy : Itm;
+    ToKwd(inKy : string) : Kwd;    
 }
-class Kwd_Stndard implements Kwd {
-    public Ky : string;
+class Itm_Standard implements Itm {
     public Wd : string;
     public Pc : string;
     constructor(
-        in_Ky? : string
+        inWd? : string
         ,
-        in_Wd? : string
-        ,
-        in_Pc? : string
+        inPc? : string
     )
     {
-        if (in_Ky) {
-            this.Ky = in_Ky;
-        } else {
-            this.Ky = '';
-        }
-        if (in_Wd) {
-            this.Wd = in_Wd;
+        if (inWd) {
+            this.Wd = inWd;
         } else {
             this.Wd = '';
         }
-        if (in_Pc) {
-            this.Pc = in_Pc;
+        if (inPc) {
+            this.Pc = inPc;
         } else {
             this.Pc = '';
         }
     }
+    public get Copy() : Itm {
+        return new Itm_Standard(this.Wd,this.Pc);
+    }
+    public ToKwd(inKy : string) : Kwd {
+        return new Kwd_Standard(inKy,this.Wd,this.Pc);
+    }
+
+    public ToString() : string
+    {
+        let result = '';
+        if (this.Wd != '') result += '"' + this.Wd + '"';
+        if (this.Pc != '') result += '(' + this.Pc + ')';
+        return result;
+    }
+}
+
+
+interface Kwd extends Itm,TestItem {
+    Ky : string;
+    Copy : Kwd;
+    ToItm() : Itm;
+}
+class Kwd_Standard extends Itm_Standard implements Kwd {
+    public Ky : string;
+    constructor(
+        inKy? : string
+        ,
+        inWd? : string
+        ,
+        inPc? : string
+    )
+    {
+        super(inWd,inPc);
+
+        if (inKy) {
+            this.Ky = inKy;
+        } else {
+            this.Ky = '';
+        }
+    }
     public get Copy() : Kwd {
-        return new Kwd_Stndard(this.Ky,this.Wd,this.Pc);
+        return new Kwd_Standard(this.Ky,this.Wd,this.Pc);
+    }
+    public ToItm() : Itm {
+        return new Itm_Standard(this.Wd,this.Pc);
     }
 
     public ToString() : string
@@ -50,10 +84,10 @@ class Kwd_Stndard implements Kwd {
 interface KwdArray<T extends Kwd> extends TestItem {
     Ky : string;
     Itms : T[];
-    Push(in_Kwd : T): void;
-    Add(in_array : Array<T>): void;
+    Push(inKwd : T): void;
+    Add(inArray : Array<T>): void;
     
-    Paste(in_array : Array<T>): void;
+    Paste(inarray : Array<T>): void;
     Copy() : KwdArray<T>;
 }
 class KwdArray_Standard<T extends Kwd> implements KwdArray<T> {
@@ -63,25 +97,25 @@ class KwdArray_Standard<T extends Kwd> implements KwdArray<T> {
         this.Ky = '';
         this.Itms = new Array<T>();
     }
-    public Push(in_Kwd : T) {
+    public Push(inKwd : T) {
         if (this.Ky == '') {
-            this.Ky = in_Kwd.Ky;
+            this.Ky = inKwd.Ky;
         }
-        if (this.Ky != in_Kwd.Ky) {
+        if (this.Ky != inKwd.Ky) {
             return;
         }
-        this.Itms.push(in_Kwd);
+        this.Itms.push(inKwd);
     }
-    public Add(in_array : Array<T>) {
-        in_array.forEach(it => {
+    public Add(inArray : Array<T>) {
+        inArray.forEach(it => {
             this.Push(it);
         }
         );
     }
-    public Paste(in_array : Array<T>) {
+    public Paste(inArray : Array<T>) {
         this.Itms = new Array<T>();
         this.Itms.length = 0;
-        this.Add(in_array);
+        this.Add(inArray);
     }
     public Copy() : KwdArray<T> {
         let result = new KwdArray_Standard<T>();
@@ -91,8 +125,13 @@ class KwdArray_Standard<T extends Kwd> implements KwdArray<T> {
     public ToString() : string {
         return testItems_string(this.Itms);
     }
+}
 
-} 
+interface KwdLibrary {
+
+}
+
+
 
 
 
