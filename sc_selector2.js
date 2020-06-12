@@ -1,5 +1,5 @@
 "use strict";
-class SctKwd_St {
+class KwdStndard {
     constructor(in_Ky, in_Wd, in_Pc) {
         if (in_Ky) {
             this.Ky = in_Ky;
@@ -21,7 +21,7 @@ class SctKwd_St {
         }
     }
     get Copy() {
-        return new SctKwd_St(this.Ky, this.Wd, this.Pc);
+        return new KwdStndard(this.Ky, this.Wd, this.Pc);
     }
     ToString() {
         let result = '';
@@ -64,6 +64,6 @@ class KwdArray_St {
         return result;
     }
     ToString() {
-        return tests_string(this.Itms);
+        return testItems_string(this.Itms);
     }
 }

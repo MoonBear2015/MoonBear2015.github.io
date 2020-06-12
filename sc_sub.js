@@ -1,5 +1,5 @@
 "use strict";
-function tests_string(in_tests) {
+function testItems_string(in_tests) {
     let str = '';
     in_tests.forEach(test => {
         str += test.ToString() + '\r\n';
@@ -15,7 +15,7 @@ function string_html(in_string) {
     }
     return result;
 }
-function tests_html(in_tests) {
+function testItems_html(in_tests) {
     let str = '';
     str += '<div>';
     str += '----------------<br>';
@@ -26,7 +26,7 @@ function tests_html(in_tests) {
     str += '</div>';
     return str;
 }
-function tests_alert(in_tests) {
+function testItems_alert(in_tests) {
     let str = '';
     in_tests.forEach(test => {
         str += test.ToString() + '\r\n';
