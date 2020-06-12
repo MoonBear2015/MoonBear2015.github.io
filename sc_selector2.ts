@@ -1,11 +1,11 @@
 
-interface SctKwd extends ITest {
+interface Kwd extends TestItem {
     Ky : string;
     Wd : string;
     Pc : string;
-    Copy : SctKwd;
+    Copy : Kwd;
 }
-class SctKwd_St implements SctKwd {
+class KwdStndard implements Kwd {
     public Ky : string;
     public Wd : string;
     public Pc : string;
@@ -33,8 +33,8 @@ class SctKwd_St implements SctKwd {
             this.Pc = '';
         }
     }
-    public get Copy() : SctKwd {
-        return new SctKwd_St(this.Ky,this.Wd,this.Pc);
+    public get Copy() : Kwd {
+        return new KwdStndard(this.Ky,this.Wd,this.Pc);
     }
 
     public ToString() : string
@@ -47,7 +47,7 @@ class SctKwd_St implements SctKwd {
     }
 }
 
-interface KwdArray<T extends SctKwd> extends ITest {
+interface KwdArray<T extends Kwd> extends TestItem {
     Ky : string;
     Itms : T[];
     Push(in_Kwd : T): void;
@@ -56,7 +56,7 @@ interface KwdArray<T extends SctKwd> extends ITest {
     Paste(in_array : Array<T>): void;
     Copy() : KwdArray<T>;
 }
-class KwdArray_St<T extends SctKwd> implements KwdArray<T> {
+class KwdArray_St<T extends Kwd> implements KwdArray<T> {
     public Ky : string;
     public Itms : T[];
     constructor(){
@@ -89,7 +89,7 @@ class KwdArray_St<T extends SctKwd> implements KwdArray<T> {
         return result;
     }
     public ToString() : string {
-        return tests_string(this.Itms);
+        return testItems_string(this.Itms);
     }
 
 } 

@@ -1,9 +1,9 @@
 //------------------------------------ test
-interface ITest {
+interface TestItem {
     ToString() : string;
 }
 
-function tests_string(in_tests : Array<ITest>) : string
+function testItems_string(in_tests : Array<TestItem>) : string
 {
     let str = '';
     in_tests.forEach(test => {
@@ -23,7 +23,7 @@ function string_html(in_string : string) : string
     return result;
 }
 
-function tests_html(in_tests : Array<ITest>) : string
+function testItems_html(in_tests : Array<TestItem>) : string
 {
     let str = '';
     str += '<div>';
@@ -40,7 +40,7 @@ function tests_html(in_tests : Array<ITest>) : string
 }
 
 
-function tests_alert(in_tests : Array<ITest>)
+function testItems_alert(in_tests : Array<TestItem>)
 {
     let str = '';
     in_tests.forEach(test => {
@@ -69,7 +69,7 @@ let replaceAll = function(str : string, before : string, after : string) : strin
     return str.split(before).join(after);
 };
 
-class AB implements ITest {
+class AB implements TestItem {
     constructor(
         public A : number
         ,

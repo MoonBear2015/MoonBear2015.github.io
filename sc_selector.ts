@@ -10,13 +10,13 @@ function to_key_with_length(in_key : string,in_length : number)
 
 //------------------------------------ selector's
 
-interface ISctItm extends ITest {
+interface ISctItm extends TestItem {
     Wrd : string;
     SctPic : string;
     Copy : ISctItm;
 }
 
-interface ISctCod extends ISctItm,ITest {
+interface ISctCod extends ISctItm,TestItem {
     CodLength : number;
     to_SctItm() : ISctItm;
     to_SctItm_NoRubi() : ISctItm;
@@ -25,7 +25,7 @@ interface ISctCod extends ISctItm,ITest {
      : Array<ISctItm>;
 }
 
-class SctItm implements ISctItm,ITest {
+class SctItm implements ISctItm,TestItem {
     public Wrd : string;
     public SctPic : string;
     constructor(
@@ -60,7 +60,7 @@ class SctItm implements ISctItm,ITest {
     }
 }
 
-class SctCod extends SctItm implements ISctCod,ITest {
+class SctCod extends SctItm implements ISctCod,TestItem {
     public CodLength : number;
     public KeyA : string;
     public KeyB : string;
@@ -162,7 +162,7 @@ class SctCod extends SctItm implements ISctCod,ITest {
     }
 }
 
-class SctCod_TI extends SctCod implements ISctCod,ITest {
+class SctCod_TI extends SctCod implements ISctCod,TestItem {
     constructor(
         in_Wrd? : string
         ,
@@ -181,7 +181,7 @@ class SctCod_TI extends SctCod implements ISctCod,ITest {
     }
 }
 
-class SctCod_TM extends SctCod implements ISctCod,ITest {
+class SctCod_TM extends SctCod implements ISctCod,TestItem {
     constructor(
         in_Wrd? : string
         ,
@@ -202,7 +202,7 @@ class SctCod_TM extends SctCod implements ISctCod,ITest {
 
 
 
-class SctCod_It extends SctCod implements ISctCod,ITest {
+class SctCod_It extends SctCod implements ISctCod,TestItem {
     constructor(
         in_Wrd? : string
         ,
@@ -220,7 +220,7 @@ class SctCod_It extends SctCod implements ISctCod,ITest {
     }
 }
 
-class SctCod_Mv extends SctCod implements ISctCod,ITest {
+class SctCod_Mv extends SctCod implements ISctCod,TestItem {
     constructor(
         in_Wrd? : string
         ,
@@ -238,7 +238,7 @@ class SctCod_Mv extends SctCod implements ISctCod,ITest {
     }
 }
 
-class SctCod_Km extends SctCod implements ISctCod,ITest {
+class SctCod_Km extends SctCod implements ISctCod,TestItem {
     constructor(
         in_Wrd? : string
         ,
@@ -259,7 +259,7 @@ class SctCod_Km extends SctCod implements ISctCod,ITest {
 
 
 
-interface IItmArray<T extends ISctItm> extends ITest {
+interface IItmArray<T extends ISctItm> extends TestItem {
     itms : T[];
     
     Paste(in_array : Array<T>): void;
@@ -298,7 +298,7 @@ class ItmArray<T extends ISctItm> implements IItmArray<T> {
     }
 
     public ToString() : string {
-        return tests_string(this.itms);
+        return testItems_string(this.itms);
     }
 }
 
