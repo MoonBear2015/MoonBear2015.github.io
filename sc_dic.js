@@ -3038,3 +3038,196 @@ const itms_goodhabit = [
     new SctItm('瞑想'),
     new SctItm('ラジオ体操')
 ];
+const itms_what = [
+    new SctItm('日本', 'WHAT/Japan.jpg'),
+    new SctItm('アメリカ', 'WHAT/America.jpg'),
+    new SctItm('米国', 'WHAT/America.jpg'),
+    new SctItm('中国', 'WHAT/China.jpg'),
+    new SctItm('イギリス', 'WHAT/England.jpg'),
+    new SctItm('英国', 'WHAT/England.jpg'),
+    new SctItm('大英帝国', 'WHAT/England.jpg'),
+    new SctItm('ロシア', 'WHAT/Russia.jpg'),
+    new SctItm('インド', 'WHAT/india.jpg'),
+    new SctItm('イタリア', 'WHAT/Italy.jpg'),
+    new SctItm('フランス', 'WHAT/France.jpg'),
+    new SctItm('ドイツ', 'WHAT/German.jpg'),
+    new SctItm('韓国', 'WHAT/koria.jpg'),
+    new SctItm('エジプト', 'WHAT/pyramid.jpg')
+    // ,
+    // new SctItm('ガミラス帝国','WHAT/gamilas.jpg')
+    // ,
+    // new SctItm('イスカンダル','WHAT/iskandar.jpg')
+    // ,
+    // new SctItm('経済','WHAT/Economy.jpg')
+    ,
+    new SctItm('株式市場', 'WHAT/Economy.jpg'),
+    new SctItm('科学', 'WHAT/Science.jpg'),
+    new SctItm('現代科学', 'WHAT/Science.jpg'),
+    new SctItm('先進科学', 'WHAT/Science.jpg')
+    // ,
+    // new SctItm('医療','WHAT/Medical.jpg')
+    ,
+    new SctItm('医療現場', 'WHAT/Medical.jpg')
+    // ,
+    // new SctItm('医学','WHAT/Medical.jpg')
+    ,
+    new SctItm('現代医学', 'WHAT/Medical.jpg'),
+    new SctItm('農業', 'WHAT/Agri.jpg'),
+    new SctItm('農場', 'WHAT/Agri.jpg'),
+    new SctItm('工場', 'WHAT/Factory.jpg'),
+    new SctItm('工業地帯', 'WHAT/Factory.jpg'),
+    new SctItm('人工知能', 'WHAT/AI.jpg'),
+    new SctItm('学校教育', 'WHAT/stady.jpg'),
+    new SctItm('宇宙', 'WHAT/space.jpg'),
+    new SctItm('宇宙開発', 'WHAT/NASA.jpg'),
+    new SctItm('天文学', 'WHAT/space.jpg'),
+    new SctItm('NASA', 'WHAT/NASA.jpg'),
+    new SctItm('マスコミ', 'WHAT/MassMedia.jpg'),
+    new SctItm('ビジネス', 'WHAT/business.jpg'),
+    new SctItm('現代社会', 'WHAT/community.jpg'),
+    new SctItm('情報化社会', 'WHAT/info.jpg'),
+    new SctItm('音楽業界', 'WHAT/music.jpg'),
+    new SctItm('芸能界', 'WHAT/media.jpg'),
+    new SctItm('キリスト教', 'WHAT/christ.jpg'),
+    new SctItm('仏教', 'WHAT/buddha.jpg'),
+    new SctItm('イスラム教', 'WHAT/Islam.jpg'),
+    new SctItm('宗教', 'WHAT/religion.jpg')
+    // ,
+    // new SctItm('世界','WHAT/history.jpg')
+    ,
+    new SctItm('人類', 'WHAT/human.jpg')
+    // ,
+    // new SctItm('女子校','WHAT/girlscoll.jpg')
+    ,
+    new SctItm('オリンピック', 'WHAT/Olympic.jpg'),
+    new SctItm('江戸幕府', 'WHAT/edo.jpg'),
+    new SctItm('ホワイトハウス', 'WHAT/whitehouse.jpg'),
+    new SctItm('紫禁城', 'WHAT/shikin.jpg')
+    // ,
+    // new SctItm('イギリス王家','WHAT/kingdom.jpg')
+    ,
+    new SctItm('ピラミッド', 'WHAT/pyramid.jpg'),
+    new SctItm('国連', 'WHAT/nation.jpg'),
+    new SctItm('東京', 'WHAT/tokyo.jpg'),
+    new SctItm('大阪', 'WHAT/osaka.jpg'),
+    new SctItm('香港', 'WHAT/hongkong.jpg'),
+    new SctItm('ニューヨーク', 'WHAT/newyork.jpg'),
+    new SctItm('パリ', 'WHAT/Paris.jpg'),
+    new SctItm('ロンドン', 'WHAT/london.jpg'),
+    new SctItm('ハワイ', 'WHAT/Hawaii.jpg'),
+    new SctItm('ラスベガス', 'WHAT/LasVegas.jpg'),
+    new SctItm('魔界', 'WHAT/hell.jpg'),
+    new SctItm('天国', 'WHAT/heaven.jpg')
+    // ,
+    // new SctItm('極楽浄土','WHAT/heaven2.jpg')
+    // ,
+    // new SctItm('地獄','WHAT/enma.jpg')
+    // ,
+    // new SctItm('南国','WHAT/seaside.jpg')
+    ,
+    new SctItm('ディズニーランド', 'WHAT/disney.jpg')
+    // ,
+    // new SctItm('ディズニーランド','WHAT/disney2.jpg')
+    // ,
+    // new SctItm('ひらかたパーク','WHAT/hirapa-.jpg')
+    // ,
+    // new SctItm('ひらかたパーク','WHAT/hirapa-2.jpg')
+    // ,
+    // new SctItm('ひらかたパーク','WHAT/hirapa-3.jpg')
+    // ,
+    // new SctItm('ＵＳＪ','WHAT/usj.jpg')
+    // ,
+    // new SctItm('ＵＳＪ','WHAT/usj2.jpg')
+    // ,
+    // new SctItm('としまえん','WHAT/toshimaen.jpg')
+    // ,
+    // new SctItm('上野動物園','WHAT/ueno_zoo.jpg')
+    // ,
+    // new SctItm('ジオン公国','WHAT/jion.jpg')
+    ,
+    new SctItm('ナチス・ドイツ', 'WHAT/nachi.jpg')
+    // ,
+    // new SctItm('ホビット床','WHAT/Shire.jpg')
+    ,
+    new SctItm('銀河帝国', 'WHAT/GalaxyEmpire.jpg'),
+    new SctItm('デス・スター', 'WHAT/deathstar.jpg'),
+    new SctItm('暗黒面', 'WHAT/darkside.jpg'),
+    new SctItm('ローマ帝国', 'WHAT/Rome.jpg'),
+    new SctItm('未来', 'WHAT/future.jpg'),
+    new SctItm('近未来', 'WHAT/nearfuture.jpg'),
+    // new SctItm('縄文時代','WHAT/joumon.jpg')
+    // ,
+    new SctItm('スラム街', 'WHAT/slum.jpg')
+    // ,
+    // new SctItm('九竜城','WHAT/coulomb.jpg')
+    // ,
+    // new SctItm('邪馬台国','WHAT/yama.jpg')
+    // ,
+    // new SctItm('竜宮城','WHAT/ryugu.jpg')
+    ,
+    new SctItm('戦場', 'WHAT/war.jpg'),
+    new SctItm('火星', 'WHAT/mars.jpg')
+];
+const itms_do = [
+    //
+    // nega 
+    //
+    new SctItm('壊滅', 'DO/break.jpg'),
+    new SctItm('死滅', 'DO/dead.jpg'),
+    new SctItm('崩壊', 'DO/Collapse.jpg'),
+    new SctItm('捏造', 'DO/fakeTelop.jpg'),
+    new SctItm('絶望', 'DO/Lonly.jpg'),
+    new SctItm('孤立', 'DO/Lonly2.jpg'),
+    new SctItm('消滅', 'DO/Dis.jpg'),
+    new SctItm('感染', 'DO/infection.jpg'),
+    new SctItm('暴走', 'DO/Wild.jpg'),
+    new SctItm('発狂', 'DO/crazy.jpg'),
+    new SctItm('洗脳', 'DO/brainwash.jpg'),
+    new SctItm('終焉', 'DO/end.jpg'),
+    new SctItm('衰退', 'DO/decline.jpg'),
+    new SctItm('滅亡', 'DO/Destruction.jpg'),
+    new SctItm('自滅', 'DO/self.jpg'),
+    new SctItm('困惑', 'DO/panic.jpg'),
+    new SctItm('混乱', 'DO/panic.jpg'),
+    new SctItm('嘲笑', 'DO/laugh.jpg'),
+    new SctItm('哄笑', 'DO/laugh.jpg'),
+    new SctItm('罵倒', 'DO/taunt.jpg'),
+    new SctItm('堕落', 'DO/depra.jpg'),
+    new SctItm('失業', 'DO/lostjob.jpg'),
+    new SctItm('支配', 'DO/mad.jpg'),
+    new SctItm('追放', 'DO/getout.jpg'),
+    new SctItm('虐待', 'DO/depression.jpg'),
+    new SctItm('束縛', 'DO/sm.jpg'),
+    new SctItm('拘束', 'DO/sm.jpg'),
+    new SctItm('否定', 'DO/no.jpg'),
+    new SctItm('警告', 'DO/warning.jpg'),
+    new SctItm('漏洩', 'DO/infoleak.jpg'),
+    new SctItm('復讐', 'DO/revenge.jpg'),
+    new SctItm('号泣', 'DO/cry.jpg'),
+    new SctItm('荒廃', 'DO/devastation.jpg'),
+    new SctItm('腐敗', 'DO/oldtimer.jpg')
+    //
+    // posi 
+    //
+    ,
+    new SctItm('誕生', 'DO/birth.jpg'),
+    new SctItm('復活', 'DO/rebirth.jpg'),
+    new SctItm('成長', 'DO/grow.jpg'),
+    new SctItm('成功', 'DO/success.jpg'),
+    new SctItm('承認', 'DO/yes.jpg'),
+    new SctItm('解放', 'DO/release.jpg'),
+    new SctItm('独立', 'DO/independence.jpg'),
+    new SctItm('賞賛', 'DO/praise.jpg'),
+    new SctItm('祝福', 'DO/bless.jpg'),
+    new SctItm('救助', 'DO/rescue.jpg'),
+    new SctItm('生還', 'DO/surviving.jpg'),
+    new SctItm('達成', 'DO/affir.jpg'),
+    new SctItm('勝利', 'DO/vict.jpg'),
+    new SctItm('優勝', 'DO/topwin.jpg'),
+    new SctItm('発明', 'DO/Edison.jpg'),
+    new SctItm('開発', 'DO/debelop.jpg'),
+    new SctItm('革命', 'DO/revolution.jpg'),
+    new SctItm('移住', 'DO/emigration.jpg'),
+    new SctItm('降臨', 'DO/advent.jpg'),
+    new SctItm('覚醒', 'DO/awaken.jpg')
+];

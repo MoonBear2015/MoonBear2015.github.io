@@ -9,7 +9,7 @@ function set_about()
     html += '<h1>';
     html += 'ABOUT';
     html += '<small>';
-    html += ' A00.02';
+    html += ' A01.00';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -30,7 +30,7 @@ function make_about()
 
 
 
-    for(let i = 0; i < rnd_minmax(10,30); i++){
+    for(let i = 0; i < rnd_minmax(30,50); i++){
         html += '<div id="about_box" ';
         html += 'style="';
         html += 'margin:     5px; ';
@@ -54,6 +54,7 @@ function make_about()
         html += 'COUNTRY:@COUNTRY@出身<br>';
         html += 'ADDRESS:@COUNTRY@在住<br>';
         html += 'HOBBY:<bir>@HABIT@<br>';
+        html += 'INSCRIPTION:<bir>@INSCRIPTION@<br>';
         html += '<br>';
         html += '</div>';
 
@@ -144,5 +145,44 @@ class about_title extends SctItm_Counter implements ISctItm_Selector{
         ];
     }
 }
+
+// 座右の銘
+class selector_inscription extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@INSCRIPTION@');
+        this.Add(itms_inscription);
+    }
+}
+
+const   itms_inscription = [
+    // 雨降って地固まる
+    new SctItm('@NICK@が@DO@すれば、@WHAT@が@DO@する')
+    ,
+    // 習慣は第二の天性なり
+    new SctItm('@HABIT@は第二の@CLASS@なり')
+    ,
+    // 心安きは不和の基
+    new SctItm('@THINK@は@THINK@の|基|もと|')
+    ,
+    // 艱難汝を玉にす
+    new SctItm('@DO@が@CLASS@を@NICK@にする')
+    ,
+    // 自慢高慢馬鹿のうち
+    new SctItm('@THINK@や@THINK@は@DO@のうち')
+    ,
+    // 弘法筆を選ばず
+    new SctItm('@CLASS@は@PART@を選ばず')
+    ,
+    // 酒と朝寝は貧乏の近道
+    new SctItm('@HABIT@と@HABIT@は@DO@の近道')
+    ,
+    // 鴨の水掻き
+    new SctItm('@CLASS@は@DO@する')
+    ,
+    // 百里を行く者は九十里を半ばとす
+    new SctItm('@WHAT@へ行く@CLASS@は@WHAT@を|半|なか|ばとす')
+    
+];
+
 
 

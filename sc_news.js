@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N02.38';
+    html += ' N02.39';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -227,15 +227,15 @@ class selector_title extends SctItm_Selector {
     constructor() {
         super('@NEWS_TITLE@');
         this.itms = [
-            new SctItm('@WHAT@の@DO@'),
-            new SctItm('@KEI@@WHAT@の@DO@'),
-            new SctItm('@WHAT@で@DO@@END02C@@THEY@'),
-            new SctItm('@DO@@END02C@@WHAT@'),
-            new SctItm('@DO@@END02C@@WHAT@の@THINK@'),
-            new SctItm('@DO@@END02C@@WHAT@の@THEY@'),
-            new SctItm('@DO@@END02C@@WHAT@の@PEOPLE@'),
-            new SctItm('@PEOPLE@が@DO@@END02C@@WHAT@'),
-            new SctItm('@THEY@が@DO@@END02C@@WHAT@')
+            new SctItm('@L_WHAT@の@L_DO@'),
+            new SctItm('@KEI@@L_WHAT@の@L_DO@'),
+            new SctItm('@L_WHAT@で@L_DO@@END02C@@THEY@'),
+            new SctItm('@L_DO@@END02C@@L_WHAT@'),
+            new SctItm('@L_DO@@END02C@@L_WHAT@の@THINK@'),
+            new SctItm('@L_DO@@END02C@@L_WHAT@の@THEY@'),
+            new SctItm('@L_DO@@END02C@@L_WHAT@の@PEOPLE@'),
+            new SctItm('@PEOPLE@が@L_DO@@END02C@@L_WHAT@'),
+            new SctItm('@THEY@が@L_DO@@END02C@@L_WHAT@')
         ];
     }
 }
@@ -270,12 +270,12 @@ class selector_call extends SctItm_Selector {
     constructor() {
         super('@CALL@');
         this.itms = [
-            new SctItm('@KEID@@KEI1@@WHAT@'),
-            new SctItm('@WHAT@の@KEI@@PEOPLE@'),
-            new SctItm('@KEID@@DO@@END02C@@PEOPLE@'),
-            new SctItm('@KEI@@WHAT@の@PEOPLE@'),
-            new SctItm('@WHAT@の@NICK@'),
-            new SctItm('@DO@@END02C@@NICK@')
+            new SctItm('@KEID@@KEI1@@L_WHAT@'),
+            new SctItm('@L_WHAT@の@KEI@@PEOPLE@'),
+            new SctItm('@KEID@@L_DO@@END02C@@PEOPLE@'),
+            new SctItm('@KEI@@L_WHAT@の@PEOPLE@'),
+            new SctItm('@L_WHAT@の@NICK@'),
+            new SctItm('@L_DO@@END02C@@NICK@')
         ];
     }
 }
@@ -368,15 +368,15 @@ class selector_c01 extends SctItm_Selector {
     constructor() {
         super('@NEWS_C01@');
         this.itms = [
-            new SctItm('@KEI@@WHAT@が@KEID@@DO@@END01B@'),
-            new SctItm('@KEI@@WHAT@での@KEI@@KEY@@END01A@'),
-            new SctItm('@KEI@@WHAT@で@KEI@@KEY@が@STATUS@@END01B@'),
-            new SctItm('@KEI@@WHAT@では@KEI@@KEY@や@KEY@が@STATUS@@END01B@'),
-            new SctItm('@KEY@が@STATUS@する@WHAT@@END01A@'),
-            new SctItm('@KEI@@KEY@や@KEY@が@STATUS@する@WHAT@@END01A@'),
-            new SctItm('@KEI@@MANYPEOPLE@が@KEID@@DO@@END01B@'),
+            new SctItm('@KEI@@L_WHAT@が@KEID@@L_DO@@END01B@'),
+            new SctItm('@KEI@@L_WHAT@での@KEI@@KEY@@END01A@'),
+            new SctItm('@KEI@@L_WHAT@で@KEI@@KEY@が@STATUS@@END01B@'),
+            new SctItm('@KEI@@L_WHAT@では@KEI@@KEY@や@KEY@が@STATUS@@END01B@'),
+            new SctItm('@KEY@が@STATUS@する@L_WHAT@@END01A@'),
+            new SctItm('@KEI@@KEY@や@KEY@が@STATUS@する@L_WHAT@@END01A@'),
+            new SctItm('@KEI@@MANYPEOPLE@が@KEID@@L_DO@@END01B@'),
             new SctItm('@KEI@@MANYPEOPLE@による@KEI@@KEY@が@STATUS@@END01B@'),
-            new SctItm('@THINK@や@THINK@@STATUS2@@WHAT@@END01A@')
+            new SctItm('@THINK@や@THINK@@STATUS2@@L_WHAT@@END01A@')
         ];
     }
 }
@@ -409,7 +409,7 @@ class selector_c02 extends SctItm_Selector {
     constructor() {
         super('@NEWS_C02@');
         this.itms = [
-            new SctItm('@MANYPEOPLE@が@KEID@@DO@@END02B@'),
+            new SctItm('@MANYPEOPLE@が@KEID@@L_DO@@END02B@'),
             new SctItm('@MANYPEOPLE@が@KEI@@NICK@@END02A@'),
             new SctItm('@MANYPEOPLE@による@KEI@@KEY@が@STATUS@@END02B@'),
             new SctItm('@MANYPEOPLE@による@KEI@@KEY@や@KEY@が@STATUS@@END02B@'),
@@ -441,10 +441,10 @@ class selector_comment extends SctItm_Selector {
             new SctItm('@COMMENT2@。@CONECT@、@COMMENT2@'),
             new SctItm('@COMMENT2@。@YESNO@、@COMMENT2@'),
             new SctItm('@COMMENT2@。@YESNO@、@COMMENT2@'),
-            new SctItm('@YESNO@ッ！ @WHAT@が@KEI@@NICK@@END02A@ッ！'),
-            new SctItm('@WHAT@の@NICK@！ @WHAT@の@NICK@！ @WHAT@の@NICK@！ @WHAT@の@NICK@！ '),
-            new SctItm('@WHAT@は@NICK@？ @COMMENT@'),
-            new SctItm('@WHAT@が@DO@@END02B@？ @COMMENT@')
+            new SctItm('@YESNO@ッ！ @L_WHAT@が@KEI@@NICK@@END02A@ッ！'),
+            new SctItm('@L_WHAT@の@NICK@！ @L_WHAT@の@NICK@！ @L_WHAT@の@NICK@！ @L_WHAT@の@NICK@！ '),
+            new SctItm('@L_WHAT@は@NICK@？ @COMMENT@'),
+            new SctItm('@L_WHAT@が@L_DO@@END02B@？ @COMMENT@')
         ];
     }
 }
@@ -458,25 +458,25 @@ class selector_comment2 extends SctItm_Selector {
             new SctItm('@CONECT@、@COMMENT2@'),
             new SctItm('@YESNO@、@COMMENT2@'),
             new SctItm('@CALL@が@STATUS@@END02B@'),
-            new SctItm('@WHAT@は@KEID@@DO@する@KEI@@NICK@と@ASSES@'),
+            new SctItm('@L_WHAT@は@KEID@@L_DO@する@KEI@@NICK@と@ASSES@'),
             new SctItm('@MANYPEOPLE@は@CALL@@END02A@'),
             new SctItm('@CALL@@END02A@'),
             new SctItm('@MANYPEOPLE@は、@CALL@@END02A@'),
             new SctItm('@MANYPEOPLE@の@KEY@@END02A@'),
-            new SctItm('@WHAT@は@DO@@END02B@'),
-            new SctItm('@WHAT@は@KEI@@NICK@の@PART@と@KEID@@ASSES@'),
-            new SctItm('@WHAT@は@KEID@@DO@する@KEI@@THEY@@END02A@'),
+            new SctItm('@L_WHAT@は@L_DO@@END02B@'),
+            new SctItm('@L_WHAT@は@KEI@@NICK@の@PART@と@KEID@@ASSES@'),
+            new SctItm('@L_WHAT@は@KEID@@L_DO@する@KEI@@THEY@@END02A@'),
             new SctItm('@CALL@で、@CALL@@END02A@'),
             new SctItm('@YESNO@、@CALL@と@ASSES@'),
             new SctItm('@YESNO@、@PEOPLE@の@KEY@@END02A@'),
-            new SctItm('@YESNO@、@WHAT@が@KEI@@NICK@@END02A@'),
+            new SctItm('@YESNO@、@L_WHAT@が@KEI@@NICK@@END02A@'),
             new SctItm('@KEI3@@NICK@、@KEI3@@NICK@、@KEI3@@NICK@、@KEI3@@NICK@……'),
             new SctItm('@KEI2@な@KEY@、@KEI2@な@KEY@、@KEI2@な@KEY@、@KEI2@な@KEY@……'),
             new SctItm('@YESNO@、@KEI2@な@PART@が@SAY@@END02B@'),
             new SctItm('@CALL@、@YESNO@、それが@PART@の@PART@@END02A@'),
-            new SctItm('@KEID@@DO@する@KEI@@NICK@と@KEID@@ASSES@@THEY@、@YESNO@、それが@WHAT@の@PEOPLE@@END02A@'),
-            new SctItm('@KEID@@DO@@END02B@@THEY@、@YESNO@、それが@WHAT@@END02A@'),
-            new SctItm('@WHAT@の@CLASS@、それが@PEOPLE@の@PEOPLE@@END02A@')
+            new SctItm('@KEID@@L_DO@する@KEI@@NICK@と@KEID@@ASSES@@THEY@、@YESNO@、それが@L_WHAT@の@PEOPLE@@END02A@'),
+            new SctItm('@KEID@@L_DO@@END02B@@THEY@、@YESNO@、それが@L_WHAT@@END02A@'),
+            new SctItm('@L_WHAT@の@CLASS@、それが@PEOPLE@の@PEOPLE@@END02A@')
         ];
     }
 }
@@ -543,207 +543,31 @@ class selector_end02c extends SctItm_Selector {
     }
 }
 // 名詞・人物・組織　～は・～が・～の
-class selector_whats extends SctItm_SelectLocker {
+class selector_what extends SctItm_Selector {
     constructor() {
-        super('@WHAT@', '@PIC_WHAT@');
-        this.itms = [
-            new SctItm('日本', 'WHAT/Japan.jpg'),
-            new SctItm('アメリカ', 'WHAT/America.jpg'),
-            new SctItm('米国', 'WHAT/America.jpg'),
-            new SctItm('中国', 'WHAT/China.jpg'),
-            new SctItm('イギリス', 'WHAT/England.jpg'),
-            new SctItm('英国', 'WHAT/England.jpg'),
-            new SctItm('大英帝国', 'WHAT/England.jpg'),
-            new SctItm('ロシア', 'WHAT/Russia.jpg'),
-            new SctItm('インド', 'WHAT/india.jpg'),
-            new SctItm('イタリア', 'WHAT/Italy.jpg'),
-            new SctItm('フランス', 'WHAT/France.jpg'),
-            new SctItm('ドイツ', 'WHAT/German.jpg'),
-            new SctItm('韓国', 'WHAT/koria.jpg'),
-            new SctItm('エジプト', 'WHAT/pyramid.jpg')
-            // ,
-            // new SctItm('ガミラス帝国','WHAT/gamilas.jpg')
-            // ,
-            // new SctItm('イスカンダル','WHAT/iskandar.jpg')
-            // ,
-            // new SctItm('経済','WHAT/Economy.jpg')
-            ,
-            new SctItm('株式市場', 'WHAT/Economy.jpg'),
-            new SctItm('科学', 'WHAT/Science.jpg'),
-            new SctItm('現代科学', 'WHAT/Science.jpg'),
-            new SctItm('先進科学', 'WHAT/Science.jpg')
-            // ,
-            // new SctItm('医療','WHAT/Medical.jpg')
-            ,
-            new SctItm('医療現場', 'WHAT/Medical.jpg')
-            // ,
-            // new SctItm('医学','WHAT/Medical.jpg')
-            ,
-            new SctItm('現代医学', 'WHAT/Medical.jpg'),
-            new SctItm('農業', 'WHAT/Agri.jpg'),
-            new SctItm('農場', 'WHAT/Agri.jpg'),
-            new SctItm('工場', 'WHAT/Factory.jpg'),
-            new SctItm('工業地帯', 'WHAT/Factory.jpg'),
-            new SctItm('人工知能', 'WHAT/AI.jpg'),
-            new SctItm('学校教育', 'WHAT/stady.jpg'),
-            new SctItm('宇宙', 'WHAT/space.jpg'),
-            new SctItm('宇宙開発', 'WHAT/NASA.jpg'),
-            new SctItm('天文学', 'WHAT/space.jpg'),
-            new SctItm('NASA', 'WHAT/NASA.jpg'),
-            new SctItm('マスコミ', 'WHAT/MassMedia.jpg'),
-            new SctItm('ビジネス', 'WHAT/business.jpg'),
-            new SctItm('現代社会', 'WHAT/community.jpg'),
-            new SctItm('情報化社会', 'WHAT/info.jpg'),
-            new SctItm('音楽業界', 'WHAT/music.jpg'),
-            new SctItm('芸能界', 'WHAT/media.jpg'),
-            new SctItm('キリスト教', 'WHAT/christ.jpg'),
-            new SctItm('仏教', 'WHAT/buddha.jpg'),
-            new SctItm('イスラム教', 'WHAT/Islam.jpg'),
-            new SctItm('宗教', 'WHAT/religion.jpg')
-            // ,
-            // new SctItm('世界','WHAT/history.jpg')
-            ,
-            new SctItm('人類', 'WHAT/human.jpg')
-            // ,
-            // new SctItm('女子校','WHAT/girlscoll.jpg')
-            ,
-            new SctItm('オリンピック', 'WHAT/Olympic.jpg'),
-            new SctItm('江戸幕府', 'WHAT/edo.jpg'),
-            new SctItm('ホワイトハウス', 'WHAT/whitehouse.jpg'),
-            new SctItm('紫禁城', 'WHAT/shikin.jpg')
-            // ,
-            // new SctItm('イギリス王家','WHAT/kingdom.jpg')
-            ,
-            new SctItm('ピラミッド', 'WHAT/pyramid.jpg'),
-            new SctItm('国連', 'WHAT/nation.jpg'),
-            new SctItm('東京', 'WHAT/tokyo.jpg'),
-            new SctItm('大阪', 'WHAT/osaka.jpg'),
-            new SctItm('香港', 'WHAT/hongkong.jpg'),
-            new SctItm('ニューヨーク', 'WHAT/newyork.jpg'),
-            new SctItm('パリ', 'WHAT/Paris.jpg'),
-            new SctItm('ロンドン', 'WHAT/london.jpg'),
-            new SctItm('ハワイ', 'WHAT/Hawaii.jpg'),
-            new SctItm('ラスベガス', 'WHAT/LasVegas.jpg'),
-            new SctItm('魔界', 'WHAT/hell.jpg'),
-            new SctItm('天国', 'WHAT/heaven.jpg')
-            // ,
-            // new SctItm('極楽浄土','WHAT/heaven2.jpg')
-            // ,
-            // new SctItm('地獄','WHAT/enma.jpg')
-            // ,
-            // new SctItm('南国','WHAT/seaside.jpg')
-            ,
-            new SctItm('ディズニーランド', 'WHAT/disney.jpg')
-            // ,
-            // new SctItm('ディズニーランド','WHAT/disney2.jpg')
-            // ,
-            // new SctItm('ひらかたパーク','WHAT/hirapa-.jpg')
-            // ,
-            // new SctItm('ひらかたパーク','WHAT/hirapa-2.jpg')
-            // ,
-            // new SctItm('ひらかたパーク','WHAT/hirapa-3.jpg')
-            // ,
-            // new SctItm('ＵＳＪ','WHAT/usj.jpg')
-            // ,
-            // new SctItm('ＵＳＪ','WHAT/usj2.jpg')
-            // ,
-            // new SctItm('としまえん','WHAT/toshimaen.jpg')
-            // ,
-            // new SctItm('上野動物園','WHAT/ueno_zoo.jpg')
-            // ,
-            // new SctItm('ジオン公国','WHAT/jion.jpg')
-            ,
-            new SctItm('ナチス・ドイツ', 'WHAT/nachi.jpg')
-            // ,
-            // new SctItm('ホビット床','WHAT/Shire.jpg')
-            ,
-            new SctItm('銀河帝国', 'WHAT/GalaxyEmpire.jpg'),
-            new SctItm('デス・スター', 'WHAT/deathstar.jpg'),
-            new SctItm('暗黒面', 'WHAT/darkside.jpg'),
-            new SctItm('ローマ帝国', 'WHAT/Rome.jpg'),
-            new SctItm('未来', 'WHAT/future.jpg'),
-            new SctItm('近未来', 'WHAT/nearfuture.jpg'),
-            // new SctItm('縄文時代','WHAT/joumon.jpg')
-            // ,
-            new SctItm('スラム街', 'WHAT/slum.jpg')
-            // ,
-            // new SctItm('九竜城','WHAT/coulomb.jpg')
-            // ,
-            // new SctItm('邪馬台国','WHAT/yama.jpg')
-            // ,
-            // new SctItm('竜宮城','WHAT/ryugu.jpg')
-            ,
-            new SctItm('戦場', 'WHAT/war.jpg'),
-            new SctItm('火星', 'WHAT/mars.jpg')
-        ];
+        super('@WHAT@');
+        this.Add(itms_what);
+    }
+}
+// （固定）名詞・人物・組織　～は・～が・～の
+class locker_what extends SctItm_Selector {
+    constructor() {
+        super('@L_WHAT@', '@PIC_WHAT@');
+        this.Add(itms_what);
     }
 }
 // 動名詞 の～
-class selector_do extends SctItm_SelectLocker {
+class selector_do extends SctItm_Selector {
     constructor() {
-        super('@DO@', '@PIC_DO@');
-        this.itms = [
-            //
-            // nega 
-            //
-            new SctItm('壊滅', 'DO/break.jpg'),
-            new SctItm('死滅', 'DO/dead.jpg'),
-            new SctItm('崩壊', 'DO/Collapse.jpg'),
-            new SctItm('捏造', 'DO/fakeTelop.jpg'),
-            new SctItm('絶望', 'DO/Lonly.jpg'),
-            new SctItm('孤立', 'DO/Lonly2.jpg'),
-            new SctItm('消滅', 'DO/Dis.jpg'),
-            new SctItm('感染', 'DO/infection.jpg'),
-            new SctItm('暴走', 'DO/Wild.jpg'),
-            new SctItm('発狂', 'DO/crazy.jpg'),
-            new SctItm('洗脳', 'DO/brainwash.jpg'),
-            new SctItm('終焉', 'DO/end.jpg'),
-            new SctItm('衰退', 'DO/decline.jpg'),
-            new SctItm('滅亡', 'DO/Destruction.jpg'),
-            new SctItm('自滅', 'DO/self.jpg'),
-            new SctItm('困惑', 'DO/panic.jpg'),
-            new SctItm('混乱', 'DO/panic.jpg'),
-            new SctItm('嘲笑', 'DO/laugh.jpg'),
-            new SctItm('哄笑', 'DO/laugh.jpg'),
-            new SctItm('罵倒', 'DO/taunt.jpg'),
-            new SctItm('堕落', 'DO/depra.jpg'),
-            new SctItm('失業', 'DO/lostjob.jpg'),
-            new SctItm('支配', 'DO/mad.jpg'),
-            new SctItm('追放', 'DO/getout.jpg'),
-            new SctItm('虐待', 'DO/depression.jpg'),
-            new SctItm('束縛', 'DO/sm.jpg'),
-            new SctItm('拘束', 'DO/sm.jpg'),
-            new SctItm('否定', 'DO/no.jpg'),
-            new SctItm('警告', 'DO/warning.jpg'),
-            new SctItm('漏洩', 'DO/infoleak.jpg'),
-            new SctItm('復讐', 'DO/revenge.jpg'),
-            new SctItm('号泣', 'DO/cry.jpg'),
-            new SctItm('荒廃', 'DO/devastation.jpg')
-            //
-            // posi 
-            //
-            ,
-            new SctItm('誕生', 'DO/birth.jpg'),
-            new SctItm('復活', 'DO/rebirth.jpg'),
-            new SctItm('成長', 'DO/grow.jpg'),
-            new SctItm('成功', 'DO/success.jpg'),
-            new SctItm('承認', 'DO/yes.jpg'),
-            new SctItm('解放', 'DO/release.jpg'),
-            new SctItm('独立', 'DO/independence.jpg'),
-            new SctItm('賞賛', 'DO/praise.jpg'),
-            new SctItm('祝福', 'DO/bless.jpg'),
-            new SctItm('救助', 'DO/rescue.jpg'),
-            new SctItm('生還', 'DO/surviving.jpg'),
-            new SctItm('達成', 'DO/affir.jpg'),
-            new SctItm('勝利', 'DO/vict.jpg'),
-            new SctItm('優勝', 'DO/topwin.jpg'),
-            new SctItm('発明', 'DO/Edison.jpg'),
-            new SctItm('開発', 'DO/debelop.jpg'),
-            new SctItm('革命', 'DO/revolution.jpg'),
-            new SctItm('移住', 'DO/emigration.jpg'),
-            new SctItm('降臨', 'DO/advent.jpg'),
-            new SctItm('覚醒', 'DO/awaken.jpg')
-        ];
+        super('@DO@');
+        this.Add(itms_do);
+    }
+}
+// （固定）動名詞 の～
+class locker_do extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_DO@', '@PIC_DO@');
+        this.Add(itms_do);
     }
 }
 // 事象・事件・事故・行事
@@ -1695,7 +1519,9 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_YESNO());
         this.dic_push(new selector_random_date());
         this.dic_push(new selector_random_year());
-        this.dic_push(new selector_whats());
+        this.dic_push(new locker_what());
+        this.dic_push(new locker_do());
+        this.dic_push(new selector_what());
         this.dic_push(new selector_do());
         this.dic_push(new selector_key());
         this.dic_push(new selector_status1());
@@ -1737,5 +1563,6 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_people());
         this.dic_push(new selector_manypeople());
         this.dic_push(new selector_partner());
+        this.dic_push(new selector_inscription());
     }
 }
