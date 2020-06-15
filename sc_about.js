@@ -7,7 +7,7 @@ function set_about() {
     html += '<h1>';
     html += 'ABOUT';
     html += '<small>';
-    html += ' A01.00';
+    html += ' A01.01';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -118,7 +118,7 @@ class selector_inscription extends SctItm_Selector {
 }
 const itms_inscription = [
     // 雨降って地固まる
-    new SctItm('@NICK@が@DO@すれば、@WHAT@が@DO@する'),
+    new SctItm('@THEY@を@DO@すれば、@WHAT@が@DO@する'),
     // 習慣は第二の天性なり
     new SctItm('@HABIT@は第二の@CLASS@なり'),
     // 心安きは不和の基
@@ -134,5 +134,13 @@ const itms_inscription = [
     // 鴨の水掻き
     new SctItm('@CLASS@は@DO@する'),
     // 百里を行く者は九十里を半ばとす
-    new SctItm('@WHAT@へ行く@CLASS@は@WHAT@を|半|なか|ばとす')
+    new SctItm('@WHAT@へ行く@CLASS@は@WHAT@を|半|なか|ばとす'),
+    // 時は金なり
+    new SctItm('@THINK@は@THINK@なり'),
+    // 難しいのは愛する技術ではなく、愛される技術である。
+    new SctItm('@KEI1@のは@ASSES@@ANSWER@ではなく、@ASSES@@ANSWER@である。'),
+    // 努力する人は希望を語り、怠ける人は不満を語る。
+    new SctItm('@CLASS@は@THINK@を語り、@NICK@は@THINK@を語る。'),
+    // 恐怖はつねに無知から生じる。
+    new SctItm('@THINK@はつねに@THINK@から生じる。')
 ];
