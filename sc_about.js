@@ -7,7 +7,7 @@ function set_about() {
     html += '<h1>';
     html += 'ABOUT';
     html += '<small>';
-    html += ' A01.01';
+    html += ' A01.02';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -37,12 +37,12 @@ function make_about() {
         html += '<br>';
         html += '@ABOUTER@';
         html += '<div id="about_doc">';
-        html += 'NICKNAME:@CALL2@<br>';
-        html += 'JOB:@CLASS@<br>';
-        html += 'COUNTRY:@COUNTRY@出身<br>';
-        html += 'ADDRESS:@COUNTRY@在住<br>';
-        html += 'HOBBY:<bir>@HABIT@<br>';
-        html += 'INSCRIPTION:<bir>@INSCRIPTION@<br>';
+        html += 'あだ名:@CALL2@<br>';
+        html += '国籍:@COUNTRY@出身<br>';
+        html += '住所:@COUNTRY@在住<br>';
+        html += '仕事:@CLASS@<br>';
+        html += '趣味:<bir>@HABIT@<br>';
+        html += '座右の銘:<bir>@INSCRIPTION@<br>';
         html += '<br>';
         html += '</div>';
         html += '</div>';
@@ -117,30 +117,13 @@ class selector_inscription extends SctItm_Selector {
     }
 }
 const itms_inscription = [
-    // 雨降って地固まる
-    new SctItm('@THEY@を@DO@すれば、@WHAT@が@DO@する'),
-    // 習慣は第二の天性なり
+    new SctItm('@THEY@が@DO@すれば、@WHAT@が@DO@する'),
     new SctItm('@HABIT@は第二の@CLASS@なり'),
-    // 心安きは不和の基
     new SctItm('@THINK@は@THINK@の|基|もと|'),
-    // 艱難汝を玉にす
-    new SctItm('@DO@が@CLASS@を@NICK@にする'),
-    // 自慢高慢馬鹿のうち
-    new SctItm('@THINK@や@THINK@は@DO@のうち'),
-    // 弘法筆を選ばず
-    new SctItm('@CLASS@は@PART@を選ばず'),
-    // 酒と朝寝は貧乏の近道
-    new SctItm('@HABIT@と@HABIT@は@DO@の近道'),
-    // 鴨の水掻き
-    new SctItm('@CLASS@は@DO@する'),
-    // 百里を行く者は九十里を半ばとす
-    new SctItm('@WHAT@へ行く@CLASS@は@WHAT@を|半|なか|ばとす'),
-    // 時は金なり
-    new SctItm('@THINK@は@THINK@なり'),
-    // 難しいのは愛する技術ではなく、愛される技術である。
-    new SctItm('@KEI1@のは@ASSES@@ANSWER@ではなく、@ASSES@@ANSWER@である。'),
-    // 努力する人は希望を語り、怠ける人は不満を語る。
-    new SctItm('@CLASS@は@THINK@を語り、@NICK@は@THINK@を語る。'),
-    // 恐怖はつねに無知から生じる。
-    new SctItm('@THINK@はつねに@THINK@から生じる。')
+    new SctItm('@DO@が@PART@を@NICK@にする'),
+    new SctItm('@THINK@、@THINK@、@KEI2@のうち'),
+    new SctItm('@HABIT@は@DO@の近道'),
+    new SctItm('@THINK@が@THINK@を産む'),
+    new SctItm('@CLASS@の@THINK@'),
+    new SctItm('@KEI1@@PART@は@DO@する')
 ];
