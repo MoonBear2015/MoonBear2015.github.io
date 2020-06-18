@@ -7,7 +7,7 @@ function set_about() {
     html += '<h1>';
     html += 'ABOUT';
     html += '<small>';
-    html += ' A01.02';
+    html += ' A01.03';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -71,7 +71,6 @@ class about_docs_maker extends news_docs_maker {
         super();
         this.dic_push(new about_title());
         this.dic_push(new selector_abouter());
-        this.dic_push(new selector_habit());
     }
 }
 class selector_abouter extends ItmArray {
@@ -105,7 +104,18 @@ class about_title extends SctItm_Counter {
             new SctItm('Web Designer'),
             new SctItm('Web Designer'),
             new SctItm('Web Designer'),
-            new SctItm('Programer')
+            new SctItm('Web Designer'),
+            new SctItm('Programer'),
+            new SctItm('Programer'),
+            new SctItm('Programer'),
+            new SctItm('Programer'),
+            new SctItm('Programer'),
+            new SctItm('Programer'),
+            new SctItm('Programer'),
+            new SctItm('Programer'),
+            new SctItm('Programer'),
+            new SctItm('Programer'),
+            new SctItm('Debugger')
         ];
     }
 }
@@ -116,14 +126,46 @@ class selector_inscription extends SctItm_Selector {
         this.Add(itms_inscription);
     }
 }
+// 座右の銘：体言
+class selector_item extends SctItm_Selector {
+    constructor() {
+        super('@ITEM@');
+        this.itms = [
+            new SctItm('@CLASS@'),
+            new SctItm('@PART@'),
+            new SctItm('@NICK@'),
+            new SctItm('@WHAT@'),
+            new SctItm('@THINK@'),
+            new SctItm('@DO@'),
+            new SctItm('@HABIT@'),
+            new SctItm('@ANSWER@'),
+            new SctItm('@KEI@@ITEM@'),
+            new SctItm('@COMM@@ITEM@')
+        ];
+    }
+}
+// 座右の銘：用言・形容詞 「～する」「～な」「～をする」
+class selector_command extends SctItm_Selector {
+    constructor() {
+        super('@COMM@');
+        this.itms = [
+            new SctItm('@KEID@@MOVE@'),
+            new SctItm('@DO@@END02B@'),
+            new SctItm('@THINK@@END02B@'),
+            new SctItm('@HABIT@を@END02B@'),
+            new SctItm('@HABIT@を@END02B@')
+        ];
+    }
+}
 const itms_inscription = [
-    new SctItm('@THEY@が@DO@すれば、@WHAT@が@DO@する'),
-    new SctItm('@HABIT@は第二の@CLASS@なり'),
-    new SctItm('@THINK@は@THINK@の|基|もと|'),
-    new SctItm('@DO@が@PART@を@NICK@にする'),
-    new SctItm('@THINK@、@THINK@、@KEI2@のうち'),
-    new SctItm('@HABIT@は@DO@の近道'),
-    new SctItm('@THINK@が@THINK@を産む'),
-    new SctItm('@CLASS@の@THINK@'),
-    new SctItm('@KEI1@@PART@は@DO@する')
+    new SctItm('@ITEM@は@ITEM@である'),
+    new SctItm('@ITEM@は第二の@ITEM@なり'),
+    new SctItm('@ITEM@は@ITEM@の|基|もと|'),
+    new SctItm('@ITEM@が@ITEM@を@ITEM@にする'),
+    new SctItm('@ITEM@は@ITEM@の近道'),
+    new SctItm('@ITEM@が@ITEM@を産む'),
+    new SctItm('@ITEM@は@ITEM@の始まり'),
+    new SctItm('@ITEM@と@ITEM@は使いよう'),
+    new SctItm('@ITEM@から出た@ITEM@'),
+    new SctItm('@ITEM@は@ITEM@である')
 ];

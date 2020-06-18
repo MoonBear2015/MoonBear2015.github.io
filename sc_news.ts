@@ -393,7 +393,7 @@ class selector_call extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@CALL@');
         this.itms = [
-            new SctItm('@KEID@@KEI1@@L_WHAT@')
+            new SctItm('@COMM@@L_WHAT@')
             ,
             new SctItm('@L_WHAT@の@KEI@@PEOPLE@')
             ,
@@ -413,17 +413,13 @@ class selector_call2 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@CALL2@');
         this.itms = [
-            new SctItm('@KEID@@KEI1@@NICK@')
+            new SctItm('@KEI1@@ITEM@')
             ,
-            new SctItm('@KEID@@KEI1@@PEOPLE@')
+            new SctItm('@COUNTRY@の@KEI@@ITEM@')
             ,
-            new SctItm('@COUNTRY@の@KEI@@PEOPLE@')
+            new SctItm('@KEID@@THINK@@END02C@@ITEM@')
             ,
-            new SctItm('@COUNTRY@の@KEI@@NICK@')
-            ,
-            new SctItm('@KEID@@THINK@@END02C@@PEOPLE@')
-            ,
-            new SctItm('@KEID1@@MOVE@@PEOPLE@')
+            new SctItm('@KEID1@@MOVE@@ITEM@')
         ];
     }
 }
@@ -717,6 +713,16 @@ class selector_comment2 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@KEID@@L_DO@@END02B@@THEY@、@YESNO@、それが@L_WHAT@@END02A@')
             ,
             new SctItm('@L_WHAT@の@CLASS@、それが@PEOPLE@の@PEOPLE@@END02A@')
+            ,
+            new SctItm('@L_WHAT@は@ITEM@@END02A@')
+            ,
+            new SctItm('@ITEM@は第二の@L_WHAT@@END02A@')
+            ,
+            new SctItm('@L_WHAT@は@ITEM@の|基|もと|@END02A@')
+            ,
+            new SctItm('@ITEM@は@L_WHAT@の近道@END02A@')
+            ,
+            new SctItm('@L_WHAT@は@ITEM@の始まり@END02A@')
         ];
     }
 }
@@ -1476,6 +1482,8 @@ class selector_keiyo extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@KEI2@で@KEI3@')
             ,
             new SctItm('@KEID1@@KEI3@')
+            ,
+            new SctItm('@KEIM1@と@ASSES@')
             // ,
             // new SctItm('@KEI2@で@KEI2@、そして@KEI3@')
         ];
@@ -2506,7 +2514,9 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_people());
         this.dic_push(new selector_manypeople());
         this.dic_push(new selector_partner());
+        this.dic_push(new selector_item());
+        this.dic_push(new selector_command());
         this.dic_push(new selector_inscription());
-        
+        this.dic_push(new selector_habit());
     }
 }

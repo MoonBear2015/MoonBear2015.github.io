@@ -2155,24 +2155,24 @@ const   cods_move_dance = [
     new SctCod_TM('|舞|ま|い|上|あ|がる')
     ,
     new SctCod_TM('|舞|ま|い|降|お|りる')
-    ,
-    new SctCod_TM('|舞|ま|い|降|お|りた')
+    // ,
+    // new SctCod_TM('|舞|ま|い|降|お|りた')
     ,
     new SctCod_TM('|舞|ま|い|戻|もど|る')
     ,
     new SctCod_TM('|舞|ま|い|散|ち|る')
     ,
     new SctCod_TM('|踊|おど|る')
-    ,
-    new SctCod_TM('|踊|おど|れ')
+    // ,
+    // new SctCod_TM('|踊|おど|れ')
     ,
     new SctCod_TM('|踊|おど|り|狂|くる|う')
     ,
     new SctCod_TM('|舞|ま|い|踊|おど|る')
-    ,
-    new SctCod_TI('|舞|ま|い')
-    ,
-    new SctCod_TI('|踊|おど|り')
+    // ,
+    // new SctCod_TI('|舞|ま|い')
+    // ,
+    // new SctCod_TI('|踊|おど|り')
 ];
 
 const   cods_move_run = [
