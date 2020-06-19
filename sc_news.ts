@@ -393,7 +393,7 @@ class selector_call extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@CALL@');
         this.itms = [
-            new SctItm('@COMM@@L_WHAT@')
+            new SctItm('@COMM1@@L_WHAT@')
             ,
             new SctItm('@L_WHAT@の@KEI@@PEOPLE@')
             ,
@@ -1288,11 +1288,15 @@ class selector_class extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('キャバクラ嬢')
             ,
+            new SctItm('キャバクラ嬢')
+            ,
             new SctItm('飴細工師')
             ,
             new SctItm('マッチ売り')
             ,
             new SctItm('魔法使い')
+            ,
+            new SctItm('魔法少女')
             ,
             new SctItm('抜け忍')
             ,
@@ -1899,6 +1903,8 @@ class selector_nickname extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('魔術師')
             ,
             new SctItm('マジシャン')
+            ,
+            new SctItm('手品師')
             ,
             new SctItm('テクニシャン')
             ,
@@ -2516,6 +2522,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_partner());
         this.dic_push(new selector_item());
         this.dic_push(new selector_command());
+        this.dic_push(new selector_command1());
         this.dic_push(new selector_inscription());
         this.dic_push(new selector_habit());
     }

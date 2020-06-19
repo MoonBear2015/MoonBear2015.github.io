@@ -3235,5 +3235,6 @@ const itms_do = [
     new SctItm('革命', 'DO/revolution.jpg'),
     new SctItm('移住', 'DO/emigration.jpg'),
     new SctItm('降臨', 'DO/advent.jpg'),
-    new SctItm('覚醒', 'DO/awaken.jpg')
+    new SctItm('覚醒', 'DO/awaken.jpg'),
+    new SctItm('引退', 'DO/solo.jpg')
 ];

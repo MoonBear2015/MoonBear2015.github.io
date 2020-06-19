@@ -7,7 +7,7 @@ function set_about() {
     html += '<h1>';
     html += 'ABOUT';
     html += '<small>';
-    html += ' A01.03';
+    html += ' A01.05';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -138,9 +138,7 @@ class selector_item extends SctItm_Selector {
             new SctItm('@THINK@'),
             new SctItm('@DO@'),
             new SctItm('@HABIT@'),
-            new SctItm('@ANSWER@'),
-            new SctItm('@KEI@@ITEM@'),
-            new SctItm('@COMM@@ITEM@')
+            new SctItm('@COUNTRY@')
         ];
     }
 }
@@ -149,23 +147,40 @@ class selector_command extends SctItm_Selector {
     constructor() {
         super('@COMM@');
         this.itms = [
-            new SctItm('@KEID@@MOVE@'),
+            new SctItm(''),
+            new SctItm('@MOVE@'),
+            new SctItm('@ASSES@'),
             new SctItm('@DO@@END02B@'),
             new SctItm('@THINK@@END02B@'),
-            new SctItm('@HABIT@を@END02B@'),
+            new SctItm('@HABIT@を@END02B@')
+        ];
+    }
+}
+// 座右の銘：用言・形容詞 「～する」「～な」「～をする」
+class selector_command1 extends SctItm_Selector {
+    constructor() {
+        super('@COMM1@');
+        this.itms = [
+            new SctItm('@MOVE@'),
+            new SctItm('@ASSES@'),
+            new SctItm('@DO@@END02B@'),
+            new SctItm('@THINK@@END02B@'),
             new SctItm('@HABIT@を@END02B@')
         ];
     }
 }
 const itms_inscription = [
-    new SctItm('@ITEM@は@ITEM@である'),
-    new SctItm('@ITEM@は第二の@ITEM@なり'),
+    new SctItm('@ITEM@は@COMM@@ITEM@である'),
+    new SctItm('@COMM@@ITEM@は第二の@ITEM@なり'),
     new SctItm('@ITEM@は@ITEM@の|基|もと|'),
     new SctItm('@ITEM@が@ITEM@を@ITEM@にする'),
-    new SctItm('@ITEM@は@ITEM@の近道'),
+    new SctItm('@COMM@@ITEM@は@ITEM@への近道'),
     new SctItm('@ITEM@が@ITEM@を産む'),
     new SctItm('@ITEM@は@ITEM@の始まり'),
     new SctItm('@ITEM@と@ITEM@は使いよう'),
     new SctItm('@ITEM@から出た@ITEM@'),
-    new SctItm('@ITEM@は@ITEM@である')
+    new SctItm('@ITEM@は@COMM@@ITEM@'),
+    new SctItm('@COMM1@@ITEM@'),
+    new SctItm('@COMM1@@ITEM@と@ITEM@'),
+    new SctItm('@ITEM@！ @ITEM@！ @ITEM@ッ！')
 ];

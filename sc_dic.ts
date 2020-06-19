@@ -5022,4 +5022,6 @@ const   itms_do = [
     new SctItm('降臨','DO/advent.jpg')
     ,
     new SctItm('覚醒','DO/awaken.jpg')
+    ,
+    new SctItm('引退','DO/solo.jpg')
 ]
