@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N02.39';
+    html += ' N02.40';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -834,7 +834,7 @@ class selector_what extends SctItm_Selector implements ISctItm_Selector{
 
 
 // （固定）名詞・人物・組織　～は・～が・～の
-class locker_what extends SctItm_Selector implements ISctItm_Selector{
+class locker_what extends SctItm_SelectLocker implements ISctItm_Selector{
     constructor(){
         super('@L_WHAT@','@PIC_WHAT@');
         this.Add(itms_what);
