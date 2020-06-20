@@ -1,3 +1,49 @@
+interface Rec {
+    Equal(inRec : Rec) : boolean;
+}
+
+interface KyRec extends Rec{
+    Ky : string;
+}
+interface KyArray<T extends KyRec> {
+    Ky : string;
+    Recs : T[];
+    add(inRec : T): void;
+    addRecs(inArray : Array<T>): void;    
+    pasteRecs(inarray : Array<T>): void;
+}
+
+class KyArray_Standard<T extends KyRec> implements KyArray<T> {
+    public Ky : string;
+    public Recs : T[];
+    constructor()
+    {
+        this.Ky = "";
+        this.Recs = new Array<T>();
+    }
+    public add(inRec : T) {
+        if (this.Ky == '') {
+            this.Ky = inRec.Ky;
+        }
+        if (this.Ky != inRec.Ky) {
+            return;
+        }
+        this.Recs.push(inRec);
+    }
+    public addRecs(inArray : Array<T>) {
+        inArray.forEach(it => {
+            this.add(it);
+        }
+        );
+    }
+    public pasteRecs(inArray : Array<T>) {
+        this.Recs = new Array<T>();
+        this.Recs.length = 0;
+        this.addRecs(inArray);
+    }
+}
+
+
 interface Itm extends TestItem {
     Wd : string;
     Pc : string;
@@ -90,6 +136,7 @@ interface KwdArray<T extends Kwd> extends TestItem {
     Paste(inarray : Array<T>): void;
     Copy() : KwdArray<T>;
 }
+
 class KwdArray_Standard<T extends Kwd> implements KwdArray<T> {
     public Ky : string;
     public Itms : T[];
@@ -127,9 +174,6 @@ class KwdArray_Standard<T extends Kwd> implements KwdArray<T> {
     }
 }
 
-interface KwdLibrary {
-
-}
 
 
 

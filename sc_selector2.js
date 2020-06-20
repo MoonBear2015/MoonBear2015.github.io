@@ -1,4 +1,29 @@
 "use strict";
+class KyArray_Standard {
+    constructor() {
+        this.Ky = "";
+        this.Recs = new Array();
+    }
+    add(inRec) {
+        if (this.Ky == '') {
+            this.Ky = inRec.Ky;
+        }
+        if (this.Ky != inRec.Ky) {
+            return;
+        }
+        this.Recs.push(inRec);
+    }
+    addRecs(inArray) {
+        inArray.forEach(it => {
+            this.add(it);
+        });
+    }
+    pasteRecs(inArray) {
+        this.Recs = new Array();
+        this.Recs.length = 0;
+        this.addRecs(inArray);
+    }
+}
 class Itm_Standard {
     constructor(inWd, inPc) {
         if (inWd) {
