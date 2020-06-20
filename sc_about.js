@@ -7,7 +7,7 @@ function set_about() {
     html += '<h1>';
     html += 'ABOUT';
     html += '<small>';
-    html += ' A01.05';
+    html += ' A01.06';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -126,61 +126,82 @@ class selector_inscription extends SctItm_Selector {
         this.Add(itms_inscription);
     }
 }
+// 座右の銘(L_WHAT使用)
+class selector_Lock_inscription extends SctItm_Selector {
+    constructor() {
+        super('@L_INSCRIPTION@');
+        this.Add(itms_Lock_inscription);
+    }
+}
 // 座右の銘：体言
 class selector_item extends SctItm_Selector {
     constructor() {
         super('@ITEM@');
         this.itms = [
             new SctItm('@CLASS@'),
+            new SctItm('@THEY@'),
             new SctItm('@PART@'),
             new SctItm('@NICK@'),
             new SctItm('@WHAT@'),
             new SctItm('@THINK@'),
             new SctItm('@DO@'),
             new SctItm('@HABIT@'),
-            new SctItm('@COUNTRY@')
+            new SctItm('@COUNTRY@'),
+            new SctItm('@COUNTRY@人')
         ];
     }
 }
-// 座右の銘：用言・形容詞 「～する」「～な」「～をする」
+// 座右の銘：形容詞  名詞の前に置く「○○する～」「○○な～」「○○をする～」
 class selector_command extends SctItm_Selector {
     constructor() {
         super('@COMM@');
         this.itms = [
             new SctItm(''),
-            new SctItm('@MOVE@'),
-            new SctItm('@ASSES@'),
-            new SctItm('@DO@@END02B@'),
-            new SctItm('@THINK@@END02B@'),
-            new SctItm('@HABIT@を@END02B@')
+            new SctItm('@COMM1@')
         ];
     }
 }
-// 座右の銘：用言・形容詞 「～する」「～な」「～をする」
 class selector_command1 extends SctItm_Selector {
     constructor() {
         super('@COMM1@');
         this.itms = [
             new SctItm('@MOVE@'),
             new SctItm('@ASSES@'),
-            new SctItm('@DO@@END02B@'),
-            new SctItm('@THINK@@END02B@'),
-            new SctItm('@HABIT@を@END02B@')
+            new SctItm('@DO@@END02C@'),
+            new SctItm('@THINK@@END02C@'),
+            new SctItm('@STATUS@@END02C@'),
+            new SctItm('@KEI1@'),
+            new SctItm('@MANY@')
         ];
     }
 }
 const itms_inscription = [
-    new SctItm('@ITEM@は@COMM@@ITEM@である'),
-    new SctItm('@COMM@@ITEM@は第二の@ITEM@なり'),
-    new SctItm('@ITEM@は@ITEM@の|基|もと|'),
+    new SctItm('@COMM@@ITEM@の@ITEM@'),
+    new SctItm('@COMM@@ITEM@は@COMM@@ITEM@@END02A@'),
+    new SctItm('@COMM@@ITEM@は第二の@COMM@@ITEM@@END02A@'),
+    new SctItm('@COMM@@ITEM@は@ITEM@の|基|もと|'),
     new SctItm('@ITEM@が@ITEM@を@ITEM@にする'),
     new SctItm('@COMM@@ITEM@は@ITEM@への近道'),
-    new SctItm('@ITEM@が@ITEM@を産む'),
-    new SctItm('@ITEM@は@ITEM@の始まり'),
+    new SctItm('@COMM@@ITEM@が@ITEM@を産む'),
+    new SctItm('@COMM@@ITEM@は@ITEM@の始まり'),
     new SctItm('@ITEM@と@ITEM@は使いよう'),
     new SctItm('@ITEM@から出た@ITEM@'),
-    new SctItm('@ITEM@は@COMM@@ITEM@'),
     new SctItm('@COMM1@@ITEM@'),
     new SctItm('@COMM1@@ITEM@と@ITEM@'),
     new SctItm('@ITEM@！ @ITEM@！ @ITEM@ッ！')
+];
+const itms_Lock_inscription = [
+    new SctItm('@COMM@@L_WHAT@の@ITEM@'),
+    new SctItm('@COMM@@ITEM@は@COMM@@L_WHAT@@END02A@'),
+    new SctItm('@COMM@@L_WHAT@は第二の@COMM@@ITEM@@END02A@'),
+    new SctItm('@COMM@@L_WHAT@は@ITEM@の|基|もと|'),
+    new SctItm('@ITEM@が@L_WHAT@を@ITEM@にする'),
+    new SctItm('@COMM@@L_WHAT@は@ITEM@への近道'),
+    new SctItm('@COMM@@L_WHAT@が@ITEM@を産む'),
+    new SctItm('@COMM@@ITEM@は@L_WHAT@の始まり'),
+    new SctItm('@L_WHAT@と@ITEM@は使いよう'),
+    new SctItm('@ITEM@から出た@L_WHAT@'),
+    new SctItm('@COMM1@@L_WHAT@'),
+    new SctItm('@COMM1@@L_WHAT@と@ITEM@'),
+    new SctItm('@L_WHAT@！ @L_WHAT@！ @L_WHAT@ッ！')
 ];
