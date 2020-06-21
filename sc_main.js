@@ -40,7 +40,7 @@ function get_menu_items() {
         new menu_item('News', 'set_news()'),
         new menu_item('Poem', 'set_poem()'),
         new menu_item('Q&A', 'set_qa()'),
-        new menu_item('Shop', 'set_qa()'),
+        new menu_item('Shop', 'set_shop()'),
         new menu_item('About', 'set_about()')
     ];
     return menu_items;

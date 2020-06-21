@@ -5025,3 +5025,55 @@ const   itms_do = [
     ,
     new SctItm('引退','DO/solo.jpg')
 ]
+
+const   itms_shop = [
+    new SctItm('CAR','SHOP/CAR.jpg')
+    ,
+    new SctItm('PHONE','SHOP/PHONE.jpg')
+]
+
+const   itms_campany = [
+    new SctItm('Apple')
+    ,
+    new SctItm('Mac')
+    ,
+    new SctItm('Microsoft')
+    ,
+    new SctItm('Sony')
+    ,
+    new SctItm('TOYOTA')
+    ,
+    new SctItm('Google')
+    ,
+    new SctItm('NTT')
+    ,
+    new SctItm('docomo')
+    ,
+    new SctItm('MacDonald')
+    ,
+    new SctItm('Yahoo!')
+    ,
+    new SctItm('TOTO')
+    ,
+    new SctItm('STARBUCKS')
+    ,
+    new SctItm('KOKUYO')
+]
+
+const   itms_model = [
+    new SctItm('Pro')
+    ,
+    new SctItm('Standard')
+    ,
+    new SctItm('Mark II')
+    ,
+    new SctItm('Powerd')
+    ,
+    new SctItm('Super')
+    ,
+    new SctItm('Mini')
+    ,
+    new SctItm('Essential')
+]
+
+
