@@ -1,30 +1,50 @@
 "use strict";
-class KyArray_Standard {
+class Rec_St {
+}
+class Ary_St {
     constructor() {
-        this.Ky = "";
-        this.Recs = new Array();
+        this.Ary = new Array();
     }
     add(inRec) {
-        if (this.Ky == '') {
+        this.Ary.push(inRec);
+    }
+    indexOf(inRec) {
+        let result = -1;
+        for (let i = 0; i < this.Ary.length; i++) {
+            if (this.Ary[i].equal(inRec)) {
+                result = i;
+                break;
+            }
+        }
+        return result;
+    }
+    addAry(inAry) {
+        inAry.forEach(it => {
+            this.add(it);
+        });
+    }
+    pasteAry(inAry) {
+        this.Ary = new Array();
+        this.Ary.length = 0;
+        this.addAry(inAry);
+    }
+}
+class KyAry_St extends Ary_St {
+    constructor() {
+        super();
+        this.Ky = "";
+    }
+    add(inRec) {
+        if (this.Ky == "") {
             this.Ky = inRec.Ky;
         }
         if (this.Ky != inRec.Ky) {
             return;
         }
-        this.Recs.push(inRec);
-    }
-    addRecs(inArray) {
-        inArray.forEach(it => {
-            this.add(it);
-        });
-    }
-    pasteRecs(inArray) {
-        this.Recs = new Array();
-        this.Recs.length = 0;
-        this.addRecs(inArray);
+        this.Ary.push(inRec);
     }
 }
-class Itm_Standard {
+class Itm_St {
     constructor(inWd, inPc) {
         if (inWd) {
             this.Wd = inWd;
@@ -40,10 +60,10 @@ class Itm_Standard {
         }
     }
     get Copy() {
-        return new Itm_Standard(this.Wd, this.Pc);
+        return new Itm_St(this.Wd, this.Pc);
     }
     ToKwd(inKy) {
-        return new Kwd_Standard(inKy, this.Wd, this.Pc);
+        return new Kwd_St(inKy, this.Wd, this.Pc);
     }
     ToString() {
         let result = '';
@@ -54,7 +74,7 @@ class Itm_Standard {
         return result;
     }
 }
-class Kwd_Standard extends Itm_Standard {
+class Kwd_St extends Itm_St {
     constructor(inKy, inWd, inPc) {
         super(inWd, inPc);
         if (inKy) {
@@ -65,10 +85,10 @@ class Kwd_Standard extends Itm_Standard {
         }
     }
     get Copy() {
-        return new Kwd_Standard(this.Ky, this.Wd, this.Pc);
+        return new Kwd_St(this.Ky, this.Wd, this.Pc);
     }
     ToItm() {
-        return new Itm_Standard(this.Wd, this.Pc);
+        return new Itm_St(this.Wd, this.Pc);
     }
     ToString() {
         let result = '';
@@ -81,7 +101,7 @@ class Kwd_Standard extends Itm_Standard {
         return result;
     }
 }
-class KwdArray_Standard {
+class KwdAry_St {
     constructor() {
         this.Ky = '';
         this.Itms = new Array();
@@ -95,18 +115,18 @@ class KwdArray_Standard {
         }
         this.Itms.push(inKwd);
     }
-    Add(inArray) {
-        inArray.forEach(it => {
+    Add(inAry) {
+        inAry.forEach(it => {
             this.Push(it);
         });
     }
-    Paste(inArray) {
+    Paste(inAry) {
         this.Itms = new Array();
         this.Itms.length = 0;
-        this.Add(inArray);
+        this.Add(inAry);
     }
     Copy() {
-        let result = new KwdArray_Standard();
+        let result = new KwdAry_St();
         result.Paste(this.Itms);
         return result;
     }

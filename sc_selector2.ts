@@ -1,47 +1,77 @@
 interface Rec {
-    Equal(inRec : Rec) : boolean;
+    equal(inRec : Rec) : boolean;
 }
+abstract class Rec_St {
+    abstract equal(inRec : Rec) : boolean;
+}
+
+interface Ary<T extends Rec> {
+    indexOf(inRec : T) : number;
+    add(inRec : T)  : void;
+    addAry(inAry : Array<T>): void;
+    pasteAry(inAry : Array<T>): void;  
+}
+
+class Ary_St<T extends Rec> implements Ary<T>{
+    public Ary : Array<T>;
+    constructor()
+    {
+        this.Ary = new Array<T>();
+    }
+    public add(inRec : T) {
+        this.Ary.push(inRec);
+    }
+    public indexOf(inRec : T) : number{
+        let result : number = -1;
+        for(let i = 0;i < this.Ary.length;i++) {
+            if (this.Ary[i].equal(inRec)) {
+                result = i;
+                break;
+            }
+        }
+        return result;
+    }
+    public addAry(inAry : Array<T>) {
+        inAry.forEach(it => {
+            this.add(it);
+        }
+        );
+    }
+    public pasteAry(inAry : Array<T>) {
+        this.Ary = new Array<T>();
+        this.Ary.length = 0;
+        this.addAry(inAry);
+    }
+}
+
 
 interface KyRec extends Rec{
     Ky : string;
 }
-interface KyArray<T extends KyRec> {
+interface KyAry<T extends KyRec> extends Ary<T> {
     Ky : string;
-    Recs : T[];
-    add(inRec : T): void;
-    addRecs(inArray : Array<T>): void;    
-    pasteRecs(inarray : Array<T>): void;
 }
 
-class KyArray_Standard<T extends KyRec> implements KyArray<T> {
+class KyAry_St<T extends KyRec>
+    extends Ary_St<T>
+    implements KyAry<T> 
+{
     public Ky : string;
-    public Recs : T[];
     constructor()
     {
+        super();
         this.Ky = "";
-        this.Recs = new Array<T>();
     }
     public add(inRec : T) {
-        if (this.Ky == '') {
+        if (this.Ky == "") {
             this.Ky = inRec.Ky;
         }
         if (this.Ky != inRec.Ky) {
             return;
         }
-        this.Recs.push(inRec);
+        this.Ary.push(inRec);
     }
-    public addRecs(inArray : Array<T>) {
-        inArray.forEach(it => {
-            this.add(it);
-        }
-        );
-    }
-    public pasteRecs(inArray : Array<T>) {
-        this.Recs = new Array<T>();
-        this.Recs.length = 0;
-        this.addRecs(inArray);
-    }
-}
+ }
 
 
 interface Itm extends TestItem {
@@ -50,7 +80,7 @@ interface Itm extends TestItem {
     Copy : Itm;
     ToKwd(inKy : string) : Kwd;    
 }
-class Itm_Standard implements Itm {
+class Itm_St implements Itm {
     public Wd : string;
     public Pc : string;
     constructor(
@@ -71,10 +101,10 @@ class Itm_Standard implements Itm {
         }
     }
     public get Copy() : Itm {
-        return new Itm_Standard(this.Wd,this.Pc);
+        return new Itm_St(this.Wd,this.Pc);
     }
     public ToKwd(inKy : string) : Kwd {
-        return new Kwd_Standard(inKy,this.Wd,this.Pc);
+        return new Kwd_St(inKy,this.Wd,this.Pc);
     }
 
     public ToString() : string
@@ -92,7 +122,7 @@ interface Kwd extends Itm,TestItem {
     Copy : Kwd;
     ToItm() : Itm;
 }
-class Kwd_Standard extends Itm_Standard implements Kwd {
+class Kwd_St extends Itm_St implements Kwd {
     public Ky : string;
     constructor(
         inKy? : string
@@ -111,10 +141,10 @@ class Kwd_Standard extends Itm_Standard implements Kwd {
         }
     }
     public get Copy() : Kwd {
-        return new Kwd_Standard(this.Ky,this.Wd,this.Pc);
+        return new Kwd_St(this.Ky,this.Wd,this.Pc);
     }
     public ToItm() : Itm {
-        return new Itm_Standard(this.Wd,this.Pc);
+        return new Itm_St(this.Wd,this.Pc);
     }
 
     public ToString() : string
@@ -127,17 +157,17 @@ class Kwd_Standard extends Itm_Standard implements Kwd {
     }
 }
 
-interface KwdArray<T extends Kwd> extends TestItem {
+interface KwdAry<T extends Kwd> extends TestItem {
     Ky : string;
     Itms : T[];
     Push(inKwd : T): void;
-    Add(inArray : Array<T>): void;
+    Add(inAry : Array<T>): void;
     
     Paste(inarray : Array<T>): void;
-    Copy() : KwdArray<T>;
+    Copy() : KwdAry<T>;
 }
 
-class KwdArray_Standard<T extends Kwd> implements KwdArray<T> {
+class KwdAry_St<T extends Kwd> implements KwdAry<T> {
     public Ky : string;
     public Itms : T[];
     constructor(){
@@ -153,19 +183,19 @@ class KwdArray_Standard<T extends Kwd> implements KwdArray<T> {
         }
         this.Itms.push(inKwd);
     }
-    public Add(inArray : Array<T>) {
-        inArray.forEach(it => {
+    public Add(inAry : Array<T>) {
+        inAry.forEach(it => {
             this.Push(it);
         }
         );
     }
-    public Paste(inArray : Array<T>) {
+    public Paste(inAry : Array<T>) {
         this.Itms = new Array<T>();
         this.Itms.length = 0;
-        this.Add(inArray);
+        this.Add(inAry);
     }
-    public Copy() : KwdArray<T> {
-        let result = new KwdArray_Standard<T>();
+    public Copy() : KwdAry<T> {
+        let result = new KwdAry_St<T>();
         result.Paste(this.Itms);
         return result;
     }
