@@ -233,7 +233,7 @@ class selector_command1 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@THINK@@END02C@')
             ,
-            new SctItm('@STATUS@@END02C@')
+            new SctItm('@SIZE@@END02C@')
             ,
             new SctItm('@KEI1@')
             ,

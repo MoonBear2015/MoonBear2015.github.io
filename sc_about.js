@@ -169,7 +169,7 @@ class selector_command1 extends SctItm_Selector {
             new SctItm('@ASSES@'),
             new SctItm('@DO@@END02C@'),
             new SctItm('@THINK@@END02C@'),
-            new SctItm('@STATUS@@END02C@'),
+            new SctItm('@SIZE@@END02C@'),
             new SctItm('@KEI1@'),
             new SctItm('@MANY@')
         ];

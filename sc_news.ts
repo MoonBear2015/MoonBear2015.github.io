@@ -540,19 +540,19 @@ class selector_c01 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@KEI@@L_WHAT@での@KEI@@KEY@@END01A@')
             ,
-            new SctItm('@KEI@@L_WHAT@で@KEI@@KEY@が@STATUS@@END01B@')
+            new SctItm('@KEI@@L_WHAT@で@KEI@@KEY@が@SIZE@@END01B@')
             ,
-            new SctItm('@KEI@@L_WHAT@では@KEI@@KEY@や@KEY@が@STATUS@@END01B@')
+            new SctItm('@KEI@@L_WHAT@では@KEI@@KEY@や@KEY@が@SIZE@@END01B@')
             ,
-            new SctItm('@KEY@が@STATUS@する@L_WHAT@@END01A@')
+            new SctItm('@KEY@が@SIZE@する@L_WHAT@@END01A@')
             ,
-            new SctItm('@KEI@@KEY@や@KEY@が@STATUS@する@L_WHAT@@END01A@')
+            new SctItm('@KEI@@KEY@や@KEY@が@SIZE@する@L_WHAT@@END01A@')
             ,
             new SctItm('@KEI@@MANYPEOPLE@が@KEID@@L_DO@@END01B@')
             ,
-            new SctItm('@KEI@@MANYPEOPLE@による@KEI@@KEY@が@STATUS@@END01B@')
+            new SctItm('@KEI@@MANYPEOPLE@による@KEI@@KEY@が@SIZE@@END01B@')
             ,
-            new SctItm('@THINK@や@THINK@@STATUS2@@L_WHAT@@END01A@')
+            new SctItm('@THINK@や@THINK@@SIZE2@@L_WHAT@@END01A@')
         ];
     }
 }
@@ -602,13 +602,13 @@ class selector_c02 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@MANYPEOPLE@が@KEI@@NICK@@END02A@')
             ,
-            new SctItm('@MANYPEOPLE@による@KEI@@KEY@が@STATUS@@END02B@')
+            new SctItm('@MANYPEOPLE@による@KEI@@KEY@が@SIZE@@END02B@')
             ,
-            new SctItm('@MANYPEOPLE@による@KEI@@KEY@や@KEY@が@STATUS@@END02B@')
+            new SctItm('@MANYPEOPLE@による@KEI@@KEY@や@KEY@が@SIZE@@END02B@')
             ,
-            new SctItm('@MANYPEOPLE@の@THINK@@STATUS2@')
+            new SctItm('@MANYPEOPLE@の@THINK@@SIZE2@')
             ,
-            new SctItm('@MANYPEOPLE@の@THINK@と@THINK@@STATUS2@')
+            new SctItm('@MANYPEOPLE@の@THINK@と@THINK@@SIZE2@')
         ];
     }
 }
@@ -680,7 +680,7 @@ class selector_comment2 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@YESNO@、@COMMENT2@')
             ,
-            new SctItm('@CALL@が@STATUS@@END02B@')
+            new SctItm('@CALL@が@SIZE@@END02B@')
             ,
             new SctItm('@L_WHAT@は@KEID@@L_DO@する@KEI@@NICK@と@ASSES@')
             ,
@@ -863,9 +863,9 @@ class selector_key extends SctItm_Selector implements ISctItm_Selector {
 }
 
 // 出来事の増減・発生 が～する・が～した・が～し、
-class selector_status1 extends SctItm_Selector implements ISctItm_Selector {
+class selector_size1 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
-        super('@STATUS@');
+        super('@SIZE@');
         this.itms = [
             new SctItm('勃発')
             ,
@@ -915,9 +915,9 @@ class selector_status1 extends SctItm_Selector implements ISctItm_Selector {
 }
 
 // 感情の増減（２） （感情）～。（悲しみが広がっている）
-class selector_status2 extends SctItm_Selector implements ISctItm_Selector {
+class selector_size2 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
-        super('@STATUS2@');
+        super('@SIZE2@');
         this.itms = [
             new SctItm('が広がっている')
             ,
@@ -2476,8 +2476,8 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_what());
         this.dic_push(new selector_do());
         this.dic_push(new selector_key());
-        this.dic_push(new selector_status1());
-        this.dic_push(new selector_status2());
+        this.dic_push(new selector_size1());
+        this.dic_push(new selector_size2());
         this.dic_push(new selector_they());
         this.dic_push(new selector_many());
         this.dic_push(new selector_keiyo());

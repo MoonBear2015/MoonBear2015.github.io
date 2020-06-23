@@ -5076,4 +5076,51 @@ const   itms_model = [
     new SctItm('Essential')
 ]
 
+const   itms_status = [
+    new SctItm('味わい')
+    ,
+    new SctItm('安全性')
+    ,
+    new SctItm('安定感')
+    ,
+    new SctItm('意外性')
+    ,
+    new SctItm('大きさ')
+    ,
+    new SctItm('開放感')
+    ,
+    new SctItm('加速度')
+    ,
+    new SctItm('カロリー')
+    ,
+    new SctItm('効率')
+    ,
+    new SctItm('コスト')
+    ,
+    new SctItm('静けさ')
+    ,
+    new SctItm('質感')
+    ,
+    new SctItm('質量')
+    ,
+    new SctItm('重量')
+    ,
+    new SctItm('速度')
+    ,
+    new SctItm('爽快感')
+    ,
+    new SctItm('糖質')
+    ,
+    new SctItm('糖度')
+    ,
+    new SctItm('深み')
+    ,
+    new SctItm('躍動感')
+    ,
+    new SctItm('容量')
+    ,
+    new SctItm('爽快感')
+
+]
+
 

@@ -7,7 +7,7 @@ function set_shop() {
     html += '<h1>';
     html += 'Shop';
     html += '<small>';
-    html += ' P00.00';
+    html += ' P00.01';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -23,15 +23,26 @@ function set_shop() {
 }
 function make_shop() {
     let html = '';
-    html += '<div id="shop_box" ';
+    html += '<div id="shop_box"';
     html += 'style="';
-    html += '">';
-    html += '<h2 id="shop_title">';
+    html += 'text-aligh = center';
+    html += '"';
+    html += '>';
+    // html += 'style="';
+    // html += 'text-aligh = center';
+    // html += '">';
+    html += '<div id="shop_title">';
     html += '@L_CAMPANY@ @L_SHOP@ @MODEL@';
-    html += '</h2>';
+    html += '</div>';
     html += '<div id="shop_pic">';
     html += '<img src="pics/@PIC_SHOP@" width="100%">';
     html += '</div>';
+    for (let i = 0; i < 3; i++) {
+        html += '<div id="shop_catch">';
+        html += '@CATCH@';
+        html += '</div>';
+        html += '<br><br>';
+    }
     //---- this Q&A END
     html += '</div>';
     let maker = new shop_docs_maker();
@@ -70,11 +81,29 @@ class selector_model extends SctItm_Selector {
         this.Add(itms_model);
     }
 }
+// ステータス
+class selector_status extends SctItm_Selector {
+    constructor() {
+        super('@STATUS@');
+        this.Add(itms_status);
+    }
+}
+class selector_catch extends SctItm_Selector {
+    constructor() {
+        super('@CATCH@');
+        this.itms = [
+            new SctItm('@KEI@@STATUS@'),
+            new SctItm('@MOVE@@STATUS@')
+        ];
+    }
+}
 class shop_docs_maker extends news_docs_maker {
     constructor() {
         super();
         this.dic_push(new locker_shop());
         this.dic_push(new locker_campany());
         this.dic_push(new selector_model());
+        this.dic_push(new selector_status());
+        this.dic_push(new selector_catch());
     }
 }
