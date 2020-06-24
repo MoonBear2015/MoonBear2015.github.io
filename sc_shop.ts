@@ -9,7 +9,7 @@ function set_shop()
     html += '<h1>';
     html += 'Shop';
     html += '<small>';
-    html += ' P00.02';
+    html += ' S00.03';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -153,9 +153,17 @@ class selector_catch extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@CATCH@');
         this.itms = [
-            new SctItm('@KEI@@L_STATUS@')
+            new SctItm('@KEI1@@L_STATUS@')
             ,
-            new SctItm('@MOVE@@L_STATUS@')
+            new SctItm('@KEI1@@L_STATUS@の@SUCCESS@')
+            ,
+            new SctItm('@KEI1@@L_STATUS@をあなたに')
+            ,
+            new SctItm('@KEI1@@L_STATUS@と共に')
+            ,
+            new SctItm('さあ、@L_STATUS@を手に入れよう')
+            ,
+            new SctItm('@ASSES@@L_STATUS@')
         ];
     }
 }
@@ -171,9 +179,7 @@ class selector_s_info_init extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@S_INFO_INIT@');
         this.itms = [
-            new SctItm('　@S_INFO01@、@S_INFO02@。')
-            ,
-            new SctItm('　@S_INFO01@、@S_INFO02@。')
+            new SctItm('　@S_INFO00@。')
         ]
     }
 }
@@ -183,9 +189,21 @@ class selector_s_info extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@S_INFO@');
         this.itms = [
-            new SctItm('@CONECT@、@S_INFO01@、@S_INFO02@。')
+            new SctItm('@S_INFO00@。')
             ,
             new SctItm('@CONECT@、@S_INFO@')
+            ,
+            new SctItm('@S_INFO00@が、@S_INFO@')
+        ]
+    }
+}
+class selector_s_info00 extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@S_INFO00@');
+        this.itms = [
+            new SctItm('@S_INFO01@、@S_INFO02@')
+            ,
+            new SctItm('@S_INFO01@、@S_INFO02@')
         ]
     }
 }
@@ -193,9 +211,15 @@ class selector_s_info01 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@S_INFO01@');
         this.itms = [
-            new SctItm('@L_CAMPANY@の@TECH@により')
+            new SctItm('@L_CAMPANY@社の@TECH@により')
             ,
-            new SctItm('@L_CAMPANY@が誇る@TECH@は')
+            new SctItm('@L_CAMPANY@社の@CLASS@達により')
+            ,
+            new SctItm('@L_CAMPANY@社が誇る@KEI1@@CLASS@達によって')
+            ,
+            new SctItm('@L_CAMPANY@社が誇る@KEI1@@TECH@によって')
+            ,
+            new SctItm('@L_CAMPANY@社は@MANY@@SAY@を頂き')
         ]
     }
 }
@@ -203,9 +227,13 @@ class selector_s_info02 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@S_INFO02@');
         this.itms = [
-            new SctItm('@MANY@@L_STATUS@が@SUCCESS@されました')
+            new SctItm('@MANY@@L_STATUS@が@SUCCESS@しました')
             ,
-            new SctItm('@MANY@@L_STATUS@を@SUCCESS@しました')
+            new SctItm('@MANY@@L_STATUS@を@SUCCESS@させました')
+            ,
+            new SctItm('@MANY@@THEY@から@SAY@を頂いております')
+            ,
+            new SctItm('@MANY@@THEY@の@THINK@と@THINK@を頂いております')
         ]
     }
 }
@@ -228,6 +256,7 @@ class shop_docs_maker extends news_docs_maker {
 
         this.dic_push(new selector_s_info_init());
         this.dic_push(new selector_s_info());
+        this.dic_push(new selector_s_info00());
         this.dic_push(new selector_s_info01());
         this.dic_push(new selector_s_info02());
     }

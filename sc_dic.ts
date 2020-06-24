@@ -5027,9 +5027,21 @@ const   itms_do = [
 ]
 
 const   itms_shop = [
-    new SctItm('CAR','SHOP/CAR.jpg')
+    new SctItm('BICYCLE','SHOP/BICYCLE.jpg')
     ,
-    new SctItm('PHONE','SHOP/PHONE.jpg')
+    new SctItm('CAR','SHOP/CAR01.jpg')
+    ,
+    new SctItm('CAR','SHOP/CAR02.jpg')
+    ,
+    new SctItm('CAR','SHOP/CAR03.jpg')
+    ,
+    new SctItm('PHONE','SHOP/PHONE01.jpg')
+    ,
+    new SctItm('PHONE','SHOP/PHONE02.jpg')
+    ,
+    new SctItm('PHONE','SHOP/PHONE03.jpg')
+    ,
+    new SctItm('TYPEWRITER','SHOP/TYPEWRITER.jpg')
 ]
 
 const   itms_campany = [
@@ -5067,6 +5079,14 @@ const   itms_model = [
     ,
     new SctItm('Mark II')
     ,
+    new SctItm('Mark III')
+    ,
+    new SctItm('Mark IV')
+    ,
+    new SctItm('Mark V')
+    ,
+    new SctItm('Mark VI')
+    ,
     new SctItm('Powerd')
     ,
     new SctItm('Super')
@@ -5074,6 +5094,16 @@ const   itms_model = [
     new SctItm('Mini')
     ,
     new SctItm('Essential')
+    ,
+    new SctItm('Turbo')
+    ,
+    new SctItm('Ultra')
+    ,
+    new SctItm('Experience')
+    ,
+    new SctItm('Eternal')
+    ,
+    new SctItm('Violence')
 ]
 
 const   itms_status = [
@@ -5123,6 +5153,8 @@ const   itms_status = [
     ,
     new SctItm('爽快感')
     ,
+    new SctItm('通信速度')
+    ,
     new SctItm('糖質')
     ,
     new SctItm('糖度')
@@ -5150,6 +5182,16 @@ const   itms_tech = [
     new SctItm('努力')
     ,
     new SctItm('マンパワー')
+    ,
+    new SctItm('半導体技術')
+    ,
+    new SctItm('伝統工芸')
+    ,
+    new SctItm('人海戦術')
+    ,
+    new SctItm('力業')
+    ,
+    new SctItm('突貫工事')
 ]
 
 // 成功・等 ～した
@@ -5163,6 +5205,8 @@ const   itms_success = [
     new SctItm('実現')
     ,
     new SctItm('到達')
+    ,
+    new SctItm('飛躍')
 ]
 
 
