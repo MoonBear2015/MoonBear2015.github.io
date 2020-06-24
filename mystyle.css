@@ -258,5 +258,12 @@ small {
     margin: 0px 0px;
     text-align: center;
 }
+#shop_info {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    font-size: 1.5vmax;
+    color:#303030;
+}
 
 

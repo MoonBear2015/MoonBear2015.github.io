@@ -1108,6 +1108,12 @@ class selector_many extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('数え切れない程の')
             ,
             new SctItm('掃いて捨てるほどの')
+            ,
+            new SctItm('膨大な')
+            ,
+            new SctItm('世界最高の')
+            ,
+            new SctItm('@COUNTRY@最大の')
         ];
     }
 }

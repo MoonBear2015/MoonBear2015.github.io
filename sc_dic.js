@@ -3267,26 +3267,50 @@ const itms_model = [
     new SctItm('Essential')
 ];
 const itms_status = [
+    new SctItm('明るさ'),
     new SctItm('味わい'),
     new SctItm('安全性'),
     new SctItm('安定感'),
     new SctItm('意外性'),
     new SctItm('大きさ'),
     new SctItm('開放感'),
+    new SctItm('画質'),
     new SctItm('加速度'),
     new SctItm('カロリー'),
+    new SctItm('血圧'),
     new SctItm('効率'),
     new SctItm('コスト'),
+    new SctItm('SAN値'),
+    new SctItm('酸味'),
     new SctItm('静けさ'),
     new SctItm('質感'),
     new SctItm('質量'),
+    new SctItm('柔軟性'),
     new SctItm('重量'),
+    new SctItm('スペック'),
     new SctItm('速度'),
     new SctItm('爽快感'),
     new SctItm('糖質'),
     new SctItm('糖度'),
+    new SctItm('濃度'),
     new SctItm('深み'),
+    new SctItm('丸み'),
     new SctItm('躍動感'),
     new SctItm('容量'),
     new SctItm('爽快感')
+];
+const itms_tech = [
+    new SctItm('企業努力'),
+    new SctItm('コスト削減'),
+    new SctItm('テクノロジー'),
+    new SctItm('努力'),
+    new SctItm('マンパワー')
+];
+// 成功・等 ～した
+const itms_success = [
+    new SctItm('完成'),
+    new SctItm('成功'),
+    new SctItm('達成'),
+    new SctItm('実現'),
+    new SctItm('到達')
 ];
