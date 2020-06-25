@@ -7,7 +7,7 @@ function set_shop() {
     html += '<h1>';
     html += 'Shop';
     html += '<small>';
-    html += ' S00.05';
+    html += ' S00.06';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -137,7 +137,8 @@ class selector_catch extends SctItm_Selector {
             new SctItm('@KEI1@@L_STATUS@を体感しよう'),
             new SctItm('@KEI1@@L_STATUS@の@FUTURE@'),
             new SctItm('さあ、@KEI1@@L_STATUS@を手に入れよう'),
-            new SctItm('@ASSES@@L_STATUS@')
+            new SctItm('@ASSES@@L_STATUS@'),
+            new SctItm('あなたの@PLACE@が@PLACE@となる')
         ];
     }
 }
@@ -214,8 +215,11 @@ class selector_s_info03 extends SctItm_Selector {
             new SctItm('あなたの@HABIT@、@HABIT@、そして@HABIT@のお供にどうぞ'),
             new SctItm('さあ、@KEI1@@L_CAMPANY@ @L_SHOP@と共に、@KEI1@@FUTURE@へ旅立ちましょう'),
             new SctItm('さあ、@KEI1@@L_CAMPANY@ @L_SHOP@と共に、@HABIT@や@HABIT@へと繰り出しましょう'),
+            new SctItm('@KEI1@@L_CAMPANY@ @L_SHOP@と一緒に、@PLACE@や@PLACE@、@PLACE@へ向かいましょう'),
             new SctItm('@KEI1@@PART@へのプレゼントに如何でしょうか'),
             new SctItm('あなたの@KEI1@@PART@への贈り物に最適です'),
+            new SctItm('もう、@CLASS@を呼ぶ必要はありません'),
+            new SctItm('もう、@PLACE@に行かなくても大丈夫'),
             new SctItm('@L_CAMPANY@ @L_SHOP@は、あなたとの出逢いを待っています'),
             new SctItm('@L_CAMPANY@ @L_SHOP@は、あなたの@KEI1@@HABIT@を@SUCCESS@させるでしょう')
         ];

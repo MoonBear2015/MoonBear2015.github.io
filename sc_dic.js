@@ -1091,6 +1091,31 @@ const cods_think = [
     new SctCod_TI('|怨|うら|み'),
     new SctCod_TI('|嫉|ねた|み')
 ];
+const cods_place = [
+    new SctCod_TI('|居場所|いばしょ|'),
+    new SctCod_TI('|教室|きょうしつ|'),
+    new SctCod_TI('オフィス'),
+    new SctCod_TI('|自宅|じたく|'),
+    new SctCod_TI('リビング'),
+    new SctCod_TI('|書斎|しょさい|'),
+    new SctCod_TI('|寝室|しんしつ|'),
+    new SctCod_TI('トイレ'),
+    new SctCod_TI('キッチン'),
+    new SctCod_TI('|温泉|おんせん|'),
+    new SctCod_TI('|大浴場|だいよくじょう|'),
+    new SctCod_TI('グラウンド'),
+    new SctCod_TI('マイカー'),
+    new SctCod_TI('|公園|こうえん|'),
+    new SctCod_TI('|遊園地|ゆうえんち|'),
+    new SctCod_TI('テーマパーク'),
+    new SctCod_TI('|映画館|えいがかん|'),
+    new SctCod_TI('|酒場|さかば|'),
+    new SctCod_TI('バーカウンター'),
+    new SctCod_TI('|喫茶店|きっさてん|'),
+    new SctCod_TI('レストラン'),
+    new SctCod_TI('コックピット'),
+    new SctCod_TI('|操縦席|そうじゅうせき|')
+];
 const cods_move = [
     new SctCod_Mv('|動|うご|く', 'active.jpg'),
     new SctCod_Mv('|動|うご|かない'),
@@ -3248,6 +3273,8 @@ const itms_do = [
 ];
 const itms_shop = [
     new SctItm('BICYCLE', 'SHOP/BICYCLE.jpg'),
+    new SctItm('CALCLATOR', 'SHOP/CALC01.jpg'),
+    new SctItm('CALCLATOR', 'SHOP/CALC02.jpg'),
     new SctItm('CAR', 'SHOP/CAR01.jpg'),
     new SctItm('CAR', 'SHOP/CAR02.jpg'),
     new SctItm('CAR', 'SHOP/CAR03.jpg'),
@@ -3266,7 +3293,8 @@ const itms_shop = [
     new SctItm('PHONE', 'SHOP/PHONE03.jpg'),
     new SctItm('TYPEWRITER', 'SHOP/TYPEWRITER.jpg'),
     new SctItm('TOASTER', 'SHOP/TOASTER.jpg'),
-    new SctItm('GUNDAM', 'SHOP/GUNDAM.jpg')
+    new SctItm('GUNDAM', 'SHOP/GUNDAM.jpg'),
+    new SctItm('GRANDFATHER', 'SHOP/GRANDFATHER.jpg')
 ];
 const itms_campany = [
     new SctItm('Apple'),

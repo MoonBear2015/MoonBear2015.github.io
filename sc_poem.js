@@ -457,8 +457,10 @@ class Gene_sent extends Gene_Poemer {
         // this.Add_cods(cods_what);
         // this.Add_cods(cods_where);
         this.Add_cods(cods_when);
+        this.Add_cods(cods_future);
         // this.Add_cods(cods_adv_color);
         this.Add_cods(cods_make);
+        this.Add_cods(cods_place);
         // this.Add_cods(cods_jougo);
         this.Add_cods(cods_km);
         this.Add_cods(cods_move);
@@ -524,6 +526,7 @@ class Gene_item extends Gene_Poemer {
         // this.Add_cods(cods_what);
         // this.Add_cods(cods_where);
         this.Add_cods(cods_when);
+        this.Add_cods(cods_future);
         this.Add_cods(cods_adv_color);
         this.Add_cods(cods_adv_sense);
         this.Add_cods(cods_adv_beauty);
