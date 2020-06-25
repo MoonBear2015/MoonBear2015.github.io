@@ -1103,8 +1103,8 @@ class selector_many extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('大半の')
             ,
-            new SctItm('大勢の')
-            ,
+            // new SctItm('大勢の')
+            // ,
             new SctItm('数え切れない程の')
             ,
             new SctItm('掃いて捨てるほどの')
@@ -2222,7 +2222,7 @@ class selector_say2 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('鼻息の荒い@SAY@')
             ,
-            new SctItm('落ち着いた様子の@SAY@')
+            new SctItm('落ち着いた様子で@SAY@')
             ,
             new SctItm('嬉々とした@SAY@')
             ,
@@ -2238,39 +2238,25 @@ class selector_say2 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('狼狽えながらの@SAY@')
             ,
-            new SctItm('怯えた様子の@SAY@')
+            new SctItm('怯えた様子で@SAY@')
             ,
-            new SctItm('主張')
-            ,
-            new SctItm('公表')
+            new SctItm('貴重な@SAY@')
             ,
             new SctItm('分析')
             ,
-            new SctItm('発言')
+            new SctItm('ご意見')
             ,
-            new SctItm('代弁')
+            new SctItm('ご要望')
             ,
-            new SctItm('強弁')
+            new SctItm('お電話')
             ,
-            new SctItm('記録')
+            new SctItm('ご批判')
             ,
-            new SctItm('メモ書き')
+            new SctItm('ご理解')
             ,
             new SctItm('コメント')
             ,
-            new SctItm('@PART@のメール')
-            ,
-            new SctItm('@PART@の電話')
-            ,
-            new SctItm('@PART@の相談')
-            ,
-            new SctItm('@PART@の連絡')
-            ,
-            new SctItm('@PART@の説明')
-            ,
-            new SctItm('@PART@のFAX')
-            ,
-            new SctItm('@PART@の耳打ち')
+            new SctItm('ツイート')
             ,
             new SctItm('リツイート')
         ];

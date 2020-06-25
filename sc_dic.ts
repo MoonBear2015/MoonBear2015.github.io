@@ -5035,6 +5035,12 @@ const   itms_shop = [
     ,
     new SctItm('CAR','SHOP/CAR03.jpg')
     ,
+    new SctItm('COMPUTER','SHOP/COMPUTER01.jpg')
+    ,
+    new SctItm('COMPUTER','SHOP/COMPUTER02.jpg')
+    ,
+    new SctItm('COMPUTER','SHOP/COMPUTER03.jpg')
+    ,
     new SctItm('CLOCK','SHOP/CLOCK01.jpg')
     ,
     new SctItm('CLOCK','SHOP/CLOCK02.jpg')
@@ -5043,6 +5049,12 @@ const   itms_shop = [
     ,
     new SctItm('CAT','SHOP/CAT.jpg')
     ,
+    new SctItm('HORSE','SHOP/HORSE01.jpg')
+    ,
+    new SctItm('HORSE','SHOP/HORSE02.jpg')
+    ,
+    new SctItm('HORSE','SHOP/HORSE03.jpg')
+    ,
     new SctItm('PHONE','SHOP/PHONE01.jpg')
     ,
     new SctItm('PHONE','SHOP/PHONE02.jpg')
@@ -5050,6 +5062,10 @@ const   itms_shop = [
     new SctItm('PHONE','SHOP/PHONE03.jpg')
     ,
     new SctItm('TYPEWRITER','SHOP/TYPEWRITER.jpg')
+    ,
+    new SctItm('TOASTER','SHOP/TOASTER.jpg')
+    ,
+    new SctItm('GUNDAM','SHOP/GUNDAM.jpg')
 ]
 
 const   itms_campany = [

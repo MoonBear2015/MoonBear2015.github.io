@@ -161,7 +161,7 @@ class selector_catch extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@KEI1@@L_STATUS@と共に')
             ,
-            new SctItm('さあ、@L_STATUS@を手に入れよう')
+            new SctItm('さあ、@KEI1@@L_STATUS@を手に入れよう')
             ,
             new SctItm('@ASSES@@L_STATUS@')
         ];
@@ -224,6 +224,8 @@ class selector_s_info01 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@L_CAMPANY@社が誇る@KEI1@@TECH@によって')
             ,
             new SctItm('@L_CAMPANY@社は@MANY@@SAY2@を頂き')
+            ,
+            new SctItm('@L_CAMPANY@社は@MANY@@KEY@を経て')
         ]
     }
 }
@@ -234,7 +236,7 @@ class selector_s_info02 extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('@MANY@@L_STATUS@が@SUCCESS@しました')
             ,
-            new SctItm('@MANY@@L_STATUS@を@SUCCESS@させました')
+            new SctItm('@MANY@@L_STATUS@が@SUCCESS@させました')
             ,
             new SctItm('@MANY@@THEY@から@SAY2@を頂いております')
             ,
@@ -252,6 +254,8 @@ class selector_s_info03 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('さあ、@KEI1@@L_CAMPANY@ @L_SHOP@と共に、@HABIT@や@HABIT@へと繰り出しましょう')
             ,
             new SctItm('@KEI1@@L_CAMPANY@ @L_SHOP@が、あなたとの出逢いを待っています')
+            ,
+            new SctItm('@KEI1@@L_CAMPANY@ @L_SHOP@が、@KEI1@@HABIT@を@SUCCESS@させるでしょう')
             ,
             new SctItm('@KEI1@@PART@へのプレゼントに如何でしょうか')
             ,
