@@ -14,7 +14,7 @@ function set_shop()
     html += '</h1>';
     html += '</div>';
 
-    for(let i = 0; i < 3; i++){
+    for(let i = 0; i < 10; i++){
         html += '<p>[' + i.toString() + ']</p>' + make_shop();
     }
 
@@ -62,7 +62,7 @@ function make_shop()
 
         html01 += '<p id="shop_info">';
         html01 += '@S_INFO_INIT@';
-        for(let j = 0; j < 5; j++){
+        for(let j = 0; j < 3; j++){
             html01 += '@S_INFO@';
         }
         html01 += '</p>';
@@ -193,20 +193,24 @@ class selector_s_info extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@CONECT@、@S_INFO@')
             ,
-            new SctItm('@S_INFO00@が、@S_INFO@')
+            new SctItm('@S_INFO03@。')
         ]
     }
 }
+// 上下（句点なし）
 class selector_s_info00 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@S_INFO00@');
         this.itms = [
             new SctItm('@S_INFO01@、@S_INFO02@')
             ,
-            new SctItm('@S_INFO01@、@S_INFO02@')
+            new SctItm('@S_INFO02@が、@S_INFO00@')
+            ,
+            new SctItm('@S_INFO01@、@S_INFO02@が、@S_INFO00@')
         ]
     }
 }
+// 上（句点なし）
 class selector_s_info01 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@S_INFO01@');
@@ -219,10 +223,11 @@ class selector_s_info01 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@L_CAMPANY@社が誇る@KEI1@@TECH@によって')
             ,
-            new SctItm('@L_CAMPANY@社は@MANY@@SAY@を頂き')
+            new SctItm('@L_CAMPANY@社は@MANY@@SAY2@を頂き')
         ]
     }
 }
+// 下（句点なし）
 class selector_s_info02 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@S_INFO02@');
@@ -231,17 +236,29 @@ class selector_s_info02 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@MANY@@L_STATUS@を@SUCCESS@させました')
             ,
-            new SctItm('@MANY@@THEY@から@SAY@を頂いております')
+            new SctItm('@MANY@@THEY@から@SAY2@を頂いております')
             ,
-            new SctItm('@MANY@@THEY@の@THINK@と@THINK@を頂いております')
+            new SctItm('@MANY@@THEY@から@SAY2@や@SAY2@を頂いております')
         ]
     }
 }
-                                        
-
-
-
-
+// 単　（句点なし）
+class selector_s_info03 extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@S_INFO03@');
+        this.itms = [
+            new SctItm('あなたの@HABIT@、@HABIT@、そして@HABIT@のお供にどうぞ')
+            ,
+            new SctItm('さあ、@KEI1@@L_CAMPANY@ @L_SHOP@と共に、@HABIT@や@HABIT@へと繰り出しましょう')
+            ,
+            new SctItm('@KEI1@@L_CAMPANY@ @L_SHOP@が、あなたとの出逢いを待っています')
+            ,
+            new SctItm('@KEI1@@PART@へのプレゼントに如何でしょうか')
+            ,
+            new SctItm('あなたの@KEI1@@PART@への贈り物に最適です')
+        ]
+    }
+}
 
 class shop_docs_maker extends news_docs_maker {
     constructor(){
@@ -259,6 +276,7 @@ class shop_docs_maker extends news_docs_maker {
         this.dic_push(new selector_s_info00());
         this.dic_push(new selector_s_info01());
         this.dic_push(new selector_s_info02());
+        this.dic_push(new selector_s_info03());
     }
 }
 class shop_docs_maker01 extends news_docs_maker {

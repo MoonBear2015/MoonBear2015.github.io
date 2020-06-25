@@ -710,9 +710,12 @@ class selector_many extends SctItm_Selector {
             new SctItm('大多数の'),
             new SctItm('ごく僅かな'),
             new SctItm('一握りの'),
-            new SctItm('ほとんどの'),
-            new SctItm('数名の'),
-            new SctItm('幾人もの'),
+            new SctItm('ほとんどの')
+            // ,
+            // new SctItm('数名の')
+            // ,
+            // new SctItm('幾人もの')
+            ,
             new SctItm('全ての'),
             new SctItm('大半の'),
             new SctItm('大勢の'),
@@ -720,7 +723,10 @@ class selector_many extends SctItm_Selector {
             new SctItm('掃いて捨てるほどの'),
             new SctItm('膨大な'),
             new SctItm('世界最高の'),
-            new SctItm('@COUNTRY@最大の')
+            new SctItm('世界最大の'),
+            new SctItm('世界で唯一の'),
+            new SctItm('@COUNTRY@最大の'),
+            new SctItm('@COUNTRY@で唯一の')
         ];
     }
 }
@@ -1364,6 +1370,43 @@ class selector_say extends SctItm_Selector {
         ];
     }
 }
+// 発言・主張 ～を頂く
+class selector_say2 extends SctItm_Selector {
+    constructor() {
+        super('@SAY2@');
+        this.itms = [
+            new SctItm('興奮気味な@SAY@'),
+            new SctItm('声高らかな@SAY@'),
+            new SctItm('鼻息の荒い@SAY@'),
+            new SctItm('落ち着いた様子の@SAY@'),
+            new SctItm('嬉々とした@SAY@'),
+            new SctItm('笑いを堪えながらの@SAY@'),
+            new SctItm('涙ながらの@SAY@'),
+            new SctItm('あっけらかんとした@SAY@'),
+            new SctItm('大声の@SAY@'),
+            new SctItm('声を潜めた@SAY@'),
+            new SctItm('狼狽えながらの@SAY@'),
+            new SctItm('怯えた様子の@SAY@'),
+            new SctItm('主張'),
+            new SctItm('公表'),
+            new SctItm('分析'),
+            new SctItm('発言'),
+            new SctItm('代弁'),
+            new SctItm('強弁'),
+            new SctItm('記録'),
+            new SctItm('メモ書き'),
+            new SctItm('コメント'),
+            new SctItm('@PART@のメール'),
+            new SctItm('@PART@の電話'),
+            new SctItm('@PART@の相談'),
+            new SctItm('@PART@の連絡'),
+            new SctItm('@PART@の説明'),
+            new SctItm('@PART@のFAX'),
+            new SctItm('@PART@の耳打ち'),
+            new SctItm('リツイート')
+        ];
+    }
+}
 // 相手
 class selector_partner extends SctItm_Selector {
     constructor() {
@@ -1563,6 +1606,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_age());
         this.dic_push(new selector_age2());
         this.dic_push(new selector_say());
+        this.dic_push(new selector_say2());
         this.dic_push(new selector_answer());
         this.dic_push(new selector_conect());
         this.dic_push(new selector_conect2());

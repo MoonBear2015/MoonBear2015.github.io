@@ -5035,6 +5035,14 @@ const   itms_shop = [
     ,
     new SctItm('CAR','SHOP/CAR03.jpg')
     ,
+    new SctItm('CLOCK','SHOP/CLOCK01.jpg')
+    ,
+    new SctItm('CLOCK','SHOP/CLOCK02.jpg')
+    ,
+    new SctItm('DOG','SHOP/DOG.jpg')
+    ,
+    new SctItm('CAT','SHOP/CAT.jpg')
+    ,
     new SctItm('PHONE','SHOP/PHONE01.jpg')
     ,
     new SctItm('PHONE','SHOP/PHONE02.jpg')
@@ -5131,7 +5139,7 @@ const   itms_status = [
     ,
     new SctItm('効率')
     ,
-    new SctItm('コスト')
+    new SctItm('低コスト')
     ,
     new SctItm('SAN値')
     ,
