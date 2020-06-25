@@ -7,7 +7,7 @@ function set_shop() {
     html += '<h1>';
     html += 'Shop';
     html += '<small>';
-    html += ' S00.03';
+    html += ' S00.05';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -47,7 +47,7 @@ function make_shop() {
         // html01 += '<br>';
         html01 += '<p id="shop_info">';
         html01 += '@S_INFO_INIT@';
-        for (let j = 0; j < 3; j++) {
+        for (let j = 0; j < 2; j++) {
             html01 += '@S_INFO@';
         }
         html01 += '</p>';
@@ -65,6 +65,7 @@ function make_shop() {
             }
         }
         html += html01;
+        html += '<br>';
     }
     //---- this Q&A END
     html += '</div>';
@@ -158,7 +159,7 @@ class selector_s_info extends SctItm_Selector {
         super('@S_INFO@');
         this.itms = [
             new SctItm('@S_INFO00@。'),
-            new SctItm('@CONECT@、@S_INFO@'),
+            new SctItm('@CONECT@、@S_INFO00@'),
             new SctItm('@S_INFO03@。')
         ];
     }
@@ -179,12 +180,14 @@ class selector_s_info01 extends SctItm_Selector {
     constructor() {
         super('@S_INFO01@');
         this.itms = [
+            new SctItm('@L_CAMPANY@ @L_SHOP@は'),
             new SctItm('@L_CAMPANY@社の@TECH@により'),
             new SctItm('@L_CAMPANY@社の@CLASS@達により'),
             new SctItm('@L_CAMPANY@社が誇る@KEI1@@CLASS@達によって'),
             new SctItm('@L_CAMPANY@社が誇る@KEI1@@TECH@によって'),
             new SctItm('@L_CAMPANY@社は@MANY@@SAY2@を頂き'),
-            new SctItm('@L_CAMPANY@社は@MANY@@KEY@を経て')
+            new SctItm('@L_CAMPANY@社は@MANY@@KEY@を経て'),
+            new SctItm('@L_CAMPANY@社は@KEI1@@FUTURE@のために')
         ];
     }
 }
@@ -193,10 +196,11 @@ class selector_s_info02 extends SctItm_Selector {
     constructor() {
         super('@S_INFO02@');
         this.itms = [
-            new SctItm('@MANY@@L_STATUS@が@SUCCESS@しました'),
-            new SctItm('@MANY@@L_STATUS@が@SUCCESS@させました'),
-            new SctItm('@MANY@@THEY@から@SAY2@を頂いております'),
-            new SctItm('@MANY@@THEY@から@SAY2@や@SAY2@を頂いております')
+            new SctItm('@MANY@@L_STATUS@が@SUCCESS@致しました'),
+            new SctItm('@MANY@@L_STATUS@を@SUCCESS@させました'),
+            new SctItm('@MANY@@THEY@から@MANY@@SAY2@を頂いております'),
+            new SctItm('@MANY@@THEY@から@MANY@@SAY2@や@SAY2@を頂いております'),
+            new SctItm('@KEI1@@FUTURE@の@SUCCESS@をお約束いたします')
         ];
     }
 }
@@ -206,11 +210,12 @@ class selector_s_info03 extends SctItm_Selector {
         super('@S_INFO03@');
         this.itms = [
             new SctItm('あなたの@HABIT@、@HABIT@、そして@HABIT@のお供にどうぞ'),
+            new SctItm('さあ、@KEI1@@L_CAMPANY@ @L_SHOP@と共に、@KEI1@@FUTURE@へ旅立ちましょう'),
             new SctItm('さあ、@KEI1@@L_CAMPANY@ @L_SHOP@と共に、@HABIT@や@HABIT@へと繰り出しましょう'),
-            new SctItm('@KEI1@@L_CAMPANY@ @L_SHOP@が、あなたとの出逢いを待っています'),
-            new SctItm('@KEI1@@L_CAMPANY@ @L_SHOP@が、@KEI1@@HABIT@を@SUCCESS@させるでしょう'),
             new SctItm('@KEI1@@PART@へのプレゼントに如何でしょうか'),
-            new SctItm('あなたの@KEI1@@PART@への贈り物に最適です')
+            new SctItm('あなたの@KEI1@@PART@への贈り物に最適です'),
+            new SctItm('@L_CAMPANY@ @L_SHOP@は、あなたとの出逢いを待っています'),
+            new SctItm('@L_CAMPANY@ @L_SHOP@は、あなたの@KEI1@@HABIT@を@SUCCESS@させるでしょう')
         ];
     }
 }

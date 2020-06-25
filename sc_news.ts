@@ -1655,8 +1655,17 @@ class selector_when extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@WHEN@');
         this.Add(cods_to_itms(cods_when));
+        this.Add(cods_to_itms(cods_future));
     }
 }
+class selector_future extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@FUTURE@');
+        this.Add(cods_to_itms(cods_future));
+    }
+}
+
+
 
 
 // 敬称 の～
@@ -2216,31 +2225,33 @@ class selector_say2 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@SAY2@');
         this.itms = [
-            new SctItm('興奮気味な@SAY@')
+            new SctItm('@SAY2@や@SAY2@')
             ,
-            new SctItm('声高らかな@SAY@')
+            new SctItm('興奮気味な@SAY2@')
             ,
-            new SctItm('鼻息の荒い@SAY@')
+            new SctItm('声高らかな@SAY2@')
             ,
-            new SctItm('落ち着いた様子で@SAY@')
+            new SctItm('鼻息の荒い@SAY2@')
             ,
-            new SctItm('嬉々とした@SAY@')
+            new SctItm('落ち着いた様子で@SAY2@')
             ,
-            new SctItm('笑いを堪えながらの@SAY@')
+            new SctItm('嬉々とした@SAY2@')
             ,
-            new SctItm('涙ながらの@SAY@')
+            new SctItm('笑いを堪えながらの@SAY2@')
             ,
-            new SctItm('あっけらかんとした@SAY@')
+            new SctItm('涙ながらの@SAY2@')
             ,
-            new SctItm('大声の@SAY@')
+            new SctItm('あっけらかんとした@SAY2@')
             ,
-            new SctItm('声を潜めた@SAY@')
+            new SctItm('大声の@SAY2@')
             ,
-            new SctItm('狼狽えながらの@SAY@')
+            new SctItm('声を潜めた@SAY2@')
             ,
-            new SctItm('怯えた様子で@SAY@')
+            new SctItm('狼狽えながらの@SAY2@')
             ,
-            new SctItm('貴重な@SAY@')
+            new SctItm('怯えた様子で@SAY2@')
+            ,
+            new SctItm('貴重な@SAY2@')
             ,
             new SctItm('分析')
             ,
@@ -2564,6 +2575,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_who3());
         this.dic_push(new selector_who4());
         this.dic_push(new selector_when());
+        this.dic_push(new selector_future());
         this.dic_push(new selector_co());
         this.dic_push(new selector_human());
         this.dic_push(new selector_class());

@@ -1475,21 +1475,29 @@ const cods_when = [
     new SctCod_It('|今|いま|'),
     new SctCod_It('|過去|かこ|'),
     new SctCod_It('|現在|げんざい|'),
-    new SctCod_It('|未来|みらい|'),
     // new SctCod_It('|後|あと|で')
     // ,
     // new SctCod_It('|後|のち|に')
     // ,
     new SctCod_It('|今日|きょう|'),
-    new SctCod_It('|明日|あす|'),
-    new SctCod_It('|明日|あした|'),
-    new SctCod_It('|明後日|あさって|'),
-    new SctCod_It('|明明後日|しあさって|'),
     new SctCod_It('|昨日|きのう|'),
     new SctCod_It('|一昨日|おととい|'),
     new SctCod_It('|一昨昨日|さきおととい|')
     // ,
     // new SctCod_It('|何時|いつ|')
+];
+const cods_future = [
+    new SctCod_It('|未来|みらい|', 'future.jpg'),
+    new SctCod_It('|明日|あす|'),
+    new SctCod_It('|明日|あした|'),
+    new SctCod_It('|明後日|あさって|'),
+    new SctCod_It('|明明後日|しあさって|'),
+    new SctCod_It('|来週|らいしゅう|'),
+    new SctCod_It('|来月|らいげつ|'),
+    new SctCod_It('|来年|らいねん|'),
+    new SctCod_It('|来世|らいせ|'),
+    new SctCod_It('|新世紀|しんせいき|'),
+    new SctCod_It('|新時代|しんじだい|')
 ];
 const cods_conect1 = [
     new SctCod('は'),
@@ -3294,27 +3302,23 @@ const itms_model = [
     new SctItm('Violence')
 ];
 const itms_status = [
-    new SctItm('明るさ'),
-    new SctItm('味わい'),
     new SctItm('安全性'),
     new SctItm('安定感'),
     new SctItm('意外性'),
-    new SctItm('大きさ'),
     new SctItm('開放感'),
     new SctItm('画質'),
     new SctItm('加速度'),
-    new SctItm('カロリー'),
+    new SctItm('低カロリー'),
     new SctItm('血圧'),
     new SctItm('効率'),
     new SctItm('低コスト'),
     new SctItm('SAN値'),
     new SctItm('酸味'),
-    new SctItm('静けさ'),
     new SctItm('質感'),
     new SctItm('質量'),
     new SctItm('柔軟性'),
     new SctItm('重量'),
-    new SctItm('スペック'),
+    new SctItm('高スペック'),
     new SctItm('速度'),
     new SctItm('爽快感'),
     new SctItm('通信速度'),
@@ -3342,9 +3346,11 @@ const itms_tech = [
 // 成功・等 ～した
 const itms_success = [
     new SctItm('完成'),
+    new SctItm('完了'),
     new SctItm('成功'),
     new SctItm('達成'),
     new SctItm('実現'),
     new SctItm('到達'),
-    new SctItm('飛躍')
+    new SctItm('飛躍'),
+    new SctItm('遂行')
 ];

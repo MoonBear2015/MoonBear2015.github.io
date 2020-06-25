@@ -291,6 +291,8 @@ class poemer_tema extends SctItm_SelectLocker implements ISctItm_Selector{
             new SctItm('@TM28')
             ,
             new SctItm('@TM29')
+            ,
+            new SctItm('@TM30')
         ];
     }
 }
@@ -562,6 +564,13 @@ class Gene_tema29 extends Gene_Poemer {
         this.Add_cods(cods_fruit);
     }
 }
+// 季語：時間
+class Gene_tema30 extends Gene_Poemer {
+    constructor(){
+        super('@TM30','@PIC_TEMA@');
+        this.Add_cods(cods_future);
+    }
+}
 
 
 // 一般
@@ -722,6 +731,7 @@ class poem_docs_maker_tema extends docs_maker {
         this.dic_concat(new Gene_tema27().Generate());
         this.dic_concat(new Gene_tema28().Generate());
         this.dic_concat(new Gene_tema29().Generate());
+        this.dic_concat(new Gene_tema30().Generate());
     }
 }
 

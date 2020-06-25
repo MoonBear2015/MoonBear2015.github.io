@@ -744,6 +744,7 @@ const   cods_bird = [
     new SctCod_TI('|朱雀|すじゃく|')
 ];
 
+
 const   cods_bird_spring = [
     new SctCod_TI('|春|はる|の|鳥|とり|','bird_spring.jpg')
     ,
@@ -1717,7 +1718,7 @@ const   cods_load = [
     // new SctCod_TI('|路線|ろせん|')
     // ,
     // new SctCod_TI('|道順|みちじゅん|')
-
+    
 ];
 
 const   cods_country = [
@@ -2387,6 +2388,7 @@ const   cods_move_make = [
     new SctCod_Mv('|脱|ぬ|ぐ')
 ];
 
+
 const   cods_ad_sense = [
     new SctCod_Mv('|美味|おい|しい')
     ,
@@ -2431,7 +2433,7 @@ const   cods_ad_sense = [
     new SctCod_Mv('|目映|まばゆ|い')
     ,
     new SctCod_Mv('|眩|まぶ|しい')
-
+    
 ];
 
 const   cods_adv_sense = [
@@ -2765,21 +2767,11 @@ const   cods_when = [
     ,
     new SctCod_It('|現在|げんざい|')
     ,
-    new SctCod_It('|未来|みらい|')
-    ,
     // new SctCod_It('|後|あと|で')
     // ,
     // new SctCod_It('|後|のち|に')
     // ,
     new SctCod_It('|今日|きょう|')
-    ,
-    new SctCod_It('|明日|あす|')
-    ,
-    new SctCod_It('|明日|あした|')
-    ,
-    new SctCod_It('|明後日|あさって|')
-    ,
-    new SctCod_It('|明明後日|しあさって|')
     ,
     new SctCod_It('|昨日|きのう|')
     ,
@@ -2790,6 +2782,29 @@ const   cods_when = [
     // new SctCod_It('|何時|いつ|')
 ];
 
+const   cods_future = [
+    new SctCod_It('|未来|みらい|','future.jpg')
+    ,
+    new SctCod_It('|明日|あす|')
+    ,
+    new SctCod_It('|明日|あした|')
+    ,
+    new SctCod_It('|明後日|あさって|')
+    ,
+    new SctCod_It('|明明後日|しあさって|')
+    ,
+    new SctCod_It('|来週|らいしゅう|')
+    ,
+    new SctCod_It('|来月|らいげつ|')
+    ,
+    new SctCod_It('|来年|らいねん|')
+    ,
+    new SctCod_It('|来世|らいせ|')
+    ,
+    new SctCod_It('|新世紀|しんせいき|')
+    ,
+    new SctCod_It('|新時代|しんじだい|')
+];
 
 const   cods_conect1 = [
     new SctCod('は')
@@ -5131,17 +5146,11 @@ const   itms_model = [
 ]
 
 const   itms_status = [
-    new SctItm('明るさ')
-    ,
-    new SctItm('味わい')
-    ,
     new SctItm('安全性')
     ,
     new SctItm('安定感')
     ,
     new SctItm('意外性')
-    ,
-    new SctItm('大きさ')
     ,
     new SctItm('開放感')
     ,
@@ -5149,7 +5158,7 @@ const   itms_status = [
     ,
     new SctItm('加速度')
     ,
-    new SctItm('カロリー')
+    new SctItm('低カロリー')
     ,
     new SctItm('血圧')
     ,
@@ -5161,8 +5170,6 @@ const   itms_status = [
     ,
     new SctItm('酸味')
     ,
-    new SctItm('静けさ')
-    ,
     new SctItm('質感')
     ,
     new SctItm('質量')
@@ -5171,7 +5178,7 @@ const   itms_status = [
     ,
     new SctItm('重量')
     ,
-    new SctItm('スペック')
+    new SctItm('高スペック')
     ,
     new SctItm('速度')
     ,
@@ -5222,6 +5229,8 @@ const   itms_tech = [
 const   itms_success = [
     new SctItm('完成')
     ,
+    new SctItm('完了')
+    ,
     new SctItm('成功')
     ,
     new SctItm('達成')
@@ -5231,6 +5240,8 @@ const   itms_success = [
     new SctItm('到達')
     ,
     new SctItm('飛躍')
+    ,
+    new SctItm('遂行')
 ]
 
 
