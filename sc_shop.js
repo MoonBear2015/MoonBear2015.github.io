@@ -159,7 +159,7 @@ class selector_s_info extends SctItm_Selector {
         super('@S_INFO@');
         this.itms = [
             new SctItm('@S_INFO00@。'),
-            new SctItm('@CONECT@、@S_INFO00@'),
+            new SctItm('@CONECT@、@S_INFO00@。'),
             new SctItm('@S_INFO03@。')
         ];
     }
