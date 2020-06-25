@@ -134,6 +134,8 @@ class selector_catch extends SctItm_Selector {
             new SctItm('@KEI1@@L_STATUS@の@SUCCESS@'),
             new SctItm('@KEI1@@L_STATUS@をあなたに'),
             new SctItm('@KEI1@@L_STATUS@と共に'),
+            new SctItm('@KEI1@@L_STATUS@を体感しよう'),
+            new SctItm('@KEI1@@L_STATUS@の@FUTURE@'),
             new SctItm('さあ、@KEI1@@L_STATUS@を手に入れよう'),
             new SctItm('@ASSES@@L_STATUS@')
         ];
