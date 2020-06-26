@@ -3272,12 +3272,16 @@ const itms_do = [
     new SctItm('引退', 'DO/solo.jpg')
 ];
 const itms_shop = [
-    new SctItm('BICYCLE', 'SHOP/BICYCLE.jpg'),
+    new SctItm('BICYCLE', 'SHOP/BICYCLE01.jpg'),
+    new SctItm('BICYCLE', 'SHOP/BICYCLE02.jpg'),
     new SctItm('CALCLATOR', 'SHOP/CALC01.jpg'),
     new SctItm('CALCLATOR', 'SHOP/CALC02.jpg'),
+    new SctItm('CAMERA', 'SHOP/CAMERA.jpg'),
     new SctItm('CAR', 'SHOP/CAR01.jpg'),
     new SctItm('CAR', 'SHOP/CAR02.jpg'),
     new SctItm('CAR', 'SHOP/CAR03.jpg'),
+    new SctItm('CHOCOLATE', 'SHOP/chocolate.jpg'),
+    new SctItm('COFFEE', 'SHOP/COFFEE.jpg'),
     new SctItm('COMPUTER', 'SHOP/COMPUTER01.jpg'),
     new SctItm('COMPUTER', 'SHOP/COMPUTER02.jpg'),
     new SctItm('COMPUTER', 'SHOP/COMPUTER03.jpg'),
@@ -3285,6 +3289,7 @@ const itms_shop = [
     new SctItm('CLOCK', 'SHOP/CLOCK02.jpg'),
     new SctItm('DOG', 'SHOP/DOG.jpg'),
     new SctItm('CAT', 'SHOP/CAT.jpg'),
+    new SctItm('HAMBURGER', 'SHOP/hamburger.jpg'),
     new SctItm('HORSE', 'SHOP/HORSE01.jpg'),
     new SctItm('HORSE', 'SHOP/HORSE02.jpg'),
     new SctItm('HORSE', 'SHOP/HORSE03.jpg'),
@@ -3293,6 +3298,7 @@ const itms_shop = [
     new SctItm('PHONE', 'SHOP/PHONE03.jpg'),
     new SctItm('TYPEWRITER', 'SHOP/TYPEWRITER.jpg'),
     new SctItm('TOASTER', 'SHOP/TOASTER.jpg'),
+    new SctItm('TRAIN', 'SHOP/TRAIN.jpg'),
     new SctItm('GUNDAM', 'SHOP/GUNDAM.jpg'),
     new SctItm('GRANDFATHER', 'SHOP/GRANDFATHER.jpg')
 ];
@@ -3373,6 +3379,9 @@ const itms_tech = [
 ];
 // 成功・等 ～した
 const itms_success = [
+    new SctItm('縮小'),
+    new SctItm('拡大'),
+    new SctItm('拡張'),
     new SctItm('完成'),
     new SctItm('完了'),
     new SctItm('成功'),

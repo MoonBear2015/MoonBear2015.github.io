@@ -7,7 +7,7 @@ function set_shop() {
     html += '<h1>';
     html += 'Shop';
     html += '<small>';
-    html += ' S00.06';
+    html += ' S00.07';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -172,9 +172,7 @@ class selector_s_info00 extends SctItm_Selector {
     constructor() {
         super('@S_INFO00@');
         this.itms = [
-            new SctItm('@S_INFO01@、@S_INFO02@'),
-            new SctItm('@S_INFO02@が、@S_INFO00@'),
-            new SctItm('@S_INFO01@、@S_INFO02@が、@S_INFO00@')
+            new SctItm('@S_INFO01@、@S_INFO02@')
         ];
     }
 }
@@ -183,12 +181,11 @@ class selector_s_info01 extends SctItm_Selector {
     constructor() {
         super('@S_INFO01@');
         this.itms = [
-            new SctItm('@L_CAMPANY@ @L_SHOP@は'),
+            new SctItm('@L_CAMPANY@社の@L_SHOP@は'),
             new SctItm('@L_CAMPANY@社の@TECH@により'),
             new SctItm('@L_CAMPANY@社の@CLASS@達により'),
             new SctItm('@L_CAMPANY@社が誇る@KEI1@@CLASS@達によって'),
             new SctItm('@L_CAMPANY@社が誇る@KEI1@@TECH@によって'),
-            new SctItm('@L_CAMPANY@社は@MANY@@SAY2@を頂き'),
             new SctItm('@L_CAMPANY@社は@MANY@@KEY@を経て'),
             new SctItm('@L_CAMPANY@社は@KEI1@@FUTURE@のために')
         ];
@@ -199,8 +196,8 @@ class selector_s_info02 extends SctItm_Selector {
     constructor() {
         super('@S_INFO02@');
         this.itms = [
+            new SctItm('@KEI1@@L_STATUS@が@SUCCESS@されました'),
             new SctItm('@MANY@@L_STATUS@が@SUCCESS@致しました'),
-            new SctItm('@MANY@@L_STATUS@を@SUCCESS@させました'),
             new SctItm('@MANY@@THEY@から@MANY@@SAY2@を頂いております'),
             new SctItm('@MANY@@THEY@から@MANY@@SAY2@や@SAY2@を頂いております'),
             new SctItm('@KEI1@@FUTURE@の@SUCCESS@をお約束いたします')
@@ -221,7 +218,9 @@ class selector_s_info03 extends SctItm_Selector {
             new SctItm('もう、@CLASS@を呼ぶ必要はありません'),
             new SctItm('もう、@PLACE@に行かなくても大丈夫'),
             new SctItm('@L_CAMPANY@ @L_SHOP@は、あなたとの出逢いを待っています'),
-            new SctItm('@L_CAMPANY@ @L_SHOP@は、あなたの@KEI1@@HABIT@を@SUCCESS@させるでしょう')
+            new SctItm('@L_CAMPANY@ @L_SHOP@は、あなたの@KEI1@@HABIT@を@SUCCESS@させるでしょう'),
+            new SctItm('もはや、@L_CAMPANY@ @L_SHOP@は手放せません。'),
+            new SctItm('@L_CAMPANY@ @L_SHOP@の@KEI1@新モデルが誕生しました。')
         ];
     }
 }
