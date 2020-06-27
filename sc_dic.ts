@@ -5150,31 +5150,49 @@ const   itms_shop = [
 ]
 
 const   itms_campany = [
-    new SctItm('Apple')
+    new SctItm('Orange')
     ,
-    new SctItm('Mac')
+    new SctItm('Pac')
     ,
-    new SctItm('Microsoft')
+    new SctItm('Bigstone')
     ,
-    new SctItm('Sony')
+    new SctItm('Mary')
     ,
-    new SctItm('TOYOTA')
+    new SctItm('TANAKA')
     ,
-    new SctItm('Google')
+    new SctItm('Meetoo')
     ,
-    new SctItm('NTT')
+    new SctItm('MPP')
     ,
-    new SctItm('docomo')
+    new SctItm('dareto')
     ,
-    new SctItm('MacDonald')
-    ,
-    new SctItm('Yahoo!')
-    ,
-    new SctItm('TOTO')
-    ,
-    new SctItm('STARBUCKS')
-    ,
-    new SctItm('KOKUYO')
+    new SctItm('Yattaa!')
+    // ,
+    // new SctItm('Apple')
+    // ,
+    // new SctItm('Mac')
+    // ,
+    // new SctItm('Microsoft')
+    // ,
+    // new SctItm('Sony')
+    // ,
+    // new SctItm('TOYOTA')
+    // ,
+    // new SctItm('Google')
+    // ,
+    // new SctItm('NTT')
+    // ,
+    // new SctItm('docomo')
+    // ,
+    // new SctItm('MacDonald')
+    // ,
+    // new SctItm('Yahoo!')
+    // ,
+    // new SctItm('TOTO')
+    // ,
+    // new SctItm('STARBUCKS')
+    // ,
+    // new SctItm('KOKUYO')
 ]
 
 const   itms_model = [
