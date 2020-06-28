@@ -230,7 +230,6 @@ small {
     text-shadow: 2px 2px 0px #000000;
 }
 
-
 #shop_box {
     margin:     5px;
     padding:    10px;
@@ -252,18 +251,33 @@ small {
     text-shadow:2px 2px 0px #C0C0C0;
     text-align: center;
 }
+
+
 #shop_catch {
     font-size: 3vmax;
     color:#303030;
     margin: 0px 0px;
-    text-align: center;
+    text-align: left;
 }
 #shop_info {
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%;
     font-size: 1.5vmax;
     color:#303030;
 }
 
+#shop_con {
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    grid-template-rows: 1fr;
+    grid-template-columns: 150px 1fr;
+}
+#shop_icon {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+#shop_doc {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
 

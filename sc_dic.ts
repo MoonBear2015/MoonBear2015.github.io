@@ -5204,61 +5204,59 @@ const   itms_model = [
 ]
 
 const   itms_status = [
-    new SctItm('安全性')
+    new SctItm('安全性','ICON/hands.jpg')
     ,
-    new SctItm('安定感')
+    new SctItm('安定感','ICON/hands.jpg')
     ,
-    new SctItm('意外性')
+    new SctItm('意外性','ICON/hands.jpg')
     ,
-    new SctItm('開放感')
+    new SctItm('開放感','ICON/hands.jpg')
     ,
-    new SctItm('画質')
+    new SctItm('高画質','ICON/hands.jpg')
     ,
-    new SctItm('加速度')
+    new SctItm('加速度','ICON/hands.jpg')
     ,
-    new SctItm('低カロリー')
+    new SctItm('低カロリー','ICON/hands.jpg')
     ,
-    new SctItm('血圧')
+    new SctItm('高カロリー','ICON/hands.jpg')
     ,
-    new SctItm('効率')
+    new SctItm('高血圧','ICON/hands.jpg')
     ,
-    new SctItm('低コスト')
+    new SctItm('低血圧','ICON/hands.jpg')
     ,
-    new SctItm('SAN値')
+    new SctItm('効率化','ICON/hands.jpg')
     ,
-    new SctItm('酸味')
+    new SctItm('低コスト','ICON/hands.jpg')
     ,
-    new SctItm('質感')
+    new SctItm('酸味','ICON/hands.jpg')
     ,
-    new SctItm('質量')
+    new SctItm('質感','ICON/hands.jpg')
     ,
-    new SctItm('柔軟性')
+    new SctItm('最大質量','ICON/hands.jpg')
     ,
-    new SctItm('重量')
+    new SctItm('柔軟性','ICON/hands.jpg')
     ,
-    new SctItm('高スペック')
+    new SctItm('重量','ICON/hands.jpg')
     ,
-    new SctItm('速度')
+    new SctItm('高スペック','ICON/hands.jpg')
     ,
-    new SctItm('爽快感')
+    new SctItm('最高速度','ICON/hands.jpg')
     ,
-    new SctItm('通信速度')
+    new SctItm('爽快感','ICON/hands.jpg')
     ,
-    new SctItm('糖質')
+    new SctItm('通信速度','ICON/hands.jpg')
     ,
-    new SctItm('糖度')
+    new SctItm('糖質','ICON/hands.jpg')
     ,
-    new SctItm('濃度')
+    new SctItm('糖度','ICON/hands.jpg')
     ,
-    new SctItm('深み')
+    new SctItm('濃度','ICON/hands.jpg')
     ,
-    new SctItm('丸み')
+    new SctItm('丸み','ICON/hands.jpg')
     ,
-    new SctItm('躍動感')
+    new SctItm('躍動感','ICON/hands.jpg')
     ,
-    new SctItm('容量')
-    ,
-    new SctItm('爽快感')
+    new SctItm('大容量','ICON/hands.jpg')
 ]
 
 const   itms_tech = [
@@ -5281,6 +5279,20 @@ const   itms_tech = [
     new SctItm('力業')
     ,
     new SctItm('突貫工事')
+    ,
+    new SctItm('人工知能')
+    ,
+    new SctItm('ペーパーレス化')
+    ,
+    new SctItm('人員削減')
+    ,
+    new SctItm('人材育成')
+    ,
+    new SctItm('社内研修')
+    ,
+    new SctItm('イデオロギー教育')
+    ,
+    new SctItm('外部委託')
 ]
 
 // 成功・等 ～した
