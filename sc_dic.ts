@@ -5150,23 +5150,21 @@ const   itms_shop = [
 ]
 
 const   itms_campany = [
-    new SctItm('Orange')
+    new SctItm('Banana')
     ,
-    new SctItm('Pac')
+    new SctItm('MaxHard')
     ,
-    new SctItm('Bigstone')
-    ,
-    new SctItm('Mary')
+    new SctItm('Pony')
     ,
     new SctItm('TANAKA')
     ,
-    new SctItm('Meetoo')
+    new SctItm('Doodle')
     ,
-    new SctItm('MPP')
-    ,
-    new SctItm('dareto')
+    new SctItm('donata')
     ,
     new SctItm('MixVegetable')
+    ,
+    new SctItm('YeeHaw!')
     ,
     new SctItm('YeeHaw!')
 ]
@@ -5186,10 +5184,6 @@ const   itms_model = [
     ,
     new SctItm('Mark VI')
     ,
-    new SctItm('Powerd')
-    ,
-    new SctItm('Super')
-    ,
     new SctItm('Mini')
     ,
     new SctItm('Essential')
@@ -5203,6 +5197,10 @@ const   itms_model = [
     new SctItm('Eternal')
     ,
     new SctItm('Violence')
+    ,
+    new SctItm('Xp')
+    ,
+    new SctItm('2000')
 ]
 
 const   itms_status = [

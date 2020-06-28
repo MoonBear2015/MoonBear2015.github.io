@@ -3303,15 +3303,14 @@ const itms_shop = [
     new SctItm('GRANDFATHER', 'SHOP/GRANDFATHER.jpg')
 ];
 const itms_campany = [
-    new SctItm('Orange'),
-    new SctItm('Pac'),
-    new SctItm('Bigstone'),
-    new SctItm('Mary'),
+    new SctItm('Banana'),
+    new SctItm('MaxHard'),
+    new SctItm('Pony'),
     new SctItm('TANAKA'),
-    new SctItm('Meetoo'),
-    new SctItm('MPP'),
-    new SctItm('dareto'),
+    new SctItm('Doodle'),
+    new SctItm('donata'),
     new SctItm('MixVegetable'),
+    new SctItm('YeeHaw!'),
     new SctItm('YeeHaw!')
 ];
 const itms_model = [
@@ -3322,15 +3321,15 @@ const itms_model = [
     new SctItm('Mark IV'),
     new SctItm('Mark V'),
     new SctItm('Mark VI'),
-    new SctItm('Powerd'),
-    new SctItm('Super'),
     new SctItm('Mini'),
     new SctItm('Essential'),
     new SctItm('Turbo'),
     new SctItm('Ultra'),
     new SctItm('Experience'),
     new SctItm('Eternal'),
-    new SctItm('Violence')
+    new SctItm('Violence'),
+    new SctItm('Xp'),
+    new SctItm('2000')
 ];
 const itms_status = [
     new SctItm('安全性'),
