@@ -2108,51 +2108,51 @@ const   cods_think = [
 ];
 
 const   cods_place = [
-    new SctCod_TI('|居場所|いばしょ|')
+    new SctCod_TI('|居場所|いばしょ|','PLACE/place.jpg')
     ,
-    new SctCod_TI('|教室|きょうしつ|')
+    new SctCod_TI('|教室|きょうしつ|','PLACE/classroom.jpg')
     ,
-    new SctCod_TI('オフィス')
+    new SctCod_TI('オフィス','PLACE/office.jpg')
     ,
-    new SctCod_TI('|自宅|じたく|')
+    new SctCod_TI('|自宅|じたく|','PLACE/home.jpg')
     ,
-    new SctCod_TI('リビング')
+    new SctCod_TI('リビングルーム','PLACE/living.jpg')
     ,
-    new SctCod_TI('|書斎|しょさい|')
+    new SctCod_TI('|書斎|しょさい|','PLACE/studyroom.jpg')
     ,
-    new SctCod_TI('|寝室|しんしつ|')
+    new SctCod_TI('|寝室|しんしつ|','PLACE/bedroom.jpg')
     ,
-    new SctCod_TI('トイレ')
+    new SctCod_TI('トイレ','PLACE/toilet.jpg')
     ,
-    new SctCod_TI('キッチン')
+    new SctCod_TI('キッチン','PLACE/kitchen.jpg')
     ,
-    new SctCod_TI('|温泉|おんせん|')
+    new SctCod_TI('|温泉|おんせん|','PLACE/onsen.jpg')
     ,
-    new SctCod_TI('|大浴場|だいよくじょう|')
+    new SctCod_TI('|大浴場|だいよくじょう|','PLACE/bigbath.jpg')
     ,
-    new SctCod_TI('グラウンド')
+    new SctCod_TI('グラウンド','PLACE/ground.jpg')
     ,
-    new SctCod_TI('マイカー')
+    new SctCod_TI('マイカー','PLACE/mycar.jpg')
     ,
-    new SctCod_TI('|公園|こうえん|')
+    new SctCod_TI('|公園|こうえん|','PLACE/park.jpg')
     ,
-    new SctCod_TI('|遊園地|ゆうえんち|')
+    new SctCod_TI('|遊園地|ゆうえんち|','PLACE/yuenchi.jpg')
     ,
-    new SctCod_TI('テーマパーク')
+    new SctCod_TI('テーマパーク','PLACE/temapark.jpg')
     ,
-    new SctCod_TI('|映画館|えいがかん|')
+    new SctCod_TI('|映画館|えいがかん|','PLACE/chinema.jpg')
     ,
-    new SctCod_TI('|酒場|さかば|')
+    new SctCod_TI('|酒場|さかば|','PLACE/place.jpg')
     ,
-    new SctCod_TI('バーカウンター')
+    new SctCod_TI('バーカウンター','PLACE/place.jpg')
     ,
-    new SctCod_TI('|喫茶店|きっさてん|')
+    new SctCod_TI('|喫茶店|きっさてん|','PLACE/place.jpg')
     ,
-    new SctCod_TI('レストラン')
+    new SctCod_TI('レストラン','PLACE/place.jpg')
     ,
-    new SctCod_TI('コックピット')
+    new SctCod_TI('コックピット','PLACE/place.jpg')
     ,
-    new SctCod_TI('|操縦席|そうじゅうせき|')
+    new SctCod_TI('|操縦席|そうじゅうせき|','PLACE/place.jpg')
 ];
 
 
@@ -5222,7 +5222,7 @@ const   itms_status = [
     ,
     new SctItm('高血圧','ICON/HighBP.jpg')
     ,
-    new SctItm('低血圧','ICON/hands.jpg')
+    new SctItm('低血圧','ICON/LowBP.jpg')
     ,
     new SctItm('効率化','ICON/QCT.jpg')
     ,
@@ -5257,6 +5257,8 @@ const   itms_status = [
     new SctItm('躍動感','ICON/jump.jpg')
     ,
     new SctItm('大容量','ICON/capacity.jpg')
+    ,
+    new SctItm('エコロジー','ICON/eco.jpg')
 ]
 
 const   itms_tech = [

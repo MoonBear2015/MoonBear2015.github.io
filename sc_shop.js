@@ -7,7 +7,7 @@ function set_shop() {
     html += '<h1>';
     html += 'Shop';
     html += '<small>';
-    html += ' S00.09';
+    html += ' S00.10';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -41,21 +41,25 @@ function make_shop() {
     for (let i = 0; i < 3; i++) {
         let maker01 = new shop_docs_maker01();
         let html01 = '';
-        html01 += '<div id="shop_con">';
-        html01 += '<div id="shop_doc">';
-        html01 += '<div id="shop_catch">';
+        html01 += '<div id="shop_con">'; // con 
+        html01 += '<div id="shop_icon">'; // icon
+        html01 += '<img src="pics/@ICON_SHOP@" width="95%">';
+        html01 += '</div>'; // icon
+        html01 += '<div id="shop_doc">'; // doc
+        html01 += '<div id="shop_catch">'; // catch
         html01 += '@CATCH@';
-        html01 += '</div>';
-        html01 += '<div id="shop_info">';
+        html01 += '</div>'; // catch
+        html01 = maker.gene_docs(html01);
+        html01 = maker01.gene_docs(html01);
+        alert(html01);
+        html01 += '<p id="shop_info">'; // info
         html01 += '@S_INFO_INIT@';
         for (let j = 0; j < 2; j++) {
             html01 += '@S_INFO@';
         }
-        html01 += '</div>';
-        html01 += '</div>';
-        html01 += '<dic id="shop_icon">';
-        html01 += '<img src="pics/@ICON_SHOP@" width="95%">';
-        html01 += '</div>';
+        html01 += '</p>'; // info
+        html01 += '</div>'; // doc
+        html01 += '</div>'; // con
         // html01 += '</div> a';
         let cnt = 0;
         while (true) {
@@ -103,6 +107,12 @@ class locker_campany extends SctItm_SelectLocker {
         this.Add(itms_campany);
     }
 }
+class locker_place extends SctItm_Selector {
+    constructor() {
+        super('@L_PLACE@', '@ICON_SHOP@');
+        this.Add(cods_to_itms(cods_place));
+    }
+}
 // 商品モデル
 class selector_model extends SctItm_Selector {
     constructor() {
@@ -143,7 +153,8 @@ class selector_catch extends SctItm_Selector {
             new SctItm('@KEI1@@L_STATUS@を体感しよう'),
             new SctItm('@KEI1@@L_STATUS@の@FUTURE@'),
             new SctItm('さあ、@KEI1@@L_STATUS@を手に入れよう'),
-            new SctItm('@ASSES@@L_STATUS@')
+            new SctItm('@ASSES@@L_STATUS@'),
+            new SctItm('あなたの@PLACE@が@L_PLACE@となる')
         ];
     }
 }
@@ -254,5 +265,6 @@ class shop_docs_maker01 extends news_docs_maker {
     constructor() {
         super();
         this.dic_push(new locker_status());
+        this.dic_push(new locker_place());
     }
 }
