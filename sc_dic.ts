@@ -5242,7 +5242,7 @@ const   itms_status = [
     ,
     new SctItm('最高速度','ICON/maxspeed.jpg')
     ,
-    new SctItm('爽快感','ICON/jumpgirl.jpg')
+    new SctItm('爽快感','ICON/sky.jpg')
     ,
     new SctItm('通信速度','ICON/telspeed.jpg')
     ,

@@ -3351,7 +3351,7 @@ const itms_status = [
     new SctItm('重量', 'ICON/heavy.jpg'),
     new SctItm('高スペック', 'ICON/spec.jpg'),
     new SctItm('最高速度', 'ICON/maxspeed.jpg'),
-    new SctItm('爽快感', 'ICON/jumpgirl.jpg'),
+    new SctItm('爽快感', 'ICON/sky.jpg'),
     new SctItm('通信速度', 'ICON/telspeed.jpg'),
     new SctItm('糖質', 'ICON/cake.jpg'),
     new SctItm('糖度', 'ICON/suger.jpg'),
