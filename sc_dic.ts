@@ -5216,7 +5216,7 @@ const   itms_status = [
     ,
     new SctItm('加速度','ICON/speed.jpg')
     ,
-    new SctItm('低カロリー','ICON/lowC.jpg')
+    new SctItm('低カロリー','ICON/LowC.jpg')
     ,
     new SctItm('高カロリー','ICON/HighC.jpg')
     ,
@@ -5252,11 +5252,11 @@ const   itms_status = [
     ,
     new SctItm('濃度','ICON/honey.jpg')
     ,
-    new SctItm('丸み','ICON/hands.jpg')
+    new SctItm('丸み','ICON/ball.jpg')
     ,
-    new SctItm('躍動感','ICON/hands.jpg')
+    new SctItm('躍動感','ICON/jump.jpg')
     ,
-    new SctItm('大容量','ICON/hands.jpg')
+    new SctItm('大容量','ICON/capacity.jpg')
 ]
 
 const   itms_tech = [

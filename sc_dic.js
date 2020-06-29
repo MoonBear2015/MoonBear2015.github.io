@@ -3338,7 +3338,7 @@ const itms_status = [
     new SctItm('開放感', 'ICON/freedom.jpg'),
     new SctItm('高画質', 'ICON/HV.jpg'),
     new SctItm('加速度', 'ICON/speed.jpg'),
-    new SctItm('低カロリー', 'ICON/lowC.jpg'),
+    new SctItm('低カロリー', 'ICON/LowC.jpg'),
     new SctItm('高カロリー', 'ICON/HighC.jpg'),
     new SctItm('高血圧', 'ICON/HighBP.jpg'),
     new SctItm('低血圧', 'ICON/hands.jpg'),
@@ -3356,9 +3356,9 @@ const itms_status = [
     new SctItm('糖質', 'ICON/cake.jpg'),
     new SctItm('糖度', 'ICON/suger.jpg'),
     new SctItm('濃度', 'ICON/honey.jpg'),
-    new SctItm('丸み', 'ICON/hands.jpg'),
-    new SctItm('躍動感', 'ICON/hands.jpg'),
-    new SctItm('大容量', 'ICON/hands.jpg')
+    new SctItm('丸み', 'ICON/ball.jpg'),
+    new SctItm('躍動感', 'ICON/jump.jpg'),
+    new SctItm('大容量', 'ICON/capacity.jpg')
 ];
 const itms_tech = [
     new SctItm('企業努力'),
