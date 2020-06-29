@@ -270,7 +270,7 @@ small {
     margin-right: auto;
     width: 70%;
     grid-template-rows: 1fr;
-    grid-template-columns: 150px 1fr;
+    grid-template-columns: 30% 1fr;
 }
 #shop_icon {
     grid-column: 1/2;

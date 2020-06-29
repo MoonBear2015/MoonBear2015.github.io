@@ -7,7 +7,7 @@ function set_shop() {
     html += '<h1>';
     html += 'Shop';
     html += '<small>';
-    html += ' S00.08';
+    html += ' S00.09';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -54,7 +54,7 @@ function make_shop() {
         html01 += '</div>';
         html01 += '</div>';
         html01 += '<dic id="shop_icon">';
-        html01 += '<img src="pics/@ICON_SHOP@" width="120px">';
+        html01 += '<img src="pics/@ICON_SHOP@" width="95%">';
         html01 += '</div>';
         // html01 += '</div> a';
         let cnt = 0;

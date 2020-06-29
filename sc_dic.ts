@@ -5206,51 +5206,51 @@ const   itms_model = [
 const   itms_status = [
     new SctItm('安全性','ICON/hands.jpg')
     ,
-    new SctItm('安定感','ICON/hands.jpg')
+    new SctItm('安定感','ICON/brance.jpg')
     ,
-    new SctItm('意外性','ICON/hands.jpg')
+    new SctItm('意外性','ICON/Surprise.jpg')
     ,
-    new SctItm('開放感','ICON/hands.jpg')
+    new SctItm('開放感','ICON/freedom.jpg')
     ,
-    new SctItm('高画質','ICON/hands.jpg')
+    new SctItm('高画質','ICON/HV.jpg')
     ,
-    new SctItm('加速度','ICON/hands.jpg')
+    new SctItm('加速度','ICON/speed.jpg')
     ,
-    new SctItm('低カロリー','ICON/hands.jpg')
+    new SctItm('低カロリー','ICON/lowC.jpg')
     ,
-    new SctItm('高カロリー','ICON/hands.jpg')
+    new SctItm('高カロリー','ICON/HighC.jpg')
     ,
-    new SctItm('高血圧','ICON/hands.jpg')
+    new SctItm('高血圧','ICON/HighBP.jpg')
     ,
     new SctItm('低血圧','ICON/hands.jpg')
     ,
-    new SctItm('効率化','ICON/hands.jpg')
+    new SctItm('効率化','ICON/QCT.jpg')
     ,
-    new SctItm('低コスト','ICON/hands.jpg')
+    new SctItm('低コスト','ICON/cost.jpg')
     ,
-    new SctItm('酸味','ICON/hands.jpg')
+    new SctItm('酸味','ICON/lemon.jpg')
     ,
-    new SctItm('質感','ICON/hands.jpg')
+    new SctItm('質感','ICON/feel.jpg')
     ,
-    new SctItm('最大質量','ICON/hands.jpg')
+    new SctItm('最大馬力','ICON/Horse.jpg')
     ,
-    new SctItm('柔軟性','ICON/hands.jpg')
+    new SctItm('柔軟性','ICON/soft.jpg')
     ,
-    new SctItm('重量','ICON/hands.jpg')
+    new SctItm('重量','ICON/heavy.jpg')
     ,
-    new SctItm('高スペック','ICON/hands.jpg')
+    new SctItm('高スペック','ICON/spec.jpg')
     ,
-    new SctItm('最高速度','ICON/hands.jpg')
+    new SctItm('最高速度','ICON/maxspeed.jpg')
     ,
-    new SctItm('爽快感','ICON/hands.jpg')
+    new SctItm('爽快感','ICON/jumpgirl.jpg')
     ,
-    new SctItm('通信速度','ICON/hands.jpg')
+    new SctItm('通信速度','ICON/telspeed.jpg')
     ,
-    new SctItm('糖質','ICON/hands.jpg')
+    new SctItm('糖質','ICON/cake.jpg')
     ,
-    new SctItm('糖度','ICON/hands.jpg')
+    new SctItm('糖度','ICON/suger.jpg')
     ,
-    new SctItm('濃度','ICON/hands.jpg')
+    new SctItm('濃度','ICON/honey.jpg')
     ,
     new SctItm('丸み','ICON/hands.jpg')
     ,
