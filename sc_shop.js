@@ -51,7 +51,6 @@ function make_shop() {
         html01 += '</div>'; // catch
         html01 = maker.gene_docs(html01);
         html01 = maker01.gene_docs(html01);
-        alert(html01);
         html01 += '<p id="shop_info">'; // info
         html01 += '@S_INFO_INIT@';
         for (let j = 0; j < 2; j++) {
