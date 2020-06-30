@@ -3269,11 +3269,13 @@ const itms_do = [
     new SctItm('移住', 'DO/emigration.jpg'),
     new SctItm('降臨', 'DO/advent.jpg'),
     new SctItm('覚醒', 'DO/awaken.jpg'),
-    new SctItm('引退', 'DO/solo.jpg')
+    new SctItm('引退', 'DO/solo.jpg'),
+    new SctItm('多様化', 'DO/personal.jpg')
 ];
 const itms_shop = [
     new SctItm('BICYCLE', 'SHOP/BICYCLE01.jpg'),
     new SctItm('BICYCLE', 'SHOP/BICYCLE02.jpg'),
+    new SctItm('BICYCLE', 'SHOP/BICYCLE03.jpg'),
     new SctItm('CALCLATOR', 'SHOP/CALC01.jpg'),
     new SctItm('CALCLATOR', 'SHOP/CALC02.jpg'),
     new SctItm('CAMERA', 'SHOP/CAMERA.jpg'),
@@ -3285,6 +3287,7 @@ const itms_shop = [
     new SctItm('COMPUTER', 'SHOP/COMPUTER01.jpg'),
     new SctItm('COMPUTER', 'SHOP/COMPUTER02.jpg'),
     new SctItm('COMPUTER', 'SHOP/COMPUTER03.jpg'),
+    new SctItm('COMPUTER', 'SHOP/COMPUTER04.jpg'),
     new SctItm('CLOCK', 'SHOP/CLOCK01.jpg'),
     new SctItm('CLOCK', 'SHOP/CLOCK02.jpg'),
     new SctItm('DOG', 'SHOP/DOG.jpg'),
@@ -3300,7 +3303,10 @@ const itms_shop = [
     new SctItm('TOASTER', 'SHOP/TOASTER.jpg'),
     new SctItm('TRAIN', 'SHOP/TRAIN.jpg'),
     new SctItm('GUNDAM', 'SHOP/GUNDAM.jpg'),
-    new SctItm('GRANDFATHER', 'SHOP/GRANDFATHER.jpg')
+    new SctItm('GRANDFATHER', 'SHOP/GRANDFATHER01.jpg'),
+    new SctItm('GRANDFATHER', 'SHOP/GRANDFATHER02.jpg'),
+    new SctItm('GOD', 'SHOP/God.jpg'),
+    new SctItm('ANGEL', 'SHOP/angel.jpg')
 ];
 const itms_campany = [
     new SctItm('Banana'),
@@ -3359,7 +3365,8 @@ const itms_status = [
     new SctItm('丸み', 'ICON/ball.jpg'),
     new SctItm('躍動感', 'ICON/jump.jpg'),
     new SctItm('大容量', 'ICON/capacity.jpg'),
-    new SctItm('エコロジー', 'ICON/eco.jpg')
+    new SctItm('エコロジー', 'ICON/eco.jpg'),
+    new SctItm('破壊力', 'ICON/war.jpg')
 ];
 const itms_tech = [
     new SctItm('企業努力'),
@@ -3392,5 +3399,8 @@ const itms_success = [
     new SctItm('実現'),
     new SctItm('到達'),
     new SctItm('飛躍'),
-    new SctItm('遂行')
+    new SctItm('遂行'),
+    new SctItm('開発'),
+    new SctItm('製造'),
+    new SctItm('創造')
 ];

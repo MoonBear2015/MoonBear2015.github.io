@@ -5087,12 +5087,16 @@ const   itms_do = [
     new SctItm('覚醒','DO/awaken.jpg')
     ,
     new SctItm('引退','DO/solo.jpg')
+    ,
+    new SctItm('多様化','DO/personal.jpg')
 ]
 
 const   itms_shop = [
     new SctItm('BICYCLE','SHOP/BICYCLE01.jpg')
     ,
     new SctItm('BICYCLE','SHOP/BICYCLE02.jpg')
+    ,
+    new SctItm('BICYCLE','SHOP/BICYCLE03.jpg')
     ,
     new SctItm('CALCLATOR','SHOP/CALC01.jpg')
     ,
@@ -5115,6 +5119,8 @@ const   itms_shop = [
     new SctItm('COMPUTER','SHOP/COMPUTER02.jpg')
     ,
     new SctItm('COMPUTER','SHOP/COMPUTER03.jpg')
+    ,
+    new SctItm('COMPUTER','SHOP/COMPUTER04.jpg')
     ,
     new SctItm('CLOCK','SHOP/CLOCK01.jpg')
     ,
@@ -5146,7 +5152,13 @@ const   itms_shop = [
     ,
     new SctItm('GUNDAM','SHOP/GUNDAM.jpg')
     ,
-    new SctItm('GRANDFATHER','SHOP/GRANDFATHER.jpg')
+    new SctItm('GRANDFATHER','SHOP/GRANDFATHER01.jpg')
+    ,
+    new SctItm('GRANDFATHER','SHOP/GRANDFATHER02.jpg')
+    ,
+    new SctItm('GOD','SHOP/God.jpg')
+    ,
+    new SctItm('ANGEL','SHOP/angel.jpg')
 ]
 
 const   itms_campany = [
@@ -5259,6 +5271,8 @@ const   itms_status = [
     new SctItm('大容量','ICON/capacity.jpg')
     ,
     new SctItm('エコロジー','ICON/eco.jpg')
+    ,
+    new SctItm('破壊力','ICON/war.jpg')
 ]
 
 const   itms_tech = [
@@ -5320,6 +5334,12 @@ const   itms_success = [
     new SctItm('飛躍')
     ,
     new SctItm('遂行')
+    ,
+    new SctItm('開発')
+    ,
+    new SctItm('製造')
+    ,
+    new SctItm('創造')
 ]
 
 

@@ -9,7 +9,7 @@ function set_shop()
     html += '<h1>';
     html += 'Shop';
     html += '<small>';
-    html += ' S00.11';
+    html += ' S00.12';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -138,7 +138,8 @@ class locker_campany extends SctItm_SelectLocker implements ISctItm_Selector{
         this.Add(itms_campany);
     }
 }
-class locker_place extends SctItm_Selector implements ISctItm_Selector {
+// （固定）場所
+class locker_place extends SctItm_SelectLocker implements ISctItm_Selector {
     constructor(){
         super('@L_PLACE@','@ICON_SHOP@');
         this.Add(cods_to_itms(cods_place));
@@ -196,13 +197,15 @@ class selector_catch extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@ASSES@@L_STATUS@')
             ,
-            new SctItm('@PLACE@が@L_PLACE@となる')
+            new SctItm('あなたの@PLACE@が@L_PLACE@となる')
             ,
             new SctItm('@FUTURE@の@L_PLACE@へようこそ')
             ,
             new SctItm('@L_PLACE@の@FUTURE@が変わる')
             ,
-            new SctItm('さあ、@KEI1@@L_PLACE@へ')
+            new SctItm('@KEI1@@L_PLACE@が@SUCCESS@する')
+            ,
+            new SctItm('さあ、@KEI1@@L_PLACE@が待っている')
         ];
     }
 }
@@ -231,8 +234,6 @@ class selector_s_info extends SctItm_Selector implements ISctItm_Selector {
         super('@S_INFO@');
         this.itms = [
             new SctItm('@S_INFO00@。')
-            ,
-            new SctItm('@CONECT@、@S_INFO00@。')
             ,
             new SctItm('@S_INFO03@。')
         ]
@@ -264,7 +265,11 @@ class selector_s_info01 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@L_CAMPANY@社は@MANY@@KEY@を経て')
             ,
-            new SctItm('@L_CAMPANY@社は@KEI1@@FUTURE@に向けて')
+            new SctItm('@L_CAMPANY@社は@KEI1@@FUTURE@のために')
+            ,
+            new SctItm('@DO@する@FUTURE@に向けて')
+            ,
+            new SctItm('@DO@する@L_PLACE@のために')
         ]
     }
 }
@@ -282,6 +287,8 @@ class selector_s_info02 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@MANY@@THEY@から@MANY@@SAY2@や@SAY2@を頂いております')
             ,
             new SctItm('@KEI1@@FUTURE@の@SUCCESS@をお約束いたします')
+            ,
+            new SctItm('@KEI1@@L_PLACE@をご提供いたします')
         ]
     }
 }
@@ -317,6 +324,16 @@ class selector_s_info03 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('もはや、@L_CAMPANY@ @L_SHOP@は手放せません')
             ,
             new SctItm('@L_CAMPANY@ @L_SHOP@の@KEI1@新モデルが誕生しました')
+            ,
+            new SctItm('これから、@L_PLACE@の@FUTURE@が変わります')
+            ,
+            new SctItm('あなたの@PLACE@が@L_PLACE@へと早変わり')
+            ,
+            new SctItm('@L_SHOP@があなたの@L_PLACE@となるでしょう')
+            ,
+            new SctItm('もはや、@L_PLACE@では欠かせないアイテムです')
+            ,
+            new SctItm('もう、@L_SHOP@の無い@L_PLACE@など有り得ません')
         ]
     }
 }

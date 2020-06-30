@@ -168,6 +168,7 @@ small {
 }
 
 #poem_tema {
+    font-family: 'HG正楷書体-PRO';
     font-size: 4vmax;
     text-indent: 0.5ex;
     color: #c0c0c0;
@@ -176,12 +177,14 @@ small {
 
 
 #poem_title {
+    font-family: 'HG正楷書体-PRO';
     font-size: 2vmax;
     color: #c0c000;
     text-shadow: 2px 2px 0px #000000;
 }
 
 #poem_main {
+    font-family: 'HG正楷書体-PRO';
     font-size: 2.8vmax;
     color: #e0e0e0;
     text-align: center;
@@ -245,7 +248,8 @@ small {
     float: center;
 }
 #shop_title {
-    font-size: 6vmax;
+    font-family: fantasy;
+    font-size: 5vmax;
     color:black;
     margin: 0px 20px;
     text-shadow:2px 2px 0px #C0C0C0;
@@ -270,7 +274,7 @@ small {
     margin-right: auto;
     width: 80%;
     grid-template-rows: 1fr;
-    grid-template-columns: 50% 1fr;
+    grid-template-columns: 30% 1fr;
 }
 #shop_icon {
     grid-column: 1/2;
