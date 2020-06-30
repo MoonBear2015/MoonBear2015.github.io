@@ -2126,6 +2126,8 @@ const   cods_place = [
     ,
     new SctCod_TI('キッチン','PLACE/kitchen.jpg')
     ,
+    new SctCod_TI('バスルーム','PLACE/bath.jpg')
+    ,
     new SctCod_TI('|温泉|おんせん|','PLACE/onsen.jpg')
     ,
     new SctCod_TI('|大浴場|だいよくじょう|','PLACE/bigbath.jpg')
@@ -2142,17 +2144,15 @@ const   cods_place = [
     ,
     new SctCod_TI('|映画館|えいがかん|','PLACE/chinema.jpg')
     ,
-    new SctCod_TI('|酒場|さかば|','PLACE/place.jpg')
+    new SctCod_TI('|酒場|さかば|','PLACE/bar.jpg')
     ,
-    new SctCod_TI('バーカウンター','PLACE/place.jpg')
+    new SctCod_TI('バーカウンター','PLACE/barcounter.jpg')
     ,
-    new SctCod_TI('|喫茶店|きっさてん|','PLACE/place.jpg')
+    new SctCod_TI('|喫茶店|きっさてん|','PLACE/coffeeshop.jpg')
     ,
-    new SctCod_TI('レストラン','PLACE/place.jpg')
+    new SctCod_TI('レストラン','PLACE/restaurant.jpg')
     ,
-    new SctCod_TI('コックピット','PLACE/place.jpg')
-    ,
-    new SctCod_TI('|操縦席|そうじゅうせき|','PLACE/place.jpg')
+    new SctCod_TI('コックピット','PLACE/cockpit.jpg')
 ];
 
 

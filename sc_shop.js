@@ -7,7 +7,7 @@ function set_shop() {
     html += '<h1>';
     html += 'Shop';
     html += '<small>';
-    html += ' S00.10';
+    html += ' S00.11';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -45,6 +45,7 @@ function make_shop() {
         html01 += '<div id="shop_icon">'; // icon
         html01 += '<img src="pics/@ICON_SHOP@" width="95%">';
         html01 += '</div>'; // icon
+        html += '<br>';
         html01 += '<div id="shop_doc">'; // doc
         html01 += '<div id="shop_catch">'; // catch
         html01 += '@CATCH@';
@@ -153,7 +154,10 @@ class selector_catch extends SctItm_Selector {
             new SctItm('@KEI1@@L_STATUS@の@FUTURE@'),
             new SctItm('さあ、@KEI1@@L_STATUS@を手に入れよう'),
             new SctItm('@ASSES@@L_STATUS@'),
-            new SctItm('あなたの@PLACE@が@L_PLACE@となる')
+            new SctItm('@PLACE@が@L_PLACE@となる'),
+            new SctItm('@FUTURE@の@L_PLACE@へようこそ'),
+            new SctItm('@L_PLACE@の@FUTURE@が変わる'),
+            new SctItm('さあ、@KEI1@@L_PLACE@へ')
         ];
     }
 }
