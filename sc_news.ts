@@ -278,7 +278,7 @@ class selector_writer3
     }
     get rnd_Itm() : SctItm {
         let name = this.nameCreater.create();
-        return new SctItm(name.html_WRITER3(50),'');
+        return new SctItm(name.html_WRITER3(100),'');
     }
     Copy() : ISctItm_Selector
     {

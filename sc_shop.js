@@ -7,7 +7,7 @@ function set_shop() {
     html += '<h1>';
     html += 'Shop';
     html += '<small>';
-    html += ' S00.14';
+    html += ' S00.15';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -80,14 +80,20 @@ function make_shop() {
     }
     for (let i = 0; i < 3; i++) {
         html += '<br>';
-        html += '<div>';
+        html += '<div id="shop_comenter">';
         html += '@WRITER3@';
-        html += '<div id="shop_catch">'; // catch
+        html += '<div id="shop_comtitle">'; // catch
         html += '@SHOPCOM@';
         html += '</div>'; // catch
-        html += '<p id="shop_info">'; // info
+        let star_cnt = rnd_minmax(3, 6);
+        let star_miss = 5 - star_cnt;
+        html += '<div id="shop_star">'; // catch
+        html += '★'.repeat(star_cnt);
+        html += '☆'.repeat(star_miss);
+        html += '</div>'; // catch
+        html += '<p id="shop_comdoc">'; // info
         for (let j = 0; j < 4; j++) {
-            html += '@S_INFO@';
+            html += '@SHOPCOMDOC@';
         }
         html += '</p>'; // catch
         html += '</div>';
@@ -272,16 +278,40 @@ class selector_s_info03 extends SctItm_Selector {
         ];
     }
 }
-// キャッチコピー
-class selector_ShopComent extends SctItm_Selector {
+// コメント
+class selector_ShopComentTitle extends SctItm_Selector {
     constructor() {
         super('@SHOPCOM@');
         this.itms = [
-            new SctItm('待ってました！ @L_CAMPANY@社の@L_SHOP@！'),
-            new SctItm('遂に来た！ これぞ@L_SHOP@の@DO@です！'),
+            new SctItm('待ってました！ @L_CAMPANY@ @L_SHOP@！'),
+            new SctItm('遂に来た！ これぞ@FUTURE@の@L_SHOP@です！'),
             new SctItm('@L_CAMPANY@！　@L_CAMPANY@！　@L_CAMPANY@！'),
             new SctItm('@L_CAMPANY@ @L_SHOP@！　もう待ちきれない！'),
-            new SctItm('@L_CAMPANY@ @L_SHOP@！　正に@COUNTRY@の@NICK@！')
+            new SctItm('@L_CAMPANY@ @L_SHOP@！　正に@COUNTRY@の@NICK@！'),
+            new SctItm('@L_CAMPANY@ @L_SHOP@！　ああ、なんて@KEI1@！'),
+            new SctItm('@L_CAMPANY@ @L_SHOP@！　これで勝てる！'),
+            new SctItm('なんて@KEI1@@L_SHOP@なのだろう！'),
+            new SctItm('もう@L_CAMPANY@の@L_SHOP@が無ければ生きていけません！')
+        ];
+    }
+}
+// キャッチコピー
+class selector_ShopComentDoc01 extends SctItm_Selector {
+    constructor() {
+        super('@SHOPCOMDOC@');
+        this.itms = [
+            new SctItm('ずっと@PLACE@で@L_CAMPANY@の@L_SHOP@を使っています。'),
+            new SctItm('@L_CAMPANY@の@L_SHOP@でなければ有り得ません。'),
+            new SctItm('今度の@L_SHOP@は実に@KEI2@で@KEIM2@です。'),
+            new SctItm('もう@L_CAMPANY@の@L_SHOP@は手放せません。'),
+            new SctItm('すぐに@PART@や@PART@に奨めなければ。'),
+            new SctItm('今度、@L_CAMPANY@ @L_SHOP@が我が社で採用されました。'),
+            new SctItm('これで@CLASS@を呼ぶ必要はありません。'),
+            new SctItm('@L_CAMPANY@ @L_SHOP@なら値段なんて気にしません。'),
+            new SctItm('@PART@や@PART@、@PART@にも買ってあげなければ。'),
+            new SctItm('もうこれで@PLACE@に行かなくてすみます。'),
+            new SctItm('もう@L_CAMPANY@の@L_SHOP@が無ければ生きていけません。'),
+            new SctItm('@L_CAMPANY@ @L_SHOP@は@PLACE@に行くときの必需品です。')
         ];
     }
 }
@@ -301,7 +331,8 @@ class shop_docs_maker extends news_docs_maker {
         this.dic_push(new selector_s_info01());
         this.dic_push(new selector_s_info02());
         this.dic_push(new selector_s_info03());
-        this.dic_push(new selector_ShopComent());
+        this.dic_push(new selector_ShopComentTitle());
+        this.dic_push(new selector_ShopComentDoc01());
     }
 }
 class shop_docs_maker01 extends news_docs_maker {

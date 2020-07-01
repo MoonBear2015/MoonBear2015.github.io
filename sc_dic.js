@@ -1513,16 +1513,12 @@ const cods_when = [
 ];
 const cods_future = [
     new SctCod_It('|未来|みらい|', 'future.jpg'),
-    new SctCod_It('|明日|あす|'),
     new SctCod_It('|明日|あした|'),
-    new SctCod_It('|明後日|あさって|'),
-    new SctCod_It('|明明後日|しあさって|'),
-    new SctCod_It('|来週|らいしゅう|'),
-    new SctCod_It('|来月|らいげつ|'),
-    new SctCod_It('|来年|らいねん|'),
     new SctCod_It('|来世|らいせ|'),
     new SctCod_It('|新世紀|しんせいき|'),
-    new SctCod_It('|新時代|しんじだい|')
+    new SctCod_It('|新時代|しんじだい|'),
+    new SctCod_It('|次世代|じせだい|'),
+    new SctCod_It('|新境地|しんきょうち|')
 ];
 const cods_conect1 = [
     new SctCod('は'),
@@ -3040,6 +3036,7 @@ const itms_goodhabit = [
     new SctItm('映画鑑賞'),
     new SctItm('アルバイト'),
     new SctItm('海外旅行'),
+    new SctItm('温泉旅行'),
     new SctItm('買い物'),
     new SctItm('家事手伝い'),
     new SctItm('切手収集'),
@@ -3075,7 +3072,14 @@ const itms_goodhabit = [
     new SctItm('窓拭き'),
     new SctItm('マラソン'),
     new SctItm('瞑想'),
-    new SctItm('ラジオ体操')
+    new SctItm('ラジオ体操'),
+    new SctItm('魚釣り'),
+    new SctItm('熊狩り'),
+    new SctItm('鹿狩り'),
+    new SctItm('鷹狩り'),
+    new SctItm('花見'),
+    new SctItm('芋掘り'),
+    new SctItm('キャンプ')
 ];
 const itms_what = [
     new SctItm('日本', 'WHAT/Japan.jpg'),

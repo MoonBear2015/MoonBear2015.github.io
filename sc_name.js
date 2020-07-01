@@ -69,8 +69,8 @@ class NmItm {
             + 'px">';
         html += '</figure>';
         html += '</div>';
-        html += '<h4 id="writer" align="left">';
-        html += this.NameAge + '©@YEAR@ @WHO4@';
+        html += '<h4 id="writer3" align="left">';
+        html += this.NameAge + ' @WHO4@';
         html += '</h4>';
         return html;
     }
