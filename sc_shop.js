@@ -92,7 +92,7 @@ function make_shop() {
         html += '☆'.repeat(star_miss);
         html += '</div>'; // catch
         html += '<p id="shop_comdoc">'; // info
-        for (let j = 0; j < 4; j++) {
+        for (let j = 0; j < 3; j++) {
             html += '@SHOPCOMDOC@';
         }
         html += '</p>'; // catch
