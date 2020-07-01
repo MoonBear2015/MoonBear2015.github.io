@@ -60,6 +60,20 @@ class NmItm {
         html += '</h4>';
         return html;
     }
+    html_WRITER3(in_picsize) {
+        let html = '';
+        html += '<div id="face_pic_L">';
+        html += '<figure>';
+        html += '<img src="pics/FACE/' + this.to_FilePath() + '" width="'
+            + in_picsize.toString()
+            + 'px">';
+        html += '</figure>';
+        html += '</div>';
+        html += '<h4 id="writer" align="left">';
+        html += this.NameAge + '©@YEAR@ @WHO4@';
+        html += '</h4>';
+        return html;
+    }
     html_QUESTER(in_picsize) {
         let html = '';
         html += '<div id="face_pic_L">';

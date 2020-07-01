@@ -183,6 +183,25 @@ class selector_writer2 extends ItmArray {
         return replace_docs(temp_doc, this);
     }
 }
+class selector_writer3 extends ItmArray {
+    constructor() {
+        super();
+        this.itm_key = "@WRITER3@";
+        this.pic_key = "";
+        this.nameCreater = new NameCreaterAll();
+    }
+    get rnd_Itm() {
+        let name = this.nameCreater.create();
+        return new SctItm(name.html_WRITER3(50), '');
+    }
+    Copy() {
+        let result = new selector_human();
+        return result;
+    }
+    Gene_Docs(temp_doc) {
+        return replace_docs(temp_doc, this);
+    }
+}
 class selector_age extends ItmArray {
     constructor() {
         super();
@@ -1564,6 +1583,7 @@ class news_docs_maker extends docs_maker {
         super();
         this.dic_push(new selector_writer());
         this.dic_push(new selector_writer2());
+        this.dic_push(new selector_writer3());
         this.dic_push(new selector_title());
         this.dic_push(new selector_doc());
         this.dic_push(new selector_c01());

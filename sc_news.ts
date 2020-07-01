@@ -262,6 +262,34 @@ class selector_writer2
     }
 
 }
+class selector_writer3 
+    extends ItmArray<SctItm>
+    implements ISctItm_Selector 
+{
+    public nameCreater : INameCreater;
+    public itm_key : string;
+    public pic_key : string;
+    constructor()
+    {
+        super();
+        this.itm_key = "@WRITER3@";
+        this.pic_key = "";
+        this.nameCreater = new NameCreaterAll();
+    }
+    get rnd_Itm() : SctItm {
+        let name = this.nameCreater.create();
+        return new SctItm(name.html_WRITER3(50),'');
+    }
+    Copy() : ISctItm_Selector
+    {
+        let result = new selector_human();
+        return result;
+    }
+
+    public Gene_Docs(temp_doc : string) : string {
+        return replace_docs(temp_doc,this);
+    }
+}
 
 
 class selector_age
@@ -2537,6 +2565,7 @@ class news_docs_maker extends docs_maker {
 
         this.dic_push(new selector_writer());
         this.dic_push(new selector_writer2());
+        this.dic_push(new selector_writer3());
         this.dic_push(new selector_title());
         this.dic_push(new selector_doc());
         this.dic_push(new selector_c01());

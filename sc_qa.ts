@@ -77,7 +77,7 @@ function Make_Q() : string {
     html += 'background-position: center center;';
     html += 'background-size: cover;';
     html += '">';
-    
+
     html += '@QUESTER@';
 
     html += '<br>';

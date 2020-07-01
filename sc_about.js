@@ -100,6 +100,7 @@ class about_title extends SctItm_Counter {
             new SctItm('Producer'),
             new SctItm('"News" Editor'),
             new SctItm('"Poem" Editor'),
+            new SctItm('"Shop" Editor'),
             new SctItm('"Q&A" Editor'),
             new SctItm('Web Designer'),
             new SctItm('Web Designer'),

@@ -9,7 +9,7 @@ function set_shop()
     html += '<h1>';
     html += 'Shop';
     html += '<small>';
-    html += ' S00.12';
+    html += ' S00.14';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -49,28 +49,29 @@ function make_shop()
     html += '</div>';
 
     let maker = new shop_docs_maker();
+    let maker01 = new shop_docs_maker01();
 
     for(let i = 0; i < 3; i++){
-
-        let maker01 = new shop_docs_maker01();
+        
+        let makerC01 = new shop_docs_maker01();
         let html01 = '';
         html01 += '<div id="shop_con">'; // con 
 
         html01 += '<div id="shop_icon">'; // icon
         html01 += '<img src="pics/@ICON_SHOP@" width="95%">';
         html01 += '</div>'; // icon
-
+        
         html += '<br>';
-
+        
         html01 += '<div id="shop_doc">'; // doc
-
+        
         
         html01 += '<div id="shop_catch">'; // catch
         html01 += '@CATCH@';
         html01 += '</div>'; // catch
 
         html01 = maker.gene_docs(html01);
-        html01 = maker01.gene_docs(html01);
+        html01 = makerC01.gene_docs(html01);
         
         html01 += '<p id="shop_info">'; // info
         html01 += '@S_INFO_INIT@';
@@ -78,18 +79,17 @@ function make_shop()
             html01 += '@S_INFO@';
         }
         html01 += '</p>'; // info
-
+        
         html01 += '</div>'; // doc
         html01 += '</div>'; // con
-
         
         // html01 += '</div> a';
-
+        
         let cnt = 0;
         while(true)
         {
             html01 = maker.gene_docs(html01);
-            html01 = maker01.gene_docs(html01);
+            html01 = makerC01.gene_docs(html01);
             cnt++;
             let chk = html01.indexOf('@');
             if (chk < 0) break;
@@ -104,6 +104,26 @@ function make_shop()
 
     }
 
+    for(let i = 0; i < 3; i++){
+        html += '<br>';
+        html += '<div>';
+        html += '@WRITER3@';
+
+        html += '<div id="shop_catch">'; // catch
+        html += '@SHOPCOM@';
+        html += '</div>'; // catch
+
+        html += '<p id="shop_info">'; // info
+        for(let j = 0; j < 4; j++){
+            html += '@S_INFO@';
+        }
+        html += '</p>'; // catch
+
+        html += '</div>';
+        html += '<br>';
+    }
+
+
     //---- this shop END
     html += '</div>';
 
@@ -111,6 +131,7 @@ function make_shop()
     while(true)
     {
         html = maker.gene_docs(html);
+        html = maker01.gene_docs(html);
         cnt++;
         let chk = html.indexOf('@');
         if (chk < 0) break;
@@ -338,6 +359,25 @@ class selector_s_info03 extends SctItm_Selector implements ISctItm_Selector {
     }
 }
 
+// キャッチコピー
+class selector_ShopComent extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@SHOPCOM@');
+        this.itms = [
+            new SctItm('待ってました！ @L_CAMPANY@社の@L_SHOP@！')
+            ,
+            new SctItm('遂に来た！ これぞ@L_SHOP@の@DO@です！')
+            ,
+            new SctItm('@L_CAMPANY@！　@L_CAMPANY@！　@L_CAMPANY@！')
+            ,
+            new SctItm('@L_CAMPANY@ @L_SHOP@！　もう待ちきれない！')
+            ,
+            new SctItm('@L_CAMPANY@ @L_SHOP@！　正に@COUNTRY@の@NICK@！')
+        ];
+    }
+}
+
+
 class shop_docs_maker extends news_docs_maker {
     constructor(){
         super();
@@ -355,6 +395,9 @@ class shop_docs_maker extends news_docs_maker {
         this.dic_push(new selector_s_info01());
         this.dic_push(new selector_s_info02());
         this.dic_push(new selector_s_info03());
+
+        this.dic_push(new selector_ShopComent());
+
     }
 }
 class shop_docs_maker01 extends news_docs_maker {
