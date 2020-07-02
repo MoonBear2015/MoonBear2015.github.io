@@ -192,7 +192,7 @@ class selector_writer3 extends ItmArray {
     }
     get rnd_Itm() {
         let name = this.nameCreater.create();
-        return new SctItm(name.html_WRITER3(100), '');
+        return new SctItm(name.html_WRITER3(70), '');
     }
     Copy() {
         let result = new selector_human();

@@ -9,7 +9,7 @@ function set_shop()
     html += '<h1>';
     html += 'Shop';
     html += '<small>';
-    html += ' S00.15';
+    html += ' S00.17';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -104,31 +104,45 @@ function make_shop()
 
     }
 
-    for(let i = 0; i < 3; i++){
-        html += '<br>';
-        html += '<div id="shop_comenter">';
-        html += '@WRITER3@';
+    for(let h = 0; h < 3; h++){
+        let flg_LR : boolean = false;
+        html += '<div id="shop_comgrid">';
+        for(let i = 0; i < 2; i++){
+            html += '<br>';
 
-        html += '<div id="shop_comtitle">'; // catch
-        html += '@SHOPCOM@';
-        html += '</div>'; // catch
+            if(flg_LR) {
+                html += '<div id="shop_comR">';
+                flg_LR = false;
+            }
+            else {
+                html += '<div id="shop_comL">';
+                flg_LR = true;
+            }
 
-        let star_cnt : number = rnd_minmax(3,6);
-        let star_miss : number = 5 - star_cnt;
+            html += '@WRITER3@';
 
-        html += '<div id="shop_star">'; // catch
-        html += '★'.repeat(star_cnt);
-        html += '☆'.repeat(star_miss);
-        html += '</div>'; // catch
+            html += '<div id="shop_comtitle">'; // catch
+            html += '@SHOPCOM@';
+            html += '</div>'; // catch
 
-        html += '<p id="shop_comdoc">'; // info
-        for(let j = 0; j < 3; j++){
-            html += '@SHOPCOMDOC@';
+            let star_cnt : number = rnd_minmax(3,6);
+            let star_miss : number = 5 - star_cnt;
+
+            html += '<div id="shop_star">'; // catch
+            html += '★'.repeat(star_cnt);
+            html += '☆'.repeat(star_miss);
+            html += '</div>'; // catch
+
+            html += '<p id="shop_comdoc">'; // info
+            for(let j = 0; j < 4; j++){
+                html += '@SHOPCOMDOC@';
+            }
+            html += '</p>'; // catch
+
+            html += '</div>';
+            html += '<br><br>';
         }
-        html += '</p>'; // catch
-
         html += '</div>';
-        html += '<br>';
     }
 
 
@@ -389,6 +403,8 @@ class selector_ShopComentTitle extends SctItm_Selector implements ISctItm_Select
             new SctItm('なんて@KEI1@@L_SHOP@なのだろう！')
             ,
             new SctItm('もう@L_CAMPANY@の@L_SHOP@が無ければ生きていけません！')
+            ,
+            new SctItm('@COUNTRY@でNo.1！ @L_CAMPANY@の@L_SHOP@！')
         ];
     }
 }
@@ -399,7 +415,7 @@ class selector_ShopComentDoc01 extends SctItm_Selector implements ISctItm_Select
         this.itms = [
             new SctItm('ずっと@PLACE@で@L_CAMPANY@の@L_SHOP@を使っています。')
             ,
-            new SctItm('@L_CAMPANY@の@L_SHOP@でなければ有り得ません。')
+            new SctItm('@L_SHOP@は@L_CAMPANY@でなければ有り得ません。')
             ,
             new SctItm('今度の@L_SHOP@は実に@KEI2@で@KEIM2@です。')
             ,
@@ -408,6 +424,10 @@ class selector_ShopComentDoc01 extends SctItm_Selector implements ISctItm_Select
             new SctItm('すぐに@PART@や@PART@に奨めなければ。')
             ,
             new SctItm('今度、@L_CAMPANY@ @L_SHOP@が我が社で採用されました。')
+            ,
+            new SctItm('今では@CLASS@の誰もが@L_CAMPANY@ @L_SHOP@を使っています。')
+            ,
+            new SctItm('正に@L_CAMPANY@ @L_SHOP@は@CLASS@の必需品です。')
             ,
             new SctItm('これで@CLASS@を呼ぶ必要はありません。')
             ,
@@ -420,6 +440,16 @@ class selector_ShopComentDoc01 extends SctItm_Selector implements ISctItm_Select
             new SctItm('もう@L_CAMPANY@の@L_SHOP@が無ければ生きていけません。')
             ,
             new SctItm('@L_CAMPANY@ @L_SHOP@は@PLACE@に行くときの必需品です。')
+            ,
+            new SctItm('私を@KEY@や@KEY@から救ってくれたのが@L_CAMPANY@ @L_SHOP@だったのです。')
+            ,
+            new SctItm('私は@L_CAMPANY@ @L_SHOP@のお陰で悩みから解放されました。')
+            ,
+            new SctItm('私は@L_CAMPANY@ @L_SHOP@のお陰で@CLASS@になれました。')
+            ,
+            new SctItm('私は@L_CAMPANY@ @L_SHOP@のお陰で@SUCCESS@できました。')
+            ,
+            new SctItm('@L_CAMPANY@ @L_SHOP@が無ければ、ずっと@CLASS@のままでした。')
         ];
     }
 }
