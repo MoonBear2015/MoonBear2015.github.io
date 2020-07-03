@@ -1572,6 +1572,24 @@ class selector_conect2 extends SctItm_Selector {
         ];
     }
 }
+// 否定接続
+class selector_bat extends SctItm_Selector {
+    constructor() {
+        super('@BAT@');
+        this.itms = [
+            new SctItm('でも'),
+            new SctItm('しかし'),
+            new SctItm('それでも'),
+            new SctItm('そうだとしても'),
+            new SctItm('そうであっても'),
+            new SctItm('ですが'),
+            new SctItm('けど'),
+            new SctItm('ですけど'),
+            new SctItm('けれども'),
+            new SctItm('そうはいっても')
+        ];
+    }
+}
 class news_doc {
     constructor(doc) {
         this.doc = doc;
@@ -1640,6 +1658,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_answer());
         this.dic_push(new selector_conect());
         this.dic_push(new selector_conect2());
+        this.dic_push(new selector_bat());
         this.dic_push(new selector_nickname());
         this.dic_push(new selector_assessment());
         this.dic_push(new selector_people());

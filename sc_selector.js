@@ -303,6 +303,27 @@ class SctItm_SelectLocker extends SctItm_Selector {
         return result;
     }
 }
+class SctItm_SelectLockerZeroCan extends SctItm_Selector {
+    constructor(in_itm_key, in_pic_key, in_array) {
+        super(in_itm_key, in_pic_key, in_array);
+        this.is_lock = false;
+        this.lock_item = new SctItm('', '');
+    }
+    get rnd_Itm() {
+        if (this.is_lock) {
+            return this.lock_item;
+        }
+        this.is_lock = true;
+        let i = 1 + rnd_max(this.itms.length - 1);
+        this.lock_item.Copy = this.itms[i];
+        return this.itms[i];
+    }
+    Copy() {
+        let result = new SctItm_SelectLockerZeroCan(this.itm_key, this.pic_key);
+        result.Paste(this.itms);
+        return result;
+    }
+}
 class SctItm_FirstLocker extends SctItm_Selector {
     constructor(in_itm_key, in_pic_key) {
         super(in_itm_key, in_pic_key);

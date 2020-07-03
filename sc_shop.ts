@@ -9,7 +9,7 @@ function set_shop()
     html += '<h1>';
     html += 'Shop';
     html += '<small>';
-    html += ' S00.18';
+    html += ' S00.19';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -104,16 +104,20 @@ function make_shop()
 
     }
 
-    for(let h = 0; h < 4; h++){
+    for(let h = 0; h < 8; h++){
 
         html += '@WRITER3@';
 
-        html += '<div id="shop_comtitle">'; // catch
-        html += '@SHOPCOM@';
-        html += '</div>'; // catch
-
-        let star_cnt : number = rnd_minmax(3,6);
+        let star_cnt : number = rnd_minmax(1,6);
         let star_miss : number = 5 - star_cnt;
+
+        html += '<div id="shop_comtitle">'; // catch
+        if(rnd_minmax(3,6) <= star_cnt) {
+            html += '@SHOPCOM_G@';
+        } else {
+            html += '@SHOPCOM_N@';
+        }
+        html += '</div>'; // catch
 
         html += '<div id="shop_star">'; // catch
         html += '★'.repeat(star_cnt);
@@ -121,8 +125,36 @@ function make_shop()
         html += '</div>'; // catch
 
         html += '<p id="shop_comdoc">'; // info
+
+        let goodCnt : number = star_cnt;
+        let badCnt :number = star_miss;
+        let before : number = 0;
+
         for(let j = 0; j < 4; j++){
-            html += '@SHOPCOMDOC@';
+            let flg : number = 0;
+            if (goodCnt == 0) flg = 2;
+            if (badCnt == 0) flg = 1;
+            if (flg == 0)
+            {
+                let r = rnd_max(2);
+                if (r == 1) {
+                    flg = 1;
+                    goodCnt--;
+                }
+                else {
+                    flg = 2;
+                    badCnt--;
+                }
+            }
+            if (before != 0 && before != flg) {
+                html += '@BAT@、'; 
+            }
+            if (flg == 1) {
+                html += '@SHOPCOMDOC_G@';
+            } else {
+                html += '@SHOPCOMDOC_B@';
+            }
+            before = flg;
         }
         html += '</p>'; // catch
 
@@ -166,7 +198,7 @@ class locker_campany extends SctItm_SelectLocker implements ISctItm_Selector{
     }
 }
 // （固定）場所
-class locker_place extends SctItm_SelectLocker implements ISctItm_Selector {
+class locker_place extends SctItm_SelectLockerZeroCan implements ISctItm_Selector {
     constructor(){
         super('@L_PLACE@','@ICON_SHOP@');
         this.Add(cods_to_itms(cods_place));
@@ -366,9 +398,9 @@ class selector_s_info03 extends SctItm_Selector implements ISctItm_Selector {
 }
 
 // コメント
-class selector_ShopComentTitle extends SctItm_Selector implements ISctItm_Selector {
+class selector_ShopComentGood extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
-        super('@SHOPCOM@');
+        super('@SHOPCOM_G@');
         this.itms = [
             new SctItm('待ってました！ @L_CAMPANY@ @L_SHOP@！')
             ,
@@ -392,10 +424,37 @@ class selector_ShopComentTitle extends SctItm_Selector implements ISctItm_Select
         ];
     }
 }
-// キャッチコピー
-class selector_ShopComentDoc01 extends SctItm_Selector implements ISctItm_Selector {
+
+// コメント
+class selector_ShopComentNomal extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
-        super('@SHOPCOMDOC@');
+        super('@SHOPCOM_N@');
+        this.itms = [
+            new SctItm('ああ、新しい@L_CAMPANY@ @L_SHOP@ですか')
+            ,
+            new SctItm('@L_CAMPANY@ @L_SHOP@？　様子見かなぁ')
+            ,
+            new SctItm('@L_CAMPANY@ @L_SHOP@？ 知らなかったな')
+            ,
+            new SctItm('@L_CAMPANY@でも@L_SHOP@出してたんだ')
+            ,
+            new SctItm('@L_CAMPANY@ @L_SHOP@？　へえ？')
+            ,
+            new SctItm('@L_CAMPANY@ @L_SHOP@？　ちょっと@KEIM2@かな')
+            ,
+            new SctItm('そろそろ新モデルの時期でしたね')
+            ,
+            new SctItm('次まで待とうかな')
+            ,
+            new SctItm('もう少し@KEIM1@だと良いんですが')
+        ];
+    }
+}
+
+// コメント
+class selector_ShopComentDocGood extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@SHOPCOMDOC_G@');
         this.itms = [
             new SctItm('ずっと@PLACE@で@L_CAMPANY@の@L_SHOP@を使っています。')
             ,
@@ -413,7 +472,7 @@ class selector_ShopComentDoc01 extends SctItm_Selector implements ISctItm_Select
             ,
             new SctItm('正に@L_CAMPANY@ @L_SHOP@は@CLASS@の必需品です。')
             ,
-            new SctItm('これで@CLASS@を呼ぶ必要はありません。')
+            new SctItm('@L_CAMPANY@ @L_SHOP@さえあれば、@CLASS@を呼ぶ必要はありません。')
             ,
             new SctItm('@L_CAMPANY@ @L_SHOP@なら値段なんて気にしません。')
             ,
@@ -438,6 +497,38 @@ class selector_ShopComentDoc01 extends SctItm_Selector implements ISctItm_Select
     }
 }
 
+// コメント
+class selector_ShopComentDocBad extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@SHOPCOMDOC_B@');
+        this.itms = [
+            new SctItm('@L_CAMPANY@の@L_SHOP@って使いにくいんですよね。')
+            ,
+            new SctItm('@L_CAMPANY@の@L_SHOP@って、すぐ壊れるんですが。')
+            ,
+            new SctItm('@L_SHOP@なら、他にもありますから。')
+            ,
+            new SctItm('もう@L_CAMPANY@の@L_SHOP@は使いたくないですね。')
+            ,
+            new SctItm('@PART@や@PART@はダメだと云ってます。')
+            ,
+            new SctItm('@PLACE@の@L_SHOP@と違うから困るんですよ。')
+            ,
+            new SctItm('@CLASS@を呼べば済むので必要ありません。')
+            ,
+            new SctItm('@L_SHOP@にしては高いですよね。')
+            ,
+            new SctItm('@PLACE@に行くとき邪魔になります。')
+            ,
+            new SctItm('@L_SHOP@はそろそろ卒業しないといけませんので。')
+            ,
+            new SctItm('@L_SHOP@は医者に止められていますので。')
+            ,
+            new SctItm('今、使っている@L_SHOP@で十分ですから。')
+        ];
+    }
+}
+
 
 class shop_docs_maker extends news_docs_maker {
     constructor(){
@@ -457,8 +548,10 @@ class shop_docs_maker extends news_docs_maker {
         this.dic_push(new selector_s_info02());
         this.dic_push(new selector_s_info03());
 
-        this.dic_push(new selector_ShopComentTitle());
-        this.dic_push(new selector_ShopComentDoc01());
+        this.dic_push(new selector_ShopComentGood());
+        this.dic_push(new selector_ShopComentNomal());
+        this.dic_push(new selector_ShopComentDocGood());
+        this.dic_push(new selector_ShopComentDocBad());
 
     }
 }

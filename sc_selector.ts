@@ -444,6 +444,7 @@ class SctItm_Selector extends ItmSelector<SctItm> implements ISctItm_Selector {
     }
 }
 
+
 class SctItm_SelectLocker extends SctItm_Selector implements ISctItm_Selector {
     private is_lock : boolean;
     private lock_item : SctItm;
@@ -475,6 +476,42 @@ class SctItm_SelectLocker extends SctItm_Selector implements ISctItm_Selector {
     Copy() : ISctItm_Selector
     {
         let result = new SctItm_SelectLocker(this.itm_key,this.pic_key);
+        result.Paste(this.itms);
+        return result;
+    }
+
+}
+class SctItm_SelectLockerZeroCan extends SctItm_Selector implements ISctItm_Selector {
+    private is_lock : boolean;
+    private lock_item : SctItm;
+
+    constructor(
+        in_itm_key? : string
+        ,
+        in_pic_key? : string
+        ,
+        in_array? : Array<SctItm>
+    )
+    {
+        super(in_itm_key,in_pic_key,in_array);
+        this.is_lock = false;
+        this.lock_item = new SctItm('','');
+    }
+
+    get rnd_Itm() : SctItm {
+        if (this.is_lock)
+        {
+            return this.lock_item;
+        }
+        this.is_lock = true;
+        let i = 1 + rnd_max(this.itms.length - 1);
+        this.lock_item.Copy = this.itms[i];
+        return this.itms[i];
+    }
+    
+    Copy() : ISctItm_Selector
+    {
+        let result = new SctItm_SelectLockerZeroCan(this.itm_key,this.pic_key);
         result.Paste(this.itms);
         return result;
     }
@@ -513,6 +550,7 @@ class SctItm_FirstLocker
     }
 
 }
+
 
 //------------------------------------ poem
 
