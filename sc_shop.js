@@ -7,7 +7,7 @@ function set_shop() {
     html += '<h1>';
     html += 'Shop';
     html += '<small>';
-    html += ' S00.17';
+    html += ' S00.18';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -78,38 +78,23 @@ function make_shop() {
         html += html01;
         html += '<br>';
     }
-    for (let h = 0; h < 3; h++) {
-        let flg_LR = false;
-        html += '<div id="shop_comgrid">';
-        for (let i = 0; i < 2; i++) {
-            html += '<br>';
-            if (flg_LR) {
-                html += '<div id="shop_comR">';
-                flg_LR = false;
-            }
-            else {
-                html += '<div id="shop_comL">';
-                flg_LR = true;
-            }
-            html += '@WRITER3@';
-            html += '<div id="shop_comtitle">'; // catch
-            html += '@SHOPCOM@';
-            html += '</div>'; // catch
-            let star_cnt = rnd_minmax(3, 6);
-            let star_miss = 5 - star_cnt;
-            html += '<div id="shop_star">'; // catch
-            html += '★'.repeat(star_cnt);
-            html += '☆'.repeat(star_miss);
-            html += '</div>'; // catch
-            html += '<p id="shop_comdoc">'; // info
-            for (let j = 0; j < 4; j++) {
-                html += '@SHOPCOMDOC@';
-            }
-            html += '</p>'; // catch
-            html += '</div>';
-            html += '<br><br>';
+    for (let h = 0; h < 4; h++) {
+        html += '@WRITER3@';
+        html += '<div id="shop_comtitle">'; // catch
+        html += '@SHOPCOM@';
+        html += '</div>'; // catch
+        let star_cnt = rnd_minmax(3, 6);
+        let star_miss = 5 - star_cnt;
+        html += '<div id="shop_star">'; // catch
+        html += '★'.repeat(star_cnt);
+        html += '☆'.repeat(star_miss);
+        html += '</div>'; // catch
+        html += '<p id="shop_comdoc">'; // info
+        for (let j = 0; j < 4; j++) {
+            html += '@SHOPCOMDOC@';
         }
-        html += '</div>';
+        html += '</p>'; // catch
+        html += '<br><br>';
     }
     //---- this shop END
     html += '</div>';
