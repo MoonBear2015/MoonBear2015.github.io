@@ -7,7 +7,7 @@ function set_shop() {
     html += '<h1>';
     html += 'Shop';
     html += '<small>';
-    html += ' S00.20';
+    html += ' S00.21';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -91,7 +91,7 @@ function make_shop() {
     html += 'レビュー<br>';
     html += '</div>';
     html += '<div id="shop_allscore">';
-    html += '<small>スコア：</small><big>' + score_ave.toString() + '</big>';
+    html += 'スコア：<big>' + score_ave.toString() + '</big>';
     html += '</div>';
     html += '<div id="shop_starL">'; // catch
     html += star_str(score_ave);
@@ -126,7 +126,7 @@ function make_shop() {
         let goodCnt = star_cnt;
         let badCnt = star_miss;
         let before = 0;
-        for (let j = 0; j < 4; j++) {
+        for (let j = 0; j < 5; j++) {
             let flg = 0;
             if (goodCnt == 0)
                 flg = 2;
@@ -345,7 +345,7 @@ class selector_ShopComentGood extends SctItm_Selector {
             new SctItm('遂に来た！ これぞ@FUTURE@の@L_SHOP_B@です！'),
             new SctItm('@L_CAMPANY@！　@L_CAMPANY@！　@L_CAMPANY@！'),
             new SctItm('@L_CAMPANY@ @L_SHOP@！　もう待ちきれない！'),
-            new SctItm('@L_CAMPANY@ @L_SHOP@！　正に@COUNTRY@の@NICK@！'),
+            new SctItm('@L_CAMPANY@ @L_SHOP@！　正に@COUNTRY@の@NICKGOOD@！'),
             new SctItm('@L_CAMPANY@ @L_SHOP@！　ああ、なんて@KEI1@！'),
             new SctItm('@L_CAMPANY@ @L_SHOP@！　これで勝てる！'),
             new SctItm('なんて@KEI1@@L_SHOP_B@なのだろう！'),
@@ -366,7 +366,7 @@ class selector_ShopComentNomal extends SctItm_Selector {
             new SctItm('@L_CAMPANY@ @L_SHOP@？　へえ？'),
             new SctItm('@L_CAMPANY@ @L_SHOP@？　ちょっと@KEIM2@かな'),
             new SctItm('そろそろ新モデルの時期でしたね'),
-            new SctItm('次まで待とうかな'),
+            new SctItm('次のモデルまで待とうかな'),
             new SctItm('もう少し@KEIM1@と良いんですが')
         ];
     }
@@ -377,7 +377,8 @@ class selector_ShopComentBad extends SctItm_Selector {
         super('@SHOPCOM_B@');
         this.itms = [
             new SctItm('@L_CAMPANY_B@の@L_SHOP_B@は、ちょっとなあ'),
-            new SctItm('これが@L_SHOP_B@？　@NICK@かと思った・・・'),
+            new SctItm('これが@L_SHOP_B@？　@NICKBAD@かと思った・・・'),
+            new SctItm('@L_SHOP_B@？　今更かな'),
             new SctItm('こんな@L_SHOP_B@なら、無い方がいいですね'),
             new SctItm('@CLASS@を呼んだ方がマシ'),
             new SctItm('こんな@L_SHOP_B@じゃ、@PLACE@には持って行けない'),
