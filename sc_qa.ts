@@ -174,6 +174,7 @@ abstract class selector_NameLocker
 {
     public nameCreater : INameCreater;
     public itm_key : string;
+    public itm_key2 : string;
     public pic_key : string;
     public is_first : boolean;
     public created_name : INmItm;
@@ -182,6 +183,7 @@ abstract class selector_NameLocker
     {
         super();
         this.itm_key = in_itm_key;
+        this.itm_key2 = "";
         this.pic_key = "";
         this.nameCreater = new NameCreaterAll();
         this.is_first = true;

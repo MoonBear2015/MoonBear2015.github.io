@@ -77,6 +77,7 @@ class selector_abouter extends ItmArray {
     constructor() {
         super();
         this.itm_key = "@ABOUTER@";
+        this.itm_key2 = "";
         this.pic_key = "";
         this.nameCreater = new NameCreaterAll();
     }

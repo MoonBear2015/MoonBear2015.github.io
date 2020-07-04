@@ -87,6 +87,7 @@ class selector_random_date extends ItmArray {
     constructor() {
         super();
         this.itm_key = "@DATE@";
+        this.itm_key2 = "";
         this.pic_key = "";
     }
     get rnd_Itm() {
@@ -112,6 +113,7 @@ class selector_random_year extends ItmArray {
     constructor() {
         super();
         this.itm_key = "@YEAR@";
+        this.itm_key2 = "";
         this.pic_key = "";
     }
     get rnd_Itm() {
@@ -130,6 +132,7 @@ class selector_human extends ItmArray {
     constructor() {
         super();
         this.itm_key = "@HUMAN@";
+        this.itm_key2 = "";
         this.pic_key = "";
         this.nameCreater = new NameCreaterAll();
     }
@@ -149,6 +152,7 @@ class selector_writer extends ItmArray {
     constructor() {
         super();
         this.itm_key = "@WRITER@";
+        this.itm_key2 = "";
         this.pic_key = "";
         this.nameCreater = new NameCreaterAll();
     }
@@ -168,6 +172,7 @@ class selector_writer2 extends ItmArray {
     constructor() {
         super();
         this.itm_key = "@WRITER2@";
+        this.itm_key2 = "";
         this.pic_key = "";
         this.nameCreater = new NameCreaterAll();
     }
@@ -187,6 +192,7 @@ class selector_writer3 extends ItmArray {
     constructor() {
         super();
         this.itm_key = "@WRITER3@";
+        this.itm_key2 = "";
         this.pic_key = "";
         this.nameCreater = new NameCreaterAll();
     }
@@ -206,6 +212,7 @@ class selector_age extends ItmArray {
     constructor() {
         super();
         this.itm_key = "@AGE@";
+        this.itm_key2 = "";
         this.pic_key = "";
         this.nameCreater = new NameCreaterAll();
     }
@@ -226,6 +233,7 @@ class selector_age2 extends ItmArray {
     constructor() {
         super();
         this.itm_key = "@AGE2@";
+        this.itm_key2 = "";
         this.pic_key = "";
         this.nameCreater = new NameCreaterAll();
     }
@@ -572,7 +580,7 @@ class selector_what extends SctItm_Selector {
 // （固定）名詞・人物・組織　～は・～が・～の
 class locker_what extends SctItm_SelectLocker {
     constructor() {
-        super('@L_WHAT@', '@PIC_WHAT@');
+        super('@L_WHAT@', '', '@PIC_WHAT@');
         this.Add(itms_what);
     }
 }
@@ -586,7 +594,7 @@ class selector_do extends SctItm_Selector {
 // （固定）動名詞 の～
 class locker_do extends SctItm_SelectLocker {
     constructor() {
-        super('@L_DO@', '@PIC_DO@');
+        super('@L_DO@', '', '@PIC_DO@');
         this.Add(itms_do);
     }
 }

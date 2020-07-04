@@ -97,11 +97,13 @@ class selector_abouter
 {
     public nameCreater : INameCreater;
     public itm_key : string;
+    public itm_key2 : string;
     public pic_key : string;
     constructor()
     {
         super();
         this.itm_key = "@ABOUTER@";
+        this.itm_key2 = "";
         this.pic_key = "";
         this.nameCreater = new NameCreaterAll();
     }

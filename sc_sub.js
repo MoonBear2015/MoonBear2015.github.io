@@ -165,3 +165,17 @@ function ruby_change(in_html) {
     }
     return result;
 }
+function star_str(in_score, in_max) {
+    let score = Math.floor(in_score);
+    let mill = 0;
+    if (score != in_score)
+        mill = 1;
+    let max = 5;
+    if (in_max)
+        max = in_max;
+    let result = '';
+    result += '★'.repeat(score);
+    result += '・'.repeat(mill);
+    result += '☆'.repeat(max - score - mill);
+    return result;
+}

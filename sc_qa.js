@@ -137,6 +137,7 @@ class selector_NameLocker extends ItmArray {
     constructor(in_itm_key) {
         super();
         this.itm_key = in_itm_key;
+        this.itm_key2 = "";
         this.pic_key = "";
         this.nameCreater = new NameCreaterAll();
         this.is_first = true;

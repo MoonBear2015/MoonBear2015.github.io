@@ -289,11 +289,33 @@ small {
     grid-row: 1/2;
 }
 
+#shop_review {
+    font-size: 3vmax;
+    color:#303030;
+    margin: 0px 0px;
+    text-align: left;
+}
+
+#shop_allscore {
+    font-size: 5vmax;
+    color:#303030;
+    margin: 0px 0px;
+    text-align: left;
+}
+
+#shop_starL {
+    font-size: 3.5vmax;
+    color:orange;
+    margin: 0px 0px;
+    text-align: left;
+    text-shadow: 1px 1px 0px #A0A050;
+}
 #shop_star {
     font-size: 2.5vmax;
     color:orange;
     margin: 0px 0px;
     text-align: left;
+    text-shadow: 1px 1px 0px #A0A050;
 }
 #shop_comtitle {
     font-size: 2.5vmax;
