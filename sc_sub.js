@@ -175,7 +175,7 @@ function star_str(in_score, in_max) {
         max = in_max;
     let result = '';
     result += '★'.repeat(score);
-    result += '・'.repeat(mill);
-    result += '☆'.repeat(max - score - mill);
+    result += '☆'.repeat(mill);
+    result += '・'.repeat(max - score - mill);
     return result;
 }

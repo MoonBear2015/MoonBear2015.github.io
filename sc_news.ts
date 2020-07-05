@@ -2223,6 +2223,23 @@ class selector_bat extends SctItm_Selector implements ISctItm_Selector {
           ];
     }
 }
+// 追加接続
+class selector_and extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@AND@');
+        this.itms = [
+            new SctItm('そして')
+            ,
+            new SctItm('それから')
+            ,
+            new SctItm('しかも')
+            ,
+            new SctItm('あと')
+            ,
+            new SctItm('加えて')
+        ];
+    }
+}
 
 
 class news_doc {
@@ -2302,6 +2319,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_conect());
         this.dic_push(new selector_conect2());
         this.dic_push(new selector_bat());
+        this.dic_push(new selector_and());
         this.dic_push(new selector_nickname());
         this.dic_push(new selector_nickBad());
         this.dic_push(new selector_nickGood());

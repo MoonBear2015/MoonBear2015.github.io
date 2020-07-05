@@ -5134,23 +5134,31 @@ const   itms_shop = [
     ,
     new SctItm('CLOCK','SHOP/CLOCK02.jpg','時計')
     ,
+    new SctItm('CLOCK','SHOP/CLOCK03.jpg','時計')
+    ,
     new SctItm('DOG','SHOP/DOG.jpg','飼い犬')
     ,
     new SctItm('CAT','SHOP/CAT.jpg','飼い猫')
     ,
     new SctItm('HAMBURGER','SHOP/hamburger.jpg','ハンバーガー')
     ,
+    new SctItm('HELICOPTER','SHOP/helicopter01.jpg','ヘリコプター')
+    ,
+    new SctItm('HELICOPTER','SHOP/helicopter02.jpg','ヘリコプター')
+    ,
+    new SctItm('HELICOPTER','SHOP/helicopter03.jpg','ヘリコプター')
+    ,
     new SctItm('HORSE','SHOP/HORSE01.jpg','馬')
     ,
     new SctItm('HORSE','SHOP/HORSE02.jpg','馬')
     ,
-    new SctItm('HORSE','SHOP/HORSE03.jpg','馬')
+    new SctItm('HORSE','SHOP/HORSE03.jpg','種馬')
     ,
-    new SctItm('PHONE','SHOP/PHONE01.jpg','電話')
+    new SctItm('SMARTPHONE','SHOP/PHONE01.jpg','スマートフォン')
     ,
-    new SctItm('PHONE','SHOP/PHONE02.jpg','電話')
+    new SctItm('SMARTPHONE','SHOP/PHONE02.jpg','スマートフォン')
     ,
-    new SctItm('PHONE','SHOP/PHONE03.jpg','電話')
+    new SctItm('SMARTPHONE','SHOP/PHONE03.jpg','スマートフォン')
     ,
     new SctItm('TYPEWRITER','SHOP/TYPEWRITER.jpg','タイプライター')
     ,
@@ -5167,12 +5175,14 @@ const   itms_shop = [
     new SctItm('GOD','SHOP/God.jpg','神様')
     ,
     new SctItm('ANGEL','SHOP/angel.jpg','天使様')
+    ,
+    new SctItm('DEATHSTAR','SHOP/deathstar.jpg','デス・スター')
 ]
 
 const   itms_campany = [
-    new SctItm('Banana','','バナナ')
+    new SctItm('Ringo','','リンゴ')
     ,
-    new SctItm('MaxHard','','マックスハード')
+    new SctItm('Mixsolt','','ミックスソルト')
     ,
     new SctItm('Pony','','ポニー')
     ,
@@ -5184,7 +5194,13 @@ const   itms_campany = [
     ,
     new SctItm('MixVegetable','','ミックスベジタブル')
     ,
-    new SctItm('YeeHaw!','','イーハー！')
+    new SctItm('YeeHaw!','','イーハー')
+    ,
+    new SctItm('Nihao','','ニーハオ')
+    ,
+    new SctItm('Forklift','','フォークリフト')
+    ,
+    new SctItm('Channel','','チャンネル')
 ]
 
 const   itms_model = [
@@ -5367,10 +5383,6 @@ const   itms_nickNega = [
     new SctItm('骸')
     ,
     new SctItm('髑髏')
-    ,
-    new SctItm('恥知らず')
-    ,
-    new SctItm('恥部')
     ,
     new SctItm('悪魔')
     ,
@@ -5643,16 +5655,6 @@ const   itms_nickPosi = [
     ,
     new SctItm('宝')
     ,
-    new SctItm('骨')
-    ,
-    new SctItm('魂')
-    ,
-    new SctItm('神髄')
-    ,
-    new SctItm('真骨頂')
-    ,
-    new SctItm('真の姿')
-    ,
     new SctItm('化身')
     ,
     new SctItm('スター')
@@ -5707,8 +5709,6 @@ const   itms_nickNomal = [
     new SctItm('おばあちゃん')
     ,
     new SctItm('若者')
-    ,
-    new SctItm('一般市民')
     ,
     new SctItm('村人')
     ,

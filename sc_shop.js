@@ -7,7 +7,7 @@ function set_shop() {
     html += '<h1>';
     html += 'Shop';
     html += '<small>';
-    html += ' S00.21';
+    html += ' S00.22';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -143,8 +143,13 @@ function make_shop() {
                     badCnt--;
                 }
             }
-            if (before != 0 && before != flg) {
-                html += '@BAT@、';
+            if (before != 0) {
+                if (before != 0 && before != flg) {
+                    html += '@BAT@、';
+                }
+                else {
+                    html += '@AND@、';
+                }
             }
             if (flg == 1) {
                 html += '@SHOPCOMDOC_G@';
@@ -394,7 +399,7 @@ class selector_ShopComentDocGood extends SctItm_Selector {
     constructor() {
         super('@SHOPCOMDOC_G@');
         this.itms = [
-            new SctItm('ずっと@PLACE@で@L_CAMPANY@の@L_SHOP_B@を使っています。'),
+            new SctItm('ずっと@PLACE@で@L_CAMPANY_B@の@L_SHOP_B@を使っています。'),
             new SctItm('@L_SHOP_B@は@L_CAMPANY_B@でなければ有り得ません。'),
             new SctItm('今度の@L_CAMPANY@ @L_SHOP@は実に@KEI2@で@KEIM2@です。'),
             new SctItm('もう@L_CAMPANY@ @L_SHOP@は手放せません。'),
@@ -423,7 +428,8 @@ class selector_ShopComentDocBad extends SctItm_Selector {
         this.itms = [
             new SctItm('@L_CAMPANY_B@の@L_SHOP_B@って使いにくいんですよね。'),
             new SctItm('@L_CAMPANY_B@の@L_SHOP_B@って、すぐ壊れるんですが。'),
-            new SctItm('@L_SHOP_B@なら、他にもありますから。'),
+            new SctItm('最近、@L_CAMPANY_B@の@L_SHOP_B@って見かけないですね。'),
+            new SctItm('今時、@L_CAMPANY_B@の@L_SHOP_B@を使うの恥ずかしいので。'),
             new SctItm('もう@L_CAMPANY_B@の@L_SHOP_B@は使いたくないですね。'),
             new SctItm('@PART@や@PART@はダメだと云ってます。'),
             new SctItm('@PLACE@の@L_SHOP_B@と違うから困るんですよ。'),
@@ -432,7 +438,10 @@ class selector_ShopComentDocBad extends SctItm_Selector {
             new SctItm('@PLACE@に行くとき邪魔になります。'),
             new SctItm('@L_SHOP_B@はそろそろ卒業しないといけませんので。'),
             new SctItm('@L_SHOP_B@は医者に止められていますので。'),
-            new SctItm('今、使っている@L_SHOP_B@で十分ですから。')
+            new SctItm('今、使っている@L_SHOP_B@で十分ですから。'),
+            new SctItm('@L_SHOP_B@なら、他にもありますから。'),
+            new SctItm('@L_SHOP_B@にしては大きすぎます。'),
+            new SctItm('@L_SHOP_B@ってもう古くないですか。')
         ];
     }
 }

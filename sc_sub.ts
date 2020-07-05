@@ -218,8 +218,8 @@ function star_str(in_score : number,in_max? : number) : string {
 
     let result = '';
     result += '★'.repeat(score);
-    result += '・'.repeat(mill)
-    result += '☆'.repeat(max - score - mill);
+    result += '☆'.repeat(mill)
+    result += '・'.repeat(max - score - mill);
 
     return result;
 }
