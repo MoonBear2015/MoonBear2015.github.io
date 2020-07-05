@@ -2201,25 +2201,19 @@ class selector_bat extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@BAT@');
         this.itms = [
-            new SctItm('でも')
+            new SctItm('でも、')
             ,
-            new SctItm('しかし')
+            new SctItm('しかし、')
             ,
-            new SctItm('それでも')
+            new SctItm('それでも、')
             ,
-            new SctItm('そうだとしても')
+            new SctItm('ですが、')
             ,
-            new SctItm('そうであっても')
+            new SctItm('けど、')
             ,
-            new SctItm('ですが')
+            new SctItm('ですけど、')
             ,
-            new SctItm('けど')
-            ,
-            new SctItm('ですけど')
-            ,
-            new SctItm('けれども')
-            ,
-            new SctItm('そうはいっても')
+            new SctItm('けれども、')
           ];
     }
 }
@@ -2228,15 +2222,17 @@ class selector_and extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@AND@');
         this.itms = [
-            new SctItm('そして')
+            new SctItm('')
             ,
-            new SctItm('それから')
+            new SctItm('そして、')
             ,
-            new SctItm('しかも')
+            new SctItm('それから、')
             ,
-            new SctItm('あと')
+            new SctItm('あと、')
             ,
-            new SctItm('加えて')
+            new SctItm('加えて、')
+            ,
+            new SctItm('だから、')
         ];
     }
 }

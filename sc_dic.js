@@ -3319,7 +3319,7 @@ const itms_shop = [
 ];
 const itms_campany = [
     new SctItm('Ringo', '', 'リンゴ'),
-    new SctItm('Mixsolt', '', 'ミックスソルト'),
+    new SctItm('Michaelsolt', '', 'マイケルソルト'),
     new SctItm('Pony', '', 'ポニー'),
     new SctItm('TANAKA', '', 'タナカ'),
     new SctItm('Doodle', '', 'ドゥードゥル'),

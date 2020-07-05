@@ -9,7 +9,7 @@ function set_shop()
     html += '<h1>';
     html += 'Shop';
     html += '<small>';
-    html += ' S00.22';
+    html += ' S00.23';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -184,9 +184,9 @@ function make_shop()
             }
             if (before != 0) {
                 if (before != 0 && before != flg) {
-                    html += '@BAT@、'; 
+                    html += '@BAT@'; 
                 } else {
-                    html += '@AND@、'; 
+                    html += '@AND@'; 
                 }
             }
             if (flg == 1) {
