@@ -7,7 +7,7 @@ function set_shop() {
     html += '<h1>';
     html += 'Shop';
     html += '<small>';
-    html += ' S00.23';
+    html += ' S00.24';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -23,14 +23,7 @@ function set_shop() {
 }
 function make_shop() {
     let html = '';
-    html += '<div id="shop_box"';
-    html += 'style="';
-    html += 'text-aligh = center';
-    html += '"';
-    html += '>';
-    // html += 'style="';
-    // html += 'text-aligh = center';
-    // html += '">';
+    html += '<div id="shop_box">';
     html += '<div id="shop_title">';
     html += '@L_CAMPANY@ @L_SHOP@ @MODEL@';
     html += '</div>';
@@ -79,23 +72,44 @@ function make_shop() {
         html += '<br>';
     }
     let scores = new Array();
-    let all = 0;
+    let scnt = [0, 0, 0, 0, 0, 0];
+    let ucnt = [0, 0, 0, 0, 0, 0];
     let reviewCnt = 8;
+    let usercnt = rnd_max(1000) + 100;
     for (let i = 0; i < reviewCnt; i++) {
         let s = rnd_minmax(1, 6);
-        all += s;
-        scores.push(rnd_minmax(1, 6));
+        let user = usercnt + rnd_max(100);
+        scores.push(s);
+        ucnt[s] += user;
+        scnt[s]++;
     }
-    let score_ave = Math.floor((all / reviewCnt) * 10) / 10;
-    html += '<div id="shop_review">';
+    let all = 0;
+    let alluser = 0;
+    for (let i = 0; i < 6; i++) {
+        ucnt[i] += rnd_max(10);
+        all += ucnt[i] * i;
+        alluser += ucnt[i];
+    }
+    let score_ave = Math.floor((all / alluser) * 10) / 10;
+    html += '<div id="shop_review_all">'; // review_all
+    html += '<div id="shop_review_all01">'; // review_all01
+    html += '<div id="shop_review_title">'; // review_title
     html += 'レビュー<br>';
-    html += '</div>';
-    html += '<div id="shop_allscore">';
+    html += '</div>'; // review_title
+    html += '<div id="shop_allscore">'; // allscore
     html += 'スコア：<big>' + score_ave.toString() + '</big>';
-    html += '</div>';
-    html += '<div id="shop_starL">'; // catch
+    html += '</div>'; // allscore
+    html += '<div id="shop_starL">'; // starL
     html += star_str(score_ave);
-    html += '</div>'; // catch
+    html += '</div>'; // starL
+    html += '</div>'; // review_all01
+    html += '<div id="shop_review_all02">'; // review_all02
+    for (let i = 5; i > 0; i--) {
+        html += i.toString() + ':' + ucnt[i].toString() + ' ' + '*'.repeat(scnt[i]);
+        html += '<br>';
+    }
+    html += '</div>'; // review_all02
+    html += '</div>'; // review_all
     html += '<br><br>';
     for (let h = 0; h < reviewCnt; h++) {
         html += '@WRITER3@';
@@ -106,7 +120,7 @@ function make_shop() {
             score2 += rnd_max(2) * 2 - 1;
         if (score2 == 4)
             score2 += rnd_max(2) * 2 - 1;
-        html += '<div id="shop_comtitle">'; // catch
+        html += '<div id="shop_comtitle">'; // comtitle
         switch (score2) {
             case 1:
                 html += '@SHOPCOM_B@';
@@ -118,11 +132,11 @@ function make_shop() {
                 html += '@SHOPCOM_G@';
                 break;
         }
-        html += '</div>'; // catch
+        html += '</div>'; // comtitle
         html += '<div id="shop_star">'; // catch
         html += star_str(star_cnt);
         html += '</div>'; // catch
-        html += '<p id="shop_comdoc">'; // info
+        html += '<p id="shop_comdoc">'; // comdoc
         let goodCnt = star_cnt;
         let badCnt = star_miss;
         let before = 0;
@@ -159,11 +173,11 @@ function make_shop() {
             }
             before = flg;
         }
-        html += '</p>'; // catch
+        html += '</p>'; // comdoc
         html += '<br><br>';
     }
     //---- this shop END
-    html += '</div>';
+    html += '</div>'; // shop_box
     let cnt = 0;
     while (true) {
         html = maker.gene_docs(html);

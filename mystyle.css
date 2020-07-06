@@ -289,7 +289,29 @@ small {
     grid-row: 1/2;
 }
 
-#shop_review {
+#shop_review_all {
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    grid-template-rows: 1fr;
+    grid-template-columns: 30% 1fr;
+}
+
+#shop_review_all01 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+#shop_review_all02 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    font-size: 2.5vmax;
+    color:black;
+    margin: 0px 0px;
+    text-align: left;
+}
+
+#shop_review_title {
     font-size: 3vmax;
     color:#303030;
     margin: 0px 0px;
