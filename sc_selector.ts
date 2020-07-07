@@ -322,7 +322,8 @@ class ItmSelector<T extends ISctItm> extends
     ItmArray<T> 
     implements IItmSelector<T> 
 {
-    private bef_num : number;
+    protected bef_num : number;
+    protected startNumber : number;
     constructor(in_array? : Array<T>){
         if (in_array) {
             super(in_array);
@@ -331,11 +332,12 @@ class ItmSelector<T extends ISctItm> extends
             super();
         }
         this.bef_num = -1;
+        this.startNumber = 0;
     }
     get rnd_Itm() : T {
         let i = -1;
         while(true) {
-            i = rnd_max(this.itms.length);
+            i = this.startNumber + rnd_max(this.itms.length - this.startNumber);
             if (this.itms.length < 2) break;
             if (i != this.bef_num) break;
         }
@@ -356,7 +358,8 @@ class ItmCounter<T extends ISctItm>
     extends ItmArray<T>
     implements IItmSelector<T> 
 {
-    private bef_num : number;
+    protected bef_num : number;
+    protected startNumber : number;
     constructor(in_array? : Array<T>){
         if (in_array) {
             super(in_array);
@@ -365,8 +368,12 @@ class ItmCounter<T extends ISctItm>
             super();
         }
         this.bef_num = -1;
+        this.startNumber = 0;
     }
     get rnd_Itm() : T {
+        if (this.startNumber != 0 && this.bef_num == -1) {
+            this.bef_num = this.startNumber - 1;
+        }
         let i = this.bef_num + 1;
         if (i == this.itms.length)
         {
@@ -500,7 +507,7 @@ class SctItm_SelectLocker extends SctItm_Selector implements ISctItm_Selector {
             return this.lock_item;
         }
         this.is_lock = true;
-        let i = rnd_max(this.itms.length);
+        let i = this.startNumber + rnd_max(this.itms.length - this.startNumber);
         this.lock_item.Copy = this.itms[i];
         return this.itms[i];
     }
@@ -508,44 +515,6 @@ class SctItm_SelectLocker extends SctItm_Selector implements ISctItm_Selector {
     Copy() : ISctItm_Selector
     {
         let result = new SctItm_SelectLocker(this.itm_key,this.itm_key2,this.pic_key);
-        result.Paste(this.itms);
-        return result;
-    }
-
-}
-class SctItm_SelectLockerZeroCan extends SctItm_Selector implements ISctItm_Selector {
-    private is_lock : boolean;
-    private lock_item : SctItm;
-
-    constructor(
-        in_itm_key? : string
-        ,
-        in_itm_key2? : string
-        ,
-        in_pic_key? : string
-        ,
-        in_array? : Array<SctItm>
-    )
-    {
-        super(in_itm_key,in_itm_key2,in_pic_key,in_array);
-        this.is_lock = false;
-        this.lock_item = new SctItm('','','');
-    }
-
-    get rnd_Itm() : SctItm {
-        if (this.is_lock)
-        {
-            return this.lock_item;
-        }
-        this.is_lock = true;
-        let i = 1 + rnd_max(this.itms.length - 1);
-        this.lock_item.Copy = this.itms[i];
-        return this.itms[i];
-    }
-    
-    Copy() : ISctItm_Selector
-    {
-        let result = new SctItm_SelectLockerZeroCan(this.itm_key,this.itm_key2,this.pic_key);
         result.Paste(this.itms);
         return result;
     }
@@ -572,9 +541,9 @@ class SctItm_FirstLocker
         if (this.is_first)
         {
             this.is_first = false;
-            return this.itms[0];
+            return this.itms[this.startNumber];
         }
-        let i = rnd_max(this.itms.length);
+        let i = this.startNumber + rnd_max(this.itms.length - this.startNumber);
         return this.itms[i];
     }
 

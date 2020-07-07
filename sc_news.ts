@@ -1711,6 +1711,7 @@ class selector_future extends SctItm_Selector implements ISctItm_Selector {
 class selector_place extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@PLACE@');
+        this.startNumber = 1;
         this.Add(cods_to_itms(cods_place));
     }
 }

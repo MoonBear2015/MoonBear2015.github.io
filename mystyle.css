@@ -295,7 +295,7 @@ small {
     margin-right: auto;
     width: 100%;
     grid-template-rows: 1fr;
-    grid-template-columns: 30% 1fr;
+    grid-template-columns: 50% 1fr;
 }
 
 #shop_review_all01 {
@@ -312,14 +312,14 @@ small {
 }
 
 #shop_review_title {
-    font-size: 3vmax;
+    font-size: 4vmax;
     color:#303030;
     margin: 0px 0px;
     text-align: left;
 }
 
 #shop_allscore {
-    font-size: 5vmax;
+    font-size: 6vmax;
     color:#303030;
     margin: 0px 0px;
     text-align: left;

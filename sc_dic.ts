@@ -5198,13 +5198,15 @@ const   itms_campany = [
     ,
     new SctItm('Nihao','','ニーハオ')
     ,
-    new SctItm('Forklift','','フォークリフト')
+    new SctItm('Speedwagon','','スピードワゴン')
     ,
     new SctItm('Channel','','チャンネル')
 ]
 
 const   itms_model = [
     new SctItm('Pro')
+    ,
+    new SctItm('Professional')
     ,
     new SctItm('Standard')
     ,

@@ -9,7 +9,7 @@ function set_shop()
     html += '<h1>';
     html += 'Shop';
     html += '<small>';
-    html += ' S00.24';
+    html += ' S00.25';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -114,25 +114,31 @@ function make_shop()
 
     let all = 0;
     let alluser = 0;
+    let max : number = 0;
 
     for(let i = 0;i < 6; i++) {
         ucnt[i] += rnd_max(10);
+        if (max < ucnt[i]) {
+            max = ucnt[i];
+        }
         all += ucnt[i] * i;
         alluser += ucnt[i];
     }
+    let gauge = max / 10;
 
     let score_ave = Math.floor((all/alluser)*10) / 10;
+
+    html += '<div id="shop_review_title">'; // review_title
+    html += 'レビュー';
+    html += '</div>'; // review_title
 
     html += '<div id="shop_review_all">'; // review_all
 
     html += '<div id="shop_review_all01">'; // review_all01
 
-    html += '<div id="shop_review_title">'; // review_title
-    html += 'レビュー<br>';
-    html += '</div>'; // review_title
 
     html += '<div id="shop_allscore">'; // allscore
-    html += 'スコア：<big>' + score_ave.toString() + '</big>';
+    html += '<small>スコア：</small><big>' + score_ave.toString() + '</big><br>';
     html += '</div>'; // allscore
 
     html += '<div id="shop_starL">'; // starL
@@ -143,8 +149,10 @@ function make_shop()
 
     html += '<div id="shop_review_all02">'; // review_all02
 
+    html += '<small>(' + alluser.toString() + 'ユーザーより集計)</small><br>';
     for(let i = 5; i > 0; i--) {
-        html += i.toString() + ':' + ucnt[i].toString() + ' ' + '*'.repeat(scnt[i]);
+        html += i.toString() + ':' + '*'.repeat(ucnt[i] / gauge); 
+        html += '<small>(' + ucnt[i].toString() + ')</small>';
         html += '<br>';
     }
     html += '</div>'; // review_all02
@@ -259,9 +267,10 @@ class locker_campany extends SctItm_SelectLocker implements ISctItm_Selector{
     }
 }
 // （固定）場所
-class locker_place extends SctItm_SelectLockerZeroCan implements ISctItm_Selector {
+class locker_place extends SctItm_SelectLocker implements ISctItm_Selector {
     constructor(){
         super('@L_PLACE@','','@ICON_SHOP@');
+        this.startNumber = 1;
         this.Add(cods_to_itms(cods_place));
     }
 }
