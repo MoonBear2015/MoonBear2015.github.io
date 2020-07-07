@@ -94,7 +94,7 @@ function make_shop() {
         all += ucnt[i] * i;
         alluser += ucnt[i];
     }
-    let gauge = max / 20;
+    let gauge = max / 15;
     let score_ave = Math.floor((all / alluser) * 10) / 10;
     html += '<div id="shop_review_title">'; // review_title
     html += 'レビュー';
