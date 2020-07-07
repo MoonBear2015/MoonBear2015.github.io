@@ -5335,18 +5335,18 @@ const   itms_tech = [
     new SctItm('外部委託')
 ]
 
-// 成功・等 ～した
+// 成功・等 が～した
 const   itms_success = [
     new SctItm('縮小')
     ,
     new SctItm('拡大')
     ,
-    new SctItm('拡張')
-    ,
+    // new SctItm('拡張')
+    // ,
     new SctItm('完成')
     ,
-    new SctItm('完了')
-    ,
+    // new SctItm('完了')
+    // ,
     new SctItm('成功')
     ,
     new SctItm('達成')
@@ -5357,13 +5357,13 @@ const   itms_success = [
     ,
     new SctItm('飛躍')
     ,
-    new SctItm('遂行')
-    ,
-    new SctItm('開発')
-    ,
-    new SctItm('製造')
-    ,
-    new SctItm('創造')
+    // new SctItm('遂行')
+    // ,
+    // new SctItm('開発')
+    // ,
+    // new SctItm('製造')
+    // ,
+    // new SctItm('創造')
 ]
 
 const   itms_nickNega = [

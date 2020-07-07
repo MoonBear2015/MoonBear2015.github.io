@@ -7,7 +7,7 @@ function set_shop() {
     html += '<h1>';
     html += 'Shop';
     html += '<small>';
-    html += ' S00.27';
+    html += ' S00.29';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -39,11 +39,11 @@ function make_shop() {
         html01 += '<div id="shop_icon">'; // icon
         html01 += '<img src="pics/@ICON_SHOP@" width="95%">';
         html01 += '</div>'; // icon
-        html += '<br>';
-        html01 += '<div id="shop_doc">'; // doc
+        html01 += '<br>';
         html01 += '<div id="shop_catch">'; // catch
         html01 += '@CATCH@';
         html01 += '</div>'; // catch
+        // html01 += '<div id="shop_doc">'; // doc
         html01 = maker.gene_docs(html01);
         html01 = makerC01.gene_docs(html01);
         html01 += '<p id="shop_info">'; // info
@@ -52,7 +52,7 @@ function make_shop() {
             html01 += '@S_INFO@';
         }
         html01 += '</p>'; // info
-        html01 += '</div>'; // doc
+        // html01 += '</div>'; // doc
         html01 += '</div>'; // con
         // html01 += '</div> a';
         let cnt = 0;
@@ -144,6 +144,7 @@ function make_shop() {
         html += star_str(star_cnt);
         html += '</div>'; // catch
         html += '<p id="shop_comdoc">'; // comdoc
+        html += '　';
         let goodCnt = star_cnt;
         let badCnt = star_miss;
         let before = 0;
