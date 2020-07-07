@@ -7,7 +7,7 @@ function set_shop() {
     html += '<h1>';
     html += 'Shop';
     html += '<small>';
-    html += ' S00.25';
+    html += ' S00.26';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -352,7 +352,7 @@ class selector_s_info03 extends SctItm_Selector {
             new SctItm('もう、@CLASS@を呼ぶ必要はありません'),
             new SctItm('もう、@PLACE@に行かなくても大丈夫'),
             new SctItm('@L_CAMPANY@ @L_SHOP@は、あなたとの出逢いを待っています'),
-            new SctItm('@L_CAMPANY@ @L_SHOP@は、あなたの@KEI1@@HABIT@を@SUCCESS@させるでしょう'),
+            new SctItm('@L_CAMPANY@ @L_SHOP@により、あなたの@KEI1@@HABIT@が@SUCCESS@します'),
             new SctItm('もはや、@L_CAMPANY@ @L_SHOP@は手放せません'),
             new SctItm('@L_CAMPANY@ @L_SHOP@の@KEI1@新モデルが誕生しました'),
             new SctItm('これから、@L_PLACE@の@FUTURE@が変わります'),
@@ -377,7 +377,8 @@ class selector_ShopComentGood extends SctItm_Selector {
             new SctItm('@L_CAMPANY@ @L_SHOP@！　これで勝てる！'),
             new SctItm('なんて@KEI1@@L_SHOP_B@なのだろう！'),
             new SctItm('もう@L_CAMPANY_B@の@L_SHOP_B@が無ければ生きていけません！'),
-            new SctItm('@COUNTRY@でNo.1！ @L_CAMPANY@ @L_SHOP@！')
+            new SctItm('@COUNTRY@でNo.1！ @L_CAMPANY@ @L_SHOP@！'),
+            new SctItm('@HABIT@する時の必需品です！')
         ];
     }
 }
@@ -392,8 +393,8 @@ class selector_ShopComentNomal extends SctItm_Selector {
             new SctItm('@L_CAMPANY_B@でも@L_SHOP_B@を出してたんだ'),
             new SctItm('@L_CAMPANY@ @L_SHOP@？　へえ？'),
             new SctItm('@L_CAMPANY@ @L_SHOP@？　ちょっと@KEIM2@かな'),
-            new SctItm('そろそろ新モデルの時期でしたね'),
-            new SctItm('次のモデルまで待とうかな'),
+            new SctItm('@L_SHOP_B@は、たまにしか使わないので'),
+            new SctItm('@HABIT@の時しか使わないけど'),
             new SctItm('もう少し@KEIM1@と良いんですが')
         ];
     }
@@ -410,6 +411,7 @@ class selector_ShopComentBad extends SctItm_Selector {
             new SctItm('@CLASS@を呼んだ方がマシ'),
             new SctItm('こんな@L_SHOP_B@じゃ、@PLACE@には持って行けない'),
             new SctItm('どうせ@COUNTRY@産の安物でしょう'),
+            new SctItm('これ、中身は@COUNTRY@産なんだよね'),
             new SctItm('@COUNTRY@でしか使ってないですよ'),
             new SctItm('@L_CAMPANY_B@製はもういいです'),
             new SctItm('@L_CAMPANY_B@のは壊れやすいので')
@@ -434,7 +436,7 @@ class selector_ShopComentDocGood extends SctItm_Selector {
             new SctItm('@PART@や@PART@、@PART@にも買ってあげなければ。'),
             new SctItm('もうこれで@PLACE@に行かなくてすみます。'),
             new SctItm('もう@L_CAMPANY@ @L_SHOP@が無ければ生きていけません。'),
-            new SctItm('@L_CAMPANY@ @L_SHOP@は@PLACE@に行くときの必需品です。'),
+            new SctItm('@PLACE@に行くときに必ず持って行きます。'),
             new SctItm('私を@KEY@や@KEY@から救ってくれたのが@L_CAMPANY@ @L_SHOP@だったのです。'),
             new SctItm('私は@L_CAMPANY@ @L_SHOP@のお陰で悩みから解放されました。'),
             new SctItm('私は@L_CAMPANY@ @L_SHOP@のお陰で@CLASS@になれました。'),
@@ -463,7 +465,8 @@ class selector_ShopComentDocBad extends SctItm_Selector {
             new SctItm('今、使っている@L_SHOP_B@で十分ですから。'),
             new SctItm('@L_SHOP_B@なら、他にもありますから。'),
             new SctItm('@L_SHOP_B@にしては大きすぎます。'),
-            new SctItm('@L_SHOP_B@ってもう古くないですか。')
+            new SctItm('@L_SHOP_B@ってもう古くないですか。'),
+            new SctItm('@L_SHOP_B@があるから、@KEY@や@KEY@が絶えないんですよね。')
         ];
     }
 }
