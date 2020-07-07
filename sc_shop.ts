@@ -9,7 +9,7 @@ function set_shop()
     html += '<h1>';
     html += 'Shop';
     html += '<small>';
-    html += ' S00.26';
+    html += ' S00.27';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -124,7 +124,7 @@ function make_shop()
         all += ucnt[i] * i;
         alluser += ucnt[i];
     }
-    let gauge = max / 10;
+    let gauge = max / 20;
 
     let score_ave = Math.floor((all/alluser)*10) / 10;
 
@@ -138,7 +138,7 @@ function make_shop()
 
 
     html += '<div id="shop_allscore">'; // allscore
-    html += '<small>スコア：</small><big>' + score_ave.toString() + '</big><br>';
+    html += '<big>' + score_ave.toString() + '</big><br>';
     html += '</div>'; // allscore
 
     html += '<div id="shop_starL">'; // starL

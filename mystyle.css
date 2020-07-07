@@ -295,17 +295,21 @@ small {
     margin-right: auto;
     width: 100%;
     grid-template-rows: 1fr;
-    grid-template-columns: 50% 1fr;
+    grid-template-columns: 30% 1fr;
 }
 
 #shop_review_all01 {
     grid-column: 1/2;
     grid-row: 1/2;
+    font-size: 2.5vmax;
+    color:black;
+    margin: 16px 16px;
+    text-align: center;
 }
 #shop_review_all02 {
     grid-column: 2/3;
     grid-row: 1/2;
-    font-size: 2.5vmax;
+    font-size: 2.0vmax;
     color:black;
     margin: 0px 0px;
     text-align: left;
