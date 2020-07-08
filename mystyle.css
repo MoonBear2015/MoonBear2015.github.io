@@ -290,13 +290,19 @@ small {
     grid-row: 2/3;
 }
 
+#shop_review_title {
+    font-size: 4vmax;
+    color:#303030;
+    margin: 0px 0px;
+    text-align: left;
+}
 #shop_review_all {
     display: grid;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
     grid-template-rows: 1fr;
-    grid-template-columns: 50% 1fr;
+    grid-template-columns: 40% 1fr;
 }
 
 #shop_review_all01 {
@@ -306,6 +312,8 @@ small {
     color:black;
     margin: 16px 16px;
     text-align: center;
+    align-self: center;
+    justify-self: center;
 }
 #shop_review_all02 {
     grid-column: 2/3;
@@ -316,25 +324,19 @@ small {
     text-align: left;
 }
 
-#shop_review_title {
-    font-size: 4vmax;
-    color:#303030;
-    margin: 0px 0px;
-    text-align: left;
-}
 
 #shop_allscore {
     font-size: 6vmax;
     color:#303030;
     margin: 0px 0px;
-    text-align: left;
+    text-align: center;
 }
 
 #shop_starL {
     font-size: 3.5vmax;
     color:orange;
     margin: 0px 0px;
-    text-align: left;
+    text-align: center;
     text-shadow: 1px 1px 0px #A0A050;
 }
 #shop_star {
