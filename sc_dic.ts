@@ -5354,7 +5354,7 @@ const   itms_tech = [
     ,
     new SctItm('外部委託','ICON/delegate.jpg')
     ,
-    new SctItm('自然淘汰','ICON/enterprise.jpg')
+    new SctItm('自然淘汰','ICON/raptor.jpg')
     ,
     new SctItm('営業力','ICON/sales.jpg')
     ,

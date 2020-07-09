@@ -3408,7 +3408,7 @@ const itms_tech = [
     new SctItm('社内研修', 'ICON/startup.jpg'),
     new SctItm('イデオロギー教育', 'ICON/communist.jpg'),
     new SctItm('外部委託', 'ICON/delegate.jpg'),
-    new SctItm('自然淘汰', 'ICON/enterprise.jpg'),
+    new SctItm('自然淘汰', 'ICON/raptor.jpg'),
     new SctItm('営業力', 'ICON/sales.jpg'),
     new SctItm('宣伝効果', 'ICON/balloon.jpg'),
     new SctItm('最終奥義', 'ICON/kung-fu.jpg'),
