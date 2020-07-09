@@ -9,7 +9,7 @@ function set_shop()
     html += '<h1>';
     html += 'Shop';
     html += '<small>';
-    html += ' S00.32';
+    html += ' S00.33';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -44,7 +44,7 @@ function make_shop()
     let maker = new shop_docs_maker();
     let maker01 = new shop_docs_maker01();
 
-    for(let i = 0; i < 3; i++){
+    for(let i = 0; i < 4; i++){
         
         let makerC01 = new shop_docs_maker01();
         let html01 = '';

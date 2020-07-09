@@ -1114,7 +1114,13 @@ const cods_place = [
     new SctCod_TI('バーカウンター', 'PLACE/barcounter.jpg'),
     new SctCod_TI('|喫茶店|きっさてん|', 'PLACE/coffeeshop.jpg'),
     new SctCod_TI('レストラン', 'PLACE/restaurant.jpg'),
-    new SctCod_TI('コックピット', 'PLACE/cockpit.jpg')
+    new SctCod_TI('コックピット', 'PLACE/cockpit.jpg'),
+    new SctCod_TI('|戦場|せんじょう|', 'PLACE/war.jpg'),
+    new SctCod_TI('プールサイド', 'PLACE/poolside.jpg'),
+    new SctCod_TI('|宇宙空間|うちゅうくうかん|', 'PLACE/space.jpg'),
+    new SctCod_TI('|牧場|ぼくじょう|', 'PLACE/cowplace.jpg'),
+    new SctCod_TI('|牧場|ぼくじょう|', 'PLACE/cowplace.jpg'),
+    new SctCod_TI('スキー|場|じょう|', 'PLACE/ski.jpg')
 ];
 const cods_move = [
     new SctCod_Mv('|動|うご|く', 'active.jpg'),
@@ -3378,7 +3384,10 @@ const itms_status = [
     new SctItm('躍動感', 'ICON/jump.jpg'),
     new SctItm('大容量', 'ICON/capacity.jpg'),
     new SctItm('エコロジー', 'ICON/eco.jpg'),
-    new SctItm('破壊力', 'ICON/war.jpg')
+    new SctItm('破壊力', 'ICON/war.jpg'),
+    new SctItm('透明度', 'ICON/clear.jpg'),
+    new SctItm('みずみずしさ', 'ICON/water.jpg'),
+    new SctItm('吸引力', 'ICON/vacum.jpg')
 ];
 const itms_tech = [
     new SctItm('企業努力'),

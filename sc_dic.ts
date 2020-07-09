@@ -2153,6 +2153,18 @@ const   cods_place = [
     new SctCod_TI('レストラン','PLACE/restaurant.jpg')
     ,
     new SctCod_TI('コックピット','PLACE/cockpit.jpg')
+    ,
+    new SctCod_TI('|戦場|せんじょう|','PLACE/war.jpg')
+    ,
+    new SctCod_TI('プールサイド','PLACE/poolside.jpg')
+    ,
+    new SctCod_TI('|宇宙空間|うちゅうくうかん|','PLACE/space.jpg')
+    ,
+    new SctCod_TI('|牧場|ぼくじょう|','PLACE/cowplace.jpg')
+    ,
+    new SctCod_TI('|牧場|ぼくじょう|','PLACE/cowplace.jpg')
+    ,
+    new SctCod_TI('スキー|場|じょう|','PLACE/ski.jpg')
 ];
 
 
@@ -5297,6 +5309,12 @@ const   itms_status = [
     new SctItm('エコロジー','ICON/eco.jpg')
     ,
     new SctItm('破壊力','ICON/war.jpg')
+    ,
+    new SctItm('透明度','ICON/clear.jpg')
+    ,
+    new SctItm('みずみずしさ','ICON/water.jpg')
+    ,
+    new SctItm('吸引力','ICON/vacum.jpg')
 ]
 
 const   itms_tech = [
