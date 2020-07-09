@@ -3387,26 +3387,33 @@ const itms_status = [
     new SctItm('破壊力', 'ICON/war.jpg'),
     new SctItm('透明度', 'ICON/clear.jpg'),
     new SctItm('みずみずしさ', 'ICON/water.jpg'),
-    new SctItm('吸引力', 'ICON/vacum.jpg')
+    new SctItm('吸引力', 'ICON/vacum.jpg'),
+    new SctItm('可能性', 'ICON/possibility.jpg')
 ];
 const itms_tech = [
-    new SctItm('企業努力'),
-    new SctItm('コスト削減'),
-    new SctItm('テクノロジー'),
-    new SctItm('努力'),
-    new SctItm('マンパワー'),
-    new SctItm('半導体技術'),
-    new SctItm('伝統工芸'),
-    new SctItm('人海戦術'),
-    new SctItm('力業'),
-    new SctItm('突貫工事'),
-    new SctItm('人工知能'),
-    new SctItm('ペーパーレス化'),
-    new SctItm('人員削減'),
-    new SctItm('人材育成'),
-    new SctItm('社内研修'),
-    new SctItm('イデオロギー教育'),
-    new SctItm('外部委託')
+    new SctItm('企業努力', 'ICON/enterprise.jpg'),
+    new SctItm('コスト削減', 'ICON/cost.jpg'),
+    new SctItm('テクノロジー', 'ICON/technology.jpg'),
+    new SctItm('努力と根性', 'ICON/manpower.jpg'),
+    new SctItm('マンパワー', 'ICON/manpower.jpg'),
+    new SctItm('半導体技術', 'ICON/circuit.jpg'),
+    new SctItm('伝統工芸', 'ICON/potter.jpg'),
+    new SctItm('人海戦術', 'ICON/crowd.jpg'),
+    new SctItm('力業', 'ICON/muscle.jpg'),
+    new SctItm('突貫工事', 'ICON/construction.jpg'),
+    new SctItm('人工知能', 'ICON/AI.jpg'),
+    new SctItm('ペーパーレス化', 'ICON/paper.jpg'),
+    new SctItm('人員削減', 'ICON/hand.jpg'),
+    new SctItm('人材育成', 'ICON/teech.jpg'),
+    new SctItm('社内研修', 'ICON/startup.jpg'),
+    new SctItm('イデオロギー教育', 'ICON/communist.jpg'),
+    new SctItm('外部委託', 'ICON/delegate.jpg'),
+    new SctItm('自然淘汰', 'ICON/enterprise.jpg'),
+    new SctItm('営業力', 'ICON/sales.jpg'),
+    new SctItm('宣伝効果', 'ICON/balloon.jpg'),
+    new SctItm('最終奥義', 'ICON/kung-fu.jpg'),
+    new SctItm('信仰心', 'ICON/saint.jpg'),
+    new SctItm('集客力', 'ICON/spectators.jpg')
 ];
 // 成功・等 が～した
 const itms_success = [

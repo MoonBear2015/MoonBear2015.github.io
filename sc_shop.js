@@ -7,7 +7,7 @@ function set_shop() {
     html += '<h1>';
     html += 'Shop';
     html += '<small>';
-    html += ' S00.33';
+    html += ' S00.34';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -223,6 +223,13 @@ class locker_place extends SctItm_SelectLocker {
         this.Add(cods_to_itms(cods_place));
     }
 }
+// （固定）テクノロジー
+class locker_tech extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_TECH@', '', '@ICON_SHOP@');
+        this.Add(itms_tech);
+    }
+}
 // 商品モデル
 class selector_model extends SctItm_Selector {
     constructor() {
@@ -256,9 +263,12 @@ class selector_catch extends SctItm_Selector {
     constructor() {
         super('@CATCH@');
         this.itms = [
+            new SctItm('@KEI1@@L_TECH@'),
             new SctItm('@KEI1@@L_STATUS@'),
             new SctItm('@KEI1@@L_STATUS@の@SUCCESS@'),
             new SctItm('@KEI1@@L_STATUS@をあなたに'),
+            new SctItm('@KEI1@@L_TECH@をあなたに'),
+            new SctItm('@FUTURE@の@L_TECH@を実現'),
             new SctItm('@KEI1@@L_STATUS@と共に'),
             new SctItm('@KEI1@@L_STATUS@を体感しよう'),
             new SctItm('@KEI1@@L_STATUS@の@FUTURE@'),
@@ -312,10 +322,11 @@ class selector_s_info01 extends SctItm_Selector {
         super('@S_INFO01@');
         this.itms = [
             new SctItm('@L_CAMPANY_B@社の@L_SHOP_B@は'),
-            new SctItm('@L_CAMPANY_B@社の@TECH@により'),
+            new SctItm('@L_CAMPANY_B@社の@L_TECH@により'),
             new SctItm('@L_CAMPANY_B@社の@CLASS@達により'),
             new SctItm('@L_CAMPANY_B@社が誇る@KEI1@@CLASS@達によって'),
-            new SctItm('@L_CAMPANY_B@社が誇る@KEI1@@TECH@によって'),
+            new SctItm('@L_CAMPANY_B@社が誇る@KEI1@@L_TECH@によって'),
+            new SctItm('@L_CAMPANY_B@社は@KEI1@@L_TECH@を投入し'),
             new SctItm('@L_CAMPANY_B@社は@MANY@@KEY@を経て'),
             new SctItm('@L_CAMPANY_B@社は@KEI1@@FUTURE@のために'),
             new SctItm('@MANYPEOPLE@より「@CALL2@」と@ASSES@@L_CAMPANY_B@社は'),
@@ -508,5 +519,6 @@ class shop_docs_maker01 extends news_docs_maker {
         super();
         this.dic_push(new locker_status());
         this.dic_push(new locker_place());
+        this.dic_push(new locker_tech());
     }
 }
