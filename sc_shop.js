@@ -7,7 +7,7 @@ function set_shop() {
     html += '<h1>';
     html += 'Shop';
     html += '<small>';
-    html += ' S00.34';
+    html += ' S00.35';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -330,7 +330,7 @@ class selector_s_info01 extends SctItm_Selector {
             new SctItm('@L_CAMPANY_B@社は@MANY@@KEY@を経て'),
             new SctItm('@L_CAMPANY_B@社は@KEI1@@FUTURE@のために'),
             new SctItm('@MANYPEOPLE@より「@CALL2@」と@ASSES@@L_CAMPANY_B@社は'),
-            new SctItm('@DO@する@FUTURE@に向けて'),
+            new SctItm('@FUTURE@の@L_PLACE@のために'),
             new SctItm('@DO@する@L_PLACE@のために')
         ];
     }
@@ -346,6 +346,7 @@ class selector_s_info02 extends SctItm_Selector {
             new SctItm('@MANY@@THEY@から@MANY@@SAY2@や@SAY2@を頂いております'),
             new SctItm('@KEI1@@FUTURE@の@SUCCESS@をお約束いたします'),
             new SctItm('@KEI1@@L_PLACE@をご提供いたします'),
+            new SctItm('@KEI1@@L_PLACE@で@MANY@@SAY2@を頂いております'),
             new SctItm('「@CALL2@」と@ASSES@@KEI1@@L_PLACE@へとご案内いたします'),
             new SctItm('「@CALL2@」と@ASSES@@KEI1@@L_SHOP_B@をご紹介いたします')
         ];

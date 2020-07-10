@@ -134,9 +134,9 @@ class about_title extends SctItm_Counter implements ISctItm_Selector{
             ,
             new SctItm('"Poem" Editor')
             ,
-            new SctItm('"Shop" Editor')
-            ,
             new SctItm('"Q&A" Editor')
+            ,
+            new SctItm('"Shop" Editor')
             ,
             new SctItm('Web Designer')
             ,

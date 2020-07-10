@@ -3380,15 +3380,19 @@ const   cods_km = [
     // new SctCod_Km('|和気藹々|わきあいあい|')
 ];
 
-
+// 名詞による形容
 const   itms_km = [
-    new SctItm('@PART@の様')
+    new SctItm('@ITEM@の様')
     ,
-    new SctItm('@NICK@の様')
+    new SctItm('@ITEM@っぽい')
     ,
-    new SctItm('@ANIMAL@の様')
+    new SctItm('@ITEM@みたい')
     ,
-    new SctItm('@COUNTRY@人の様')
+    new SctItm('@ITEM@的')
+    ,
+    new SctItm('@ITEM@の如く')
+    ,
+    new SctItm('@ITEM@らしい')
 ];
 
 
@@ -5188,7 +5192,9 @@ const   itms_shop = [
     ,
     new SctItm('ANGEL','SHOP/angel.jpg','天使様')
     ,
-    new SctItm('DEATHSTAR','SHOP/deathstar.jpg','デス・スター')
+    new SctItm('DEATHSTAR','SHOP/deathstar.jpg','デススター')
+    ,
+    new SctItm('DRAGON','SHOP/dragon.jpg','ドラゴン')
 ]
 
 const   itms_campany = [
@@ -5317,14 +5323,20 @@ const   itms_status = [
     new SctItm('吸引力','ICON/vacum.jpg')
     ,
     new SctItm('可能性','ICON/possibility.jpg')
+    ,
+    new SctItm('色彩','ICON/color.jpg')
 ]
 
 const   itms_tech = [
     new SctItm('企業努力','ICON/enterprise.jpg')
     ,
+    new SctItm('国家権力','ICON/police.jpg')
+    ,
     new SctItm('コスト削減','ICON/cost.jpg')
     ,
     new SctItm('テクノロジー','ICON/technology.jpg')
+    ,
+    new SctItm('バイオテクノロジー','ICON/bio.jpg')
     ,
     new SctItm('努力と根性','ICON/manpower.jpg')
     ,
@@ -5358,13 +5370,15 @@ const   itms_tech = [
     ,
     new SctItm('営業力','ICON/sales.jpg')
     ,
-    new SctItm('宣伝効果','ICON/balloon.jpg')
+    new SctItm('宣伝効果','ICON/CM.jpg')
     ,
     new SctItm('最終奥義','ICON/kung-fu.jpg')
     ,
     new SctItm('信仰心','ICON/saint.jpg')
     ,
     new SctItm('集客力','ICON/spectators.jpg')
+    ,
+    new SctItm('現代医学','ICON/medi.jpg')
 ]
 
 // 成功・等 が～した
