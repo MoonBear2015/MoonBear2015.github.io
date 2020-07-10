@@ -1858,11 +1858,11 @@ const cods_km = [
 // 名詞による形容
 const itms_km = [
     new SctItm('@ITEM@の様'),
+    new SctItm('@ITEM@的')
+];
+const itms_kmd = [
     new SctItm('@ITEM@っぽい'),
-    new SctItm('@ITEM@みたい'),
-    new SctItm('@ITEM@的'),
-    new SctItm('@ITEM@の如く'),
-    new SctItm('@ITEM@らしい')
+    new SctItm('@ITEM@みたい')
 ];
 // const   cods_jougo = [
 // new SctCod_Km('|連々|れんれん|')

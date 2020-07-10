@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N02.40';
+    html += ' N02.41';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -1637,6 +1637,7 @@ class selector_k extends SctItm_Selector implements ISctItm_Selector {
         // this.Add(cods_to_itms(cods_ad_color));
         this.Add(cods_to_itms(cods_ad_jougo));
         this.Add(cods_to_itms(cods_ad_etc));
+        this.Add(itms_kmd);
     }
 }
 
