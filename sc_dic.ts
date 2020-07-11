@@ -5132,6 +5132,8 @@ const   itms_shop = [
     ,
     new SctItm('CAR','SHOP/CAR03.jpg','車')
     ,
+    new SctItm('CAR','SHOP/CAR04.jpg','車')
+    ,
     new SctItm('CHOCOLATE','SHOP/chocolate.jpg','チョコレート')
     ,
     new SctItm('COFFEE','SHOP/COFFEE.jpg','コーヒー')
@@ -5143,6 +5145,8 @@ const   itms_shop = [
     new SctItm('COMPUTER','SHOP/COMPUTER03.jpg','コンピューター')
     ,
     new SctItm('COMPUTER','SHOP/COMPUTER04.jpg','コンピューター')
+    ,
+    new SctItm('COMPUTER','SHOP/COMPUTER05.jpg','コンピューター')
     ,
     new SctItm('CLOCK','SHOP/CLOCK01.jpg','時計')
     ,

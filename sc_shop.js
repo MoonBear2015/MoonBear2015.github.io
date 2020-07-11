@@ -7,7 +7,7 @@ function set_shop() {
     html += '<h1>';
     html += 'Shop';
     html += '<small>';
-    html += ' S00.35';
+    html += ' S00.36';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -181,7 +181,7 @@ function make_shop() {
             }
             before = flg;
         }
-        html += '</p>'; // comdoc
+        html += '。</p>'; // comdoc
         html += '<br><br>';
     }
     //---- this shop END
@@ -443,26 +443,26 @@ class selector_ShopComentDocGood extends SctItm_Selector {
     constructor() {
         super('@SHOPCOMDOC_G@');
         this.itms = [
-            new SctItm('ずっと@PLACE@で@L_CAMPANY_B@の@L_SHOP_B@を使っています。'),
-            new SctItm('@L_SHOP_B@は@L_CAMPANY_B@でなければ有り得ません。'),
-            new SctItm('今度の@L_CAMPANY@ @L_SHOP@は実に@KEI2@で@KEIM2@です。'),
-            new SctItm('もう@L_CAMPANY@ @L_SHOP@は手放せません。'),
-            new SctItm('すぐに@PART@や@PART@に奨めなければ。'),
-            new SctItm('今度、@L_CAMPANY@ @L_SHOP@が我が社で採用されました。'),
-            new SctItm('今では@CLASS@の誰もが@L_CAMPANY@ @L_SHOP@を使っています。'),
-            new SctItm('正に@L_CAMPANY@ @L_SHOP@は@CLASS@の必需品です。'),
-            new SctItm('@L_CAMPANY@ @L_SHOP@さえあれば、@CLASS@を呼ぶ必要はありません。'),
-            new SctItm('@L_CAMPANY@ @L_SHOP@なら値段なんて気にしません。'),
-            new SctItm('@PART@や@PART@、@PART@にも買ってあげなければ。'),
-            new SctItm('もうこれで@PLACE@に行かなくてすみます。'),
-            new SctItm('もう@L_CAMPANY@ @L_SHOP@が無ければ生きていけません。'),
-            new SctItm('@PLACE@に行くときに必ず持って行きます。'),
-            new SctItm('私を@KEY@や@KEY@から救ってくれたのが@L_CAMPANY@ @L_SHOP@だったのです。'),
-            new SctItm('私は@L_CAMPANY@ @L_SHOP@のお陰で悩みから解放されました。'),
-            new SctItm('私は@L_CAMPANY@ @L_SHOP@のお陰で@CLASS@になれました。'),
-            new SctItm('私は@L_CAMPANY@ @L_SHOP@のお陰で@SUCCESS@できました。'),
-            new SctItm('@L_CAMPANY@ @L_SHOP@が無ければ、ずっと@CLASS@のままでした。'),
-            new SctItm('さすが「@CALL2@」と@ASSES@だけのことはあります。')
+            new SctItm('ずっと@PLACE@で@L_CAMPANY_B@の@L_SHOP_B@を使っています'),
+            new SctItm('@L_SHOP_B@は@L_CAMPANY_B@でなければ有り得ません'),
+            new SctItm('今度の@L_CAMPANY@ @L_SHOP@は@KEI2@で@KEI1@んです'),
+            new SctItm('もう@L_CAMPANY@ @L_SHOP@は手放せません'),
+            new SctItm('すぐに@PART@や@PART@に奨めなければいけません'),
+            new SctItm('今度、@L_CAMPANY@ @L_SHOP@が我が社で採用されました'),
+            new SctItm('今では@CLASS@の誰もが@L_CAMPANY@ @L_SHOP@を使っています'),
+            new SctItm('正に@L_CAMPANY@ @L_SHOP@は@CLASS@の必需品です'),
+            new SctItm('@L_CAMPANY@ @L_SHOP@さえあれば、@CLASS@を呼ぶ必要はありません'),
+            new SctItm('@L_CAMPANY@ @L_SHOP@なら値段なんて気にしません'),
+            new SctItm('@PART@や@PART@、@PART@にも買ってあげようと思います'),
+            new SctItm('もうこれで@PLACE@に行かなくてすみます'),
+            new SctItm('もう@L_CAMPANY@ @L_SHOP@が無ければ生きていけません'),
+            new SctItm('@PLACE@に行くときに必ず持って行きます'),
+            new SctItm('私を@KEY@や@KEY@から救ってくれたのが@L_CAMPANY@ @L_SHOP@だったのです'),
+            new SctItm('私は@L_CAMPANY@ @L_SHOP@のお陰で悩みから解放されました'),
+            new SctItm('私は@L_CAMPANY@ @L_SHOP@のお陰で@CLASS@になれました'),
+            new SctItm('私は@L_CAMPANY@ @L_SHOP@のお陰で@SUCCESS@できました'),
+            new SctItm('@L_CAMPANY@ @L_SHOP@が無ければ、ずっと@CLASS@のままでした'),
+            new SctItm('さすが「@CALL2@」と@ASSES@だけのことはあります')
         ];
     }
 }
@@ -471,24 +471,24 @@ class selector_ShopComentDocBad extends SctItm_Selector {
     constructor() {
         super('@SHOPCOMDOC_B@');
         this.itms = [
-            new SctItm('@L_CAMPANY_B@の@L_SHOP_B@って使いにくいんですよね。'),
-            new SctItm('@L_CAMPANY_B@の@L_SHOP_B@って、すぐ壊れるんですが。'),
-            new SctItm('最近、@L_CAMPANY_B@の@L_SHOP_B@って見かけないですね。'),
-            new SctItm('今時、@L_CAMPANY_B@の@L_SHOP_B@を使うの恥ずかしいので。'),
-            new SctItm('もう@L_CAMPANY_B@の@L_SHOP_B@は使いたくないですね。'),
-            new SctItm('@PART@や@PART@はダメだと云ってます。'),
-            new SctItm('@PLACE@の@L_SHOP_B@と違うから困るんですよ。'),
-            new SctItm('@CLASS@を呼べば済むので必要ありません。'),
-            new SctItm('@L_SHOP_B@にしては高いですよね。'),
-            new SctItm('@PLACE@に行くとき邪魔になります。'),
-            new SctItm('@L_SHOP_B@はそろそろ卒業しないといけませんので。'),
-            new SctItm('@L_SHOP_B@は医者に止められていますので。'),
-            new SctItm('今使っている@L_SHOP_B@で十分ですから。'),
-            new SctItm('@L_SHOP_B@なら他にもありますから。'),
-            new SctItm('@L_SHOP_B@にしては大きすぎます。'),
-            new SctItm('@L_SHOP_B@ってもう古くないですか。'),
-            new SctItm('@L_SHOP_B@があるから、@KEY@や@KEY@が絶えないんですよね。'),
-            new SctItm('そんなことだから「@CALL2@」と@ASSES@んです。')
+            new SctItm('@L_CAMPANY_B@の@L_SHOP_B@って、なんだか使いにくいんです'),
+            new SctItm('@L_CAMPANY_B@の@L_SHOP_B@って、すぐ壊れるんです'),
+            new SctItm('最近、@L_CAMPANY_B@の@L_SHOP_B@って見かけません'),
+            new SctItm('今時、@L_CAMPANY_B@の@L_SHOP_B@を使うの恥ずかしいんです'),
+            new SctItm('もう@L_CAMPANY_B@の@L_SHOP_B@は使いたくないです'),
+            new SctItm('@PART@や@PART@はダメだと云ってます'),
+            new SctItm('@PLACE@の@L_SHOP_B@と違うから困るんです'),
+            new SctItm('@CLASS@を呼べば済むので必要ありません'),
+            new SctItm('@L_SHOP_B@にしては高いです'),
+            new SctItm('@PLACE@に行くとき邪魔になります'),
+            new SctItm('@L_SHOP_B@はそろそろ卒業しないといけません'),
+            new SctItm('@L_SHOP_B@は医者に止められています'),
+            new SctItm('今使っている@L_SHOP_B@で十分です'),
+            new SctItm('@L_SHOP_B@なら他にもあります'),
+            new SctItm('@L_SHOP_B@にしては大きすぎます'),
+            new SctItm('@L_SHOP_B@ってもう古いんです'),
+            new SctItm('@L_SHOP_B@があるから、@KEY@や@KEY@が絶えないんです'),
+            new SctItm('そんなことだから「@CALL2@」と@ASSES@んです')
         ];
     }
 }

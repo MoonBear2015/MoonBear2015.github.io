@@ -1406,13 +1406,36 @@ class selector_bat extends SctItm_Selector {
     constructor() {
         super('@BAT@');
         this.itms = [
-            new SctItm('でも、'),
-            new SctItm('しかし、'),
-            new SctItm('それでも、'),
-            new SctItm('ですが、'),
+            new SctItm('が、'),
             new SctItm('けど、'),
-            new SctItm('ですけど、'),
-            new SctItm('けれども、')
+            new SctItm('@END@@BAT01@、')
+        ];
+    }
+}
+// 否定接続 副
+class selector_bat01 extends SctItm_Selector {
+    constructor() {
+        super('@BAT01@');
+        this.itms = [
+            new SctItm('でも'),
+            new SctItm('けど'),
+            new SctItm('しかし'),
+            new SctItm('ただし'),
+            new SctItm('それでも'),
+            new SctItm('けれども'),
+            new SctItm('そうはいっても')
+        ];
+    }
+}
+// 句読点・結び
+class selector_end extends SctItm_Selector {
+    constructor() {
+        super('@END@');
+        this.itms = [
+            new SctItm('。'),
+            new SctItm('ね。'),
+            new SctItm('よ。'),
+            new SctItm('よね。')
         ];
     }
 }
@@ -1421,12 +1444,27 @@ class selector_and extends SctItm_Selector {
     constructor() {
         super('@AND@');
         this.itms = [
-            new SctItm(''),
-            new SctItm('そして、'),
-            new SctItm('それから、'),
-            new SctItm('あと、'),
-            new SctItm('加えて、'),
-            new SctItm('だから、')
+            new SctItm('し、'),
+            new SctItm('ので、'),
+            new SctItm('から、'),
+            new SctItm('@END@'),
+            new SctItm('@END@@AND01@、')
+        ];
+    }
+}
+// 追加接続 副
+class selector_and01 extends SctItm_Selector {
+    constructor() {
+        super('@AND01@');
+        this.itms = [
+            new SctItm('そして'),
+            new SctItm('あと'),
+            new SctItm('加えて'),
+            new SctItm('だから'),
+            new SctItm('つまり'),
+            new SctItm('それから'),
+            new SctItm('確かに'),
+            new SctItm('しかも')
         ];
     }
 }
@@ -1498,8 +1536,11 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_answer());
         this.dic_push(new selector_conect());
         this.dic_push(new selector_conect2());
+        this.dic_push(new selector_end());
         this.dic_push(new selector_bat());
+        this.dic_push(new selector_bat01());
         this.dic_push(new selector_and());
+        this.dic_push(new selector_and01());
         this.dic_push(new selector_nickname());
         this.dic_push(new selector_nickBad());
         this.dic_push(new selector_nickGood());
