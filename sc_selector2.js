@@ -1,17 +1,19 @@
 "use strict";
+// 独自配列用レコード：標準
 class Rec_St {
 }
+// 独自配列：標準型
 class Ary_St {
     constructor() {
-        this.Ary = new Array();
+        this.ary = [];
     }
     add(inRec) {
-        this.Ary.push(inRec);
+        this.ary.push(inRec);
     }
     indexOf(inRec) {
         let result = -1;
-        for (let i = 0; i < this.Ary.length; i++) {
-            if (this.Ary[i].equal(inRec)) {
+        for (let i = 0; i < this.ary.length; i++) {
+            if (this.ary[i].equal(inRec)) {
                 result = i;
                 break;
             }
@@ -24,53 +26,60 @@ class Ary_St {
         });
     }
     pasteAry(inAry) {
-        this.Ary = new Array();
-        this.Ary.length = 0;
+        this.ary = [];
+        this.ary.length = 0;
         this.addAry(inAry);
     }
 }
+// キーレコード・標準型
+class KyRec_St {
+    constructor(in_ky) {
+        this.ky = in_ky;
+    }
+}
+// キーレコード用配列（同じキーのアイテムしか登録できない） 
 class KyAry_St extends Ary_St {
     constructor() {
         super();
-        this.Ky = "";
+        this.ky = "";
     }
     add(inRec) {
-        if (this.Ky == "") {
-            this.Ky = inRec.Ky;
+        if (this.ky == "") {
+            this.ky = inRec.ky;
         }
-        if (this.Ky != inRec.Ky) {
+        if (this.ky != inRec.ky) {
             return;
         }
-        this.Ary.push(inRec);
+        this.ary.push(inRec);
     }
 }
 class Itm_St {
     constructor(inWd, inPc) {
         if (inWd) {
-            this.Wd = inWd;
+            this.wd = inWd;
         }
         else {
-            this.Wd = '';
+            this.wd = '';
         }
         if (inPc) {
-            this.Pc = inPc;
+            this.pc = inPc;
         }
         else {
-            this.Pc = '';
+            this.pc = '';
         }
     }
-    get Copy() {
-        return new Itm_St(this.Wd, this.Pc);
+    get copy() {
+        return new Itm_St(this.wd, this.pc);
     }
-    ToKwd(inKy) {
-        return new Kwd_St(inKy, this.Wd, this.Pc);
+    toKwd(inKy) {
+        return new Kwd_St(inKy, this.wd, this.pc);
     }
     ToString() {
         let result = '';
-        if (this.Wd != '')
-            result += '"' + this.Wd + '"';
-        if (this.Pc != '')
-            result += '(' + this.Pc + ')';
+        if (this.wd != '')
+            result += '"' + this.wd + '"';
+        if (this.pc != '')
+            result += '(' + this.pc + ')';
         return result;
     }
 }
@@ -84,20 +93,20 @@ class Kwd_St extends Itm_St {
             this.Ky = '';
         }
     }
-    get Copy() {
-        return new Kwd_St(this.Ky, this.Wd, this.Pc);
+    get copy() {
+        return new Kwd_St(this.Ky, this.wd, this.pc);
     }
     ToItm() {
-        return new Itm_St(this.Wd, this.Pc);
+        return new Itm_St(this.wd, this.pc);
     }
     ToString() {
         let result = '';
         if (this.Ky != '')
             result += '[' + this.Ky + ']';
-        if (this.Wd != '')
-            result += '"' + this.Wd + '"';
-        if (this.Pc != '')
-            result += '(' + this.Pc + ')';
+        if (this.wd != '')
+            result += '"' + this.wd + '"';
+        if (this.pc != '')
+            result += '(' + this.pc + ')';
         return result;
     }
 }

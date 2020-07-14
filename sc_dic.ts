@@ -3384,13 +3384,35 @@ const   cods_km = [
 const   itms_km = [
     new SctItm('@ITEM@の様')
     ,
-    new SctItm('@ITEM@的')
+    new SctItm('@ITEM@みたい')
+    ,
+    new SctItm('@ITEM@そっくり')
+    ,
+    new SctItm('@ITEM@が@DO@したかの様')
+    ,
+    new SctItm('@DO@した@ITEM@の様')
+    ,
+    new SctItm('@DO@した@ITEM@みたい')
+    ,
+    new SctItm('@DO@した@ITEM@そっくり')
 ];
 
 const   itms_kmd = [
     new SctItm('@ITEM@っぽい')
     ,
-    new SctItm('@ITEM@みたい')
+    new SctItm('@ITEM@らしい')
+    ,
+    new SctItm('@ITEM@に等しい')
+    ,
+    new SctItm('@DO@する@ITEM@に等しい')
+    ,
+    new SctItm('@ITEM@に似ている')
+    ,
+    new SctItm('@DO@する@ITEM@に似ている')
+    ,
+    new SctItm('@ITEM@と変わらない')
+    ,
+    new SctItm('@DO@する@ITEM@と変わらない')
 ]
 
 

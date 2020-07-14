@@ -9,7 +9,7 @@ function set_shop()
     html += '<h1>';
     html += 'Shop';
     html += '<small>';
-    html += ' S00.36';
+    html += ' S00.38';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -539,7 +539,7 @@ class selector_ShopComentNomal extends SctItm_Selector implements ISctItm_Select
             ,
             new SctItm('@L_CAMPANY@ @L_SHOP@？　ちょっと@KEIM2@かな')
             ,
-            new SctItm('@L_SHOP_B@は、たまにしか使わないので')
+            new SctItm('たまにしか@L_SHOP_B@は使わないので')
             ,
             new SctItm('@HABIT@の時しか使わないけど')
             ,
@@ -563,11 +563,11 @@ class selector_ShopComentBad extends SctItm_Selector implements ISctItm_Selector
             ,
             new SctItm('@L_SHOP_B@？　今更かな')
             ,
-            new SctItm('こんな@L_SHOP_B@なら、無い方がいいですね')
+            new SctItm('こんな@L_SHOP_B@なら無い方がいいですね')
             ,
             new SctItm('@CLASS@を呼んだ方がマシ')
             ,
-            new SctItm('こんな@L_SHOP_B@じゃ、@PLACE@には持って行けない')
+            new SctItm('こんな@L_SHOP_B@じゃ@PLACE@には持って行けない')
             ,
             new SctItm('どうせ@COUNTRY@産の安物でしょう')
             ,
@@ -580,6 +580,8 @@ class selector_ShopComentBad extends SctItm_Selector implements ISctItm_Selector
             new SctItm('@L_CAMPANY_B@製は壊れやすいので')
             ,
             new SctItm('どうして@L_CAMPANY_B@製は@KEI1@んですかね')
+            ,
+            new SctItm('あまり@HABIT@はしないから')
         ];
     }
 }
@@ -629,6 +631,8 @@ class selector_ShopComentDocGood extends SctItm_Selector implements ISctItm_Sele
             new SctItm('@L_CAMPANY@ @L_SHOP@が無ければ、ずっと@CLASS@のままでした')
             ,
             new SctItm('さすが「@CALL2@」と@ASSES@だけのことはあります')
+            ,
+            new SctItm('これほど@KEI1@@L_SHOP_B@は見たことがありません')
         ];
     }
 }
@@ -673,6 +677,8 @@ class selector_ShopComentDocBad extends SctItm_Selector implements ISctItm_Selec
             new SctItm('@L_SHOP_B@があるから、@KEY@や@KEY@が絶えないんです')
             ,
             new SctItm('そんなことだから「@CALL2@」と@ASSES@んです')
+            ,
+            new SctItm('こんな@KEI1@@L_SHOP_B@なんて有り得ません')
         ];
     }
 }

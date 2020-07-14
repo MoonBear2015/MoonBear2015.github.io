@@ -1,30 +1,43 @@
+// 独自配列用レコード
 interface Rec {
+    // 比較
     equal(inRec : Rec) : boolean;
 }
+
+// 独自配列用レコード：標準
 abstract class Rec_St {
     abstract equal(inRec : Rec) : boolean;
 }
 
+// 独自配列（独自ルールを適応した配列カプセル化）
 interface Ary<T extends Rec> {
+    // 検索（添え字位置を返却し、なければ-1）
     indexOf(inRec : T) : number;
+
+    // 追加（独自ルールを定義する）
     add(inRec : T)  : void;
-    addAry(inAry : Array<T>): void;
-    pasteAry(inAry : Array<T>): void;  
+
+    // 配列追加（独自addを必ず経由）
+    addAry(inAry : T[]): void;
+
+    // 配列置き換え（独自addを必ず経由）
+    pasteAry(inAry : T[]): void;  
 }
 
+// 独自配列：標準型
 class Ary_St<T extends Rec> implements Ary<T>{
-    public Ary : Array<T>;
+    public ary : T[];
     constructor()
     {
-        this.Ary = new Array<T>();
+        this.ary = [];
     }
     public add(inRec : T) {
-        this.Ary.push(inRec);
+        this.ary.push(inRec);
     }
     public indexOf(inRec : T) : number{
         let result : number = -1;
-        for(let i = 0;i < this.Ary.length;i++) {
-            if (this.Ary[i].equal(inRec)) {
+        for(let i = 0;i < this.ary.length;i++) {
+            if (this.ary[i].equal(inRec)) {
                 result = i;
                 break;
             }
@@ -38,51 +51,74 @@ class Ary_St<T extends Rec> implements Ary<T>{
         );
     }
     public pasteAry(inAry : Array<T>) {
-        this.Ary = new Array<T>();
-        this.Ary.length = 0;
+        this.ary = [];
+        this.ary.length = 0;
         this.addAry(inAry);
     }
 }
 
+/*
+*   キー：識別キー レコードを分類するためのキー
+*/
 
+// キーレコード（文字列変換キー付きレコード）
 interface KyRec extends Rec{
-    Ky : string;
+    // キー
+    ky : string;
+    equal(inRec : KyRec) : boolean;
 }
-interface KyAry<T extends KyRec> extends Ary<T> {
-    Ky : string;
+// キーレコード・標準型
+abstract class KyRec_St implements KyRec {
+    public ky : string;
+    constructor(in_ky : string) {
+        this.ky = in_ky;
+    }
+    abstract equal(inRec : KyRec) : boolean;
 }
 
+
+// キーレコード用配列・独自配列より継承
+interface KyAry<T extends KyRec> extends Ary<T> {
+    // 登録されているキー
+    ky : string;
+}
+// キーレコード用配列（同じキーのアイテムしか登録できない） 
 class KyAry_St<T extends KyRec>
     extends Ary_St<T>
     implements KyAry<T> 
 {
-    public Ky : string;
+    public ky : string;
     constructor()
     {
         super();
-        this.Ky = "";
+        this.ky = "";
     }
     public add(inRec : T) {
-        if (this.Ky == "") {
-            this.Ky = inRec.Ky;
+        if (this.ky == "") {
+            this.ky = inRec.ky;
         }
-        if (this.Ky != inRec.Ky) {
+        if (this.ky != inRec.ky) {
             return;
         }
-        this.Ary.push(inRec);
+        this.ary.push(inRec);
     }
- }
+}
+
+interface KyArys<T extends KyRec> {
+
+}
+
 
 
 interface Itm extends TestItem {
-    Wd : string;
-    Pc : string;
-    Copy : Itm;
-    ToKwd(inKy : string) : Kwd;    
+    wd : string;
+    pc : string;
+    copy : Itm;
+    toKwd(inKy : string) : Kwd;    
 }
 class Itm_St implements Itm {
-    public Wd : string;
-    public Pc : string;
+    public wd : string;
+    public pc : string;
     constructor(
         inWd? : string
         ,
@@ -90,28 +126,28 @@ class Itm_St implements Itm {
     )
     {
         if (inWd) {
-            this.Wd = inWd;
+            this.wd = inWd;
         } else {
-            this.Wd = '';
+            this.wd = '';
         }
         if (inPc) {
-            this.Pc = inPc;
+            this.pc = inPc;
         } else {
-            this.Pc = '';
+            this.pc = '';
         }
     }
-    public get Copy() : Itm {
-        return new Itm_St(this.Wd,this.Pc);
+    public get copy() : Itm {
+        return new Itm_St(this.wd,this.pc);
     }
-    public ToKwd(inKy : string) : Kwd {
-        return new Kwd_St(inKy,this.Wd,this.Pc);
+    public toKwd(inKy : string) : Kwd {
+        return new Kwd_St(inKy,this.wd,this.pc);
     }
 
     public ToString() : string
     {
         let result = '';
-        if (this.Wd != '') result += '"' + this.Wd + '"';
-        if (this.Pc != '') result += '(' + this.Pc + ')';
+        if (this.wd != '') result += '"' + this.wd + '"';
+        if (this.pc != '') result += '(' + this.pc + ')';
         return result;
     }
 }
@@ -119,7 +155,7 @@ class Itm_St implements Itm {
 
 interface Kwd extends Itm,TestItem {
     Ky : string;
-    Copy : Kwd;
+    copy : Kwd;
     ToItm() : Itm;
 }
 class Kwd_St extends Itm_St implements Kwd {
@@ -140,19 +176,19 @@ class Kwd_St extends Itm_St implements Kwd {
             this.Ky = '';
         }
     }
-    public get Copy() : Kwd {
-        return new Kwd_St(this.Ky,this.Wd,this.Pc);
+    public get copy() : Kwd {
+        return new Kwd_St(this.Ky,this.wd,this.pc);
     }
     public ToItm() : Itm {
-        return new Itm_St(this.Wd,this.Pc);
+        return new Itm_St(this.wd,this.pc);
     }
 
     public ToString() : string
     {
         let result = '';
         if (this.Ky != '') result += '[' + this.Ky + ']';
-        if (this.Wd != '') result += '"' + this.Wd + '"';
-        if (this.Pc != '') result += '(' + this.Pc + ')';
+        if (this.wd != '') result += '"' + this.wd + '"';
+        if (this.pc != '') result += '(' + this.pc + ')';
         return result;
     }
 }
