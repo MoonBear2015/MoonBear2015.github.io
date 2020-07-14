@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N02.41';
+    html += ' N02.42';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -701,10 +701,10 @@ class selector_comment extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@YESNO@ッ！ @L_WHAT@が@KEI@@NICK@@END02A@ッ！')
             ,
             new SctItm('@L_WHAT@の@NICK@！ @L_WHAT@の@NICK@！ @L_WHAT@の@NICK@！ @L_WHAT@の@NICK@！ ')
-            ,
-            new SctItm('@L_WHAT@は@NICK@？ @COMMENT@')
-            ,
-            new SctItm('@L_WHAT@が@L_DO@@END02B@？ @COMMENT@')
+            // ,
+            // new SctItm('@L_WHAT@は@NICK@？ @COMMENT@')
+            // ,
+            // new SctItm('@L_WHAT@が@L_DO@@END02B@？ @COMMENT@')
             ,
             new SctItm('@L_INSCRIPTION@')
         ];
@@ -750,9 +750,9 @@ class selector_comment2 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@YESNO@、@L_WHAT@が@KEI@@NICK@@END02A@')
             ,
-            new SctItm('@KEI3@@NICK@、@KEI3@@NICK@、@KEI3@@NICK@、@KEI3@@NICK@……')
+            new SctItm('@KEI1@@NICK@、@KEI1@@NICK@、@KEI1@@NICK@、@KEI1@@NICK@……')
             ,
-            new SctItm('@KEI2@な@KEY@、@KEI2@な@KEY@、@KEI2@な@KEY@、@KEI2@な@KEY@……')
+            new SctItm('@KEI1@@KEY@、@KEI1@@KEY@、@KEI1@@KEY@、@KEI1@@KEY@……')
             ,
             new SctItm('@YESNO@、@KEI2@な@PART@が@SAY@@END02B@')
             ,
@@ -1646,7 +1646,7 @@ class selector_kd extends SctItm_Selector implements ISctItm_Selector {
         super('@KEI4@');
         this.Add(cods_to_itms(cods_adv_beauty));
         this.Add(cods_to_itms(cods_adv_sense));
-        // this.Add(cods_to_itms(cods_adv_danger));
+        this.Add(cods_to_itms(cods_adv_danger));
         this.Add(cods_to_itms(cods_adv_etc));
     }
 }
