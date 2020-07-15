@@ -1,11 +1,12 @@
 // 独自配列用レコード
 interface Rec {
-    // 比較
     equal(inRec : Rec) : boolean;
+
 }
 
 // 独自配列用レコード：標準
 abstract class Rec_St {
+    // レコード比較 true:一致
     abstract equal(inRec : Rec) : boolean;
 }
 
