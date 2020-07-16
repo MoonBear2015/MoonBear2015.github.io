@@ -1860,7 +1860,8 @@ const itms_kmd = [
     new SctItm('@ITEM@に似ている'),
     new SctItm('@DO@する@ITEM@に似ている'),
     new SctItm('@ITEM@と変わらない'),
-    new SctItm('@DO@する@ITEM@と変わらない')
+    new SctItm('@DO@する@ITEM@と変わらない'),
+    new SctItm('@CALL2@と@ASSES@')
 ];
 // const   cods_jougo = [
 // new SctCod_Km('|連々|れんれん|')

@@ -403,7 +403,7 @@ class selector_c01 extends SctItm_Selector {
             new SctItm('@KEI@@KEY@や@KEY@が@SIZE@する@L_WHAT@@END01A@'),
             new SctItm('@KEI@@MANYPEOPLE@が@KEID@@L_DO@@END01B@'),
             new SctItm('@KEI@@MANYPEOPLE@による@KEI@@KEY@が@SIZE@@END01B@'),
-            new SctItm('@THINK@や@THINK@@SIZE2@@L_WHAT@@END01A@')
+            new SctItm('@MANYPEOPLE@の@THINK@や@THINK@@SIZE2@@L_WHAT@@END01A@')
         ];
     }
 }

@@ -3411,6 +3411,8 @@ const   itms_kmd = [
     new SctItm('@ITEM@と変わらない')
     ,
     new SctItm('@DO@する@ITEM@と変わらない')
+    ,
+    new SctItm('@CALL2@と@ASSES@')
 ]
 
 // const   cods_jougo = [

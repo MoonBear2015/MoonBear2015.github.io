@@ -596,7 +596,7 @@ class selector_c01 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@KEI@@MANYPEOPLE@による@KEI@@KEY@が@SIZE@@END01B@')
             ,
-            new SctItm('@THINK@や@THINK@@SIZE2@@L_WHAT@@END01A@')
+            new SctItm('@MANYPEOPLE@の@THINK@や@THINK@@SIZE2@@L_WHAT@@END01A@')
         ];
     }
 }

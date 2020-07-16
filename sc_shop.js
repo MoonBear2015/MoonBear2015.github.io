@@ -7,7 +7,7 @@ function set_shop() {
     html += '<h1>';
     html += 'Shop';
     html += '<small>';
-    html += ' S00.38';
+    html += ' S00.39';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -312,7 +312,8 @@ class selector_s_info00 extends SctItm_Selector {
     constructor() {
         super('@S_INFO00@');
         this.itms = [
-            new SctItm('@S_INFO01@、@S_INFO02@')
+            new SctItm('@S_INFO01@、@S_INFO02@'),
+            new SctItm('@S_INFO04@、@S_INFO05@')
         ];
     }
 }
@@ -360,9 +361,9 @@ class selector_s_info03 extends SctItm_Selector {
             new SctItm('さあ、@KEI1@@FUTURE@の到来です'),
             new SctItm('さあ、@L_SHOP_B@の全てが変わります'),
             new SctItm('あなたの@HABIT@、@HABIT@、そして@HABIT@のお供にどうぞ'),
-            new SctItm('さあ、@KEI1@@L_CAMPANY@ @L_SHOP@と共に、@KEI1@@FUTURE@へ旅立ちましょう'),
-            new SctItm('さあ、@KEI1@@L_CAMPANY@ @L_SHOP@と共に、@HABIT@や@HABIT@へと繰り出しましょう'),
-            new SctItm('@KEI1@@L_CAMPANY@ @L_SHOP@と一緒に、@PLACE@や@PLACE@、@PLACE@へ向かいましょう'),
+            new SctItm('@L_CAMPANY@ @L_SHOP@が、あなたの@KEI@パートナーとなるでしょう'),
+            new SctItm('@L_CAMPANY@ @L_SHOP@が、あなたの@KEI@@PART@となるでしょう'),
+            new SctItm('@KEI@@L_CAMPANY@ @L_SHOP@なら、あなたの@THINK@や@THINK@が@SUCCESS@できます'),
             new SctItm('@KEI1@@PART@へのプレゼントに如何でしょうか'),
             new SctItm('あなたの@KEI1@@PART@への贈り物に最適です'),
             new SctItm('もう、@CLASS@を呼ぶ必要はありません'),
@@ -376,6 +377,32 @@ class selector_s_info03 extends SctItm_Selector {
             new SctItm('@L_SHOP_B@があなたの@L_PLACE@となるでしょう'),
             new SctItm('もはや、@L_PLACE@では欠かせないアイテムです'),
             new SctItm('もう、@L_CAMPANY@ @L_SHOP@の無い@L_PLACE@など有り得ません')
+        ];
+    }
+}
+// 上（句点なし）
+class selector_s_info04 extends SctItm_Selector {
+    constructor() {
+        super('@S_INFO04@');
+        this.itms = [
+            new SctItm('さあ、@KEI1@@L_CAMPANY@ @L_SHOP@と共に'),
+            new SctItm('さあ、@KEI1@@L_CAMPANY@ @L_SHOP@を片手に'),
+            new SctItm('さあ、@KEI1@@L_CAMPANY@ @L_SHOP@と一緒に'),
+            new SctItm('@KEI1@@L_CAMPANY@ @L_SHOP@でパワーアップして')
+        ];
+    }
+}
+// 下（句点なし）
+class selector_s_info05 extends SctItm_Selector {
+    constructor() {
+        super('@S_INFO05@');
+        this.itms = [
+            new SctItm('@KEI1@@FUTURE@へと旅立ちましょう'),
+            new SctItm('@KEI1@@FUTURE@を冒険してみませんか'),
+            new SctItm('@HABIT@や@HABIT@に繰り出しましょう'),
+            new SctItm('@PLACE@や@PLACE@へと出かけましょう'),
+            new SctItm('@KEI@@PLACE@へと出かけましょう'),
+            new SctItm('@KEI@@PLACE@へと出かけてみませんか')
         ];
     }
 }
@@ -511,6 +538,8 @@ class shop_docs_maker extends news_docs_maker {
         this.dic_push(new selector_s_info01());
         this.dic_push(new selector_s_info02());
         this.dic_push(new selector_s_info03());
+        this.dic_push(new selector_s_info04());
+        this.dic_push(new selector_s_info05());
         this.dic_push(new selector_ShopComentGood());
         this.dic_push(new selector_ShopComentNomal());
         this.dic_push(new selector_ShopComentBad());
