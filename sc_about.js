@@ -1,13 +1,13 @@
 "use strict";
 function set_about() {
-    set_header_menu(5);
+    set_header_menu(6);
     scrollTo(0, 0);
     let html = '';
     html += '<div id="main_title">';
     html += '<h1>';
     html += 'ABOUT';
     html += '<small>';
-    html += ' A01.06';
+    html += ' A01.07';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
