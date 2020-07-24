@@ -201,6 +201,36 @@ function make_shop() {
     }
     return html;
 }
+function make_site_footer() {
+    let html = '';
+    html += '<div id="foot_cm">'; // cm
+    html += '<div id="foot_pic">';
+    html += '<img src="pics/@PIC_SHOP@" width="100%">';
+    html += '</div>';
+    html += '<div id="foot_title">';
+    html += '@L_CAMPANY@ @L_SHOP@ @MODEL@';
+    html += '</div>';
+    html += '<div id="foot_copy">';
+    html += '@CATCH@';
+    html += '</div>';
+    html += '</div>'; // cm
+    let maker = new shop_docs_maker();
+    let maker01 = new shop_docs_maker01();
+    let cnt = 0;
+    while (true) {
+        html = maker.gene_docs(html);
+        html = maker01.gene_docs(html);
+        cnt++;
+        let chk = html.indexOf('@');
+        if (chk < 0)
+            break;
+        if (cnt > 10) {
+            alert('over work : ' + chk.toString());
+            break;
+        }
+    }
+    return html;
+}
 // （固定）商品
 class locker_shop extends SctItm_SelectLocker {
     constructor() {

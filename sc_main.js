@@ -9,13 +9,23 @@ function set_site_header() {
     }
     elem.innerHTML = html;
 }
+function set_site_footer() {
+    let html = '';
+    html += make_site_footer();
+    let elem = document.getElementById('site_footer');
+    if (elem == null) {
+        alert('not found "site_footer"');
+        return;
+    }
+    elem.innerHTML = html;
+}
 function make_site_header() {
     let html = '';
     html += '<div id="header_title">';
     html += '<h1>';
     html += '「空虚」';
     html += '<small>';
-    html += 'M01.28';
+    html += 'M01.29';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -41,7 +51,6 @@ function get_menu_items() {
         new menu_item('Poem', 'set_poem()'),
         new menu_item('Q&A', 'set_qa()'),
         new menu_item('Shop', 'set_shop()'),
-        new menu_item('Comic', 'set_comic()'),
         new menu_item('About', 'set_about()')
     ];
     return menu_items;
