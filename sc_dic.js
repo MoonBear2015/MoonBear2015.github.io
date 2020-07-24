@@ -3326,7 +3326,8 @@ const itms_shop = [
     new SctItm('GOD', 'SHOP/God.jpg', '神様'),
     new SctItm('ANGEL', 'SHOP/angel.jpg', '天使様'),
     new SctItm('DEATHSTAR', 'SHOP/deathstar.jpg', 'デススター'),
-    new SctItm('DRAGON', 'SHOP/dragon.jpg', 'ドラゴン')
+    new SctItm('DRAGON', 'SHOP/dragon.jpg', 'ドラゴン'),
+    new SctItm('ARMOR', 'SHOP/ARMOR01.jpg', '甲冑')
 ];
 const itms_campany = [
     new SctItm('Ringo', '', 'リンゴ'),

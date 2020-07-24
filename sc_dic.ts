@@ -5217,6 +5217,8 @@ const   itms_shop = [
     new SctItm('DEATHSTAR','SHOP/deathstar.jpg','デススター')
     ,
     new SctItm('DRAGON','SHOP/dragon.jpg','ドラゴン')
+    ,
+    new SctItm('ARMOR','SHOP/ARMOR01.jpg','甲冑')
 ]
 
 const   itms_campany = [
