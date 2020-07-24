@@ -1,4 +1,10 @@
 "use strict";
+function set_timer() {
+    let cm = function () {
+        set_site_footer();
+    };
+    setInterval(cm, 10000);
+}
 function set_site_header() {
     let html = '';
     html += make_site_header();
@@ -25,7 +31,7 @@ function make_site_header() {
     html += '<h1>';
     html += '「空虚」';
     html += '<small>';
-    html += 'M01.30';
+    html += 'M01.31';
     html += '</small>';
     html += '</h1>';
     html += '</div>';

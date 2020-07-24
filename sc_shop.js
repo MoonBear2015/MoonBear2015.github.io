@@ -203,6 +203,7 @@ function make_shop() {
 }
 function make_site_footer() {
     let html = '';
+    html += '<div id="@FOOT_ST@">'; // st
     html += '<div id="foot_cm">'; // cm
     html += '<div id="foot_pic">';
     html += '<img src="pics/@PIC_SHOP@" width="100%">';
@@ -214,6 +215,7 @@ function make_site_footer() {
     html += '@CATCH@';
     html += '</div>';
     html += '</div>'; // cm
+    html += '</div>'; // st
     let maker = new shop_docs_maker();
     let maker01 = new shop_docs_maker01();
     let cnt = 0;
@@ -552,6 +554,18 @@ class selector_ShopComentDocBad extends SctItm_Selector {
         ];
     }
 }
+class selector_footer extends SctItm_Selector {
+    constructor() {
+        super('@FOOT_ST@');
+        this.itms = [
+            new SctItm('foot01'),
+            new SctItm('foot02'),
+            new SctItm('foot03'),
+            new SctItm('foot04'),
+            new SctItm('foot05')
+        ];
+    }
+}
 class shop_docs_maker extends news_docs_maker {
     constructor() {
         super();
@@ -575,6 +589,7 @@ class shop_docs_maker extends news_docs_maker {
         this.dic_push(new selector_ShopComentBad());
         this.dic_push(new selector_ShopComentDocGood());
         this.dic_push(new selector_ShopComentDocBad());
+        this.dic_push(new selector_footer());
     }
 }
 class shop_docs_maker01 extends news_docs_maker {
