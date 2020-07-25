@@ -562,7 +562,8 @@ class selector_footer extends SctItm_Selector {
             new SctItm('foot02'),
             new SctItm('foot03'),
             new SctItm('foot04'),
-            new SctItm('foot05')
+            new SctItm('foot05'),
+            new SctItm('foot06')
         ];
     }
 }

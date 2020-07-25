@@ -58,13 +58,13 @@ body {
 
 #foot01 {
     font-family: fantasy;
-    color:white;
+    color:lightcyan;
     background-color: darkblue;
 }
 #foot02 {
-    font-family: 'Courier New';
+    font-family: 'Gungsuh';
     color:white;
-    background-color: darkred;
+    background-color: #500000;
 }
 #foot03 {
     font-family: 'Times New Roman', Times, serif;
@@ -72,7 +72,7 @@ body {
     background-color: darkmagenta;
 }
 #foot04 {
-    font-family: 'Impact';
+    font-family: 'HG行書体';
     color:black;
     background-color: darkgray;
 }
@@ -80,6 +80,11 @@ body {
     font-family: 'Georgia';
     color:white;
     background-color: darkgreen;
+}
+#foot06 {
+    font-family: 'Impact';
+    color:darkblue;
+    background-color: yellow;
 }
 
 #foot_pic {
@@ -89,7 +94,6 @@ body {
 
 #foot_title {
     font-size: 5vmin;
-    color:white;
     margin: 0;
     padding: 0;
     text-shadow:2px 2px 0px #909090;
