@@ -25,6 +25,7 @@ class SctItm {
         else {
             this.Wrd2 = '';
         }
+        this.pnt = 0;
     }
     ;
     get Copy() {
@@ -347,6 +348,41 @@ class SctItm_FirstLocker extends SctItm_Selector {
     }
     Copy() {
         let result = new SctItm_FirstLocker(this.itm_key, this.itm_key2, this.pic_key);
+        result.Paste(this.itms);
+        return result;
+    }
+}
+class SctItm_PointSelector extends SctItm_Selector {
+    constructor(in_itm_key, in_itm_key2, in_pic_key, in_array) {
+        super(in_itm_key, in_itm_key2, in_pic_key, in_array);
+    }
+    clear_pnt() {
+        this.itms.forEach(itm => {
+            itm.pnt = 0;
+        });
+    }
+    count_zero() {
+        let result = 0;
+        this.itms.forEach(itm => {
+            if (itm.pnt == 0) {
+                result++;
+            }
+        });
+        return result;
+    }
+    get rnd_Itm() {
+        if (this.count_zero() == 0) {
+            this.clear_pnt();
+        }
+        let filItms = this.itms.filter(function (itm) {
+            return itm.pnt == 0;
+        });
+        let i = filItms.length;
+        filItms[i].pnt = -1;
+        return filItms[i];
+    }
+    Copy() {
+        let result = new SctItm_PointSelector(this.itm_key, this.itm_key2, this.pic_key);
         result.Paste(this.itms);
         return result;
     }

@@ -14,6 +14,7 @@ interface ISctItm extends TestItem {
     Wrd : string;
     SctPic : string;
     Wrd2 : string;
+    pnt : number;
     Copy : ISctItm;
 }
 
@@ -30,6 +31,7 @@ class SctItm implements ISctItm,TestItem {
     public Wrd : string;
     public SctPic : string;
     public Wrd2 : string;
+    public pnt : number;
     constructor(
         in_Wrd? : string
         ,
@@ -52,6 +54,7 @@ class SctItm implements ISctItm,TestItem {
         } else {
             this.Wrd2 = '';
         }
+        this.pnt = 0;
     };
     public get Copy() : ISctItm {
         return new SctItm(this.Wrd,this.SctPic,this.Wrd2);
@@ -481,7 +484,6 @@ class SctItm_Selector extends ItmSelector<SctItm> implements ISctItm_Selector {
     }
 }
 
-
 class SctItm_SelectLocker extends SctItm_Selector implements ISctItm_Selector {
     private is_lock : boolean;
     private lock_item : SctItm;
@@ -555,6 +557,59 @@ class SctItm_FirstLocker
     }
 
 }
+
+class SctItm_PointSelector extends SctItm_Selector implements ISctItm_Selector {
+    constructor(
+        in_itm_key? : string
+        ,
+        in_itm_key2? : string
+        ,
+        in_pic_key? : string
+        ,
+        in_array? : Array<SctItm>
+    )
+    {
+        super(in_itm_key,in_itm_key2,in_pic_key,in_array);
+    }
+
+    public clear_pnt() {
+        this.itms.forEach(itm => {
+            itm.pnt = 0;
+        });
+    }
+    
+    public count_zero() {
+        let result : number = 0;
+        this.itms.forEach(itm => {
+            if (itm.pnt == 0) {
+                result++;
+            }
+        });
+        return result;
+    }
+
+    get rnd_Itm() : SctItm {
+        if (this.count_zero() == 0) {
+            this.clear_pnt();
+        }
+        let filItms = this.itms.filter(function(itm) {
+            return itm.pnt == 0;
+        }
+        );
+        let i = filItms.length;
+        filItms[i].pnt = -1;
+        return filItms[i];
+    }
+    
+    Copy() : ISctItm_Selector
+    {
+        let result = new SctItm_PointSelector(this.itm_key,this.itm_key2,this.pic_key);
+        result.Paste(this.itms);
+        return result;
+    }
+
+}
+
 
 
 //------------------------------------ poem

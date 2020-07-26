@@ -1,6 +1,6 @@
 function set_about()
 {
-    set_header_menu(5);
+    set_header_menu(6);
 
     scrollTo(0,0);
 
