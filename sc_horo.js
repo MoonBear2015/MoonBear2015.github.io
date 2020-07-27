@@ -11,9 +11,7 @@ function set_horo() {
     html += '</small>';
     html += '</h1>';
     html += '</div>';
-    for (let i = 0; i < 10; i++) {
-        html += '<p>[' + i.toString() + ']</p>' + make_shop();
-    }
+    html += make_horo();
     let elem = document.getElementById('site_main');
     if (elem == null) {
         alert('not found "site_main"');
@@ -24,13 +22,18 @@ function set_horo() {
 function make_horo() {
     let html = '';
     html += '<div id="horo_box">';
-    html += '<div id="shop_title">';
-    html += '@L_CAMPANY@ @L_SHOP@ @MODEL@';
-    html += '</div>';
-    html += '<div id="shop_pic">';
-    html += '<img src="pics/@PIC_SHOP@" width="100%">';
-    html += '</div>';
-    let maker = new shop_docs_maker();
+    html += '@P_ANIMAL@ <br>';
+    html += '@P_ANIMAL@ <br>';
+    html += '@P_ANIMAL@ <br>';
+    html += '@P_ANIMAL@ <br>';
+    html += '@P_ANIMAL@ <br>';
+    html += '------- <br>';
+    html += '@P_ANIMAL@ <br>';
+    html += '@P_ANIMAL@ <br>';
+    html += '@P_ANIMAL@ <br>';
+    html += '@P_ANIMAL@ <br>';
+    html += '@P_ANIMAL@ <br>';
+    let maker = new horo_docs_maker();
     let cnt = 0;
     while (true) {
         html = maker.gene_docs(html);
@@ -44,4 +47,17 @@ function make_horo() {
         }
     }
     return html;
+}
+// （固定）ステータス
+class pointer_animal extends SctItm_PointSelector {
+    constructor() {
+        super('@P_ANIMAL@', '', '@ICON_HORO@');
+        this.Add(itms_horo_animal);
+    }
+}
+class horo_docs_maker extends news_docs_maker {
+    constructor() {
+        super();
+        this.dic_push(new pointer_animal());
+    }
 }

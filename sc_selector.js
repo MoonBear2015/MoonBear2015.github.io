@@ -377,7 +377,8 @@ class SctItm_PointSelector extends SctItm_Selector {
         let filItms = this.itms.filter(function (itm) {
             return itm.pnt == 0;
         });
-        let i = filItms.length;
+        testItems_alert(filItms);
+        let i = rnd_max(filItms.length);
         filItms[i].pnt = -1;
         return filItms[i];
     }

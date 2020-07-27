@@ -14,9 +14,8 @@ function set_horo()
     html += '</h1>';
     html += '</div>';
 
-    for(let i = 0; i < 10; i++){
-        html += '<p>[' + i.toString() + ']</p>' + make_shop();
-    }
+    html += make_horo();
+
 
     let elem = document.getElementById('site_main');
     if (elem == null)
@@ -36,15 +35,30 @@ function make_horo()
 
     html += '<div id="horo_box">';
 
-    html += '<div id="shop_title">';
-    html += '@L_CAMPANY@ @L_SHOP@ @MODEL@';
-    html += '</div>';
+    html += '@P_ANIMAL@ <br>';
 
-    html += '<div id="shop_pic">';
-    html += '<img src="pics/@PIC_SHOP@" width="100%">';
-    html += '</div>';
+    html += '@P_ANIMAL@ <br>';
 
-    let maker = new shop_docs_maker();
+    html += '@P_ANIMAL@ <br>';
+
+    html += '@P_ANIMAL@ <br>';
+
+    html += '@P_ANIMAL@ <br>';
+
+    html += '------- <br>';
+
+    html += '@P_ANIMAL@ <br>';
+
+    html += '@P_ANIMAL@ <br>';
+
+    html += '@P_ANIMAL@ <br>';
+
+    html += '@P_ANIMAL@ <br>';
+
+    html += '@P_ANIMAL@ <br>';
+
+
+    let maker = new horo_docs_maker();
 
 
     let cnt = 0;
@@ -64,6 +78,23 @@ function make_horo()
     return html;
     
 }
+
+// （固定）ステータス
+class pointer_animal extends SctItm_PointSelector implements ISctItm_Selector{
+    constructor(){
+        super('@P_ANIMAL@','','@ICON_HORO@');
+        this.Add(itms_horo_animal);
+    }
+}
+
+class horo_docs_maker extends news_docs_maker {
+    constructor(){
+        super();
+        this.dic_push(new pointer_animal());
+
+    }
+}
+
 
 
 

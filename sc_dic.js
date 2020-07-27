@@ -582,7 +582,7 @@ const cods_animal = [
     new SctCod_TI('|山羊|やぎ|'),
     new SctCod_TI('|馬陸|やすで|'),
     new SctCod_TI('|寄居虫|やどかり|'),
-    new SctCod_TI('|山荒・豪猪|やまあらし|'),
+    new SctCod_TI('|山荒|やまあらし|'),
     new SctCod_TI('|家守|やもり|'),
     new SctCod_TI('|駱駝|らくだ|'),
     new SctCod_TI('|海獺|らっこ|'),
@@ -3631,4 +3631,15 @@ const itms_nickNomal = [
     new SctItm('旅人'),
     new SctItm('住人'),
     new SctItm('人')
+];
+const itms_horo_animal = [
+    new SctItm('DRAGON', 'HORO/dragon.jpg', '龍'),
+    new SctItm('TIGER', 'HORO/tiger.jpg', '虎'),
+    new SctItm('DOG', 'HORO/dog.jpg', '犬'),
+    new SctItm('CAT', 'HORO/cat.jpg', '猫'),
+    new SctItm('CROW', 'HORO/crow.jpg', '烏'),
+    new SctItm('SPARROW', 'HORO/sparrow.jpg', '雀'),
+    new SctItm('SHEEP', 'HORO/sheep.jpg', '羊'),
+    new SctItm('SHEEP', 'HORO/sheep.jpg', '羊'),
+    new SctItm('COW', 'HORO/cow.jpg', '牛')
 ];

@@ -559,6 +559,7 @@ class SctItm_FirstLocker
 }
 
 class SctItm_PointSelector extends SctItm_Selector implements ISctItm_Selector {
+    
     constructor(
         in_itm_key? : string
         ,
@@ -596,7 +597,8 @@ class SctItm_PointSelector extends SctItm_Selector implements ISctItm_Selector {
             return itm.pnt == 0;
         }
         );
-        let i = filItms.length;
+        testItems_alert(filItms);
+        let i = rnd_max(filItms.length);
         filItms[i].pnt = -1;
         return filItms[i];
     }

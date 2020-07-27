@@ -445,3 +445,10 @@ small {
     text-align: left;
 }
 
+#horo_box {
+    margin:     5px;
+    padding:    10px;
+    border:     0.5px solid #606060;
+    border-radius:  1%;
+    background-color: white;
+}
