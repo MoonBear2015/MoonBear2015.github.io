@@ -7,3 +7,18 @@ function rnd_minmax(min, max) {
 function rnd_max(max) {
     return Math.floor(Math.random() * max);
 }
+// 配列のシャッフル
+const Shuffle = ([...array]) => {
+    for (let i = array.length - 1; i >= 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+};
+function SeqNumber(n) {
+    let ary = new Array();
+    for (let i = 0; i < n; i++) {
+        ary.push(i);
+    }
+    return ary;
+}

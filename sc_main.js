@@ -116,7 +116,7 @@ function set_center_message(mess) {
 }
 function set_main() {
     set_header_menu(0);
-    scrollTo(0, 0);
+    window.scrollTo(0, 0);
     let html = '';
     let msgs = [
         '新しいことをしたければ、<br>先人の教えを捨てましょう。<br>どうすれば良いのか？<br>サイコロを振って決めればいいのです。',
@@ -416,4 +416,5 @@ function set_main() {
         }
     }
     set_center_message(ruby_change(msg));
+    window.scrollTo(0, 0);
 }

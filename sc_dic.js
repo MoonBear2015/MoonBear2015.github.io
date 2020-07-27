@@ -3640,6 +3640,5 @@ const itms_horo_animal = [
     new SctItm('CROW', 'HORO/crow.jpg', '烏'),
     new SctItm('SPARROW', 'HORO/sparrow.jpg', '雀'),
     new SctItm('SHEEP', 'HORO/sheep.jpg', '羊'),
-    new SctItm('SHEEP', 'HORO/sheep.jpg', '羊'),
     new SctItm('COW', 'HORO/cow.jpg', '牛')
 ];

@@ -145,8 +145,7 @@ function set_center_message(mess : string) {
 function set_main()
 {
     set_header_menu(0);
-
-    scrollTo(0,0);
+    window.scrollTo(0,0);
 
     let html : string = '';
 
@@ -536,5 +535,8 @@ function set_main()
     }
     
     set_center_message(ruby_change(msg));
+
+    window.scrollTo(0,0);
+
 }
 

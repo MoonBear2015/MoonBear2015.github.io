@@ -352,7 +352,7 @@ class SctItm_FirstLocker extends SctItm_Selector {
         return result;
     }
 }
-class SctItm_PointSelector extends SctItm_Selector {
+class SctItm_Rotetion extends SctItm_Selector {
     constructor(in_itm_key, in_itm_key2, in_pic_key, in_array) {
         super(in_itm_key, in_itm_key2, in_pic_key, in_array);
     }
@@ -377,13 +377,34 @@ class SctItm_PointSelector extends SctItm_Selector {
         let filItms = this.itms.filter(function (itm) {
             return itm.pnt == 0;
         });
-        testItems_alert(filItms);
         let i = rnd_max(filItms.length);
         filItms[i].pnt = -1;
         return filItms[i];
     }
     Copy() {
-        let result = new SctItm_PointSelector(this.itm_key, this.itm_key2, this.pic_key);
+        let result = new SctItm_Rotetion(this.itm_key, this.itm_key2, this.pic_key);
+        result.Paste(this.itms);
+        return result;
+    }
+}
+class SctItm_FixSeq extends SctItm_Selector {
+    constructor(in_itm_key, in_itm_key2, in_pic_key, in_array) {
+        super(in_itm_key, in_itm_key2, in_pic_key, in_array);
+        this.fixAry = [];
+        this.nowCnt = -1;
+    }
+    get rnd_Itm() {
+        if (this.nowCnt == -1) {
+            this.fixAry = Shuffle(this.itms);
+        }
+        this.nowCnt++;
+        if (this.nowCnt >= this.fixAry.length) {
+            this.nowCnt = 0;
+        }
+        return this.fixAry[this.nowCnt];
+    }
+    Copy() {
+        let result = new SctItm_FixSeq(this.itm_key, this.itm_key2, this.pic_key);
         result.Paste(this.itms);
         return result;
     }

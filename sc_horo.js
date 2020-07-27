@@ -7,7 +7,7 @@ function set_horo() {
     html += '<h1>';
     html += 'Horoscope';
     html += '<small>';
-    html += ' H00.00';
+    html += ' H00.01';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -22,17 +22,23 @@ function set_horo() {
 function make_horo() {
     let html = '';
     html += '<div id="horo_box">';
-    html += '@P_ANIMAL@ <br>';
-    html += '@P_ANIMAL@ <br>';
-    html += '@P_ANIMAL@ <br>';
-    html += '@P_ANIMAL@ <br>';
-    html += '@P_ANIMAL@ <br>';
+    html += '@F_ANIMAL@ <br>';
+    html += '@F_ANIMAL@ <br>';
+    html += '@F_ANIMAL@ <br>';
+    html += '@F_ANIMAL@ <br>';
+    html += '@F_ANIMAL@ <br>';
+    html += '@F_ANIMAL@ <br>';
+    html += '@F_ANIMAL@ <br>';
+    html += '@F_ANIMAL@ <br>';
     html += '------- <br>';
-    html += '@P_ANIMAL@ <br>';
-    html += '@P_ANIMAL@ <br>';
-    html += '@P_ANIMAL@ <br>';
-    html += '@P_ANIMAL@ <br>';
-    html += '@P_ANIMAL@ <br>';
+    html += '@F_ANIMAL@ <br>';
+    html += '@F_ANIMAL@ <br>';
+    html += '@F_ANIMAL@ <br>';
+    html += '@F_ANIMAL@ <br>';
+    html += '@F_ANIMAL@ <br>';
+    html += '@F_ANIMAL@ <br>';
+    html += '@F_ANIMAL@ <br>';
+    html += '@F_ANIMAL@ <br>';
     let maker = new horo_docs_maker();
     let cnt = 0;
     while (true) {
@@ -49,15 +55,15 @@ function make_horo() {
     return html;
 }
 // （固定）ステータス
-class pointer_animal extends SctItm_PointSelector {
+class Fix_animal extends SctItm_FixSeq {
     constructor() {
-        super('@P_ANIMAL@', '', '@ICON_HORO@');
+        super('@F_ANIMAL@', '', '@ICON_HORO@');
         this.Add(itms_horo_animal);
     }
 }
 class horo_docs_maker extends news_docs_maker {
     constructor() {
         super();
-        this.dic_push(new pointer_animal());
+        this.dic_push(new Fix_animal());
     }
 }
