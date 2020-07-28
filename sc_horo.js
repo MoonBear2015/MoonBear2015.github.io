@@ -7,7 +7,7 @@ function set_horo() {
     html += '<h1>';
     html += 'Horoscope';
     html += '<small>';
-    html += ' H00.02';
+    html += ' H00.03';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -24,18 +24,27 @@ function make_horo() {
     let fixAnimal = new Fix_animal();
     maker.dic_push(fixAnimal);
     let cntHoro = rnd_minmax(4, fixAnimal.countItm + 1);
-    let horoDays = Math.floor(365 / cntHoro);
     let dt = new Date();
     let html = '';
+    let days = SplitYearDays(cntHoro);
     for (let i = 0; i < 2; i++) {
         html += '<div id="horo_box">';
         for (let j = 0; j < cntHoro; j++) {
-            let dt1 = first_date();
-            dt1.setDate(dt1.getDate() + horoDays * j);
-            alert(date_string(dt1));
-            html += '@F_ANIMAL@ ' + date_MD_string(dt1) + '<br>';
+            html += '<div id="horo_line">';
+            html += '<div id="#horo_colname">';
+            html += '@F_ANIMAL@';
+            html += '</div>';
+            html += '<div id="#horo_colstart">';
+            html += date_MD_string(days[j].st);
+            html += '</div>';
+            html += '<div id="#horo_colto">';
+            html += ' ~ ';
+            html += '</div>';
+            html += '<div id="#horo_colend">';
+            html += date_MD_string(days[j].ed);
+            html += '</div>';
+            html += '</div>';
         }
-        html += '------- <br>';
         html += '</div>';
         let cnt = 0;
         while (true) {

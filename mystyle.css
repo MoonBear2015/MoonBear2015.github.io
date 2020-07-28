@@ -448,7 +448,42 @@ small {
 #horo_box {
     margin:     5px;
     padding:    10px;
+    width:      50%;
     border:     0.5px solid #606060;
     border-radius:  1%;
     background-color: white;
+}
+
+#horo_line {
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    grid-template-rows: 1fr;
+    grid-template-columns: 30% 30% 10% 30%;
+}
+
+#horo_colname {
+    grid-column: 1/2;
+    font-size: 2.0vmax;
+    margin: 0px 0px;
+    text-align: left;
+}
+#horo_colstart {
+    grid-column: 2/3;
+    font-size: 2.0vmax;
+    margin: 0px 0px;
+    text-align: center;
+}
+#horo_colto {
+    grid-column: 3/4;
+    font-size: 2.0vmax;
+    margin: 0px 0px;
+    text-align: center;
+}
+#horo_colend {
+    grid-column: 4/5;
+    font-size: 2.0vmax;
+    margin: 0px 0px;
+    text-align: center;
 }
