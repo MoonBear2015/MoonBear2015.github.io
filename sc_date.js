@@ -1,4 +1,10 @@
 "use strict";
+function first_date() {
+    let dt = new Date();
+    dt.setMonth(1);
+    dt.setDate(1);
+    return dt;
+}
 function date_string(inDate) {
     let result = "";
     result += inDate.getFullYear().toString()

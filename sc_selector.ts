@@ -630,16 +630,26 @@ class SctItm_FixSeq extends SctItm_Selector implements ISctItm_Selector {
         this.fixAry = [];
         this.nowCnt = -1;
     }
+
+    get countItm() : number {
+        return this.itms.length;
+    }
     
     get rnd_Itm() : SctItm {
         if (this.nowCnt == -1) {
             this.fixAry = Shuffle(this.itms);
+            this.nowCnt = 0;
         }
-        this.nowCnt++;
         if (this.nowCnt >= this.fixAry.length) {
             this.nowCnt = 0;
         }
-        return this.fixAry[this.nowCnt];
+        let result = this.fixAry[this.nowCnt];
+        this.nowCnt++;
+        return result;
+    }
+
+    Reset() {
+        this.nowCnt = 0;
     }
     
     Copy() : ISctItm_Selector

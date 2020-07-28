@@ -9,7 +9,7 @@ function set_horo()
     html += '<h1>';
     html += 'Horoscope';
     html += '<small>';
-    html += ' H00.01';
+    html += ' H00.02';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -25,63 +25,50 @@ function set_horo()
     elem.innerHTML = ruby_change(html);
 }
 
+
+
 function make_horo()
 {
-    let html : string = '';
-
-    html += '<div id="horo_box">';
-
-    html += '@F_ANIMAL@ <br>';
-
-    html += '@F_ANIMAL@ <br>';
-
-    html += '@F_ANIMAL@ <br>';
-
-    html += '@F_ANIMAL@ <br>';
-
-    html += '@F_ANIMAL@ <br>';
-
-    html += '@F_ANIMAL@ <br>';
-
-    html += '@F_ANIMAL@ <br>';
-
-    html += '@F_ANIMAL@ <br>';
-
-    html += '------- <br>';
-
-    html += '@F_ANIMAL@ <br>';
-
-    html += '@F_ANIMAL@ <br>';
-
-    html += '@F_ANIMAL@ <br>';
-
-    html += '@F_ANIMAL@ <br>';
-
-    html += '@F_ANIMAL@ <br>';
-
-    html += '@F_ANIMAL@ <br>';
-
-    html += '@F_ANIMAL@ <br>';
-
-    html += '@F_ANIMAL@ <br>';
-
 
     let maker = new horo_docs_maker();
+    let fixAnimal = new Fix_animal();
+    maker.dic_push(fixAnimal);
 
+    let cntHoro = rnd_minmax(4,fixAnimal.countItm + 1);
+    let horoDays = Math.floor(365/cntHoro);
+    let dt = new Date()
 
-    let cnt = 0;
-    while(true)
-    {
-        html = maker.gene_docs(html);
+    let html : string = '';
 
-        cnt++;
-        let chk = html.indexOf('@');
-        if (chk < 0) break;
-        if (cnt > 10)
-        {
-            alert('over work : ' + chk.toString());
-            break;
+    for(let i = 0; i < 2; i++) {
+
+        html += '<div id="horo_box">';
+
+        for(let j = 0; j < cntHoro; j++) {
+            let dt1 = first_date();
+            dt1.setDate(dt1.getDate() + horoDays * j);
+            alert(date_string(dt1));
+            html += '@F_ANIMAL@ '+ date_MD_string(dt1) + '<br>' ;
+
         }
+        html += '------- <br>';
+        html += '</div>';
+
+        let cnt = 0;
+        while(true)
+        {
+            html = maker.gene_docs(html);
+
+            cnt++;
+            let chk = html.indexOf('@');
+            if (chk < 0) break;
+            if (cnt > 10)
+            {
+                alert('over work : ' + chk.toString());
+                break;
+            }
+        }
+        fixAnimal.Reset();
     }
     return html;
     
@@ -98,7 +85,7 @@ class Fix_animal extends SctItm_FixSeq implements ISctItm_Selector{
 class horo_docs_maker extends news_docs_maker {
     constructor(){
         super();
-        this.dic_push(new Fix_animal());
+        // this.dic_push(new Fix_animal());
 
     }
 }

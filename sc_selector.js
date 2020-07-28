@@ -393,15 +393,23 @@ class SctItm_FixSeq extends SctItm_Selector {
         this.fixAry = [];
         this.nowCnt = -1;
     }
+    get countItm() {
+        return this.itms.length;
+    }
     get rnd_Itm() {
         if (this.nowCnt == -1) {
             this.fixAry = Shuffle(this.itms);
+            this.nowCnt = 0;
         }
-        this.nowCnt++;
         if (this.nowCnt >= this.fixAry.length) {
             this.nowCnt = 0;
         }
-        return this.fixAry[this.nowCnt];
+        let result = this.fixAry[this.nowCnt];
+        this.nowCnt++;
+        return result;
+    }
+    Reset() {
+        this.nowCnt = 0;
     }
     Copy() {
         let result = new SctItm_FixSeq(this.itm_key, this.itm_key2, this.pic_key);

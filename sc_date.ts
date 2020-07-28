@@ -1,3 +1,10 @@
+function first_date() : Date {
+    let dt = new Date();
+    dt.setMonth(1);
+    dt.setDate(1);
+    return dt;
+}
+
 function date_string(inDate: Date) : string 
 {
     let result: string = "";
