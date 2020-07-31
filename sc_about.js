@@ -90,7 +90,7 @@ class selector_abouter extends ItmArray {
         return result;
     }
     Gene_Docs(temp_doc) {
-        return replace_docs(temp_doc, this);
+        return replace_docs_A(temp_doc, this);
     }
 }
 // スタッフ

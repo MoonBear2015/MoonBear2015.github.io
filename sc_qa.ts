@@ -208,7 +208,7 @@ abstract class selector_NameLocker
         return result;
     }
     public Gene_Docs(temp_doc : string) : string {
-        return replace_docs(temp_doc,this);
+        return replace_docs_A(temp_doc,this);
     }
 
 }

@@ -118,7 +118,7 @@ class selector_abouter
     }
 
     public Gene_Docs(temp_doc : string) : string {
-        return replace_docs(temp_doc,this);
+        return replace_docs_A(temp_doc,this);
     }
 
 }

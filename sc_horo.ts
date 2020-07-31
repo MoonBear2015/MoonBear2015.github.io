@@ -49,19 +49,23 @@ function make_horo()
 
             html += '<div id="horo_line">';
 
-            html += '<div id="#horo_colname">';
+            html += '<div id="horo_colicon">';
+            html += '<img src="pics/@ICON_HORO@" height="60px">';
+            html += '</div>';
+
+            html += '<div id="horo_colname">';
             html += '@F_ANIMAL@';
             html += '</div>';
 
-            html += '<div id="#horo_colstart">';
+            html += '<div id="horo_colstart">';
             html += date_MD_string(days[j].st);
             html += '</div>';
 
-            html += '<div id="#horo_colto">';
+            html += '<div id="horo_colto">';
             html += ' ~ ';
             html += '</div>';
 
-            html += '<div id="#horo_colend">';
+            html += '<div id="horo_colend">';
             html += date_MD_string(days[j].ed);
             html += '</div>';
 

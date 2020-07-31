@@ -106,7 +106,7 @@ class selector_random_date extends ItmArray {
         return result;
     }
     Gene_Docs(temp_doc) {
-        return replace_docs(temp_doc, this);
+        return replace_docs_A(temp_doc, this);
     }
 }
 class selector_random_year extends ItmArray {
@@ -125,7 +125,7 @@ class selector_random_year extends ItmArray {
         return result;
     }
     Gene_Docs(temp_doc) {
-        return replace_docs(temp_doc, this);
+        return replace_docs_A(temp_doc, this);
     }
 }
 class selector_human extends ItmArray {
@@ -145,7 +145,7 @@ class selector_human extends ItmArray {
         return result;
     }
     Gene_Docs(temp_doc) {
-        return replace_docs(temp_doc, this);
+        return replace_docs_A(temp_doc, this);
     }
 }
 class selector_writer extends ItmArray {
@@ -165,7 +165,7 @@ class selector_writer extends ItmArray {
         return result;
     }
     Gene_Docs(temp_doc) {
-        return replace_docs(temp_doc, this);
+        return replace_docs_A(temp_doc, this);
     }
 }
 class selector_writer2 extends ItmArray {
@@ -185,7 +185,7 @@ class selector_writer2 extends ItmArray {
         return result;
     }
     Gene_Docs(temp_doc) {
-        return replace_docs(temp_doc, this);
+        return replace_docs_A(temp_doc, this);
     }
 }
 class selector_writer3 extends ItmArray {
@@ -205,7 +205,7 @@ class selector_writer3 extends ItmArray {
         return result;
     }
     Gene_Docs(temp_doc) {
-        return replace_docs(temp_doc, this);
+        return replace_docs_A(temp_doc, this);
     }
 }
 class selector_age extends ItmArray {
@@ -226,7 +226,7 @@ class selector_age extends ItmArray {
         return result;
     }
     Gene_Docs(temp_doc) {
-        return replace_docs(temp_doc, this);
+        return replace_docs_A(temp_doc, this);
     }
 }
 class selector_age2 extends ItmArray {
@@ -247,7 +247,7 @@ class selector_age2 extends ItmArray {
         return result;
     }
     Gene_Docs(temp_doc) {
-        return replace_docs(temp_doc, this);
+        return replace_docs_A(temp_doc, this);
     }
 }
 class selector_title extends SctItm_Selector {

@@ -406,7 +406,7 @@ interface ISctItm_Selector extends IItmSelector<SctItm> {
 
 }
 
-function replace_docs(temp_doc : string,selector : ISctItm_Selector) : string {
+function replace_docs_A(temp_doc : string,selector : ISctItm_Selector) : string {
     let result = temp_doc;
     if (selector.itm_key != ''){
         while(result.search(selector.itm_key) != -1){
@@ -425,6 +425,32 @@ function replace_docs(temp_doc : string,selector : ISctItm_Selector) : string {
             result = result.replace(selector.itm_key2,itm.Wrd2);
             if (selector.pic_key != ''){
                 while(result.search(selector.pic_key) != -1){
+                    result = result.replace(selector.pic_key,itm.SctPic);
+                }
+            }
+        }
+    }
+    return result;
+}
+function replace_docs_B(temp_doc : string,selector : ISctItm_Selector) : string {
+    let result = temp_doc;
+    if (selector.itm_key != ''){
+        while(result.search(selector.itm_key) != -1){
+            let itm = selector.rnd_Itm;
+            result = result.replace(selector.itm_key,itm.Wrd);
+            if (selector.pic_key != ''){
+                if (result.search(selector.pic_key) != -1){
+                    result = result.replace(selector.pic_key,itm.SctPic);
+                }
+            }
+        }
+    }
+    if (selector.itm_key2 != ''){
+        while(result.search(selector.itm_key2) != -1){
+            let itm = selector.rnd_Itm;
+            result = result.replace(selector.itm_key2,itm.Wrd2);
+            if (selector.pic_key != ''){
+                if (result.search(selector.pic_key) != -1){
                     result = result.replace(selector.pic_key,itm.SctPic);
                 }
             }
@@ -480,7 +506,7 @@ class SctItm_Selector extends ItmSelector<SctItm> implements ISctItm_Selector {
     }
 
     public Gene_Docs(temp_doc : string) : string {
-        return replace_docs(temp_doc,this);
+        return replace_docs_A(temp_doc,this);
     }
 }
 
@@ -659,6 +685,11 @@ class SctItm_FixSeq extends SctItm_Selector implements ISctItm_Selector {
         return result;
     }
 
+    public Gene_Docs(temp_doc : string) : string {
+        return replace_docs_B(temp_doc,this);
+    }
+
+
 }
 
 
@@ -703,7 +734,7 @@ class SctItm_Counter extends ItmCounter<SctItm> implements ISctItm_Selector {
     }
 
     public Gene_Docs(temp_doc : string) : string {
-        return replace_docs(temp_doc,this);
+        return replace_docs_A(temp_doc,this);
     }
 
 }

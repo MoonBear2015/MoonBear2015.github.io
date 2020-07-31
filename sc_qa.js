@@ -158,7 +158,7 @@ class selector_NameLocker extends ItmArray {
         return result;
     }
     Gene_Docs(temp_doc) {
-        return replace_docs(temp_doc, this);
+        return replace_docs_A(temp_doc, this);
     }
 }
 class selector_quester extends selector_NameLocker {

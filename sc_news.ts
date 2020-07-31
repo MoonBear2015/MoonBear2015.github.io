@@ -139,7 +139,7 @@ class selector_random_date
     }
 
     public Gene_Docs(temp_doc : string) : string {
-        return replace_docs(temp_doc,this);
+        return replace_docs_A(temp_doc,this);
     }
 
  
@@ -171,7 +171,7 @@ class selector_random_year
     }
 
     public Gene_Docs(temp_doc : string) : string {
-        return replace_docs(temp_doc,this);
+        return replace_docs_A(temp_doc,this);
     }
  
 }
@@ -204,7 +204,7 @@ class selector_human
     }
 
     public Gene_Docs(temp_doc : string) : string {
-        return replace_docs(temp_doc,this);
+        return replace_docs_A(temp_doc,this);
     }
 
 }
@@ -236,7 +236,7 @@ class selector_writer
     }
 
     public Gene_Docs(temp_doc : string) : string {
-        return replace_docs(temp_doc,this);
+        return replace_docs_A(temp_doc,this);
     }
 
 }
@@ -268,7 +268,7 @@ class selector_writer2
     }
 
     public Gene_Docs(temp_doc : string) : string {
-        return replace_docs(temp_doc,this);
+        return replace_docs_A(temp_doc,this);
     }
 
 }
@@ -299,7 +299,7 @@ class selector_writer3
     }
 
     public Gene_Docs(temp_doc : string) : string {
-        return replace_docs(temp_doc,this);
+        return replace_docs_A(temp_doc,this);
     }
 }
 
@@ -331,7 +331,7 @@ class selector_age
         return result;
     }
     public Gene_Docs(temp_doc : string) : string {
-        return replace_docs(temp_doc,this);
+        return replace_docs_A(temp_doc,this);
     }
 
 }
@@ -363,7 +363,7 @@ class selector_age2
         return result;
     }
     public Gene_Docs(temp_doc : string) : string {
-        return replace_docs(temp_doc,this);
+        return replace_docs_A(temp_doc,this);
     }
 
 }

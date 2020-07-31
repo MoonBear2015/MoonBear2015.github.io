@@ -5809,19 +5809,19 @@ const   itms_nickNomal = [
 
 
 const   itms_horo_animal = [
-    new SctItm('DRAGON','HORO/dragon.jpg','龍')
+    new SctItm('DRAGON','HORO/dragon.png','龍')
     ,
-    new SctItm('TIGER','HORO/tiger.jpg','虎')
+    new SctItm('TIGER','HORO/tiger.png','虎')
     ,
-    new SctItm('DOG','HORO/dog.jpg','犬')
+    new SctItm('DOG','HORO/dog.png','犬')
     ,
-    new SctItm('CAT','HORO/cat.jpg','猫')
+    new SctItm('CAT','HORO/cat.png','猫')
     ,
-    new SctItm('CROW','HORO/crow.jpg','烏')
+    new SctItm('CROW','HORO/crow.png','烏')
     ,
-    new SctItm('SPARROW','HORO/sparrow.jpg','雀')
+    new SctItm('SPARROW','HORO/sparrow.png','雀')
     ,
-    new SctItm('SHEEP','HORO/sheep.jpg','羊')
+    new SctItm('SHEEP','HORO/sheep.png','羊')
     ,
-    new SctItm('COW','HORO/cow.jpg','牛')
+    new SctItm('COW','HORO/cow.png','牛')
 ]

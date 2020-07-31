@@ -250,7 +250,7 @@ class ItmCounter extends ItmArray {
         return result;
     }
 }
-function replace_docs(temp_doc, selector) {
+function replace_docs_A(temp_doc, selector) {
     let result = temp_doc;
     if (selector.itm_key != '') {
         while (result.search(selector.itm_key) != -1) {
@@ -269,6 +269,32 @@ function replace_docs(temp_doc, selector) {
             result = result.replace(selector.itm_key2, itm.Wrd2);
             if (selector.pic_key != '') {
                 while (result.search(selector.pic_key) != -1) {
+                    result = result.replace(selector.pic_key, itm.SctPic);
+                }
+            }
+        }
+    }
+    return result;
+}
+function replace_docs_B(temp_doc, selector) {
+    let result = temp_doc;
+    if (selector.itm_key != '') {
+        while (result.search(selector.itm_key) != -1) {
+            let itm = selector.rnd_Itm;
+            result = result.replace(selector.itm_key, itm.Wrd);
+            if (selector.pic_key != '') {
+                if (result.search(selector.pic_key) != -1) {
+                    result = result.replace(selector.pic_key, itm.SctPic);
+                }
+            }
+        }
+    }
+    if (selector.itm_key2 != '') {
+        while (result.search(selector.itm_key2) != -1) {
+            let itm = selector.rnd_Itm;
+            result = result.replace(selector.itm_key2, itm.Wrd2);
+            if (selector.pic_key != '') {
+                if (result.search(selector.pic_key) != -1) {
                     result = result.replace(selector.pic_key, itm.SctPic);
                 }
             }
@@ -309,7 +335,7 @@ class SctItm_Selector extends ItmSelector {
         return result;
     }
     Gene_Docs(temp_doc) {
-        return replace_docs(temp_doc, this);
+        return replace_docs_A(temp_doc, this);
     }
 }
 class SctItm_SelectLocker extends SctItm_Selector {
@@ -416,6 +442,9 @@ class SctItm_FixSeq extends SctItm_Selector {
         result.Paste(this.itms);
         return result;
     }
+    Gene_Docs(temp_doc) {
+        return replace_docs_B(temp_doc, this);
+    }
 }
 //------------------------------------ poem
 class SctItm_Counter extends ItmCounter {
@@ -446,7 +475,7 @@ class SctItm_Counter extends ItmCounter {
         return result;
     }
     Gene_Docs(temp_doc) {
-        return replace_docs(temp_doc, this);
+        return replace_docs_A(temp_doc, this);
     }
 }
 class Selector_Generator {
