@@ -448,12 +448,10 @@ small {
 #horo_box {
     margin:     5px;
     padding:    10px;
-    margin: 2px;
     border:     1px solid #606060;
     width:      70%;
     border-radius:  1%;
     background-color: white;
-
 }
 
 #horo_line {
@@ -478,23 +476,23 @@ small {
     grid-column: 2/3;
     grid-row: 1/2;
     font-size: 3.0vw;
-    margin: 20% 10%;
+    margin: 10% 10%;
 }
 #horo_colstart {
     grid-column: 3/4;
     grid-row: 1/2;
-    font-size: 2.5vw;
-    margin: 30% 10%;
+    font-size: 2.0vw;
+    margin: 20% 10%;
 }
 #horo_colto {
     grid-column: 4/5;
     grid-row: 1/2;
-    font-size: 2.5vw;
-    margin: 20% 10%;
+    font-size: 2.0vw;
+    margin: 50% 10%;
 }
 #horo_colend {
     grid-column: 5/6;
     grid-row: 1/2;
-    font-size: 2.5vw;
-    margin: 30% 10%;
+    font-size: 2.0vw;
+    margin: 20% 10%;
 }
