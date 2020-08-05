@@ -9,7 +9,7 @@ function set_horo()
     html += '<h1>';
     html += 'Horoscope';
     html += '<small>';
-    html += ' H00.04';
+    html += ' H00.05';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -48,7 +48,7 @@ function make_horo()
         html += '<div id="horo_line">';
 
         html += '<div id="horo_colicon">';
-        html += '<img src="pics/@ICON_HORO@" height="60em">';
+        html += '<img src="pics/@ICON_HORO@" width="80%">';
         html += '</div>';
 
         html += '<div id="horo_colname">';
