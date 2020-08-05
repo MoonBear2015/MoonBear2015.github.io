@@ -48,7 +48,7 @@ function make_horo()
         html += '<div id="horo_line">';
 
         html += '<div id="horo_colicon">';
-        html += '<img src="pics/@ICON_HORO@" height="60px">';
+        html += '<img src="pics/@ICON_HORO@" height="60em">';
         html += '</div>';
 
         html += '<div id="horo_colname">';
