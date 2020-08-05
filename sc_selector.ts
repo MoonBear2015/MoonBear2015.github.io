@@ -670,11 +670,16 @@ class SctItm_FixSeq extends SctItm_Selector implements ISctItm_Selector {
             this.nowCnt = 0;
         }
         let result = this.fixAry[this.nowCnt];
-        this.nowCnt++;
         return result;
     }
-
-    Reset() {
+    
+    Next() {
+        this.nowCnt++;
+        if (this.nowCnt >= this.fixAry.length) {
+            this.nowCnt = 0;
+        }
+    }
+    Restart() {
         this.nowCnt = 0;
     }
     
