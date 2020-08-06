@@ -558,6 +558,7 @@ small {
     grid-column: 3/4;
     grid-row: 1/2;
     text-align: center;
+    font-size: 4vw;
 }
 #horo_sent_days {
     font-family: 'Times New Roman', Times, serif;

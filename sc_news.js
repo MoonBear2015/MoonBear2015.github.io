@@ -1025,7 +1025,9 @@ class selector_keime1 extends SctItm_Selector {
         super('@KEIM1@');
         this.itms = [
             new SctItm('@KEI2@だ'),
-            new SctItm('@KEI3@')
+            new SctItm('@KEI3@'),
+            new SctItm('@KEID2@@KEI2@だ'),
+            new SctItm('@KEID2@@KEI3@'),
         ];
     }
 }
@@ -1319,6 +1321,28 @@ class selector_assessment extends SctItm_Selector {
     constructor() {
         super('@ASSES@');
         this.itms = [
+            new SctItm('@ASSES_S1@'),
+            new SctItm('@ASSES_S2@、@ASSES_S1@'),
+            new SctItm('@ASSES_S2@、@CONECT3@、@ASSES_S1@')
+        ];
+    }
+}
+// 評価 と～（る・た・い）。
+class selector_assessment1 extends SctItm_Selector {
+    constructor() {
+        super('@ASSES1@');
+        this.itms = [
+            new SctItm('@ASSES_S2@'),
+            new SctItm('@ASSES_S2@、@ASSES_S2@'),
+            new SctItm('@ASSES_S2@、@CONECT3@、@ASSES_S2@')
+        ];
+    }
+}
+// 評価 と～（る・た・い）。
+class selector_asses1 extends SctItm_Selector {
+    constructor() {
+        super('@ASSES_S1@');
+        this.itms = [
             new SctItm('親しまれている'),
             new SctItm('賞賛された'),
             new SctItm('蔑まれている'),
@@ -1357,6 +1381,50 @@ class selector_assessment extends SctItm_Selector {
             new SctItm('誤解されている'),
             new SctItm('勘違いされた'),
             new SctItm('決めつけられた')
+        ];
+    }
+}
+// 評価 と～（る・た・い）。
+class selector_asses2 extends SctItm_Selector {
+    constructor() {
+        super('@ASSES_S2@');
+        this.itms = [
+            new SctItm('親しまれ'),
+            new SctItm('賞賛され'),
+            new SctItm('蔑まれ'),
+            new SctItm('罵倒され'),
+            new SctItm('呼ばれ'),
+            new SctItm('知られ'),
+            new SctItm('期待され'),
+            new SctItm('見放され'),
+            new SctItm('見限られ'),
+            new SctItm('見捨てられ'),
+            new SctItm('恐れられ'),
+            new SctItm('おだてられ'),
+            new SctItm('馬鹿にされ'),
+            new SctItm('讃えられ'),
+            new SctItm('言い伝えられ'),
+            new SctItm('丸め込まれ'),
+            new SctItm('知れ渡っ'),
+            new SctItm('語り継がれ'),
+            new SctItm('後ろ指を指され'),
+            new SctItm('推薦され'),
+            new SctItm('表彰され'),
+            new SctItm('認定され'),
+            new SctItm('ささやかれ'),
+            new SctItm('驚嘆され'),
+            new SctItm('驚かせ'),
+            new SctItm('感動され'),
+            new SctItm('感謝され'),
+            new SctItm('太鼓判を押され'),
+            new SctItm('名付けられ'),
+            new SctItm('見守られ'),
+            new SctItm('訴えられ'),
+            new SctItm('見間違えられ'),
+            new SctItm('間違えられ'),
+            new SctItm('誤解され'),
+            new SctItm('勘違いされ'),
+            new SctItm('決めつけられ')
         ];
     }
 }
@@ -1413,6 +1481,16 @@ class selector_conect2 extends SctItm_Selector {
         ];
     }
 }
+// 接続詞 小
+class selector_conect3 extends SctItm_Selector {
+    constructor() {
+        super('@CONECT3@');
+        this.itms = [
+            new SctItm('@AND00@'),
+            new SctItm('@BAT00@')
+        ];
+    }
+}
 // 否定接続
 class selector_bat extends SctItm_Selector {
     constructor() {
@@ -1421,6 +1499,18 @@ class selector_bat extends SctItm_Selector {
             new SctItm('が、'),
             new SctItm('けど、'),
             new SctItm('@END@@BAT01@、')
+        ];
+    }
+}
+// 否定接続 副
+class selector_bat00 extends SctItm_Selector {
+    constructor() {
+        super('@BAT00@');
+        this.itms = [
+            new SctItm('しかし'),
+            new SctItm('ただし'),
+            new SctItm('それでも'),
+            new SctItm('けれども')
         ];
     }
 }
@@ -1461,6 +1551,18 @@ class selector_and extends SctItm_Selector {
             new SctItm('から、'),
             new SctItm('@END@'),
             new SctItm('@END@@AND01@、')
+        ];
+    }
+}
+// 追加接続 副
+class selector_and00 extends SctItm_Selector {
+    constructor() {
+        super('@AND00@');
+        this.itms = [
+            new SctItm('そして'),
+            new SctItm('加えて'),
+            new SctItm('それから'),
+            new SctItm('しかも')
         ];
     }
 }
@@ -1549,15 +1651,21 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_answer());
         this.dic_push(new selector_conect());
         this.dic_push(new selector_conect2());
+        this.dic_push(new selector_conect3());
         this.dic_push(new selector_end());
         this.dic_push(new selector_bat());
+        this.dic_push(new selector_bat00());
         this.dic_push(new selector_bat01());
         this.dic_push(new selector_and());
+        this.dic_push(new selector_and00());
         this.dic_push(new selector_and01());
         this.dic_push(new selector_nickname());
         this.dic_push(new selector_nickBad());
         this.dic_push(new selector_nickGood());
         this.dic_push(new selector_assessment());
+        this.dic_push(new selector_assessment1());
+        this.dic_push(new selector_asses1());
+        this.dic_push(new selector_asses2());
         this.dic_push(new selector_people());
         this.dic_push(new selector_manypeople());
         this.dic_push(new selector_partner());

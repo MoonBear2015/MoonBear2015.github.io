@@ -9,7 +9,7 @@ function set_horo()
     html += '<h1>';
     html += 'Horoscope';
     html += '<small>';
-    html += ' H00.06';
+    html += ' H00.07';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -118,9 +118,10 @@ function make_horo()
 
         html += '<p id="horo_sent_info">'; // info
         html += '　@H_INFO_INIT@、';
-        // for(let j = 0; j < 2; j++){
-        //     html += '@H_INFO@。';
-        // }
+        for(let j = 0; j < 2; j++){
+            html += '@H_INFO@';
+        }
+        html += '@H_INFO_END@。';
         html += '</p>'; // info
 
 
@@ -174,17 +175,51 @@ class Fix_animal extends SctItm_FixSeq implements ISctItm_Selector{
     }
 }
 
+// 解説 開始
 class selector_h_info_init extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@H_INFO_INIT@');
         this.itms = [
-            new SctItm('@F_ANIMAL_B@座の人の特徴は、')
+            new SctItm('@F_ANIMAL_B@座の人の特徴は')
             ,
-            new SctItm('@F_ANIMAL_B@座の人の多くは、')
+            new SctItm('@F_ANIMAL_B@座の人の多くは')
             ,
-            new SctItm('@F_ANIMAL_B@座の人にありがちなことは、')
+            new SctItm('@F_ANIMAL_B@座の人にありがちなことは')
             ,
-            new SctItm('@F_ANIMAL_B@座の人の性格は、')
+            new SctItm('@F_ANIMAL_B@座の人の性格は')
+        ]
+    }
+}
+// 解説 開始
+class selector_h_info extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@H_INFO@');
+        this.itms = [
+            new SctItm('@H_INFO_END@。')
+            ,
+            new SctItm('@H_INFO_END@。@CONECT3@、')
+            ,
+            new SctItm('@H_INFO_END@が、')
+            ,
+            new SctItm('@H_INFO_END@ので、')
+        ]
+    }
+}
+
+
+
+// 解説 結び
+class selector_h_info_end extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@H_INFO_END@');
+        this.itms = [
+            new SctItm('@KEI1@性格の持ち主です')
+            ,
+            new SctItm('@KEI1@ことだと@ASSES1@ています')
+            ,
+            new SctItm('@KEIM1@と@ASSES1@ています')
+            ,
+            new SctItm('@KEIM1@と@SAY@されています')
         ]
     }
 }
@@ -193,7 +228,9 @@ class selector_h_info_init extends SctItm_Selector implements ISctItm_Selector {
 class horo_docs_maker extends news_docs_maker {
     constructor(){
         super();
+        this.dic_push(new selector_h_info());
         this.dic_push(new selector_h_info_init());
+        this.dic_push(new selector_h_info_end());
 
         // this.dic_push(new Fix_animal());
 
