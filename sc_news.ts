@@ -2055,7 +2055,7 @@ class selector_assessment extends SctItm_Selector implements ISctItm_Selector {
         ];
     }
 }
-// 評価 と～（る・た・い）。
+// 評価 と～（れ）、
 class selector_assessment1 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@ASSES1@');
@@ -2065,6 +2065,23 @@ class selector_assessment1 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@ASSES_S2@、@ASSES_S2@')
             ,
             new SctItm('@ASSES_S2@、@CONECT3@、@ASSES_S2@')
+        ];
+    }
+}
+// 人々＋評価。○○から～（れ）、
+class selector_people_asses extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@PEOPLE_ASSES@');
+        this.itms = [
+            new SctItm('@PEOPLE@から@ASSES_S2@')
+            ,
+            new SctItm('@PEOPLE@より@ASSES_S2@')
+            ,
+            new SctItm('@PEOPLE@には@ASSES_S2@')
+            ,
+            new SctItm('@PEOPLE@から@ASSES_S2@、@ASSES_S2@')
+            ,
+            new SctItm('@PEOPLE@から@ASSES_S2@、@CONECT3@、@PEOPLE@には@ASSES_S2@')
         ];
     }
 }
@@ -2189,8 +2206,6 @@ class selector_asses2 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('言い伝えられ')
             ,
             new SctItm('丸め込まれ')
-            ,
-            new SctItm('知れ渡っ')
             ,
             new SctItm('語り継がれ')
             ,
@@ -2554,6 +2569,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_assessment1());
         this.dic_push(new selector_asses1());
         this.dic_push(new selector_asses2());
+        this.dic_push(new selector_people_asses());
         this.dic_push(new selector_people());
         this.dic_push(new selector_manypeople());
         this.dic_push(new selector_partner());

@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+  }
+
 #wrapper{
     min-height: 100vh;
     position: relative;/*←相対位置*/
@@ -536,20 +540,15 @@ small {
     margin-right: auto;
     border:     1px solid #606060;
     width: 90%;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 20% 10% 30% 5% 1fr 1fr;
     grid-template-columns: 30% 5% 1fr;
 }
 
 #horo_sent_icon {
+    font-family: 'Times New Roman', Times, serif;
     grid-column: 1/2;
     grid-row: 1/4;
     margin: 0 auto;
-}
-
-#horo_sent_icon_name {
-    font-family: 'Times New Roman', Times, serif;
-    grid-column: 1/2;
-    grid-row: 4/5;
     text-align: center;
 }
 
@@ -568,12 +567,12 @@ small {
     font-size: 2vw;
 }
 
-#horo_sent_info {
+#horo_sent_type {
     font-family: 'Times New Roman', Times, serif;
     grid-column: 3/4;
-    grid-row: 3/4;
+    grid-row: 3/6;
     text-align: left;
-    font-size: 2vw;
+    font-size: 2.5vw;
 }
 
 
