@@ -7,7 +7,7 @@ function set_horo() {
     html += '<h1>';
     html += 'Horoscope';
     html += '<small>';
-    html += ' H00.09';
+    html += ' H00.10';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -91,7 +91,7 @@ function make_horo() {
         html += date_MD_string(days[j].ed);
         html += '</div>';
         html += '<p id="horo_sent_type">'; // info
-        html += '　@H_TYPE_INIT@、';
+        html += '　@H_TYPE_INIT@';
         for (let j = 0; j < 2; j++) {
             html += '@H_TYPE@';
         }
@@ -139,6 +139,7 @@ class selector_h_type_init extends SctItm_Selector {
     constructor() {
         super('@H_TYPE_INIT@');
         this.itms = [
+            new SctItm('@F_ANIMAL_B@座の人は'),
             new SctItm('@F_ANIMAL_B@座の人は基本的に'),
             new SctItm('@F_ANIMAL_B@座の人の多くは'),
             new SctItm('@F_ANIMAL_B@座の人にありがちなことは'),
@@ -164,11 +165,16 @@ class selector_h_type_end extends SctItm_Selector {
         super('@H_TYPE_END@');
         this.itms = [
             new SctItm('@GRADE@@KEI1@性格の持ち主です'),
-            new SctItm('@GRADE@@KEI1@ことだと@PEOPLE_ASSES@ています'),
-            new SctItm('@GRADE@@KEI1@ことだと@PEOPLE_ASSES@ているようです'),
+            new SctItm('男性なら@GRADE@@KEID2@、女性なら@GRADE@@KEI1@性格の持ち主です'),
+            new SctItm('男性には@GRADE@@KEI1@人が多いようです'),
+            new SctItm('女性には@GRADE@@KEI1@人が多いようです'),
+            new SctItm('@GRADE@@KEIM1@と@PEOPLE_ASSES@ています'),
+            new SctItm('@GRADE@@KEIM1@と@PEOPLE_ASSES@ているようです'),
             new SctItm('@GRADE@@KEIM1@と@PEOPLE_ASSES@ています'),
             new SctItm('@GRADE@@KEIM1@と@PEOPLE_ASSES@てしまうので注意が必要です'),
-            new SctItm('@GRADE@@KEIM1@と@PEOPLE_ASSES@ているのが難点です')
+            new SctItm('@GRADE@@KEIM1@と@PEOPLE_ASSES@ているのが難点です'),
+            new SctItm('@GRADE@@KEI1@のが今後の課題です'),
+            new SctItm('@GRADE@@KEI1@ので要注意です')
         ];
     }
 }
