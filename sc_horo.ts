@@ -9,7 +9,7 @@ function set_horo()
     html += '<h1>';
     html += 'Horoscope';
     html += '<small>';
-    html += ' H00.08';
+    html += ' H00.09';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -189,13 +189,13 @@ class selector_h_type_init extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@H_TYPE_INIT@');
         this.itms = [
-            new SctItm('@F_ANIMAL_B@座は基本的に')
+            new SctItm('@F_ANIMAL_B@座の人は基本的に')
             ,
-            new SctItm('@F_ANIMAL_B@座の多くは')
+            new SctItm('@F_ANIMAL_B@座の人の多くは')
             ,
-            new SctItm('@F_ANIMAL_B@座にありがちなことは')
+            new SctItm('@F_ANIMAL_B@座の人にありがちなことは')
             ,
-            new SctItm('@F_ANIMAL_B@座の特徴は')
+            new SctItm('@F_ANIMAL_B@座の人の特徴は')
         ]
     }
 }
@@ -222,17 +222,17 @@ class selector_h_type_end extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@H_TYPE_END@');
         this.itms = [
-            new SctItm('@KEI1@性格の持ち主です')
+            new SctItm('@GRADE@@KEI1@性格の持ち主です')
             ,
-            new SctItm('@KEI1@ことだと@PEOPLE_ASSES@ています')
+            new SctItm('@GRADE@@KEI1@ことだと@PEOPLE_ASSES@ています')
             ,
-            new SctItm('@KEI1@ことだと@PEOPLE_ASSES@ているようです')
+            new SctItm('@GRADE@@KEI1@ことだと@PEOPLE_ASSES@ているようです')
             ,
-            new SctItm('@KEIM1@と@PEOPLE_ASSES@ています')
+            new SctItm('@GRADE@@KEIM1@と@PEOPLE_ASSES@ています')
             ,
-            new SctItm('@KEIM1@と@PEOPLE_ASSES@てしまうので注意が必要です')
+            new SctItm('@GRADE@@KEIM1@と@PEOPLE_ASSES@てしまうので注意が必要です')
             ,
-            new SctItm('@KEIM1@と@PEOPLE_ASSES@ているのが難点です')
+            new SctItm('@GRADE@@KEIM1@と@PEOPLE_ASSES@ているのが難点です')
         ]
     }
 }
