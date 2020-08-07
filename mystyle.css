@@ -471,7 +471,7 @@ small {
     height: 8vh;
     /* height: 8vh; */
     grid-template-rows: 1fr;
-    grid-template-columns: 20% 35% 20% 5% 20%;
+    grid-template-columns: 20% 35% 1fr;
 }
 #horo_line:hover {
     color:  red;
@@ -496,29 +496,17 @@ small {
 #horo_col_name {
     grid-column: 2/3;
     grid-row: 1/2;
-    font-size: 3.0vw;
+    font-size: 2.5vw;
     margin: 5% 10%;
     text-align: center;
+    letter-spacing: 0.2em;
 }
-#horo_col_start {
+#horo_col_days {
     grid-column: 3/4;
     grid-row: 1/2;
     font-size: 2vw;
-    margin: 20% 0%;
-    text-align: right;
-}
-#horo_col_to {
-    grid-column: 4/5;
-    grid-row: 1/2;
-    font-size: 2.0vw;
-    margin: 60% 10%;
-}
-#horo_col_end {
-    grid-column: 5/6;
-    grid-row: 1/2;
-    font-size: 2vw;
-    margin: 20% 0%;
-    text-align: left;
+    margin: 5% 0%;
+    text-align: center;
 }
 
 #horo_sent_box {
@@ -540,16 +528,18 @@ small {
     margin-right: auto;
     border:     1px solid #606060;
     width: 90%;
-    grid-template-rows: 15% 10% 1fr 1fr 1fr;
+    grid-template-rows: 15% 15% 1fr 1fr 1fr;
     grid-template-columns: 30% 5% 1fr;
 }
 
 #horo_sent_icon {
     font-family: 'Times New Roman', Times, serif;
+    font-size: 2.0vw;
     grid-column: 1/2;
     grid-row: 1/4;
     margin: 0 auto;
     text-align: center;
+    letter-spacing: 0.8em;
 }
 
 #horo_sent_title {
@@ -557,7 +547,8 @@ small {
     grid-column: 3/4;
     grid-row: 1/2;
     text-align: center;
-    font-size: 4vw;
+    font-size: 3.5vw;
+    letter-spacing: 0.5em;
 }
 #horo_sent_days {
     font-family: 'Times New Roman', Times, serif;

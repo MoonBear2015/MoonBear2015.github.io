@@ -9,7 +9,7 @@ function set_horo()
     html += '<h1>';
     html += 'Horoscope';
     html += '<small>';
-    html += ' H00.10';
+    html += ' H00.13';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -60,18 +60,12 @@ function make_horo()
         html += '</div>';
 
         html += '<div id="horo_col_name">';
-        html += '@F_ANIMAL_B@ 座';
+        html += '@F_ANIMAL_B@座';
         html += '</div>';
 
-        html += '<div id="horo_col_start">';
+        html += '<div id="horo_col_days">';
         html += date_MD_string(days[j].st);
-        html += '</div>';
-
-        html += '<div id="horo_col_to">';
         html += ' ~ ';
-        html += '</div>';
-
-        html += '<div id="horo_col_end">';
         html += date_MD_string(days[j].ed);
         html += '</div>';
 
@@ -111,14 +105,14 @@ function make_horo()
         html += '<div id="horo_sent">';
 
         html += '<div id="horo_sent_icon">';
-        html += '<img src="pics/@ICON_HORO@" width="100%">';
+        html += '<img src="pics/@ICON_HORO@" width="90%">';
         html += '@F_ANIMAL@';
         html += '</div>';
 
         html += '<div id="horo_sent_title">';
-        html += '<small>☆ ★ </small>';
-        html += '@F_ANIMAL_B@ 座';
-        html += '<small> ★ ☆</small>';
+        html += '☆★';
+        html += '<big>@F_ANIMAL_B@座</big>';
+        html += '★☆';
         html += '</div>';
 
         html += '<div id="horo_sent_days">';
@@ -185,6 +179,32 @@ class Fix_animal extends SctItm_FixSeq implements ISctItm_Selector{
 }
 
 // 解説 開始
+class selector_h_info_init extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@H_INFO_INIT@');
+        this.itms = [
+            new SctItm('@F_ANIMAL_B@座は@COUNTRY@の@DIR@の夜空に輝く星座で')
+            ,
+            new SctItm('@F_ANIMAL_B@座は代表的な@SEASON@の星座で')
+        ]
+    }
+}
+// 解説 結び
+class selector_h_info_end extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@H_INFO_end@');
+        this.itms = [
+            new SctItm('@MANYPEAPLE@に親しまれ')
+            ,
+            new SctItm('@CLASS@の象徴として愛され')
+            ,
+            new SctItm('@COUNTRY@の新紙幣の図案に採用され')
+        ]
+    }
+}
+
+
+// 性格 開始
 class selector_h_type_init extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@H_TYPE_INIT@');
@@ -201,7 +221,7 @@ class selector_h_type_init extends SctItm_Selector implements ISctItm_Selector {
         ]
     }
 }
-// 解説 開始
+// 性格 開始
 class selector_h_type extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@H_TYPE@');
@@ -219,7 +239,7 @@ class selector_h_type extends SctItm_Selector implements ISctItm_Selector {
 
 
 
-// 解説 結び
+// 性格 結び
 class selector_h_type_end extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@H_TYPE_END@');

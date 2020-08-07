@@ -5807,6 +5807,50 @@ const   itms_nickNomal = [
     new SctItm('人')
 ]
 
+const   itms_dir = [
+    new SctItm('北')
+    ,
+    new SctItm('西')
+    ,
+    new SctItm('南')
+    ,
+    new SctItm('東')
+    ,
+    new SctItm('北東')
+    ,
+    new SctItm('北西')
+    ,
+    new SctItm('南西')
+    ,
+    new SctItm('南東')
+]
+
+const   itms_season = [
+    new SctItm('春')
+    ,
+    new SctItm('夏')
+    ,
+    new SctItm('秋')
+    ,
+    new SctItm('冬')
+    ,
+    new SctItm('初春')
+    ,
+    new SctItm('晩春')
+    ,
+    new SctItm('初夏')
+    ,
+    new SctItm('晩夏')
+    ,
+    new SctItm('初秋')
+    ,
+    new SctItm('晩秋')
+    ,
+    new SctItm('初冬')
+    ,
+    new SctItm('晩冬')
+]
+
 
 const   itms_horo_animal = [
     new SctItm('DRAGON','HORO/dragon.png','龍')
@@ -5834,4 +5878,24 @@ const   itms_horo_animal = [
     new SctItm('OWL','HORO/owl.png','梟')
     ,
     new SctItm('LION','HORO/lion.png','獅子')
+    ,
+    new SctItm('HORSE','HORO/horse.png','馬')
+    ,
+    new SctItm('ELEPHANT','HORO/elephant.png','象')
+    ,
+    new SctItm('EAGLE','HORO/eagle.png','鷲')
+    ,
+    new SctItm('CRAB','HORO/crab.png','蟹')
+    ,
+    new SctItm('UNICORN','HORO/unicorn.png','一角獣')
+    ,
+    new SctItm('CUPID','HORO/cupid.png','天使')
+    ,
+    new SctItm('SUNFLOWER','HORO/sunflower.png','向日葵')
+    ,
+    new SctItm('HOUSE','HORO/house.png','家')
+    ,
+    new SctItm('UNCLE','HORO/uncle.png','叔父')
+    ,
+    new SctItm('DEATH','HORO/death.png','死神')
 ]

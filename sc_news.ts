@@ -1676,6 +1676,18 @@ class selector_grade extends SctItm_Selector implements ISctItm_Selector {
         this.Add(itms_grade);
     }
 }
+class selector_dir extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@DIR@');
+        this.Add(itms_dir);
+    }
+}
+class selector_season extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@SEASON@');
+        this.Add(itms_season);
+    }
+}
 
 class selector_move extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
@@ -2532,6 +2544,8 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_k());
         this.dic_push(new selector_kd());
         this.dic_push(new selector_grade());
+        this.dic_push(new selector_dir());
+        this.dic_push(new selector_season());
         this.dic_push(new selector_move());
 
         this.dic_push(new selector_think());
