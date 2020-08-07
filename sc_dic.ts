@@ -5824,4 +5824,14 @@ const   itms_horo_animal = [
     new SctItm('SHEEP','HORO/sheep.png','羊')
     ,
     new SctItm('COW','HORO/cow.png','牛')
+    ,
+    new SctItm('RHINO','HORO/rhino.png','犀')
+    ,
+    new SctItm('RABBIT','HORO/rabbit.png','兎')
+    ,
+    new SctItm('FISH','HORO/fish.png','魚')
+    ,
+    new SctItm('OWL','HORO/owl.png','梟')
+    ,
+    new SctItm('LION','HORO/lion.png','獅子')
 ]

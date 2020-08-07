@@ -2073,11 +2073,11 @@ class selector_people_asses extends SctItm_Selector implements ISctItm_Selector 
     constructor(){
         super('@PEOPLE_ASSES@');
         this.itms = [
+            new SctItm('@PEOPLE@に@ASSES_S2@')
+            ,
             new SctItm('@PEOPLE@から@ASSES_S2@')
             ,
             new SctItm('@PEOPLE@より@ASSES_S2@')
-            ,
-            new SctItm('@PEOPLE@には@ASSES_S2@')
             ,
             new SctItm('@PEOPLE@から@ASSES_S2@、@ASSES_S2@')
             ,
