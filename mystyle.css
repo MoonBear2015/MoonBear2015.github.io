@@ -528,7 +528,7 @@ small {
     margin-right: auto;
     border:     1px solid #606060;
     width: 90%;
-    grid-template-rows: 15% 15% 1fr 1fr 1fr;
+    grid-template-rows: 15% 8% 1fr 1fr 1fr;
     grid-template-columns: 30% 5% 1fr;
 }
 
@@ -537,9 +537,10 @@ small {
     font-size: 2.0vw;
     grid-column: 1/2;
     grid-row: 1/4;
-    margin: 0 auto;
+    margin: auto;
     text-align: center;
     letter-spacing: 0.8em;
+    vertical-align: middle;
 }
 
 #horo_sent_title {
@@ -569,7 +570,7 @@ small {
     grid-column: 3/4;
     grid-row: 3/4;
     text-align: left;
-    font-size: 2.0vw;
+    font-size: 2.5vw;
     display: flex;
     align-items: center;
 

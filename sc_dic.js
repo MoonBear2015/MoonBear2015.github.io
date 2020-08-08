@@ -3581,6 +3581,7 @@ const itms_nickPosi = [
     new SctItm('神様'),
     new SctItm('鬼神'),
     new SctItm('魔神'),
+    new SctItm('軍神'),
     new SctItm('コンピューター'),
     new SctItm('薔薇'),
     new SctItm('百合の花'),

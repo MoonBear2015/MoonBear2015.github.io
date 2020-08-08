@@ -7,7 +7,7 @@ function set_horo() {
     html += '<h1>';
     html += 'Horoscope';
     html += '<small>';
-    html += ' H00.14';
+    html += ' H00.15';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -73,7 +73,7 @@ function make_horo() {
         html += '</span>';
         html += '<div id="horo_sent">';
         html += '<div id="horo_sent_icon">';
-        html += '<img src="pics/@ICON_HORO@" width="90%">';
+        html += '<img src="pics/@ICON_HORO@" width="100%" height="100%">';
         html += '@F_ANIMAL@';
         html += '</div>';
         html += '<div id="horo_sent_title">';
@@ -149,9 +149,9 @@ class selector_h_info_init extends SctItm_Selector {
     constructor() {
         super('@H_INFO_INIT@');
         this.itms = [
-            new SctItm('@F_ANIMAL_B@座は@COUNTRY@の@DIR@の夜空に輝く星座で'),
-            new SctItm('@F_ANIMAL_B@座は@SEASON@の夜空に輝く星座で'),
-            new SctItm('@F_ANIMAL_B@座は代表的な@SEASON@の星座で')
+            new SctItm('@F_ANIMAL_B@座は@DIR@の夜空に輝く星座で'),
+            new SctItm('@F_ANIMAL_B@座は代表的な@SEASON@の星座で'),
+            new SctItm('@F_ANIMAL_B@座は@COUNTRY@では有名な星座で')
         ];
     }
 }
@@ -161,10 +161,10 @@ class selector_h_info_end extends SctItm_Selector {
         super('@H_INFO_END@');
         this.itms = [
             new SctItm('@MANYPEOPLE@に親しまれ'),
-            new SctItm('@MANYPEOPLE@に親しまれ'),
             new SctItm('@CLASS@の象徴として愛され'),
-            new SctItm('@COUNTRY@の新紙幣に採用され'),
-            new SctItm('@COUNTRY@の起源として伝えられ'),
+            new SctItm('@PEOPLE@のシンボルに採用され'),
+            new SctItm('@COUNTRY@神話に語られ'),
+            new SctItm('@COUNTRY@民謡にも歌われ'),
             new SctItm('「@COUNTRY@の@PART@」と親しまれ')
         ];
     }
@@ -175,14 +175,13 @@ class selector_h_type_init extends SctItm_Selector {
         super('@H_TYPE_INIT@');
         this.itms = [
             new SctItm('@F_ANIMAL_B@座の人は'),
-            new SctItm('@F_ANIMAL_B@座の人は基本的に'),
             new SctItm('@F_ANIMAL_B@座の人の多くは'),
             new SctItm('@F_ANIMAL_B@座の人にありがちなことは'),
             new SctItm('@F_ANIMAL_B@座の人の特徴は')
         ];
     }
 }
-// 性格 開始
+// 性格
 class selector_h_type extends SctItm_Selector {
     constructor() {
         super('@H_TYPE@');
