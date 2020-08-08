@@ -9,7 +9,7 @@ function set_horo()
     html += '<h1>';
     html += 'Horoscope';
     html += '<small>';
-    html += ' H00.13';
+    html += ' H00.14';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -121,7 +121,12 @@ function make_horo()
         html += date_MD_string(days[j].ed);
         html += '</div>';
 
-        html += '<p id="horo_sent_type">'; // info
+        html += '<p id="horo_sent_info">'; // 
+        html += '　@H_INFO@';
+        html += '</p>'; // info
+
+
+        html += '<p id="horo_sent_type">'; // 
         html += '　@H_TYPE_INIT@';
         for(let j = 0; j < 2; j++){
             html += '@H_TYPE@';
@@ -178,12 +183,30 @@ class Fix_animal extends SctItm_FixSeq implements ISctItm_Selector{
     }
 }
 
+// 解説
+class selector_h_info extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@H_INFO@');
+        this.itms = [
+            new SctItm('@H_INFO_INIT@す。')
+            ,
+            new SctItm('@H_INFO_INIT@、@H_INFO_END@ています。')
+            ,
+            new SctItm('@H_INFO_INIT@、@H_INFO_END@、@H_INFO_END@ています。')
+        ]
+    }
+}
+
+
+
 // 解説 開始
 class selector_h_info_init extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@H_INFO_INIT@');
         this.itms = [
             new SctItm('@F_ANIMAL_B@座は@COUNTRY@の@DIR@の夜空に輝く星座で')
+            ,
+            new SctItm('@F_ANIMAL_B@座は@SEASON@の夜空に輝く星座で')
             ,
             new SctItm('@F_ANIMAL_B@座は代表的な@SEASON@の星座で')
         ]
@@ -192,13 +215,19 @@ class selector_h_info_init extends SctItm_Selector implements ISctItm_Selector {
 // 解説 結び
 class selector_h_info_end extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
-        super('@H_INFO_end@');
+        super('@H_INFO_END@');
         this.itms = [
-            new SctItm('@MANYPEAPLE@に親しまれ')
+            new SctItm('@MANYPEOPLE@に親しまれ')
+            ,
+            new SctItm('@MANYPEOPLE@に親しまれ')
             ,
             new SctItm('@CLASS@の象徴として愛され')
             ,
-            new SctItm('@COUNTRY@の新紙幣の図案に採用され')
+            new SctItm('@COUNTRY@の新紙幣に採用され')
+            ,
+            new SctItm('@COUNTRY@の起源として伝えられ')
+            ,
+            new SctItm('「@COUNTRY@の@PART@」と親しまれ')
         ]
     }
 }
@@ -273,6 +302,9 @@ class selector_h_type_end extends SctItm_Selector implements ISctItm_Selector {
 class horo_docs_maker extends news_docs_maker {
     constructor(){
         super();
+        this.dic_push(new selector_h_info());
+        this.dic_push(new selector_h_info_init());
+        this.dic_push(new selector_h_info_end());
         this.dic_push(new selector_h_type());
         this.dic_push(new selector_h_type_init());
         this.dic_push(new selector_h_type_end());

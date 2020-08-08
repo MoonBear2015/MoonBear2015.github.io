@@ -37,7 +37,7 @@ function make_poem() {
     html += 'margin:     5px; ';
     html += 'padding:    5px; ';
     html += 'border:     0.5px solid #606060;';
-    html += 'border-radius:  0.5%;';
+    html += 'border-radius:  10px;';
     html += 'background: ';
     html += 'linear-gradient(135deg,rgba(80,80,80,0.8),rgba(80,80,80,0.8)),';
     html += 'url(./pics/TEMA/@PIC_TEMA@);';
@@ -81,7 +81,7 @@ function make_poem_sub() {
     html += 'margin:     5px; ';
     html += 'padding:    5px; ';
     html += 'border:     0.5px solid #606060;';
-    html += 'border-radius:  1%;';
+    html += 'border-radius:  10px;';
     html += 'background: ';
     html += '">';
     html += '<h3 id="poem_title">';

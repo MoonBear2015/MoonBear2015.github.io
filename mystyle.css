@@ -232,7 +232,7 @@ figure {
     margin:     10px; 
     padding:    10px; 
     border:     0.5px solid #606060;
-    border-radius:  1%;
+    border-radius:  10px;
 }
 
 #news_title {
@@ -258,7 +258,7 @@ small {
     margin:     10px; 
     padding:    0px; 
     border:     0.5px solid #606060;
-    border-radius:  1%;
+    border-radius:  10px;
 }
 
 #poem_tema {
@@ -289,7 +289,7 @@ small {
     margin:     10px; 
     padding:    10px; 
     border:     0.5px solid #606060;
-    border-radius:  1%;
+    border-radius:  10px;
 }
 
 #qa_title {
@@ -310,7 +310,7 @@ small {
     margin:     10px; 
     padding:    10px; 
     border:     0.5px solid #606060;
-    border-radius:  1%;
+    border-radius:  10px;
 }
 
 #about_title {
@@ -331,7 +331,7 @@ small {
     margin:     5px;
     padding:    10px;
     border:     0.5px solid #606060;
-    border-radius:  1%;
+    border-radius:  10px;
     background-color: white;
 }
 
@@ -454,7 +454,7 @@ small {
     padding:    10px;
     border:     1px solid #606060;
     width:      60%;
-    border-radius:  1%;
+    border-radius:  10px;
     background-color: white;
 }
 
@@ -514,7 +514,7 @@ small {
     padding:    10px;
     border:     1px solid #606060;
     width:      100%;
-    border-radius:  1%;
+    border-radius:  10px;
     background-color: white;
 }
 
@@ -558,10 +558,26 @@ small {
     font-size: 3vw;
 }
 
-#horo_sent_type {
+#horo_sent_info {
+    margin:     5px;
+    padding:    5px;
+    border:     1px solid black;
+    border-radius:  20px;
+    color: white;
+    background-color: #505050;
     font-family: 'Times New Roman', Times, serif;
     grid-column: 3/4;
-    grid-row: 3/6;
+    grid-row: 3/4;
+    text-align: left;
+    font-size: 2.0vw;
+    display: flex;
+    align-items: center;
+
+}
+#horo_sent_type {
+    font-family: 'Times New Roman', Times, serif;
+    grid-column: 1/4;
+    grid-row: 4/5;
     text-align: left;
     font-size: 2.8vw;
 }

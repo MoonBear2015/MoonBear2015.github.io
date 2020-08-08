@@ -27,7 +27,7 @@ function make_about() {
         html += 'margin:     5px; ';
         html += 'padding:    10px; ';
         html += 'border:     0.5px solid #606060;';
-        html += 'border-radius:  1%;';
+        html += 'border-radius:  10px;';
         html += '">';
         html += '<h2 id="about_title">';
         html += '<span style="border-bottom: solid 1px #FFFFFF;">';

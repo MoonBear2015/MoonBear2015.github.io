@@ -28,7 +28,7 @@ function make_qa() {
     html += 'margin:     5px; ';
     html += 'padding:    10px; ';
     html += 'border:     0.5px solid #606060;';
-    html += 'border-radius:  1%;';
+    html += 'border-radius:  10px;';
     html += '">';
     html += Make_Q();
     html += Make_A();
@@ -56,7 +56,7 @@ function Make_Q() {
     html += 'margin:     5px; ';
     html += 'padding:    10px; ';
     html += 'border:     0.5px solid #606060;';
-    html += 'border-radius:  1%;';
+    html += 'border-radius:  10px;';
     html += 'background: ';
     html += 'linear-gradient(0deg,rgba(0,0,80,0.3),rgba(0,0,30,0.8)),';
     html += 'url(./pics/QA/@PIC_Q@);';
@@ -84,7 +84,7 @@ function Make_A() {
     html += 'margin:     5px; ';
     html += 'padding:    10px; ';
     html += 'border:     0.5px solid #606060;';
-    html += 'border-radius:  1%;';
+    html += 'border-radius:  10px;';
     html += 'background: ';
     html += 'linear-gradient(0deg,rgba(30,30,30,0.8),rgba(80,80,30,0.8)),';
     html += 'url(./pics/QA/@PIC_A@);';
