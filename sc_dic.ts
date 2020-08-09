@@ -5900,4 +5900,8 @@ const   itms_horo_animal = [
     new SctItm('UNCLE','HORO/uncle.png','叔父')
     ,
     new SctItm('DEATH','HORO/death.png','死神')
+    ,
+    new SctItm('CROWN','HORO/crown.png','王冠')
+    ,
+    new SctItm('PIANO','HORO/piano.png','鍵盤')
 ]

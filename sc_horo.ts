@@ -9,7 +9,7 @@ function set_horo()
     html += '<h1>';
     html += 'Horoscope';
     html += '<small>';
-    html += ' H00.15';
+    html += ' H00.16';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -56,7 +56,7 @@ function make_horo()
         html += '<div id="horo_line">';
 
         html += '<div id="horo_col_icon">';
-        html += '<img src="pics/@ICON_HORO@" width="50" height="50">';
+        html += '<img src="pics/@ICON_HORO@" width="60" height="60">';
         html += '</div>';
 
         html += '<div id="horo_col_name">';
@@ -188,11 +188,13 @@ class selector_h_info extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@H_INFO@');
         this.itms = [
-            new SctItm('@H_INFO_INIT@す。')
-            ,
             new SctItm('@H_INFO_INIT@、@H_INFO_END@ています。')
             ,
+            new SctItm('@H_INFO_INIT@すが、@H_INFO_END@ています。')
+            ,
             new SctItm('@H_INFO_INIT@、@H_INFO_END@、@H_INFO_END@ています。')
+            ,
+            new SctItm('@H_INFO_INIT@すが、@H_INFO_END@、@CONECT3@、@H_INFO_END@ています。')
         ]
     }
 }
@@ -208,7 +210,7 @@ class selector_h_info_init extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@F_ANIMAL_B@座は代表的な@SEASON@の星座で')
             ,
-            new SctItm('@F_ANIMAL_B@座は@COUNTRY@では有名な星座で')
+            new SctItm('@F_ANIMAL_B@座は@COUNTRY@に伝わる星座で')
         ]
     }
 }
