@@ -5853,8 +5853,7 @@ const   itms_season = [
     new SctItm('晩冬')
 ]
 
-
-const   itms_horo_animal = [
+const   itms_horo_star = [
     new SctItm('DRAGON','HORO/dragon.png','龍')
     ,
     new SctItm('TIGER','HORO/tiger.png','虎')
@@ -5904,4 +5903,24 @@ const   itms_horo_animal = [
     new SctItm('CROWN','HORO/crown.png','王冠')
     ,
     new SctItm('PIANO','HORO/piano.png','鍵盤')
+]
+
+
+const   itms_horo_item = [
+    new SctItm('#LOVE')
+    ,
+    new SctItm('#JOB')
+    ,
+    new SctItm('#HEALTH')
+]
+
+const  itms_horo_love_what = [
+    new SctItm('愛情','HORO/love.png','LOVE')
+]
+const  itms_horo_job_what = [
+    new SctItm('仕事','HORO/job.png','Business')
+]
+
+const   itms_horo_health_what = [
+    new SctItm('健康','HORO/health.png','Health')
 ]

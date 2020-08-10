@@ -7,7 +7,7 @@ function set_horo() {
     html += '<h1>';
     html += 'Horoscope';
     html += '<small>';
-    html += ' H00.16';
+    html += ' H00.17';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -21,9 +21,12 @@ function set_horo() {
 }
 function make_horo() {
     let maker = new horo_docs_maker();
-    let fixAnimal = new Fix_animal();
+    let fixAnimal = new Fix_stars();
     maker.dic_push(fixAnimal);
     let cntHoro = rnd_minmax(4, fixAnimal.countItm + 1);
+    let fixItem = new Fix_items();
+    maker.dic_push(fixItem);
+    let cntItem = 2;
     let dt = new Date();
     let html = '';
     let days = SplitYearDays(cntHoro);
@@ -37,10 +40,10 @@ function make_horo() {
         html += '">';
         html += '<div id="horo_line">';
         html += '<div id="horo_col_icon">';
-        html += '<img src="pics/@ICON_HORO@" width="60" height="60">';
+        html += '<img src="pics/@ICON_HORO@" width="90%" height="90%">';
         html += '</div>';
         html += '<div id="horo_col_name">';
-        html += '@F_ANIMAL_B@座';
+        html += '@F_STAR_B@座';
         html += '</div>';
         html += '<div id="horo_col_days">';
         html += date_MD_string(days[j].st);
@@ -74,11 +77,11 @@ function make_horo() {
         html += '<div id="horo_sent">';
         html += '<div id="horo_sent_icon">';
         html += '<img src="pics/@ICON_HORO@" width="100%" height="100%">';
-        html += '@F_ANIMAL@';
+        html += '@F_STAR@';
         html += '</div>';
         html += '<div id="horo_sent_title">';
         html += '☆★';
-        html += '<big>@F_ANIMAL_B@座</big>';
+        html += '<big>@F_STAR_B@座</big>';
         html += '★☆';
         html += '</div>';
         html += '<div id="horo_sent_days">';
@@ -96,7 +99,6 @@ function make_horo() {
         }
         html += '@H_TYPE_END@。';
         html += '</p>'; // info
-        html += '</div>';
         let cnt0 = 0;
         while (true) {
             html = maker.gene_docs(html);
@@ -110,6 +112,27 @@ function make_horo() {
             }
         }
         fixAnimal.Next();
+        html += '<p id="horo_sent_items">'; // 
+        for (let k = 0; k < cntItem; k++) {
+            html += '@F_ITEM_A @F_ITEM_B ';
+            html += '<br>';
+            let cnt1 = 0;
+            while (true) {
+                html = maker.gene_docs(html);
+                cnt1++;
+                let chk = html.indexOf('@');
+                if (chk < 0)
+                    break;
+                if (cnt1 > 10) {
+                    alert('over work : ' + chk.toString());
+                    break;
+                }
+            }
+            fixItem.Next();
+        }
+        html += '</p>'; // info
+        fixItem.Restart();
+        html += '</div>';
     }
     html += '</div>';
     let cnt1 = 0;
@@ -127,10 +150,17 @@ function make_horo() {
     return html;
 }
 // （固定）ステータス
-class Fix_animal extends SctItm_FixSeq {
+class Fix_stars extends SctItm_FixSeq {
     constructor() {
-        super('@F_ANIMAL@', '@F_ANIMAL_B@', '@ICON_HORO@');
-        this.Add(itms_horo_animal);
+        super('@F_STAR@', '@F_STAR_B@', '@ICON_HORO@');
+        this.Add(itms_horo_star);
+    }
+}
+// （固定）占い・項目
+class Fix_items extends SctItm_FixSeq {
+    constructor() {
+        super('@F_ITEM');
+        this.Add(itms_horo_item);
     }
 }
 // 解説
@@ -150,9 +180,9 @@ class selector_h_info_init extends SctItm_Selector {
     constructor() {
         super('@H_INFO_INIT@');
         this.itms = [
-            new SctItm('@F_ANIMAL_B@座は@DIR@の夜空に輝く星座で'),
-            new SctItm('@F_ANIMAL_B@座は代表的な@SEASON@の星座で'),
-            new SctItm('@F_ANIMAL_B@座は@COUNTRY@に伝わる星座で')
+            new SctItm('@F_STAR_B@座は@DIR@の夜空に輝く星座で'),
+            new SctItm('@F_STAR_B@座は代表的な@SEASON@の星座で'),
+            new SctItm('@F_STAR_B@座は@COUNTRY@に伝わる星座で')
         ];
     }
 }
@@ -175,10 +205,10 @@ class selector_h_type_init extends SctItm_Selector {
     constructor() {
         super('@H_TYPE_INIT@');
         this.itms = [
-            new SctItm('@F_ANIMAL_B@座の人は'),
-            new SctItm('@F_ANIMAL_B@座の人の多くは'),
-            new SctItm('@F_ANIMAL_B@座の人にありがちなことは'),
-            new SctItm('@F_ANIMAL_B@座の人の特徴は')
+            new SctItm('@F_STAR_B@座の人は'),
+            new SctItm('@F_STAR_B@座の人の多くは'),
+            new SctItm('@F_STAR_B@座の人にありがちなことは'),
+            new SctItm('@F_STAR_B@座の人の特徴は')
         ];
     }
 }
