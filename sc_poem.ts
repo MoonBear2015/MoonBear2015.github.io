@@ -75,14 +75,14 @@ function make_poem() : string
     let cnt = 0;
     while(true)
     {
-        html = maker.gene_docs(html);
+        html = maker.gene_docs(html,true);
 
-        html = maker_tema.gene_docs(html);
-        html = maker_sent.gene_docs(html);
+        html = maker_tema.gene_docs(html,true);
+        html = maker_sent.gene_docs(html,true);
     
-        html = maker_im.gene_docs(html);
+        html = maker_im.gene_docs(html,true);
     
-        html = maker_c.gene_docs(html);
+        html = maker_c.gene_docs(html,true);
     
         cnt++;
         let chk = html.indexOf('@');

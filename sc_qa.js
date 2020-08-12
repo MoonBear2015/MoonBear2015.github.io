@@ -35,18 +35,7 @@ function make_qa() {
     //---- this Q&A END
     html += '</div>';
     let maker = new qa_docs_maker();
-    let cnt = 0;
-    while (true) {
-        html = maker.gene_docs(html);
-        cnt++;
-        let chk = html.indexOf('@');
-        if (chk < 0)
-            break;
-        if (cnt > 10) {
-            alert('over work : ' + chk.toString());
-            break;
-        }
-    }
+    html = maker.gene_docs(html);
     return html;
 }
 function Make_Q() {

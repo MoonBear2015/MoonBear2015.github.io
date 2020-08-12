@@ -46,20 +46,8 @@ function make_qa()
     html += '</div>';
 
     let maker = new qa_docs_maker();
+    html = maker.gene_docs(html);
 
-    let cnt = 0;
-    while(true)
-    {
-        html = maker.gene_docs(html);
-        cnt++;
-        let chk = html.indexOf('@');
-        if (chk < 0) break;
-        if (cnt > 10)
-        {
-            alert('over work : ' + chk.toString());
-            break;
-        }
-    }
     return html;
 }
 

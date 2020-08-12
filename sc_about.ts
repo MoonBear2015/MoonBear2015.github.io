@@ -69,8 +69,8 @@ function make_about()
     let cnt = 0;
     while(true)
     {
-        html = maker_about.gene_docs(html);
-        html = maker.gene_docs(html);
+        html = maker_about.gene_docs(html,true);
+        html = maker.gene_docs(html,true);
         cnt++;
         let chk = html.indexOf('@');
         if (chk < 0) break;

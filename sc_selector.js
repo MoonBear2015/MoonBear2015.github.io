@@ -569,11 +569,25 @@ class docs_maker {
     constructor() {
         this.selectors = new Array();
     }
-    gene_docs(temp_doc) {
+    gene_docs(temp_doc, isNoCheck) {
         let result = temp_doc;
-        this.selectors.forEach((value) => {
-            result = value.Gene_Docs(result);
-        });
+        let cnt = 0;
+        while (true) {
+            this.selectors.forEach((value) => {
+                result = value.Gene_Docs(result);
+            });
+            if (isNoCheck) {
+                break;
+            }
+            cnt++;
+            let chk = result.indexOf('@');
+            if (chk < 0)
+                break;
+            if (cnt > 10) {
+                alert('over work : ' + chk.toString());
+                break;
+            }
+        }
         return result;
     }
     dic_push(in_selector) {

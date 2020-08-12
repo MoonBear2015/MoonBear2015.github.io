@@ -62,8 +62,8 @@ function make_shop()
         
         // html01 += '<div id="shop_doc">'; // doc
 
-        html01 = maker.gene_docs(html01);
-        html01 = makerC01.gene_docs(html01);
+        html01 = maker.gene_docs(html01,true);
+        html01 = makerC01.gene_docs(html01,true);
         
         html01 += '<p id="shop_info">'; // info
         html01 += '@S_INFO_INIT@';
@@ -80,8 +80,8 @@ function make_shop()
         let cnt = 0;
         while(true)
         {
-            html01 = maker.gene_docs(html01);
-            html01 = makerC01.gene_docs(html01);
+            html01 = maker.gene_docs(html01,true);
+            html01 = makerC01.gene_docs(html01,true);
             cnt++;
             let chk = html01.indexOf('@');
             if (chk < 0) break;
@@ -237,8 +237,8 @@ function make_shop()
     let cnt = 0;
     while(true)
     {
-        html = maker.gene_docs(html);
-        html = maker01.gene_docs(html);
+        html = maker.gene_docs(html,true);
+        html = maker01.gene_docs(html,true);
         cnt++;
         let chk = html.indexOf('@');
         if (chk < 0) break;
@@ -278,8 +278,8 @@ function make_site_footer(): string {
     let cnt = 0;
     while(true)
     {
-        html = maker.gene_docs(html);
-        html = maker01.gene_docs(html);
+        html = maker.gene_docs(html,true);
+        html = maker01.gene_docs(html,true);
         cnt++;
         let chk = html.indexOf('@');
         if (chk < 0) break;

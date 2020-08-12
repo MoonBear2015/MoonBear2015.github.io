@@ -7,7 +7,7 @@ function set_horo() {
     html += '<h1>';
     html += 'Horoscope';
     html += '<small>';
-    html += ' H00.17';
+    html += ' H00.18';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -52,18 +52,7 @@ function make_horo() {
         html += '</div>';
         html += '</div>';
         html += '</a>';
-        let cnt0 = 0;
-        while (true) {
-            html = maker.gene_docs(html);
-            cnt0++;
-            let chk = html.indexOf('@');
-            if (chk < 0)
-                break;
-            if (cnt0 > 10) {
-                alert('over work : ' + chk.toString());
-                break;
-            }
-        }
+        html = maker.gene_docs(html);
         fixAnimal.Next();
     }
     html += '</div>';
@@ -76,7 +65,7 @@ function make_horo() {
         html += '</span>';
         html += '<div id="horo_sent">';
         html += '<div id="horo_sent_icon">';
-        html += '<img src="pics/@ICON_HORO@" width="100%" height="100%">';
+        html += '<img src="pics/@ICON_HORO@" width="90%" height="90%">';
         html += '@F_STAR@';
         html += '</div>';
         html += '<div id="horo_sent_title">';
@@ -99,35 +88,14 @@ function make_horo() {
         }
         html += '@H_TYPE_END@。';
         html += '</p>'; // info
-        let cnt0 = 0;
-        while (true) {
-            html = maker.gene_docs(html);
-            cnt0++;
-            let chk = html.indexOf('@');
-            if (chk < 0)
-                break;
-            if (cnt0 > 10) {
-                alert('over work : ' + chk.toString());
-                break;
-            }
-        }
+        html = maker.gene_docs(html);
         fixAnimal.Next();
         html += '<p id="horo_sent_items">'; // 
         for (let k = 0; k < cntItem; k++) {
-            html += '@F_ITEM_A @F_ITEM_B ';
+            html += '<img src="pics/@ICON_HOROITEM@" width="30px" height="30px">';
+            html += '@F_ITEM@ @F_ITEM@ @F_ITEM@ @F_ITEM@';
             html += '<br>';
-            let cnt1 = 0;
-            while (true) {
-                html = maker.gene_docs(html);
-                cnt1++;
-                let chk = html.indexOf('@');
-                if (chk < 0)
-                    break;
-                if (cnt1 > 10) {
-                    alert('over work : ' + chk.toString());
-                    break;
-                }
-            }
+            html = maker.gene_docs(html);
             fixItem.Next();
         }
         html += '</p>'; // info
@@ -136,17 +104,7 @@ function make_horo() {
     }
     html += '</div>';
     let cnt1 = 0;
-    while (true) {
-        html = maker.gene_docs(html);
-        cnt1++;
-        let chk = html.indexOf('@');
-        if (chk < 0)
-            break;
-        if (cnt1 > 10) {
-            alert('over work : ' + chk.toString());
-            break;
-        }
-    }
+    html = maker.gene_docs(html);
     return html;
 }
 // （固定）ステータス
@@ -159,8 +117,29 @@ class Fix_stars extends SctItm_FixSeq {
 // （固定）占い・項目
 class Fix_items extends SctItm_FixSeq {
     constructor() {
-        super('@F_ITEM');
+        super('@F_ITEM@');
         this.Add(itms_horo_item);
+    }
+}
+// （固定）名詞・人物・組織　～は・～が・～の
+class First_love extends SctItm_FirstLocker {
+    constructor() {
+        super('@I_LOVE@', '', '@ICON_HOROITEM@');
+        this.Add(itms_horo_love);
+    }
+}
+// （固定）名詞・人物・組織　～は・～が・～の
+class First_job extends SctItm_FirstLocker {
+    constructor() {
+        super('@I_JOB@', '', '@ICON_HOROITEM@');
+        this.Add(itms_horo_job);
+    }
+}
+// （固定）名詞・人物・組織　～は・～が・～の
+class First_health extends SctItm_FirstLocker {
+    constructor() {
+        super('@I_HEALTH@', '', '@ICON_HOROITEM@');
+        this.Add(itms_horo_health);
     }
 }
 // 解説
@@ -252,6 +231,9 @@ class horo_docs_maker extends news_docs_maker {
         this.dic_push(new selector_h_type());
         this.dic_push(new selector_h_type_init());
         this.dic_push(new selector_h_type_end());
+        this.dic_push(new First_love());
+        this.dic_push(new First_job());
+        this.dic_push(new First_health());
         // this.dic_push(new Fix_animal());
     }
 }

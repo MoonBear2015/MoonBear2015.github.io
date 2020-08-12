@@ -58,11 +58,11 @@ function make_poem() {
     let maker_c = new poem_docs_maker_c();
     let cnt = 0;
     while (true) {
-        html = maker.gene_docs(html);
-        html = maker_tema.gene_docs(html);
-        html = maker_sent.gene_docs(html);
-        html = maker_im.gene_docs(html);
-        html = maker_c.gene_docs(html);
+        html = maker.gene_docs(html, true);
+        html = maker_tema.gene_docs(html, true);
+        html = maker_sent.gene_docs(html, true);
+        html = maker_im.gene_docs(html, true);
+        html = maker_c.gene_docs(html, true);
         cnt++;
         let chk = html.indexOf('@');
         if (chk < 0)
