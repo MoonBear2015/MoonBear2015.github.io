@@ -174,6 +174,9 @@ class ItmArray {
             this.Paste(in_array);
         }
     }
+    get countItm() {
+        return this.itms.length;
+    }
     Paste(in_array) {
         this.itms = new Array();
         this.itms.length = 0;
@@ -183,6 +186,12 @@ class ItmArray {
         in_array.forEach(it => {
             this.itms.push(it);
         });
+    }
+    Next() {
+        return;
+    }
+    Restart() {
+        return;
     }
     Copy() {
         let result = new ItmArray();
@@ -216,6 +225,12 @@ class ItmSelector extends ItmArray {
         this.bef_num = i;
         return this.itms[i];
     }
+    Next() {
+        return;
+    }
+    Restart() {
+        return;
+    }
     Copy() {
         let result = new ItmSelector();
         result.Paste(this.itms);
@@ -230,19 +245,25 @@ class ItmCounter extends ItmArray {
         else {
             super();
         }
-        this.bef_num = -1;
+        this.now_num = -1;
         this.startNumber = 0;
     }
     get rnd_Itm() {
-        if (this.startNumber != 0 && this.bef_num == -1) {
-            this.bef_num = this.startNumber - 1;
+        if (this.startNumber != 0 && this.now_num == -1) {
+            this.now_num = this.startNumber - 1;
         }
-        let i = this.bef_num + 1;
+        this.Next();
+        return this.itms[this.now_num];
+    }
+    Next() {
+        let i = this.now_num + 1;
         if (i == this.itms.length) {
             i = this.itms.length - 1;
         }
-        this.bef_num = i;
-        return this.itms[i];
+        this.now_num = i;
+    }
+    Restart() {
+        this.now_num = -1;
     }
     Copy() {
         let result = new ItmCounter();
@@ -372,6 +393,9 @@ class SctItm_FirstLocker extends SctItm_Selector {
         let i = this.startNumber + rnd_max(this.itms.length - this.startNumber);
         return this.itms[i];
     }
+    Restart() {
+        this.is_first = true;
+    }
     Copy() {
         let result = new SctItm_FirstLocker(this.itm_key, this.itm_key2, this.pic_key);
         result.Paste(this.itms);
@@ -406,6 +430,9 @@ class SctItm_Rotetion extends SctItm_Selector {
         let i = rnd_max(filItms.length);
         filItms[i].pnt = -1;
         return filItms[i];
+    }
+    Restart() {
+        this.clear_pnt();
     }
     Copy() {
         let result = new SctItm_Rotetion(this.itm_key, this.itm_key2, this.pic_key);
@@ -589,6 +616,11 @@ class docs_maker {
             }
         }
         return result;
+    }
+    Restart() {
+        this.selectors.forEach((value) => {
+            value.Restart();
+        });
     }
     dic_push(in_selector) {
         this.selectors.push(in_selector);

@@ -7,7 +7,7 @@ function set_horo() {
     html += '<h1>';
     html += 'Horoscope';
     html += '<small>';
-    html += ' H00.18';
+    html += ' H00.19';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -21,11 +21,12 @@ function set_horo() {
 }
 function make_horo() {
     let maker = new horo_docs_maker();
-    let fixAnimal = new Fix_stars();
-    maker.dic_push(fixAnimal);
-    let cntHoro = rnd_minmax(4, fixAnimal.countItm + 1);
+    let fixStars = new Fix_stars();
+    maker.dic_push(fixStars);
+    let cntHoro = rnd_minmax(4, fixStars.countItm + 1);
+    let makerItms = new horo_docs_maker_items();
     let fixItem = new Fix_items();
-    maker.dic_push(fixItem);
+    makerItms.dic_push(fixItem);
     let cntItem = 2;
     let dt = new Date();
     let html = '';
@@ -53,10 +54,10 @@ function make_horo() {
         html += '</div>';
         html += '</a>';
         html = maker.gene_docs(html);
-        fixAnimal.Next();
+        fixStars.Next();
     }
     html += '</div>';
-    fixAnimal.Restart();
+    fixStars.Restart();
     html += '<div id="horo_sent_box">';
     for (let j = 0; j < cntHoro; j++) {
         html += '<span id="horo_';
@@ -89,17 +90,17 @@ function make_horo() {
         html += '@H_TYPE_END@。';
         html += '</p>'; // info
         html = maker.gene_docs(html);
-        fixAnimal.Next();
+        fixStars.Next();
         html += '<p id="horo_sent_items">'; // 
         for (let k = 0; k < cntItem; k++) {
             html += '<img src="pics/@ICON_HOROITEM@" width="30px" height="30px">';
             html += '@F_ITEM@ @F_ITEM@ @F_ITEM@ @F_ITEM@';
             html += '<br>';
-            html = maker.gene_docs(html);
+            html = makerItms.gene_docs(html);
             fixItem.Next();
         }
+        makerItms.Restart();
         html += '</p>'; // info
-        fixItem.Restart();
         html += '</div>';
     }
     html += '</div>';
@@ -231,9 +232,13 @@ class horo_docs_maker extends news_docs_maker {
         this.dic_push(new selector_h_type());
         this.dic_push(new selector_h_type_init());
         this.dic_push(new selector_h_type_end());
+    }
+}
+class horo_docs_maker_items extends news_docs_maker {
+    constructor() {
+        super();
         this.dic_push(new First_love());
         this.dic_push(new First_job());
         this.dic_push(new First_health());
-        // this.dic_push(new Fix_animal());
     }
 }

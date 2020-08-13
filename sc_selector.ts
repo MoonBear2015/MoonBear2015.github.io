@@ -274,14 +274,19 @@ class SctCod_Km extends SctCod implements ISctCod,TestItem {
 
 interface IItmArray<T extends ISctItm> extends TestItem {
     itms : T[];
-    
+    countItm : number;
     Paste(in_array : Array<T>): void;
     Add(in_array : Array<T>): void;
+    Next() : void;
+    Restart() : void;
     Copy() : IItmArray<T>;
 }
 
 class ItmArray<T extends ISctItm> implements IItmArray<T> {
     public itms : Array<T>;
+    get countItm() : number {
+        return this.itms.length;
+    }
     constructor(in_array? : Array<T>){
         this.itms = new Array<T>();
         if (in_array)
@@ -302,7 +307,12 @@ class ItmArray<T extends ISctItm> implements IItmArray<T> {
         }
         );
     }
-
+    public Next() : void {
+        return;
+    }
+    public Restart() : void {
+        return;
+    }
     public Copy()
     {
         let result = new ItmArray<T>();
@@ -319,7 +329,6 @@ interface IItmSelector<T extends ISctItm> extends IItmArray<T> {
     rnd_Itm : T;
     Copy() : IItmSelector<T>;
 }
-
 
 class ItmSelector<T extends ISctItm> extends 
     ItmArray<T> 
@@ -347,6 +356,12 @@ class ItmSelector<T extends ISctItm> extends
         this.bef_num = i;
         return this.itms[i];
     }
+    public Next() : void {
+        return;
+    }
+    public Restart() : void {
+        return;
+    }
 
     public Copy() : IItmSelector<T>
     {
@@ -361,7 +376,7 @@ class ItmCounter<T extends ISctItm>
     extends ItmArray<T>
     implements IItmSelector<T> 
 {
-    protected bef_num : number;
+    protected now_num : number;
     protected startNumber : number;
     constructor(in_array? : Array<T>){
         if (in_array) {
@@ -370,21 +385,28 @@ class ItmCounter<T extends ISctItm>
         else {
             super();
         }
-        this.bef_num = -1;
+        this.now_num = -1;
         this.startNumber = 0;
     }
     get rnd_Itm() : T {
-        if (this.startNumber != 0 && this.bef_num == -1) {
-            this.bef_num = this.startNumber - 1;
+        if (this.startNumber != 0 && this.now_num == -1) {
+            this.now_num = this.startNumber - 1;
         }
-        let i = this.bef_num + 1;
+        this.Next();
+        return this.itms[this.now_num];
+    }
+    public Next() : void {
+        let i = this.now_num + 1;
         if (i == this.itms.length)
         {
             i = this.itms.length - 1;
         }
-        this.bef_num = i;
-        return this.itms[i];
+        this.now_num = i;
     }
+    public Restart() : void {
+        this.now_num = -1;
+    }
+
     Copy() : IItmSelector<T>
     {
         let result = new ItmCounter<T>();
@@ -575,6 +597,10 @@ class SctItm_FirstLocker
         return this.itms[i];
     }
 
+    public Restart() : void {
+        this.is_first = true;
+    }
+
     Copy() : ISctItm_Selector
     {
         let result = new SctItm_FirstLocker(this.itm_key,this.itm_key2,this.pic_key);
@@ -627,6 +653,10 @@ class SctItm_Rotetion extends SctItm_Selector implements ISctItm_Selector {
         let i = rnd_max(filItms.length);
         filItms[i].pnt = -1;
         return filItms[i];
+    }
+
+    public Restart() : void {
+        this.clear_pnt();
     }
     
     Copy() : ISctItm_Selector
@@ -893,8 +923,15 @@ class docs_maker {
                 break;
             }
         }
-
         return result;
+    }
+
+    public Restart() : void {
+        this.selectors.forEach (
+            (value) => {
+                value.Restart();
+            }
+        )
     }
 
     dic_push(in_selector : ISctItm_Selector)
