@@ -25,8 +25,6 @@ function set_horo()
     elem.innerHTML = ruby_change(html);
 }
 
-
-
 function make_horo()
 {
 
