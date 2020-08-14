@@ -1,15 +1,38 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Times New Roman', Times, serif;
     font-family: 'Noto Serif JP', serif;
+    color:  #202020;
+    /* background-color: #f0f0f0; */
 }
 
-header {
-    color: rebeccapurple;
+
+
+#main_header {
+    margin: 0;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    background: url(./img/back/nothing.png);
+    background-size: cover;
 }
+
+#header_title {
+    /* margin: auto;
+    padding: 22px; */
+    font-size: 10vw;
+    text-align: center;
+}
+
 
 h1 {
     font-size: 5.0vw;
+}
+
+p {
+    font-size: 2.0vw;
 }
 
 
