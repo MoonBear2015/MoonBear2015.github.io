@@ -25,6 +25,17 @@
     text-align: center;
 }
 
+rt {
+    font-size: 30%;
+    display: table-header-group;
+    text-align: justify;
+	line-height: 1;
+}
+rb {
+    display: table-footer-group;
+	line-height: 1;
+}
+
 
 h1 {
     font-size: 5.0vw;
