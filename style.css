@@ -4,6 +4,9 @@
     font-family: 'Times New Roman', Times, serif;
     font-family: 'Noto Serif JP', serif;
     color:  #202020;
+
+    line-height: 1;
+
     /* background-color: #f0f0f0; */
 }
 
@@ -25,13 +28,20 @@
     text-align: center;
 }
 
-rt {
-    font-size: 30%;
-    display: table-header-group;
-    text-align: justify;
-	line-height: 1;
+ruby {
+    display: inline-table;
+    vertical-align: bottom;
+    ruby-align: distribute-letter;
+    ruby-position: inline;
 }
-rb {
+
+ruby rt {
+    font-size: 40%;
+    display: table-header-group;
+    text-align: inherit;
+    line-height: 1;
+}
+ruby rb {
     display: table-footer-group;
 	line-height: 1;
 }
