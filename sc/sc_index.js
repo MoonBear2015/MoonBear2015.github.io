@@ -14,11 +14,38 @@ const set_index_header = () => {
     html += '「|空虚|くうきょ|」';
     html += '</h1>';
     html += '<p>';
-    html += '<small> i0.02 </small>';
+    html += '<small> i0.03 </small>';
     html += '</p>';
     html += '</div>';
-    // html += '<div id="header_menu">';
-    // html += make_header_menu(0);
-    // html += '</div>';
+    html += '<div id="header_menu">';
+    html += '<ul>';
+    html += '<li>';
+    html += '<a onclick="test_alt()">';
+    html += 'あ';
+    html += '</a></li>' + '\r\n';
+    html += '<li>';
+    html += '<a onclick="test_alt()">';
+    html += 'い';
+    html += '</a></li>' + '\r\n';
+    html += '<li>';
+    html += '<a onclick="test_alt()">';
+    html += 'う';
+    html += '</a></li>' + '\r\n';
+    html += '<li>';
+    html += '<a onclick="test_alt()">';
+    html += 'え';
+    html += '</a></li>' + '\r\n';
+    html += '</ul>';
+    html += '</div>';
     set_html('index_header', html);
 };
+const test_alt = (str) => {
+    alert(str);
+};
+class menu_itm {
+    constructor(name, command) {
+        this.name = name;
+        this.command = command;
+    }
+    ;
+}

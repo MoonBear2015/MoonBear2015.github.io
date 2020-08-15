@@ -36,9 +36,9 @@ function testItems_alert(in_tests) {
 //------------------------------------ etc
 const zP2 = new Intl.NumberFormat('ja', { minimumIntegerDigits: 2 });
 const zP3 = new Intl.NumberFormat('ja', { minimumIntegerDigits: 3 });
-function char_cnt(in_str, in_chr) {
+const char_cnt = (in_str, in_chr) => {
     return in_str.split(in_chr).length - 1;
-}
+};
 function char_del(in_str, in_chr) {
     let result = in_str;
     for (let i = 0; i < in_chr.length; i++) {
@@ -80,13 +80,12 @@ function cods_ruby_to_itms(in_cods) {
     });
     return results;
 }
-function ruby_check(in_str) {
+const ruby_check = (in_str) => {
     let cnt = char_cnt(in_str, '\|');
     let sts = ((cnt % 3) == 0);
     return ((cnt % 3) == 0);
-}
-function ruby_kana(in_str) {
-    //if (!ruby_check(in_str)) return in_str;
+};
+const ruby_kana = (in_str) => {
     let strs = in_str.split('|');
     let result = '';
     let sts = 0;
@@ -108,8 +107,8 @@ function ruby_kana(in_str) {
         sts++;
     });
     return result;
-}
-function ruby_no(in_str) {
+};
+const ruby_no = (in_str) => {
     if (!ruby_check(in_str))
         return in_str;
     let strs = in_str.split('|');
@@ -133,13 +132,13 @@ function ruby_no(in_str) {
         sts++;
     });
     return result;
-}
+};
 function ruby_beat(in_str) {
     let str = ruby_kana(in_str);
     str = char_del(str, 'ぁぃぅぇぉゎゃゅょァィゥェォヮャュョ・');
     return str.length;
 }
-function ruby_change(in_html) {
+const ruby_change = (in_html) => {
     let result = '';
     let rubytags = [
         '<ruby><rb>',
@@ -164,7 +163,7 @@ function ruby_change(in_html) {
         }
     }
     return result;
-}
+};
 function star_str(in_score, in_max) {
     let score = Math.floor(in_score);
     let mill = 0;

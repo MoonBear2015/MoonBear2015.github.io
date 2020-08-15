@@ -53,9 +53,10 @@ function testItems_alert(in_tests : Array<TestItem>)
 const zP2 = new Intl.NumberFormat('ja', { minimumIntegerDigits: 2 })
 const zP3 = new Intl.NumberFormat('ja', { minimumIntegerDigits: 3 })
 
-function char_cnt(in_str : string,in_chr : string) {
+const char_cnt = (in_str : string,in_chr : string) :number => {
     return in_str.split(in_chr).length - 1;
 }
+
 function char_del(in_str : string,in_chr : string) : string {
     let result = in_str;
     for(let i = 0;i < in_chr.length;i++) {
@@ -113,14 +114,13 @@ function cods_ruby_to_itms(in_cods : ISctCod[]) : ISctItm[]
 }
 
 
-function ruby_check(in_str : string) : boolean {
+const ruby_check = (in_str : string) : boolean => {
     let cnt = char_cnt(in_str,'\|');
     let sts : boolean = ((cnt % 3) == 0);
     return ((cnt % 3) == 0);
 }
 
-function ruby_kana(in_str : string) : string {
-    //if (!ruby_check(in_str)) return in_str;
+const ruby_kana = (in_str : string) : string => {
     let strs = in_str.split('|');
     let result : string = '';
     let sts : number = 0;
@@ -144,7 +144,7 @@ function ruby_kana(in_str : string) : string {
     return result;
 }
 
-function ruby_no(in_str : string) : string {
+const ruby_no = (in_str : string) : string => {
     if (!ruby_check(in_str)) return in_str;
     let strs = in_str.split('|');
     let result : string = '';
@@ -176,7 +176,7 @@ function ruby_beat(in_str : string) : number {
     return str.length;
 }
 
-function ruby_change(in_html : string) : string {
+const ruby_change = (in_html : string) : string => {
     let result : string = '';
     let rubytags = [
         '<ruby><rb>'
