@@ -76,7 +76,7 @@ function set_header_menu(num) {
     }
     elem.innerHTML = html;
 }
-function make_header_menu(num) {
+function old_make_header_menu(num) {
     let html = '';
     html += '<ul>';
     let items = get_menu_items();

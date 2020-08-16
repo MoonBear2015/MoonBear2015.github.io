@@ -91,7 +91,7 @@ function set_header_menu(num : number) {
     elem.innerHTML = html;
 }
 
-function make_header_menu(num : number) : string {
+function old_make_header_menu(num : number) : string {
     let html ='';
 
     html += '<ul>';

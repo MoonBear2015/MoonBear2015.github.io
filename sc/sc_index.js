@@ -14,33 +14,16 @@ const set_index_header = () => {
     html += '「|空虚|くうきょ|」';
     html += '</h1>';
     html += '<p>';
-    html += '<small> i0.03 </small>';
+    html += '<small> i0.04 </small>';
     html += '</p>';
     html += '</div>';
     html += '<div id="header_menu">';
-    html += '<ul>';
-    html += '<li>';
-    html += '<a onclick="test_alt()">';
-    html += 'あ';
-    html += '</a></li>' + '\r\n';
-    html += '<li>';
-    html += '<a onclick="test_alt()">';
-    html += 'い';
-    html += '</a></li>' + '\r\n';
-    html += '<li>';
-    html += '<a onclick="test_alt()">';
-    html += 'う';
-    html += '</a></li>' + '\r\n';
-    html += '<li>';
-    html += '<a onclick="test_alt()">';
-    html += 'え';
-    html += '</a></li>' + '\r\n';
-    html += '</ul>';
+    html += make_header_menu(1);
     html += '</div>';
     set_html('index_header', html);
 };
-const test_alt = (str) => {
-    alert(str);
+const test_alt = (num) => {
+    alert(num.toString());
 };
 class menu_itm {
     constructor(name, command) {
@@ -49,3 +32,28 @@ class menu_itm {
     }
     ;
 }
+const menu_itms = [
+    new menu_itm('聞', 'test_alt(0)'),
+    new menu_itm('詩', 'test_alt(1)'),
+    new menu_itm('問', 'test_alt(2)'),
+    new menu_itm('店', 'test_alt(3)'),
+    new menu_itm('注', 'test_alt(4)')
+];
+const make_header_menu = (num) => {
+    let html = '';
+    html += '<ul>';
+    for (var i = 0; i < menu_itms.length; i++) {
+        let cmd = menu_itms[i].command;
+        html += '<li>';
+        html += '<a ';
+        if (i == num) {
+            html += 'id="active"';
+        }
+        html += ' onclick="' + cmd + '">';
+        html += menu_itms[i].name;
+        html += '</a></li>' + '\r\n';
+    }
+    html += '</ul>';
+    html += '</div>' + '\r\n';
+    return html;
+};
