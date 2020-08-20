@@ -18,39 +18,43 @@ const set_index_header = () => {
     html += '</p>';
     html += '</div>';
     html += '<div id="header_menu">';
-    html += make_header_menu(1);
+    html += make_header_menu(0);
     html += '</div>';
     set_html('index_header', html);
 };
 const test_alt = (num) => {
     alert(num.toString());
 };
-class menu_itm {
+class menu_item {
     constructor(name, command) {
         this.name = name;
         this.command = command;
     }
     ;
 }
-const menu_itms = [
-    new menu_itm('聞', 'test_alt(0)'),
-    new menu_itm('詩', 'test_alt(1)'),
-    new menu_itm('問', 'test_alt(2)'),
-    new menu_itm('店', 'test_alt(3)'),
-    new menu_itm('注', 'test_alt(4)')
+const menu_items = [
+    new menu_item('聞', 'set_news()'),
+    new menu_item('詩', 'set_header_menu(1)'),
+    new menu_item('問', 'set_header_menu(2)'),
+    new menu_item('店', 'set_header_menu(3)'),
+    new menu_item('注', 'set_header_menu(4)')
 ];
+function set_header_menu(num) {
+    let html = make_header_menu(num);
+    set_html('header_menu', html);
+}
 const make_header_menu = (num) => {
     let html = '';
     html += '<ul>';
-    for (var i = 0; i < menu_itms.length; i++) {
-        let cmd = menu_itms[i].command;
+    for (var i = 0; i < menu_items.length; i++) {
+        let cmd = menu_items[i].command;
         html += '<li>';
         html += '<a ';
         if (i == num) {
             html += 'id="active"';
         }
         html += ' onclick="' + cmd + '">';
-        html += menu_itms[i].name;
+        html += menu_items[i].name;
         html += '</a></li>' + '\r\n';
     }
     html += '</ul>';

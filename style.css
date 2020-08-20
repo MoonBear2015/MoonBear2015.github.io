@@ -37,11 +37,9 @@ ruby rt {
     font-size: 30%;
     display: table-header-group;
     text-align: inherit;
-    line-height: 1;
 }
 ruby rb {
     display: table-footer-group;
-	line-height: 1;
 }
 
 
@@ -53,26 +51,25 @@ p {
     font-size: 2.0vh;
 }
 
-ul {
+#header_menu ul {
     list-style-type: none;
-    padding: 0;
     overflow: hidden;
     background: rgba(20,20,20,0.3);
 }
 
-li {
+#header_menu li {
     font-size: 2.0vh;
     float: left;
     border-right: 1px solid;
     border-color: black;
     border-radius: 80%;
 }
-li:last-child{
+#header_menu li:last-child{
     float: right;
     border-right: none;
 }
 
-li a {
+#header_menu li a {
     display: block;
     color: black;
     text-align: center;
@@ -80,11 +77,16 @@ li a {
     text-decoration: none;
 }
 
-li a:hover:not(#active) {
+#header_menu li a:hover:not(#active) {
     color: yellow;
 }
-#active {
+#header_menu #active {
 	color: #da3c41;
+}
+
+#index_main {
+    top: 10vh;
+    margin-top: 15vh;
 }
 
 

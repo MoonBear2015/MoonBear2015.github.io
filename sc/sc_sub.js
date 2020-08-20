@@ -66,20 +66,6 @@ function sepalate_number(num) {
     return results;
 }
 //------------------------------------ japanese text
-function cods_to_itms(in_cods) {
-    let results = new Array();
-    in_cods.forEach((cod) => {
-        results.push(cod.to_SctItm_NoRubi());
-    });
-    return results;
-}
-function cods_ruby_to_itms(in_cods) {
-    let results = new Array();
-    in_cods.forEach((cod) => {
-        results.push(cod.to_SctItm_Rubi());
-    });
-    return results;
-}
 const ruby_check = (in_str) => {
     let cnt = char_cnt(in_str, '\|');
     let sts = ((cnt % 3) == 0);

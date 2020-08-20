@@ -95,24 +95,6 @@ function sepalate_number(num : number) : Array<AB>
 
 //------------------------------------ japanese text
 
-function cods_to_itms(in_cods : ISctCod[]) : ISctItm[]
-{
-    let results = new Array<ISctItm>();
-    in_cods.forEach((cod) => {
-        results.push(cod.to_SctItm_NoRubi());
-    });
-    return results;
-}
-
-function cods_ruby_to_itms(in_cods : ISctCod[]) : ISctItm[]
-{
-    let results = new Array<ISctItm>();
-    in_cods.forEach((cod) => {
-        results.push(cod.to_SctItm_Rubi());
-    });
-    return results;
-}
-
 
 const ruby_check = (in_str : string) : boolean => {
     let cnt = char_cnt(in_str,'\|');
