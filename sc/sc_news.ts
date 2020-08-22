@@ -6,12 +6,12 @@ function set_news()
 
     let html : string = '';
     html += '<div id="main_title">'
-    html += '<h1>';
+    html += '<h2>';
     html += 'NEWS';
     html += '<small>';
     html += ' N0.00';
     html += '</small>';
-    html += '</h1>';
+    html += '</h2>';
     html += '</div>';
 
     // for(let i = 0; i < 20; i++){
@@ -21,3 +21,5 @@ function set_news()
     set_html('index_main',html);
 
 }
+
+

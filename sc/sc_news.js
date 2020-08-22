@@ -4,12 +4,12 @@ function set_news() {
     scrollTo(0, 0);
     let html = '';
     html += '<div id="main_title">';
-    html += '<h1>';
+    html += '<h2>';
     html += 'NEWS';
     html += '<small>';
     html += ' N0.00';
     html += '</small>';
-    html += '</h1>';
+    html += '</h2>';
     html += '</div>';
     // for(let i = 0; i < 20; i++){
     //     html += '<p>[' + i.toString() + ']</p>' + make_news();
