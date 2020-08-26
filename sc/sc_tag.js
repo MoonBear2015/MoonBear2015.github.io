@@ -1,24 +1,24 @@
 "use strict";
-// Tag = "@ABC@"        タグ
-// TTag = "@R_ABC@"     タグ（使用時）
-// TAG_CHR = "@"        タグ認識文字
-// TTAG_CHR = "_"
-// TagStr = "R_ABC"     タグ文字列
-// TagKey = "ABC"       タグ識別
-// TagType = "R_"       タグ種類
-// tag char
+// Tag = "@ABC@"            タグ
+// STag = "@R_ABC@"         セルタグ（特殊選択指定付きタグ）
+// TAG_CHR = "@"            タグ認識文字
+// STAG_CHR = "_"           セル指定文字                    
+// TagStr = "R_ABC"         タグ文字列
+// TagKey = "ABC"           タグ識別子
+// SetType = "R"            セル（特殊選択指定）
+// Tag Char
 const TAG_CHR = "@";
-const TTAG_CHR = "_";
-// tag Type
-const TTAG_NONE = ""; // （無効タグ）
-const TTAG_RND = "R_"; // ランダム
-const TTAG_LCK = "L_"; // 固定
-const TTAG_SEQ = "S_"; // 順
-const TagTypes = [
-    TTAG_NONE,
-    TTAG_RND,
-    TTAG_LCK,
-    TTAG_SEQ
+// STag Char
+const STAG_CHR = "_";
+// Sel Type
+const SEL_NON = ""; // 不正・指定なし
+const SEL_RND = "R"; // ランダム
+const SEL_LCK = "L"; // 固定
+const SEL_SEQ = "S"; // 順
+const SelTypes = [
+    SEL_RND,
+    SEL_LCK,
+    SEL_SEQ
 ];
 // Tag判定
 const is_Tag = (inTag) => {
@@ -30,14 +30,6 @@ const is_Tag = (inTag) => {
         return false;
     return true;
 };
-// TTag判定
-const is_TTag = (inTTag) => {
-    if (!is_Tag(inTTag))
-        return false;
-    if (inTTag.charAt(2) != TTAG_CHR)
-        return false;
-    return true;
-};
 // Tag文字列抽出
 const to_TagString = (inTag) => {
     let result = "";
@@ -45,4 +37,43 @@ const to_TagString = (inTag) => {
         result = inTag.substr(1, inTag.length - 1);
     }
     return result;
+};
+// TagKey抽出
+const to_TagKey = (inTag) => {
+    let result = "";
+    let str = to_TagString(inTag);
+    if (str == "") {
+        return "";
+    }
+    let strs = str.split(STAG_CHR);
+    if (strs.length != 2) {
+        return str;
+    }
+    else {
+        return strs[1];
+    }
+};
+// 選択識別子判定（なければ""返却）
+const is_SelType = (inSel) => {
+    let result = "";
+    for (let i = 0; i < SelTypes.length; i++) {
+        if (SelTypes[i] == inSel) {
+            result = SelTypes[i];
+            break;
+        }
+    }
+    return result;
+};
+// 選択識別子抽出
+const to_SelString = (inTag) => {
+    let result = "";
+    if (!is_Tag(inTag)) {
+        return result;
+    }
+    let tagString = to_TagString(inTag);
+    let tags = tagString.split(STAG_CHR);
+    if (tags.length != 2) {
+        return "";
+    }
+    return is_SelType(tags[0]);
 };
