@@ -1,92 +1,58 @@
-// Tag = "@ABC@"
+// Tag = "@ABC@"        タグ
+// TTag = "@R_ABC@"     タグ（使用時）
 
-// TAG_ST = "@"
-// TAG_ED = "@"
+// TAG_CHR = "@"        タグ認識文字
+// TTAG_CHR = "_"
 
-// TagStr = "ABC"
+// TagStr = "R_ABC"     タグ文字列
+// TagKey = "ABC"       タグ識別
+// TagType = "R_"       タグ種類
 
-// TagType = Tag.Rundom
-// TagTypeKey = "R_"
-// TagKey = "@R_ABC@"
+
+
+
 
 // tag char
-const TAG_ST = "@";
-const TAG_ED = "@";
+const TAG_CHR = "@";
+const TTAG_CHR = "_";
 
 // tag Type
-enum TagType {
-    None
-    ,
-    Rundom
-    ,
-    Locker
-    ,
-    Seq
-}
+const TTAG_NONE = "";   // （無効タグ）
+const TTAG_RND = "R_";  // ランダム
+const TTAG_LCK = "L_";  // 固定
+const TTAG_SEQ = "S_";  // 順
 
-class TagTypeKeySet {
-    constructor(
-        public typekey : string
-        ,
-        public type : TagType
-        ) {}    
-}
-
-const Tag_None = new TagTypeKeySet("",TagType.None);
-const Tag_Random = new TagTypeKeySet("R_",TagType.Rundom);
-const Tag_Locker = new TagTypeKeySet("L_",TagType.Locker);
-const Tag_Seq = new TagTypeKeySet("S_",TagType.Seq);
-
-const TagTypeKeySets = [
-    Tag_None
+const TagTypes = [
+    TTAG_NONE
     ,
-    Tag_Random
+    TTAG_RND
     ,
-    Tag_Locker
+    TTAG_LCK
     ,
-    Tag_Seq
+    TTAG_SEQ
 ]
 
-const isTag = (inTag : string) : boolean => {
-    if (inTag.charAt(0) != TAG_ST) return false;
-    if (inTag.charAt(inTag.length - 1) != TAG_ED) return false;
+// Tag判定
+const is_Tag = (inTag : string) : boolean => {
+    if (inTag.charAt(0) != TAG_CHR) return false;
+    if (inTag.charAt(inTag.length - 1) != TAG_CHR) return false;
     if (inTag.length <= 2) return false;
     return true;
 }
-
-
-const toTagStr = (inTag : string) : string => {
-    let result : string = "";
-    if (!isTag(inTag)) return "";
-    return inTag.substring(1,inTag.length - 1);
+// TTag判定
+const is_TTag = (inTTag : string) : boolean => {
+    if (!is_Tag(inTTag)) return false;
+    if (inTTag.charAt(2) != TTAG_CHR) return false;
+    return true;
 }
 
-
-const toTagTypeKeySet = (inTag : TagType) : TagTypeKeySet | undefined => {
-    let result : TagTypeKeySet | undefined = undefined;
-    for(let i = 0; i < TagTypeKeySets.length; i++) {
-        if (TagTypeKeySets[i].type = inTag) {
-            result = TagTypeKeySets[i];
-            break;
-        }
+// Tag文字列抽出
+const to_TagString = (inTag : string) : string => {
+    let result = "";
+    if (is_Tag(inTag)) {
+        result = inTag.substr(1,inTag.length - 1);
     }
     return result;
 }
 
-
-
-// class Key {
-//     public tag : string;
-//     public type : TagType;
-//     constructor(
-//         inStr0 : string
-//         ,
-//         inStr1? : string
-//     )
-//     {
-//         if (inStr1) {
-            
-//         }
-//     }
-// }
 

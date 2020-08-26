@@ -1,73 +1,48 @@
 "use strict";
-// Tag = "@ABC@"
-// TAG_ST = "@"
-// TAG_ED = "@"
-// TagStr = "ABC"
-// TagType = Tag.Rundom
-// TagTypeKey = "R_"
-// TagKey = "@R_ABC@"
+// Tag = "@ABC@"        タグ
+// TTag = "@R_ABC@"     タグ（使用時）
+// TAG_CHR = "@"        タグ認識文字
+// TTAG_CHR = "_"
+// TagStr = "R_ABC"     タグ文字列
+// TagKey = "ABC"       タグ識別
+// TagType = "R_"       タグ種類
 // tag char
-const TAG_ST = "@";
-const TAG_ED = "@";
+const TAG_CHR = "@";
+const TTAG_CHR = "_";
 // tag Type
-var TagType;
-(function (TagType) {
-    TagType[TagType["None"] = 0] = "None";
-    TagType[TagType["Rundom"] = 1] = "Rundom";
-    TagType[TagType["Locker"] = 2] = "Locker";
-    TagType[TagType["Seq"] = 3] = "Seq";
-})(TagType || (TagType = {}));
-class TagTypeKeySet {
-    constructor(typekey, type) {
-        this.typekey = typekey;
-        this.type = type;
-    }
-}
-const Tag_None = new TagTypeKeySet("", TagType.None);
-const Tag_Random = new TagTypeKeySet("R_", TagType.Rundom);
-const Tag_Locker = new TagTypeKeySet("L_", TagType.Locker);
-const Tag_Seq = new TagTypeKeySet("S_", TagType.Seq);
-const TagTypeKeySets = [
-    Tag_None,
-    Tag_Random,
-    Tag_Locker,
-    Tag_Seq
+const TTAG_NONE = ""; // （無効タグ）
+const TTAG_RND = "R_"; // ランダム
+const TTAG_LCK = "L_"; // 固定
+const TTAG_SEQ = "S_"; // 順
+const TagTypes = [
+    TTAG_NONE,
+    TTAG_RND,
+    TTAG_LCK,
+    TTAG_SEQ
 ];
-const isTag = (inTag) => {
-    if (inTag.charAt(0) != TAG_ST)
+// Tag判定
+const is_Tag = (inTag) => {
+    if (inTag.charAt(0) != TAG_CHR)
         return false;
-    if (inTag.charAt(inTag.length - 1) != TAG_ED)
+    if (inTag.charAt(inTag.length - 1) != TAG_CHR)
         return false;
     if (inTag.length <= 2)
         return false;
     return true;
 };
-const toTagStr = (inTag) => {
-    let result = "";
-    if (!isTag(inTag))
-        return "";
-    return inTag.substring(1, inTag.length - 1);
+// TTag判定
+const is_TTag = (inTTag) => {
+    if (!is_Tag(inTTag))
+        return false;
+    if (inTTag.charAt(2) != TTAG_CHR)
+        return false;
+    return true;
 };
-const toTagTypeKeySet = (inTag) => {
-    let result = undefined;
-    for (let i = 0; i < TagTypeKeySets.length; i++) {
-        if (TagTypeKeySets[i].type = inTag) {
-            result = TagTypeKeySets[i];
-            break;
-        }
+// Tag文字列抽出
+const to_TagString = (inTag) => {
+    let result = "";
+    if (is_Tag(inTag)) {
+        result = inTag.substr(1, inTag.length - 1);
     }
     return result;
 };
-// class Key {
-//     public tag : string;
-//     public type : TagType;
-//     constructor(
-//         inStr0 : string
-//         ,
-//         inStr1? : string
-//     )
-//     {
-//         if (inStr1) {
-//         }
-//     }
-// }
