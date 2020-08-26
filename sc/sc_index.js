@@ -14,7 +14,7 @@ const set_index_header = () => {
     html += '「|空虚|くうきょ|」';
     html += '</h1>';
     html += '<p>';
-    html += '<small> i0.04 </small>';
+    html += '<small> i0.06 </small>';
     html += '</p>';
     html += '</div>';
     html += '<div id="header_menu">';

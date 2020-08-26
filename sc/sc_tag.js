@@ -6,12 +6,16 @@
 // TagType = Tag.Rundom
 // TagTypeKey = "R_"
 // TagKey = "@R_ABC@"
+// tag char
+const TAG_ST = "@";
+const TAG_ED = "@";
 // tag Type
 var TagType;
 (function (TagType) {
-    TagType[TagType["Rundom"] = 0] = "Rundom";
-    TagType[TagType["Locker"] = 1] = "Locker";
-    TagType[TagType["Seq"] = 2] = "Seq";
+    TagType[TagType["None"] = 0] = "None";
+    TagType[TagType["Rundom"] = 1] = "Rundom";
+    TagType[TagType["Locker"] = 2] = "Locker";
+    TagType[TagType["Seq"] = 3] = "Seq";
 })(TagType || (TagType = {}));
 class TagTypeKeySet {
     constructor(typekey, type) {
@@ -19,16 +23,16 @@ class TagTypeKeySet {
         this.type = type;
     }
 }
+const Tag_None = new TagTypeKeySet("", TagType.None);
 const Tag_Random = new TagTypeKeySet("R_", TagType.Rundom);
 const Tag_Locker = new TagTypeKeySet("L_", TagType.Locker);
 const Tag_Seq = new TagTypeKeySet("S_", TagType.Seq);
 const TagTypeKeySets = [
+    Tag_None,
     Tag_Random,
     Tag_Locker,
     Tag_Seq
 ];
-const TAG_ST = "@";
-const TAG_ED = "@";
 const isTag = (inTag) => {
     if (inTag.charAt(0) != TAG_ST)
         return false;
@@ -45,7 +49,7 @@ const toTagStr = (inTag) => {
     return inTag.substring(1, inTag.length - 1);
 };
 const toTagTypeKeySet = (inTag) => {
-    let result;
+    let result = undefined;
     for (let i = 0; i < TagTypeKeySets.length; i++) {
         if (TagTypeKeySets[i].type = inTag) {
             result = TagTypeKeySets[i];
