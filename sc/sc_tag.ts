@@ -8,10 +8,16 @@
 // TagKey = "ABC"           タグ識別子
 // SetType = "R"            セル（特殊選択指定）
 
+// TagsString = "WHAT,COUNTRY,~"  複数タグ（いち文字列による指定）
+// TAGS_CHR = ","           複数タグ区切り    
+
 // Tag Char
 const TAG_CHR = "@";
 // STag Char
 const STAG_CHR = "_";
+
+// Tags Char
+const TAGS_CHR = ",";
 
 // Sel Type
 const SEL_NON : string = "";    // 不正・指定なし
@@ -26,6 +32,10 @@ const SelTypes = [
     ,
     SEL_SEQ
 ]
+
+const to_Tags = (inTagsString : string) : string[] => {
+    return inTagsString.split(TAGS_CHR);
+}
 
 // Tag判定
 const is_Tag = (inTag : string) : boolean => {
