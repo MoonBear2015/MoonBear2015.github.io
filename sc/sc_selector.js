@@ -1,40 +1,51 @@
 "use strict";
-class ItemSt {
-    constructor(inWord, inPicF, inTagsString) {
-        this.word = inWord;
-        if (inPicF) {
-            this.picF = inPicF;
-        }
-        else {
-            this.picF = undefined;
-        }
-        if (inTagsString) {
-            this.tags = to_Tags(inTagsString);
-        }
-        else {
-            this.tags = undefined;
-        }
-    }
-}
+var SelMode;
+(function (SelMode) {
+    SelMode[SelMode["Seq"] = 0] = "Seq";
+    SelMode[SelMode["Rnd"] = 1] = "Rnd";
+})(SelMode || (SelMode = {}));
 class ItemArraySt {
-    constructor(inItems) {
+    constructor(inItems, inMode) {
         this.items = [];
+        this.idx = -1;
+        if (inMode) {
+            this.mode = inMode;
+        }
+        else {
+            this.mode = SelMode.Seq;
+        }
         if (inItems) {
+            this.add(inItems);
         }
     }
-    Add(inItems) {
+    reset() {
+        this.idx = -1;
+    }
+    next() {
+        if (this.items.length == 0) {
+            return undefined;
+        }
+        if (this.idx < 0 || this.idx >= this.items.length) {
+            this.idx = 0;
+        }
+        else {
+            this.idx++;
+        }
+        return this.items[this.idx];
+    }
+    add(inItems) {
         inItems.forEach(it => {
             this.items.push(it);
         });
     }
-    New() {
+    new() {
         this.items = [];
     }
-    ReNew(inItems) {
-        this.New();
-        this.Add(inItems);
+    reNew(inItems) {
+        this.new();
+        this.add(inItems);
     }
-    Copy() {
+    copy() {
         return new ItemArraySt(this.items);
     }
 }

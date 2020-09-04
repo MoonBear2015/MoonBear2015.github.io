@@ -1,61 +1,85 @@
-interface Item {
-    word : string;
-    picF : string | undefined;    
-    tags : string[] | undefined;
+enum SelectMode {
+    Seq,
+    Rnd
 }
 
-class ItemSt implements Item {
-    public word : string;
-    public picF : string | undefined;
-    public tags : string[] | undefined;
-    constructor(inWord : string,inPicF? : string,inTagsString? : string)
-    {   
-        this.word = inWord;
-        if (inPicF) {
-            this.picF = inPicF;
-        }
-        else {
-            this.picF = undefined;
-        }
-        if (inTagsString) {
-            this.tags = to_Tags(inTagsString);
-        }
-        else {
-            this.tags = undefined;
-        }
-    } 
+interface Item {
+    equal(item : Item) : boolean;
+    Copy() : Item;
 }
 
 interface ItemArray<T extends Item> {
     items : T[];
-    ReNew(in_array : Array<T>): void;
-    Add(in_array : Array<T>): void;
-    Copy() : ItemArray<T>;
+    mode : SelectMode;
+    reset() : void;
+    next() : T | undefined;
+    reNew(in_array : T[]): void;
+    add(in_array : T[]): void;
+    copy() : ItemArray<T>;   
 }
-
 class ItemArraySt<T extends Item> implements ItemArray<T> {
     public items : T[];
-    constructor(inItems? : T[]) {
-        this.items = [];
-        if (inItems) {
+    private idx : number;
+    public mode : SelectMode; 
 
+    constructor(inItems? : T[],inMode? : SelectMode) {
+        this.items = [];
+        this.idx = -1;
+        if (inMode) {
+            this.mode = inMode;
+        } else {
+            this.mode = SelectMode.Seq;
+        }
+        if (inItems) {
+            this.add(inItems);
         }
     }
-    public Add(inItems : T[]) {
+
+    public reset() : void {
+        this.idx = -1;
+    }
+
+    public next() : T | undefined {
+        if (this.items.length == 0) return undefined;
+        switch(this.mode) {
+            case SelectMode.Seq:
+                return this.next_Seq();
+                break;
+        }
+        return undefined;
+    }
+
+    public next_Seq() : T | undefined {
+        if (this.idx < 0 || this.idx >= this.items.length) {
+            this.idx = 0;
+        }
+        else {
+            this.idx++;
+        }
+        return this.items[this.idx];
+    }
+
+    public next_Rnd : T | undefined {
+        return this.items[RanMax()];
+    }
+
+    public add(inItems : T[]) {
         inItems.forEach(it => {
             this.items.push(it);
         }
         );
     }
-    public New() {
+    public new() {
         this.items = [];
     }
-    public ReNew(inItems : T[]) {
-        this.New();
-        this.Add(inItems);
+    public reNew(inItems : T[]) {
+        this.new();
+        this.add(inItems);
     }
-    public Copy() : ItemArray<T> {
+    public copy() : ItemArray<T> {
         return new ItemArraySt<T>(this.items);
     }
-
 }
+
+
+
