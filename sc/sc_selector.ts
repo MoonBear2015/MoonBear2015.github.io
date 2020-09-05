@@ -3,83 +3,112 @@ enum SelectMode {
     Rnd
 }
 
-interface Item {
-    equal(item : Item) : boolean;
-    Copy() : Item;
+interface Itm {
+    equal(itm : Itm) : boolean;
+    Copy() : Itm;
 }
 
-interface ItemArray<T extends Item> {
-    items : T[];
+interface ItmArray<T extends Itm> {
+    itms : T[];
     mode : SelectMode;
+    readonly length : number;
+    clear() : void;
     reset() : void;
     next() : T | undefined;
-    reNew(in_array : T[]): void;
+    update(in_array : T[]): void;
     add(in_array : T[]): void;
-    copy() : ItemArray<T>;   
+    copy() : ItmArray<T>;   
 }
-class ItemArraySt<T extends Item> implements ItemArray<T> {
-    public items : T[];
+class ItmArraySt<T extends Itm> implements ItmArray<T> {
+    public itms : T[];
     private idx : number;
     public mode : SelectMode; 
 
-    constructor(inItems? : T[],inMode? : SelectMode) {
-        this.items = [];
+    constructor(inItms? : T[],inMode? : SelectMode) {
+        this.itms = [];
         this.idx = -1;
         if (inMode) {
             this.mode = inMode;
         } else {
             this.mode = SelectMode.Seq;
         }
-        if (inItems) {
-            this.add(inItems);
+        if (inItms) {
+            this.add(inItms);
         }
     }
 
-    public reset() : void {
+    get length() : number {
+        if (this.itms) return this.itms.length
+        else return 0;
+    }
+
+    public reset = () : void => {
         this.idx = -1;
     }
 
-    public next() : T | undefined {
-        if (this.items.length == 0) return undefined;
+    public next = () : T | undefined => {
+        if (this.itms.length == 0) return undefined;
         switch(this.mode) {
             case SelectMode.Seq:
                 return this.next_Seq();
+                break;
+            case SelectMode.Rnd:
+                return this.next_Rnd();
                 break;
         }
         return undefined;
     }
 
-    public next_Seq() : T | undefined {
-        if (this.idx < 0 || this.idx >= this.items.length) {
+    public next_Seq = () : T | undefined => {
+        if (this.idx < 0 || this.idx >= this.itms.length) {
             this.idx = 0;
         }
         else {
             this.idx++;
         }
-        return this.items[this.idx];
+        return this.itms[this.idx];
     }
 
-    public next_Rnd : T | undefined {
-        return this.items[RanMax()];
+    public next_Rnd = () : T | undefined => {
+        return this.itms[RanMax(this.itms.length)];
     }
 
-    public add(inItems : T[]) {
-        inItems.forEach(it => {
-            this.items.push(it);
+    public add = (inItms : T[]) => {
+        inItms.forEach(it => {
+            this.itms.push(it);
         }
         );
     }
-    public new() {
-        this.items = [];
+
+    public clear = () => {
+        this.itms = [];
     }
-    public reNew(inItems : T[]) {
-        this.new();
-        this.add(inItems);
+
+    public update(inItms : T[]) {
+        this.clear();
+        this.add(inItms);
     }
-    public copy() : ItemArray<T> {
-        return new ItemArraySt<T>(this.items);
+
+    public copy() : ItmArray<T> {
+        return new ItmArraySt<T>(this.itms);
     }
 }
+
+interface Wrd extends Itm {
+    txt : string;
+    picF : string;
+    tags : string;    
+}
+
+interface ItmSelector<T extends Wrd> extends ItmArray<T> {
+
+}
+
+class ItmSelectorSt<T extends Wrd> implements ItmSelector<T> {
+
+} 
+
+
 
 
 

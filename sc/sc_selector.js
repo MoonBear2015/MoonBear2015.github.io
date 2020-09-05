@@ -1,51 +1,72 @@
 "use strict";
-var SelMode;
-(function (SelMode) {
-    SelMode[SelMode["Seq"] = 0] = "Seq";
-    SelMode[SelMode["Rnd"] = 1] = "Rnd";
-})(SelMode || (SelMode = {}));
-class ItemArraySt {
-    constructor(inItems, inMode) {
-        this.items = [];
+var SelectMode;
+(function (SelectMode) {
+    SelectMode[SelectMode["Seq"] = 0] = "Seq";
+    SelectMode[SelectMode["Rnd"] = 1] = "Rnd";
+})(SelectMode || (SelectMode = {}));
+class ItmArraySt {
+    constructor(inItms, inMode) {
+        this.reset = () => {
+            this.idx = -1;
+        };
+        this.next = () => {
+            if (this.itms.length == 0)
+                return undefined;
+            switch (this.mode) {
+                case SelectMode.Seq:
+                    return this.next_Seq();
+                    break;
+                case SelectMode.Rnd:
+                    return this.next_Rnd();
+                    break;
+            }
+            return undefined;
+        };
+        this.next_Seq = () => {
+            if (this.idx < 0 || this.idx >= this.itms.length) {
+                this.idx = 0;
+            }
+            else {
+                this.idx++;
+            }
+            return this.itms[this.idx];
+        };
+        this.next_Rnd = () => {
+            return this.itms[RanMax(this.itms.length)];
+        };
+        this.add = (inItms) => {
+            inItms.forEach(it => {
+                this.itms.push(it);
+            });
+        };
+        this.clear = () => {
+            this.itms = [];
+        };
+        this.itms = [];
         this.idx = -1;
         if (inMode) {
             this.mode = inMode;
         }
         else {
-            this.mode = SelMode.Seq;
+            this.mode = SelectMode.Seq;
         }
-        if (inItems) {
-            this.add(inItems);
+        if (inItms) {
+            this.add(inItms);
         }
     }
-    reset() {
-        this.idx = -1;
+    get length() {
+        if (this.itms)
+            return this.itms.length;
+        else
+            return 0;
     }
-    next() {
-        if (this.items.length == 0) {
-            return undefined;
-        }
-        if (this.idx < 0 || this.idx >= this.items.length) {
-            this.idx = 0;
-        }
-        else {
-            this.idx++;
-        }
-        return this.items[this.idx];
-    }
-    add(inItems) {
-        inItems.forEach(it => {
-            this.items.push(it);
-        });
-    }
-    new() {
-        this.items = [];
-    }
-    reNew(inItems) {
-        this.new();
-        this.add(inItems);
+    update(inItms) {
+        this.clear();
+        this.add(inItms);
     }
     copy() {
-        return new ItemArraySt(this.items);
+        return new ItmArraySt(this.itms);
     }
+}
+class ItmSelectorSt {
 }
