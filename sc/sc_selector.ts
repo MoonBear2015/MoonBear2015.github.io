@@ -1,6 +1,9 @@
 enum SelectMode {
-    Seq,
+    Seq
+    ,
     Rnd
+    ,
+    Lck
 }
 
 interface Itm {
@@ -10,28 +13,18 @@ interface Itm {
 
 interface ItmArray<T extends Itm> {
     itms : T[];
-    mode : SelectMode;
     readonly length : number;
     clear() : void;
-    reset() : void;
-    next() : T | undefined;
     update(in_array : T[]): void;
     add(in_array : T[]): void;
     copy() : ItmArray<T>;   
 }
+
 class ItmArraySt<T extends Itm> implements ItmArray<T> {
     public itms : T[];
-    private idx : number;
-    public mode : SelectMode; 
 
-    constructor(inItms? : T[],inMode? : SelectMode) {
+    constructor(inItms? : T[]) {
         this.itms = [];
-        this.idx = -1;
-        if (inMode) {
-            this.mode = inMode;
-        } else {
-            this.mode = SelectMode.Seq;
-        }
         if (inItms) {
             this.add(inItms);
         }
@@ -40,6 +33,51 @@ class ItmArraySt<T extends Itm> implements ItmArray<T> {
     get length() : number {
         if (this.itms) return this.itms.length
         else return 0;
+    }
+
+    public clear = () => {
+        this.itms = [];
+    }
+    
+    public add = (inItms : T[]) => {
+        inItms.forEach(it => {
+            this.itms.push(it);
+        }
+        );
+    }
+
+    public update(inItms : T[]) {
+        this.clear();
+        this.add(inItms);
+    }
+
+    public copy() : ItmArray<T> {
+        return new ItmArraySt<T>(this.itms);
+    }
+}
+
+interface ItmSelector<T extends Itm> extends ItmArray<T> {
+    mode : SelectMode;
+    reset() : void;
+    next() : T | undefined;
+}
+
+class ItmSelectorSt<T extends Itm> 
+    extends ItmArraySt<T> 
+    implements ItmSelector<T> 
+{
+    private idx : number;
+    public mode : SelectMode; 
+
+    constructor(inItms? : T[],inMode? : SelectMode) {
+        super(inItms);
+        this.idx = -1;
+        if (inMode) {
+            this.mode = inMode;
+        } else {
+            this.mode = SelectMode.Seq;
+        }
+
     }
 
     public reset = () : void => {
@@ -73,42 +111,20 @@ class ItmArraySt<T extends Itm> implements ItmArray<T> {
         return this.itms[RanMax(this.itms.length)];
     }
 
-    public add = (inItms : T[]) => {
-        inItms.forEach(it => {
-            this.itms.push(it);
+    public next_Lck = () : T | undefined => {
+        if (this.idx == -1) {
+            this.idx = RanMax(this.itms.length);
         }
-        );
+        return this.itms[this.idx];
     }
-
-    public clear = () => {
-        this.itms = [];
-    }
-
-    public update(inItms : T[]) {
-        this.clear();
-        this.add(inItms);
-    }
-
-    public copy() : ItmArray<T> {
-        return new ItmArraySt<T>(this.itms);
-    }
+    
 }
 
 interface Wrd extends Itm {
     txt : string;
-    picF : string;
     tags : string;    
+    picF : string;
 }
-
-interface ItmSelector<T extends Wrd> extends ItmArray<T> {
-
-}
-
-class ItmSelectorSt<T extends Wrd> implements ItmSelector<T> {
-
-} 
-
-
 
 
 

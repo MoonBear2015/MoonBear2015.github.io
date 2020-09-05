@@ -3,9 +3,40 @@ var SelectMode;
 (function (SelectMode) {
     SelectMode[SelectMode["Seq"] = 0] = "Seq";
     SelectMode[SelectMode["Rnd"] = 1] = "Rnd";
+    SelectMode[SelectMode["Lck"] = 2] = "Lck";
 })(SelectMode || (SelectMode = {}));
 class ItmArraySt {
+    constructor(inItms) {
+        this.clear = () => {
+            this.itms = [];
+        };
+        this.add = (inItms) => {
+            inItms.forEach(it => {
+                this.itms.push(it);
+            });
+        };
+        this.itms = [];
+        if (inItms) {
+            this.add(inItms);
+        }
+    }
+    get length() {
+        if (this.itms)
+            return this.itms.length;
+        else
+            return 0;
+    }
+    update(inItms) {
+        this.clear();
+        this.add(inItms);
+    }
+    copy() {
+        return new ItmArraySt(this.itms);
+    }
+}
+class ItmSelectorSt extends ItmArraySt {
     constructor(inItms, inMode) {
+        super(inItms);
         this.reset = () => {
             this.idx = -1;
         };
@@ -34,15 +65,12 @@ class ItmArraySt {
         this.next_Rnd = () => {
             return this.itms[RanMax(this.itms.length)];
         };
-        this.add = (inItms) => {
-            inItms.forEach(it => {
-                this.itms.push(it);
-            });
+        this.next_Lck = () => {
+            if (this.idx == -1) {
+                this.idx = RanMax(this.itms.length);
+            }
+            return this.itms[this.idx];
         };
-        this.clear = () => {
-            this.itms = [];
-        };
-        this.itms = [];
         this.idx = -1;
         if (inMode) {
             this.mode = inMode;
@@ -50,23 +78,5 @@ class ItmArraySt {
         else {
             this.mode = SelectMode.Seq;
         }
-        if (inItms) {
-            this.add(inItms);
-        }
     }
-    get length() {
-        if (this.itms)
-            return this.itms.length;
-        else
-            return 0;
-    }
-    update(inItms) {
-        this.clear();
-        this.add(inItms);
-    }
-    copy() {
-        return new ItmArraySt(this.itms);
-    }
-}
-class ItmSelectorSt {
 }
