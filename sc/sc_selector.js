@@ -80,3 +80,14 @@ class ItmSelectorSt extends ItmArraySt {
         }
     }
 }
+class WrdSt {
+    constructor(inTxt, inTags, inPic) {
+        this.txt = inTxt;
+        if (inTags) {
+            this.tags = inTags;
+        }
+        if (inPic) {
+            this.pic = inPic;
+        }
+    }
+}

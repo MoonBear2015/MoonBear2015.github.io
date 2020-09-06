@@ -1,6 +1,6 @@
 function set_news()
 {
-    set_header_menu(0);
+    set_index_header_menu(0);
 
     scrollTo(0,0);
 

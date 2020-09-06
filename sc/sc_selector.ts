@@ -123,8 +123,25 @@ class ItmSelectorSt<T extends Itm>
 interface Wrd extends Itm {
     txt : string;
     tags : string;    
-    picF : string;
+    pic : string;
 }
 
+class WrdSt implements Wrd {
+    public txt : string;
+    public tags : string;
+    public pic : string;
+
+    constructor(inTxt : string,inTags? : string,inPic? : string) {
+        this.txt = inTxt;
+        this.tags = "";
+        this.pic = "";
+        if (inTags) {
+            this.tags = inTags;
+        }
+        if (inPic) {
+            this.pic = inPic;
+        }
+    }
+}
 
 
