@@ -8,7 +8,7 @@ enum SelectMode {
 
 interface Itm {
     equal(itm : Itm) : boolean;
-    Copy() : Itm;
+    copy() : Itm;
 }
 
 interface ItmArray<T extends Itm> {
@@ -142,6 +142,13 @@ class WrdSt implements Wrd {
             this.pic = inPic;
         }
     }
+
+    public equal = (inWrd : Wrd) : boolean => (this.txt === inWrd.txt);
+
+    public copy = () : Wrd => new WrdSt(this.txt,this.tags,this.pic);
+
+
+
 }
 
 

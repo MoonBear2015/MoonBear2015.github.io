@@ -1,18 +1,18 @@
 //------------------------------------ test
 interface TestItem {
-    ToString() : string;
+    toString() : string;
 }
 
-function testItems_string(in_tests : Array<TestItem>) : string
+function TestItems_String(in_tests : TestItem[]) : string
 {
     let str = '';
     in_tests.forEach(test => {
-        str += test.ToString() + '\r\n';
+        str += test.toString() + '\r\n';
     });
     return str;
 }
 
-function string_html(in_string : string) : string
+function cr_br(in_string : string) : string
 {
     let result = in_string;
     while(true)
@@ -23,14 +23,14 @@ function string_html(in_string : string) : string
     return result;
 }
 
-function testItems_html(in_tests : Array<TestItem>) : string
+function TestItems_html(in_tests : TestItem[]) : string
 {
     let str = '';
     str += '<div>';
     str += '----------------<br>';
 
     in_tests.forEach(test => {
-        str += test.ToString() + '<br>';
+        str += test.toString() + '<br>';
     });
 
     str += '----------------<br>';
@@ -40,11 +40,11 @@ function testItems_html(in_tests : Array<TestItem>) : string
 }
 
 
-function testItems_alert(in_tests : Array<TestItem>)
+function TestItems_alert(in_tests : Array<TestItem>)
 {
     let str = '';
     in_tests.forEach(test => {
-        str += test.ToString() + '\r\n';
+        str += test.toString() + '\r\n';
     });
     alert(str);
 }
@@ -78,7 +78,7 @@ class AB implements TestItem {
     )
     {}
 
-    ToString() : string {
+    toString() : string {
         return '(' + this.A + ',' + this.B + ')';
     }
 }

@@ -82,7 +82,11 @@ class ItmSelectorSt extends ItmArraySt {
 }
 class WrdSt {
     constructor(inTxt, inTags, inPic) {
+        this.equal = (inWrd) => (this.txt === inWrd.txt);
+        this.copy = () => new WrdSt(this.txt, this.tags, this.pic);
         this.txt = inTxt;
+        this.tags = "";
+        this.pic = "";
         if (inTags) {
             this.tags = inTags;
         }

@@ -1,12 +1,12 @@
 "use strict";
-function testItems_string(in_tests) {
+function TestItems_String(in_tests) {
     let str = '';
     in_tests.forEach(test => {
-        str += test.ToString() + '\r\n';
+        str += test.toString() + '\r\n';
     });
     return str;
 }
-function string_html(in_string) {
+function cr_br(in_string) {
     let result = in_string;
     while (true) {
         if (result.indexOf('\r\n') == -1)
@@ -15,21 +15,21 @@ function string_html(in_string) {
     }
     return result;
 }
-function testItems_html(in_tests) {
+function TestItems_html(in_tests) {
     let str = '';
     str += '<div>';
     str += '----------------<br>';
     in_tests.forEach(test => {
-        str += test.ToString() + '<br>';
+        str += test.toString() + '<br>';
     });
     str += '----------------<br>';
     str += '</div>';
     return str;
 }
-function testItems_alert(in_tests) {
+function TestItems_alert(in_tests) {
     let str = '';
     in_tests.forEach(test => {
-        str += test.ToString() + '\r\n';
+        str += test.toString() + '\r\n';
     });
     alert(str);
 }
@@ -54,7 +54,7 @@ class AB {
         this.A = A;
         this.B = B;
     }
-    ToString() {
+    toString() {
         return '(' + this.A + ',' + this.B + ')';
     }
 }
