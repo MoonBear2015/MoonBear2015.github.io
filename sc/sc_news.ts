@@ -4,21 +4,22 @@ function set_news()
 
     scrollTo(0,0);
 
-    let html : string = '';
-    html += '<div id="main_title">'
-    html += '<h2>';
-    html += 'NEWS';
-    html += '<small>';
-    html += ' N0.00';
-    html += '</small>';
-    html += '</h2>';
-    html += '</div>';
+    let html : string = "";
+    html += "<div id='main_title'>"
+    html += "<h2>";
+    html += "NEWS";
+    html += "<small>";
+    html += " N0.01";
+    html += "</small>";
+    html += "</h2>";
+    html += "</div>";
 
-    // for(let i = 0; i < 20; i++){
-    //     html += '<p>[' + i.toString() + ']</p>' + make_news();
-    // }
+    for(let i = 0; i < 20; i++){
+        html += "<p>[" + i.toString() + "]</p>";
 
-    set_html('index_main',html);
+    }
+
+    set_html("index_main",html);
 
 }
 
