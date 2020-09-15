@@ -7,12 +7,15 @@ function set_news() {
     html += "<h2>";
     html += "NEWS";
     html += "<small>";
-    html += " N0.01";
+    html += " N0.02";
     html += "</small>";
     html += "</h2>";
     html += "</div>";
+    html += "<br>";
     for (let i = 0; i < 20; i++) {
         html += "<p>[" + i.toString() + "]</p>";
+        html += "<br>";
+        html += "<h3>日本沈没</h3>";
     }
     set_html("index_main", html);
 }
