@@ -11,6 +11,12 @@ interface Itm {
     copy() : Itm;
 }
 
+class ItmSt implements Itm {
+    constructor() {}
+    public equal = (itm : Itm) : boolean => true;
+    public copy = () : Itm => new ItmSt(); 
+}
+
 interface ItmArray<T extends Itm> {
     itms : T[];
     readonly length : number;
@@ -35,9 +41,7 @@ class ItmArraySt<T extends Itm> implements ItmArray<T> {
         else return 0;
     }
 
-    public clear = () => {
-        this.itms = [];
-    }
+    public clear = () => this.itms = [];
     
     public add = (inItms : T[]) => {
         inItms.forEach(it => {
@@ -46,14 +50,12 @@ class ItmArraySt<T extends Itm> implements ItmArray<T> {
         );
     }
 
-    public update(inItms : T[]) {
+    public update = (inItms : T[]) => {
         this.clear();
         this.add(inItms);
     }
 
-    public copy() : ItmArray<T> {
-        return new ItmArraySt<T>(this.itms);
-    }
+    public copy = () : ItmArray<T> => new ItmArraySt<T>(this.itms);
 }
 
 interface ItmSelector<T extends Itm> extends ItmArray<T> {
@@ -122,33 +124,27 @@ class ItmSelectorSt<T extends Itm>
 
 interface Wrd extends Itm {
     txt : string;
-    tags : string;    
-    pic : string;
+    pic : string | undefined;
 }
 
 class WrdSt implements Wrd {
     public txt : string;
-    public tags : string;
-    public pic : string;
+    public pic : string | undefined;
 
-    constructor(inTxt : string,inTags? : string,inPic? : string) {
+    constructor(inTxt : string,inPic? : string) {
         this.txt = inTxt;
-        this.tags = "";
         this.pic = "";
-        if (inTags) {
-            this.tags = inTags;
-        }
         if (inPic) {
             this.pic = inPic;
+        }
+        else {
+            this.pic = undefined;
         }
     }
 
     public equal = (inWrd : Wrd) : boolean => (this.txt === inWrd.txt);
 
-    public copy = () : Wrd => new WrdSt(this.txt,this.tags,this.pic);
-
-
-
+    public copy = () : Wrd => new WrdSt(this.txt,this.pic);
 }
 
 

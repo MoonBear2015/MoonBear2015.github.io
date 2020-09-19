@@ -33,8 +33,16 @@ const SelTypes = [
     SEL_SEQ
 ]
 
-const to_Tags = (inTagsString : string) : string[] => {
-    return inTagsString.split(TAGS_CHR);
+const to_Tags = (inTagsString : string) : string[] => { 
+    let tags : string[] = inTagsString.split(TAGS_CHR);
+    let results : string[] = [];
+    tags.forEach(tag => {
+        if (is_Tag(tag)) {
+            results.push(tag);
+        }
+    }
+    );
+    return results;
 }
 
 // Tag判定

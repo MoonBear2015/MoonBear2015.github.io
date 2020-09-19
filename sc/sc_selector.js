@@ -5,16 +5,25 @@ var SelectMode;
     SelectMode[SelectMode["Rnd"] = 1] = "Rnd";
     SelectMode[SelectMode["Lck"] = 2] = "Lck";
 })(SelectMode || (SelectMode = {}));
+class ItmSt {
+    constructor() {
+        this.equal = (itm) => true;
+        this.copy = () => new ItmSt();
+    }
+}
 class ItmArraySt {
     constructor(inItms) {
-        this.clear = () => {
-            this.itms = [];
-        };
+        this.clear = () => this.itms = [];
         this.add = (inItms) => {
             inItms.forEach(it => {
                 this.itms.push(it);
             });
         };
+        this.update = (inItms) => {
+            this.clear();
+            this.add(inItms);
+        };
+        this.copy = () => new ItmArraySt(this.itms);
         this.itms = [];
         if (inItms) {
             this.add(inItms);
@@ -25,13 +34,6 @@ class ItmArraySt {
             return this.itms.length;
         else
             return 0;
-    }
-    update(inItms) {
-        this.clear();
-        this.add(inItms);
-    }
-    copy() {
-        return new ItmArraySt(this.itms);
     }
 }
 class ItmSelectorSt extends ItmArraySt {
@@ -81,17 +83,16 @@ class ItmSelectorSt extends ItmArraySt {
     }
 }
 class WrdSt {
-    constructor(inTxt, inTags, inPic) {
+    constructor(inTxt, inPic) {
         this.equal = (inWrd) => (this.txt === inWrd.txt);
-        this.copy = () => new WrdSt(this.txt, this.tags, this.pic);
+        this.copy = () => new WrdSt(this.txt, this.pic);
         this.txt = inTxt;
-        this.tags = "";
         this.pic = "";
-        if (inTags) {
-            this.tags = inTags;
-        }
         if (inPic) {
             this.pic = inPic;
+        }
+        else {
+            this.pic = undefined;
         }
     }
 }

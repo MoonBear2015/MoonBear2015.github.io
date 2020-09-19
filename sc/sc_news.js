@@ -7,11 +7,15 @@ const set_news = () => {
     html += "<h2>";
     html += "NEWS";
     html += "<small>";
-    html += " N0.05";
+    html += " N0.06";
     html += "</small>";
     html += "</h2>";
     html += "</div>";
     html += "<br>";
+    let tagst = "@a@,@b@,@c@";
+    let tags = to_Tags(tagst);
+    let test = TestItems_html(tags);
+    html += test;
     for (let i = 0; i < 20; i++) {
         html += "<p>[" + i.toString() + "]</p>";
         html += "<div id='box'>";
@@ -43,7 +47,6 @@ const replace_string = (inStr, inKey, inDic) => {
         if (cnt > 1000)
             break;
     }
-    alert(result);
     return result;
 };
 const dic_place = [

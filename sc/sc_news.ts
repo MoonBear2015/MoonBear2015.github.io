@@ -9,11 +9,17 @@ const set_news = () =>
     html += "<h2>";
     html += "NEWS";
     html += "<small>";
-    html += " N0.05";
+    html += " N0.06";
     html += "</small>";
     html += "</h2>";
     html += "</div>";
     html += "<br>";
+
+    
+    let tagst : string = "@a@,@b@,@c@";
+    let tags = to_Tags(tagst);
+    let test = TestItems_html(tags);
+    html += test;
 
     for(let i = 0; i < 20; i++){
         html += "<p>[" + i.toString() + "]</p>";
@@ -37,7 +43,7 @@ const set_news = () =>
 
 }
 
-const replace_string = (inStr : string,inKey : string,inDic : string[])
+const replace_string = (inStr : string, inKey : string, inDic : string[])
  : string => 
 {
     let result : string = inStr;
@@ -49,7 +55,6 @@ const replace_string = (inStr : string,inKey : string,inDic : string[])
         cnt++;
         if (cnt > 1000) break;
     }
-    alert(result);
     return result;
 }
 
