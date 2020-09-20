@@ -9,6 +9,7 @@ class ItmSt {
     constructor() {
         this.equal = (itm) => true;
         this.copy = () => new ItmSt();
+        this.toString = () => this.toString();
     }
 }
 class ItmArraySt {
@@ -24,6 +25,18 @@ class ItmArraySt {
             this.add(inItms);
         };
         this.copy = () => new ItmArraySt(this.itms);
+        this.toString = () => {
+            let result = "";
+            let cnt = 0;
+            this.itms.forEach(itm => {
+                result += "[" + cnt.toString() + "] ";
+                result += itm.toString();
+                result += "\r\n";
+                cnt++;
+            });
+            result += "*** count:" + cnt.toString();
+            return result;
+        };
         this.itms = [];
         if (inItms) {
             this.add(inItms);
@@ -36,8 +49,20 @@ class ItmArraySt {
             return 0;
     }
 }
+class ItmDictionarySt extends ItmArraySt {
+    constructor(inTag, inItms) {
+        super(inItms);
+        this.copy = () => new ItmDictionarySt(this.tag, this.itms);
+        if (inTag) {
+            this.tag = inTag;
+        }
+        else {
+            this.tag = undefined;
+        }
+    }
+}
 class ItmSelectorSt extends ItmArraySt {
-    constructor(inItms, inMode) {
+    constructor(inItms, inTag, inMode) {
         super(inItms);
         this.reset = () => {
             this.idx = -1;
@@ -51,6 +76,9 @@ class ItmSelectorSt extends ItmArraySt {
                     break;
                 case SelectMode.Rnd:
                     return this.next_Rnd();
+                    break;
+                case SelectMode.Lck:
+                    return this.next_Lck();
                     break;
             }
             return undefined;
@@ -74,6 +102,12 @@ class ItmSelectorSt extends ItmArraySt {
             return this.itms[this.idx];
         };
         this.idx = -1;
+        if (inTag) {
+            this.tag = inTag;
+        }
+        else {
+            this.tag = "";
+        }
         if (inMode) {
             this.mode = inMode;
         }
@@ -82,11 +116,34 @@ class ItmSelectorSt extends ItmArraySt {
         }
     }
 }
-class WrdSt {
-    constructor(inTxt, inPic) {
-        this.equal = (inWrd) => (this.txt === inWrd.txt);
-        this.copy = () => new WrdSt(this.txt, this.pic);
-        this.txt = inTxt;
+class TxtSt extends ItmSt {
+    constructor(inTxt) {
+        super();
+        this.equal = (inItm) => {
+            if (typeof (inItm) == typeof (this)) {
+                let checkItm = inItm;
+                return checkItm.txt == this.txt;
+            }
+            return false;
+        };
+        this.toString = () => this.txt;
+        this.txt = "";
+        if (inTxt)
+            this.txt = inTxt;
+    }
+}
+class WrdSt extends TxtSt {
+    constructor(inTxt, inTag, inPic) {
+        super(inTxt);
+        this.equal = (inItm) => {
+            if (typeof (inItm) == typeof (this)) {
+                let checkItm = inItm;
+                return (checkItm.txt == this.txt) && (checkItm.tag == this.tag);
+            }
+            return false;
+        };
+        this.copy = () => new WrdSt(this.txt, this.tag, this.pic);
+        this.tag = inTag;
         this.pic = "";
         if (inPic) {
             this.pic = inPic;
@@ -94,5 +151,13 @@ class WrdSt {
         else {
             this.pic = undefined;
         }
+    }
+}
+class DictionaryBase {
+    constructor() {
+        this.Adddictionary = (inTag) => {
+            this.dictionary[inTag] = new ItmDictionarySt(inTag);
+        };
+        this.dictionary = {};
     }
 }

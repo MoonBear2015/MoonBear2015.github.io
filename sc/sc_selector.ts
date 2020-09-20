@@ -7,14 +7,16 @@ enum SelectMode {
 }
 
 interface Itm {
-    equal(itm : Itm) : boolean;
+    equal(inItm : any) : boolean;
     copy() : Itm;
+    toString() : string;    
 }
 
 class ItmSt implements Itm {
     constructor() {}
-    public equal = (itm : Itm) : boolean => true;
-    public copy = () : Itm => new ItmSt(); 
+    public equal = (itm : any) : boolean => true;
+    public copy = () : Itm => new ItmSt();
+    public toString = () : string => this.toString();
 }
 
 interface ItmArray<T extends Itm> {
@@ -56,10 +58,45 @@ class ItmArraySt<T extends Itm> implements ItmArray<T> {
     }
 
     public copy = () : ItmArray<T> => new ItmArraySt<T>(this.itms);
+
+    public toString = () : string => {
+        let result : string = "";
+        let cnt = 0;
+        this.itms.forEach(itm => {
+            result += "[" + cnt.toString() + "] ";
+            result += itm.toString();
+            result += "\r\n";
+            cnt++;
+        });
+        result += "*** count:" + cnt.toString();
+        return result;
+    }
 }
+
+interface ItmDictionary<T extends Wrd> extends ItmArray<T> {
+    tag : string | undefined;    
+}
+class ItmDictionarySt<T extends Wrd> extends ItmArraySt<T> implements ItmDictionary<T>
+{
+    public tag: string | undefined;
+    constructor(inTag?:string,inItms?: T[])
+    {
+        super(inItms);
+        if (inTag) {
+            this.tag = inTag;
+        }
+        else {
+            this.tag = undefined;
+        }
+    }
+    public copy = () : ItmDictionary<T> => new ItmDictionarySt<T>(this.tag,this.itms);
+
+}
+
 
 interface ItmSelector<T extends Itm> extends ItmArray<T> {
     mode : SelectMode;
+    tag :   string;
     reset() : void;
     next() : T | undefined;
 }
@@ -69,11 +106,19 @@ class ItmSelectorSt<T extends Itm>
     implements ItmSelector<T> 
 {
     private idx : number;
-    public mode : SelectMode; 
+    public mode : SelectMode;
+    public tag : string; 
 
-    constructor(inItms? : T[],inMode? : SelectMode) {
+    constructor(inItms? : T[],inTag? : string,inMode? : SelectMode) {
         super(inItms);
         this.idx = -1;
+        if (inTag) {
+            this.tag = inTag;
+        } 
+        else {
+            this.tag = "";
+        }
+
         if (inMode) {
             this.mode = inMode;
         } else {
@@ -94,6 +139,9 @@ class ItmSelectorSt<T extends Itm>
                 break;
             case SelectMode.Rnd:
                 return this.next_Rnd();
+                break;
+            case SelectMode.Lck:
+                return this.next_Lck();
                 break;
         }
         return undefined;
@@ -122,17 +170,39 @@ class ItmSelectorSt<T extends Itm>
     
 }
 
-interface Wrd extends Itm {
+interface Txt extends Itm {
     txt : string;
+}
+class TxtSt extends ItmSt implements Txt {
+    public txt : string;
+    constructor(inTxt? : string) {
+        super();
+        this.txt = "";
+        if (inTxt) this.txt = inTxt;
+    }
+    public equal = (inItm : any) :boolean => {
+        if (typeof(inItm) == typeof(this)) {
+            let checkItm = inItm as Txt;
+            return checkItm.txt == this.txt;
+        }
+        return false;
+    }
+
+    public toString = () : string => this.txt;
+} 
+
+interface Wrd extends Txt {
+    tag : string;
     pic : string | undefined;
 }
 
-class WrdSt implements Wrd {
-    public txt : string;
+class WrdSt extends TxtSt implements Wrd {
+    public tag : string;
     public pic : string | undefined;
 
-    constructor(inTxt : string,inPic? : string) {
-        this.txt = inTxt;
+    constructor(inTxt : string,inTag : string,inPic? : string) {
+        super(inTxt);
+        this.tag = inTag;
         this.pic = "";
         if (inPic) {
             this.pic = inPic;
@@ -142,9 +212,31 @@ class WrdSt implements Wrd {
         }
     }
 
-    public equal = (inWrd : Wrd) : boolean => (this.txt === inWrd.txt);
+    public equal = (inItm : any) : boolean => {
+        if (typeof(inItm) == typeof(this)) {
+            let checkItm = inItm as Wrd;
+            return (checkItm.txt == this.txt) && (checkItm.tag == this.tag);
+        }
+        return false;
+    }
 
-    public copy = () : Wrd => new WrdSt(this.txt,this.pic);
+    public copy = () : Wrd => new WrdSt(this.txt,this.tag,this.pic);
 }
+
+class DictionaryBase {
+    public dictionary : { [key:string] : ItmDictionarySt<Wrd>};
+
+    constructor() {
+        this.dictionary = {};        
+    }
+
+    public Adddictionary = (inTag : string) => {
+        this.dictionary[inTag] = new ItmDictionarySt<Wrd>(inTag);
+    }
+    
+
+}
+
+
 
 

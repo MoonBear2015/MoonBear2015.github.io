@@ -7,15 +7,23 @@ const set_news = () => {
     html += "<h2>";
     html += "NEWS";
     html += "<small>";
-    html += " N0.06";
+    html += " N0.08";
     html += "</small>";
     html += "</h2>";
     html += "</div>";
     html += "<br>";
-    let tagst = "@a@,@b@,@c@";
-    let tags = to_Tags(tagst);
-    let test = TestItems_html(tags);
-    html += test;
+    let ary = new ItmArraySt(dic_country);
+    html += cr_br(ary.toString());
+    html += "<br>";
+    html += "---------------<br>";
+    let txtA = new TxtSt("111");
+    let txtB = new TxtSt("112");
+    html += txtA.toString() + "<br>";
+    html += txtB.toString() + "<br>";
+    html += txtA.equal(new WrdSt("111", "aa"));
+    html += new WrdSt("aaa", "aa").equal(new TxtSt("aaa"));
+    html += "<br>";
+    html += "---------------<br>";
     for (let i = 0; i < 20; i++) {
         html += "<p>[" + i.toString() + "]</p>";
         html += "<div id='box'>";
@@ -49,6 +57,10 @@ const replace_string = (inStr, inKey, inDic) => {
     }
     return result;
 };
+const dic_country = [
+    new TxtSt("日本"),
+    new TxtSt("アメリカ")
+];
 const dic_place = [
     "日本",
     "アメリカ"
