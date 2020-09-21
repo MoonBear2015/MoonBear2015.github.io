@@ -181,7 +181,7 @@ class TxtSt extends ItmSt implements Txt {
         if (inTxt) this.txt = inTxt;
     }
     public equal = (inItm : any) :boolean => {
-        if (typeof(inItm) == typeof(this)) {
+        if (inItm instanceof TxtSt) {
             let checkItm = inItm as Txt;
             return checkItm.txt == this.txt;
         }
@@ -213,7 +213,7 @@ class WrdSt extends TxtSt implements Wrd {
     }
 
     public equal = (inItm : any) : boolean => {
-        if (typeof(inItm) == typeof(this)) {
+        if (inItm instanceof WrdSt) {
             let checkItm = inItm as Wrd;
             return (checkItm.txt == this.txt) && (checkItm.tag == this.tag);
         }

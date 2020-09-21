@@ -9,7 +9,7 @@ const set_news = () =>
     html += "<h2>";
     html += "NEWS";
     html += "<small>";
-    html += " N0.08";
+    html += " N0.09";
     html += "</small>";
     html += "</h2>";
     html += "</div>";
@@ -22,10 +22,15 @@ const set_news = () =>
     html += "---------------<br>";
     let txtA = new TxtSt("111");
     let txtB = new TxtSt("112");
-    html += txtA.toString() + "<br>";
-    html += txtB.toString() + "<br>";
-    html += txtA.equal(new WrdSt("111","aa"));
-    html += new WrdSt("aaa","aa").equal(new TxtSt("aaa"));
+    // html += txtA.toString() + "<br>";
+    // html += txtB.toString() + "<br>";
+    // html += txtA.equal(new WrdSt("111","aa"));
+    html += "<br>";
+    html += "W::W =" + new WrdSt("aaa","aa").equal(new WrdSt("aaa","aa"));
+    html += "<br>";
+    html += "T::W =" + new TxtSt("aaa").equal(new WrdSt("aaa","aa"));
+    html += "<br>";
+    html += "W::T =" + new WrdSt("aaa","aa").equal(new TxtSt("aaa"));
     html += "<br>";
     html += "---------------<br>";
 

@@ -120,7 +120,7 @@ class TxtSt extends ItmSt {
     constructor(inTxt) {
         super();
         this.equal = (inItm) => {
-            if (typeof (inItm) == typeof (this)) {
+            if (inItm instanceof TxtSt) {
                 let checkItm = inItm;
                 return checkItm.txt == this.txt;
             }
@@ -136,7 +136,7 @@ class WrdSt extends TxtSt {
     constructor(inTxt, inTag, inPic) {
         super(inTxt);
         this.equal = (inItm) => {
-            if (typeof (inItm) == typeof (this)) {
+            if (inItm instanceof WrdSt) {
                 let checkItm = inItm;
                 return (checkItm.txt == this.txt) && (checkItm.tag == this.tag);
             }
