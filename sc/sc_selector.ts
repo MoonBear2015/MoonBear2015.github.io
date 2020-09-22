@@ -23,8 +23,9 @@ interface ItmArray<T extends Itm> {
     itms : T[];
     readonly length : number;
     clear() : void;
-    update(in_array : T[]): void;
-    add(in_array : T[]): void;
+    add(inItm : T): void;
+    renew(in_array : T[]): void;
+    append(in_array : T[]): void;
     copy() : ItmArray<T>;   
 }
 
@@ -34,7 +35,7 @@ class ItmArraySt<T extends Itm> implements ItmArray<T> {
     constructor(inItms? : T[]) {
         this.itms = [];
         if (inItms) {
-            this.add(inItms);
+            this.append(inItms);
         }
     }
 
@@ -44,17 +45,19 @@ class ItmArraySt<T extends Itm> implements ItmArray<T> {
     }
 
     public clear = () => this.itms = [];
-    
-    public add = (inItms : T[]) => {
+
+    public add = (inItm : T) => this.itms.push(inItm);
+
+    public append = (inItms : T[]) => {
         inItms.forEach(it => {
             this.itms.push(it);
         }
         );
     }
 
-    public update = (inItms : T[]) => {
+    public renew = (inItms : T[]) => {
         this.clear();
-        this.add(inItms);
+        this.append(inItms);
     }
 
     public copy = () : ItmArray<T> => new ItmArraySt<T>(this.itms);
@@ -233,8 +236,6 @@ class DictionaryBase {
     public Adddictionary = (inTag : string) => {
         this.dictionary[inTag] = new ItmDictionarySt<Wrd>(inTag);
     }
-    
-
 }
 
 

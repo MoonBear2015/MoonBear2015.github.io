@@ -15,14 +15,15 @@ class ItmSt {
 class ItmArraySt {
     constructor(inItms) {
         this.clear = () => this.itms = [];
-        this.add = (inItms) => {
+        this.add = (inItm) => this.itms.push(inItm);
+        this.append = (inItms) => {
             inItms.forEach(it => {
                 this.itms.push(it);
             });
         };
-        this.update = (inItms) => {
+        this.renew = (inItms) => {
             this.clear();
-            this.add(inItms);
+            this.append(inItms);
         };
         this.copy = () => new ItmArraySt(this.itms);
         this.toString = () => {
@@ -39,7 +40,7 @@ class ItmArraySt {
         };
         this.itms = [];
         if (inItms) {
-            this.add(inItms);
+            this.append(inItms);
         }
     }
     get length() {
