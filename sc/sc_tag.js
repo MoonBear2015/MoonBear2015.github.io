@@ -1,12 +1,13 @@
 "use strict";
-// Tag = "@ABC@"            タグ
+// Tag = "@ABC@"              タグ
 // STag = "@R_ABC@"         セルタグ（特殊選択指定付きタグ）
 // TAG_CHR = "@"            タグ認識文字
 // STAG_CHR = "_"           セル指定文字                    
 // TagStr = "R_ABC"         タグ文字列
 // TagKey = "ABC"           タグ識別子
-// SetType = "R"            セル（特殊選択指定）
-// TagsString = "WHAT,COUNTRY,~"  複数タグ（いち文字列による指定）
+// TagSel = "R"            セル（特殊選択指定）
+// TagTxt = "WHAT,COUNTRY,~"     複数タグ（いち文字列による指定）
+// Tags = "@WHAT@","@COUNTRY@",~    複数タグ配列
 // TAGS_CHR = ","           複数タグ区切り    
 // Tag Char
 const TAG_CHR = "@";
@@ -24,18 +25,23 @@ const SelTypes = [
     SEL_LCK,
     SEL_SEQ
 ];
-const to_Tags = (inTagsString) => {
-    let tags = inTagsString.split(TAGS_CHR);
-    let results = [];
-    tags.forEach(tag => {
-        if (is_Tag(tag)) {
-            results.push(tag);
-        }
-    });
-    return results;
+const TagTxt_TagKeys = (inTagSt) => inTagSt.split(TAGS_CHR);
+const TagKey_TagStr = (inTagKey, inTagSel) => {
+    let result = inTagKey;
+    if (inTagSel) {
+        result = inTagSel + STAG_CHR + result;
+    }
+    return result;
 };
-// Tag判定
-const is_Tag = (inTag) => {
+const TagStr_Tag = (inTagStr) => TAG_CHR + inTagStr + TAG_CHR;
+const Tag_TagStr = (inTag) => {
+    let result = "";
+    if (isTag(inTag)) {
+        result = inTag.substr(1, inTag.length - 1);
+    }
+    return result;
+};
+const isTag = (inTag) => {
     if (inTag.charAt(0) != TAG_CHR)
         return false;
     if (inTag.charAt(inTag.length - 1) != TAG_CHR)
@@ -44,18 +50,9 @@ const is_Tag = (inTag) => {
         return false;
     return true;
 };
-// Tag文字列抽出
-const to_TagString = (inTag) => {
+const _TagKey = (inTag) => {
     let result = "";
-    if (is_Tag(inTag)) {
-        result = inTag.substr(1, inTag.length - 1);
-    }
-    return result;
-};
-// TagKey抽出
-const to_TagKey = (inTag) => {
-    let result = "";
-    let str = to_TagString(inTag);
+    let str = Tag_TagStr(inTag);
     if (str == "") {
         return "";
     }
@@ -81,10 +78,10 @@ const is_SelType = (inSel) => {
 // 選択識別子抽出
 const to_SelString = (inTag) => {
     let result = "";
-    if (!is_Tag(inTag)) {
+    if (!isTag(inTag)) {
         return result;
     }
-    let tagString = to_TagString(inTag);
+    let tagString = _TagKey(inTag);
     let tags = tagString.split(STAG_CHR);
     if (tags.length != 2) {
         return "";

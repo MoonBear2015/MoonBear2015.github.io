@@ -139,14 +139,14 @@ class WrdSt extends TxtSt {
         this.equal = (inItm) => {
             if (inItm instanceof WrdSt) {
                 let checkItm = inItm;
-                return (checkItm.txt == this.txt) && (checkItm.tag == this.tag);
+                return (checkItm.txt == this.txt) && (checkItm.tagSt == this.tagSt);
             }
             return false;
         };
-        this.copy = () => new WrdSt(this.txt, this.tag, this.pic);
-        this.tag = inTag;
-        this.pic = "";
-        if (inPic) {
+        this.copy = () => new WrdSt(this.txt, this.tagSt, this.pic);
+        this.toString = () => this.txt + " [" + this.tagSt + "]";
+        this.tagSt = inTag;
+        if (inPic && inPic != "") {
             this.pic = inPic;
         }
         else {
@@ -156,9 +156,11 @@ class WrdSt extends TxtSt {
 }
 class DictionaryBase {
     constructor() {
-        this.Adddictionary = (inTag) => {
+        this.AddWrd = (inWrd) => this.wrds.push(inWrd);
+        this.AddDictionary = (inTag) => {
             this.dictionary[inTag] = new ItmDictionarySt(inTag);
         };
+        this.wrds = [];
         this.dictionary = {};
     }
 }

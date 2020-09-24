@@ -1,4 +1,4 @@
-// Tag = "@ABC@"            タグ
+// Tag = "@ABC@"              タグ
 // STag = "@R_ABC@"         セルタグ（特殊選択指定付きタグ）
 
 // TAG_CHR = "@"            タグ認識文字
@@ -6,9 +6,11 @@
 
 // TagStr = "R_ABC"         タグ文字列
 // TagKey = "ABC"           タグ識別子
-// SetType = "R"            セル（特殊選択指定）
+// TagSel = "R"            セル（特殊選択指定）
 
-// TagsString = "WHAT,COUNTRY,~"  複数タグ（いち文字列による指定）
+// TagTxt = "WHAT,COUNTRY,~"     複数タグ（いち文字列による指定）
+// Tags = "@WHAT@","@COUNTRY@",~    複数タグ配列
+
 // TAGS_CHR = ","           複数タグ区切り    
 
 // Tag Char
@@ -33,38 +35,35 @@ const SelTypes = [
     SEL_SEQ
 ]
 
-const to_Tags = (inTagsString : string) : string[] => { 
-    let tags : string[] = inTagsString.split(TAGS_CHR);
-    let results : string[] = [];
-    tags.forEach(tag => {
-        if (is_Tag(tag)) {
-            results.push(tag);
-        }
+const TagTxt_TagKeys = (inTagSt : string) : string[] =>  inTagSt.split(TAGS_CHR);
+const TagKey_TagStr = (inTagKey : string,inTagSel? : string) : string => {
+    let result = inTagKey;
+    if (inTagSel) {
+        result = inTagSel + STAG_CHR + result;
+    }    
+    return result;
+}
+const TagStr_Tag = (inTagStr : string) : string => TAG_CHR + inTagStr + TAG_CHR;
+const Tag_TagStr = (inTag : string) : string => {
+    let result = "";
+    if (isTag(inTag)) {
+        result = inTag.substr(1,inTag.length - 1);
     }
-    );
-    return results;
+    return result;
 }
 
-// Tag判定
-const is_Tag = (inTag : string) : boolean => {
+const isTag = (inTag : string) : boolean => {
     if (inTag.charAt(0) != TAG_CHR) return false;
     if (inTag.charAt(inTag.length - 1) != TAG_CHR) return false;
     if (inTag.length <= 2) return false;
     return true;
 }
 
-// Tag文字列抽出
-const to_TagString = (inTag : string) : string => {
+
+
+const _TagKey = (inTag : string) : string => {
     let result = "";
-    if (is_Tag(inTag)) {
-        result = inTag.substr(1,inTag.length - 1);
-    }
-    return result;
-}
-// TagKey抽出
-const to_TagKey = (inTag : string) : string => {
-    let result = "";
-    let str = to_TagString(inTag);
+    let str = Tag_TagStr(inTag);
     if (str == "") {
         return "";
     }
@@ -76,6 +75,9 @@ const to_TagKey = (inTag : string) : string => {
         return strs[1];
     }
 }
+
+
+
 // 選択識別子判定（なければ""返却）
 const is_SelType = (inSel : string) : string => {
     let result = "";
@@ -87,13 +89,14 @@ const is_SelType = (inSel : string) : string => {
     }
     return result;
 }
+
 // 選択識別子抽出
 const to_SelString = (inTag : string) : string => {
     let result = "";
-    if (!is_Tag(inTag)) {
+    if (!isTag(inTag)) {
         return result;
     }
-    let tagString = to_TagString(inTag);
+    let tagString = _TagKey(inTag);
     let tags = tagString.split(STAG_CHR);
     if (tags.length != 2) {
         return "";

@@ -195,19 +195,18 @@ class TxtSt extends ItmSt implements Txt {
 } 
 
 interface Wrd extends Txt {
-    tag : string;
+    tagSt : string;
     pic : string | undefined;
 }
 
 class WrdSt extends TxtSt implements Wrd {
-    public tag : string;
+    public tagSt : string;
     public pic : string | undefined;
 
     constructor(inTxt : string,inTag : string,inPic? : string) {
         super(inTxt);
-        this.tag = inTag;
-        this.pic = "";
-        if (inPic) {
+        this.tagSt = inTag;
+        if (inPic && inPic != "") {
             this.pic = inPic;
         }
         else {
@@ -218,22 +217,29 @@ class WrdSt extends TxtSt implements Wrd {
     public equal = (inItm : any) : boolean => {
         if (inItm instanceof WrdSt) {
             let checkItm = inItm as Wrd;
-            return (checkItm.txt == this.txt) && (checkItm.tag == this.tag);
+            return (checkItm.txt == this.txt) && (checkItm.tagSt == this.tagSt);
         }
         return false;
     }
 
-    public copy = () : Wrd => new WrdSt(this.txt,this.tag,this.pic);
+    public copy = () : Wrd => new WrdSt(this.txt,this.tagSt,this.pic);
+
+    public toString = () : string => this.txt + " [" + this.tagSt + "]";
 }
 
 class DictionaryBase {
+    public  wrds : Wrd[];
+
     public dictionary : { [key:string] : ItmDictionarySt<Wrd>};
 
     constructor() {
+        this.wrds = [];
         this.dictionary = {};        
     }
 
-    public Adddictionary = (inTag : string) => {
+    public AddWrd = (inWrd : Wrd) => this.wrds.push(inWrd);
+
+    public AddDictionary = (inTag : string) => {
         this.dictionary[inTag] = new ItmDictionarySt<Wrd>(inTag);
     }
 }

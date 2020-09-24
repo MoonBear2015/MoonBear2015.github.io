@@ -7,12 +7,24 @@ const set_news = () => {
     html += "<h2>";
     html += "NEWS";
     html += "<small>";
-    html += " N0.10";
+    html += " N0.11";
     html += "</small>";
     html += "</h2>";
     html += "</div>";
     html += "<br>";
-    let ary = new ItmArraySt(dic_country);
+    let dic = new DictionaryBase();
+    dic_country.forEach(wrd => {
+        dic.AddWrd(wrd);
+    });
+    html += TestItems_html(dic.wrds);
+    html += "<br>";
+    html += "---------------<br>";
+    dic_country.forEach(wrd => {
+        html += wrd.toString();
+    });
+    html += "<br>";
+    html += "---------------<br>";
+    let ary = new ItmDictionarySt("@COUNTRY@", dic_country);
     html += cr_br(ary.toString());
     html += "<br>";
     html += "---------------<br>";
@@ -63,8 +75,9 @@ const replace_string = (inStr, inKey, inDic) => {
     return result;
 };
 const dic_country = [
-    new TxtSt("日本"),
-    new TxtSt("アメリカ")
+    new WrdSt("日本", "COUNTRY,ASIA"),
+    new WrdSt("中国", "COUNTRY,ASIA"),
+    new WrdSt("アメリカ", "COUNTRY")
 ];
 const dic_place = [
     "日本",
