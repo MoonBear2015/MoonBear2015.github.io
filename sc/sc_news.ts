@@ -9,7 +9,7 @@ const set_news = () =>
     html += "<h2>";
     html += "NEWS";
     html += "<small>";
-    html += " N0.12";
+    html += " N0.13";
     html += "</small>";
     html += "</h2>";
     html += "</div>";
@@ -43,12 +43,23 @@ const set_news = () =>
 
     html += "<br>";
     html += "---------------<br>";
+    let lary : { [key:string] : Txt;};
+    lary = {"A":new TxtSt("1"),"B":new TxtSt("2"),"C":new TxtSt("3")};
+    for(let t in lary) {
+        html += ">> " + t + ":" + lary[t].txt + "<br>";
+    }
 
-    
+    html += "<br>";
+    html += "---------------<br>";
 
     let ary = new ItmDictionarySt<Wrd>("@COUNTRY@",dic_country);
     html += cr_br(ary.toString());
     html += "<br>";
+
+    dic_country.forEach(wrd => {
+            html += "++> " + wrd.toString() + "//" + isTagCheck(wrd.tagTxt,"ASIA") + "<br>";
+    }
+    );
     
     html += "---------------<br>";
     let txtA = new TxtSt("111");

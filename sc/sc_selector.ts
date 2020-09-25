@@ -195,17 +195,17 @@ class TxtSt extends ItmSt implements Txt {
 } 
 
 interface Wrd extends Txt {
-    tagSt : string;
+    tagTxt : string;
     pic : string | undefined;
 }
 
 class WrdSt extends TxtSt implements Wrd {
-    public tagSt : string;
+    public tagTxt : string;
     public pic : string | undefined;
 
     constructor(inTxt : string,inTag : string,inPic? : string) {
         super(inTxt);
-        this.tagSt = inTag;
+        this.tagTxt = inTag;
         if (inPic && inPic != "") {
             this.pic = inPic;
         }
@@ -217,20 +217,20 @@ class WrdSt extends TxtSt implements Wrd {
     public equal = (inItm : any) : boolean => {
         if (inItm instanceof WrdSt) {
             let checkItm = inItm as Wrd;
-            return (checkItm.txt == this.txt) && (checkItm.tagSt == this.tagSt);
+            return (checkItm.txt == this.txt) && (checkItm.tagTxt == this.tagTxt);
         }
         return false;
     }
 
-    public copy = () : Wrd => new WrdSt(this.txt,this.tagSt,this.pic);
+    public copy = () : Wrd => new WrdSt(this.txt,this.tagTxt,this.pic);
 
-    public toString = () : string => this.txt + " [" + this.tagSt + "]";
+    public toString = () : string => this.txt + " [" + this.tagTxt + "]";
 }
 
 class DictionaryBase {
     public  wrds : Wrd[];
 
-    public dictionary : { [key:string] : ItmDictionarySt<Wrd>};
+    public dictionary : { [tagKey:string] : ItmDictionarySt<Wrd>};
 
     constructor() {
         this.wrds = [];

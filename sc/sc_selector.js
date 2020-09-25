@@ -139,13 +139,13 @@ class WrdSt extends TxtSt {
         this.equal = (inItm) => {
             if (inItm instanceof WrdSt) {
                 let checkItm = inItm;
-                return (checkItm.txt == this.txt) && (checkItm.tagSt == this.tagSt);
+                return (checkItm.txt == this.txt) && (checkItm.tagTxt == this.tagTxt);
             }
             return false;
         };
-        this.copy = () => new WrdSt(this.txt, this.tagSt, this.pic);
-        this.toString = () => this.txt + " [" + this.tagSt + "]";
-        this.tagSt = inTag;
+        this.copy = () => new WrdSt(this.txt, this.tagTxt, this.pic);
+        this.toString = () => this.txt + " [" + this.tagTxt + "]";
+        this.tagTxt = inTag;
         if (inPic && inPic != "") {
             this.pic = inPic;
         }

@@ -37,7 +37,7 @@ const to_TagStr = (inTag) => {
     return result;
 };
 const is_Tag = (inTag) => {
-    if (inTag.charAt(0) != TAG_CHR)
+    if (inTag.charAt(0) !== TAG_CHR)
         return false;
     if (inTag.charAt(inTag.length - 1) != TAG_CHR)
         return false;
@@ -57,14 +57,15 @@ const to_TagSel = (inTag) => {
 const to_TagKey = (inTag) => {
     let result = "";
     let str = to_TagStr(inTag);
-    if (str == "") {
+    if (str === "") {
         return "";
     }
     let strs = str.split(STAG_CHR);
-    if (strs.length != 2) {
+    if (strs.length !== 2) {
         return str;
     }
     else {
         return strs[1];
     }
 };
+const isTagCheck = (inTagTxt, inTagKey) => inTagTxt.indexOf(inTagKey) !== -1;
