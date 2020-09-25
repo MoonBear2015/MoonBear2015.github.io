@@ -27,14 +27,6 @@ const SEL_RND : string = "R";   // ランダム
 const SEL_LCK : string = "L";   // 固定
 const SEL_SEQ : string = "S";   // 順
 
-const SelTypes = [
-    SEL_RND
-    ,
-    SEL_LCK
-    ,
-    SEL_SEQ
-]
-
 const TagTxt_TagKeys = (inTagSt : string) : string[] =>  inTagSt.split(TAGS_CHR);
 const TagKey_TagStr = (inTagKey : string,inTagSel? : string) : string => {
     let result = inTagKey;
@@ -44,26 +36,36 @@ const TagKey_TagStr = (inTagKey : string,inTagSel? : string) : string => {
     return result;
 }
 const TagStr_Tag = (inTagStr : string) : string => TAG_CHR + inTagStr + TAG_CHR;
-const Tag_TagStr = (inTag : string) : string => {
+
+const to_TagStr = (inTag : string) : string => {
     let result = "";
-    if (isTag(inTag)) {
-        result = inTag.substr(1,inTag.length - 1);
+    if (is_Tag(inTag)) {
+        result = inTag.substr(1,inTag.length - 2);
     }
     return result;
 }
 
-const isTag = (inTag : string) : boolean => {
+const is_Tag = (inTag : string) : boolean => {
     if (inTag.charAt(0) != TAG_CHR) return false;
     if (inTag.charAt(inTag.length - 1) != TAG_CHR) return false;
     if (inTag.length <= 2) return false;
     return true;
 }
 
+const is_STagStr = (inTag : string) : boolean => to_TagStr(inTag).charAt(1) == STAG_CHR;
 
+const to_TagSel = (inTag : string) : string => {
+    if (is_STagStr(inTag)) {
+        let strs = to_TagStr(inTag).split(STAG_CHR);
+        alert(strs);
+        return strs[0];
+    }
+    return "";
+}
 
-const _TagKey = (inTag : string) : string => {
+const to_TagKey = (inTag : string) : string => {
     let result = "";
-    let str = Tag_TagStr(inTag);
+    let str = to_TagStr(inTag);
     if (str == "") {
         return "";
     }
@@ -76,30 +78,3 @@ const _TagKey = (inTag : string) : string => {
     }
 }
 
-
-
-// 選択識別子判定（なければ""返却）
-const is_SelType = (inSel : string) : string => {
-    let result = "";
-    for(let i = 0; i < SelTypes.length; i++) {
-        if (SelTypes[i] == inSel) {
-            result = SelTypes[i];
-            break;
-        }
-    }
-    return result;
-}
-
-// 選択識別子抽出
-const to_SelString = (inTag : string) : string => {
-    let result = "";
-    if (!isTag(inTag)) {
-        return result;
-    }
-    let tagString = _TagKey(inTag);
-    let tags = tagString.split(STAG_CHR);
-    if (tags.length != 2) {
-        return "";
-    }
-    return is_SelType(tags[0]);
-}

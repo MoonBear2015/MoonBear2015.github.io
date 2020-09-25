@@ -7,7 +7,7 @@ const set_news = () => {
     html += "<h2>";
     html += "NEWS";
     html += "<small>";
-    html += " N0.11";
+    html += " N0.12";
     html += "</small>";
     html += "</h2>";
     html += "</div>";
@@ -19,9 +19,20 @@ const set_news = () => {
     html += TestItems_html(dic.wrds);
     html += "<br>";
     html += "---------------<br>";
-    dic_country.forEach(wrd => {
-        html += wrd.toString();
+    let tagTxt = "a,b,c";
+    let tagkeys = TagTxt_TagKeys(tagTxt);
+    tagkeys.forEach(key => {
+        html += ":= " + key + "<br>";
     });
+    html += "<br>";
+    html += "---------------<br>";
+    let tag = "@TAG@";
+    html += "Tag = " + tag + "<br>";
+    html += "isTag = " + is_Tag(tag) + "<br>";
+    html += "TagStr = " + to_TagStr(tag) + "<br>";
+    html += "isSTagStr = " + is_STagStr(tag) + "<br>";
+    html += "to_TagSel:" + to_TagSel(tag) + "<br>";
+    html += "to_TagKey:" + to_TagKey(tag) + "<br>";
     html += "<br>";
     html += "---------------<br>";
     let ary = new ItmDictionarySt("@COUNTRY@", dic_country);

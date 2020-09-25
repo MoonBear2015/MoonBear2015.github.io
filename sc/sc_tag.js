@@ -20,11 +20,6 @@ const SEL_NON = ""; // 不正・指定なし
 const SEL_RND = "R"; // ランダム
 const SEL_LCK = "L"; // 固定
 const SEL_SEQ = "S"; // 順
-const SelTypes = [
-    SEL_RND,
-    SEL_LCK,
-    SEL_SEQ
-];
 const TagTxt_TagKeys = (inTagSt) => inTagSt.split(TAGS_CHR);
 const TagKey_TagStr = (inTagKey, inTagSel) => {
     let result = inTagKey;
@@ -34,14 +29,14 @@ const TagKey_TagStr = (inTagKey, inTagSel) => {
     return result;
 };
 const TagStr_Tag = (inTagStr) => TAG_CHR + inTagStr + TAG_CHR;
-const Tag_TagStr = (inTag) => {
+const to_TagStr = (inTag) => {
     let result = "";
-    if (isTag(inTag)) {
-        result = inTag.substr(1, inTag.length - 1);
+    if (is_Tag(inTag)) {
+        result = inTag.substr(1, inTag.length - 2);
     }
     return result;
 };
-const isTag = (inTag) => {
+const is_Tag = (inTag) => {
     if (inTag.charAt(0) != TAG_CHR)
         return false;
     if (inTag.charAt(inTag.length - 1) != TAG_CHR)
@@ -50,9 +45,18 @@ const isTag = (inTag) => {
         return false;
     return true;
 };
-const _TagKey = (inTag) => {
+const is_STagStr = (inTag) => to_TagStr(inTag).charAt(1) == STAG_CHR;
+const to_TagSel = (inTag) => {
+    if (is_STagStr(inTag)) {
+        let strs = to_TagStr(inTag).split(STAG_CHR);
+        alert(strs);
+        return strs[0];
+    }
+    return "";
+};
+const to_TagKey = (inTag) => {
     let result = "";
-    let str = Tag_TagStr(inTag);
+    let str = to_TagStr(inTag);
     if (str == "") {
         return "";
     }
@@ -63,28 +67,4 @@ const _TagKey = (inTag) => {
     else {
         return strs[1];
     }
-};
-// 選択識別子判定（なければ""返却）
-const is_SelType = (inSel) => {
-    let result = "";
-    for (let i = 0; i < SelTypes.length; i++) {
-        if (SelTypes[i] == inSel) {
-            result = SelTypes[i];
-            break;
-        }
-    }
-    return result;
-};
-// 選択識別子抽出
-const to_SelString = (inTag) => {
-    let result = "";
-    if (!isTag(inTag)) {
-        return result;
-    }
-    let tagString = _TagKey(inTag);
-    let tags = tagString.split(STAG_CHR);
-    if (tags.length != 2) {
-        return "";
-    }
-    return is_SelType(tags[0]);
 };
