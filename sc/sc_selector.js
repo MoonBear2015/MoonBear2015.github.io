@@ -16,28 +16,6 @@ class ItmArraySt {
     constructor(inItms) {
         this.clear = () => this.itms = [];
         this.add = (inItm) => this.itms.push(inItm);
-        this.append = (inItms) => {
-            inItms.forEach(it => {
-                this.itms.push(it);
-            });
-        };
-        this.renew = (inItms) => {
-            this.clear();
-            this.append(inItms);
-        };
-        this.copy = () => new ItmArraySt(this.itms);
-        this.toString = () => {
-            let result = "";
-            let cnt = 0;
-            this.itms.forEach(itm => {
-                result += "[" + cnt.toString() + "] ";
-                result += itm.toString();
-                result += "\r\n";
-                cnt++;
-            });
-            result += "*** count:" + cnt.toString();
-            return result;
-        };
         this.itms = [];
         if (inItms) {
             this.append(inItms);
@@ -48,6 +26,31 @@ class ItmArraySt {
             return this.itms.length;
         else
             return 0;
+    }
+    append(inItms) {
+        inItms.forEach(it => {
+            this.itms.push(it);
+        });
+    }
+    renew(inItms) {
+        this.clear();
+        this.append(inItms);
+    }
+    copy() {
+        return new ItmArraySt(this.itms);
+    }
+    toString() {
+        let result = "----------------------<br>";
+        let cnt = 0;
+        this.itms.forEach(itm => {
+            result += "[" + cnt.toString() + "] ";
+            result += itm.toString();
+            result += "\r\n";
+            cnt++;
+        });
+        result += "*** count:" + cnt.toString();
+        result += "\r\n";
+        return result;
     }
 }
 class ItmDictionarySt extends ItmArraySt {
@@ -60,6 +63,11 @@ class ItmDictionarySt extends ItmArraySt {
         else {
             this.tagKey = undefined;
         }
+    }
+    toString() {
+        let result = ">>>>>>>>>>>>>>>>>>>>>>> " + this.tagKey + "\r\n";
+        result += super.toString();
+        return result;
     }
 }
 class ItmSelectorSt extends ItmArraySt {
@@ -157,11 +165,27 @@ class WrdSt extends TxtSt {
 }
 class DictionaryBase {
     constructor() {
-        this.AddWrd = (inWrd) => this.wrds.push(inWrd);
-        this.AddDictionary = (inTag) => {
-            this.dictionary[inTag] = new ItmDictionarySt(inTag);
+        this.AddWrd = (inWrd) => {
+            this.wrds.push(inWrd);
+            let keys = TagTxt_TagKeys(inWrd.tagTxt);
+            keys.forEach(key => {
+                this.NewDictionary(key);
+                this.dictionarys[key].add(inWrd);
+            });
+        };
+        this.NewDictionary = (inTagKey) => {
+            if (!this.dictionarys[inTagKey]) {
+                this.dictionarys[inTagKey] = new ItmDictionarySt(inTagKey);
+            }
+        };
+        this.toString = () => {
+            let result = "";
+            for (let key in this.dictionarys) {
+                result += this.dictionarys[key].toString();
+            }
+            return result;
         };
         this.wrds = [];
-        this.dictionary = {};
+        this.dictionarys = {};
     }
 }

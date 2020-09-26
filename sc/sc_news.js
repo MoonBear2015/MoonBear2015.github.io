@@ -7,7 +7,7 @@ const set_news = () => {
     html += "<h2>";
     html += "NEWS";
     html += "<small>";
-    html += " N0.15";
+    html += " N0.16";
     html += "</small>";
     html += "</h2>";
     html += "</div>";
@@ -16,7 +16,7 @@ const set_news = () => {
     dic_country.forEach(wrd => {
         dic.AddWrd(wrd);
     });
-    html += TestItems_html(dic.wrds);
+    html += cr_br(dic.toString());
     html += "<br>";
     html += "---------------<br>";
     let tagTxt = "a,b,c";

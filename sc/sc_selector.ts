@@ -26,7 +26,8 @@ interface ItmArray<T extends Itm> {
     add(inItm : T): void;
     renew(in_array : T[]): void;
     append(in_array : T[]): void;
-    copy() : ItmArray<T>;   
+    copy() : ItmArray<T>;
+    toString() : string;
 }
 
 class ItmArraySt<T extends Itm> implements ItmArray<T> {
@@ -48,22 +49,24 @@ class ItmArraySt<T extends Itm> implements ItmArray<T> {
 
     public add = (inItm : T) => this.itms.push(inItm);
 
-    public append = (inItms : T[]) => {
+    public append (inItms : T[]) {
         inItms.forEach(it => {
             this.itms.push(it);
         }
         );
     }
 
-    public renew = (inItms : T[]) => {
+    public renew (inItms : T[]) {
         this.clear();
         this.append(inItms);
     }
 
-    public copy = () : ItmArray<T> => new ItmArraySt<T>(this.itms);
+    public copy() : ItmArray<T> {
+        return new ItmArraySt<T>(this.itms);
+    }
 
-    public toString = () : string => {
-        let result : string = "";
+    public toString() : string {
+        let result : string = "----------------------<br>";
         let cnt = 0;
         this.itms.forEach(itm => {
             result += "[" + cnt.toString() + "] ";
@@ -72,6 +75,7 @@ class ItmArraySt<T extends Itm> implements ItmArray<T> {
             cnt++;
         });
         result += "*** count:" + cnt.toString();
+        result += "\r\n";
         return result;
     }
 }
@@ -94,6 +98,12 @@ class ItmDictionarySt<T extends Wrd> extends ItmArraySt<T> implements ItmDiction
     }
 
     public copy = () : ItmDictionary<T> => new ItmDictionarySt<T>(this.tagKey,this.itms);
+
+    public toString() : string {
+        let result = ">>>>>>>>>>>>>>>>>>>>>>> " + this.tagKey + "\r\n";
+        result += super.toString();
+        return result;
+    }
 
 }
 
@@ -235,18 +245,37 @@ class WrdSt extends TxtSt implements Wrd {
 class DictionaryBase {
     public  wrds : Wrd[];
 
-    public dictionary : { [tagKey:string] : ItmDictionarySt<Wrd>};
+    public dictionarys : { [tagKey:string] : ItmDictionary<Wrd>};
 
     constructor() {
         this.wrds = [];
-        this.dictionary = {};        
+        this.dictionarys = {};        
     }
 
-    public AddWrd = (inWrd : Wrd) => this.wrds.push(inWrd);
-
-    public AddDictionary = (inTag : string) => {
-        this.dictionary[inTag] = new ItmDictionarySt<Wrd>(inTag);
+    public AddWrd = (inWrd : Wrd) => {
+        this.wrds.push(inWrd);
+        let keys = TagTxt_TagKeys(inWrd.tagTxt);
+        keys.forEach(key => {
+            this.NewDictionary(key);
+            this.dictionarys[key].add(inWrd);
+        }
+        );
     }
+
+    public NewDictionary = (inTagKey : string) => {
+        if (!this.dictionarys[inTagKey]) {
+            this.dictionarys[inTagKey] = new ItmDictionarySt<Wrd>(inTagKey);
+        }
+    }
+
+    public toString = () : string => {
+        let result : string = "";
+        for(let key in this.dictionarys) {
+            result += this.dictionarys[key].toString();
+        }
+        return result;
+    }
+
 }
 
 
