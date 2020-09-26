@@ -7,7 +7,7 @@ const set_news = () => {
     html += "<h2>";
     html += "NEWS";
     html += "<small>";
-    html += " N0.16";
+    html += " N0.17";
     html += "</small>";
     html += "</h2>";
     html += "</div>";

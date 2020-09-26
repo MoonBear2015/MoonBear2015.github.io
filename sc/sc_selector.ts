@@ -14,9 +14,15 @@ interface Itm {
 
 class ItmSt implements Itm {
     constructor() {}
-    public equal = (itm : any) : boolean => true;
-    public copy = () : Itm => new ItmSt();
-    public toString = () : string => this.toString();
+    public equal (itm : any) : boolean {
+        return true;
+    }
+    public copy () : Itm {
+        return new ItmSt();
+    } 
+    public toString () : string {
+        return this.toString();
+    }
 }
 
 interface ItmArray<T extends Itm> {
@@ -45,9 +51,13 @@ class ItmArraySt<T extends Itm> implements ItmArray<T> {
         else return 0;
     }
 
-    public clear = () => this.itms = [];
+    public clear () {
+        this.itms = [];
+    } 
 
-    public add = (inItm : T) => this.itms.push(inItm);
+    public add (inItm : T) {
+        return this.itms.push(inItm)
+    };
 
     public append (inItms : T[]) {
         inItms.forEach(it => {
@@ -97,7 +107,9 @@ class ItmDictionarySt<T extends Wrd> extends ItmArraySt<T> implements ItmDiction
         }
     }
 
-    public copy = () : ItmDictionary<T> => new ItmDictionarySt<T>(this.tagKey,this.itms);
+    public copy () : ItmDictionary<T> {
+        return new ItmDictionarySt<T>(this.tagKey,this.itms);
+    }
 
     public toString() : string {
         let result = ">>>>>>>>>>>>>>>>>>>>>>> " + this.tagKey + "\r\n";
@@ -141,11 +153,11 @@ class ItmSelectorSt<T extends Itm>
 
     }
 
-    public reset = () : void => {
+    public reset () : void {
         this.idx = -1;
     }
 
-    public next = () : T | undefined => {
+    public next () : T | undefined {
         if (this.itms.length == 0) return undefined;
         switch(this.mode) {
             case SelectMode.Seq:
@@ -161,7 +173,7 @@ class ItmSelectorSt<T extends Itm>
         return undefined;
     }
 
-    public next_Seq = () : T | undefined => {
+    public next_Seq () : T | undefined {
         if (this.idx < 0 || this.idx >= this.itms.length) {
             this.idx = 0;
         }
@@ -171,11 +183,11 @@ class ItmSelectorSt<T extends Itm>
         return this.itms[this.idx];
     }
 
-    public next_Rnd = () : T | undefined => {
+    public next_Rnd () : T | undefined {
         return this.itms[RanMax(this.itms.length)];
     }
 
-    public next_Lck = () : T | undefined => {
+    public next_Lck () : T | undefined {
         if (this.idx == -1) {
             this.idx = RanMax(this.itms.length);
         }
@@ -194,7 +206,7 @@ class TxtSt extends ItmSt implements Txt {
         this.txt = "";
         if (inTxt) this.txt = inTxt;
     }
-    public equal = (inItm : any) :boolean => {
+    public equal (inItm : any) :boolean {
         if (inItm instanceof TxtSt) {
             let checkItm = inItm as Txt;
             return checkItm.txt == this.txt;
@@ -202,7 +214,9 @@ class TxtSt extends ItmSt implements Txt {
         return false;
     }
 
-    public toString = () : string => this.txt;
+    public toString () : string {
+        return this.txt;
+    }
 } 
 
 interface Wrd extends Txt {
@@ -226,7 +240,7 @@ class WrdSt extends TxtSt implements Wrd {
         }
     }
 
-    public equal = (inItm : any) : boolean => {
+    public equal (inItm : any) : boolean {
         if (inItm instanceof WrdSt) {
             let checkItm = inItm as Wrd;
             return (checkItm.txt == this.txt) && (checkItm.tagTxt == this.tagTxt);
@@ -234,12 +248,17 @@ class WrdSt extends TxtSt implements Wrd {
         return false;
     }
 
-    public isTagCheck = (inTagKey : string) : boolean =>
-        StrInTxtCheck(this.tagTxt,inTagKey);
+    public isTagCheck (inTagKey : string) : boolean {
+        return StrInTxtCheck(this.tagTxt,inTagKey);
+    }
 
-    public copy = () : Wrd => new WrdSt(this.txt,this.tagTxt,this.pic);
+    public copy () : Wrd {
+        return new WrdSt(this.txt,this.tagTxt,this.pic);
+    }
 
-    public toString = () : string => this.txt + " [" + this.tagTxt + "]";
+    public toString () : string {
+        return this.txt + " [" + this.tagTxt + "]";
+    }
 }
 
 class DictionaryBase {
@@ -252,7 +271,7 @@ class DictionaryBase {
         this.dictionarys = {};        
     }
 
-    public AddWrd = (inWrd : Wrd) => {
+    public AddWrd (inWrd : Wrd) {
         this.wrds.push(inWrd);
         let keys = TagTxt_TagKeys(inWrd.tagTxt);
         keys.forEach(key => {
@@ -262,13 +281,13 @@ class DictionaryBase {
         );
     }
 
-    public NewDictionary = (inTagKey : string) => {
+    public NewDictionary (inTagKey : string) {
         if (!this.dictionarys[inTagKey]) {
             this.dictionarys[inTagKey] = new ItmDictionarySt<Wrd>(inTagKey);
         }
     }
 
-    public toString = () : string => {
+    public toString () : string {
         let result : string = "";
         for(let key in this.dictionarys) {
             result += this.dictionarys[key].toString();
