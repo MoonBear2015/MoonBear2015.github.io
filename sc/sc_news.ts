@@ -9,7 +9,7 @@ const set_news = () =>
     html += "<h2>";
     html += "NEWS";
     html += "<small>";
-    html += " N0.13";
+    html += " N0.15";
     html += "</small>";
     html += "</h2>";
     html += "</div>";
@@ -57,7 +57,7 @@ const set_news = () =>
     html += "<br>";
 
     dic_country.forEach(wrd => {
-            html += "++> " + wrd.toString() + "//" + isTagCheck(wrd.tagTxt,"ASIA") + "<br>";
+            html += "++> " + wrd.toString() + "//" + wrd.isTagCheck("ASIA") + "<br>";
     }
     );
     

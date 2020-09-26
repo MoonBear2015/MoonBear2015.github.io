@@ -68,4 +68,4 @@ const to_TagKey = (inTag) => {
         return strs[1];
     }
 };
-const isTagCheck = (inTagTxt, inTagKey) => inTagTxt.indexOf(inTagKey) !== -1;
+const StrInTxtCheck = (inTxt, inStr) => inTxt.indexOf(inStr) !== -1;

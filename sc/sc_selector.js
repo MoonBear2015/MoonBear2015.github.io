@@ -51,14 +51,14 @@ class ItmArraySt {
     }
 }
 class ItmDictionarySt extends ItmArraySt {
-    constructor(inTag, inItms) {
+    constructor(inTagKey, inItms) {
         super(inItms);
-        this.copy = () => new ItmDictionarySt(this.tag, this.itms);
-        if (inTag) {
-            this.tag = inTag;
+        this.copy = () => new ItmDictionarySt(this.tagKey, this.itms);
+        if (inTagKey) {
+            this.tagKey = inTagKey;
         }
         else {
-            this.tag = undefined;
+            this.tagKey = undefined;
         }
     }
 }
@@ -143,6 +143,7 @@ class WrdSt extends TxtSt {
             }
             return false;
         };
+        this.isTagCheck = (inTagKey) => StrInTxtCheck(this.tagTxt, inTagKey);
         this.copy = () => new WrdSt(this.txt, this.tagTxt, this.pic);
         this.toString = () => this.txt + " [" + this.tagTxt + "]";
         this.tagTxt = inTag;

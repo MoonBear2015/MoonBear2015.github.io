@@ -78,8 +78,8 @@ const to_TagKey = (inTag : string) : string => {
     }
 }
 
-const isTagCheck = (inTagTxt : string,inTagKey : string) : boolean =>
-    inTagTxt.indexOf(inTagKey) !== -1;
+const StrInTxtCheck = (inTxt : string,inStr : string) : boolean =>
+    inTxt.indexOf(inStr) !== -1;
 
 
 

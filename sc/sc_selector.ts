@@ -77,22 +77,23 @@ class ItmArraySt<T extends Itm> implements ItmArray<T> {
 }
 
 interface ItmDictionary<T extends Wrd> extends ItmArray<T> {
-    tag : string | undefined;    
+    tagKey : string | undefined;    
 }
 class ItmDictionarySt<T extends Wrd> extends ItmArraySt<T> implements ItmDictionary<T>
 {
-    public tag: string | undefined;
-    constructor(inTag?:string,inItms?: T[])
+    public tagKey: string | undefined;
+    constructor(inTagKey?:string,inItms?: T[])
     {
         super(inItms);
-        if (inTag) {
-            this.tag = inTag;
+        if (inTagKey) {
+            this.tagKey = inTagKey;
         }
         else {
-            this.tag = undefined;
+            this.tagKey = undefined;
         }
     }
-    public copy = () : ItmDictionary<T> => new ItmDictionarySt<T>(this.tag,this.itms);
+
+    public copy = () : ItmDictionary<T> => new ItmDictionarySt<T>(this.tagKey,this.itms);
 
 }
 
@@ -197,6 +198,7 @@ class TxtSt extends ItmSt implements Txt {
 interface Wrd extends Txt {
     tagTxt : string;
     pic : string | undefined;
+    isTagCheck(inTagKey : string) : boolean;
 }
 
 class WrdSt extends TxtSt implements Wrd {
@@ -221,6 +223,9 @@ class WrdSt extends TxtSt implements Wrd {
         }
         return false;
     }
+
+    public isTagCheck = (inTagKey : string) : boolean =>
+        StrInTxtCheck(this.tagTxt,inTagKey);
 
     public copy = () : Wrd => new WrdSt(this.txt,this.tagTxt,this.pic);
 
