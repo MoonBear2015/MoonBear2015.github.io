@@ -9,7 +9,7 @@ const set_news = () =>
     html += "<h2>";
     html += "NEWS";
     html += "<small>";
-    html += " N0.19";
+    html += " N0.20";
     html += "</small>";
     html += "</h2>";
     html += "</div>";
@@ -22,7 +22,6 @@ const set_news = () =>
     html += cr_br(dic.toString());
 
     html += "<br>";
-
     html += "---------------<br>";
 
     let tag01 = "@S_TAG@";
@@ -30,6 +29,29 @@ const set_news = () =>
     let tag = new Tag(tag01);
     html += "key = " + tag.key + "<br>";
     html += "sel = " + tag.sel + "<br>";
+    html += "str = " + tag.str + "<br>";
+    html += "tag = " + tag.tag + "<br>";
+    html += "<br>";
+
+    let tag02 = "@tag@";
+    html += "into Tag = " + tag02 + "<br>";
+    tag.tag = tag02;
+    html += "key = " + tag.key + "<br>";
+    html += "sel = " + tag.sel + "<br>";
+    html += "str = " + tag.str + "<br>";
+    html += "tag = " + tag.tag + "<br>";
+    html += "<br>";
+
+    let tag03 = "V_TTT";
+    html += "into Tag = " + tag03 + "<br>";
+    tag.tag = tag03;
+    html += "key = " + tag.key + "<br>";
+    html += "sel = " + tag.sel + "<br>";
+    html += "str = " + tag.str + "<br>";
+    html += "tag = " + tag.tag + "<br>";
+    html += "<br>";
+
+    html += "---------------<br>";
 
     html += "---------------<br>";
 

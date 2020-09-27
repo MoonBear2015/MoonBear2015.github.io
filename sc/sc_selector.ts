@@ -26,8 +26,8 @@ class ItmSt implements Itm {
 }
 
 interface ItmArray<T extends Itm> {
-    itms : T[];
     readonly length : number;
+    itms : T[];
     clear() : void;
     add(inItm : T): void;
     renew(in_array : T[]): void;
@@ -120,37 +120,33 @@ class ItmDictionarySt<T extends Wrd> extends ItmArraySt<T> implements ItmDiction
 }
 
 
-interface ItmSelector<T extends Itm> extends ItmArray<T> {
+interface ItmSelector<T extends Wrd> {
     mode : SelectMode;
-    tag :   string;
+    dic : ItmDictionary<T>;
+    tagKey :   string | undefined;
     reset() : void;
     next() : T | undefined;
 }
 
-class ItmSelectorSt<T extends Itm> 
-    extends ItmArraySt<T> 
-    implements ItmSelector<T> 
+class ItmSelectorSt<T extends Wrd> 
+    implements ItmSelector<T>
 {
+    public dic : ItmDictionary<T>
     private idx : number;
     public mode : SelectMode;
-    public tag : string; 
+    public tagKey : string | undefined;
 
-    constructor(inItms? : T[],inTag? : string,inMode? : SelectMode) {
-        super(inItms);
+    constructor(inDic : ItmDictionary<T>,inMode? : SelectMode) {
         this.idx = -1;
-        if (inTag) {
-            this.tag = inTag;
-        } 
-        else {
-            this.tag = "";
-        }
-
+        this.dic = inDic;
+        this.tagKey = this.dic.tagKey;
         if (inMode) {
             this.mode = inMode;
-        } else {
-            this.mode = SelectMode.Seq;
         }
-
+        else
+        {
+            this.mode = SelectMode.Rnd;
+        }
     }
 
     public reset () : void {
@@ -158,7 +154,7 @@ class ItmSelectorSt<T extends Itm>
     }
 
     public next () : T | undefined {
-        if (this.itms.length == 0) return undefined;
+        if (this.dic.length == 0) return undefined;
         switch(this.mode) {
             case SelectMode.Seq:
                 return this.next_Seq();
@@ -174,24 +170,24 @@ class ItmSelectorSt<T extends Itm>
     }
 
     public next_Seq () : T | undefined {
-        if (this.idx < 0 || this.idx >= this.itms.length) {
+        if (this.idx < 0 || this.idx >= this.dic.length) {
             this.idx = 0;
         }
         else {
             this.idx++;
         }
-        return this.itms[this.idx];
+        return this.dic.itms[this.idx];
     }
 
     public next_Rnd () : T | undefined {
-        return this.itms[RanMax(this.itms.length)];
+        return this.dic.itms[RanMax(this.dic.itms.length)];
     }
 
     public next_Lck () : T | undefined {
         if (this.idx == -1) {
-            this.idx = RanMax(this.itms.length);
+            this.idx = RanMax(this.dic.itms.length);
         }
-        return this.itms[this.idx];
+        return this.dic.itms[this.idx];
     }
     
 }

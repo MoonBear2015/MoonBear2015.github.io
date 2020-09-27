@@ -45,6 +45,29 @@ class Tag {
             this.sel = "";
         }
     }
+    get str() : string {
+        if (this.sel === "") {
+            return this.key;
+        }
+        else {
+            return this.sel + STAG_CHR + this.key;
+        }
+    }
+    set str(inStr : string) {
+        this.key = to_TagKey(inStr);
+        this.sel = to_TagSel(inStr);
+    }
+    get tag() : string {
+        let result : string = this.key;
+        if (this.sel !== "") {
+            result = this.sel + STAG_CHR + this.key;
+        }
+        return TAG_CHR + result + TAG_CHR;
+    }
+    set tag(inTag : string) {
+        let st = to_TagStr(inTag);
+        this.str = st;
+    }
 }
 
 const TagTxt_TagKeys = (inTagSt : string) : string[] =>  inTagSt.split(TAGS_CHR);

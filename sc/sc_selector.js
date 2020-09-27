@@ -82,28 +82,23 @@ class ItmDictionarySt extends ItmArraySt {
         return result;
     }
 }
-class ItmSelectorSt extends ItmArraySt {
-    constructor(inItms, inTag, inMode) {
-        super(inItms);
+class ItmSelectorSt {
+    constructor(inDic, inMode) {
         this.idx = -1;
-        if (inTag) {
-            this.tag = inTag;
-        }
-        else {
-            this.tag = "";
-        }
+        this.dic = inDic;
+        this.tagKey = this.dic.tagKey;
         if (inMode) {
             this.mode = inMode;
         }
         else {
-            this.mode = SelectMode.Seq;
+            this.mode = SelectMode.Rnd;
         }
     }
     reset() {
         this.idx = -1;
     }
     next() {
-        if (this.itms.length == 0)
+        if (this.dic.length == 0)
             return undefined;
         switch (this.mode) {
             case SelectMode.Seq:
@@ -119,22 +114,22 @@ class ItmSelectorSt extends ItmArraySt {
         return undefined;
     }
     next_Seq() {
-        if (this.idx < 0 || this.idx >= this.itms.length) {
+        if (this.idx < 0 || this.idx >= this.dic.length) {
             this.idx = 0;
         }
         else {
             this.idx++;
         }
-        return this.itms[this.idx];
+        return this.dic.itms[this.idx];
     }
     next_Rnd() {
-        return this.itms[RanMax(this.itms.length)];
+        return this.dic.itms[RanMax(this.dic.itms.length)];
     }
     next_Lck() {
         if (this.idx == -1) {
-            this.idx = RanMax(this.itms.length);
+            this.idx = RanMax(this.dic.itms.length);
         }
-        return this.itms[this.idx];
+        return this.dic.itms[this.idx];
     }
 }
 class TxtSt extends ItmSt {
