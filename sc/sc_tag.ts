@@ -22,25 +22,51 @@ const STAG_CHR = "_";
 const TAGS_CHR = ",";
 
 // Sel Type
-const SEL_NON : string = "";    // 不正・指定なし
+const SEL_NON : string = "";    // 指定なし
 const SEL_RND : string = "R";   // ランダム
 const SEL_LCK : string = "L";   // 固定
 const SEL_SEQ : string = "S";   // 順
+
+class Tag {
+    public key : string;
+    public sel : string;
+    constructor(inKey : string,inSel? : string) {
+        let str = to_TagStr(inKey);
+        this.key = to_TagKey(str);
+        if (is_STagStr(str)) {
+            this.sel = to_TagSel(str);
+            return;
+        }
+        if (inSel) {
+            this.sel = inSel;
+        }
+        else
+        {
+            this.sel = "";
+        }
+    }
+}
 
 const TagTxt_TagKeys = (inTagSt : string) : string[] =>  inTagSt.split(TAGS_CHR);
 const TagKey_TagStr = (inTagKey : string,inTagSel? : string) : string => {
     let result = inTagKey;
     if (inTagSel) {
-        result = inTagSel + STAG_CHR + result;
+        result = inTagSel + STAG_CHR + result;        
     }    
     return result;
 }
+
 const TagStr_Tag = (inTagStr : string) : string => TAG_CHR + inTagStr + TAG_CHR;
+
+
 
 const to_TagStr = (inTag : string) : string => {
     let result = "";
     if (is_Tag(inTag)) {
         result = inTag.substr(1,inTag.length - 2);
+    }
+    else {
+        result = inTag;
     }
     return result;
 }
@@ -57,7 +83,6 @@ const is_STagStr = (inTag : string) : boolean => to_TagStr(inTag).charAt(1) == S
 const to_TagSel = (inTag : string) : string => {
     if (is_STagStr(inTag)) {
         let strs = to_TagStr(inTag).split(STAG_CHR);
-        alert(strs);
         return strs[0];
     }
     return "";
@@ -68,7 +93,7 @@ const to_TagKey = (inTag : string) : string => {
     let str = to_TagStr(inTag);
     if (str === "") {
         return "";
-    }
+    }    
     let strs = str.split(STAG_CHR);
     if (strs.length !== 2) {
         return str;
@@ -78,8 +103,7 @@ const to_TagKey = (inTag : string) : string => {
     }
 }
 
-const StrInTxtCheck = (inTxt : string,inStr : string) : boolean =>
-    inTxt.indexOf(inStr) !== -1;
+const StrInTxtCheck = (inTxt : string,inStr : string) : boolean => inTxt.indexOf(inStr) !== -1;
 
 
 

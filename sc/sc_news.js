@@ -7,7 +7,7 @@ const set_news = () => {
     html += "<h2>";
     html += "NEWS";
     html += "<small>";
-    html += " N0.17";
+    html += " N0.19";
     html += "</small>";
     html += "</h2>";
     html += "</div>";
@@ -19,48 +19,11 @@ const set_news = () => {
     html += cr_br(dic.toString());
     html += "<br>";
     html += "---------------<br>";
-    let tagTxt = "a,b,c";
-    let tagkeys = TagTxt_TagKeys(tagTxt);
-    tagkeys.forEach(key => {
-        html += ":= " + key + "<br>";
-    });
-    html += "<br>";
-    html += "---------------<br>";
-    let tag = "@TAG@";
-    html += "Tag = " + tag + "<br>";
-    html += "isTag = " + is_Tag(tag) + "<br>";
-    html += "TagStr = " + to_TagStr(tag) + "<br>";
-    html += "isSTagStr = " + is_STagStr(tag) + "<br>";
-    html += "to_TagSel:" + to_TagSel(tag) + "<br>";
-    html += "to_TagKey:" + to_TagKey(tag) + "<br>";
-    html += "<br>";
-    html += "---------------<br>";
-    let lary;
-    lary = { "A": new TxtSt("1"), "B": new TxtSt("2"), "C": new TxtSt("3") };
-    for (let t in lary) {
-        html += ">> " + t + ":" + lary[t].txt + "<br>";
-    }
-    html += "<br>";
-    html += "---------------<br>";
-    let ary = new ItmDictionarySt("@COUNTRY@", dic_country);
-    html += cr_br(ary.toString());
-    html += "<br>";
-    dic_country.forEach(wrd => {
-        html += "++> " + wrd.toString() + "//" + wrd.isTagCheck("ASIA") + "<br>";
-    });
-    html += "---------------<br>";
-    let txtA = new TxtSt("111");
-    let txtB = new TxtSt("112");
-    // html += txtA.toString() + "<br>";
-    // html += txtB.toString() + "<br>";
-    // html += txtA.equal(new WrdSt("111","aa"));
-    html += "<br>";
-    html += "W::W =" + new WrdSt("aaa", "aa").equal(new WrdSt("aaa", "aa"));
-    html += "<br>";
-    html += "T::W =" + new TxtSt("aaa").equal(new WrdSt("aaa", "aa"));
-    html += "<br>";
-    html += "W::T =" + new WrdSt("aaa", "aa").equal(new TxtSt("aaa"));
-    html += "<br>";
+    let tag01 = "@S_TAG@";
+    html += "Tag = " + tag01 + "<br>";
+    let tag = new Tag(tag01);
+    html += "key = " + tag.key + "<br>";
+    html += "sel = " + tag.sel + "<br>";
     html += "---------------<br>";
     for (let i = 0; i < 20; i++) {
         html += "<p>[" + i.toString() + "]</p>";

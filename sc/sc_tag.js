@@ -16,10 +16,26 @@ const STAG_CHR = "_";
 // Tags Char
 const TAGS_CHR = ",";
 // Sel Type
-const SEL_NON = ""; // 不正・指定なし
+const SEL_NON = ""; // 指定なし
 const SEL_RND = "R"; // ランダム
 const SEL_LCK = "L"; // 固定
 const SEL_SEQ = "S"; // 順
+class Tag {
+    constructor(inKey, inSel) {
+        let str = to_TagStr(inKey);
+        this.key = to_TagKey(str);
+        if (is_STagStr(str)) {
+            this.sel = to_TagSel(str);
+            return;
+        }
+        if (inSel) {
+            this.sel = inSel;
+        }
+        else {
+            this.sel = "";
+        }
+    }
+}
 const TagTxt_TagKeys = (inTagSt) => inTagSt.split(TAGS_CHR);
 const TagKey_TagStr = (inTagKey, inTagSel) => {
     let result = inTagKey;
@@ -33,6 +49,9 @@ const to_TagStr = (inTag) => {
     let result = "";
     if (is_Tag(inTag)) {
         result = inTag.substr(1, inTag.length - 2);
+    }
+    else {
+        result = inTag;
     }
     return result;
 };
@@ -49,7 +68,6 @@ const is_STagStr = (inTag) => to_TagStr(inTag).charAt(1) == STAG_CHR;
 const to_TagSel = (inTag) => {
     if (is_STagStr(inTag)) {
         let strs = to_TagStr(inTag).split(STAG_CHR);
-        alert(strs);
         return strs[0];
     }
     return "";
