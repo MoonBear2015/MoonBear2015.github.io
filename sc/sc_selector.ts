@@ -1,10 +1,3 @@
-enum SelectMode {
-    Seq
-    ,
-    Rnd
-    ,
-    Lck
-}
 
 interface Itm {
     equal(inItm : any) : boolean;
@@ -56,12 +49,12 @@ class ItmArraySt<T extends Itm> implements ItmArray<T> {
     } 
 
     public add (inItm : T) {
-        return this.itms.push(inItm)
+        this.itms.push(inItm);
     };
 
     public append (inItms : T[]) {
         inItms.forEach(it => {
-            this.itms.push(it);
+            this.add(it);
         }
         );
     }
@@ -95,7 +88,7 @@ interface ItmDictionary<T extends Wrd> extends ItmArray<T> {
 }
 class ItmDictionarySt<T extends Wrd> extends ItmArraySt<T> implements ItmDictionary<T>
 {
-    public tagKey: string | undefined;
+    public tagKey: string;
     constructor(inTagKey?:string,inItms?: T[])
     {
         super(inItms);
@@ -103,13 +96,20 @@ class ItmDictionarySt<T extends Wrd> extends ItmArraySt<T> implements ItmDiction
             this.tagKey = inTagKey;
         }
         else {
-            this.tagKey = undefined;
+            this.tagKey = "";
         }
     }
 
-    public copy () : ItmDictionary<T> {
+    public copy() : ItmDictionary<T> {
         return new ItmDictionarySt<T>(this.tagKey,this.itms);
     }
+
+    public add(inItm : T) {
+        alert(inItm.tagTxt + " << " + this.tagKey)
+        if (inItm.isTagCheck(this.tagKey)){
+            this.itms.push(inItm)
+        }
+    };
 
     public toString() : string {
         let result = ">>>>>>>>>>>>>>>>>>>>>>> " + this.tagKey + "\r\n";
@@ -121,7 +121,7 @@ class ItmDictionarySt<T extends Wrd> extends ItmArraySt<T> implements ItmDiction
 
 
 interface ItmSelector<T extends Wrd> {
-    mode : SelectMode;
+    mode : string;
     dic : ItmDictionary<T>;
     tagKey :   string | undefined;
     reset() : void;
@@ -133,10 +133,10 @@ class ItmSelectorSt<T extends Wrd>
 {
     public dic : ItmDictionary<T>
     private idx : number;
-    public mode : SelectMode;
+    public mode : string;
     public tagKey : string | undefined;
 
-    constructor(inDic : ItmDictionary<T>,inMode? : SelectMode) {
+    constructor(inDic : ItmDictionary<T>,inMode? : string) {
         this.idx = -1;
         this.dic = inDic;
         this.tagKey = this.dic.tagKey;
@@ -145,7 +145,7 @@ class ItmSelectorSt<T extends Wrd>
         }
         else
         {
-            this.mode = SelectMode.Rnd;
+            this.mode = "";
         }
     }
 
@@ -156,13 +156,13 @@ class ItmSelectorSt<T extends Wrd>
     public next () : T | undefined {
         if (this.dic.length == 0) return undefined;
         switch(this.mode) {
-            case SelectMode.Seq:
+            case SEL_SEQ:
                 return this.next_Seq();
                 break;
-            case SelectMode.Rnd:
+            case SEL_RND:
                 return this.next_Rnd();
                 break;
-            case SelectMode.Lck:
+            case SEL_LCK:
                 return this.next_Lck();
                 break;
         }
@@ -170,9 +170,9 @@ class ItmSelectorSt<T extends Wrd>
     }
 
     public next_Seq () : T | undefined {
-        if (this.idx < 0 || this.idx >= this.dic.length) {
+        if (this.idx >= (this.dic.length - 1)) {
             this.idx = 0;
-        }
+        }        
         else {
             this.idx++;
         }
@@ -188,8 +188,7 @@ class ItmSelectorSt<T extends Wrd>
             this.idx = RanMax(this.dic.itms.length);
         }
         return this.dic.itms[this.idx];
-    }
-    
+    }    
 }
 
 interface Txt extends Itm {

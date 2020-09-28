@@ -14,14 +14,7 @@ const set_news = () =>
     html += "</h2>";
     html += "</div>";
     html += "<br>";
-    
-    let dic = new DictionaryBase();
-    dic_country.forEach(wrd => {
-        dic.AddWrd(wrd);
-    })
-    html += cr_br(dic.toString());
 
-    html += "<br>";
     html += "---------------<br>";
 
     let tag01 = "@S_TAG@";
@@ -32,26 +25,17 @@ const set_news = () =>
     html += "str = " + tag.str + "<br>";
     html += "tag = " + tag.tag + "<br>";
     html += "<br>";
-
-    let tag02 = "@tag@";
-    html += "into Tag = " + tag02 + "<br>";
-    tag.tag = tag02;
-    html += "key = " + tag.key + "<br>";
-    html += "sel = " + tag.sel + "<br>";
-    html += "str = " + tag.str + "<br>";
-    html += "tag = " + tag.tag + "<br>";
-    html += "<br>";
-
-    let tag03 = "V_TTT";
-    html += "into Tag = " + tag03 + "<br>";
-    tag.tag = tag03;
-    html += "key = " + tag.key + "<br>";
-    html += "sel = " + tag.sel + "<br>";
-    html += "str = " + tag.str + "<br>";
-    html += "tag = " + tag.tag + "<br>";
-    html += "<br>";
-
+    
     html += "---------------<br>";
+    
+    let dictionary = new ItmDictionarySt<Wrd>("ASIA",dic_country);
+    alert(dictionary.tagKey);
+    let selector = new ItmSelectorSt<Wrd>(dictionary,"R");
+    for(let i = 0; i < 20; i++) {
+        html += i.toString() + " >> " + selector.next() + "<br>";
+    }
+    html += "<br>";
+
 
     html += "---------------<br>";
 

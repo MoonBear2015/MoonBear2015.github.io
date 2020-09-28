@@ -1,10 +1,4 @@
 "use strict";
-var SelectMode;
-(function (SelectMode) {
-    SelectMode[SelectMode["Seq"] = 0] = "Seq";
-    SelectMode[SelectMode["Rnd"] = 1] = "Rnd";
-    SelectMode[SelectMode["Lck"] = 2] = "Lck";
-})(SelectMode || (SelectMode = {}));
 class ItmSt {
     constructor() { }
     equal(itm) {
@@ -34,12 +28,12 @@ class ItmArraySt {
         this.itms = [];
     }
     add(inItm) {
-        return this.itms.push(inItm);
+        this.itms.push(inItm);
     }
     ;
     append(inItms) {
         inItms.forEach(it => {
-            this.itms.push(it);
+            this.add(it);
         });
     }
     renew(inItms) {
@@ -70,12 +64,19 @@ class ItmDictionarySt extends ItmArraySt {
             this.tagKey = inTagKey;
         }
         else {
-            this.tagKey = undefined;
+            this.tagKey = "";
         }
     }
     copy() {
         return new ItmDictionarySt(this.tagKey, this.itms);
     }
+    add(inItm) {
+        alert(inItm.tagTxt + " << " + this.tagKey);
+        if (inItm.isTagCheck(this.tagKey)) {
+            this.itms.push(inItm);
+        }
+    }
+    ;
     toString() {
         let result = ">>>>>>>>>>>>>>>>>>>>>>> " + this.tagKey + "\r\n";
         result += super.toString();
@@ -91,7 +92,7 @@ class ItmSelectorSt {
             this.mode = inMode;
         }
         else {
-            this.mode = SelectMode.Rnd;
+            this.mode = "";
         }
     }
     reset() {
@@ -101,20 +102,20 @@ class ItmSelectorSt {
         if (this.dic.length == 0)
             return undefined;
         switch (this.mode) {
-            case SelectMode.Seq:
+            case SEL_SEQ:
                 return this.next_Seq();
                 break;
-            case SelectMode.Rnd:
+            case SEL_RND:
                 return this.next_Rnd();
                 break;
-            case SelectMode.Lck:
+            case SEL_LCK:
                 return this.next_Lck();
                 break;
         }
         return undefined;
     }
     next_Seq() {
-        if (this.idx < 0 || this.idx >= this.dic.length) {
+        if (this.idx >= (this.dic.length - 1)) {
             this.idx = 0;
         }
         else {
