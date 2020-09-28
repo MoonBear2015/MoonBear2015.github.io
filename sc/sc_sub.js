@@ -65,6 +65,46 @@ function sepalate_number(num) {
     }
     return results;
 }
+//------------------------------------ key text
+const KEYS_CHR = ",";
+const keyText_keys = (inText) => inText.split(KEYS_CHR);
+const keys_keyText = (inKeys) => {
+    let result = "";
+    inKeys.forEach(key => {
+        if (result === "")
+            result += KEYS_CHR;
+        result += key;
+    });
+    return result;
+};
+const isInKeys = (inText, inKey) => inText.indexOf(inKey) !== -1;
+const keyAppend = (inText, inKey) => {
+    if (inKey === "")
+        return inText;
+    if (isInKeys(inText, inKey))
+        return inText;
+    let result = inText;
+    if (result.length > 0)
+        result += KEYS_CHR;
+    result += inKey;
+    return result;
+};
+const keyRemove = (inText, inKey) => {
+    if (inKey === "")
+        return inText;
+    if (!isInKeys(inText, inKey))
+        return inText;
+    let result = "";
+    let keys = keyText_keys(inText);
+    for (let i = 0; i < keys.length; i++) {
+        if (keys[i] === inKey)
+            continue;
+        if (result !== "")
+            result += KEYS_CHR;
+        result += keys[i];
+    }
+    return result;
+};
 //------------------------------------ japanese text
 const ruby_check = (in_str) => {
     let cnt = char_cnt(in_str, '\|');

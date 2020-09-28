@@ -58,14 +58,16 @@ class ItmArraySt {
     }
 }
 class ItmDictionarySt extends ItmArraySt {
-    constructor(inTagKey, inItms) {
+    // public tagKey: string;
+    constructor(tagKey, inItms) {
+        // if (inTagKey) {
+        //     this.tagKey = inTagKey;
+        // }
+        // else {
+        //     this.tagKey = "";
+        // }
         super(inItms);
-        if (inTagKey) {
-            this.tagKey = inTagKey;
-        }
-        else {
-            this.tagKey = "";
-        }
+        this.tagKey = tagKey;
     }
     copy() {
         return new ItmDictionarySt(this.tagKey, this.itms);

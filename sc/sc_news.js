@@ -7,12 +7,28 @@ const set_news = () => {
     html += "<h2>";
     html += "NEWS";
     html += "<small>";
-    html += " N0.20";
+    html += " N0.21";
     html += "</small>";
     html += "</h2>";
     html += "</div>";
     html += "<br>";
     html += "---------------<br>";
+    html += "<br>";
+    let text = "";
+    text = keyAppend(text, "Apple");
+    html += "TEXT : " + text + "<br>";
+    text = keyAppend(text, "Banana");
+    html += "TEXT : " + text + "<br>";
+    text = keyAppend(text, "Orange");
+    html += "TEXT : " + text + "<br>";
+    text = keyAppend(text, "Orange");
+    html += "TEXT : " + text + "<br>";
+    text = keyRemove(text, "Apple");
+    html += "TEXT : " + text + "<br>";
+    text = keyRemove(text, "Apple");
+    html += "TEXT : " + text + "<br>";
+    html += "---------------<br>";
+    html += "<br>";
     let tag01 = "@S_TAG@";
     html += "Tag = " + tag01 + "<br>";
     let tag = new Tag(tag01);
@@ -23,6 +39,7 @@ const set_news = () => {
     html += "<br>";
     html += "---------------<br>";
     let dictionary = new ItmDictionarySt("ASIA", dic_country);
+    html += TestItems_html(dictionary.itms);
     alert(dictionary.tagKey);
     let selector = new ItmSelectorSt(dictionary, "R");
     for (let i = 0; i < 20; i++) {

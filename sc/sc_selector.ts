@@ -88,16 +88,16 @@ interface ItmDictionary<T extends Wrd> extends ItmArray<T> {
 }
 class ItmDictionarySt<T extends Wrd> extends ItmArraySt<T> implements ItmDictionary<T>
 {
-    public tagKey: string;
-    constructor(inTagKey?:string,inItms?: T[])
+    // public tagKey: string;
+    constructor(public tagKey:string,inItms?: T[])
     {
+        // if (inTagKey) {
+        //     this.tagKey = inTagKey;
+        // }
+        // else {
+        //     this.tagKey = "";
+        // }
         super(inItms);
-        if (inTagKey) {
-            this.tagKey = inTagKey;
-        }
-        else {
-            this.tagKey = "";
-        }
     }
 
     public copy() : ItmDictionary<T> {
