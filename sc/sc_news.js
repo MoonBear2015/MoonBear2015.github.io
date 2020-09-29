@@ -7,7 +7,7 @@ const set_news = () => {
     html += "<h2>";
     html += "NEWS";
     html += "<small>";
-    html += " N0.21";
+    html += " N0.22";
     html += "</small>";
     html += "</h2>";
     html += "</div>";
@@ -41,10 +41,17 @@ const set_news = () => {
     let dictionary = new ItmDictionarySt("ASIA", dic_country);
     html += TestItems_html(dictionary.itms);
     alert(dictionary.tagKey);
-    let selector = new ItmSelectorSt(dictionary, "R");
+    let selector = new ItmSelectorSt(dictionary);
     for (let i = 0; i < 20; i++) {
         html += i.toString() + " >> " + selector.next() + "<br>";
     }
+    html += "<br>";
+    html += "---------------<br>";
+    let base = new DictionaryBase();
+    dic_country.forEach(wrd => {
+        base.AddWrd(wrd);
+    });
+    html += cr_br(base.toString());
     html += "<br>";
     html += "---------------<br>";
     for (let i = 0; i < 20; i++) {

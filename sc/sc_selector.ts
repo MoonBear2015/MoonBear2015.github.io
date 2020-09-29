@@ -88,16 +88,17 @@ interface ItmDictionary<T extends Wrd> extends ItmArray<T> {
 }
 class ItmDictionarySt<T extends Wrd> extends ItmArraySt<T> implements ItmDictionary<T>
 {
+    public tagKey : string | undefined;
     // public tagKey: string;
-    constructor(public tagKey:string,inItms?: T[])
+    constructor(public inTagKey?:string,inItms?: T[])
     {
-        // if (inTagKey) {
-        //     this.tagKey = inTagKey;
-        // }
-        // else {
-        //     this.tagKey = "";
-        // }
-        super(inItms);
+        super();
+        if (inTagKey) {
+            this.tagKey = inTagKey;
+        }
+        if (inItms) {
+            this.append(inItms);
+        }
     }
 
     public copy() : ItmDictionary<T> {
@@ -105,9 +106,8 @@ class ItmDictionarySt<T extends Wrd> extends ItmArraySt<T> implements ItmDiction
     }
 
     public add(inItm : T) {
-        alert(inItm.tagTxt + " << " + this.tagKey)
-        if (inItm.isTagCheck(this.tagKey)){
-            this.itms.push(inItm)
+        if ((this.tagKey) && inItm.isTagCheck(this.tagKey)){
+            this.itms.push(inItm);
         }
     };
 
@@ -244,7 +244,7 @@ class WrdSt extends TxtSt implements Wrd {
     }
 
     public isTagCheck (inTagKey : string) : boolean {
-        return StrInTxtCheck(this.tagTxt,inTagKey);
+        return isInKeys(this.tagTxt,inTagKey);
     }
 
     public copy () : Wrd {
@@ -260,10 +260,12 @@ class DictionaryBase {
     public  wrds : Wrd[];
 
     public dictionarys : { [tagKey:string] : ItmDictionary<Wrd>};
+    public selectors : {[tagKey:string] : ItmDictionary<Wrd>};
 
     constructor() {
         this.wrds = [];
-        this.dictionarys = {};        
+        this.dictionarys = {};
+        this.selectors = {};       
     }
 
     public AddWrd (inWrd : Wrd) {

@@ -18,14 +18,17 @@ const TAG_CHR = "@";
 // STag Char
 const STAG_CHR = "_";
 
-// Tags Char
-const TAGS_CHR = ",";
-
 // Sel Type
-const SEL_NON : string = "";    // 指定なし
-const SEL_RND : string = "R";   // ランダム
+const SEL_RND : string = "";   // ランダム
 const SEL_LCK : string = "L";   // 固定
 const SEL_SEQ : string = "S";   // 順
+const SELS = [
+    SEL_RND
+    ,
+    SEL_LCK
+    ,
+    SEL_SEQ
+]
 
 class Tag {
     public key : string;
@@ -70,7 +73,7 @@ class Tag {
     }
 }
 
-const TagTxt_TagKeys = (inTagSt : string) : string[] =>  inTagSt.split(TAGS_CHR);
+const TagTxt_TagKeys = (inTagTxt : string) : string[] =>  keyText_keys(inTagTxt);
 const TagKey_TagStr = (inTagKey : string,inTagSel? : string) : string => {
     let result = inTagKey;
     if (inTagSel) {
@@ -125,8 +128,6 @@ const to_TagKey = (inTag : string) : string => {
         return strs[1];
     }
 }
-
-const StrInTxtCheck = (inTxt : string,inStr : string) : boolean => inTxt.indexOf(inStr) !== -1;
 
 
 

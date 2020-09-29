@@ -59,22 +59,21 @@ class ItmArraySt {
 }
 class ItmDictionarySt extends ItmArraySt {
     // public tagKey: string;
-    constructor(tagKey, inItms) {
-        // if (inTagKey) {
-        //     this.tagKey = inTagKey;
-        // }
-        // else {
-        //     this.tagKey = "";
-        // }
-        super(inItms);
-        this.tagKey = tagKey;
+    constructor(inTagKey, inItms) {
+        super();
+        this.inTagKey = inTagKey;
+        if (inTagKey) {
+            this.tagKey = inTagKey;
+        }
+        if (inItms) {
+            this.append(inItms);
+        }
     }
     copy() {
         return new ItmDictionarySt(this.tagKey, this.itms);
     }
     add(inItm) {
-        alert(inItm.tagTxt + " << " + this.tagKey);
-        if (inItm.isTagCheck(this.tagKey)) {
+        if ((this.tagKey) && inItm.isTagCheck(this.tagKey)) {
             this.itms.push(inItm);
         }
     }
@@ -172,7 +171,7 @@ class WrdSt extends TxtSt {
         return false;
     }
     isTagCheck(inTagKey) {
-        return StrInTxtCheck(this.tagTxt, inTagKey);
+        return isInKeys(this.tagTxt, inTagKey);
     }
     copy() {
         return new WrdSt(this.txt, this.tagTxt, this.pic);
@@ -185,6 +184,7 @@ class DictionaryBase {
     constructor() {
         this.wrds = [];
         this.dictionarys = {};
+        this.selectors = {};
     }
     AddWrd(inWrd) {
         this.wrds.push(inWrd);

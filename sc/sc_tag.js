@@ -13,13 +13,15 @@
 const TAG_CHR = "@";
 // STag Char
 const STAG_CHR = "_";
-// Tags Char
-const TAGS_CHR = ",";
 // Sel Type
-const SEL_NON = ""; // 指定なし
-const SEL_RND = "R"; // ランダム
+const SEL_RND = ""; // ランダム
 const SEL_LCK = "L"; // 固定
 const SEL_SEQ = "S"; // 順
+const SELS = [
+    SEL_RND,
+    SEL_LCK,
+    SEL_SEQ
+];
 class Tag {
     constructor(inKey, inSel) {
         let str = to_TagStr(inKey);
@@ -59,7 +61,7 @@ class Tag {
         this.str = st;
     }
 }
-const TagTxt_TagKeys = (inTagSt) => inTagSt.split(TAGS_CHR);
+const TagTxt_TagKeys = (inTagTxt) => keyText_keys(inTagTxt);
 const TagKey_TagStr = (inTagKey, inTagSel) => {
     let result = inTagKey;
     if (inTagSel) {
@@ -109,4 +111,3 @@ const to_TagKey = (inTag) => {
         return strs[1];
     }
 };
-const StrInTxtCheck = (inTxt, inStr) => inTxt.indexOf(inStr) !== -1;
