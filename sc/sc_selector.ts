@@ -84,18 +84,16 @@ class ItmArraySt<T extends Itm> implements ItmArray<T> {
 }
 
 interface ItmDictionary<T extends Wrd> extends ItmArray<T> {
-    tagKey : string | undefined;    
+    tagKey : string;    
 }
 class ItmDictionarySt<T extends Wrd> extends ItmArraySt<T> implements ItmDictionary<T>
 {
-    public tagKey : string | undefined;
+    public tagKey : string;
     // public tagKey: string;
-    constructor(public inTagKey?:string,inItms?: T[])
+    constructor(public inTagKey:string,inItms?: T[])
     {
         super();
-        if (inTagKey) {
-            this.tagKey = inTagKey;
-        }
+        this.tagKey = inTagKey;
         if (inItms) {
             this.append(inItms);
         }
@@ -119,34 +117,72 @@ class ItmDictionarySt<T extends Wrd> extends ItmArraySt<T> implements ItmDiction
 
 }
 
-
-interface ItmSelector<T extends Wrd> {
-    mode : string;
-    dic : ItmDictionary<T>;
-    tagKey :   string | undefined;
-    reset() : void;
+interface Replacer<T extends Wrd> {
+    tag : Tag;
     next() : T | undefined;
+    replace(inText : string) : string;
 }
 
-class ItmSelectorSt<T extends Wrd> 
-    implements ItmSelector<T>
+abstract class ReplacerSt<T extends Wrd> implements Replacer<T> {
+    public tag : Tag;
+    abstract next() : T | undefined;
+
+    constructor(inKey : string,inSel? : string) {
+        this.tag = new Tag(inKey,inSel);
+    }
+
+    public replace(inText : string) : string {
+        let result = inText;
+        while(true) {
+            if (inText.indexOf(this.tag.tag) === -1) break;
+            let wrd = this.next();
+            if (wrd) {
+                result = result.replace(this.tag.tag,wrd.txt);
+                if (wrd.pic) {
+                    result = result.replace(this.tag.pTag,wrd.pic);
+                }
+            }       
+        }
+        return result;
+    }
+}
+
+
+interface WrdSelector<T extends Wrd> 
+    extends Replacer<T>
+{
+    sel : string;
+    dic : ItmDictionary<T>;
+    key :   string;
+    reset() : void;
+    next() : T | undefined;
+    toString() : string;
+}
+
+
+class WrdSelectorSt<T extends Wrd>
+    extends ReplacerSt<T>
+    implements WrdSelector<T>
 {
     public dic : ItmDictionary<T>
     private idx : number;
-    public mode : string;
-    public tagKey : string | undefined;
+    public sel : string;
+    public key : string;
+    public tag : Tag;
 
-    constructor(inDic : ItmDictionary<T>,inMode? : string) {
+    constructor(inDic : ItmDictionary<T>,inSel? : string) {
+        super(inDic.tagKey,inSel);
         this.idx = -1;
         this.dic = inDic;
-        this.tagKey = this.dic.tagKey;
-        if (inMode) {
-            this.mode = inMode;
+        this.key = this.dic.tagKey;
+        if (inSel) {
+            this.sel = inSel;
         }
         else
         {
-            this.mode = "";
+            this.sel = "";
         }
+        this.tag = new Tag(this.key,this.sel);
     }
 
     public reset () : void {
@@ -155,7 +191,7 @@ class ItmSelectorSt<T extends Wrd>
 
     public next () : T | undefined {
         if (this.dic.length == 0) return undefined;
-        switch(this.mode) {
+        switch(this.sel) {
             case SEL_SEQ:
                 return this.next_Seq();
                 break;
@@ -188,7 +224,13 @@ class ItmSelectorSt<T extends Wrd>
             this.idx = RanMax(this.dic.itms.length);
         }
         return this.dic.itms[this.idx];
-    }    
+    }
+    
+    public toString() : string {
+        let result = "------------------------- [" + this.sel + "]\r\n";
+        result += this.dic.toString();
+        return result;
+    }
 }
 
 interface Txt extends Itm {
@@ -260,12 +302,16 @@ class DictionaryBase {
     public  wrds : Wrd[];
 
     public dictionarys : { [tagKey:string] : ItmDictionary<Wrd>};
-    public selectors : {[tagKey:string] : ItmDictionary<Wrd>};
+    public selectors : {[tag:string] : WrdSelector<Wrd>};
 
     constructor() {
         this.wrds = [];
         this.dictionarys = {};
         this.selectors = {};       
+    }
+
+    public AddWrds (inWrds : Wrd[]) {
+        inWrds.forEach( wrd => this.AddWrd(wrd) );
     }
 
     public AddWrd (inWrd : Wrd) {
@@ -280,7 +326,17 @@ class DictionaryBase {
 
     public NewDictionary (inTagKey : string) {
         if (!this.dictionarys[inTagKey]) {
-            this.dictionarys[inTagKey] = new ItmDictionarySt<Wrd>(inTagKey);
+            let newDictionary = new ItmDictionarySt<Wrd>(inTagKey);
+            this.dictionarys[inTagKey] = newDictionary;
+            SELS.forEach(sel => this.NewSelector(inTagKey,newDictionary,sel));
+        }
+    }
+
+    public NewSelector (inTagKey : string,inDictionary : ItmDictionary<Wrd>,inSelMode : string) {        
+        let tag = new Tag(inTagKey,inSelMode);
+        if (!this.selectors[tag.tag]) {
+            let newSelector : WrdSelector<Wrd> = new WrdSelectorSt<Wrd>(inDictionary,inSelMode);
+            this.selectors[tag.tag] = newSelector;
         }
     }
 

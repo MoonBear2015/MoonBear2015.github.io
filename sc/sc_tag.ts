@@ -1,8 +1,8 @@
-// Tag = "@ABC@"              タグ
-// STag = "@R_ABC@"         セルタグ（特殊選択指定付きタグ）
+// Tag = "@R_ABC@"         タグ
+// pTag = "@P_ABC@"         画像貼り付け
 
 // TAG_CHR = "@"            タグ認識文字
-// STAG_CHR = "_"           セル指定文字                    
+// SEL_CHR = "_"           セル指定文字                    
 
 // TagStr = "R_ABC"         タグ文字列
 // TagKey = "ABC"           タグ識別子
@@ -12,11 +12,6 @@
 // Tags = "@WHAT@","@COUNTRY@",~    複数タグ配列
 
 // TAGS_CHR = ","           複数タグ区切り    
-
-// Tag Char
-const TAG_CHR = "@";
-// STag Char
-const STAG_CHR = "_";
 
 // Sel Type
 const SEL_RND : string = "";   // ランダム
@@ -29,6 +24,14 @@ const SELS = [
     ,
     SEL_SEQ
 ]
+
+const SEL_PIC : string = "P"; // 画像用
+
+// Tag Char
+const TAG_CHR = "@";
+// STag Char
+const SEL_CHR = "_";
+
 
 class Tag {
     public key : string;
@@ -53,7 +56,7 @@ class Tag {
             return this.key;
         }
         else {
-            return this.sel + STAG_CHR + this.key;
+            return this.sel + SEL_CHR + this.key;
         }
     }
     set str(inStr : string) {
@@ -63,7 +66,7 @@ class Tag {
     get tag() : string {
         let result : string = this.key;
         if (this.sel !== "") {
-            result = this.sel + STAG_CHR + this.key;
+            result = this.sel + SEL_CHR + this.key;
         }
         return TAG_CHR + result + TAG_CHR;
     }
@@ -71,20 +74,22 @@ class Tag {
         let st = to_TagStr(inTag);
         this.str = st;
     }
-}
+    get pTag () : string {
+        let result = TAG_CHR + SEL_PIC + "_" + this.key + TAG_CHR;
+        return result;
+    } 
+} 
 
 const TagTxt_TagKeys = (inTagTxt : string) : string[] =>  keyText_keys(inTagTxt);
 const TagKey_TagStr = (inTagKey : string,inTagSel? : string) : string => {
     let result = inTagKey;
     if (inTagSel) {
-        result = inTagSel + STAG_CHR + result;        
+        result = inTagSel + SEL_CHR + result;        
     }    
     return result;
 }
 
 const TagStr_Tag = (inTagStr : string) : string => TAG_CHR + inTagStr + TAG_CHR;
-
-
 
 const to_TagStr = (inTag : string) : string => {
     let result = "";
@@ -104,11 +109,11 @@ const is_Tag = (inTag : string) : boolean => {
     return true;
 }
 
-const is_STagStr = (inTag : string) : boolean => to_TagStr(inTag).charAt(1) == STAG_CHR;
+const is_STagStr = (inTag : string) : boolean => to_TagStr(inTag).charAt(1) == SEL_CHR;
 
 const to_TagSel = (inTag : string) : string => {
     if (is_STagStr(inTag)) {
-        let strs = to_TagStr(inTag).split(STAG_CHR);
+        let strs = to_TagStr(inTag).split(SEL_CHR);
         return strs[0];
     }
     return "";
@@ -120,7 +125,7 @@ const to_TagKey = (inTag : string) : string => {
     if (str === "") {
         return "";
     }    
-    let strs = str.split(STAG_CHR);
+    let strs = str.split(SEL_CHR);
     if (strs.length !== 2) {
         return str;
     } 

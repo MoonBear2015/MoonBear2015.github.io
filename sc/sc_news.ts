@@ -9,7 +9,7 @@ const set_news = () =>
     html += "<h2>";
     html += "NEWS";
     html += "<small>";
-    html += " N0.22";
+    html += " N0.23";
     html += "</small>";
     html += "</h2>";
     html += "</div>";
@@ -49,8 +49,7 @@ const set_news = () =>
     
     let dictionary = new ItmDictionarySt<Wrd>("ASIA",dic_country);
     html += TestItems_html(dictionary.itms);
-    alert(dictionary.tagKey);
-    let selector = new ItmSelectorSt<Wrd>(dictionary);
+    let selector = new WrdSelectorSt<Wrd>(dictionary);
     for(let i = 0; i < 20; i++) {
         html += i.toString() + " >> " + selector.next() + "<br>";
     }
@@ -58,11 +57,21 @@ const set_news = () =>
     html += "<br>";
     html += "---------------<br>";
     let base = new DictionaryBase();
-    dic_country.forEach(wrd => {
-        base.AddWrd(wrd);
-    } 
-    );
+    base.AddWrds(dic_country);
     html += cr_br(base.toString());
+
+
+    html += "<br>";
+    html += "---------------<br>";
+    for (let key in base.selectors) {
+        html += "****** " + key + "<br>";
+        for(let i = 0; i < 10; i++) {  
+            let wrd = base.selectors[key].next();
+            if (wrd) {
+                html += "***> " + wrd.toString() + "<br>";
+            }
+        }  
+    }
 
 
     html += "<br>";

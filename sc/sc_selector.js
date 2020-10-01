@@ -62,9 +62,7 @@ class ItmDictionarySt extends ItmArraySt {
     constructor(inTagKey, inItms) {
         super();
         this.inTagKey = inTagKey;
-        if (inTagKey) {
-            this.tagKey = inTagKey;
-        }
+        this.tagKey = inTagKey;
         if (inItms) {
             this.append(inItms);
         }
@@ -84,17 +82,39 @@ class ItmDictionarySt extends ItmArraySt {
         return result;
     }
 }
-class ItmSelectorSt {
-    constructor(inDic, inMode) {
+class ReplacerSt {
+    constructor(inKey, inSel) {
+        this.tag = new Tag(inKey, inSel);
+    }
+    replace(inText) {
+        let result = inText;
+        while (true) {
+            if (inText.indexOf(this.tag.tag) === -1)
+                break;
+            let wrd = this.next();
+            if (wrd) {
+                result = result.replace(this.tag.tag, wrd.txt);
+                if (wrd.pic) {
+                    result = result.replace(this.tag.pTag, wrd.pic);
+                }
+            }
+        }
+        return result;
+    }
+}
+class WrdSelectorSt extends ReplacerSt {
+    constructor(inDic, inSel) {
+        super(inDic.tagKey, inSel);
         this.idx = -1;
         this.dic = inDic;
-        this.tagKey = this.dic.tagKey;
-        if (inMode) {
-            this.mode = inMode;
+        this.key = this.dic.tagKey;
+        if (inSel) {
+            this.sel = inSel;
         }
         else {
-            this.mode = "";
+            this.sel = "";
         }
+        this.tag = new Tag(this.key, this.sel);
     }
     reset() {
         this.idx = -1;
@@ -102,7 +122,7 @@ class ItmSelectorSt {
     next() {
         if (this.dic.length == 0)
             return undefined;
-        switch (this.mode) {
+        switch (this.sel) {
             case SEL_SEQ:
                 return this.next_Seq();
                 break;
@@ -132,6 +152,11 @@ class ItmSelectorSt {
             this.idx = RanMax(this.dic.itms.length);
         }
         return this.dic.itms[this.idx];
+    }
+    toString() {
+        let result = "------------------------- [" + this.sel + "]\r\n";
+        result += this.dic.toString();
+        return result;
     }
 }
 class TxtSt extends ItmSt {
@@ -186,6 +211,9 @@ class DictionaryBase {
         this.dictionarys = {};
         this.selectors = {};
     }
+    AddWrds(inWrds) {
+        inWrds.forEach(wrd => this.AddWrd(wrd));
+    }
     AddWrd(inWrd) {
         this.wrds.push(inWrd);
         let keys = TagTxt_TagKeys(inWrd.tagTxt);
@@ -196,7 +224,16 @@ class DictionaryBase {
     }
     NewDictionary(inTagKey) {
         if (!this.dictionarys[inTagKey]) {
-            this.dictionarys[inTagKey] = new ItmDictionarySt(inTagKey);
+            let newDictionary = new ItmDictionarySt(inTagKey);
+            this.dictionarys[inTagKey] = newDictionary;
+            SELS.forEach(sel => this.NewSelector(inTagKey, newDictionary, sel));
+        }
+    }
+    NewSelector(inTagKey, inDictionary, inSelMode) {
+        let tag = new Tag(inTagKey, inSelMode);
+        if (!this.selectors[tag.tag]) {
+            let newSelector = new WrdSelectorSt(inDictionary, inSelMode);
+            this.selectors[tag.tag] = newSelector;
         }
     }
     toString() {
