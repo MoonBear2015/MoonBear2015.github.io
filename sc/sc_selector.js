@@ -77,19 +77,19 @@ class ItmDictionarySt extends ItmArraySt {
     }
     ;
     toString() {
-        let result = ">>>>>>>>>>>>>>>>>>>>>>> " + this.tagKey + "\r\n";
+        let result = ">>>>>>>>>>>>>>>>>>>>>>> [" + this.tagKey + "]\r\n";
         result += super.toString();
         return result;
     }
 }
-class ReplacerSt {
+class TagReplacerSt {
     constructor(inKey, inSel) {
         this.tag = new Tag(inKey, inSel);
     }
-    replace(inText) {
+    tagReplace(inText) {
         let result = inText;
         while (true) {
-            if (inText.indexOf(this.tag.tag) === -1)
+            if (result.indexOf(this.tag.tag) === -1)
                 break;
             let wrd = this.next();
             if (wrd) {
@@ -102,19 +102,19 @@ class ReplacerSt {
         return result;
     }
 }
-class WrdSelectorSt extends ReplacerSt {
+class WrdSelectorSt extends TagReplacerSt {
     constructor(inDic, inSel) {
         super(inDic.tagKey, inSel);
         this.idx = -1;
         this.dic = inDic;
-        this.key = this.dic.tagKey;
+        this.tagKey = this.dic.tagKey;
         if (inSel) {
-            this.sel = inSel;
+            this.tagSel = inSel;
         }
         else {
-            this.sel = "";
+            this.tagSel = "";
         }
-        this.tag = new Tag(this.key, this.sel);
+        this.tag = new Tag(this.tagKey, this.tagSel);
     }
     reset() {
         this.idx = -1;
@@ -122,7 +122,7 @@ class WrdSelectorSt extends ReplacerSt {
     next() {
         if (this.dic.length == 0)
             return undefined;
-        switch (this.sel) {
+        switch (this.tagSel) {
             case SEL_SEQ:
                 return this.next_Seq();
                 break;
@@ -154,7 +154,7 @@ class WrdSelectorSt extends ReplacerSt {
         return this.dic.itms[this.idx];
     }
     toString() {
-        let result = "------------------------- [" + this.sel + "]\r\n";
+        let result = "------------------------- [" + this.tagSel + "]\r\n";
         result += this.dic.toString();
         return result;
     }
@@ -235,6 +235,24 @@ class DictionaryBase {
             let newSelector = new WrdSelectorSt(inDictionary, inSelMode);
             this.selectors[tag.tag] = newSelector;
         }
+    }
+    tagReplace(inText) {
+        let result = inText;
+        let cnt = 0;
+        while (true) {
+            if (result.indexOf(TAG_CHR) === -1) {
+                break;
+            }
+            cnt++;
+            if (cnt > 100) {
+                alert("Over Work!!");
+                break;
+            }
+            for (let key in this.selectors) {
+                result = this.selectors[key].tagReplace(result);
+            }
+        }
+        return result;
     }
     toString() {
         let result = "";

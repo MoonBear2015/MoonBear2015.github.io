@@ -110,20 +110,20 @@ class ItmDictionarySt<T extends Wrd> extends ItmArraySt<T> implements ItmDiction
     };
 
     public toString() : string {
-        let result = ">>>>>>>>>>>>>>>>>>>>>>> " + this.tagKey + "\r\n";
+        let result = ">>>>>>>>>>>>>>>>>>>>>>> [" + this.tagKey + "]\r\n";
         result += super.toString();
         return result;
     }
 
 }
 
-interface Replacer<T extends Wrd> {
+interface TagReplacer<T extends Wrd> {
     tag : Tag;
     next() : T | undefined;
-    replace(inText : string) : string;
+    tagReplace(inText : string) : string;
 }
 
-abstract class ReplacerSt<T extends Wrd> implements Replacer<T> {
+abstract class TagReplacerSt<T extends Wrd> implements TagReplacer<T> {
     public tag : Tag;
     abstract next() : T | undefined;
 
@@ -131,10 +131,10 @@ abstract class ReplacerSt<T extends Wrd> implements Replacer<T> {
         this.tag = new Tag(inKey,inSel);
     }
 
-    public replace(inText : string) : string {
+    public tagReplace(inText : string) : string {
         let result = inText;
         while(true) {
-            if (inText.indexOf(this.tag.tag) === -1) break;
+            if (result.indexOf(this.tag.tag) === -1) break;
             let wrd = this.next();
             if (wrd) {
                 result = result.replace(this.tag.tag,wrd.txt);
@@ -149,11 +149,12 @@ abstract class ReplacerSt<T extends Wrd> implements Replacer<T> {
 
 
 interface WrdSelector<T extends Wrd> 
-    extends Replacer<T>
+    extends TagReplacer<T>
 {
-    sel : string;
+    tag : Tag;
+    tagSel : string;
     dic : ItmDictionary<T>;
-    key :   string;
+    tagKey :   string;
     reset() : void;
     next() : T | undefined;
     toString() : string;
@@ -161,28 +162,28 @@ interface WrdSelector<T extends Wrd>
 
 
 class WrdSelectorSt<T extends Wrd>
-    extends ReplacerSt<T>
+    extends TagReplacerSt<T>
     implements WrdSelector<T>
 {
     public dic : ItmDictionary<T>
     private idx : number;
-    public sel : string;
-    public key : string;
+    public tagSel : string;
+    public tagKey : string;
     public tag : Tag;
 
-    constructor(inDic : ItmDictionary<T>,inSel? : string) {
+    constructor(inDic : ItmDictionary<T>,inSel : string) {
         super(inDic.tagKey,inSel);
         this.idx = -1;
         this.dic = inDic;
-        this.key = this.dic.tagKey;
+        this.tagKey = this.dic.tagKey;
         if (inSel) {
-            this.sel = inSel;
+            this.tagSel = inSel;
         }
         else
         {
-            this.sel = "";
+            this.tagSel = "";
         }
-        this.tag = new Tag(this.key,this.sel);
+        this.tag = new Tag(this.tagKey,this.tagSel);
     }
 
     public reset () : void {
@@ -191,7 +192,7 @@ class WrdSelectorSt<T extends Wrd>
 
     public next () : T | undefined {
         if (this.dic.length == 0) return undefined;
-        switch(this.sel) {
+        switch(this.tagSel) {
             case SEL_SEQ:
                 return this.next_Seq();
                 break;
@@ -227,7 +228,7 @@ class WrdSelectorSt<T extends Wrd>
     }
     
     public toString() : string {
-        let result = "------------------------- [" + this.sel + "]\r\n";
+        let result = "------------------------- [" + this.tagSel + "]\r\n";
         result += this.dic.toString();
         return result;
     }
@@ -338,6 +339,25 @@ class DictionaryBase {
             let newSelector : WrdSelector<Wrd> = new WrdSelectorSt<Wrd>(inDictionary,inSelMode);
             this.selectors[tag.tag] = newSelector;
         }
+    }
+
+    public tagReplace(inText : string) : string {
+        let result = inText;
+        let cnt = 0;
+        while(true) {
+            if (result.indexOf(TAG_CHR) === -1) {
+                break;
+            }
+            cnt++;
+            if (cnt > 100) {
+                alert("Over Work!!");
+                break;
+            }
+            for(let key in this.selectors) {
+                result = this.selectors[key].tagReplace(result);                
+            }
+        }
+        return result;
     }
 
     public toString () : string {

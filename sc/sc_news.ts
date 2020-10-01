@@ -9,55 +9,18 @@ const set_news = () =>
     html += "<h2>";
     html += "NEWS";
     html += "<small>";
-    html += " N0.23";
+    html += " N0.24";
     html += "</small>";
     html += "</h2>";
     html += "</div>";
     html += "<br>";
     
-    html += "---------------<br>";
-    html += "<br>";
-    let text = "";
-    text = keyAppend(text,"Apple");
-    html += "TEXT : " + text + "<br>";
-    text = keyAppend(text,"Banana");
-    html += "TEXT : " + text + "<br>";
-    text = keyAppend(text,"Orange");
-    html += "TEXT : " + text + "<br>";
-    text = keyAppend(text,"Orange");
-    html += "TEXT : " + text + "<br>";
-    text = keyRemove(text,"Apple");
-    html += "TEXT : " + text + "<br>";
-    text = keyRemove(text,"Apple");
-    html += "TEXT : " + text + "<br>";
-    
-    
-    
-    html += "---------------<br>";
-    html += "<br>";
-    
-    let tag01 = "@S_TAG@";
-    html += "Tag = " + tag01 + "<br>";
-    let tag = new Tag(tag01);
-    html += "key = " + tag.key + "<br>";
-    html += "sel = " + tag.sel + "<br>";
-    html += "str = " + tag.str + "<br>";
-    html += "tag = " + tag.tag + "<br>";
-    html += "<br>";
-    
-    html += "---------------<br>";
-    
-    let dictionary = new ItmDictionarySt<Wrd>("ASIA",dic_country);
-    html += TestItems_html(dictionary.itms);
-    let selector = new WrdSelectorSt<Wrd>(dictionary);
-    for(let i = 0; i < 20; i++) {
-        html += i.toString() + " >> " + selector.next() + "<br>";
-    }
 
     html += "<br>";
     html += "---------------<br>";
     let base = new DictionaryBase();
     base.AddWrds(dic_country);
+    base.AddWrds(dic_do);
     html += cr_br(base.toString());
 
 
@@ -83,36 +46,23 @@ const set_news = () =>
 
         html += "<div id='box'>";
         html += "<br>";
-        html += "<h3>@country@沈没</h3>";
+        html += "<h3>@COUNTRY@@DO@</h3>";
         html += "<br>";
         html += "<figure id='fig_left'>";
         html += "<img src='./img/place/Japan.jpg' alt='NEWS'>";
         html += "</figure>";
         html += "<p>　";
         for(let j = 0;j  < 100; j++) {
-            html += "@country@が沈没しました。";
+            html += "@COUNTRY@が@DO@しました。";
         }
         html += "</p>";
         html += "</div>";
     }
-    html = replace_string(html,"@country@",dic_place);
+
+    html = base.tagReplace(html);
+
     set_html("index_main",html);
 
-}
-
-const replace_string = (inStr : string, inKey : string, inDic : string[])
- : string => 
-{
-    let result : string = inStr;
-    let cnt : number = 0;
-    while(true) {
-        if (result.indexOf(inKey) == -1) break;
-        let after = inDic[RanMax(inDic.length)];
-        result = result.replace(inKey,after);
-        cnt++;
-        if (cnt > 1000) break;
-    }
-    return result;
 }
 
 const dic_country = [
@@ -121,6 +71,21 @@ const dic_country = [
     new WrdSt("中国","COUNTRY,ASIA")
     ,
     new WrdSt("アメリカ","COUNTRY")
+]
+
+const dic_do = [
+    new WrdSt("破滅","DO")
+    ,
+    new WrdSt("壊滅","DO")
+    ,
+    new WrdSt("自滅","DO")
+    ,
+    new WrdSt("絶滅","DO")
+    ,
+    new WrdSt("死滅","DO")
+    ,
+    new WrdSt("全滅","DO")
+
 ]
 
 const dic_place = [
