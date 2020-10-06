@@ -240,6 +240,11 @@ class DictionaryBase {
             this.selectors[tag.tag] = newSelector;
         }
     }
+    reset() {
+        for (let key in this.selectors) {
+            this.selectors[key].reset();
+        }
+    }
     tagReplace(inText) {
         let result = inText;
         let cnt = 0;

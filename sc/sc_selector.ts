@@ -345,6 +345,12 @@ class DictionaryBase {
         }
     }
 
+    public reset() {
+        for(let key in this.selectors) {
+            this.selectors[key].reset();
+        }
+    }
+
     public tagReplace(inText : string) : string {
         let result = inText;
         let cnt = 0;

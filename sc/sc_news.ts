@@ -9,7 +9,7 @@ const set_news = () =>
     html += "<h2>";
     html += "NEWS";
     html += "<small>";
-    html += " N0.27";
+    html += " N0.28";
     html += "</small>";
     html += "</h2>";
     html += "</div>";
@@ -22,13 +22,15 @@ const set_news = () =>
     base.AddWrds(dic_do);
 
     for(let i = 0; i < 20; i++){
+        base.reset();
+
         html += "<p>[" + i.toString() + "]</p>";
 
         html += '<div id="box" ';
         html += 'style="';
         html += 'background: ';
         html += 'linear-gradient(0deg,rgba(20,20,20,0.4),rgba(0,0,0,0.8)),';
-        html += 'url(@P_DO@);';
+        html += 'url(@PL_DO@);';
         html += 'background-position: center center;';
         html += 'background-size: cover;';
         html += '">';
@@ -36,7 +38,7 @@ const set_news = () =>
         html += "<h3>@NEWSTITLE@</h3>";
         html += "<br>";
         html += "<figure id='fig_left'>";
-        html += "<img src='@P_WHAT@' alt='NEWS'>";
+        html += "<img src='@PL_WHAT@' alt='NEWS'>";
         html += "</figure>";
         html += "<p>　";
         for(let j = 0;j  < 30; j++) {
@@ -45,7 +47,7 @@ const set_news = () =>
         html += "</p>";
 
         html += "<figure id='fig_right'>";
-        html += "<img src='@P_DO@' alt='NEWS'>";
+        html += "<img src='@PL_DO@' alt='NEWS'>";
         html += "</figure>";
         html += "<p>　";
         for(let j = 0;j  < 30; j++) {

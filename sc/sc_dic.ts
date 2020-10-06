@@ -1,11 +1,11 @@
 const dic_news_title = [
-    new WrdSt("@WHAT@@DO@","NEWSTITLE")
+    new WrdSt("@L_WHAT@@L_DO@","NEWSTITLE")
     ,
-    new WrdSt("@WHAT@の@DO@","NEWSTITLE")
+    new WrdSt("@L_WHAT@の@L_DO@","NEWSTITLE")
     ,
-    new WrdSt("@DO@する@WHAT@","NEWSTITLE")
+    new WrdSt("@L_DO@する@L_WHAT@","NEWSTITLE")
     ,
-    new WrdSt("@DO@した@WHAT@","NEWSTITLE")
+    new WrdSt("@L_DO@した@L_WHAT@","NEWSTITLE")
 ]
 
 

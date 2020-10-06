@@ -62,7 +62,7 @@ class Tag {
         this.str = st;
     }
     get pTag() {
-        let result = TAG_CHR + SEL_PIC + "_" + this.key + TAG_CHR;
+        let result = TAG_CHR + SEL_PIC + this.sel + "_" + this.key + TAG_CHR;
         return result;
     }
 }
