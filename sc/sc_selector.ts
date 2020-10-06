@@ -133,13 +133,17 @@ abstract class TagReplacerSt<T extends Wrd> implements TagReplacer<T> {
 
     public tagReplace(inText : string) : string {
         let result = inText;
+        
         while(true) {
             if (result.indexOf(this.tag.tag) === -1) break;
             let wrd = this.next();
             if (wrd) {
                 result = result.replace(this.tag.tag,wrd.txt);
                 if (wrd.pic) {
-                    result = result.replace(this.tag.pTag,wrd.pic);
+                    while(true) {
+                        if (result.indexOf(this.tag.pTag) === -1) break;
+                        result = result.replace(this.tag.pTag,wrd.pic);
+                    }
                 }
             }       
         }

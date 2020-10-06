@@ -9,7 +9,7 @@ const set_news = () =>
     html += "<h2>";
     html += "NEWS";
     html += "<small>";
-    html += " N0.25";
+    html += " N0.27";
     html += "</small>";
     html += "</h2>";
     html += "</div>";
@@ -24,7 +24,14 @@ const set_news = () =>
     for(let i = 0; i < 20; i++){
         html += "<p>[" + i.toString() + "]</p>";
 
-        html += "<div id='box'>";
+        html += '<div id="box" ';
+        html += 'style="';
+        html += 'background: ';
+        html += 'linear-gradient(0deg,rgba(20,20,20,0.4),rgba(0,0,0,0.8)),';
+        html += 'url(@P_DO@);';
+        html += 'background-position: center center;';
+        html += 'background-size: cover;';
+        html += '">';
         html += "<br>";
         html += "<h3>@NEWSTITLE@</h3>";
         html += "<br>";
