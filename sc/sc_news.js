@@ -7,16 +7,21 @@ const set_news = () => {
     html += "<h2>";
     html += "NEWS";
     html += "<small>";
-    html += " N0.28";
+    html += " N0.29";
     html += "</small>";
     html += "</h2>";
     html += "</div>";
     html += "<br>";
     let base = new DictionaryBase();
     base.AddWrds(dic_news_title);
+    base.AddWrds(dic_news_sent);
+    base.AddWrds(dic_news_sent01);
+    base.AddWrds(dic_news_sent02);
+    base.AddWrds(dic_news_sent03);
     base.AddWrds(dic_country);
     base.AddWrds(dic_city);
     base.AddWrds(dic_do);
+    base.AddWrds(dic_they);
     for (let i = 0; i < 20; i++) {
         base.reset();
         html += "<p>[" + i.toString() + "]</p>";
@@ -36,7 +41,7 @@ const set_news = () => {
         html += "</figure>";
         html += "<p>　";
         for (let j = 0; j < 30; j++) {
-            html += "@COUNTRY@が@DO@しました。";
+            html += "@SENT@";
         }
         html += "</p>";
         html += "<figure id='fig_right'>";
@@ -44,7 +49,7 @@ const set_news = () => {
         html += "</figure>";
         html += "<p>　";
         for (let j = 0; j < 30; j++) {
-            html += "@COUNTRY@が@DO@しました。";
+            html += "@SENT@";
         }
         html += "</p>";
         html += "</div>";
@@ -52,3 +57,4 @@ const set_news = () => {
     }
     set_html("index_main", html);
 };
+//# sourceMappingURL=sc_news.js.map

@@ -9,7 +9,7 @@ const set_news = () =>
     html += "<h2>";
     html += "NEWS";
     html += "<small>";
-    html += " N0.28";
+    html += " N0.29";
     html += "</small>";
     html += "</h2>";
     html += "</div>";
@@ -17,10 +17,15 @@ const set_news = () =>
 
     let base = new DictionaryBase();
     base.AddWrds(dic_news_title);
+    base.AddWrds(dic_news_sent);
+    base.AddWrds(dic_news_sent01);
+    base.AddWrds(dic_news_sent02);
+    base.AddWrds(dic_news_sent03);
     base.AddWrds(dic_country);
     base.AddWrds(dic_city);
     base.AddWrds(dic_do);
-
+    base.AddWrds(dic_they);
+    
     for(let i = 0; i < 20; i++){
         base.reset();
 
@@ -42,7 +47,7 @@ const set_news = () =>
         html += "</figure>";
         html += "<p>　";
         for(let j = 0;j  < 30; j++) {
-            html += "@COUNTRY@が@DO@しました。";
+            html += "@SENT@";
         }
         html += "</p>";
 
@@ -51,7 +56,7 @@ const set_news = () =>
         html += "</figure>";
         html += "<p>　";
         for(let j = 0;j  < 30; j++) {
-            html += "@COUNTRY@が@DO@しました。";
+            html += "@SENT@";
         }
         html += "</p>";
 

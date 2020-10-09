@@ -204,3 +204,4 @@ function star_str(in_score, in_max) {
     result += '・'.repeat(max - score - mill);
     return result;
 }
+//# sourceMappingURL=sc_sub.js.map

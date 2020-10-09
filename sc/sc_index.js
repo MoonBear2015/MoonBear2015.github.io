@@ -69,3 +69,4 @@ const make_header_menu = (num) => {
     html += "</div>" + "\r\n";
     return html;
 };
+//# sourceMappingURL=sc_index.js.map

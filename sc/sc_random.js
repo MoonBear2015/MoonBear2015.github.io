@@ -22,3 +22,4 @@ function seqNumber(n) {
     }
     return ary;
 }
+//# sourceMappingURL=sc_random.js.map
