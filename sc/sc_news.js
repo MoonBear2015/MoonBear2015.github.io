@@ -22,6 +22,7 @@ const set_news = () => {
     base.AddWrds(dic_city);
     base.AddWrds(dic_do);
     base.AddWrds(dic_they);
+    base.AddWrds(dic_volume);
     for (let i = 0; i < 20; i++) {
         base.reset();
         html += "<p>[" + i.toString() + "]</p>";

@@ -3,8 +3,9 @@ const dic_news_title = [
     new WrdSt("@L_WHAT@@L_DO@", "NEWSTITLE"),
     new WrdSt("@L_WHAT@の@L_DO@", "NEWSTITLE"),
     new WrdSt("@L_DO@する@L_WHAT@", "NEWSTITLE"),
+    new WrdSt("@L_DO@する@VOLUME@@L_WHAT@", "NEWSTITLE"),
     new WrdSt("@L_DO@した@L_WHAT@", "NEWSTITLE"),
-    new WrdSt("@L_DO@した@L_WHAT@", "NEWSTITLE")
+    new WrdSt("@L_DO@した@VOLUME@@L_WHAT@", "NEWSTITLE")
 ];
 const dic_news_sent = [
     new WrdSt("@SENT01@、@SENT02@、@SENT03@。", "SENT"),
@@ -15,8 +16,8 @@ const dic_news_sent01 = [
     new WrdSt("@PLACE@には", "SENT01")
 ];
 const dic_news_sent02 = [
-    new WrdSt("多くの@THEY@が", "SENT02"),
-    new WrdSt("一部の@THEY@が", "SENT02")
+    new WrdSt("@VOLUME@@THEY@が", "SENT02"),
+    new WrdSt("@THEY@が", "SENT02")
 ];
 const dic_news_sent03 = [
     new WrdSt("@DO@していた", "SENT03"),
@@ -58,6 +59,25 @@ const dic_they = [
     new WrdSt("人々", "WHAT,THEY", "./img/they/Humans.jpg"),
     new WrdSt("連中", "WHAT,THEY", "./img/they/They.jpg"),
     new WrdSt("民衆", "WHAT,THEY", "./img/they/People.jpg"),
-    new WrdSt("子供達", "WHAT,THEY", "./img/they/Childrens.jpg")
+    new WrdSt("子供達", "WHAT,THEY", "./img/they/Childrens.jpg"),
+    new WrdSt("少年達", "WHAT,THEY", "./img/they/Boys.jpg"),
+    new WrdSt("少女達", "WHAT,THEY", "./img/they/Girls.jpg"),
+    new WrdSt("学生達", "WHAT,THEY", "./img/they/Students.jpg"),
+    new WrdSt("大人達", "WHAT,THEY", "./img/they/Adults.jpg"),
+    new WrdSt("若年層", "WHAT,THEY", "./img/they/Youngs.jpg"),
+    new WrdSt("中高年", "WHAT,THEY", "./img/they/Oldies.jpg"),
+    new WrdSt("サラリーマン", "WHAT,THEY", "./img/they/Humans.jpg"),
+    new WrdSt("ビジネスマン", "WHAT,THEY", "./img/they/Humans.jpg"),
+    new WrdSt("兵士達", "WHAT,THEY", "./img/they/Humans.jpg"),
+    new WrdSt("支配階級", "WHAT,THEY", "./img/they/Humans.jpg"),
+    new WrdSt("支配階級", "WHAT,THEY", "./img/they/Humans.jpg")
+];
+const dic_volume = [
+    new WrdSt("多くの", "VOLUME"),
+    new WrdSt("大半の", "VOLUME"),
+    new WrdSt("数多くの", "VOLUME"),
+    new WrdSt("一部の", "VOLUME"),
+    new WrdSt("少数の", "VOLUME"),
+    new WrdSt("ごくわずかな", "VOLUME")
 ];
 //# sourceMappingURL=sc_dic.js.map

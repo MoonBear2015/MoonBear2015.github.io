@@ -9,7 +9,7 @@ const set_news = () =>
     html += "<h2>";
     html += "NEWS";
     html += "<small>";
-    html += " N0.29";
+    html += " N0.30";
     html += "</small>";
     html += "</h2>";
     html += "</div>";
@@ -25,6 +25,7 @@ const set_news = () =>
     base.AddWrds(dic_city);
     base.AddWrds(dic_do);
     base.AddWrds(dic_they);
+    base.AddWrds(dic_volume);
     
     for(let i = 0; i < 20; i++){
         base.reset();
