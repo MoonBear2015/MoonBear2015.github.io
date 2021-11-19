@@ -3,25 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>none...</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP:400,700&display=swap&subset=japanese" rel="stylesheet">
-    <script type="text/javascript" src="./sc/sc_selector.js"></script>
-    <script type="text/javascript" src="./sc/sc_sub.js"></script>
-    <script type="text/javascript" src="./sc/sc_random.js"></script>
-    <script type="text/javascript" src="./sc/sc_news.js"></script>
-    <script type="text/javascript" src="./sc/sc_tag.js"></script>
-    <script type="text/javascript" src="./sc/sc_dic.js"></script>
-    <script type="text/javascript" src="./sc/sc_index.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>None...</title>
+    <link rel="stylesheet" href="mystyle.css">
 </head>
+
+<script>
+    function test()
+    {
+        document.getElementById("mess").innerHTML +="無い！";
+    }
+    test();
+</script>
+
 <body>
-    <header id="index_header"></header>
-    <main id="index_main"></main>
+    <header id="site_header">
+        <div id="header_title"> 
+            <h1>「空虚」</h1>
+        </div>
+        <div id="header_menu">
+            <ul>
+                <li>
+                    <a class="active">Home</a>
+                </li>
+                <li>
+                    <a>News</a>
+                </li>
+                <li>
+                    <a>Content</a>
+                </li>
+                <li>
+                    <a>About</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="main_con">
+        <div class="center_message">
+            <p>
+                ここには何もありません。
+            </p>
+        </div>
+        <p>何かあるか？</p>
+        <button type="button" onclick="test()">クリックして下さい
+        </button>
+        <div id="mess"></div>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+    
 </body>
 </html>
-
-<script type="text/javascript">
-    window.onload = function () {
-        set_index_header();
-    }
-</script>
