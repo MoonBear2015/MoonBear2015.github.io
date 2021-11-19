@@ -1,0 +1,733 @@
+function set_qa()
+{
+    set_header_menu(3);
+
+    scrollTo(0,0);
+
+    let html : string = '';
+    html += '<div id="main_title">'
+    html += '<h1>';
+    html += 'Q&A';
+    html += '<small>';
+    html += ' Q01.00';
+    html += '</small>';
+    html += '</h1>';
+    html += '</div>';
+
+    for(let i = 0; i < 40; i++){
+        html += '<p>[' + i.toString() + ']</p>' + make_qa();
+    }
+
+    let elem = document.getElementById('site_main');
+    if (elem == null)
+    {
+        alert('not found "site_main"');
+        return;
+    }
+    elem.innerHTML = ruby_change(html);
+}
+
+function make_qa()
+{
+    let html : string = '';
+
+    html += '<div id="qa_box" ';
+    html += 'style="';
+    html += 'margin:     5px; ';
+    html += 'padding:    10px; ';
+    html += 'border:     0.5px solid #606060;';
+    html += 'border-radius:  10px;';
+    html += '">';
+
+    html += Make_Q();
+    html += Make_A();
+
+    //---- this Q&A END
+    html += '</div>';
+
+    let maker = new qa_docs_maker();
+    html = maker.gene_docs(html);
+
+    return html;
+}
+
+function Make_Q() : string {
+    let html = '';
+    html += '<div id="qa_box" ';
+    html += 'style="';
+    html += 'margin:     5px; ';
+    html += 'padding:    10px; ';
+    html += 'border:     0.5px solid #606060;';
+    html += 'border-radius:  10px;';
+    html += 'background: ';
+    html += 'linear-gradient(0deg,rgba(0,0,80,0.3),rgba(0,0,30,0.8)),';
+    html += 'url(./pics/QA/@PIC_Q@);';
+    html += 'background-position: center center;';
+    html += 'background-size: cover;';
+    html += '">';
+
+    html += '@QUESTER@';
+
+    html += '<br>';
+
+    html += '<p id="qa_title">';
+    html += '@Q_TITLE@';
+    html += '</p>';
+
+    html += '<p id="qa_doc">';
+    html += '@Q_INIT@';
+    for(let i = 0;i < rnd_minmax(2,4);i++)
+    {
+        html += '@Q_SENT@';
+    }
+    html += '</p>';
+
+    html += '</div>';
+
+    return html;
+}
+
+function Make_A() : string {
+    let html = '';
+    html += '<div id="qa_box" ';
+    html += 'style="';
+    html += 'margin:     5px; ';
+    html += 'padding:    10px; ';
+    html += 'border:     0.5px solid #606060;';
+    html += 'border-radius:  10px;';
+    html += 'background: ';
+    html += 'linear-gradient(0deg,rgba(30,30,30,0.8),rgba(80,80,30,0.8)),';
+    html += 'url(./pics/QA/@PIC_A@);';
+    html += 'background-position: center center;';
+    html += 'background-size: cover;';
+    html += '">';
+    
+    html += '@ADVICER@';
+
+    html += '<br>';
+
+    html += '<p id="qa_title">';
+    html += '@A_TITLE@';
+    html += '</p>';
+
+    html += '<p id="qa_doc">';
+    html += '@A_INIT@';
+    for(let i = 0;i < rnd_minmax(2,4);i++)
+    {
+        html += '@A_SENT@';
+    }
+    html += '</p>';
+
+
+    html += '</div>';
+
+    return html;
+}
+
+
+class qa_docs_maker extends news_docs_maker {
+    constructor(){
+        super();
+        this.dic_push(new selector_q_title());
+        this.dic_push(new selector_q_init());
+        this.dic_push(new selector_q_sent());
+        this.dic_push(new selector_q_msg());
+        this.dic_push(new selector_q01_me());
+        this.dic_push(new selector_q02());
+        this.dic_push(new selector_q03_quest());
+        this.dic_push(new selector_q04_result());
+
+        this.dic_push(new selector_a_title());
+        this.dic_push(new selector_a_init());
+        this.dic_push(new selector_a_sent());
+        this.dic_push(new selector_a_msg());
+        this.dic_push(new selector_a01_you());
+        this.dic_push(new selector_a03_issue());
+        this.dic_push(new selector_a02_quest());
+        this.dic_push(new selector_a04_result());
+
+        this.dic_push(new selector_pic_q());
+        this.dic_push(new selector_pic_a());
+        this.dic_push(new selector_quester());
+        this.dic_push(new selector_advicer());
+        this.dic_push(new locker_part());
+        this.dic_push(new locker_habit());
+        this.dic_push(new selector_habit());
+    }
+}
+
+abstract class selector_NameLocker 
+    extends ItmArray<SctItm>
+    implements ISctItm_Selector 
+{
+    public nameCreater : INameCreater;
+    public itm_key : string;
+    public itm_key2 : string;
+    public pic_key : string;
+    public is_first : boolean;
+    public created_name : INmItm;
+
+    constructor(in_itm_key : string)
+    {
+        super();
+        this.itm_key = in_itm_key;
+        this.itm_key2 = "";
+        this.pic_key = "";
+        this.nameCreater = new NameCreaterAll();
+        this.is_first = true;
+        this.created_name = this.nameCreater.create();
+    }
+    
+    abstract get first_itm() : SctItm;
+    get second_itm() : SctItm {
+        return new SctItm(this.created_name.FstNmStr,'');
+    }
+
+    get rnd_Itm() : SctItm {
+        if (this.is_first) {
+            this.is_first = false;
+            return this.first_itm;
+        }
+        return this.second_itm;
+    }
+    Copy() : ISctItm_Selector
+    {
+        let result = new selector_human();
+        return result;
+    }
+    public Gene_Docs(temp_doc : string) : string {
+        return replace_docs_A(temp_doc,this);
+    }
+
+}
+
+
+class selector_quester 
+    extends selector_NameLocker
+    implements ISctItm_Selector 
+{
+    constructor()
+    {
+        super("@QUESTER@");
+    }
+    get first_itm() : SctItm {
+        return new SctItm(this.created_name.html_QUESTER(100),'');
+    }
+}
+
+class selector_advicer
+    extends selector_NameLocker
+    implements ISctItm_Selector 
+{
+    constructor()
+    {
+        super("@ADVICER@");
+    }
+    get first_itm() : SctItm {
+        return new SctItm(this.created_name.html_ADVICER(100),'');
+    }
+}
+
+class selector_pic_q extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@PIC_Q@');
+        this.itms = [
+            new SctItm('Q01.jpg')
+            ,
+            new SctItm('Q02.jpg')
+            ,
+            new SctItm('Q03.jpg')
+            ,
+            new SctItm('Q04.jpg')
+            ,
+            new SctItm('Q05.jpg')
+            ,
+            new SctItm('Q06.jpg')
+        ]
+    }
+}
+class selector_pic_a extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@PIC_A@');
+        this.itms = [
+            new SctItm('A01.jpg')
+            ,
+            new SctItm('A02.jpg')
+            ,
+            new SctItm('A03.jpg')
+            ,
+            new SctItm('A04.jpg')
+            ,
+            new SctItm('A05.jpg')
+            ,
+            new SctItm('A06.jpg')
+        ]
+    }
+}
+
+class selector_q_title extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@Q_TITLE@');
+        this.itms = [
+            new SctItm('@L_PART@に@THINK@しています')
+            ,
+            new SctItm('@L_PART@が@L_HABIT@ばかりしています')
+            ,
+            new SctItm('助けて！ @L_PART@がまるで@NICK@なんです')
+            ,
+            new SctItm('@L_PART@が@NICK@にしか見えません')
+            ,
+            new SctItm('@L_PART@を@CLASS@にしたいのですが')
+            ,
+            new SctItm('@L_PART@が@KEI2@で仕方がありません')
+            ,
+            new SctItm('@L_PART@の@L_HABIT@を止めさせたいんです')
+            ,
+            new SctItm('@L_PART@の@L_HABIT@が長続きしません')
+            ,
+            new SctItm('@L_PART@と@L_HABIT@をしたいのですが')
+            ,
+            new SctItm('@L_PART@が@L_HABIT@で捕まっています')
+            ,
+            new SctItm('@L_PART@が@L_HABIT@で疑われています')
+            ,
+            new SctItm('私の@KEI@@L_PART@を知りませんか')
+            ,
+            new SctItm('どうして、@CLASS@は@KEI1@のでしょうか')
+            ,
+            new SctItm('どうして、@L_PART@は@KEI1@のでしょうか')
+            ,
+            new SctItm('どうすれば@CLASS@になれますか')
+            ,
+            new SctItm('「@CALL2@」と呼ばれて@GRADE@@THINK@しています')
+            ,
+            new SctItm('@CLASS@になりたくて@GRADE@@THINK@しています')
+        ]
+    }
+}
+
+class selector_q_init extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@Q_INIT@');
+        this.itms = [
+            new SctItm('お早うございます。@Q_INIT@')
+            ,
+            new SctItm('こんにちは。@Q_INIT@')
+            ,
+            new SctItm('ご無沙汰しております。@Q_INIT@')
+            ,
+            new SctItm('いつもお世話になっております。@Q_INIT@')
+            ,
+            new SctItm('私は@COUNTRY@で@CLASS@をしています。')
+            ,
+            new SctItm('私は@CLASS@をしている@QUESTER@と云います。')
+            ,
+            new SctItm('私が@AGE2@の頃、@Q_SENT@')
+            ,
+            new SctItm('私が@CLASS@をしていた頃、@Q_SENT@')
+            ,
+            new SctItm('私が@COUNTRY@にいた頃、@Q_SENT@')
+            ,
+            new SctItm('私には@KEI@@L_PART@がいるのですが、@Q_SENT@')
+            ,
+            new SctItm('私には@CLASS@をしている@AGE2@の@L_PART@がいるのですが、@Q_SENT@')
+            ,
+            new SctItm('つい昨日の話なのですが、@Q_SENT@')
+            ,
+            new SctItm('おとといの話なのですが、@Q_SENT@')
+
+        ]
+    }
+}
+class selector_q_sent extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@Q_SENT@');
+        this.itms = [
+            new SctItm('@Q_MSG@。')
+            ,
+            new SctItm('@CONECT2@、@Q_MSG@。')
+            ,
+            new SctItm('@Q_MSG@が、@Q_SENT@')
+            ,
+            new SctItm('@Q_MSG@けど、@Q_SENT@')
+            // ,
+            // new SctItm('私の@KEI@@L_PART@をご存じでしょうか。')
+        ]
+    }
+}
+
+
+class selector_q_msg extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@Q_MSG@');
+        this.itms = [
+            new SctItm('@Q_MSG01@@Q_MSG04@')
+            ,
+            new SctItm('@Q_MSG01@@Q_MSG02@、@Q_MSG04@')
+            ,
+            new SctItm('@Q_MSG01@@Q_MSG03@@Q_MSG04@')
+            ,
+            new SctItm('@Q_MSG01@@Q_MSG02@、@Q_MSG04@')
+            ,
+            new SctItm('@Q_MSG02@、@Q_MSG03@@Q_MSG04@')
+            ,
+            new SctItm('@Q_MSG01@@Q_MSG02@、@Q_MSG03@@Q_MSG04@')
+            ,
+            new SctItm('私の@WHO3@@L_PART@の話です')
+            ,
+            new SctItm('私の「@CALL2@」と@GRADE@@ASSES@@L_PART@のことです')
+        ]
+    }
+}
+
+// 自己紹介・誰が
+class selector_q01_me extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@Q_MSG01@');
+        this.itms = [
+            new SctItm('私は')
+            ,
+            new SctItm('@WHO3@私は')
+            ,
+            new SctItm('私の@KEI@@L_PART@は')
+        ]
+    }
+}
+
+
+// 事情
+class selector_q02 extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@Q_MSG02@');
+        this.itms = [
+            new SctItm('@L_HABIT@がしたいのですが')
+            ,
+            new SctItm('@HABIT@がしたいのですが')
+            ,
+            new SctItm('@CLASS@をしているのですが')
+            ,
+            new SctItm('@CLASS@をしていたのですが')
+            ,
+            new SctItm('@CLASS@になろうと思うのですが')
+            ,
+            new SctItm('@CLASS@になったばかりなのですが')
+            ,
+            new SctItm('@COUNTRY@に住んでいるのですが')
+            ,
+            new SctItm('@COUNTRY@に移住するつもりですが')
+            ,
+            new SctItm('@COUNTRY@から帰ってきたのですが')
+            ,
+            new SctItm('初めて@COUNTRY@に来たのですが')
+        ]
+    }
+}
+
+// 理由
+class selector_q03_quest extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@Q_MSG03@');
+        this.itms = [
+            new SctItm('@L_HABIT@が止められず')
+            ,
+            new SctItm('@L_HABIT@が出来なくて')
+            ,
+            new SctItm('@L_HABIT@が禁止されていて')
+            ,
+            new SctItm('@MANYPEOPLE@が@ASSES@ので')
+            ,
+            new SctItm('@KEI@@PEOPLE@と@ASSES@ので')
+            ,
+            new SctItm('@PART@がいなくなってしまい')
+            ,
+            new SctItm('@PART@が邪魔で')
+            ,
+            new SctItm('@PART@を押しつけられ')
+            ,
+            new SctItm('@PART@に反対され')
+            ,
+            new SctItm('@HABIT@ばかりしてしまい')
+            ,
+            new SctItm('@HABIT@三昧で')
+            ,
+            new SctItm('@HABIT@や@HABIT@に夢中で')
+            ,
+            new SctItm('@HABIT@が出来なくて')
+            ,
+            new SctItm('@KEY@に巻き込まれてしまい')
+            ,
+            new SctItm('@MANYPEOPLE@に反対され')
+            ,
+            new SctItm('@MANYPEOPLE@がやってきて')
+            ,
+            new SctItm('@MANYPEOPLE@がいなくなったので')
+            ,
+            new SctItm('@MANYPEOPLE@に取り囲まれ')
+            ,
+            new SctItm('@PART@が@KEI1@ので')
+            ,
+            new SctItm('本当は@CLASS@になりたいので')
+        ]
+    }
+}
+
+
+// 結果
+class selector_q04_result extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@Q_MSG04@');
+        this.itms = [
+            new SctItm('@GRADE@困っているのです')
+            ,
+            new SctItm('@GRADE@悔しくて仕方がないのです')
+            ,
+            new SctItm('@GRADE@悲しくて仕方がないのです')
+            ,
+            new SctItm('@GRADE@嬉しくて仕方がないのです')
+            ,
+            new SctItm('涙が止まらないのです')
+            ,
+            new SctItm('笑いが止まらないのです')
+            ,
+            new SctItm('@GRADE@堪えきれません')
+            ,
+            new SctItm('@GRADE@我慢が出来ません')
+            ,
+            new SctItm('途方に暮れています')
+            ,
+            new SctItm('取り付く島もありません')
+            ,
+            new SctItm('どうしようもありません')
+            ,
+            new SctItm('@GRADE@@THINK@しているのです')
+        ]
+    }
+}
+
+// 問題の相手
+class locker_part extends SctItm_SelectLocker implements ISctItm_Selector{
+    constructor(){
+        super('@L_PART@');
+        this.Add(itms_partner);
+    }
+}
+
+// 癖・悪癖
+class locker_habit extends SctItm_SelectLocker implements ISctItm_Selector{
+    constructor(){
+        super('@L_HABIT@');
+        this.Add(itms_badhabit);
+        this.Add(itms_goodhabit);
+    }
+}
+
+// 癖・悪癖
+class selector_habit extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@HABIT@');
+        this.Add(itms_badhabit);
+        this.Add(itms_goodhabit);
+    }
+}
+
+
+class selector_a_title extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@A_TITLE@');
+        this.itms = [
+            new SctItm('ようこそ、@QUESTER@さん')
+            ,
+            new SctItm('初めまして、@QUESTER@さん')
+            ,
+            new SctItm('こんにちは、@QUESTER@さん')
+            ,
+            new SctItm('お久しぶりですね、@QUESTER@さん')
+            ,
+            new SctItm('@GRADE@大変ですね、@QUESTER@さん')
+            ,
+            new SctItm('それは@QUESTER@さんの問題では？')
+            ,
+            new SctItm('それは@QUESTER@さんの思い過ごしですよ')
+            ,
+            new SctItm('それは@QUESTER@さんの責任です')
+            ,
+            new SctItm('@QUESTER@さんの仰るとおりです')
+            ,
+            new SctItm('それは@QUESTER@さんの勘違いでは？')
+            ,
+            new SctItm('@QUESTER@さんは悪くありません')
+            ,
+            new SctItm('@QUESTER@さんなら大丈夫ですよ')
+            ,
+            new SctItm('@QUESTER@さん、もう諦めましょう')
+            ,
+            new SctItm('頑張りましょう、@QUESTER@さん')
+            ,
+            new SctItm('止めて下さい、@QUESTER@さん')
+            ,
+            new SctItm('残念でしたね、@QUESTER@さん')
+            ,
+            new SctItm('良かったですね、@QUESTER@さん')
+            ,
+            new SctItm('仕方が無いですよ、@QUESTER@さん')
+            // ,
+            // new SctItm('@QUESTER@さん、お薬の時間ですよ')
+            ,
+            new SctItm('@QUESTER@さん、もういい加減にして下さい')
+            ,
+            new SctItm('@QUESTER@さん、もう来ないで下さい')
+            ,
+            new SctItm('@QUESTER@さん、もう来ないで下さいといったはずです')
+        ]
+    }
+}
+
+
+class selector_a_init extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@A_INIT@');
+        this.itms = [
+            new SctItm('おはよう御座います。@A_INIT@')
+            ,
+            new SctItm('こんにちは。@A_INIT@')
+            ,
+            new SctItm('ご無沙汰しております。@A_INIT@')
+            ,
+            new SctItm('@A_SENT@')
+            ,
+            new SctItm('私は@CLASS@をしている@ADVICER@と云います。')
+            ,
+            new SctItm('私は@WHO3@@ADVICER@と云います。')
+            ,
+            new SctItm('私は@MANYPEOPLE@より「@CALL2@」と@ASSES@@ADVICER@と云います。')
+
+        ]
+    }
+}
+class selector_a_sent extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@A_SENT@');
+        this.itms = [
+            new SctItm('@A_MSG@。')
+            ,
+            new SctItm('@CONECT2@、@A_MSG@。')
+            ,
+            new SctItm('@A_MSG@が、@A_SENT@')
+            ,
+            new SctItm('@A_MSG@けど、@A_SENT@')
+            ,
+            new SctItm('@A_MSG@ので、@A_SENT@')
+        ]
+    }
+}
+class selector_a_msg extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@A_MSG@');
+        this.itms = [
+            new SctItm('@A_MSG01@@A_MSG04@')
+            ,
+            new SctItm('@A_MSG02@、@A_MSG04@')
+            ,
+            new SctItm('@A_MSG02@、@A_MSG03@@A_MSG04@')
+            ,
+            new SctItm('@A_MSG01@@A_MSG03@、@A_MSG04@')
+            ,
+            new SctItm('@A_MSG01@@A_MSG02@、@A_MSG03@@A_MSG04@')
+            ,
+            new SctItm('私は@MANYPEOPLE@より「@CALL2@」と@GRADE@@ASSES@のです')
+            ,
+            new SctItm('それは@KEI@@QUESTER@さんが@GRADE@@ASSES@からです')
+            ,
+            new SctItm('それは@KEI@@L_PART@さんが@GRADE@@ASSES@からです')
+        ]
+    }
+}
+
+
+// 誰が・あなたが
+class selector_a01_you extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@A_MSG01@');
+        this.itms = [
+            // new SctItm('あなたが')
+            // ,
+            new SctItm('@QUESTER@さんが')
+            ,
+            new SctItm('あなたの@KEI@@L_PART@さんが')
+            ,
+            new SctItm('@QUESTER@さんの@KEI@@L_PART@さんが')
+            ,
+            new SctItm('私が')
+            ,
+            new SctItm('@MANYPEOPLE@が')
+        ]
+    }
+}
+
+// 理由
+class selector_a02_quest extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@A_MSG02@');
+        this.itms = [
+            new SctItm('@CLASS@をしているなら')
+            ,
+            new SctItm('@CLASS@になりたいなら')
+            ,
+            new SctItm('@MANYPEOPLE@のために')
+            ,
+            new SctItm('@MANYPEOPLE@のせいで')
+            ,
+            new SctItm('@CALL2@と@ASSES@なら')
+            ,
+            new SctItm('@COUNTRY@にいるなら')
+            ,
+            new SctItm('@MANYPEOPLE@に@ASSES@のなら')
+            ,
+            new SctItm('@KEI@@PEOPLE@と@ASSES@なら')
+        ]
+    }
+}
+
+// 問題
+class selector_a03_issue extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@A_MSG03@');
+        this.itms = [
+            new SctItm('@L_HABIT@が止められなくて')
+            ,
+            new SctItm('@L_HABIT@が出来なくて')
+            ,
+            new SctItm('@L_HABIT@がしたくて')
+            ,
+            new SctItm('@L_HABIT@が禁止され')
+            ,
+            new SctItm('@CALL2@と呼ばれて')
+        ]
+    }
+}
+
+// 結果
+class selector_a04_result extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@A_MSG04@');
+        this.itms = [
+            new SctItm('@GRADE@@THINK@しているのは判ります')
+            ,
+            new SctItm('@GRADE@@THINK@してしまうのは仕方がありません')
+            ,
+            new SctItm('@GRADE@@THINK@しても仕方がありません')
+            ,
+            new SctItm('@GRADE@@THINK@しているとは実に@KEI1@話です')
+            ,
+            new SctItm('@GRADE@@THINK@するとは@KEI1@話です')
+            ,
+            new SctItm('@GRADE@@THINK@したってどうしようもありません')
+            ,
+            new SctItm('@GRADE@@THINK@するのは当然です')
+            ,
+            new SctItm('@KEI@@PEOPLE@と@ASSES@のは当たり前です')
+        ]
+    }
+}
+
+
