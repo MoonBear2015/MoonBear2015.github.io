@@ -3330,17 +3330,17 @@ const itms_shop = [
     new SctItm('ARMOR', 'SHOP/ARMOR01.jpg', '甲冑')
 ];
 const itms_campany = [
-    new SctItm('Ringo', '', 'リンゴ'),
-    new SctItm('Michaelsolt', '', 'マイケルソルト'),
-    new SctItm('Pony', '', 'ポニー'),
-    new SctItm('TANAKA', '', 'タナカ'),
-    new SctItm('Doodle', '', 'ドゥードゥル'),
-    new SctItm('donata', '', 'ドナタ'),
-    new SctItm('MixVegetable', '', 'ミックスベジタブル'),
-    new SctItm('YeeHaw!', '', 'イーハー'),
-    new SctItm('Nihao', '', 'ニーハオ'),
-    new SctItm('Speedwagon', '', 'スピードワゴン'),
-    new SctItm('Channel', '', 'チャンネル')
+    new SctItm('Apple', '', 'アップル'),
+    new SctItm('Microsoft', '', 'マイクロソフト'),
+    new SctItm('Sony', '', 'ソニー'),
+    new SctItm('TOYOTA', '', 'トヨタ'),
+    new SctItm('Google', '', 'グーグル'),
+    new SctItm('docomo', '', 'ドコモ'),
+    new SctItm('MacDonald', '', 'マクドナルド'),
+    new SctItm('Yahoo!', '', 'ヤフー'),
+    new SctItm('HUAWEI', '', 'ファーウェイ'),
+    new SctItm('CHANEL', '', 'シャネル'),
+    new SctItm('UNIQLO', '', 'ユニクロ')
 ];
 const itms_model = [
     new SctItm('Pro'),

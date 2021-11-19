@@ -5224,27 +5224,27 @@ const   itms_shop = [
 
 
 const   itms_campany = [
-    new SctItm('Ringo','','リンゴ')
+    new SctItm('Apple','','アップル')
     ,
-    new SctItm('Michaelsolt','','マイケルソルト')
+    new SctItm('Microsoft','','マイクロソフト')
     ,
-    new SctItm('Pony','','ポニー')
+    new SctItm('Sony','','ソニー')
     ,
-    new SctItm('TANAKA','','タナカ')
+    new SctItm('TOYOTA','','トヨタ')
     ,
-    new SctItm('Doodle','','ドゥードゥル')
+    new SctItm('Google','','グーグル')
     ,
-    new SctItm('donata','','ドナタ')
+    new SctItm('docomo','','ドコモ')
     ,
-    new SctItm('MixVegetable','','ミックスベジタブル')
+    new SctItm('MacDonald','','マクドナルド')
     ,
-    new SctItm('YeeHaw!','','イーハー')
+    new SctItm('Yahoo!','','ヤフー')
     ,
-    new SctItm('Nihao','','ニーハオ')
+    new SctItm('HUAWEI','','ファーウェイ')
     ,
-    new SctItm('Speedwagon','','スピードワゴン')
+    new SctItm('CHANEL','','シャネル')
     ,
-    new SctItm('Channel','','チャンネル')
+    new SctItm('UNIQLO','','ユニクロ')
 ]
 
 const   itms_model = [
