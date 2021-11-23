@@ -2922,6 +2922,7 @@ const itms_grade = [
 const itms_partner = [
     new SctItm('知り合い'),
     new SctItm('友達'),
+    new SctItm('親友'),
     new SctItm('彼女'),
     new SctItm('彼氏'),
     new SctItm('恋人'),
@@ -2956,7 +2957,8 @@ const itms_partner = [
     new SctItm('不倫相手'),
     new SctItm('相方'),
     new SctItm('ライバル'),
-    new SctItm('親の仇')
+    new SctItm('親の仇'),
+    new SctItm('裏切り者')
 ];
 const itms_accident = [
     new SctItm('児童虐待'),
@@ -2977,8 +2979,7 @@ const itms_accident = [
     new SctItm('破壊工作'),
     new SctItm('暴力行為'),
     new SctItm('乱痴気騒ぎ'),
-    // new SctItm('乱交パーティー')
-    // ,
+    new SctItm('乱交パーティー'),
     new SctItm('乱闘騒ぎ'),
     new SctItm('大喧嘩'),
     new SctItm('不法侵入'),
@@ -3022,6 +3023,9 @@ const itms_badhabit = [
     new SctItm('ギャンブル'),
     new SctItm('切り取り強盗'),
     new SctItm('自転車泥棒'),
+    new SctItm('下着泥棒'),
+    new SctItm('ひったくり'),
+    new SctItm('万引き'),
     new SctItm('衝動買い'),
     new SctItm('ストーカー'),
     new SctItm('辻斬り'),
@@ -3029,15 +3033,15 @@ const itms_badhabit = [
     new SctItm('転売'),
     new SctItm('盗み食い'),
     new SctItm('早弁'),
-    new SctItm('ひったくり'),
+    new SctItm('やけ食い'),
     new SctItm('拾い食い'),
     new SctItm('風俗通い'),
     new SctItm('ホスト通い'),
     new SctItm('賭け麻雀'),
-    new SctItm('万引き'),
     new SctItm('無駄遣い'),
     new SctItm('夜這い'),
-    new SctItm('夜更かし')
+    new SctItm('夜更かし'),
+    new SctItm('乱痴気騒ぎ')
 ];
 const itms_goodhabit = [
     new SctItm('編み物'),
@@ -3045,6 +3049,7 @@ const itms_goodhabit = [
     new SctItm('アルバイト'),
     new SctItm('海外旅行'),
     new SctItm('温泉旅行'),
+    new SctItm('一人旅'),
     new SctItm('買い物'),
     new SctItm('家事手伝い'),
     new SctItm('切手収集'),
@@ -3087,7 +3092,8 @@ const itms_goodhabit = [
     new SctItm('鷹狩り'),
     new SctItm('花見'),
     new SctItm('芋掘り'),
-    new SctItm('キャンプ')
+    new SctItm('キャンプ'),
+    new SctItm('ハイキング')
 ];
 const itms_what = [
     new SctItm('日本', 'WHAT/Japan.jpg'),
@@ -3103,25 +3109,14 @@ const itms_what = [
     new SctItm('フランス', 'WHAT/France.jpg'),
     new SctItm('ドイツ', 'WHAT/German.jpg'),
     new SctItm('韓国', 'WHAT/koria.jpg'),
-    new SctItm('エジプト', 'WHAT/pyramid.jpg')
-    // ,
-    // new SctItm('ガミラス帝国','WHAT/gamilas.jpg')
-    // ,
-    // new SctItm('イスカンダル','WHAT/iskandar.jpg')
-    // ,
-    // new SctItm('経済','WHAT/Economy.jpg')
-    ,
+    new SctItm('エジプト', 'WHAT/pyramid.jpg'),
+    new SctItm('ガミラス帝国', 'WHAT/gamilas.jpg'),
+    new SctItm('イスカンダル', 'WHAT/iskandar.jpg'),
     new SctItm('株式市場', 'WHAT/Economy.jpg'),
     new SctItm('科学', 'WHAT/Science.jpg'),
     new SctItm('現代科学', 'WHAT/Science.jpg'),
-    new SctItm('先進科学', 'WHAT/Science.jpg')
-    // ,
-    // new SctItm('医療','WHAT/Medical.jpg')
-    ,
-    new SctItm('医療現場', 'WHAT/Medical.jpg')
-    // ,
-    // new SctItm('医学','WHAT/Medical.jpg')
-    ,
+    new SctItm('先進科学', 'WHAT/Science.jpg'),
+    new SctItm('医療現場', 'WHAT/Medical.jpg'),
     new SctItm('現代医学', 'WHAT/Medical.jpg'),
     new SctItm('農業', 'WHAT/Agri.jpg'),
     new SctItm('農場', 'WHAT/Agri.jpg'),
@@ -3142,21 +3137,14 @@ const itms_what = [
     new SctItm('キリスト教', 'WHAT/christ.jpg'),
     new SctItm('仏教', 'WHAT/buddha.jpg'),
     new SctItm('イスラム教', 'WHAT/Islam.jpg'),
-    new SctItm('宗教', 'WHAT/religion.jpg')
-    // ,
-    // new SctItm('世界','WHAT/history.jpg')
-    ,
-    new SctItm('人類', 'WHAT/human.jpg')
-    // ,
-    // new SctItm('女子校','WHAT/girlscoll.jpg')
-    ,
+    new SctItm('宗教', 'WHAT/religion.jpg'),
+    new SctItm('人類', 'WHAT/human.jpg'),
+    new SctItm('女子校', 'WHAT/girlscoll.jpg'),
     new SctItm('オリンピック', 'WHAT/Olympic.jpg'),
     new SctItm('江戸幕府', 'WHAT/edo.jpg'),
     new SctItm('ホワイトハウス', 'WHAT/whitehouse.jpg'),
-    new SctItm('紫禁城', 'WHAT/shikin.jpg')
-    // ,
-    // new SctItm('イギリス王家','WHAT/kingdom.jpg')
-    ,
+    new SctItm('紫禁城', 'WHAT/shikin.jpg'),
+    new SctItm('イギリス王家', 'WHAT/kingdom.jpg'),
     new SctItm('ピラミッド', 'WHAT/pyramid.jpg'),
     new SctItm('国連', 'WHAT/nation.jpg'),
     new SctItm('東京', 'WHAT/tokyo.jpg'),
@@ -3168,56 +3156,37 @@ const itms_what = [
     new SctItm('ハワイ', 'WHAT/Hawaii.jpg'),
     new SctItm('ラスベガス', 'WHAT/LasVegas.jpg'),
     new SctItm('魔界', 'WHAT/hell.jpg'),
-    new SctItm('天国', 'WHAT/heaven.jpg')
-    // ,
-    // new SctItm('極楽浄土','WHAT/heaven2.jpg')
-    // ,
-    // new SctItm('地獄','WHAT/enma.jpg')
-    // ,
-    // new SctItm('南国','WHAT/seaside.jpg')
-    ,
-    new SctItm('ディズニーランド', 'WHAT/disney.jpg')
-    // ,
-    // new SctItm('ディズニーランド','WHAT/disney2.jpg')
-    // ,
-    // new SctItm('ひらかたパーク','WHAT/hirapa-.jpg')
-    // ,
-    // new SctItm('ひらかたパーク','WHAT/hirapa-2.jpg')
-    // ,
-    // new SctItm('ひらかたパーク','WHAT/hirapa-3.jpg')
-    // ,
-    // new SctItm('ＵＳＪ','WHAT/usj.jpg')
-    // ,
-    // new SctItm('ＵＳＪ','WHAT/usj2.jpg')
-    // ,
-    // new SctItm('としまえん','WHAT/toshimaen.jpg')
-    // ,
-    // new SctItm('上野動物園','WHAT/ueno_zoo.jpg')
-    // ,
-    // new SctItm('ジオン公国','WHAT/jion.jpg')
-    ,
-    new SctItm('ナチス・ドイツ', 'WHAT/nachi.jpg')
-    // ,
-    // new SctItm('ホビット床','WHAT/Shire.jpg')
-    ,
+    new SctItm('天国', 'WHAT/heaven.jpg'),
+    new SctItm('極楽浄土', 'WHAT/heaven2.jpg'),
+    new SctItm('地獄', 'WHAT/enma.jpg'),
+    new SctItm('南国', 'WHAT/seaside.jpg'),
+    new SctItm('ディズニーランド', 'WHAT/disney.jpg'),
+    new SctItm('ディズニーランド', 'WHAT/disney2.jpg'),
+    new SctItm('ひらかたパーク', 'WHAT/hirapa-.jpg'),
+    new SctItm('ひらかたパーク', 'WHAT/hirapa-2.jpg'),
+    new SctItm('ひらかたパーク', 'WHAT/hirapa-3.jpg'),
+    new SctItm('ＵＳＪ', 'WHAT/usj.jpg'),
+    new SctItm('ＵＳＪ', 'WHAT/usj2.jpg'),
+    new SctItm('としまえん', 'WHAT/toshimaen.jpg'),
+    new SctItm('上野動物園', 'WHAT/ueno_zoo.jpg'),
+    new SctItm('ジオン公国', 'WHAT/jion.jpg'),
+    new SctItm('ナチス・ドイツ', 'WHAT/nachi.jpg'),
+    new SctItm('ホビット床', 'WHAT/Shire.jpg'),
     new SctItm('銀河帝国', 'WHAT/GalaxyEmpire.jpg'),
     new SctItm('デス・スター', 'WHAT/deathstar.jpg'),
     new SctItm('暗黒面', 'WHAT/darkside.jpg'),
     new SctItm('ローマ帝国', 'WHAT/Rome.jpg'),
     new SctItm('未来', 'WHAT/future.jpg'),
     new SctItm('近未来', 'WHAT/nearfuture.jpg'),
-    // new SctItm('縄文時代','WHAT/joumon.jpg')
-    // ,
-    new SctItm('スラム街', 'WHAT/slum.jpg')
-    // ,
-    // new SctItm('九竜城','WHAT/coulomb.jpg')
-    // ,
-    // new SctItm('邪馬台国','WHAT/yama.jpg')
-    // ,
-    // new SctItm('竜宮城','WHAT/ryugu.jpg')
-    ,
+    new SctItm('縄文時代', 'WHAT/joumon.jpg'),
+    new SctItm('スラム街', 'WHAT/slum.jpg'),
+    new SctItm('九竜城', 'WHAT/coulomb.jpg'),
+    new SctItm('邪馬台国', 'WHAT/yama.jpg'),
+    new SctItm('竜宮城', 'WHAT/ryugu.jpg'),
     new SctItm('戦場', 'WHAT/war.jpg'),
-    new SctItm('火星', 'WHAT/mars.jpg')
+    new SctItm('火星', 'WHAT/mars.jpg'),
+    new SctItm('スターバックス', 'WHAT/Startbucks.jpg'),
+    new SctItm('マクドナルド', 'WHAT/MacDonald.jpg')
 ];
 const itms_do = [
     //
@@ -3290,7 +3259,8 @@ const itms_shop = [
     new SctItm('BICYCLE', 'SHOP/BICYCLE03.jpg', '自転車'),
     new SctItm('CALCLATOR', 'SHOP/CALC01.jpg', '電卓'),
     new SctItm('CALCLATOR', 'SHOP/CALC02.jpg', '電卓'),
-    new SctItm('CAMERA', 'SHOP/CAMERA.jpg', 'カメラ'),
+    new SctItm('CAMERA', 'SHOP/CAMERA01.jpg', 'カメラ'),
+    new SctItm('CAMERA', 'SHOP/CAMERA02.jpg', 'カメラ'),
     new SctItm('CAR', 'SHOP/CAR01.jpg', '車'),
     new SctItm('CAR', 'SHOP/CAR02.jpg', '車'),
     new SctItm('CAR', 'SHOP/CAR03.jpg', '車'),
@@ -3324,7 +3294,8 @@ const itms_shop = [
     new SctItm('GRANDFATHER', 'SHOP/GRANDFATHER01.jpg', 'お爺さん'),
     new SctItm('GRANDFATHER', 'SHOP/GRANDFATHER02.jpg', 'お爺さん'),
     new SctItm('GOD', 'SHOP/God.jpg', '神様'),
-    new SctItm('ANGEL', 'SHOP/angel.jpg', '天使様'),
+    new SctItm('ANGEL', 'SHOP/angel01.jpg', '天使様'),
+    new SctItm('ANGEL', 'SHOP/angel02.jpg', '天使様'),
     new SctItm('DEATHSTAR', 'SHOP/deathstar.jpg', 'デススター'),
     new SctItm('DRAGON', 'SHOP/dragon.jpg', 'ドラゴン'),
     new SctItm('ARMOR', 'SHOP/ARMOR01.jpg', '甲冑')
@@ -3340,7 +3311,8 @@ const itms_campany = [
     new SctItm('Yahoo!', '', 'ヤフー'),
     new SctItm('HUAWEI', '', 'ファーウェイ'),
     new SctItm('CHANEL', '', 'シャネル'),
-    new SctItm('UNIQLO', '', 'ユニクロ')
+    new SctItm('UNIQLO', '', 'ユニクロ'),
+    new SctItm('STARBUCKS', '', 'スターバックス')
 ];
 const itms_model = [
     new SctItm('Pro'),

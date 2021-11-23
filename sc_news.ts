@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N02.42';
+    html += ' N02.43';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
