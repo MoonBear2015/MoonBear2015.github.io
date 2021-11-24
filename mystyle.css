@@ -35,9 +35,6 @@ body {
     background-color: #202020;
     width: 100%;
     background: url(./img/nothing.png);
-
-    /* background-size: 要素の背景画像の寸法を設定 
-        covor:画像の縦横比を崩すことなく、画像ができるだけ大きくなるよう拡大縮小*/
     background-size: cover;
 }
 #site_footer {
@@ -98,6 +95,8 @@ body {
 #foot_title {
     font-size: 3vmin;
     margin: 0px 0px;
+    font-size: 3.5vmin;
+    margin: 0;
     padding: 0;
     text-shadow:2px 2px 0px #909090;
     text-align: center;
