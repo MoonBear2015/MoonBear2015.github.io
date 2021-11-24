@@ -290,6 +290,7 @@ function make_site_footer(): string {
         }
     }
     return html;
+    
 }
 
 

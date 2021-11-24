@@ -54,6 +54,7 @@ body {
     width: 80%;
     grid-template-rows: 6fr 1000px;
     grid-template-columns: 25% 1fr;
+    
 }
 
 #foot01 {
