@@ -42,7 +42,7 @@ body {
 }
 #site_footer {
     margin: 0;
-    bottom: 5%;
+    bottom: 10%;
     position: fixed;
     color: #f0f0f0;
     width: 100%;
@@ -97,7 +97,7 @@ body {
 }
 
 #foot_title {
-    font-size: 3.8vmin;
+    font-size: 3.5vmin;
     margin: 0;
     padding: 0;
     text-shadow:2px 2px 0px #909090;
