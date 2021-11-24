@@ -258,7 +258,7 @@ function make_site_footer(): string {
 
     html += '<div id="foot_cm">'; // cm
     html += '<div id="foot_pic">';
-    html += '<img src="pics/@PIC_SHOP@" width="70%">';
+    html += '<img src="pics/@PIC_SHOP@" width="60%" >';
     html += '</div>';
 
     html += '<div id="foot_title">';
@@ -290,7 +290,7 @@ function make_site_footer(): string {
         }
     }
     return html;
-    
+
 }
 
 
