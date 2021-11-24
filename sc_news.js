@@ -956,15 +956,7 @@ class selector_keiyo1 extends SctItm_Selector {
         this.itms = [
             new SctItm('@KEI2@な'),
             new SctItm('@KEID2@@KEI2@な'),
-            // ,
-            // new SctItm('@KEI2@で@KEI2@な')
-            // ,
-            // new SctItm('@KEI2@で@KEI2@、そして@KEI2@な')
             new SctItm('@KEID2@@KEI3@')
-            // ,
-            // new SctItm('@KEI2@で@KEI3@')
-            // ,
-            // new SctItm('@KEI2@で@KEI2@、そして@KEI3@')
         ];
     }
 }
