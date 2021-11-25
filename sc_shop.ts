@@ -261,12 +261,13 @@ function make_site_footer(): string {
     html += '<img src="pics/@PIC_SHOP@" width="80%" >';
     html += '</div>';
 
-    html += '<div id="foot_title">';
-    html += '@L_CAMPANY@ @L_SHOP@ @MODEL@';
-    html += '</div>';
-
     html += '<div id="foot_copy">';
     html += '@CATCH@';
+    html += '</div>';
+
+
+    html += '<div id="foot_title">';
+    html += '@L_CAMPANY@ @L_SHOP@ @MODEL@';
     html += '</div>';
 
     html += '</div>'; // cm
