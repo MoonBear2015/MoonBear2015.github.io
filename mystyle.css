@@ -39,11 +39,11 @@ body {
 }
 #site_footer {
     margin: 0;
-    bottom: 5%;
+    bottom: 10%;
     position: fixed;
     color: #f0f0f0;
     width: 100%;
-    height: 5vmin;
+    height: 4vmin;
     padding: 0 0 0 0;
 }
 
@@ -89,6 +89,7 @@ body {
 }
 
 #foot_pic {
+    margin: 8px 8px;
     grid-column: 1/2;
     grid-row: 1/3;
 }
