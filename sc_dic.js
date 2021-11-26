@@ -2906,6 +2906,11 @@ const cods_ad_jougo = [
     // ,
     new SctCod_Mv('|禍々|まがまが|しい'),
     new SctCod_Mv('|瑞々|みずみず|しい'),
+    // new SctCod_Mv('|宗々|むねむね|しい')
+    // ,
+    // new SctCod_Mv('|宜々|むべむべ|しい')
+    // ,
+    // new SctCod_Mv('|由々|よしよし|しい')
 ];
 const itms_grade = [
     new SctItm('わずかに'),
@@ -3411,6 +3416,13 @@ const itms_success = [
     new SctItm('実現'),
     new SctItm('到達'),
     new SctItm('飛躍'),
+    // new SctItm('遂行')
+    // ,
+    // new SctItm('開発')
+    // ,
+    // new SctItm('製造')
+    // ,
+    // new SctItm('創造')
 ];
 const itms_nickNega = [
     //

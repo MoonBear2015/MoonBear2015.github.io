@@ -1,0 +1,24 @@
+{
+  "name": "moonbear2015.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sc_about.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MoonBear2015/MoonBear2015.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MoonBear2015/MoonBear2015.github.io/issues"
+  },
+  "homepage": "https://github.com/MoonBear2015/MoonBear2015.github.io#readme",
+  "devDependencies": {
+    "@types/node": "^16.11.10",
+    "typescript": "^4.5.2"
+  }
+}
