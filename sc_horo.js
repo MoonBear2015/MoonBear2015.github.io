@@ -7,7 +7,7 @@ function set_horo() {
     html += '<h1>';
     html += 'Horoscope';
     html += '<small>';
-    html += ' H00.20';
+    html += ' H00.22';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -93,7 +93,7 @@ function make_horo() {
         fixStars.Next();
         html += '<p id="horo_sent_items">'; // 
         for (let k = 0; k < cntItem; k++) {
-            html += '<img src="pics/@ICON_HOROITEM@" width="30px" height="30px">';
+            html += '<img src="pics/@ICON_HOROITEM@" width="30px" height="50px">';
             html += '@F_ITEM@ @F_ITEM@ @F_ITEM@ @F_ITEM@';
             html += '<br>';
             html = makerItms.gene_docs(html);
@@ -123,21 +123,21 @@ class Fix_items extends SctItm_FixSeq {
     }
 }
 // （固定）名詞・人物・組織　～は・～が・～の
-class First_love extends SctItm_FirstLocker {
+class First_love extends SctItm_FirstLocker2 {
     constructor() {
         super('@I_LOVE@', '', '@ICON_HOROITEM@');
         this.Add(itms_horo_love);
     }
 }
 // （固定）名詞・人物・組織　～は・～が・～の
-class First_job extends SctItm_FirstLocker {
+class First_job extends SctItm_FirstLocker2 {
     constructor() {
         super('@I_JOB@', '', '@ICON_HOROITEM@');
         this.Add(itms_horo_job);
     }
 }
 // （固定）名詞・人物・組織　～は・～が・～の
-class First_health extends SctItm_FirstLocker {
+class First_health extends SctItm_FirstLocker2 {
     constructor() {
         super('@I_HEALTH@', '', '@ICON_HOROITEM@');
         this.Add(itms_horo_health);

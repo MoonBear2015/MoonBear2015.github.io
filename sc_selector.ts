@@ -610,6 +610,46 @@ class SctItm_FirstLocker
 
 }
 
+// 最初の項目はもう使わない
+class SctItm_FirstLocker2 
+    extends SctItm_Selector 
+    implements ISctItm_Selector {
+    private is_first : boolean;
+    constructor(
+        in_itm_key? : string
+        ,
+        in_itm_key2? : string
+        ,
+        in_pic_key? : string
+    )
+    {
+        super(in_itm_key,in_itm_key2,in_pic_key);
+        this.is_first = true;
+    }
+
+    get rnd_Itm() : SctItm {
+        if (this.is_first)
+        {
+            this.is_first = false;
+            return this.itms[this.startNumber];
+        }
+        let i = this.startNumber + rnd_max(this.itms.length - 1) + 1;
+        return this.itms[i];
+    }
+
+    public Restart() : void {
+        this.is_first = true;
+    }
+
+    Copy() : ISctItm_Selector
+    {
+        let result = new SctItm_FirstLocker(this.itm_key,this.itm_key2,this.pic_key);
+        result.Paste(this.itms);
+        return result;
+    }
+
+}
+
 class SctItm_Rotetion extends SctItm_Selector implements ISctItm_Selector {
     
     constructor(

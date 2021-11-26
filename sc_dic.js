@@ -3662,8 +3662,11 @@ const itms_horo_star = [
     new SctItm('UNICORN', 'HORO/unicorn.png', '一角獣'),
     new SctItm('CUPID', 'HORO/cupid.png', '天使'),
     new SctItm('SUNFLOWER', 'HORO/sunflower.png', '向日葵'),
+    new SctItm('ROSE', 'HORO/rose.png', '薔薇'),
     new SctItm('HOUSE', 'HORO/house.png', '家'),
     new SctItm('UNCLE', 'HORO/uncle.png', '叔父'),
+    new SctItm('MONA LISA', 'HORO/mona.png', 'モナリ'),
+    new SctItm('PRESIDENT', 'HORO/president.png', '大統領'),
     new SctItm('DEATH', 'HORO/death.png', '死神'),
     new SctItm('CROWN', 'HORO/crown.png', '王冠'),
     new SctItm('PIANO', 'HORO/piano.png', '鍵盤')
@@ -3674,18 +3677,18 @@ const itms_horo_item = [
     new SctItm('@I_HEALTH@')
 ];
 const itms_horo_love = [
-    new SctItm('愛情', 'HORO/love.png', 'Love'),
-    new SctItm('恋'),
-    new SctItm('愛'),
-    new SctItm('情')
+    new SctItm('☆★愛情運★☆', 'HORO/love.png', 'Love'),
+    new SctItm('@THEY@'),
+    new SctItm('@CLASS@'),
+    new SctItm('@PEOPLE@')
 ];
 const itms_horo_job = [
-    new SctItm('仕事', 'HORO/job.png', 'Business'),
+    new SctItm('☆★仕事運★☆', 'HORO/job.png', 'Business'),
     new SctItm('就職'),
     new SctItm('転職')
 ];
 const itms_horo_health = [
-    new SctItm('健康', 'HORO/health.png', 'Health'),
+    new SctItm('☆★健康★☆', 'HORO/health.png', 'Health'),
     new SctItm('体重'),
     new SctItm('身長')
 ];

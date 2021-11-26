@@ -402,6 +402,29 @@ class SctItm_FirstLocker extends SctItm_Selector {
         return result;
     }
 }
+// 最初の項目はもう使わない
+class SctItm_FirstLocker2 extends SctItm_Selector {
+    constructor(in_itm_key, in_itm_key2, in_pic_key) {
+        super(in_itm_key, in_itm_key2, in_pic_key);
+        this.is_first = true;
+    }
+    get rnd_Itm() {
+        if (this.is_first) {
+            this.is_first = false;
+            return this.itms[this.startNumber];
+        }
+        let i = this.startNumber + rnd_max(this.itms.length - 1) + 1;
+        return this.itms[i];
+    }
+    Restart() {
+        this.is_first = true;
+    }
+    Copy() {
+        let result = new SctItm_FirstLocker(this.itm_key, this.itm_key2, this.pic_key);
+        result.Paste(this.itms);
+        return result;
+    }
+}
 class SctItm_Rotetion extends SctItm_Selector {
     constructor(in_itm_key, in_itm_key2, in_pic_key, in_array) {
         super(in_itm_key, in_itm_key2, in_pic_key, in_array);
