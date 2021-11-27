@@ -3671,24 +3671,3 @@ const itms_horo_star = [
     new SctItm('CROWN', 'HORO/crown.png', '王冠'),
     new SctItm('PIANO', 'HORO/piano.png', '鍵盤')
 ];
-const itms_horo_item = [
-    new SctItm('@I_LOVE@'),
-    new SctItm('@I_JOB@'),
-    new SctItm('@I_HEALTH@')
-];
-const itms_horo_love = [
-    new SctItm('☆★愛情運★☆', 'HORO/love.png', 'Love'),
-    new SctItm('@THEY@'),
-    new SctItm('@CLASS@'),
-    new SctItm('@PEOPLE@')
-];
-const itms_horo_job = [
-    new SctItm('☆★仕事運★☆', 'HORO/job.png', 'Business'),
-    new SctItm('就職'),
-    new SctItm('転職')
-];
-const itms_horo_health = [
-    new SctItm('☆★健康★☆', 'HORO/health.png', 'Health'),
-    new SctItm('体重'),
-    new SctItm('身長')
-];

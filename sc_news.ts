@@ -1509,6 +1509,29 @@ class selector_class extends SctItm_Selector implements ISctItm_Selector {
     }
 }
 
+// 意識 ？？に～する
+class selector_history extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@HISTORY@');
+        this.itms = [
+            new SctItm('伝説')
+            ,
+            new SctItm('神話')
+            ,
+            new SctItm('昔話')
+            ,
+            new SctItm('民話')
+            ,
+            new SctItm('聖書')
+            ,
+            new SctItm('辞典')
+            ,
+            new SctItm('辞書')
+        ];
+    }
+}
+
+
 class selector_keiyo extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@KEI@');
@@ -2519,6 +2542,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_keime1());
         this.dic_push(new selector_keime2());
         this.dic_push(new selector_country());
+        this.dic_push(new selector_history());
         this.dic_push(new selector_animal());
         this.dic_push(new selector_km());
         this.dic_push(new selector_k());

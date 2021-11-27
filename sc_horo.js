@@ -7,7 +7,7 @@ function set_horo() {
     html += '<h1>';
     html += 'Horoscope';
     html += '<small>';
-    html += ' H00.22';
+    html += ' H00.24';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -119,28 +119,45 @@ class Fix_stars extends SctItm_FixSeq {
 class Fix_items extends SctItm_FixSeq {
     constructor() {
         super('@F_ITEM@');
-        this.Add(itms_horo_item);
+        this.itms = [
+            new SctItm('@I_LOVE@'),
+            new SctItm('@I_JOB@'),
+            new SctItm('@I_HEALTH@')
+        ];
     }
 }
 // （固定）名詞・人物・組織　～は・～が・～の
 class First_love extends SctItm_FirstLocker2 {
     constructor() {
         super('@I_LOVE@', '', '@ICON_HOROITEM@');
-        this.Add(itms_horo_love);
+        this.itms = [
+            new SctItm('☆★愛情★☆<br>', 'HORO/love.png', 'Love'),
+            new SctItm('@THEY@'),
+            new SctItm('@CLASS@'),
+            new SctItm('@PEOPLE@')
+        ];
     }
 }
 // （固定）名詞・人物・組織　～は・～が・～の
 class First_job extends SctItm_FirstLocker2 {
     constructor() {
         super('@I_JOB@', '', '@ICON_HOROITEM@');
-        this.Add(itms_horo_job);
+        this.itms = [
+            new SctItm('☆★仕事運★☆<br>', 'HORO/job.png', 'Business'),
+            new SctItm('就職'),
+            new SctItm('転職')
+        ];
     }
 }
 // （固定）名詞・人物・組織　～は・～が・～の
 class First_health extends SctItm_FirstLocker2 {
     constructor() {
         super('@I_HEALTH@', '', '@ICON_HOROITEM@');
-        this.Add(itms_horo_health);
+        this.itms = [
+            new SctItm('☆★健康★☆<br>', 'HORO/health.png', 'Health'),
+            new SctItm('体重'),
+            new SctItm('身長')
+        ];
     }
 }
 // 解説
@@ -171,12 +188,28 @@ class selector_h_info_end extends SctItm_Selector {
     constructor() {
         super('@H_INFO_END@');
         this.itms = [
-            new SctItm('@MANYPEOPLE@に親しまれ'),
-            new SctItm('@CLASS@の象徴として愛され'),
-            new SctItm('@PEOPLE@のシンボルに採用され'),
-            new SctItm('@COUNTRY@神話に語られ'),
-            new SctItm('@COUNTRY@民謡にも歌われ'),
-            new SctItm('「@COUNTRY@の@PART@」と親しまれ')
+            new SctItm('@MANYPEOPLE@に@H_THINK@'),
+            new SctItm('@CLASS@の象徴として@H_THINK@'),
+            new SctItm('@PEOPLE@のシンボルに@H_THINK@'),
+            new SctItm('@COUNTRY@@HISTORY@に@H_THINK@'),
+            new SctItm('「@COUNTRY@の@PART@」と@H_THINK@'),
+            new SctItm('「@THEY@の@PART@」と@H_THINK@'),
+            new SctItm('「@COUNTRY@の@THINK@」と@H_THINK@')
+        ];
+    }
+}
+// 解説 結び
+class selector_h_think extends SctItm_Selector {
+    constructor() {
+        super('@H_THINK@');
+        this.itms = [
+            new SctItm('親しまれ'),
+            new SctItm('愛され'),
+            new SctItm('採用され'),
+            new SctItm('語られ'),
+            new SctItm('歌われ'),
+            new SctItm('讃えられ'),
+            new SctItm('恐れられ')
         ];
     }
 }
@@ -232,6 +265,7 @@ class horo_docs_maker extends news_docs_maker {
         this.dic_push(new selector_h_type());
         this.dic_push(new selector_h_type_init());
         this.dic_push(new selector_h_type_end());
+        this.dic_push(new selector_h_think());
     }
 }
 class horo_docs_maker_items extends news_docs_maker {
