@@ -7,7 +7,7 @@ function set_horo() {
     html += '<h1>';
     html += 'Horoscope';
     html += '<small>';
-    html += ' H00.24';
+    html += ' H00.25';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -190,11 +190,13 @@ class selector_h_info_end extends SctItm_Selector {
         this.itms = [
             new SctItm('@MANYPEOPLE@に@H_THINK@'),
             new SctItm('@CLASS@の象徴として@H_THINK@'),
-            new SctItm('@PEOPLE@のシンボルに@H_THINK@'),
-            new SctItm('@COUNTRY@@HISTORY@に@H_THINK@'),
-            new SctItm('「@COUNTRY@の@PART@」と@H_THINK@'),
+            new SctItm('@PEOPLE@のシンボルとして@H_THINK@'),
+            new SctItm('@COUNTRY@@HISTORY@に記され'),
+            new SctItm('「@COUNTRY@の@PART@」と@H_CHOISE@'),
             new SctItm('「@THEY@の@PART@」と@H_THINK@'),
-            new SctItm('「@COUNTRY@の@THINK@」と@H_THINK@')
+            new SctItm('「@COUNTRY@の@THINK@」と@H_THINK@'),
+            new SctItm('「@COUNTRY@の@CLASS@」と@H_THINK@'),
+            new SctItm('「@COUNTRY@の@FUTURE@」と@H_THINK@')
         ];
     }
 }
@@ -205,11 +207,21 @@ class selector_h_think extends SctItm_Selector {
         this.itms = [
             new SctItm('親しまれ'),
             new SctItm('愛され'),
-            new SctItm('採用され'),
-            new SctItm('語られ'),
-            new SctItm('歌われ'),
             new SctItm('讃えられ'),
             new SctItm('恐れられ')
+        ];
+    }
+}
+// 解説 結び
+class selector_h_choise extends SctItm_Selector {
+    constructor() {
+        super('@H_CHOISE@');
+        this.itms = [
+            new SctItm('定められ'),
+            new SctItm('例えられ'),
+            new SctItm('選ばれ'),
+            new SctItm('任命され'),
+            new SctItm('列せられ')
         ];
     }
 }
@@ -266,6 +278,7 @@ class horo_docs_maker extends news_docs_maker {
         this.dic_push(new selector_h_type_init());
         this.dic_push(new selector_h_type_end());
         this.dic_push(new selector_h_think());
+        this.dic_push(new selector_h_choise());
     }
 }
 class horo_docs_maker_items extends news_docs_maker {
