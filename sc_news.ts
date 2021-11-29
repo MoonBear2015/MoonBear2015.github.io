@@ -1518,15 +1518,13 @@ class selector_history extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('神話')
             ,
-            new SctItm('昔話')
+            new SctItm('伝記')
             ,
             new SctItm('民話')
             ,
             new SctItm('聖書')
             ,
-            new SctItm('辞典')
-            ,
-            new SctItm('辞書')
+            new SctItm('経典')
         ];
     }
 }

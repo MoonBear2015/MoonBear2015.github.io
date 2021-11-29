@@ -9,7 +9,7 @@ function set_horo()
     html += '<h1>';
     html += 'Horoscope';
     html += '<small>';
-    html += ' H00.25';
+    html += ' H00.26';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -62,7 +62,7 @@ function make_horo()
         html += '<div id="horo_line">';
 
         html += '<div id="horo_col_icon">';
-        html += '<img src="pics/@ICON_HORO@" width="90%" height="90%">';
+        html += '<img src="pics/@ICON_HORO@" width="100%" height="100%">';
         html += '</div>';
 
         html += '<div id="horo_col_name">';
@@ -98,7 +98,7 @@ function make_horo()
         html += '<div id="horo_sent">';
 
         html += '<div id="horo_sent_icon">';
-        html += '<img src="pics/@ICON_HORO@" width="90%" height="90%">';
+        html += '<img src="pics/@ICON_HORO@" width="100%" height="100%">';
         html += '@F_STAR@';
         html += '</div>';
 
@@ -256,23 +256,39 @@ class selector_h_info_end extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@H_INFO_END@');
         this.itms = [
+            new SctItm('@COUNTRY@@HISTORY@に記され')
+            ,
             new SctItm('@MANYPEOPLE@に@H_THINK@')
             ,
             new SctItm('@CLASS@の象徴として@H_THINK@')
             ,
             new SctItm('@PEOPLE@のシンボルとして@H_THINK@')
             ,
-            new SctItm('@COUNTRY@@HISTORY@に記され')
+            new SctItm('「@COUNTRY@の@PART@」として@H_THINK@')
             ,
-            new SctItm('「@COUNTRY@の@PART@」と@H_CHOISE@')
+            new SctItm('「@THEY@の@PART@」として@H_THINK@')
             ,
-            new SctItm('「@THEY@の@PART@」と@H_THINK@')
+            new SctItm('「@COUNTRY@の@THINK@」として@H_THINK@')
             ,
-            new SctItm('「@COUNTRY@の@THINK@」と@H_THINK@')
+            new SctItm('「@COUNTRY@の@CLASS@」として@H_THINK@')
             ,
-            new SctItm('「@COUNTRY@の@CLASS@」と@H_THINK@')
+            new SctItm('「@COUNTRY@の@FUTURE@」として@H_THINK@')
             ,
-            new SctItm('「@COUNTRY@の@FUTURE@」と@H_THINK@')
+            new SctItm('@MANYPEOPLE@に@H_CHOISE@')
+            ,
+            new SctItm('@CLASS@の象徴として@H_CHOISE@')
+            ,
+            new SctItm('@PEOPLE@のシンボルに@H_CHOISE@')
+            ,
+            new SctItm('「@COUNTRY@の@PART@」に@H_CHOISE@')
+            ,
+            new SctItm('「@THEY@の@PART@」に@H_CHOISE@')
+            ,
+            new SctItm('「@COUNTRY@の@THINK@」に@H_CHOISE@')
+            ,
+            new SctItm('「@COUNTRY@の@CLASS@」に@H_CHOISE@')
+            ,
+            new SctItm('「@COUNTRY@の@FUTURE@」に@H_CHOISE@')
 ]
     }
 }
@@ -289,6 +305,10 @@ class selector_h_think extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('讃えられ')
             ,
             new SctItm('恐れられ')
+            ,
+            new SctItm('語り継がれ')
+            ,
+            new SctItm('伝えられ')
         ]
     }
 }
@@ -306,6 +326,8 @@ class selector_h_choise extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('選ばれ')
             ,
             new SctItm('任命され')
+            ,
+            new SctItm('列せられ')
             ,
             new SctItm('列せられ')
         ]

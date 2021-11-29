@@ -449,10 +449,10 @@ small {
 }
 
 #horo_box {
-    margin:     0px auto;
+    margin:     10px auto;
     padding:    10px;
     border:     1px solid #606060;
-    width:      60%;
+    width:      80%;
     border-radius:  10px;
     background-color: white;
 }
@@ -468,8 +468,7 @@ small {
     margin-top: auto;
     border:     0.5px solid #606060;
     width: 90%;
-    height: 90%;
-    height: 3.5vh;
+    height: 3.0vh;
     /* height: 8vh; */
     grid-template-rows: 1fr;
     grid-template-columns: 10% 1fr 1fr;
@@ -506,7 +505,7 @@ small {
 #horo_col_days {
     grid-column: 3/4;
     grid-row: 1/1;
-    font-size: 2.0vw;
+    font-size: 3.0vh;
     margin: 0%;
     text-align: center;
 }
