@@ -7,7 +7,7 @@ function set_horo() {
     html += '<h1>';
     html += 'Horoscope';
     html += '<small>';
-    html += ' H00.26';
+    html += ' H00.28';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -192,19 +192,24 @@ class selector_h_info_end extends SctItm_Selector {
             new SctItm('@MANYPEOPLE@に@H_THINK@'),
             new SctItm('@CLASS@の象徴として@H_THINK@'),
             new SctItm('@PEOPLE@のシンボルとして@H_THINK@'),
-            new SctItm('「@COUNTRY@の@PART@」として@H_THINK@'),
-            new SctItm('「@THEY@の@PART@」として@H_THINK@'),
-            new SctItm('「@COUNTRY@の@THINK@」として@H_THINK@'),
-            new SctItm('「@COUNTRY@の@CLASS@」として@H_THINK@'),
-            new SctItm('「@COUNTRY@の@FUTURE@」として@H_THINK@'),
-            new SctItm('@MANYPEOPLE@に@H_CHOISE@'),
-            new SctItm('@CLASS@の象徴として@H_CHOISE@'),
-            new SctItm('@PEOPLE@のシンボルに@H_CHOISE@'),
-            new SctItm('「@COUNTRY@の@PART@」に@H_CHOISE@'),
-            new SctItm('「@THEY@の@PART@」に@H_CHOISE@'),
-            new SctItm('「@COUNTRY@の@THINK@」に@H_CHOISE@'),
-            new SctItm('「@COUNTRY@の@CLASS@」に@H_CHOISE@'),
-            new SctItm('「@COUNTRY@の@FUTURE@」に@H_CHOISE@')
+            new SctItm('「@H_TITLE_NAME@」と@H_THINK@'),
+            new SctItm('「@H_TITLE_NAME@」に@H_CHOISE@')
+        ];
+    }
+}
+class selector_h_title_name extends SctItm_Selector {
+    constructor() {
+        super('@H_TITLE_NAME@');
+        this.itms = [
+            new SctItm('@THEY@の@PART@'),
+            new SctItm('@COUNTRY@の@PART@'),
+            new SctItm('@COUNTRY@の@THINK@'),
+            new SctItm('@COUNTRY@の@CLASS@'),
+            new SctItm('@COUNTRY@の@FUTURE@'),
+            new SctItm('@COUNTRY@の@NICK@'),
+            new SctItm('@CLASS@の@PART@'),
+            new SctItm('@CLASS@の@THINK@'),
+            new SctItm('@CLASS@の@NICK@')
         ];
     }
 }
@@ -218,7 +223,9 @@ class selector_h_think extends SctItm_Selector {
             new SctItm('讃えられ'),
             new SctItm('恐れられ'),
             new SctItm('語り継がれ'),
-            new SctItm('伝えられ')
+            new SctItm('伝えられ'),
+            new SctItm('呼ばれ'),
+            new SctItm('例えられ')
         ];
     }
 }
@@ -244,7 +251,8 @@ class selector_h_type_init extends SctItm_Selector {
             new SctItm('@F_STAR_B@座の人は'),
             new SctItm('@F_STAR_B@座の人の多くは'),
             new SctItm('@F_STAR_B@座の人にありがちなことは'),
-            new SctItm('@F_STAR_B@座の人の特徴は')
+            new SctItm('@F_STAR_B@座の人の特徴は'),
+            new SctItm('@F_STAR_B@座の人は基本的に')
         ];
     }
 }
@@ -256,6 +264,7 @@ class selector_h_type extends SctItm_Selector {
             new SctItm('@H_TYPE_END@。'),
             new SctItm('@H_TYPE_END@。@CONECT3@、'),
             new SctItm('@H_TYPE_END@が、'),
+            new SctItm('@H_TYPE_END@から、'),
             new SctItm('@H_TYPE_END@ので、')
         ];
     }
@@ -268,7 +277,7 @@ class selector_h_type_end extends SctItm_Selector {
             new SctItm('@GRADE@@KEI1@性格の持ち主です'),
             new SctItm('男性なら@GRADE@@KEID2@、女性なら@GRADE@@KEI1@性格の持ち主です'),
             new SctItm('男性には@GRADE@@KEI1@人が多いようです'),
-            new SctItm('女性には@GRADE@@KEI1@人が多いようです'),
+            new SctItm('女性には@GRADE@@KEI1@人が多いです'),
             new SctItm('@GRADE@@KEIM1@と@PEOPLE_ASSES@ています'),
             new SctItm('@GRADE@@KEIM1@と@PEOPLE_ASSES@ているようです'),
             new SctItm('@GRADE@@KEIM1@と@PEOPLE_ASSES@ています'),
@@ -288,6 +297,7 @@ class horo_docs_maker extends news_docs_maker {
         this.dic_push(new selector_h_type());
         this.dic_push(new selector_h_type_init());
         this.dic_push(new selector_h_type_end());
+        this.dic_push(new selector_h_title_name());
         this.dic_push(new selector_h_think());
         this.dic_push(new selector_h_choise());
     }
