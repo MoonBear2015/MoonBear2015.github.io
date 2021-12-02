@@ -300,10 +300,11 @@ class selector_call2 extends SctItm_Selector {
     constructor() {
         super('@CALL2@');
         this.itms = [
+            new SctItm('@COMM1@@WHAT@'),
             new SctItm('@KEI1@@ITEM@'),
             new SctItm('@COUNTRY@の@KEI@@ITEM@'),
-            new SctItm('@KEID@@THINK@@END02C@@ITEM@'),
-            new SctItm('@KEID1@@MOVE@@ITEM@')
+            new SctItm('@MOVE@@ITEM@'),
+            new SctItm('@KEI@@ITEM@')
         ];
     }
 }
@@ -940,7 +941,9 @@ class selector_history extends SctItm_Selector {
             new SctItm('伝記'),
             new SctItm('民話'),
             new SctItm('聖書'),
-            new SctItm('経典')
+            new SctItm('経典'),
+            new SctItm('怪談'),
+            new SctItm('全集')
         ];
     }
 }
