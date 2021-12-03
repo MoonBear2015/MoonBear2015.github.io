@@ -169,6 +169,7 @@ li a:hover:not(#active) {
 #site_main {
     top: 20vh;
     margin-top: 19vh;
+    /* margin-top: 19vh; */
     padding: 20px;
 }
 

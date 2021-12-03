@@ -931,7 +931,6 @@ class selector_class extends SctItm_Selector {
         ];
     }
 }
-// 意識 ？？に～する
 class selector_history extends SctItm_Selector {
     constructor() {
         super('@HISTORY@');
@@ -943,6 +942,21 @@ class selector_history extends SctItm_Selector {
             new SctItm('聖書'),
             new SctItm('経典'),
             new SctItm('怪談'),
+            new SctItm('全集')
+        ];
+    }
+}
+class selector_action extends SctItm_Selector {
+    constructor() {
+        super('@ACTION@');
+        this.itms = [
+            new SctItm('恋愛'),
+            new SctItm('仕事'),
+            new SctItm('学業'),
+            new SctItm('スポーツ'),
+            new SctItm(''),
+            new SctItm('事故'),
+            new SctItm('天災'),
             new SctItm('全集')
         ];
     }
