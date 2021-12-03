@@ -9,7 +9,7 @@ function set_horo()
     html += '<h1>';
     html += 'Horoscope';
     html += '<small>';
-    html += ' H00.32';
+    html += ' H00.33';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -224,13 +224,13 @@ class selector_h_info extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@H_INFO@');
         this.itms = [
-            new SctItm('@H_INFO_INIT@、@H_INFO_END@ています。')
+            new SctItm('@H_INFO_INIT@、@H_INFO_ITEM@@H_INFO_END@ています。')
             ,
-            new SctItm('@H_INFO_INIT@すが、@H_INFO_END@ています。')
+            new SctItm('@H_INFO_INIT@すが、@H_INFO_ITEM@@H_INFO_END@ています。')
             ,
-            new SctItm('@H_INFO_INIT@、@H_INFO_END@、@H_INFO_END@ています。')
+            new SctItm('@H_INFO_INIT@、@H_INFO_ITEM@@H_INFO_END@、@H_INFO_END@ています。')
             ,
-            new SctItm('@H_INFO_INIT@すが、@H_INFO_END@、@CONECT3@、@H_INFO_END@ています。')
+            new SctItm('@H_INFO_INIT@すが、@H_INFO_ITEM@@H_INFO_END@、@CONECT3@、@H_INFO_ITEM@@H_INFO_END@ています。')
         ]
     }
 }
@@ -251,6 +251,21 @@ class selector_h_info_init extends SctItm_Selector implements ISctItm_Selector {
     }
 }
 
+// 解説 主語
+class selector_h_info_item extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@H_INFO_ITEM@');
+        this.itms = [
+            new SctItm('その姿は@GRADE@@KEI3@と')
+            ,
+            new SctItm('それは@ANIMAL@の@BODY@を持つと')
+            ,
+            new SctItm('それは@NICK@瓜二つだと')
+        ]
+    }
+}
+
+
 // 解説 結び
 class selector_h_info_end extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
@@ -258,9 +273,7 @@ class selector_h_info_end extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('@COUNTRY@@HISTORY@に@H_WRITE@')
             ,
-            new SctItm('「@H_TITLE_NAME@」と@COUNTRY@@HISTORY@に@H_WRITE@')
-            ,
-            new SctItm('@MANYPEOPLE@に@H_THINK@')
+            new SctItm('@WHO3@@MANYPEOPLE@に@H_THINK@')
             ,
             new SctItm('@H_TITLE_NAME@として@H_THINK@')
             ,
@@ -294,6 +307,8 @@ class selector_h_title_name extends SctItm_Selector implements ISctItm_Selector 
             new SctItm('@CLASS@の@NICK@')
             ,
             new SctItm('@PEOPLE@の中の@PEOPLE@')
+            ,
+            new SctItm('@WHO3@@PEOPLE@')
 
         ]
     }
@@ -437,6 +452,7 @@ class horo_docs_maker extends news_docs_maker {
         super();
         this.dic_push(new selector_h_info());
         this.dic_push(new selector_h_info_init());
+        this.dic_push(new selector_h_info_item());
         this.dic_push(new selector_h_info_end());
         this.dic_push(new selector_h_type());
         this.dic_push(new selector_h_type_init());

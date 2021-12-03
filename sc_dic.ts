@@ -2750,8 +2750,8 @@ const   cods_adv_etc = [
 const   cods_body = [
     new SctCod_It('|体|からだ|','body.jpg')
     ,
-    new SctCod_It('|肉体|にくたい|')
-    ,
+    // new SctCod_It('|肉体|にくたい|')
+    // ,
     new SctCod_It('|頭|あたま|')
     ,
     new SctCod_It('|眼|まなこ|')
@@ -2760,13 +2760,15 @@ const   cods_body = [
     ,
     new SctCod_It('|鼻|はな|')
     ,
-    new SctCod_It('|口|くち|')
-    ,
-    new SctCod_It('|首|くび|')
-    ,
-    new SctCod_It('|肩|かた|')
-    ,
+    // new SctCod_It('|口|くち|')
+    // ,
+    // new SctCod_It('|首|くび|')
+    // ,
+    // new SctCod_It('|肩|かた|')
+    // ,
     new SctCod_It('|腕|うで|')
+    ,
+    new SctCod_It('|右腕|みぎうで|')
     ,
     new SctCod_It('|手足|てあし|')
     ,
