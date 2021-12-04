@@ -877,6 +877,7 @@ class selector_what extends SctItm_Selector implements ISctItm_Selector{
     constructor(){
         super('@WHAT@');
         this.Add(itms_what);
+        this.Add(itms_city);
     }
 }
 
@@ -886,6 +887,7 @@ class locker_what extends SctItm_SelectLocker implements ISctItm_Selector{
     constructor(){
         super('@L_WHAT@','','@PIC_WHAT@');
         this.Add(itms_what);
+        this.Add(itms_city);
     }
 }
 
@@ -1546,6 +1548,8 @@ class selector_history extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('怪談')
             ,
             new SctItm('全集')
+            ,
+            new SctItm('石碑')
         ];
     }
 }
@@ -1772,7 +1776,7 @@ class selector_country extends SctItm_Selector implements ISctItm_Selector {
 class selector_animal extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@ANIMAL@');
-        this.Add(cods_to_itms(cods_animal));
+        this.Add(itms_animal);
     }
 }
 

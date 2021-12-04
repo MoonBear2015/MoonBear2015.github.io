@@ -4502,6 +4502,127 @@ const itms_grade = [
 ];
 
 
+const itms_landmark = [
+    new SctItm('城')
+    ,
+    new SctItm('寺')
+    ,
+    new SctItm('寺院')
+    ,
+    new SctItm('大聖堂')
+    ,
+    new SctItm('洞窟')
+    ,
+    new SctItm('図書館')
+    ,
+    new SctItm('美術館')
+    ,
+    new SctItm('博物館')
+    ,
+    new SctItm('市役所')
+    ,
+    new SctItm('都庁')
+    ,
+    new SctItm('公園')
+    ,
+    new SctItm('大通り')
+    ,
+    new SctItm('川')
+    ,
+    new SctItm('河')
+    ,
+    new SctItm('湖')
+    ,
+    new SctItm('山脈')
+    ,
+    new SctItm('海岸')
+];
+
+const itms_animal = [
+    new SctItm('ネズミ')
+    ,
+    new SctItm('牛')
+    ,
+    new SctItm('虎')
+    ,
+    new SctItm('ウサギ')
+    ,
+    new SctItm('龍')
+    ,
+    new SctItm('蛇')
+    ,
+    new SctItm('馬')
+    ,
+    new SctItm('羊')
+    ,
+    new SctItm('猿')
+    ,
+    new SctItm('ニワトリ')
+    ,
+    new SctItm('犬')
+    ,
+    new SctItm('猪')
+    ,
+    new SctItm('猫')
+    ,
+    new SctItm('豹')
+    ,
+    new SctItm('ライオン')
+    ,
+    new SctItm('ハムスター')
+    ,
+    new SctItm('鹿')
+    ,
+    new SctItm('カモシカ')
+    ,
+    new SctItm('シマウマ')
+    ,
+    new SctItm('キリン')
+    ,
+    new SctItm('豚')
+    ,
+    new SctItm('ヤギ')
+    ,
+    new SctItm('ロバ')
+    ,
+    new SctItm('カラス')
+    ,
+    new SctItm('雀')
+    ,
+    new SctItm('鷹')
+    ,
+    new SctItm('鷲')
+    ,
+    new SctItm('ハゲワシ')
+    ,
+    new SctItm('ペリカン')
+    ,
+    new SctItm('鶴')
+    ,
+    new SctItm('白鳥')
+    ,
+    new SctItm('鳩')
+    ,
+    new SctItm('魚')
+    ,
+    new SctItm('鮫')
+    ,
+    new SctItm('シャチ')
+    ,
+    new SctItm('クジラ')
+    ,
+    new SctItm('クラゲ')
+    ,
+    new SctItm('蟹')
+    ,
+    new SctItm('海老')
+    ,
+    new SctItm('貝')
+    ,
+    new SctItm('タコ')
+    ,
+    new SctItm('イカ')
+];
 
 const itms_partner = [
     new SctItm('知り合い')
@@ -4932,7 +5053,7 @@ const   itms_what = [
     ,
     new SctItm('オリンピック','WHAT/Olympic.jpg')
     ,
-    new SctItm('江戸幕府','WHAT/edo.jpg')
+    new SctItm('江戸幕府','WHAT/edoBack.jpg')
     ,
     new SctItm('ホワイトハウス','WHAT/whitehouse.jpg')
     ,
@@ -4943,22 +5064,6 @@ const   itms_what = [
     new SctItm('ピラミッド','WHAT/pyramid.jpg')
     ,
     new SctItm('国連','WHAT/nation.jpg')
-    ,
-    new SctItm('東京','WHAT/tokyo.jpg')
-    ,
-    new SctItm('大阪','WHAT/osaka.jpg')
-    ,
-    new SctItm('香港','WHAT/hongkong.jpg')
-    ,
-    new SctItm('ニューヨーク','WHAT/newyork.jpg')
-    ,
-    new SctItm('パリ','WHAT/Paris.jpg')
-    ,
-    new SctItm('ロンドン','WHAT/london.jpg')
-    ,
-    new SctItm('ハワイ','WHAT/Hawaii.jpg')
-    ,
-    new SctItm('ラスベガス','WHAT/LasVegas.jpg')
     ,
     new SctItm('魔界','WHAT/hell.jpg')
     ,
@@ -5024,6 +5129,28 @@ const   itms_what = [
     ,
     new SctItm('マクドナルド','WHAT/MacDonald.jpg')
 ];
+
+
+const   itms_city = [
+    new SctItm('東京','CITY/tokyo.jpg')
+    ,
+    new SctItm('大阪','CITY/osaka.jpg')
+    ,
+    new SctItm('香港','CITY/hongkong.jpg')
+    ,
+    new SctItm('ニューヨーク','CITY/newyork.jpg')
+    ,
+    new SctItm('パリ','CITY/Paris.jpg')
+    ,
+    new SctItm('ロンドン','CITY/london.jpg')
+    ,
+    new SctItm('ハワイ','CITY/Hawaii.jpg')
+    ,
+    new SctItm('ラスベガス','CITY/LasVegas.jpg')
+    ,
+    new SctItm('江戸','CITY/Edo.jpg')
+];
+
 
 const   itms_do = [
     //
