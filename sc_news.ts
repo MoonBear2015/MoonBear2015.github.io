@@ -1554,6 +1554,9 @@ class selector_history extends SctItm_Selector implements ISctItm_Selector {
     }
 }
 
+// 神 ～の@SUPERCLASS@と繋ぐ
+
+
 class selector_action extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@ACTION@');
@@ -1799,6 +1802,14 @@ class selector_place extends SctItm_Selector implements ISctItm_Selector {
         super('@PLACE@');
         this.startNumber = 1;
         this.Add(cods_to_itms(cods_place));
+    }
+}
+
+class selector_landmark extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@LANDMARK@');
+        this.startNumber = 1;
+        this.Add(itms_landmark);
     }
 }
 
@@ -2146,8 +2157,6 @@ class selector_people_asses extends SctItm_Selector implements ISctItm_Selector 
             new SctItm('@PEOPLE@には@ASSES_S2@')
             ,
             new SctItm('@PEOPLE@から@ASSES_S2@')
-            ,
-            new SctItm('@PEOPLE@からは@ASSES_S2@')
         ];
     }
 }
@@ -2594,6 +2603,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_keime2());
         this.dic_push(new selector_country());
         this.dic_push(new selector_history());
+        this.dic_push(new selector_landmark());
         this.dic_push(new selector_animal());
         this.dic_push(new selector_km());
         this.dic_push(new selector_k());

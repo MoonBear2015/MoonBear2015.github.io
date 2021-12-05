@@ -3633,7 +3633,9 @@ const itms_nickPosi = [
     new SctItm('巨砲'),
     new SctItm('妖精'),
     new SctItm('天使'),
+    new SctItm('神'),
     new SctItm('神様'),
+    new SctItm('守り神'),
     new SctItm('鬼神'),
     new SctItm('魔神'),
     new SctItm('軍神'),
@@ -3656,8 +3658,13 @@ const itms_nickPosi = [
     new SctItm('貴婦人'),
     new SctItm('王様'),
     new SctItm('女王様'),
+    new SctItm('王子様'),
+    new SctItm('王女様'),
+    new SctItm('お姫様'),
     new SctItm('お殿様'),
     new SctItm('大統領'),
+    new SctItm('酋長'),
+    new SctItm('酋長'),
     new SctItm('酋長')
 ];
 const itms_nickNomal = [

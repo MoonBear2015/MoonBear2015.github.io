@@ -5850,7 +5850,11 @@ const   itms_nickPosi = [
     ,
     new SctItm('天使')
     ,
+    new SctItm('神')
+    ,
     new SctItm('神様')
+    ,
+    new SctItm('守り神')
     ,
     new SctItm('鬼神')
     ,
@@ -5896,9 +5900,19 @@ const   itms_nickPosi = [
     ,
     new SctItm('女王様')
     ,
+    new SctItm('王子様')
+    ,
+    new SctItm('王女様')
+    ,
+    new SctItm('お姫様')
+    ,
     new SctItm('お殿様')
     ,
     new SctItm('大統領')
+    ,
+    new SctItm('酋長')
+    ,
+    new SctItm('酋長')
     ,
     new SctItm('酋長')
 ]

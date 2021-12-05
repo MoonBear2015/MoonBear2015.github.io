@@ -9,7 +9,7 @@ function set_horo()
     html += '<h1>';
     html += 'Horoscope';
     html += '<small>';
-    html += ' H00.34';
+    html += ' H00.36';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -256,11 +256,11 @@ class selector_h_info_item extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@H_INFO_ITEM@');
         this.itms = [
-            new SctItm('その姿は@GRADE@@KEI3@ので')
+            new SctItm('その姿は@GRADE@@KEI3@と')
             ,
             new SctItm('その@F_STAR_B@は@ANIMAL@の@BODY@を持つと')
             ,
-            new SctItm('その@F_STAR_B@は@NICK@瓜二つだと')
+            new SctItm('その@F_STAR_B@は@NICK@に瓜二つだと')
         ]
     }
 }
@@ -273,15 +273,11 @@ class selector_h_info_end extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('@COUNTRY@@HISTORY@に@H_WRITE@')
             ,
-            new SctItm('@COUNTRY@@HISTORY@に@H_WRITE@')
-            ,
             new SctItm('@WHO3@@MANYPEOPLE@に@H_THINK@')
             ,
-            new SctItm('@H_TITLE_NAME@に@H_THINK@')
+            new SctItm('@H_TITLE_NAME@と@H_THINK@')
             ,
-            new SctItm('@COUNTRY@の「@H_TITLE_NAME@」に@H_CHOISE@')
-            ,
-            new SctItm('@THEY@より「@H_TITLE_NAME@」に@H_CHOISE@')
+            new SctItm('「@H_TITLE_NAME@」に@H_CHOISE@')
         ]
     }
 }
@@ -365,8 +361,6 @@ class selector_h_choise extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('定められ')
             ,
             new SctItm('例えられ')
-            ,
-            new SctItm('選ばれ')
             ,
             new SctItm('任命され')
             ,
