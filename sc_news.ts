@@ -2140,10 +2140,10 @@ class selector_assessment1 extends SctItm_Selector implements ISctItm_Selector {
         super('@ASSES1@');
         this.itms = [
             new SctItm('@ASSES_S2@')
-            ,
-            new SctItm('@ASSES_S2@、@ASSES_S2@')
-            ,
-            new SctItm('@ASSES_S2@、@CONECT3@、@ASSES_S2@')
+            // ,
+            // new SctItm('@ASSES_S2@、@ASSES_S2@')
+            // ,
+            // new SctItm('@ASSES_S2@、@CONECT3@、@ASSES_S2@')
         ];
     }
 }
