@@ -9,7 +9,7 @@ function set_horo()
     html += '<h1>';
     html += 'Horoscope';
     html += '<small>';
-    html += ' H00.37';
+    html += ' H00.38';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -263,6 +263,8 @@ class selector_h_info_item extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('その@F_STAR_B@は@ANIMAL@の@BODY@を持つと')
             ,
             new SctItm('その姿は@NICK@に瓜二つだと')
+            ,
+            new SctItm('@CLASS@の象徴であると')
         ]
     }
 }
@@ -277,7 +279,7 @@ class selector_h_info_end extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@WHO3@@MANYPEOPLE@に@ASSES1@')
             ,
-            new SctItm('@MANY@@H_TITLE_NAME@と@ASSES_S2@')
+            new SctItm('@MANYPEOPLE@を@ASSES_S2@')
         ]
     }
 }
@@ -357,8 +359,6 @@ class selector_h_choise extends SctItm_Selector implements ISctItm_Selector {
         super('@H_CHOISE@');
         this.itms = [
             new SctItm('定められ')
-            ,
-            new SctItm('例えられ')
             ,
             new SctItm('任命され')
             ,
