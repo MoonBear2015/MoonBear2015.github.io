@@ -7,7 +7,7 @@ function set_horo() {
     html += '<h1>';
     html += 'Horoscope';
     html += '<small>';
-    html += ' H00.38';
+    html += ' H00.39';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -27,7 +27,7 @@ function make_horo() {
     let makerItms = new horo_docs_maker_items();
     let fixItem = new Fix_items();
     makerItms.dic_push(fixItem);
-    let cntItem = 2;
+    let cntItem = 6;
     let dt = new Date();
     let html = '';
     let days = SplitYearDays(cntHoro);
@@ -80,10 +80,10 @@ function make_horo() {
         html += date_MD_string(days[j].ed);
         html += '</div>';
         html += '<p id="horo_sent_info">'; // 
-        html += '　@H_INFO@';
+        html += '@H_INFO@';
         html += '</p>'; // info
         html += '<p id="horo_sent_type">'; // 
-        html += '　@H_TYPE_INIT@';
+        html += '@H_TYPE_INIT@';
         for (let j = 0; j < 2; j++) {
             html += '@H_TYPE@';
         }
@@ -93,8 +93,8 @@ function make_horo() {
         fixStars.Next();
         html += '<p id="horo_sent_items">'; // 
         for (let k = 0; k < cntItem; k++) {
-            html += '<img src="pics/@ICON_HOROITEM@" width="30px" height="50px">';
-            html += '@F_ITEM@ @F_ITEM@ @F_ITEM@ @F_ITEM@';
+            html += '<img src="pics/@ICON_HOROITEM@" width="30px" height="30px">';
+            html += '@F_ITEM@';
             html += '<br>';
             html = makerItms.gene_docs(html);
             fixItem.Next();
@@ -122,7 +122,12 @@ class Fix_items extends SctItm_FixSeq {
         this.itms = [
             new SctItm('@I_LOVE@'),
             new SctItm('@I_JOB@'),
-            new SctItm('@I_HEALTH@')
+            new SctItm('@I_HEALTH@'),
+            new SctItm('@I_SPORT@'),
+            new SctItm('@I_STUDY@'),
+            new SctItm('@I_TRAVEL@'),
+            new SctItm('@I_FAMILY@'),
+            new SctItm('@I_GAME@')
         ];
     }
 }
@@ -155,6 +160,56 @@ class First_health extends SctItm_FirstLocker2 {
         super('@I_HEALTH@', '', '@ICON_HOROITEM@');
         this.itms = [
             new SctItm('☆★健康★☆<br>', 'HORO/health.png', 'Health'),
+            new SctItm('体重'),
+            new SctItm('身長')
+        ];
+    }
+}
+class First_sport extends SctItm_FirstLocker2 {
+    constructor() {
+        super('@I_SPORT@', '', '@ICON_HOROITEM@');
+        this.itms = [
+            new SctItm('☆★スポーツ★☆<br>', 'HORO/sport.png', 'Sport'),
+            new SctItm('体重'),
+            new SctItm('身長')
+        ];
+    }
+}
+class First_studay extends SctItm_FirstLocker2 {
+    constructor() {
+        super('@I_STUDAY@', '', '@ICON_HOROITEM@');
+        this.itms = [
+            new SctItm('☆★勉強★☆<br>', 'HORO/studay.png', 'Studay'),
+            new SctItm('体重'),
+            new SctItm('身長')
+        ];
+    }
+}
+class First_travel extends SctItm_FirstLocker2 {
+    constructor() {
+        super('@I_TRAVEL@', '', '@ICON_HOROITEM@');
+        this.itms = [
+            new SctItm('☆★旅行★☆<br>', 'HORO/travel.png', 'Travel'),
+            new SctItm('体重'),
+            new SctItm('身長')
+        ];
+    }
+}
+class First_family extends SctItm_FirstLocker2 {
+    constructor() {
+        super('@I_FAMILY@', '', '@ICON_HOROITEM@');
+        this.itms = [
+            new SctItm('☆★家庭★☆<br>', 'HORO/family.png', 'Travel'),
+            new SctItm('体重'),
+            new SctItm('身長')
+        ];
+    }
+}
+class First_game extends SctItm_FirstLocker2 {
+    constructor() {
+        super('@I_GAME@', '', '@ICON_HOROITEM@');
+        this.itms = [
+            new SctItm('☆★勝負★☆<br>', 'HORO/game.png', 'Travel'),
             new SctItm('体重'),
             new SctItm('身長')
         ];
@@ -332,5 +387,9 @@ class horo_docs_maker_items extends news_docs_maker {
         this.dic_push(new First_love());
         this.dic_push(new First_job());
         this.dic_push(new First_health());
+        this.dic_push(new First_sport());
+        this.dic_push(new First_studay());
+        this.dic_push(new First_travel());
+        this.dic_push(new First_game());
     }
 }
