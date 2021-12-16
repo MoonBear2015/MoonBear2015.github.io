@@ -9,7 +9,7 @@ function set_horo()
     html += '<h1>';
     html += 'Horoscope';
     html += '<small>';
-    html += ' H00.39';
+    html += ' H00.40';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -39,7 +39,7 @@ function make_horo()
     let fixItem = new Fix_items();
     makerItms.dic_push(fixItem);
 
-    let cntItem = 6;
+    let cntItem = 5;
 
     let dt = new Date()
 
@@ -134,8 +134,8 @@ function make_horo()
         for(let k = 0; k < cntItem; k++)
         {
             html += '<img src="pics/@ICON_HOROITEM@" width="30px" height="30px">';
-            html += '@F_ITEM@';
-            html += '<br>';
+            html += '@F_ITEM@運：' + star_str(rnd_minmax(1,6));
+            html += ' <small>@F_ITEM@</small><br>';
 
             html = makerItms.gene_docs(html);
             fixItem.Next();
@@ -174,9 +174,7 @@ class Fix_items extends SctItm_FixSeq implements ISctItm_Selector{
             ,
             new SctItm('@I_HEALTH@')
             ,
-            new SctItm('@I_SPORT@')
-            ,
-            new SctItm('@I_STUDY@')
+            new SctItm('@I_STUDAY@')
             ,
             new SctItm('@I_TRAVEL@')
             ,
@@ -191,7 +189,7 @@ class First_love extends SctItm_FirstLocker2 implements ISctItm_Selector{
     constructor(){
         super('@I_LOVE@','','@ICON_HOROITEM@');
         this.itms = [
-            new SctItm('☆★愛情★☆<br>','HORO/love.png','Love')
+            new SctItm('愛情','HORO/love.png','Love')
             ,
             new SctItm('@THEY@')
             ,
@@ -206,7 +204,7 @@ class First_job extends SctItm_FirstLocker2 implements ISctItm_Selector{
     constructor(){
         super('@I_JOB@','','@ICON_HOROITEM@');
         this.itms = [
-            new SctItm('☆★仕事運★☆<br>','HORO/job.png','Business')
+            new SctItm('仕事','HORO/job.png','Business')
             ,
             new SctItm('就職')
             ,
@@ -219,21 +217,7 @@ class First_health extends SctItm_FirstLocker2 implements ISctItm_Selector{
     constructor(){
         super('@I_HEALTH@','','@ICON_HOROITEM@');
         this.itms = [
-            new SctItm('☆★健康★☆<br>','HORO/health.png','Health')
-            ,
-            new SctItm('体重')
-            ,
-            new SctItm('身長')
-        ]
-    }
-}
-
-
-class First_sport extends SctItm_FirstLocker2 implements ISctItm_Selector{
-    constructor(){
-        super('@I_SPORT@','','@ICON_HOROITEM@');
-        this.itms = [
-            new SctItm('☆★スポーツ★☆<br>','HORO/sport.png','Sport')
+            new SctItm('健康','HORO/health.png','Health')
             ,
             new SctItm('体重')
             ,
@@ -246,7 +230,7 @@ class First_studay extends SctItm_FirstLocker2 implements ISctItm_Selector{
     constructor(){
         super('@I_STUDAY@','','@ICON_HOROITEM@');
         this.itms = [
-            new SctItm('☆★勉強★☆<br>','HORO/studay.png','Studay')
+            new SctItm('学業','HORO/studay.png','Studay')
             ,
             new SctItm('体重')
             ,
@@ -260,7 +244,7 @@ class First_travel extends SctItm_FirstLocker2 implements ISctItm_Selector{
     constructor(){
         super('@I_TRAVEL@','','@ICON_HOROITEM@');
         this.itms = [
-            new SctItm('☆★旅行★☆<br>','HORO/travel.png','Travel')
+            new SctItm('旅行','HORO/travel.png','Travel')
             ,
             new SctItm('体重')
             ,
@@ -272,7 +256,7 @@ class First_family extends SctItm_FirstLocker2 implements ISctItm_Selector{
     constructor(){
         super('@I_FAMILY@','','@ICON_HOROITEM@');
         this.itms = [
-            new SctItm('☆★家庭★☆<br>','HORO/family.png','Travel')
+            new SctItm('家庭','HORO/family.png','Family')
             ,
             new SctItm('体重')
             ,
@@ -285,7 +269,7 @@ class First_game extends SctItm_FirstLocker2 implements ISctItm_Selector{
     constructor(){
         super('@I_GAME@','','@ICON_HOROITEM@');
         this.itms = [
-            new SctItm('☆★勝負★☆<br>','HORO/game.png','Travel')
+            new SctItm('勝負','HORO/game.png','Travel')
             ,
             new SctItm('体重')
             ,
@@ -540,8 +524,8 @@ class horo_docs_maker_items extends news_docs_maker {
         this.dic_push(new First_love());
         this.dic_push(new First_job());
         this.dic_push(new First_health());
-        this.dic_push(new First_sport());
         this.dic_push(new First_studay());
+        this.dic_push(new First_family());
         this.dic_push(new First_travel());
         this.dic_push(new First_game());
     }

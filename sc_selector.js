@@ -634,7 +634,8 @@ class docs_maker {
             if (chk < 0)
                 break;
             if (cnt > 10) {
-                // alert('over work : ' + chk.toString() + result);
+                result = "** over work **<br>" + result;
+                // alert('over work : ' + chk.toString());
                 break;
             }
         }
