@@ -471,7 +471,7 @@ small {
     width: 90%;
     height: 3.0vh;
     /* height: 8vh; */
-    grid-template-rows: 1fr;
+    grid-template-rows: min-content;
     grid-template-columns: 10% 1fr 1fr;
 }
 #horo_line:hover {
@@ -530,7 +530,7 @@ small {
     margin-right: auto;
     border:     1px solid #606060;
     width: 90%;
-    grid-template-rows: 15% 8% 1fr 1fr 1fr;
+    grid-template-rows: 5% 5% min-content min-content *;
     grid-template-columns: 30% 5% 1fr;
 }
 
@@ -538,7 +538,7 @@ small {
     font-family: 'Times New Roman', Times, serif;
     font-size: 2.0vw;
     grid-column: 1/2;
-    grid-row: 1/4;
+    grid-row: 2/3;
     margin: auto;
     text-align: center;
     letter-spacing: 0.8em;

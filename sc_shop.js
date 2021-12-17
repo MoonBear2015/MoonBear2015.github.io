@@ -276,13 +276,6 @@ class selector_status extends SctItm_Selector {
         this.Add(itms_status);
     }
 }
-// テクノロジー
-class selector_tech extends SctItm_Selector {
-    constructor() {
-        super('@TECH@');
-        this.Add(itms_tech);
-    }
-}
 // 成功・達成
 class selector_success extends SctItm_Selector {
     constructor() {
@@ -575,7 +568,6 @@ class shop_docs_maker extends news_docs_maker {
         this.dic_push(new selector_model());
         this.dic_push(new selector_status());
         this.dic_push(new selector_catch());
-        this.dic_push(new selector_tech());
         this.dic_push(new selector_success());
         this.dic_push(new selector_s_info_init());
         this.dic_push(new selector_s_info());

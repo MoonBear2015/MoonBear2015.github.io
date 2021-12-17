@@ -1177,6 +1177,13 @@ class selector_landmark extends SctItm_Selector {
         this.Add(itms_landmark);
     }
 }
+// テクノロジー
+class selector_tech extends SctItm_Selector {
+    constructor() {
+        super('@TECH@');
+        this.Add(itms_tech);
+    }
+}
 // 敬称 の～
 class selector_nickname extends SctItm_Selector {
     constructor() {
@@ -1688,6 +1695,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_country());
         this.dic_push(new selector_history());
         this.dic_push(new selector_landmark());
+        this.dic_push(new selector_tech());
         this.dic_push(new selector_animal());
         this.dic_push(new selector_km());
         this.dic_push(new selector_k());

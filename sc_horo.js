@@ -7,7 +7,7 @@ function set_horo() {
     html += '<h1>';
     html += 'Horoscope';
     html += '<small>';
-    html += ' H00.40';
+    html += ' H00.41';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -83,7 +83,7 @@ function make_horo() {
         html += '@H_INFO@';
         html += '</p>'; // info
         html += '<p id="horo_sent_type">'; // 
-        html += '@H_TYPE_INIT@';
+        html += '　@H_TYPE_INIT@';
         for (let j = 0; j < 2; j++) {
             html += '@H_TYPE@';
         }
@@ -94,8 +94,8 @@ function make_horo() {
         html += '<p id="horo_sent_items">'; // 
         for (let k = 0; k < cntItem; k++) {
             html += '<img src="pics/@ICON_HOROITEM@" width="30px" height="30px">';
-            html += '@F_ITEM@運：' + star_str(rnd_minmax(1, 6));
-            html += ' <small>@F_ITEM@</small><br>';
+            html += '@F_ITEM@：' + star_str(rnd_minmax(1, 6));
+            html += ' @F_ITEM@<br>';
             html = makerItms.gene_docs(html);
             fixItem.Next();
         }
@@ -126,7 +126,9 @@ class Fix_items extends SctItm_FixSeq {
             new SctItm('@I_STUDAY@'),
             new SctItm('@I_TRAVEL@'),
             new SctItm('@I_FAMILY@'),
-            new SctItm('@I_GAME@')
+            new SctItm('@I_GAME@'),
+            new SctItm('@I_SWEETS@'),
+            new SctItm('@I_FOOD@')
         ];
     }
 }
@@ -136,9 +138,9 @@ class First_love extends SctItm_FirstLocker2 {
         super('@I_LOVE@', '', '@ICON_HOROITEM@');
         this.itms = [
             new SctItm('愛情', 'HORO/love.png', 'Love'),
-            new SctItm('@THEY@'),
-            new SctItm('@CLASS@'),
-            new SctItm('@PEOPLE@')
+            new SctItm('@KEY@で出逢いが待っている'),
+            new SctItm('@CLASS@には要注意'),
+            new SctItm('お薦めデートスポット @LANDMARK@，@LANDMARK@，@LANDMARK@')
         ];
     }
 }
@@ -148,8 +150,10 @@ class First_job extends SctItm_FirstLocker2 {
         super('@I_JOB@', '', '@ICON_HOROITEM@');
         this.itms = [
             new SctItm('仕事', 'HORO/job.png', 'Business'),
-            new SctItm('就職'),
-            new SctItm('転職')
+            new SctItm('@CLASS@の素質有り'),
+            new SctItm('転職するなら@CLASS@が狙い目'),
+            new SctItm('@CLASS@が高収入'),
+            new SctItm('@TECH@で業績アップ')
         ];
     }
 }
@@ -159,8 +163,10 @@ class First_health extends SctItm_FirstLocker2 {
         super('@I_HEALTH@', '', '@ICON_HOROITEM@');
         this.itms = [
             new SctItm('健康', 'HORO/health.png', 'Health'),
-            new SctItm('体重'),
-            new SctItm('身長')
+            new SctItm('@HABIT@で医者いらず'),
+            new SctItm('@HABIT@のやり過ぎに注意'),
+            new SctItm('朝晩の@HABIT@で健康回復'),
+            new SctItm('@TECH@が健康の秘訣')
         ];
     }
 }
@@ -169,8 +175,9 @@ class First_studay extends SctItm_FirstLocker2 {
         super('@I_STUDAY@', '', '@ICON_HOROITEM@');
         this.itms = [
             new SctItm('学業', 'HORO/studay.png', 'Studay'),
-            new SctItm('体重'),
-            new SctItm('身長')
+            new SctItm('@TECH@で学力向上'),
+            new SctItm('@TECH@で志望校合格'),
+            new SctItm('@HABIT@で記憶力向上')
         ];
     }
 }
@@ -179,8 +186,8 @@ class First_travel extends SctItm_FirstLocker2 {
         super('@I_TRAVEL@', '', '@ICON_HOROITEM@');
         this.itms = [
             new SctItm('旅行', 'HORO/travel.png', 'Travel'),
-            new SctItm('体重'),
-            new SctItm('身長')
+            new SctItm('お薦めの国 @COUNTRY@，@COUNTRY@，@COUNTRY@'),
+            new SctItm('@DIR@への旅路は要注意')
         ];
     }
 }
@@ -199,6 +206,26 @@ class First_game extends SctItm_FirstLocker2 {
         super('@I_GAME@', '', '@ICON_HOROITEM@');
         this.itms = [
             new SctItm('勝負', 'HORO/game.png', 'Travel'),
+            new SctItm('体重'),
+            new SctItm('身長')
+        ];
+    }
+}
+class First_sweets extends SctItm_FirstLocker2 {
+    constructor() {
+        super('@I_SWEETS@', '', '@ICON_HOROITEM@');
+        this.itms = [
+            new SctItm('菓子', 'HORO/sweet.png', 'Sweets'),
+            new SctItm('体重'),
+            new SctItm('身長')
+        ];
+    }
+}
+class First_food extends SctItm_FirstLocker2 {
+    constructor() {
+        super('@I_FOOD@', '', '@ICON_HOROITEM@');
+        this.itms = [
+            new SctItm('菓子', 'HORO/food.png', 'Food'),
             new SctItm('体重'),
             new SctItm('身長')
         ];
@@ -380,5 +407,7 @@ class horo_docs_maker_items extends news_docs_maker {
         this.dic_push(new First_family());
         this.dic_push(new First_travel());
         this.dic_push(new First_game());
+        this.dic_push(new First_sweets());
+        this.dic_push(new First_food());
     }
 }
