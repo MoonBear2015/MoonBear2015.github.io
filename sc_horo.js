@@ -7,7 +7,7 @@ function set_horo() {
     html += '<h1>';
     html += 'Horoscope';
     html += '<small>';
-    html += ' H00.41';
+    html += ' H00.42';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -27,7 +27,7 @@ function make_horo() {
     let makerItms = new horo_docs_maker_items();
     let fixItem = new Fix_items();
     makerItms.dic_push(fixItem);
-    let cntItem = 5;
+    let cntItem = 6;
     let dt = new Date();
     let html = '';
     let days = SplitYearDays(cntHoro);
@@ -128,7 +128,8 @@ class Fix_items extends SctItm_FixSeq {
             new SctItm('@I_FAMILY@'),
             new SctItm('@I_GAME@'),
             new SctItm('@I_SWEETS@'),
-            new SctItm('@I_FOOD@')
+            new SctItm('@I_FOOD@'),
+            new SctItm('@I_MUSIC@')
         ];
     }
 }
@@ -137,7 +138,7 @@ class First_love extends SctItm_FirstLocker2 {
     constructor() {
         super('@I_LOVE@', '', '@ICON_HOROITEM@');
         this.itms = [
-            new SctItm('愛情', 'HORO/love.png', 'Love'),
+            new SctItm('恋愛', 'HORO/love.png', 'Love'),
             new SctItm('@KEY@で出逢いが待っている'),
             new SctItm('@CLASS@には要注意'),
             new SctItm('お薦めデートスポット @LANDMARK@，@LANDMARK@，@LANDMARK@')
@@ -164,8 +165,8 @@ class First_health extends SctItm_FirstLocker2 {
         this.itms = [
             new SctItm('健康', 'HORO/health.png', 'Health'),
             new SctItm('@HABIT@で医者いらず'),
-            new SctItm('@HABIT@のやり過ぎに注意'),
-            new SctItm('朝晩の@HABIT@で健康回復'),
+            new SctItm('@HABIT@のやり過ぎは禁物'),
+            new SctItm('朝晩の@HABIT@でダイエット'),
             new SctItm('@TECH@が健康の秘訣')
         ];
     }
@@ -196,8 +197,9 @@ class First_family extends SctItm_FirstLocker2 {
         super('@I_FAMILY@', '', '@ICON_HOROITEM@');
         this.itms = [
             new SctItm('家庭', 'HORO/family.png', 'Family'),
-            new SctItm('体重'),
-            new SctItm('身長')
+            new SctItm('@PART@の言動に要注意'),
+            new SctItm('@PART@を大切にしよう'),
+            new SctItm('@PART@へのプレゼントが幸運を呼ぶ')
         ];
     }
 }
@@ -206,8 +208,10 @@ class First_game extends SctItm_FirstLocker2 {
         super('@I_GAME@', '', '@ICON_HOROITEM@');
         this.itms = [
             new SctItm('勝負', 'HORO/game.png', 'Travel'),
-            new SctItm('体重'),
-            new SctItm('身長')
+            new SctItm('@DIR@に勝利の予感'),
+            new SctItm('昨日の勝敗に@THINK@は禁物'),
+            new SctItm('@CLASS@との勝負は避けて'),
+            new SctItm('@THEY@を味方に付ければ')
         ];
     }
 }
@@ -216,8 +220,9 @@ class First_sweets extends SctItm_FirstLocker2 {
         super('@I_SWEETS@', '', '@ICON_HOROITEM@');
         this.itms = [
             new SctItm('菓子', 'HORO/sweet.png', 'Sweets'),
-            new SctItm('体重'),
-            new SctItm('身長')
+            new SctItm('@HABIT@のお供は@SWEETS@がお薦め'),
+            new SctItm('@SWEETS@の食べ過ぎに注意'),
+            new SctItm('今日のおやつは@COUNTRY@産の@SWEETS@')
         ];
     }
 }
@@ -225,9 +230,22 @@ class First_food extends SctItm_FirstLocker2 {
     constructor() {
         super('@I_FOOD@', '', '@ICON_HOROITEM@');
         this.itms = [
-            new SctItm('菓子', 'HORO/food.png', 'Food'),
-            new SctItm('体重'),
-            new SctItm('身長')
+            new SctItm('食事', 'HORO/food.png', 'Food'),
+            new SctItm('おすすめランチ @FOOD@，@FOOD@，@FOOD@'),
+            new SctItm('おすすめディナー @FOOD@，@FOOD@，@FOOD@'),
+            new SctItm('@FOOD@の食べ過ぎは要注意')
+        ];
+    }
+}
+class First_music extends SctItm_FirstLocker2 {
+    constructor() {
+        super('@I_MUSIC@', '', '@ICON_HOROITEM@');
+        this.itms = [
+            new SctItm('音楽', 'HORO/music.png', 'Music'),
+            new SctItm('@COUNTRY@のヒットチャートに注目'),
+            new SctItm('@COUNTRY@の@MUSIC@が今年の流行'),
+            new SctItm('@THEY@で人気の@MUSIC@に注目'),
+            new SctItm('@HABIT@のお供は@MUSIC@がお薦め')
         ];
     }
 }
@@ -409,5 +427,6 @@ class horo_docs_maker_items extends news_docs_maker {
         this.dic_push(new First_game());
         this.dic_push(new First_sweets());
         this.dic_push(new First_food());
+        this.dic_push(new First_music());
     }
 }

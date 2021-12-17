@@ -3705,6 +3705,41 @@ const itms_dir = [
     new SctItm('南西'),
     new SctItm('南東')
 ];
+const itms_sweets = [
+    new SctItm('チョコレート'),
+    new SctItm('ケーキ'),
+    new SctItm('クッキー'),
+    new SctItm('ビスケット'),
+    new SctItm('キャンディー'),
+    new SctItm('ポップコーン'),
+    new SctItm('ポテトチップス'),
+    new SctItm('饅頭'),
+    new SctItm('団子'),
+    new SctItm('大福餅'),
+    new SctItm('プリン'),
+    new SctItm('ゼリー')
+];
+const itms_food = [
+    new SctItm('カレー'),
+    new SctItm('ラーメン'),
+    new SctItm('ハンバーガー'),
+    new SctItm('お寿司'),
+    new SctItm('中華料理'),
+    new SctItm('イタリア料理'),
+    new SctItm('フランス料理'),
+    new SctItm('和食')
+];
+const itms_music = [
+    new SctItm('クラシック'),
+    new SctItm('ジャズ'),
+    new SctItm('ロック'),
+    new SctItm('ハードロック'),
+    new SctItm('ヘヴィメタル'),
+    new SctItm('パンク'),
+    new SctItm('ポップス'),
+    new SctItm('ヒップホップ'),
+    new SctItm('レゲェ')
+];
 const itms_season = [
     new SctItm('春'),
     new SctItm('夏'),

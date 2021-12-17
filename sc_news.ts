@@ -1812,6 +1812,27 @@ class selector_landmark extends SctItm_Selector implements ISctItm_Selector {
         this.Add(itms_landmark);
     }
 }
+class selector_sweets extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@SWEETS@');
+        this.startNumber = 1;
+        this.Add(itms_sweets);
+    }
+}
+class selector_food extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@FOOD@');
+        this.startNumber = 1;
+        this.Add(itms_food);
+    }
+}
+class selector_music extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@MUSIC@');
+        this.startNumber = 1;
+        this.Add(itms_music);
+    }
+}
 
 // テクノロジー
 class selector_tech extends SctItm_Selector implements ISctItm_Selector {
@@ -2613,6 +2634,9 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_country());
         this.dic_push(new selector_history());
         this.dic_push(new selector_landmark());
+        this.dic_push(new selector_sweets());
+        this.dic_push(new selector_food());
+        this.dic_push(new selector_music());
         this.dic_push(new selector_tech());
         this.dic_push(new selector_animal());
         this.dic_push(new selector_km());
