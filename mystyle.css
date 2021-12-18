@@ -578,6 +578,7 @@ small {
 
 }
 #horo_sent_type {
+    padding: 2vw;
     font-family: 'Times New Roman', Times, serif;
     grid-column: 1/4;
     grid-row: 4/5;

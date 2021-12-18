@@ -1765,6 +1765,12 @@ class selector_body extends SctItm_Selector implements ISctItm_Selector {
         this.Add(cods_to_itms(cods_body));
     }
 }
+class selector_family extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@FAMILY@');
+        this.Add(cods_to_itms(cods_family));
+    }
+}
 
 
 
@@ -2658,6 +2664,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_co());
         this.dic_push(new selector_human());
         this.dic_push(new selector_body());
+        this.dic_push(new selector_family());
         this.dic_push(new selector_class());
         this.dic_push(new selector_call());
         this.dic_push(new selector_call2());

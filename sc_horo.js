@@ -7,7 +7,7 @@ function set_horo() {
     html += '<h1>';
     html += 'Horoscope';
     html += '<small>';
-    html += ' H00.42';
+    html += ' H00.43';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -165,8 +165,8 @@ class First_health extends SctItm_FirstLocker2 {
         this.itms = [
             new SctItm('健康', 'HORO/health.png', 'Health'),
             new SctItm('@HABIT@で医者いらず'),
-            new SctItm('@HABIT@のやり過ぎは禁物'),
-            new SctItm('朝晩の@HABIT@でダイエット'),
+            new SctItm('@HABIT@のやり過ぎ注意'),
+            new SctItm('毎日の@HABIT@でダイエット'),
             new SctItm('@TECH@が健康の秘訣')
         ];
     }
@@ -188,6 +188,7 @@ class First_travel extends SctItm_FirstLocker2 {
         this.itms = [
             new SctItm('旅行', 'HORO/travel.png', 'Travel'),
             new SctItm('お薦めの国 @COUNTRY@，@COUNTRY@，@COUNTRY@'),
+            new SctItm('@LANDMARK@巡りの季節になりました'),
             new SctItm('@DIR@への旅路は要注意')
         ];
     }
@@ -197,9 +198,11 @@ class First_family extends SctItm_FirstLocker2 {
         super('@I_FAMILY@', '', '@ICON_HOROITEM@');
         this.itms = [
             new SctItm('家庭', 'HORO/family.png', 'Family'),
-            new SctItm('@PART@の言動に要注意'),
-            new SctItm('@PART@を大切にしよう'),
-            new SctItm('@PART@へのプレゼントが幸運を呼ぶ')
+            new SctItm('@FAMILY@の言動に要注意'),
+            new SctItm('@FAMILY@を大切に'),
+            new SctItm('@FAMILY@へのプレゼントが幸運を呼ぶ'),
+            new SctItm('家族旅行は@COUNTRY@がお薦め'),
+            new SctItm('家族みんなで@HABIT@')
         ];
     }
 }
@@ -207,7 +210,7 @@ class First_game extends SctItm_FirstLocker2 {
     constructor() {
         super('@I_GAME@', '', '@ICON_HOROITEM@');
         this.itms = [
-            new SctItm('勝負', 'HORO/game.png', 'Travel'),
+            new SctItm('賭事', 'HORO/game.png', 'Travel'),
             new SctItm('@DIR@に勝利の予感'),
             new SctItm('昨日の勝敗に@THINK@は禁物'),
             new SctItm('@CLASS@との勝負は避けて'),
@@ -220,7 +223,7 @@ class First_sweets extends SctItm_FirstLocker2 {
         super('@I_SWEETS@', '', '@ICON_HOROITEM@');
         this.itms = [
             new SctItm('菓子', 'HORO/sweet.png', 'Sweets'),
-            new SctItm('@HABIT@のお供は@SWEETS@がお薦め'),
+            new SctItm('@SWEETS@を@HABIT@のお供に'),
             new SctItm('@SWEETS@の食べ過ぎに注意'),
             new SctItm('今日のおやつは@COUNTRY@産の@SWEETS@')
         ];
@@ -254,10 +257,10 @@ class selector_h_info extends SctItm_Selector {
     constructor() {
         super('@H_INFO@');
         this.itms = [
-            new SctItm('@H_INFO_INIT@、@H_INFO_ITEM@@H_INFO_END@ています。'),
-            new SctItm('@H_INFO_INIT@すが、@H_INFO_ITEM@@H_INFO_END@ています。'),
-            new SctItm('@H_INFO_INIT@、@H_INFO_ITEM@@H_INFO_END@、@H_INFO_END@ています。'),
-            new SctItm('@H_INFO_INIT@すが、@H_INFO_ITEM@@H_INFO_END@、@CONECT3@、@H_INFO_ITEM@@H_INFO_END@ています。')
+            new SctItm('@H_INFO_INIT@、@H_INFO_ITEM@、@H_INFO_END@ています。'),
+            new SctItm('@H_INFO_INIT@すが、@H_INFO_ITEM@、@H_INFO_END@ています。'),
+            new SctItm('@H_INFO_INIT@、@H_INFO_ITEM@、@H_INFO_END@、@H_INFO_END@ています。'),
+            new SctItm('@H_INFO_INIT@すが、@H_INFO_ITEM@、@H_INFO_END@、@CONECT3@、@H_INFO_ITEM@、@H_INFO_END@ています。')
         ];
     }
 }
@@ -292,7 +295,7 @@ class selector_h_info_end extends SctItm_Selector {
         this.itms = [
             new SctItm('@COUNTRY@@HISTORY@に@H_WRITE@'),
             new SctItm('@WHO3@@MANYPEOPLE@に@ASSES1@'),
-            new SctItm('@MANYPEOPLE@を@ASSES_S2@')
+            new SctItm('@MANYPEOPLE@に@ASSES_S2@')
         ];
     }
 }
