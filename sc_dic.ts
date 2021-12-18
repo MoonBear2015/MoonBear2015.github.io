@@ -6021,6 +6021,8 @@ const   itms_food = [
     ,
     new SctItm('お寿司')
     ,
+    new SctItm('おにぎり')
+    ,
     new SctItm('中華料理')
     ,
     new SctItm('イタリア料理')
@@ -6028,6 +6030,8 @@ const   itms_food = [
     new SctItm('フランス料理')
     ,
     new SctItm('和食')
+    ,
+    new SctItm('BBQ')
 ]
 const   itms_music = [
     new SctItm('クラシック')

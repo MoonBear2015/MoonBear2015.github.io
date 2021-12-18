@@ -9,7 +9,7 @@ function set_horo()
     html += '<h1>';
     html += 'Horoscope';
     html += '<small>';
-    html += ' H00.43';
+    html += ' H00.44';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -201,7 +201,9 @@ class First_love extends SctItm_FirstLocker2 implements ISctItm_Selector{
             ,
             new SctItm('@CLASS@には要注意')
             ,
-            new SctItm('お薦めデートスポット @LANDMARK@，@LANDMARK@，@LANDMARK@')
+            new SctItm('@CLASS@を射止める絶好のチャンス')
+            ,
+            new SctItm('お薦めデートスポット …… @LANDMARK@，@LANDMARK@，@LANDMARK@')
         ]
     }
 }
@@ -214,11 +216,13 @@ class First_job extends SctItm_FirstLocker2 implements ISctItm_Selector{
             ,
             new SctItm('@CLASS@の素質有り')
             ,
-            new SctItm('転職するなら@CLASS@が狙い目')
+            new SctItm('お薦めの転職先 …… @CLASS@，@CLASS@，@CLASS@')
             ,
             new SctItm('@CLASS@が高収入')
             ,
             new SctItm('@TECH@で業績アップ')
+            ,
+            new SctItm('@TECH@で効率化')
         ]
     }
 }
@@ -262,7 +266,7 @@ class First_travel extends SctItm_FirstLocker2 implements ISctItm_Selector{
         this.itms = [
             new SctItm('旅行','HORO/travel.png','Travel')
             ,
-            new SctItm('お薦めの国 @COUNTRY@，@COUNTRY@，@COUNTRY@')
+            new SctItm('お薦めの国 …… @COUNTRY@，@COUNTRY@，@COUNTRY@')
             ,
             new SctItm('@LANDMARK@巡りの季節になりました')
             ,
@@ -327,14 +331,15 @@ class First_food extends SctItm_FirstLocker2 implements ISctItm_Selector{
         this.itms = [
             new SctItm('食事','HORO/food.png','Food')
             ,
-            new SctItm('おすすめランチ @FOOD@，@FOOD@，@FOOD@')
+            new SctItm('おすすめランチ …… @FOOD@，@FOOD@，@FOOD@')
             ,
-            new SctItm('おすすめディナー @FOOD@，@FOOD@，@FOOD@')
+            new SctItm('おすすめディナー …… @FOOD@，@FOOD@，@FOOD@')
             ,
             new SctItm('@FOOD@の食べ過ぎは要注意')
         ]
     }
 }
+
 class First_music extends SctItm_FirstLocker2 implements ISctItm_Selector{
     constructor(){
         super('@I_MUSIC@','','@ICON_HOROITEM@');
@@ -343,11 +348,11 @@ class First_music extends SctItm_FirstLocker2 implements ISctItm_Selector{
             ,
             new SctItm('@COUNTRY@のヒットチャートに注目')
             ,
-            new SctItm('@COUNTRY@の@MUSIC@が今年の流行')
+            new SctItm('お休み前に@COUNTRY@の@MUSIC@')
             ,
-            new SctItm('@THEY@で人気の@MUSIC@に注目')
+            new SctItm('@THEY@で人気の@MUSIC@がお薦め')
             ,
-            new SctItm('@HABIT@のお供は@MUSIC@がお薦め')
+            new SctItm('目覚めの@MUSIC@で元気一杯')
         ]
     }
 }

@@ -492,6 +492,9 @@ class SctItm_FixSeq extends SctItm_Selector {
     Restart() {
         this.nowCnt = 0;
     }
+    ReRandom() {
+        this.nowCnt = -1;
+    }
     Copy() {
         let result = new SctItm_FixSeq(this.itm_key, this.itm_key2, this.pic_key);
         result.Paste(this.itms);

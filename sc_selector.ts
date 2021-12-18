@@ -752,6 +752,10 @@ class SctItm_FixSeq extends SctItm_Selector implements ISctItm_Selector {
     Restart() {
         this.nowCnt = 0;
     }
+
+    ReRandom() {
+        this.nowCnt = -1;
+    }
     
     Copy() : ISctItm_Selector
     {
