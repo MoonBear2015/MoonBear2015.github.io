@@ -9,7 +9,7 @@ function set_horo()
     html += '<h1>';
     html += 'Horoscope';
     html += '<small>';
-    html += ' H00.44';
+    html += ' H00.45';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -235,7 +235,7 @@ class First_health extends SctItm_FirstLocker2 implements ISctItm_Selector{
             ,
             new SctItm('@HABIT@で医者いらず')
             ,
-            new SctItm('@HABIT@のやり過ぎ注意')
+            new SctItm('@HABIT@中毒に気を付けて')
             ,
             new SctItm('毎日の@HABIT@でダイエット')
             ,
@@ -318,7 +318,7 @@ class First_sweets extends SctItm_FirstLocker2 implements ISctItm_Selector{
             ,
             new SctItm('@SWEETS@を@HABIT@のお供に')
             ,
-            new SctItm('@SWEETS@の食べ過ぎに注意')
+            new SctItm('@SWEETS@の食べ過ぎは禁物')
             ,
             new SctItm('今日のおやつは@COUNTRY@産の@SWEETS@')
         ]
@@ -334,8 +334,6 @@ class First_food extends SctItm_FirstLocker2 implements ISctItm_Selector{
             new SctItm('おすすめランチ …… @FOOD@，@FOOD@，@FOOD@')
             ,
             new SctItm('おすすめディナー …… @FOOD@，@FOOD@，@FOOD@')
-            ,
-            new SctItm('@FOOD@の食べ過ぎは要注意')
         ]
     }
 }

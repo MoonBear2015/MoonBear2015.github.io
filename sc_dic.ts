@@ -6136,5 +6136,11 @@ const   itms_horo_star = [
     new SctItm('CROWN','HORO/crown.png','王冠')
     ,
     new SctItm('PIANO','HORO/piano.png','鍵盤')
+    ,
+    new SctItm('ZEBRA','HORO/zebra.png','縞馬')
+    ,
+    new SctItm('PIZZA','HORO/pizza.png','ピ')
+    ,
+    new SctItm('MICHAEL JACSON','HORO/michael.png','マイケル')
 ]
 
