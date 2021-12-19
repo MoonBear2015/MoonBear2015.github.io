@@ -348,20 +348,22 @@ class locker_part extends SctItm_SelectLocker {
         this.Add(itms_partner);
     }
 }
-// 癖・悪癖
+// 癖・悪癖・スポーツ
 class locker_habit extends SctItm_SelectLocker {
     constructor() {
         super('@L_HABIT@');
         this.Add(itms_badhabit);
         this.Add(itms_goodhabit);
+        this.Add(itms_sports);
     }
 }
-// 癖・悪癖
+// 癖・悪癖・スポーツ
 class selector_habit extends SctItm_Selector {
     constructor() {
         super('@HABIT@');
         this.Add(itms_badhabit);
         this.Add(itms_goodhabit);
+        this.Add(itms_sports);
     }
 }
 class selector_a_title extends SctItm_Selector {

@@ -7,7 +7,7 @@ function set_horo() {
     html += '<h1>';
     html += 'Horoscope';
     html += '<small>';
-    html += ' H00.45';
+    html += ' H00.46';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -129,7 +129,8 @@ class Fix_items extends SctItm_FixSeq {
             new SctItm('@I_GAME@'),
             new SctItm('@I_SWEETS@'),
             new SctItm('@I_FOOD@'),
-            new SctItm('@I_MUSIC@')
+            new SctItm('@I_MUSIC@'),
+            new SctItm('@I_SPORTS@')
         ];
     }
 }
@@ -142,7 +143,7 @@ class First_love extends SctItm_FirstLocker2 {
             new SctItm('@KEY@で出逢いが待っている'),
             new SctItm('@CLASS@には要注意'),
             new SctItm('@CLASS@を射止める絶好のチャンス'),
-            new SctItm('お薦めデートスポット …… @LANDMARK@，@LANDMARK@，@LANDMARK@')
+            new SctItm('お薦めデートスポット ～ @LANDMARK@ @LANDMARK@ @LANDMARK@')
         ];
     }
 }
@@ -153,7 +154,7 @@ class First_job extends SctItm_FirstLocker2 {
         this.itms = [
             new SctItm('仕事', 'HORO/job.png', 'Business'),
             new SctItm('@CLASS@の素質有り'),
-            new SctItm('お薦めの転職先 …… @CLASS@，@CLASS@，@CLASS@'),
+            new SctItm('お薦めの転職先 ～ @CLASS@ @CLASS@ @CLASS@'),
             new SctItm('@CLASS@が高収入'),
             new SctItm('@TECH@で業績アップ'),
             new SctItm('@TECH@で効率化')
@@ -189,7 +190,7 @@ class First_travel extends SctItm_FirstLocker2 {
         super('@I_TRAVEL@', '', '@ICON_HOROITEM@');
         this.itms = [
             new SctItm('旅行', 'HORO/travel.png', 'Travel'),
-            new SctItm('お薦めの国 …… @COUNTRY@，@COUNTRY@，@COUNTRY@'),
+            new SctItm('お薦めの国 ～ @COUNTRY@ @COUNTRY@ @COUNTRY@'),
             new SctItm('@LANDMARK@巡りの季節になりました'),
             new SctItm('@DIR@への旅路は要注意')
         ];
@@ -226,7 +227,7 @@ class First_sweets extends SctItm_FirstLocker2 {
         this.itms = [
             new SctItm('菓子', 'HORO/sweet.png', 'Sweets'),
             new SctItm('@SWEETS@を@HABIT@のお供に'),
-            new SctItm('@SWEETS@の食べ過ぎは禁物'),
+            new SctItm('@SWEETS@を今日一日のご褒美に'),
             new SctItm('今日のおやつは@COUNTRY@産の@SWEETS@')
         ];
     }
@@ -236,8 +237,11 @@ class First_food extends SctItm_FirstLocker2 {
         super('@I_FOOD@', '', '@ICON_HOROITEM@');
         this.itms = [
             new SctItm('食事', 'HORO/food.png', 'Food'),
-            new SctItm('おすすめランチ …… @FOOD@，@FOOD@，@FOOD@'),
-            new SctItm('おすすめディナー …… @FOOD@，@FOOD@，@FOOD@')
+            new SctItm('朝食には@FOOD@が一番'),
+            new SctItm('おすすめランチ ～ @FOOD@ @FOOD@ @FOOD@'),
+            new SctItm('おすすめディナー ～ @FOOD@ @FOOD@ @FOOD@'),
+            new SctItm('@FOOD@が美味しい季節になりました'),
+            new SctItm('@FOOD@の名店を探してみよう')
         ];
     }
 }
@@ -247,9 +251,20 @@ class First_music extends SctItm_FirstLocker2 {
         this.itms = [
             new SctItm('音楽', 'HORO/music.png', 'Music'),
             new SctItm('@COUNTRY@のヒットチャートに注目'),
-            new SctItm('お休み前に@COUNTRY@の@MUSIC@'),
+            new SctItm('お休み前には@COUNTRY@の@MUSIC@'),
             new SctItm('@THEY@で人気の@MUSIC@がお薦め'),
             new SctItm('目覚めの@MUSIC@で元気一杯')
+        ];
+    }
+}
+class First_sports extends SctItm_FirstLocker2 {
+    constructor() {
+        super('@I_SPORTS@', '', '@ICON_HOROITEM@');
+        this.itms = [
+            new SctItm('運動', 'HORO/sports.png', 'Sports'),
+            new SctItm('@SPORTS@で良い汗を流そう'),
+            new SctItm('@SPORTS@のシーズン到来です'),
+            new SctItm('お薦めのスポーツ ～ @SPORTS@ @SPORTS@ @SPORTS@')
         ];
     }
 }
@@ -432,5 +447,6 @@ class horo_docs_maker_items extends news_docs_maker {
         this.dic_push(new First_sweets());
         this.dic_push(new First_food());
         this.dic_push(new First_music());
+        this.dic_push(new First_sports());
     }
 }

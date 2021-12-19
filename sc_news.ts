@@ -1788,6 +1788,12 @@ class selector_animal extends SctItm_Selector implements ISctItm_Selector {
         this.Add(itms_animal);
     }
 }
+class selector_sports extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@SPORTS@');
+        this.Add(itms_sports);
+    }
+}
 
 
 class selector_when extends SctItm_Selector implements ISctItm_Selector {
@@ -2645,6 +2651,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_music());
         this.dic_push(new selector_tech());
         this.dic_push(new selector_animal());
+        this.dic_push(new selector_sports());
         this.dic_push(new selector_km());
         this.dic_push(new selector_k());
         this.dic_push(new selector_kd());

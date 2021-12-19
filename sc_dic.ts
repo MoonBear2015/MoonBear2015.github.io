@@ -4883,17 +4883,11 @@ const   itms_goodhabit = [
     ,
     new SctItm('牛乳配達')
     ,
-    new SctItm('筋トレ')
-    ,
     new SctItm('靴磨き')
     ,
     new SctItm('工場勤務')
     ,
     new SctItm('婚活')
-    ,
-    new SctItm('散歩')
-    ,
-    new SctItm('サイクリング')
     ,
     new SctItm('慈善事業')
     ,
@@ -4901,11 +4895,7 @@ const   itms_goodhabit = [
     ,
     new SctItm('受験勉強')
     ,
-    new SctItm('ジョギング')
-    ,
     new SctItm('新聞配達')
-    ,
-    new SctItm('スキューバダイビング')
     ,
     new SctItm('断食')
     ,
@@ -4925,8 +4915,6 @@ const   itms_goodhabit = [
     ,
     new SctItm('ひとり旅')
     ,
-    new SctItm('ボーリング')
-    ,
     new SctItm('ボランティア活動')
     ,
     new SctItm('募金活動')
@@ -4939,11 +4927,7 @@ const   itms_goodhabit = [
     ,
     new SctItm('窓拭き')
     ,
-    new SctItm('マラソン')
-    ,
     new SctItm('瞑想')
-    ,
-    new SctItm('ラジオ体操')
     ,
     new SctItm('魚釣り')
     ,
@@ -4958,9 +4942,83 @@ const   itms_goodhabit = [
     new SctItm('芋掘り')
     ,
     new SctItm('キャンプ')
+];
+
+const   itms_sports = [
+    new SctItm('野球')
+    ,
+    new SctItm('サッカー')
+    ,
+    new SctItm('バスケットボール')
+    ,
+    new SctItm('バレーボール')
+    ,
+    new SctItm('卓球')
+    ,
+    new SctItm('テニス')
+    ,
+    new SctItm('フットサル')
+    ,
+    new SctItm('ビーチバレー')
+    ,
+    new SctItm('ボーリング')
+    ,
+    new SctItm('ゴルフ')
+    ,
+    new SctItm('スキー')
+    ,
+    new SctItm('スケート')
+    ,
+    new SctItm('ローラースケート')
+    ,
+    new SctItm('スノーボード')
+    ,
+    new SctItm('サーフィン')
+    ,
+    new SctItm('ウィンドサーフィン')
+    ,
+    new SctItm('遠泳')
+    ,
+    new SctItm('スキューバダイビング')
+    ,
+    new SctItm('柔道')
+    ,
+    new SctItm('空手')
+    ,
+    new SctItm('合気道')
+    ,
+    new SctItm('剣道')
+    ,
+    new SctItm('太極拳')
+    ,
+    new SctItm('フェンシング')
+    ,
+    new SctItm('ボクシング')
+    ,
+    new SctItm('レスリング')
+    ,
+    new SctItm('相撲')
+    ,
+    new SctItm('筋トレ')
+    ,
+    new SctItm('散歩')
+    ,
+    new SctItm('サイクリング')
+    ,
+    new SctItm('ジョギング')
+    ,
+    new SctItm('マラソン')
     ,
     new SctItm('ハイキング')
+    ,
+    new SctItm('トレッキング')
+    ,
+    new SctItm('ラジオ体操')
+    ,
+    new SctItm('ヨガ')
 ];
+
+
 
 const   itms_what = [
     new SctItm('日本' ,'WHAT/Japan.jpg')
@@ -6011,6 +6069,10 @@ const   itms_sweets = [
     new SctItm('プリン')
     ,
     new SctItm('ゼリー')
+    ,
+    new SctItm('アイスクリーム')
+    ,
+    new SctItm('かき氷')
 ]
 const   itms_food = [
     new SctItm('カレー')
@@ -6032,6 +6094,20 @@ const   itms_food = [
     new SctItm('和食')
     ,
     new SctItm('BBQ')
+    ,
+    new SctItm('すき焼き')
+    ,
+    new SctItm('ちゃんこ鍋')
+    ,
+    new SctItm('ピザ')
+    ,
+    new SctItm('パスタ')
+    ,
+    new SctItm('タコス')
+    ,
+    new SctItm('牛丼')
+    ,
+    new SctItm('サンドイッチ')
 ]
 const   itms_music = [
     new SctItm('クラシック')
@@ -6141,6 +6217,6 @@ const   itms_horo_star = [
     ,
     new SctItm('PIZZA','HORO/pizza.png','ピ')
     ,
-    new SctItm('MICHAEL JACSON','HORO/michael.png','マイケル')
+    new SctItm('MICHAEL JACKSON','HORO/michael.png','マイケル')
 ]
 
