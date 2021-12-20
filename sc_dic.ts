@@ -5554,6 +5554,10 @@ const   itms_status = [
     new SctItm('可能性','ICON/possibility.jpg')
     ,
     new SctItm('色彩','ICON/color.jpg')
+    ,
+    new SctItm('熱量','ICON/bomb.jpg')
+    ,
+    new SctItm('静寂','ICON/silent.jpg')
 ]
 
 const   itms_tech = [
@@ -6218,5 +6222,9 @@ const   itms_horo_star = [
     new SctItm('PIZZA','HORO/pizza.png','ピ')
     ,
     new SctItm('MICHAEL JACKSON','HORO/michael.png','マイケル')
+    ,
+    new SctItm('GUITAR','HORO/guiter.png','ギター')
+    ,
+    new SctItm('ＷＨＡＬＥ','HORO/whale.png','鯨')
 ]
 

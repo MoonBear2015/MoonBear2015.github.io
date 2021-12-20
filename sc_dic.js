@@ -3472,7 +3472,9 @@ const itms_status = [
     new SctItm('みずみずしさ', 'ICON/water.jpg'),
     new SctItm('吸引力', 'ICON/vacum.jpg'),
     new SctItm('可能性', 'ICON/possibility.jpg'),
-    new SctItm('色彩', 'ICON/color.jpg')
+    new SctItm('色彩', 'ICON/color.jpg'),
+    new SctItm('熱量', 'ICON/bomb.jpg'),
+    new SctItm('静寂', 'ICON/silent.jpg')
 ];
 const itms_tech = [
     new SctItm('企業努力', 'ICON/enterprise.jpg'),
@@ -3825,5 +3827,7 @@ const itms_horo_star = [
     new SctItm('PIANO', 'HORO/piano.png', '鍵盤'),
     new SctItm('ZEBRA', 'HORO/zebra.png', '縞馬'),
     new SctItm('PIZZA', 'HORO/pizza.png', 'ピ'),
-    new SctItm('MICHAEL JACKSON', 'HORO/michael.png', 'マイケル')
+    new SctItm('MICHAEL JACKSON', 'HORO/michael.png', 'マイケル'),
+    new SctItm('GUITAR', 'HORO/guiter.png', 'ギター'),
+    new SctItm('ＷＨＡＬＥ', 'HORO/whale.png', '鯨')
 ];
