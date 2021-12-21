@@ -5281,6 +5281,10 @@ const   itms_do = [
     new SctItm('荒廃','DO/devastation.jpg')
     ,
     new SctItm('腐敗','DO/oldtimer.jpg')
+    ,
+    new SctItm('敗北','DO/lost.jpg')
+    ,
+    new SctItm('逃走','DO/run.jpg')
     //
     // posi 
     //
@@ -5328,6 +5332,8 @@ const   itms_do = [
     new SctItm('引退','DO/solo.jpg')
     ,
     new SctItm('多様化','DO/personal.jpg')
+    ,
+    new SctItm('恋','DO/love.jpg')
 ]
 
 const   itms_shop = [
