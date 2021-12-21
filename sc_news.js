@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N02.44';
+    html += ' N02.45';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -244,14 +244,17 @@ class selector_title extends SctItm_Selector {
     constructor() {
         super('@NEWS_TITLE@');
         this.itms = [
+            new SctItm('@L_WHAT@の@KEI@@THEY@'),
             new SctItm('@L_WHAT@の@L_DO@'),
             new SctItm('@KEI@@L_WHAT@の@L_DO@'),
             new SctItm('@L_WHAT@の@KEI@@L_DO@'),
             new SctItm('@L_WHAT@で@L_DO@@END02C@@THEY@'),
             new SctItm('@L_DO@@END02C@@L_WHAT@'),
+            new SctItm('@KEI@@L_DO@@END02C@@L_WHAT@'),
             new SctItm('@L_DO@@END02C@@L_WHAT@の@THINK@'),
             new SctItm('@L_DO@@END02C@@L_WHAT@の@THEY@'),
             new SctItm('@L_DO@@END02C@@L_WHAT@の@PEOPLE@'),
+            new SctItm('@L_DO@@END02C@@L_WHAT@の@KEI@@PEOPLE@'),
             new SctItm('@PEOPLE@が@L_DO@@END02C@@L_WHAT@'),
             new SctItm('@THEY@が@L_DO@@END02C@@L_WHAT@')
         ];
@@ -560,7 +563,9 @@ class selector_end02b extends SctItm_Selector {
             new SctItm('させていた'),
             new SctItm('している'),
             new SctItm('していた'),
-            new SctItm('してしまった')
+            new SctItm('してしまった'),
+            new SctItm('したかった'),
+            new SctItm('させたかった')
         ];
     }
 }
@@ -973,6 +978,7 @@ class selector_action extends SctItm_Selector {
         ];
     }
 }
+// 名詞に対する単一形容
 class selector_keiyo extends SctItm_Selector {
     constructor() {
         super('@KEI@');
@@ -989,8 +995,8 @@ class selector_keiyo extends SctItm_Selector {
             // new SctItm('@KEI2@で@KEI3@')
             // ,
             // new SctItm('@KEID1@@KEI3@')
-            // ,
-            new SctItm('@KEIM1@と@ASSES@')
+            // // ,
+            // new SctItm('@KEIM1@と@ASSES@')
             // ,
             // new SctItm('@KEI2@で@KEI2@、そして@KEI3@')
         ];
@@ -1001,8 +1007,10 @@ class selector_keiyo1 extends SctItm_Selector {
         super('@KEI1@');
         this.itms = [
             new SctItm('@KEI2@な'),
+            new SctItm('@KEI4@@KEI2@な'),
             new SctItm('@KEID2@@KEI2@な'),
-            new SctItm('@KEID2@@KEI3@')
+            new SctItm('@KEID2@@KEI3@'),
+            new SctItm('@KEI4@@KEI3@')
         ];
     }
 }
@@ -1053,9 +1061,12 @@ class selector_keime1 extends SctItm_Selector {
         super('@KEIM1@');
         this.itms = [
             new SctItm('@KEI2@だ'),
-            new SctItm('@KEI3@'),
-            new SctItm('@KEID2@@KEI2@だ'),
-            new SctItm('@KEID2@@KEI3@'),
+            new SctItm('@KEI3@')
+            // ,
+            // new SctItm('@KEID2@@KEI2@だ')
+            // ,
+            // new SctItm('@KEID2@@KEI3@')
+            ,
         ];
     }
 }
