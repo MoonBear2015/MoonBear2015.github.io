@@ -5409,7 +5409,11 @@ const   itms_shop = [
     ,
     new SctItm('GRANDFATHER','SHOP/GRANDFATHER02.jpg','お爺さん')
     ,
-    new SctItm('GOD','SHOP/God.jpg','神様')
+    new SctItm('GOD','SHOP/God01.jpg','神様')
+    ,
+    new SctItm('GOD','SHOP/God02.jpg','神様')
+    ,
+    new SctItm('GOD','SHOP/God03.jpg','神様')
     ,
     new SctItm('ANGEL','SHOP/angel01.jpg','天使様')
     ,
@@ -5420,6 +5424,10 @@ const   itms_shop = [
     new SctItm('DRAGON','SHOP/dragon.jpg','ドラゴン')
     ,
     new SctItm('ARMOR','SHOP/ARMOR01.jpg','甲冑')
+    ,
+    new SctItm('ELEPHANT','SHOP/elephant01.jpg','象')
+    ,
+    new SctItm('ELEPHANT','SHOP/elephant02.jpg','象')
 ]
 
 
@@ -6225,6 +6233,12 @@ const   itms_horo_star = [
     ,
     new SctItm('GUITAR','HORO/guiter.png','ギター')
     ,
-    new SctItm('ＷＨＡＬＥ','HORO/whale.png','鯨')
+    new SctItm('WHALE','HORO/whale.png','鯨')
+    ,
+    new SctItm('CLOWN','HORO/clown.png','ピエロ')
+    ,
+    new SctItm('KING','HORO/king.png','王')
+    ,
+    new SctItm('BUDDA','HORO/budda.png','大仏')
 ]
 

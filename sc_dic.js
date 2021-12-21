@@ -3398,12 +3398,16 @@ const itms_shop = [
     new SctItm('GUNDAM', 'SHOP/GUNDAM.jpg', 'モビルスーツ'),
     new SctItm('GRANDFATHER', 'SHOP/GRANDFATHER01.jpg', 'お爺さん'),
     new SctItm('GRANDFATHER', 'SHOP/GRANDFATHER02.jpg', 'お爺さん'),
-    new SctItm('GOD', 'SHOP/God.jpg', '神様'),
+    new SctItm('GOD', 'SHOP/God01.jpg', '神様'),
+    new SctItm('GOD', 'SHOP/God02.jpg', '神様'),
+    new SctItm('GOD', 'SHOP/God03.jpg', '神様'),
     new SctItm('ANGEL', 'SHOP/angel01.jpg', '天使様'),
     new SctItm('ANGEL', 'SHOP/angel02.jpg', '天使様'),
     new SctItm('DEATHSTAR', 'SHOP/deathstar.jpg', 'デススター'),
     new SctItm('DRAGON', 'SHOP/dragon.jpg', 'ドラゴン'),
-    new SctItm('ARMOR', 'SHOP/ARMOR01.jpg', '甲冑')
+    new SctItm('ARMOR', 'SHOP/ARMOR01.jpg', '甲冑'),
+    new SctItm('ELEPHANT', 'SHOP/elephant01.jpg', '象'),
+    new SctItm('ELEPHANT', 'SHOP/elephant02.jpg', '象')
 ];
 const itms_campany = [
     new SctItm('Apple', '', 'アップル'),
@@ -3829,5 +3833,8 @@ const itms_horo_star = [
     new SctItm('PIZZA', 'HORO/pizza.png', 'ピ'),
     new SctItm('MICHAEL JACKSON', 'HORO/michael.png', 'マイケル'),
     new SctItm('GUITAR', 'HORO/guiter.png', 'ギター'),
-    new SctItm('ＷＨＡＬＥ', 'HORO/whale.png', '鯨')
+    new SctItm('WHALE', 'HORO/whale.png', '鯨'),
+    new SctItm('CLOWN', 'HORO/clown.png', 'ピエロ'),
+    new SctItm('KING', 'HORO/king.png', '王'),
+    new SctItm('BUDDA', 'HORO/budda.png', '大仏')
 ];

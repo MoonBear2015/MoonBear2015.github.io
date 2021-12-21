@@ -367,6 +367,8 @@ class selector_title extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@KEI@@L_WHAT@の@L_DO@')
             ,
+            new SctItm('@L_WHAT@の@KEI@@L_DO@')
+            ,
             new SctItm('@L_WHAT@で@L_DO@@END02C@@THEY@')
             ,
             new SctItm('@L_DO@@END02C@@L_WHAT@')
