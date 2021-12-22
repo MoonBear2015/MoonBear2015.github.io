@@ -304,7 +304,19 @@ class selector_call2 extends SctItm_Selector {
     constructor() {
         super('@CALL2@');
         this.itms = [
+            new SctItm('★★ @L_DO@する@L_WHAT@'),
             new SctItm('@COMM1@@WHAT@'),
+            new SctItm('@KEI1@@ITEM@'),
+            new SctItm('@COUNTRY@の@KEI@@ITEM@'),
+            new SctItm('@MOVE@@ITEM@'),
+            new SctItm('@KEI@@ITEM@')
+        ];
+    }
+}
+class selector_pop1 extends SctItm_Selector {
+    constructor() {
+        super('@POP1@');
+        this.itms = [
             new SctItm('@KEI1@@ITEM@'),
             new SctItm('@COUNTRY@の@KEI@@ITEM@'),
             new SctItm('@MOVE@@ITEM@'),

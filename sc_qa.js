@@ -7,7 +7,7 @@ function set_qa() {
     html += '<h1>';
     html += 'Q&A';
     html += '<small>';
-    html += ' Q01.02';
+    html += ' Q01.04';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -280,16 +280,24 @@ class selector_q02 extends SctItm_Selector {
     constructor() {
         super('@Q_MSG02@');
         this.itms = [
-            new SctItm('@L_HABIT@がしたいのですが'),
-            new SctItm('@HABIT@がしたいのですが'),
+            // new SctItm('@L_HABIT@がしたいのですが')
+            // ,
+            // new SctItm('@HABIT@がしたいのですが')
+            // ,
             new SctItm('@CLASS@をしているのですが'),
             new SctItm('@CLASS@をしていたのですが'),
-            new SctItm('@CLASS@になろうと思うのですが'),
+            // new SctItm('@CLASS@になろうと思うのですが')
+            // ,
             new SctItm('@CLASS@になったばかりなのですが'),
             new SctItm('@COUNTRY@に住んでいるのですが'),
-            new SctItm('@COUNTRY@に移住するつもりですが'),
+            // new SctItm('@COUNTRY@に移住するつもりですが')
+            // ,
             new SctItm('@COUNTRY@から帰ってきたのですが'),
-            new SctItm('初めて@COUNTRY@に来たのですが')
+            new SctItm('初めて@COUNTRY@に来たのですが'),
+            new SctItm('@L_HABIT@に夢中なのですが'),
+            new SctItm('「@CALL2@」と評判なのですが'),
+            new SctItm('@HABIT@が苦手なのですが'),
+            new SctItm('@HABIT@の達人だと評判なのですが')
         ];
     }
 }
