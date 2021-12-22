@@ -9,7 +9,7 @@ function set_horo()
     html += '<h1>';
     html += 'Horoscope';
     html += '<small>';
-    html += ' H00.48';
+    html += ' H00.49';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -199,13 +199,13 @@ class First_love extends SctItm_FirstLocker2 implements ISctItm_Selector{
         this.itms = [
             new SctItm('恋愛','HORO/love.png','Love')
             ,
-            new SctItm('@KEY@で出逢いが待っている')
+            new SctItm('@KEY@で@KEI@出逢いが待っている')
             ,
-            new SctItm('@CLASS@には要注意')
+            new SctItm('@KEI@@CLASS@に要注意')
             ,
-            new SctItm('@CLASS@を射止める絶好のチャンス')
+            new SctItm('@KEI@@CLASS@を射止める絶好のチャンス')
             ,
-            new SctItm('お薦めデートスポット ～ @LANDMARK@ @LANDMARK@ @LANDMARK@')
+            new SctItm('お薦めデートスポット ～ @LANDMARK@・@LANDMARK@・@LANDMARK@')
         ]
     }
 }
@@ -216,15 +216,13 @@ class First_job extends SctItm_FirstLocker2 implements ISctItm_Selector{
         this.itms = [
             new SctItm('仕事','HORO/job.png','Business')
             ,
-            new SctItm('@CLASS@の素質有り')
-            ,
-            new SctItm('お薦めの転職先 ～ @CLASS@ @CLASS@ @CLASS@')
-            ,
-            new SctItm('@CLASS@が高収入')
+            new SctItm('お薦めの転職先 ～ @CLASS@・@CLASS@・@CLASS@')
             ,
             new SctItm('@TECH@で業績アップ')
             ,
-            new SctItm('@TECH@で効率化')
+            new SctItm('@TECH@で効率化を計りましょう')
+            ,
+            new SctItm('@COUNTRY@にビジネスチャンスの予感')
         ]
     }
 }
@@ -268,7 +266,7 @@ class First_travel extends SctItm_FirstLocker2 implements ISctItm_Selector{
         this.itms = [
             new SctItm('旅行','HORO/travel.png','Travel')
             ,
-            new SctItm('お薦めの国 ～ @COUNTRY@ @COUNTRY@ @COUNTRY@')
+            new SctItm('お薦めの国 ～ @COUNTRY@・@COUNTRY@・@COUNTRY@')
             ,
             new SctItm('@LANDMARK@巡りの季節になりました')
             ,
@@ -335,9 +333,9 @@ class First_food extends SctItm_FirstLocker2 implements ISctItm_Selector{
             ,
             new SctItm('朝食には@FOOD@が一番')
             ,
-            new SctItm('おすすめランチ ～ @FOOD@ @FOOD@ @FOOD@')
+            new SctItm('おすすめランチ ～ @FOOD@・@FOOD@・@FOOD@')
             ,
-            new SctItm('おすすめディナー ～ @FOOD@ @FOOD@ @FOOD@')
+            new SctItm('おすすめディナー ～ @FOOD@・@FOOD@・@FOOD@')
             ,
             new SctItm('@FOOD@が美味しい季節になりました')
             ,
@@ -372,7 +370,7 @@ class First_sports extends SctItm_FirstLocker2 implements ISctItm_Selector{
             ,
             new SctItm('@SPORTS@のシーズン到来です')
             ,
-            new SctItm('お薦めのスポーツ ～ @SPORTS@ @SPORTS@ @SPORTS@')
+            new SctItm('お薦めのスポーツ ～ @SPORTS@・@SPORTS@・@SPORTS@')
         ]
     }
 }

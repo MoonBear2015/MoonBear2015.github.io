@@ -5373,6 +5373,8 @@ const   itms_shop = [
     ,
     new SctItm('COMPUTER','SHOP/COMPUTER05.jpg','コンピューター')
     ,
+    new SctItm('COMPUTER','SHOP/COMPUTER06.jpg','コンピューター')
+    ,
     new SctItm('CLOCK','SHOP/CLOCK01.jpg','時計')
     ,
     new SctItm('CLOCK','SHOP/CLOCK02.jpg','時計')
@@ -5402,6 +5404,10 @@ const   itms_shop = [
     new SctItm('SMARTPHONE','SHOP/PHONE02.jpg','スマートフォン')
     ,
     new SctItm('SMARTPHONE','SHOP/PHONE03.jpg','スマートフォン')
+    ,
+    new SctItm('SMARTPHONE','SHOP/PHONE04.jpg','スマートフォン')
+    ,
+    new SctItm('SMARTPHONE','SHOP/PHONE05.jpg','スマートフォン')
     ,
     new SctItm('TYPEWRITER','SHOP/TYPEWRITER.jpg','タイプライター')
     ,
@@ -5434,6 +5440,10 @@ const   itms_shop = [
     new SctItm('ELEPHANT','SHOP/elephant01.jpg','象')
     ,
     new SctItm('ELEPHANT','SHOP/elephant02.jpg','象')
+    ,
+    new SctItm('TIGER','SHOP/TIGER01.jpg','虎')
+    ,
+    new SctItm('TIGER','SHOP/TIGER02.jpg','虎')
 ]
 
 
