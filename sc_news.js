@@ -1388,6 +1388,23 @@ class selector_partner extends SctItm_Selector {
         this.Add(itms_partner);
     }
 }
+// 感情 （嬉し）い　（嬉し）くて
+class selector_emotion extends SctItm_Selector {
+    constructor() {
+        super('@EMO@');
+        this.itms = [
+            new SctItm('嬉し'),
+            new SctItm('楽し'),
+            new SctItm('面白'),
+            new SctItm('悲し'),
+            new SctItm('切な'),
+            new SctItm('苦し'),
+            new SctItm('辛'),
+            new SctItm('怖'),
+            new SctItm('寂し')
+        ];
+    }
+}
 // 判断 ～を
 class selector_answer extends SctItm_Selector {
     constructor() {
@@ -1803,5 +1820,6 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_inscription());
         this.dic_push(new selector_Lock_inscription());
         this.dic_push(new selector_habit());
+        this.dic_push(new selector_emotion());
     }
 }

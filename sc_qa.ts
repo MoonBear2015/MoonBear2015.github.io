@@ -9,7 +9,7 @@ function set_qa()
     html += '<h1>';
     html += 'Q&A';
     html += '<small>';
-    html += ' Q01.00';
+    html += ' Q01.01';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -479,27 +479,23 @@ class selector_q04_result extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('@GRADE@困っているのです')
             ,
-            new SctItm('@GRADE@悔しくて仕方がないのです')
+            new SctItm('@GRADE@@EMO@くて仕方がないのです')
             ,
-            new SctItm('@GRADE@悲しくて仕方がないのです')
+            new SctItm('@GRADE@@EMO@くて涙が止まらないのです')
             ,
-            new SctItm('@GRADE@嬉しくて仕方がないのです')
+            new SctItm('@GRADE@@EMO@くて笑いが止まらないのです')
             ,
-            new SctItm('涙が止まらないのです')
+            new SctItm('@GRADE@@EMO@くて堪えきれません')
             ,
-            new SctItm('笑いが止まらないのです')
+            new SctItm('@GRADE@@EMO@くて我慢が出来ません')
             ,
-            new SctItm('@GRADE@堪えきれません')
-            ,
-            new SctItm('@GRADE@我慢が出来ません')
-            ,
-            new SctItm('途方に暮れています')
+            new SctItm('@GRADE@@EMO@くて途方に暮れています')
             ,
             new SctItm('取り付く島もありません')
             ,
-            new SctItm('どうしようもありません')
+            new SctItm('@GRADE@@EMO@くてどうしようもありません')
             ,
-            new SctItm('@GRADE@@THINK@しているのです')
+            new SctItm('@GRADE@@EMO@くて@THINK@しているのです')
         ]
     }
 }
