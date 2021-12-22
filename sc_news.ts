@@ -2145,7 +2145,13 @@ class selector_emotion extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('怖')
             ,
+            new SctItm('恐ろし')
+            ,
             new SctItm('寂し')
+            ,
+            new SctItm('悔し')
+            ,
+            new SctItm('悔し')
         ]
     }            
 }

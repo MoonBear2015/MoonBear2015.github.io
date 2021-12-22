@@ -1401,7 +1401,10 @@ class selector_emotion extends SctItm_Selector {
             new SctItm('苦し'),
             new SctItm('辛'),
             new SctItm('怖'),
-            new SctItm('寂し')
+            new SctItm('恐ろし'),
+            new SctItm('寂し'),
+            new SctItm('悔し'),
+            new SctItm('悔し')
         ];
     }
 }
