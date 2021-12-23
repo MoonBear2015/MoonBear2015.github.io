@@ -9,7 +9,7 @@ function set_qa()
     html += '<h1>';
     html += 'Q&A';
     html += '<small>';
-    html += ' Q01.04';
+    html += ' Q01.05';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -487,21 +487,9 @@ class selector_q04_result extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('@GRADE@困っているのです')
             ,
-            new SctItm('@GRADE@@EMO@くて仕方がないのです')
-            ,
-            new SctItm('@GRADE@@EMO@くて涙が止まらないのです')
-            ,
-            new SctItm('@GRADE@@EMO@くて笑いが止まらないのです')
-            ,
-            new SctItm('@GRADE@@EMO@くて堪えきれません')
-            ,
-            new SctItm('@GRADE@@EMO@くて我慢が出来ません')
-            ,
-            new SctItm('@GRADE@@EMO@くて途方に暮れています')
+            new SctItm('@GRADE@@EMO@@END02D@')
             ,
             new SctItm('取り付く島もありません')
-            ,
-            new SctItm('@GRADE@@EMO@くてどうしようもありません')
             ,
             new SctItm('@GRADE@@EMO@くて@THINK@しているのです')
         ]

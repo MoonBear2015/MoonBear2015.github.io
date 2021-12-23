@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N02.45';
+    html += ' N02.47';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -455,7 +455,7 @@ class selector_call2 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@CALL2@');
         this.itms = [
-            new SctItm('★★ @L_DO@する@L_WHAT@')
+            new SctItm('@L_DO@する@L_WHAT@')
             ,
             new SctItm('@COMM1@@WHAT@')
             ,
@@ -466,6 +466,8 @@ class selector_call2 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@MOVE@@ITEM@')
             ,
             new SctItm('@KEI@@ITEM@')
+            ,
+            new SctItm('@HABIT@の@NICK@')
         ];
     }
 }
@@ -797,6 +799,8 @@ class selector_comment2 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@KEID@@L_DO@@END02B@@THEY@、@YESNO@、それが@L_WHAT@@END02A@')
             ,
             new SctItm('@L_WHAT@の@CLASS@、それが@PEOPLE@の@PEOPLE@@END02A@')
+            ,
+            new SctItm('@EMOFRONT@@EMO@@END02D@')
         ];
     }
 }
@@ -841,6 +845,32 @@ class selector_YESNO extends SctItm_Selector implements ISctItm_Selector {
     }
 }
 
+
+// コメント用・感情に対する前置き
+class selector_emofront extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@EMOFRONT@');
+        this.itms = [
+            new SctItm('正直、')
+            ,
+            new SctItm('とても')
+            ,
+            new SctItm('ああ、')
+            ,
+            new SctItm('いやはや、')
+            ,
+            new SctItm('こうなっては')
+            ,
+            new SctItm('')
+            ,
+            new SctItm('')
+            ,
+            new SctItm('')
+            ,
+            new SctItm('')
+        ];
+    }
+}
 
 
 class selector_end02a extends SctItm_Selector implements ISctItm_Selector {
@@ -898,6 +928,28 @@ class selector_end02c extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('する')
             ,
             new SctItm('した')
+        ];
+    }
+}
+class selector_end02d extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@END02D@');
+        this.itms = [
+            new SctItm('い')
+            ,
+            new SctItm('いのだ')
+            ,
+            new SctItm('いのです')
+            ,
+            new SctItm('いのだが')
+            ,
+            new SctItm('いんだ')
+            ,
+            new SctItm('いんです')
+            ,
+            new SctItm('くてどうしようもない')
+            ,
+            new SctItm('くて堪らない')
         ];
     }
 }
@@ -2141,11 +2193,44 @@ class selector_partner extends SctItm_Selector implements ISctItm_Selector {
     }
 }
 
-
-// 感情 （嬉し）い　（嬉し）くて
 class selector_emotion extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@EMO@');
+        this.itms = [
+            new SctItm('@EMO1@くて涙が止まらな')
+            ,
+            new SctItm('@EMO1@くて笑いが止まらな')
+            ,
+            new SctItm('@EMO1@くて夜も眠れな')
+            ,
+            new SctItm('@EMO1@くて食事が喉を通らな')
+            ,
+            new SctItm('@EMO1@くて@PART@に顔向けできな')
+            ,
+            new SctItm('@EMO1@')
+            ,
+            new SctItm('@EMO1@')
+            ,
+            new SctItm('@EMO1@')
+            ,
+            new SctItm('@EMO1@')
+            ,
+            new SctItm('@EMO1@')
+            ,
+            new SctItm('@EMO1@')
+            ,
+            new SctItm('@EMO1@')
+            ,
+            new SctItm('@EMO1@')
+        ]
+    }            
+}
+
+
+// 感情 （嬉し）い　（嬉し）くて
+class selector_emotion01 extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@EMO1@');
         this.itms = [
             new SctItm('嬉し')
             ,
@@ -2168,6 +2253,8 @@ class selector_emotion extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('寂し')
             ,
             new SctItm('悔し')
+            ,
+            new SctItm('恥ずかし')
             ,
             new SctItm('悔し')
         ]
@@ -2691,6 +2778,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_end02a());
         this.dic_push(new selector_end02b());
         this.dic_push(new selector_end02c());
+        this.dic_push(new selector_end02d());
         this.dic_push(new selector_comment());
         this.dic_push(new selector_comment2());
         this.dic_push(new selector_YESNO());
@@ -2778,5 +2866,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_Lock_inscription());
         this.dic_push(new selector_habit());
         this.dic_push(new selector_emotion());
+        this.dic_push(new selector_emotion01());
+        this.dic_push(new selector_emofront());
     }
 }
