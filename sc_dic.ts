@@ -6102,12 +6102,15 @@ const   itms_sweets = [
     ,
     new SctItm('かき氷')
 ]
+
 const   itms_food = [
     new SctItm('カレー')
     ,
     new SctItm('ラーメン')
     ,
     new SctItm('ハンバーガー')
+    ,
+    new SctItm('ホットドッグ')
     ,
     new SctItm('お寿司')
     ,
@@ -6135,8 +6138,21 @@ const   itms_food = [
     ,
     new SctItm('牛丼')
     ,
+    new SctItm('カツ丼')
+    ,
+    new SctItm('親子丼')
+    ,
+    new SctItm('天丼')
+    ,
     new SctItm('サンドイッチ')
+    ,
+    new SctItm('たこ焼き')
+    ,
+    new SctItm('お好み焼き')
+    ,
+    new SctItm('串カツ')
 ]
+
 const   itms_music = [
     new SctItm('クラシック')
     ,
@@ -6155,6 +6171,10 @@ const   itms_music = [
     new SctItm('ヒップホップ')
     ,
     new SctItm('レゲェ')
+    ,
+    new SctItm('演歌')
+    ,
+    new SctItm('ヨーデル')
 ]
 
 
@@ -6256,5 +6276,7 @@ const   itms_horo_star = [
     new SctItm('KING','HORO/king.png','王')
     ,
     new SctItm('BUDDA','HORO/budda.png','大仏')
+    ,
+    new SctItm('GYOUZA','HORO/gyouza.png','ギョウ')
 ]
 

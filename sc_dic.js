@@ -3768,6 +3768,7 @@ const itms_food = [
     new SctItm('カレー'),
     new SctItm('ラーメン'),
     new SctItm('ハンバーガー'),
+    new SctItm('ホットドッグ'),
     new SctItm('お寿司'),
     new SctItm('おにぎり'),
     new SctItm('中華料理'),
@@ -3781,7 +3782,13 @@ const itms_food = [
     new SctItm('パスタ'),
     new SctItm('タコス'),
     new SctItm('牛丼'),
-    new SctItm('サンドイッチ')
+    new SctItm('カツ丼'),
+    new SctItm('親子丼'),
+    new SctItm('天丼'),
+    new SctItm('サンドイッチ'),
+    new SctItm('たこ焼き'),
+    new SctItm('お好み焼き'),
+    new SctItm('串カツ')
 ];
 const itms_music = [
     new SctItm('クラシック'),
@@ -3792,7 +3799,9 @@ const itms_music = [
     new SctItm('パンク'),
     new SctItm('ポップス'),
     new SctItm('ヒップホップ'),
-    new SctItm('レゲェ')
+    new SctItm('レゲェ'),
+    new SctItm('演歌'),
+    new SctItm('ヨーデル')
 ];
 const itms_season = [
     new SctItm('春'),
@@ -3844,5 +3853,6 @@ const itms_horo_star = [
     new SctItm('WHALE', 'HORO/whale.png', '鯨'),
     new SctItm('CLOWN', 'HORO/clown.png', 'ピエロ'),
     new SctItm('KING', 'HORO/king.png', '王'),
-    new SctItm('BUDDA', 'HORO/budda.png', '大仏')
+    new SctItm('BUDDA', 'HORO/budda.png', '大仏'),
+    new SctItm('GYOUZA', 'HORO/gyouza.png', 'ギョウ')
 ];
