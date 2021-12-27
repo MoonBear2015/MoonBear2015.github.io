@@ -236,11 +236,11 @@ class First_food extends SctItm_FirstLocker2 {
         super('@I_FOOD@', '', '@ICON_HOROITEM@');
         this.itms = [
             new SctItm('食事', 'HORO/food.png', 'Food'),
-            new SctItm('朝食には@FOOD@が一番'),
-            new SctItm('おすすめランチ ～ @FOOD@・@FOOD@・@FOOD@'),
-            new SctItm('おすすめディナー ～ @FOOD@・@FOOD@・@FOOD@'),
-            new SctItm('@FOOD@が美味しい季節になりました'),
-            new SctItm('@FOOD@の名店を探してみよう')
+            new SctItm('朝食には@MEAL@が一番'),
+            new SctItm('おすすめランチ ～ @MEAL@・@MEAL@・@MEAL@'),
+            new SctItm('おすすめディナー ～ @MEAL@・@MEAL@・@MEAL@'),
+            new SctItm('@MEAL@が美味しい季節になりました'),
+            new SctItm('@MEAL@の名店を探してみよう')
         ];
     }
 }

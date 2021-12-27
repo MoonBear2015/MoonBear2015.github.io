@@ -9,7 +9,7 @@ function set_qa()
     html += '<h1>';
     html += 'Q&A';
     html += '<small>';
-    html += ' Q01.05';
+    html += ' Q01.06';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -269,6 +269,10 @@ class selector_q_title extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@Q_TITLE@');
         this.itms = [
+            new SctItm('@DOING@いる@L_PART@に失望しています')
+            ,
+            new SctItm('@L_PART@が@DOING@いるので困っています')
+            ,
             new SctItm('@L_PART@に@THINK@しています')
             ,
             new SctItm('@L_PART@が@L_HABIT@ばかりしています')
@@ -361,6 +365,14 @@ class selector_q_msg extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@Q_MSG@');
         this.itms = [
+            new SctItm('私は@DOING@いたのです')
+            ,
+            new SctItm('私は@DOING@みたかったのです')
+            ,
+            new SctItm('私が@DOING@いた時のことです')
+            ,
+            new SctItm('@L_PART@が@DOING@いたのです')
+            ,
             new SctItm('@Q_MSG01@@Q_MSG04@')
             ,
             new SctItm('@Q_MSG01@@Q_MSG02@、@Q_MSG04@')
@@ -427,6 +439,10 @@ class selector_q02 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@HABIT@が苦手なのですが')
             ,
             new SctItm('@HABIT@の達人だと評判なのですが')
+            ,
+            new SctItm('@DOING@いたのですが')
+            ,
+            new SctItm('@DOING@いる筈だったのですが')
         ]
     }
 }
@@ -492,6 +508,8 @@ class selector_q04_result extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('取り付く島もありません')
             ,
             new SctItm('@GRADE@@EMO@くて@THINK@しているのです')
+            ,
+            new SctItm('@DOING@いたのです')
         ]
     }
 }
@@ -572,6 +590,10 @@ class selector_a_title extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@QUESTER@さん、もう来ないで下さい')
             ,
             new SctItm('@QUESTER@さん、もう来ないで下さいといったはずです')
+            ,
+            new SctItm('@QUESTER@さん、@DOING@いる場合ではありません')
+            ,
+            new SctItm('@QUESTER@さん、@DOING@みては？')
         ]
     }
 }
@@ -720,6 +742,14 @@ class selector_a04_result extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@GRADE@@THINK@するのは当然です')
             ,
             new SctItm('@KEI@@PEOPLE@と@ASSES@のは当たり前です')
+            ,
+            new SctItm('@DOING@いてはどうしようもありません')
+            ,
+            new SctItm('@DOING@いては仕方がありません')
+            ,
+            new SctItm('@DOING@いる場合ではありません')
+            ,
+            new SctItm('@DOING@いるとは何事ですか')
         ]
     }
 }

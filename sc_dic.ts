@@ -2160,9 +2160,7 @@ const   cods_place = [
     ,
     new SctCod_TI('|宇宙空間|うちゅうくうかん|','PLACE/space.jpg')
     ,
-    new SctCod_TI('|牧場|ぼくじょう|','PLACE/cowplace.jpg')
-    ,
-    new SctCod_TI('|牧場|ぼくじょう|','PLACE/cowplace.jpg')
+    new SctCod_TI('ビーチ','PLACE/beach.jpg')
     ,
     new SctCod_TI('スキー|場|じょう|','PLACE/ski.jpg')
 ];
@@ -6102,7 +6100,7 @@ const   itms_sweets = [
     ,
     new SctItm('かき氷')
 ]
-const   itms_food = [
+const   itms_meal = [
     new SctItm('カレー')
     ,
     new SctItm('ラーメン')
@@ -6135,7 +6133,52 @@ const   itms_food = [
     ,
     new SctItm('牛丼')
     ,
-    new SctItm('サンドイッチ')
+    new SctItm('目玉焼き')
+    ,
+    new SctItm('卵焼き')
+    ,
+    new SctItm('オムレツ')
+    ,
+    new SctItm('オムライス')
+    ,
+    new SctItm('炒飯')
+    ,
+    new SctItm('ピラフ')
+    ,
+    new SctItm('グラタン')
+    ,
+    new SctItm('シチュー')
+    ,
+    new SctItm('肉じゃが')
+    ,
+    new SctItm('刺身')
+    ,
+    new SctItm('おでん')
+    ,
+    new SctItm('海老フライ')
+    ,
+    new SctItm('トンカツ')
+    ,
+    new SctItm('コロッケ')
+]
+const   itms_fruit = [
+    new SctItm('リンゴ')
+    ,
+    new SctItm('ミカン')
+    ,
+    new SctItm('オレンジ')
+    ,
+    new SctItm('ブドウ')
+    ,
+    new SctItm('梨')
+    ,
+    new SctItm('スイカ')
+    ,
+    new SctItm('サクランボ')
+    ,
+    new SctItm('グレープフルーツ')
+    ,
+    new SctItm('イチゴ')
 ]
 const   itms_music = [
     new SctItm('クラシック')

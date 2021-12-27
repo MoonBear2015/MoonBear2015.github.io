@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N02.47';
+    html += ' N02.48';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -500,6 +500,8 @@ class selector_comment2 extends SctItm_Selector {
     constructor() {
         super('@COMMENT2@');
         this.itms = [
+            new SctItm('@PART@は@DOING@いた'),
+            new SctItm('私が@DOING@いるとき、@PART@が@DOING@いたのだ'),
             new SctItm('@NEWS_C01@、@NEWS_C02@'),
             new SctItm('@COMMENT2@。@COMMENT2@'),
             new SctItm('@CONECT@、@COMMENT2@'),
@@ -1246,22 +1248,44 @@ class selector_place extends SctItm_Selector {
 class selector_landmark extends SctItm_Selector {
     constructor() {
         super('@LANDMARK@');
-        this.startNumber = 1;
         this.Add(itms_landmark);
+    }
+}
+class selector_fruit extends SctItm_Selector {
+    constructor() {
+        super('@FRUIT@');
+        this.Add(cods_to_itms(cods_fruit));
     }
 }
 class selector_sweets extends SctItm_Selector {
     constructor() {
         super('@SWEETS@');
-        this.startNumber = 1;
         this.Add(itms_sweets);
+    }
+}
+class selector_meal extends SctItm_Selector {
+    constructor() {
+        super('@MEAL@');
+        this.Add(itms_meal);
+    }
+}
+class selector_food1 extends SctItm_Selector {
+    constructor() {
+        super('@FOOD01@');
+        this.Add(itms_meal);
+        this.Add(itms_sweets);
+        this.Add(itms_fruit);
     }
 }
 class selector_food extends SctItm_Selector {
     constructor() {
         super('@FOOD@');
-        this.startNumber = 1;
-        this.Add(itms_food);
+        this.itms = [
+            new SctItm('@FOOD01@'),
+            new SctItm('@COUNTRY@産@FOOD01@'),
+            new SctItm('@ITEM@っぽい@FOOD01@'),
+            new SctItm('@PART@が作った@FOOD01@')
+        ];
     }
 }
 class selector_music extends SctItm_Selector {
@@ -1785,6 +1809,23 @@ class selector_and01 extends SctItm_Selector {
         ];
     }
 }
+// 行動 （食べて）いる　（食べて）いた
+class selector_doing extends SctItm_Selector {
+    constructor() {
+        super('@DOING@');
+        this.itms = [
+            new SctItm('@FOOD@を食べて'),
+            new SctItm('@PEOPLE@と遊んで'),
+            new SctItm('@PEOPLE@と話して'),
+            new SctItm('@PLACE@で眠って'),
+            new SctItm('@PEOPLE@と@LANDMARK@を歩いて'),
+            new SctItm('@MANYPEOPLE@に追われて'),
+            new SctItm('@PEOPLE@を捕まえて'),
+            new SctItm('@PEOPLE@から誘われて'),
+            new SctItm('@WHAT@に向かって')
+        ];
+    }
+}
 class news_doc {
     constructor(doc) {
         this.doc = doc;
@@ -1831,7 +1872,10 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_country());
         this.dic_push(new selector_history());
         this.dic_push(new selector_landmark());
+        this.dic_push(new selector_fruit());
         this.dic_push(new selector_sweets());
+        this.dic_push(new selector_meal());
+        this.dic_push(new selector_food1());
         this.dic_push(new selector_food());
         this.dic_push(new selector_music());
         this.dic_push(new selector_tech());
@@ -1894,5 +1938,6 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_emotion());
         this.dic_push(new selector_emotion01());
         this.dic_push(new selector_emofront());
+        this.dic_push(new selector_doing());
     }
 }
