@@ -305,6 +305,7 @@ class selector_q02 extends SctItm_Selector {
             new SctItm('@HABIT@が苦手なのですが'),
             new SctItm('@HABIT@の達人だと評判なのですが'),
             new SctItm('@DOING@いたのですが'),
+            new SctItm('@DOING@ばかりいるのですが'),
             new SctItm('@DOING@いる筈だったのですが')
         ];
     }
@@ -404,7 +405,7 @@ class selector_a_title extends SctItm_Selector {
             new SctItm('@QUESTER@さん、もう来ないで下さい'),
             new SctItm('@QUESTER@さん、もう来ないで下さいといったはずです'),
             new SctItm('@QUESTER@さん、@DOING@いる場合ではありません'),
-            new SctItm('@QUESTER@さん、@DOING@みては？')
+            new SctItm('@QUESTER@さんが@DOING@みては？')
         ];
     }
 }

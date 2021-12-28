@@ -5184,6 +5184,14 @@ const   itms_what = [
     new SctItm('スターバックス','WHAT/Startbucks.jpg')
     ,
     new SctItm('マクドナルド','WHAT/MacDonald.jpg')
+    ,
+    new SctItm('インターネット','WHAT/internet.jpg')
+    ,
+    new SctItm('クリスマス','WHAT/christmas.jpg')
+    ,
+    new SctItm('教会','WHAT/Church.jpg')
+    ,
+    new SctItm('幼稚園','WHAT/kindergarten.jpg')
 ];
 
 
@@ -6070,7 +6078,6 @@ const   itms_dir = [
     new SctItm('南東')
 ]
 
-
 const   itms_sweets = [
     new SctItm('チョコレート')
     ,
@@ -6094,7 +6101,7 @@ const   itms_sweets = [
     ,
     new SctItm('プリン')
     ,
-    new SctItm('ゼリー')
+    new SctItm('@FRUIT@のゼリー')
     ,
     new SctItm('アイスクリーム')
     ,
@@ -6176,6 +6183,16 @@ const   itms_meal = [
     new SctItm('トンカツ')
     ,
     new SctItm('コロッケ')
+    ,
+    new SctItm('鶏の唐揚げ')
+    ,
+    new SctItm('@ANIMAL@の唐揚げ')
+    ,
+    new SctItm('@ANIMAL@のフライ')
+    ,
+    new SctItm('@ANIMAL@の天ぷら')
+    ,
+    new SctItm('@FRUIT@のサラダ')
 ]
 const   itms_fruit = [
     new SctItm('リンゴ')
@@ -6219,6 +6236,8 @@ const   itms_music = [
     new SctItm('演歌')
     ,
     new SctItm('ヨーデル')
+    ,
+    new SctItm('@COUNTRY@民謡')
 ]
 
 

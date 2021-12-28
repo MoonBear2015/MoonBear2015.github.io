@@ -250,7 +250,6 @@ class First_music extends SctItm_FirstLocker2 {
         this.itms = [
             new SctItm('音楽', 'HORO/music.png', 'Music'),
             new SctItm('@COUNTRY@のヒットチャートに注目'),
-            new SctItm('お休み前には@COUNTRY@の@MUSIC@'),
             new SctItm('@THEY@で人気の@MUSIC@がお薦め'),
             new SctItm('目覚めの@MUSIC@で元気一杯')
         ];

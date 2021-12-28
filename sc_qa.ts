@@ -442,6 +442,8 @@ class selector_q02 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@DOING@いたのですが')
             ,
+            new SctItm('@DOING@ばかりいるのですが')
+            ,
             new SctItm('@DOING@いる筈だったのですが')
         ]
     }
@@ -593,7 +595,7 @@ class selector_a_title extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@QUESTER@さん、@DOING@いる場合ではありません')
             ,
-            new SctItm('@QUESTER@さん、@DOING@みては？')
+            new SctItm('@QUESTER@さんが@DOING@みては？')
         ]
     }
 }

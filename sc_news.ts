@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N02.48';
+    html += ' N02.49';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -468,6 +468,8 @@ class selector_call2 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@KEI@@ITEM@')
             ,
             new SctItm('@HABIT@の@NICK@')
+            ,
+            new SctItm('@DOING@いる@NICK@')
         ];
     }
 }
@@ -568,6 +570,12 @@ class selector_who3 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@NICK@のような@BODY@をした')
             ,
             new SctItm('@ANIMAL@の@BODY@を持つ')
+            ,
+            new SctItm('@DOING@ばかりいる')
+            ,
+            new SctItm('@DOING@いる')
+            ,
+            new SctItm('@DOING@いた筈の')
         ];
     }
 }
@@ -944,8 +952,6 @@ class selector_end02d extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('いのだ')
             ,
             new SctItm('いのです')
-            ,
-            new SctItm('いのだが')
             ,
             new SctItm('いんだ')
             ,
@@ -2805,8 +2811,6 @@ class selector_doing extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@PEOPLE@を捕まえて')
             ,
             new SctItm('@PEOPLE@から誘われて')
-            ,
-            new SctItm('@WHAT@に向かって')
         ];
     }
 }

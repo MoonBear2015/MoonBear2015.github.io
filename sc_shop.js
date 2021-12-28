@@ -7,7 +7,7 @@ function set_shop() {
     html += '<h1>';
     html += 'Shop';
     html += '<small>';
-    html += ' S00.45';
+    html += ' S00.46';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -303,7 +303,9 @@ class selector_catch extends SctItm_Selector {
             new SctItm('@FUTURE@の@L_PLACE@へようこそ'),
             new SctItm('@L_PLACE@の@FUTURE@が変わる'),
             new SctItm('@KEI1@@L_PLACE@が@SUCCESS@する'),
-            new SctItm('さあ、@KEI1@@L_PLACE@が待っている')
+            new SctItm('さあ、@KEI1@@L_PLACE@が待っている'),
+            new SctItm('あなたも@DOING@みませんか'),
+            new SctItm('まだ、@DOING@いるあなたに')
         ];
     }
 }
@@ -401,7 +403,8 @@ class selector_s_info03 extends SctItm_Selector {
             new SctItm('あなたの@PLACE@が@L_PLACE@へと早変わり'),
             new SctItm('@L_SHOP_B@があなたの@L_PLACE@となるでしょう'),
             new SctItm('もはや、@L_PLACE@では欠かせないアイテムです'),
-            new SctItm('もう、@L_CAMPANY@ @L_SHOP@の無い@L_PLACE@など有り得ません')
+            new SctItm('もう、@L_CAMPANY@ @L_SHOP@の無い@L_PLACE@など有り得ません'),
+            new SctItm('あなたも@KEI1@@L_CAMPANY@ @L_SHOP@で@DOING@みませんか')
         ];
     }
 }

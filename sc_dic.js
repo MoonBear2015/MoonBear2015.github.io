@@ -3279,7 +3279,11 @@ const itms_what = [
     new SctItm('戦場', 'WHAT/war.jpg'),
     new SctItm('火星', 'WHAT/mars.jpg'),
     new SctItm('スターバックス', 'WHAT/Startbucks.jpg'),
-    new SctItm('マクドナルド', 'WHAT/MacDonald.jpg')
+    new SctItm('マクドナルド', 'WHAT/MacDonald.jpg'),
+    new SctItm('インターネット', 'WHAT/internet.jpg'),
+    new SctItm('クリスマス', 'WHAT/christmas.jpg'),
+    new SctItm('教会', 'WHAT/Church.jpg'),
+    new SctItm('幼稚園', 'WHAT/kindergarten.jpg')
 ];
 const itms_city = [
     new SctItm('東京', 'CITY/tokyo.jpg'),
@@ -3759,7 +3763,7 @@ const itms_sweets = [
     new SctItm('団子'),
     new SctItm('大福餅'),
     new SctItm('プリン'),
-    new SctItm('ゼリー'),
+    new SctItm('@FRUIT@のゼリー'),
     new SctItm('アイスクリーム'),
     new SctItm('かき氷')
 ];
@@ -3801,7 +3805,12 @@ const itms_meal = [
     new SctItm('おでん'),
     new SctItm('海老フライ'),
     new SctItm('トンカツ'),
-    new SctItm('コロッケ')
+    new SctItm('コロッケ'),
+    new SctItm('鶏の唐揚げ'),
+    new SctItm('@ANIMAL@の唐揚げ'),
+    new SctItm('@ANIMAL@のフライ'),
+    new SctItm('@ANIMAL@の天ぷら'),
+    new SctItm('@FRUIT@のサラダ')
 ];
 const itms_fruit = [
     new SctItm('リンゴ'),
@@ -3825,7 +3834,8 @@ const itms_music = [
     new SctItm('ヒップホップ'),
     new SctItm('レゲェ'),
     new SctItm('演歌'),
-    new SctItm('ヨーデル')
+    new SctItm('ヨーデル'),
+    new SctItm('@COUNTRY@民謡')
 ];
 const itms_season = [
     new SctItm('春'),

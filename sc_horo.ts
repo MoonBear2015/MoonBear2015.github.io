@@ -352,8 +352,6 @@ class First_music extends SctItm_FirstLocker2 implements ISctItm_Selector{
             ,
             new SctItm('@COUNTRY@のヒットチャートに注目')
             ,
-            new SctItm('お休み前には@COUNTRY@の@MUSIC@')
-            ,
             new SctItm('@THEY@で人気の@MUSIC@がお薦め')
             ,
             new SctItm('目覚めの@MUSIC@で元気一杯')
