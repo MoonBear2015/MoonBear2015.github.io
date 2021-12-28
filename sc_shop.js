@@ -7,7 +7,7 @@ function set_shop() {
     html += '<h1>';
     html += 'Shop';
     html += '<small>';
-    html += ' S00.46';
+    html += ' S00.47';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -303,9 +303,7 @@ class selector_catch extends SctItm_Selector {
             new SctItm('@FUTURE@の@L_PLACE@へようこそ'),
             new SctItm('@L_PLACE@の@FUTURE@が変わる'),
             new SctItm('@KEI1@@L_PLACE@が@SUCCESS@する'),
-            new SctItm('さあ、@KEI1@@L_PLACE@が待っている'),
-            new SctItm('あなたも@DOING@みませんか'),
-            new SctItm('まだ、@DOING@いるあなたに')
+            new SctItm('さあ、@KEI1@@L_PLACE@が待っている')
         ];
     }
 }
