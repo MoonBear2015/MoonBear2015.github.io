@@ -1821,7 +1821,7 @@ class selector_doing extends SctItm_Selector {
             new SctItm('@PEOPLE@と遊んで'),
             new SctItm('@PEOPLE@と話して'),
             new SctItm('@PLACE@で眠って'),
-            new SctItm('@PLACE@に向かって'),
+            new SctItm('@PLACE@で遊んで'),
             new SctItm('@PEOPLE@と@LANDMARK@を歩いて'),
             new SctItm('@MANYPEOPLE@に追われて'),
             new SctItm('@MANYPEOPLE@に囲まれて'),

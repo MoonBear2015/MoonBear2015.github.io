@@ -9,7 +9,7 @@ function set_qa()
     html += '<h1>';
     html += 'Q&A';
     html += '<small>';
-    html += ' Q01.06';
+    html += ' Q01.07';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -512,6 +512,10 @@ class selector_q04_result extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@GRADE@@EMO@くて@THINK@しているのです')
             ,
             new SctItm('@DOING@いたのです')
+            ,
+            new SctItm('@DOING@いたいのです')
+            ,
+            new SctItm('@DOING@いるのです')
         ]
     }
 }
@@ -702,6 +706,12 @@ class selector_a02_quest extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@MANYPEOPLE@に@ASSES@のなら')
             ,
             new SctItm('@KEI@@PEOPLE@と@ASSES@なら')
+            ,
+            new SctItm('@DOING@いるなら')
+            ,
+            new SctItm('@DOING@しまっては')
+            ,
+            new SctItm('@DOING@いるのは')
         ]
     }
 }
@@ -751,7 +761,7 @@ class selector_a04_result extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@DOING@いる場合ではありません')
             ,
-            new SctItm('@DOING@いるとは何事ですか')
+            new SctItm('@DOING@いたとは信じられません')
         ]
     }
 }

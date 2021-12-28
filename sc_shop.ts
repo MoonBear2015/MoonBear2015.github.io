@@ -9,7 +9,7 @@ function set_shop()
     html += '<h1>';
     html += 'Shop';
     html += '<small>';
-    html += ' S00.47';
+    html += ' S00.48';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -526,6 +526,8 @@ class selector_s_info03 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('もう、@L_CAMPANY@ @L_SHOP@の無い@L_PLACE@など有り得ません')
             ,
             new SctItm('あなたも@KEI1@@L_CAMPANY@ @L_SHOP@で@DOING@みませんか')
+            ,
+            new SctItm('あなたも@KEI1@@L_CAMPANY@ @L_SHOP@で@DOING@みましょう')
         ]
     }
 }
@@ -562,6 +564,10 @@ class selector_s_info05 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@KEI@@PLACE@へと出かけましょう')
             ,
             new SctItm('@KEI@@PLACE@へと出かけてみませんか')
+            ,
+            new SctItm('@DOING@みませんか')
+            ,
+            new SctItm('@DOING@みましょう')
         ]
     }
 }
@@ -659,6 +665,8 @@ class selector_ShopComentBad extends SctItm_Selector implements ISctItm_Selector
             new SctItm('どうして@L_CAMPANY_B@製は@KEI1@んですかね')
             ,
             new SctItm('あまり@HABIT@はしないから')
+            ,
+            new SctItm('@DOING@いるので@L_SHOP_B@は要りません')
         ];
     }
 }

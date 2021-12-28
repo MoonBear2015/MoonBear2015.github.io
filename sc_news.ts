@@ -2800,7 +2800,7 @@ class selector_doing extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@PLACE@で眠って')
             ,
-            new SctItm('@PLACE@に向かって')
+            new SctItm('@PLACE@で遊んで')
             ,
             new SctItm('@PEOPLE@と@LANDMARK@を歩いて')
             ,
