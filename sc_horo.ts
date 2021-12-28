@@ -9,7 +9,7 @@ function set_horo()
     html += '<h1>';
     html += 'Horoscope';
     html += '<small>';
-    html += ' H00.50';
+    html += ' H00.51';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -422,6 +422,10 @@ class selector_h_info_item extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('その姿は@NICK@に瓜二つだと')
             ,
             new SctItm('@CLASS@の象徴であると')
+            ,
+            new SctItm('@KEI@@ITEM@の化身だと')
+            ,
+            new SctItm('@DOING@いる神様だと')
         ]
     }
 }
