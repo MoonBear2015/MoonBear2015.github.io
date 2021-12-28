@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N02.49';
+    html += ' N02.50';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -379,6 +379,8 @@ class selector_who3 extends SctItm_Selector {
             new SctItm('@NICK@そっくりの'),
             new SctItm('@NICK@のような@BODY@をした'),
             new SctItm('@ANIMAL@の@BODY@を持つ'),
+            new SctItm('@FRUIT@の香りが漂う'),
+            new SctItm('@FOOD@の匂いがする'),
             new SctItm('@DOING@ばかりいる'),
             new SctItm('@DOING@いる'),
             new SctItm('@DOING@いた筈の')
@@ -504,8 +506,6 @@ class selector_comment2 extends SctItm_Selector {
     constructor() {
         super('@COMMENT2@');
         this.itms = [
-            new SctItm('@PART@は@DOING@いた'),
-            new SctItm('私が@DOING@いるとき、@PART@が@DOING@いたのだ'),
             new SctItm('@NEWS_C01@、@NEWS_C02@'),
             new SctItm('@COMMENT2@。@COMMENT2@'),
             new SctItm('@CONECT@、@COMMENT2@'),
@@ -530,7 +530,10 @@ class selector_comment2 extends SctItm_Selector {
             new SctItm('@KEID@@L_DO@する@KEI@@NICK@と@KEID@@ASSES@@THEY@、@YESNO@、それが@L_WHAT@の@PEOPLE@@END02A@'),
             new SctItm('@KEID@@L_DO@@END02B@@THEY@、@YESNO@、それが@L_WHAT@@END02A@'),
             new SctItm('@L_WHAT@の@CLASS@、それが@PEOPLE@の@PEOPLE@@END02A@'),
-            new SctItm('@EMOFRONT@@EMO@@END02D@')
+            new SctItm('@EMOFRONT@@EMO@@END02D@'),
+            new SctItm('@L_WHAT@の@DOING@ていた'),
+            new SctItm('@PART@は@DOING@いた'),
+            new SctItm('私が@DOING@いるとき、@PART@が@DOING@いたのだ')
         ];
     }
 }
@@ -1312,6 +1315,9 @@ class selector_nickname extends SctItm_Selector {
         this.Add(itms_nickNega);
         this.Add(itms_nickPosi);
         this.Add(itms_nickNomal);
+        this.Add(itms_meal);
+        this.Add(itms_sweets);
+        this.Add(itms_fruit);
     }
 }
 // 敬称 の～
@@ -1825,8 +1831,11 @@ class selector_doing extends SctItm_Selector {
             new SctItm('@PEOPLE@と@LANDMARK@を歩いて'),
             new SctItm('@MANYPEOPLE@に追われて'),
             new SctItm('@MANYPEOPLE@に囲まれて'),
-            new SctItm('@PEOPLE@を捕まえて'),
-            new SctItm('@PEOPLE@から誘われて')
+            new SctItm('@PEOPLE@を追いかけて'),
+            new SctItm('@PEOPLE@を探して'),
+            new SctItm('@PEOPLE@をとっちめて'),
+            new SctItm('@PEOPLE@から誘われて'),
+            new SctItm('「@CALL@」と呼ばれて')
         ];
     }
 }
