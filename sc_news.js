@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N02.54';
+    html += ' N02.55';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -247,11 +247,14 @@ class selector_title extends SctItm_Selector {
             new SctItm('@L_WHAT@の@KEI@@L_DO@'),
             new SctItm('@KEI@@L_WHAT@の@L_DO@'),
             new SctItm('@L_WHAT@の@KEI@@L_DO@'),
-            new SctItm('@L_WHAT@で@L_DO@@END02C@@THEY@'),
+            new SctItm('@L_WHAT@が@KEI@@L_DO@'),
+            new SctItm('@L_WHAT@を@L_DO@@END02C@@TECH@'),
+            new SctItm('@L_WHAT@の@TECH@で@L_DO@@END02C@@THEY@'),
             new SctItm('@L_DO@@END02C@@L_WHAT@'),
             new SctItm('@KEID@@L_DO@@END02C@@L_WHAT@'),
             new SctItm('@L_DO@@END02C@@L_WHAT@の@THINK@'),
             new SctItm('@L_DO@@END02C@@L_WHAT@の@THEY@'),
+            new SctItm('@L_DO@@END02C@@L_WHAT@の@TECH@'),
             new SctItm('@L_DO@@END02C@@L_WHAT@の@PEOPLE@'),
             new SctItm('@L_DO@@END02C@@L_WHAT@の@KEI@@PEOPLE@'),
             new SctItm('@PEOPLE@が@L_DO@@END02C@@L_WHAT@'),

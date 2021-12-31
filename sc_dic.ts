@@ -5656,6 +5656,8 @@ const   itms_tech = [
     new SctItm('集客力','ICON/spectators.jpg')
     ,
     new SctItm('現代医学','ICON/medi.jpg')
+    ,
+    new SctItm('チームワーク','ICON/teamwork.jpg')
 ]
 
 // 成功・等 が～した

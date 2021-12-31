@@ -3524,7 +3524,8 @@ const itms_tech = [
     new SctItm('最終奥義', 'ICON/kung-fu.jpg'),
     new SctItm('信仰心', 'ICON/saint.jpg'),
     new SctItm('集客力', 'ICON/spectators.jpg'),
-    new SctItm('現代医学', 'ICON/medi.jpg')
+    new SctItm('現代医学', 'ICON/medi.jpg'),
+    new SctItm('チームワーク', 'ICON/teamwork.jpg')
 ];
 // 成功・等 が～した
 const itms_success = [
