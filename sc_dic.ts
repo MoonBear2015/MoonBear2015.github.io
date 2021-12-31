@@ -5194,6 +5194,8 @@ const   itms_what = [
     new SctItm('幼稚園','WHAT/kindergarten.jpg')
     ,
     new SctItm('戦国時代','WHAT/sengoku.jpg')
+    ,
+    new SctItm('異世界','WHAT/Fantasy.jpg')
 ];
 
 
@@ -5350,6 +5352,8 @@ const   itms_do = [
     new SctItm('巨大化','DO/Giant.jpg')
     ,
     new SctItm('アニメ化','DO/animated.jpg')
+    ,
+    new SctItm('機械化','DO/Mechanization.jpg')
 ]
 
 const   itms_shop = [
