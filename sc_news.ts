@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N02.50';
+    html += ' N02.52';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -363,9 +363,7 @@ class selector_title extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@NEWS_TITLE@');
         this.itms = [
-            new SctItm('@L_WHAT@の@KEI@@THEY@')
-            ,
-            new SctItm('@L_WHAT@の@L_DO@')
+            new SctItm('@L_WHAT@の@KEI@@L_DO@')
             ,
             new SctItm('@KEI@@L_WHAT@の@L_DO@')
             ,
@@ -375,7 +373,7 @@ class selector_title extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@L_DO@@END02C@@L_WHAT@')
             ,
-            new SctItm('@KEI@@L_DO@@END02C@@L_WHAT@')
+            new SctItm('@KEID@@L_DO@@END02C@@L_WHAT@')
             ,
             new SctItm('@L_DO@@END02C@@L_WHAT@の@THINK@')
             ,
@@ -879,14 +877,6 @@ class selector_emofront extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('いやはや、')
             ,
             new SctItm('こうなっては')
-            ,
-            new SctItm('')
-            ,
-            new SctItm('')
-            ,
-            new SctItm('')
-            ,
-            new SctItm('')
         ];
     }
 }
@@ -1393,6 +1383,10 @@ class selector_class extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('水呑百姓')
             ,
+            new SctItm('農民')
+            ,
+            new SctItm('牧場主')
+            ,
             new SctItm('ミイラ職人')
             ,
             new SctItm('花売り娘')
@@ -1449,7 +1443,7 @@ class selector_class extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('キャバクラ嬢')
             ,
-            new SctItm('キャバクラ嬢')
+            new SctItm('ホステス')
             ,
             new SctItm('飴細工師')
             ,
@@ -1483,9 +1477,15 @@ class selector_class extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('仮面ライダー')
             ,
+            new SctItm('ウルトラマン')
+            ,
+            new SctItm('スーパーマン')
+            ,
             new SctItm('学級委員')
             ,
             new SctItm('図書委員')
+            ,
+            new SctItm('生徒会長')
             ,
             new SctItm('ＰＴＡ会長')
             ,
@@ -1624,6 +1624,12 @@ class selector_class extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('取締役')
             ,
             new SctItm('社長')
+            ,
+            new SctItm('スパイ')
+            ,
+            new SctItm('テロリスト')
+            ,
+            new SctItm('ハッカー')
         ];
     }
 }
@@ -1671,8 +1677,6 @@ class selector_action extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('事故')
             ,
             new SctItm('天災')
-            ,
-            new SctItm('全集')
         ];
     }
 }
@@ -1682,8 +1686,6 @@ class selector_keiyo extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@KEI@');
         this.itms = [
-            new SctItm('')
-            ,
             new SctItm('@KEI2@な')
             ,
             // new SctItm('@KEI2@で@KEI2@な')
@@ -1724,8 +1726,6 @@ class selector_keido extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@KEID@');
         this.itms = [
-            new SctItm('')
-            ,
             new SctItm('@KEI2@に')
             ,
             new SctItm('@KEI4@')
