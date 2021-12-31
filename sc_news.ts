@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N02.52';
+    html += ' N02.53';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -1630,6 +1630,10 @@ class selector_class extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('テロリスト')
             ,
             new SctItm('ハッカー')
+            ,
+            new SctItm('宇宙人')
+            ,
+            new SctItm('火星人')
         ];
     }
 }
@@ -2827,6 +2831,10 @@ class selector_doing extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@PEOPLE@から誘われて')
             ,
             new SctItm('「@CALL@」と呼ばれて')
+            ,
+            new SctItm('@PART@を連れて')
+            ,
+            new SctItm('@ANIMAL@を連れて')
         ];
     }
 }

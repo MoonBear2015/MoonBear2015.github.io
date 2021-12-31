@@ -3283,7 +3283,8 @@ const itms_what = [
     new SctItm('インターネット', 'WHAT/internet.jpg'),
     new SctItm('クリスマス', 'WHAT/christmas.jpg'),
     new SctItm('教会', 'WHAT/Church.jpg'),
-    new SctItm('幼稚園', 'WHAT/kindergarten.jpg')
+    new SctItm('幼稚園', 'WHAT/kindergarten.jpg'),
+    new SctItm('戦国時代', 'WHAT/sengoku.jpg')
 ];
 const itms_city = [
     new SctItm('東京', 'CITY/tokyo.jpg'),
@@ -3362,7 +3363,11 @@ const itms_do = [
     new SctItm('覚醒', 'DO/awaken.jpg'),
     new SctItm('引退', 'DO/solo.jpg'),
     new SctItm('多様化', 'DO/personal.jpg'),
-    new SctItm('恋', 'DO/love.jpg')
+    new SctItm('恋', 'DO/love.jpg'),
+    new SctItm('近代化', 'DO/develop.jpg'),
+    new SctItm('近代化', 'DO/develop.jpg'),
+    new SctItm('巨大化', 'DO/Giant.jpg'),
+    new SctItm('アニメ化', 'DO/animated.jpg')
 ];
 const itms_shop = [
     new SctItm('BICYCLE', 'SHOP/BICYCLE01.jpg', '自転車'),

@@ -5192,6 +5192,8 @@ const   itms_what = [
     new SctItm('教会','WHAT/Church.jpg')
     ,
     new SctItm('幼稚園','WHAT/kindergarten.jpg')
+    ,
+    new SctItm('戦国時代','WHAT/sengoku.jpg')
 ];
 
 
@@ -5340,6 +5342,14 @@ const   itms_do = [
     new SctItm('多様化','DO/personal.jpg')
     ,
     new SctItm('恋','DO/love.jpg')
+    ,
+    new SctItm('近代化','DO/develop.jpg')
+    ,
+    new SctItm('近代化','DO/develop.jpg')
+    ,
+    new SctItm('巨大化','DO/Giant.jpg')
+    ,
+    new SctItm('アニメ化','DO/animated.jpg')
 ]
 
 const   itms_shop = [
