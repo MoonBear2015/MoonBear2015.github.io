@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N02.55';
+    html += ' N02.56';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -248,8 +248,7 @@ class selector_title extends SctItm_Selector {
             new SctItm('@KEI@@L_WHAT@の@L_DO@'),
             new SctItm('@L_WHAT@の@KEI@@L_DO@'),
             new SctItm('@L_WHAT@が@KEI@@L_DO@'),
-            new SctItm('@L_WHAT@を@L_DO@@END02C@@TECH@'),
-            new SctItm('@L_WHAT@の@TECH@で@L_DO@@END02C@@THEY@'),
+            new SctItm('@L_WHAT@を@L_DO@@END02E@@TECH@ ★★'),
             new SctItm('@L_DO@@END02C@@L_WHAT@'),
             new SctItm('@KEID@@L_DO@@END02C@@L_WHAT@'),
             new SctItm('@L_DO@@END02C@@L_WHAT@の@THINK@'),
@@ -627,6 +626,15 @@ class selector_end02d extends SctItm_Selector {
             new SctItm('いんです'),
             new SctItm('くてどうしようもない'),
             new SctItm('くて堪らない')
+        ];
+    }
+}
+class selector_end02e extends SctItm_Selector {
+    constructor() {
+        super('@END02E@');
+        this.itms = [
+            new SctItm('させる'),
+            new SctItm('させた')
         ];
     }
 }
@@ -1868,6 +1876,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_end02b());
         this.dic_push(new selector_end02c());
         this.dic_push(new selector_end02d());
+        this.dic_push(new selector_end02e());
         this.dic_push(new selector_comment());
         this.dic_push(new selector_comment2());
         this.dic_push(new selector_YESNO());

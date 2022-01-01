@@ -9,7 +9,7 @@ function set_shop()
     html += '<h1>';
     html += 'Shop';
     html += '<small>';
-    html += ' S00.48';
+    html += ' S00.49';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -362,6 +362,8 @@ class selector_catch extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@KEI1@@L_STATUS@をあなたに')
             ,
             new SctItm('@KEI1@@L_TECH@をあなたに')
+            ,
+            new SctItm('@MANYPEOPLE@を@DO@@END02E@@L_TECH@')
             ,
             new SctItm('@FUTURE@の@L_TECH@を実現')
             ,
