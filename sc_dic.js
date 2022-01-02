@@ -3339,7 +3339,9 @@ const itms_do = [
     new SctItm('荒廃', 'DO/devastation.jpg'),
     new SctItm('腐敗', 'DO/oldtimer.jpg'),
     new SctItm('敗北', 'DO/lost.jpg'),
-    new SctItm('逃走', 'DO/run.jpg')
+    new SctItm('逃走', 'DO/run.jpg'),
+    new SctItm('抗議', 'DO/demo.jpg'),
+    new SctItm('侮辱', 'DO/insult.jpg')
     //
     // posi 
     //
