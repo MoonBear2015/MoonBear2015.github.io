@@ -3396,8 +3396,12 @@ const itms_shop = [
     new SctItm('CLOCK', 'SHOP/CLOCK01.jpg', '時計'),
     new SctItm('CLOCK', 'SHOP/CLOCK02.jpg', '時計'),
     new SctItm('CLOCK', 'SHOP/CLOCK03.jpg', '時計'),
-    new SctItm('DOG', 'SHOP/DOG.jpg', '飼い犬'),
-    new SctItm('CAT', 'SHOP/CAT.jpg', '飼い猫'),
+    new SctItm('DOG', 'SHOP/DOG01.jpg', '飼い犬'),
+    new SctItm('DOG', 'SHOP/DOG02.jpg', '飼い犬'),
+    new SctItm('DOG', 'SHOP/DOG03.jpg', '飼い犬'),
+    new SctItm('CAT', 'SHOP/CAT01.jpg', '飼い猫'),
+    new SctItm('CAT', 'SHOP/CAT02.jpg', '飼い猫'),
+    new SctItm('CAT', 'SHOP/CAT03.jpg', '飼い猫'),
     new SctItm('HAMBURGER', 'SHOP/hamburger.jpg', 'ハンバーガー'),
     new SctItm('HELICOPTER', 'SHOP/helicopter01.jpg', 'ヘリコプター'),
     new SctItm('HELICOPTER', 'SHOP/helicopter02.jpg', 'ヘリコプター'),
@@ -3427,7 +3431,11 @@ const itms_shop = [
     new SctItm('ELEPHANT', 'SHOP/elephant01.jpg', '象'),
     new SctItm('ELEPHANT', 'SHOP/elephant02.jpg', '象'),
     new SctItm('TIGER', 'SHOP/TIGER01.jpg', '虎'),
-    new SctItm('TIGER', 'SHOP/TIGER02.jpg', '虎')
+    new SctItm('TIGER', 'SHOP/TIGER02.jpg', '虎'),
+    new SctItm('TV', 'SHOP/TV01.jpg', 'テレビ'),
+    new SctItm('TV', 'SHOP/TV02.jpg', 'テレビ'),
+    new SctItm('TV', 'SHOP/TV03.jpg', 'テレビ'),
+    new SctItm('TV', 'SHOP/TV04.jpg', 'テレビ')
 ];
 const itms_campany = [
     new SctItm('Apple', '', 'アップル'),

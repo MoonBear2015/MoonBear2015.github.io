@@ -5405,9 +5405,17 @@ const   itms_shop = [
     ,
     new SctItm('CLOCK','SHOP/CLOCK03.jpg','時計')
     ,
-    new SctItm('DOG','SHOP/DOG.jpg','飼い犬')
+    new SctItm('DOG','SHOP/DOG01.jpg','飼い犬')
     ,
-    new SctItm('CAT','SHOP/CAT.jpg','飼い猫')
+    new SctItm('DOG','SHOP/DOG02.jpg','飼い犬')
+    ,
+    new SctItm('DOG','SHOP/DOG03.jpg','飼い犬')
+    ,
+    new SctItm('CAT','SHOP/CAT01.jpg','飼い猫')
+    ,
+    new SctItm('CAT','SHOP/CAT02.jpg','飼い猫')
+    ,
+    new SctItm('CAT','SHOP/CAT03.jpg','飼い猫')
     ,
     new SctItm('HAMBURGER','SHOP/hamburger.jpg','ハンバーガー')
     ,
@@ -5468,6 +5476,14 @@ const   itms_shop = [
     new SctItm('TIGER','SHOP/TIGER01.jpg','虎')
     ,
     new SctItm('TIGER','SHOP/TIGER02.jpg','虎')
+    ,
+    new SctItm('TV','SHOP/TV01.jpg','テレビ')
+    ,
+    new SctItm('TV','SHOP/TV02.jpg','テレビ')
+    ,
+    new SctItm('TV','SHOP/TV03.jpg','テレビ')
+    ,
+    new SctItm('TV','SHOP/TV04.jpg','テレビ')
 ]
 
 

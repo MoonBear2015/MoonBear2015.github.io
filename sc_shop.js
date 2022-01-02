@@ -7,7 +7,7 @@ function set_shop() {
     html += '<h1>';
     html += 'Shop';
     html += '<small>';
-    html += ' S00.49';
+    html += ' S00.50';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
