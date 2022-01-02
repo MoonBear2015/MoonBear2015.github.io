@@ -3285,7 +3285,9 @@ const itms_what = [
     new SctItm('教会', 'WHAT/Church.jpg'),
     new SctItm('幼稚園', 'WHAT/kindergarten.jpg'),
     new SctItm('戦国時代', 'WHAT/sengoku.jpg'),
-    new SctItm('異世界', 'WHAT/Fantasy.jpg')
+    new SctItm('異世界', 'WHAT/Fantasy.jpg'),
+    new SctItm('お花畑', 'WHAT/flower.jpg'),
+    new SctItm('マヤ文明', 'WHAT/maya.jpg')
 ];
 const itms_city = [
     new SctItm('東京', 'CITY/tokyo.jpg'),

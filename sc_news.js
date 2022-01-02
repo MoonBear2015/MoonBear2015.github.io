@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N02.56';
+    html += ' N02.58';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -245,19 +245,14 @@ class selector_title extends SctItm_Selector {
         super('@NEWS_TITLE@');
         this.itms = [
             new SctItm('@L_WHAT@の@KEI@@L_DO@'),
+            new SctItm('@L_WHAT@が@KEID@@L_DO@'),
+            new SctItm('@L_WHAT@が@KEID@@L_DO@@END02C@'),
+            new SctItm('@L_WHAT@を@L_DO@@END02E@@TECH@'),
             new SctItm('@KEI@@L_WHAT@の@L_DO@'),
-            new SctItm('@L_WHAT@の@KEI@@L_DO@'),
-            new SctItm('@L_WHAT@が@KEI@@L_DO@'),
-            new SctItm('@L_WHAT@を@L_DO@@END02E@@TECH@ ★★'),
             new SctItm('@L_DO@@END02C@@L_WHAT@'),
             new SctItm('@KEID@@L_DO@@END02C@@L_WHAT@'),
             new SctItm('@L_DO@@END02C@@L_WHAT@の@THINK@'),
-            new SctItm('@L_DO@@END02C@@L_WHAT@の@THEY@'),
-            new SctItm('@L_DO@@END02C@@L_WHAT@の@TECH@'),
-            new SctItm('@L_DO@@END02C@@L_WHAT@の@PEOPLE@'),
-            new SctItm('@L_DO@@END02C@@L_WHAT@の@KEI@@PEOPLE@'),
-            new SctItm('@PEOPLE@が@L_DO@@END02C@@L_WHAT@'),
-            new SctItm('@THEY@が@L_DO@@END02C@@L_WHAT@')
+            new SctItm('@L_DO@@END02C@@L_WHAT@の@TECH@')
         ];
     }
 }
@@ -1097,23 +1092,6 @@ class selector_keido extends SctItm_Selector {
         ];
     }
 }
-class selector_keido1 extends SctItm_Selector {
-    constructor() {
-        super('@KEID1@');
-        this.itms = [
-            // new SctItm('')
-            // ,
-            new SctItm('@KEI2@に'),
-            new SctItm('@KEI4@')
-            // ,
-            // new SctItm('@KEI2@、そして、@KEI2@に')
-            // ,
-            // new SctItm('@KEI2@、そして、@KEI4@')
-            // ,
-            // new SctItm('@KEI4@、そして、@KEI4@')
-        ];
-    }
-}
 class selector_keido2 extends SctItm_Selector {
     constructor() {
         super('@KEID2@');
@@ -1894,7 +1872,6 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_keiyo());
         this.dic_push(new selector_keiyo1());
         this.dic_push(new selector_keido());
-        this.dic_push(new selector_keido1());
         this.dic_push(new selector_keido2());
         this.dic_push(new selector_keime1());
         this.dic_push(new selector_keime2());
