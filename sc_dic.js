@@ -1540,8 +1540,6 @@ const cods_gundam = [
     new SctCod_TI('ハロ'),
     new SctCod_TI('|白|しろ|い|悪魔|あくま|'),
     new SctCod_TI('|弾幕|だんまく|'),
-    new SctCod_TI('サイコミュ'),
-    new SctCod_TI('サイコフレーム'),
     new SctCod_TI('ミノフスキー'),
     new SctCod_TI('ニュータイプ'),
     new SctCod_TI('ガンダムハンマー'),
@@ -1569,7 +1567,9 @@ const cods_zeon = [
     new SctCod_TI('コロニー|落|お|とし'),
     new SctCod_TI('ザビ|家|け|'),
     new SctCod_TI('ヒートホーク'),
-    new SctCod_TI('ファンネル')
+    new SctCod_TI('ファンネル'),
+    new SctCod_TI('サイコミュ'),
+    new SctCod_TI('サイコフレーム')
 ];
 const cods_km = [
     new SctCod_Km('|曖昧|あいまい|'),
@@ -1583,7 +1583,8 @@ const cods_km = [
     new SctCod_Km('|快適|かいてき|'),
     new SctCod_Km('|過酷|かこく|'),
     new SctCod_Km('|過激|かげき|'),
-    new SctCod_Km('|華奢|かしゃ|'),
+    // new SctCod_Km('|華奢|かしゃ|')
+    // ,
     new SctCod_Km('|果断|かだん|'),
     new SctCod_Km('|華美|かび|'),
     new SctCod_Km('|華麗|かれい|'),
@@ -1606,8 +1607,10 @@ const cods_km = [
     // new SctCod_Km('|空虚|くうきょ|')
     ,
     new SctCod_Km('|屈強|くっきょう|'),
+    new SctCod_Km('|具体的|ぐたいてき|'),
     new SctCod_Km('|愚直|ぐちょく|'),
     new SctCod_Km('|激烈|げきれつ|'),
+    new SctCod_Km('|劇的|げきてき|'),
     new SctCod_Km('|愚直|ぐちょく|'),
     new SctCod_Km('|計画的|けいかくてき|'),
     new SctCod_Km('|経済的|けいざいてき|'),
@@ -1616,12 +1619,14 @@ const cods_km = [
     new SctCod_Km('|桁違|けたちが|い'),
     new SctCod_Km('|決定的|けっていてき|'),
     new SctCod_Km('|厳格|げんかく|'),
+    new SctCod_Km('|豪快|ごうかい|'),
     new SctCod_Km('|攻撃的|こうげきてき|'),
     new SctCod_Km('|肯定的|こうていてき|'),
     new SctCod_Km('|困難|こんなん|'),
     new SctCod_Km('|最悪|さいあく|'),
     new SctCod_Km('|最高|さいこう|'),
-    new SctCod_Km('|最新|さいしん|'),
+    // new SctCod_Km('|最新|さいしん|')
+    // ,
     new SctCod_Km('|最低|さいてい|'),
     new SctCod_Km('|災難|さいなん|'),
     new SctCod_Km('|残酷|ざんこく|')
@@ -1663,12 +1668,14 @@ const cods_km = [
     new SctCod_Km('|天才的|てんさいてき|'),
     new SctCod_Km('|伝統的|でんとうてき|'),
     new SctCod_Km('|獰猛|どうもう|'),
-    new SctCod_Km('|突兀|とっこつ|'),
+    // new SctCod_Km('|突兀|とっこつ|')
+    // ,
     new SctCod_Km('|貪欲|どんよく|'),
     new SctCod_Km('|軟弱|なんじゃく|'),
     new SctCod_Km('|難解|なんかい|'),
     new SctCod_Km('|柔弱|にゅうじゃく|'),
-    new SctCod_Km('|佞奸|ねいかん|'),
+    // new SctCod_Km('|佞奸|ねいかん|')
+    // ,
     new SctCod_Km('|熱烈|ねつれつ|'),
     new SctCod_Km('|念入|ねんい|り'),
     new SctCod_Km('|濃厚|のうこう|')
@@ -1739,7 +1746,8 @@ const cods_km = [
     // ,
     // new SctCod_Km('ぷよぷよ')
     ,
-    new SctCod_Km('|無頼|ぶらい|'),
+    // new SctCod_Km('|無頼|ぶらい|')
+    // ,
     new SctCod_Km('|不埒|ふらち|'),
     // new SctCod_Km('ふらふら')
     // ,
@@ -3287,7 +3295,9 @@ const itms_what = [
     new SctItm('戦国時代', 'WHAT/sengoku.jpg'),
     new SctItm('異世界', 'WHAT/Fantasy.jpg'),
     new SctItm('お花畑', 'WHAT/flower.jpg'),
-    new SctItm('マヤ文明', 'WHAT/maya.jpg')
+    new SctItm('マヤ文明', 'WHAT/maya.jpg'),
+    new SctItm('暗黒街', 'WHAT/Mafia.jpg'),
+    new SctItm('歓楽街', 'WHAT/moulin.jpg')
 ];
 const itms_city = [
     new SctItm('東京', 'CITY/tokyo.jpg'),
@@ -3373,7 +3383,9 @@ const itms_do = [
     new SctItm('近代化', 'DO/develop.jpg'),
     new SctItm('巨大化', 'DO/Giant.jpg'),
     new SctItm('アニメ化', 'DO/animated.jpg'),
-    new SctItm('機械化', 'DO/Mechanization.jpg')
+    new SctItm('機械化', 'DO/Mechanization.jpg'),
+    new SctItm('進化', 'DO/evolution2.jpg'),
+    new SctItm('退化', 'DO/Degeneration.jpg')
 ];
 const itms_shop = [
     new SctItm('BICYCLE', 'SHOP/BICYCLE01.jpg', '自転車'),

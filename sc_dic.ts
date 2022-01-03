@@ -2898,10 +2898,6 @@ const   cods_gundam = [
     ,
     new SctCod_TI('|弾幕|だんまく|')
     ,
-    new SctCod_TI('サイコミュ')
-    ,
-    new SctCod_TI('サイコフレーム')
-    ,
     new SctCod_TI('ミノフスキー')
     ,
     new SctCod_TI('ニュータイプ')
@@ -2955,6 +2951,10 @@ const   cods_zeon = [
     new SctCod_TI('ヒートホーク')
     ,
     new SctCod_TI('ファンネル')
+    ,
+    new SctCod_TI('サイコミュ')
+    ,
+    new SctCod_TI('サイコフレーム')
 
 ];
 
@@ -2981,8 +2981,8 @@ const   cods_km = [
     ,
     new SctCod_Km('|過激|かげき|')
     ,
-    new SctCod_Km('|華奢|かしゃ|')
-    ,
+    // new SctCod_Km('|華奢|かしゃ|')
+    // ,
     new SctCod_Km('|果断|かだん|')
     ,
     new SctCod_Km('|華美|かび|')
@@ -3019,9 +3019,13 @@ const   cods_km = [
     ,
     new SctCod_Km('|屈強|くっきょう|')
     ,
+    new SctCod_Km('|具体的|ぐたいてき|')
+    ,
     new SctCod_Km('|愚直|ぐちょく|')
     ,
     new SctCod_Km('|激烈|げきれつ|')
+    ,
+    new SctCod_Km('|劇的|げきてき|')
     ,
     new SctCod_Km('|愚直|ぐちょく|')
     ,
@@ -3039,6 +3043,8 @@ const   cods_km = [
     ,
     new SctCod_Km('|厳格|げんかく|')
     ,
+    new SctCod_Km('|豪快|ごうかい|')
+    ,
     new SctCod_Km('|攻撃的|こうげきてき|')
     ,
     new SctCod_Km('|肯定的|こうていてき|')
@@ -3049,8 +3055,8 @@ const   cods_km = [
     ,
     new SctCod_Km('|最高|さいこう|')
     ,
-    new SctCod_Km('|最新|さいしん|')
-    ,
+    // new SctCod_Km('|最新|さいしん|')
+    // ,
     new SctCod_Km('|最低|さいてい|')
     ,
     new SctCod_Km('|災難|さいなん|')
@@ -3111,8 +3117,8 @@ const   cods_km = [
     ,
     new SctCod_Km('|獰猛|どうもう|')
     ,
-    new SctCod_Km('|突兀|とっこつ|')
-    ,
+    // new SctCod_Km('|突兀|とっこつ|')
+    // ,
     new SctCod_Km('|貪欲|どんよく|')
     ,
     new SctCod_Km('|軟弱|なんじゃく|')
@@ -3121,8 +3127,8 @@ const   cods_km = [
     ,
     new SctCod_Km('|柔弱|にゅうじゃく|')
     ,
-    new SctCod_Km('|佞奸|ねいかん|')
-    ,
+    // new SctCod_Km('|佞奸|ねいかん|')
+    // ,
     new SctCod_Km('|熱烈|ねつれつ|')
     ,
     new SctCod_Km('|念入|ねんい|り')
@@ -3221,8 +3227,8 @@ const   cods_km = [
     // ,
     // new SctCod_Km('ぷよぷよ')
     ,
-    new SctCod_Km('|無頼|ぶらい|')
-    ,
+    // new SctCod_Km('|無頼|ぶらい|')
+    // ,
     new SctCod_Km('|不埒|ふらち|')
     ,
     // new SctCod_Km('ふらふら')
@@ -5200,6 +5206,10 @@ const   itms_what = [
     new SctItm('お花畑','WHAT/flower.jpg')
     ,
     new SctItm('マヤ文明','WHAT/maya.jpg')
+    ,
+    new SctItm('暗黒街','WHAT/Mafia.jpg')
+    ,
+    new SctItm('歓楽街','WHAT/moulin.jpg')
 ];
 
 
@@ -5362,6 +5372,10 @@ const   itms_do = [
     new SctItm('アニメ化','DO/animated.jpg')
     ,
     new SctItm('機械化','DO/Mechanization.jpg')
+    ,
+    new SctItm('進化','DO/evolution2.jpg')
+    ,
+    new SctItm('退化','DO/Degeneration.jpg')
 ]
 
 const   itms_shop = [
