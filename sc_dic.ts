@@ -6248,25 +6248,6 @@ const   itms_meal = [
     ,
     new SctItm('@FRUIT@のサラダ')
 ]
-const   itms_fruit = [
-    new SctItm('リンゴ')
-    ,
-    new SctItm('ミカン')
-    ,
-    new SctItm('オレンジ')
-    ,
-    new SctItm('ブドウ')
-    ,
-    new SctItm('梨')
-    ,
-    new SctItm('スイカ')
-    ,
-    new SctItm('サクランボ')
-    ,
-    new SctItm('グレープフルーツ')
-    ,
-    new SctItm('イチゴ')
-]
 
 const   itms_music = [
     new SctItm('クラシック')

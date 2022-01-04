@@ -80,6 +80,13 @@ function cods_ruby_to_itms(in_cods) {
     });
     return results;
 }
+function cods_rubyKana_to_itms(in_cods) {
+    let results = new Array();
+    in_cods.forEach((cod) => {
+        results.push(cod.to_SctItm_RubiKana());
+    });
+    return results;
+}
 function ruby_check(in_str) {
     let cnt = char_cnt(in_str, '\|');
     let sts = ((cnt % 3) == 0);
@@ -178,4 +185,16 @@ function star_str(in_score, in_max) {
     result += '☆'.repeat(mill);
     result += '・'.repeat(max - score - mill);
     return result;
+}
+function hiraToKana(str) {
+    return str.replace(/[\u3041-\u3096]/g, function (match) {
+        var chr = match.charCodeAt(0) + 0x60;
+        return String.fromCharCode(chr);
+    });
+}
+function kanaToHira(str) {
+    return str.replace(/[\u30a1-\u30f6]/g, function (match) {
+        var chr = match.charCodeAt(0) - 0x60;
+        return String.fromCharCode(chr);
+    });
 }

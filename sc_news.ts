@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N02.60';
+    html += ' N02.62';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -806,7 +806,7 @@ class selector_comment2 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@EMOFRONT@@EMO@@END02D@')
             ,
-            new SctItm('@L_WHAT@の@DOING@ていた')
+            new SctItm('@L_WHAT@の@DOING@いた')
             ,
             new SctItm('@PART@は@DOING@いた')
             ,
@@ -1539,6 +1539,8 @@ class selector_class extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('総理大臣')
             ,
+            new SctItm('独裁者')
+            ,
             new SctItm('道化師')
             ,
             new SctItm('庭師')
@@ -1922,7 +1924,7 @@ class selector_landmark extends SctItm_Selector implements ISctItm_Selector {
 class selector_fruit extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@FRUIT@');
-        this.Add(cods_to_itms(cods_fruit));
+        this.Add(cods_rubyKana_to_itms(cods_fruit.slice(1)));
     }
 }
 class selector_sweets extends SctItm_Selector implements ISctItm_Selector {
@@ -1943,7 +1945,7 @@ class selector_food1 extends SctItm_Selector implements ISctItm_Selector {
         super('@FOOD01@');
         this.Add(itms_meal);
         this.Add(itms_sweets);
-        this.Add(itms_fruit);
+        this.Add(cods_rubyKana_to_itms(cods_fruit.slice(1)));
     }
 }
 class selector_food extends SctItm_Selector implements ISctItm_Selector {
@@ -1987,7 +1989,7 @@ class selector_nickname extends SctItm_Selector implements ISctItm_Selector {
         this.Add(itms_nickNomal);
         this.Add(itms_meal);
         this.Add(itms_sweets);
-        this.Add(itms_fruit);
+        this.Add(cods_rubyKana_to_itms(cods_fruit.slice(1)));
     }
 }
 // 敬称 の～
