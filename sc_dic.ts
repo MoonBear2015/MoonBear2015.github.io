@@ -5691,6 +5691,12 @@ const   itms_tech = [
     ,
     new SctItm('信仰心','ICON/saint.jpg')
     ,
+    new SctItm('神頼み','ICON/pray.jpg')
+    ,
+    new SctItm('神通力','ICON/godpower.jpg')
+    ,
+    new SctItm('超能力','ICON/psychokinesis.jpg')
+    ,
     new SctItm('集客力','ICON/spectators.jpg')
     ,
     new SctItm('現代医学','ICON/medi.jpg')
@@ -5698,6 +5704,10 @@ const   itms_tech = [
     new SctItm('チームワーク','ICON/teamwork.jpg')
     ,
     new SctItm('地域活動','ICON/volunteer.jpg')
+    ,
+    new SctItm('塩加減','ICON/salt.jpg')
+    ,
+    new SctItm('隠し味','ICON/ingredient.jpg')
 ]
 
 // 成功・等 が～した
