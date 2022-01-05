@@ -3549,7 +3549,8 @@ const itms_tech = [
     new SctItm('信仰心', 'ICON/saint.jpg'),
     new SctItm('集客力', 'ICON/spectators.jpg'),
     new SctItm('現代医学', 'ICON/medi.jpg'),
-    new SctItm('チームワーク', 'ICON/teamwork.jpg')
+    new SctItm('チームワーク', 'ICON/teamwork.jpg'),
+    new SctItm('地域活動', 'ICON/volunteer.jpg')
 ];
 // 成功・等 が～した
 const itms_success = [
@@ -3564,7 +3565,7 @@ const itms_success = [
     new SctItm('達成'),
     new SctItm('実現'),
     new SctItm('到達'),
-    new SctItm('飛躍'),
+    new SctItm('飛躍')
     // new SctItm('遂行')
     // ,
     // new SctItm('開発')

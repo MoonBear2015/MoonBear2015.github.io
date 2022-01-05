@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N02.62';
+    html += ' N02.63';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -960,6 +960,7 @@ class selector_class extends SctItm_Selector {
             new SctItm('総理大臣'),
             new SctItm('独裁者'),
             new SctItm('道化師'),
+            new SctItm('ピエロ'),
             new SctItm('庭師'),
             new SctItm('狩人'),
             new SctItm('騎士'),
@@ -1009,7 +1010,8 @@ class selector_class extends SctItm_Selector {
             new SctItm('テロリスト'),
             new SctItm('ハッカー'),
             new SctItm('宇宙人'),
-            new SctItm('火星人')
+            new SctItm('火星人'),
+            new SctItm('秘密探偵')
         ];
     }
 }
@@ -1357,7 +1359,6 @@ class selector_think extends SctItm_Selector {
             ,
             new SctItm('失望'),
             new SctItm('心配'),
-            new SctItm('心配'),
             new SctItm('絶望'),
             new SctItm('憎悪'),
             new SctItm('尊敬'),
@@ -1370,12 +1371,7 @@ class selector_think extends SctItm_Selector {
             new SctItm('迷走'),
             new SctItm('夢想'),
             new SctItm('妄想'),
-            new SctItm('欲情')
-            // ,
-            // new SctItm('恋慕')
-            // ,
-            // new SctItm('愛')
-            ,
+            new SctItm('欲情'),
             new SctItm('落胆'),
             new SctItm('楽観')
         ];

@@ -5696,6 +5696,8 @@ const   itms_tech = [
     new SctItm('現代医学','ICON/medi.jpg')
     ,
     new SctItm('チームワーク','ICON/teamwork.jpg')
+    ,
+    new SctItm('地域活動','ICON/volunteer.jpg')
 ]
 
 // 成功・等 が～した
@@ -5719,7 +5721,6 @@ const   itms_success = [
     new SctItm('到達')
     ,
     new SctItm('飛躍')
-    ,
     // new SctItm('遂行')
     // ,
     // new SctItm('開発')
