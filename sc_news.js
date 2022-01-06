@@ -1053,14 +1053,14 @@ class selector_keiyo extends SctItm_Selector {
             new SctItm('@KEI2@な'),
             // new SctItm('@KEI2@で@KEI2@な')
             // ,
-            // new SctItm('@KEID1@@KEI2@な')
+            // new SctItm('@KEID@@KEI2@な')
             // ,
             // new SctItm('@KEI2@で@KEI2@、そして@KEI2@な')
             // ,
             new SctItm('@KEI3@'),
             // new SctItm('@KEI2@で@KEI3@')
             // ,
-            // new SctItm('@KEID1@@KEI3@')
+            // new SctItm('@KEID@@KEI3@')
             // // ,
             // new SctItm('@KEIM1@と@ASSES@')
             // ,
