@@ -3847,8 +3847,19 @@ const itms_meal = [
     new SctItm('鶏の唐揚げ'),
     new SctItm('@ANIMAL@の唐揚げ'),
     new SctItm('@ANIMAL@のフライ'),
+    new SctItm('@ANIMAL@のステーキ'),
+    new SctItm('@ANIMAL@の丸焼き'),
     new SctItm('@ANIMAL@の天ぷら'),
-    new SctItm('@FRUIT@のサラダ')
+    new SctItm('@FRUIT@のサラダ'),
+    new SctItm('お子様ランチ'),
+    new SctItm('焼き肉定食'),
+    new SctItm('トンカツ定食'),
+    new SctItm('海老フライ定食'),
+    new SctItm('ラーメンライス'),
+    new SctItm('学校給食'),
+    new SctItm('幕の内弁当'),
+    new SctItm('海苔弁当'),
+    new SctItm('日の丸弁当')
 ];
 const itms_music = [
     new SctItm('クラシック'),

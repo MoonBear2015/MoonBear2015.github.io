@@ -7,7 +7,7 @@ function set_horo() {
     html += '<h1>';
     html += 'Horoscope';
     html += '<small>';
-    html += ' H00.51';
+    html += ' H00.52';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -216,7 +216,8 @@ class First_game extends SctItm_FirstLocker2 {
             new SctItm('@DIR@に勝利の予感'),
             new SctItm('昨日の勝敗に@THINK@は禁物'),
             new SctItm('@CLASS@との勝負は避けて'),
-            new SctItm('@THEY@を味方に付ければ')
+            new SctItm('@THEY@を味方に付ければ'),
+            new SctItm('ラッキーナンバー　@num10000@')
         ];
     }
 }
