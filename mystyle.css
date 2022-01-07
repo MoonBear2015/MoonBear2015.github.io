@@ -573,8 +573,9 @@ small {
     grid-row: 3/4;
     text-align: left;
     font-size: 3.0vw;
-    display: flex;
+    /* display: flex; */
     align-items: center;
+    vertical-align:middle;
 
 }
 #horo_sent_type {

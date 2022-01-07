@@ -1296,6 +1296,12 @@ class selector_fruit extends SctItm_Selector {
         // this.Add(cods_rubyKana_to_itms(cods_fruit.slice(1)));
     }
 }
+class selector_fish extends SctItm_Selector {
+    constructor() {
+        super('@FISH@');
+        this.Add(cods_fish.slice(1));
+    }
+}
 class selector_sweets extends SctItm_Selector {
     constructor() {
         super('@SWEETS@');
@@ -1313,7 +1319,7 @@ class selector_food1 extends SctItm_Selector {
         super('@FOOD01@');
         this.Add(itms_meal);
         this.Add(itms_sweets);
-        this.Add(cods_rubyKana_to_itms(cods_fruit.slice(1)));
+        this.Add(cods_fruit.slice(1));
     }
 }
 class selector_food extends SctItm_Selector {
@@ -1916,6 +1922,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_history());
         this.dic_push(new selector_landmark());
         this.dic_push(new selector_fruit());
+        this.dic_push(new selector_fish());
         this.dic_push(new selector_sweets());
         this.dic_push(new selector_meal());
         this.dic_push(new selector_food1());

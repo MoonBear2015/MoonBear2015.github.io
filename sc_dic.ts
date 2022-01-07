@@ -1137,54 +1137,54 @@ const   cods_fish = [
     ,
     new SctCod_TI('|鯏|あさり|')
     ,
-    new SctCod_TI('|鯘|あざれ|')
-    ,
+    // new SctCod_TI('|鯘|あざれ|')
+    // ,
     new SctCod_TI('|鯵|あじ|')
     ,
-    new SctCod_TI('|鰺|あじ|')
-    ,
-    new SctCod_TI('|鮩|あみ|')
-    ,
-    new SctCod_TI('|鯇|あめのうお|')
-    ,
-    new SctCod_TI('|鰀|あめのうお|')
-    ,
+    // new SctCod_TI('|鰺|あじ|')
+    // ,
+    // new SctCod_TI('|鮩|あみ|')
+    // ,
+    // new SctCod_TI('|鯇|あめのうお|')
+    // ,
+    // new SctCod_TI('|鰀|あめのうお|')
+    // ,
     new SctCod_TI('|鮎|あゆ|')
     ,
-    new SctCod_TI('|𩺊|あら|')
-    ,
+    // new SctCod_TI('|𩺊|あら|')
+    // ,
     new SctCod_TI('|鮑|あわび|')
     ,
-    new SctCod_TI('|鰒|あわび|')
-    ,
+    // new SctCod_TI('|鰒|あわび|')
+    // ,
     new SctCod_TI('|鮟鱇|あんこう|')
     ,
     new SctCod_TI('|魷|いか|')
     ,
-    new SctCod_TI('|鰞|いか|')
-    ,
-    new SctCod_TI('|鰂|いか|')
-    ,
+    // new SctCod_TI('|鰞|いか|')
+    // ,
+    // new SctCod_TI('|鰂|いか|')
+    // ,
     new SctCod_TI('|鮻|いさぎ|')
     ,
     new SctCod_TI('|魦|いさざ|')
     ,
     new SctCod_TI('|鱊|いさざ|')
     ,
-    new SctCod_TI('|鰵|いしもち|')
-    ,
+    // new SctCod_TI('|鰵|いしもち|')
+    // ,
     new SctCod_TI('|鯆|いるか|')
     ,
-    new SctCod_TI('|鰛|いわし|')
-    ,
-    new SctCod_TI('|鰮|いわし|')
-    ,
+    // new SctCod_TI('|鰛|いわし|')
+    // ,
+    // new SctCod_TI('|鰮|いわし|')
+    // ,
     new SctCod_TI('|鰯|いわし|')
     ,
     new SctCod_TI('|鮇|いわな|')
     ,
-    new SctCod_TI('|鷠|う|')
-    ,
+    // new SctCod_TI('|鷠|う|')
+    // ,
     new SctCod_TI('|鯎|うぐい|')
     ,
     new SctCod_TI('|鰻|うなぎ|')
@@ -1195,48 +1195,48 @@ const   cods_fish = [
     ,
     new SctCod_TI('|鱏|えい|')
     ,
-    new SctCod_TI('|鰩|えい|')
-    ,
-    new SctCod_TI('|鱝|えい|')
-    ,
+    // new SctCod_TI('|鰩|えい|')
+    // ,
+    // new SctCod_TI('|鱝|えい|')
+    // ,
     new SctCod_TI('|鮧|えそ|')
     ,
-    new SctCod_TI('|鱛|えそ|')
-    ,
-    new SctCod_TI('|鮆|えつ|')
-    ,
-    new SctCod_TI('|魵|えび|')
-    ,
+    // new SctCod_TI('|鱛|えそ|')
+    // ,
+    // new SctCod_TI('|鮆|えつ|')
+    // ,
+    // new SctCod_TI('|魵|えび|')
+    // ,
     new SctCod_TI('|鰕|えび|')
     ,
-    new SctCod_TI('|鰓|えら|')
-    ,
+    // new SctCod_TI('|鰓|えら|')
+    // ,
     new SctCod_TI('|魞|えり|')
     ,
-    new SctCod_TI('|鰲|おおがめ|')
-    ,
-    new SctCod_TI('|鰧|おこぜ|')
-    ,
-    new SctCod_TI('|鯿|おしきうお|')
-    ,
-    new SctCod_TI('|魯|おろか|')
-    ,
-    new SctCod_TI('|鮰|かい|')
-    ,
-    new SctCod_TI('|鰄|かいらぎ|')
-    ,
+    // // // new SctCod_TI('|鰲|おおがめ|')
+    // // // ,
+    // // // new SctCod_TI('|鰧|おこぜ|')
+    // // // ,
+    // // // new SctCod_TI('|鯿|おしきうお|')
+    // // // ,
+    // // // new SctCod_TI('|魯|おろか|')
+    // // // ,
+    // // new SctCod_TI('|鮰|かい|')
+    // // ,
+    // new SctCod_TI('|鰄|かいらぎ|')
+    // ,
     new SctCod_TI('|鮖|かじか|')
     ,
     new SctCod_TI('|鰍|かじか|')
     ,
     new SctCod_TI('|鯑|かずのこ|')
     ,
-    new SctCod_TI('|鮦|かつお|')
-    ,
+    // new SctCod_TI('|鮦|かつお|')
+    // ,
     new SctCod_TI('|鰹|かつお|')
     ,
-    new SctCod_TI('|鯟|かど|')
-    ,
+    // new SctCod_TI('|鯟|かど|')
+    // ,
     new SctCod_TI('|鱟|かぶとがに|')
     ,
     new SctCod_TI('|魳|かます|')
@@ -1247,8 +1247,8 @@ const   cods_fish = [
     ,
     new SctCod_TI('|鰈|かれい|')
     ,
-    new SctCod_TI('|鰨|かれい|')
-    ,
+    // new SctCod_TI('|鰨|かれい|')
+    // ,
     new SctCod_TI('|鮍|かわはぎ|')
     ,
     new SctCod_TI('|鱨|ぎぎ|')
@@ -1257,18 +1257,18 @@ const   cods_fish = [
     ,
     new SctCod_TI('|鱜|きょう|')
     ,
-    new SctCod_TI('|鮾|くさる|')
-    ,
-    new SctCod_TI('|鯢|くじら|')
-    ,
+    // new SctCod_TI('|鮾|くさる|')
+    // ,
+    // new SctCod_TI('|鯢|くじら|')
+    // ,
     new SctCod_TI('|鯨|くじら|')
     ,
     new SctCod_TI('|鯉|こい|')
     ,
-    new SctCod_TI('|鯪|こい|')
-    ,
-    new SctCod_TI('|鱣|こい|')
-    ,
+    // new SctCod_TI('|鯪|こい|')
+    // ,
+    // new SctCod_TI('|鱣|こい|')
+    // ,
     new SctCod_TI('|鱇|こう|')
     ,
     new SctCod_TI('|魥|こがめ|')
@@ -1277,36 +1277,36 @@ const   cods_fish = [
     ,
     new SctCod_TI('|鮗|このしろ|')
     ,
-    new SctCod_TI('|鰶|このしろ|')
-    ,
-    new SctCod_TI('|鰽|このしろ|')
-    ,
-    new SctCod_TI('|鱓|ごまめ|')
-    ,
-    new SctCod_TI('|鱔|ごまめ|')
-    ,
-    new SctCod_TI('|鮔|ごり|')
-    ,
-    new SctCod_TI('|鮴|ごり|')
-    ,
-    new SctCod_TI('|鯀|こん|')
-    ,
-    new SctCod_TI('|鯤|こん|')
-    ,
-    new SctCod_TI('|魚|さかな|')
-    ,
-    new SctCod_TI('|魫|さかなのこ|')
-    ,
-    new SctCod_TI('|鮏|さけ|')
-    ,
+    // new SctCod_TI('|鰶|このしろ|')
+    // ,
+    // new SctCod_TI('|鰽|このしろ|')
+    // ,
+    // new SctCod_TI('|鱓|ごまめ|')
+    // ,
+    // new SctCod_TI('|鱔|ごまめ|')
+    // ,
+    // new SctCod_TI('|鮔|ごり|')
+    // ,
+    // new SctCod_TI('|鮴|ごり|')
+    // ,
+    // new SctCod_TI('|鯀|こん|')
+    // ,
+    // new SctCod_TI('|鯤|こん|')
+    // ,
+    // new SctCod_TI('|魚|さかな|')
+    // ,
+    // new SctCod_TI('|魫|さかなのこ|')
+    // ,
+    // new SctCod_TI('|鮏|さけ|')
+    // ,
     new SctCod_TI('|鮭|さけ|')
     ,
     new SctCod_TI('|鯹|さけ|')
     ,
     new SctCod_TI('|鱖|さけ|')
     ,
-    new SctCod_TI('|鮄|さば|')
-    ,
+    // new SctCod_TI('|鮄|さば|')
+    // ,
     new SctCod_TI('|鯖|さば|')
     ,
     new SctCod_TI('|鮫|さめ|')
@@ -1317,8 +1317,8 @@ const   cods_fish = [
     ,
     new SctCod_TI('|鱪|しいら|')
     ,
-    new SctCod_TI('|鱰|しいら|')
-    ,
+    // new SctCod_TI('|鱰|しいら|')
+    // ,
     new SctCod_TI('|鯱|しゃち|')
     ,
     new SctCod_TI('|鱐|しゃちほこ|')
@@ -1329,10 +1329,10 @@ const   cods_fish = [
     ,
     new SctCod_TI('|鯳|すけとうだら|')
     ,
-    new SctCod_TI('|鮓|すし|')
-    ,
-    new SctCod_TI('|鮨|すし|')
-    ,
+    // new SctCod_TI('|鮓|すし|')
+    // ,
+    // new SctCod_TI('|鮨|すし|')
+    // ,
     new SctCod_TI('|鱸|すずき|')
     ,
     new SctCod_TI('|鱉|すっぽん|')
@@ -1345,14 +1345,14 @@ const   cods_fish = [
     ,
     new SctCod_TI('|鮬|せいご|')
     ,
-    new SctCod_TI('|鮮|せん|')
-    ,
-    new SctCod_TI('|鱄|せん|')
-    ,
-    new SctCod_TI('|鱻|せん|')
-    ,
-    new SctCod_TI('|鮉|たい|')
-    ,
+    // new SctCod_TI('|鮮|せん|')
+    // ,
+    // new SctCod_TI('|鱄|せん|')
+    // ,
+    // new SctCod_TI('|鱻|せん|')
+    // ,
+    // new SctCod_TI('|鮉|たい|')
+    // ,
     new SctCod_TI('|鯛|たい|')
     ,
     new SctCod_TI('|鰖|たかべ|')
@@ -1365,50 +1365,50 @@ const   cods_fish = [
     ,
     new SctCod_TI('|魣|たなご|')
     ,
-    new SctCod_TI('|鰱|たなご|')
-    ,
-    new SctCod_TI('|鱮|たなご|')
-    ,
+    // new SctCod_TI('|鰱|たなご|')
+    // ,
+    // new SctCod_TI('|鱮|たなご|')
+    // ,
     new SctCod_TI('|鱈|たら|')
     ,
-    new SctCod_TI('|鰔|たら|')
-    ,
-    new SctCod_TI('|鱅|ちちかぶり|')
-    ,
-    new SctCod_TI('|釣|ちょう|')
-    ,
+    // new SctCod_TI('|鰔|たら|')
+    // ,
+    // new SctCod_TI('|鱅|ちちかぶり|')
+    // ,
+    // new SctCod_TI('|釣|ちょう|')
+    // ,
     new SctCod_TI('|鱘|ちょうざめ|')
     ,
-    new SctCod_TI('|鰢|つくら|')
-    ,
-    new SctCod_TI('|鯯|つなし|')
-    ,
-    new SctCod_TI('|鯲|どじょう|')
-    ,
+    // new SctCod_TI('|鰢|つくら|')
+    // ,
+    // new SctCod_TI('|鯯|つなし|')
+    // ,
+    // new SctCod_TI('|鯲|どじょう|')
+    // ,
     new SctCod_TI('|鰌|どじょう|')
     ,
-    new SctCod_TI('|鱃|どじょう|')
-    ,
+    // new SctCod_TI('|鱃|どじょう|')
+    // ,
     new SctCod_TI('|魹|とど|')
     ,
     new SctCod_TI('|魸|なます|')
     ,
-    new SctCod_TI('|鱠|なます|')
-    ,
-    new SctCod_TI('|鰋|なまず|')
-    ,
-    new SctCod_TI('|鮀|なまず|')
-    ,
+    // new SctCod_TI('|鱠|なます|')
+    // ,
+    // new SctCod_TI('|鰋|なまず|')
+    // ,
+    // new SctCod_TI('|鮀|なまず|')
+    // ,
     new SctCod_TI('|鯰|なまず|')
     ,
-    new SctCod_TI('|鮷|なまず|')
-    ,
-    new SctCod_TI('|鯡|にしん|')
-    ,
+    // new SctCod_TI('|鮷|なまず|')
+    // ,
+    // new SctCod_TI('|鯡|にしん|')
+    // ,
     new SctCod_TI('|鰊|にしん|')
     ,
-    new SctCod_TI('|鰜|にしん|')
-    ,
+    // new SctCod_TI('|鰜|にしん|')
+    // ,
     new SctCod_TI('|鮸|にべ|')
     ,
     new SctCod_TI('|鯁|のぎ|')
@@ -1419,8 +1419,8 @@ const   cods_fish = [
     ,
     new SctCod_TI('|鰰|はたはた|')
     ,
-    new SctCod_TI('|鱩|はたはた|')
-    ,
+    // new SctCod_TI('|鱩|はたはた|')
+    // ,
     new SctCod_TI('|鮚|はまぐり|')
     ,
     new SctCod_TI('|魬|はまち|')
@@ -1429,50 +1429,52 @@ const   cods_fish = [
     ,
     new SctCod_TI('|鮋|はや|')
     ,
-    new SctCod_TI('|鮠|はや|')
-    ,
-    new SctCod_TI('|鰦|はや|')
-    ,
-    new SctCod_TI('|鰷|はや|')
-    ,
-    new SctCod_TI('|鯈|はや|')
-    ,
+    // new SctCod_TI('|鮠|はや|')
+    // ,
+    // new SctCod_TI('|鰦|はや|')
+    // ,
+    // new SctCod_TI('|鰷|はや|')
+    // ,
+    // new SctCod_TI('|鯈|はや|')
+    // ,
     new SctCod_TI('|鰚|はらか|')
     ,
     new SctCod_TI('|鮞|はららご|')
     ,
-    new SctCod_TI('|鯝|はらわた|')
-    ,
-    new SctCod_TI('|魮|ひ|')
-    ,
+    // new SctCod_TI('|鯝|はらわた|')
+    // ,
+    // new SctCod_TI('|魮|ひ|')
+    // ,
     new SctCod_TI('|鰉|ひがい|')
     ,
     new SctCod_TI('|鯷|ひしこ|')
     ,
     new SctCod_TI('|鮃|ひらめ|')
     ,
-    new SctCod_TI('|鰭|ひれ|')
-    ,
+    // new SctCod_TI('|鰭|ひれ|')
+    // ,
     new SctCod_TI('|鰏|ひょく|')
     ,
-    new SctCod_TI('|鰾|うきぶくろ|')
-    ,
+    // new SctCod_TI('|鰾|うきぶくろ|')
+    // ,
     new SctCod_TI('|鱶|ふか|')
     ,
-    new SctCod_TI('|鮝|ふか|')
+    // new SctCod_TI('|鮝|ふか|')
+    // ,
+    new SctCod_TI('|河豚|ふぐ|')
     ,
-    new SctCod_TI('|鮐|ふぐ|')
-    ,
-    new SctCod_TI('|鯸|ふぐ|')
-    ,
-    new SctCod_TI('|鯺|ふぐ|')
-    ,
-    new SctCod_TI('|魨|ふぐ|')
-    ,
+    // new SctCod_TI('|鮐|ふぐ|')
+    // ,
+    // new SctCod_TI('|鯸|ふぐ|')
+    // ,
+    // new SctCod_TI('|鯺|ふぐ|')
+    // ,
+    // new SctCod_TI('|魨|ふぐ|')
+    // ,
     new SctCod_TI('|鮒|ふな|')
     ,
-    new SctCod_TI('|鯽|ふな|')
-    ,
+    // new SctCod_TI('|鯽|ふな|')
+    // ,
     new SctCod_TI('|鰤|ぶり|')
     ,
     new SctCod_TI('|魴|ほうぼう|')
@@ -1483,14 +1485,14 @@ const   cods_fish = [
     ,
     new SctCod_TI('|鮱|ぼら|')
     ,
-    new SctCod_TI('|鰡|ぼら|')
-    ,
-    new SctCod_TI('|鯔|ぼら|')
-    ,
+    // new SctCod_TI('|鰡|ぼら|')
+    // ,
+    // new SctCod_TI('|鯔|ぼら|')
+    // ,
     new SctCod_TI('|鮪|まぐろ|')
     ,
-    new SctCod_TI('|鮅|ます|')
-    ,
+    // new SctCod_TI('|鮅|ます|')
+    // ,
     new SctCod_TI('|鱒|ます|')
     ,
     new SctCod_TI('|鮲|まて|')
@@ -1515,13 +1517,13 @@ const   cods_fish = [
     ,
     new SctCod_TI('|鰥|やもお|')
     ,
-    new SctCod_TI('|漁|りょう|')
-    ,
+    // new SctCod_TI('|漁|りょう|')
+    // ,
     new SctCod_TI('|鰙|わかさぎ|')
     ,
     new SctCod_TI('|鰐|わに|')
     ,
-    new SctCod_TI('|鱷|わに|')
+    // new SctCod_TI('|鱷|わに|')
 
 ];
 
@@ -6249,6 +6251,16 @@ const   itms_meal = [
     ,
     new SctItm('コロッケ')
     ,
+    new SctItm('@FISH@の唐揚げ')
+    ,
+    new SctItm('@FISH@の塩焼き')
+    ,
+    new SctItm('@FISH@の味噌煮')
+    ,
+    new SctItm('@FISH@の刺身')
+    ,
+    new SctItm('@FISH@の天ぷら')
+    ,
     new SctItm('鶏の唐揚げ')
     ,
     new SctItm('@ANIMAL@の唐揚げ')
@@ -6258,8 +6270,6 @@ const   itms_meal = [
     new SctItm('@ANIMAL@のステーキ')
     ,
     new SctItm('@ANIMAL@の丸焼き')
-    ,
-    new SctItm('@ANIMAL@の天ぷら')
     ,
     new SctItm('@FRUIT@のサラダ')
     ,
