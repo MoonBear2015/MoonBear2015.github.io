@@ -7,7 +7,7 @@ function set_qa() {
     html += '<h1>';
     html += 'Q&A';
     html += '<small>';
-    html += ' Q01.07';
+    html += ' Q01.08';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -399,7 +399,9 @@ class selector_a_title extends SctItm_Selector {
             new SctItm('止めて下さい、@QUESTER@さん'),
             new SctItm('残念でしたね、@QUESTER@さん'),
             new SctItm('良かったですね、@QUESTER@さん'),
-            new SctItm('仕方が無いですよ、@QUESTER@さん')
+            new SctItm('仕方が無いですよ、@QUESTER@さん'),
+            new SctItm('仕方が無いですよ、@QUESTER@さん'),
+            new SctItm('@KEI@なことを云ってはいけませんよ、@QUESTER@さん')
             // ,
             // new SctItm('@QUESTER@さん、お薬の時間ですよ')
             ,
@@ -431,6 +433,11 @@ class selector_a_sent extends SctItm_Selector {
         this.itms = [
             new SctItm('@A_MSG@。'),
             new SctItm('@CONECT2@、@A_MSG@。'),
+            new SctItm('@A_MSG@が、@QUESTER@さんはご存じですよね？'),
+            new SctItm('@A_MSG@が、@QUESTER@さんは知らなかったのですか？'),
+            new SctItm('@A_MSG@が、その@L_PART@さんなら知っている筈ですよ。'),
+            new SctItm('@A_MSG@が、その@L_PART@さんなら@DOING@いる筈です。'),
+            new SctItm('@A_MSG@が、その@L_PART@さんが@DOING@いましたよ？'),
             new SctItm('@A_MSG@が、@A_SENT@'),
             new SctItm('@A_MSG@けど、@A_SENT@'),
             new SctItm('@A_MSG@ので、@A_SENT@')
@@ -448,7 +455,10 @@ class selector_a_msg extends SctItm_Selector {
             new SctItm('@A_MSG01@@A_MSG02@、@A_MSG03@@A_MSG04@'),
             new SctItm('私は@MANYPEOPLE@より「@CALL2@」と@GRADE@@ASSES@のです'),
             new SctItm('それは@KEI@@QUESTER@さんが@GRADE@@ASSES@からです'),
-            new SctItm('それは@KEI@@L_PART@さんが@GRADE@@ASSES@からです')
+            new SctItm('それは@KEI@@L_PART@さんが@GRADE@@ASSES@からです'),
+            new SctItm('@CONECT2@、@L_PART@さんが@DOING@います'),
+            new SctItm('@CONECT2@、私は@DOING@います'),
+            new SctItm('@CONECT2@、私が@GRADE@@ASSES@からです')
         ];
     }
 }

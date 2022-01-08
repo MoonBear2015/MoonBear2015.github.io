@@ -1469,7 +1469,8 @@ const cods_ad_danger = [
     new SctCod_Mv('|危|あぶ|ない', 'danger.png'),
     new SctCod_Mv('|危|あや|うい'),
     new SctCod_Mv('|恐|おそ|ろしい'),
-    new SctCod_Mv('|怖|こわ|い'),
+    // new SctCod_Mv('|怖|こわ|い')
+    // ,
     new SctCod_Mv('|凄|すさ|まじい'),
     new SctCod_Mv('|空恐|そらおそ|ろしい'),
     new SctCod_Mv('|酷|ひど|い'),
@@ -1483,7 +1484,8 @@ const cods_ad_danger = [
 const cods_adv_danger = [
     new SctCod_It('|危|あや|うく', 'danger.png'),
     new SctCod_It('|恐|おそ|ろしく'),
-    new SctCod_It('|怖|こわ|く'),
+    // new SctCod_It('|怖|こわ|く')
+    // ,
     new SctCod_It('|凄|すさ|まじく'),
     new SctCod_It('|空恐|そらおそ|ろしく'),
     new SctCod_It('|酷|ひど|く'),

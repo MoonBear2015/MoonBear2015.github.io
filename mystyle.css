@@ -562,8 +562,8 @@ small {
 }
 
 #horo_sent_info {
-    margin:     5px;
-    padding:    5px;
+    margin:     20px;
+    padding:    20px;
     border:     1px solid black;
     border-radius:  20px;
     color: white;
@@ -571,8 +571,8 @@ small {
     font-family: 'Times New Roman', Times, serif;
     grid-column: 3/4;
     grid-row: 3/4;
-    text-align: left;
-    font-size: 3.0vw;
+    text-align: justify;
+    font-size: 2.5vw;
     /* display: flex; */
     align-items: center;
     vertical-align:middle;
@@ -584,14 +584,14 @@ small {
     grid-column: 1/4;
     grid-row: 4/5;
     text-align: left;
-    font-size: 3.0vw;
+    font-size: 2.5vw;
 }
 #horo_sent_items {
     font-family: 'Times New Roman', Times, serif;
     grid-column: 1/4;
     grid-row: 5/6;
     text-align: left;
-    font-size: 2.3vw;
+    font-size: 2.5vw;
 }
 
 

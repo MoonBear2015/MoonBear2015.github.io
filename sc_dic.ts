@@ -2622,8 +2622,8 @@ const   cods_ad_danger = [
     ,
     new SctCod_Mv('|恐|おそ|ろしい')
     ,
-    new SctCod_Mv('|怖|こわ|い')
-    ,
+    // new SctCod_Mv('|怖|こわ|い')
+    // ,
     new SctCod_Mv('|凄|すさ|まじい')
     ,
     new SctCod_Mv('|空恐|そらおそ|ろしい')
@@ -2647,8 +2647,8 @@ const   cods_adv_danger = [
     ,
     new SctCod_It('|恐|おそ|ろしく')
     ,
-    new SctCod_It('|怖|こわ|く')
-    ,
+    // new SctCod_It('|怖|こわ|く')
+    // ,
     new SctCod_It('|凄|すさ|まじく')
     ,
     new SctCod_It('|空恐|そらおそ|ろしく')

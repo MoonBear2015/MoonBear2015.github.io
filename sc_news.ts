@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N02.63';
+    html += ' N02.64';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -2887,7 +2887,33 @@ class selector_doing extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@PART@を連れて')
             ,
+            new SctItm('@PART@とデートして')
+            ,
+            new SctItm('@PART@をデートに誘って')
+            ,
+            new SctItm('@PART@に告白して')
+            ,
+            new SctItm('@PART@とお散歩して')
+            ,
+            new SctItm('@PART@にプロポーズして')
+            ,
+            new SctItm('@PART@と食事して')
+            ,
+            new SctItm('@PART@に別れ話をして')
+            ,
+            new SctItm('@PART@と喧嘩して')
+            ,
+            new SctItm('@PART@にお茶を出して')
+            ,
             new SctItm('@ANIMAL@を連れて')
+            ,
+            new SctItm('@ANIMAL@の散歩をして')
+            ,
+            new SctItm('@ANIMAL@に餌をやって')
+            ,
+            new SctItm('@ANIMAL@の体を洗って')
+            ,
+            new SctItm('@ANIMAL@狩りをして')
         ];
     }
 }
