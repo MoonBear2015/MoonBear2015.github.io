@@ -1864,6 +1864,10 @@ class selector_doing extends SctItm_Selector {
             new SctItm('@PEOPLE@と@LANDMARK@を歩いて'),
             new SctItm('@MANYPEOPLE@に追われて'),
             new SctItm('@MANYPEOPLE@に囲まれて'),
+            new SctItm('@MANYPEOPLE@にいじめられて'),
+            new SctItm('@MANYPEOPLE@に閉じ込められて'),
+            new SctItm('@MANYPEOPLE@に襲われて'),
+            new SctItm('@MANYPEOPLE@に殺されかけて'),
             new SctItm('@PEOPLE@を追いかけて'),
             new SctItm('@PEOPLE@を探して'),
             new SctItm('@PEOPLE@をとっちめて'),
@@ -1883,7 +1887,9 @@ class selector_doing extends SctItm_Selector {
             new SctItm('@ANIMAL@の散歩をして'),
             new SctItm('@ANIMAL@に餌をやって'),
             new SctItm('@ANIMAL@の体を洗って'),
-            new SctItm('@ANIMAL@狩りをして')
+            new SctItm('@ANIMAL@狩りをして'),
+            new SctItm('@ANIMAL@に襲われて'),
+            new SctItm('@ANIMAL@の絵を描いて')
         ];
     }
 }

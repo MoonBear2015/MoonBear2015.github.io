@@ -7,7 +7,7 @@ function set_qa() {
     html += '<h1>';
     html += 'Q&A';
     html += '<small>';
-    html += ' Q01.08';
+    html += ' Q01.09';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -433,11 +433,11 @@ class selector_a_sent extends SctItm_Selector {
         this.itms = [
             new SctItm('@A_MSG@。'),
             new SctItm('@CONECT2@、@A_MSG@。'),
-            new SctItm('@A_MSG@が、@QUESTER@さんはご存じですよね？'),
-            new SctItm('@A_MSG@が、@QUESTER@さんは知らなかったのですか？'),
-            new SctItm('@A_MSG@が、その@L_PART@さんなら知っている筈ですよ。'),
+            new SctItm('@A_MSG@が、@QUESTER@さんはご存じですよね？ '),
+            new SctItm('@A_MSG@が、@QUESTER@さんは知らなかったのですか？ '),
+            new SctItm('@A_MSG@が、その@L_PART@さんなら知っている筈ですよ？　'),
             new SctItm('@A_MSG@が、その@L_PART@さんなら@DOING@いる筈です。'),
-            new SctItm('@A_MSG@が、その@L_PART@さんが@DOING@いましたよ？'),
+            new SctItm('@A_MSG@が、その@L_PART@さんなら@DOING@いましたよ？　'),
             new SctItm('@A_MSG@が、@A_SENT@'),
             new SctItm('@A_MSG@けど、@A_SENT@'),
             new SctItm('@A_MSG@ので、@A_SENT@')
