@@ -9,7 +9,7 @@ function set_about()
     html += '<h1>';
     html += 'ABOUT';
     html += '<small>';
-    html += ' A01.07';
+    html += ' A01.08';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -49,9 +49,10 @@ function make_about()
 
         html += '@ABOUTER@';
         html += '<div id="about_doc">';
-        html += 'あだ名:@CALL2@<br>'
+        html += '通り名:@CALL2@<br>'
         html += '国籍:@COUNTRY@出身<br>';
         html += '住所:@COUNTRY@在住<br>';
+        html += '学歴:@SCOOL@<br>'
         html += '仕事:@CLASS@<br>'
         html += '趣味:<bir>@HABIT@<br>';
         html += '座右の銘:<bir>@INSCRIPTION@<br>';

@@ -7,7 +7,7 @@ function set_qa() {
     html += '<h1>';
     html += 'Q&A';
     html += '<small>';
-    html += ' Q01.09';
+    html += ' Q01.10';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -196,7 +196,9 @@ class selector_q_title extends SctItm_Selector {
     constructor() {
         super('@Q_TITLE@');
         this.itms = [
-            new SctItm('@DOING@いる@L_PART@に失望しています'),
+            new SctItm('@DOING@いる@L_PART@に@THINK@しています'),
+            new SctItm('@DOING@いる@L_PART@を知りませんか'),
+            new SctItm('@DOING@いる@L_PART@をなんとかして下さい'),
             new SctItm('@L_PART@が@DOING@いるので困っています'),
             new SctItm('@L_PART@に@THINK@しています'),
             new SctItm('@L_PART@が@L_HABIT@ばかりしています'),
@@ -208,7 +210,6 @@ class selector_q_title extends SctItm_Selector {
             new SctItm('@L_PART@の@L_HABIT@が長続きしません'),
             new SctItm('@L_PART@と@L_HABIT@をしたいのですが'),
             new SctItm('@L_PART@が@L_HABIT@で捕まっています'),
-            new SctItm('@L_PART@が@L_HABIT@で疑われています'),
             new SctItm('私の@KEI@@L_PART@を知りませんか'),
             new SctItm('どうして、@CLASS@は@KEI1@のでしょうか'),
             new SctItm('どうして、@L_PART@は@KEI1@のでしょうか'),
@@ -435,9 +436,9 @@ class selector_a_sent extends SctItm_Selector {
             new SctItm('@CONECT2@、@A_MSG@。'),
             new SctItm('@A_MSG@が、@QUESTER@さんはご存じですよね？ '),
             new SctItm('@A_MSG@が、@QUESTER@さんは知らなかったのですか？ '),
-            new SctItm('@A_MSG@が、その@L_PART@さんなら知っている筈ですよ？　'),
+            new SctItm('@A_MSG@が、その@L_PART@さんなら知っている筈ですよ？ '),
             new SctItm('@A_MSG@が、その@L_PART@さんなら@DOING@いる筈です。'),
-            new SctItm('@A_MSG@が、その@L_PART@さんなら@DOING@いましたよ？　'),
+            new SctItm('@A_MSG@が、その@L_PART@さんなら@DOING@いましたよ？ '),
             new SctItm('@A_MSG@が、@A_SENT@'),
             new SctItm('@A_MSG@けど、@A_SENT@'),
             new SctItm('@A_MSG@ので、@A_SENT@')

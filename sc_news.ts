@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N02.64';
+    html += ' N02.65';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -166,7 +166,7 @@ class selector_random_year
     }
  
 }
-class selector_random_num10
+class selector_random_NUM10
     extends ItmArray<SctItm>
     implements ISctItm_Selector
 {
@@ -176,16 +176,16 @@ class selector_random_num10
     constructor()
     {
         super();
-        this.itm_key = "@num10@";
+        this.itm_key = "@NUM10@";
         this.itm_key2 = "";
         this.pic_key = "";
     }
     get rnd_Itm() : SctItm {
-        return new SctItm(rnd_max(10).toString(),"");
+        return new SctItm(rnd_minmax(1,9).toString(),"");
     }
     Copy() : ISctItm_Selector
     {
-        let result = new selector_random_num10();
+        let result = new selector_random_NUM10();
         result.Paste(this.itms);
         return result;
     }
@@ -195,7 +195,7 @@ class selector_random_num10
     }
  
 }
-class selector_random_num10000
+class selector_random_NUM10000
     extends ItmArray<SctItm>
     implements ISctItm_Selector
 {
@@ -205,7 +205,7 @@ class selector_random_num10000
     constructor()
     {
         super();
-        this.itm_key = "@num10000@";
+        this.itm_key = "@NUM10000@";
         this.itm_key2 = "";
         this.pic_key = "";
     }
@@ -214,7 +214,7 @@ class selector_random_num10000
     }
     Copy() : ISctItm_Selector
     {
-        let result = new selector_random_num10000();
+        let result = new selector_random_NUM10000();
         result.Paste(this.itms);
         return result;
     }
@@ -798,7 +798,9 @@ class selector_comment extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@YESNO@ッ！ @L_WHAT@が@KEI@@NICK@@END02A@ッ！')
             ,
-            new SctItm('@L_WHAT@の@NICK@！ @L_WHAT@の@NICK@！ @L_WHAT@の@NICK@！ @L_WHAT@の@NICK@！ ')
+            new SctItm('@NICKBAD@ッ！ @NICKBAD@ッ！ @L_WHAT@の@NICKBAD@ッ！')
+            ,
+            new SctItm('@L_WHAT@の@NICKBAD@！ @L_WHAT@の@NICKBAD@！ @L_WHAT@の@NICKBAD@！ @L_WHAT@の@NICKBAD@！ ')
             // ,
             // new SctItm('@L_WHAT@は@NICK@？ @COMMENT@')
             // ,
@@ -1976,6 +1978,46 @@ class selector_place extends SctItm_Selector implements ISctItm_Selector {
         this.Add(cods_to_itms(cods_place));
     }
 }
+class selector_city extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@CITY@');
+        this.startNumber = 1;
+        this.Add(itms_city);
+    }
+}
+
+class selector_scool extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@SCOOL@');
+        this.startNumber = 1;
+        this.itms = [
+            new SctItm('@CITY@@SCOOL01@')
+            ,
+            new SctItm('@CITY@@DIR@@SCOOL01@')
+            ,
+            new SctItm('@CITY@中央@SCOOL01@')
+            ,
+            new SctItm('@CITY@第@NUM10@@SCOOL01@')
+            ,
+            new SctItm('@COUNTRY@@SCOOL01@')
+            ,
+            new SctItm('@COUNTRY@@DIR@@SCOOL01@')
+            ,
+            new SctItm('@COUNTRY@中央@SCOOL01@')
+            ,
+            new SctItm('@COUNTRY@第@NUM10@@SCOOL01@')
+        ];
+    }
+}
+
+
+class selector_scool01 extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@SCOOL01@');
+        this.startNumber = 1;
+        this.Add(itms_scool);
+    }
+}
 
 class selector_landmark extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
@@ -2058,7 +2100,7 @@ class selector_nickname extends SctItm_Selector implements ISctItm_Selector {
         this.Add(itms_nickNomal);
         this.Add(itms_meal);
         this.Add(itms_sweets);
-        this.Add(cods_rubyKana_to_itms(cods_fruit.slice(1)));
+        this.Add(cods_fruit.slice(1));
     }
 }
 // 敬称 の～
@@ -2926,6 +2968,8 @@ class selector_doing extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@ANIMAL@に襲われて')
             ,
             new SctItm('@ANIMAL@の絵を描いて')
+            ,
+            new SctItm('@SCOOL@に通って')
         ];
     }
 }
@@ -2965,7 +3009,8 @@ class news_docs_maker extends docs_maker {
         
         this.dic_push(new selector_random_date());
         this.dic_push(new selector_random_year());
-        this.dic_push(new selector_random_num10000());
+        this.dic_push(new selector_random_NUM10());
+        this.dic_push(new selector_random_NUM10000());
         this.dic_push(new locker_what());
         this.dic_push(new locker_do());
         this.dic_push(new selector_what());
@@ -2990,6 +3035,8 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_meal());
         this.dic_push(new selector_food1());
         this.dic_push(new selector_food());
+        this.dic_push(new selector_scool());
+        this.dic_push(new selector_scool01());
         
         this.dic_push(new selector_music());
         this.dic_push(new selector_tech());
@@ -3011,6 +3058,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_when());
         this.dic_push(new selector_future());
         this.dic_push(new selector_place());
+        this.dic_push(new selector_city());
         this.dic_push(new selector_co());
         this.dic_push(new selector_human());
         this.dic_push(new selector_body());

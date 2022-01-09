@@ -3672,19 +3672,18 @@ const itms_nickNega = [
     // nega
     //
     new SctItm('犬'),
-    new SctItm('死神'),
     new SctItm('死霊'),
     new SctItm('幽霊'),
     new SctItm('病人'),
     new SctItm('怪我人'),
     new SctItm('骸'),
     new SctItm('髑髏'),
+    new SctItm('骸骨'),
     new SctItm('悪魔'),
     new SctItm('小悪魔'),
     new SctItm('堕天使'),
     new SctItm('魔女'),
     new SctItm('魔王'),
-    new SctItm('世紀末覇者'),
     new SctItm('罰当たり'),
     new SctItm('蜥蜴'),
     new SctItm('害虫'),
@@ -3694,6 +3693,8 @@ const itms_nickNega = [
     new SctItm('冷血漢'),
     new SctItm('奴隷'),
     new SctItm('疫病神'),
+    new SctItm('貧乏神'),
+    new SctItm('死神'),
     new SctItm('梅毒'),
     new SctItm('淋病'),
     new SctItm('疫病'),
@@ -3713,6 +3714,7 @@ const itms_nickNega = [
     new SctItm('無駄骨'),
     new SctItm('穀潰し'),
     new SctItm('蝿'),
+    new SctItm('虫ケラ'),
     new SctItm('コソ泥'),
     new SctItm('ガン細胞'),
     new SctItm('紙屑'),
@@ -3788,6 +3790,7 @@ const itms_nickPosi = [
     new SctItm('夢'),
     new SctItm('赤い彗星'),
     new SctItm('白い悪魔'),
+    new SctItm('世紀末覇者'),
     new SctItm('星'),
     new SctItm('希望'),
     new SctItm('鉄人'),
@@ -3802,6 +3805,7 @@ const itms_nickPosi = [
     new SctItm('馬車馬'),
     new SctItm('重戦車'),
     new SctItm('航空母艦'),
+    new SctItm('宇宙戦艦'),
     new SctItm('巨砲'),
     new SctItm('妖精'),
     new SctItm('天使'),
@@ -3834,10 +3838,7 @@ const itms_nickPosi = [
     new SctItm('王女様'),
     new SctItm('お姫様'),
     new SctItm('お殿様'),
-    new SctItm('大統領'),
-    new SctItm('酋長'),
-    new SctItm('酋長'),
-    new SctItm('酋長')
+    new SctItm('大統領')
 ];
 const itms_nickNomal = [
     //
@@ -3966,6 +3967,12 @@ const itms_music = [
     new SctItm('演歌'),
     new SctItm('ヨーデル'),
     new SctItm('@COUNTRY@民謡')
+];
+const itms_scool = [
+    new SctItm('小学校'),
+    new SctItm('中学校'),
+    new SctItm('高校'),
+    new SctItm('大学')
 ];
 const itms_season = [
     new SctItm('春'),
