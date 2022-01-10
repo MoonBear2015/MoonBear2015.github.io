@@ -217,7 +217,7 @@ class First_game extends SctItm_FirstLocker2 {
             new SctItm('昨日の勝敗に@THINK@は禁物'),
             new SctItm('@CLASS@との勝負は避けて'),
             new SctItm('@THEY@を味方に付ければ'),
-            new SctItm('ラッキーナンバー　@num10000@')
+            new SctItm('ラッキーナンバー　@NUM10000@')
         ];
     }
 }

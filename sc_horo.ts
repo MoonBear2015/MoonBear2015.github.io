@@ -307,7 +307,7 @@ class First_game extends SctItm_FirstLocker2 implements ISctItm_Selector{
             ,
             new SctItm('@THEY@を味方に付ければ')
             ,
-            new SctItm('ラッキーナンバー　@num10000@')
+            new SctItm('ラッキーナンバー　@NUM10000@')
         ]
     }
 }
