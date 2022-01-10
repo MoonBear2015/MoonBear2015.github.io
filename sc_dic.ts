@@ -2165,6 +2165,8 @@ const   cods_place = [
     new SctCod_TI('ビーチ','PLACE/beach.jpg')
     ,
     new SctCod_TI('スキー|場|じょう|','PLACE/ski.jpg')
+    ,
+    new SctCod_TI('|刑務所|けいむしょ|','PLACE/Jail.jpg')
 ];
 
 
@@ -5222,7 +5224,15 @@ const   itms_city = [
     ,
     new SctItm('香港','CITY/hongkong.jpg')
     ,
+    new SctItm('北京','CITY/peking.jpg')
+    ,
+    new SctItm('上海','CITY/shanghigh.jpg')
+    ,
     new SctItm('ニューヨーク','CITY/newyork.jpg')
+    ,
+    new SctItm('ワシントン','CITY/washington.jpg')
+    ,
+    new SctItm('ハリウッド','CITY/hollywood.jpg')
     ,
     new SctItm('パリ','CITY/Paris.jpg')
     ,
@@ -5232,7 +5242,13 @@ const   itms_city = [
     ,
     new SctItm('ラスベガス','CITY/LasVegas.jpg')
     ,
+    new SctItm('テキサス','CITY/texas.jpg')
+    ,
     new SctItm('江戸','CITY/Edo.jpg')
+    ,
+    new SctItm('ローマ','CITY/rome.jpg')
+    ,
+    new SctItm('ウィーン','CITY/Vienna.jpg')
 ];
 
 
@@ -6324,6 +6340,10 @@ const   itms_music = [
 
 
 const   itms_scool = [
+    new SctItm('幼稚園')
+    ,
+    new SctItm('保育園')
+    ,
     new SctItm('小学校')
     ,
     new SctItm('中学校')
@@ -6331,6 +6351,25 @@ const   itms_scool = [
     new SctItm('高校')
     ,
     new SctItm('大学')
+    ,
+    new SctItm('短期大学')
+    ,
+    new SctItm('夜間学校')
+    ,
+    new SctItm('@CLASS@専門学校')
+    ,
+    new SctItm('@CLASS@養成学校')
+]
+const   itms_scoolas = [
+    new SctItm('入学')
+    ,
+    new SctItm('合格')
+    ,
+    new SctItm('在籍')
+    ,
+    new SctItm('卒業')
+    ,
+    new SctItm('中退')
 ]
 
 const   itms_season = [

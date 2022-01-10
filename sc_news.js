@@ -405,8 +405,8 @@ class selector_who3 extends SctItm_Selector {
             new SctItm('@COUNTRY@出身の'),
             new SctItm('@COUNTRY@在住の'),
             new SctItm('@COUNTRY@唯一の'),
-            new SctItm('@COUNTRY@大学出身の'),
-            new SctItm('@COUNTRY@大学を中退した'),
+            new SctItm('@SCOOL@出身の'),
+            new SctItm('@SCOOL@を中退した'),
             new SctItm('@COUNTRY@政府から派遣された'),
             new SctItm('「@CALL2@」と呼ばれている'),
             new SctItm('@MANYPEOPLE@より@ASSES@'),
@@ -1294,7 +1294,6 @@ class selector_city extends SctItm_Selector {
 class selector_scool extends SctItm_Selector {
     constructor() {
         super('@SCOOL@');
-        this.startNumber = 1;
         this.itms = [
             new SctItm('@CITY@@SCOOL01@'),
             new SctItm('@CITY@@DIR@@SCOOL01@'),
@@ -1310,8 +1309,13 @@ class selector_scool extends SctItm_Selector {
 class selector_scool01 extends SctItm_Selector {
     constructor() {
         super('@SCOOL01@');
-        this.startNumber = 1;
         this.Add(itms_scool);
+    }
+}
+class selector_scoolas extends SctItm_Selector {
+    constructor() {
+        super('@SCOOLAS@');
+        this.Add(itms_scoolas);
     }
 }
 class selector_landmark extends SctItm_Selector {
@@ -1921,7 +1925,11 @@ class selector_doing extends SctItm_Selector {
             new SctItm('@ANIMAL@狩りをして'),
             new SctItm('@ANIMAL@に襲われて'),
             new SctItm('@ANIMAL@の絵を描いて'),
-            new SctItm('@SCOOL@に通って')
+            new SctItm('@SCOOL@に通って'),
+            new SctItm('@SCOOL@に入学して'),
+            new SctItm('@SCOOL@に合格して'),
+            new SctItm('@SCOOL@を卒業して'),
+            new SctItm('@SCOOL@を中退して')
         ];
     }
 }
@@ -1981,6 +1989,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_food());
         this.dic_push(new selector_scool());
         this.dic_push(new selector_scool01());
+        this.dic_push(new selector_scoolas());
         this.dic_push(new selector_music());
         this.dic_push(new selector_tech());
         this.dic_push(new selector_animal());
