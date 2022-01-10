@@ -3983,15 +3983,17 @@ const itms_scool = [
     new SctItm('中学校'),
     new SctItm('高校'),
     new SctItm('大学'),
+    new SctItm('学習院'),
+    new SctItm('学習院大学'),
+    new SctItm('女子大学'),
+    new SctItm('女学校'),
     new SctItm('短期大学'),
     new SctItm('夜間学校'),
     new SctItm('@CLASS@専門学校'),
     new SctItm('@CLASS@養成学校')
 ];
 const itms_scoolas = [
-    new SctItm('入学'),
-    new SctItm('合格'),
-    new SctItm('在籍'),
+    new SctItm('在学中'),
     new SctItm('卒業'),
     new SctItm('中退')
 ];

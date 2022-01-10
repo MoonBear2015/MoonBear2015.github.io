@@ -1296,11 +1296,11 @@ class selector_scool extends SctItm_Selector {
         super('@SCOOL@');
         this.itms = [
             new SctItm('@CITY@@SCOOL01@'),
-            new SctItm('@CITY@@DIR@@SCOOL01@'),
+            new SctItm('@CITY@@SCOOL01@'),
             new SctItm('@CITY@中央@SCOOL01@'),
             new SctItm('@CITY@第@NUM10@@SCOOL01@'),
             new SctItm('@COUNTRY@@SCOOL01@'),
-            new SctItm('@COUNTRY@@DIR@@SCOOL01@'),
+            new SctItm('@COUNTRY@@SCOOL01@'),
             new SctItm('@COUNTRY@中央@SCOOL01@'),
             new SctItm('@COUNTRY@第@NUM10@@SCOOL01@')
         ];
