@@ -1297,10 +1297,19 @@ class selector_scool extends SctItm_Selector {
         this.itms = [
             new SctItm('@CITY@@SCOOL01@'),
             new SctItm('@CITY@私立@SCOOL01@'),
-            new SctItm('@CITY@中央@SCOOL01@'),
+            new SctItm('@CITY@公立@SCOOL01@'),
+            new SctItm('@CITY@市立@SCOOL01@'),
+            new SctItm('@CITY@私立第@NUM10@@SCOOL01@'),
+            new SctItm('@CITY@公立第@NUM10@@SCOOL01@'),
+            new SctItm('@CITY@市立第@NUM10@@SCOOL01@'),
             new SctItm('@CITY@第@NUM10@@SCOOL01@'),
             new SctItm('@COUNTRY@@SCOOL01@'),
+            new SctItm('@COUNTRY@私立@SCOOL01@'),
+            new SctItm('@COUNTRY@公立@SCOOL01@'),
             new SctItm('@COUNTRY@国立@SCOOL01@'),
+            new SctItm('@COUNTRY@私立第@NUM10@@SCOOL01@'),
+            new SctItm('@COUNTRY@公立第@NUM10@@SCOOL01@'),
+            new SctItm('@COUNTRY@国立第@NUM10@@SCOOL01@'),
             new SctItm('@COUNTRY@第@NUM10@@SCOOL01@')
         ];
     }
