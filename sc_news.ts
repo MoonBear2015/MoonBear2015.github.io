@@ -1992,7 +1992,7 @@ class selector_scool extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('@CITY@@SCOOL01@')
             ,
-            new SctItm('@CITY@@SCOOL01@')
+            new SctItm('@CITY@私立@SCOOL01@')
             ,
             new SctItm('@CITY@中央@SCOOL01@')
             ,
@@ -2000,9 +2000,7 @@ class selector_scool extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@COUNTRY@@SCOOL01@')
             ,
-            new SctItm('@COUNTRY@@SCOOL01@')
-            ,
-            new SctItm('@COUNTRY@中央@SCOOL01@')
+            new SctItm('@COUNTRY@国立@SCOOL01@')
             ,
             new SctItm('@COUNTRY@第@NUM10@@SCOOL01@')
         ];
