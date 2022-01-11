@@ -3988,12 +3988,14 @@ const itms_scool = [
     new SctItm('短期大学'),
     new SctItm('夜間学校'),
     new SctItm('@CLASS@専門学校'),
-    new SctItm('@CLASS@養成学校')
+    new SctItm('@CLASS@養成所')
 ];
 const itms_scoolas = [
     new SctItm('在学中'),
+    new SctItm('休学中'),
     new SctItm('卒業'),
-    new SctItm('中退')
+    new SctItm('中退'),
+    new SctItm('落第')
 ];
 const itms_season = [
     new SctItm('春'),
