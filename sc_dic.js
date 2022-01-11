@@ -3983,8 +3983,6 @@ const itms_scool = [
     new SctItm('中学校'),
     new SctItm('高校'),
     new SctItm('大学'),
-    new SctItm('学習院'),
-    new SctItm('学習院大学'),
     new SctItm('女子大学'),
     new SctItm('女学校'),
     new SctItm('短期大学'),
