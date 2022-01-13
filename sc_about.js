@@ -42,8 +42,9 @@ function make_about() {
         html += '住所:@COUNTRY@在住<br>';
         html += '学歴:@SCOOL@ @SCOOLAS@<br>';
         html += '仕事:@CLASS@<br>';
-        html += '趣味:<bir>@HABIT@<br>';
-        html += '座右の銘:<bir>@INSCRIPTION@<br>';
+        html += '趣味:@HABIT@<br>';
+        html += '好物:@FOOD@<br>';
+        html += '座右の銘:@INSCRIPTION@<br>';
         html += '<br>';
         html += '</div>';
         html += '</div>';

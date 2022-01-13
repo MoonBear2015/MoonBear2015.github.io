@@ -6168,6 +6168,12 @@ const   itms_sweets = [
     ,
     new SctItm('ケーキ')
     ,
+    new SctItm('@FRUIT@のショートケーキ')
+    ,
+    new SctItm('チーズケーキ')
+    ,
+    new SctItm('ホットケーキ')
+    ,
     new SctItm('クッキー')
     ,
     new SctItm('ビスケット')
@@ -6180,7 +6186,9 @@ const   itms_sweets = [
     ,
     new SctItm('饅頭')
     ,
-    new SctItm('団子')
+    new SctItm('栗饅頭')
+    ,
+    new SctItm('みたらし団子')
     ,
     new SctItm('大福餅')
     ,
@@ -6190,6 +6198,8 @@ const   itms_sweets = [
     ,
     new SctItm('アイスクリーム')
     ,
+    new SctItm('@FRUIT@のアイスクリーム')
+    ,
     new SctItm('かき氷')
 ]
 const   itms_meal = [
@@ -6198,6 +6208,8 @@ const   itms_meal = [
     new SctItm('ラーメン')
     ,
     new SctItm('ハンバーガー')
+    ,
+    new SctItm('@ANIMAL@のハンバーガー')
     ,
     new SctItm('ホットドッグ')
     ,
@@ -6273,6 +6285,8 @@ const   itms_meal = [
     ,
     new SctItm('@FISH@の塩焼き')
     ,
+    new SctItm('@FISH@鍋')
+    ,
     new SctItm('@FISH@の味噌煮')
     ,
     new SctItm('@FISH@の刺身')
@@ -6283,9 +6297,13 @@ const   itms_meal = [
     ,
     new SctItm('@ANIMAL@の唐揚げ')
     ,
+    new SctItm('@ANIMAL@鍋')
+    ,
     new SctItm('@ANIMAL@のフライ')
     ,
     new SctItm('@ANIMAL@のステーキ')
+    ,
+    new SctItm('@ANIMAL@のシチュー')
     ,
     new SctItm('@ANIMAL@の丸焼き')
     ,

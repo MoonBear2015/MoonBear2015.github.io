@@ -1161,8 +1161,8 @@ class selector_they extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('@CLASS@')
             ,
-            new SctItm('人々')
-            ,
+            // new SctItm('人々')
+            // ,
             new SctItm('一般大衆')
             ,
             new SctItm('有識者達')
@@ -2087,9 +2087,17 @@ class selector_food extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@COUNTRY@産@FOOD01@')
             ,
+            new SctItm('@COUNTRY@風@FOOD01@')
+            ,
             new SctItm('@ITEM@っぽい@FOOD01@')
             ,
             new SctItm('@PART@が作った@FOOD01@')
+            ,
+            new SctItm('@CLASS@の手作り@FOOD01@')
+            ,
+            new SctItm('@CLASS@のお薦め@FOOD01@')
+            ,
+            new SctItm('@THEY@で人気の@FOOD01@')
         ];
     }
 }
@@ -2961,7 +2969,7 @@ class selector_doing extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@PART@をデートに誘って')
             ,
-            new SctItm('@PART@に告白して')
+            new SctItm('@PART@に手紙を書いて')
             ,
             new SctItm('@PART@とお散歩して')
             ,

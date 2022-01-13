@@ -9,7 +9,7 @@ function set_horo()
     html += '<h1>';
     html += 'Horoscope';
     html += '<small>';
-    html += ' H00.55';
+    html += ' H00.57';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -271,6 +271,8 @@ class First_travel extends SctItm_FirstLocker2 implements ISctItm_Selector{
             new SctItm('@LANDMARK@巡りの季節になりました')
             ,
             new SctItm('@DIR@への旅路は要注意')
+            ,
+            new SctItm('@SWEETS@をお土産にどうぞ')
         ]
     }
 }
