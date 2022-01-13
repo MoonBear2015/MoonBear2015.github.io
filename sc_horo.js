@@ -7,7 +7,7 @@ function set_horo() {
     html += '<h1>';
     html += 'Horoscope';
     html += '<small>';
-    html += ' H00.57';
+    html += ' H00.58';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -130,7 +130,9 @@ class Fix_items extends SctItm_FixSeq {
             new SctItm('@I_SWEETS@'),
             new SctItm('@I_FOOD@'),
             new SctItm('@I_MUSIC@'),
-            new SctItm('@I_SPORTS@')
+            new SctItm('@I_SPORTS@'),
+            new SctItm('@I_ANIMAL@'),
+            new SctItm('@I_FLOWER@')
         ];
     }
 }
@@ -265,6 +267,28 @@ class First_sports extends SctItm_FirstLocker2 {
             new SctItm('@SPORTS@で良い汗を流そう'),
             new SctItm('@SPORTS@のシーズン到来です'),
             new SctItm('お薦めスポーツ：@SPORTS@・@SPORTS@・@SPORTS@')
+        ];
+    }
+}
+class First_animal extends SctItm_FirstLocker2 {
+    constructor() {
+        super('@I_ANIMAL@', '', '@ICON_HOROITEM@');
+        this.itms = [
+            new SctItm('動物', 'HORO/animal.png', 'Animal'),
+            new SctItm('お薦めペット @ANIMAL@・@ANIMAL@・@ANIMAL@'),
+            new SctItm('@ANIMAL@を飼ってみませんか'),
+            new SctItm('@ANIMAL@に要注意'),
+            new SctItm('@ANIMAL@嫌いを克服しよう'),
+            new SctItm('@ANIMAL@を見たらすぐ逃げて')
+        ];
+    }
+}
+class First_flower extends SctItm_FirstLocker2 {
+    constructor() {
+        super('@I_FLOWER@', '', '@ICON_HOROITEM@');
+        this.itms = [
+            new SctItm('花々', 'HORO/flower2.png', 'Animal'),
+            new SctItm('ラッキーフラワー：@FLOWER@・@FLOWER@・@FLOWER@')
         ];
     }
 }
@@ -450,5 +474,7 @@ class horo_docs_maker_items extends news_docs_maker {
         this.dic_push(new First_food());
         this.dic_push(new First_music());
         this.dic_push(new First_sports());
+        this.dic_push(new First_animal());
+        this.dic_push(new First_flower());
     }
 }

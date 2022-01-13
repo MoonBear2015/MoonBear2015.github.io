@@ -1264,6 +1264,15 @@ class selector_animal extends SctItm_Selector {
         this.Add(cods_bird_winter.slice(1));
     }
 }
+class selector_flower extends SctItm_Selector {
+    constructor() {
+        super('@FLOWER@');
+        this.Add(cods_flower_spring.slice(1));
+        this.Add(cods_flower_summer.slice(1));
+        this.Add(cods_flower_autumn.slice(1));
+        this.Add(cods_flower_winter.slice(1));
+    }
+}
 class selector_sports extends SctItm_Selector {
     constructor() {
         super('@SPORTS@');
@@ -1945,11 +1954,17 @@ class selector_doing extends SctItm_Selector {
             new SctItm('@ANIMAL@に襲われて'),
             new SctItm('@ANIMAL@と戦って'),
             new SctItm('@ANIMAL@の絵を描いて'),
+            new SctItm('@ANIMAL@のコートを着て'),
             new SctItm('@SCOOL@に通って'),
             new SctItm('@SCOOL@に入学して'),
             new SctItm('@SCOOL@に合格して'),
             new SctItm('@SCOOL@を卒業して'),
-            new SctItm('@SCOOL@を中退して')
+            new SctItm('@SCOOL@を中退して'),
+            new SctItm('@FLOWER@の花を捧げて'),
+            new SctItm('@FLOWER@の花を咲かせて'),
+            new SctItm('@FLOWER@の花を飾って'),
+            new SctItm('@FLOWER@の花を散らして'),
+            new SctItm('@FRUIT@の皮を剥いて')
         ];
     }
 }
@@ -2013,6 +2028,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_music());
         this.dic_push(new selector_tech());
         this.dic_push(new selector_animal());
+        this.dic_push(new selector_flower());
         this.dic_push(new selector_sports());
         this.dic_push(new selector_km());
         this.dic_push(new selector_k());
