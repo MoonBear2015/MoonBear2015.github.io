@@ -3044,7 +3044,13 @@ class selector_doing extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@FLOWER@の花を散らして')
             ,
+            new SctItm('@FLOWER@の花びらを蒔いて')
+            ,
+            new SctItm('@FLOWER@の種を蒔いて')
+            ,
             new SctItm('@FRUIT@の皮を剥いて')
+            ,
+            new SctItm('@FRUIT@の種を捨てて')
         ];
     }
 }
