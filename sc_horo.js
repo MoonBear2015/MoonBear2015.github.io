@@ -7,7 +7,7 @@ function set_horo() {
     html += '<h1>';
     html += 'Horoscope';
     html += '<small>';
-    html += ' H00.58';
+    html += ' H00.59';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -275,7 +275,7 @@ class First_animal extends SctItm_FirstLocker2 {
         super('@I_ANIMAL@', '', '@ICON_HOROITEM@');
         this.itms = [
             new SctItm('動物', 'HORO/animal.png', 'Animal'),
-            new SctItm('お薦めペット @ANIMAL@・@ANIMAL@・@ANIMAL@'),
+            new SctItm('お薦めペット：@ANIMAL@・@ANIMAL@・@ANIMAL@'),
             new SctItm('@ANIMAL@を飼ってみませんか'),
             new SctItm('@ANIMAL@に要注意'),
             new SctItm('@ANIMAL@嫌いを克服しよう'),
