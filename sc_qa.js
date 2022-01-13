@@ -7,7 +7,7 @@ function set_qa() {
     html += '<h1>';
     html += 'Q&A';
     html += '<small>';
-    html += ' Q01.10';
+    html += ' Q01.11';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -402,7 +402,7 @@ class selector_a_title extends SctItm_Selector {
             new SctItm('良かったですね、@QUESTER@さん'),
             new SctItm('仕方が無いですよ、@QUESTER@さん'),
             new SctItm('仕方が無いですよ、@QUESTER@さん'),
-            new SctItm('@KEI@なことを云ってはいけませんよ、@QUESTER@さん')
+            new SctItm('@KEI@ことを云ってはいけませんよ、@QUESTER@さん')
             // ,
             // new SctItm('@QUESTER@さん、お薬の時間ですよ')
             ,
