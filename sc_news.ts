@@ -623,6 +623,8 @@ class selector_who3 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@FLOWER@の香りが漂う')
             ,
+            new SctItm('@FRUIT@の香りが漂う')
+            ,
             new SctItm('@FOOD@の匂いがする')
             ,
             new SctItm('@DOING@ばかりいる')
