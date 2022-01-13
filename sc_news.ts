@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N02.65';
+    html += ' N02.67';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -1947,7 +1947,12 @@ class selector_country extends SctItm_Selector implements ISctItm_Selector {
 class selector_animal extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@ANIMAL@');
-        this.Add(itms_animal);
+        this.Add(cods_animal.slice(1));
+        this.Add(cods_bird.slice(1));
+        this.Add(cods_bird_spring.slice(1));
+        this.Add(cods_bird_summer.slice(1));
+        this.Add(cods_bird_autumn.slice(1));
+        this.Add(cods_bird_winter.slice(1));
     }
 }
 class selector_sports extends SctItm_Selector implements ISctItm_Selector {
@@ -2961,6 +2966,8 @@ class selector_doing extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@PEOPLE@から誘われて')
             ,
+            new SctItm('@PEOPLE@の振りをして')
+            ,
             new SctItm('「@CALL@」と呼ばれて')
             ,
             new SctItm('@PART@を連れて')
@@ -2994,6 +3001,8 @@ class selector_doing extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@ANIMAL@狩りをして')
             ,
             new SctItm('@ANIMAL@に襲われて')
+            ,
+            new SctItm('@ANIMAL@と戦って')
             ,
             new SctItm('@ANIMAL@の絵を描いて')
             ,
