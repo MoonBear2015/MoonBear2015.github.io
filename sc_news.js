@@ -413,7 +413,7 @@ class selector_who3 extends SctItm_Selector {
             new SctItm('@NICK@そっくりの'),
             new SctItm('@NICK@のような@BODY@をした'),
             new SctItm('@ANIMAL@の@BODY@を持つ'),
-            new SctItm('@FRUIT@の香りが漂う'),
+            new SctItm('@FLOWER@の香りが漂う'),
             new SctItm('@FOOD@の匂いがする'),
             new SctItm('@DOING@ばかりいる'),
             new SctItm('@DOING@いる'),
