@@ -6471,6 +6471,8 @@ const   itms_horo_star = [
     ,
     new SctItm('ROSE','HORO/rose.png','薔薇')
     ,
+    new SctItm('FLOWER VASE','HORO/flowervase.png','花瓶')
+    ,
     new SctItm('HOUSE','HORO/house.png','家')
     ,
     new SctItm('UNCLE','HORO/uncle.png','叔父')

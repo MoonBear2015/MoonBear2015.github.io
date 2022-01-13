@@ -4091,6 +4091,7 @@ const itms_horo_star = [
     new SctItm('CUPID', 'HORO/cupid.png', '天使'),
     new SctItm('SUNFLOWER', 'HORO/sunflower.png', '向日葵'),
     new SctItm('ROSE', 'HORO/rose.png', '薔薇'),
+    new SctItm('FLOWER VASE', 'HORO/flowervase.png', '花瓶'),
     new SctItm('HOUSE', 'HORO/house.png', '家'),
     new SctItm('UNCLE', 'HORO/uncle.png', '叔父'),
     new SctItm('MONA LISA', 'HORO/mona.png', 'モナリ'),

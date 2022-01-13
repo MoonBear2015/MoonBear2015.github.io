@@ -9,7 +9,7 @@ function set_horo()
     html += '<h1>';
     html += 'Horoscope';
     html += '<small>';
-    html += ' H00.59';
+    html += ' H00.60';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -402,7 +402,7 @@ class First_flower extends SctItm_FirstLocker2 implements ISctItm_Selector{
     constructor(){
         super('@I_FLOWER@','','@ICON_HOROITEM@');
         this.itms = [
-            new SctItm('花々','HORO/flower2.png','Animal')
+            new SctItm('花々','HORO/flower.png','Animal')
             ,
             new SctItm('ラッキーフラワー：@FLOWER@・@FLOWER@・@FLOWER@')
         ]
