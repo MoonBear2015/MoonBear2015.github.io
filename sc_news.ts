@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N02.69';
+    html += ' N02.70';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -2943,10 +2943,40 @@ class selector_and01 extends SctItm_Selector implements ISctItm_Selector {
     }
 }
 
-// 行動 （食べて）いる　（食べて）いた
 class selector_doing extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@DOING@');
+        this.itms = [
+            new SctItm('@DOING01@')
+            ,
+            new SctItm('@DOING01@')
+            ,
+            new SctItm('@PLACE@で@DOING02@')
+        ];
+    }
+}
+class selector_doing01 extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@DOING01@');
+        this.itms = [
+            new SctItm('@DOING02@')
+            ,
+            new SctItm('@PEOPLE@と一緒に@DOING02@')
+            ,
+            new SctItm('一人で@DOING02@')
+            ,
+            new SctItm('独りぼっちで@DOING02@')
+        ];
+    }
+}
+
+
+
+
+// 行動 （食べて）いる　（食べて）いた
+class selector_doing02 extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@DOING02@');
         this.itms = [
             new SctItm('@FOOD@を食べて')
             ,
@@ -2964,15 +2994,13 @@ class selector_doing extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@CLASS@を首にして')
             ,
-            new SctItm('@PEOPLE@と遊んで')
-            ,
-            new SctItm('@PEOPLE@と話して')
+            new SctItm('遊んで')
             ,
             new SctItm('@PLACE@で眠って')
             ,
             new SctItm('@PLACE@で遊んで')
             ,
-            new SctItm('@PEOPLE@と@LANDMARK@を歩いて')
+            new SctItm('@LANDMARK@を歩いて')
             ,
             new SctItm('@MANYPEOPLE@に追われて')
             ,
@@ -3000,17 +3028,17 @@ class selector_doing extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@PART@を連れて')
             ,
-            new SctItm('@PART@とデートして')
+            new SctItm('デートして')
             ,
             new SctItm('@PART@をデートに誘って')
             ,
             new SctItm('@PART@に手紙を書いて')
             ,
-            new SctItm('@PART@とお散歩して')
+            new SctItm('お散歩して')
             ,
             new SctItm('@PART@にプロポーズして')
             ,
-            new SctItm('@PART@と食事して')
+            new SctItm('食事して')
             ,
             new SctItm('@PART@に別れ話をして')
             ,
@@ -3195,5 +3223,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_emotion01());
         this.dic_push(new selector_emofront());
         this.dic_push(new selector_doing());
+        this.dic_push(new selector_doing01());
+        this.dic_push(new selector_doing02());
     }
 }
