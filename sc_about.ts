@@ -202,10 +202,10 @@ class selector_item extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@NICK@')
             ,
             new SctItm('@WHAT@')
-            ,
-            new SctItm('@THINK@')
-            ,
-            new SctItm('@DO@')
+            // ,
+            // new SctItm('@THINK@')
+            // ,
+            // new SctItm('@DO@')
             ,
             new SctItm('@HABIT@')
             ,

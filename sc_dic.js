@@ -4121,5 +4121,8 @@ const itms_horo_star = [
     new SctItm('CLOWN', 'HORO/clown.png', 'ピエロ'),
     new SctItm('KING', 'HORO/king.png', '王'),
     new SctItm('BUDDA', 'HORO/budda.png', '大仏'),
-    new SctItm('GYOUZA', 'HORO/gyouza.png', 'ギョウ')
+    new SctItm('GYOUZA', 'HORO/gyouza.png', 'ギョウ'),
+    new SctItm('SCISSORS', 'HORO/Scissors.png', '鋏'),
+    new SctItm('ASTRONAUT', 'HORO/astronaut.png', '宇宙飛行士'),
+    new SctItm('NEWTON', 'HORO/newton.png', 'ニュートン')
 ];

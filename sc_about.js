@@ -146,9 +146,12 @@ class selector_item extends SctItm_Selector {
             new SctItm('@THEY@'),
             new SctItm('@PART@'),
             new SctItm('@NICK@'),
-            new SctItm('@WHAT@'),
-            new SctItm('@THINK@'),
-            new SctItm('@DO@'),
+            new SctItm('@WHAT@')
+            // ,
+            // new SctItm('@THINK@')
+            // ,
+            // new SctItm('@DO@')
+            ,
             new SctItm('@HABIT@'),
             new SctItm('@COUNTRY@'),
             new SctItm('@COUNTRY@人')
