@@ -538,7 +538,8 @@ const cods_animal = [
     new SctCod_TI('|蝙蝠|こうもり|'),
     new SctCod_TI('|犀|さい|'),
     new SctCod_TI('|栄螺|さざえ|'),
-    new SctCod_TI('|真田虫|さなだむし|'),
+    // new SctCod_TI('|真田虫|さなだむし|')
+    // ,
     new SctCod_TI('|珊瑚|さんご|'),
     new SctCod_TI('|山椒魚|さんしょううお|'),
     new SctCod_TI('|獅子|しし|'),
@@ -4021,18 +4022,31 @@ const itms_meal = [
     new SctItm('日の丸弁当')
 ];
 const itms_music = [
+    new SctItm('アニメソング'),
+    new SctItm('演歌'),
+    new SctItm('オペラ'),
+    new SctItm('カントリーミュージック'),
     new SctItm('クラシック'),
+    new SctItm('クリスマスソング'),
+    new SctItm('軍歌'),
+    new SctItm('ゲームミュージック'),
+    new SctItm('ケルト音楽'),
+    new SctItm('ゴスペル'),
+    new SctItm('ケルト音楽'),
+    new SctItm('サンバ'),
+    new SctItm('シャンソン'),
     new SctItm('ジャズ'),
-    new SctItm('ロック'),
+    new SctItm('ダンスミュージック'),
     new SctItm('ハードロック'),
+    new SctItm('ヒップホップ'),
+    new SctItm('フォークソング'),
     new SctItm('ヘヴィメタル'),
     new SctItm('パンク'),
     new SctItm('ポップス'),
-    new SctItm('ヒップホップ'),
-    new SctItm('レゲェ'),
-    new SctItm('演歌'),
+    new SctItm('ユーロビート'),
     new SctItm('ヨーデル'),
-    new SctItm('@COUNTRY@民謡')
+    new SctItm('レゲェ'),
+    new SctItm('ロック')
 ];
 const itms_scool = [
     new SctItm('幼稚園'),

@@ -9,7 +9,7 @@ function set_poem() {
     html += '<h1>';
     html += 'POEM';
     html += '<small>';
-    html += ' P01.48';
+    html += ' P01.50';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -475,8 +475,8 @@ class Gene_sent extends Gene_Poemer {
         this.Add_cods(cods_move_light);
         this.Add_cods(cods_move_dark);
         this.Add_cods(cods_move_think);
-        this.Add_cods(cods_move_sense);
-        this.Add_cods(cods_move_make);
+        // this.Add_cods(cods_move_sense);
+        // this.Add_cods(cods_move_make);
         this.Add_cods(cods_ad_color);
         this.Add_cods(cods_ad_beauty);
         this.Add_cods(cods_ad_danger);
@@ -503,8 +503,8 @@ class Gene_move extends Gene_Poemer {
         this.Add_cods(cods_move_light);
         this.Add_cods(cods_move_dark);
         this.Add_cods(cods_move_think);
-        this.Add_cods(cods_move_sense);
-        this.Add_cods(cods_move_make);
+        // this.Add_cods(cods_move_sense);
+        // this.Add_cods(cods_move_make);
         this.Add_cods(cods_ad_color);
         this.Add_cods(cods_ad_beauty);
         this.Add_cods(cods_ad_danger);
