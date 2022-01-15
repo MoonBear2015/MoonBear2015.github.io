@@ -342,9 +342,7 @@ class selector_q_init extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('私には@CLASS@をしている@AGE2@の@L_PART@がいるのですが、@Q_SENT@')
             ,
-            new SctItm('つい昨日の話なのですが、@Q_SENT@')
-            ,
-            new SctItm('おとといの話なのですが、@Q_SENT@')
+            new SctItm('@TODAY@の話なのですが、@Q_SENT@')
 
         ]
     }

@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N02.70';
+    html += ' N02.71';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -697,6 +697,8 @@ class selector_c01 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@KEI@@MANYPEOPLE@による@KEI@@KEY@が@SIZE@@END01B@')
             ,
             new SctItm('@MANYPEOPLE@の@THINK@や@THINK@@SIZE2@@L_WHAT@@END01A@')
+            ,
+            new SctItm('@MANYPEOPLE@が@DOING@いる@L_WHAT@@END01A@')
         ];
     }
 }
@@ -711,8 +713,8 @@ class selector_end01a extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('では')
             ,
-            new SctItm('には')
-            ,
+            // new SctItm('には')
+            // ,
             new SctItm('で')
         ];
     }
@@ -742,6 +744,8 @@ class selector_c02 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@NEWS_C02@');
         this.itms = [
+            new SctItm('@MANYPEOPLE@が@DOING@いる')
+            ,
             new SctItm('@MANYPEOPLE@が@KEID@@L_DO@@END02B@')
             ,
             new SctItm('@MANYPEOPLE@が@KEI@@NICK@@END02A@')
@@ -870,7 +874,7 @@ class selector_comment2 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@L_WHAT@の@DOING@いた')
             ,
-            new SctItm('@PART@は@DOING@いた')
+            new SctItm('私の@PART@は@DOING@いた')
             ,
             new SctItm('私が@DOING@いるとき、@PART@が@DOING@いたのだ')
 
@@ -965,23 +969,23 @@ class selector_end02b extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('した')
             ,
-            new SctItm('されている')
-            ,
-            new SctItm('されていた')
-            ,
-            new SctItm('させている')
-            ,
-            new SctItm('させていた')
-            ,
+            // new SctItm('されている')
+            // ,
+            // new SctItm('されていた')
+            // ,
+            // new SctItm('させている')
+            // ,
+            // new SctItm('させていた')
+            // ,
             new SctItm('している')
             ,
             new SctItm('していた')
             ,
             new SctItm('してしまった')
-            ,
-            new SctItm('したかった')
-            ,
-            new SctItm('させたかった')
+            // ,
+            // new SctItm('したかった')
+            // ,
+            // new SctItm('させたかった')
         ];
     }
 }
@@ -2402,6 +2406,24 @@ class selector_emotion extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@EMO@');
         this.itms = [
+            new SctItm('@EMO1@くて生きていけな')
+            ,
+            new SctItm('@EMO1@くて明日をも知れな')
+            ,
+            new SctItm('@EMO1@くて訳が判らな')
+            ,
+            new SctItm('@EMO1@くて取り付く島もな')
+            ,
+            new SctItm('@EMO1@くていてもたってもいられな')
+            ,
+            new SctItm('@EMO1@くてどうしようもな')
+            ,
+            new SctItm('@EMO1@くて仕方が無')
+            ,
+            new SctItm('@EMO1@くてたまらな')
+            ,
+            new SctItm('@EMO1@くて申し訳な')
+            ,
             new SctItm('@EMO1@くて涙が止まらな')
             ,
             new SctItm('@EMO1@くて笑いが止まらな')
@@ -2449,10 +2471,6 @@ class selector_emotion01 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('苦し')
             ,
-            new SctItm('辛')
-            ,
-            new SctItm('怖')
-            ,
             new SctItm('恐ろし')
             ,
             new SctItm('寂し')
@@ -2462,6 +2480,10 @@ class selector_emotion01 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('恥ずかし')
             ,
             new SctItm('悔し')
+            ,
+            new SctItm('切な')
+            ,
+            new SctItm('腹立たし')
         ]
     }            
 }
@@ -2498,6 +2520,8 @@ class selector_answer extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('言い訳')
             ,
             new SctItm('世迷い言')
+            ,
+            new SctItm('迷信')
             ,
             new SctItm('予言')
             ,

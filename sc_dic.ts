@@ -2839,11 +2839,7 @@ const   cods_today = [
     ,
     new SctCod_It('|明後日|みょうごにち|')
     ,
-    new SctCod_It('|毎日|まいにち|')
-    ,
-    new SctCod_It('|連日|れんじつ|')
-    // ,
-    // new SctCod_It('|何時|いつ|')
+    new SctCod_It('|何時|いつ|')
 ];
 const   cods_when = [
     new SctCod_It('|時|とき|','time.jpg')
