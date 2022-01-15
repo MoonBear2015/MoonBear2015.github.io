@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N02.72';
+    html += ' N02.74';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -570,7 +570,7 @@ class selector_comment2 extends SctItm_Selector {
             new SctItm('@KEID@@L_DO@@END02B@@THEY@、@YESNO@、それが@L_WHAT@@END02A@'),
             new SctItm('@L_WHAT@の@CLASS@、それが@PEOPLE@の@PEOPLE@@END02A@'),
             new SctItm('@EMOFRONT@@EMO@@END02D@'),
-            new SctItm('@L_WHAT@の@DOING@いた'),
+            new SctItm('@L_WHAT@で@DOING@いた'),
             new SctItm('私の@PART@は@DOING@いた'),
             new SctItm('私が@DOING@いるとき、@PART@が@DOING@いたのだ')
         ];
