@@ -1979,8 +1979,8 @@ class selector_sports extends SctItm_Selector implements ISctItm_Selector {
 class selector_when extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@WHEN@');
-        this.Add(cods_to_itms(cods_when));
-        this.Add(cods_to_itms(cods_future));
+        this.Add(cods_to_itms(cods_when).slice(1));
+        // this.Add(cods_to_itms(cods_future));
     }
 }
 class selector_future extends SctItm_Selector implements ISctItm_Selector {
@@ -2949,7 +2949,7 @@ class selector_doing extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('@DOING01@')
             ,
-            new SctItm('@DOING01@')
+            new SctItm('今日も@DOING01@')
             ,
             new SctItm('@PLACE@で@DOING02@')
         ];
@@ -2989,10 +2989,6 @@ class selector_doing02 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@CLASS@に恋をして')
             ,
             new SctItm('@CLASS@を目指して')
-            ,
-            new SctItm('@CLASS@を雇って')
-            ,
-            new SctItm('@CLASS@を首にして')
             ,
             new SctItm('遊んで')
             ,

@@ -1582,6 +1582,21 @@ const cods_where = [
     new SctCod_It('あそこ'),
     new SctCod_It('どこ')
 ];
+const cods_date = [
+    new SctCod_It('|日々|ひび|', 'date.jpg'),
+    new SctCod_It('|今日|きょう|'),
+    new SctCod_It('|昨日|きのう|'),
+    new SctCod_It('|一昨日|おととい|'),
+    new SctCod_It('|一昨昨日|さきおととい|'),
+    new SctCod_It('|明日|あした|'),
+    new SctCod_It('|明日|あす|'),
+    new SctCod_It('|明後日|あさって|'),
+    new SctCod_It('|明後日|みょうごにち|'),
+    new SctCod_It('|毎日|まいにち|'),
+    new SctCod_It('|連日|れんじつ|')
+    // ,
+    // new SctCod_It('|何時|いつ|')
+];
 const cods_when = [
     new SctCod_It('|時|とき|', 'time.jpg'),
     new SctCod_It('|今|いま|'),

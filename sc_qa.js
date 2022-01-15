@@ -7,7 +7,7 @@ function set_qa() {
     html += '<h1>';
     html += 'Q&A';
     html += '<small>';
-    html += ' Q01.11';
+    html += ' Q01.12';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -199,7 +199,9 @@ class selector_q_title extends SctItm_Selector {
             new SctItm('@DOING@いる@L_PART@に@THINK@しています'),
             new SctItm('@DOING@いる@L_PART@を知りませんか'),
             new SctItm('@DOING@いる@L_PART@をなんとかして下さい'),
-            new SctItm('@L_PART@が@DOING@いるので困っています'),
+            new SctItm('@L_PART@が@DOING01@いるので困っています'),
+            new SctItm('@L_PART@と@DOING02@みたいのです'),
+            new SctItm('誰か@L_PART@と一緒に@DOING02@して頂けませんか'),
             new SctItm('@L_PART@に@THINK@しています'),
             new SctItm('@L_PART@が@L_HABIT@ばかりしています'),
             new SctItm('助けて！ @L_PART@がまるで@NICK@なんです'),
@@ -401,7 +403,6 @@ class selector_a_title extends SctItm_Selector {
             new SctItm('残念でしたね、@QUESTER@さん'),
             new SctItm('良かったですね、@QUESTER@さん'),
             new SctItm('仕方が無いですよ、@QUESTER@さん'),
-            new SctItm('仕方が無いですよ、@QUESTER@さん'),
             new SctItm('@KEI@ことを云ってはいけませんよ、@QUESTER@さん')
             // ,
             // new SctItm('@QUESTER@さん、お薬の時間ですよ')
@@ -409,8 +410,8 @@ class selector_a_title extends SctItm_Selector {
             new SctItm('@QUESTER@さん、もういい加減にして下さい'),
             new SctItm('@QUESTER@さん、もう来ないで下さい'),
             new SctItm('@QUESTER@さん、もう来ないで下さいといったはずです'),
-            new SctItm('@QUESTER@さん、@DOING@いる場合ではありません'),
-            new SctItm('@QUESTER@さんが@DOING@みては？')
+            new SctItm('@QUESTER@さん、@DOING01@いる場合ではありません'),
+            new SctItm('@QUESTER@さんが@DOING01@みては？')
         ];
     }
 }
