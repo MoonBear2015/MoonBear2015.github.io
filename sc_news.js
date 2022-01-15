@@ -1265,6 +1265,12 @@ class selector_animal extends SctItm_Selector {
         this.Add(cods_bird_winter.slice(1));
     }
 }
+class selector_livestock extends SctItm_Selector {
+    constructor() {
+        super('@LIVESTOCK@');
+        this.Add(itms_livestock);
+    }
+}
 class selector_flower extends SctItm_Selector {
     constructor() {
         super('@FLOWER@');
@@ -1408,6 +1414,12 @@ class selector_tech extends SctItm_Selector {
     constructor() {
         super('@TECH@');
         this.Add(itms_tech);
+    }
+}
+class selector_today extends SctItm_Selector {
+    constructor() {
+        super('@TODAY@');
+        this.Add(cods_to_itms(cods_today).slice(1));
     }
 }
 // 敬称 の～
@@ -1919,7 +1931,7 @@ class selector_doing extends SctItm_Selector {
         super('@DOING@');
         this.itms = [
             new SctItm('@DOING01@'),
-            new SctItm('今日も@DOING01@'),
+            new SctItm('@TODAY@も@DOING01@'),
             new SctItm('@PLACE@で@DOING02@')
         ];
     }
@@ -1931,7 +1943,8 @@ class selector_doing01 extends SctItm_Selector {
             new SctItm('@DOING02@'),
             new SctItm('@PEOPLE@と一緒に@DOING02@'),
             new SctItm('一人で@DOING02@'),
-            new SctItm('独りぼっちで@DOING02@')
+            new SctItm('独りぼっちで@DOING02@'),
+            new SctItm('@ANIMAL@を連れて@DOING02@')
         ];
     }
 }
@@ -2057,6 +2070,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_music());
         this.dic_push(new selector_tech());
         this.dic_push(new selector_animal());
+        this.dic_push(new selector_livestock());
         this.dic_push(new selector_flower());
         this.dic_push(new selector_sports());
         this.dic_push(new selector_km());
@@ -2073,6 +2087,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_who4());
         this.dic_push(new selector_when());
         this.dic_push(new selector_future());
+        this.dic_push(new selector_today());
         this.dic_push(new selector_place());
         this.dic_push(new selector_city());
         this.dic_push(new selector_co());

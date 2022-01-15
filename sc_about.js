@@ -7,7 +7,7 @@ function set_about() {
     html += '<h1>';
     html += 'ABOUT';
     html += '<small>';
-    html += ' A01.13';
+    html += ' A01.14';
     html += '</small>';
     html += '</h1>';
     html += '</div>';

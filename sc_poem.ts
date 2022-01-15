@@ -577,7 +577,7 @@ class Gene_tema30 extends Gene_Poemer {
 class Gene_tema31 extends Gene_Poemer {
     constructor(){
         super('@TM31','@PIC_TEMA@');
-        this.Add_cods(cods_date);
+        this.Add_cods(cods_today);
     }
 }
 

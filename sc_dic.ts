@@ -959,8 +959,8 @@ const   cods_animal = [
     ,
     new SctCod_TI('|鼬|いたち|')
     ,
-    new SctCod_TI('|一角|いっかく|')
-    ,
+    // new SctCod_TI('|一角|いっかく|')
+    // ,
     new SctCod_TI('|蝗|いなご|')
     ,
     new SctCod_TI('|井守|いもり|')
@@ -2820,7 +2820,7 @@ const   cods_where = [
     new SctCod_It('どこ')
 ];
 
-const   cods_date = [
+const   cods_today = [
     new SctCod_It('|日々|ひび|','date.jpg')
     ,
     new SctCod_It('|今日|きょう|')
@@ -4571,99 +4571,51 @@ const itms_landmark = [
     new SctItm('海岸')
 ];
 
-// const itms_animal = [
-//     new SctItm('ネズミ')
-//     ,
-//     new SctItm('牛')
-//     ,
-//     new SctItm('虎')
-//     ,
-//     new SctItm('ウサギ')
-//     ,
-//     new SctItm('蛇')
-//     ,
-//     new SctItm('馬')
-//     ,
-//     new SctItm('羊')
-//     ,
-//     new SctItm('猿')
-//     ,
-//     new SctItm('ニワトリ')
-//     ,
-//     new SctItm('犬')
-//     ,
-//     new SctItm('猪')
-//     ,
-//     new SctItm('猫')
-//     ,
-//     new SctItm('豹')
-//     ,
-//     new SctItm('ライオン')
-//     ,
-//     new SctItm('ハムスター')
-//     ,
-//     new SctItm('鹿')
-//     ,
-//     new SctItm('カモシカ')
-//     ,
-//     new SctItm('シマウマ')
-//     ,
-//     new SctItm('キリン')
-//     ,
-//     new SctItm('豚')
-//     ,
-//     new SctItm('ヤギ')
-//     ,
-//     new SctItm('ロバ')
-//     ,
-//     new SctItm('カラス')
-//     ,
-//     new SctItm('雀')
-//     ,
-//     new SctItm('鷹')
-//     ,
-//     new SctItm('鷲')
-//     ,
-//     new SctItm('ハゲワシ')
-//     ,
-//     new SctItm('ペリカン')
-//     ,
-//     new SctItm('鶴')
-//     ,
-//     new SctItm('白鳥')
-//     ,
-//     new SctItm('鳩')
-//     ,
-//     new SctItm('雀')
-//     ,
-//     new SctItm('カラス')
-//     ,
-//     new SctItm('鷹')
-//     ,
-//     new SctItm('鷲')
-//     ,
-//     new SctItm('魚')
-//     ,
-//     new SctItm('鮫')
-//     ,
-//     new SctItm('シャチ')
-//     ,
-//     new SctItm('クジラ')
-//     ,
-//     new SctItm('クラゲ')
-//     ,
-//     new SctItm('蟹')
-//     ,
-//     new SctItm('海老')
-//     ,
-//     new SctItm('貝')
-//     ,
-//     new SctItm('タコ')
-//     ,
-//     new SctItm('イカ')
-//     ,
-//     new SctItm('龍')
-// ];
+const itms_livestock = [
+    new SctItm('牛')
+    ,
+    new SctItm('虎')
+    ,
+    new SctItm('ウサギ')
+    ,
+    new SctItm('馬')
+    ,
+    new SctItm('羊')
+    ,
+    new SctItm('ニワトリ')
+    ,
+    new SctItm('犬')
+    ,
+    new SctItm('猪')
+    ,
+    new SctItm('鹿')
+    ,
+    new SctItm('カモシカ')
+    ,
+    new SctItm('シマウマ')
+    ,
+    new SctItm('豚')
+    ,
+    new SctItm('ヤギ')
+    ,
+    new SctItm('鳩')
+    ,
+    new SctItm('雀')
+    ,
+    new SctItm('鮫')
+    ,
+    new SctItm('クジラ')
+    ,
+    new SctItm('蟹')
+    ,
+    new SctItm('海老')
+    ,
+    new SctItm('タコ')
+    ,
+    new SctItm('イカ')
+    ,
+    new SctItm('龍')
+];
 
 const itms_partner = [
     new SctItm('知り合い')
@@ -6242,7 +6194,7 @@ const   itms_meal = [
     ,
     new SctItm('ハンバーガー')
     ,
-    new SctItm('@ANIMAL@のハンバーガー')
+    new SctItm('@LIVESTOCK@のハンバーガー')
     ,
     new SctItm('ホットドッグ')
     ,
@@ -6328,17 +6280,17 @@ const   itms_meal = [
     ,
     new SctItm('鶏の唐揚げ')
     ,
-    new SctItm('@ANIMAL@の唐揚げ')
+    new SctItm('@LIVESTOCK@の唐揚げ')
     ,
-    new SctItm('@ANIMAL@鍋')
+    new SctItm('@LIVESTOCK@鍋')
     ,
-    new SctItm('@ANIMAL@のフライ')
+    new SctItm('@LIVESTOCK@のフライ')
     ,
-    new SctItm('@ANIMAL@のステーキ')
+    new SctItm('@LIVESTOCK@のステーキ')
     ,
-    new SctItm('@ANIMAL@のシチュー')
+    new SctItm('@LIVESTOCK@のシチュー')
     ,
-    new SctItm('@ANIMAL@の丸焼き')
+    new SctItm('@LIVESTOCK@の丸焼き')
     ,
     new SctItm('@FRUIT@のサラダ')
     ,
