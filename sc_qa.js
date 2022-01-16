@@ -201,7 +201,7 @@ class selector_q_title extends SctItm_Selector {
             new SctItm('@DOING@いる@L_PART@をなんとかして下さい'),
             new SctItm('@L_PART@が@DOING01@いるので困っています'),
             new SctItm('@L_PART@と@DOING02@みたいのです'),
-            new SctItm('誰か@L_PART@と一緒に@DOING02@して頂けませんか'),
+            new SctItm('誰か@L_PART@と一緒に@DOING02@頂けませんか'),
             new SctItm('@L_PART@に@THINK@しています'),
             new SctItm('@L_PART@が@L_HABIT@ばかりしています'),
             new SctItm('助けて！ @L_PART@がまるで@NICK@なんです'),

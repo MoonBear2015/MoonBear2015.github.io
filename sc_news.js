@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N02.75';
+    html += ' N02.76';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -1670,9 +1670,11 @@ class selector_assessment extends SctItm_Selector {
     constructor() {
         super('@ASSES@');
         this.itms = [
-            new SctItm('@ASSES_S1@'),
-            new SctItm('@ASSES_S2@、@ASSES_S1@'),
-            new SctItm('@ASSES_S2@、@CONECT3@、@ASSES_S1@')
+            new SctItm('@ASSES_S1@')
+            // ,
+            // new SctItm('@ASSES_S2@、@ASSES_S1@')
+            // ,
+            // new SctItm('@ASSES_S2@、@CONECT3@、@ASSES_S1@')
         ];
     }
 }

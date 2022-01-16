@@ -279,7 +279,7 @@ class selector_q_title extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@L_PART@と@DOING02@みたいのです')
             ,
-            new SctItm('誰か@L_PART@と一緒に@DOING02@して頂けませんか')
+            new SctItm('誰か@L_PART@と一緒に@DOING02@頂けませんか')
             ,
             new SctItm('@L_PART@に@THINK@しています')
             ,
