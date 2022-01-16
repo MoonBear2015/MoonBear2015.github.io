@@ -2841,29 +2841,6 @@ const   cods_today = [
     ,
     new SctCod_It('|何時|いつ|')
 ];
-const   cods_when = [
-    new SctCod_It('|時|とき|','time.jpg')
-    ,
-    new SctCod_It('|今|いま|')
-    ,
-    new SctCod_It('|過去|かこ|')
-    ,
-    new SctCod_It('|現在|げんざい|')
-    ,
-    // new SctCod_It('|後|あと|で')
-    // ,
-    // new SctCod_It('|後|のち|に')
-    // ,
-    new SctCod_It('|今日|きょう|')
-    ,
-    new SctCod_It('|昨日|きのう|')
-    ,
-    new SctCod_It('|一昨日|おととい|')
-    ,
-    new SctCod_It('|一昨昨日|さきおととい|')
-    // ,
-    // new SctCod_It('|何時|いつ|')
-];
 
 const   cods_future = [
     new SctCod_It('|未来|みらい|','future.jpg')

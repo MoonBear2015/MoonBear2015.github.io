@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N02.74';
+    html += ' N02.75';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -1986,13 +1986,7 @@ class selector_sports extends SctItm_Selector implements ISctItm_Selector {
 }
 
 
-class selector_when extends SctItm_Selector implements ISctItm_Selector {
-    constructor(){
-        super('@WHEN@');
-        this.Add(cods_to_itms(cods_when).slice(1));
-        // this.Add(cods_to_itms(cods_future));
-    }
-}
+
 class selector_future extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@FUTURE@');
@@ -2146,13 +2140,6 @@ class selector_tech extends SctItm_Selector implements ISctItm_Selector {
         this.Add(itms_tech);
     }
 }
-class selector_today extends SctItm_Selector implements ISctItm_Selector {
-    constructor(){
-        super('@TODAY@');
-        this.Add(cods_to_itms(cods_today).slice(1));
-    }
-}
-
 
 // 敬称 の～
 class selector_nickname extends SctItm_Selector implements ISctItm_Selector {
@@ -2545,6 +2532,22 @@ class selector_answer extends SctItm_Selector implements ISctItm_Selector {
         ];
     }
 }
+
+
+// 評価 と～（る・た・い）。
+class selector_day extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@DAY@');
+        this.itms = [
+            new SctItm('今日')
+            ,
+            new SctItm('昨日')
+            ,
+            new SctItm('一昨日')
+        ];
+    }
+}
+            
 
 
 // 評価 と～（る・た・い）。
@@ -2985,7 +2988,7 @@ class selector_doing extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('@DOING01@')
             ,
-            new SctItm('@TODAY@も@DOING01@')
+            new SctItm('@DAY@も@DOING01@')
             ,
             new SctItm('@PLACE@で@DOING02@')
         ];
@@ -3027,8 +3030,6 @@ class selector_doing02 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@CLASS@に恋をして')
             ,
             new SctItm('@CLASS@を目指して')
-            ,
-            new SctItm('遊んで')
             ,
             new SctItm('@PLACE@で眠って')
             ,
@@ -3211,9 +3212,8 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_who2());
         this.dic_push(new selector_who3());
         this.dic_push(new selector_who4());
-        this.dic_push(new selector_when());
         this.dic_push(new selector_future());
-        this.dic_push(new selector_today());
+        this.dic_push(new selector_day());
         this.dic_push(new selector_place());
         this.dic_push(new selector_city());
         this.dic_push(new selector_co());

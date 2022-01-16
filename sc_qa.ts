@@ -341,9 +341,6 @@ class selector_q_init extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('私には@KEI@@L_PART@がいるのですが、@Q_SENT@')
             ,
             new SctItm('私には@CLASS@をしている@AGE2@の@L_PART@がいるのですが、@Q_SENT@')
-            ,
-            new SctItm('@TODAY@の話なのですが、@Q_SENT@')
-
         ]
     }
 }
@@ -603,9 +600,9 @@ class selector_a_title extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@QUESTER@さん、もう来ないで下さいといったはずです')
             ,
-            new SctItm('@QUESTER@さん、@DOING01@いる場合ではありません')
+            new SctItm('@QUESTER@さん、@DOING02@いる場合ではありません')
             ,
-            new SctItm('@QUESTER@さんが@DOING01@みては？')
+            new SctItm('@QUESTER@さんが@DOING02@みては？')
         ]
     }
 }
