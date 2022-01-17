@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N02.76';
+    html += ' N02.77';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -73,10 +73,10 @@ function make_news() {
     html = maker.gene_docs(html);
     return html;
 }
-class selector_random_date extends ItmArray {
+class selector_random_date01 extends ItmArray {
     constructor() {
         super();
-        this.itm_key = "@DATE@";
+        this.itm_key = "@DATE01@";
         this.itm_key2 = "";
         this.pic_key = "";
     }
@@ -91,7 +91,7 @@ class selector_random_date extends ItmArray {
         }
     }
     Copy() {
-        let result = new selector_random_date();
+        let result = new selector_random_date01();
         result.Paste(this.itms);
         return result;
     }
@@ -110,7 +110,7 @@ class selector_random_year extends ItmArray {
         return new SctItm(random_Y_string(), "");
     }
     Copy() {
-        let result = new selector_random_date();
+        let result = new selector_random_date01();
         result.Paste(this.itms);
         return result;
     }
@@ -127,6 +127,25 @@ class selector_random_NUM10 extends ItmArray {
     }
     get rnd_Itm() {
         return new SctItm(rnd_minmax(1, 9).toString(), "");
+    }
+    Copy() {
+        let result = new selector_random_NUM10();
+        result.Paste(this.itms);
+        return result;
+    }
+    Gene_Docs(temp_doc) {
+        return replace_docs_A(temp_doc, this);
+    }
+}
+class selector_random_NUM2TO9 extends ItmArray {
+    constructor() {
+        super();
+        this.itm_key = "@NUM2TO9@";
+        this.itm_key2 = "";
+        this.pic_key = "";
+    }
+    get rnd_Itm() {
+        return new SctItm(rnd_minmax(2, 9).toString(), "");
     }
     Copy() {
         let result = new selector_random_NUM10();
@@ -309,14 +328,14 @@ class selector_manypeople extends SctItm_Selector {
         super('@MANYPEOPLE@');
         this.itms = [
             new SctItm('@KEI@@THEY@'),
-            new SctItm('@MANY@@THEY@'),
-            new SctItm('@MANY@@KEI@@THEY@'),
-            new SctItm('@MANY@@CLASS@'),
-            new SctItm('@MANY@@KEI@@CLASS@'),
-            new SctItm('@MANY@@PART@'),
-            new SctItm('@MANY@@KEI@@PART@'),
-            new SctItm('@MANY@@PEOPLE@'),
-            new SctItm('@MANY@@KEI@@PEOPLE@')
+            new SctItm('@MANYMAN@@THEY@'),
+            new SctItm('@MANYMAN@@KEI@@THEY@'),
+            new SctItm('@MANYMAN@@CLASS@'),
+            new SctItm('@MANYMAN@@KEI@@CLASS@'),
+            new SctItm('@MANYMAN@@PART@'),
+            new SctItm('@MANYMAN@@KEI@@PART@'),
+            new SctItm('@MANYMAN@@PEOPLE@'),
+            new SctItm('@MANYMAN@@KEI@@PEOPLE@')
         ];
     }
 }
@@ -357,6 +376,25 @@ class selector_pop1 extends SctItm_Selector {
             new SctItm('@COUNTRY@の@KEI@@ITEM@'),
             new SctItm('@MOVE@@ITEM@'),
             new SctItm('@KEI@@ITEM@')
+        ];
+    }
+}
+class selector_date extends SctItm_Selector {
+    constructor() {
+        super('@DATE@');
+        this.itms = [
+            new SctItm('@DATE01@'),
+            new SctItm('@DATE01@'),
+            new SctItm('@DATE01@'),
+            new SctItm('@DATE01@'),
+            new SctItm('@DATE01@'),
+            new SctItm('@DATE01@'),
+            new SctItm('@NUM2TO9@日後'),
+            new SctItm('@NUM2TO9@日前'),
+            new SctItm('@NUM2TO9@年後'),
+            new SctItm('@NUM2TO9@年前'),
+            new SctItm('@NUM2TO9@ヶ月前'),
+            new SctItm('@NUM2TO9@ヶ月後')
         ];
     }
 }
@@ -869,6 +907,33 @@ class selector_many extends SctItm_Selector {
             new SctItm('世界最大の'),
             new SctItm('世界で唯一の'),
             new SctItm('@COUNTRY@最大の'),
+            new SctItm('@COUNTRY@で唯一の')
+        ];
+    }
+}
+class selector_manyman extends SctItm_Selector {
+    constructor() {
+        super('@MANYMAN@');
+        this.itms = [
+            new SctItm('@NUM2TO9@人の'),
+            new SctItm('@NUM2TO9@百人もの'),
+            new SctItm('@NUM2TO9@千人もの'),
+            new SctItm('数名の'),
+            new SctItm('幾人もの'),
+            new SctItm('多くの'),
+            new SctItm('一部の'),
+            new SctItm('大多数の'),
+            new SctItm('ごく僅かな'),
+            new SctItm('一握りの'),
+            new SctItm('ほとんどの'),
+            new SctItm('全ての'),
+            new SctItm('大半の'),
+            new SctItm('大勢の'),
+            new SctItm('数え切れない程の'),
+            new SctItm('掃いて捨てるほどの'),
+            new SctItm('膨大な'),
+            new SctItm('世界最高の'),
+            new SctItm('世界で唯一の'),
             new SctItm('@COUNTRY@で唯一の')
         ];
     }
@@ -1394,6 +1459,10 @@ class selector_food extends SctItm_Selector {
         super('@FOOD@');
         this.itms = [
             new SctItm('@FOOD01@'),
+            new SctItm('@FOOD01@'),
+            new SctItm('@FOOD01@'),
+            new SctItm('@FOOD01@'),
+            new SctItm('@FOOD01@'),
             new SctItm('@COUNTRY@産@FOOD01@'),
             new SctItm('@COUNTRY@風@FOOD01@'),
             new SctItm('@ITEM@っぽい@FOOD01@'),
@@ -1659,9 +1728,10 @@ class selector_day extends SctItm_Selector {
     constructor() {
         super('@DAY@');
         this.itms = [
+            new SctItm('今朝'),
             new SctItm('今日'),
             new SctItm('昨日'),
-            new SctItm('一昨日')
+            new SctItm('|一昨日|おととい|')
         ];
     }
 }
@@ -2017,13 +2087,15 @@ class selector_doing02 extends SctItm_Selector {
             new SctItm('@SCOOL@に合格して'),
             new SctItm('@SCOOL@を卒業して'),
             new SctItm('@SCOOL@を中退して'),
-            new SctItm('@FLOWER@の花を捧げて'),
+            new SctItm('@FLOWER@の花を|捧|ささ|げて'),
             new SctItm('@FLOWER@の花を咲かせて'),
             new SctItm('@FLOWER@の花を飾って'),
             new SctItm('@FLOWER@の花びらを散らして'),
-            new SctItm('@FLOWER@の花を咥えて'),
-            new SctItm('@FLOWER@の種を蒔いて'),
-            new SctItm('@FRUIT@の皮を剥いて'),
+            new SctItm('@FLOWER@の花を|咥|くわ|えて'),
+            new SctItm('@FLOWER@の種を|蒔|ま|いて'),
+            new SctItm('@FRUIT@の皮を|剥|む|いて'),
+            new SctItm('@FRUIT@を収穫して'),
+            new SctItm('@FRUIT@を叩き売りして'),
             new SctItm('@FRUIT@の種を捨てて')
         ];
     }
@@ -2054,9 +2126,11 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_comment());
         this.dic_push(new selector_comment2());
         this.dic_push(new selector_YESNO());
-        this.dic_push(new selector_random_date());
+        this.dic_push(new selector_date());
+        this.dic_push(new selector_random_date01());
         this.dic_push(new selector_random_year());
         this.dic_push(new selector_random_NUM10());
+        this.dic_push(new selector_random_NUM2TO9());
         this.dic_push(new selector_random_NUM10000());
         this.dic_push(new locker_what());
         this.dic_push(new locker_do());
@@ -2067,6 +2141,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_size2());
         this.dic_push(new selector_they());
         this.dic_push(new selector_many());
+        this.dic_push(new selector_manyman());
         this.dic_push(new selector_keiyo());
         this.dic_push(new selector_keiyo1());
         this.dic_push(new selector_keido());

@@ -113,7 +113,6 @@ function random_Y_string() : string
     return date_Y_string(date_random());
 }
 
-
 function date_random() : Date
 {
     let nowyear = new Date().getFullYear();
