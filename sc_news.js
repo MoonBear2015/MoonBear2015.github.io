@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N02.78';
+    html += ' N02.79';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -48,7 +48,7 @@ function make_news() {
     html += '</div>';
     html += '<p id="news_doc">';
     html += '　@NEWS_DOC@';
-    for (let i = 0; i < rnd_minmax(2, 3); i++) {
+    for (let i = 0; i < rnd_minmax(4, 6); i++) {
         html += '@CONECT@、';
         html += '@NEWS_DOC@';
     }
@@ -323,7 +323,7 @@ class selector_subtitle01 extends SctItm_Selector {
             new SctItm('@MANYPEOPLE@の@L_WHAT@'),
             new SctItm('@DOING02@いる@L_WHAT@'),
             new SctItm('@DOING02@いた@L_WHAT@'),
-            new SctItm('@L_WHAT@は@DOING02@いた'),
+            new SctItm('@L_DO@する@L_WHAT@'),
             new SctItm('@KEI@@L_WHAT@の@L_DO@')
         ];
     }

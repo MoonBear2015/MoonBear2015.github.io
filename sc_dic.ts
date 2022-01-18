@@ -5321,7 +5321,7 @@ const   itms_do = [
     ,
     new SctItm('優勝','DO/topwin.jpg')
     ,
-    new SctItm('発明','DO/Edison.jpg')
+    new SctItm('発明','DO/invention.jpg')
     ,
     new SctItm('開発','DO/debelop.jpg')
     ,
