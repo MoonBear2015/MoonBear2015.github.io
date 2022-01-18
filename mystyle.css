@@ -189,6 +189,8 @@ figure {
     /* margin: 10px 10px; */
     padding: 10px 10px;
     float: left;
+    font-size: 12px;
+    color: yellow;
 }
 
 #news_pic_R {
@@ -196,6 +198,8 @@ figure {
     /* margin: 10px 10px; */
     padding: 10px 10px;
     float: right;
+    font-size: 12px;
+    color: yellow;
 }
 
 #face_pic_R {

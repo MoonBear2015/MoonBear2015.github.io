@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N02.77';
+    html += ' N02.78';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -54,6 +54,7 @@ function make_news()
     html += '<figure>';
     html += '<img src="pics/@PIC_WHAT@" width="300px">';
     html += '</figure>';
+    html += '<p>@NEWS_SUBTITLE01@</p>';
     html += '</div>';
     
     html += '<p id="news_doc">';
@@ -69,6 +70,7 @@ function make_news()
     html += '<figure>';
     html += '<img src="pics/@PIC_DO@" width="300px">';
     html += '</figure>';
+    html += '<p>@NEWS_SUBTITLE02@</p>';
     html += '</div>';
 
     html += '<p id="news_doc">';
@@ -463,6 +465,42 @@ class selector_title extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@L_DO@@END02C@@L_WHAT@の@THINK@')
             ,
             new SctItm('@L_DO@@END02C@@L_WHAT@の@TECH@')
+        ];
+    }
+}
+
+class selector_subtitle01 extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@NEWS_SUBTITLE01@');
+        this.itms = [
+            new SctItm('@L_DO@する@L_WHAT@の@MANYPEOPLE@')
+            ,
+            new SctItm('@MANYPEOPLE@の@L_WHAT@')
+            ,
+            new SctItm('@DOING02@いる@L_WHAT@')
+            ,
+            new SctItm('@DOING02@いた@L_WHAT@')
+            ,
+            new SctItm('@L_WHAT@は@DOING02@いた')
+            ,
+            new SctItm('@KEI@@L_WHAT@の@L_DO@')
+        ];
+    }
+}
+
+class selector_subtitle02 extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@NEWS_SUBTITLE02@');
+        this.itms = [
+            new SctItm('@L_DO@する@MANYPEOPLE@')
+            ,
+            new SctItm('@L_DO@された@MANYPEOPLE@')
+            ,
+            new SctItm('@SIZE@する@L_DO@')
+            ,
+            new SctItm('@L_DO@@SIZE2@@PLACE@')
+            ,
+            new SctItm('@PEOPLE@もまた@L_DO@する')
         ];
     }
 }
@@ -3263,6 +3301,8 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_writer2());
         this.dic_push(new selector_writer3());
         this.dic_push(new selector_title());
+        this.dic_push(new selector_subtitle01());
+        this.dic_push(new selector_subtitle02());
         this.dic_push(new selector_doc());
         this.dic_push(new selector_c01());
         this.dic_push(new selector_c02());
