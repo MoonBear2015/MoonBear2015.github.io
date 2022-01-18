@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N02.80';
+    html += ' N02.81';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -305,7 +305,9 @@ class selector_title extends SctItm_Selector {
         this.itms = [
             new SctItm('@L_WHAT@の@KEI@@L_DO@'),
             new SctItm('@L_WHAT@が@KEID@@L_DO@'),
+            new SctItm('@L_WHAT@の@L_CLASS@が@KEID@@L_DO@'),
             new SctItm('@L_WHAT@が@KEID@@L_DO@@END02C@'),
+            new SctItm('@L_WHAT@の@L_CLASS@が@KEID@@L_DO@@END02C@'),
             new SctItm('@L_WHAT@を@L_DO@@END02E@@TECH@'),
             new SctItm('@KEI@@L_WHAT@の@L_DO@'),
             new SctItm('@L_DO@@END02C@@L_WHAT@'),
@@ -319,11 +321,12 @@ class selector_subtitle01 extends SctItm_Selector {
     constructor() {
         super('@NEWS_SUBTITLE01@');
         this.itms = [
-            new SctItm('@L_DO@する@L_WHAT@の@MANYPEOPLE@'),
-            new SctItm('@MANYPEOPLE@の@L_WHAT@'),
-            new SctItm('@DOING02@いる@L_WHAT@'),
-            new SctItm('@DOING02@いた@L_WHAT@'),
             new SctItm('@L_DO@する@L_WHAT@'),
+            new SctItm('@L_DO@する@L_WHAT@の@L_CLASS@'),
+            new SctItm('@L_CLASS@の@L_WHAT@'),
+            new SctItm('@DOING02@いる@L_WHAT@'),
+            new SctItm('@DOING02@いる@L_WHAT@の@L_CLASS@'),
+            new SctItm('@DOING02@いた@L_WHAT@の@L_CLASS@'),
             new SctItm('@KEI@@L_WHAT@の@L_DO@')
         ];
     }
@@ -332,11 +335,11 @@ class selector_subtitle02 extends SctItm_Selector {
     constructor() {
         super('@NEWS_SUBTITLE02@');
         this.itms = [
-            new SctItm('@L_DO@する@MANYPEOPLE@'),
-            new SctItm('@L_DO@された@MANYPEOPLE@'),
+            new SctItm('@L_DO@する@L_CLASS@'),
+            new SctItm('@L_DO@された@L_CLASS@'),
             new SctItm('@SIZE@する@L_DO@'),
             new SctItm('@L_DO@@SIZE2@@PLACE@'),
-            new SctItm('@PEOPLE@もまた@L_DO@する')
+            new SctItm('@CLASS@もまた@L_DO@する')
         ];
     }
 }
@@ -444,8 +447,8 @@ class selector_who extends SctItm_Selector {
         super('@WHO@');
         this.itms = [
             new SctItm('「@CALL@」と@KEID@@ASSES@@HUMAN@@AGE@'),
-            new SctItm('「@CALL@」と@KEID@@ASSES@@CLASS@の@HUMAN@@AGE@'),
-            new SctItm('@MANYPEOPLE@より「@CALL@」と@ASSES@@CLASS@の@HUMAN@@AGE@')
+            new SctItm('「@CALL@」と@KEID@@ASSES@@L_CLASS@の@HUMAN@@AGE@'),
+            new SctItm('@MANYPEOPLE@より「@CALL@」と@ASSES@@L_CLASS@の@HUMAN@@AGE@')
         ];
     }
 }
@@ -465,7 +468,7 @@ class selector_who3 extends SctItm_Selector {
     constructor() {
         super('@WHO3@');
         this.itms = [
-            new SctItm('@CLASS@の'),
+            new SctItm('@L_CLASS@の'),
             new SctItm('@COUNTRY@で産まれた'),
             new SctItm('@COUNTRY@出身の'),
             new SctItm('@COUNTRY@在住の'),
@@ -491,7 +494,7 @@ class selector_who4 extends SctItm_Selector {
     constructor() {
         super('@WHO4@');
         this.itms = [
-            new SctItm('@CLASS@'),
+            new SctItm('@L_CLASS@'),
             new SctItm('@COUNTRY@出身'),
             new SctItm('@COUNTRY@在住'),
             new SctItm('「@CALL2@」'),
@@ -633,7 +636,7 @@ class selector_comment2 extends SctItm_Selector {
             new SctItm('@CALL@、@YESNO@、それが@PART@の@PART@@END02A@'),
             new SctItm('@KEID@@L_DO@する@KEI@@NICK@と@KEID@@ASSES@@THEY@、@YESNO@、それが@L_WHAT@の@PEOPLE@@END02A@'),
             new SctItm('@KEID@@L_DO@@END02B@@THEY@、@YESNO@、それが@L_WHAT@@END02A@'),
-            new SctItm('@L_WHAT@の@CLASS@、それが@PEOPLE@の@PEOPLE@@END02A@'),
+            new SctItm('@L_WHAT@の@L_CLASS@、それが@PEOPLE@の@PEOPLE@@END02A@'),
             new SctItm('@EMOFRONT@@EMO@@END02D@'),
             new SctItm('@L_WHAT@で@DOING@いた'),
             new SctItm('私の@PART@は@DOING@いた'),
@@ -839,7 +842,7 @@ class selector_they extends SctItm_Selector {
     constructor() {
         super('@THEY@');
         this.itms = [
-            new SctItm('@CLASS@'),
+            new SctItm('@L_CLASS@'),
             // new SctItm('人々')
             // ,
             new SctItm('一般大衆'),
@@ -965,196 +968,16 @@ class selector_manyman extends SctItm_Selector {
         ];
     }
 }
-// 肩書き ～の
 class selector_class extends SctItm_Selector {
     constructor() {
         super('@CLASS@');
-        this.itms = [
-            new SctItm('大学教授'),
-            new SctItm('高校教師'),
-            new SctItm('数学教師'),
-            new SctItm('物理学者'),
-            new SctItm('経済学者'),
-            new SctItm('政治評論家'),
-            new SctItm('映画評論家'),
-            new SctItm('映画監督'),
-            new SctItm('舞台監督'),
-            new SctItm('舞台作家'),
-            new SctItm('恋愛小説家'),
-            new SctItm('絵本作家'),
-            new SctItm('調理師'),
-            new SctItm('ケーキ職人'),
-            new SctItm('工場長'),
-            new SctItm('会社員'),
-            new SctItm('事務員'),
-            new SctItm('飼育員'),
-            new SctItm('店員'),
-            new SctItm('店主'),
-            new SctItm('アルバイター'),
-            new SctItm('釣り師'),
-            new SctItm('元警察官'),
-            new SctItm('陸軍少佐'),
-            new SctItm('元海兵隊'),
-            new SctItm('空軍少佐'),
-            new SctItm('海軍将校'),
-            new SctItm('陶芸家'),
-            new SctItm('タクシードライバー'),
-            new SctItm('トラックの運転手'),
-            new SctItm('バスの運転手'),
-            new SctItm('アニメーター'),
-            new SctItm('漫画家'),
-            new SctItm('少女漫画家'),
-            new SctItm('プロサーファー'),
-            new SctItm('ユーチューバー'),
-            new SctItm('プログラマー'),
-            new SctItm('システムエンジニア'),
-            new SctItm('助産婦'),
-            new SctItm('ケアマネージャー'),
-            new SctItm('外交官'),
-            new SctItm('警備員'),
-            new SctItm('警察官'),
-            new SctItm('保安官'),
-            new SctItm('ピアニスト'),
-            new SctItm('指揮者'),
-            new SctItm('ギターリスト'),
-            new SctItm('考古学者'),
-            new SctItm('ホテルマン'),
-            new SctItm('デザイナー'),
-            new SctItm('靴磨き'),
-            new SctItm('武士'),
-            new SctItm('野武士'),
-            new SctItm('伯爵'),
-            new SctItm('水呑百姓'),
-            new SctItm('農民'),
-            new SctItm('牧場主'),
-            new SctItm('ミイラ職人'),
-            new SctItm('花売り娘'),
-            new SctItm('大道芸人'),
-            new SctItm('吟遊詩人'),
-            new SctItm('連邦保安官'),
-            new SctItm('国家公務員'),
-            new SctItm('国選弁護人'),
-            new SctItm('メイド'),
-            new SctItm('執事'),
-            new SctItm('駅員'),
-            new SctItm('車掌'),
-            new SctItm('世界第三位'),
-            new SctItm('世界第一位'),
-            new SctItm('旅芸人'),
-            new SctItm('サーカス団員'),
-            new SctItm('幼稚園児'),
-            new SctItm('保育園児'),
-            new SctItm('小学生'),
-            new SctItm('中学生'),
-            new SctItm('高校生'),
-            new SctItm('大学生'),
-            new SctItm('ラーメン屋'),
-            new SctItm('落語家'),
-            new SctItm('漫才師'),
-            new SctItm('漫才師'),
-            new SctItm('コメディアン'),
-            new SctItm('ストリッパー'),
-            new SctItm('キャバクラ嬢'),
-            new SctItm('ホステス'),
-            new SctItm('飴細工師'),
-            new SctItm('マッチ売り'),
-            new SctItm('魔法使い'),
-            new SctItm('魔法少女'),
-            new SctItm('抜け忍'),
-            new SctItm('黒魔術師'),
-            new SctItm('祈祷師'),
-            new SctItm('インディアン'),
-            new SctItm('カウボーイ'),
-            new SctItm('看板娘'),
-            new SctItm('カメラ屋'),
-            new SctItm('税理士'),
-            new SctItm('銀行マン'),
-            new SctItm('変身ヒーロー'),
-            new SctItm('ショッカー'),
-            new SctItm('仮面ライダー'),
-            new SctItm('ウルトラマン'),
-            new SctItm('スーパーマン'),
-            new SctItm('学級委員'),
-            new SctItm('図書委員'),
-            new SctItm('生徒会長'),
-            new SctItm('ＰＴＡ会長'),
-            new SctItm('会社員'),
-            new SctItm('専業主婦'),
-            new SctItm('家政婦'),
-            new SctItm('アニメ声優'),
-            new SctItm('アナウンサー'),
-            new SctItm('新聞記者'),
-            new SctItm('牛乳配達員'),
-            new SctItm('郵便局員'),
-            new SctItm('公務員'),
-            new SctItm('機関士'),
-            new SctItm('野鳥の会'),
-            new SctItm('牧師'),
-            new SctItm('神主'),
-            new SctItm('村長'),
-            new SctItm('町長'),
-            new SctItm('庄長'),
-            new SctItm('市長'),
-            new SctItm('皇帝'),
-            new SctItm('国王'),
-            new SctItm('大統領'),
-            new SctItm('女王'),
-            new SctItm('総理大臣'),
-            new SctItm('独裁者'),
-            new SctItm('道化師'),
-            new SctItm('ピエロ'),
-            new SctItm('庭師'),
-            new SctItm('狩人'),
-            new SctItm('騎士'),
-            new SctItm('忍者'),
-            new SctItm('抜け忍'),
-            new SctItm('諜報員'),
-            new SctItm('狙撃兵'),
-            new SctItm('株主'),
-            new SctItm('筆頭株主'),
-            new SctItm('投資家'),
-            new SctItm('証券マン'),
-            new SctItm('セールスマン'),
-            new SctItm('庖丁人'),
-            new SctItm('用心棒'),
-            new SctItm('ハスラー'),
-            new SctItm('花火職人'),
-            new SctItm('皿洗い'),
-            new SctItm('薬剤師'),
-            new SctItm('ペンキ屋'),
-            new SctItm('パン屋'),
-            new SctItm('八百屋'),
-            new SctItm('肉屋'),
-            new SctItm('豆腐屋'),
-            new SctItm('魚屋'),
-            new SctItm('コック'),
-            new SctItm('ウェイトレス'),
-            new SctItm('バーテンダー'),
-            new SctItm('バニーガール'),
-            new SctItm('芸者'),
-            new SctItm('ショーガール'),
-            new SctItm('スチュワーデス'),
-            new SctItm('バスガイド'),
-            new SctItm('お茶汲み'),
-            new SctItm('コンビニ店員'),
-            new SctItm('店員'),
-            new SctItm('組員'),
-            new SctItm('組長'),
-            new SctItm('ボス'),
-            new SctItm('会長'),
-            new SctItm('酋長'),
-            new SctItm('課長'),
-            new SctItm('部長'),
-            new SctItm('本部長'),
-            new SctItm('取締役'),
-            new SctItm('社長'),
-            new SctItm('スパイ'),
-            new SctItm('テロリスト'),
-            new SctItm('ハッカー'),
-            new SctItm('宇宙人'),
-            new SctItm('火星人'),
-            new SctItm('秘密探偵')
-        ];
+        this.Add(itms_class);
+    }
+}
+class locker_class extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_CLASS@');
+        this.Add(itms_class);
     }
 }
 class selector_history extends SctItm_Selector {
@@ -1494,8 +1317,8 @@ class selector_food extends SctItm_Selector {
             new SctItm('@COUNTRY@風@FOOD01@'),
             new SctItm('@ITEM@っぽい@FOOD01@'),
             new SctItm('@PART@が作った@FOOD01@'),
-            new SctItm('@CLASS@の手作り@FOOD01@'),
-            new SctItm('@CLASS@のお薦め@FOOD01@'),
+            new SctItm('@L_CLASS@の手作り@FOOD01@'),
+            new SctItm('@L_CLASS@のお薦め@FOOD01@'),
             new SctItm('@THEY@で人気の@FOOD01@')
         ];
     }
@@ -2072,9 +1895,9 @@ class selector_doing02 extends SctItm_Selector {
             new SctItm('@FOOD@を食べて'),
             new SctItm('@FOOD@を注文して'),
             new SctItm('@FOOD@の店を開いて'),
-            new SctItm('@CLASS@に憧れて'),
-            new SctItm('@CLASS@に恋をして'),
-            new SctItm('@CLASS@を目指して'),
+            new SctItm('@L_CLASS@に憧れて'),
+            new SctItm('@L_CLASS@に恋をして'),
+            new SctItm('@L_CLASS@を目指して'),
             new SctItm('@PLACE@で眠って'),
             new SctItm('@PLACE@で遊んで'),
             new SctItm('@LANDMARK@を歩いて'),
@@ -2216,6 +2039,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_body());
         this.dic_push(new selector_family());
         this.dic_push(new selector_class());
+        this.dic_push(new locker_class());
         this.dic_push(new selector_call());
         this.dic_push(new selector_call2());
         this.dic_push(new selector_age());
