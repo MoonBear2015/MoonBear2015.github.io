@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N02.87';
+    html += ' N02.88';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -40,11 +40,12 @@ function make_news() {
     html += '@NEWS_TITLE@';
     html += '</span>';
     html += '</h2>';
-    html += '<div id="news_pic_L">';
-    html += '<figure>';
-    html += '<img src="pics/@PIC_WHAT@" width="300px">';
-    html += '</figure>';
-    html += '<p>@NEWS_SUBTITLE01@</p>';
+    html += '<div id="news_pic_Title">';
+    // html += '<div id="news_pic_L">';
+    // html += '<figure>';
+    html += '<img src="pics/@PIC_WHAT@" width="100%">';
+    // html += '</figure>';
+    // html += '<p>@NEWS_SUBTITLE01@</p>';
     html += '</div>';
     html += '<p id="news_doc">';
     html += '　@NEWS_DOC@';
