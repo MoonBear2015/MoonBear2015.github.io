@@ -255,13 +255,6 @@ class locker_place extends SctItm_SelectLocker {
         this.Add(cods_to_itms(cods_place));
     }
 }
-// （固定）テクノロジー
-class locker_tech extends SctItm_SelectLocker {
-    constructor() {
-        super('@L_TECH@', '', '@ICON_SHOP@');
-        this.Add(itms_tech);
-    }
-}
 // 商品モデル
 class selector_model extends SctItm_Selector {
     constructor() {
@@ -596,6 +589,6 @@ class shop_docs_maker01 extends news_docs_maker {
         super();
         this.dic_push(new locker_status());
         this.dic_push(new locker_place());
-        this.dic_push(new locker_tech());
+        // this.dic_push(new locker_tech());
     }
 }
