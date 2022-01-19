@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N02.85';
+    html += ' N02.86';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -52,7 +52,7 @@ function make_news()
 
     html += '<div id="news_pic_L">';
     html += '<figure>';
-    html += '<img src="pics/@PIC_WHAT@" width="500px">';
+    html += '<img src="pics/@PIC_WHAT@" width="300px">';
     html += '</figure>';
     html += '<p>@NEWS_SUBTITLE01@</p>';
     html += '</div>';
@@ -68,7 +68,7 @@ function make_news()
 
     html += '<div id="news_pic_R">';
     html += '<figure>';
-    html += '<img src="pics/@PIC_DO@" width="200px">';
+    html += '<img src="pics/@PIC_DO@" width="300px">';
     html += '</figure>';
     html += '<p>@NEWS_SUBTITLE02@</p>';
     html += '</div>';
@@ -84,7 +84,7 @@ function make_news()
 
     html += '<div id="news_pic_L">';
     html += '<figure>';
-    html += '<img src="pics/@ICON_TECH@" width="200px">';
+    html += '<img src="pics/@ICON_TECH@" width="300px">';
     html += '</figure>';
     html += '<p>@NEWS_SUBTITLE03@</p>';
     html += '</div>';
