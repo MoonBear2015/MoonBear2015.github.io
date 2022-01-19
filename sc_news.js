@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N02.83';
+    html += ' N02.84';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -323,11 +323,12 @@ class selector_subtitle01 extends SctItm_Selector {
         this.itms = [
             new SctItm('@KEI@@L_CLASS@の@L_WHAT@'),
             new SctItm('@DOING02@いる@L_WHAT@'),
-            new SctItm('@DOING02@いる@L_WHAT@の@L_CLASS@'),
-            new SctItm('@DOING02@いた@L_WHAT@の@L_CLASS@'),
             new SctItm('@DOING02@いる@L_WHAT@の@L_TECH@'),
-            new SctItm('@L_WHAT@の@KEI@@L_CLASS@'),
-            new SctItm('@L_WHAT@の@KEI@@L_TECH@'),
+            new SctItm('@DOING02@いる@L_WHAT@の@L_CLASS@'),
+            new SctItm('@L_CLASS@が@DOING02@いる@L_WHAT@'),
+            new SctItm('@L_CLASS@だけが@DOING02@いた@L_WHAT@'),
+            new SctItm('@KEI@@L_WHAT@の@L_TECH@'),
+            new SctItm('@KEI@@L_WHAT@の@L_CLASS@'),
             new SctItm('@KEI@@L_WHAT@の@THINK@')
         ];
     }
@@ -341,6 +342,8 @@ class selector_subtitle02 extends SctItm_Selector {
             new SctItm('@L_DO@@END02B@@L_CLASS@'),
             new SctItm('@L_DO@@END02B@@L_TECH@'),
             new SctItm('@SIZE@@END02B@@L_DO@'),
+            new SctItm('@SIZE@@END02B@@L_CLASS@の@L_DO@ ★★'),
+            new SctItm('@SIZE@@END02B@@L_TECH@の@L_DO@ ★★'),
             new SctItm('@L_DO@@SIZE2@@PLACE@')
         ];
     }
