@@ -42,7 +42,7 @@ function make_news() {
     html += '</h2>';
     html += '<div id="news_pic_L">';
     html += '<figure>';
-    html += '<img src="pics/@PIC_WHAT@" width="300px">';
+    html += '<img src="pics/@PIC_WHAT@" width="400px">';
     html += '</figure>';
     html += '<p>@NEWS_SUBTITLE01@</p>';
     html += '</div>';
@@ -55,7 +55,7 @@ function make_news() {
     html += '</p>';
     html += '<div id="news_pic_R">';
     html += '<figure>';
-    html += '<img src="pics/@PIC_DO@" width="300px">';
+    html += '<img src="pics/@PIC_DO@" width="200px">';
     html += '</figure>';
     html += '<p>@NEWS_SUBTITLE02@</p>';
     html += '</div>';
@@ -68,7 +68,7 @@ function make_news() {
     html += '</p>';
     html += '<div id="news_pic_L">';
     html += '<figure>';
-    html += '<img src="pics/@ICON_TECH@" width="300px">';
+    html += '<img src="pics/@ICON_TECH@" width="200px">';
     html += '</figure>';
     html += '<p>@NEWS_SUBTITLE03@</p>';
     html += '</div>';
