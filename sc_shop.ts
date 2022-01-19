@@ -51,7 +51,7 @@ function make_shop()
         html01 += '<div id="shop_con">'; // con 
 
         html01 += '<div id="shop_icon">'; // icon
-        html01 += '<img src="pics/@ICON_SHOP@" width="95%">';
+        html01 += '<img src="pics/@ICON_TECH@" width="95%">';
         html01 += '</div>'; // icon
         
         html01 += '<br>';
@@ -312,7 +312,7 @@ class locker_campany extends SctItm_SelectLocker implements ISctItm_Selector{
 // （固定）場所
 class locker_place extends SctItm_SelectLocker implements ISctItm_Selector {
     constructor(){
-        super('@L_PLACE@','','@ICON_SHOP@');
+        super('@L_PLACE@','','@ICON_TECH@');
         this.startNumber = 1;
         this.Add(cods_to_itms(cods_place));
     }
@@ -385,7 +385,7 @@ class selector_catch extends SctItm_Selector implements ISctItm_Selector {
 // （固定）ステータス
 class locker_status extends SctItm_SelectLocker implements ISctItm_Selector{
     constructor(){
-        super('@L_STATUS@','','@ICON_SHOP@');
+        super('@L_STATUS@','','@ICON_TECH@');
         this.Add(itms_status);
     }
 }

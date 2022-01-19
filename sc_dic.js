@@ -3810,6 +3810,7 @@ const itms_tech = [
     new SctItm('神頼み', 'ICON/pray.jpg'),
     new SctItm('神通力', 'ICON/godpower.jpg'),
     new SctItm('超能力', 'ICON/psychokinesis.jpg'),
+    new SctItm('魔力', 'ICON/magic.jpg'),
     new SctItm('集客力', 'ICON/spectators.jpg'),
     new SctItm('現代医学', 'ICON/medi.jpg'),
     new SctItm('チームワーク', 'ICON/teamwork.jpg'),

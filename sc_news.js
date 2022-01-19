@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N02.84';
+    html += ' N02.85';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -42,7 +42,7 @@ function make_news() {
     html += '</h2>';
     html += '<div id="news_pic_L">';
     html += '<figure>';
-    html += '<img src="pics/@PIC_WHAT@" width="300px">';
+    html += '<img src="pics/@PIC_WHAT@" width="500px">';
     html += '</figure>';
     html += '<p>@NEWS_SUBTITLE01@</p>';
     html += '</div>';
@@ -55,13 +55,26 @@ function make_news() {
     html += '</p>';
     html += '<div id="news_pic_R">';
     html += '<figure>';
-    html += '<img src="pics/@PIC_DO@" width="300px">';
+    html += '<img src="pics/@PIC_DO@" width="200px">';
     html += '</figure>';
     html += '<p>@NEWS_SUBTITLE02@</p>';
     html += '</div>';
     html += '<p id="news_doc">';
     html += '　@NEWS_DOC@';
-    for (let i = 0; i < rnd_minmax(3, 5); i++) {
+    for (let i = 0; i < rnd_minmax(1, 2); i++) {
+        html += '@CONECT@、';
+        html += '@NEWS_DOC@';
+    }
+    html += '</p>';
+    html += '<div id="news_pic_L">';
+    html += '<figure>';
+    html += '<img src="pics/@ICON_TECH@" width="200px">';
+    html += '</figure>';
+    html += '<p>@NEWS_SUBTITLE03@</p>';
+    html += '</div>';
+    html += '<p id="news_doc">';
+    html += '　@NEWS_DOC@';
+    for (let i = 0; i < rnd_minmax(1, 2); i++) {
         html += '@CONECT@、';
         html += '@NEWS_DOC@';
     }
@@ -322,9 +335,9 @@ class selector_subtitle01 extends SctItm_Selector {
         super('@NEWS_SUBTITLE01@');
         this.itms = [
             new SctItm('@KEI@@L_CLASS@の@L_WHAT@'),
-            new SctItm('@DOING02@いる@L_WHAT@'),
-            new SctItm('@DOING02@いる@L_WHAT@の@L_TECH@'),
-            new SctItm('@DOING02@いる@L_WHAT@の@L_CLASS@'),
+            new SctItm('@KEI@@L_WHAT@'),
+            new SctItm('@KEI@@L_WHAT@の@L_TECH@'),
+            new SctItm('@KEI@@L_WHAT@の@L_CLASS@'),
             new SctItm('@L_CLASS@が@DOING02@いる@L_WHAT@'),
             new SctItm('@L_CLASS@だけが@DOING02@いた@L_WHAT@'),
             new SctItm('@KEI@@L_WHAT@の@L_TECH@'),
@@ -342,9 +355,20 @@ class selector_subtitle02 extends SctItm_Selector {
             new SctItm('@L_DO@@END02B@@L_CLASS@'),
             new SctItm('@L_DO@@END02B@@L_TECH@'),
             new SctItm('@SIZE@@END02B@@L_DO@'),
-            new SctItm('@SIZE@@END02B@@L_CLASS@の@L_DO@ ★★'),
-            new SctItm('@SIZE@@END02B@@L_TECH@の@L_DO@ ★★'),
+            new SctItm('@SIZE@@END02B@@L_CLASS@の@L_DO@'),
+            new SctItm('@SIZE@@END02B@@L_TECH@の@L_DO@'),
             new SctItm('@L_DO@@SIZE2@@PLACE@')
+        ];
+    }
+}
+class selector_subtitle03 extends SctItm_Selector {
+    constructor() {
+        super('@NEWS_SUBTITLE03@');
+        this.itms = [
+            new SctItm('@L_DO@@END02B@@L_TECH@'),
+            new SctItm('@L_WHAT@の@KEI@@L_TECH@'),
+            new SctItm('@KEI@@L_CLASS@の@L_TECH@'),
+            new SctItm('@L_WHAT@の@L_TECH@が@L_DO@@END02C@')
         ];
     }
 }
@@ -867,6 +891,7 @@ class selector_they extends SctItm_Selector {
             new SctItm('先人達'),
             new SctItm('労働者達'),
             new SctItm('兵士達'),
+            new SctItm('騎士団'),
             new SctItm('若年層'),
             new SctItm('主婦層'),
             new SctItm('全乗組員'),
@@ -1350,7 +1375,7 @@ class selector_tech extends SctItm_Selector {
 // （固定）テクノロジー
 class locker_tech extends SctItm_SelectLocker {
     constructor() {
-        super('@L_TECH@', '', '@ICON_SHOP@');
+        super('@L_TECH@', '', '@ICON_TECH@');
         this.Add(itms_tech);
     }
 }
@@ -1982,6 +2007,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_title());
         this.dic_push(new selector_subtitle01());
         this.dic_push(new selector_subtitle02());
+        this.dic_push(new selector_subtitle03());
         this.dic_push(new selector_doc());
         this.dic_push(new selector_c01());
         this.dic_push(new selector_c02());
