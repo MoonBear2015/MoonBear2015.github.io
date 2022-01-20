@@ -23,7 +23,7 @@ function set_site_footer() {
         alert('not found "site_footer"');
         return;
     }
-    elem.innerHTML = html;
+    elem.innerHTML = ruby_change(html);
 }
 function make_site_header() {
     let html = '';
