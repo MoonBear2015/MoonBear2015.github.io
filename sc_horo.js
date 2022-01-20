@@ -103,6 +103,7 @@ function make_horo() {
         html += '</p>'; // info
         html += '</div>';
     }
+    html += '<br>';
     html += '</div>';
     let cnt1 = 0;
     html = maker.gene_docs(html);

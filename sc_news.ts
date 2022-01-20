@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N02.88';
+    html += ' N02.89';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -55,7 +55,7 @@ function make_news()
     // html += '<figure>';
     html += '<img src="pics/@PIC_WHAT@" width="100%">';
     // html += '</figure>';
-    // html += '<p>@NEWS_SUBTITLE01@</p>';
+    html += '<p>@NEWS_SUBTITLE01@</p>';
     html += '</div>';
     
     html += '<p id="news_doc">';

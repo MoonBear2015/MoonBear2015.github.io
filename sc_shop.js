@@ -206,7 +206,7 @@ function make_site_footer() {
     html += '<div id="@FOOT_ST@">'; // st
     html += '<div id="foot_cm">'; // cm
     html += '<div id="foot_pic">';
-    html += '<img src="pics/@PIC_SHOP@" width="100%" >';
+    html += '<img src="pics/@PIC_SHOP@" width="90%" >';
     html += '</div>';
     html += '<div id="foot_copy">';
     html += '@CATCH@';

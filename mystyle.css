@@ -52,7 +52,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     width: 90%;
-    grid-template-rows: 6fr 1000px;
+    grid-template-rows: 5fr 1000px;
     grid-template-columns: 25% 1fr;
     
 }
