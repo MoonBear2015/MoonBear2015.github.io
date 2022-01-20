@@ -405,7 +405,7 @@ class selector_call extends SctItm_Selector {
         super('@CALL@');
         this.itms = [
             new SctItm('@COMM1@@L_WHAT@'),
-            new SctItm('@L_WHAT@の@KEI@@PEOPLE@'),
+            new SctItm('@L_WHAT@の@KEI@@L_CLASS@'),
             new SctItm('@KEID@@L_DO@@END02C@@PEOPLE@'),
             new SctItm('@KEI@@L_WHAT@の@PEOPLE@'),
             new SctItm('@L_WHAT@の@NICK@'),
@@ -414,7 +414,8 @@ class selector_call extends SctItm_Selector {
             new SctItm('@L_DO@@END02C@@L_TECH@'),
             new SctItm('@SIZE@@END02C@@L_TECH@'),
             new SctItm('@L_DO@@END02C@@NICK@'),
-            new SctItm('@SIZE@@END02C@@NICK@')
+            new SctItm('@SIZE@@END02C@@NICK@'),
+            new SctItm('@SIZE@@END02C@@L_CLASS@')
         ];
     }
 }
@@ -1913,8 +1914,8 @@ class selector_doing extends SctItm_Selector {
         super('@DOING@');
         this.itms = [
             new SctItm('@DOING01@'),
-            new SctItm('@DAY@も@DOING01@'),
-            new SctItm('@PLACE@で@DOING02@')
+            new SctItm('@DOING02@'),
+            new SctItm('@DAY@も@DOING01@')
         ];
     }
 }
@@ -1936,14 +1937,17 @@ class selector_doing02 extends SctItm_Selector {
         super('@DOING02@');
         this.itms = [
             new SctItm('@FOOD@を食べて'),
+            new SctItm('@FOOD@を配達して'),
             new SctItm('@FOOD@を注文して'),
             new SctItm('@FOOD@の店を開いて'),
             new SctItm('@L_CLASS@に憧れて'),
             new SctItm('@L_CLASS@に恋をして'),
             new SctItm('@L_CLASS@を目指して'),
+            new SctItm('@PLACE@に住んで'),
+            new SctItm('@CITY@に家を建てて'),
             new SctItm('@PLACE@で眠って'),
             new SctItm('@PLACE@で遊んで'),
-            new SctItm('@LANDMARK@を歩いて'),
+            new SctItm('@CITY@の@LANDMARK@を歩いて'),
             new SctItm('@MANYPEOPLE@に追われて'),
             new SctItm('@MANYPEOPLE@に囲まれて'),
             new SctItm('@MANYPEOPLE@にいじめられて'),

@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N02.89';
+    html += ' N02.90';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -598,7 +598,7 @@ class selector_call extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('@COMM1@@L_WHAT@')
             ,
-            new SctItm('@L_WHAT@の@KEI@@PEOPLE@')
+            new SctItm('@L_WHAT@の@KEI@@L_CLASS@')
             ,
             new SctItm('@KEID@@L_DO@@END02C@@PEOPLE@')
             ,
@@ -617,6 +617,8 @@ class selector_call extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@L_DO@@END02C@@NICK@')
             ,
             new SctItm('@SIZE@@END02C@@NICK@')
+            ,
+            new SctItm('@SIZE@@END02C@@L_CLASS@')
         ];
     }
 }
@@ -2845,9 +2847,9 @@ class selector_doing extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('@DOING01@')
             ,
-            new SctItm('@DAY@も@DOING01@')
+            new SctItm('@DOING02@')
             ,
-            new SctItm('@PLACE@で@DOING02@')
+            new SctItm('@DAY@も@DOING01@')
         ];
     }
 }
@@ -2878,6 +2880,8 @@ class selector_doing02 extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('@FOOD@を食べて')
             ,
+            new SctItm('@FOOD@を配達して')
+            ,
             new SctItm('@FOOD@を注文して')
             ,
             new SctItm('@FOOD@の店を開いて')
@@ -2888,11 +2892,15 @@ class selector_doing02 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@L_CLASS@を目指して')
             ,
+            new SctItm('@PLACE@に住んで')
+            ,
+            new SctItm('@CITY@に家を建てて')
+            ,
             new SctItm('@PLACE@で眠って')
             ,
             new SctItm('@PLACE@で遊んで')
             ,
-            new SctItm('@LANDMARK@を歩いて')
+            new SctItm('@CITY@の@LANDMARK@を歩いて')
             ,
             new SctItm('@MANYPEOPLE@に追われて')
             ,

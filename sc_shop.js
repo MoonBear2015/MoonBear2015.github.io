@@ -292,7 +292,7 @@ class selector_catch extends SctItm_Selector {
             new SctItm('@KEI1@@L_STATUS@を体感しよう'),
             new SctItm('@KEI1@@L_STATUS@の@FUTURE@'),
             new SctItm('さあ、@KEI1@@L_STATUS@を手に入れよう'),
-            new SctItm('@ASSES@@L_STATUS@'),
+            new SctItm('@KEID@@ASSES@@L_STATUS@'),
             new SctItm('あなたの@PLACE@が@L_PLACE@となる'),
             new SctItm('@FUTURE@の@L_PLACE@へようこそ'),
             new SctItm('@L_PLACE@の@FUTURE@が変わる'),

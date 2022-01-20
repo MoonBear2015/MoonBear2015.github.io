@@ -368,7 +368,7 @@ class selector_catch extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('さあ、@KEI1@@L_STATUS@を手に入れよう')
             ,
-            new SctItm('@ASSES@@L_STATUS@')
+            new SctItm('@KEID@@ASSES@@L_STATUS@')
             ,
             new SctItm('あなたの@PLACE@が@L_PLACE@となる')
             ,
