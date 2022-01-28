@@ -7,7 +7,7 @@ function set_qa() {
     html += '<h1>';
     html += 'Q&A';
     html += '<small>';
-    html += ' Q01.13';
+    html += ' Q01.14';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -337,7 +337,9 @@ class selector_q03_quest extends SctItm_Selector {
             new SctItm('@MANYPEOPLE@がいなくなったので'),
             new SctItm('@MANYPEOPLE@に取り囲まれ'),
             new SctItm('@PART@が@KEI1@ので'),
-            new SctItm('本当は@CLASS@になりたいので')
+            new SctItm('本当は@CLASS@になりたいので'),
+            new SctItm('@DOING@ばかりいるので'),
+            new SctItm('@DOING@しまうので')
         ];
     }
 }
@@ -404,7 +406,7 @@ class selector_a_title extends SctItm_Selector {
             new SctItm('良かったですね、@QUESTER@さん'),
             new SctItm('仕方が無いですよ、@QUESTER@さん'),
             new SctItm('諦めましょう、@QUESTER@さん'),
-            new SctItm('@QUESTER@さん、あなたは@NICK@ですか？'),
+            new SctItm('@QUESTER@さん、あなたは@NICKBAD@ですか？'),
             new SctItm('@KEI@ことを云ってはいけませんよ、@QUESTER@さん')
             // ,
             // new SctItm('@QUESTER@さん、お薬の時間ですよ')
