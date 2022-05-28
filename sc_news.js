@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N02.91';
+    html += ' N02.92';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -1925,6 +1925,7 @@ class selector_doing01 extends SctItm_Selector {
         this.itms = [
             new SctItm('@DOING02@'),
             new SctItm('@PEOPLE@と一緒に@DOING02@'),
+            new SctItm('@PEOPLE@と@DOING02@'),
             new SctItm('一人で@DOING02@'),
             new SctItm('独りぼっちで@DOING02@'),
             new SctItm('@ANIMAL@を連れて@DOING02@')
@@ -1960,6 +1961,12 @@ class selector_doing02 extends SctItm_Selector {
             new SctItm('@PEOPLE@から誘われて'),
             new SctItm('@PEOPLE@の振りをして'),
             new SctItm('「@CALL@」と呼ばれて'),
+            new SctItm('「@CALL@」と噂されて'),
+            new SctItm('「@CALL@」と馬鹿にされて'),
+            new SctItm('「@CALL@」と後ろ指を指されて'),
+            new SctItm('「@CALL@」と讃えられて'),
+            new SctItm('「@CALL@」と賞賛されて'),
+            new SctItm('「@CALL@」とおだてられて'),
             new SctItm('@PART@を連れて'),
             new SctItm('デートして'),
             new SctItm('@PART@をデートに誘って'),
@@ -1993,7 +2000,9 @@ class selector_doing02 extends SctItm_Selector {
             new SctItm('@FRUIT@の皮を|剥|む|いて'),
             new SctItm('@FRUIT@を収穫して'),
             new SctItm('@FRUIT@を叩き売りして'),
-            new SctItm('@FRUIT@の種を捨てて')
+            new SctItm('@FRUIT@の種を捨てて'),
+            new SctItm('@MUSIC@を聴いて'),
+            new SctItm('@MUSIC@を歌って')
         ];
     }
 }
