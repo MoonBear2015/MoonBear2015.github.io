@@ -9,7 +9,7 @@ function set_qa()
     html += '<h1>';
     html += 'Q&A';
     html += '<small>';
-    html += ' Q01.13';
+    html += ' Q01.14';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -498,6 +498,10 @@ class selector_q03_quest extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@PART@が@KEI1@ので')
             ,
             new SctItm('本当は@CLASS@になりたいので')
+            ,
+            new SctItm('@DOING@ばかりいるので')
+            ,
+            new SctItm('@DOING@しまうので')
         ]
     }
 }
@@ -596,7 +600,7 @@ class selector_a_title extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('諦めましょう、@QUESTER@さん')
             ,
-            new SctItm('@QUESTER@さん、あなたは@NICK@ですか？')
+            new SctItm('@QUESTER@さん、あなたは@NICKBAD@ですか？')
             ,
             new SctItm('@KEI@ことを云ってはいけませんよ、@QUESTER@さん')
             // ,

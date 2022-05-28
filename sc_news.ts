@@ -69,7 +69,7 @@ function make_news()
 
     html += '<div id="news_pic_R">';
     html += '<figure>';
-    html += '<img src="pics/@PIC_DO@" width="300px">';
+    html += '<img src="pics/@PIC_DO@" width="200px">';
     html += '</figure>';
     html += '<p>@NEWS_SUBTITLE02@</p>';
     html += '</div>';
@@ -85,7 +85,7 @@ function make_news()
 
     html += '<div id="news_pic_L">';
     html += '<figure>';
-    html += '<img src="pics/@ICON_TECH@" width="300px">';
+    html += '<img src="pics/@ICON_TECH@" width="200px">';
     html += '</figure>';
     html += '<p>@NEWS_SUBTITLE03@</p>';
     html += '</div>';
@@ -619,6 +619,8 @@ class selector_call extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@SIZE@@END02C@@NICK@')
             ,
             new SctItm('@SIZE@@END02C@@L_CLASS@')
+            ,
+            new SctItm('@DOING@いる@NICK@')
         ];
     }
 }
@@ -2961,6 +2963,8 @@ class selector_doing02 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@PART@にお茶を出して')
             ,
             new SctItm('@ANIMAL@を連れて')
+            ,
+            new SctItm('@ANIMAL@に乗って')
             ,
             new SctItm('@ANIMAL@の散歩をして')
             ,
