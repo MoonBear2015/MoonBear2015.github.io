@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N02.92';
+    html += ' N02.93';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -2896,6 +2896,12 @@ class selector_doing02 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@L_CLASS@を目指して')
             ,
+            new SctItm('@L_CLASS@を雇って')
+            ,
+            new SctItm('@L_CLASS@を召還して')
+            ,
+            new SctItm('@L_CLASS@を呼び出して')
+            ,
             new SctItm('@PLACE@に住んで')
             ,
             new SctItm('@CITY@に家を建てて')
@@ -2997,6 +3003,8 @@ class selector_doing02 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@FLOWER@の花を咲かせて')
             ,
             new SctItm('@FLOWER@の花を飾って')
+            ,
+            new SctItm('@FLOWER@の花の絵を描いて')
             ,
             new SctItm('@FLOWER@の花びらを散らして')
             ,
