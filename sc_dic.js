@@ -1181,6 +1181,7 @@ const cods_think = [
 ];
 const cods_place = [
     new SctCod_TI('|居場所|いばしょ|', 'PLACE/place.jpg'),
+    new SctCod_TI('|図書館|としょかん|', 'PLACE/library.jpg'),
     new SctCod_TI('|教室|きょうしつ|', 'PLACE/classroom.jpg'),
     new SctCod_TI('オフィス', 'PLACE/office.jpg'),
     new SctCod_TI('|自宅|じたく|', 'PLACE/home.jpg'),
@@ -1202,6 +1203,7 @@ const cods_place = [
     new SctCod_TI('バーカウンター', 'PLACE/barcounter.jpg'),
     new SctCod_TI('|喫茶店|きっさてん|', 'PLACE/coffeeshop.jpg'),
     new SctCod_TI('レストラン', 'PLACE/restaurant.jpg'),
+    new SctCod_TI('スーパーマーケット', 'PLACE/market.jpg'),
     new SctCod_TI('コックピット', 'PLACE/cockpit.jpg'),
     new SctCod_TI('|戦場|せんじょう|', 'PLACE/war.jpg'),
     new SctCod_TI('プールサイド', 'PLACE/poolside.jpg'),
