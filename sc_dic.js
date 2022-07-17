@@ -4138,6 +4138,37 @@ const itms_meal = [
     new SctItm('海苔弁当'),
     new SctItm('日の丸弁当')
 ];
+const itms_dress = [
+    new SctItm('私服'),
+    new SctItm('制服'),
+    new SctItm('学生服'),
+    new SctItm('体操服'),
+    new SctItm('セーラー服'),
+    new SctItm('喪服'),
+    new SctItm('メイド服'),
+    new SctItm('宇宙服'),
+    new SctItm('白衣'),
+    new SctItm('背広'),
+    new SctItm('スーツ'),
+    new SctItm('燕尾服'),
+    new SctItm('タキシード'),
+    new SctItm('着物'),
+    new SctItm('晴れ着'),
+    new SctItm('浴衣'),
+    new SctItm('羽織袴'),
+    new SctItm('紋付き袴'),
+    new SctItm('振り袖'),
+    new SctItm('ドレス'),
+    new SctItm('チャイナドレス'),
+    new SctItm('ウエディングドレス'),
+    new SctItm('レオタード'),
+    new SctItm('チュチュ'),
+    new SctItm('ジャージ'),
+    new SctItm('スウェット'),
+    new SctItm('水着'),
+    new SctItm('ビキニ'),
+    new SctItm('@ANIMAL@の毛皮のコート')
+];
 const itms_music = [
     new SctItm('アニメソング'),
     new SctItm('演歌'),

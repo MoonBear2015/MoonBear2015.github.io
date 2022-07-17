@@ -1334,6 +1334,12 @@ class selector_meal extends SctItm_Selector {
         this.Add(itms_meal);
     }
 }
+class selector_dress extends SctItm_Selector {
+    constructor() {
+        super('@DRESS@');
+        this.Add(itms_dress);
+    }
+}
 class selector_food1 extends SctItm_Selector {
     constructor() {
         super('@FOOD01@');
@@ -1948,10 +1954,12 @@ class selector_doing02 extends SctItm_Selector {
             new SctItm('@L_CLASS@を雇って'),
             new SctItm('@L_CLASS@を召還して'),
             new SctItm('@L_CLASS@を呼び出して'),
+            new SctItm('@L_CLASS@に変身して'),
             new SctItm('@PLACE@に住んで'),
             new SctItm('@CITY@に家を建てて'),
             new SctItm('@PLACE@で眠って'),
             new SctItm('@PLACE@で遊んで'),
+            new SctItm('@PLACE@で踊って'),
             new SctItm('@CITY@の@LANDMARK@を歩いて'),
             new SctItm('@MANYPEOPLE@に追われて'),
             new SctItm('@MANYPEOPLE@に囲まれて'),
@@ -1990,7 +1998,11 @@ class selector_doing02 extends SctItm_Selector {
             new SctItm('@ANIMAL@に襲われて'),
             new SctItm('@ANIMAL@と戦って'),
             new SctItm('@ANIMAL@の絵を描いて'),
-            new SctItm('@ANIMAL@の毛皮のコートを着て'),
+            new SctItm('@DRESS@を着て'),
+            new SctItm('@DRESS@を脱いで'),
+            new SctItm('@DRESS@に着替えて'),
+            new SctItm('@DRESS@を洗濯して'),
+            new SctItm('@DRESS@を仮縫いして'),
             new SctItm('@SCOOL@に通って'),
             new SctItm('@SCOOL@に入学して'),
             new SctItm('@SCOOL@に合格して'),
@@ -2070,6 +2082,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_fish());
         this.dic_push(new selector_sweets());
         this.dic_push(new selector_meal());
+        this.dic_push(new selector_dress());
         this.dic_push(new selector_food1());
         this.dic_push(new selector_food());
         this.dic_push(new selector_scool());
