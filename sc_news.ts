@@ -1986,8 +1986,13 @@ class selector_food extends SctItm_Selector implements ISctItm_Selector {
 class selector_music extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@MUSIC@');
-        this.startNumber = 1;
         this.Add(itms_music);
+    }
+}
+class selector_dance extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@DANCE@');
+        this.Add(itms_dance);
     }
 }
 
@@ -2920,6 +2925,12 @@ class selector_doing02 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@PLACE@で踊って')
             ,
+            new SctItm('@DANCE@を踊って')
+            ,
+            new SctItm('@KEI@@DANCE@を踊って')
+            ,
+            new SctItm('@KEID@@DANCE@を踊って')
+            ,
             new SctItm('@CITY@の@LANDMARK@を歩いて')
             ,
             new SctItm('@MANYPEOPLE@に追われて')
@@ -3118,6 +3129,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_scoolas());
         
         this.dic_push(new selector_music());
+        this.dic_push(new selector_dance());
         this.dic_push(new selector_tech());
         this.dic_push(new locker_tech());
         this.dic_push(new selector_animal());

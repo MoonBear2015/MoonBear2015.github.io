@@ -4196,6 +4196,24 @@ const itms_music = [
     new SctItm('レゲェ'),
     new SctItm('ロック')
 ];
+const itms_dance = [
+    new SctItm('ダンス'),
+    new SctItm('フォークダンス'),
+    new SctItm('ジャズダンス'),
+    new SctItm('バレエ'),
+    new SctItm('バレエ'),
+    new SctItm('社交ダンス'),
+    new SctItm('チークダンス'),
+    new SctItm('タンゴ'),
+    new SctItm('フラメンコ'),
+    new SctItm('サンバ'),
+    new SctItm('タップダンス'),
+    new SctItm('コサックダンス'),
+    new SctItm('ベリーダンス'),
+    new SctItm('日本舞踊'),
+    new SctItm('ヒップホップ'),
+    new SctItm('パラパラ')
+];
 const itms_scool = [
     new SctItm('幼稚園'),
     new SctItm('保育園'),
