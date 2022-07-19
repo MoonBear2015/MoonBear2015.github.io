@@ -4147,6 +4147,7 @@ const itms_dress = [
     new SctItm('喪服'),
     new SctItm('メイド服'),
     new SctItm('宇宙服'),
+    new SctItm('軍服'),
     new SctItm('白衣'),
     new SctItm('背広'),
     new SctItm('スーツ'),
