@@ -3305,6 +3305,9 @@ const itms_what = [
     new SctItm('宇宙', 'WHAT/space.jpg'),
     new SctItm('宇宙開発', 'WHAT/NASA.jpg'),
     new SctItm('天文学', 'WHAT/space.jpg'),
+    new SctItm('火星', 'WHAT/mars.jpg'),
+    new SctItm('タイタン', 'WHAT/saturn.jpg'),
+    new SctItm('アンドロメダ星雲', 'WHAT/andromeda.jpg'),
     new SctItm('NASA', 'WHAT/NASA.jpg'),
     new SctItm('マスコミ', 'WHAT/MassMedia.jpg'),
     new SctItm('ビジネス', 'WHAT/business.jpg'),
@@ -3354,7 +3357,6 @@ const itms_what = [
     new SctItm('邪馬台国', 'WHAT/yama.jpg'),
     new SctItm('竜宮城', 'WHAT/ryugu.jpg'),
     new SctItm('戦場', 'WHAT/war.jpg'),
-    new SctItm('火星', 'WHAT/mars.jpg'),
     new SctItm('スターバックス', 'WHAT/Startbucks.jpg'),
     new SctItm('マクドナルド', 'WHAT/MacDonald.jpg'),
     new SctItm('インターネット', 'WHAT/internet.jpg'),
@@ -4291,5 +4293,6 @@ const itms_horo_star = [
     new SctItm('GYOUZA', 'HORO/gyouza.png', 'ギョウ'),
     new SctItm('SCISSORS', 'HORO/Scissors.png', '鋏'),
     new SctItm('ASTRONAUT', 'HORO/astronaut.png', '宇宙飛行士'),
-    new SctItm('NEWTON', 'HORO/newton.png', 'ニュートン')
+    new SctItm('NEWTON', 'HORO/newton.png', 'ニュートン'),
+    new SctItm('SIR CHARLES SPENCER CHAPLIN', 'HORO/Chaplin.png', 'チャップリン')
 ];

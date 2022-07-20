@@ -606,7 +606,11 @@ class selector_call extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@L_WHAT@の@NICK@')
             ,
+            new SctItm('@L_WHAT@が産んだ@NICK@')
+            ,
             new SctItm('@L_WHAT@の@L_TECH@')
+            ,
+            new SctItm('@L_TECH@の@NICK@')
             ,
             new SctItm('@L_WHAT@が@THINK@@END02C@@L_TECH@')
             ,
@@ -621,6 +625,8 @@ class selector_call extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@SIZE@@END02C@@L_CLASS@')
             ,
             new SctItm('@DOING@いる@NICK@')
+            ,
+            new SctItm('@DOING@いた@NICK@')
         ];
     }
 }
@@ -670,6 +676,10 @@ class selector_date extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@DATE@');
         this.itms = [
+            new SctItm('およそ@DATE@')
+            ,
+            new SctItm('@DATE01@')
+            ,
             new SctItm('@DATE01@')
             ,
             new SctItm('@DATE01@')
@@ -754,17 +764,25 @@ class selector_who3 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@COUNTRY@で産まれた')
             ,
+            new SctItm('@COUNTRY@から来た')
+            ,
             new SctItm('@COUNTRY@出身の')
             ,
             new SctItm('@COUNTRY@在住の')
             ,
             new SctItm('@COUNTRY@唯一の')
             ,
+            new SctItm('@COUNTRY@政府から派遣された')
+            ,
             new SctItm('@SCOOL@出身の')
             ,
-            new SctItm('@SCOOL@を中退した')
+            new SctItm('@SCOOL@に通う')
             ,
-            new SctItm('@COUNTRY@政府から派遣された')
+            new SctItm('@SCOOL@在学中の')
+            ,
+            new SctItm('@SCOOL@筆頭の')
+            ,
+            new SctItm('@SCOOL@を中退した')
             ,
             new SctItm('「@CALL2@」と呼ばれている')
             ,
@@ -2174,6 +2192,10 @@ class selector_say extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('記録')
             ,
+            new SctItm('解説')
+            ,
+            new SctItm('説明')
+            ,
             new SctItm('メモ書き')
             ,
             new SctItm('コメント')
@@ -2341,6 +2363,12 @@ class selector_emotion01 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('切な')
             ,
             new SctItm('腹立たし')
+            ,
+            new SctItm('煩わし')
+            ,
+            new SctItm('痛々し')
+            ,
+            new SctItm('痛々し')
         ]
     }            
 }
@@ -2391,6 +2419,8 @@ class selector_answer extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('推理')
             ,
             new SctItm('叫び')
+            ,
+            new SctItm('訴え')
             ,
             new SctItm('絶叫')
             ,
@@ -2470,11 +2500,35 @@ class selector_asses1 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@ASSES_S1@');
         this.itms = [
+            new SctItm('言い伝えられた')
+            ,
+            new SctItm('後ろ指を指された')
+            ,
+            new SctItm('恐れられた')
+            ,
+            new SctItm('おだてられている')
+            ,
+            new SctItm('驚かせた')
+            ,
+            new SctItm('勘違いされた')
+            ,
+            new SctItm('感動された')
+            ,
+            new SctItm('誤解されている')
+            ,
+            new SctItm('感謝されている')
+            ,
+            new SctItm('決めつけられた')
+            ,
+            new SctItm('驚嘆された')
+            ,
+            new SctItm('ささやかれている')
+            ,
+            new SctItm('蔑まれている')
+            ,
             new SctItm('親しまれている')
             ,
             new SctItm('賞賛された')
-            ,
-            new SctItm('蔑まれている')
             ,
             new SctItm('罵倒されている')
             ,
@@ -2488,29 +2542,21 @@ class selector_asses1 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('期待されている')
             ,
+            new SctItm('丸め込まれた')
+            ,
             new SctItm('見放されている')
             ,
             new SctItm('見限られた')
             ,
             new SctItm('見捨てられた')
             ,
-            new SctItm('恐れられた')
-            ,
-            new SctItm('おだてられている')
-            ,
             new SctItm('馬鹿にされている')
             ,
             new SctItm('讃えられている')
             ,
-            new SctItm('言い伝えられた')
-            ,
-            new SctItm('丸め込まれた')
-            ,
             new SctItm('知れ渡っている')
             ,
             new SctItm('語り継がれている')
-            ,
-            new SctItm('後ろ指を指された')
             ,
             new SctItm('推薦された')
             ,
@@ -2518,15 +2564,7 @@ class selector_asses1 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('認定された')
             ,
-            new SctItm('ささやかれている')
-            ,
-            new SctItm('驚嘆された')
-            ,
-            new SctItm('驚かせた')
-            ,
-            new SctItm('感動された')
-            ,
-            new SctItm('感謝されている')
+            new SctItm('認められた')
             ,
             new SctItm('太鼓判を押された')
             ,
@@ -2539,12 +2577,6 @@ class selector_asses1 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('見間違えられた')
             ,
             new SctItm('間違えられた')
-            ,
-            new SctItm('誤解されている')
-            ,
-            new SctItm('勘違いされた')
-            ,
-            new SctItm('決めつけられた')
         ];
     }
 }
@@ -2622,6 +2654,8 @@ class selector_asses2 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('勘違いされ')
             ,
             new SctItm('決めつけられ')
+            ,
+            new SctItm('認められ')
         ];
     }
 }
@@ -2899,6 +2933,8 @@ class selector_doing02 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@FOOD@を注文して')
             ,
+            new SctItm('@FOOD@を平らげて')
+            ,
             new SctItm('@FOOD@の店を開いて')
             ,
             new SctItm('@L_CLASS@に憧れて')
@@ -2976,6 +3012,8 @@ class selector_doing02 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@PART@をデートに誘って')
             ,
             new SctItm('@PART@に手紙を書いて')
+            ,
+            new SctItm('@PART@に電話して')
             ,
             new SctItm('お散歩して')
             ,

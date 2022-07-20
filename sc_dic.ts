@@ -5053,6 +5053,12 @@ const   itms_what = [
     ,
     new SctItm('天文学','WHAT/space.jpg')
     ,
+    new SctItm('火星','WHAT/mars.jpg')
+    ,
+    new SctItm('タイタン','WHAT/saturn.jpg')
+    ,
+    new SctItm('アンドロメダ星雲','WHAT/andromeda.jpg')
+    ,
     new SctItm('NASA','WHAT/NASA.jpg')
     ,
     new SctItm('マスコミ','WHAT/MassMedia.jpg')
@@ -5150,8 +5156,6 @@ const   itms_what = [
     new SctItm('竜宮城','WHAT/ryugu.jpg')
     ,
     new SctItm('戦場','WHAT/war.jpg')
-    ,
-    new SctItm('火星','WHAT/mars.jpg')
     ,
     new SctItm('スターバックス','WHAT/Startbucks.jpg')
     ,
@@ -6961,5 +6965,7 @@ const   itms_horo_star = [
     new SctItm('ASTRONAUT','HORO/astronaut.png','宇宙飛行士')
     ,
     new SctItm('NEWTON','HORO/newton.png','ニュートン')
+    ,
+    new SctItm('SIR CHARLES SPENCER CHAPLIN','HORO/Chaplin.png','チャップリン')
 ]
 
