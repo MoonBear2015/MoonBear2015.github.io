@@ -565,7 +565,7 @@ small {
     grid-column: 3/4;
     grid-row: 1/2;
     text-align: center;
-    font-size: 3.5vw;
+    font-size: 3vw;
     letter-spacing: 0.5em;
 }
 #horo_sent_days {

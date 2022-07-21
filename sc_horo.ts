@@ -104,7 +104,8 @@ function make_horo()
 
         html += '<div id="horo_sent_title">';
         html += '☆★';
-        html += '<big>@F_STAR_B@座</big>';
+        // html += '<big>@F_STAR_B@座</big>';
+        html += '@F_STAR_B@座';
         html += '★☆';
         html += '</div>';
 
