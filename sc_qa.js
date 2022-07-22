@@ -196,6 +196,7 @@ class selector_q_title extends SctItm_Selector {
     constructor() {
         super('@Q_TITLE@');
         this.itms = [
+            new SctItm('@DOING02@みたいのですが'),
             new SctItm('@DOING@いる@L_PART@に@THINK@しています'),
             new SctItm('@DOING@いる@L_PART@を知りませんか'),
             new SctItm('@DOING@いる@L_PART@をなんとかして下さい'),
@@ -207,6 +208,9 @@ class selector_q_title extends SctItm_Selector {
             new SctItm('助けて！ @L_PART@がまるで@NICK@なんです'),
             new SctItm('@L_PART@が@NICK@にしか見えません'),
             new SctItm('@L_PART@を@CLASS@にしたいのですが'),
+            new SctItm('@L_PART@が@DOING@いるので困っています'),
+            new SctItm('@L_PART@を@L_DO@できなくて困っています'),
+            new SctItm('助けて！ @L_PART@に@L_DO@されそうなんです！'),
             new SctItm('@L_PART@が@KEI2@で仕方がありません'),
             new SctItm('@L_PART@の@L_HABIT@を止めさせたいんです'),
             new SctItm('@L_PART@の@L_HABIT@が長続きしません'),
@@ -218,6 +222,9 @@ class selector_q_title extends SctItm_Selector {
             new SctItm('どうして、@CLASS@は@KEI1@のでしょうか'),
             new SctItm('どうして、@L_PART@は@KEI1@のでしょうか'),
             new SctItm('どうすれば@CLASS@になれますか'),
+            new SctItm('@CLASS@になりたいんです'),
+            new SctItm('@ANIMAL@に追われて困っています'),
+            new SctItm('@NICK@の様になりたいのですが'),
             new SctItm('「@CALL2@」と呼ばれて@GRADE@@THINK@しています'),
             new SctItm('@CLASS@になりたくて@GRADE@@THINK@しています')
         ];
