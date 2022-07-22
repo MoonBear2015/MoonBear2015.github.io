@@ -543,7 +543,6 @@ class selector_a04_result extends SctItm_Selector {
             new SctItm('@KEI@@PEOPLE@と@ASSES@のは当たり前です'),
             new SctItm('@DOING@いてはどうしようもありません'),
             new SctItm('@DOING@いては仕方がありません'),
-            new SctItm('@DOING@いるのがダメなんです'),
             new SctItm('@DOING@いる場合ではありません'),
             new SctItm('@DOING@いたとは信じられません'),
             new SctItm('@DOING@みるしかありません')

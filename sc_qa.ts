@@ -816,8 +816,6 @@ class selector_a04_result extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@DOING@いては仕方がありません')
             ,
-            new SctItm('@DOING@いるのがダメなんです')
-            ,
             new SctItm('@DOING@いる場合ではありません')
             ,
             new SctItm('@DOING@いたとは信じられません')
