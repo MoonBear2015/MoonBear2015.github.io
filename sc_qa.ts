@@ -592,9 +592,13 @@ class selector_a_title extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('それは@QUESTER@さんの責任です')
             ,
+            new SctItm('だから@QUESTER@さんはダメなんです')
+            ,
             new SctItm('@QUESTER@さんの仰るとおりです')
             ,
             new SctItm('それは@QUESTER@さんの勘違いでは？')
+            ,
+            new SctItm('@QUESTER@さんの思い込みですよ')
             ,
             new SctItm('@QUESTER@さんは悪くありません')
             ,
@@ -633,6 +637,8 @@ class selector_a_title extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@QUESTER@さん、@DOING02@いる場合ではありません')
             ,
             new SctItm('@QUESTER@さんが@DOING02@みては？')
+            ,
+            new SctItm('それは@QUESTER@さんだけですよ')
         ]
     }
 }
@@ -810,9 +816,13 @@ class selector_a04_result extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@DOING@いては仕方がありません')
             ,
+            new SctItm('@DOING@いるのがダメなんです')
+            ,
             new SctItm('@DOING@いる場合ではありません')
             ,
             new SctItm('@DOING@いたとは信じられません')
+            ,
+            new SctItm('@DOING@みるしかありません')
         ]
     }
 }
