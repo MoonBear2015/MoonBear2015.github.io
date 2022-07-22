@@ -4296,5 +4296,5 @@ const itms_horo_star = [
     new SctItm('NEWTON', 'HORO/newton.png', 'ニュートン'),
     new SctItm('SIR CHARLES SPENCER CHAPLIN', 'HORO/Chaplin.png', 'チャップリン'),
     new SctItm('EDISON', 'HORO/edison.png', 'エヂソン'),
-    new SctItm('BEETHOVEN', 'HORO/beethoven.png', 'ベートーヴェン')
+    new SctItm('BEETHOVEN', 'HORO/beethoven.png', 'ベートーベン')
 ];

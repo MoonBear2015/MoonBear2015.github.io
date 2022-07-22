@@ -6970,6 +6970,6 @@ const   itms_horo_star = [
     ,
     new SctItm('EDISON','HORO/edison.png','エヂソン')
     ,
-    new SctItm('BEETHOVEN','HORO/beethoven.png','ベートーヴェン')
+    new SctItm('BEETHOVEN','HORO/beethoven.png','ベートーベン')
 ]
 
