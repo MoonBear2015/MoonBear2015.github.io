@@ -2980,6 +2980,8 @@ class selector_doing02 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@MANYPEOPLE@に殺されかけて')
             ,
+            new SctItm('@PEOPLE@を集めて')
+            ,
             new SctItm('@PEOPLE@を追いかけて')
             ,
             new SctItm('@PEOPLE@を探して')
@@ -3013,6 +3015,8 @@ class selector_doing02 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@PART@に手紙を書いて')
             ,
             new SctItm('@PART@に電話して')
+            ,
+            new SctItm('@PART@にメールして')
             ,
             new SctItm('お散歩して')
             ,

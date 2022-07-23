@@ -1128,6 +1128,14 @@ const   cods_animal = [
     new SctCod_TI('|栗鼠|りす|')
     ,
     new SctCod_TI('|驢馬|ろば|')
+    ,
+    new SctCod_TI('|鳳凰|ほうおう|')
+    ,
+    new SctCod_TI('|朱雀|すじゃく|')
+    ,
+    new SctCod_TI('|恐竜|きょうりゅう|')
+    ,
+    new SctCod_TI('|怪獣|かいじゅう|')
 ];
 
 const   cods_fish = [
@@ -5349,8 +5357,6 @@ const   itms_do = [
     ,
     new SctItm('近代化','DO/develop.jpg')
     ,
-    new SctItm('近代化','DO/develop.jpg')
-    ,
     new SctItm('巨大化','DO/Giant.jpg')
     ,
     new SctItm('アニメ化','DO/animated.jpg')
@@ -5392,6 +5398,8 @@ const   itms_class = [
     new SctItm('ケーキ職人')
     ,
     new SctItm('工場長')
+    ,
+    new SctItm('現場監督')
     ,
     new SctItm('会社員')
     ,
@@ -5471,6 +5479,8 @@ const   itms_class = [
     ,
     new SctItm('伯爵')
     ,
+    new SctItm('男爵')
+    ,
     new SctItm('水呑百姓')
     ,
     new SctItm('農民')
@@ -5487,9 +5497,13 @@ const   itms_class = [
     ,
     new SctItm('連邦保安官')
     ,
+    new SctItm('公務員')
+    ,
     new SctItm('国家公務員')
     ,
     new SctItm('国選弁護人')
+    ,
+    new SctItm('弁護士')
     ,
     new SctItm('メイド')
     ,
@@ -5542,8 +5556,6 @@ const   itms_class = [
     new SctItm('魔法使い')
     ,
     new SctItm('魔法少女')
-    ,
-    new SctItm('抜け忍')
     ,
     new SctItm('黒魔術師')
     ,
