@@ -2434,7 +2434,6 @@ class selector_answer extends SctItm_Selector implements ISctItm_Selector {
 }
 
 
-// 評価 と～（る・た・い）。
 class selector_day extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@DAY@');
