@@ -564,6 +564,7 @@ const cods_animal = [
     new SctCod_TI('|海鼠|なまこ|'),
     new SctCod_TI('|蛞蝓|なめくじ|'),
     new SctCod_TI('|鼠|ねずみ|'),
+    new SctCod_TI('|大熊猫|ぱんだ|'),
     new SctCod_TI('|獏|ばく|'),
     new SctCod_TI('|波布|はぶ|'),
     new SctCod_TI('|蛤|はまぐり|'),
@@ -1203,6 +1204,8 @@ const cods_place = [
     new SctCod_TI('|遊園地|ゆうえんち|', 'PLACE/yuenchi.jpg'),
     new SctCod_TI('テーマパーク', 'PLACE/temapark.jpg'),
     new SctCod_TI('|映画館|えいがかん|', 'PLACE/chinema.jpg'),
+    new SctCod_TI('|水族館|すいぞくかん|', 'PLACE/Aquarium.jpg'),
+    new SctCod_TI('|動物園|どうぶつえん|', 'PLACE/zoo.jpg'),
     new SctCod_TI('|酒場|さかば|', 'PLACE/bar.jpg'),
     new SctCod_TI('バーカウンター', 'PLACE/barcounter.jpg'),
     new SctCod_TI('|喫茶店|きっさてん|', 'PLACE/coffeeshop.jpg'),
@@ -3372,7 +3375,8 @@ const itms_what = [
     new SctItm('お花畑', 'WHAT/flower.jpg'),
     new SctItm('マヤ文明', 'WHAT/maya.jpg'),
     new SctItm('暗黒街', 'WHAT/Mafia.jpg'),
-    new SctItm('歓楽街', 'WHAT/moulin.jpg')
+    new SctItm('歓楽街', 'WHAT/moulin.jpg'),
+    new SctItm('中華街', 'WHAT/chinatown.jpg')
 ];
 const itms_city = [
     new SctItm('東京', 'CITY/tokyo.jpg'),
@@ -4302,5 +4306,6 @@ const itms_horo_star = [
     new SctItm('NEWTON', 'HORO/newton.png', 'ニュートン'),
     new SctItm('SIR CHARLES SPENCER CHAPLIN', 'HORO/Chaplin.png', 'チャップリン'),
     new SctItm('EDISON', 'HORO/edison.png', 'エヂソン'),
-    new SctItm('BEETHOVEN', 'HORO/beethoven.png', 'ベートーベン')
+    new SctItm('BEETHOVEN', 'HORO/beethoven.png', 'ベートーベン'),
+    new SctItm('PANDA', 'HORO/panda.png', 'パンダ')
 ];

@@ -1075,6 +1075,8 @@ const   cods_animal = [
     ,
     new SctCod_TI('|鼠|ねずみ|')
     ,
+    new SctCod_TI('|大熊猫|ぱんだ|')
+    ,
     new SctCod_TI('|獏|ばく|')
     ,
     new SctCod_TI('|波布|はぶ|')
@@ -2155,6 +2157,10 @@ const   cods_place = [
     new SctCod_TI('テーマパーク','PLACE/temapark.jpg')
     ,
     new SctCod_TI('|映画館|えいがかん|','PLACE/chinema.jpg')
+    ,
+    new SctCod_TI('|水族館|すいぞくかん|','PLACE/Aquarium.jpg')
+    ,
+    new SctCod_TI('|動物園|どうぶつえん|','PLACE/zoo.jpg')
     ,
     new SctCod_TI('|酒場|さかば|','PLACE/bar.jpg')
     ,
@@ -5188,6 +5194,8 @@ const   itms_what = [
     new SctItm('暗黒街','WHAT/Mafia.jpg')
     ,
     new SctItm('歓楽街','WHAT/moulin.jpg')
+    ,
+    new SctItm('中華街','WHAT/chinatown.jpg')
 ];
 
 
@@ -6983,5 +6991,7 @@ const   itms_horo_star = [
     new SctItm('EDISON','HORO/edison.png','エヂソン')
     ,
     new SctItm('BEETHOVEN','HORO/beethoven.png','ベートーベン')
+    ,
+    new SctItm('PANDA','HORO/panda.png','パンダ')
 ]
 
