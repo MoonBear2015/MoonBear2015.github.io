@@ -483,7 +483,13 @@ class selector_q03_quest extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@KEI@@PEOPLE@と@ASSES@ので')
             ,
-            new SctItm('@PART@がいなくなってしまい')
+            new SctItm('@PART@が@DOING@しまい◎◎')
+            ,
+            new SctItm('@PART@が@DOING@しまったので◎◎')
+            ,
+            new SctItm('@PART@が@DOING@いたので◎◎')
+            ,
+            new SctItm('@PART@が@DOING@いるので◎◎')
             ,
             new SctItm('@PART@が邪魔で')
             ,
