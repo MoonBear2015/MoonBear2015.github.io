@@ -9,7 +9,7 @@ function set_horo()
     html += '<h1>';
     html += 'Horoscope';
     html += '<small>';
-    html += ' H00.63';
+    html += ' H00.64';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -277,7 +277,7 @@ class First_travel extends SctItm_FirstLocker2 implements ISctItm_Selector{
             ,
             new SctItm('@DIR@への旅路は要注意')
             ,
-            new SctItm('@SWEETS@をお土産にどうぞ')
+            new SctItm('@CITY@名物の@SWEETS@をお土産にどうぞ')
         ]
     }
 }
@@ -314,7 +314,7 @@ class First_game extends SctItm_FirstLocker2 implements ISctItm_Selector{
             ,
             new SctItm('@THEY@を味方に付ければ')
             ,
-            new SctItm('ラッキーナンバー　@NUM10000@')
+            new SctItm('ラッキーナンバー @NUM10000@')
         ]
     }
 }
@@ -377,6 +377,8 @@ class First_sports extends SctItm_FirstLocker2 implements ISctItm_Selector{
             ,
             new SctItm('@SPORTS@のシーズン到来です')
             ,
+            new SctItm('日々の@SPORTS@で丈夫な体')
+            ,
             new SctItm('お薦めスポーツ：@SPORTS@・@SPORTS@・@SPORTS@')
         ]
     }
@@ -406,6 +408,10 @@ class First_flower extends SctItm_FirstLocker2 implements ISctItm_Selector{
             new SctItm('花々','HORO/flower.png','Animal')
             ,
             new SctItm('ラッキーフラワー：@FLOWER@・@FLOWER@・@FLOWER@')
+            ,
+            new SctItm('@FLOWER@の花を部屋に飾ろう')
+            ,
+            new SctItm('@PART@に@FLOWER@の花を捧げよう')
         ]
     }
 }
@@ -461,6 +467,8 @@ class selector_h_info_item extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@KEI@@ITEM@の化身だと')
             ,
             new SctItm('@DOING@いる神様だと')
+            ,
+            new SctItm('@DO@を呼ぶ悪魔だと')
         ]
     }
 }
@@ -579,8 +587,6 @@ class selector_h_type_init extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@F_STAR_B@座の人は')
             ,
             new SctItm('@F_STAR_B@座の人の多くは')
-            ,
-            new SctItm('@F_STAR_B@座の人にありがちなことは')
             ,
             new SctItm('@F_STAR_B@座の人の特徴は')
             ,
