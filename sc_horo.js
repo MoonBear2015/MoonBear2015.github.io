@@ -7,7 +7,7 @@ function set_horo() {
     html += '<h1>';
     html += 'Horoscope';
     html += '<small>';
-    html += ' H00.64';
+    html += ' H00.65';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -332,7 +332,7 @@ class selector_h_info_item extends SctItm_Selector {
             new SctItm('@CLASS@の象徴であると'),
             new SctItm('@KEI@@ITEM@の化身だと'),
             new SctItm('@DOING@いる神様だと'),
-            new SctItm('@DO@を呼ぶ悪魔だと')
+            new SctItm('@ANIMAL@の@BODY@を持つ悪魔だと')
         ];
     }
 }

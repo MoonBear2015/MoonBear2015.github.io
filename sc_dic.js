@@ -3723,7 +3723,9 @@ const itms_shop = [
     new SctItm('TV', 'SHOP/TV01.jpg', 'テレビ'),
     new SctItm('TV', 'SHOP/TV02.jpg', 'テレビ'),
     new SctItm('TV', 'SHOP/TV03.jpg', 'テレビ'),
-    new SctItm('TV', 'SHOP/TV04.jpg', 'テレビ')
+    new SctItm('TV', 'SHOP/TV04.jpg', 'テレビ'),
+    new SctItm('FRIED CHICKEN', 'SHOP/CHIKIN01.jpg', 'フライドチキン'),
+    new SctItm('FRIED CHICKEN', 'SHOP/CHIKIN02.jpg', '唐揚げ')
 ];
 const itms_campany = [
     new SctItm('Apple', '', 'アップル'),
@@ -3737,7 +3739,8 @@ const itms_campany = [
     new SctItm('HUAWEI', '', 'ファーウェイ'),
     new SctItm('CHANEL', '', 'シャネル'),
     new SctItm('UNIQLO', '', 'ユニクロ'),
-    new SctItm('STARBUCKS', '', 'スターバックス')
+    new SctItm('STARBUCKS', '', 'スターバックス'),
+    new SctItm('KENTUCKY', '', 'ケンタッキー')
 ];
 const itms_model = [
     new SctItm('Pro'),
@@ -4307,5 +4310,6 @@ const itms_horo_star = [
     new SctItm('SIR CHARLES SPENCER CHAPLIN', 'HORO/Chaplin.png', 'チャップリン'),
     new SctItm('EDISON', 'HORO/edison.png', 'エヂソン'),
     new SctItm('BEETHOVEN', 'HORO/beethoven.png', 'ベートーベン'),
-    new SctItm('PANDA', 'HORO/panda.png', 'パンダ')
+    new SctItm('PANDA', 'HORO/panda.png', 'パンダ'),
+    new SctItm('SOUTHER', 'HORO/Souther.png', 'サウ')
 ];
