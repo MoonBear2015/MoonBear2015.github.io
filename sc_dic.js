@@ -3727,7 +3727,9 @@ const itms_shop = [
     new SctItm('TV', 'SHOP/TV03.jpg', 'テレビ'),
     new SctItm('TV', 'SHOP/TV04.jpg', 'テレビ'),
     new SctItm('FRIED CHICKEN', 'SHOP/CHIKIN01.jpg', 'フライドチキン'),
-    new SctItm('FRIED CHICKEN', 'SHOP/CHIKIN02.jpg', '唐揚げ')
+    new SctItm('FRIED CHICKEN', 'SHOP/CHIKIN02.jpg', '唐揚げ'),
+    new SctItm('NEWS PAPER', 'SHOP/NEWSPAPER01.jpg', '新聞'),
+    new SctItm('NEWS PAPER', 'SHOP/NEWSPAPER02.jpg', '新聞')
 ];
 const itms_campany = [
     new SctItm('Apple', '', 'アップル'),
