@@ -9,7 +9,7 @@ function set_horo()
     html += '<h1>';
     html += 'Horoscope';
     html += '<small>';
-    html += ' H00.66';
+    html += ' H00.68';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -377,9 +377,9 @@ class First_sports extends SctItm_FirstLocker2 implements ISctItm_Selector{
             ,
             new SctItm('@SPORTS@のシーズン到来です')
             ,
-            new SctItm('日々の@SPORTS@で丈夫な体')
+            new SctItm('@SPORTS@で丈夫な体')
             ,
-            new SctItm('お薦めスポーツ：@SPORTS@・@SPORTS@・@SPORTS@')
+            new SctItm('お薦めスポーツ：@SPORTS@')
         ]
     }
 }
@@ -407,7 +407,7 @@ class First_flower extends SctItm_FirstLocker2 implements ISctItm_Selector{
         this.itms = [
             new SctItm('花々','HORO/flower.png','Animal')
             ,
-            new SctItm('ラッキーフラワー：@FLOWER@・@FLOWER@・@FLOWER@')
+            new SctItm('ラッキーフラワー：@FLOWER@')
             ,
             new SctItm('@FLOWER@の花を部屋に飾ろう')
             ,
@@ -456,19 +456,19 @@ class selector_h_info_item extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@H_INFO_ITEM@');
         this.itms = [
-            new SctItm('その姿は@GRADE@@KEIM1@と')
+            new SctItm('その姿は@GRADE@@KEIM1@と@ASSES_S2@')
             ,
-            new SctItm('その@F_STAR_B@は@ANIMAL@の@BODY@を持つと')
+            new SctItm('その姿は@NICK@に瓜二つだと@ASSES_S2@')
             ,
-            new SctItm('その姿は@NICK@に瓜二つだと')
+            new SctItm('@CLASS@の象徴であると@ASSES_S2@')
             ,
-            new SctItm('@CLASS@の象徴であると')
+            new SctItm('@KEI@@ITEM@の化身だと@ASSES_S2@')
             ,
-            new SctItm('@KEI@@ITEM@の化身だと')
+            new SctItm('@DOING@いる神様だと@ASSES_S2@')
             ,
-            new SctItm('@DOING@いる神様だと')
+            new SctItm('@ANIMAL@の@BODY@を持つ悪魔と@ASSES_S2@')
             ,
-            new SctItm('@ANIMAL@の@BODY@を持つ悪魔だと')
+            new SctItm('@FLOWER@の妖精と@ASSES_S2@')
         ]
     }
 }
