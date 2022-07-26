@@ -7,7 +7,7 @@ function set_horo() {
     html += '<h1>';
     html += 'Horoscope';
     html += '<small>';
-    html += ' H00.65';
+    html += ' H00.66';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -157,7 +157,7 @@ class First_job extends SctItm_FirstLocker2 {
         super('@I_JOB@', '', '@ICON_HOROITEM@');
         this.itms = [
             new SctItm('仕事', 'HORO/job.png', 'Business'),
-            new SctItm('お薦めの転職先：@CLASS@・@CLASS@・@CLASS@'),
+            new SctItm('お薦めの転職先：@CLASS@'),
             new SctItm('@TECH@で業績アップ'),
             new SctItm('@TECH@で効率化を計りましょう'),
             new SctItm('@COUNTRY@にビジネスチャンスの予感')
@@ -243,8 +243,8 @@ class First_food extends SctItm_FirstLocker2 {
         this.itms = [
             new SctItm('食事', 'HORO/food.png', 'Food'),
             new SctItm('朝食には@MEAL@が一番'),
-            new SctItm('おすすめランチ：@MEAL@・@MEAL@・@MEAL@'),
-            new SctItm('おすすめディナー：@MEAL@・@MEAL@・@MEAL@'),
+            new SctItm('おすすめランチ：@MEAL@'),
+            new SctItm('おすすめディナー：@MEAL@'),
             new SctItm('@MEAL@が美味しい季節になりました'),
             new SctItm('@MEAL@の名店を探してみよう')
         ];
@@ -278,7 +278,7 @@ class First_animal extends SctItm_FirstLocker2 {
         super('@I_ANIMAL@', '', '@ICON_HOROITEM@');
         this.itms = [
             new SctItm('動物', 'HORO/animal.png', 'Animal'),
-            new SctItm('お薦めペット：@ANIMAL@・@ANIMAL@・@ANIMAL@'),
+            new SctItm('お薦めペット：@ANIMAL@'),
             new SctItm('@ANIMAL@を飼ってみませんか'),
             new SctItm('@ANIMAL@に要注意'),
             new SctItm('@ANIMAL@嫌いを克服しよう'),

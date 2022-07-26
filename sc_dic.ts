@@ -5589,6 +5589,8 @@ const   itms_class = [
     ,
     new SctItm('ウルトラマン')
     ,
+    new SctItm('バルタン星人')
+    ,
     new SctItm('スーパーマン')
     ,
     new SctItm('学級委員')
@@ -5650,6 +5652,8 @@ const   itms_class = [
     new SctItm('ピエロ')
     ,
     new SctItm('庭師')
+    ,
+    new SctItm('植木屋')
     ,
     new SctItm('狩人')
     ,

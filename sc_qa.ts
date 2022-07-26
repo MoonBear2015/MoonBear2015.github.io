@@ -9,7 +9,7 @@ function set_qa()
     html += '<h1>';
     html += 'Q&A';
     html += '<small>';
-    html += ' Q01.14';
+    html += ' Q01.15';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -590,15 +590,13 @@ class selector_a_title extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('お久しぶりですね、@QUESTER@さん')
             ,
-            new SctItm('@GRADE@大変ですね、@QUESTER@さん')
+            new SctItm('大変ですね、@QUESTER@さん')
             ,
             new SctItm('それは@QUESTER@さんの問題では？')
             ,
             new SctItm('それは@QUESTER@さんの思い過ごしですよ')
             ,
             new SctItm('それは@QUESTER@さんの責任です')
-            ,
-            new SctItm('だから@QUESTER@さんはダメなんです')
             ,
             new SctItm('@QUESTER@さんの仰るとおりです')
             ,
@@ -609,6 +607,8 @@ class selector_a_title extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@QUESTER@さんは悪くありません')
             ,
             new SctItm('@QUESTER@さんなら大丈夫ですよ')
+            ,
+            new SctItm('それは@QUESTER@さんだけですよ')
             ,
             new SctItm('@QUESTER@さん、もう諦めましょう')
             ,
@@ -623,10 +623,6 @@ class selector_a_title extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('仕方が無いですよ、@QUESTER@さん')
             ,
             new SctItm('諦めましょう、@QUESTER@さん')
-            ,
-            new SctItm('@QUESTER@さん、あなたは@NICKBAD@ですか？')
-            ,
-            new SctItm('@KEI@ことを云ってはいけませんよ、@QUESTER@さん')
             // ,
             // new SctItm('@QUESTER@さん、お薬の時間ですよ')
             ,
@@ -640,11 +636,17 @@ class selector_a_title extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@QUESTER@さん、もう来ないで下さいといったはずです')
             ,
-            new SctItm('@QUESTER@さん、@DOING02@いる場合ではありません')
+            new SctItm('だから@QUESTER@さんは@NICKBAD@なんです')
+            ,
+            new SctItm('@QUESTER@さんが@SAY@しても仕方がありません')
+            ,
+            new SctItm('@QUESTER@さんが@DOING02@いる場合ではありません')
             ,
             new SctItm('@QUESTER@さんが@DOING02@みては？')
             ,
-            new SctItm('それは@QUESTER@さんだけですよ')
+            new SctItm('@L_PART@さんと@DOING02@みては？')
+            ,
+            new SctItm('@CLASS@に相談しましょう')
         ]
     }
 }

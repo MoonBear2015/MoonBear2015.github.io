@@ -9,7 +9,7 @@ function set_horo()
     html += '<h1>';
     html += 'Horoscope';
     html += '<small>';
-    html += ' H00.65';
+    html += ' H00.66';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -221,7 +221,7 @@ class First_job extends SctItm_FirstLocker2 implements ISctItm_Selector{
         this.itms = [
             new SctItm('仕事','HORO/job.png','Business')
             ,
-            new SctItm('お薦めの転職先：@CLASS@・@CLASS@・@CLASS@')
+            new SctItm('お薦めの転職先：@CLASS@')
             ,
             new SctItm('@TECH@で業績アップ')
             ,
@@ -342,9 +342,9 @@ class First_food extends SctItm_FirstLocker2 implements ISctItm_Selector{
             ,
             new SctItm('朝食には@MEAL@が一番')
             ,
-            new SctItm('おすすめランチ：@MEAL@・@MEAL@・@MEAL@')
+            new SctItm('おすすめランチ：@MEAL@')
             ,
-            new SctItm('おすすめディナー：@MEAL@・@MEAL@・@MEAL@')
+            new SctItm('おすすめディナー：@MEAL@')
             ,
             new SctItm('@MEAL@が美味しい季節になりました')
             ,
@@ -389,7 +389,7 @@ class First_animal extends SctItm_FirstLocker2 implements ISctItm_Selector{
         this.itms = [
             new SctItm('動物','HORO/animal.png','Animal')
             ,
-            new SctItm('お薦めペット：@ANIMAL@・@ANIMAL@・@ANIMAL@')
+            new SctItm('お薦めペット：@ANIMAL@')
             ,
             new SctItm('@ANIMAL@を飼ってみませんか')
             ,
