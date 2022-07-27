@@ -6099,6 +6099,8 @@ const   itms_tech = [
     new SctItm('塩加減','ICON/salt.jpg')
     ,
     new SctItm('隠し味','ICON/ingredient.jpg')
+    ,
+    new SctItm('ファッションセンス','ICON/fashion.jpg')
 ]
 
 // 成功・等 が～した
