@@ -7025,5 +7025,9 @@ const   itms_horo_star = [
     new SctItm('PANDA','HORO/panda.png','パンダ')
     ,
     new SctItm('SOUTHER','HORO/Souther.png','サウ')
+    ,
+    new SctItm('GRIFFIN','HORO/griffin.png','グリフォン')
+    ,
+    new SctItm('EARTH','HORO/earth.png','地球')
 ]
 
