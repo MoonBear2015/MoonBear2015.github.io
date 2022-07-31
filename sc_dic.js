@@ -3838,7 +3838,8 @@ const itms_tech = [
     new SctItm('地域活動', 'ICON/volunteer.jpg'),
     new SctItm('塩加減', 'ICON/salt.jpg'),
     new SctItm('隠し味', 'ICON/ingredient.jpg'),
-    new SctItm('ファッションセンス', 'ICON/fashion.jpg')
+    new SctItm('ファッションセンス', 'ICON/fashion.jpg'),
+    new SctItm('セキュリティー', 'ICON/key.jpg')
 ];
 // 成功・等 が～した
 const itms_success = [
