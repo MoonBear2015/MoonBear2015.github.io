@@ -3729,7 +3729,12 @@ const itms_shop = [
     new SctItm('FRIED CHICKEN', 'SHOP/CHIKIN01.jpg', 'フライドチキン'),
     new SctItm('FRIED CHICKEN', 'SHOP/CHIKIN02.jpg', '唐揚げ'),
     new SctItm('NEWS PAPER', 'SHOP/NEWSPAPER01.jpg', '新聞'),
-    new SctItm('NEWS PAPER', 'SHOP/NEWSPAPER02.jpg', '新聞')
+    new SctItm('NEWS PAPER', 'SHOP/NEWSPAPER02.jpg', '新聞'),
+    new SctItm('TABLET', 'SHOP/TABLET01.jpg', 'タブレット'),
+    new SctItm('TABLET', 'SHOP/TABLET02.jpg', 'タブレット'),
+    new SctItm('TABLET', 'SHOP/TABLET03.jpg', 'タブレット'),
+    new SctItm('WATCH', 'SHOP/WATCH01.jpg', '腕時計'),
+    new SctItm('WATCH', 'SHOP/WATCH02.jpg', '腕時計')
 ];
 const itms_campany = [
     new SctItm('Apple', '', 'アップル'),
@@ -3744,7 +3749,8 @@ const itms_campany = [
     new SctItm('CHANEL', '', 'シャネル'),
     new SctItm('UNIQLO', '', 'ユニクロ'),
     new SctItm('STARBUCKS', '', 'スターバックス'),
-    new SctItm('KENTUCKY', '', 'ケンタッキー')
+    new SctItm('KENTUCKY', '', 'ケンタッキー'),
+    new SctItm('CASIO', '', 'カシオ')
 ];
 const itms_model = [
     new SctItm('Pro'),

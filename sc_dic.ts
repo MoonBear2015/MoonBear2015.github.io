@@ -5889,6 +5889,16 @@ const   itms_shop = [
     new SctItm('NEWS PAPER','SHOP/NEWSPAPER01.jpg','新聞')
     ,
     new SctItm('NEWS PAPER','SHOP/NEWSPAPER02.jpg','新聞')
+    ,
+    new SctItm('TABLET','SHOP/TABLET01.jpg','タブレット')
+    ,
+    new SctItm('TABLET','SHOP/TABLET02.jpg','タブレット')
+    ,
+    new SctItm('TABLET','SHOP/TABLET03.jpg','タブレット')
+    ,
+    new SctItm('WATCH','SHOP/WATCH01.jpg','腕時計')
+    ,
+    new SctItm('WATCH','SHOP/WATCH02.jpg','腕時計')
 ]
 
 
@@ -5919,6 +5929,8 @@ const   itms_campany = [
     new SctItm('STARBUCKS','','スターバックス')
     ,
     new SctItm('KENTUCKY','','ケンタッキー')
+    ,
+    new SctItm('CASIO','','カシオ')
 ]
 
 const   itms_model = [
