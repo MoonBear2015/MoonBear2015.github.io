@@ -3436,8 +3436,12 @@ const itms_do = [
     new SctItm('腐敗', 'DO/oldtimer.jpg'),
     new SctItm('敗北', 'DO/lost.jpg'),
     new SctItm('逃走', 'DO/run.jpg'),
+    new SctItm('迷走', 'DO/panicrun.png'),
     new SctItm('抗議', 'DO/demo.jpg'),
-    new SctItm('侮辱', 'DO/insult.jpg')
+    new SctItm('侮辱', 'DO/insult.jpg'),
+    new SctItm('退化', 'DO/Degeneration.jpg'),
+    new SctItm('失望', 'DO/disappointment.jpg'),
+    new SctItm('軽蔑', 'DO/contempt.jpg')
     //
     // posi 
     //
@@ -3470,7 +3474,7 @@ const itms_do = [
     new SctItm('アニメ化', 'DO/animated.jpg'),
     new SctItm('機械化', 'DO/Mechanization.jpg'),
     new SctItm('進化', 'DO/evolution2.jpg'),
-    new SctItm('退化', 'DO/Degeneration.jpg')
+    new SctItm('開花', 'DO/openflower.jpg')
 ];
 const itms_class = [
     new SctItm('大学教授'),
@@ -3481,8 +3485,10 @@ const itms_class = [
     new SctItm('政治評論家'),
     new SctItm('映画評論家'),
     new SctItm('映画監督'),
+    new SctItm('女優'),
     new SctItm('舞台監督'),
     new SctItm('舞台作家'),
+    new SctItm('舞台俳優'),
     new SctItm('恋愛小説家'),
     new SctItm('絵本作家'),
     new SctItm('調理師'),
@@ -3554,6 +3560,7 @@ const itms_class = [
     new SctItm('小学生'),
     new SctItm('中学生'),
     new SctItm('高校生'),
+    new SctItm('女子校生'),
     new SctItm('大学生'),
     new SctItm('ラーメン屋'),
     new SctItm('落語家'),
@@ -4195,6 +4202,19 @@ const itms_dress = [
     new SctItm('スウェット'),
     new SctItm('水着'),
     new SctItm('ビキニ'),
+    new SctItm('デニム'),
+    new SctItm('パジャマ'),
+    new SctItm('ネグリジェ'),
+    new SctItm('下着'),
+    new SctItm('甲冑'),
+    new SctItm('鎧兜'),
+    new SctItm('忍者服'),
+    new SctItm('袈裟'),
+    new SctItm('羽衣'),
+    new SctItm('羽衣'),
+    new SctItm('人民服'),
+    new SctItm('チマチョゴリ'),
+    new SctItm('@ANIMAL@の着ぐるみ'),
     new SctItm('@ANIMAL@の毛皮のコート')
 ];
 const itms_music = [
