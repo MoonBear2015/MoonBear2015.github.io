@@ -3315,6 +3315,7 @@ const itms_what = [
     new SctItm('火星', 'WHAT/mars.jpg'),
     new SctItm('タイタン', 'WHAT/saturn.jpg'),
     new SctItm('アンドロメダ星雲', 'WHAT/andromeda.jpg'),
+    new SctItm('ブラックホール', 'WHAT/blackhole.jpg'),
     new SctItm('NASA', 'WHAT/NASA.jpg'),
     new SctItm('マスコミ', 'WHAT/MassMedia.jpg'),
     new SctItm('ビジネス', 'WHAT/business.jpg'),
@@ -3380,6 +3381,7 @@ const itms_what = [
 ];
 const itms_city = [
     new SctItm('東京', 'CITY/tokyo.jpg'),
+    new SctItm('銀座', 'CITY/ginza.jpg'),
     new SctItm('大阪', 'CITY/osaka.jpg'),
     new SctItm('香港', 'CITY/hongkong.jpg'),
     new SctItm('北京', 'CITY/peking.jpg'),

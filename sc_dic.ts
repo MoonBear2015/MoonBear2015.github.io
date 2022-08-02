@@ -5073,6 +5073,8 @@ const   itms_what = [
     ,
     new SctItm('アンドロメダ星雲','WHAT/andromeda.jpg')
     ,
+    new SctItm('ブラックホール','WHAT/blackhole.jpg')
+    ,
     new SctItm('NASA','WHAT/NASA.jpg')
     ,
     new SctItm('マスコミ','WHAT/MassMedia.jpg')
@@ -5201,6 +5203,8 @@ const   itms_what = [
 
 const   itms_city = [
     new SctItm('東京','CITY/tokyo.jpg')
+    ,
+    new SctItm('銀座','CITY/ginza.jpg')
     ,
     new SctItm('大阪','CITY/osaka.jpg')
     ,
