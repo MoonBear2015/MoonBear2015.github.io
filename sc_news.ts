@@ -760,6 +760,8 @@ class selector_who3 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@WHO3@');
         this.itms = [
+            new SctItm('@L_DO@する')
+            ,
             new SctItm('@L_CLASS@の')
             ,
             new SctItm('@COUNTRY@で産まれた')
@@ -3004,6 +3006,8 @@ class selector_doing02 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@PEOPLE@の振りをして')
             ,
+            new SctItm('「@CALL@」と署名して')
+            ,
             new SctItm('「@CALL@」と呼ばれて')
             ,
             new SctItm('「@CALL@」と噂されて')
@@ -3042,6 +3046,12 @@ class selector_doing02 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@PART@にお茶を出して')
             ,
+            new SctItm('@PART@の靴を磨いて')
+            ,
+            new SctItm('@PART@の髪を乾かして')
+            ,
+            new SctItm('@PART@の背中を掻いて')
+            ,
             new SctItm('@ANIMAL@を連れて')
             ,
             new SctItm('@ANIMAL@に乗って')
@@ -3057,6 +3067,14 @@ class selector_doing02 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@ANIMAL@に襲われて')
             ,
             new SctItm('@ANIMAL@と戦って')
+            ,
+            new SctItm('@ANIMAL@を退治して')
+            ,
+            new SctItm('@ANIMAL@を檻に入れて')
+            ,
+            new SctItm('@ANIMAL@を追い出して')
+            ,
+            new SctItm('@ANIMAL@を追い払って')
             ,
             new SctItm('@ANIMAL@の絵を描いて')
             ,
