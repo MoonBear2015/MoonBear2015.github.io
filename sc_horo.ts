@@ -9,7 +9,7 @@ function set_horo()
     html += '<h1>';
     html += 'Horoscope';
     html += '<small>';
-    html += ' H00.68';
+    html += ' H00.69';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -456,19 +456,19 @@ class selector_h_info_item extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@H_INFO_ITEM@');
         this.itms = [
-            new SctItm('その姿は@GRADE@@KEIM1@と@ASSES_S2@')
+            new SctItm('その姿は@GRADE@@KEIM1@と')
             ,
-            new SctItm('その姿は@NICK@に瓜二つだと@ASSES_S2@')
+            new SctItm('その姿は@NICK@に瓜二つだと')
             ,
-            new SctItm('@CLASS@の象徴であると@ASSES_S2@')
+            new SctItm('@CLASS@の象徴であると')
             ,
-            new SctItm('@KEI@@ITEM@の化身だと@ASSES_S2@')
+            new SctItm('@KEI@@ITEM@の化身だと')
             ,
-            new SctItm('@DOING@いる神様だと@ASSES_S2@')
+            new SctItm('@DOING@いる神様だと')
             ,
-            new SctItm('@ANIMAL@の@BODY@を持つ悪魔と@ASSES_S2@')
+            new SctItm('@ANIMAL@の@BODY@を持つ悪魔と')
             ,
-            new SctItm('@FLOWER@の妖精と@ASSES_S2@')
+            new SctItm('@FLOWER@の妖精と')
         ]
     }
 }
