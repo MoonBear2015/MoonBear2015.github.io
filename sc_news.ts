@@ -2186,8 +2186,6 @@ class selector_say extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('発言')
             ,
-            new SctItm('発表')
-            ,
             new SctItm('代弁')
             ,
             new SctItm('強弁')
@@ -2197,6 +2195,10 @@ class selector_say extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('解説')
             ,
             new SctItm('説明')
+            ,
+            new SctItm('提案')
+            ,
+            new SctItm('報告')
             ,
             new SctItm('メモ書き')
             ,
@@ -2216,6 +2218,12 @@ class selector_say extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@PART@に耳打ち')
             ,
+            new SctItm('報告書を提出')
+            ,
+            new SctItm('記者会見で発表')
+            ,
+            new SctItm('演説')
+            ,
             new SctItm('リツイート')
         ];
     }
@@ -2230,7 +2238,7 @@ class selector_say2 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('興奮気味な@SAY2@')
             ,
-            new SctItm('声高らかな@SAY2@')
+            new SctItm('声高らかに@SAY2@')
             ,
             new SctItm('鼻息の荒い@SAY2@')
             ,

@@ -2185,6 +2185,8 @@ const   cods_place = [
     new SctCod_TI('スキー|場|じょう|','PLACE/ski.jpg')
     ,
     new SctCod_TI('|刑務所|けいむしょ|','PLACE/Jail.jpg')
+    ,
+    new SctCod_TI('ホテル','PLACE/hotel.jpg')
 ];
 
 
@@ -6095,6 +6097,8 @@ const   itms_tech = [
     new SctItm('人材育成','ICON/teech.jpg')
     ,
     new SctItm('社内研修','ICON/startup.jpg')
+    ,
+    new SctItm('学校教員','ICON/school.jpg')
     ,
     new SctItm('イデオロギー教育','ICON/communist.jpg')
     ,

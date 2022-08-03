@@ -1501,12 +1501,13 @@ class selector_say extends SctItm_Selector {
             new SctItm('公表'),
             new SctItm('分析'),
             new SctItm('発言'),
-            new SctItm('発表'),
             new SctItm('代弁'),
             new SctItm('強弁'),
             new SctItm('記録'),
             new SctItm('解説'),
             new SctItm('説明'),
+            new SctItm('提案'),
+            new SctItm('報告'),
             new SctItm('メモ書き'),
             new SctItm('コメント'),
             new SctItm('@PART@にメール'),
@@ -1516,6 +1517,9 @@ class selector_say extends SctItm_Selector {
             new SctItm('@PART@に説明'),
             new SctItm('@PART@にFAX'),
             new SctItm('@PART@に耳打ち'),
+            new SctItm('報告書を提出'),
+            new SctItm('記者会見で発表'),
+            new SctItm('演説'),
             new SctItm('リツイート')
         ];
     }
@@ -1527,7 +1531,7 @@ class selector_say2 extends SctItm_Selector {
         this.itms = [
             new SctItm('@SAY2@や@SAY2@'),
             new SctItm('興奮気味な@SAY2@'),
-            new SctItm('声高らかな@SAY2@'),
+            new SctItm('声高らかに@SAY2@'),
             new SctItm('鼻息の荒い@SAY2@'),
             new SctItm('落ち着いた様子で@SAY2@'),
             new SctItm('嬉々とした@SAY2@'),
