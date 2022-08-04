@@ -9,7 +9,7 @@ function set_qa()
     html += '<h1>';
     html += 'Q&A';
     html += '<small>';
-    html += ' Q01.17';
+    html += ' Q01.18';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -569,6 +569,16 @@ class selector_q04_result extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@DOING@いたいのです')
             ,
             new SctItm('@DOING@いるのです')
+            ,
+            new SctItm('@DOING@ばかりいるのです')
+            ,
+            new SctItm('@DOING@いてはダメでしょうか')
+            ,
+            new SctItm('@DOING@いたのが間違いでしょうか')
+            ,
+            new SctItm('@DOING@も大丈夫でしょうか')
+            ,
+            new SctItm('@DOING@も構いませんか')
         ]
     }
 }
@@ -711,13 +721,15 @@ class selector_a_sent extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@A_MSG@が、@QUESTER@さんならお判りでしょう。')
             ,
-            new SctItm('@A_MSG@が、@QUESTER@さんのことですよね？ ')
+            new SctItm('@A_MSG@が、それって@QUESTER@さんのことですよね？ ')
             ,
             new SctItm('@A_MSG@が、@QUESTER@さんとは無関係です。')
             ,
             new SctItm('@A_MSG@が、@QUESTER@さんには無理ですね。')
             ,
-            new SctItm('@A_MSG@が、@QUESTER@さんしか出来ませんよ。')
+            new SctItm('@A_MSG@が、@QUESTER@さんにしか出来ませんよ。')
+            ,
+            new SctItm('@A_MSG@が、確か@QUESTER@さんもそうでしたよね？ ')
             ,
             new SctItm('@A_MSG@が、@QUESTER@さんは知らなかったのですか？ ')
             ,
