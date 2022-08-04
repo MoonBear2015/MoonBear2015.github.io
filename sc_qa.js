@@ -7,7 +7,7 @@ function set_qa() {
     html += '<h1>';
     html += 'Q&A';
     html += '<small>';
-    html += ' Q01.18';
+    html += ' Q01.19';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -326,7 +326,7 @@ class selector_q02 extends SctItm_Selector {
             new SctItm('「@CALL2@」と評判なのです'),
             new SctItm('@HABIT@を止めたいのです'),
             new SctItm('@HABIT@が苦手なのです'),
-            new SctItm('@HABIT@の達人だと評判なのです'),
+            new SctItm('@HABIT@の@NICK@だと評判なのです'),
             new SctItm('@DOING@いたのです'),
             new SctItm('@DOING@ばかりいるのです'),
             new SctItm('@DOING@いる筈だったのです'),
