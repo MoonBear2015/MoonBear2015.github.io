@@ -7,7 +7,7 @@ function set_qa() {
     html += '<h1>';
     html += 'Q&A';
     html += '<small>';
-    html += ' Q01.16';
+    html += ' Q01.17';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -310,6 +310,8 @@ class selector_q02 extends SctItm_Selector {
             // ,
             // new SctItm('@HABIT@がしたいのですが')
             // ,
+            new SctItm('@CLASS@を止めたいのです'),
+            new SctItm('@CLASS@になりたいのです'),
             new SctItm('@CLASS@をしているのです'),
             new SctItm('@CLASS@をしていたのです'),
             // new SctItm('@CLASS@になろうと思うのですが')
@@ -322,6 +324,7 @@ class selector_q02 extends SctItm_Selector {
             new SctItm('初めて@COUNTRY@に来たのです'),
             new SctItm('@L_HABIT@に夢中なのです'),
             new SctItm('「@CALL2@」と評判なのです'),
+            new SctItm('@HABIT@を止めたいのです'),
             new SctItm('@HABIT@が苦手なのです'),
             new SctItm('@HABIT@の達人だと評判なのです'),
             new SctItm('@DOING@いたのです'),
@@ -470,6 +473,12 @@ class selector_a_sent extends SctItm_Selector {
             new SctItm('@A_MSG@。'),
             new SctItm('@CONECT2@、@A_MSG@。'),
             new SctItm('@A_MSG@が、@QUESTER@さんはご存じですよね？ '),
+            new SctItm('@A_MSG@が、知らないのは@QUESTER@さんだけです。'),
+            new SctItm('@A_MSG@が、@QUESTER@さんならお判りでしょう。'),
+            new SctItm('@A_MSG@が、@QUESTER@さんのことですよね？ '),
+            new SctItm('@A_MSG@が、@QUESTER@さんとは無関係です。'),
+            new SctItm('@A_MSG@が、@QUESTER@さんには無理ですね。'),
+            new SctItm('@A_MSG@が、@QUESTER@さんしか出来ませんよ。'),
             new SctItm('@A_MSG@が、@QUESTER@さんは知らなかったのですか？ '),
             new SctItm('@A_MSG@が、その@L_PART@さんなら知っている筈ですよ？ '),
             new SctItm('@A_MSG@が、その@L_PART@さんなら@DOING@いる筈です。'),
