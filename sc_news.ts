@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N02.94';
+    html += ' N02.95';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -2741,6 +2741,8 @@ class selector_conect2 extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('それはそうと')
             ,
+            new SctItm('それはそれとして')
+            ,
             new SctItm('正直いいますと')
             ,
             new SctItm('話は変わりますが')
@@ -3002,6 +3004,14 @@ class selector_doing02 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@MANYPEOPLE@に殺されかけて')
             ,
+            new SctItm('@MANYPEOPLE@にもてはやされて')
+            ,
+            new SctItm('@MANYPEOPLE@に喝采されて')
+            ,
+            new SctItm('@MANYPEOPLE@を引き連れて')
+            ,
+            new SctItm('@MANYPEOPLE@を募集して')
+            ,
             new SctItm('@PEOPLE@を集めて')
             ,
             new SctItm('@PEOPLE@を追いかけて')
@@ -3031,6 +3041,14 @@ class selector_doing02 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('「@CALL@」とおだてられて')
             ,
             new SctItm('@PART@を連れて')
+            ,
+            new SctItm('@PART@の手を引いて')
+            ,
+            new SctItm('@PART@を置き去りにして')
+            ,
+            new SctItm('@PART@を見捨てて')
+            ,
+            new SctItm('@PART@を押しのけて')
             ,
             new SctItm('デートして')
             ,
@@ -3121,6 +3139,8 @@ class selector_doing02 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@FLOWER@の種を|蒔|ま|いて')
             ,
             new SctItm('@FRUIT@の皮を|剥|む|いて')
+            ,
+            new SctItm('@FRUIT@の木を植えて')
             ,
             new SctItm('@FRUIT@を収穫して')
             ,

@@ -7,7 +7,7 @@ function set_shop() {
     html += '<h1>';
     html += 'Shop';
     html += '<small>';
-    html += ' S00.52';
+    html += ' S00.53';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -378,7 +378,12 @@ class selector_s_info03 extends SctItm_Selector {
         super('@S_INFO03@');
         this.itms = [
             new SctItm('さあ、@KEI1@@FUTURE@の到来です'),
+            new SctItm('さあ、@KEI1@@FUTURE@の幕開けです'),
+            new SctItm('さあ、@KEI1@@FUTURE@の時代がやってきました'),
             new SctItm('さあ、@L_SHOP_B@の全てが変わります'),
+            new SctItm('@L_SHOP_B@の新時代がやってきました'),
+            new SctItm('@L_SHOP_B@の概念が変わります'),
+            new SctItm('これまでに無い@L_SHOP_B@をお届けします'),
             new SctItm('あなたの@HABIT@、@HABIT@、そして@HABIT@のお供にどうぞ'),
             new SctItm('@L_CAMPANY@ @L_SHOP@が、あなたの@KEI@パートナーとなるでしょう'),
             new SctItm('@L_CAMPANY@ @L_SHOP@が、あなたの@KEI@@PART@となるでしょう'),
