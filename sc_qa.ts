@@ -571,14 +571,6 @@ class selector_q04_result extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@DOING@いるのです')
             ,
             new SctItm('@DOING@ばかりいるのです')
-            ,
-            new SctItm('@DOING@いてはダメでしょうか')
-            ,
-            new SctItm('@DOING@いたのが間違いでしょうか')
-            ,
-            new SctItm('@DOING@も大丈夫でしょうか')
-            ,
-            new SctItm('@DOING@も構いませんか')
         ]
     }
 }
