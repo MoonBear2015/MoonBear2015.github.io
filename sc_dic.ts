@@ -5919,6 +5919,10 @@ const   itms_shop = [
     new SctItm('WATCH','SHOP/WATCH01.jpg','腕時計')
     ,
     new SctItm('WATCH','SHOP/WATCH02.jpg','腕時計')
+    ,
+    new SctItm('PYRAMID','SHOP/PYRAMID01.jpg','ピラミッド')
+    ,
+    new SctItm('CASTLE','SHOP/CASTLE01.jpg','お城')
 ]
 
 
@@ -6619,6 +6623,14 @@ const   itms_meal = [
     ,
     new SctItm('ラーメン')
     ,
+    new SctItm('味噌ラーメン')
+    ,
+    new SctItm('きつねうどん')
+    ,
+    new SctItm('天ぷら蕎麦')
+    ,
+    new SctItm('鍋焼きうどん')
+    ,
     new SctItm('ハンバーガー')
     ,
     new SctItm('@LIVESTOCK@のハンバーガー')
@@ -6655,11 +6667,15 @@ const   itms_meal = [
     ,
     new SctItm('天丼')
     ,
+    new SctItm('うな重')
+    ,
     new SctItm('サンドイッチ')
     ,
     new SctItm('たこ焼き')
     ,
     new SctItm('お好み焼き')
+    ,
+    new SctItm('焼きそば')
     ,
     new SctItm('串カツ')
     ,
@@ -6816,8 +6832,6 @@ const   itms_dress = [
     new SctItm('忍者服')
     ,
     new SctItm('袈裟')
-    ,
-    new SctItm('羽衣')
     ,
     new SctItm('羽衣')
     ,
