@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N02.95';
+    html += ' N02.96';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -396,6 +396,19 @@ class selector_manypeople extends SctItm_Selector {
             new SctItm('@MANYMAN@@KEI@@PART@'),
             new SctItm('@MANYMAN@@PEOPLE@'),
             new SctItm('@MANYMAN@@KEI@@PEOPLE@')
+        ];
+    }
+}
+// ☆☆
+// 書籍のタイトル
+class selector_book extends SctItm_Selector {
+    constructor() {
+        super('@BOOK@');
+        this.itms = [
+            new SctItm('@L_WHAT@の@L_DO@'),
+            new SctItm('@L_WHAT@の@L_CLASS@'),
+            new SctItm('@L_WHAT@の@PEOPLE@'),
+            new SctItm('@L_WHAT@の@MANYPEOPLE@')
         ];
     }
 }
