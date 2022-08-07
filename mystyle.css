@@ -265,6 +265,13 @@ figure {
     text-shadow: 2px 2px 0px #000000;
 }
 
+#news_book {
+    font-size: 14px;
+    color: #b0b0b0;
+    float: right;
+    text-shadow: 2px 2px 0px #000000;
+}
+
 small {
     font-size: 8px;
 }

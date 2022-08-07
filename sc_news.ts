@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N02.96';
+    html += ' N02.97';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -99,8 +99,13 @@ function make_news()
         html += '@NEWS_DOC@';
     }
     html += '</p>';
-
+    
     html += '<br>';
+    
+    html += '<p id="news_book">';
+    html += '著書「@BOOK@」より抜粋';
+    html += '</p>';
+    html += '<br><br>';
     
     html += '@WRITER@';
 
@@ -599,11 +604,31 @@ class selector_book extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('@L_WHAT@の@L_DO@')
             ,
-            new SctItm('@L_WHAT@の@L_CLASS@')
+            new SctItm('@L_WHAT@の@L_CLASS@達')
             ,
             new SctItm('@L_WHAT@の@PEOPLE@')
             ,
             new SctItm('@L_WHAT@の@MANYPEOPLE@')
+            ,
+            new SctItm('@L_WHAT@入門')
+            ,
+            new SctItm('@L_WHAT@辞典')
+            ,
+            new SctItm('@L_WHAT@の真実')
+            ,
+            new SctItm('@L_WHAT@の驚異')
+            ,
+            new SctItm('@L_WHAT@の歴史')
+            ,
+            new SctItm('@L_WHAT@伝説')
+            ,
+            new SctItm('実録・@L_WHAT@')
+            ,
+            new SctItm('@ANIMAL@でも判る@L_WHAT@')
+            ,
+            new SctItm('@ANIMAL@から見た@L_WHAT@')
+            ,
+            new SctItm('@L_DO@する@L_WHAT@')
         ];
     }
 }
@@ -3191,6 +3216,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_writer());
         this.dic_push(new selector_writer2());
         this.dic_push(new selector_writer3());
+        this.dic_push(new selector_book());
         this.dic_push(new selector_title());
         this.dic_push(new selector_subtitle01());
         this.dic_push(new selector_subtitle02());
