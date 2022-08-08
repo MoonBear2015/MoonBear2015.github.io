@@ -39,7 +39,7 @@ function make_book() {
 }
 function make_b() {
     let html = '';
-    html += '<div id="qa_box" ';
+    html += '<div id="book_box" ';
     html += 'style="';
     html += 'margin:     5px; ';
     html += 'padding:    10px; ';
@@ -51,9 +51,8 @@ function make_b() {
     html += 'background-repeat: no-repeat;';
     html += 'background-size: 30%;';
     html += '">';
-    html += '@BOOK@';
     html += '<br>';
-    html += '<p id="qa_title">';
+    html += '<p id="book_title">';
     html += '@BOOK@';
     html += '</p>';
     html += '<p id="qa_doc">';
