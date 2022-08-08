@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N02.97';
+    html += ' N02.98';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -411,14 +411,19 @@ class selector_book extends SctItm_Selector {
         this.itms = [
             new SctItm('@L_WHAT@の@L_DO@'),
             new SctItm('@L_WHAT@の@L_CLASS@達'),
+            new SctItm('@L_WHAT@に生きる@L_CLASS@達'),
+            new SctItm('@L_WHAT@から消えた@L_CLASS@'),
             new SctItm('@L_WHAT@の@PEOPLE@'),
-            new SctItm('@L_WHAT@の@MANYPEOPLE@'),
             new SctItm('@L_WHAT@入門'),
-            new SctItm('@L_WHAT@辞典'),
-            new SctItm('@L_WHAT@の真実'),
-            new SctItm('@L_WHAT@の驚異'),
+            new SctItm('@L_WHAT@@HISTORY@'),
+            new SctItm('@L_WHAT@の@THINK@'),
+            new SctItm('@L_WHAT@の@FUTURE@'),
+            new SctItm('@L_WHAT@からの手紙'),
+            new SctItm('@THINK@する@L_WHAT@'),
             new SctItm('@L_WHAT@の歴史'),
-            new SctItm('@L_WHAT@伝説'),
+            new SctItm('@L_WHAT@の足跡'),
+            new SctItm('@DAY@の@L_WHAT@'),
+            new SctItm('@L_CLASS@達の@L_WHAT@'),
             new SctItm('実録・@L_WHAT@'),
             new SctItm('@ANIMAL@でも判る@L_WHAT@'),
             new SctItm('@ANIMAL@から見た@L_WHAT@'),
@@ -1067,7 +1072,10 @@ class selector_history extends SctItm_Selector {
             new SctItm('経典'),
             new SctItm('怪談'),
             new SctItm('全集'),
-            new SctItm('石碑')
+            new SctItm('石碑'),
+            new SctItm('辞書'),
+            new SctItm('大百科'),
+            new SctItm('刑法')
         ];
     }
 }
