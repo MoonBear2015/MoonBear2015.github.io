@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N02.98';
+    html += ' N03.00';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -383,7 +383,8 @@ class selector_people extends SctItm_Selector {
         this.itms = [
             new SctItm('@CLASS@'),
             new SctItm('@PART@'),
-            new SctItm('@COUNTRY@人')
+            new SctItm('@COUNTRY@人'),
+            new SctItm('@SEXAGE@')
         ];
     }
 }
@@ -409,11 +410,14 @@ class selector_book extends SctItm_Selector {
     constructor() {
         super('@BOOK@');
         this.itms = [
+            new SctItm('@KEI@@L_WHAT@'),
             new SctItm('@L_WHAT@の@L_DO@'),
             new SctItm('@L_WHAT@の@L_CLASS@達'),
             new SctItm('@L_WHAT@に生きる@L_CLASS@達'),
             new SctItm('@L_WHAT@から消えた@L_CLASS@'),
             new SctItm('@L_WHAT@の@PEOPLE@'),
+            new SctItm('@L_WHAT@の@BODY@'),
+            new SctItm('@L_WHAT@の@BODY@と呼ばれた@PEOPLE@達'),
             new SctItm('@L_WHAT@入門'),
             new SctItm('@L_WHAT@@HISTORY@'),
             new SctItm('@L_WHAT@の@THINK@'),
@@ -425,7 +429,8 @@ class selector_book extends SctItm_Selector {
             new SctItm('@DAY@の@L_WHAT@'),
             new SctItm('@L_CLASS@達の@L_WHAT@'),
             new SctItm('実録・@L_WHAT@'),
-            new SctItm('@ANIMAL@でも判る@L_WHAT@'),
+            new SctItm('@ANIMAL@でも判る@L_WHAT@入門'),
+            new SctItm('@PEOPLE@のための@L_WHAT@講座'),
             new SctItm('@ANIMAL@から見た@L_WHAT@'),
             new SctItm('@L_DO@する@L_WHAT@')
         ];
@@ -984,7 +989,8 @@ class selector_they extends SctItm_Selector {
             new SctItm('チームメイト達'),
             new SctItm('ルームメイト達'),
             new SctItm('クラスメイト達'),
-            new SctItm('野次馬達')
+            new SctItm('野次馬達'),
+            new SctItm('@SEXAGE@達')
         ];
     }
 }
@@ -1588,6 +1594,13 @@ class selector_say2 extends SctItm_Selector {
             new SctItm('ツイート'),
             new SctItm('リツイート')
         ];
+    }
+}
+// 相手
+class selector_sexage extends SctItm_Selector {
+    constructor() {
+        super('@SEXAGE@');
+        this.Add(itms_sexage);
     }
 }
 // 相手
@@ -2238,6 +2251,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_people_asses());
         this.dic_push(new selector_people());
         this.dic_push(new selector_manypeople());
+        this.dic_push(new selector_sexage());
         this.dic_push(new selector_partner());
         this.dic_push(new selector_item());
         this.dic_push(new selector_command());

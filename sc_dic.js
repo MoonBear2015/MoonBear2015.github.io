@@ -1573,7 +1573,10 @@ const cods_body = [
     new SctCod_It('|胸|むね|'),
     new SctCod_It('|腰|こし|'),
     new SctCod_It('|尻|しり|'),
-    new SctCod_It('|足|あし|')
+    new SctCod_It('|足|あし|'),
+    new SctCod_It('|頭脳|ずのう|'),
+    new SctCod_It('|心臓|しんぞう|'),
+    new SctCod_It('|魂|たましい|')
 ];
 const cods_move_which = [
     new SctCod_Mv('この'),
@@ -3075,6 +3078,18 @@ const itms_livestock = [
     new SctItm('タコ'),
     new SctItm('イカ'),
     new SctItm('龍')
+];
+const itms_sexage = [
+    new SctItm('男'),
+    new SctItm('女'),
+    new SctItm('少年'),
+    new SctItm('少女'),
+    new SctItm('青年'),
+    new SctItm('紳士'),
+    new SctItm('淑女'),
+    new SctItm('老人'),
+    new SctItm('老女'),
+    new SctItm('幼児')
 ];
 const itms_partner = [
     new SctItm('知り合い'),
