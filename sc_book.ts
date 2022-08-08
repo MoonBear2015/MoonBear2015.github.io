@@ -9,7 +9,7 @@ function set_book()
     html += '<h1>';
     html += 'Q&A';
     html += '<small>';
-    html += ' B00.00';
+    html += ' B00.01';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -53,32 +53,34 @@ function make_book()
 function make_b() : string {
     let html = '';
     html += '<div id="book_box" ';
+    html += '">';
+
+    html += '<div id="book_face" ';
     html += 'style="';
-    html += 'margin:     5px; ';
-    html += 'padding:    10px; ';
-    html += 'border:     0.5px solid #606060;';
-    html += 'border-radius:  10px;';
     html += 'background: ';
     html += 'url(./pics/@PIC_WHAT@);';
-    html += 'background-position: left;';
+    html += 'background-position: full;';
     html += 'background-repeat: no-repeat;';
-    html += 'background-size: 30%;';
     html += '">';
+
 
     html += '<br>';
 
-    html += '<p id="book_title">';
+    // html += '<p id="book_title">';
+    html += '<p>';
+
     html += '@BOOK@';
     html += '</p>';
 
-    html += '<p id="qa_doc">';
+    // html += '<p id="qa_doc">';
     html += '@L_WHAT@';
     for(let i = 0;i < rnd_minmax(2,4);i++)
     {
         html += '@L_WHAT@';
     }
-    html += '</p>';
+    // html += '</p>';
 
+    html += '</div>';
     html += '</div>';
 
     return html;
