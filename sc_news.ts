@@ -2323,6 +2323,12 @@ class selector_sexage extends SctItm_Selector implements ISctItm_Selector {
         this.Add(itms_sexage);
     }
 }
+class locker_sexage extends SctItm_SelectLocker implements ISctItm_Selector{
+    constructor(){
+        super('@L_SEXAGE@');
+        this.Add(itms_sexage);
+    }
+}
 // 相手
 class selector_partner extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
@@ -3358,6 +3364,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_people());
         this.dic_push(new selector_manypeople());
         this.dic_push(new selector_sexage());
+        this.dic_push(new locker_sexage());
         this.dic_push(new selector_partner());
         this.dic_push(new locker_partner());
         this.dic_push(new selector_habit());
