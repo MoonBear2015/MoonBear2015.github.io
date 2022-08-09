@@ -52,15 +52,15 @@ function make_book()
 
 function make_b() : string {
     let html = '';
-    html += '<div id="book_box" ';
-    html += '">';
 
     html += '<div id="book_face" ';
     html += 'style="';
     html += 'background: ';
     html += 'url(./pics/@PIC_WHAT@);';
-    html += 'background-position: full;';
+    html += 'background-position: left top;';
+    html += 'background-size:   cover;';
     html += 'background-repeat: no-repeat;';
+    html += 'border:     2px solid #ffffff;';
     html += '">';
 
 
@@ -76,11 +76,10 @@ function make_b() : string {
     html += '@L_WHAT@';
     for(let i = 0;i < rnd_minmax(2,4);i++)
     {
-        html += '@L_WHAT@';
+        html += '@L_WHAT@<br>';
     }
     // html += '</p>';
 
-    html += '</div>';
     html += '</div>';
 
     return html;

@@ -308,6 +308,8 @@ small {
 }
 
 #book_box {
+    box-sizing: content-box;
+    height: 30vh;
     display:    grid;
     grid-template-columns: 2fr 1fr;
     margin:     10px; 
