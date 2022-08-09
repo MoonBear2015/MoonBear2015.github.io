@@ -409,31 +409,13 @@ class selector_manypeople extends SctItm_Selector {
 class selector_book extends SctItm_Selector {
     constructor() {
         super('@BOOK@');
-        this.itms = [
-            new SctItm('@KEI@@L_WHAT@'),
-            new SctItm('@L_WHAT@の@L_DO@'),
-            new SctItm('@L_WHAT@の@L_CLASS@達'),
-            new SctItm('@L_WHAT@に生きる@L_CLASS@達'),
-            new SctItm('@L_WHAT@から消えた@L_CLASS@'),
-            new SctItm('@L_WHAT@の@PEOPLE@'),
-            new SctItm('@L_WHAT@の@BODY@'),
-            new SctItm('@L_WHAT@の@BODY@と呼ばれた@PEOPLE@達'),
-            new SctItm('@L_WHAT@入門'),
-            new SctItm('@L_WHAT@@HISTORY@'),
-            new SctItm('@L_WHAT@の@THINK@'),
-            new SctItm('@L_WHAT@の@FUTURE@'),
-            new SctItm('@L_WHAT@からの手紙'),
-            new SctItm('@THINK@する@L_WHAT@'),
-            new SctItm('@L_WHAT@の歴史'),
-            new SctItm('@L_WHAT@の足跡'),
-            new SctItm('@DAY@の@L_WHAT@'),
-            new SctItm('@L_CLASS@達の@L_WHAT@'),
-            new SctItm('実録・@L_WHAT@'),
-            new SctItm('@ANIMAL@でも判る@L_WHAT@入門'),
-            new SctItm('@PEOPLE@のための@L_WHAT@講座'),
-            new SctItm('@ANIMAL@から見た@L_WHAT@'),
-            new SctItm('@L_DO@する@L_WHAT@')
-        ];
+        this.Add(itms_book);
+    }
+}
+class locker_book extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_BOOK@');
+        this.Add(itms_book);
     }
 }
 // News(WHO,DO)特化の呼称
@@ -1610,6 +1592,31 @@ class selector_partner extends SctItm_Selector {
         this.Add(itms_partner);
     }
 }
+// 問題の相手
+class locker_partner extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_PART@');
+        this.Add(itms_partner);
+    }
+}
+// 癖・悪癖・スポーツ
+class locker_habit extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_HABIT@');
+        this.Add(itms_badhabit);
+        this.Add(itms_goodhabit);
+        this.Add(itms_sports);
+    }
+}
+// 癖・悪癖・スポーツ
+class selector_habit extends SctItm_Selector {
+    constructor() {
+        super('@HABIT@');
+        this.Add(itms_badhabit);
+        this.Add(itms_goodhabit);
+        this.Add(itms_sports);
+    }
+}
 class selector_emotion extends SctItm_Selector {
     constructor() {
         super('@EMO@');
@@ -2142,6 +2149,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_writer2());
         this.dic_push(new selector_writer3());
         this.dic_push(new selector_book());
+        this.dic_push(new locker_book());
         this.dic_push(new selector_title());
         this.dic_push(new selector_subtitle01());
         this.dic_push(new selector_subtitle02());
@@ -2253,6 +2261,9 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_manypeople());
         this.dic_push(new selector_sexage());
         this.dic_push(new selector_partner());
+        this.dic_push(new locker_partner());
+        this.dic_push(new selector_habit());
+        this.dic_push(new locker_habit());
         this.dic_push(new selector_item());
         this.dic_push(new selector_command());
         this.dic_push(new selector_command1());

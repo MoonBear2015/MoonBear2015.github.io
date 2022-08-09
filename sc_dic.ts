@@ -7123,3 +7123,50 @@ const   itms_horo_star = [
     new SctItm('EARTH','HORO/earth.png','地球')
 ]
 
+const   itms_book = [
+    new SctItm('@L_WHAT@の@L_DO@')
+    ,
+    new SctItm('@L_WHAT@の@L_CLASS@達')
+    ,
+    new SctItm('@L_WHAT@に生きる@L_CLASS@達')
+    ,
+    new SctItm('@L_WHAT@から消えた@L_CLASS@')
+    ,
+    new SctItm('@L_WHAT@の@PEOPLE@')
+    ,
+    new SctItm('@L_WHAT@の@BODY@')
+    ,
+    new SctItm('@L_WHAT@の@BODY@と呼ばれた@PEOPLE@達')
+    ,
+    new SctItm('@L_WHAT@入門')
+    ,
+    new SctItm('@L_WHAT@@HISTORY@')
+    ,
+    new SctItm('@L_WHAT@の@THINK@')
+    ,
+    new SctItm('@L_WHAT@の@FUTURE@')
+    ,
+    new SctItm('@L_WHAT@からの手紙')
+    ,
+    new SctItm('@THINK@する@L_WHAT@')
+    ,
+    new SctItm('@L_WHAT@の歴史')
+    ,
+    new SctItm('@L_WHAT@の足跡')
+    ,
+    new SctItm('@DAY@の@L_WHAT@')
+    ,
+    new SctItm('@L_CLASS@達の@L_WHAT@')
+    ,
+    new SctItm('実録・@L_WHAT@')
+    ,
+    new SctItm('@ANIMAL@でも判る@L_WHAT@入門')
+    ,
+    new SctItm('@PEOPLE@のための@L_WHAT@講座')
+    ,
+    new SctItm('@ANIMAL@から見た@L_WHAT@')
+    ,
+    new SctItm('@L_DO@する@L_WHAT@')
+]
+    
+

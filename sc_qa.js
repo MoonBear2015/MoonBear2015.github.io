@@ -117,9 +117,6 @@ class qa_docs_maker extends news_docs_maker {
         this.dic_push(new selector_pic_a());
         this.dic_push(new selector_quester());
         this.dic_push(new selector_advicer());
-        this.dic_push(new locker_part());
-        this.dic_push(new locker_habit());
-        this.dic_push(new selector_habit());
     }
 }
 class selector_NameLocker extends ItmArray {
@@ -384,31 +381,6 @@ class selector_q04_result extends SctItm_Selector {
             new SctItm('@DOING@いるのです'),
             new SctItm('@DOING@ばかりいるのです')
         ];
-    }
-}
-// 問題の相手
-class locker_part extends SctItm_SelectLocker {
-    constructor() {
-        super('@L_PART@');
-        this.Add(itms_partner);
-    }
-}
-// 癖・悪癖・スポーツ
-class locker_habit extends SctItm_SelectLocker {
-    constructor() {
-        super('@L_HABIT@');
-        this.Add(itms_badhabit);
-        this.Add(itms_goodhabit);
-        this.Add(itms_sports);
-    }
-}
-// 癖・悪癖・スポーツ
-class selector_habit extends SctItm_Selector {
-    constructor() {
-        super('@HABIT@');
-        this.Add(itms_badhabit);
-        this.Add(itms_goodhabit);
-        this.Add(itms_sports);
     }
 }
 class selector_a_title extends SctItm_Selector {

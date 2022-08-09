@@ -309,9 +309,9 @@ small {
 
 #book_box {
     box-sizing: content-box;
-    height: 30vh;
+    height: 40vh;
     display:    grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
     margin:     10px; 
     padding:    10px; 
     border:     0.5px solid #606060;
@@ -322,6 +322,9 @@ small {
     grid-column: 1 / 2;    
 }
 
+#book_comment {
+    grid-column: 2 / 3;    
+}
 
 #book_title {
     font-size: 5vw;
@@ -329,6 +332,8 @@ small {
     margin: 0px 20px;
     text-shadow: 2px 2px 0px #000000;
 }
+
+
 
 
 #qa_box {
