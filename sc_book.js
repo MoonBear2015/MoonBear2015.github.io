@@ -7,7 +7,7 @@ function set_book() {
     html += '<h1>';
     html += 'Q&A';
     html += '<small>';
-    html += ' B00.01';
+    html += ' B00.02';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -39,10 +39,14 @@ function make_book() {
 }
 function make_b() {
     let html = '';
+    html += '<div id="book_writerpicture">';
+    html += '著者：';
+    html += '@L_BOOKWRITER@';
+    html += '</div>';
     html += '<div id="book_face" ';
     html += 'style="';
     html += 'background: ';
-    html += 'linear-gradient(0deg,rgba(0,0,0,0.8),rgba(0,0,0,0.4)),';
+    html += 'linear-gradient(0deg,rgba(0,0,0,0.6),rgba(0,0,0,0.6)),';
     html += 'url(./pics/@PIC_WHAT@);';
     html += 'background-position: left top;';
     html += 'background-size:   cover;';
@@ -53,11 +57,15 @@ function make_b() {
     html += '<p id="book_title">';
     html += '@L_BOOK@';
     html += '</p>';
+    html += '<p id="#book_writer">';
+    html += '@L_BOOKWRITER@';
+    html += '</p>';
     html += '</div>';
     html += '<div id="book_comment">';
     // html += '<p id="qa_doc">';
     for (let i = 0; i < rnd_minmax(2, 4); i++) {
         html += '@L_BOOK@<br>';
+        html += '@L_BOOKWRITER@<br>';
     }
     // html += '</p>';
     html += '</div>';

@@ -215,6 +215,45 @@ class selector_human extends ItmArray {
         return replace_docs_A(temp_doc, this);
     }
 }
+class selector_NameLocker extends ItmArray {
+    constructor(in_itm_key) {
+        super();
+        this.itm_key = in_itm_key;
+        this.itm_key2 = "";
+        this.pic_key = "";
+        this.nameCreater = new NameCreaterAll();
+        this.is_first = true;
+        this.created_name = this.nameCreater.create();
+    }
+    get second_itm() {
+        return new SctItm(this.created_name.FstNmStr, '');
+    }
+    get rnd_Itm() {
+        if (this.is_first) {
+            this.is_first = false;
+            return this.first_itm;
+        }
+        return this.second_itm;
+    }
+    Copy() {
+        let result = new selector_human();
+        return result;
+    }
+    Gene_Docs(temp_doc) {
+        return replace_docs_A(temp_doc, this);
+    }
+}
+class locker_bookwriter extends selector_NameLocker {
+    constructor() {
+        super("@L_BOOKWRITER@");
+    }
+    get second_itm() {
+        return new SctItm(this.created_name.NmStr, '');
+    }
+    get first_itm() {
+        return new SctItm(this.created_name.html_BOOKWRITER(100), '');
+    }
+}
 class selector_writer extends ItmArray {
     constructor() {
         super();
@@ -2151,6 +2190,7 @@ class news_doc {
 class news_docs_maker extends docs_maker {
     constructor() {
         super();
+        this.dic_push(new locker_bookwriter());
         this.dic_push(new selector_writer());
         this.dic_push(new selector_writer2());
         this.dic_push(new selector_writer3());

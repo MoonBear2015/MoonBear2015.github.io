@@ -119,34 +119,46 @@ class qa_docs_maker extends news_docs_maker {
         this.dic_push(new selector_advicer());
     }
 }
-class selector_NameLocker extends ItmArray {
-    constructor(in_itm_key) {
-        super();
-        this.itm_key = in_itm_key;
-        this.itm_key2 = "";
-        this.pic_key = "";
-        this.nameCreater = new NameCreaterAll();
-        this.is_first = true;
-        this.created_name = this.nameCreater.create();
-    }
-    get second_itm() {
-        return new SctItm(this.created_name.FstNmStr, '');
-    }
-    get rnd_Itm() {
-        if (this.is_first) {
-            this.is_first = false;
-            return this.first_itm;
-        }
-        return this.second_itm;
-    }
-    Copy() {
-        let result = new selector_human();
-        return result;
-    }
-    Gene_Docs(temp_doc) {
-        return replace_docs_A(temp_doc, this);
-    }
-}
+// abstract class selector_NameLocker 
+//     extends ItmArray<SctItm>
+//     implements ISctItm_Selector 
+// {
+//     public nameCreater : INameCreater;
+//     public itm_key : string;
+//     public itm_key2 : string;
+//     public pic_key : string;
+//     public is_first : boolean;
+//     public created_name : INmItm;
+//     constructor(in_itm_key : string)
+//     {
+//         super();
+//         this.itm_key = in_itm_key;
+//         this.itm_key2 = "";
+//         this.pic_key = "";
+//         this.nameCreater = new NameCreaterAll();
+//         this.is_first = true;
+//         this.created_name = this.nameCreater.create();
+//     }
+//     abstract get first_itm() : SctItm;
+//     get second_itm() : SctItm {
+//         return new SctItm(this.created_name.FstNmStr,'');
+//     }
+//     get rnd_Itm() : SctItm {
+//         if (this.is_first) {
+//             this.is_first = false;
+//             return this.first_itm;
+//         }
+//         return this.second_itm;
+//     }
+//     Copy() : ISctItm_Selector
+//     {
+//         let result = new selector_human();
+//         return result;
+//     }
+//     public Gene_Docs(temp_doc : string) : string {
+//         return replace_docs_A(temp_doc,this);
+//     }
+// }
 class selector_quester extends selector_NameLocker {
     constructor() {
         super("@QUESTER@");

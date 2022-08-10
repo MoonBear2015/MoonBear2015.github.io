@@ -307,6 +307,71 @@ class selector_human
 
 }
 
+
+abstract class selector_NameLocker 
+    extends ItmArray<SctItm>
+    implements ISctItm_Selector 
+{
+    public nameCreater : INameCreater;
+    public itm_key : string;
+    public itm_key2 : string;
+    public pic_key : string;
+    public is_first : boolean;
+    public created_name : INmItm;
+
+    constructor(in_itm_key : string)
+    {
+        super();
+        this.itm_key = in_itm_key;
+        this.itm_key2 = "";
+        this.pic_key = "";
+        this.nameCreater = new NameCreaterAll();
+        this.is_first = true;
+        this.created_name = this.nameCreater.create();
+    }
+    
+    abstract get first_itm() : SctItm;
+    get second_itm() : SctItm {
+        return new SctItm(this.created_name.FstNmStr,'');
+    }
+
+    get rnd_Itm() : SctItm {
+        if (this.is_first) {
+            this.is_first = false;
+            return this.first_itm;
+        }
+        return this.second_itm;
+    }
+    Copy() : ISctItm_Selector
+    {
+        let result = new selector_human();
+        return result;
+    }
+    public Gene_Docs(temp_doc : string) : string {
+        return replace_docs_A(temp_doc,this);
+    }
+
+}
+
+class locker_bookwriter 
+    extends selector_NameLocker
+    implements ISctItm_Selector 
+{
+    constructor()
+    {
+        super("@L_BOOKWRITER@");
+    }
+    get second_itm() : SctItm {
+        return new SctItm(this.created_name.NmStr,'');
+    }
+
+    get first_itm() : SctItm {
+        return new SctItm(this.created_name.html_BOOKWRITER(100),'');
+    }
+}
+
+
+
 class selector_writer 
     extends ItmArray<SctItm>
     implements ISctItm_Selector 
@@ -3246,6 +3311,7 @@ class news_docs_maker extends docs_maker {
     constructor(){
         super();
 
+        this.dic_push(new locker_bookwriter());
         this.dic_push(new selector_writer());
         this.dic_push(new selector_writer2());
         this.dic_push(new selector_writer3());
