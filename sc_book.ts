@@ -9,7 +9,7 @@ function set_book()
     html += '<h1>';
     html += 'Q&A';
     html += '<small>';
-    html += ' B00.02';
+    html += ' B00.03';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -73,14 +73,17 @@ function make_b() : string {
 
     html += '<br>';
 
-
+    html += '<div id="@BOOKFACE@">';
 
     html += '<p id="book_title">';
     html += '@L_BOOK@';
     html += '</p>';
-    html += '<p id="#book_writer">';
+    html += '<br><br><br><br>';
+    html += '<p id="book_writer">';
     html += '@L_BOOKWRITER@';
     html += '</p>';
+    html += '<br>';
+    html += '</div>';
 
     html += '</div>';
     
