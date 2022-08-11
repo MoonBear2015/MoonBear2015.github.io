@@ -333,8 +333,8 @@ small {
 
 
 #book_writerpicture {
-    margin:     10px; 
-    padding:    10px; 
+    margin:     5px; 
+    padding:    5px; 
     grid-row: 1 / 2;
     grid-column: 2 / 3;
     color: white;
