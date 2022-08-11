@@ -43,7 +43,8 @@ class NmItm {
         html += '</figure>';
         html += '</div>';
         html += '<h4 id="writer" align="right">';
-        html += '©@YEAR@ @WHO2@ <span class="xl">' + this.NameAge + '</span> @CO@';
+        html += '©@YEAR@ @WHO2@ <br>';
+        html += '<span class="xl">' + this.Name + '</span> ' + this.Age + ' @CO@';
         html += '</h4>';
         return html;
     }
@@ -57,7 +58,8 @@ class NmItm {
         html += '</figure>';
         html += '</div>';
         html += '<h4 id="writer" align="right">';
-        html += '©@YEAR@ @WHO4@ <span class="xl">' + this.NameAge + '</span> @CO@';
+        html += '©@YEAR@ @WHO4@ <br>';
+        html += '<span class="xl">' + this.Name + '</span> ' + this.Age + ' @CO@';
         html += '</h4>';
         return html;
     }
@@ -71,7 +73,8 @@ class NmItm {
         html += '</figure>';
         html += '</div>';
         html += '<h4 id="writer3" align="left">';
-        html += this.NameAge + ' @WHO4@';
+        html += '<span class="l">' + this.Name + '</span> ' + this.Age;
+        html += ' @WHO4@';
         html += '</h4>';
         return html;
     }
@@ -84,8 +87,9 @@ class NmItm {
             + 'px">';
         html += '</figure>';
         html += '</div>';
-        html += '<h4 id="quester" align="left">';
-        html += '<span class="xl">' + this.NameAge + '</span>' + ' @WHO4@ ';
+        html += '<h4 id="QAPlayer" align="left">';
+        html += '<span class="xl">' + this.Name + '</span> ' + this.Age + '<br>';
+        html += ' @WHO4@';
         html += '</h4>';
         return html;
     }
@@ -98,8 +102,9 @@ class NmItm {
             + 'px">';
         html += '</figure>';
         html += '</div>';
-        html += '<h4 id="quester" align="right">';
-        html += ' @WHO4@ <span class="xl">' + this.NameAge + '</span>';
+        html += '<h4 id="QAPlayer" align="right">';
+        html += ' @WHO4@ <br>';
+        html += '<span class="xl">' + this.Name + '</span> ' + this.Age;
         html += '</h4>';
         return html;
     }
@@ -112,8 +117,8 @@ class NmItm {
             + 'px">';
         html += '</figure>';
         html += '</div>';
-        html += '<h3 id="quester" align="left">';
-        html += '<span class="xl">' + this.NameAge + '</span>';
+        html += '<h3 id="abouter" align="left">';
+        html += '<span class="xl">' + this.Name + '</span> ' + this.Age;
         html += '</h3>';
         return html;
     }
@@ -126,20 +131,22 @@ class NmItm {
             + 'px">';
         html += '</figure>';
         html += '</div>';
-        html += '<h3 id="quester" align="left">';
-        html += '<span class="xl">' + this.Name + '</span>' + this.Life + "<br>";
+        html += '<h3 id="bookwriter" align="left">';
+        html += '<span class="xl">' + this.Name + '</span> ' + this.Life + "<br>";
         html += '@WHO4@';
         html += '</h3>';
         return html;
     }
     get NameAge() {
-        return this.NmStr
-            + '('
-            + this.NmAgeNum.toString()
-            + ')';
+        return this.Name + this.Age;
     }
     get Name() {
         return this.NmStr;
+    }
+    get Age() {
+        return '('
+            + this.NmAgeNum.toString()
+            + ')';
     }
     get Life() {
         let now = new Date();

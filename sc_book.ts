@@ -9,7 +9,7 @@ function set_book()
     html += '<h1>';
     html += 'Q&A';
     html += '<small>';
-    html += ' B00.06';
+    html += ' B00.07';
     html += '</small>';
     html += '</h1>';
     html += '</div>';

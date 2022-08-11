@@ -242,14 +242,19 @@ figure {
     font-size: 1.2vmax;
     color: #505050;
 }
-#quester {
+#QAPlayer {
+    font-size: 12px;
+    color: #b0b0b0;
+}
+
+#abouter {
     font-size: 12px;
     color: #b0b0b0;
 }
 
 #bookwriter {
-    font-size: 16px;
-    color: white;
+    font-size: 12px;
+    color: #b0b0b0;
 }
 
 #news_pic img {
