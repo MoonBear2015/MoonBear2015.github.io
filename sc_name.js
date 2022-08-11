@@ -125,12 +125,13 @@ class NmItm {
     html_BOOKWRITER(in_picsize) {
         let html = '';
         html += '<div id="face_pic_L">';
-        html += '<figure>';
+        // html += '<figure>';
         html += '<img src="pics/FACE/' + this.to_FilePath() + '" width="'
             + in_picsize.toString()
             + 'px">';
-        html += '</figure>';
+        // html += '</figure>';
         html += '</div>';
+        html += '<br>';
         html += '<h3 id="bookwriter" align="left">';
         html += '<span class="xl">' + this.Name + '</span> ' + this.Life + "<br>";
         html += '@WHO4@';

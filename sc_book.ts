@@ -7,9 +7,9 @@ function set_book()
     let html : string = '';
     html += '<div id="main_title">'
     html += '<h1>';
-    html += 'Q&A';
+    html += 'Book';
     html += '<small>';
-    html += ' B00.07';
+    html += ' B00.08';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
