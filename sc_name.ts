@@ -184,6 +184,7 @@ class NmItm implements INmItm {
             + 'px">';
         // html += '</figure>';
         html += '</div>';
+        html += '<br clear="left">';
     
         html += '<h3 id="bookwriter">';
         html += '<span class="l">' + this.Name + '</span> ' + this.Life + "<br>"

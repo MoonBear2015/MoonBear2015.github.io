@@ -366,7 +366,7 @@ class locker_bookwriter
     }
 
     get first_itm() : SctItm {
-        return new SctItm(this.created_name.html_BOOKWRITER(60),'');
+        return new SctItm(this.created_name.html_BOOKWRITER(100),'');
     }
 }
 
