@@ -170,7 +170,8 @@ class NmItm implements INmItm {
         html += '</div>';
     
         html += '<h3 id="abouter" align="left">';
-        html += '<span class="xl">' + this.Name + '</span> ' + this.Age;
+        html += '<span class="xl">' + this.Name + '</span><br>';
+        html += this.Age;
         html += '</h3>';
         return html;
     }
