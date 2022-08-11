@@ -329,7 +329,7 @@ small {
     box-sizing: content-box;
     display:    grid;
     grid-template-rows: 5ft 5fr;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     margin:     10px; 
     padding:    10px; 
     border:     0.5px solid #606060;
