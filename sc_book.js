@@ -7,7 +7,7 @@ function set_book() {
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B00.11';
+    html += ' B00.12';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -68,8 +68,7 @@ function make_b() {
     html += '<div id="book_comment">';
     // html += '<p id="qa_doc">';
     for (let i = 0; i < rnd_minmax(2, 4); i++) {
-        html += '@L_BOOK@<br>';
-        html += '@L_BOOKWRITER@<br>';
+        html += '「@COMMENT@」';
     }
     // html += '</p>';
     html += '</div>';

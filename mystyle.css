@@ -381,19 +381,19 @@ small {
 #book02 {
     font-family: 'Yu Gothic';
     font-weight:bolder;
-    color:  darkblue;
+    color:  cyan;
     font-size: 6vw;
     text-align:right;
-    text-shadow: 3px 3px 0px white;
+    text-shadow: 3px 3px 0px darkblue;
 }
 #book03 {
     font-family: 'Times New Roman', Times, serif;
     font-weight:bolder;
     font-style: italic;
-    color:  lightblue;
-    font-size: 3vw;
+    color:  lightyellow;
+    font-size: 5vw;
     text-align:center;
-    text-shadow: 3px 3px 0px darkblue;
+    text-shadow: 3px 3px 0px darkslategray;
 }
 #book04 {
     font-family: 'Meiryo';
@@ -401,22 +401,23 @@ small {
     font-style: italic;
     font-size: 4vw;
     text-align:right;
-    text-shadow: 3px 3px 0px darkgreen;
+    text-shadow: 3px 3px 0px darkmagenta;
 }
 #book05 {
     font-family:monospace;
     font-weight:bolder;
     color:  white;
-    font-size: 4vw;
+    font-size: 6vw;
     text-align:left;
     text-shadow: 3px 3px 0px darkred;
 }
 #book06 {
-    font-family:sans-serif;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 900;
     color:  lightgreen;
-    font-size: 4vw;
+    font-size: 5vw;
     text-align:center;
-    text-shadow: 3px 3px 0px black;
+    text-shadow: 3px 3px 0px darkgreen;
 }
 
 
