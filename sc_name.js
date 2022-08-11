@@ -131,9 +131,8 @@ class NmItm {
             + 'px">';
         // html += '</figure>';
         html += '</div>';
-        html += '<br>';
-        html += '<h3 id="bookwriter" align="left">';
-        html += '<span class="xl">' + this.Name + '</span> ' + this.Life + "<br>";
+        html += '<h3 id="bookwriter">';
+        html += '<span class="l">' + this.Name + '</span> ' + this.Life + "<br>";
         html += '@WHO4@';
         html += '</h3>';
         return html;
@@ -153,7 +152,11 @@ class NmItm {
         let now = new Date();
         let nowYear = now.getFullYear();
         let birthYear = rnd_minmax(1890, nowYear - 10);
-        let deadYear = birthYear + this.NmAgeNum;
+        let deadAge = rnd_minmax(30, 100);
+        if (deadAge < this.NmAgeNum) {
+            deadAge = this.NmAgeNum;
+        }
+        let deadYear = birthYear + deadAge;
         let result = '('
             + birthYear.toString() + '-';
         if (deadYear <= nowYear) {
