@@ -251,7 +251,7 @@ class locker_bookwriter extends selector_NameLocker {
         return new SctItm(this.created_name.NmStr, '');
     }
     get first_itm() {
-        return new SctItm(this.created_name.html_BOOKWRITER(50), '');
+        return new SctItm(this.created_name.html_BOOKWRITER(150), '');
     }
 }
 class selector_bookface extends SctItm_Selector {

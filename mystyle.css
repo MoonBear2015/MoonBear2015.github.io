@@ -27,6 +27,14 @@ body {
     font-family: "メイリオ", "Meiryo", "verdana", sans-serif;
 }
 
+span.l {
+    font-size: larger; 
+}
+
+span.xl {
+    font-size: x-large; 
+}
+
 #site_header {
     margin: 0;
     top: 0;
@@ -239,6 +247,11 @@ figure {
     color: #b0b0b0;
 }
 
+#bookwriter {
+    font-size: 16px;
+    color: white;
+}
+
 #news_pic img {
     margin: 10px;
 }
@@ -310,7 +323,7 @@ small {
 #book_box {
     box-sizing: content-box;
     display:    grid;
-    grid-template-rows: 1ft 5fr;
+    grid-template-rows: 5ft 5fr;
     grid-template-columns: 1fr 1fr;
     margin:     10px; 
     padding:    10px; 
@@ -320,26 +333,29 @@ small {
 
 
 #book_writerpicture {
+    margin:     10px; 
+    padding:    10px; 
     grid-row: 1 / 2;
-    grid-column: 1 / 3;
+    grid-column: 2 / 3;
     color: white;
     text-shadow: 2px 2px 0px #000000;
 }
 
 
 #book_face {
-    grid-row: 2 / 3;
+    grid-row: 1 / 2;
     grid-column: 1 / 2;    
 }
 
 #book_comment {
-    grid-column: 2 / 3;    
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;    
 }
 
 #book_title {
     margin: 0px 20px;
 }
-#book_writer {
+#book_writerinfo {
     font-size: 3vw;
     margin: 0px 20px;
     /* text-align:right; */
@@ -349,46 +365,51 @@ small {
 
 
 #book01 {
-    font-family: 'Yu Gothic';
+    font-family: 'Yu Mincho';
+    font-style: italic;
     font-weight:bolder;
     color:  white;
-    font-size: 3vw;
+    font-size: 4vw;
     text-align:center;
     text-shadow: 3px 3px 0px #000000;
 }
 #book02 {
-    font-family: 'Yu Mincho';
-    font-style: italic;
+    font-family: 'Yu Gothic';
+    font-weight:bolder;
     color:  darkblue;
-    font-size: 4vw;
+    font-size: 6vw;
     text-align:right;
     text-shadow: 3px 3px 0px white;
 }
 #book03 {
     font-family: 'Times New Roman', Times, serif;
+    font-weight:bolder;
+    font-style: italic;
     color:  lightblue;
     font-size: 3vw;
-    text-align:left;
-    text-shadow: 3px 3px 0px blue;
+    text-align:center;
+    text-shadow: 3px 3px 0px darkblue;
 }
 #book04 {
     font-family: 'Meiryo';
-    color:  greenyellow;
-    font-size: 5vw;
+    color:  lightyellow;
+    font-style: italic;
+    font-size: 4vw;
     text-align:right;
     text-shadow: 3px 3px 0px darkgreen;
 }
 #book05 {
     font-family:monospace;
-    color:  lightpink;
-    font-size: 3vw;
+    font-weight:bolder;
+    color:  white;
+    font-size: 4vw;
     text-align:left;
     text-shadow: 3px 3px 0px darkred;
 }
 #book06 {
     font-family:sans-serif;
     color:  lightgreen;
-    font-size: 5vw;
+    font-size: 4vw;
     text-align:center;
     text-shadow: 3px 3px 0px black;
 }

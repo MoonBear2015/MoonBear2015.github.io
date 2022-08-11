@@ -1,3 +1,5 @@
+// import { randomInt } from "crypto";
+
 const FACE_PATH = 'pics/FACE/@FACE_PATH@';
 
 function Num_to_AgeCode(in_Age_Num : number) : string
@@ -35,6 +37,8 @@ interface INmItm {
     NmAge : string;
     NmAgeNum : number;
     NameAge : string;
+    Name : string;
+    Life : string;
     Copy() : INmItm;
 
     Past : INmItm;
@@ -82,7 +86,7 @@ class NmItm implements INmItm {
         html += '</div>';
     
         html += '<h4 id="writer" align="right">';
-        html += '©@YEAR@ @WHO2@ ' + this.NameAge + ' @CO@';
+        html += '©@YEAR@ @WHO2@ <span class="xl">' + this.NameAge + '</span> @CO@';
         html += '</h4>';
         return html;
     }
@@ -97,7 +101,7 @@ class NmItm implements INmItm {
         html += '</div>';
     
         html += '<h4 id="writer" align="right">';
-        html += '©@YEAR@ @WHO4@ ' + this.NameAge + ' @CO@';
+        html += '©@YEAR@ @WHO4@ <span class="xl">' + this.NameAge + '</span> @CO@';
         html += '</h4>';
         return html;
     }
@@ -128,7 +132,7 @@ class NmItm implements INmItm {
         html += '</div>';
     
         html += '<h4 id="quester" align="left">';
-        html += '<big>' + this.NameAge + '</big>' + ' @WHO4@ ';
+        html += '<span class="xl">' + this.NameAge + '</span>' + ' @WHO4@ ';
         html += '</h4>';
         return html;
     }
@@ -144,7 +148,7 @@ class NmItm implements INmItm {
         html += '</div>';
     
         html += '<h4 id="quester" align="right">';
-        html += ' @WHO4@ <big>' + this.NameAge + '</big>';
+        html += ' @WHO4@ <span class="xl">' + this.NameAge + '</span>';
         html += '</h4>';
         return html;
     }
@@ -160,7 +164,7 @@ class NmItm implements INmItm {
         html += '</div>';
     
         html += '<h3 id="quester" align="left">';
-        html += '<big>' + this.NameAge + '</big>';
+        html += '<span class="xl">' + this.NameAge + '</span>';
         html += '</h3>';
         return html;
     }
@@ -176,20 +180,35 @@ class NmItm implements INmItm {
         html += '</div>';
     
         html += '<h3 id="quester" align="left">';
-        html += this.NameAge + ' @WHO4@';
+        html += '<span class="xl">' + this.Name + '</span>' + this.Life + "<br>"
+        html += '@WHO4@';
         html += '</h3>';
         return html;
     }
 
-
-
     get NameAge() {
-        return '<big>' 
-        + this.NmStr 
-        + '</big>' 
+        return this.NmStr 
         + '(' 
         + this.NmAgeNum.toString() 
         + ')';
+    }
+
+    get Name() {
+        return this.NmStr;
+    }
+
+    get Life() {
+        let now = new Date();
+        let nowYear = now.getFullYear();
+        let birthYear = rnd_minmax(1890,nowYear - 10);
+        let deadYear = birthYear + this.NmAgeNum;
+        let result = '('
+        + birthYear.toString() + '-';
+        if (deadYear <= nowYear) {
+            result = result + deadYear.toString();
+        }
+        result = result + ')';
+        return result;  
     }
 
     get NmAge() {
