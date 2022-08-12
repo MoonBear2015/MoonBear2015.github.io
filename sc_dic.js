@@ -3336,7 +3336,7 @@ const itms_what = [
     new SctItm('ブラックホール', 'WHAT/blackhole.jpg'),
     new SctItm('NASA', 'WHAT/NASA.jpg'),
     new SctItm('マスコミ', 'WHAT/MassMedia.jpg'),
-    new SctItm('ビジネス', 'WHAT/business.jpg'),
+    new SctItm('ビジネス社会', 'WHAT/business.jpg'),
     new SctItm('現代社会', 'WHAT/community.jpg'),
     new SctItm('情報化社会', 'WHAT/info.jpg'),
     new SctItm('音楽業界', 'WHAT/music.jpg'),

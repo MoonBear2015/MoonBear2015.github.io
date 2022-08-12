@@ -1774,7 +1774,6 @@ class selector_answer extends SctItm_Selector {
     constructor() {
         super('@ANSWER@');
         this.itms = [
-            new SctItm('見方'),
             new SctItm('意見'),
             new SctItm('見解'),
             new SctItm('推測'),

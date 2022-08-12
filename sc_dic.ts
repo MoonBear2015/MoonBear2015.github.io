@@ -5115,7 +5115,7 @@ const   itms_what = [
     ,
     new SctItm('マスコミ','WHAT/MassMedia.jpg')
     ,
-    new SctItm('ビジネス','WHAT/business.jpg')
+    new SctItm('ビジネス社会','WHAT/business.jpg')
     ,
     new SctItm('現代社会','WHAT/community.jpg')
     ,

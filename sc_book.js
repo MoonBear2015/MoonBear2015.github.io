@@ -7,7 +7,7 @@ function set_book() {
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B00.18';
+    html += ' B00.20';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -79,14 +79,14 @@ class selector_bookinfo01 extends SctItm_Selector {
         super('@B_INFO01@');
         this.itms = [
             new SctItm('@COMMENT2@――'),
-            new SctItm('「@COMMENT2@」――この@KEI@冒頭に世界が震撼した'),
-            new SctItm('「@COMMENT2@」――この@KEI@冒頭に、@MANYPEOPLE@が泣いた'),
+            new SctItm('「@COMMENT2@」――この@KEI@冒頭に@L_WHAT@が震撼した'),
+            new SctItm('「@COMMENT2@」――この@KEI@冒頭に、@L_WHAT@の@MANYPEOPLE@が泣いた'),
             new SctItm('「@COMMENT2@」――この@KEI@一文が、@L_WHAT@の全てを変えた'),
             new SctItm('「@COMMENT2@」――この@KEI@名調子が、あなたを@superitem@@L_WHAT@へと誘う'),
-            new SctItm('「@COMMENT2@」――この@KEI@一言が、世界を震え上がらせた'),
+            new SctItm('「@COMMENT2@」――この@KEI@一言が、@L_WHAT@を震え上がらせた'),
             new SctItm('「@COMMENT2@」――この@KEI@一言が、あなたを変える'),
-            new SctItm('「@COMMENT2@」――この@KEI@一文が、世界の命運を別ける'),
-            new SctItm('「@COMMENT2@」――そう、正にこれが@L_BOOKWRITER@の世界だ')
+            new SctItm('「@COMMENT2@」――この@KEI@告発が、@L_WHAT@の命運を決定づけた'),
+            new SctItm('「@COMMENT2@」――そう、これぞ正しく@L_BOOKWRITER@の世界だ')
         ];
     }
 }
