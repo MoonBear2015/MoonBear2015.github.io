@@ -353,6 +353,8 @@ small {
 }
 
 #book_comment {
+    margin:     5px; 
+    padding:    5px; 
     grid-row: 2 / 3;
     grid-column: 1 / 3;    
 }

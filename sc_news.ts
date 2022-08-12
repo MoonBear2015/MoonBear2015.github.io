@@ -708,6 +708,8 @@ class selector_call extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@L_WHAT@の@KEI@@L_CLASS@')
             ,
+            new SctItm('@L_WHAT@の@SPECIALIST@')
+            ,
             new SctItm('@KEID@@L_DO@@END02C@@PEOPLE@')
             ,
             new SctItm('@KEI@@L_WHAT@の@PEOPLE@')
@@ -719,6 +721,8 @@ class selector_call extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@L_WHAT@の@L_TECH@')
             ,
             new SctItm('@L_TECH@の@NICK@')
+            ,
+            new SctItm('@L_TECH@の@SPECIALIST@')
             ,
             new SctItm('@L_WHAT@が@THINK@@END02C@@L_TECH@')
             ,
@@ -1673,6 +1677,12 @@ class selector_manyman extends SctItm_Selector implements ISctItm_Selector {
     }
 }
 
+class selector_specialist extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@SPECIALIST@');
+        this.Add(itms_specialist);
+    }
+}
 class selector_class extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@CLASS@');
@@ -2125,6 +2135,14 @@ class selector_music extends SctItm_Selector implements ISctItm_Selector {
         this.Add(itms_music);
     }
 }
+
+class locker_music extends SctItm_SelectLocker implements ISctItm_Selector {
+    constructor(){
+        super('@L_MUSIC@');
+        this.Add(itms_music);
+    }
+}
+
 class selector_dance extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@DANCE@');
@@ -2840,6 +2858,33 @@ class selector_asses2 extends SctItm_Selector implements ISctItm_Selector {
     }
 }
 
+// 作品に対する凄い形容
+class selector_superitem extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@superitem@');
+        this.itms = [
+            new SctItm('究極の')
+            ,
+            new SctItm('至高の')
+            ,
+            new SctItm('衝撃の')
+            ,
+            new SctItm('驚愕の')
+            ,
+            new SctItm('渾身の')
+            ,
+            new SctItm('磨き抜かれた')
+            ,
+            new SctItm('洗練された')
+            ,
+            new SctItm('@KEI@')
+            ,
+            new SctItm('@KEI3@')
+            ,
+        ];
+    }
+}
+
 
 // 接続詞
 class selector_conect extends SctItm_Selector implements ISctItm_Selector {
@@ -3391,6 +3436,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_scoolas());
         
         this.dic_push(new selector_music());
+        this.dic_push(new locker_music());
         this.dic_push(new selector_dance());
         this.dic_push(new selector_tech());
         this.dic_push(new locker_tech());
@@ -3447,6 +3493,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_asses2());
         this.dic_push(new selector_people_asses());
         this.dic_push(new selector_people());
+        this.dic_push(new selector_specialist());
         this.dic_push(new selector_manypeople());
         this.dic_push(new selector_sexage());
         this.dic_push(new locker_sexage());
@@ -3466,5 +3513,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_doing());
         this.dic_push(new selector_doing01());
         this.dic_push(new selector_doing02());
+        this.dic_push(new selector_superitem());
+
     }
 }

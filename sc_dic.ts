@@ -3101,6 +3101,10 @@ const   cods_km = [
     ,
     new SctCod_Km('|純粋|じゅんすい|')
     ,
+    new SctCod_Km('|衝撃|しょうげき|')
+    ,
+    new SctCod_Km('|衝撃的|しょうげきてき|')
+    ,
     new SctCod_Km('|精悍|せいかん|')
     ,
     new SctCod_Km('|凄惨|せいさん|')
@@ -6590,6 +6594,45 @@ const   itms_nickNomal = [
     new SctItm('人')
 ]
 
+
+const   itms_specialist = [
+    new SctItm('スペシャリスト')
+    ,
+    new SctItm('専門家')
+    ,
+    new SctItm('大家')
+    ,
+    new SctItm('第一人者')
+    ,
+    new SctItm('巨匠')
+    ,
+    new SctItm('天才')
+    ,
+    new SctItm('鬼才')
+    ,
+    new SctItm('筆頭')
+    ,
+    new SctItm('貴人')
+    ,
+    new SctItm('神')
+    ,
+    new SctItm('魔神')
+    ,
+    new SctItm('奇術師')
+    ,
+    new SctItm('魔術師')
+    ,
+    new SctItm('魔法使い')
+    ,
+    new SctItm('傀儡師')
+    ,
+    new SctItm('操り人形')
+    ,
+    new SctItm('使い魔')
+    ,
+    new SctItm('悪魔')
+]
+
 const   itms_dir = [
     new SctItm('北')
     ,
@@ -7132,6 +7175,8 @@ const   itms_book = [
     ,
     new SctItm('@L_WHAT@から消えた@L_CLASS@')
     ,
+    new SctItm('@L_WHAT@が産んだ@L_TECH@')
+    ,
     new SctItm('@L_WHAT@の@L_SEXAGE@')
     ,
     new SctItm('@L_WHAT@入門')
@@ -7141,6 +7186,14 @@ const   itms_book = [
     new SctItm('@L_WHAT@の歴史')
     ,
     new SctItm('@L_WHAT@の足跡')
+    ,
+    new SctItm('@L_WHAT@を尋ねて')
+    ,
+    new SctItm('@L_WHAT@の歩き方')
+    ,
+    new SctItm('@L_WHAT@の旅')
+    ,
+    new SctItm('@L_WHAT@で聞く@L_MUSIC@')
     ,
     new SctItm('@L_CLASS@達の@L_WHAT@')
     ,
