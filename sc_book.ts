@@ -9,7 +9,7 @@ function set_book()
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B00.17';
+    html += ' B00.18';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -55,6 +55,7 @@ function make_b() : string {
 
 
     html += '<div id="book_writerpicture">';
+    html += '<span class="xl">@L_BOOK@</span><br>';
     html += '著者：<br>';
     html += '@L_BOOKWRITER@';
     html += '</div>';

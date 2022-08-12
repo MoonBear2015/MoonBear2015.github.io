@@ -1683,6 +1683,15 @@ class selector_specialist extends SctItm_Selector implements ISctItm_Selector {
         this.Add(itms_specialist);
     }
 }
+
+class locker_specialist extends SctItm_SelectLocker implements ISctItm_Selector{
+    constructor(){
+        super('@L_SPECIALIST@');
+        this.Add(itms_specialist);
+    }
+}
+
+
 class selector_class extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@CLASS@');
@@ -3512,6 +3521,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_people_asses());
         this.dic_push(new selector_people());
         this.dic_push(new selector_specialist());
+        this.dic_push(new locker_specialist());
         this.dic_push(new selector_manypeople());
         this.dic_push(new selector_sexage());
         this.dic_push(new locker_sexage());

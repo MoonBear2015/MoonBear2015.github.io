@@ -5246,6 +5246,8 @@ const   itms_city = [
     ,
     new SctItm('大阪','CITY/osaka.jpg')
     ,
+    new SctItm('沖縄','CITY/okinawa.jpg')
+    ,
     new SctItm('香港','CITY/hongkong.jpg')
     ,
     new SctItm('北京','CITY/peking.jpg')
@@ -7177,6 +7179,8 @@ const   itms_book = [
     ,
     new SctItm('@L_WHAT@の@L_CLASS@達')
     ,
+    new SctItm('@L_WHAT@の@L_PART@')
+    ,
     new SctItm('@L_WHAT@の@L_PART@と呼ばれた@L_SEXAGE@')
     ,
     new SctItm('@L_WHAT@最後の@L_CLASS@')
@@ -7192,6 +7196,12 @@ const   itms_book = [
     new SctItm('@L_WHAT@の@L_FUTURE@')
     ,
     new SctItm('@L_WHAT@@L_SEXAGE@')
+    ,
+    new SctItm('@L_WHAT@の@L_SPECIALIST@')
+    ,
+    new SctItm('@L_WHAT@の@L_SPECIALIST@と呼ばれた@L_SEXAGE@')
+    ,
+    new SctItm('@L_WHAT@の@L_SPECIALIST@と呼ばれた@L_SEXAGE@達')
     ,
     new SctItm('@L_WHAT@入門')
     ,
@@ -7216,8 +7226,6 @@ const   itms_book = [
     new SctItm('@L_WHAT@の真実')
     ,
     new SctItm('@L_WHAT@の戦い')
-    ,
-    new SctItm('@L_WHAT@と平和')
     ,
     new SctItm('@L_WHAT@と平和')
     ,
