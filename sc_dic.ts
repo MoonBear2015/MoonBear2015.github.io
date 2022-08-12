@@ -5365,6 +5365,8 @@ const   itms_do = [
     new SctItm('失望','DO/disappointment.jpg')
     ,
     new SctItm('軽蔑','DO/contempt.jpg')
+    ,
+    new SctItm('驚愕','DO/Surprise.jpg')
     //
     // posi 
     //
