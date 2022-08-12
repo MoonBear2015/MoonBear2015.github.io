@@ -1944,7 +1944,7 @@ class selector_asses2 extends SctItm_Selector {
 // 作品に対する凄い形容
 class selector_superitem extends SctItm_Selector {
     constructor() {
-        super('@superitem@');
+        super('@SUPERITEM@');
         this.itms = [
             new SctItm('究極の'),
             new SctItm('至高の'),

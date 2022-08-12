@@ -9,7 +9,7 @@ function set_book()
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B00.21';
+    html += ' B00.22';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -113,7 +113,7 @@ class selector_bookinfo01 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('「@COMMENT2@」――この@KEI@一文が、@L_WHAT@の全てを変えた')
             ,
-            new SctItm('「@COMMENT2@」――この@KEI@名調子が、あなたを@superitem@@L_WHAT@へと誘う')
+            new SctItm('「@COMMENT2@」――この@KEI@名調子が、あなたを@SUPERITEM@@L_WHAT@へと誘う')
             ,
             new SctItm('「@COMMENT2@」――この@KEI@一言が、@L_WHAT@を震え上がらせた')
             ,
@@ -147,25 +147,25 @@ class selector_bookinfoend extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@B_INFOEND@');
         this.itms = [
-            new SctItm('@B_WRITER_DECO@、@L_BOOKWRITER@が放つ@superitem@@B_TYPE@')
+            new SctItm('@B_WRITER_DECO@、@L_BOOKWRITER@が放つ@SUPERITEM@@B_TYPE@')
             ,
-            new SctItm('@B_WRITER_DECO@、@L_BOOKWRITER@が産んだ@superitem@@B_TYPE@')
+            new SctItm('@B_WRITER_DECO@、@L_BOOKWRITER@が産んだ@SUPERITEM@@B_TYPE@')
             ,
-            new SctItm('@B_WRITER_DECO@、@L_BOOKWRITER@が書き綴る@superitem@@B_TYPE@')
+            new SctItm('@B_WRITER_DECO@、@L_BOOKWRITER@が書き綴る@SUPERITEM@@B_TYPE@')
             ,
-            new SctItm('@B_WRITER_DECO@、@L_BOOKWRITER@の@superitem@@B_TYPE@')
+            new SctItm('@B_WRITER_DECO@、@L_BOOKWRITER@の@SUPERITEM@@B_TYPE@')
             ,
-            new SctItm('@B_WRITER_DECO@、@L_BOOKWRITER@の@superitem@@B_TYPE@')
+            new SctItm('@B_WRITER_DECO@、@L_BOOKWRITER@の@SUPERITEM@@B_TYPE@')
             ,
-            new SctItm('@B_WRITER_DECO@、@L_BOOKWRITER@の再スタートを記念する@superitem@@B_TYPE@')
+            new SctItm('@B_WRITER_DECO@、@L_BOOKWRITER@の再スタートを記念する@SUPERITEM@@B_TYPE@')
             ,
-            new SctItm('@B_WRITER_DECO@、@L_BOOKWRITER@の完全復活を飾る@superitem@@B_TYPE@')
+            new SctItm('@B_WRITER_DECO@、@L_BOOKWRITER@の完全復活を飾る@SUPERITEM@@B_TYPE@')
             ,
-            new SctItm('@B_WRITER_DECO@、@L_BOOKWRITER@にとって事実上の遺作となった@superitem@@B_TYPE@')
+            new SctItm('@B_WRITER_DECO@、@L_BOOKWRITER@にとって事実上の遺作となった@SUPERITEM@@B_TYPE@')
             ,
-            new SctItm('@B_WRITER_DECO@、@L_BOOKWRITER@らしからぬ@superitem@@B_TYPE@')
+            new SctItm('@B_WRITER_DECO@、@L_BOOKWRITER@らしからぬ@SUPERITEM@@B_TYPE@')
             ,
-            new SctItm('@B_WRITER_DECO@、@L_BOOKWRITER@の稀に見る@superitem@@B_TYPE@')
+            new SctItm('@B_WRITER_DECO@、@L_BOOKWRITER@の稀に見る@SUPERITEM@@B_TYPE@')
         ]
     }
 }
