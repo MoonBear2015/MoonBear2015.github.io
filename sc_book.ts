@@ -9,7 +9,7 @@ function set_book()
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B00.13';
+    html += ' B00.14';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -124,7 +124,7 @@ class selector_bookinfo01 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('「@COMMENT2@」――この@KEI@一文が、世界の命運を別ける')
             ,
-            new SctItm('「@COMMENT2@」――そう、これが@L_BOOKWRITER@だ')
+            new SctItm('「@COMMENT2@」――そう、正にこれが@L_BOOKWRITER@の世界だ')
         ]
     }
 }
