@@ -4401,10 +4401,14 @@ const itms_book = [
     new SctItm('@L_WHAT@の@L_FLOWER@'),
     new SctItm('@L_WHAT@に咲く@L_FLOWER@'),
     new SctItm('@L_WHAT@の@L_CLASS@達'),
+    new SctItm('@L_WHAT@の@L_PART@と呼ばれた@L_SEXAGE@'),
+    new SctItm('@L_WHAT@最後の@L_CLASS@'),
     new SctItm('@L_WHAT@に生きる@L_CLASS@達'),
     new SctItm('@L_WHAT@から消えた@L_CLASS@'),
     new SctItm('@L_WHAT@が産んだ@L_TECH@'),
     new SctItm('@L_WHAT@の@L_SEXAGE@'),
+    new SctItm('@L_WHAT@の@L_FUTURE@'),
+    new SctItm('@L_WHAT@@L_SEXAGE@'),
     new SctItm('@L_WHAT@入門'),
     new SctItm('@L_WHAT@からの手紙'),
     new SctItm('@L_WHAT@の歴史'),
@@ -4419,6 +4423,7 @@ const itms_book = [
     new SctItm('@L_WHAT@の戦い'),
     new SctItm('@L_WHAT@と平和'),
     new SctItm('@L_WHAT@と平和'),
+    new SctItm('@L_FUTURE@のための@L_WHAT@講座'),
     new SctItm('@L_CLASS@のための@L_WHAT@講座'),
     new SctItm('@L_DO@する@L_WHAT@')
 ];

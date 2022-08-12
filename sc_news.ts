@@ -1993,6 +1993,12 @@ class selector_future extends SctItm_Selector implements ISctItm_Selector {
         this.Add(cods_to_itms(cods_future));
     }
 }
+class locker_future extends SctItm_SelectLocker implements ISctItm_Selector{
+    constructor(){
+        super('@L_FUTURE@');
+        this.Add(cods_to_itms(cods_future));
+    }
+}
 class selector_place extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@PLACE@');
@@ -3469,6 +3475,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_who3());
         this.dic_push(new selector_who4());
         this.dic_push(new selector_future());
+        this.dic_push(new locker_future());
         this.dic_push(new selector_day());
         this.dic_push(new selector_place());
         this.dic_push(new selector_city());
