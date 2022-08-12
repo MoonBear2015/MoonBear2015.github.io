@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N03.00';
+    html += ' N03.01';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -1967,6 +1967,16 @@ class selector_flower extends SctItm_Selector implements ISctItm_Selector {
     }
 }
 
+class locker_flower extends SctItm_SelectLocker implements ISctItm_Selector{
+        constructor(){
+        super('@L_FLOWER@');
+        this.Add(cods_flower_spring.slice(1));
+        this.Add(cods_flower_summer.slice(1));
+        this.Add(cods_flower_autumn.slice(1));
+        this.Add(cods_flower_winter.slice(1));
+    }
+}
+
 
 class selector_sports extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
@@ -3328,19 +3338,19 @@ class selector_doing02 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@SCOOL@を中退して')
             ,
-            new SctItm('@FLOWER@の花を|捧|ささ|げて')
+            new SctItm('@L_FLOWER@の花を|捧|ささ|げて')
             ,
-            new SctItm('@FLOWER@の花を咲かせて')
+            new SctItm('@L_FLOWER@の花を咲かせて')
             ,
-            new SctItm('@FLOWER@の花を飾って')
+            new SctItm('@L_FLOWER@の花を飾って')
             ,
-            new SctItm('@FLOWER@の花の絵を描いて')
+            new SctItm('@L_FLOWER@の花の絵を描いて')
             ,
-            new SctItm('@FLOWER@の花びらを散らして')
+            new SctItm('@L_FLOWER@の花びらを散らして')
             ,
-            new SctItm('@FLOWER@の花を|咥|くわ|えて')
+            new SctItm('@L_FLOWER@の花を|咥|くわ|えて')
             ,
-            new SctItm('@FLOWER@の種を|蒔|ま|いて')
+            new SctItm('@L_FLOWER@の種を|蒔|ま|いて')
             ,
             new SctItm('@FRUIT@の皮を|剥|む|いて')
             ,
@@ -3443,6 +3453,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_animal());
         this.dic_push(new selector_livestock());
         this.dic_push(new selector_flower());
+        this.dic_push(new locker_flower());
         this.dic_push(new selector_sports());
         this.dic_push(new selector_km());
         this.dic_push(new selector_k());

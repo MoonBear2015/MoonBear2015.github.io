@@ -3346,6 +3346,7 @@ const itms_what = [
     new SctItm('イスラム教', 'WHAT/Islam.jpg'),
     new SctItm('宗教', 'WHAT/religion.jpg'),
     new SctItm('人類', 'WHAT/human.jpg'),
+    new SctItm('小学校', 'WHAT/jschool.jpg'),
     new SctItm('女子校', 'WHAT/girlscoll.jpg'),
     new SctItm('オリンピック', 'WHAT/Olympic.jpg'),
     new SctItm('江戸幕府', 'WHAT/edoBack.jpg'),
@@ -4397,6 +4398,8 @@ const itms_horo_star = [
 ];
 const itms_book = [
     new SctItm('@L_WHAT@の@L_DO@'),
+    new SctItm('@L_WHAT@の@L_FLOWER@'),
+    new SctItm('@L_WHAT@に咲く@L_FLOWER@'),
     new SctItm('@L_WHAT@の@L_CLASS@達'),
     new SctItm('@L_WHAT@に生きる@L_CLASS@達'),
     new SctItm('@L_WHAT@から消えた@L_CLASS@'),
@@ -4409,9 +4412,13 @@ const itms_book = [
     new SctItm('@L_WHAT@を尋ねて'),
     new SctItm('@L_WHAT@の歩き方'),
     new SctItm('@L_WHAT@の旅'),
-    new SctItm('@L_WHAT@で聞く@L_MUSIC@'),
+    new SctItm('@L_WHAT@で聞く@L_MUSIC@講座'),
     new SctItm('@L_CLASS@達の@L_WHAT@'),
     new SctItm('実録・@L_WHAT@'),
+    new SctItm('@L_WHAT@の真実'),
+    new SctItm('@L_WHAT@の戦い'),
+    new SctItm('@L_WHAT@と平和'),
+    new SctItm('@L_WHAT@と平和'),
     new SctItm('@L_CLASS@のための@L_WHAT@講座'),
     new SctItm('@L_DO@する@L_WHAT@')
 ];
