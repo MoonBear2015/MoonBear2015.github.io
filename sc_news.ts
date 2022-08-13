@@ -245,6 +245,38 @@ class selector_random_NUM2TO9
     }
  
 }
+
+class selector_random_NUM10TO99
+    extends ItmArray<SctItm>
+    implements ISctItm_Selector
+{
+    public itm_key : string;
+    public itm_key2 : string;
+    public pic_key : string;
+    constructor()
+    {
+        super();
+        this.itm_key = "@NUM10TO99@";
+        this.itm_key2 = "";
+        this.pic_key = "";
+    }
+    get rnd_Itm() : SctItm {
+        return new SctItm(rnd_minmax(10,99).toString(),"");
+    }
+    Copy() : ISctItm_Selector
+    {
+        let result = new selector_random_NUM10();
+        result.Paste(this.itms);
+        return result;
+    }
+
+    public Gene_Docs(temp_doc : string) : string {
+        return replace_docs_A(temp_doc,this);
+    }
+ 
+}
+
+
 class selector_random_NUM10000
     extends ItmArray<SctItm>
     implements ISctItm_Selector
@@ -3464,6 +3496,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_random_year());
         this.dic_push(new selector_random_NUM10());
         this.dic_push(new selector_random_NUM2TO9());
+        this.dic_push(new selector_random_NUM10TO99());
         this.dic_push(new selector_random_NUM10000());
         this.dic_push(new locker_what());
         this.dic_push(new locker_do());

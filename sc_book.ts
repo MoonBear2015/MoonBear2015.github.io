@@ -9,7 +9,7 @@ function set_book()
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B00.25';
+    html += ' B00.26';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -186,7 +186,9 @@ class selector_bookinfo03 extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('@COUNTRY@文学賞に輝く@L_BOOKWRITER@の@B_TYPE@')
             ,
-            new SctItm('@COUNTRY@を代表する@L_BOOKWRITER@のベストセラー作品')
+            new SctItm('@COUNTRY@を代表する@L_BOOKWRITER@の@B_TYPE@')
+            ,
+            new SctItm('@COUNTRY@を含む@NUM10TO99@ヶ国で発売禁止となった@L_BOOKWRITER@の@B_TYPE@')
             ,
             new SctItm('@NUM2TO9@度に渡り映画化された@L_BOOKWRITER@の@B_TYPE@')
             ,
@@ -263,7 +265,11 @@ class selector_booktype extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('出世作')
             ,
+            new SctItm('ベストセラー')
+            ,
             new SctItm('代表作')
+            ,
+            new SctItm('問題作')
             ,
             new SctItm('名作')
             ,
