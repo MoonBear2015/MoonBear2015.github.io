@@ -9,7 +9,7 @@ function set_book()
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B00.23';
+    html += ' B00.24';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -203,7 +203,7 @@ class selector_bookwriter_deco extends SctItm_Selector implements ISctItm_Select
             ,
             new SctItm('@L_CLASS@の@SPECIALIST@')
             ,
-            new SctItm('@L_DO@の@SPECIALIST@')
+            new SctItm('@L_DO@する@SPECIALIST@')
             ,
             new SctItm('@L_TECH@の@SPECIALIST@')
         ]
