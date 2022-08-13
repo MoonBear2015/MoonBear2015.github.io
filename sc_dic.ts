@@ -3453,13 +3453,9 @@ const   itms_kmd = [
     ,
     new SctItm('@DO@する@ITEM@に等しい')
     ,
-    new SctItm('@ITEM@に似ている')
+    new SctItm('@ITEM@のような')
     ,
-    new SctItm('@DO@する@ITEM@に似ている')
-    ,
-    new SctItm('@ITEM@と変わらない')
-    ,
-    new SctItm('@DO@する@ITEM@と変わらない')
+    new SctItm('@DO@する@ITEM@みたいな')
     ,
     new SctItm('@CALL2@と@ASSES@')
 ]
