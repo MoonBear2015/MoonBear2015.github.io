@@ -1617,6 +1617,12 @@ const cods_future = [
     new SctCod_It('|次世代|じせだい|'),
     new SctCod_It('|新境地|しんきょうち|')
 ];
+const cods_course = [
+    new SctCod_It('|運命|うんめい|', 'future.jpg'),
+    new SctCod_It('|命運|めいうん|'),
+    new SctCod_It('|行|ゆ|く|末|す|え'),
+    new SctCod_It('|明日|あす|')
+];
 const cods_conect1 = [
     new SctCod('は'),
     new SctCod('で'),
@@ -4118,10 +4124,14 @@ const itms_specialist = [
     new SctItm('奇術師'),
     new SctItm('魔術師'),
     new SctItm('魔法使い'),
+    new SctItm('占い師'),
+    new SctItm('占い師'),
     new SctItm('傀儡師'),
     new SctItm('操り人形'),
     new SctItm('使い魔'),
-    new SctItm('悪魔')
+    new SctItm('悪魔'),
+    new SctItm('裏切り者'),
+    new SctItm('異端児')
 ];
 const itms_dir = [
     new SctItm('北'),
@@ -4405,12 +4415,15 @@ const itms_book = [
     new SctItm('@L_WHAT@の@L_CLASS@達'),
     new SctItm('@L_WHAT@の@L_PART@'),
     new SctItm('@L_WHAT@の@L_PART@と呼ばれた@L_SEXAGE@'),
+    new SctItm('@L_WHAT@の@L_ANIMAL@'),
+    new SctItm('@L_WHAT@の@L_ANIMAL@と呼ばれた@L_SEXAGE@'),
     new SctItm('@L_WHAT@最後の@L_CLASS@'),
     new SctItm('@L_WHAT@に生きる@L_CLASS@達'),
-    new SctItm('@L_WHAT@から消えた@L_CLASS@'),
+    new SctItm('@L_WHAT@から消えた@L_CLASS@達'),
     new SctItm('@L_WHAT@が産んだ@L_TECH@'),
     new SctItm('@L_WHAT@の@L_SEXAGE@'),
     new SctItm('@L_WHAT@の@L_FUTURE@'),
+    new SctItm('@L_WHAT@の@L_COURSE@'),
     new SctItm('@L_WHAT@@L_SEXAGE@'),
     new SctItm('@L_WHAT@の@L_SPECIALIST@'),
     new SctItm('@L_WHAT@の@L_SPECIALIST@と呼ばれた@L_SEXAGE@'),
@@ -4430,5 +4443,7 @@ const itms_book = [
     new SctItm('@L_WHAT@と平和'),
     new SctItm('@L_FUTURE@のための@L_WHAT@講座'),
     new SctItm('@L_CLASS@のための@L_WHAT@講座'),
-    new SctItm('@L_DO@する@L_WHAT@')
+    new SctItm('@L_DO@する@L_WHAT@'),
+    new SctItm('@L_ANIMAL@に乗った@L_SEXAGE@'),
+    new SctItm('@L_CLASS@@L_SEXAGE@')
 ];

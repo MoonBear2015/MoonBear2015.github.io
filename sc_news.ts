@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N03.01';
+    html += ' N03.02';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -736,9 +736,7 @@ class selector_call extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@SIZE@@END02C@@L_CLASS@')
             ,
-            new SctItm('@DOING@いる@NICK@')
-            ,
-            new SctItm('@DOING@いた@NICK@')
+            new SctItm('@DOING@@DOINGEND@@NICK@')
         ];
     }
 }
@@ -762,7 +760,7 @@ class selector_call2 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@HABIT@の@NICK@')
             ,
-            new SctItm('@DOING@いる@NICK@')
+            new SctItm('@DOING@@DOINGEND@@NICK@')
         ];
     }
 }
@@ -914,11 +912,11 @@ class selector_who3 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@FOOD@の匂いがする')
             ,
-            new SctItm('@DOING@ばかりいる')
+            new SctItm('@DOING@ばかり@DOINGEND@')
             ,
-            new SctItm('@DOING@いる')
+            new SctItm('@DOING@@DOINGEND@')
             ,
-            new SctItm('@DOING@いた筈の')
+            new SctItm('@DOING@@DOINGEND@筈の')
         ];
     }
 }
@@ -985,7 +983,7 @@ class selector_c01 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@MANYPEOPLE@の@THINK@や@THINK@@SIZE2@@L_WHAT@@END01A@')
             ,
-            new SctItm('@MANYPEOPLE@が@DOING@いる@L_WHAT@@END01A@')
+            new SctItm('@MANYPEOPLE@が@DOING@@DOINGEND@@L_WHAT@@END01A@')
         ];
     }
 }
@@ -1031,7 +1029,7 @@ class selector_c02 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@NEWS_C02@');
         this.itms = [
-            new SctItm('@MANYPEOPLE@が@DOING@いる')
+            new SctItm('@MANYPEOPLE@が@DOING@@DOINGEND@')
             ,
             new SctItm('@MANYPEOPLE@が@KEID@@L_DO@@END02B@')
             ,
@@ -1159,11 +1157,11 @@ class selector_comment2 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@EMOFRONT@@EMO@@END02D@')
             ,
-            new SctItm('@L_WHAT@で@DOING@いた')
+            new SctItm('@L_WHAT@で@DOING@@DOINGEND@')
             ,
-            new SctItm('私の@PART@は@DOING@いた')
+            new SctItm('私の@PART@は@DOING@@DOINGEND@')
             ,
-            new SctItm('私が@DOING@いるとき、@PART@が@DOING@いたのだ')
+            new SctItm('私が@DOING@@DOINGEND@とき、@PART@が@DOING@@DOINGEND@のだ')
 
         ];
     }
@@ -1960,6 +1958,19 @@ class selector_animal extends SctItm_Selector implements ISctItm_Selector {
         this.Add(cods_bird_winter.slice(1));
     }
 }
+
+class locker_animal extends SctItm_SelectLocker implements ISctItm_Selector{
+    constructor(){
+        super('@L_ANIMAL@');
+        this.Add(cods_animal.slice(1));
+        this.Add(cods_bird.slice(1));
+        this.Add(cods_bird_spring.slice(1));
+        this.Add(cods_bird_summer.slice(1));
+        this.Add(cods_bird_autumn.slice(1));
+        this.Add(cods_bird_winter.slice(1));
+    }
+}
+
 class selector_livestock extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@LIVESTOCK@');
@@ -2008,6 +2019,20 @@ class locker_future extends SctItm_SelectLocker implements ISctItm_Selector{
         this.Add(cods_to_itms(cods_future));
     }
 }
+class selector_course extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@COURSE@');
+        this.Add(cods_to_itms(cods_course));
+    }
+}
+class locker_course extends SctItm_SelectLocker implements ISctItm_Selector{
+    constructor(){
+        super('@L_COURSE@');
+        this.Add(cods_to_itms(cods_course));
+    }
+}
+
+
 class selector_place extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@PLACE@');
@@ -3138,6 +3163,18 @@ class selector_and01 extends SctItm_Selector implements ISctItm_Selector {
     }
 }
 
+class selector_doingend extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@DOINGEND@');
+        this.itms = [
+            new SctItm('いる')
+            ,
+            new SctItm('いた')
+        ];
+    }
+}
+
+
 class selector_doing extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@DOING@');
@@ -3464,6 +3501,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_tech());
         this.dic_push(new locker_tech());
         this.dic_push(new selector_animal());
+        this.dic_push(new locker_animal());
         this.dic_push(new selector_livestock());
         this.dic_push(new selector_flower());
         this.dic_push(new locker_flower());
@@ -3483,6 +3521,8 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_who4());
         this.dic_push(new selector_future());
         this.dic_push(new locker_future());
+        this.dic_push(new selector_course());
+        this.dic_push(new locker_course());
         this.dic_push(new selector_day());
         this.dic_push(new selector_place());
         this.dic_push(new selector_city());
@@ -3536,6 +3576,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_emotion());
         this.dic_push(new selector_emotion01());
         this.dic_push(new selector_emofront());
+        this.dic_push(new selector_doingend());
         this.dic_push(new selector_doing());
         this.dic_push(new selector_doing01());
         this.dic_push(new selector_doing02());

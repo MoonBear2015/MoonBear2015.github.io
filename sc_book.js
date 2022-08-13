@@ -79,14 +79,28 @@ class selector_bookinfo01 extends SctItm_Selector {
         super('@B_INFO01@');
         this.itms = [
             new SctItm('@COMMENT2@――'),
-            new SctItm('「@COMMENT2@」――この@KEI@冒頭に@L_WHAT@が震撼した'),
-            new SctItm('「@COMMENT2@」――この@KEI@冒頭に、@L_WHAT@の@MANYPEOPLE@が泣いた'),
-            new SctItm('「@COMMENT2@」――この@KEI@一文が、@L_WHAT@の全てを変えた'),
-            new SctItm('「@COMMENT2@」――この@KEI@名調子が、あなたを@SUPERITEM@@L_WHAT@へと誘う'),
-            new SctItm('「@COMMENT2@」――この@KEI@一言が、@L_WHAT@を震え上がらせた'),
-            new SctItm('「@COMMENT2@」――この@KEI@一言が、あなたを変える'),
-            new SctItm('「@COMMENT2@」――この@KEI@告発が、@L_WHAT@の命運を決定づけた'),
-            new SctItm('「@COMMENT2@」――そう、これぞ正しく@L_BOOKWRITER@の世界だ')
+            new SctItm('「@COMMENT2@」――この@KEI@@B_SENTENCE@に@L_WHAT@が震撼した'),
+            new SctItm('「@COMMENT2@」――この@KEI@@B_SENTENCE@に、@L_WHAT@の@MANYPEOPLE@が泣いた'),
+            new SctItm('「@COMMENT2@」――この@KEI@@B_SENTENCE@が、@L_WHAT@の@COURSE@を変えた'),
+            new SctItm('「@COMMENT2@」――この@KEI@@B_SENTENCE@が、あなたを@SUPERITEM@@L_WHAT@へと誘う'),
+            new SctItm('「@COMMENT2@」――この@KEI@@B_SENTENCE@が、@L_WHAT@を震え上がらせた'),
+            new SctItm('「@COMMENT2@」――この@KEI@@B_SENTENCE@が、あなたの@COURSE@を変える'),
+            new SctItm('「@COMMENT2@」――この@KEI@@B_SENTENCE@が、@L_WHAT@の@COURSE@を決定づけた'),
+            new SctItm('「@COMMENT2@」――そう、これぞ正しく@L_BOOKWRITER@の世界だ'),
+            new SctItm('「@COMMENT2@」――この@KEI@@B_SENTENCE@こそ、@L_BOOKWRITER@の真骨頂')
+        ];
+    }
+}
+class selector_booksentence extends SctItm_Selector {
+    constructor() {
+        super('@B_SENTENCE@');
+        this.itms = [
+            new SctItm('冒頭'),
+            new SctItm('一文'),
+            new SctItm('一言'),
+            new SctItm('告発'),
+            new SctItm('狂言回し'),
+            new SctItm('名調子')
         ];
     }
 }
@@ -162,6 +176,7 @@ class book_docs_maker extends news_docs_maker {
         this.dic_push(new selector_bookinfo01());
         this.dic_push(new selector_bookinfo02());
         this.dic_push(new selector_bookinfoend());
+        this.dic_push(new selector_booksentence());
         this.dic_push(new selector_bookwriter_deco());
         this.dic_push(new selector_booktype());
     }
