@@ -7,7 +7,7 @@ function set_book() {
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B00.24';
+    html += ' B00.25';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -67,11 +67,21 @@ function make_b() {
     html += '</div>';
     html += '</div>';
     html += '<div id="book_comment">';
-    html += '@B_INFO01@。';
-    html += '@B_INFO02@？ @B_INFO02@――';
-    html += '@B_INFOEND@。';
+    html += '@B_INFO@';
     html += '</div>';
     return html;
+}
+class selector_bookinfo extends SctItm_Selector {
+    constructor() {
+        super('@B_INFO@');
+        this.itms = [
+            new SctItm('@B_INFO01@。@B_INFO02@？ @B_INFO02@――@B_INFOEND@。'),
+            new SctItm('@B_INFO01@。@B_INFO02@？ @B_INFO02@――@B_INFO03@。'),
+            new SctItm('@B_INFO02@？ @B_INFO02@？ @B_INFOEND@。'),
+            new SctItm('@B_INFO02@？ @B_INFO02@？ @B_INFO01@。'),
+            new SctItm('@B_INFO02@？ @B_INFO02@？ @B_INFO03@。')
+        ];
+    }
 }
 // 01:例文から
 class selector_bookinfo01 extends SctItm_Selector {
@@ -112,7 +122,21 @@ class selector_bookinfo02 extends SctItm_Selector {
             new SctItm('何故、@L_WHAT@では@DOING@いるのか'),
             new SctItm('何故、@L_WHAT@の@L_CLASS@は@DOING@いるのか'),
             new SctItm('@L_CLASS@だけが知る@L_WHAT@の真実とは'),
-            new SctItm('@PEOPLE@が@DOING@いた理由とは')
+            new SctItm('@PEOPLE@が@DOING@いた理由とは'),
+            new SctItm('@L_DO@した@L_WHAT@の@COURSE@は')
+        ];
+    }
+}
+// 03:評価
+class selector_bookinfo03 extends SctItm_Selector {
+    constructor() {
+        super('@B_INFO03@');
+        this.itms = [
+            new SctItm('@COUNTRY@文学賞に輝く@L_BOOKWRITER@の@B_TYPE@'),
+            new SctItm('@COUNTRY@を代表する@L_BOOKWRITER@のベストセラー作品'),
+            new SctItm('@NUM2TO9@度に渡り映画化された@L_BOOKWRITER@の@B_TYPE@'),
+            new SctItm('映画化不可能と云われた@L_BOOKWRITER@の@B_TYPE@'),
+            new SctItm('@CLASS@達にもっとも愛された@L_BOOKWRITER@の@B_TYPE@')
         ];
     }
 }
@@ -166,15 +190,22 @@ class selector_booktype extends SctItm_Selector {
             new SctItm('現代小説'),
             new SctItm('歴史小説'),
             new SctItm('推理小説'),
-            new SctItm('入門書')
+            new SctItm('サスペンス'),
+            new SctItm('ホラー小説'),
+            new SctItm('短編集'),
+            new SctItm('実用書'),
+            new SctItm('入門書'),
+            new SctItm('教科書')
         ];
     }
 }
 class book_docs_maker extends news_docs_maker {
     constructor() {
         super();
+        this.dic_push(new selector_bookinfo());
         this.dic_push(new selector_bookinfo01());
         this.dic_push(new selector_bookinfo02());
+        this.dic_push(new selector_bookinfo03());
         this.dic_push(new selector_bookinfoend());
         this.dic_push(new selector_booksentence());
         this.dic_push(new selector_bookwriter_deco());
