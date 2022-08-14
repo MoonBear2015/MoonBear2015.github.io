@@ -1423,6 +1423,13 @@ class selector_city extends SctItm_Selector {
         this.Add(itms_city);
     }
 }
+class locker_city extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_CITY@');
+        this.startNumber = 1;
+        this.Add(itms_city);
+    }
+}
 class selector_scool extends SctItm_Selector {
     constructor() {
         super('@SCOOL@');
@@ -1865,43 +1872,6 @@ class selector_assessment extends SctItm_Selector {
     constructor() {
         super('@ASSES@');
         this.itms = [
-            new SctItm('@ASSES_S1@')
-            // ,
-            // new SctItm('@ASSES_S2@、@ASSES_S1@')
-            // ,
-            // new SctItm('@ASSES_S2@、@CONECT3@、@ASSES_S1@')
-        ];
-    }
-}
-// 評価 と～（れ）、
-class selector_assessment1 extends SctItm_Selector {
-    constructor() {
-        super('@ASSES1@');
-        this.itms = [
-            new SctItm('@ASSES_S2@')
-            // ,
-            // new SctItm('@ASSES_S2@、@ASSES_S2@')
-            // ,
-            // new SctItm('@ASSES_S2@、@CONECT3@、@ASSES_S2@')
-        ];
-    }
-}
-// 人々＋評価。○○から～（れ）、
-class selector_people_asses extends SctItm_Selector {
-    constructor() {
-        super('@PEOPLE_ASSES@');
-        this.itms = [
-            new SctItm('@PEOPLE@に@ASSES_S2@'),
-            new SctItm('@PEOPLE@には@ASSES_S2@'),
-            new SctItm('@PEOPLE@から@ASSES_S2@')
-        ];
-    }
-}
-// 評価 と～（る・た・い）。
-class selector_asses1 extends SctItm_Selector {
-    constructor() {
-        super('@ASSES_S1@');
-        this.itms = [
             new SctItm('言い伝えられた'),
             new SctItm('後ろ指を指された'),
             new SctItm('恐れられた'),
@@ -1941,50 +1911,6 @@ class selector_asses1 extends SctItm_Selector {
             new SctItm('訴えられている'),
             new SctItm('見間違えられた'),
             new SctItm('間違えられた')
-        ];
-    }
-}
-// 評価 と～（る・た・い）。
-class selector_asses2 extends SctItm_Selector {
-    constructor() {
-        super('@ASSES_S2@');
-        this.itms = [
-            new SctItm('親しまれ'),
-            new SctItm('賞賛され'),
-            new SctItm('蔑まれ'),
-            new SctItm('罵倒され'),
-            new SctItm('呼ばれ'),
-            new SctItm('知られ'),
-            new SctItm('期待され'),
-            new SctItm('見放され'),
-            new SctItm('見限られ'),
-            new SctItm('見捨てられ'),
-            new SctItm('恐れられ'),
-            new SctItm('おだてられ'),
-            new SctItm('馬鹿にされ'),
-            new SctItm('讃えられ'),
-            new SctItm('言い伝えられ'),
-            new SctItm('丸め込まれ'),
-            new SctItm('語り継がれ'),
-            new SctItm('後ろ指を指され'),
-            new SctItm('推薦され'),
-            new SctItm('表彰され'),
-            new SctItm('認定され'),
-            new SctItm('ささやかれ'),
-            new SctItm('驚嘆され'),
-            new SctItm('驚かせ'),
-            new SctItm('感動され'),
-            new SctItm('感謝され'),
-            new SctItm('太鼓判を押され'),
-            new SctItm('名付けられ'),
-            new SctItm('見守られ'),
-            new SctItm('訴えられ'),
-            new SctItm('見間違えられ'),
-            new SctItm('間違えられ'),
-            new SctItm('誤解され'),
-            new SctItm('勘違いされ'),
-            new SctItm('決めつけられ'),
-            new SctItm('認められ')
         ];
     }
 }
@@ -2312,8 +2238,8 @@ class locker_doing extends SctItm_SelectLocker {
             new SctItm('@L_CLASS@を召還して'),
             new SctItm('@L_CLASS@を呼び出して'),
             new SctItm('@L_CLASS@に変身して'),
-            new SctItm('@L_WHAT@に住んで'),
-            new SctItm('@L_WHAT@に家を建てて'),
+            new SctItm('@L_CITY@に住んで'),
+            new SctItm('@L_CITY@に家を建てて'),
             new SctItm('@L_PART@を連れて'),
             new SctItm('@L_PART@の手を引いて'),
             new SctItm('@L_PART@を置き去りにして'),
@@ -2462,6 +2388,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_day());
         this.dic_push(new selector_place());
         this.dic_push(new selector_city());
+        this.dic_push(new locker_city());
         this.dic_push(new selector_co());
         this.dic_push(new selector_human());
         this.dic_push(new selector_body());
@@ -2489,10 +2416,6 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_nickBad());
         this.dic_push(new selector_nickGood());
         this.dic_push(new selector_assessment());
-        this.dic_push(new selector_assessment1());
-        this.dic_push(new selector_asses1());
-        this.dic_push(new selector_asses2());
-        this.dic_push(new selector_people_asses());
         this.dic_push(new selector_people());
         this.dic_push(new selector_specialist());
         this.dic_push(new locker_specialist());

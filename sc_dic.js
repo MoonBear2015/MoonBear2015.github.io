@@ -4407,6 +4407,7 @@ const itms_horo_star = [
     new SctItm('EARTH', 'HORO/earth.png', '地球')
 ];
 const itms_book = [
+    new SctItm('@L_WHAT@ @L_DO@'),
     new SctItm('@L_WHAT@の@L_DO@'),
     new SctItm('@L_WHAT@の@L_FLOWER@'),
     new SctItm('@L_WHAT@に咲く@L_FLOWER@'),
@@ -4446,6 +4447,7 @@ const itms_book = [
     new SctItm('@L_CLASS@のための@L_WHAT@講座'),
     new SctItm('@L_CLASS@のための@L_WHAT@大百科'),
     new SctItm('@L_DO@する@L_WHAT@'),
+    new SctItm('@L_DOING@'),
     new SctItm('@L_DOING@いた@L_WHAT@'),
     new SctItm('@L_DOING@いる@L_SEXAGE@'),
     new SctItm('@L_ANIMAL@に乗った@L_SEXAGE@'),

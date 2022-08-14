@@ -7188,6 +7188,8 @@ const   itms_horo_star = [
 ]
 
 const   itms_book = [
+    new SctItm('@L_WHAT@ @L_DO@')
+    ,
     new SctItm('@L_WHAT@の@L_DO@')
     ,
     new SctItm('@L_WHAT@の@L_FLOWER@')
@@ -7265,6 +7267,8 @@ const   itms_book = [
     new SctItm('@L_CLASS@のための@L_WHAT@大百科')
     ,
     new SctItm('@L_DO@する@L_WHAT@')
+    ,
+    new SctItm('@L_DOING@')
     ,
     new SctItm('@L_DOING@いた@L_WHAT@')
     ,
