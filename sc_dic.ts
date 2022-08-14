@@ -6991,6 +6991,88 @@ const   itms_music = [
     new SctItm('ロック')
 ]
 
+
+const   itms_ride = [
+    new SctItm('車')
+    ,
+    new SctItm('トラック')
+    ,
+    new SctItm('スポーツカー')
+    ,
+    new SctItm('バス')
+    ,
+    new SctItm('自転車')
+    ,
+    new SctItm('三輪車')
+    ,
+    new SctItm('一輪車')
+    ,
+    new SctItm('バイク')
+    ,
+    new SctItm('オートバイ')
+    ,
+    new SctItm('ロードローラー')
+    ,
+    new SctItm('ショベルカー')
+    ,
+    new SctItm('戦車')
+    ,
+    new SctItm('ロボット')
+    ,
+    new SctItm('モビルスーツ')
+    ,
+    new SctItm('飛行機')
+    ,
+    new SctItm('ジェット機')
+    ,
+    new SctItm('ジャンボジェット機')
+    ,
+    new SctItm('旅客機')
+    ,
+    new SctItm('セスナ')
+    ,
+    new SctItm('戦闘機')
+    ,
+    new SctItm('ゼロ戦')
+    ,
+    new SctItm('複葉機')
+    ,
+    new SctItm('気球')
+    ,
+    new SctItm('ヘリコプター')
+    ,
+    new SctItm('船')
+    ,
+    new SctItm('ヨット')
+    ,
+    new SctItm('ボート')
+    ,
+    new SctItm('モーターボート')
+    ,
+    new SctItm('フェリー')
+    ,
+    new SctItm('帆船')
+    ,
+    new SctItm('ガレー船')
+    ,
+    new SctItm('戦艦')
+    ,
+    new SctItm('巡洋艦')
+    ,
+    new SctItm('駆逐艦')
+    ,
+    new SctItm('潜水艦')
+    ,
+    new SctItm('ロケット')
+    ,
+    new SctItm('宇宙船')
+    ,
+    new SctItm('宇宙戦艦')
+    ,
+    new SctItm('ＵＦＯ')
+]
+
+
 const   itms_dance = [
     new SctItm('ダンス')
     ,

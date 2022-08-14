@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N03.02';
+    html += ' N03.03';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -1430,6 +1430,20 @@ class locker_city extends SctItm_SelectLocker {
         this.Add(itms_city);
     }
 }
+class selector_ride extends SctItm_Selector {
+    constructor() {
+        super('@RIDE@');
+        this.startNumber = 1;
+        this.Add(itms_ride);
+    }
+}
+class locker_ride extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_RIDE@');
+        this.startNumber = 1;
+        this.Add(itms_ride);
+    }
+}
 class selector_scool extends SctItm_Selector {
     constructor() {
         super('@SCOOL@');
@@ -2223,7 +2237,8 @@ class selector_doing02 extends SctItm_Selector {
             new SctItm('@FRUIT@を叩き売りして'),
             new SctItm('@FRUIT@の種を捨てて'),
             new SctItm('@MUSIC@を聴いて'),
-            new SctItm('@MUSIC@を歌って')
+            new SctItm('@MUSIC@を歌って'),
+            new SctItm('@RIDE@に乗って')
         ];
     }
 }
@@ -2284,7 +2299,8 @@ class locker_doing extends SctItm_SelectLocker {
             new SctItm('@L_FLOWER@の花を|咥|くわ|えて'),
             new SctItm('@L_FLOWER@の種を|蒔|ま|いて'),
             new SctItm('@L_MUSIC@を聴いて'),
-            new SctItm('@L_MUSIC@を歌って')
+            new SctItm('@L_MUSIC@を歌って'),
+            new SctItm('@L_RIDE@に乗って')
         ];
     }
 }
@@ -2395,6 +2411,8 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_family());
         this.dic_push(new selector_class());
         this.dic_push(new locker_class());
+        this.dic_push(new selector_ride());
+        this.dic_push(new locker_ride());
         this.dic_push(new selector_call());
         this.dic_push(new selector_call2());
         this.dic_push(new selector_age());
