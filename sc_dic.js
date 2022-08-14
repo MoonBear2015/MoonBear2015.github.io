@@ -1620,7 +1620,7 @@ const cods_future = [
 const cods_course = [
     new SctCod_It('|運命|うんめい|', 'future.jpg'),
     new SctCod_It('|命運|めいうん|'),
-    new SctCod_It('|行|ゆ|く|末|す|え'),
+    new SctCod_It('|行|ゆ|く|末|すえ|'),
     new SctCod_It('|明日|あす|')
 ];
 const cods_conect1 = [

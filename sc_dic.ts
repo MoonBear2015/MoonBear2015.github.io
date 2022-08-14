@@ -2889,7 +2889,7 @@ const   cods_course = [
     ,
     new SctCod_It('|命運|めいうん|')
     ,
-    new SctCod_It('|行|ゆ|く|末|す|え')
+    new SctCod_It('|行|ゆ|く|末|すえ|')
     ,
     new SctCod_It('|明日|あす|')
 ];
