@@ -4273,8 +4273,8 @@ const itms_dress = [
     new SctItm('羽衣'),
     new SctItm('人民服'),
     new SctItm('チマチョゴリ'),
-    new SctItm('@ANIMAL@の着ぐるみ'),
-    new SctItm('@ANIMAL@の毛皮のコート')
+    new SctItm('@L_ANIMAL@の着ぐるみ'),
+    new SctItm('@L_ANIMAL@の毛皮のコート')
 ];
 const itms_music = [
     new SctItm('アニメソング'),
@@ -4444,7 +4444,10 @@ const itms_book = [
     new SctItm('@L_WHAT@と平和'),
     new SctItm('@L_FUTURE@のための@L_WHAT@講座'),
     new SctItm('@L_CLASS@のための@L_WHAT@講座'),
+    new SctItm('@L_CLASS@のための@L_WHAT@大百科'),
     new SctItm('@L_DO@する@L_WHAT@'),
+    new SctItm('@L_DOING@いた@L_WHAT@'),
+    new SctItm('@L_DOING@いる@L_SEXAGE@'),
     new SctItm('@L_ANIMAL@に乗った@L_SEXAGE@'),
     new SctItm('@L_ANIMAL@と@L_SEXAGE@'),
     new SctItm('@L_CLASS@@L_SEXAGE@')

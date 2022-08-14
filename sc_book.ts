@@ -9,7 +9,7 @@ function set_book()
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B00.26';
+    html += ' B00.28';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -108,6 +108,12 @@ class selector_bookinfo extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@B_INFO02@？ @B_INFO02@？ @B_INFO01@。')
             ,
             new SctItm('@B_INFO02@？ @B_INFO02@？ @B_INFO03@。')
+            ,
+            new SctItm('@B_INFO02@――@B_INFO03@。')
+            ,
+            new SctItm('@B_INFO02@――@B_INFOEND@。')
+            ,
+            new SctItm('@B_INFO02@――@B_INFOEND@。@COMMENT2@――')
         ]
     }
 }
@@ -189,6 +195,8 @@ class selector_bookinfo03 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@COUNTRY@を代表する@L_BOOKWRITER@の@B_TYPE@')
             ,
             new SctItm('@COUNTRY@を含む@NUM10TO99@ヶ国で発売禁止となった@L_BOOKWRITER@の@B_TYPE@')
+            ,
+            new SctItm('かつて@COUNTRY@で禁書に指定された@L_BOOKWRITER@の@B_TYPE@')
             ,
             new SctItm('@NUM2TO9@度に渡り映画化された@L_BOOKWRITER@の@B_TYPE@')
             ,

@@ -7,7 +7,7 @@ function set_book() {
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B00.26';
+    html += ' B00.28';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -79,7 +79,10 @@ class selector_bookinfo extends SctItm_Selector {
             new SctItm('@B_INFO01@。@B_INFO02@？ @B_INFO02@――@B_INFO03@。'),
             new SctItm('@B_INFO02@？ @B_INFO02@？ @B_INFOEND@。'),
             new SctItm('@B_INFO02@？ @B_INFO02@？ @B_INFO01@。'),
-            new SctItm('@B_INFO02@？ @B_INFO02@？ @B_INFO03@。')
+            new SctItm('@B_INFO02@？ @B_INFO02@？ @B_INFO03@。'),
+            new SctItm('@B_INFO02@――@B_INFO03@。'),
+            new SctItm('@B_INFO02@――@B_INFOEND@。'),
+            new SctItm('@B_INFO02@――@B_INFOEND@。@COMMENT2@――')
         ];
     }
 }
@@ -135,6 +138,7 @@ class selector_bookinfo03 extends SctItm_Selector {
             new SctItm('@COUNTRY@文学賞に輝く@L_BOOKWRITER@の@B_TYPE@'),
             new SctItm('@COUNTRY@を代表する@L_BOOKWRITER@の@B_TYPE@'),
             new SctItm('@COUNTRY@を含む@NUM10TO99@ヶ国で発売禁止となった@L_BOOKWRITER@の@B_TYPE@'),
+            new SctItm('かつて@COUNTRY@で禁書に指定された@L_BOOKWRITER@の@B_TYPE@'),
             new SctItm('@NUM2TO9@度に渡り映画化された@L_BOOKWRITER@の@B_TYPE@'),
             new SctItm('映画化不可能と云われた@L_BOOKWRITER@の@B_TYPE@'),
             new SctItm('@CLASS@達にもっとも愛された@L_BOOKWRITER@の@B_TYPE@')

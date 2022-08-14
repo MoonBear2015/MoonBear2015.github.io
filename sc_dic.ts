@@ -6933,9 +6933,9 @@ const   itms_dress = [
     ,
     new SctItm('チマチョゴリ')
     ,
-    new SctItm('@ANIMAL@の着ぐるみ')
+    new SctItm('@L_ANIMAL@の着ぐるみ')
     ,
-    new SctItm('@ANIMAL@の毛皮のコート')
+    new SctItm('@L_ANIMAL@の毛皮のコート')
 ]
 
 
@@ -7262,7 +7262,13 @@ const   itms_book = [
     ,
     new SctItm('@L_CLASS@のための@L_WHAT@講座')
     ,
+    new SctItm('@L_CLASS@のための@L_WHAT@大百科')
+    ,
     new SctItm('@L_DO@する@L_WHAT@')
+    ,
+    new SctItm('@L_DOING@いた@L_WHAT@')
+    ,
+    new SctItm('@L_DOING@いる@L_SEXAGE@')
     ,
     new SctItm('@L_ANIMAL@に乗った@L_SEXAGE@')
     ,
