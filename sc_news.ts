@@ -2791,6 +2791,8 @@ class selector_assessment extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('賞賛された')
             ,
+            new SctItm('愛された')
+            ,
             new SctItm('罵倒されている')
             ,
             new SctItm('呼ばれている')

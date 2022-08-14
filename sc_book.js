@@ -7,7 +7,7 @@ function set_book() {
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B00.29';
+    html += ' B00.30';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -141,7 +141,7 @@ class selector_bookinfo03 extends SctItm_Selector {
             new SctItm('かつて@COUNTRY@で禁書に指定された@L_BOOKWRITER@の@B_TYPE@'),
             new SctItm('@NUM2TO9@度に渡り映画化された@L_BOOKWRITER@の@B_TYPE@'),
             new SctItm('映画化不可能と云われた@L_BOOKWRITER@の@B_TYPE@'),
-            new SctItm('@CLASS@達にもっとも愛された@L_BOOKWRITER@の@B_TYPE@')
+            new SctItm('@PEOPLE@達にもっとも@ASSES@@L_BOOKWRITER@の@B_TYPE@')
         ];
     }
 }
@@ -172,7 +172,9 @@ class selector_bookwriter_deco extends SctItm_Selector {
             new SctItm('@L_WHAT@が産んだ@SPECIALIST@'),
             new SctItm('@L_CLASS@の@SPECIALIST@'),
             new SctItm('@L_DO@する@SPECIALIST@'),
-            new SctItm('@L_TECH@の@SPECIALIST@')
+            new SctItm('@L_TECH@の@SPECIALIST@'),
+            new SctItm('かつて@COUNTRY@から追放された元@L_CLASS@'),
+            new SctItm('もっとも@COUNTRY@で@ASSES@元@L_CLASS@')
         ];
     }
 }

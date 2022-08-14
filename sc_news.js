@@ -1901,6 +1901,7 @@ class selector_assessment extends SctItm_Selector {
             new SctItm('蔑まれている'),
             new SctItm('親しまれている'),
             new SctItm('賞賛された'),
+            new SctItm('愛された'),
             new SctItm('罵倒されている'),
             new SctItm('呼ばれている'),
             new SctItm('評価が高い'),
