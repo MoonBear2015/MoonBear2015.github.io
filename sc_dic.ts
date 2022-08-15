@@ -5243,6 +5243,12 @@ const   itms_what = [
     new SctItm('歓楽街','WHAT/moulin.jpg')
     ,
     new SctItm('中華街','WHAT/chinatown.jpg')
+    ,
+    new SctItm('スペースコロニー','WHAT/spacecolony.jpg')
+    ,
+    new SctItm('カジノ','WHAT/Casino.jpg')
+    ,
+    new SctItm('ジャングル','WHAT/jungle.jpg')
 ];
 
 
@@ -5636,9 +5642,13 @@ const   itms_class = [
     ,
     new SctItm('祈祷師')
     ,
+    new SctItm('悪魔払い師')
+    ,
     new SctItm('インディアン')
     ,
     new SctItm('カウボーイ')
+    ,
+    new SctItm('賞金稼ぎ')
     ,
     new SctItm('看板娘')
     ,
@@ -5694,6 +5704,12 @@ const   itms_class = [
     ,
     new SctItm('神主')
     ,
+    new SctItm('僧侶')
+    ,
+    new SctItm('司祭')
+    ,
+    new SctItm('司教')
+    ,
     new SctItm('村長')
     ,
     new SctItm('町長')
@@ -5705,6 +5721,8 @@ const   itms_class = [
     new SctItm('皇帝')
     ,
     new SctItm('国王')
+    ,
+    new SctItm('法王')
     ,
     new SctItm('大統領')
     ,
@@ -5750,6 +5768,8 @@ const   itms_class = [
     ,
     new SctItm('ハスラー')
     ,
+    new SctItm('ギャンブラー')
+    ,
     new SctItm('花火職人')
     ,
     new SctItm('皿洗い')
@@ -5777,6 +5797,10 @@ const   itms_class = [
     new SctItm('バニーガール')
     ,
     new SctItm('芸者')
+    ,
+    new SctItm('ホスト')
+    ,
+    new SctItm('ホステス')
     ,
     new SctItm('ショーガール')
     ,
@@ -5821,6 +5845,16 @@ const   itms_class = [
     new SctItm('火星人')
     ,
     new SctItm('秘密探偵')
+    ,
+    new SctItm('人魚')
+    ,
+    new SctItm('半魚人')
+    ,
+    new SctItm('人狼')
+    ,
+    new SctItm('狼男')
+    ,
+    new SctItm('吸血鬼')
 ];
 
 
@@ -7001,6 +7035,10 @@ const   itms_ride = [
     ,
     new SctItm('バス')
     ,
+    new SctItm('電車')
+    ,
+    new SctItm('新幹線')
+    ,
     new SctItm('自転車')
     ,
     new SctItm('三輪車')
@@ -7039,6 +7077,20 @@ const   itms_ride = [
     ,
     new SctItm('気球')
     ,
+    new SctItm('飛行船')
+    ,
+    new SctItm('箒')
+    ,
+    new SctItm('風')
+    ,
+    new SctItm('雲')
+    ,
+    new SctItm('筋斗雲')
+    ,
+    new SctItm('@L_ANIMAL@')
+    ,
+    new SctItm('@L_ANIMAL@の背中')
+    ,
     new SctItm('ヘリコプター')
     ,
     new SctItm('船')
@@ -7054,6 +7106,8 @@ const   itms_ride = [
     new SctItm('帆船')
     ,
     new SctItm('ガレー船')
+    ,
+    new SctItm('海賊船')
     ,
     new SctItm('戦艦')
     ,
@@ -7349,6 +7403,8 @@ const   itms_book = [
     new SctItm('漫画で読む@L_WHAT@')
     ,
     new SctItm('@L_WHAT@昔話')
+    ,
+    new SctItm('@L_WHAT@物語')
     ,
     new SctItm('@L_FUTURE@のための@L_WHAT@講座')
     ,
