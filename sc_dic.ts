@@ -5257,6 +5257,10 @@ const   itms_city = [
     ,
     new SctItm('銀座','CITY/ginza.jpg')
     ,
+    new SctItm('渋谷','CITY/shibuya.jpg')
+    ,
+    new SctItm('秋葉原','CITY/akihabara.jpg')
+    ,
     new SctItm('大阪','CITY/osaka.jpg')
     ,
     new SctItm('沖縄','CITY/okinawa.jpg')
