@@ -3122,6 +3122,14 @@ class selector_doing extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@DOING02@')
             ,
             new SctItm('@DAY@も@DOING01@')
+            ,
+            new SctItm('@DOING01@笑って')
+            ,
+            new SctItm('@DOING01@悲しんで')
+            ,
+            new SctItm('@DOING01@涙を流して')
+            ,
+            new SctItm('@DOING01@@DOING02@')
         ];
     }
 }
@@ -3130,6 +3138,8 @@ class selector_doing01 extends SctItm_Selector implements ISctItm_Selector {
         super('@DOING01@');
         this.itms = [
             new SctItm('@DOING02@')
+            ,
+            new SctItm('@L_DOING@')
             ,
             new SctItm('@PEOPLE@と一緒に@DOING02@')
             ,
@@ -3143,9 +3153,6 @@ class selector_doing01 extends SctItm_Selector implements ISctItm_Selector {
         ];
     }
 }
-
-
-
 
 // 行動 （食べて）いる　（食べて）いた
 class selector_doing02 extends SctItm_Selector implements ISctItm_Selector {
@@ -3171,6 +3178,8 @@ class selector_doing02 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@L_CLASS@を雇って')
             ,
             new SctItm('@L_CLASS@を召還して')
+            ,
+            new SctItm('@L_CLASS@を募集して')
             ,
             new SctItm('@L_CLASS@を呼び出して')
             ,
@@ -3373,6 +3382,8 @@ class locker_doing extends SctItm_SelectLocker implements ISctItm_Selector{
             ,
             new SctItm('@L_CLASS@を召還して')
             ,
+            new SctItm('@L_CLASS@を募集して')
+            ,
             new SctItm('@L_CLASS@を呼び出して')
             ,
             new SctItm('@L_CLASS@に変身して')
@@ -3472,6 +3483,33 @@ class locker_doing extends SctItm_SelectLocker implements ISctItm_Selector{
             new SctItm('@L_MUSIC@を歌って')
             ,
             new SctItm('@L_RIDE@に乗って')
+        ];
+    }
+}
+
+
+// 出版元（画像未設定の解消のため）
+class selector_bookmaker extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@BOOKMAKER@');
+        this.itms = [
+            new SctItm('@L_WHAT@出版')
+            ,
+            new SctItm('@L_WHAT@印刷')
+            ,
+            new SctItm('@L_WHAT@書房')
+            ,
+            new SctItm('@L_WHAT@書院')
+            ,
+            new SctItm('@L_WHAT@文芸')
+            ,
+            new SctItm('@L_WHAT@学院')
+            ,
+            new SctItm('@L_WHAT@株式会社')
+            ,
+            new SctItm('@L_WHAT@財団')
+            ,
+            new SctItm('@L_WHAT@委員会')
         ];
     }
 }
@@ -3641,6 +3679,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_doing02());
         this.dic_push(new locker_doing());
         this.dic_push(new selector_superitem());
+        this.dic_push(new selector_bookmaker());
 
     }
 }

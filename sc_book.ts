@@ -58,6 +58,12 @@ function make_b() : string {
     html += '<span class="xl">@L_BOOK@</span><br>';
     html += '著者：<br>';
     html += '@L_BOOKWRITER@';
+    html += '<br>';
+    html += '<p id="book_maker">';
+    html += '出版元：@BOOKMAKER@';
+    html += '</p>';
+    html += '<br>';
+
     html += '</div>';
 
     html += '<div id="book_face" ';

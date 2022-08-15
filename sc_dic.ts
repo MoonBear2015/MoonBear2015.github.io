@@ -7342,6 +7342,14 @@ const   itms_book = [
     ,
     new SctItm('@L_WHAT@と平和')
     ,
+    new SctItm('@L_WHAT@のひみつ')
+    ,
+    new SctItm('月刊 @L_WHAT@')
+    ,
+    new SctItm('漫画で読む@L_WHAT@')
+    ,
+    new SctItm('@L_WHAT@昔話')
+    ,
     new SctItm('@L_FUTURE@のための@L_WHAT@講座')
     ,
     new SctItm('@L_CLASS@のための@L_WHAT@講座')
@@ -7361,6 +7369,8 @@ const   itms_book = [
     new SctItm('@L_ANIMAL@と@L_SEXAGE@')
     ,
     new SctItm('@L_CLASS@@L_SEXAGE@')
+    ,
+    new SctItm('@L_DO@する@L_CLASS@')
 
 ]
     
