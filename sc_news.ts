@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N03.03';
+    html += ' N03.04';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -3160,6 +3160,14 @@ class selector_doing02 extends SctItm_Selector implements ISctItm_Selector {
         super('@DOING02@');
         this.itms = [
             new SctItm('@FOOD@を食べて')
+            ,
+            new SctItm('@FOOD@に塩をかけて食べて')
+            ,
+            new SctItm('@FOOD@に醤油をかけて食べて')
+            ,
+            new SctItm('@FOOD@にソースをかけて食べて')
+            ,
+            new SctItm('@FOOD@を温め直して')
             ,
             new SctItm('@FOOD@を配達して')
             ,
