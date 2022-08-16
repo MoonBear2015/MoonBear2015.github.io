@@ -4329,6 +4329,8 @@ const itms_ride = [
     new SctItm('バス'),
     new SctItm('電車'),
     new SctItm('新幹線'),
+    new SctItm('汽車'),
+    new SctItm('機関車'),
     new SctItm('自転車'),
     new SctItm('三輪車'),
     new SctItm('一輪車'),

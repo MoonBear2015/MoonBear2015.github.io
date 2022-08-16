@@ -9,7 +9,7 @@ function set_book()
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B00.30';
+    html += ' B00.31';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -291,8 +291,6 @@ class selector_booktype extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('名作')
             ,
-            new SctItm('改訂版')
-            ,
             new SctItm('文芸作品')
             ,
             new SctItm('現代小説')
@@ -305,13 +303,15 @@ class selector_booktype extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('ホラー小説')
             ,
+            new SctItm('恋愛小説')
+            ,
             new SctItm('短編集')
             ,
             new SctItm('実用書')
             ,
             new SctItm('入門書')
             ,
-            new SctItm('教科書')
+            new SctItm('参考書')
         ]
     }
 }

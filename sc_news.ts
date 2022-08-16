@@ -780,13 +780,9 @@ class selector_call2 extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('@L_DO@する@L_WHAT@')
             ,
-            new SctItm('@COMM1@@WHAT@')
-            ,
             new SctItm('@KEI1@@ITEM@')
             ,
             new SctItm('@COUNTRY@の@KEI@@ITEM@')
-            ,
-            new SctItm('@MOVE@@ITEM@')
             ,
             new SctItm('@KEI@@ITEM@')
             ,
@@ -1149,7 +1145,7 @@ class selector_comment2 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@CALL@が@SIZE@@END02B@')
             ,
-            new SctItm('@L_WHAT@は@KEID@@L_DO@する@KEI@@NICK@と@ASSES@')
+            new SctItm('@L_WHAT@は@KEID@@L_DO@する@KEI@@NICK@だと@ASSES@')
             ,
             new SctItm('@MANYPEOPLE@は@CALL@@END02A@')
             ,
@@ -1161,13 +1157,13 @@ class selector_comment2 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@L_WHAT@は@L_DO@@END02B@')
             ,
-            new SctItm('@L_WHAT@は@KEI@@NICK@の@PART@と@KEID@@ASSES@')
+            new SctItm('@L_WHAT@は@KEI@@NICK@の@PART@だと@KEID@@ASSES@')
             ,
             new SctItm('@L_WHAT@は@KEID@@L_DO@する@KEI@@THEY@@END02A@')
             ,
             new SctItm('@CALL@で、@CALL@@END02A@')
             ,
-            new SctItm('@YESNO@、@CALL@と@ASSES@')
+            new SctItm('@YESNO@、@CALL@だと@ASSES@')
             ,
             new SctItm('@YESNO@、@PEOPLE@の@KEY@@END02A@')
             ,
@@ -2859,6 +2855,10 @@ class selector_superitem extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('渾身の')
             ,
+            new SctItm('不朽の')
+            ,
+            new SctItm('未完の')
+            ,
             new SctItm('磨き抜かれた')
             ,
             new SctItm('洗練された')
@@ -3123,9 +3123,13 @@ class selector_doing extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@DAY@も@DOING01@')
             ,
+            new SctItm('@DOING01@喜んで')
+            ,
             new SctItm('@DOING01@笑って')
             ,
             new SctItm('@DOING01@悲しんで')
+            ,
+            new SctItm('@DOING01@泣いて')
             ,
             new SctItm('@DOING01@涙を流して')
             ,
@@ -3161,11 +3165,13 @@ class selector_doing02 extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('@FOOD@を食べて')
             ,
-            new SctItm('@FOOD@に塩をかけて食べて')
+            new SctItm('@FOOD@に塩を振って食べて')
             ,
             new SctItm('@FOOD@に醤油をかけて食べて')
             ,
             new SctItm('@FOOD@にソースをかけて食べて')
+            ,
+            new SctItm('@FOOD@にレモンを搾って食べて')
             ,
             new SctItm('@FOOD@を温め直して')
             ,
@@ -3200,8 +3206,6 @@ class selector_doing02 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@PLACE@で眠って')
             ,
             new SctItm('@PLACE@で遊んで')
-            ,
-            new SctItm('@PLACE@で踊って')
             ,
             new SctItm('@DANCE@を踊って')
             ,

@@ -9,7 +9,7 @@ function set_about()
     html += '<h1>';
     html += 'ABOUT';
     html += '<small>';
-    html += ' A01.14';
+    html += ' A01.15';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -231,13 +231,9 @@ class selector_command1 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@COMM1@');
         this.itms = [
-            new SctItm('@MOVE@')
+            new SctItm('@DOING02@@DOINGEND@')
             ,
-            new SctItm('@ASSES@')
-            ,
-            new SctItm('@DO@@END02C@')
-            ,
-            new SctItm('@THINK@@END02C@')
+            new SctItm('@L_DOING@@DOINGEND@')
             ,
             new SctItm('@SIZE@@END02C@')
             ,

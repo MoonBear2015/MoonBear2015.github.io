@@ -7043,6 +7043,10 @@ const   itms_ride = [
     ,
     new SctItm('新幹線')
     ,
+    new SctItm('汽車')
+    ,
+    new SctItm('機関車')
+    ,
     new SctItm('自転車')
     ,
     new SctItm('三輪車')
