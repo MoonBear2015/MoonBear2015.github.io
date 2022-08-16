@@ -607,11 +607,11 @@ class selector_who3 extends SctItm_Selector {
             new SctItm('@COUNTRY@在住の'),
             new SctItm('@COUNTRY@唯一の'),
             new SctItm('@COUNTRY@政府から派遣された'),
-            new SctItm('@SCOOL@出身の'),
-            new SctItm('@SCOOL@に通う'),
-            new SctItm('@SCOOL@在学中の'),
-            new SctItm('@SCOOL@筆頭の'),
-            new SctItm('@SCOOL@を中退した'),
+            new SctItm('@SCHOOL@出身の'),
+            new SctItm('@SCHOOL@に通う'),
+            new SctItm('@SCHOOL@在学中の'),
+            new SctItm('@SCHOOL@筆頭の'),
+            new SctItm('@SCHOOL@を中退した'),
             new SctItm('「@CALL2@」と呼ばれている'),
             new SctItm('@MANYPEOPLE@より@ASSES@'),
             new SctItm('@NICK@そっくりの'),
@@ -709,32 +709,43 @@ class selector_c02 extends SctItm_Selector {
         ];
     }
 }
-// 発言の・句読点をつけられると困る
+// 最後に句読点をつけられると困る
 class selector_comment extends SctItm_Selector {
     constructor() {
         super('@COMMENT@');
         this.itms = [
-            new SctItm('@COMMENT2@'),
-            new SctItm('@COMMENT2@'),
-            new SctItm('@COMMENT2@'),
-            new SctItm('@COMMENT2@'),
-            new SctItm('@YESNO@、@COMMENT2@'),
-            new SctItm('@YESNO@、@COMMENT2@'),
-            new SctItm('@CONECT@、@COMMENT2@'),
-            new SctItm('@CONECT@、@COMMENT2@'),
-            new SctItm('@COMMENT2@。@COMMENT2@'),
-            new SctItm('@COMMENT2@。@COMMENT2@'),
-            new SctItm('@COMMENT2@。@COMMENT2@'),
-            new SctItm('@COMMENT2@。@COMMENT2@。@COMMENT2@'),
-            new SctItm('@COMMENT2@。@COMMENT2@。@COMMENT2@'),
-            new SctItm('@COMMENT2@。@COMMENT2@。@COMMENT2@'),
-            new SctItm('@COMMENT2@。@CONECT@、@COMMENT2@'),
-            new SctItm('@COMMENT2@。@CONECT@、@COMMENT2@'),
-            new SctItm('@COMMENT2@。@YESNO@、@COMMENT2@'),
-            new SctItm('@COMMENT2@。@YESNO@、@COMMENT2@'),
-            new SctItm('@YESNO@ッ！ @L_WHAT@が@KEI@@NICK@@END02A@ッ！'),
-            new SctItm('@NICKBAD@ッ！ @NICKBAD@ッ！ @L_WHAT@の@NICKBAD@ッ！'),
+            new SctItm('@COMMENT1@'),
+            new SctItm('@COMMENT1@'),
+            new SctItm('@COMMENT1@――'),
+            new SctItm('――@COMMENT1@'),
+            new SctItm('@COMMENT1@……'),
+            new SctItm('……@COMMENT1@'),
+            new SctItm('@YESNO@ッ！ @NEWS_C02@！'),
+            new SctItm('@NICKBAD@ッ！ @NICKBAD@ッ！ @NICKBAD@ッ！'),
             new SctItm('@L_WHAT@の@NICKBAD@！ @L_WHAT@の@NICKBAD@！ @L_WHAT@の@NICKBAD@！ @L_WHAT@の@NICKBAD@！ ')
+        ];
+    }
+}
+// 最初・最後に句読点などを付けても問題無し
+class selector_comment1 extends SctItm_Selector {
+    constructor() {
+        super('@COMMENT1@');
+        this.itms = [
+            new SctItm('@COMMENT2@'),
+            new SctItm('@YESNO@、@COMMENT2@'),
+            new SctItm('@YESNO@、@COMMENT2@'),
+            new SctItm('@CONECT@、@COMMENT2@'),
+            new SctItm('@CONECT@、@COMMENT2@'),
+            new SctItm('@COMMENT2@。@COMMENT2@'),
+            new SctItm('@COMMENT2@。@COMMENT2@'),
+            new SctItm('@COMMENT2@。@COMMENT2@'),
+            new SctItm('@COMMENT2@。@COMMENT2@。@COMMENT2@'),
+            new SctItm('@COMMENT2@。@COMMENT2@。@COMMENT2@'),
+            new SctItm('@COMMENT2@。@COMMENT2@。@COMMENT2@'),
+            new SctItm('@COMMENT2@。@CONECT@、@COMMENT2@'),
+            new SctItm('@COMMENT2@。@CONECT@、@COMMENT2@'),
+            new SctItm('@COMMENT2@。@YESNO@、@COMMENT2@'),
+            new SctItm('@COMMENT2@。@YESNO@、@COMMENT2@')
             // ,
             // new SctItm('@L_WHAT@は@NICK@？ @COMMENT@')
             // ,
@@ -766,8 +777,8 @@ class selector_comment2 extends SctItm_Selector {
             new SctItm('@YESNO@、@CALL@だと@ASSES@'),
             new SctItm('@YESNO@、@PEOPLE@の@KEY@@END02A@'),
             new SctItm('@YESNO@、@L_WHAT@が@KEI@@NICK@@END02A@'),
-            new SctItm('@KEI1@@NICK@、@KEI1@@NICK@、@KEI1@@NICK@、@KEI1@@NICK@……'),
-            new SctItm('@KEI1@@KEY@、@KEI1@@KEY@、@KEI1@@KEY@、@KEI1@@KEY@……'),
+            new SctItm('@KEI1@@NICK@、@KEI1@@NICK@、@KEI1@@NICK@、@KEI1@@NICK@'),
+            new SctItm('@KEI1@@KEY@、@KEI1@@KEY@、@KEI1@@KEY@、@KEI1@@KEY@'),
             new SctItm('@YESNO@、@KEI2@な@PART@が@SAY@@END02B@'),
             new SctItm('@CALL@、@YESNO@、それが@PART@の@PART@@END02A@'),
             new SctItm('@KEID@@L_DO@する@KEI@@NICK@と@KEID@@ASSES@@THEY@、@YESNO@、それが@L_WHAT@の@PEOPLE@@END02A@'),
@@ -1037,10 +1048,11 @@ class selector_they extends SctItm_Selector {
             new SctItm('犠牲者達'),
             new SctItm('生徒一同'),
             new SctItm('兄弟弟子'),
-            new SctItm('メンバー達'),
             new SctItm('チームメイト達'),
+            new SctItm('@SPORTS@のチームメイト達'),
             new SctItm('ルームメイト達'),
             new SctItm('クラスメイト達'),
+            new SctItm('@SCHOOL@のクラスメイト達'),
             new SctItm('野次馬達'),
             new SctItm('@SEXAGE@達')
         ];
@@ -1444,7 +1456,7 @@ class locker_ride extends SctItm_SelectLocker {
 }
 class selector_scool extends SctItm_Selector {
     constructor() {
-        super('@SCOOL@');
+        super('@SCHOOL@');
         this.itms = [
             new SctItm('@CITY@@SCOOL01@'),
             new SctItm('@CITY@私立@SCOOL01@'),
@@ -2154,10 +2166,20 @@ class selector_doing02 extends SctItm_Selector {
         this.itms = [
             new SctItm('@FOOD@を食べて'),
             new SctItm('@FOOD@に塩を振って食べて'),
+            new SctItm('@FOOD@に塩胡椒をかけて食べて'),
             new SctItm('@FOOD@に醤油をかけて食べて'),
             new SctItm('@FOOD@にソースをかけて食べて'),
+            new SctItm('@FOOD@にカラシをつけて食べて'),
+            new SctItm('@FOOD@にジャムを塗って食べて'),
             new SctItm('@FOOD@にレモンを搾って食べて'),
-            new SctItm('@FOOD@を温め直して'),
+            new SctItm('@FOOD@をパンに挟んで食べて'),
+            new SctItm('@FOOD@をご飯にのせて食べて'),
+            new SctItm('@FOOD@を温め直して食べて'),
+            new SctItm('@FOOD@を焼き直して食べて'),
+            new SctItm('@LIVESTOCK@の肉を油で揚げて食べて'),
+            new SctItm('@LIVESTOCK@の肉を丸焼きにして食べて'),
+            new SctItm('@FISH@を塩焼きにして食べて'),
+            new SctItm('@FISH@を蒸し焼きにして食べて'),
             new SctItm('@FOOD@を配達して'),
             new SctItm('@FOOD@を注文して'),
             new SctItm('@FOOD@を平らげて'),
@@ -2239,11 +2261,11 @@ class selector_doing02 extends SctItm_Selector {
             new SctItm('@DRESS@に着替えて'),
             new SctItm('@DRESS@を洗濯して'),
             new SctItm('@DRESS@を仮縫いして'),
-            new SctItm('@SCOOL@に通って'),
-            new SctItm('@SCOOL@に入学して'),
-            new SctItm('@SCOOL@に合格して'),
-            new SctItm('@SCOOL@を卒業して'),
-            new SctItm('@SCOOL@を中退して'),
+            new SctItm('@SCHOOL@に通って'),
+            new SctItm('@SCHOOL@に入学して'),
+            new SctItm('@SCHOOL@に合格して'),
+            new SctItm('@SCHOOL@を卒業して'),
+            new SctItm('@SCHOOL@を中退して'),
             new SctItm('@L_FLOWER@の花を|捧|ささ|げて'),
             new SctItm('@L_FLOWER@の花を咲かせて'),
             new SctItm('@L_FLOWER@の花を飾って'),
@@ -2396,6 +2418,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_end02d());
         this.dic_push(new selector_end02e());
         this.dic_push(new selector_comment());
+        this.dic_push(new selector_comment1());
         this.dic_push(new selector_comment2());
         this.dic_push(new selector_YESNO());
         this.dic_push(new selector_date());

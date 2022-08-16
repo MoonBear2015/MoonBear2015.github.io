@@ -6754,6 +6754,10 @@ const   itms_sweets = [
     new SctItm('@FRUIT@のアイスクリーム')
     ,
     new SctItm('かき氷')
+    ,
+    new SctItm('あんぱん')
+    ,
+    new SctItm('クリームパン')
 ]
 
 const   itms_meal = [
@@ -6770,6 +6774,12 @@ const   itms_meal = [
     new SctItm('鍋焼きうどん')
     ,
     new SctItm('ハンバーガー')
+    ,
+    new SctItm('食パン')
+    ,
+    new SctItm('カレーパン')
+    ,
+    new SctItm('焼きそばパン')
     ,
     new SctItm('@LIVESTOCK@のハンバーガー')
     ,
@@ -6822,6 +6832,8 @@ const   itms_meal = [
     new SctItm('目玉焼き')
     ,
     new SctItm('卵焼き')
+    ,
+    new SctItm('ゆで卵')
     ,
     new SctItm('オムレツ')
     ,
@@ -6892,6 +6904,20 @@ const   itms_meal = [
     new SctItm('海苔弁当')
     ,
     new SctItm('日の丸弁当')
+    ,
+    new SctItm('ソーセージ')
+    ,
+    new SctItm('ロースハム')
+    ,
+    new SctItm('生ハム')
+    ,
+    new SctItm('|蒲鉾|かまぼこ|')
+    ,
+    new SctItm('|竹輪|ちくわ|')
+    ,
+    new SctItm('|納豆|なっとう|')
+    ,
+    new SctItm('|納豆|なっとう|')
 
 ]
 
