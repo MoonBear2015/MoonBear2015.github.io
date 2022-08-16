@@ -129,7 +129,7 @@ class selector_bookinfo02 extends SctItm_Selector {
         this.itms = [
             new SctItm('何故、@L_WHAT@では@DOING@いるのか'),
             new SctItm('何故、@L_WHAT@の@L_CLASS@は@DOING@いるのか'),
-            new SctItm('@L_CLASS@だけが知る@L_WHAT@の真実とは'),
+            new SctItm('@L_CLASS@だけが知る@L_ITEM@の真実とは'),
             new SctItm('@PEOPLE@が@DOING@いた理由とは'),
             new SctItm('@L_DO@した@L_WHAT@の@COURSE@は')
         ];
@@ -175,9 +175,10 @@ class selector_bookwriter_deco extends SctItm_Selector {
         this.itms = [
             new SctItm('@L_WHAT@の@SPECIALIST@'),
             new SctItm('@L_WHAT@が産んだ@SPECIALIST@'),
-            new SctItm('@L_CLASS@の@SPECIALIST@'),
+            new SctItm('@L_ITEM@の@SPECIALIST@'),
+            new SctItm('@L_ITEM@を知り尽くした@SPECIALIST@'),
             new SctItm('@L_DO@する@SPECIALIST@'),
-            new SctItm('@L_TECH@の@SPECIALIST@'),
+            new SctItm('@L_ITEM@の@SPECIALIST@'),
             new SctItm('かつて@COUNTRY@から追放された元@L_CLASS@'),
             new SctItm('もっとも@COUNTRY@で@ASSES@元@L_CLASS@')
         ];

@@ -1490,6 +1490,13 @@ class selector_fruit extends SctItm_Selector {
         // this.Add(cods_rubyKana_to_itms(cods_fruit.slice(1)));
     }
 }
+class locker_fruit extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_FRUIT@');
+        this.Add(cods_fruit.slice(1));
+        // this.Add(cods_rubyKana_to_itms(cods_fruit.slice(1)));
+    }
+}
 class selector_fish extends SctItm_Selector {
     constructor() {
         super('@FISH@');
@@ -2314,7 +2321,30 @@ class locker_doing extends SctItm_SelectLocker {
             new SctItm('@L_FLOWER@の種を|蒔|ま|いて'),
             new SctItm('@L_MUSIC@を聴いて'),
             new SctItm('@L_MUSIC@を歌って'),
+            new SctItm('@L_FRUIT@の皮を|剥|む|いて'),
+            new SctItm('@L_FRUIT@の木を植えて'),
+            new SctItm('@L_FRUIT@を収穫して'),
+            new SctItm('@L_FRUIT@を叩き売りして'),
+            new SctItm('@L_FRUIT@の種を捨てて'),
             new SctItm('@L_RIDE@に乗って')
+        ];
+    }
+}
+class locker_item extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_ITEM@');
+        this.itms = [
+            new SctItm('@L_WHAT@'),
+            new SctItm('@L_ANIMAL@'),
+            new SctItm('@L_FLOWER@'),
+            new SctItm('@L_FRUIT@'),
+            new SctItm('@L_RIDE@'),
+            new SctItm('@L_DRESS@'),
+            new SctItm('@L_MUSIC@'),
+            new SctItm('@L_SEXAGE@'),
+            new SctItm('@L_PART@'),
+            new SctItm('@L_HABIT@'),
+            new SctItm('@L_MUSIC@')
         ];
     }
 }
@@ -2395,6 +2425,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_history());
         this.dic_push(new selector_landmark());
         this.dic_push(new selector_fruit());
+        this.dic_push(new locker_fruit());
         this.dic_push(new selector_fish());
         this.dic_push(new selector_sweets());
         this.dic_push(new selector_meal());
@@ -2491,5 +2522,6 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new locker_doing());
         this.dic_push(new selector_superitem());
         this.dic_push(new selector_bookmaker());
+        this.dic_push(new locker_item());
     }
 }

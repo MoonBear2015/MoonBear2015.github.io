@@ -182,7 +182,7 @@ class selector_bookinfo02 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('何故、@L_WHAT@の@L_CLASS@は@DOING@いるのか')
             ,
-            new SctItm('@L_CLASS@だけが知る@L_WHAT@の真実とは')
+            new SctItm('@L_CLASS@だけが知る@L_ITEM@の真実とは')
             ,
             new SctItm('@PEOPLE@が@DOING@いた理由とは')
             ,
@@ -250,11 +250,13 @@ class selector_bookwriter_deco extends SctItm_Selector implements ISctItm_Select
             ,
             new SctItm('@L_WHAT@が産んだ@SPECIALIST@')
             ,
-            new SctItm('@L_CLASS@の@SPECIALIST@')
+            new SctItm('@L_ITEM@の@SPECIALIST@')
+            ,
+            new SctItm('@L_ITEM@を知り尽くした@SPECIALIST@')
             ,
             new SctItm('@L_DO@する@SPECIALIST@')
             ,
-            new SctItm('@L_TECH@の@SPECIALIST@')
+            new SctItm('@L_ITEM@の@SPECIALIST@')
             ,
             new SctItm('かつて@COUNTRY@から追放された元@L_CLASS@')
             ,

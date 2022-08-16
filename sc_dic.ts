@@ -5138,7 +5138,7 @@ const   itms_what = [
     ,
     new SctItm('イスラム教','WHAT/Islam.jpg')
     ,
-    new SctItm('宗教','WHAT/religion.jpg')
+    new SctItm('新興宗教','WHAT/religion.jpg')
     ,
     new SctItm('人類','WHAT/human.jpg')
     ,
@@ -5249,6 +5249,12 @@ const   itms_what = [
     new SctItm('カジノ','WHAT/Casino.jpg')
     ,
     new SctItm('ジャングル','WHAT/jungle.jpg')
+    ,
+    new SctItm('月世界','WHAT/moonworld.jpg')
+    ,
+    new SctItm('月面','WHAT/moon.jpg')
+    ,
+    new SctItm('下町','WHAT/Downtown.jpg')
 ];
 
 
@@ -7364,6 +7370,8 @@ const   itms_book = [
     ,
     new SctItm('@L_WHAT@の@L_COURSE@')
     ,
+    new SctItm('@L_WHAT@の@L_ITEM@')
+    ,
     new SctItm('@L_WHAT@@L_SEXAGE@')
     ,
     new SctItm('@L_WHAT@の@L_SPECIALIST@')
@@ -7396,17 +7404,25 @@ const   itms_book = [
     ,
     new SctItm('@L_CLASS@達の@L_FUTURE@')
     ,
-    new SctItm('実録・@L_WHAT@')
+    new SctItm('実録・@L_ITEM@')
     ,
-    new SctItm('@L_WHAT@の真実')
+    new SctItm('@L_ITEM@の真実')
     ,
     new SctItm('@L_WHAT@の戦い')
     ,
-    new SctItm('@L_WHAT@と平和')
+    new SctItm('@L_WHAT@の旅')
     ,
-    new SctItm('@L_WHAT@のひみつ')
+    new SctItm('@L_WHAT@への道')
     ,
-    new SctItm('月刊 @L_WHAT@')
+    new SctItm('@L_ITEM@と平和')
+    ,
+    new SctItm('@L_ITEM@のひみつ')
+    ,
+    new SctItm('@L_WHAT@の@L_ITEM@')
+    ,
+    new SctItm('週刊 @L_ITEM@')
+    ,
+    new SctItm('月刊 @L_ITEM@')
     ,
     new SctItm('漫画で読む@L_WHAT@')
     ,
