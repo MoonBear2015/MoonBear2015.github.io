@@ -3634,6 +3634,8 @@ class selector_bookmaker extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('㈱@L_WHAT@出版')
             ,
+            new SctItm('㈱@L_WHAT@文庫')
+            ,
             new SctItm('㈱@L_WHAT@印刷')
             ,
             new SctItm('@L_WHAT@書房')
