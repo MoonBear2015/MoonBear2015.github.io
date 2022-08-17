@@ -3406,7 +3406,8 @@ const itms_what = [
     new SctItm('ジャングル', 'WHAT/jungle.jpg'),
     new SctItm('月世界', 'WHAT/moonworld.jpg'),
     new SctItm('月面', 'WHAT/moon.jpg'),
-    new SctItm('下町', 'WHAT/Downtown.jpg')
+    new SctItm('下町', 'WHAT/Downtown.jpg'),
+    new SctItm('スタジアム', 'WHAT/stadium.jpg')
 ];
 const itms_city = [
     new SctItm('東京', 'CITY/tokyo.jpg'),

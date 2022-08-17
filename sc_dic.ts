@@ -5255,6 +5255,8 @@ const   itms_what = [
     new SctItm('月面','WHAT/moon.jpg')
     ,
     new SctItm('下町','WHAT/Downtown.jpg')
+    ,
+    new SctItm('スタジアム','WHAT/stadium.jpg')
 ];
 
 
