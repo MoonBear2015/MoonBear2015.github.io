@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N03.06';
+    html += ' N03.07';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -2152,12 +2152,18 @@ class selector_doing extends SctItm_Selector {
         super('@DOING@');
         this.itms = [
             new SctItm('@DOING01@'),
+            new SctItm('@DOING01@'),
+            new SctItm('@DOING01@'),
+            new SctItm('@DOING02@'),
+            new SctItm('@DOING02@'),
             new SctItm('@DOING02@'),
             new SctItm('@DAY@も@DOING01@'),
             new SctItm('@DOING01@喜んで'),
             new SctItm('@DOING01@笑って'),
+            new SctItm('@DOING01@笑い転げて'),
             new SctItm('@DOING01@悲しんで'),
             new SctItm('@DOING01@泣いて'),
+            new SctItm('@DOING01@泣き叫んで'),
             new SctItm('@DOING01@涙を流して'),
             new SctItm('@DOING01@@DOING02@')
         ];
