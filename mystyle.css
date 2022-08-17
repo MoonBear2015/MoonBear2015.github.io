@@ -655,7 +655,7 @@ small {
 #horo_col_name {
     grid-column: 2/3;
     grid-row: 1/1;
-    font-size: 2.8vw;
+    font-size: 3.0vw;
     margin: 0%;
     text-align: center;
     letter-spacing: 0.2em;
@@ -707,15 +707,15 @@ small {
     grid-column: 3/4;
     grid-row: 1/2;
     text-align: center;
-    font-size: 3vw;
-    letter-spacing: 0.5em;
+    font-size: 4.0vw;
+    letter-spacing: 0.1em;
 }
 #horo_sent_days {
     font-family: 'Times New Roman', Times, serif;
     grid-column: 3/4;
     grid-row: 2/3;
     text-align: center;
-    font-size: 3vw;
+    font-size: 3.5vw;
 }
 
 #horo_sent_info {

@@ -7,7 +7,7 @@ function set_horo() {
     html += '<h1>';
     html += 'Horoscope';
     html += '<small>';
-    html += ' H00.72';
+    html += ' H00.73';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
