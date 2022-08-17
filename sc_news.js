@@ -2399,11 +2399,11 @@ class selector_bookmaker extends SctItm_Selector {
     constructor() {
         super('@BOOKMAKER@');
         this.itms = [
-            new SctItm('@L_WHAT@出版'),
-            new SctItm('@L_WHAT@印刷'),
+            new SctItm('㈱@L_WHAT@出版'),
+            new SctItm('㈱@L_WHAT@印刷'),
             new SctItm('@L_WHAT@書房'),
             new SctItm('@L_WHAT@書院'),
-            new SctItm('@L_WHAT@文芸'),
+            new SctItm('㈱@L_WHAT@文芸'),
             new SctItm('@L_WHAT@学院'),
             new SctItm('@L_WHAT@株式会社'),
             new SctItm('@L_WHAT@財団'),
