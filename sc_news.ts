@@ -2012,7 +2012,6 @@ class selector_country extends SctItm_Selector implements ISctItm_Selector {
         this.Add(cods_to_itms(cods_country2));
     }
 }
-
 class selector_animal extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@ANIMAL@');

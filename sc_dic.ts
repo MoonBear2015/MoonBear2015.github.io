@@ -7171,6 +7171,8 @@ const   itms_ride = [
     ,
     new SctItm('ロケット')
     ,
+    new SctItm('スペースシャトル')
+    ,
     new SctItm('宇宙船')
     ,
     new SctItm('宇宙戦艦')
@@ -7456,6 +7458,10 @@ const   itms_book = [
     ,
     new SctItm('@L_ITEM@のひみつ')
     ,
+    new SctItm('@L_ITEM@の冒険')
+    ,
+    new SctItm('@L_ITEM@の@L_DO@')
+    ,
     new SctItm('@L_WHAT@の@L_ITEM@')
     ,
     new SctItm('週刊 @L_ITEM@')
@@ -7473,6 +7479,10 @@ const   itms_book = [
     new SctItm('@L_CLASS@のための@L_WHAT@講座')
     ,
     new SctItm('@L_CLASS@のための@L_WHAT@大百科')
+    ,
+    new SctItm('@L_ANIMAL@でも判る@L_WHAT@講座')
+    ,
+    new SctItm('@L_ANIMAL@でも判る@L_WHAT@大百科')
     ,
     new SctItm('@L_DO@する@L_WHAT@')
     ,

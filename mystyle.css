@@ -398,18 +398,18 @@ small {
     font-family: 'Times New Roman', Times, serif;
     font-weight:bolder;
     font-style: italic;
-    color:  #505050;
+    color:  #d0d0d0;
     font-size: 5vw;
     text-align:center;
-    text-shadow: 3px 3px 0px #e0e0e0;
+    text-shadow: 3px 3px 0px #A00000;
 }
 #book04 {
     font-family: 'Meiryo';
-    color:  lightyellow;
+    color:  yellow;
     font-style: italic;
     font-size: 4vw;
     text-align:right;
-    text-shadow: 3px 3px 0px darkmagenta;
+    text-shadow: 3px 3px 0px #606000;
 }
 #book05 {
     font-family:monospace;
