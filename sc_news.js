@@ -1903,46 +1903,54 @@ class selector_assessment extends SctItm_Selector {
     constructor() {
         super('@ASSES@');
         this.itms = [
-            new SctItm('言い伝えられた'),
-            new SctItm('後ろ指を指された'),
-            new SctItm('恐れられた'),
-            new SctItm('おだてられている'),
-            new SctItm('驚かせた'),
-            new SctItm('勘違いされた'),
-            new SctItm('感動された'),
-            new SctItm('誤解されている'),
-            new SctItm('感謝されている'),
-            new SctItm('決めつけられた'),
-            new SctItm('驚嘆された'),
-            new SctItm('ささやかれている'),
-            new SctItm('蔑まれている'),
-            new SctItm('親しまれている'),
-            new SctItm('賞賛された'),
-            new SctItm('愛された'),
-            new SctItm('罵倒されている'),
-            new SctItm('呼ばれている'),
+            new SctItm('@ASSES02@た'),
+            new SctItm('@ASSES02@ている'),
             new SctItm('評価が高い'),
-            new SctItm('名高い'),
-            new SctItm('知られている'),
-            new SctItm('期待されている'),
-            new SctItm('丸め込まれた'),
-            new SctItm('見放されている'),
-            new SctItm('見限られた'),
-            new SctItm('見捨てられた'),
-            new SctItm('馬鹿にされている'),
-            new SctItm('讃えられている'),
-            new SctItm('知れ渡っている'),
-            new SctItm('語り継がれている'),
-            new SctItm('推薦された'),
-            new SctItm('表彰された'),
-            new SctItm('認定された'),
-            new SctItm('認められた'),
-            new SctItm('太鼓判を押された'),
-            new SctItm('名付けられた'),
-            new SctItm('見守られている'),
-            new SctItm('訴えられている'),
-            new SctItm('見間違えられた'),
-            new SctItm('間違えられた')
+            new SctItm('名高い')
+        ];
+    }
+}
+class selector_assessment02 extends SctItm_Selector {
+    constructor() {
+        super('@ASSES02@');
+        this.itms = [
+            new SctItm('言い伝えられ'),
+            new SctItm('後ろ指を指され'),
+            new SctItm('恐れられ'),
+            new SctItm('おだてられ'),
+            new SctItm('驚かせ'),
+            new SctItm('勘違いされ'),
+            new SctItm('感動され'),
+            new SctItm('誤解され'),
+            new SctItm('感謝され'),
+            new SctItm('決めつけられ'),
+            new SctItm('驚嘆され'),
+            new SctItm('ささやかれ'),
+            new SctItm('蔑まれ'),
+            new SctItm('親しまれ'),
+            new SctItm('賞賛され'),
+            new SctItm('愛され'),
+            new SctItm('罵倒され'),
+            new SctItm('呼ばれ'),
+            new SctItm('知られ'),
+            new SctItm('期待され'),
+            new SctItm('丸め込まれ'),
+            new SctItm('見放され'),
+            new SctItm('見限られ'),
+            new SctItm('見捨てられ'),
+            new SctItm('馬鹿にされ'),
+            new SctItm('讃えられ'),
+            new SctItm('語り継がれ'),
+            new SctItm('推薦され'),
+            new SctItm('表彰され'),
+            new SctItm('認定され'),
+            new SctItm('認められ'),
+            new SctItm('太鼓判を押され'),
+            new SctItm('名付けられ'),
+            new SctItm('見守られ'),
+            new SctItm('訴えられ'),
+            new SctItm('見間違え'),
+            new SctItm('間違えら')
         ];
     }
 }
@@ -2519,6 +2527,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_nickBad());
         this.dic_push(new selector_nickGood());
         this.dic_push(new selector_assessment());
+        this.dic_push(new selector_assessment02());
         this.dic_push(new selector_people());
         this.dic_push(new selector_specialist());
         this.dic_push(new locker_specialist());

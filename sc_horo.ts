@@ -9,7 +9,7 @@ function set_horo()
     html += '<h1>';
     html += 'Horoscope';
     html += '<small>';
-    html += ' H00.69';
+    html += ' H00.70';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -481,9 +481,9 @@ class selector_h_info_end extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('@COUNTRY@@HISTORY@に@H_WRITE@')
             ,
-            new SctItm('@WHO3@@MANYPEOPLE@に@ASSES1@')
+            new SctItm('@WHO3@@MANYPEOPLE@に@ASSES02@')
             ,
-            new SctItm('@MANYPEOPLE@に@ASSES_S2@')
+            new SctItm('@MANYPEOPLE@に@ASSES02@')
         ]
     }
 }
@@ -625,15 +625,15 @@ class selector_h_type_end extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('女性には@GRADE@@KEI1@人が多いです')
             ,
-            new SctItm('@GRADE@@KEIM1@と@PEOPLE_ASSES@ています')
+            new SctItm('@GRADE@@KEIM1@と@ASSES02@ています')
             ,
-            new SctItm('@GRADE@@KEIM1@と@PEOPLE_ASSES@ているようです')
+            new SctItm('@GRADE@@KEIM1@と@ASSES02@ているようです')
             ,
-            new SctItm('@GRADE@@KEIM1@と@PEOPLE_ASSES@ています')
+            new SctItm('@GRADE@@KEIM1@と@ASSES02@ています')
             ,
-            new SctItm('@GRADE@@KEIM1@と@PEOPLE_ASSES@てしまうので注意が必要です')
+            new SctItm('@GRADE@@KEIM1@と@ASSES02@てしまうので注意が必要です')
             ,
-            new SctItm('@GRADE@@KEIM1@と@PEOPLE_ASSES@ているのが難点です')
+            new SctItm('@GRADE@@KEIM1@と@ASSES02@ているのが難点です')
             ,
             new SctItm('@GRADE@@KEI1@のが今後の課題です')
             ,
