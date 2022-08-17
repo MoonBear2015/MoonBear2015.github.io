@@ -655,17 +655,19 @@ small {
 #horo_col_name {
     grid-column: 2/3;
     grid-row: 1/1;
-    font-size: 3.0vw;
+    font-size: 3.0vh;
     margin: 0%;
     text-align: center;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.3em;
+    vertical-align: text-top;
 }
 #horo_col_days {
     grid-column: 3/4;
     grid-row: 1/1;
-    font-size: 2.5vw;
+    font-size: 2.5vh;
     margin: 0%;
     text-align: center;
+    vertical-align: text-top;
 }
 
 #horo_sent_box {
@@ -699,7 +701,6 @@ small {
     margin: auto;
     text-align: center;
     letter-spacing: 0.8em;
-    vertical-align: middle;
 }
 
 #horo_sent_title {
@@ -732,7 +733,7 @@ small {
     font-size: 3vw;
     /* display: flex; */
     align-items: center;
-    vertical-align:middle;
+    /* vertical-align:middle; */
 
 }
 #horo_sent_type {
