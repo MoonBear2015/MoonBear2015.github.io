@@ -5616,6 +5616,10 @@ const   itms_class = [
     ,
     new SctItm('保育園児')
     ,
+    new SctItm('生徒')
+    ,
+    new SctItm('学生')
+    ,
     new SctItm('小学生')
     ,
     new SctItm('中学生')
@@ -5625,6 +5629,10 @@ const   itms_class = [
     new SctItm('女子校生')
     ,
     new SctItm('大学生')
+    ,
+    new SctItm('転校生')
+    ,
+    new SctItm('浪人')
     ,
     new SctItm('ラーメン屋')
     ,
@@ -5809,6 +5817,8 @@ const   itms_class = [
     new SctItm('バニーガール')
     ,
     new SctItm('芸者')
+    ,
+    new SctItm('花魁')
     ,
     new SctItm('ホスト')
     ,
