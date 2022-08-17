@@ -390,7 +390,7 @@ small {
     font-family: 'Yu Gothic';
     font-weight:bolder;
     color:  cyan;
-    font-size: 6vw;
+    font-size: 4vw;
     text-align:right;
     text-shadow: 3px 3px 0px darkblue;
 }
@@ -398,10 +398,10 @@ small {
     font-family: 'Times New Roman', Times, serif;
     font-weight:bolder;
     font-style: italic;
-    color:  lightyellow;
+    color:  #505050;
     font-size: 5vw;
     text-align:center;
-    text-shadow: 3px 3px 0px darkslategray;
+    text-shadow: 3px 3px 0px #e0e0e0;
 }
 #book04 {
     font-family: 'Meiryo';
@@ -414,8 +414,8 @@ small {
 #book05 {
     font-family:monospace;
     font-weight:bolder;
-    color:  white;
-    font-size: 6vw;
+    color:  lightpink;
+    font-size: 4vw;
     text-align:left;
     text-shadow: 3px 3px 0px darkred;
 }
