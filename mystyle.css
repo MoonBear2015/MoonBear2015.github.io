@@ -661,6 +661,7 @@ small {
     text-align: center;
     letter-spacing: 0.3em;
     vertical-align: text-top;
+    letter-spacing: 0em;
 }
 #horo_col_days {
     font-family: 'Times New Roman', Times, serif;
