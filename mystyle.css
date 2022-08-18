@@ -653,18 +653,20 @@ small {
 }
 
 #horo_col_name {
+    font-family: 'Times New Roman', Times, serif;
     grid-column: 2/3;
     grid-row: 1/1;
-    font-size: 3.0vh;
+    /* font-size: 3.0vh; */
     margin: 0%;
     text-align: center;
     letter-spacing: 0.3em;
     vertical-align: text-top;
 }
 #horo_col_days {
+    font-family: 'Times New Roman', Times, serif;
     grid-column: 3/4;
     grid-row: 1/1;
-    font-size: 2.5vh;
+    /* font-size: 2.5vh; */
     margin: 0%;
     text-align: center;
     vertical-align: text-top;
