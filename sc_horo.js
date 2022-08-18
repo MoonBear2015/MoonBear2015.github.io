@@ -7,7 +7,7 @@ function set_horo() {
     html += '<h1>';
     html += 'Horoscope';
     html += '<small>';
-    html += ' H00.75';
+    html += ' H00.76';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -48,7 +48,7 @@ function make_horo() {
         html += '</div>';
         html += '<div id="horo_col_days">';
         html += date_MD_string(days[j].st);
-        html += ' ~ ';
+        html += '~';
         html += date_MD_string(days[j].ed);
         html += '</div>';
         html += '</div>';

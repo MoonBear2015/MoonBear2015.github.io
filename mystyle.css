@@ -671,6 +671,7 @@ small {
     margin: 0%;
     text-align: center;
     vertical-align: text-top;
+    letter-spacing: 0em;
 }
 
 #horo_sent_box {
