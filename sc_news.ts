@@ -3655,6 +3655,61 @@ class selector_bookmaker extends SctItm_Selector implements ISctItm_Selector {
 }
 
 
+// class selector_chr_hero extends SctItm_Selector implements ISctItm_Selector {
+//     constructor(){
+//         super('@H@');
+//         this.Add(itms_chr_hero);
+//     }
+// }
+
+class locker_chr_hero extends SctItm_SelectLocker implements ISctItm_Selector{
+    constructor(){
+        super('@L_H@');
+        this.Add(itms_chr_hero);
+    }
+}
+class locker_hero_type extends SctItm_SelectLocker implements ISctItm_Selector{
+    constructor(){
+        super('@L_HEROTYPE@');
+        this.Add(itms_hero_type);
+    }
+}
+
+class locker_heroname extends SctItm_SelectLocker implements ISctItm_Selector{
+    constructor(){
+        super('@L_HERONAME@');
+        this.itms = [
+            new SctItm('@L_H@ー')
+            ,
+            new SctItm('@L_H@ン')
+            ,
+            new SctItm('@L_H@@L_H@')
+            ,
+            new SctItm('@L_H@@L_H@ー')
+            ,
+            new SctItm('@L_H@@L_H@ン')
+            ,
+            new SctItm('@L_H@ッ@L_H@')
+            ,
+            new SctItm('@L_H@ッ@L_H@ー')
+            ,
+            new SctItm('@L_H@ッ@L_H@ン')
+            ,
+            new SctItm('@L_H@@L_H@ン')
+        ];
+    }
+}
+
+class locker_hero extends SctItm_SelectLocker implements ISctItm_Selector{
+    constructor(){
+        super('@L_HERO@');
+        this.itms = [
+            new SctItm('――@WHAT@の@NICKGOOD@、@L_ITEM@@L_HEROTYPE@☆@L_HERONAME@')
+            ,
+            new SctItm('――@WHAT@の@NICKGOOD@、スーパー@L_CLASS@★@L_HERONAME@')
+        ];
+    }
+}
 
 
 class news_doc {
@@ -3826,6 +3881,10 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_superitem());
         this.dic_push(new selector_bookmaker());
         this.dic_push(new locker_item());
+        this.dic_push(new locker_chr_hero());
+        this.dic_push(new locker_hero_type());
+        this.dic_push(new locker_heroname());
+        this.dic_push(new locker_hero());
 
     }
 }

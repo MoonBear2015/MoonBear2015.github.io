@@ -4564,3 +4564,59 @@ const itms_book = [
     new SctItm('@L_CLASS@@L_SEXAGE@'),
     new SctItm('@L_DO@する@L_CLASS@')
 ];
+// 伸ばしても繰り返しても問題ない文字
+const itms_chr_hero = [
+    // new SctItm('マ')
+    // ,
+    // new SctItm('ミ')
+    // ,
+    // new SctItm('ム')
+    // ,
+    // new SctItm('メ')
+    // ,
+    // new SctItm('モ')
+    // ,
+    // new SctItm('ラ')
+    // ,
+    // new SctItm('リ')
+    // ,
+    // new SctItm('ル')
+    // ,
+    // new SctItm('レ')
+    // ,
+    // new SctItm('ロ')
+    // ,
+    new SctItm('パ'),
+    new SctItm('ピ'),
+    new SctItm('プ'),
+    new SctItm('ペ'),
+    new SctItm('ポ')
+];
+const itms_hero_type = [
+    new SctItm('戦士'),
+    new SctItm('英雄'),
+    new SctItm('少年'),
+    new SctItm('少女'),
+    new SctItm('男'),
+    new SctItm('女'),
+    new SctItm('王'),
+    new SctItm('王子'),
+    new SctItm('王女')
+];
+const itms_chr_evil = [
+    new SctItm('ガ'),
+    new SctItm('ギ'),
+    new SctItm('グ'),
+    new SctItm('ゲ'),
+    new SctItm('ゴ'),
+    new SctItm('ザ'),
+    new SctItm('ジ'),
+    new SctItm('ズ'),
+    new SctItm('ゼ'),
+    new SctItm('ゾ'),
+    new SctItm('バ'),
+    new SctItm('ビ'),
+    new SctItm('ブ'),
+    new SctItm('ベ'),
+    new SctItm('ボ')
+];

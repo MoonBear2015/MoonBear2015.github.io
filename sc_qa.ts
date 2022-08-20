@@ -694,7 +694,7 @@ class selector_a_sent extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@A_MSG@が、@QUESTER@さんは知らなかったのですか？ ')
             ,
-            new SctItm('@A_MSG@が、その@L_PART@さんなら知っている筈ですよ？ ')
+            new SctItm('@A_MSG@が、その@L_PART@さんなら知っている筈ですよね？ ')
             ,
             new SctItm('@A_MSG@が、その@L_PART@さんなら@DOING@いる筈です。')
             ,
@@ -733,6 +733,8 @@ class selector_a_msg extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@CONECT2@、私は@DOING@います')
             ,
             new SctItm('@CONECT2@、私が@GRADE@@ASSES@からです')
+            ,
+            new SctItm('そんな私の正体は@L_HERO@だったのです')
         ]
     }
 }

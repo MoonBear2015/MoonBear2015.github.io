@@ -466,7 +466,7 @@ class selector_a_sent extends SctItm_Selector {
             new SctItm('@A_MSG@が、@QUESTER@さんにしか出来ませんよ。'),
             new SctItm('@A_MSG@が、確か@QUESTER@さんもそうでしたよね？ '),
             new SctItm('@A_MSG@が、@QUESTER@さんは知らなかったのですか？ '),
-            new SctItm('@A_MSG@が、その@L_PART@さんなら知っている筈ですよ？ '),
+            new SctItm('@A_MSG@が、その@L_PART@さんなら知っている筈ですよね？ '),
             new SctItm('@A_MSG@が、その@L_PART@さんなら@DOING@いる筈です。'),
             new SctItm('@A_MSG@が、その@L_PART@さんなら@DOING@いましたよ？ '),
             new SctItm('@A_MSG@が、@DOING@いる@L_PART@さんを見かけましたよ。'),
@@ -489,7 +489,8 @@ class selector_a_msg extends SctItm_Selector {
             new SctItm('それは@KEI@@L_PART@さんが@GRADE@@ASSES@からです'),
             new SctItm('@CONECT2@、@L_PART@さんが@DOING@います'),
             new SctItm('@CONECT2@、私は@DOING@います'),
-            new SctItm('@CONECT2@、私が@GRADE@@ASSES@からです')
+            new SctItm('@CONECT2@、私が@GRADE@@ASSES@からです'),
+            new SctItm('そんな私の正体は@L_HERO@だったのです')
         ];
     }
 }
