@@ -4597,11 +4597,17 @@ const itms_hero_type = [
     new SctItm('英雄'),
     new SctItm('少年'),
     new SctItm('少女'),
-    new SctItm('男'),
-    new SctItm('女'),
     new SctItm('王'),
     new SctItm('王子'),
     new SctItm('王女')
+];
+const itms_evil_type = [
+    new SctItm('男'),
+    new SctItm('女'),
+    new SctItm('魔神'),
+    new SctItm('魔人'),
+    new SctItm('人間'),
+    new SctItm('星人')
 ];
 const itms_chr_evil = [
     new SctItm('ガ'),

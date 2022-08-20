@@ -7,7 +7,7 @@ function set_qa() {
     html += '<h1>';
     html += 'Q&A';
     html += '<small>';
-    html += ' Q01.19';
+    html += ' Q01.20';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -293,7 +293,8 @@ class selector_q_msg extends SctItm_Selector {
             new SctItm('@Q_MSG02@けど、@Q_MSG03@@Q_MSG04@'),
             new SctItm('@Q_MSG01@@Q_MSG02@が、@Q_MSG03@@Q_MSG04@'),
             new SctItm('私の@WHO3@@L_PART@の話です'),
-            new SctItm('私の「@CALL2@」と@GRADE@@ASSES@@L_PART@のことです')
+            new SctItm('私の「@CALL2@」と@GRADE@@ASSES@@L_PART@のことです'),
+            new SctItm('なんと私の正体は@L_EVIL@だったのです')
         ];
     }
 }
@@ -471,7 +472,8 @@ class selector_a_sent extends SctItm_Selector {
             new SctItm('@A_MSG@が、その@L_PART@さんなら@DOING@いましたよ？ '),
             new SctItm('@A_MSG@が、@DOING@いる@L_PART@さんを見かけましたよ。'),
             new SctItm('@A_MSG@が、@A_SENT@'),
-            new SctItm('@A_MSG@けど、@A_SENT@')
+            new SctItm('@A_MSG@けど、@A_SENT@'),
+            new SctItm('では、@QUESTER@さんの正体は@L_EVIL@だったのですね？ ')
         ];
     }
 }
