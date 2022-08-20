@@ -708,7 +708,7 @@ class selector_a_sent extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@A_MSG@けど、@A_SENT@')
             ,
-            new SctItm('では、@QUESTER@さんの正体は@L_EVIL@だったのですね？ ')
+            new SctItm('では、@QUESTER@さんの正体は@L_EVILFULLNAME@だったのですね？ ')
         ]
     }
 }

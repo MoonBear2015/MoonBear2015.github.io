@@ -473,7 +473,7 @@ class selector_a_sent extends SctItm_Selector {
             new SctItm('@A_MSG@が、@DOING@いる@L_PART@さんを見かけましたよ。'),
             new SctItm('@A_MSG@が、@A_SENT@'),
             new SctItm('@A_MSG@けど、@A_SENT@'),
-            new SctItm('では、@QUESTER@さんの正体は@L_EVIL@だったのですね？ ')
+            new SctItm('では、@QUESTER@さんの正体は@L_EVILFULLNAME@だったのですね？ ')
         ];
     }
 }

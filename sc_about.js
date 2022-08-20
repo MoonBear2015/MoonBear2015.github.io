@@ -7,7 +7,7 @@ function set_about() {
     html += '<h1>';
     html += 'ABOUT';
     html += '<small>';
-    html += ' A01.16';
+    html += ' A01.17';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -36,27 +36,41 @@ function make_about() {
         html += '</h2>';
         html += '<br>';
         html += '@ABOUTER@';
-        html += '<div id="about_doc">';
-        html += '通り名:@CALL2@<br>';
-        html += '国籍:@COUNTRY@出身<br>';
-        html += '住所:@COUNTRY@在住<br>';
-        html += '学歴:@SCHOOL@ @SCOOLAS@<br>';
-        html += '仕事:@CLASS@<br>';
-        html += '趣味:@HABIT@<br>';
-        html += '好物:@FOOD@<br>';
-        html += '座右の銘:@INSCRIPTION@<br>';
-        html += '<br>';
+        let shtml = "";
+        shtml += '<div id="about_doc">';
+        shtml += '通り名:@CALL2@<br>';
+        shtml += '国籍:@COUNTRY@出身<br>';
+        shtml += '住所:@COUNTRY@在住<br>';
+        shtml += '学歴:@SCHOOL@ @SCOOLAS@<br>';
+        shtml += '仕事:@L_CLASS@<br>';
+        shtml += '趣味:@HABIT@<br>';
+        shtml += '好物:@FOOD@<br>';
+        shtml += '座右の銘:@INSCRIPTION@<br>';
+        shtml += '正体：@L_HEROEVIL@';
+        shtml += '<br>';
+        shtml += '</div>';
+        let maker = new news_docs_maker();
+        let scnt = 0;
+        while (true) {
+            shtml = maker.gene_docs(shtml, true);
+            scnt++;
+            let schk = shtml.indexOf('@');
+            if (schk < 0)
+                break;
+            if (scnt > 10) {
+                alert('over work : ' + schk.toString());
+                break;
+            }
+        }
+        html += shtml;
         html += '</div>';
-        html += '</div>';
-        html += '<br><br>';
     }
+    html += '<br><br>';
     html += '</div>';
     let maker_about = new about_docs_maker();
-    let maker = new news_docs_maker();
     let cnt = 0;
     while (true) {
         html = maker_about.gene_docs(html, true);
-        html = maker.gene_docs(html, true);
         cnt++;
         let chk = html.indexOf('@');
         if (chk < 0)
