@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N03.08';
+    html += ' N03.09';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -2460,6 +2460,7 @@ class locker_heroname extends SctItm_SelectLocker {
         this.itms = [
             new SctItm('@L_H1@@L_H2@'),
             new SctItm('@L_H1@@L_H2@@L_H2@'),
+            new SctItm('@L_H1@@L_H2@@L_H1@@L_H2@'),
             new SctItm('@L_H1@@L_H2@ー'),
             new SctItm('@L_H1@ー@L_H2@ー'),
             new SctItm('@L_H1@@L_H2@ン'),
@@ -2476,6 +2477,7 @@ class locker_evilname extends SctItm_SelectLocker {
         this.itms = [
             new SctItm('@L_E1@@L_E2@'),
             new SctItm('@L_E1@@L_E2@@L_E2@'),
+            new SctItm('@L_E1@@L_E2@@L_E1@@L_E2@'),
             new SctItm('@L_E1@ー@L_E2@ー'),
             new SctItm('@L_E1@@L_E2@ー'),
             new SctItm('@L_E1@@L_E2@ン'),
@@ -2491,8 +2493,10 @@ class locker_herojob extends SctItm_SelectLocker {
     constructor() {
         super('@L_HEROJOB@');
         this.itms = [
-            new SctItm('@L_ITEM@'),
-            new SctItm('@L_CLASS@')
+            new SctItm('@L_WHAT@'),
+            new SctItm('@L_FLOWER@'),
+            new SctItm('@L_DRESS@'),
+            new SctItm('@L_FRUIT@')
         ];
     }
 }
@@ -2500,8 +2504,8 @@ class locker_herofullname extends SctItm_SelectLocker {
     constructor() {
         super('@L_HEROFULLNAME@');
         this.itms = [
-            new SctItm('@L_HEROJOB@@L_HEROTYPE@☆@L_HERONAME@'),
-            new SctItm('@L_WHAT@@L_HEROTYPE@☆@L_HERONAME@'),
+            new SctItm('@L_HEROJOB@@L_HEROTYPE@★@L_HERONAME@'),
+            new SctItm('@L_HEROJOB@@L_HEROTYPE@★@L_HERONAME@'),
             new SctItm('スーパー@L_HEROJOB@★@L_HERONAME@'),
             new SctItm('ウルトラ@L_HEROJOB@★@L_HERONAME@')
         ];
@@ -2511,7 +2515,7 @@ class locker_hero extends SctItm_SelectLocker {
     constructor() {
         super('@L_HERO@');
         this.itms = [
-            new SctItm('@WHAT@の@NICKGOOD@ @L_HEROFULLNAME@')
+            new SctItm('@ITEM@の@NICKGOOD@ @L_HEROFULLNAME@')
         ];
     }
 }
@@ -2519,8 +2523,11 @@ class locker_eviljob extends SctItm_SelectLocker {
     constructor() {
         super('@L_EVILJOB@');
         this.itms = [
-            new SctItm('@L_ITEM@'),
-            new SctItm('@L_HABIT@')
+            new SctItm('@L_ANIMAL@'),
+            new SctItm('@L_RIDE@'),
+            new SctItm('@L_MUSIC@'),
+            new SctItm('@L_HABIT@'),
+            new SctItm('@L_MUSIC@')
         ];
     }
 }
@@ -2528,8 +2535,8 @@ class locker_evilfullname extends SctItm_SelectLocker {
     constructor() {
         super('@L_EVILFULLNAME@');
         this.itms = [
-            new SctItm('@L_ITEM@@L_EVILTYPE@@L_EVILNAME@'),
-            new SctItm('@L_HABIT@@L_EVILTYPE@@L_EVILNAME@')
+            new SctItm('@L_EVILJOB@@L_EVILTYPE@◆@L_EVILNAME@'),
+            new SctItm('@L_EVILJOB@@L_EVILTYPE@◆@L_EVILNAME@')
         ];
     }
 }
