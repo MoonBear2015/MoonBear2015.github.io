@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N03.07';
+    html += ' N03.08';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -2418,16 +2418,28 @@ class selector_bookmaker extends SctItm_Selector {
 //         this.Add(itms_chr_hero);
 //     }
 // }
-class locker_chr_hero extends SctItm_SelectLocker {
+class locker_chr_hero1 extends SctItm_SelectLocker {
     constructor() {
-        super('@L_H@');
-        this.Add(itms_chr_hero);
+        super('@L_H1@');
+        this.Add(itms_chr_hero1);
     }
 }
-class locker_chr_evil extends SctItm_SelectLocker {
+class locker_chr_hero2 extends SctItm_SelectLocker {
     constructor() {
-        super('@L_E@');
-        this.Add(itms_chr_evil);
+        super('@L_H2@');
+        this.Add(itms_chr_hero2);
+    }
+}
+class locker_chr_evil1 extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_E1@');
+        this.Add(itms_chr_evil1);
+    }
+}
+class locker_chr_evil2 extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_E2@');
+        this.Add(itms_chr_evil2);
     }
 }
 class locker_hero_type extends SctItm_SelectLocker {
@@ -2446,14 +2458,15 @@ class locker_heroname extends SctItm_SelectLocker {
     constructor() {
         super('@L_HERONAME@');
         this.itms = [
-            new SctItm('@L_H@@L_H@'),
-            new SctItm('@L_H@@L_H@ー'),
-            new SctItm('@L_H@ー@L_H@ー'),
-            new SctItm('@L_H@@L_H@ン'),
-            new SctItm('@L_H@ッ@L_H@'),
-            new SctItm('@L_H@ッ@L_H@ー'),
-            new SctItm('@L_H@ッ@L_H@ン'),
-            new SctItm('@L_H@@L_H@ン')
+            new SctItm('@L_H1@@L_H2@'),
+            new SctItm('@L_H1@@L_H2@@L_H2@'),
+            new SctItm('@L_H1@@L_H2@ー'),
+            new SctItm('@L_H1@ー@L_H2@ー'),
+            new SctItm('@L_H1@@L_H2@ン'),
+            new SctItm('@L_H1@ッ@L_H2@'),
+            new SctItm('@L_H1@ッ@L_H2@ー'),
+            new SctItm('@L_H1@ッ@L_H2@ン'),
+            new SctItm('@L_H1@@L_H2@ン')
         ];
     }
 }
@@ -2461,14 +2474,16 @@ class locker_evilname extends SctItm_SelectLocker {
     constructor() {
         super('@L_EVILNAME@');
         this.itms = [
-            new SctItm('@L_E@@L_E@'),
-            new SctItm('@L_E@ー@L_E@ー'),
-            new SctItm('@L_E@@L_E@ー'),
-            new SctItm('@L_E@@L_E@ン'),
-            new SctItm('@L_E@ッ@L_E@'),
-            new SctItm('@L_E@ッ@L_E@ー'),
-            new SctItm('@L_E@ッ@L_E@ン'),
-            new SctItm('@L_E@@L_E@ン')
+            new SctItm('@L_E1@@L_E2@'),
+            new SctItm('@L_E1@@L_E2@@L_E2@'),
+            new SctItm('@L_E1@ー@L_E2@ー'),
+            new SctItm('@L_E1@@L_E2@ー'),
+            new SctItm('@L_E1@@L_E2@ン'),
+            new SctItm('@L_E1@ッ@L_E2@'),
+            new SctItm('@L_E1@ッ@L_E2@ー'),
+            new SctItm('@L_E1@ッ@L_E2@ン'),
+            new SctItm('@L_E1@@L_E2@ン'),
+            new SctItm('@L_E1@@L_E2@@L_E2@ン')
         ];
     }
 }
@@ -2486,6 +2501,7 @@ class locker_herofullname extends SctItm_SelectLocker {
         super('@L_HEROFULLNAME@');
         this.itms = [
             new SctItm('@L_HEROJOB@@L_HEROTYPE@☆@L_HERONAME@'),
+            new SctItm('@L_WHAT@@L_HEROTYPE@☆@L_HERONAME@'),
             new SctItm('スーパー@L_HEROJOB@★@L_HERONAME@'),
             new SctItm('ウルトラ@L_HEROJOB@★@L_HERONAME@')
         ];
@@ -2512,8 +2528,8 @@ class locker_evilfullname extends SctItm_SelectLocker {
     constructor() {
         super('@L_EVILFULLNAME@');
         this.itms = [
-            new SctItm('@L_ITEM@@L_EVILTYPE@◇@L_EVILNAME@'),
-            new SctItm('@L_HABIT@@L_EVILTYPE@◆@L_EVILNAME@')
+            new SctItm('@L_ITEM@@L_EVILTYPE@@L_EVILNAME@'),
+            new SctItm('@L_HABIT@@L_EVILTYPE@@L_EVILNAME@')
         ];
     }
 }
@@ -2694,13 +2710,15 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_superitem());
         this.dic_push(new selector_bookmaker());
         this.dic_push(new locker_item());
-        this.dic_push(new locker_chr_hero());
+        this.dic_push(new locker_chr_hero1());
+        this.dic_push(new locker_chr_hero2());
         this.dic_push(new locker_hero_type());
         this.dic_push(new locker_heroname());
         this.dic_push(new locker_herojob());
         this.dic_push(new locker_herofullname());
         this.dic_push(new locker_hero());
-        this.dic_push(new locker_chr_evil());
+        this.dic_push(new locker_chr_evil1());
+        this.dic_push(new locker_chr_evil2());
         this.dic_push(new locker_evil_type());
         this.dic_push(new locker_evilname());
         this.dic_push(new locker_eviljob());

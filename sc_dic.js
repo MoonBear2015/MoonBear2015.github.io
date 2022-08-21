@@ -4565,7 +4565,7 @@ const itms_book = [
     new SctItm('@L_DO@する@L_CLASS@')
 ];
 // 伸ばしても繰り返しても問題ない文字
-const itms_chr_hero = [
+const itms_chr_hero1 = [
     // new SctItm('マ')
     // ,
     // new SctItm('ミ')
@@ -4590,6 +4590,47 @@ const itms_chr_hero = [
     new SctItm('ピ'),
     new SctItm('プ'),
     new SctItm('ペ'),
+    new SctItm('ポ'),
+    new SctItm('ピャ'),
+    new SctItm('ピュ'),
+    new SctItm('ピョ')
+];
+const itms_chr_hero2 = [
+    new SctItm('カ'),
+    new SctItm('キ'),
+    new SctItm('ク'),
+    new SctItm('ケ'),
+    new SctItm('コ'),
+    new SctItm('タ'),
+    new SctItm('チ'),
+    new SctItm('ツ'),
+    new SctItm('テ'),
+    new SctItm('ト')
+    // ,
+    // new SctItm('マ')
+    // ,
+    // new SctItm('ミ')
+    // ,
+    // new SctItm('ム')
+    // ,
+    // new SctItm('メ')
+    // ,
+    // new SctItm('モ')
+    // ,
+    // new SctItm('ラ')
+    // ,
+    // new SctItm('リ')
+    // ,
+    // new SctItm('ル')
+    // ,
+    // new SctItm('レ')
+    // ,
+    // new SctItm('ロ')
+    ,
+    new SctItm('パ'),
+    new SctItm('ピ'),
+    new SctItm('プ'),
+    new SctItm('ペ'),
     new SctItm('ポ')
 ];
 const itms_hero_type = [
@@ -4599,7 +4640,10 @@ const itms_hero_type = [
     new SctItm('少女'),
     new SctItm('王'),
     new SctItm('王子'),
-    new SctItm('王女')
+    new SctItm('王女'),
+    new SctItm('ライダー'),
+    new SctItm('ロボ'),
+    new SctItm('天使')
 ];
 const itms_evil_type = [
     new SctItm('男'),
@@ -4609,7 +4653,39 @@ const itms_evil_type = [
     new SctItm('人間'),
     new SctItm('星人')
 ];
-const itms_chr_evil = [
+const itms_chr_evil1 = [
+    new SctItm('ガ'),
+    new SctItm('ギ'),
+    new SctItm('グ'),
+    new SctItm('ゲ'),
+    new SctItm('ゴ'),
+    new SctItm('ザ'),
+    new SctItm('ジ'),
+    new SctItm('ズ'),
+    new SctItm('ゼ'),
+    new SctItm('ゾ'),
+    new SctItm('バ'),
+    new SctItm('ビ'),
+    new SctItm('ブ'),
+    new SctItm('ベ'),
+    new SctItm('ボ')
+];
+const itms_chr_evil2 = [
+    new SctItm('カ'),
+    new SctItm('キ'),
+    new SctItm('ク'),
+    new SctItm('ケ'),
+    new SctItm('コ'),
+    new SctItm('タ'),
+    new SctItm('チ'),
+    new SctItm('ツ'),
+    new SctItm('テ'),
+    new SctItm('ト'),
+    new SctItm('マ'),
+    new SctItm('ミ'),
+    new SctItm('ム'),
+    new SctItm('メ'),
+    new SctItm('モ'),
     new SctItm('ガ'),
     new SctItm('ギ'),
     new SctItm('グ'),
