@@ -9,7 +9,7 @@ function set_qa()
     html += '<h1>';
     html += 'Q&A';
     html += '<small>';
-    html += ' Q01.20';
+    html += ' Q01.21';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -274,11 +274,11 @@ class selector_q_title extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@DOING@いる@L_PART@をなんとかして下さい')
             ,
-            new SctItm('@L_PART@が@DOING01@いるので困っています')
+            new SctItm('@L_PART@が@L_DOING@いるので困っています')
             ,
-            new SctItm('@L_PART@と@DOING02@みたいのです')
+            new SctItm('@L_PART@と@L_DOING@みたいのです')
             ,
-            new SctItm('誰か@L_PART@と一緒に@DOING02@頂けませんか')
+            new SctItm('誰か@L_PART@と一緒に@L_DOING@頂けませんか')
             ,
             new SctItm('@L_PART@に@THINK@しています')
             ,
@@ -290,7 +290,7 @@ class selector_q_title extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@L_PART@を@CLASS@にしたいのですが')
             ,
-            new SctItm('@L_PART@が@DOING@いるので困っています')
+            new SctItm('@L_PART@が@L_DOING@いるので困っています')
             ,
             new SctItm('@L_PART@を@L_DO@できなくて困っています')
             ,
@@ -412,6 +412,8 @@ class selector_q_msg extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('私の「@CALL2@」と@GRADE@@ASSES@@L_PART@のことです')
             ,
             new SctItm('なんと私の正体は@L_EVIL@だったのです')
+            ,
+            new SctItm('@L_HERO@の居場所を探しているのです')
         ]
     }
 }
@@ -637,11 +639,11 @@ class selector_a_title extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@QUESTER@さんが@SAY@しても仕方がありません')
             ,
-            new SctItm('@QUESTER@さんが@DOING02@いる場合ではありません')
+            new SctItm('@QUESTER@さんが@L_DOING@いる場合ではありません')
             ,
-            new SctItm('@QUESTER@さんが@DOING02@みては？')
+            new SctItm('@QUESTER@さんが@L_DOING@みては？')
             ,
-            new SctItm('@L_PART@さんと@DOING02@みては？')
+            new SctItm('@L_PART@さんと@L_DOING@みては？')
             ,
             new SctItm('@CLASS@に相談しましょう')
         ]
@@ -683,8 +685,6 @@ class selector_a_sent extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@A_MSG@が、知らないのは@QUESTER@さんだけです。')
             ,
             new SctItm('@A_MSG@が、@QUESTER@さんならお判りでしょう。')
-            ,
-            new SctItm('@A_MSG@が、それって@QUESTER@さんのことですよね？ ')
             ,
             new SctItm('@A_MSG@が、@QUESTER@さんとは無関係です。')
             ,
@@ -728,17 +728,21 @@ class selector_a_msg extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('私は@MANYPEOPLE@から「@CALL2@」と@GRADE@@ASSES@のです')
             ,
-            new SctItm('それは@KEI@@QUESTER@さんが@GRADE@@ASSES@からです')
+            new SctItm('それは@KEI@@QUESTER@さんが「@CALL2@」と@GRADE@@ASSES@からです')
             ,
-            new SctItm('それは@KEI@@L_PART@さんが@GRADE@@ASSES@からです')
+            new SctItm('それは@KEI@@L_PART@さんが@DOING@からです')
+            ,
+            new SctItm('@QUESTER@さんの@L_PART@さんなら、@CITY@の@PLACE@で@L_DOING@います')
             ,
             new SctItm('@CONECT2@、@L_PART@さんが@DOING@います')
             ,
             new SctItm('@CONECT2@、私は@DOING@います')
             ,
-            new SctItm('@CONECT2@、私が@GRADE@@ASSES@からです')
+            new SctItm('@CONECT2@、私が@DOING@いるからです')
             ,
             new SctItm('そんな私の正体は@L_HERO@だったのです')
+            ,
+            new SctItm('@L_HEROFULLNAME@なら私のことです')
         ]
     }
 }
