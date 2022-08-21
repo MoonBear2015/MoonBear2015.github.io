@@ -39,7 +39,7 @@ function make_book()
     html += 'border-radius:  10px;';
     html += '">';
 
-    html += make_b();
+    html += make_booktype0();
 
     //---- this Q&A END
     html += '</div>';
@@ -50,7 +50,7 @@ function make_book()
     return html;
 }
 
-function make_b() : string {
+function make_booktype0() : string {
     let html = '';
 
 
@@ -100,6 +100,59 @@ function make_b() : string {
 
     return html;
 }
+
+
+function make_booktype1() : string {
+    let html = '';
+
+
+    html += '<div id="book_writerpicture">';
+    html += '<span class="xl">@L_BOOK@</span><br>';
+    html += '著者：<br>';
+    html += '@L_BOOKWRITER@';
+    html += '<br>';
+    html += '<p id="book_maker">';
+    html += '出版元：@BOOKMAKER@';
+    html += '</p>';
+    html += '<br>';
+
+    html += '</div>';
+
+    html += '<div id="book_face" ';
+    html += 'style="';
+    html += 'background: ';
+    html += 'linear-gradient(0deg,rgba(0,0,0,0.6),rgba(0,0,0,0.6)),';
+    html += 'url(./pics/@PIC_WHAT@);';
+
+    html += 'background-position: left top;';
+    html += 'background-size:   cover;';
+    html += 'background-repeat: no-repeat;';
+    html += 'border:     2px solid #ffffff;';
+    html += '">';
+
+    html += '<br>';
+
+    html += '<div id="@BOOKFACE@">';
+
+    html += '<p id="book_title">';
+    html += '@L_BOOK@';
+    html += '</p>';
+    html += '<br><br>';
+    html += '<p id="book_writerinfo">';
+    html += '@L_BOOKWRITER@';
+    html += '</p>';
+    html += '<br>';
+    html += '</div>';
+
+    html += '</div>';
+    
+    html += '<div id="book_comment">';
+    html += '@B_INFO@';
+    html += '</div>';
+
+    return html;
+}
+
 
 class selector_bookinfo extends SctItm_Selector implements ISctItm_Selector {
     constructor(){

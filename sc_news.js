@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N03.09';
+    html += ' N03.10';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -64,7 +64,7 @@ function make_news() {
     html += '　@NEWS_DOC@';
     for (let i = 0; i < rnd_minmax(1, 2); i++) {
         html += '@CONECT@、';
-        html += '@NEWS_DOC@';
+        html += '@IT@@NEWS_DOC@';
     }
     html += '</p>';
     html += '<div id="news_pic_L">';
@@ -1983,6 +1983,19 @@ class selector_superitem extends SctItm_Selector {
         ];
     }
 }
+class selector_it extends SctItm_Selector {
+    constructor() {
+        super('@IT@');
+        this.itms = [
+            new SctItm(''),
+            new SctItm(''),
+            new SctItm(''),
+            new SctItm('その'),
+            new SctItm('この'),
+            new SctItm('あの')
+        ];
+    }
+}
 // 接続詞
 class selector_conect extends SctItm_Selector {
     constructor() {
@@ -2675,6 +2688,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_say());
         this.dic_push(new selector_say2());
         this.dic_push(new selector_answer());
+        this.dic_push(new selector_it());
         this.dic_push(new selector_conect());
         this.dic_push(new selector_conect2());
         this.dic_push(new selector_conect3());
