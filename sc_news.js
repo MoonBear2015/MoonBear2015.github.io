@@ -2517,10 +2517,7 @@ class locker_herofullname extends SctItm_SelectLocker {
     constructor() {
         super('@L_HEROFULLNAME@');
         this.itms = [
-            new SctItm('@L_HEROJOB@@L_HEROTYPE@★@L_HERONAME@'),
-            new SctItm('@L_HEROJOB@@L_HEROTYPE@★@L_HERONAME@'),
-            new SctItm('スーパー@L_HEROJOB@★@L_HERONAME@'),
-            new SctItm('ウルトラ@L_HEROJOB@★@L_HERONAME@')
+            new SctItm('@L_HEROJOB@@L_HEROTYPE@★@L_HERONAME@')
         ];
     }
 }
@@ -2568,6 +2565,12 @@ class locker_heroevil extends SctItm_SelectLocker {
             new SctItm('@L_HERO@'),
             new SctItm('@L_EVIL@')
         ];
+    }
+}
+class locker_herocatch extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_HEROCATCH@');
+        this.Add(itms_hero_catch);
     }
 }
 class news_doc {
@@ -2746,5 +2749,6 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new locker_evilfullname());
         this.dic_push(new locker_evil());
         this.dic_push(new locker_heroevil());
+        this.dic_push(new locker_herocatch());
     }
 }

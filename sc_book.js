@@ -7,7 +7,7 @@ function set_book() {
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B00.34';
+    html += ' B00.35';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -30,7 +30,12 @@ function make_book() {
     html += 'border:     0.5px solid #606060;';
     html += 'border-radius:  10px;';
     html += '">';
-    html += make_booktype0();
+    if (rnd_max(3) == 0) {
+        html += make_booktype0();
+    }
+    else {
+        html += make_booktype1();
+    }
     //---- this Q&A END
     html += '</div>';
     let maker = new book_docs_maker();
@@ -79,7 +84,7 @@ function make_booktype0() {
 function make_booktype1() {
     let html = '';
     html += '<div id="book_writerpicture">';
-    html += '<span class="xl">@L_BOOK@</span><br>';
+    html += '<span class="xl">@L_HEROCATCH@@L_HEROFULLNAME@！</span><br>';
     html += '著者：<br>';
     html += '@L_BOOKWRITER@';
     html += '<br>';
@@ -101,7 +106,7 @@ function make_booktype1() {
     html += '<br>';
     html += '<div id="@BOOKFACE@">';
     html += '<p id="book_title">';
-    html += '@L_BOOK@';
+    html += '@L_HEROCATCH@@L_HEROFULLNAME@！';
     html += '</p>';
     html += '<br><br>';
     html += '<p id="book_writerinfo">';

@@ -7614,6 +7614,16 @@ const   itms_hero_type = [
     new SctItm('ロボ')
     ,
     new SctItm('天使')
+    ,
+    new SctItm('マン')
+    ,
+    new SctItm('レディー')
+    ,
+    new SctItm('ボーイ')
+    ,
+    new SctItm('ガール')
+    ,
+    new SctItm('キング')
 ]
 
 const   itms_evil_type = [
@@ -7725,4 +7735,21 @@ const   itms_chr_evil2 = [
     new SctItm('ボ')
 ]
 
+const   itms_hero_catch = [
+    new SctItm('戦え！ ')
+    ,
+    new SctItm('負けるな！ ')
+    ,
+    new SctItm('がんばれ！ ')
+    ,
+    new SctItm('それゆけ！ ')
+    ,
+    new SctItm('必殺！ ')
+    ,
+    new SctItm('怪傑！ ')
+    ,
+    new SctItm('激烈！ ')
+    ,
+    new SctItm('爆裂！ ')
+]
 
