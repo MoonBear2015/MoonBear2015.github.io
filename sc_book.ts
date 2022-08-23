@@ -9,7 +9,7 @@ function set_book()
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B00.36';
+    html += ' B00.37';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -84,7 +84,7 @@ function make_booktype0() : string {
 
     html += '<br>';
 
-    html += '<div id="@BOOKFACE@">';
+    html += '<div id="@BOOKFACE0@">';
 
     html += '<p id="book_title">';
     html += '@L_BOOK@';
@@ -136,7 +136,7 @@ function make_booktype1() : string {
 
     html += '<br>';
 
-    html += '<div id="@BOOKFACE@">';
+    html += '<div id="@BOOKFACE1@">';
 
     html += '<p id="book_title">';
     html += '@L_HEROCATCH@<br>@L_HEROJOB@@L_HEROTYPE@<br>★<br>@L_HERONAME@！';

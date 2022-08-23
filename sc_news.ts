@@ -402,16 +402,22 @@ class locker_bookwriter
     }
 }
 
-class selector_bookface extends SctItm_Selector implements ISctItm_Selector {
+class selector_bookface0 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
-        super('@BOOKFACE@');
+        super('@BOOKFACE0@');
         this.itms = [
             new SctItm('book01')
             ,
             new SctItm('book02')
             ,
             new SctItm('book03')
-            ,
+        ]
+    }
+}
+class selector_bookface1 extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@BOOKFACE1@');
+        this.itms = [
             new SctItm('book04')
             ,
             new SctItm('book05')
@@ -3878,7 +3884,8 @@ class news_docs_maker extends docs_maker {
     constructor(){
         super();
 
-        this.dic_push(new selector_bookface());
+        this.dic_push(new selector_bookface0());
+        this.dic_push(new selector_bookface1());
         this.dic_push(new locker_bookwriter());
         this.dic_push(new selector_writer());
         this.dic_push(new selector_writer2());
