@@ -2769,6 +2769,90 @@ const   cods_adv_etc = [
 ];
 
 
+const   cods_ad_posi = [
+    new SctCod_It('|勇|いさ|ましい')
+    ,
+    new SctCod_It('|賢|かしこ|い')
+    ,
+    new SctCod_It('|素晴|すば|らしい')
+    ,
+    new SctCod_It('|手堅|てがた|い')
+    ,
+    new SctCod_It('|柔|やわ|らかい')
+    ,
+    new SctCod_It('|喜|よろこ|ばしい')
+    ,
+    new SctCod_It('|楽|たの|しい')
+    ,
+    new SctCod_It('|明|あか|るい')
+    ,
+    new SctCod_It('|穏|おだ|やかな')
+    ,
+    new SctCod_It('|緩|ゆる|やかな')
+    ,
+    new SctCod_It('|平和|へいわ|な')
+    ,
+    new SctCod_It('|幸|しあわ|せな')
+    ,
+    new SctCod_It('|豊|ゆた|かな')
+    ,
+    new SctCod_It('|優|やさ|しい')
+];
+const   cods_adv_posi = [
+    new SctCod_It('|勇|いさ|ましく')
+    ,
+    new SctCod_It('|賢|かしこ|く')
+    ,
+    new SctCod_It('|素晴|すば|らしく')
+    ,
+    new SctCod_It('|手堅|てがた|く')
+    ,
+    new SctCod_It('|柔|やわ|らかく')
+    ,
+    new SctCod_It('|喜|よろこ|ばしく')
+    ,
+    new SctCod_It('|楽|たの|しく')
+    ,
+    new SctCod_It('|明|あか|るく')
+    ,
+    new SctCod_It('|穏|おだ|やかに')
+    ,
+    new SctCod_It('|緩|ゆる|やかに')
+    ,
+    new SctCod_It('|平和|へいわ|に')
+    ,
+    new SctCod_It('|幸|しあわ|せに')
+    ,
+    new SctCod_It('|豊|ゆた|かに')
+    ,
+    new SctCod_It('|優|やさ|しく')
+];
+
+const   cods_ad_nega = [
+    new SctCod_It('|五月蠅|うるさ|い')
+    ,
+    new SctCod_It('|口|くち|うるさい')
+    ,
+    new SctCod_It('|切|せつ|ない')
+    ,
+    new SctCod_It('|憎|にく|たらしい')
+    ,
+    new SctCod_It('|薄暗|うすぐら|い')
+];
+const   cods_adv_nega = [
+    new SctCod_It('|五月蠅|うるさ|く')
+    ,
+    new SctCod_It('|口|くち|うるさく')
+    ,
+    new SctCod_It('|切|せつ|なく')
+    ,
+    new SctCod_It('|憎|にく|たらしく')
+    ,
+    new SctCod_It('|薄暗|うすぐら|く')
+];
+
+
+
 const   cods_body = [
     new SctCod_It('|体|からだ|','body.jpg')
     ,
@@ -7609,6 +7693,10 @@ const   itms_hero_type = [
     ,
     new SctItm('王女')
     ,
+    new SctItm('伯爵')
+    ,
+    new SctItm('侯爵')
+    ,
     new SctItm('ライダー')
     ,
     new SctItm('ロボ')
@@ -7634,6 +7722,22 @@ const   itms_evil_type = [
     new SctItm('魔神')
     ,
     new SctItm('魔人')
+    ,
+    new SctItm('怪人')
+    ,
+    new SctItm('泥棒')
+    ,
+    new SctItm('怪獣')
+    ,
+    new SctItm('恐竜')
+    ,
+    new SctItm('大王')
+    ,
+    new SctItm('皇帝')
+    ,
+    new SctItm('龍王')
+    ,
+    new SctItm('魔王')
     ,
     new SctItm('人間')
     ,
@@ -7753,3 +7857,30 @@ const   itms_hero_catch = [
     new SctItm('爆裂！ ')
 ]
 
+
+const   itms_heromark = [
+    new SctItm('★')
+    ,
+    new SctItm('☆')
+    ,
+    new SctItm('♂')
+    ,
+    new SctItm('♀')
+    ,
+    new SctItm('♪')
+]
+
+
+const   itms_evilmark = [
+    new SctItm('◆')
+    ,
+    new SctItm('◇')
+    ,
+    new SctItm('▲')
+    ,
+    new SctItm('△')
+    ,
+    new SctItm('▼')
+    ,
+    new SctItm('▽')
+]

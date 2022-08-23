@@ -9,7 +9,7 @@ function set_book()
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B00.37';
+    html += ' B00.40';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -139,7 +139,7 @@ function make_booktype1() : string {
     html += '<div id="@BOOKFACE1@">';
 
     html += '<p id="book_title">';
-    html += '@L_HEROCATCH@<br>@L_HEROJOB@@L_HEROTYPE@<br>★<br>@L_HERONAME@！';
+    html += '@L_HEROCATCH@<br>@L_HEROJOB@@L_HEROTYPE@<br>@L_HM@<br>@L_HERONAME@！';
     html += '</p>';
     html += '<br><br>';
     html += '<p id="book_writerinfo">';
@@ -151,7 +151,7 @@ function make_booktype1() : string {
     html += '</div>';
     
     html += '<div id="book_comment">';
-    html += '@B_INFO@';
+    html += '@STORY00@';
     html += '</div>';
 
     return html;
@@ -375,6 +375,19 @@ class selector_booktype extends SctItm_Selector implements ISctItm_Selector {
     }
 }
 
+// 場所
+class selector_story00 extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@STORY00@');
+        this.itms = [
+            new SctItm('今日も@KEIP@@COUNTRY@では、@THEY@や@THEY@が@KEIDP@@KEIDP@暮らしています。')
+            ,
+            new SctItm('ここは@MANYPEOPLE@が住む@KEIP@@COUNTRY@、みんなで@KEIDP@@KEIDP@@DOING02@暮らしています。')
+            ,
+            new SctItm('昔々、とても@KEIP@@COUNTRY@では、@THEY@が@KEIDP@@KEIDP@@DOING02@暮らしていました。')
+        ]
+    }
+}
 
 
 
@@ -389,6 +402,7 @@ class book_docs_maker extends news_docs_maker {
         this.dic_push(new selector_booksentence());
         this.dic_push(new selector_bookwriter_deco());
         this.dic_push(new selector_booktype());
+        this.dic_push(new selector_story00());
     }
 }
 
