@@ -5165,34 +5165,34 @@ const   itms_what = [
     new SctItm('イスカンダル','WHAT/iskandar.jpg')
     ,
     new SctItm('株式市場','WHAT/Economy.jpg')
-    ,
-    new SctItm('科学','WHAT/Science.jpg')
-    ,
-    new SctItm('現代科学','WHAT/Science.jpg')
-    ,
-    new SctItm('先進科学','WHAT/Science.jpg')
+    // ,
+    // new SctItm('科学','WHAT/Science.jpg')
+    // ,
+    // new SctItm('現代科学','WHAT/Science.jpg')
+    // ,
+    // new SctItm('先進科学','WHAT/Science.jpg')
     ,
     new SctItm('医療現場','WHAT/Medical.jpg')
-    ,
-    new SctItm('現代医学','WHAT/Medical.jpg')
-    ,
-    new SctItm('農業','WHAT/Agri.jpg')
+    // ,
+    // new SctItm('現代医学','WHAT/Medical.jpg')
+    // ,
+    // new SctItm('農業','WHAT/Agri.jpg')
     ,
     new SctItm('農場','WHAT/Agri.jpg')
     ,
     new SctItm('工場','WHAT/Factory.jpg')
     ,
     new SctItm('工業地帯','WHAT/Factory.jpg')
+    // ,
+    // new SctItm('人工知能','WHAT/AI.jpg')
     ,
-    new SctItm('人工知能','WHAT/AI.jpg')
-    ,
-    new SctItm('学校教育','WHAT/stady.jpg')
+    new SctItm('教育現場','WHAT/stady.jpg')
     ,
     new SctItm('宇宙','WHAT/space.jpg')
-    ,
-    new SctItm('宇宙開発','WHAT/NASA.jpg')
-    ,
-    new SctItm('天文学','WHAT/space.jpg')
+    // ,
+    // new SctItm('宇宙開発','WHAT/NASA.jpg')
+    // ,
+    // new SctItm('天文学','WHAT/space.jpg')
     ,
     new SctItm('火星','WHAT/mars.jpg')
     ,

@@ -9,7 +9,7 @@ function set_book()
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B00.44';
+    html += ' B00.46';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -388,11 +388,11 @@ class selector_story00 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@STORY00@');
         this.itms = [
+            new SctItm('ここは@KEIP@@COUNTRY@の、@MANY@@L_CLASS@達が暮らす@KEIP@@L_WHAT@。')
+            ,
             new SctItm('今日も@KEIP@@L_WHAT@では、@MANY@@L_CLASS@達が@KEIDP@@KEIDP@暮らしています。')
             ,
-            new SctItm('ここは、@MANY@@L_CLASS@達が暮らす@KEIP@@L_WHAT@の街。')
-            ,
-            new SctItm('昔々、とても@KEIP@@L_WHAT@では、@MANY@@L_CLASS@達が@KEIDP@@KEIDP@@DOING02@暮らしていました。')
+            new SctItm('昔々、とても@KEIP@@L_WHAT@では、@KEIDP@@L_CLASS@達が@DOING02@暮らしていました。')
         ]
     }
 }
@@ -402,11 +402,13 @@ class selector_story01 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@STORY01@');
         this.itms = [
-            new SctItm('そんな@L_CLASS@達に、@L_EVILFULLNAME@が襲いかかりました。')
+            new SctItm('そんな@KEIP@@L_CLASS@達に、@KEIN@姿の@L_EVILTYPE@が襲いかかりました。')
             ,
-            new SctItm('そこに突然、見るも@KEIN@@L_EVILFULLNAME@が現れたのです。')
+            new SctItm('そこに突然、見るも@KEIN@@L_EVILTYPE@が現れたのです。')
             ,
-            new SctItm('そこに現れた@KEIN@謎の怪人、その名も@L_EVILFULLNAME@！　')
+            new SctItm('そこに現れた@KEIN@謎の@L_EVILTYPE@、その名も@L_EVILNAME@！　')
+            ,
+            new SctItm('そんな@KEIP@@L_WHAT@に現れのは！ 「なんて@KEIN@奴だ！ 貴様は誰だ！」')
         ]
     }
 }
@@ -414,11 +416,13 @@ class selector_story02 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@STORY02@');
         this.itms = [
-            new SctItm('「私の名は@L_EVIL@！ @TECH@の力をとくと見るが良い！」')
+            new SctItm('「私の名前は@L_EVIL@！ @TECH@の力をとくと見るが良い！」')
             ,
-            new SctItm('「我こそは@L_EVIL@！ 貴様達はこの@TECH@のパワーの餌食となるのだ！」')
+            new SctItm('「我こそは@L_EVIL@！ 貴様達はこの@L_TECH@のパワーの餌食となるのだ！」')
             ,
             new SctItm('「我が名は@L_EVIL@！ @TECH@の恐ろしさを身をもって味わうのだ！」')
+            ,
+            new SctItm('「俺様は@L_EVIL@！ @L_TECH@の呪いを受けてみよ！」')
         ]
     }
 }
