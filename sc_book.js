@@ -7,7 +7,7 @@ function set_book() {
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B00.43';
+    html += ' B00.44';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -282,7 +282,8 @@ class selector_story01 extends SctItm_Selector {
         super('@STORY01@');
         this.itms = [
             new SctItm('そんな@L_CLASS@達に、@L_EVILFULLNAME@が襲いかかりました。'),
-            new SctItm('そこに突然、見るも@KEIN@@L_EVILFULLNAME@が現れたのです。')
+            new SctItm('そこに突然、見るも@KEIN@@L_EVILFULLNAME@が現れたのです。'),
+            new SctItm('そこに現れた@KEIN@謎の怪人、その名も@L_EVILFULLNAME@！　')
         ];
     }
 }
@@ -290,9 +291,9 @@ class selector_story02 extends SctItm_Selector {
     constructor() {
         super('@STORY02@');
         this.itms = [
-            new SctItm('「さあ、私の@TECH@を見るが良い！ @EVILATTACK@」'),
-            new SctItm('「貴様達はこの@TECH@の餌食となるのだ！ @EVILATTACK@」'),
-            new SctItm('「これが真の@TECH@だ！ @EVILATTACK@！」')
+            new SctItm('「私の名は@L_EVIL@！ @TECH@の力をとくと見るが良い！」'),
+            new SctItm('「我こそは@L_EVIL@！ 貴様達はこの@TECH@のパワーの餌食となるのだ！」'),
+            new SctItm('「我が名は@L_EVIL@！ @TECH@の恐ろしさを身をもって味わうのだ！」')
         ];
     }
 }
@@ -300,8 +301,8 @@ class selector_story03 extends SctItm_Selector {
     constructor() {
         super('@STORY03@');
         this.itms = [
-            new SctItm('@L_CLASS@達は慌てふためいていますが――その時！'),
-            new SctItm('@L_CLASS@達は震え上がり、助けを求めました。どうしよう！ 誰か助けて！――その時です！ '),
+            new SctItm('大変なことになりました。慌てふためく@L_CLASS@達・・・しかし、そこに現れたのは！'),
+            new SctItm('@L_CLASS@達は震え上がり、助けを求めました。どうしよう！ 誰か助けて！――と、その時です！ '),
             new SctItm('@L_CLASS@達は絶望しました。ああ、こんな時に、あの人が居てくれたら……。')
         ];
     }
@@ -310,9 +311,9 @@ class selector_story04 extends SctItm_Selector {
     constructor() {
         super('@STORY04@');
         this.itms = [
-            new SctItm('「@ITEM@の@NICKGOOD@！ @L_HEROFULLNAME@参上！」'),
-            new SctItm('「待たせたな！ @L_HEROFULLNAME@が相手だ！」'),
-            new SctItm('「そこまでだ！ @L_HEROFULLNAME@が容赦はしないぞ！')
+            new SctItm('「私の名は@ITEM@の@NICKGOOD@！ @L_HEROFULLNAME@参上！」'),
+            new SctItm('「待たせたな！ @L_HERO@が相手だ！ 貴様の好きにはさせないぞ！」'),
+            new SctItm('「そこまでだ！ @L_HERO@が容赦はしないぞ！」')
         ];
     }
 }
