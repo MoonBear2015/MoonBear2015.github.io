@@ -383,7 +383,7 @@ small {
     font-weight:bolder;
     color:  white;
     font-size: 3vw;
-    text-align:center;
+    text-align:left;
     text-shadow: 3px 3px 0px #000000;
 }
 #book02 {
@@ -416,7 +416,7 @@ small {
     font-family:monospace;
     font-weight:bolder;
     color:  lightpink;
-    font-size: 5vw;
+    font-size: 4vw;
     text-align:center;
     text-shadow: 3px 3px 0px darkred;
 }
@@ -425,7 +425,7 @@ small {
     font-weight:bolder;
     font-style: italic;
     color:  lightgreen;
-    font-size: 6vw;
+    font-size: 4vw;
     text-align:center;
     text-shadow: 3px 3px 0px darkgreen;
 }

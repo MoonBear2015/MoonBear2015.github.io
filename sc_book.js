@@ -7,7 +7,7 @@ function set_book() {
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B00.40';
+    html += ' B00.42';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -106,7 +106,7 @@ function make_booktype1() {
     html += '<br>';
     html += '<div id="@BOOKFACE1@">';
     html += '<p id="book_title">';
-    html += '@L_HEROCATCH@<br>@L_HEROJOB@@L_HEROTYPE@<br>@L_HM@<br>@L_HERONAME@！';
+    html += '@L_HEROCATCH@<br>@L_HEROJOB@@L_HEROTYPE@@L_HM@@L_HERONAME@！';
     html += '</p>';
     html += '<br><br>';
     html += '<p id="book_writerinfo">';
@@ -116,7 +116,10 @@ function make_booktype1() {
     html += '</div>';
     html += '</div>';
     html += '<div id="book_comment">';
-    html += '@STORY00@';
+    html += '　@STORY00@';
+    html += '@STORY01@';
+    html += '<br>';
+    html += '@STORY02@';
     html += '</div>';
     return html;
 }
@@ -258,14 +261,48 @@ class selector_booktype extends SctItm_Selector {
         ];
     }
 }
-// 場所
+// 背景
 class selector_story00 extends SctItm_Selector {
     constructor() {
         super('@STORY00@');
         this.itms = [
-            new SctItm('今日も@KEIP@@COUNTRY@では、@THEY@や@THEY@が@KEIDP@@KEIDP@暮らしています。'),
-            new SctItm('ここは@MANYPEOPLE@が住む@KEIP@@COUNTRY@、みんなで@KEIDP@@KEIDP@@DOING02@暮らしています。'),
-            new SctItm('昔々、とても@KEIP@@COUNTRY@では、@THEY@が@KEIDP@@KEIDP@@DOING02@暮らしていました。')
+            new SctItm('今日も@KEIP@@COUNTRY@では、@MANY@@L_CLASS@達が@KEIDP@@KEIDP@暮らしています。'),
+            new SctItm('ここ、@MANY@@L_CLASS@達が暮らす@KEIP@@COUNTRY@。'),
+            new SctItm('昔々、とても@KEIP@@COUNTRY@では、@MANY@@L_CLASS@達が@KEIDP@@KEIDP@@DOING02@暮らしていました。')
+        ];
+    }
+}
+// 登場
+class selector_story01 extends SctItm_Selector {
+    constructor() {
+        super('@STORY01@');
+        this.itms = [
+            new SctItm('そんな@L_CLASS@達に、@L_EVILFULLNAME@が襲いかかりました。'),
+            new SctItm('そこに突然、見るも@KEIN@@L_EVILFULLNAME@が現れたのです。')
+        ];
+    }
+}
+class selector_story02 extends SctItm_Selector {
+    constructor() {
+        super('@STORY02@');
+        this.itms = [
+            new SctItm('「さあ、私の@TECH@を見るが良い！ @EVILATTACK@」'),
+            new SctItm('「貴様達はこの@TECH@の餌食となるのだ！ @EVILATTACK@」'),
+            new SctItm('「これが真の@TECH@だ！ @L_EVILJOB@魔法発動！」')
+        ];
+    }
+}
+class selector_evilattack extends SctItm_Selector {
+    constructor() {
+        super('@EVILATTACK@');
+        this.itms = [
+            new SctItm('@L_EVILJOB@ガス噴射！'),
+            new SctItm('@L_EVILJOB@爆弾投下！'),
+            new SctItm('@L_EVILJOB@魔法発動！'),
+            new SctItm('@L_EVILJOB@ハリケーン！'),
+            new SctItm('@L_EVILJOB@バズーカー！'),
+            new SctItm('@L_EVILJOB@ダイナマイト！'),
+            new SctItm('@L_EVILJOB@ダイナマイト！')
         ];
     }
 }
@@ -281,5 +318,7 @@ class book_docs_maker extends news_docs_maker {
         this.dic_push(new selector_bookwriter_deco());
         this.dic_push(new selector_booktype());
         this.dic_push(new selector_story00());
+        this.dic_push(new selector_story01());
+        this.dic_push(new selector_story02());
     }
 }
