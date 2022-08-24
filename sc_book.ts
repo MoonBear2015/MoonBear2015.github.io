@@ -9,7 +9,7 @@ function set_book()
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B00.42';
+    html += ' B00.43';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -453,6 +453,7 @@ class book_docs_maker extends news_docs_maker {
         this.dic_push(new selector_story00());
         this.dic_push(new selector_story01());
         this.dic_push(new selector_story02());
+        this.dic_push(new selector_evilattack());
     }
 }
 
