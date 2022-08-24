@@ -120,6 +120,10 @@ function make_booktype1() {
     html += '@STORY01@';
     html += '<br>';
     html += '@STORY02@';
+    html += '<br>';
+    html += '@STORY03@';
+    html += '<br>';
+    html += '@STORY04@';
     html += '</div>';
     return html;
 }
@@ -266,9 +270,9 @@ class selector_story00 extends SctItm_Selector {
     constructor() {
         super('@STORY00@');
         this.itms = [
-            new SctItm('今日も@KEIP@@COUNTRY@では、@MANY@@L_CLASS@達が@KEIDP@@KEIDP@暮らしています。'),
-            new SctItm('ここ、@MANY@@L_CLASS@達が暮らす@KEIP@@COUNTRY@。'),
-            new SctItm('昔々、とても@KEIP@@COUNTRY@では、@MANY@@L_CLASS@達が@KEIDP@@KEIDP@@DOING02@暮らしていました。')
+            new SctItm('今日も@KEIP@@L_WHAT@では、@MANY@@L_CLASS@達が@KEIDP@@KEIDP@暮らしています。'),
+            new SctItm('ここは、@MANY@@L_CLASS@達が暮らす@KEIP@@L_WHAT@の街。'),
+            new SctItm('昔々、とても@KEIP@@L_WHAT@では、@MANY@@L_CLASS@達が@KEIDP@@KEIDP@@DOING02@暮らしていました。')
         ];
     }
 }
@@ -288,7 +292,27 @@ class selector_story02 extends SctItm_Selector {
         this.itms = [
             new SctItm('「さあ、私の@TECH@を見るが良い！ @EVILATTACK@」'),
             new SctItm('「貴様達はこの@TECH@の餌食となるのだ！ @EVILATTACK@」'),
-            new SctItm('「これが真の@TECH@だ！ @L_EVILJOB@魔法発動！」')
+            new SctItm('「これが真の@TECH@だ！ @EVILATTACK@！」')
+        ];
+    }
+}
+class selector_story03 extends SctItm_Selector {
+    constructor() {
+        super('@STORY03@');
+        this.itms = [
+            new SctItm('@L_CLASS@達は慌てふためいていますが――その時！'),
+            new SctItm('@L_CLASS@達は震え上がり、助けを求めました。どうしよう！ 誰か助けて！――その時です！ '),
+            new SctItm('@L_CLASS@達は絶望しました。ああ、こんな時に、あの人が居てくれたら……。')
+        ];
+    }
+}
+class selector_story04 extends SctItm_Selector {
+    constructor() {
+        super('@STORY04@');
+        this.itms = [
+            new SctItm('「@ITEM@の@NICKGOOD@！ @L_HEROFULLNAME@参上！」'),
+            new SctItm('「待たせたな！ @L_HEROFULLNAME@が相手だ！」'),
+            new SctItm('「そこまでだ！ @L_HEROFULLNAME@が容赦はしないぞ！')
         ];
     }
 }
@@ -302,7 +326,8 @@ class selector_evilattack extends SctItm_Selector {
             new SctItm('@L_EVILJOB@ハリケーン！'),
             new SctItm('@L_EVILJOB@バズーカー！'),
             new SctItm('@L_EVILJOB@ダイナマイト！'),
-            new SctItm('@L_EVILJOB@ダイナマイト！')
+            new SctItm('@L_EVILJOB@大砲！'),
+            new SctItm('@L_EVILJOB@ミサイル！')
         ];
     }
 }
@@ -320,6 +345,8 @@ class book_docs_maker extends news_docs_maker {
         this.dic_push(new selector_story00());
         this.dic_push(new selector_story01());
         this.dic_push(new selector_story02());
+        this.dic_push(new selector_story03());
+        this.dic_push(new selector_story04());
         this.dic_push(new selector_evilattack());
     }
 }
