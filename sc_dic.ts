@@ -2815,16 +2815,16 @@ const   cods_adv_posi = [
     ,
     new SctCod_It('|明|あか|るく')
     ,
-    new SctCod_It('|穏|おだ|やかに')
-    ,
-    new SctCod_It('|緩|ゆる|やかに')
-    ,
-    new SctCod_It('|平和|へいわ|に')
-    ,
-    new SctCod_It('|幸|しあわ|せに')
-    ,
-    new SctCod_It('|豊|ゆた|かに')
-    ,
+    // new SctCod_It('|穏|おだ|やかに')
+    // ,
+    // new SctCod_It('|緩|ゆる|やかに')
+    // ,
+    // new SctCod_It('|平和|へいわ|に')
+    // ,
+    // new SctCod_It('|幸|しあわ|せに')
+    // ,
+    // new SctCod_It('|豊|ゆた|かに')
+    // ,
     new SctCod_It('|優|やさ|しく')
 ];
 

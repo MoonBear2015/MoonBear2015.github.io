@@ -392,7 +392,7 @@ class selector_story00 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('今日も@KEIP@@L_WHAT@では、@MANY@@L_CLASS@達が@KEIDP@@KEIDP@暮らしています。')
             ,
-            new SctItm('昔々、とても@KEIP@@L_WHAT@では、@KEIDP@@L_CLASS@達が@DOING02@暮らしていました。')
+            new SctItm('昔々、とても@KEIP@@L_WHAT@では、@KEIDP@て@KEIP@@L_CLASS@達が@DOING02@暮らしていました。')
         ]
     }
 }
