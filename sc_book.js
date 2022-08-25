@@ -7,7 +7,7 @@ function set_book() {
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B00.48';
+    html += ' B00.50';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -119,13 +119,13 @@ function make_booktype1() {
     html += '　@STORY00@';
     html += '@STORY01@';
     html += '<br>';
-    html += '@STORY02@';
+    html += '　@STORY02@';
     html += '<br>';
-    html += '@STORY03@';
+    html += '　@STORY03@';
     html += '<br>';
-    html += '@STORY04@';
+    html += '　@STORY04@';
     html += '<br>';
-    html += '@STORY05@';
+    html += '　@STORY05@';
     html += '</div>';
     return html;
 }
@@ -272,7 +272,7 @@ class selector_story00 extends SctItm_Selector {
     constructor() {
         super('@STORY00@');
         this.itms = [
-            new SctItm('ここは@KEIP@@COUNTRY@の、@MANY@@L_CLASS@達が暮らす@KEIP@@L_WHAT@。'),
+            new SctItm('ここは@MANY@@L_CLASS@達が暮らす@KEIP@@L_WHAT@。'),
             new SctItm('今日も@KEIP@@L_WHAT@では、@MANY@@L_CLASS@達が@KEIDP@@KEIDP@暮らしています。'),
             new SctItm('昔々、とても@KEIP@@L_WHAT@では、@KEIDP@て@KEIP@@L_CLASS@達が@DOING02@暮らしていました。')
         ];
@@ -285,8 +285,8 @@ class selector_story01 extends SctItm_Selector {
         this.itms = [
             new SctItm('そんな@KEIP@@L_WHAT@に、@KEIN@姿の@L_EVILTYPE@が現れました。'),
             new SctItm('そこに突然、見るも@KEIN@@L_EVILTYPE@が現れたのです。'),
-            new SctItm('そんなある日のこと、そこに@KEIN@姿の@L_EVILTYPE@が襲いかかったのです。その名も@L_EVILNAME@！　'),
-            new SctItm('そんな@KEIP@@L_WHAT@に現れたのは！ 「なんて@KEIN@奴だ！ 貴様は誰だ！」')
+            new SctItm('その@L_WHAT@に、@KEIN@@L_EVILTYPE@が訪れました。その名も@L_EVILNAME@。'),
+            new SctItm('そんな@KEIP@@L_WHAT@に@KEIN@姿の@L_EVILTYPE@がやってきました。@L_CLASS@達は驚いて尋ねました。「なんて@KEIN@奴だ。 貴様は誰だ？」')
         ];
     }
 }
@@ -306,8 +306,8 @@ class selector_story03 extends SctItm_Selector {
         super('@STORY03@');
         this.itms = [
             new SctItm('大変なことになりました。慌てふためく@L_CLASS@達・・・そこに姿を現したのは！'),
-            new SctItm('@L_CLASS@達は震え上がり、助けを求めました。どうしよう！ 誰か助けて――――　と、その時！ '),
-            new SctItm('@L_CLASS@達は絶体絶命！ もう何も打つ手はないのか？　――――いや！ あの人が助けてくれる！')
+            new SctItm('@L_CLASS@達は震え上がり、助けを求めました。どうしよう！ 誰か助けて――　と、その時！ '),
+            new SctItm('@L_CLASS@達は絶体絶命！ もう何も打つ手はないのか？　――いや！ あの人が助けてくれる！')
         ];
     }
 }
@@ -325,9 +325,9 @@ class selector_story05 extends SctItm_Selector {
     constructor() {
         super('@STORY05@');
         this.itms = [
-            new SctItm('今度は@L_EVILTYPE@が驚く番です。「ぬぬ！ @L_HERONAME@め！ 邪魔立てするな！」'),
-            new SctItm('@L_EVILTYPE@はいきり立ちます。「来たな@L_HERONAME@！ 覚悟せよ！」'),
-            new SctItm('@L_EVILTYPE@は慌てず高笑い。「ヌハハハ！ 此処であったが百年目！ 勝負だ@L_HERONAME@！ 」')
+            new SctItm('今度は@L_EVILJOB@@L_EVILTYPE@が驚く番です。「ぬぬ！ @L_HERONAME@め！ 邪魔立てするな！」'),
+            new SctItm('@L_EVILJOB@@L_EVILTYPE@はいきり立ちます。「来たな@L_HERONAME@！ 覚悟せよ！」'),
+            new SctItm('@L_EVILJOB@@L_EVILTYPE@は慌てず高笑い。「ヌハハハ！ 此処であったが百年目！ 勝負だ@L_HERONAME@！ 」')
         ];
     }
 }
