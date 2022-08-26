@@ -7,7 +7,7 @@ function set_book() {
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B00.53';
+    html += ' B00.54';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -276,7 +276,7 @@ class selector_storyE00 extends SctItm_Selector {
         this.itms = [
             new SctItm('そこに@KEIN@姿の@L_EVILTYPE@がやってきました。'),
             new SctItm('そこに突然、見るも@KEIN@@L_EVILTYPE@が現れたのです。'),
-            new SctItm('その@L_WHAT@に、@KEIN@@L_EVILTYPE@が訪れました。'),
+            new SctItm('その@L_WHAT@に、まるで@NICKBAD@のような@KEIN@@L_EVILTYPE@が訪れました。'),
             new SctItm('そんな@KEIP@@L_WHAT@に、@KEIN@姿形の@L_EVILTYPE@がやってきました。')
         ];
     }
@@ -307,9 +307,9 @@ class selector_storyH00 extends SctItm_Selector {
     constructor() {
         super('@STH00@');
         this.itms = [
-            new SctItm('そこに見るも@KEIP@@L_HEROTYPE@が現れたのです。'),
-            new SctItm('そんな@KEIDN@て@KEIN@@L_WHAT@に、@KEIP@@L_HEROTYPE@が姿を現しました。'),
-            new SctItm('そんな@KEIN@@L_WHAT@に、@KEIP@姿形の@L_HEROTYPE@がやってきました。'),
+            new SctItm('その@KEIN@@L_WHAT@に、そこに見るも@KEIP@@L_HEROJOB@@L_HEROTYPE@が現れたのです。'),
+            new SctItm('そんな@KEIDN@て@KEIN@@L_WHAT@に、@KEIP@@L_HEROJOB@@L_HEROTYPE@が姿を現しました。'),
+            new SctItm('そんな@KEIN@@L_WHAT@に、@KEIP@姿形の@L_HEROJOB@@L_HEROTYPE@がやってきました。'),
             new SctItm('鳴り響く@KEIP@@MUSIC@と共に、@L_HEROJOB@@L_HEROTYPE@が参上しました。'),
             new SctItm('見るも@KEIP@@DRESS@をひるがえし、@L_HEROJOB@@L_HEROTYPE@が登場しました。')
         ];
