@@ -9,7 +9,7 @@ function set_book()
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B00.54';
+    html += ' B00.55';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -99,7 +99,7 @@ function make_booktype0() : string {
     html += '</div>';
     
     html += '<div id="book_comment">';
-    html += '@B_INFO@';
+    html += '　@B_INFO@';
     html += '</div>';
 
     return html;
@@ -151,7 +151,7 @@ function make_booktype1() : string {
     html += '</div>';
     
     html += '<div id="book_comment">';
-    html += '　@ST00@@STE00@<br>@STE01@<br>　@STE_C@<br>　@STH00@<br>@STH01@';
+    html += '　@ST00@@STE00@<br>@STE01@<br>　@STE_C@<br>　@STH00@<br>@STH01@<br>　@STH_E@<br>　@STE02@';
     html += '</div>';
 
     return html;
@@ -465,15 +465,28 @@ class selector_storyH01 extends SctItm_Selector implements ISctItm_Selector {
     }
 }
 
-class selector_story05 extends SctItm_Selector implements ISctItm_Selector {
+class selector_storyH_E extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
-        super('@STORYEA01@');
+        super('@STH_E@');
         this.itms = [
-            new SctItm('今度は@L_EVILJOB@@L_EVILTYPE@が驚く番です。「ぬぬ！ @L_HERONAME@め！ 邪魔立てするな！」')
+            new SctItm('驚いた@L_EVILTYPE@@L_EM@@L_EVILNAME@、「ぬぬ！ @L_HERONAME@め！ 邪魔立てするな！」')
             ,
             new SctItm('@L_EVILJOB@@L_EVILTYPE@はいきり立ちます。「来たな@L_HERONAME@！ 覚悟せよ！」')
             ,
-            new SctItm('@L_EVILJOB@@L_EVILTYPE@は慌てず高笑い。「ヌハハハ！ 此処であったが百年目！ 勝負だ@L_HERONAME@！ 」')
+            new SctItm('@L_EVILTYPE@@L_EM@@L_EVILNAME@は慌てず高笑い。「ヌハハハ！ 此処であったが百年目！ 勝負だ@L_HERONAME@！ 」')
+        ]
+    }
+}
+
+class selector_storyE02 extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@STE02@');
+        this.itms = [
+            new SctItm('@L_EVILJOB@@L_EVILTYPE@は襲いかかります。「喰らえ！ @EVILATTACK@」')
+            ,
+            new SctItm('@L_EVILJOB@@L_EVILTYPE@の攻撃！ 「受けてみよ！ @EVILATTACK@」')
+            ,
+            new SctItm('襲い掛かる@L_EVILJOB@@L_EVILTYPE@！ 「くたばれ！ @EVILATTACK@」')
         ]
     }
 }
@@ -517,10 +530,11 @@ class book_docs_maker extends news_docs_maker {
         this.dic_push(new selector_story00());
         this.dic_push(new selector_storyE00());
         this.dic_push(new selector_storyE01());
+        this.dic_push(new selector_storyE02());
         this.dic_push(new selector_storyE_C());
         this.dic_push(new selector_storyH00());
         this.dic_push(new selector_storyH01());
-        this.dic_push(new selector_story05());
+        this.dic_push(new selector_storyH_E());
         this.dic_push(new selector_evilattack());
     }
 }
