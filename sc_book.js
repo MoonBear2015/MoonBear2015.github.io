@@ -7,7 +7,7 @@ function set_book() {
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B00.56';
+    html += ' B00.57';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -116,7 +116,7 @@ function make_booktype1() {
     html += '</div>';
     html += '</div>';
     html += '<div id="book_comment">';
-    html += '　@ST00@@STE00@<br>@STE01@<br>　@STE_C@<br>　@STH00@<br>@STH01@<br>　@STH_E@<br>　@STE02@<br>@STH03@<br>　@STH02@';
+    html += '　@ST00@@STE00@<br>@STE01@<br>　@STE_C@<br>　@STH00@<br>@STH01@<br>　@STH_E@<br>　@STE02@<br>　@STH03@<br>　@STH02@<br>　@STE03@<br>　@STE02@';
     html += '</div>';
     return html;
 }
@@ -285,10 +285,10 @@ class selector_storyE01 extends SctItm_Selector {
     constructor() {
         super('@STE01@');
         this.itms = [
-            new SctItm('「私の名前は@L_EVIL@！ @TECH@の力を思い知れ！」'),
-            new SctItm('「我こそは@L_EVIL@！ 我が@L_TECH@パワーの餌食となるのだ！」'),
-            new SctItm('「我が名は@L_EVIL@！ @TECH@の恐ろしさを身をもって味わうのだ！」'),
-            new SctItm('「俺様は@L_EVIL@！ @L_TECH@の呪いを受けてみよ！」')
+            new SctItm('「私の名前は@L_EVIL@！ @L_EVILJOB@の力を思い知れ！」'),
+            new SctItm('「我こそは@L_EVIL@！ 我が@L_EVILJOB@パワーの餌食となるのだ！」'),
+            new SctItm('「我が名は@L_EVIL@！ @L_EVILJOB@の恐ろしさを身をもって味わうのだ！」'),
+            new SctItm('「俺様は@L_EVIL@！ @L_EVILJOB@の呪いを受けてみよ！」')
         ];
     }
 }
@@ -365,6 +365,16 @@ class selector_storyH03 extends SctItm_Selector {
         ];
     }
 }
+class selector_storyE03 extends SctItm_Selector {
+    constructor() {
+        super('@STE03@');
+        this.itms = [
+            new SctItm('それを@L_EVILTYPE@@L_HM@@L_EVILNAME@はガッチリ受け止め、「フン、この程度か！」'),
+            new SctItm('それを@L_EVILTYPE@@L_HM@@L_EVILNAME@は払いのけ、「そんな@NICKBAD@みたいな技が効くものか！」'),
+            new SctItm('しかし、@L_EVILTYPE@@L_HM@@L_EVILNAME@には効きません！ 「フハハ、俺様の勝ちだ！」')
+        ];
+    }
+}
 class selector_evilattack extends SctItm_Selector {
     constructor() {
         super('@EVILATTACK@');
@@ -411,6 +421,7 @@ class book_docs_maker extends news_docs_maker {
         this.dic_push(new selector_storyE00());
         this.dic_push(new selector_storyE01());
         this.dic_push(new selector_storyE02());
+        this.dic_push(new selector_storyE03());
         this.dic_push(new selector_storyE_C());
         this.dic_push(new selector_storyH00());
         this.dic_push(new selector_storyH01());

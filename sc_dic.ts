@@ -5203,8 +5203,8 @@ const   itms_what = [
     new SctItm('ブラックホール','WHAT/blackhole.jpg')
     ,
     new SctItm('NASA','WHAT/NASA.jpg')
-    ,
-    new SctItm('マスコミ','WHAT/MassMedia.jpg')
+    // ,
+    // new SctItm('マスコミ','WHAT/MassMedia.jpg')
     ,
     new SctItm('ビジネス社会','WHAT/business.jpg')
     ,
@@ -5223,8 +5223,8 @@ const   itms_what = [
     new SctItm('イスラム教','WHAT/Islam.jpg')
     ,
     new SctItm('新興宗教','WHAT/religion.jpg')
-    ,
-    new SctItm('人類','WHAT/human.jpg')
+    // ,
+    // new SctItm('人類','WHAT/human.jpg')
     ,
     new SctItm('小学校','WHAT/jschool.jpg')
     ,

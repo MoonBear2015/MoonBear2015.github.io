@@ -3401,8 +3401,10 @@ const itms_what = [
     new SctItm('タイタン', 'WHAT/saturn.jpg'),
     new SctItm('アンドロメダ星雲', 'WHAT/andromeda.jpg'),
     new SctItm('ブラックホール', 'WHAT/blackhole.jpg'),
-    new SctItm('NASA', 'WHAT/NASA.jpg'),
-    new SctItm('マスコミ', 'WHAT/MassMedia.jpg'),
+    new SctItm('NASA', 'WHAT/NASA.jpg')
+    // ,
+    // new SctItm('マスコミ','WHAT/MassMedia.jpg')
+    ,
     new SctItm('ビジネス社会', 'WHAT/business.jpg'),
     new SctItm('現代社会', 'WHAT/community.jpg'),
     new SctItm('情報化社会', 'WHAT/info.jpg'),
@@ -3411,8 +3413,10 @@ const itms_what = [
     new SctItm('キリスト教', 'WHAT/christ.jpg'),
     new SctItm('仏教', 'WHAT/buddha.jpg'),
     new SctItm('イスラム教', 'WHAT/Islam.jpg'),
-    new SctItm('新興宗教', 'WHAT/religion.jpg'),
-    new SctItm('人類', 'WHAT/human.jpg'),
+    new SctItm('新興宗教', 'WHAT/religion.jpg')
+    // ,
+    // new SctItm('人類','WHAT/human.jpg')
+    ,
     new SctItm('小学校', 'WHAT/jschool.jpg'),
     new SctItm('女子校', 'WHAT/girlscoll.jpg'),
     new SctItm('オリンピック', 'WHAT/Olympic.jpg'),
