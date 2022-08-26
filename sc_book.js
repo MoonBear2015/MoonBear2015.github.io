@@ -7,7 +7,7 @@ function set_book() {
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B00.55';
+    html += ' B00.56';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -116,7 +116,7 @@ function make_booktype1() {
     html += '</div>';
     html += '</div>';
     html += '<div id="book_comment">';
-    html += '　@ST00@@STE00@<br>@STE01@<br>　@STE_C@<br>　@STH00@<br>@STH01@<br>　@STH_E@<br>　@STE02@';
+    html += '　@ST00@@STE00@<br>@STE01@<br>　@STE_C@<br>　@STH00@<br>@STH01@<br>　@STH_E@<br>　@STE02@<br>@STH03@<br>　@STH02@';
     html += '</div>';
     return html;
 }
@@ -340,8 +340,28 @@ class selector_storyE02 extends SctItm_Selector {
         super('@STE02@');
         this.itms = [
             new SctItm('@L_EVILJOB@@L_EVILTYPE@は襲いかかります。「喰らえ！ @EVILATTACK@」'),
-            new SctItm('@L_EVILJOB@@L_EVILTYPE@の攻撃！ 「受けてみよ！ @EVILATTACK@」'),
+            new SctItm('@L_EVILJOB@@L_EVILTYPE@の攻撃！ 「死ね！ @EVILATTACK@」'),
             new SctItm('襲い掛かる@L_EVILJOB@@L_EVILTYPE@！ 「くたばれ！ @EVILATTACK@」')
+        ];
+    }
+}
+class selector_storyH02 extends SctItm_Selector {
+    constructor() {
+        super('@STH02@');
+        this.itms = [
+            new SctItm('@L_HEROFULLNAME@は必殺の構え！ 「覚悟だ！ @HEROATTACK@」'),
+            new SctItm('@L_HEROFULLNAME@の攻撃！ 「トドメだ！ @HEROATTACK@」'),
+            new SctItm('もはや@L_HEROFULLNAME@は問答無用！ 「@HEROATTACK@」')
+        ];
+    }
+}
+class selector_storyH03 extends SctItm_Selector {
+    constructor() {
+        super('@STH03@');
+        this.itms = [
+            new SctItm('@L_HEROTYPE@@L_HM@@L_HERONAME@はヒラリとかわし、「仕方ない、我が裁きを受けよ！」'),
+            new SctItm('@L_HEROTYPE@@L_HM@@L_HERONAME@は負けてはいません。「悪が栄える試しは無い！」'),
+            new SctItm('しかし、@L_HEROTYPE@@L_HM@@L_HERONAME@は正々堂々、「ならば、こちらの番だ！」')
         ];
     }
 }
@@ -355,8 +375,24 @@ class selector_evilattack extends SctItm_Selector {
             new SctItm('@L_EVILJOB@ハリケーン！'),
             new SctItm('@L_EVILJOB@バズーカー！'),
             new SctItm('@L_EVILJOB@ダイナマイト！'),
-            new SctItm('@L_EVILJOB@大砲！'),
-            new SctItm('@L_EVILJOB@ミサイル！')
+            new SctItm('@L_EVILJOB@大砲！')
+        ];
+    }
+}
+class selector_heroattack extends SctItm_Selector {
+    constructor() {
+        super('@HEROATTACK@');
+        this.itms = [
+            new SctItm('@L_HEROJOB@パンチ！'),
+            new SctItm('@L_HEROJOB@キック！'),
+            new SctItm('@L_HEROJOB@チョップ！'),
+            new SctItm('@L_HEROJOB@光線！'),
+            new SctItm('@L_HEROJOB@レーザー！'),
+            new SctItm('@L_HEROJOB@ビーム！'),
+            new SctItm('@L_HEROJOB@ミサイル！'),
+            new SctItm('@L_HEROJOB@トマホーク！'),
+            new SctItm('@L_HEROJOB@カッター！'),
+            new SctItm('@L_HEROJOB@ブーメラン！')
         ];
     }
 }
@@ -378,7 +414,10 @@ class book_docs_maker extends news_docs_maker {
         this.dic_push(new selector_storyE_C());
         this.dic_push(new selector_storyH00());
         this.dic_push(new selector_storyH01());
+        this.dic_push(new selector_storyH02());
+        this.dic_push(new selector_storyH03());
         this.dic_push(new selector_storyH_E());
         this.dic_push(new selector_evilattack());
+        this.dic_push(new selector_heroattack());
     }
 }
