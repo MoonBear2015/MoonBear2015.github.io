@@ -358,8 +358,8 @@ class selector_storyH03 extends SctItm_Selector {
     constructor() {
         super('@STH03@');
         this.itms = [
-            new SctItm('@L_HEROTYPE@@L_HM@@L_HERONAME@はヒラリとかわし、「仕方ない、我が裁きを受けよ！」<br>　@STH02@'),
-            new SctItm('それを@L_HEROTYPE@@L_HM@@L_HERONAME@は弾き返す！ 「悪が栄える試しは無い！」<br>　@STH02@')
+            new SctItm('@L_HERONAME@はヒラリとかわし、「仕方ない、我が裁きを受けよ！」<br>　@STH02@'),
+            new SctItm('それを@L_HERONAME@は弾き返す！ 「悪が栄える試しは無い！」<br>　@STH02@')
         ];
     }
 }
