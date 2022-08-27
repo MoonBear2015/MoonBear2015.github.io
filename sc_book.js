@@ -7,7 +7,7 @@ function set_book() {
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B00.63';
+    html += ' B00.64';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -264,7 +264,7 @@ class selector_story00 extends SctItm_Selector {
         super('@ST00@');
         this.itms = [
             new SctItm('ここは@MANY@@L_CLASS@達が暮らす@KEIP@@L_WHAT@。@STE00@'),
-            new SctItm('この@KEIP@@L_WHAT@で@DOING02@いるのは、@KEIDP@@KEIDP@@L_CLASS@達。@STE00@')
+            new SctItm('この@KEIP@@L_WHAT@で@DOING02@いるのは、@KEIDP@@KEIP@@L_CLASS@達。@STE00@')
         ];
     }
 }
