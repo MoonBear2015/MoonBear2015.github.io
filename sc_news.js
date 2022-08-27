@@ -2613,6 +2613,12 @@ class locker_heroevil extends SctItm_SelectLocker {
         ];
     }
 }
+class selector_herocatch extends SctItm_Selector {
+    constructor() {
+        super('@HEROCATCH@');
+        this.Add(itms_hero_catch);
+    }
+}
 class locker_herocatch extends SctItm_SelectLocker {
     constructor() {
         super('@L_HEROCATCH@');
@@ -2802,6 +2808,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new locker_evilfullname());
         this.dic_push(new locker_evil());
         this.dic_push(new locker_heroevil());
+        this.dic_push(new selector_herocatch());
         this.dic_push(new locker_herocatch());
     }
 }

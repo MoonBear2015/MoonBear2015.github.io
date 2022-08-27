@@ -7846,15 +7846,11 @@ const   itms_hero_catch = [
     ,
     new SctItm('がんばれ！ ')
     ,
-    new SctItm('それゆけ！ ')
+    new SctItm('立ち上がれ！ ')
     ,
-    new SctItm('必殺！ ')
+    new SctItm('羽ばたけ！ ')
     ,
-    new SctItm('怪傑！ ')
-    ,
-    new SctItm('激烈！ ')
-    ,
-    new SctItm('爆裂！ ')
+    new SctItm('燃え上がれ！ ')
 ]
 
 
