@@ -9,7 +9,7 @@ function set_book()
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B00.60';
+    html += ' B00.62';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -382,7 +382,7 @@ class selector_story00 extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('ここは@MANY@@L_CLASS@達が暮らす@KEIP@@L_WHAT@。@STE00@')
             ,
-            new SctItm('この@KEIP@@L_WHAT@では、@MANY@@L_CLASS@達が@KEIDP@@KEIDP@暮らしています。@STE00@')
+            new SctItm('この@KEIP@@L_WHAT@で@DOING02@いるのは、@KEIDP@@KEIDP@@L_CLASS@達。@STE00@')
         ]
     }
 }
@@ -394,7 +394,7 @@ class selector_storyE00 extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('その@L_WHAT@に現れた、見るも@KEIN@謎の@L_EVILTYPE@――。@STE01@')
             ,
-            new SctItm('そんな@KEIP@@L_WHAT@に、@KEIN@姿形の@L_EVILJOB@@L_EVILTYPE@が姿を現しました。@STE01@')
+            new SctItm('そんな@KEIP@@L_WHAT@に、@KEIN@姿形の@L_EVILJOB@@L_EVILTYPE@が姿を現した――。@STE01@')
         ]
     }
 }
@@ -404,8 +404,6 @@ class selector_storyE01 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@STE01@');
         this.itms = [
-            new SctItm('<br>「私の名前は@L_EVIL@！ @KEIN@@L_EVILJOB@の力を思い知れ！」<br>　@STE_C@')
-            ,
             new SctItm('<br>「我こそは@L_EVIL@！ この@KEIN@@L_EVILJOB@パワーの餌食となるのだ！」<br>　@STE_C@')
             ,
             new SctItm('<br>「我が名は@L_EVIL@！ @KEIN@@L_EVILJOB@の恐ろしさを身をもって味わうのだ！」<br>　@STE_C@')
@@ -420,11 +418,11 @@ class selector_storyE_C extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@STE_C@');
         this.itms = [
-            new SctItm('@L_CLASS@達は大慌て。このまま@L_WHAT@は征服されてしまうのか。――と、その時！　@STH00@')
+            new SctItm('@L_CLASS@達は大慌て。このまま@L_WHAT@は征服されてしまうのか。――と、その時。　@STH00@')
             ,
-            new SctItm('逃げ惑う@L_CLASS@達。もはや@L_WHAT@は風前の灯火――と、その時！　@STH00@')
+            new SctItm('逃げ惑う@L_CLASS@達。もはや@L_WHAT@は風前の灯火――と、その時。　@STH00@')
             ,
-            new SctItm('為す術も無く狼狽える@L_CLASS@達――と、その時！　@STH00@')
+            new SctItm('為す術も無く狼狽える@L_CLASS@達――と、その時。　@STH00@')
         ]
     }
 }
@@ -436,11 +434,11 @@ class selector_storyH00 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@STH00@');
         this.itms = [
-            new SctItm('そんな@KEIN@騒ぎを聞きつけ、@KEIP@@L_HEROJOB@@L_HEROTYPE@がやってきました。@STH01@')
+            new SctItm('そんな@KEIN@騒ぎを聞きつけ、やってきたのは@KEIP@@L_HEROJOB@@L_HEROTYPE@！@STH01@')
             ,
-            new SctItm('鳴り響く@KEIP@@MUSIC@と共に、@L_HEROJOB@@L_HEROTYPE@が参上しました。@STH01@')
+            new SctItm('鳴り響く@KEIP@@MUSIC@と共に、@L_HEROJOB@@L_HEROTYPE@、只今参上！@STH01@')
             ,
-            new SctItm('見るも@KEIP@@DRESS@をひるがえし、@L_HEROJOB@@L_HEROTYPE@が登場しました。@STH01@')
+            new SctItm('見るも@KEIP@@DRESS@をひるがえし、舞い降りたのは@L_HEROJOB@@L_HEROTYPE@！@STH01@')
         ]
     }
 }
@@ -450,9 +448,9 @@ class selector_storyH01 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@STH01@');
         this.itms = [
-            new SctItm('<br>「人呼んで@ITEM@の@NICKGOOD@！ @L_HEROFULLNAME@参上！」」<br>　@STH_E@')
+            new SctItm('<br>「人呼んで@ITEM@の@NICKGOOD@！ @L_HEROFULLNAME@とは私のことだ！」<br>　@STH_E@')
             ,
-            new SctItm('<br>「待たせたな！ @L_HERO@が相手だ！」<br>　@STH_E@')
+            new SctItm('<br>「待たせたな！ この@L_HERO@が相手になろう！」<br>　@STH_E@')
             ,
             new SctItm('<br>「そこまでだ！ @L_HERO@が容赦はしないぞ！」<br>　@STH_E@')
         ]
@@ -466,7 +464,7 @@ class selector_storyH_E extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('驚いた@L_EVILTYPE@@L_EM@@L_EVILNAME@、「ぬぬ！ @L_HERONAME@め！ 邪魔立てするな！」<br>　@STE02@')
             ,
-            new SctItm('@L_EVILJOB@@L_EVILTYPE@はいきり立ちます。「来たな@L_HERONAME@！ 覚悟せよ！」<br>　@STE02@')
+            new SctItm('@L_EVILJOB@@L_EVILTYPE@はいきり立つ。「来たな@L_HERONAME@！ 覚悟せよ！」<br>　@STE02@')
             ,
             new SctItm('@L_EVILTYPE@@L_EM@@L_EVILNAME@は慌てず高笑い。「ヌハハハ！ 此処であったが百年目！ 勝負だ@L_HERONAME@！ 」<br>　@STE02@')
         ]
@@ -477,7 +475,7 @@ class selector_storyE02 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@STE02@');
         this.itms = [
-            new SctItm('@L_EVILJOB@@L_EVILTYPE@は襲いかかります！「喰らえ！ @EVILATTACK@」<br>　@STH03@')
+            new SctItm('襲いかかる@L_EVILJOB@@L_EVILTYPE@！「喰らえ！ @EVILATTACK@」<br>　@STH03@')
             ,
             new SctItm('@L_EVILJOB@@L_EVILTYPE@の攻撃！ 「死ね！ @EVILATTACK@」<br>　@STH03@')
             ,
@@ -493,6 +491,8 @@ class selector_storyH02 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@L_HEROFULLNAME@は必殺の構え！ 「覚悟だ！ @HEROATTACK@」<br>　@STE03@')
             ,
             new SctItm('@L_HEROFULLNAME@の攻撃！ 「トドメだ！ @HEROATTACK@」<br>　@STE03@')
+            ,
+            new SctItm('@L_HEROFULLNAME@は相手を見据えて 「トドメだ！ @HEROATTACK@」<br>　@STE03@')
         ]
     }
 }
@@ -516,7 +516,7 @@ class selector_storyE03 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('それを@L_EVILTYPE@@L_HM@@L_EVILNAME@は払いのけ、「そんな@NICKBAD@みたいな技が効くものか！」')
             ,
-            new SctItm('しかし、@L_EVILTYPE@@L_HM@@L_EVILNAME@には効きません！ 「フハハ、俺様の勝ちだ！」')
+            new SctItm('しかし、@L_EVILTYPE@@L_HM@@L_EVILNAME@通じない！ 「フハハ、俺様の勝ちだ！」')
         ]
     }
 }
