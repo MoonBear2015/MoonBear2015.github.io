@@ -348,8 +348,8 @@ class selector_storyH02 extends SctItm_Selector {
         super('@STH02@');
         this.itms = [
             new SctItm('@L_HEROFULLNAME@は必殺の構え！ 「覚悟だ！ @HEROATTACK@」<br>　@STE03@'),
-            new SctItm('@L_HEROFULLNAME@の攻撃！ 「トドメだ！ @HEROATTACK@」<br>　@STE03@'),
-            new SctItm('@L_HEROFULLNAME@は相手を見据えて 「トドメだ！ @HEROATTACK@」<br>　@STE03@')
+            new SctItm('@L_HEROFULLNAME@は攻撃する！ 「トドメだ！ @HEROATTACK@」<br>　@STE03@'),
+            new SctItm('@L_HEROFULLNAME@の技が放たれた！ 「受けてみよ！ @HEROATTACK@」<br>　@STE03@')
         ];
     }
 }
@@ -358,8 +358,9 @@ class selector_storyH03 extends SctItm_Selector {
     constructor() {
         super('@STH03@');
         this.itms = [
-            new SctItm('@L_HERONAME@はヒラリとかわし、「仕方ない、我が裁きを受けよ！」<br>　@STH02@'),
-            new SctItm('それを@L_HERONAME@は弾き返す！ 「悪が栄える試しは無い！」<br>　@STH02@')
+            new SctItm('「仕方ない、我が裁きを受けよ！」と言いつつ、@KEIP@@L_HEROJOB@@L_HEROTYPE@はヒラリとかわす！<br>　@STH02@'),
+            new SctItm('それを@KEIP@@L_HEROJOB@@L_HEROTYPE@は弾き返す！ 「悪が栄える試しは無い！」<br>　@STH02@'),
+            new SctItm('「それで正義が揺らぐものか！」@KEIP@@L_HEROJOB@@L_HEROTYPE@はビクともしない！<br>　@STH02@')
         ];
     }
 }
@@ -367,9 +368,9 @@ class selector_storyE03 extends SctItm_Selector {
     constructor() {
         super('@STE03@');
         this.itms = [
-            new SctItm('それを@L_EVILTYPE@@L_HM@@L_EVILNAME@はガッチリ受け止め、「フン、この程度か！」'),
-            new SctItm('それを@L_EVILTYPE@@L_HM@@L_EVILNAME@は払いのけ、「そんな@NICKBAD@みたいな技が効くものか！」'),
-            new SctItm('しかし、@L_EVILTYPE@@L_HM@@L_EVILNAME@通じない！ 「フハハ、俺様の勝ちだ！」')
+            new SctItm('それを@L_EVILTYPE@@L_EM@@L_EVILNAME@はガッチリ受け止め、「フン、この程度か！」'),
+            new SctItm('それを@L_EVILTYPE@@L_EM@@L_EVILNAME@は払いのけ、「そんな@NICKBAD@みたいな技が効くものか！」'),
+            new SctItm('しかし、@L_EVILTYPE@@L_EM@@L_EVILNAME@通じない！ 「フハハ、俺様の勝ちだ！」')
         ];
     }
 }
