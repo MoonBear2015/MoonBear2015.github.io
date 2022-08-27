@@ -392,7 +392,7 @@ class selector_storyE00 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@STE00@');
         this.itms = [
-            new SctItm('その@L_WHAT@に現れた、見るも@KEIN@謎の@L_EVILTYPE@――。@STE01@')
+            new SctItm('そこに訪れた見るも@KEIN@謎の@L_EVILTYPE@――。@STE01@')
             ,
             new SctItm('そんな@KEIP@@L_WHAT@に、@KEIN@姿形の@L_EVILJOB@@L_EVILTYPE@が姿を現した――。@STE01@')
         ]
