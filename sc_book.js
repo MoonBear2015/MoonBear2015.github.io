@@ -7,7 +7,7 @@ function set_book() {
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B00.59';
+    html += ' B00.60';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -295,9 +295,9 @@ class selector_storyE_C extends SctItm_Selector {
     constructor() {
         super('@STE_C@');
         this.itms = [
-            new SctItm('@L_CLASS@達は大慌て。このまま@L_WHAT@は征服されてしまうのか。――と、その時！<br>　@STH00@'),
-            new SctItm('逃げ惑う@L_CLASS@達。もはや@L_WHAT@は風前の灯火――と、その時！<br>　@STH00@'),
-            new SctItm('為す術も無く狼狽える@L_CLASS@達――と、その時！<br>　@STH00@')
+            new SctItm('@L_CLASS@達は大慌て。このまま@L_WHAT@は征服されてしまうのか。――と、その時！　@STH00@'),
+            new SctItm('逃げ惑う@L_CLASS@達。もはや@L_WHAT@は風前の灯火――と、その時！　@STH00@'),
+            new SctItm('為す術も無く狼狽える@L_CLASS@達――と、その時！　@STH00@')
         ];
     }
 }
@@ -338,7 +338,7 @@ class selector_storyE02 extends SctItm_Selector {
     constructor() {
         super('@STE02@');
         this.itms = [
-            new SctItm('@L_EVILJOB@@L_EVILTYPE@は襲いかかります。「喰らえ！ @EVILATTACK@」<br>　@STH03@'),
+            new SctItm('@L_EVILJOB@@L_EVILTYPE@は襲いかかります！「喰らえ！ @EVILATTACK@」<br>　@STH03@'),
             new SctItm('@L_EVILJOB@@L_EVILTYPE@の攻撃！ 「死ね！ @EVILATTACK@」<br>　@STH03@'),
             new SctItm('襲い掛かる@L_EVILJOB@@L_EVILTYPE@！ 「くたばれ！ @EVILATTACK@」<br>　@STH03@')
         ];
