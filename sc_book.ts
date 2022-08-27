@@ -418,11 +418,11 @@ class selector_storyE_C extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@STE_C@');
         this.itms = [
-            new SctItm('@L_CLASS@達は大慌て。このまま@L_WHAT@は征服されてしまうのか。――と、その時。<br>　@STH00@')
+            new SctItm('@L_CLASS@達は大慌て。このまま@L_WHAT@は征服されてしまうのか。――と、その時、@STH00@')
             ,
-            new SctItm('逃げ惑う@L_CLASS@達。もはや@L_WHAT@は風前の灯火――と、その時。<br>　@STH00@')
+            new SctItm('逃げ惑う@L_CLASS@達。もはや@L_WHAT@は風前の灯火――と、その時、@STH00@')
             ,
-            new SctItm('為す術も無く狼狽える@L_CLASS@達――と、その時。<br>　@STH00@')
+            new SctItm('為す術も無く狼狽える@L_CLASS@達――と、その時、@STH00@')
         ]
     }
 }
