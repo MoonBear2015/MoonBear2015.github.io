@@ -7,7 +7,7 @@ function set_book() {
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B00.67';
+    html += ' B00.69';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -309,7 +309,7 @@ class selector_storyH00 extends SctItm_Selector {
         super('@STH00@');
         this.itms = [
             new SctItm('そんな@KEIN@騒ぎを聞きつけ、やってきたのは@KEIP@@L_HEROJOB@@L_HEROTYPE@！<br>@STH01@'),
-            new SctItm('鳴り響く@KEIP@@MUSIC@と共に、@L_HEROJOB@@L_HEROTYPE@、只今参上！<br>@STH01@'),
+            new SctItm('鳴り響く@KEIP@@MUSIC@と共に、現れたのは@L_HEROJOB@@L_HEROTYPE@！<br>@STH01@'),
             new SctItm('見るも@KEIP@@DRESS@をひるがえし、舞い降りたのは@L_HEROJOB@@L_HEROTYPE@！<br>@STH01@')
         ];
     }
@@ -321,7 +321,12 @@ class selector_storyH01 extends SctItm_Selector {
         this.itms = [
             new SctItm('「人呼んで@ITEM@の@NICKGOOD@！ @L_HEROFULLNAME@とは私のことだ！」<br>@STH_E@'),
             new SctItm('「待たせたな！ この@L_HERO@が相手になろう！」<br>@STH_E@'),
-            new SctItm('「そこまでだ！ @L_HERO@が容赦はしないぞ！」<br>@STH_E@')
+            new SctItm('「そこまでだ！ @L_HERO@が容赦はしないぞ！」<br>@STH_E@'),
+            new SctItm('「@L_HERO@、只今参上！」<br>@STH_E@'),
+            new SctItm('「人呼んで@ITEM@の@NICKGOOD@！ @L_HEROFULLNAME@とは私のことだ！」<br>@STH_C@'),
+            new SctItm('「待たせたな！ この@L_HERO@が相手になろう！」<br>@STH_C@'),
+            new SctItm('「そこまでだ！ @L_HERO@が容赦はしないぞ！」<br>@STH_C@'),
+            new SctItm('「@L_HERO@、只今参上！」<br>@STH_C@')
         ];
     }
 }
@@ -367,7 +372,7 @@ class selector_storyH03 extends SctItm_Selector {
         ];
     }
 }
-// 04:ヒーロー負け
+// 04:怪人⇒ヒーロー負け
 class selector_storyH04 extends SctItm_Selector {
     constructor() {
         super('@STH04@');
@@ -375,6 +380,27 @@ class selector_storyH04 extends SctItm_Selector {
             new SctItm('「し、しまった！」 チュドーン！ @KEIP@@L_HERONAME@は吹き飛ばされた！<br><br>@STEEND'),
             new SctItm('「あ・・・！」 ドカーン！！ @L_HERONAME@は大爆発！<br><br>@STEEND'),
             new SctItm('「やられたっ！」 ズドドドーン！ @L_HERONAME@は倒された！<br><br>@STEEND')
+        ];
+    }
+}
+// 04:住人⇒ヒーロー負け
+class selector_storyH05 extends SctItm_Selector {
+    constructor() {
+        super('@STH05@');
+        this.itms = [
+            new SctItm('「ご、ごめんなさい！」 チュドーン！ @KEIP@@L_HERONAME@は謝罪会見！<br>@STE05@'),
+            new SctItm('「は、反省してます！」 ドカーン！！ @L_HERONAME@は余罪で逮捕された！<br>@STE05@'),
+            new SctItm('「も、もうしませんっ！」 ズドドドーン！ @L_HERONAME@はアカウント炎上削除！<br>@STE05@')
+        ];
+    }
+}
+// 04:住人⇒怪人負け
+class selector_storyE05 extends SctItm_Selector {
+    constructor() {
+        super('@STE05@');
+        this.itms = [
+            new SctItm('「あれ？ 俺も？」 チュドーン！ @L_EVILJOB@@L_EVILTYPE@も冤罪逮捕！<br><br>@STCEND'),
+            new SctItm('「い、いや、俺は違うぞ！」 ドカーン！ @L_EVILJOB@@L_EVILTYPE@にも誤解炎上！<br><br>@STCEND')
         ];
     }
 }
@@ -389,6 +415,16 @@ class selector_storyEEND extends SctItm_Selector {
         ];
     }
 }
+// END:住人勝利
+class selector_storyCEND extends SctItm_Selector {
+    constructor() {
+        super('@STCEND');
+        this.itms = [
+            new SctItm('　数の暴力！ @L_CLASS@達の大勝利！<br>「住民パワーで世界平和だ！」<br>　@HEROCATCH@@L_HERONAME@！ ついでに@HEROCATCH@@L_EVILNAME@！<br>　英雄達に未来は来るか？<br>(続く)'),
+            new SctItm('　数の暴力！ @L_CLASS@達の大勝利！<br>「ペンは剣よりも強いのだ！」<br>　@HEROCATCH@@L_HERONAME@！ そして@HEROCATCH@@L_EVILNAME@！<br>　ヒーロー達の明日はどっちだ？<br>(続く)')
+        ];
+    }
+}
 class selector_storyE03 extends SctItm_Selector {
     constructor() {
         super('@STE03@');
@@ -396,6 +432,27 @@ class selector_storyE03 extends SctItm_Selector {
             new SctItm('　それを@L_EVILTYPE@@L_EM@@L_EVILNAME@はガッチリ受け止め、「フン、この程度か！　@EVILATTACK@」<br>@STH04@'),
             new SctItm('　それを@L_EVILTYPE@@L_EM@@L_EVILNAME@は払いのけ、「そんな@NICKBAD@みたいな技が効くものか！　@EVILATTACK@」<br>@STH04@'),
             new SctItm('　しかし、@L_EVILTYPE@@L_EM@@L_EVILNAME@通じない！ 「フハハ、俺様の勝ちだ！　@EVILATTACK@」<br>@STH04@')
+        ];
+    }
+}
+// H_C:ヒーロー⇒住人
+class selector_storyH_C extends SctItm_Selector {
+    constructor() {
+        super('@STH_C@');
+        this.itms = [
+            new SctItm('　ところが、何故か騒ぎ出す@L_CLASS@達 「では、貴様はこの@L_WHAT@で@DOING02@いた@L_HERONAME@ではないか！」<br>@STC01@'),
+            new SctItm('　ところが、@L_CLASS@達はおかしな様子 「お前はウチの@ANIMAL@を盗んだ@L_HERONAME@ではないか！」<br>@STC01@'),
+            new SctItm('　その時、@L_CLASS@の一人が指さし、「この間、うちで@FOOD@を盗み食いした@L_HERONAME@だな？」<br>@STC01@')
+        ];
+    }
+}
+// 01:住人攻撃
+class selector_storyC01 extends SctItm_Selector {
+    constructor() {
+        super('@STC01@');
+        this.itms = [
+            new SctItm('　狼狽える@L_HEROJOB@@L_HEROTYPE@だが@L_CLASS@達は問答無用！ 思い知れ！ @CLASSATTACK@」<br>@STH05@'),
+            new SctItm('　もはや@L_HERONAME@の言い訳も聞かず、「思い知れ！ @CLASSATTACK@」<br>@STH05@')
         ];
     }
 }
@@ -430,6 +487,19 @@ class selector_heroattack extends SctItm_Selector {
         ];
     }
 }
+class selector_classattack extends SctItm_Selector {
+    constructor() {
+        super('@CLASSATTACK@');
+        this.itms = [
+            new SctItm('@L_CLASS@ハラスメント！'),
+            new SctItm('@L_CLASS@シュプレヒコール！'),
+            new SctItm('@L_CLASS@集団訴訟！'),
+            new SctItm('@L_CLASS@リツイート！'),
+            new SctItm('@L_CLASS@デモ行進！'),
+            new SctItm('@L_CLASS@不買運動！')
+        ];
+    }
+}
 class book_docs_maker extends news_docs_maker {
     constructor() {
         super();
@@ -446,6 +516,7 @@ class book_docs_maker extends news_docs_maker {
         this.dic_push(new selector_storyE01());
         this.dic_push(new selector_storyE02());
         this.dic_push(new selector_storyE03());
+        this.dic_push(new selector_storyE05());
         this.dic_push(new selector_storyE_C());
         this.dic_push(new selector_storyEEND());
         this.dic_push(new selector_storyH00());
@@ -453,8 +524,13 @@ class book_docs_maker extends news_docs_maker {
         this.dic_push(new selector_storyH02());
         this.dic_push(new selector_storyH03());
         this.dic_push(new selector_storyH04());
+        this.dic_push(new selector_storyH05());
         this.dic_push(new selector_storyH_E());
+        this.dic_push(new selector_storyH_C());
+        this.dic_push(new selector_storyC01());
+        this.dic_push(new selector_storyCEND());
         this.dic_push(new selector_evilattack());
         this.dic_push(new selector_heroattack());
+        this.dic_push(new selector_classattack());
     }
 }
