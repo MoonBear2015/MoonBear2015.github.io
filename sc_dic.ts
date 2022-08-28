@@ -5341,6 +5341,16 @@ const   itms_what = [
     new SctItm('下町','WHAT/Downtown.jpg')
     ,
     new SctItm('スタジアム','WHAT/stadium.jpg')
+    ,
+    new SctItm('アルプス','WHAT/Alps.jpg')
+    ,
+    new SctItm('砂漠','WHAT/desert.jpg')
+    ,
+    new SctItm('グランドキャニオン','WHAT/grand-canyon.jpg')
+    ,
+    new SctItm('富士山','WHAT/fuji.jpg')
+    ,
+    new SctItm('スイス','WHAT/switzerland.jpg')
 ];
 
 
