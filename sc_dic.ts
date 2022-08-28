@@ -5734,8 +5734,6 @@ const   itms_class = [
     ,
     new SctItm('漫才師')
     ,
-    new SctItm('漫才師')
-    ,
     new SctItm('コメディアン')
     ,
     new SctItm('ストリッパー')
@@ -5810,6 +5808,8 @@ const   itms_class = [
     ,
     new SctItm('公務員')
     ,
+    new SctItm('国会議員')
+    ,
     new SctItm('機関士')
     ,
     new SctItm('野鳥の会')
@@ -5849,6 +5849,10 @@ const   itms_class = [
     new SctItm('道化師')
     ,
     new SctItm('ピエロ')
+    ,
+    new SctItm('手品師')
+    ,
+    new SctItm('マジシャン')
     ,
     new SctItm('庭師')
     ,
@@ -5971,6 +5975,8 @@ const   itms_class = [
     new SctItm('狼男')
     ,
     new SctItm('吸血鬼')
+    ,
+    new SctItm('化け猫')
 ];
 
 

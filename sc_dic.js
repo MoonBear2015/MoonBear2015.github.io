@@ -3677,7 +3677,6 @@ const itms_class = [
     new SctItm('ラーメン屋'),
     new SctItm('落語家'),
     new SctItm('漫才師'),
-    new SctItm('漫才師'),
     new SctItm('コメディアン'),
     new SctItm('ストリッパー'),
     new SctItm('キャバクラ嬢'),
@@ -3715,6 +3714,7 @@ const itms_class = [
     new SctItm('牛乳配達員'),
     new SctItm('郵便局員'),
     new SctItm('公務員'),
+    new SctItm('国会議員'),
     new SctItm('機関士'),
     new SctItm('野鳥の会'),
     new SctItm('牧師'),
@@ -3735,6 +3735,8 @@ const itms_class = [
     new SctItm('独裁者'),
     new SctItm('道化師'),
     new SctItm('ピエロ'),
+    new SctItm('手品師'),
+    new SctItm('マジシャン'),
     new SctItm('庭師'),
     new SctItm('植木屋'),
     new SctItm('狩人'),
@@ -3795,7 +3797,8 @@ const itms_class = [
     new SctItm('半魚人'),
     new SctItm('人狼'),
     new SctItm('狼男'),
-    new SctItm('吸血鬼')
+    new SctItm('吸血鬼'),
+    new SctItm('化け猫')
 ];
 const itms_shop = [
     new SctItm('BICYCLE', 'SHOP/BICYCLE01.jpg', '自転車'),
