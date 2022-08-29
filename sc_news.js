@@ -2213,7 +2213,7 @@ class selector_doing extends SctItm_Selector {
             new SctItm('@DOING01@泣いて'),
             new SctItm('@DOING01@泣き叫んで'),
             new SctItm('@DOING01@涙を流して'),
-            new SctItm('@DOING01@@DOING02@')
+            new SctItm('@DOING01@油を売って')
         ];
     }
 }
@@ -2255,6 +2255,7 @@ class selector_doing02 extends SctItm_Selector {
             new SctItm('@FOOD@を配達して'),
             new SctItm('@FOOD@を注文して'),
             new SctItm('@FOOD@を平らげて'),
+            new SctItm('@FOOD@を食い逃げして'),
             new SctItm('@FOOD@の店を開いて'),
             new SctItm('@L_CLASS@に憧れて'),
             new SctItm('@L_CLASS@に恋をして'),
@@ -2333,6 +2334,8 @@ class selector_doing02 extends SctItm_Selector {
             new SctItm('@DRESS@に着替えて'),
             new SctItm('@DRESS@を洗濯して'),
             new SctItm('@DRESS@を仮縫いして'),
+            new SctItm('@DRESS@を試着して'),
+            new SctItm('@DRESS@を仕立て直して'),
             new SctItm('@SCHOOL@に通って'),
             new SctItm('@SCHOOL@に入学して'),
             new SctItm('@SCHOOL@に合格して'),
