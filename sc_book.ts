@@ -9,7 +9,7 @@ function set_book()
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B00.72';
+    html += ' B00.73';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -440,7 +440,7 @@ class selector_storyH00 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@STH00@');
         this.itms = [
-            new SctItm('そんな@KEIN@騒ぎを聞きつけ、やってきたのは@KEIP@@L_HEROJOB@@L_HEROTYPE@！<br>@STH01@')
+            new SctItm('そんな@KEIN@騒ぎを聞きつけ、やってきたのは@KEIDP@@KEIP@@L_HEROJOB@@L_HEROTYPE@！<br>@STH01@')
             ,
             new SctItm('鳴り響く@KEIP@@MUSIC@と共に、現れたのは@L_HEROJOB@@L_HEROTYPE@！<br>@STH01@')
             ,

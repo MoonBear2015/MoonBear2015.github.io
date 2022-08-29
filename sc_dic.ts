@@ -7231,12 +7231,6 @@ const   itms_ride = [
     ,
     new SctItm('飛行船')
     ,
-    new SctItm('箒')
-    ,
-    new SctItm('風')
-    ,
-    new SctItm('雲')
-    ,
     new SctItm('筋斗雲')
     ,
     new SctItm('@L_ANIMAL@')
@@ -7705,6 +7699,8 @@ const   itms_hero_type = [
     ,
     new SctItm('王')
     ,
+    new SctItm('王者')
+    ,
     new SctItm('王子')
     ,
     new SctItm('王女')
@@ -7718,8 +7714,6 @@ const   itms_hero_type = [
     new SctItm('ロボ')
     ,
     new SctItm('天使')
-    ,
-    new SctItm('マン')
     ,
     new SctItm('レディー')
     ,
