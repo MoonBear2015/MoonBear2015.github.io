@@ -3487,6 +3487,8 @@ class selector_doing02 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@DRESS@を仕立て直して')
             ,
+            new SctItm('ドレスアップして')
+            ,
             new SctItm('@SCHOOL@に通って')
             ,
             new SctItm('@SCHOOL@に入学して')

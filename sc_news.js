@@ -2336,6 +2336,7 @@ class selector_doing02 extends SctItm_Selector {
             new SctItm('@DRESS@を仮縫いして'),
             new SctItm('@DRESS@を試着して'),
             new SctItm('@DRESS@を仕立て直して'),
+            new SctItm('ドレスアップして'),
             new SctItm('@SCHOOL@に通って'),
             new SctItm('@SCHOOL@に入学して'),
             new SctItm('@SCHOOL@に合格して'),
