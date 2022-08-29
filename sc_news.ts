@@ -2049,6 +2049,19 @@ class selector_country extends SctItm_Selector implements ISctItm_Selector {
         this.Add(cods_to_itms(cods_country2));
     }
 }
+
+class selector_bird extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@BIRD@');
+        this.Add(cods_bird.slice(1));
+        this.Add(cods_bird_spring.slice(1));
+        this.Add(cods_bird_summer.slice(1));
+        this.Add(cods_bird_autumn.slice(1));
+        this.Add(cods_bird_winter.slice(1));
+    }
+}
+
+
 class selector_animal extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@ANIMAL@');
@@ -4013,6 +4026,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_dance());
         this.dic_push(new selector_tech());
         this.dic_push(new locker_tech());
+        this.dic_push(new selector_bird());
         this.dic_push(new selector_animal());
         this.dic_push(new locker_animal());
         this.dic_push(new selector_livestock());
