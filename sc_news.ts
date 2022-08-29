@@ -3342,21 +3342,21 @@ class selector_doing02 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@FOOD@の店を開いて')
             ,
-            new SctItm('@L_CLASS@に憧れて')
+            new SctItm('@CLASS@に憧れて')
             ,
-            new SctItm('@L_CLASS@に恋をして')
+            new SctItm('@CLASS@に恋をして')
             ,
-            new SctItm('@L_CLASS@を目指して')
+            new SctItm('@CLASS@を目指して')
             ,
-            new SctItm('@L_CLASS@を雇って')
+            new SctItm('@CLASS@を雇って')
             ,
-            new SctItm('@L_CLASS@を召還して')
+            new SctItm('@CLASS@を召還して')
             ,
-            new SctItm('@L_CLASS@を募集して')
+            new SctItm('@CLASS@を募集して')
             ,
-            new SctItm('@L_CLASS@を呼び出して')
+            new SctItm('@CLASS@を呼び出して')
             ,
-            new SctItm('@L_CLASS@に変身して')
+            new SctItm('@CLASS@に変身して')
             ,
             new SctItm('@PLACE@に住んで')
             ,
@@ -3512,19 +3512,19 @@ class selector_doing02 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@SCHOOL@を中退して')
             ,
-            new SctItm('@L_FLOWER@の花を|捧|ささ|げて')
+            new SctItm('@FLOWER@の花を|捧|ささ|げて')
             ,
-            new SctItm('@L_FLOWER@の花を咲かせて')
+            new SctItm('@FLOWER@の花を咲かせて')
             ,
-            new SctItm('@L_FLOWER@の花を飾って')
+            new SctItm('@FLOWER@の花を飾って')
             ,
-            new SctItm('@L_FLOWER@の花の絵を描いて')
+            new SctItm('@FLOWER@の花の絵を描いて')
             ,
-            new SctItm('@L_FLOWER@の花びらを散らして')
+            new SctItm('@FLOWER@の花びらを散らして')
             ,
-            new SctItm('@L_FLOWER@の花を|咥|くわ|えて')
+            new SctItm('@FLOWER@の花を|咥|くわ|えて')
             ,
-            new SctItm('@L_FLOWER@の種を|蒔|ま|いて')
+            new SctItm('@FLOWER@の種を|蒔|ま|いて')
             ,
             new SctItm('@FRUIT@の皮を|剥|む|いて')
             ,
