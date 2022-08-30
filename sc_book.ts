@@ -9,7 +9,7 @@ function set_book()
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B00.81';
+    html += ' B00.82';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -484,11 +484,11 @@ class selector_storyH_E extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@STH_E@');
         this.itms = [
-            new SctItm('「ぬぬ、@L_HEROJOB@@L_HEROTYPE@だと？」と、@L_EVILJOB@@L_EVILTYPE@は驚いたが、@STE02@')
+            new SctItm('「ぬぬ、@L_HEROJOB@@L_HEROTYPE@だと？」と驚く@L_EVILJOB@@L_EVILTYPE@、しかし、それも束の間。<br>@STE02@')
             ,
-            new SctItm('「来たな@L_HERONAME@！ 覚悟せよ！」と、@L_EVILJOB@@L_EVILTYPE@は勇み立ち、@STE02@')
+            new SctItm('「来たな@L_HERONAME@！ 覚悟せよ！」と、@L_EVILJOB@@L_EVILTYPE@は勇み立つ。<br>@STE02@')
             ,
-            new SctItm('「ヌハハハ！ 此処であったが百年目！ 勝負だ@L_HERONAME@！ 」と、@L_EVILJOB@@L_EVILTYPE@は不敵に笑い、@STE02@')
+            new SctItm('「ヌハハハ！ 此処であったが百年目！ 勝負だ@L_HERONAME@！ 」と、@L_EVILJOB@@L_EVILTYPE@は不敵に笑う。<br>@STE02@')
         ]
     }
 }
@@ -497,11 +497,11 @@ class selector_storyE02 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@STE02@');
         this.itms = [
-            new SctItm('@KEIN@@NICKBAD@のような@KEIN@形相で@L_HEROFULLNAME@に襲いかかる！<br>「喰らえ！ @EVILATTACK@」<br>@SEL02@')
+            new SctItm('　@KEIN@@NICKBAD@のような@KEIN@形相で@L_HEROFULLNAME@に襲いかかる！<br>「喰らえ！ @EVILATTACK@」<br>@SEL02@')
             ,
-            new SctItm('@KEIN@@ANIMAL@のような@KEIN@勢いで@L_HEROFULLNAME@に飛びかかった！<br>「死ね！ @EVILATTACK@」<br>@SEL02@')
+            new SctItm('　@KEIN@@ANIMAL@のような@KEIN@勢いで@L_HEROFULLNAME@に飛びかかった！<br>「死ね！ @EVILATTACK@」<br>@SEL02@')
             ,
-            new SctItm('@KEIN@@BIRD@の構えで@KEIDN@@KEIN@技を繰り出した！<br>「くたばれ！ @EVILATTACK@」<br>@SEL02@')
+            new SctItm('　@KEIN@@BIRD@の構えで@KEIDN@@KEIN@技を繰り出した！<br>「くたばれ！ @EVILATTACK@」<br>@SEL02@')
         ]
     }
 }
