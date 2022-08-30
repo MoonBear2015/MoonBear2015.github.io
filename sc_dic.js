@@ -3484,10 +3484,14 @@ const itms_what = [
     new SctItm('下町', 'WHAT/Downtown.jpg'),
     new SctItm('スタジアム', 'WHAT/stadium.jpg'),
     new SctItm('アルプス', 'WHAT/Alps.jpg'),
-    new SctItm('砂漠', 'WHAT/desert.jpg'),
+    new SctItm('サハラ砂漠', 'WHAT/desert.jpg'),
+    new SctItm('アラビア砂漠', 'WHAT/desert.jpg'),
+    new SctItm('ゴビ砂漠', 'WHAT/desert.jpg'),
     new SctItm('グランドキャニオン', 'WHAT/grand-canyon.jpg'),
     new SctItm('富士山', 'WHAT/fuji.jpg'),
-    new SctItm('スイス', 'WHAT/switzerland.jpg')
+    new SctItm('スイス', 'WHAT/switzerland.jpg'),
+    new SctItm('ナイル川', 'WHAT/nile_river.jpg'),
+    new SctItm('アマゾン川', 'WHAT/amazons.jpg')
 ];
 const itms_city = [
     new SctItm('東京', 'CITY/tokyo.jpg'),
