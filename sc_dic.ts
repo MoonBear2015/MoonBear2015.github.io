@@ -2471,12 +2471,26 @@ const   cods_move_make = [
 ];
 
 
-const   cods_ad_sense = [
+const   cods_ad_sense_p = [
     new SctCod_Mv('|美味|おい|しい')
     ,
-    new SctCod_Mv('|不味|まず|い')
-    ,
     new SctCod_Mv('|甘|あま|い')
+    ,
+    new SctCod_Mv('|甘辛|あまから|い')
+    ,
+    new SctCod_Mv('|涼|すず|しい')
+    ,
+    new SctCod_Mv('|暖|あたた|かい')
+    ,
+    new SctCod_Mv('|明|あか|るい')
+    ,
+    new SctCod_Mv('|目映|まばゆ|い')
+    ,
+    new SctCod_Mv('|眩|まぶ|しい')
+    
+];
+const   cods_ad_sense_n = [
+    new SctCod_Mv('|不味|まず|い')
     ,
     new SctCod_Mv('|辛|から|い')
     ,
@@ -2498,44 +2512,21 @@ const   cods_ad_sense = [
     ,
     new SctCod_Mv('|寒|さむ|い')
     ,
-    new SctCod_Mv('|涼|すず|しい')
-    ,
-    new SctCod_Mv('|暖|あたた|かい')
-    ,
     new SctCod_It('ぬるい')
     ,
     new SctCod_It('|生|なま|ぬるい')
     ,
-    new SctCod_Mv('|明|あか|るい')
-    ,
     new SctCod_Mv('|暗|くら|い')
     ,
     new SctCod_Mv('|薄暗|うすぐら|い')
-    ,
-    new SctCod_Mv('|目映|まばゆ|い')
-    ,
-    new SctCod_Mv('|眩|まぶ|しい')
-    
 ];
 
-const   cods_adv_sense = [
+const   cods_adv_sense_p = [
     new SctCod_It('|美味|おい|しく')
     ,
     new SctCod_It('|甘|あま|く')
     ,
-    new SctCod_It('|辛|から|く')
-    ,
-    new SctCod_It('|塩辛|しおから|く')
-    ,
-    new SctCod_It('しょっぱく')
-    ,
     new SctCod_It('|甘辛|あまから|く')
-    ,
-    new SctCod_It('|苦|にが|く')
-    ,
-    new SctCod_It('|熱|あつ|く')
-    ,
-    new SctCod_It('|冷|つめ|たく')
     ,
     // new SctCod_It('|暑|あつ|く')
     // ,
@@ -2543,11 +2534,31 @@ const   cods_adv_sense = [
     // ,
     // new SctCod_It('|寒|さむ|く')
     // ,
-    // new SctCod_It('|涼|すず|しく')
-    // ,
+    new SctCod_It('|涼|すず|しく')
+    ,
     new SctCod_It('|暖|あたた|かく')
     ,
     new SctCod_It('|明|あか|るく')
+];
+
+const   cods_adv_sense_n = [
+    new SctCod_It('|辛|から|く')
+    ,
+    new SctCod_It('|塩辛|しおから|く')
+    ,
+    new SctCod_It('しょっぱく')
+    ,
+    new SctCod_It('|苦|にが|く')
+    ,
+    new SctCod_It('|熱|あつ|く')
+    ,
+    new SctCod_It('|冷|つめ|たく')
+    ,
+    new SctCod_It('|暑|あつ|く')
+    ,
+    new SctCod_It('|蒸|む|し|暑|あつ|く')
+    ,
+    new SctCod_It('|寒|さむ|く')
     ,
     new SctCod_It('|暗|くら|く')
     ,
@@ -2784,19 +2795,19 @@ const   cods_ad_posi = [
     ,
     new SctCod_It('|楽|たの|しい')
     ,
-    new SctCod_It('|明|あか|るい')
-    ,
     new SctCod_It('|穏|おだ|やかな')
-    ,
-    new SctCod_It('|緩|ゆる|やかな')
     ,
     new SctCod_It('|平和|へいわ|な')
     ,
     new SctCod_It('|幸|しあわ|せな')
     ,
+    new SctCod_It('|素敵|すてき|な')
+    ,
     new SctCod_It('|豊|ゆた|かな')
     ,
     new SctCod_It('|優|やさ|しい')
+    ,
+    new SctCod_It('|緩|ゆる|やかな')
 ];
 const   cods_adv_posi = [
     new SctCod_It('|勇|いさ|ましく')
@@ -2812,8 +2823,6 @@ const   cods_adv_posi = [
     new SctCod_It('|喜|よろこ|ばしく')
     ,
     new SctCod_It('|楽|たの|しく')
-    ,
-    new SctCod_It('|明|あか|るく')
     ,
     // new SctCod_It('|穏|おだ|やかに')
     // ,
@@ -2838,6 +2847,8 @@ const   cods_ad_nega = [
     new SctCod_It('|憎|にく|たらしい')
     ,
     new SctCod_It('|薄暗|うすぐら|い')
+    ,
+    new SctCod_It('|醜|みにく|い')
 ];
 const   cods_adv_nega = [
     new SctCod_It('|五月蠅|うるさ|く')
@@ -2849,6 +2860,8 @@ const   cods_adv_nega = [
     new SctCod_It('|憎|にく|たらしく')
     ,
     new SctCod_It('|薄暗|うすぐら|く')
+    ,
+    new SctCod_It('|醜|みにく|く')
 ];
 
 

@@ -1938,7 +1938,8 @@ class selector_k extends SctItm_Selector implements ISctItm_Selector {
         super('@KEI3@');
         this.Add(cods_to_itms(cods_ad_beauty));
         this.Add(cods_to_itms(cods_ad_danger));
-        this.Add(cods_to_itms(cods_ad_sense));
+        this.Add(cods_to_itms(cods_ad_sense_n));
+        this.Add(cods_to_itms(cods_ad_sense_p));
         // this.Add(cods_to_itms(cods_ad_color));
         this.Add(cods_to_itms(cods_ad_jougo));
         this.Add(cods_to_itms(cods_ad_etc));
@@ -1950,7 +1951,8 @@ class selector_kd extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@KEI4@');
         this.Add(cods_to_itms(cods_adv_beauty));
-        this.Add(cods_to_itms(cods_adv_sense));
+        this.Add(cods_to_itms(cods_adv_sense_n));
+        this.Add(cods_to_itms(cods_adv_sense_p));
         this.Add(cods_to_itms(cods_adv_danger));
         this.Add(cods_to_itms(cods_adv_etc));
     }
@@ -1961,6 +1963,8 @@ class selector_kp extends SctItm_Selector implements ISctItm_Selector {
         super('@KEIP@');
         this.Add(cods_to_itms(cods_ad_posi));
         this.Add(cods_to_itms(cods_ad_beauty));
+        this.Add(cods_to_itms(cods_ad_sense_p));
+
     }
 }
 class selector_kdp extends SctItm_Selector implements ISctItm_Selector {
@@ -1968,6 +1972,7 @@ class selector_kdp extends SctItm_Selector implements ISctItm_Selector {
         super('@KEIDP@');
         this.Add(cods_to_itms(cods_adv_posi));
         this.Add(cods_to_itms(cods_adv_beauty));
+        this.Add(cods_to_itms(cods_adv_sense_p));
     }
 }
 class selector_kn extends SctItm_Selector implements ISctItm_Selector {
@@ -1975,6 +1980,7 @@ class selector_kn extends SctItm_Selector implements ISctItm_Selector {
         super('@KEIN@');
         this.Add(cods_to_itms(cods_ad_nega));
         this.Add(cods_to_itms(cods_ad_danger));
+        this.Add(cods_to_itms(cods_ad_sense_n));
     }
 }
 class selector_kdn extends SctItm_Selector implements ISctItm_Selector {
@@ -1982,6 +1988,7 @@ class selector_kdn extends SctItm_Selector implements ISctItm_Selector {
         super('@KEIDN@');
         this.Add(cods_to_itms(cods_adv_nega));
         this.Add(cods_to_itms(cods_adv_danger));
+        this.Add(cods_to_itms(cods_adv_sense_n));
     }
 }
 
