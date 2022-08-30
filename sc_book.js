@@ -7,7 +7,7 @@ function set_book() {
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B00.82';
+    html += ' B00.83';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -351,9 +351,9 @@ class selector_storyE02 extends SctItm_Selector {
     constructor() {
         super('@STE02@');
         this.itms = [
-            new SctItm('　@KEIN@@NICKBAD@のような@KEIN@形相で@L_HEROFULLNAME@に襲いかかる！<br>「喰らえ！ @EVILATTACK@」<br>@SEL02@'),
-            new SctItm('　@KEIN@@ANIMAL@のような@KEIN@勢いで@L_HEROFULLNAME@に飛びかかった！<br>「死ね！ @EVILATTACK@」<br>@SEL02@'),
-            new SctItm('　@KEIN@@BIRD@の構えで@KEIDN@@KEIN@技を繰り出した！<br>「くたばれ！ @EVILATTACK@」<br>@SEL02@')
+            new SctItm('　やがて、@NICKBAD@のような@KEIN@形相を浮かべて、@L_HEROFULLNAME@に襲いかかる！<br>「喰らえ！ @EVILATTACK@」<br>@SEL02@'),
+            new SctItm('　次の瞬間、@KEIN@@ANIMAL@のような@KEIN@勢いで@L_HEROFULLNAME@に飛びかかった！<br>「死ね！ @EVILATTACK@」<br>@SEL02@'),
+            new SctItm('　そして、@KEIN@@BIRD@の構えで@KEIDN@@KEIN@技を繰り出した！<br>「くたばれ@L_HERONAME@！ @EVILATTACK@」<br>@SEL02@')
         ];
     }
 }
