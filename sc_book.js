@@ -7,7 +7,7 @@ function set_book() {
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B00.90';
+    html += ' B00.91';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -486,8 +486,8 @@ class selector_storyH_C extends SctItm_Selector {
     constructor() {
         super('@STH_C@');
         this.itms = [
-            new SctItm('<br>　しかし、正義の味方のその姿に、何故か騒ぎ出す@L_WHAT@の@L_CLASS@達。<br> 「もしや、アイツはウチで@FOOD@を食い逃げした@L_HERONAME@ではないか？」<br>@STC01@'),
-            new SctItm('<br>　しかし、せっかく登場した正義の味方に、@L_WHAT@の@L_CLASS@達は不穏な様子。<br> 「ちょっと待て！ お前はウチの@ANIMAL@を盗んだ@L_HERONAME@だろう！」<br>@STC01@'),
+            new SctItm('<br>　しかし、正義の味方のその姿に、何故か騒ぎ出す@L_WHAT@の@L_CLASS@達。<br>「もしや、アイツはウチで@FOOD@を食い逃げした@L_HERONAME@ではないか？」<br>@STC01@'),
+            new SctItm('<br>　しかし、せっかく登場した正義の味方に、@L_WHAT@の@L_CLASS@達は不穏な様子。<br>「ちょっと待て！ お前はウチの@ANIMAL@を盗んだ@L_HERONAME@だろう！」<br>@STC01@'),
             new SctItm('<br>　その時、助けに来た正義の味方を、@L_WHAT@の@L_CLASS@達は指さして、<br>「間違いない！ 貴様はウチで@FOOD@を盗み食いした@L_HERONAME@だな？」<br>@STC01@')
         ];
     }
@@ -497,9 +497,10 @@ class selector_storyH_C2 extends SctItm_Selector {
     constructor() {
         super('@STH_C2@');
         this.itms = [
-            new SctItm('<br>　しかし、@L_WHAT@の@L_CLASS@達は認めない！<br> 「なんてことするんだ！ 暴力反対！」<br>「貴様も同じ、@KEIN@乱暴者ではないか！」<br><br>@STHLOSE@'),
-            new SctItm('<br>　何故か、@L_WHAT@の@L_CLASS@達は怒りだした！<br> 「相手が悪人だからって乱暴は良くない！」<br>「それで平和になると思うのか！」<br><br>@STHLOSE@'),
-            new SctItm('<br>　まだ、@L_WHAT@の@L_CLASS@達の恐怖は収まらない！<br> 「正義の味方？ どちらも同じじゃ無いか！」<br>「近づくな！ @KEIN@乱暴者は出て行け！」<br><br>@STHLOSE@')
+            new SctItm('<br>　しかし、@L_WHAT@の@L_CLASS@達は認めない！<br>「なんてことするんだ！ 暴力反対！」<br>「貴様も同じ、@KEIN@乱暴者ではないか！」<br><br>@STHLOSE@'),
+            new SctItm('<br>　何故か、@L_WHAT@の@L_CLASS@達は怒りだした！<br>「相手が悪人だからって乱暴は良くない！」<br>「それで平和になると思うのか！」<br><br>@STHLOSE@'),
+            new SctItm('<br>　まだ、@L_WHAT@の@L_CLASS@達の恐怖は収まらない！<br>「正義の味方？ どちらも同じじゃ無いか！」<br>「近づくな！ @KEIN@乱暴者は出て行け！」<br><br>@STHLOSE@'),
+            new SctItm('<br>　だが、@L_WHAT@の@L_CLASS@達は疑っている！<br>「今の戦い方は本気じゃないな？」<br>「お前ら、絶対にグルだろう！」<br>「そうやって、報酬を後で山分けする気だな！」<br><br>@STHLOSE@')
         ];
     }
 }
@@ -514,7 +515,7 @@ class selector_storyHLose extends SctItm_Selector {
             new SctItm('　@L_WHAT@から追われた@L_HEROFULLNAME@を待っていたのは、かつてのライバル、@L_EVILFULLNAME@であった。<br>「もう終わったんだ。俺達の時代は」「ああ、そうだな――」<br>　酒を酌み交わす英雄が二人・・・。<br><br>　@HEROCATCH@@L_HERONAME@！<br>　@HEROCATCH@@L_EVILNAME@！<br>　プロレス界が君達を待っている！<br>(続く)'),
             new SctItm('　@L_CLASS@から追いやられた@L_HEROFULLNAME@の側に、もはや敵ではなくなった、@L_EVILFULLNAME@の姿があった。<br>「――判ったか？ 俺達のすべきことが」「ああ、そうだな――」<br>　勇者の手に、@KEIDP@@KEIN@武器が手渡されていた。<br><br>　@HEROCATCH@@L_HERONAME@！<br>　@HEROCATCH@@L_EVILNAME@！<br>　世論を敵に回して勝てるのか？<br>(続く)'),
             new SctItm('　荷物をかかえて@L_WHAT@を後にする@L_HEROFULLNAME@を、ジッと見守る@L_EVILFULLNAME@の姿。<br>　これが二人の愛が始まる瞬間であった――。<br><br>　@HEROCATCH@@L_HERONAME@！<br>　@HEROCATCH@@L_EVILNAME@！<br>　プロポーズまで先は長いぞ！<br>(続く)'),
-            new SctItm('　やがて、火の海と化した@L_WHAT@を後にする@L_HEROFULLNAME@の姿があった。<br>いったい何があったのか？<br>（誰も、俺の気持ちを判ってくれない・・・）<br>　そんな彼を出迎えたのは、永遠のライバル、@L_EVILFULLNAME@<br>　さて、続きをしようじゃないか――。<br><br>　@HEROCATCH@@L_HERONAME@！<br>　@HEROCATCH@@L_EVILNAME@！<br>　所詮は、血塗られた道なのだ！<br>(続く)')
+            new SctItm('　やがて、火の海と化した@L_WHAT@を後にする@L_HEROFULLNAME@の姿があった。<br>いったい何があったのか？<br>（誰も、俺の気持ちを判ってくれない・・・）<br>　そんな彼を出迎えたのは、永遠のライバル、@L_EVILFULLNAME@<br>　二人は改めて向き直る。さあ、続きをしようじゃないか――。<br><br>　@HEROCATCH@@L_HERONAME@！<br>　@HEROCATCH@@L_EVILNAME@！<br>　所詮は、血塗られた道なのだ！<br>(続く)')
         ];
     }
 }
