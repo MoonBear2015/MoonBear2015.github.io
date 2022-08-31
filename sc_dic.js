@@ -4279,6 +4279,16 @@ const itms_sweets = [
     new SctItm('あんぱん'),
     new SctItm('クリームパン')
 ];
+const itms_sweets_p = [
+    new SctItm('@FRUIT@のショートケーキ'),
+    new SctItm('@FRUIT@のゼリー'),
+    new SctItm('@FRUIT@のアイスクリーム')
+];
+const itms_sweets_l = [
+    new SctItm('@L_FRUIT@のショートケーキ'),
+    new SctItm('@L_FRUIT@のゼリー'),
+    new SctItm('@L_FRUIT@のアイスクリーム')
+];
 const itms_meal = [
     new SctItm('カレー'),
     new SctItm('ラーメン'),
@@ -4290,7 +4300,6 @@ const itms_meal = [
     new SctItm('食パン'),
     new SctItm('カレーパン'),
     new SctItm('焼きそばパン'),
-    new SctItm('@LIVESTOCK@のハンバーガー'),
     new SctItm('ホットドッグ'),
     new SctItm('お寿司'),
     new SctItm('おにぎり'),
@@ -4329,20 +4338,7 @@ const itms_meal = [
     new SctItm('海老フライ'),
     new SctItm('トンカツ'),
     new SctItm('コロッケ'),
-    new SctItm('@FISH@の唐揚げ'),
-    new SctItm('@FISH@の塩焼き'),
-    new SctItm('@FISH@鍋'),
-    new SctItm('@FISH@の味噌煮'),
-    new SctItm('@FISH@の刺身'),
-    new SctItm('@FISH@の天ぷら'),
     new SctItm('鶏の唐揚げ'),
-    new SctItm('@LIVESTOCK@の唐揚げ'),
-    new SctItm('@LIVESTOCK@鍋'),
-    new SctItm('@LIVESTOCK@のフライ'),
-    new SctItm('@LIVESTOCK@のステーキ'),
-    new SctItm('@LIVESTOCK@のシチュー'),
-    new SctItm('@LIVESTOCK@の丸焼き'),
-    new SctItm('@FRUIT@のサラダ'),
     new SctItm('お子様ランチ'),
     new SctItm('焼き肉定食'),
     new SctItm('トンカツ定食'),
@@ -4359,6 +4355,38 @@ const itms_meal = [
     new SctItm('|竹輪|ちくわ|'),
     new SctItm('|納豆|なっとう|'),
     new SctItm('|納豆|なっとう|')
+];
+const itms_meal_p = [
+    new SctItm('@LIVESTOCK@のハンバーガー'),
+    new SctItm('@FISH@の唐揚げ'),
+    new SctItm('@FISH@の塩焼き'),
+    new SctItm('@FISH@鍋'),
+    new SctItm('@FISH@の味噌煮'),
+    new SctItm('@FISH@の刺身'),
+    new SctItm('@FISH@の天ぷら'),
+    new SctItm('@LIVESTOCK@の唐揚げ'),
+    new SctItm('@LIVESTOCK@鍋'),
+    new SctItm('@LIVESTOCK@のフライ'),
+    new SctItm('@LIVESTOCK@のステーキ'),
+    new SctItm('@LIVESTOCK@のシチュー'),
+    new SctItm('@LIVESTOCK@の丸焼き'),
+    new SctItm('@FRUIT@のサラダ')
+];
+const itms_meal_l = [
+    new SctItm('@L_LIVESTOCK@のハンバーガー'),
+    new SctItm('@L_FISH@の唐揚げ'),
+    new SctItm('@L_FISH@の塩焼き'),
+    new SctItm('@L_FISH@鍋'),
+    new SctItm('@L_FISH@の味噌煮'),
+    new SctItm('@L_FISH@の刺身'),
+    new SctItm('@L_FISH@の天ぷら'),
+    new SctItm('@L_LIVESTOCK@の唐揚げ'),
+    new SctItm('@L_LIVESTOCK@鍋'),
+    new SctItm('@L_LIVESTOCK@のフライ'),
+    new SctItm('@L_LIVESTOCK@のステーキ'),
+    new SctItm('@L_LIVESTOCK@のシチュー'),
+    new SctItm('@L_LIVESTOCK@の丸焼き'),
+    new SctItm('@L_FRUIT@のサラダ')
 ];
 const itms_dress = [
     new SctItm('私服'),
@@ -4677,7 +4705,12 @@ const itms_chr_hero1 = [
     new SctItm('ポ'),
     new SctItm('ピャ'),
     new SctItm('ピュ'),
-    new SctItm('ピョ')
+    new SctItm('ピョ'),
+    new SctItm('ラ'),
+    new SctItm('リ'),
+    new SctItm('ル'),
+    new SctItm('レ'),
+    new SctItm('ロ')
 ];
 const itms_chr_hero2 = [
     new SctItm('カ'),
@@ -4719,6 +4752,8 @@ const itms_chr_hero2 = [
 ];
 const itms_hero_type = [
     new SctItm('戦士'),
+    new SctItm('剣士'),
+    new SctItm('騎士'),
     new SctItm('英雄'),
     new SctItm('少年'),
     new SctItm('少女'),
@@ -4731,10 +4766,17 @@ const itms_hero_type = [
     new SctItm('ライダー'),
     new SctItm('ロボ'),
     new SctItm('天使'),
+    new SctItm('エンジェル'),
     new SctItm('レディー'),
     new SctItm('ボーイ'),
     new SctItm('ガール'),
-    new SctItm('キング')
+    new SctItm('キング'),
+    new SctItm('クイーン'),
+    new SctItm('ファイター'),
+    new SctItm('仙人'),
+    new SctItm('地蔵'),
+    new SctItm('菩薩'),
+    new SctItm('導師')
 ];
 const itms_evil_type = [
     new SctItm('男'),
@@ -4804,10 +4846,12 @@ const itms_chr_evil2 = [
 const itms_hero_catch = [
     new SctItm('戦え！ '),
     new SctItm('負けるな！ '),
+    new SctItm('くじけるな！ '),
     new SctItm('がんばれ！ '),
     new SctItm('立ち上がれ！ '),
     new SctItm('羽ばたけ！ '),
-    new SctItm('燃え上がれ！ ')
+    new SctItm('燃え上がれ！ '),
+    new SctItm('飛び出せ！ ')
 ];
 const itms_heromark = [
     new SctItm('★'),

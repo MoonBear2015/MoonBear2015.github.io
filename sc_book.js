@@ -265,7 +265,7 @@ class selector_story00 extends SctItm_Selector {
         this.itms = [
             new SctItm('　ここは@MANY@@KEIP@@L_CLASS@達が暮らす@KEIDP@@KEIP@@L_WHAT@。@STE00@'),
             new SctItm('　今日も@KEIP@@L_WHAT@で@DOING02@いるのは、@MANY@@KEIDP@@KEIP@@L_CLASS@達である。@STE00@'),
-            new SctItm('　昔々、@KEIDP@@KEIP@@L_WHAT@で、@KEIP@@L_CLASS@達が今日も@KEIDP@@DOING02@いると、@STE00@')
+            new SctItm('　昔々、@KEIDP@@KEIP@@L_WHAT@で、今日も@KEIDP@@DOING02@いる@KEIP@@L_CLASS@達。@STE00@')
         ];
     }
 }

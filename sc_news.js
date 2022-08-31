@@ -952,6 +952,13 @@ class selector_key extends SctItm_Selector {
         this.Add(itms_festival);
     }
 }
+class locker_key extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_KEY@');
+        this.Add(itms_accident);
+        this.Add(itms_festival);
+    }
+}
 // 出来事の増減・発生 が～する・が～した・が～し、
 class selector_size1 extends SctItm_Selector {
     constructor() {
@@ -1404,6 +1411,16 @@ class selector_bird extends SctItm_Selector {
         this.Add(cods_bird_winter.slice(1));
     }
 }
+class locker_bird extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_BIRD@');
+        this.Add(cods_bird.slice(1));
+        this.Add(cods_bird_spring.slice(1));
+        this.Add(cods_bird_summer.slice(1));
+        this.Add(cods_bird_autumn.slice(1));
+        this.Add(cods_bird_winter.slice(1));
+    }
+}
 class selector_animal extends SctItm_Selector {
     constructor() {
         super('@ANIMAL@');
@@ -1429,6 +1446,12 @@ class locker_animal extends SctItm_SelectLocker {
 class selector_livestock extends SctItm_Selector {
     constructor() {
         super('@LIVESTOCK@');
+        this.Add(itms_livestock);
+    }
+}
+class locker_livestock extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_LIVESTOCK@');
         this.Add(itms_livestock);
     }
 }
@@ -1576,16 +1599,39 @@ class selector_fish extends SctItm_Selector {
         this.Add(cods_fish.slice(1));
     }
 }
+class locker_fish extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_FISH@');
+        this.Add(cods_fish.slice(1));
+        // this.Add(cods_rubyKana_to_itms(cods_fruit.slice(1)));
+    }
+}
 class selector_sweets extends SctItm_Selector {
     constructor() {
         super('@SWEETS@');
         this.Add(itms_sweets);
+        this.Add(itms_sweets_p);
+    }
+}
+class locker_sweets extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_SWEETS@');
+        this.Add(itms_sweets);
+        this.Add(itms_sweets_l);
     }
 }
 class selector_meal extends SctItm_Selector {
     constructor() {
         super('@MEAL@');
         this.Add(itms_meal);
+        this.Add(itms_meal_p);
+    }
+}
+class locker_meal extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_MEAL@');
+        this.Add(itms_meal);
+        this.Add(itms_meal_l);
     }
 }
 class selector_dress extends SctItm_Selector {
@@ -1604,7 +1650,9 @@ class selector_food1 extends SctItm_Selector {
     constructor() {
         super('@FOOD01@');
         this.Add(itms_meal);
+        this.Add(itms_meal_p);
         this.Add(itms_sweets);
+        this.Add(itms_sweets_p);
         this.Add(cods_fruit.slice(1));
     }
 }
@@ -2452,6 +2500,8 @@ class locker_item extends SctItm_SelectLocker {
             new SctItm('@L_ANIMAL@'),
             new SctItm('@L_FLOWER@'),
             new SctItm('@L_FRUIT@'),
+            new SctItm('@L_SWEETS@'),
+            new SctItm('@L_MEAL@'),
             new SctItm('@L_RIDE@'),
             new SctItm('@L_DRESS@'),
             new SctItm('@L_MUSIC@'),
@@ -2576,7 +2626,8 @@ class locker_herojob extends SctItm_SelectLocker {
             new SctItm('@L_WHAT@'),
             new SctItm('@L_FLOWER@'),
             new SctItm('@L_DRESS@'),
-            new SctItm('@L_FRUIT@')
+            new SctItm('@L_FRUIT@'),
+            new SctItm('@L_SWEETS@')
         ];
     }
 }
@@ -2604,7 +2655,9 @@ class locker_eviljob extends SctItm_SelectLocker {
             new SctItm('@L_RIDE@'),
             new SctItm('@L_MUSIC@'),
             new SctItm('@L_HABIT@'),
-            new SctItm('@L_MUSIC@')
+            new SctItm('@L_MUSIC@'),
+            new SctItm('@L_MEAL@'),
+            new SctItm('@L_KEY@')
         ];
     }
 }
@@ -2692,6 +2745,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_what());
         this.dic_push(new selector_do());
         this.dic_push(new selector_key());
+        this.dic_push(new locker_key());
         this.dic_push(new selector_size1());
         this.dic_push(new selector_size2());
         this.dic_push(new selector_they());
@@ -2709,8 +2763,11 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_fruit());
         this.dic_push(new locker_fruit());
         this.dic_push(new selector_fish());
+        this.dic_push(new locker_fish());
         this.dic_push(new selector_sweets());
+        this.dic_push(new locker_sweets());
         this.dic_push(new selector_meal());
+        this.dic_push(new locker_meal());
         this.dic_push(new selector_dress());
         this.dic_push(new locker_dress());
         this.dic_push(new selector_food1());
@@ -2724,9 +2781,11 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_tech());
         this.dic_push(new locker_tech());
         this.dic_push(new selector_bird());
+        this.dic_push(new locker_bird());
         this.dic_push(new selector_animal());
         this.dic_push(new locker_animal());
         this.dic_push(new selector_livestock());
+        this.dic_push(new locker_livestock());
         this.dic_push(new selector_flower());
         this.dic_push(new locker_flower());
         this.dic_push(new selector_sports());
