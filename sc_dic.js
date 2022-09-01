@@ -4259,7 +4259,6 @@ const itms_dir = [
 const itms_sweets = [
     new SctItm('チョコレート'),
     new SctItm('ケーキ'),
-    new SctItm('@FRUIT@のショートケーキ'),
     new SctItm('チーズケーキ'),
     new SctItm('ホットケーキ'),
     new SctItm('クッキー'),
@@ -4272,9 +4271,7 @@ const itms_sweets = [
     new SctItm('みたらし団子'),
     new SctItm('大福餅'),
     new SctItm('プリン'),
-    new SctItm('@FRUIT@のゼリー'),
     new SctItm('アイスクリーム'),
-    new SctItm('@FRUIT@のアイスクリーム'),
     new SctItm('かき氷'),
     new SctItm('あんぱん'),
     new SctItm('クリームパン')

@@ -2358,6 +2358,16 @@ class selector_food1 extends SctItm_Selector implements ISctItm_Selector {
         this.Add(cods_fruit.slice(1));
     }
 }
+class locker_food1 extends SctItm_SelectLocker implements ISctItm_Selector {
+    constructor(){
+        super('@L_FOOD01@');
+        this.Add(itms_meal);
+        this.Add(itms_meal_l);
+        this.Add(itms_sweets);
+        this.Add(itms_sweets_l);
+        this.Add(cods_fruit.slice(1));
+    }
+}
 
 class selector_food extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
@@ -2381,11 +2391,41 @@ class selector_food extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@PART@が作った@FOOD01@')
             ,
-            new SctItm('@L_CLASS@の手作り@FOOD01@')
+            new SctItm('@CLASS@の手作り@FOOD01@')
             ,
-            new SctItm('@L_CLASS@のお薦め@FOOD01@')
+            new SctItm('@CLASS@のお薦め@FOOD01@')
             ,
-            new SctItm('@THEY@で人気の@FOOD01@')
+            new SctItm('@CLASS@で人気の@FOOD01@')
+        ];
+    }
+}
+class locker_food extends SctItm_SelectLocker implements ISctItm_Selector {
+    constructor(){
+        super('@L_FOOD@');
+        this.itms = [
+            new SctItm('@L_FOOD01@')
+            ,
+            new SctItm('@L_FOOD01@')
+            ,
+            new SctItm('@L_FOOD01@')
+            ,
+            new SctItm('@L_FOOD01@')
+            ,
+            new SctItm('@L_FOOD01@')
+            ,
+            new SctItm('@L_COUNTRY@産@L_FOOD01@')
+            ,
+            new SctItm('@L_COUNTRY@風@L_FOOD01@')
+            ,
+            new SctItm('@L_ITEM@っぽい@L_FOOD01@')
+            ,
+            new SctItm('@L_PART@が作った@L_FOOD01@')
+            ,
+            new SctItm('@L_CLASS@の手作り@L_FOOD01@')
+            ,
+            new SctItm('@L_CLASS@のお薦め@L_FOOD01@')
+            ,
+            new SctItm('@L_CLASS@で人気の@L_FOOD01@')
         ];
     }
 }
@@ -3607,6 +3647,48 @@ class locker_doing extends SctItm_SelectLocker implements ISctItm_Selector{
     constructor(){
         super('@L_DOING@');
         this.itms = [
+            new SctItm('@L_FOOD@を食べて')
+            ,
+            new SctItm('@L_FOOD@に塩を振って食べて')
+            ,
+            new SctItm('@L_FOOD@に塩胡椒をかけて食べて')
+            ,
+            new SctItm('@L_FOOD@に醤油をかけて食べて')
+            ,
+            new SctItm('@L_FOOD@にソースをかけて食べて')
+            ,
+            new SctItm('@L_FOOD@にカラシをつけて食べて')
+            ,
+            new SctItm('@L_FOOD@にジャムを塗って食べて')
+            ,
+            new SctItm('@L_FOOD@にレモンを搾って食べて')
+            ,
+            new SctItm('@L_FOOD@をパンに挟んで食べて')
+            ,
+            new SctItm('@L_FOOD@をご飯にのせて食べて')
+            ,
+            new SctItm('@L_FOOD@を温め直して食べて')
+            ,
+            new SctItm('@L_FOOD@を焼き直して食べて')
+            ,
+            new SctItm('@L_LIVESTOCK@の肉を油で揚げて食べて')
+            ,
+            new SctItm('@L_LIVESTOCK@の肉を丸焼きにして食べて')
+            ,
+            new SctItm('@L_FISH@を塩焼きにして食べて')
+            ,
+            new SctItm('@L_FISH@を蒸し焼きにして食べて')
+            ,
+            new SctItm('@L_FOOD@を配達して')
+            ,
+            new SctItm('@L_FOOD@を注文して')
+            ,
+            new SctItm('@L_FOOD@を平らげて')
+            ,
+            new SctItm('@L_FOOD@を食い逃げして')
+            ,
+            new SctItm('@L_FOOD@の店を開いて')
+            ,
             new SctItm('@L_CLASS@に憧れて')
             ,
             new SctItm('@L_CLASS@に恋をして')
@@ -3744,9 +3826,7 @@ class locker_item extends SctItm_SelectLocker implements ISctItm_Selector{
             ,
             new SctItm('@L_FRUIT@')
             ,
-            new SctItm('@L_SWEETS@')
-            ,
-            new SctItm('@L_MEAL@')
+            new SctItm('@L_FOOD@')
             ,
             new SctItm('@L_RIDE@')
             ,
@@ -4088,7 +4168,9 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_dress());
         this.dic_push(new locker_dress());
         this.dic_push(new selector_food1());
+        this.dic_push(new locker_food1());
         this.dic_push(new selector_food());
+        this.dic_push(new locker_food());
         this.dic_push(new selector_scool());
         this.dic_push(new selector_scool01());
         this.dic_push(new selector_scoolas());

@@ -6854,8 +6854,6 @@ const   itms_sweets = [
     ,
     new SctItm('ケーキ')
     ,
-    new SctItm('@FRUIT@のショートケーキ')
-    ,
     new SctItm('チーズケーキ')
     ,
     new SctItm('ホットケーキ')
@@ -6880,11 +6878,7 @@ const   itms_sweets = [
     ,
     new SctItm('プリン')
     ,
-    new SctItm('@FRUIT@のゼリー')
-    ,
     new SctItm('アイスクリーム')
-    ,
-    new SctItm('@FRUIT@のアイスクリーム')
     ,
     new SctItm('かき氷')
     ,
