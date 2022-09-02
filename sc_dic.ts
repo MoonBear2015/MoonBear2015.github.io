@@ -7698,16 +7698,16 @@ const   itms_chr_hero1 = [
     new SctItm('ピュ')
     ,
     new SctItm('ピョ')
-    ,
-    new SctItm('ラ')
-    ,
-    new SctItm('リ')
-    ,
-    new SctItm('ル')
-    ,
-    new SctItm('レ')
-    ,
-    new SctItm('ロ')
+    // ,
+    // new SctItm('ラ')
+    // ,
+    // new SctItm('リ')
+    // ,
+    // new SctItm('ル')
+    // ,
+    // new SctItm('レ')
+    // ,
+    // new SctItm('ロ')
 
 ]
 
