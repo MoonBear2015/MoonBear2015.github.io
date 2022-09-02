@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N03.11';
+    html += ' N03.12';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -1435,6 +1435,18 @@ class locker_key extends SctItm_SelectLocker implements ISctItm_Selector{
     constructor(){
         super('@L_KEY@');
         this.Add(itms_accident);
+        this.Add(itms_festival);
+    }
+}
+class selector_festival extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@FESTIVAL@');
+        this.Add(itms_festival);
+    }
+}
+class locker_festival extends SctItm_SelectLocker implements ISctItm_Selector{
+    constructor(){
+        super('@L_FESTIVAL@');
         this.Add(itms_festival);
     }
 }
@@ -3646,6 +3658,10 @@ class selector_doing02 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@MUSIC@を歌って')
             ,
             new SctItm('@RIDE@に乗って')
+            ,
+            new SctItm('@FESTIVAL@を開催して')
+            ,
+            new SctItm('@FESTIVAL@に参加して')
         ];
     }
 }
@@ -3817,6 +3833,10 @@ class locker_doing extends SctItm_SelectLocker implements ISctItm_Selector{
             new SctItm('@L_FRUIT@の種を捨てて')
             ,
             new SctItm('@L_RIDE@に乗って')
+            ,
+            new SctItm('@L_FESTIVAL@を開催して')
+            ,
+            new SctItm('@L_FESTIVAL@に参加して')
         ];
     }
 }
@@ -4150,6 +4170,8 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_do());
         this.dic_push(new selector_key());
         this.dic_push(new locker_key());
+        this.dic_push(new selector_festival());
+        this.dic_push(new locker_festival());
         this.dic_push(new selector_size1());
         this.dic_push(new selector_size2());
         this.dic_push(new selector_they());
