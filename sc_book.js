@@ -7,7 +7,7 @@ function set_book() {
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B00.92';
+    html += ' B00.93';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -30,7 +30,7 @@ function make_book() {
     html += 'border:     0.5px solid #606060;';
     html += 'border-radius:  10px;';
     html += '">';
-    if (rnd_max(3) == 0) {
+    if (rnd_max(5) == 0) {
         html += make_booktype0();
     }
     else {
@@ -351,9 +351,9 @@ class selector_storyE02 extends SctItm_Selector {
     constructor() {
         super('@STE02@');
         this.itms = [
-            new SctItm('　やがて、@NICKBAD@のような@KEIN@形相を浮かべて、@L_HEROFULLNAME@に襲いかかる！<br>「喰らえ！ @EVILATTACK@」<br>@SEL02@'),
+            new SctItm('　そして、@NICKBAD@のような@KEIN@形相を浮かべて、@L_HEROFULLNAME@に襲いかかる！<br>「喰らえ！ @EVILATTACK@」<br>@SEL02@'),
             new SctItm('　次の瞬間、@KEIN@@ANIMAL@のような@KEIN@勢いで@L_HEROFULLNAME@に飛びかかった！<br>「死ね！ @EVILATTACK@」<br>@SEL02@'),
-            new SctItm('　そして、@KEIN@@BIRD@の構えで@KEIDN@@KEIN@技を繰り出した！<br>「くたばれ@L_HERONAME@！ @EVILATTACK@」<br>@SEL02@')
+            new SctItm('　そして、@KEIN@@ANIMAL@の構えから、@KEIDN@@KEIN@技を繰り出した！<br>「くたばれ@L_HERONAME@！ @EVILATTACK@」<br>@SEL02@')
         ];
     }
 }
@@ -436,7 +436,7 @@ class selector_storyE05 extends SctItm_Selector {
         this.itms = [
             new SctItm('「あれ？ 俺も？」 チュドーン！ ついでに@L_EVILJOB@@L_EVILTYPE@も冤罪逮捕！<br><br>@STCEND'),
             new SctItm('「い、いや、俺は違うぞ！」 ドカーン！ おまけで@L_EVILJOB@@L_EVILTYPE@も誤解炎上！<br><br>@STCEND'),
-            new SctItm('「わ、悪いのはアイツじゃないか」 ズドドドーン！ @L_EVILJOB@@L_EVILTYPE@も巻き込まれて引退発表！<br><br>@STCEND')
+            new SctItm('「悪いのはアイツじゃないか」 ズドドドーン！ @L_EVILJOB@@L_EVILTYPE@も巻き込まれて引退発表！<br><br>@STCEND')
         ];
     }
 }
@@ -524,9 +524,9 @@ class selector_storyC01 extends SctItm_Selector {
     constructor() {
         super('@STC01@');
         this.itms = [
-            new SctItm('　狼狽える@L_HEROJOB@@L_HEROTYPE@、しかし@L_CLASS@達は容赦なく、<br>「思い知れ！ @CLASSATTACK@」<br><br>@STH05@'),
-            new SctItm('　@L_HERONAME@は言い訳するが、@L_CLASS@達は問答無用、<br>「謝罪しろ！ @CLASSATTACK@」<br><br>@STH05@'),
-            new SctItm('　思わず逃げ出そうとする@L_HERONAME@を、@L_CLASS@達は取り囲み、<br>「落ちぶれてしまえ！ @CLASSATTACK@」<br><br>@STH05@')
+            new SctItm('　狼狽える@L_HEROJOB@@L_HEROTYPE@、しかし@L_CLASS@達は容赦なく、<br>「思い知れ！ 必殺・@CLASSATTACK@」<br><br>@STH05@'),
+            new SctItm('　@L_HERONAME@は言い訳するが、@L_CLASS@達は問答無用、<br>「謝罪しろ！ 秘技・@CLASSATTACK@」<br><br>@STH05@'),
+            new SctItm('　思わず逃げ出そうとする@L_HERONAME@を、@L_CLASS@達は取り囲み、<br>「落ちぶれてしまえ！ 奥義・@CLASSATTACK@」<br><br>@STH05@')
         ];
     }
 }
