@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N03.12';
+    html += ' N03.13';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -2669,7 +2669,10 @@ class locker_heroname extends SctItm_SelectLocker {
             new SctItm('@L_H1@ッ@L_H2@'),
             new SctItm('@L_H1@ッ@L_H2@ー'),
             new SctItm('@L_H1@ッ@L_H2@ン'),
-            new SctItm('@L_H1@@L_H2@ン')
+            new SctItm('@L_H1@@L_H2@ン'),
+            new SctItm('@L_H1@ン@L_H2@'),
+            new SctItm('@L_H1@ン@L_H2@ー'),
+            new SctItm('@L_H1@ン@L_H2@ン')
         ];
     }
 }
@@ -2687,6 +2690,8 @@ class locker_evilname extends SctItm_SelectLocker {
             new SctItm('@L_E1@ッ@L_E2@ー'),
             new SctItm('@L_E1@ッ@L_E2@ン'),
             new SctItm('@L_E1@@L_E2@ン'),
+            new SctItm('@L_E1@ン@L_E2@'),
+            new SctItm('@L_E1@ン@L_E2@ー'),
             new SctItm('@L_E1@@L_E2@@L_E2@ン')
         ];
     }
