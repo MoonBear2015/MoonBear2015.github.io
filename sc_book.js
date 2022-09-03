@@ -7,7 +7,7 @@ function set_book() {
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B01.01';
+    html += ' B01.02';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -678,7 +678,7 @@ class selector_girlnext extends SctItm_Selector {
             new SctItm('「あら、@L_BOY@。私は@O_DOING@なんかいないわ。@O_DOING@いるだけよ」'),
             new SctItm('「@L_BOY@ったらおかしな人。私は@O_DOING@いるんじゃなくて、@O_DOING@いるのよ」'),
             new SctItm('「そうね、@L_BOY@。でも、私が@O_DOING@いないと、あなたが@O_DOING@しまうから」'),
-            new SctItm('「なら、@L_BOY@も私と一緒に@O_DOING@みれば、@O_DOING@なんかいられなくなるわよ」'),
+            new SctItm('「@L_BOY@？ 私は@O_DOING@いないと、@O_DOING@しまうと前に言ったわよね？」'),
             new SctItm('「それなら、@L_BOY@も一緒に@O_DOING@いる筈だったのに、どうして@O_DOING@いるの？ 」'),
             new SctItm('「@L_BOY@は知ってる？ 以前、@O_DOING@いた私の@PART@が、今は@O_DOING@いるんですって」')
         ];
