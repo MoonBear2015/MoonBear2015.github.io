@@ -8446,23 +8446,23 @@ const   itms_doing_o = [
     ,
     new SctItm('@O_FOOD@を焼き直して食べて')
     ,
-    new SctItm('@L_LIVESTOCK@の肉を油で揚げて食べて')
+    new SctItm('@O_LIVESTOCK@の肉を油で揚げて食べて')
     ,
-    new SctItm('@L_LIVESTOCK@の肉を丸焼きにして食べて')
+    new SctItm('@O_LIVESTOCK@の肉を丸焼きにして食べて')
     ,
     new SctItm('@L_FISH@を塩焼きにして食べて')
     ,
     new SctItm('@L_FISH@を蒸し焼きにして食べて')
     ,
-    new SctItm('@L_FOOD@を配達して')
+    new SctItm('@O_FOOD@を配達して')
     ,
-    new SctItm('@L_FOOD@を注文して')
+    new SctItm('@O_FOOD@を注文して')
     ,
-    new SctItm('@L_FOOD@を平らげて')
+    new SctItm('@O_FOOD@を平らげて')
     ,
-    new SctItm('@L_FOOD@を食い逃げして')
+    new SctItm('@O_FOOD@を食い逃げして')
     ,
-    new SctItm('@L_FOOD@の店を開いて')
+    new SctItm('@O_FOOD@の店を開いて')
     ,
     new SctItm('@L_CLASS@に憧れて')
     ,

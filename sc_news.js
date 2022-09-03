@@ -1484,6 +1484,12 @@ class locker_livestock extends SctItm_SelectLocker {
         this.Add(itms_livestock);
     }
 }
+class OneTime_livestock extends SctItm_OneTimeLocker {
+    constructor() {
+        super('@O_LIVESTOCK@');
+        this.Add(itms_livestock);
+    }
+}
 class selector_flower extends SctItm_Selector {
     constructor() {
         super('@FLOWER@');
@@ -2681,6 +2687,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new locker_animal());
         this.dic_push(new selector_livestock());
         this.dic_push(new locker_livestock());
+        this.dic_push(new OneTime_livestock());
         this.dic_push(new selector_flower());
         this.dic_push(new locker_flower());
         this.dic_push(new selector_sports());
