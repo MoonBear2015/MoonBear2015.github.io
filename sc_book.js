@@ -7,7 +7,7 @@ function set_book() {
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B01.00';
+    html += ' B01.01';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -676,7 +676,7 @@ class selector_girlnext extends SctItm_Selector {
         super('@GIRL_NEXT@');
         this.itms = [
             new SctItm('「あら、@L_BOY@。私は@O_DOING@なんかいないわ。@O_DOING@いるだけよ」'),
-            new SctItm('「@L_BOY@ったらおかしな人。@O_DOING@いるんじゃなくて、@O_DOING@いるのよ」'),
+            new SctItm('「@L_BOY@ったらおかしな人。私は@O_DOING@いるんじゃなくて、@O_DOING@いるのよ」'),
             new SctItm('「そうね、@L_BOY@。でも、私が@O_DOING@いないと、あなたが@O_DOING@しまうから」'),
             new SctItm('「なら、@L_BOY@も私と一緒に@O_DOING@みれば、@O_DOING@なんかいられなくなるわよ」'),
             new SctItm('「それなら、@L_BOY@も一緒に@O_DOING@いる筈だったのに、どうして@O_DOING@いるの？ 」'),
@@ -690,7 +690,7 @@ class selector_boynext extends SctItm_Selector {
         this.itms = [
             new SctItm('「でも、@L_GIRL@が@O_DOING@いると、僕は@O_DOING@しまうんだ」'),
             new SctItm('「@L_GIRL@、僕が@O_DOING@いるのは、君も一緒に@O_DOING@欲しいからなんだ」'),
-            new SctItm('「@L_GIRL@が@O_DOING@いると、自分が@O_DOING@いた頃を思い出してしまうんだ」'),
+            new SctItm('「僕は、@L_GIRL@が@O_DOING@いると、自分が@O_DOING@いた頃を思い出してしまうんだ」'),
             new SctItm('「確か、@L_GIRL@が@O_DOING@いたのは、僕が@O_DOING@いた頃だったよね」'),
             new SctItm('「でも、僕は@O_DOING@いるより、@O_DOING@いる@L_GIRL@の方が好きなんだ」'),
             new SctItm('「そういえば、僕が@O_DOING@いると、いつも@L_GIRL@は@O_DOING@いたね」'),
