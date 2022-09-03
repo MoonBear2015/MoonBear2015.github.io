@@ -9,7 +9,7 @@ function set_book()
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B00.96';
+    html += ' B00.97';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -39,10 +39,23 @@ function make_book()
     html += 'border-radius:  10px;';
     html += '">';
 
-    if (rnd_max(5) == 0) {
-        html += make_booktype0();
-    } else {
-        html += make_booktype1();
+    switch(rnd_max(3))
+    {
+        case 0:
+            {
+                html += make_booktype1();
+                break;
+            }
+        case 1:
+            {
+                html += make_booktype2();
+                break;
+            }
+        default:
+            {
+                html += make_booktype0();
+                break;
+            }
     }
 
     //---- this Q&A END
@@ -157,6 +170,74 @@ function make_booktype1() : string {
     return html;
 }
 
+function make_booktype2() : string {
+    let html = '';
+
+
+    html += '<div id="book_writerpicture">';
+    html += '<span class="l">@L_BOY@ と @L_GIRL@</span><br>';
+    html += '著者：<br>';
+    html += '@L_BOOKWRITER@';
+    html += '<br>';
+    html += '<p id="book_maker">';
+    html += '出版元：@BOOKMAKER@';
+    html += '</p>';
+    html += '<br>';
+
+    html += '</div>';
+
+    html += '<div id="book_face" ';
+    html += 'style="';
+    html += 'background: ';
+    html += 'linear-gradient(0deg,rgba(0,0,0,0.6),rgba(0,0,0,0.6)),';
+    html += 'url(./pics/@PIC_WHAT@);';
+
+    html += 'background-position: left top;';
+    html += 'background-size:   cover;';
+    html += 'background-repeat: no-repeat;';
+    html += 'border:     2px solid #ffffff;';
+    html += '">';
+
+    html += '<br>';
+
+    html += '<div id="@BOOKFACE2@">';
+
+    html += '<p id="book_title">';
+    html += '@L_BOY@ と @L_GIRL@';
+    html += '</p>';
+    html += '<br><br>';
+    html += '<p id="book_writerinfo">';
+    html += '@L_BOOKWRITER@';
+    html += '</p>';
+    html += '<br>';
+    html += '</div>';
+
+    html += '</div>';
+    
+    html += '<div id="book_comment">';
+    html += '@BOY_FIRST@<br>';
+    html += '@GIRL_NEXT@<br>';
+    html += '@BOY_NEXT@<br>';
+    html += '@GIRL_NEXT@<br>';
+    html += '@BOY_NEXT@<br>';
+    html += '@GIRL_NEXT@<br>';
+    html += '@BOY_NEXT@<br>';
+    html += '@GIRL_NEXT@<br>';
+    html += '@BOY_NEXT@<br>';
+    html += '@GIRL_NEXT@<br>';
+    html += '@BOY_NEXT@<br>';
+    html += '@GIRL_NEXT@<br>';
+    html += '@BOY_NEXT@<br>';
+    html += '@GIRL_NEXT@<br>';
+    html += '@BOY_NEXT@<br>';
+    html += '@GIRL_NEXT@<br>';
+    html += '@BOY_NEXT@<br>';
+    html += '@GIRL_NEXT@<br>';
+    html += '@BOY_NEXT@<br>';
+    html += '</div>';
+
+    return html;
+}
 
 class selector_bookinfo extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
@@ -797,6 +878,76 @@ class selector_classattack extends SctItm_Selector implements ISctItm_Selector {
     }
 }
 
+class locker_boy extends SctItm_SelectLocker implements ISctItm_Selector{
+    constructor(){
+        super('@L_BOY@');
+        this.Add(itms_boyName);
+    }
+}
+class locker_girl extends SctItm_SelectLocker implements ISctItm_Selector{
+    constructor(){
+        super('@L_GIRL@');
+        this.Add(itms_girlName);
+    }
+}
+
+class onetime_doing extends SctItm_OneTimeLocker implements ISctItm_Selector{
+    constructor(){
+        super('@O_DOING@');
+        this.Add(itms_doing_l);
+    }
+}
+
+class selector_boyfirst extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@BOY_FIRST@');
+        this.itms = [
+            new SctItm('「やあ、@L_GIRL@。今日は@O_DOING@いるんだね？」')
+            ,
+            new SctItm('「おや、@L_GIRL@。どうして@O_DOING@るんだい？」')
+            ,
+            new SctItm('「だめだよ、@L_GIRL@。@O_DOING@はいけないと言っただろう」')
+        ]
+    }
+}
+
+class selector_girlnext extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@GIRL_NEXT@');
+        this.itms = [
+            new SctItm('「あら、@L_BOY@。私は@O_DOING@なんていないわ。@O_DOING@いるだけよ」')
+            ,
+            new SctItm('「@L_BOY@ったらおかしな人。@O_DOING@いるんじゃなくて、@O_DOING@いるのよ」')
+            ,
+            new SctItm('「@L_BOY@？ @O_DOING@はダメなら、@O_DOING@いいというの？」')
+            ,
+            new SctItm('「そうね、@L_BOY@。でも、@O_DOING@いないと、あなたが@O_DOING@しまうから」')
+            ,
+            new SctItm('「なら、@L_BOY@も私と一緒に@O_DOING@みれば、@O_DOING@いられなくなるわよ」')
+            ,
+            new SctItm('「じゃあ、@L_BOY@も一緒に@O_DOING@みれば？ @O_DOING@いるよりマシよ」')
+            ,
+            new SctItm('「それなら、@L_BOY@も一緒に@O_DOING@いる筈だったのに、どうして@O_DOING@いるの？ 」')
+            ,
+            new SctItm('「@L_BOY@は知ってる？ 以前、@O_DOING@いた私の@PART@が、今は@O_DOING@いるんですって」')
+        ]
+    }
+}
+
+class selector_boynext extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@BOY_NEXT@');
+        this.itms = [
+            new SctItm('「でも、@L_GIRL@。君が@O_DOING@いると、僕は@O_DOING@しまうんだ」')
+            ,
+            new SctItm('「@L_GIRL@、僕が@O_DOING@いるのは、君も一緒に@O_DOING@欲しいからなんだ」')
+            ,
+            new SctItm('「@L_GIRL@が@O_DOING@いると、自分が@O_DOING@いた頃を思い出してしまうんだ」')
+            ,
+            new SctItm('「でも、僕は@O_DOING@いるより@O_DOING@いる@L_GIRL@の方が好きなんだ」')
+        ]
+    }
+}
 
 class book_docs_maker extends news_docs_maker {
     constructor(){
@@ -837,6 +988,13 @@ class book_docs_maker extends news_docs_maker {
         this.dic_push(new selector_evilattack());
         this.dic_push(new selector_heroattack());
         this.dic_push(new selector_classattack());
+        this.dic_push(new locker_boy());
+        this.dic_push(new locker_girl());
+        this.dic_push(new onetime_doing());
+        this.dic_push(new selector_boyfirst());
+        this.dic_push(new selector_boynext());
+        this.dic_push(new selector_girlnext());
+
     }
 }
 

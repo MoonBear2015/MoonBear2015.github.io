@@ -430,6 +430,31 @@ small {
     text-shadow: 3px 3px 0px darkgreen;
 }
 
+#book07 {
+    font-family: 'Yu Mincho';
+    color:  red;
+    font-style: italic;
+    font-size: 4vw;
+    text-align:center;
+    text-shadow: 3px 3px 0px white;
+}
+#book08 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight:bolder;
+    color:  lightpink;
+    font-size: 4vw;
+    text-align:center;
+    text-shadow: 3px 3px 0px darkred;
+}
+#book09 {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight:bolder;
+    font-style: italic;
+    color:  magenta;
+    font-size: 4vw;
+    text-align:center;
+    text-shadow: 3px 3px 0px darkmagenta;
+}
 
 
 

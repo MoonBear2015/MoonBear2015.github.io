@@ -576,6 +576,47 @@ class SctItm_SelectLocker extends SctItm_Selector implements ISctItm_Selector {
 
 }
 
+class SctItm_OneTimeLocker extends SctItm_Selector implements ISctItm_Selector {
+    private is_lock : boolean;
+    private lock_item : SctItm;
+
+    constructor(
+        in_itm_key? : string
+        ,
+        in_itm_key2? : string
+        ,
+        in_pic_key? : string
+        ,
+        in_array? : Array<SctItm>
+    )
+    {
+        super(in_itm_key,in_itm_key2,in_pic_key,in_array);
+        this.is_lock = false;
+        this.lock_item = new SctItm('','','');
+    }
+
+    get rnd_Itm() : SctItm {
+        if (this.is_lock)
+        {
+            this.is_lock = false;
+            return this.lock_item;
+        }
+        this.is_lock = true;
+        let i = this.startNumber + rnd_max(this.itms.length - this.startNumber);
+        this.lock_item.Copy = this.itms[i];
+        return this.itms[i];
+    }
+    
+    Copy() : ISctItm_Selector
+    {
+        let result = new SctItm_SelectLocker(this.itm_key,this.itm_key2,this.pic_key);
+        result.Paste(this.itms);
+        return result;
+    }
+
+}
+
+
 class SctItm_FirstLocker 
     extends SctItm_Selector 
     implements ISctItm_Selector {
