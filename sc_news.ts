@@ -2461,6 +2461,18 @@ class locker_food extends SctItm_SelectLocker implements ISctItm_Selector {
     }
 }
 
+class OneTime_food extends SctItm_OneTimeLocker implements ISctItm_Selector {
+    constructor(){
+        super('@O_FOOD@');
+        this.Add(itms_meal);
+        this.Add(itms_meal_l);
+        this.Add(itms_sweets);
+        this.Add(itms_sweets_l);
+        this.Add(cods_fruit.slice(1));
+    }
+}
+
+
 class selector_music extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@MUSIC@');
@@ -3810,6 +3822,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new locker_food1());
         this.dic_push(new selector_food());
         this.dic_push(new locker_food());
+        this.dic_push(new OneTime_food());
         this.dic_push(new selector_scool());
         this.dic_push(new selector_scool01());
         this.dic_push(new selector_scoolas());

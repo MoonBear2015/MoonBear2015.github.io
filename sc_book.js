@@ -7,7 +7,7 @@ function set_book() {
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B00.98';
+    html += ' B00.99';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -657,7 +657,7 @@ class locker_girl extends SctItm_SelectLocker {
 class onetime_doing extends SctItm_OneTimeLocker {
     constructor() {
         super('@O_DOING@');
-        this.Add(itms_doing_l);
+        this.Add(itms_doing_o);
     }
 }
 class selector_boyfirst extends SctItm_Selector {
