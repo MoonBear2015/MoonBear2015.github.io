@@ -358,6 +358,13 @@ small {
     grid-row: 2 / 3;
     grid-column: 1 / 3;    
 }
+#book_lovestory {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin:     5px; 
+    padding:    5px; 
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;    
+}
 
 #book_title {
     margin: 0px 20px;
@@ -434,7 +441,7 @@ small {
     font-family: 'Yu Mincho';
     color:  red;
     font-style: italic;
-    font-size: 4vw;
+    font-size: 2.5vw;
     text-align:center;
     text-shadow: 3px 3px 0px white;
 }
@@ -442,7 +449,7 @@ small {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight:bolder;
     color:  lightpink;
-    font-size: 4vw;
+    font-size: 3vw;
     text-align:center;
     text-shadow: 3px 3px 0px darkred;
 }
@@ -451,7 +458,7 @@ small {
     font-weight:bolder;
     font-style: italic;
     color:  magenta;
-    font-size: 4vw;
+    font-size: 2.5vw;
     text-align:center;
     text-shadow: 3px 3px 0px darkmagenta;
 }
