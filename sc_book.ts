@@ -9,7 +9,7 @@ function set_book()
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B00.93';
+    html += ' B00.94';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -575,11 +575,11 @@ class selector_storyE04 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@STE04@');
         this.itms = [
-            new SctItm('「おのれ！ @L_HERONAME@め！」 チュドーン！ @KEIN@@L_EVILJOB@@L_EVILTYPE@は星の彼方へ！<br><br>@STHEND@')
+            new SctItm('　@L_EVILNAME@に見事的中！<br>「おのれ！ @L_HERONAME@め！」<br>　チュドーン！ @KEIN@@L_EVILJOB@@L_EVILTYPE@は星の彼方へ！<br><br>@STHEND@')
             ,
-            new SctItm('「覚えてろ！ @L_HERONAME@め！」 スタタタタ・・・ @KEIN@@L_EVILJOB@@L_EVILTYPE@は逃げていった！<br><br>@STHEND@')
+            new SctItm('　@L_EVILNAME@は手も足も出ない！<br>「覚えてろ！ @L_HERONAME@め！」<br>　スタタタタ・・・ @KEIN@@L_EVILJOB@@L_EVILTYPE@は逃げていった！<br><br>@STHEND@')
             ,
-            new SctItm('「@L_EVILJOB@に栄光あれ！」 ドッカーン！ @KEIN@@L_EVILNAME@は大爆発！<br><br>@STHEND@')
+            new SctItm('　@L_EVILNAME@は絶体絶命！「・・・@L_EVILJOB@に栄光あれ！」<br>　ドッカーン！ @KEIN@@L_EVILNAME@は大爆発！<br><br>@STHEND@')
         ]
     }
 }
@@ -723,11 +723,11 @@ class selector_storyC01 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@STC01@');
         this.itms = [
-            new SctItm('　狼狽える@L_HEROJOB@@L_HEROTYPE@、しかし@L_CLASS@達は容赦なく、<br>「思い知れ！ 必殺・@CLASSATTACK@」<br><br>@STH05@')
+            new SctItm('　狼狽える@L_HEROJOB@@L_HEROTYPE@、しかし@L_CLASS@達は容赦なく、<br>「思い知れ！ 必殺・@CLASSATTACK@」<br>@STH05@')
             ,
-            new SctItm('　@L_HERONAME@は言い訳するが、@L_CLASS@達は問答無用、<br>「謝罪しろ！ 秘技・@CLASSATTACK@」<br><br>@STH05@')
+            new SctItm('　@L_HERONAME@は言い訳するが、@L_CLASS@達は問答無用、<br>「謝罪しろ！ 秘技・@CLASSATTACK@」<br>@STH05@')
             ,
-            new SctItm('　思わず逃げ出そうとする@L_HERONAME@を、@L_CLASS@達は取り囲み、<br>「落ちぶれてしまえ！ 奥義・@CLASSATTACK@」<br><br>@STH05@')
+            new SctItm('　思わず逃げ出そうとする@L_HERONAME@を、@L_CLASS@達は取り囲み、<br>「落ちぶれてしまえ！ 奥義・@CLASSATTACK@」<br>@STH05@')
         ]
     }
 }
