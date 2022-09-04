@@ -5103,8 +5103,8 @@ const itms_doing_o = [
     new SctItm('@O_FOOD@を焼き直して食べて'),
     new SctItm('@O_LIVESTOCK@の肉を油で揚げて食べて'),
     new SctItm('@O_LIVESTOCK@の肉を丸焼きにして食べて'),
-    new SctItm('@L_FISH@を塩焼きにして食べて'),
-    new SctItm('@L_FISH@を蒸し焼きにして食べて'),
+    new SctItm('@O_FISH@を塩焼きにして食べて'),
+    new SctItm('@O_FISH@を蒸し焼きにして食べて'),
     new SctItm('@O_FOOD@を配達して'),
     new SctItm('@O_FOOD@を注文して'),
     new SctItm('@O_FOOD@を平らげて'),
@@ -5117,16 +5117,26 @@ const itms_doing_o = [
     new SctItm('@L_CLASS@を召還して'),
     new SctItm('@L_CLASS@を募集して'),
     new SctItm('@L_CLASS@を呼び出して'),
-    new SctItm('@L_CLASS@に変身して'),
-    new SctItm('@L_CITY@に住んで'),
-    new SctItm('@L_CITY@に家を建てて'),
-    new SctItm('「@L_ITEM@の@L_SPECIALIST@」と呼ばれて'),
-    new SctItm('「@L_ITEM@の@L_SPECIALIST@」と噂されて'),
-    new SctItm('「@L_ITEM@の@L_SPECIALIST@」と馬鹿にされて'),
-    new SctItm('「@L_ITEM@の@L_SPECIALIST@」と後ろ指を指されて'),
-    new SctItm('「@L_ITEM@の@L_SPECIALIST@」と讃えられて'),
-    new SctItm('「@L_ITEM@の@L_SPECIALIST@」と賞賛されて'),
-    new SctItm('「@L_ITEM@の@L_SPECIALIST@」とおだてられて'),
+    new SctItm('@L_CLASS@に変身して')
+    // ,
+    // new SctItm('@L_CITY@に住んで')
+    // ,
+    // new SctItm('@L_CITY@に家を建てて')
+    // ,
+    // new SctItm('「@L_ITEM@の@L_SPECIALIST@」と呼ばれて')
+    // ,
+    // new SctItm('「@L_ITEM@の@L_SPECIALIST@」と噂されて')
+    // ,
+    // new SctItm('「@L_ITEM@の@L_SPECIALIST@」と馬鹿にされて')
+    // ,
+    // new SctItm('「@L_ITEM@の@L_SPECIALIST@」と後ろ指を指されて')
+    // ,
+    // new SctItm('「@L_ITEM@の@L_SPECIALIST@」と讃えられて')
+    // ,
+    // new SctItm('「@L_ITEM@の@L_SPECIALIST@」と賞賛されて')
+    // ,
+    // new SctItm('「@L_ITEM@の@L_SPECIALIST@」とおだてられて')
+    ,
     new SctItm('@L_PART@を連れて'),
     new SctItm('@L_PART@の手を引いて'),
     new SctItm('@L_PART@を置き去りにして'),
@@ -5264,4 +5274,11 @@ const itms_girlName = [
     new SctItm('|Margaret|マーガレット|'),
     new SctItm('|Dorothy|ドロシー|'),
     new SctItm('|Jennifer|ジェニファー|')
+];
+const itms_love = [
+    new SctItm('恋愛', 'LOVE/Love01.jpg'),
+    new SctItm('恋の', 'LOVE/Love02.jpg'),
+    new SctItm('二人の', 'LOVE/Love03.jpg'),
+    new SctItm('愛の', 'LOVE/Love04.jpg'),
+    new SctItm('愛憎', 'LOVE/Love05.jpg')
 ];

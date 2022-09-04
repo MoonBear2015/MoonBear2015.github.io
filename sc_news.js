@@ -1641,6 +1641,13 @@ class locker_fish extends SctItm_SelectLocker {
         // this.Add(cods_rubyKana_to_itms(cods_fruit.slice(1)));
     }
 }
+class OneTime_fish extends SctItm_OneTimeLocker {
+    constructor() {
+        super('@O_FISH@');
+        this.Add(cods_fish.slice(1));
+        // this.Add(cods_rubyKana_to_itms(cods_fruit.slice(1)));
+    }
+}
 class selector_sweets extends SctItm_Selector {
     constructor() {
         super('@SWEETS@');
@@ -2401,24 +2408,6 @@ class locker_item extends SctItm_SelectLocker {
         ];
     }
 }
-// 出版元（画像未設定の解消のため）
-class selector_bookmaker extends SctItm_Selector {
-    constructor() {
-        super('@BOOKMAKER@');
-        this.itms = [
-            new SctItm('㈱@L_WHAT@出版'),
-            new SctItm('㈱@L_WHAT@文庫'),
-            new SctItm('㈱@L_WHAT@印刷'),
-            new SctItm('@L_WHAT@書房'),
-            new SctItm('@L_WHAT@書院'),
-            new SctItm('㈱@L_WHAT@文芸'),
-            new SctItm('@L_WHAT@学院'),
-            new SctItm('@L_WHAT@株式会社'),
-            new SctItm('@L_WHAT@財団'),
-            new SctItm('@L_WHAT@委員会')
-        ];
-    }
-}
 // class selector_chr_hero extends SctItm_Selector implements ISctItm_Selector {
 //     constructor(){
 //         super('@H@');
@@ -2672,7 +2661,6 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new locker_food1());
         this.dic_push(new selector_food());
         this.dic_push(new locker_food());
-        this.dic_push(new OneTime_food());
         this.dic_push(new selector_scool());
         this.dic_push(new selector_scool01());
         this.dic_push(new selector_scoolas());
@@ -2687,7 +2675,6 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new locker_animal());
         this.dic_push(new selector_livestock());
         this.dic_push(new locker_livestock());
-        this.dic_push(new OneTime_livestock());
         this.dic_push(new selector_flower());
         this.dic_push(new locker_flower());
         this.dic_push(new selector_sports());
@@ -2771,7 +2758,6 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_doing02());
         this.dic_push(new locker_doing());
         this.dic_push(new selector_superitem());
-        this.dic_push(new selector_bookmaker());
         this.dic_push(new locker_item());
         this.dic_push(new locker_chr_hero1());
         this.dic_push(new locker_chr_hero2());

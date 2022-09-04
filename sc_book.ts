@@ -9,7 +9,7 @@ function set_book()
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B01.02';
+    html += ' B01.04';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -180,7 +180,7 @@ function make_booktype2() : string {
     html += '@L_BOOKWRITER@';
     html += '<br>';
     html += '<p id="book_maker">';
-    html += '出版元：@BOOKMAKER@';
+    html += '出版元：@LOVEMAKER@';
     html += '</p>';
     html += '<br>';
 
@@ -190,7 +190,7 @@ function make_booktype2() : string {
     html += 'style="';
     html += 'background: ';
     html += 'linear-gradient(0deg,rgba(0,0,0,0.6),rgba(0,0,0,0.6)),';
-    html += 'url(./pics/@PIC_WHAT@);';
+    html += 'url(./pics/@PIC_LOVE@);';
 
     html += 'background-position: left top;';
     html += 'background-size:   cover;';
@@ -892,7 +892,7 @@ class locker_girl extends SctItm_SelectLocker implements ISctItm_Selector{
     }
 }
 
-class onetime_doing extends SctItm_OneTimeLocker implements ISctItm_Selector{
+class Onetime_doing extends SctItm_OneTimeLocker implements ISctItm_Selector{
     constructor(){
         super('@O_DOING@');
         this.Add(itms_doing_o);
@@ -922,7 +922,7 @@ class selector_girlnext extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('「@L_BOY@ったらおかしな人。私は@O_DOING@いるんじゃなくて、@O_DOING@いるのよ」')
             ,
-            new SctItm('「そうね、@L_BOY@。でも、私が@O_DOING@いないと、あなたが@O_DOING@しまうから」')
+            new SctItm('「そうよ、@L_BOY@。私が@O_DOING@いないと、あなたが@O_DOING@しまうから」')
             ,
             new SctItm('「@L_BOY@？ 私は@O_DOING@いないと、@O_DOING@しまうと前に言ったわよね？」')
             ,
@@ -954,9 +954,74 @@ class selector_boynext extends SctItm_Selector implements ISctItm_Selector {
     }
 }
 
+class locker_love extends SctItm_SelectLocker implements ISctItm_Selector{
+    constructor(){
+        super('@L_LOVE@','','@PIC_LOVE@');
+        this.Add(itms_love);
+    }
+}
+
+// 出版元（画像未設定の解消のため）
+class selector_bookmaker extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@BOOKMAKER@');
+        this.itms = [
+            new SctItm('㈱@L_WHAT@出版')
+            ,
+            new SctItm('㈱@L_WHAT@文庫')
+            ,
+            new SctItm('㈱@L_WHAT@印刷')
+            ,
+            new SctItm('@L_WHAT@書房')
+            ,
+            new SctItm('@L_WHAT@書院')
+            ,
+            new SctItm('㈱@L_WHAT@文芸')
+            ,
+            new SctItm('@L_WHAT@学院')
+            ,
+            new SctItm('@L_WHAT@株式会社')
+            ,
+            new SctItm('@L_WHAT@財団')
+            ,
+            new SctItm('@L_WHAT@委員会')
+        ];
+    }
+}
+
+class selector_lovemaker extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@LOVEMAKER@');
+        this.itms = [
+            new SctItm('㈱@L_LOVE@出版')
+            ,
+            new SctItm('㈱@L_LOVE@文庫')
+            ,
+            new SctItm('㈱@L_LOVE@印刷')
+            ,
+            new SctItm('@L_LOVE@書房')
+            ,
+            new SctItm('@L_LOVE@書院')
+            ,
+            new SctItm('㈱@L_LOVE@文芸')
+            ,
+            new SctItm('@L_LOVE@学院')
+            ,
+            new SctItm('@L_LOVE@株式会社')
+            ,
+            new SctItm('@L_LOVE@財団')
+            ,
+            new SctItm('@L_LOVE@委員会')
+        ];
+    }
+}
+
 class book_docs_maker extends news_docs_maker {
     constructor(){
         super();
+        this.dic_push(new selector_bookmaker());
+        this.dic_push(new selector_lovemaker());
+
         this.dic_push(new selector_bookinfo());
         this.dic_push(new selector_bookinfo01());
         this.dic_push(new selector_bookinfo02());
@@ -995,7 +1060,14 @@ class book_docs_maker extends news_docs_maker {
         this.dic_push(new selector_classattack());
         this.dic_push(new locker_boy());
         this.dic_push(new locker_girl());
-        this.dic_push(new onetime_doing());
+
+        this.dic_push(new locker_love());
+
+        this.dic_push(new OneTime_food());
+        this.dic_push(new OneTime_livestock());
+        this.dic_push(new OneTime_fish());
+        this.dic_push(new Onetime_doing());
+
         this.dic_push(new selector_boyfirst());
         this.dic_push(new selector_boynext());
         this.dic_push(new selector_girlnext());
