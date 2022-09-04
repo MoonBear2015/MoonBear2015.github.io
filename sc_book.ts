@@ -9,7 +9,7 @@ function set_book()
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B01.04';
+    html += ' B01.05';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -929,6 +929,8 @@ class selector_girlnext extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('「それなら、@L_BOY@も一緒に@O_DOING@いる筈だったのに、どうして@O_DOING@いるの？ 」')
             ,
             new SctItm('「@L_BOY@は知ってる？ 以前、@O_DOING@いた私の@PART@が、今は@O_DOING@いるんですって」')
+            ,
+            new SctItm('「なら、@L_BOY@が@O_DOING@みればいいわ。私が@O_DOING@もいいから」')
         ]
     }
 }
@@ -941,6 +943,8 @@ class selector_boynext extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('「@L_GIRL@、僕が@O_DOING@いるのは、君も一緒に@O_DOING@欲しいからなんだ」')
             ,
+            new SctItm('「@L_GIRL@、キミは@O_DOING@、僕は@O_DOING@いればいいと言うのかい？」')
+            ,
             new SctItm('「僕は、@L_GIRL@が@O_DOING@いると、自分が@O_DOING@いた頃を思い出してしまうんだ」')
             ,
             new SctItm('「確か、@L_GIRL@が@O_DOING@いたのは、僕が@O_DOING@いた頃だったよね」')
@@ -949,7 +953,7 @@ class selector_boynext extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('「そういえば、僕が@O_DOING@いると、いつも@L_GIRL@は@O_DOING@いたね」')
             ,
-            new SctItm('「それなら、僕が@O_DOING@、@L_GIRL@は@O_DOING@みるのはどうだい？」')
+            new SctItm('「じゃあ、僕が@O_DOING@、@L_GIRL@は@O_DOING@みるのはどうだい？」')
         ]
     }
 }
@@ -983,8 +987,6 @@ class selector_bookmaker extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@L_WHAT@株式会社')
             ,
             new SctItm('@L_WHAT@財団')
-            ,
-            new SctItm('@L_WHAT@委員会')
         ];
     }
 }
@@ -1010,8 +1012,6 @@ class selector_lovemaker extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@L_LOVE@株式会社')
             ,
             new SctItm('@L_LOVE@財団')
-            ,
-            new SctItm('@L_LOVE@委員会')
         ];
     }
 }
