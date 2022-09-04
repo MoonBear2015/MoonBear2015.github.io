@@ -7,7 +7,7 @@ function set_book() {
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B01.05';
+    html += ' B01.06';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -679,9 +679,15 @@ class selector_girlnext extends SctItm_Selector {
             new SctItm('「@L_BOY@ったらおかしな人。私は@O_DOING@いるんじゃなくて、@O_DOING@いるのよ」'),
             new SctItm('「そうよ、@L_BOY@。私が@O_DOING@いないと、あなたが@O_DOING@しまうから」'),
             new SctItm('「@L_BOY@？ 私は@O_DOING@いないと、@O_DOING@しまうと前に言ったわよね？」'),
+            new SctItm('「@L_BOY@は@O_DOING@ばかりいるのに、ちっとも私と@O_DOING@くれないのね」'),
+            new SctItm('「@L_BOY@が@O_DOING@くれないなら、私は@O_DOING@しまうから」'),
+            new SctItm('「@L_BOY@とこうして@O_DOING@いると、@O_DOING@いた@PART@を思い出すわね」'),
+            new SctItm('「@L_BOY@が@O_DOING@くれなかったら、私も今頃は@O_DOING@ばかりいたわ」'),
             new SctItm('「それなら、@L_BOY@も一緒に@O_DOING@いる筈だったのに、どうして@O_DOING@いるの？ 」'),
             new SctItm('「@L_BOY@は知ってる？ 以前、@O_DOING@いた私の@PART@が、今は@O_DOING@いるんですって」'),
-            new SctItm('「なら、@L_BOY@が@O_DOING@みればいいわ。私が@O_DOING@もいいから」')
+            new SctItm('「なら、@L_BOY@が@O_DOING@みればいいわ。私が@O_DOING@もいいから」'),
+            new SctItm('「ねえ、@L_BOY@も@O_DOING@くれない？ そのかわり、私が@O_DOING@もいいから」'),
+            new SctItm('「私が@O_DOING@いても、@L_BOY@は@O_DOING@ばかりいるのね」')
         ];
     }
 }
@@ -692,11 +698,17 @@ class selector_boynext extends SctItm_Selector {
             new SctItm('「でも、@L_GIRL@が@O_DOING@いると、僕は@O_DOING@しまうんだ」'),
             new SctItm('「@L_GIRL@、僕が@O_DOING@いるのは、君も一緒に@O_DOING@欲しいからなんだ」'),
             new SctItm('「@L_GIRL@、キミは@O_DOING@、僕は@O_DOING@いればいいと言うのかい？」'),
+            new SctItm('「@L_GIRL@、@O_DOING@ばかりいると、僕は@O_DOING@しまいたくなる」'),
             new SctItm('「僕は、@L_GIRL@が@O_DOING@いると、自分が@O_DOING@いた頃を思い出してしまうんだ」'),
             new SctItm('「確か、@L_GIRL@が@O_DOING@いたのは、僕が@O_DOING@いた頃だったよね」'),
             new SctItm('「でも、僕は@O_DOING@いるより、@O_DOING@いる@L_GIRL@の方が好きなんだ」'),
             new SctItm('「そういえば、僕が@O_DOING@いると、いつも@L_GIRL@は@O_DOING@いたね」'),
-            new SctItm('「じゃあ、僕が@O_DOING@、@L_GIRL@は@O_DOING@みるのはどうだい？」')
+            new SctItm('「じゃあ、僕が@O_DOING@、@L_GIRL@は@O_DOING@みるのはどうだい？」'),
+            new SctItm('「@L_GIRL@は@O_DOING@いるより、@O_DOING@いた方が素敵だな」'),
+            new SctItm('「@L_GIRL@も@O_DOING@ご覧よ。@O_DOING@いるよりずっと@KEIP@から」'),
+            new SctItm('「@O_DOING@も仕方ないよ。僕は@L_GIRL@とこうして@O_DOING@いたいんだ」'),
+            new SctItm('「僕も@O_DOING@もいいけど、@L_GIRL@と@O_DOING@いる方がいいな」'),
+            new SctItm('「@O_DOING@いる@L_GIRL@は、@O_DOING@いた@PART@にそっくりだよね」')
         ];
     }
 }
