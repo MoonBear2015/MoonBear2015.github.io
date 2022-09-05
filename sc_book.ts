@@ -9,7 +9,7 @@ function set_book()
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B01.06';
+    html += ' B01.08';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -129,7 +129,7 @@ function make_booktype1() : string {
     html += '@L_BOOKWRITER@';
     html += '<br>';
     html += '<p id="book_maker">';
-    html += '出版元：@BOOKMAKER@';
+    html += '出版元：@HEROMAKER@';
     html += '</p>';
     html += '<br>';
 
@@ -139,7 +139,7 @@ function make_booktype1() : string {
     html += 'style="';
     html += 'background: ';
     html += 'linear-gradient(0deg,rgba(0,0,0,0.6),rgba(0,0,0,0.6)),';
-    html += 'url(./pics/@PIC_WHAT@);';
+    html += 'url(./pics/@PIC_HERO@);';
 
     html += 'background-position: left top;';
     html += 'background-size:   cover;';
@@ -982,10 +982,16 @@ class selector_boynext extends SctItm_Selector implements ISctItm_Selector {
     }
 }
 
-class locker_love extends SctItm_SelectLocker implements ISctItm_Selector{
+class locker_lovepic extends SctItm_SelectLocker implements ISctItm_Selector{
     constructor(){
-        super('@L_LOVE@','','@PIC_LOVE@');
-        this.Add(itms_love);
+        super('@L_LOVEPIC@','','@PIC_LOVE@');
+        this.Add(itms_lovepic);
+    }
+}
+class locker_heropic extends SctItm_SelectLocker implements ISctItm_Selector{
+    constructor(){
+        super('@L_HEROPIC@','','@PIC_HERO@');
+        this.Add(itms_heropic);
     }
 }
 
@@ -1019,31 +1025,58 @@ class selector_lovemaker extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@LOVEMAKER@');
         this.itms = [
-            new SctItm('㈱@L_LOVE@出版')
+            new SctItm('㈱@L_LOVEPIC@出版')
             ,
-            new SctItm('㈱@L_LOVE@文庫')
+            new SctItm('㈱@L_LOVEPIC@文庫')
             ,
-            new SctItm('㈱@L_LOVE@印刷')
+            new SctItm('㈱@L_LOVEPIC@印刷')
             ,
-            new SctItm('@L_LOVE@書房')
+            new SctItm('@L_LOVEPIC@書房')
             ,
-            new SctItm('@L_LOVE@書院')
+            new SctItm('@L_LOVEPIC@書院')
             ,
-            new SctItm('㈱@L_LOVE@文芸')
+            new SctItm('㈱@L_LOVEPIC@文芸')
             ,
-            new SctItm('@L_LOVE@学院')
+            new SctItm('@L_LOVEPIC@学院')
             ,
-            new SctItm('@L_LOVE@株式会社')
+            new SctItm('@L_LOVEPIC@株式会社')
             ,
-            new SctItm('@L_LOVE@財団')
+            new SctItm('@L_LOVEPIC@財団')
         ];
     }
 }
+
+class selector_heromaker extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@HEROMAKER@');
+        this.itms = [
+            new SctItm('㈱@L_HEROPIC@出版')
+            ,
+            new SctItm('㈱@L_HEROPIC@文庫')
+            ,
+            new SctItm('㈱@L_HEROPIC@印刷')
+            ,
+            new SctItm('@L_HEROPIC@書房')
+            ,
+            new SctItm('@L_HEROPIC@書院')
+            ,
+            new SctItm('㈱@L_HEROPIC@文芸')
+            ,
+            new SctItm('@L_HEROPIC@学院')
+            ,
+            new SctItm('@L_HEROPIC@株式会社')
+            ,
+            new SctItm('@L_HEROPIC@財団')
+        ];
+    }
+}
+
 
 class book_docs_maker extends news_docs_maker {
     constructor(){
         super();
         this.dic_push(new selector_bookmaker());
+        this.dic_push(new selector_heromaker());
         this.dic_push(new selector_lovemaker());
 
         this.dic_push(new selector_bookinfo());
@@ -1085,7 +1118,8 @@ class book_docs_maker extends news_docs_maker {
         this.dic_push(new locker_boy());
         this.dic_push(new locker_girl());
 
-        this.dic_push(new locker_love());
+        this.dic_push(new locker_heropic());
+        this.dic_push(new locker_lovepic());
 
         this.dic_push(new OneTime_food());
         this.dic_push(new OneTime_livestock());

@@ -1736,6 +1736,9 @@ class locker_food extends SctItm_SelectLocker {
             new SctItm('@L_FOOD01@'),
             new SctItm('@L_FOOD01@'),
             new SctItm('@L_FOOD01@'),
+            new SctItm('@L_FOOD01@'),
+            new SctItm('@L_FOOD01@'),
+            new SctItm('@L_FOOD01@'),
             new SctItm('@L_COUNTRY@産@L_FOOD01@'),
             new SctItm('@L_COUNTRY@風@L_FOOD01@'),
             new SctItm('@L_ITEM@っぽい@L_FOOD01@'),
@@ -2766,7 +2769,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new locker_heroname());
         this.dic_push(new locker_herojob());
         this.dic_push(new locker_herofullname());
-        this.dic_push(new locker_hero());
+        this.dic_push(new locker_heropic());
         this.dic_push(new locker_chr_evil1());
         this.dic_push(new locker_chr_evil2());
         this.dic_push(new locker_evilmark());
