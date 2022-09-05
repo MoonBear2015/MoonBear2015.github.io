@@ -2455,7 +2455,7 @@ class locker_evilmark extends SctItm_SelectLocker {
 }
 class locker_hero_type extends SctItm_SelectLocker {
     constructor() {
-        super('@L_HEROTYPE@');
+        super('@L_HEROTYPE@', '', '@PIC_HERO@');
         this.Add(itms_hero_type);
     }
 }

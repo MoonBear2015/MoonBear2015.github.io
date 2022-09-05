@@ -7,7 +7,7 @@ function set_book() {
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B01.09';
+    html += ' B01.10';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -726,7 +726,7 @@ class locker_lovepic extends SctItm_SelectLocker {
 }
 class locker_heropic extends SctItm_SelectLocker {
     constructor() {
-        super('@L_HEROPIC@', '', '@PIC_HERO@');
+        super('@L_HEROPIC@');
         this.Add(itms_heropic);
     }
 }
