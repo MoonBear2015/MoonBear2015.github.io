@@ -9,7 +9,7 @@ function set_book()
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B01.08';
+    html += ' B01.09';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -943,6 +943,14 @@ class selector_girlnext extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('「ねえ、@L_BOY@も@O_DOING@くれない？ そのかわり、私が@O_DOING@もいいから」')
             ,
             new SctItm('「私が@O_DOING@いても、@L_BOY@は@O_DOING@ばかりいるのね」')
+            ,
+            new SctItm('「@L_BOY@は、私が@O_DOING@いると、どうして@O_DOING@いるの」')
+            ,
+            new SctItm('「じゃあ、@L_BOY@も一緒に@O_DOING@くれない？ @O_DOING@ばかりいないで」')
+            ,
+            new SctItm('「次は@O_DOING@、そして@O_DOING@、それから――ねえ@L_BOY@、聞いてるの？」')
+            ,
+            new SctItm('「それで@L_BOY@は、昨日まで@O_DOING@た筈なのに、今日は@O_DOING@いるのね。」')
         ]
     }
 }
@@ -978,6 +986,10 @@ class selector_boynext extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('「僕も@O_DOING@もいいけど、@L_GIRL@と@O_DOING@いる方がいいな」')
             ,
             new SctItm('「@O_DOING@いる@L_GIRL@は、@O_DOING@いた@PART@にそっくりだよね」')
+            ,
+            new SctItm('「@O_DOING@いる@L_GIRL@はとても@KEIP@けど、@O_DOING@いる@L_GIRL@も@KEIP@よね」')
+            ,
+            new SctItm('「最近、@L_GIRL@は@O_DOING@ばかりいるから、たまには@O_DOING@みたらどうかと思ってさ」')
         ]
     }
 }
