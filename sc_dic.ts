@@ -7818,6 +7818,12 @@ const   itms_hero_type = [
     new SctItm('菩薩','HERO/Hero12.jpg')
     ,
     new SctItm('導師','HERO/Hero11.jpg')
+    ,
+    new SctItm('ドクター','HERO/Hero16.jpg')
+    ,
+    new SctItm('博士','HERO/Hero16.jpg')
+    ,
+    new SctItm('教授','HERO/Hero16.jpg')
 ]
 
 const   itms_evil_type = [
