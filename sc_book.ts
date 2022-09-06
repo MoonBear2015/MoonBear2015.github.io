@@ -983,7 +983,7 @@ class selector_boynext extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('「@O_DOING@も仕方ないよ。僕は@L_GIRL@とこうして@O_DOING@いたいんだ」')
             ,
-            new SctItm('「僕も@O_DOING@もいいけど、@L_GIRL@と@O_DOING@いる方がいいな」')
+            new SctItm('「僕は@O_DOING@いるより、@L_GIRL@と@O_DOING@いる方がいいな」')
             ,
             new SctItm('「@O_DOING@いる@L_GIRL@は、@O_DOING@いた@PART@にそっくりだよね」')
             ,

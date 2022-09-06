@@ -711,7 +711,7 @@ class selector_boynext extends SctItm_Selector {
             new SctItm('「@L_GIRL@は@O_DOING@いるより、@O_DOING@いた方が素敵だな」'),
             new SctItm('「@L_GIRL@も@O_DOING@ご覧よ。@O_DOING@いるよりずっと@KEIP@から」'),
             new SctItm('「@O_DOING@も仕方ないよ。僕は@L_GIRL@とこうして@O_DOING@いたいんだ」'),
-            new SctItm('「僕も@O_DOING@もいいけど、@L_GIRL@と@O_DOING@いる方がいいな」'),
+            new SctItm('「僕は@O_DOING@いるより、@L_GIRL@と@O_DOING@いる方がいいな」'),
             new SctItm('「@O_DOING@いる@L_GIRL@は、@O_DOING@いた@PART@にそっくりだよね」'),
             new SctItm('「@O_DOING@いる@L_GIRL@はとても@KEIP@けど、@O_DOING@いる@L_GIRL@も@KEIP@よね」'),
             new SctItm('「最近、@L_GIRL@は@O_DOING@ばかりいるから、たまには@O_DOING@みたらどうかと思ってさ」')

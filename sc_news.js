@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N03.14';
+    html += ' N03.15';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -2769,7 +2769,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new locker_heroname());
         this.dic_push(new locker_herojob());
         this.dic_push(new locker_herofullname());
-        this.dic_push(new locker_heropic());
+        this.dic_push(new locker_hero());
         this.dic_push(new locker_chr_evil1());
         this.dic_push(new locker_chr_evil2());
         this.dic_push(new locker_evilmark());
