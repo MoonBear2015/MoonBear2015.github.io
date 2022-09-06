@@ -1741,7 +1741,6 @@ class locker_food extends SctItm_SelectLocker {
             new SctItm('@L_FOOD01@'),
             new SctItm('@L_COUNTRY@産@L_FOOD01@'),
             new SctItm('@L_COUNTRY@風@L_FOOD01@'),
-            new SctItm('@L_ITEM@っぽい@L_FOOD01@'),
             new SctItm('@L_PART@が作った@L_FOOD01@'),
             new SctItm('@L_CLASS@の手作り@L_FOOD01@'),
             new SctItm('@L_CLASS@のお薦め@L_FOOD01@'),
