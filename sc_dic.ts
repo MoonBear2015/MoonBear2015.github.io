@@ -7783,7 +7783,9 @@ const   itms_hero_type = [
     ,
     new SctItm('王子','HERO/Hero13.jpg')
     ,
-    new SctItm('王女','HERO/Hero05.jpg')
+    new SctItm('王女','HERO/Hero15.jpg')
+    ,
+    new SctItm('女王','HERO/Hero15.jpg')
     ,
     new SctItm('伯爵','HERO/Hero10.jpg')
     ,
@@ -7994,7 +7996,7 @@ const   itms_doing = [
     ,
     new SctItm('@FOOD@に塩を振って食べて')
     ,
-    new SctItm('@FOOD@に塩胡椒をかけて食べて')
+    new SctItm('@FOOD@に塩胡椒を振って食べて')
     ,
     new SctItm('@FOOD@に醤油をかけて食べて')
     ,
@@ -8049,6 +8051,10 @@ const   itms_doing = [
     new SctItm('@CLASS@に変身して')
     ,
     new SctItm('@PLACE@に住んで')
+    ,
+    new SctItm('@COUNTRY@に移住して')
+    ,
+    new SctItm('@COUNTRY@に亡命して')
     ,
     new SctItm('@CITY@に家を建てて')
     ,
@@ -8242,7 +8248,7 @@ const   itms_doing_l = [
     ,
     new SctItm('@L_FOOD@に塩を振って食べて')
     ,
-    new SctItm('@L_FOOD@に塩胡椒をかけて食べて')
+    new SctItm('@L_FOOD@に塩胡椒を振って食べて')
     ,
     new SctItm('@L_FOOD@に醤油をかけて食べて')
     ,
@@ -8295,6 +8301,10 @@ const   itms_doing_l = [
     new SctItm('@L_CLASS@を呼び出して')
     ,
     new SctItm('@L_CLASS@に変身して')
+    ,
+    new SctItm('@L_COUNTRY@に移住して')
+    ,
+    new SctItm('@L_COUNTRY@に亡命して')
     ,
     new SctItm('@L_CITY@に住んで')
     ,
@@ -8412,8 +8422,6 @@ const   itms_doing_l = [
     ,
     new SctItm('@L_FRUIT@を叩き売りして')
     ,
-    new SctItm('@L_FRUIT@の種を捨てて')
-    ,
     new SctItm('@L_RIDE@に乗って')
     ,
     new SctItm('@L_FESTIVAL@を開催して')
@@ -8426,7 +8434,7 @@ const   itms_doing_o = [
     ,
     new SctItm('@O_FOOD@に塩を振って食べて')
     ,
-    new SctItm('@O_FOOD@に塩胡椒をかけて食べて')
+    new SctItm('@O_FOOD@に塩胡椒を振って食べて')
     ,
     new SctItm('@O_FOOD@に醤油をかけて食べて')
     ,
