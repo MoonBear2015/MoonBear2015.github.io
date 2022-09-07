@@ -1564,14 +1564,21 @@ const cods_ad_posi = [
     new SctCod_It('|手堅|てがた|い'),
     new SctCod_It('|柔|やわ|らかい'),
     new SctCod_It('|喜|よろこ|ばしい'),
-    new SctCod_It('|楽|たの|しい'),
-    new SctCod_It('|穏|おだ|やかな'),
-    new SctCod_It('|平和|へいわ|な'),
-    new SctCod_It('|幸|しあわ|せな'),
-    new SctCod_It('|素敵|すてき|な'),
-    new SctCod_It('|豊|ゆた|かな'),
-    new SctCod_It('|優|やさ|しい'),
-    new SctCod_It('|緩|ゆる|やかな')
+    new SctCod_It('|楽|たの|しい')
+    // ,
+    // new SctCod_It('|穏|おだ|やかな')
+    // ,
+    // new SctCod_It('|平和|へいわ|な')
+    // ,
+    // new SctCod_It('|幸|しあわ|せな')
+    // ,
+    // new SctCod_It('|素敵|すてき|な')
+    // ,
+    // new SctCod_It('|豊|ゆた|かな')
+    ,
+    new SctCod_It('|優|やさ|しい')
+    // ,
+    // new SctCod_It('|緩|ゆる|やかな')
 ];
 const cods_adv_posi = [
     new SctCod_It('|勇|いさ|ましく'),
