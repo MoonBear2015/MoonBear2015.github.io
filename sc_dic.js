@@ -3728,7 +3728,8 @@ const itms_class = [
     new SctItm('公務員'),
     new SctItm('国会議員'),
     new SctItm('機関士'),
-    new SctItm('野鳥の会'),
+    // new SctItm('野鳥の会')
+    // ,
     new SctItm('牧師'),
     new SctItm('神主'),
     new SctItm('僧侶'),

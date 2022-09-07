@@ -7,7 +7,7 @@ function set_book() {
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B01.13';
+    html += ' B01.14';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -167,12 +167,6 @@ function make_booktype2() {
     html += '</div>';
     html += '<div id="book_lovestory">';
     html += '@BOY_FIRST@<br>';
-    html += '@GIRL_NEXT@<br>';
-    html += '@BOY_NEXT@<br>';
-    html += '@GIRL_NEXT@<br>';
-    html += '@BOY_NEXT@<br>';
-    html += '@GIRL_NEXT@<br>';
-    html += '@BOY_NEXT@<br>';
     html += '@GIRL_NEXT@<br>';
     html += '@BOY_NEXT@<br>';
     html += '@GIRL_NEXT@<br>';
@@ -664,10 +658,11 @@ class selector_boyfirst extends SctItm_Selector {
     constructor() {
         super('@BOY_FIRST@');
         this.itms = [
-            new SctItm('「やあ、@L_GIRL@。今日は@O_DOING@いるんだね？」'),
+            new SctItm('「やあ、@KEIP@@L_GIRL@。今日は@O_DOING@いるんだね？」'),
             new SctItm('「おや、@L_GIRL@。どうして@O_DOING@るんだい？」'),
-            new SctItm('「だめだよ、@L_GIRL@。@O_DOING@はいけないと言っただろう」'),
-            new SctItm('「ああ、@L_GIRL@。キミも一緒に@O_DOING@はどうだい？」')
+            new SctItm('「だめだよ、@L_GIRL@。そんな@KEIN@@O_DOING@はいけないと言っただろう」'),
+            new SctItm('「ああ、@KEIP@@L_GIRL@。キミも一緒に@O_DOING@はどうだい？」'),
+            new SctItm('「@L_GIRL@、どうして@O_DOING@ないのかい？」')
         ];
     }
 }
