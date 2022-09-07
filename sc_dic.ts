@@ -2794,6 +2794,8 @@ const   cods_ad_posi = [
     new SctCod_It('|喜|よろこ|ばしい')
     ,
     new SctCod_It('|楽|たの|しい')
+    ,
+    new SctCod_It('|嬉|うれ|しい')
     // ,
     // new SctCod_It('|穏|おだ|やかな')
     // ,
