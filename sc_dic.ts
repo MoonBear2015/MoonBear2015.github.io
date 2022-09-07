@@ -8798,6 +8798,10 @@ const   itms_lovepic = [
     new SctItm('愛の','LOVE/Love04.jpg')
     ,
     new SctItm('愛憎','LOVE/Love05.jpg')
+    ,
+    new SctItm('恋人','LOVE/Love06.jpg')
+    ,
+    new SctItm('結婚','LOVE/Love07.jpg')
 ]
 
 const   itms_heropic = [
