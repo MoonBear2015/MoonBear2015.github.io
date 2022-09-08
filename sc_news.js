@@ -1349,6 +1349,30 @@ class selector_kdp extends SctItm_Selector {
         this.Add(cods_to_itms(cods_adv_sense_p));
     }
 }
+class selector_kmp extends SctItm_Selector {
+    constructor() {
+        super('@KEIMP@');
+        this.Add(cods_to_itms(cods_km_posi));
+    }
+}
+class selector_kp2 extends SctItm_Selector {
+    constructor() {
+        super('@KEIP2@');
+        this.itms = [
+            new SctItm('@KEIP@'),
+            new SctItm('@KEIMP@な')
+        ];
+    }
+}
+class selector_kp3 extends SctItm_Selector {
+    constructor() {
+        super('@KEIP3@');
+        this.itms = [
+            new SctItm('@KEIP@'),
+            new SctItm('@KEIMP@だ')
+        ];
+    }
+}
 class selector_kn extends SctItm_Selector {
     constructor() {
         super('@KEIN@');
@@ -1363,6 +1387,30 @@ class selector_kdn extends SctItm_Selector {
         this.Add(cods_to_itms(cods_adv_nega));
         this.Add(cods_to_itms(cods_adv_danger));
         this.Add(cods_to_itms(cods_adv_sense_n));
+    }
+}
+class selector_kmn extends SctItm_Selector {
+    constructor() {
+        super('@KEIMN@');
+        this.Add(cods_to_itms(cods_km_nega));
+    }
+}
+class selector_kn2 extends SctItm_Selector {
+    constructor() {
+        super('@KEIN2@');
+        this.itms = [
+            new SctItm('@KEIN@'),
+            new SctItm('@KEIMN@な')
+        ];
+    }
+}
+class selector_kn3 extends SctItm_Selector {
+    constructor() {
+        super('@KEIN3@');
+        this.itms = [
+            new SctItm('@KEIN@'),
+            new SctItm('@KEIMN@だ')
+        ];
     }
 }
 class selector_grade extends SctItm_Selector {
@@ -2685,8 +2733,14 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_kd());
         this.dic_push(new selector_kp());
         this.dic_push(new selector_kdp());
+        this.dic_push(new selector_kmp());
+        this.dic_push(new selector_kp2());
+        this.dic_push(new selector_kp3());
         this.dic_push(new selector_kn());
         this.dic_push(new selector_kdn());
+        this.dic_push(new selector_kmn());
+        this.dic_push(new selector_kn2());
+        this.dic_push(new selector_kn3());
         this.dic_push(new selector_grade());
         this.dic_push(new selector_dir());
         this.dic_push(new selector_season());
