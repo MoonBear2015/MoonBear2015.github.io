@@ -1583,7 +1583,8 @@ const cods_km_posi = [
     new SctCod_It('あざやか'),
     new SctCod_It('|安全|あんぜん|'),
     new SctCod_It('アンニュイ'),
-    new SctCod_It('|偉大|いだい|'),
+    // new SctCod_It('|偉大|いだい|')
+    // ,
     new SctCod_It('|鋭敏|えいびん|'),
     new SctCod_It('|綺麗|きれい|'),
     new SctCod_It('しなやか'),
@@ -1591,7 +1592,8 @@ const cods_km_posi = [
     new SctCod_It('ロマンチック'),
     new SctCod_It('|幸|しあわ|せ'),
     new SctCod_It('|親切|しんせつ|'),
-    new SctCod_It('|新鮮|しんせん|'),
+    // new SctCod_It('|新鮮|しんせん|')
+    // ,
     new SctCod_It('|素敵|すてき|'),
     new SctCod_It('|魅力的|みりょくてき|'),
     new SctCod_It('|豊|ゆた|か')
@@ -1602,7 +1604,9 @@ const cods_ad_nega = [
     new SctCod_It('|切|せつ|ない'),
     new SctCod_It('|憎|にく|たらしい'),
     new SctCod_It('|薄暗|うすぐら|い'),
-    new SctCod_It('|醜|みにく|い')
+    new SctCod_It('|醜|みにく|い'),
+    new SctCod_It('|阿呆|あほ|らしい'),
+    new SctCod_It('|馬鹿|ばか|らしい')
 ];
 const cods_adv_nega = [
     new SctCod_It('|五月蠅|うるさ|く'),
@@ -1610,38 +1614,34 @@ const cods_adv_nega = [
     new SctCod_It('|切|せつ|なく'),
     new SctCod_It('|憎|にく|たらしく'),
     new SctCod_It('|薄暗|うすぐら|く'),
+    new SctCod_It('|阿呆|あほ|らしく'),
+    new SctCod_It('|馬鹿|ばか|らしく'),
     new SctCod_It('|醜|みにく|く')
 ];
 const cods_km_nega = [
     new SctCod_It('|曖昧|あいまい|'),
-    new SctCod_It('|悪逆|あくぎゃく|'),
-    new SctCod_It('|悪質|あくしつ|'),
-    new SctCod_It('|悪徳|あくとく|'),
-    new SctCod_It('|悪辣|あくらつ|'),
-    new SctCod_It('|阿呆|あほ|'),
     new SctCod_It('|哀|あわ|れ'),
-    new SctCod_It('|異質|いしつ|'),
-    new SctCod_It('|異常|いじょう|'),
-    new SctCod_It('|嫌|いや|'),
+    // new SctCod_It('|嫌|いや|')
+    // ,
     new SctCod_It('|大袈裟|おおげさ|'),
     new SctCod_It('|大雑把|おおざっぱ|'),
     new SctCod_It('|臆病|おくびょう|'),
     new SctCod_It('|愚|おろ|か'),
     new SctCod_It('|過激|かげき|'),
     new SctCod_It('|過酷|かこく|'),
-    new SctCod_It('|危険|きけん|'),
+    // new SctCod_It('|危険|きけん|')
+    // ,
     new SctCod_It('|下品|げひん|'),
     new SctCod_It('|下劣|げれつ|'),
     new SctCod_It('|残虐|ざんぎゃく|'),
     new SctCod_It('|残酷|ざんこく|'),
-    new SctCod_It('|馬鹿|ばか|'),
     new SctCod_It('|悲惨|ひさん|'),
     new SctCod_It('|不潔|ふけつ|'),
     new SctCod_It('|暴虐|ぼうぎゃく|'),
     new SctCod_It('|暴力的|ぼうりょくてき|'),
     new SctCod_It('|迷惑|めいわく|'),
     new SctCod_It('|冷酷|れいこく|'),
-    new SctCod_It('|劣悪|れいこく|')
+    new SctCod_It('|劣悪|れつあく|')
 ];
 const cods_body = [
     new SctCod_It('|体|からだ|', 'body.jpg'),

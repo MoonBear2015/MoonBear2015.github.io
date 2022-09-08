@@ -2827,8 +2827,8 @@ const   cods_km_posi = [
 	,
 	new SctCod_It('アンニュイ')
 	,
-	new SctCod_It('|偉大|いだい|')
-	,
+	// new SctCod_It('|偉大|いだい|')
+	// ,
 	new SctCod_It('|鋭敏|えいびん|')
 	,
 	new SctCod_It('|綺麗|きれい|')
@@ -2843,8 +2843,8 @@ const   cods_km_posi = [
 	,
 	new SctCod_It('|親切|しんせつ|')
 	,
-	new SctCod_It('|新鮮|しんせん|')
-	,
+	// new SctCod_It('|新鮮|しんせん|')
+	// ,
 	new SctCod_It('|素敵|すてき|')
 	,
 	new SctCod_It('|魅力的|みりょくてき|')
@@ -2865,6 +2865,10 @@ const   cods_ad_nega = [
     new SctCod_It('|薄暗|うすぐら|い')
     ,
     new SctCod_It('|醜|みにく|い')
+    ,
+	new SctCod_It('|阿呆|あほ|らしい')
+	,
+	new SctCod_It('|馬鹿|ばか|らしい')
 ];
 const   cods_adv_nega = [
     new SctCod_It('|五月蠅|うるさ|く')
@@ -2877,30 +2881,20 @@ const   cods_adv_nega = [
     ,
     new SctCod_It('|薄暗|うすぐら|く')
     ,
+	new SctCod_It('|阿呆|あほ|らしく')
+	,
+	new SctCod_It('|馬鹿|ばか|らしく')
+	,
     new SctCod_It('|醜|みにく|く')
 ];
 
 const   cods_km_nega = [
 	new SctCod_It('|曖昧|あいまい|')
 	,
-	new SctCod_It('|悪逆|あくぎゃく|')
-	,
-	new SctCod_It('|悪質|あくしつ|')
-	,
-	new SctCod_It('|悪徳|あくとく|')
-	,
-	new SctCod_It('|悪辣|あくらつ|')
-	,
-	new SctCod_It('|阿呆|あほ|')
-	,
 	new SctCod_It('|哀|あわ|れ')
 	,
-	new SctCod_It('|異質|いしつ|')
-	,
-	new SctCod_It('|異常|いじょう|')
-	,
-	new SctCod_It('|嫌|いや|')
-	,
+	// new SctCod_It('|嫌|いや|')
+	// ,
 	new SctCod_It('|大袈裟|おおげさ|')
 	,
 	new SctCod_It('|大雑把|おおざっぱ|')
@@ -2913,8 +2907,8 @@ const   cods_km_nega = [
 	,
 	new SctCod_It('|過酷|かこく|')
 	,
-	new SctCod_It('|危険|きけん|')
-	,
+	// new SctCod_It('|危険|きけん|')
+	// ,
 	new SctCod_It('|下品|げひん|')
 	,
 	new SctCod_It('|下劣|げれつ|')
@@ -2922,8 +2916,6 @@ const   cods_km_nega = [
 	new SctCod_It('|残虐|ざんぎゃく|')
 	,
 	new SctCod_It('|残酷|ざんこく|')
-	,
-	new SctCod_It('|馬鹿|ばか|')
 	,
 	new SctCod_It('|悲惨|ひさん|')
 	,
@@ -2937,7 +2929,7 @@ const   cods_km_nega = [
 	,
 	new SctCod_It('|冷酷|れいこく|')
 	,
-	new SctCod_It('|劣悪|れいこく|')
+	new SctCod_It('|劣悪|れつあく|')
 ];
 
 

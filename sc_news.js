@@ -1373,6 +1373,15 @@ class selector_kp3 extends SctItm_Selector {
         ];
     }
 }
+class selector_kdp2 extends SctItm_Selector {
+    constructor() {
+        super('@KEIDP2@');
+        this.itms = [
+            new SctItm('@KEIDP@'),
+            new SctItm('@KEIMP@に')
+        ];
+    }
+}
 class selector_kn extends SctItm_Selector {
     constructor() {
         super('@KEIN@');
@@ -1410,6 +1419,15 @@ class selector_kn3 extends SctItm_Selector {
         this.itms = [
             new SctItm('@KEIN@'),
             new SctItm('@KEIMN@だ')
+        ];
+    }
+}
+class selector_kdn2 extends SctItm_Selector {
+    constructor() {
+        super('@KEIDN2@');
+        this.itms = [
+            new SctItm('@KEIDN@'),
+            new SctItm('@KEIMN@に')
         ];
     }
 }
@@ -2733,11 +2751,13 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_kd());
         this.dic_push(new selector_kp());
         this.dic_push(new selector_kdp());
+        this.dic_push(new selector_kdp2());
         this.dic_push(new selector_kmp());
         this.dic_push(new selector_kp2());
         this.dic_push(new selector_kp3());
         this.dic_push(new selector_kn());
         this.dic_push(new selector_kdn());
+        this.dic_push(new selector_kdn2());
         this.dic_push(new selector_kmn());
         this.dic_push(new selector_kn2());
         this.dic_push(new selector_kn3());

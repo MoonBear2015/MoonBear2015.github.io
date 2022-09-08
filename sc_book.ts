@@ -9,7 +9,7 @@ function set_book()
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B01.20';
+    html += ' B01.21';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -456,11 +456,11 @@ class selector_story00 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@ST00@');
         this.itms = [
-            new SctItm('　ここは@MANY@@KEIP2@@L_CLASS@達が暮らす@KEIDP@@KEIP2@@L_WHAT@。@STE00@')
+            new SctItm('　ここは@MANY@@KEIP2@@L_CLASS@達が@KEIDP2@暮らす@KEIP2@@L_WHAT@。@STE00@')
             ,
-            new SctItm('　今日も@KEIP2@@L_WHAT@で@DOING02@いるのは、@MANY@@KEIDP@@KEIP2@@L_CLASS@達である。@STE00@')
+            new SctItm('　今日も@KEIP2@@L_WHAT@で@DOING02@いるのは、@MANY@@KEIP2@@L_CLASS@達である。@STE00@')
             ,
-            new SctItm('　昔々、@KEIDP@@KEIP2@@L_WHAT@で、今日も@KEIDP@@DOING02@いる@KEIP2@@L_CLASS@達。@STE00@')
+            new SctItm('　昔々、@KEIP2@@L_WHAT@で、今日も@KEIDP2@@DOING02@いる@KEIP2@@L_CLASS@達。@STE00@')
         ]
     }
 }
@@ -470,13 +470,13 @@ class selector_storyE00 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@STE00@');
         this.itms = [
-            new SctItm('<br>　その@KEIP2@@L_CLASS@達の元に、見るも@KEIDN@@KEIN2@@RIDE@に乗った謎の@L_EVILTYPE@が姿を現した――。@STE01@')
+            new SctItm('<br>　その@KEIP2@@L_CLASS@達の元に、見るも@KEIN2@@RIDE@に乗った謎の@L_EVILTYPE@が姿を現した――。@STE01@')
             ,
-            new SctItm('<br>　そんな@KEIP2@@L_WHAT@に、@KEIN2@@NICKBAD@そっくりの@L_EVILTYPE@が@KEIDN@@KEIN2@@RIDE@に乗って現れた――。@STE01@')
+            new SctItm('<br>　そんな@KEIP2@@L_WHAT@に、@KEIN2@@NICKBAD@そっくりの@L_EVILTYPE@が@KEIN2@@RIDE@に乗って現れた――。@STE01@')
             ,
-            new SctItm('<br>　そこに@NICKBAD@のように@KEIDN@@KEIN2@@L_EVILJOB@@L_EVILTYPE@が姿を現した――。@STE01@')
+            new SctItm('<br>　そこに@NICKBAD@のように@KEIN2@@L_EVILJOB@@L_EVILTYPE@が姿を現した――。@STE01@')
             ,
-            new SctItm('<br>　その@L_CLASS@達の元に現れたのは、まるで@NICKBAD@のような@KEIDN@@KEIN2@@L_EVILJOB@@L_EVILTYPE@――。@STE01@')
+            new SctItm('<br>　その@L_CLASS@達の元に@KEIDN2@現れたのは、まるで@NICKBAD@のような@KEIN2@@L_EVILJOB@@L_EVILTYPE@――。@STE01@')
         ]
     }
 }
@@ -490,7 +490,7 @@ class selector_storyE01 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('<br>「我が名は@L_EVIL@！ @KEIN2@@TECH@の恐ろしさを身をもって味わうのだ！」@STE_C@')
             ,
-            new SctItm('<br>「俺様は@L_EVIL@！ @KEIN2@@TECH@の呪いを受けてみよ！」@STE_C@')
+            new SctItm('<br>「俺様は@L_EVIL@！ @KEIN2@@TECH@の@KEIDN2@呪いを受けてみよ！」@STE_C@')
         ]
     }
 }
@@ -516,13 +516,13 @@ class selector_storyH00 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@STH00@');
         this.itms = [
-            new SctItm('<br>　@KEIDP@@KEIP2@@ANIMAL@の背にまたがって、@KEIDP@も@KEIP2@@L_HEROJOB@@L_HEROTYPE@が駆け付けた！<br>@STH01@')
+            new SctItm('<br>　@KEIP2@@ANIMAL@の背にまたがって、@KEIP2@@L_HEROJOB@@L_HEROTYPE@が駆け付けた！<br>@STH01@')
             ,
-            new SctItm('<br>　@KEIP2@@MUSIC@と共に現れたのは、@KEIDP@@KEIP2@@L_HEROJOB@@L_HEROTYPE@！<br>@STH01@')
+            new SctItm('<br>　@KEIP2@@MUSIC@と共に@KEIDP2@現れたのは、@KEIP2@@L_HEROJOB@@L_HEROTYPE@！<br>@STH01@')
             ,
-            new SctItm('<br>　見るも@KEIP2@@DRESS@をひるがえし、@KEIP2@@L_HEROJOB@@L_HEROTYPE@が@KEIDP@@KEIDP@舞い降りた！<br>@STH01@')
+            new SctItm('<br>　見るも@KEIP2@@DRESS@を@KEIDP2@ひるがえし、@KEIP2@@L_HEROJOB@@L_HEROTYPE@が@KEIDP2@舞い降りた！<br>@STH01@')
             ,
-            new SctItm('<br>　@KEIP2@@FLOWER@の花を口にくわえた正義の味方、@KEIP2@@L_HEROJOB@@L_HEROTYPE@が降臨した！<br>@STH01@')
+            new SctItm('<br>　@KEIP2@@FLOWER@の花を口にくわえた正義の味方、@KEIP2@@L_HEROJOB@@L_HEROTYPE@が@KEIDP2@降臨した！<br>@STH01@')
         ]
     }
 }
@@ -562,9 +562,9 @@ class selector_storyH_E extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('「ぬぬ、@L_HEROJOB@@L_HEROTYPE@だと？」と驚く@L_EVILJOB@@L_EVILTYPE@、しかし、それも束の間。<br>@STE02@')
             ,
-            new SctItm('「来たな@L_HERONAME@！ 覚悟せよ！」と、@L_EVILJOB@@L_EVILTYPE@は勇み立つ。<br>@STE02@')
+            new SctItm('「来たな@L_HERONAME@！ 覚悟せよ！」と、@L_EVILJOB@@L_EVILTYPE@は@KEIDN2@勇み立つ。<br>@STE02@')
             ,
-            new SctItm('「ヌハハハ！ 此処であったが百年目！ 勝負だ@L_HERONAME@！ 」と、@L_EVILJOB@@L_EVILTYPE@は不敵に笑う。<br>@STE02@')
+            new SctItm('「ヌハハハ！ 此処であったが百年目！ 勝負だ@L_HERONAME@！ 」と、@L_EVILJOB@@L_EVILTYPE@は@KEIDN2@笑う。<br>@STE02@')
         ]
     }
 }
@@ -577,7 +577,7 @@ class selector_storyE02 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('　次の瞬間、@KEIN2@@ANIMAL@のような@KEIN2@勢いで@L_HEROFULLNAME@に飛びかかった！<br>「死ね！ @EVILATTACK@」<br>@SEL02@')
             ,
-            new SctItm('　そして、@KEIN2@@BIRD@の構えから、@KEIDN@@KEIN2@技を繰り出した！<br>「くたばれ@L_HERONAME@！ @EVILATTACK@」<br>@SEL02@')
+            new SctItm('　そして、@KEIN2@@BIRD@の構えから、@KEIN2@技を繰り出した！<br>「くたばれ@L_HERONAME@！ @EVILATTACK@」<br>@SEL02@')
         ]
     }
 }
@@ -600,7 +600,7 @@ class selector_storyH02 extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('　@KEIP2@@L_HEROFULLNAME@は@KEIP2@必殺の構え！ <br>「覚悟だ！ @HEROATTACK@」<br>@SEL03@')
             ,
-            new SctItm('　@KEIP2@@L_HEROFULLNAME@は@KEIP2@腕を振りかざし！ <br>「トドメだ！ @HEROATTACK@」<br>@SEL03@')
+            new SctItm('　@KEIP2@@L_HEROFULLNAME@は@KEIP2@腕を@KEIDP2@振りかざし！ <br>「トドメだ！ @HEROATTACK@」<br>@SEL03@')
             ,
             new SctItm('　@KEIP2@@L_HEROFULLNAME@の@KEIP2@大技が放たれた！ <br>「受けてみよ！ @HEROATTACK@」<br>@SEL03@')
         ]
@@ -624,9 +624,9 @@ class selector_storyH03 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@STH03@');
         this.itms = [
-            new SctItm('「仕方ない、我が裁きを受けよ！」と@KEIDP@言いつつ、@KEIP2@@L_HEROJOB@@L_HEROTYPE@はヒラリとかわす！<br>@STH02@')
+            new SctItm('「仕方ない、我が裁きを受けよ！」と@KEIDP2@言いつつ、@KEIP2@@L_HEROJOB@@L_HEROTYPE@はヒラリとかわす！<br>@STH02@')
             ,
-            new SctItm('　それを@KEIP2@@L_HEROJOB@@L_HEROTYPE@は@KEIDP@弾き返す！「悪が栄える試しは無い！」<br>@STH02@')
+            new SctItm('　それを@KEIP2@@L_HEROJOB@@L_HEROTYPE@は@KEIDP2@弾き返す！「悪が栄える試しは無い！」<br>@STH02@')
             ,
             new SctItm('「それで正義が揺らぐものか！」@KEIP2@@L_HEROJOB@@L_HEROTYPE@はビクともしない！<br>@STH02@')
         ]
@@ -696,7 +696,7 @@ class selector_storyEEND extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('「悪が栄える！ これがこの世の真実だ！」<br>　@L_WHAT@は@KEIN2@@L_EVILJOB@@L_EVILTYPE@の魔の手に落ちた！<br><br>　@HEROCATCH@@L_HERONAME@！<br>　@HEROCATCH@@L_HERONAME@！<br>　@L_WHAT@があなたを待っている！<br><p style="text-align: right">(つづく)</p>')
             ,
-            new SctItm('「さあ、@L_CLASS@共よ！ 俺様に平伏すが良い！ ゲハハハ！」<br>　@L_EVILFULLNAME@の@KEIDN@@KEIN2@大勝利！<br><br>　@HEROCATCH@@L_HERONAME@！<br>　@HEROCATCH@@L_HERONAME@！<br>　@L_CLASS@達を救えるのは君だけだ！<br><p style="text-align: right">(つづく)</p>')
+            new SctItm('「さあ、@L_CLASS@共よ！ 俺様に平伏すが良い！ ゲハハハ！」<br>　@L_EVILFULLNAME@の@KEIN2@大勝利！<br><br>　@HEROCATCH@@L_HERONAME@！<br>　@HEROCATCH@@L_HERONAME@！<br>　@L_CLASS@達を救えるのは君だけだ！<br><p style="text-align: right">(つづく)</p>')
         ]
     }
 }
@@ -782,7 +782,7 @@ class selector_storyHLose extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('　@L_WHAT@から追われた@L_HEROFULLNAME@を待っていたのは、かつてのライバル、@L_EVILFULLNAME@であった。<br>「もう終わったんだ。俺達の時代は」「ああ、そうだな――」<br>　酒を酌み交わす英雄が二人・・・。<br><br>　@HEROCATCH@@L_HERONAME@！<br>　@HEROCATCH@@L_EVILNAME@！<br>　プロレス界が君達を待っている！<br><p style="text-align: right">(つづく)</p>')
             ,
-            new SctItm('　@L_CLASS@から追いやられた@L_HEROFULLNAME@の側に、もはや敵ではなくなった、@L_EVILFULLNAME@の姿があった。<br>「――判ったか？ 俺達のすべきことが」「ああ、そうだな――」<br>　勇者の手に、@KEIDP@@KEIN2@武器が手渡されていた。<br><br>　@HEROCATCH@@L_HERONAME@！<br>　@HEROCATCH@@L_EVILNAME@！<br>　世論を敵に回して勝てるのか？<br><p style="text-align: right">(つづく)</p>')
+            new SctItm('　@L_CLASS@から追いやられた@L_HEROFULLNAME@の側に、もはや敵ではなくなった、@L_EVILFULLNAME@の姿があった。<br>「――判ったか？ 俺達のすべきことが」「ああ、そうだな――」<br>　勇者の手に、@KEIDP@も@KEIN2@武器が手渡されていた。<br><br>　@HEROCATCH@@L_HERONAME@！<br>　@HEROCATCH@@L_EVILNAME@！<br>　世論を敵に回して勝てるのか？<br><p style="text-align: right">(つづく)</p>')
             ,
             new SctItm('　荷物をかかえて@L_WHAT@を後にする@L_HEROFULLNAME@を、ジッと見守る@L_EVILFULLNAME@の姿。<br>　これが二人の愛が始まる瞬間であった――。<br><br>　@HEROCATCH@@L_HERONAME@！<br>　@HEROCATCH@@L_EVILNAME@！<br>　プロポーズまで先は長いぞ！<br><p style="text-align: right">(つづく)</p>')
             ,
@@ -928,7 +928,7 @@ class selector_girlnext extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('「@KEIN2@@L_BOY@とこうして@KEIN2@@O_DOING@いると、@KEIN2@@O_DOING@いた@KEIN2@@PART@を思い出すわね」')
             ,
-            new SctItm('「@KEIN2@@L_BOY@が@KEIN2@@O_DOING@くれなかったら、私も今頃は@KEIDN@@O_DOING@ばかりいたわ」')
+            new SctItm('「@KEIN2@@L_BOY@が@KEIN2@@O_DOING@くれなかったら、私も今頃は@KEIDN2@@O_DOING@ばかりいたわ」')
             ,
             new SctItm('「それなら、@KEIN2@@L_BOY@も一緒に@KEIN2@@O_DOING@いる筈だったのに、どうして@KEIN2@@O_DOING@いるの？ 」')
             ,
