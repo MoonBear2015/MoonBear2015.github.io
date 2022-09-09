@@ -5397,3 +5397,8 @@ const itms_heropic = [
     new SctItm('ヒーロー', 'HERO/Hero04.jpg'),
     new SctItm('怪人', 'HERO/Hero05.jpg')
 ];
+const itms_mystpic = [
+    new SctItm('ミステリー', 'MYST/Myst01.jpg'),
+    new SctItm('殺人', 'MYST/Myst02.jpg'),
+    new SctItm('狂気', 'MYST/Myst03.jpg')
+];

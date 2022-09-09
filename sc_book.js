@@ -7,7 +7,7 @@ function set_book() {
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B01.23';
+    html += ' B01.25';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -30,7 +30,7 @@ function make_book() {
     html += 'border:     0.5px solid #606060;';
     html += 'border-radius:  10px;';
     html += '">';
-    switch (rnd_max(3)) {
+    switch (rnd_max(4)) {
         case 0:
             {
                 html += make_booktype1();
@@ -39,6 +39,11 @@ function make_book() {
         case 1:
             {
                 html += make_booktype2();
+                break;
+            }
+        case 2:
+            {
+                html += make_booktype3();
                 break;
             }
         default:
@@ -157,6 +162,58 @@ function make_booktype2() {
     html += '<div id="@BOOKFACE2@">';
     html += '<p id="book_title">';
     html += '@L_BOY@ と @L_GIRL@';
+    html += '</p>';
+    html += '<br><br>';
+    html += '<p id="book_writerinfo">';
+    html += '@L_BOOKWRITER@';
+    html += '</p>';
+    html += '<br>';
+    html += '</div>';
+    html += '</div>';
+    html += '<div id="book_lovestory">';
+    html += '@BOY_FIRST@<br>';
+    html += '@GIRL_NEXT@<br>';
+    html += '@BOY_NEXT@<br>';
+    html += '@GIRL_NEXT@<br>';
+    html += '@BOY_NEXT@<br>';
+    html += '@GIRL_NEXT@<br>';
+    html += '@BOY_NEXT@<br>';
+    html += '@GIRL_NEXT@<br>';
+    html += '@BOY_NEXT@<br>';
+    html += '@GIRL_NEXT@<br>';
+    html += '@BOY_NEXT@<br>';
+    html += '@GIRL_NEXT@<br>';
+    html += '@BOY_NEXT@<br>';
+    html += '<p style="text-align: right">(つづく)</p>';
+    html += '</div>';
+    return html;
+}
+function make_booktype3() {
+    let html = '';
+    html += '<div id="book_writerpicture">';
+    html += '<span class="l">@L_CLASS@殺人事件</span><br>';
+    html += '著者：<br>';
+    html += '@L_BOOKWRITER@';
+    html += '<br>';
+    html += '<p id="book_maker">';
+    html += '出版元：@MYSTMAKER@';
+    html += '</p>';
+    html += '<br>';
+    html += '</div>';
+    html += '<div id="book_face" ';
+    html += 'style="';
+    html += 'background: ';
+    html += 'linear-gradient(0deg,rgba(0,0,0,0.6),rgba(0,0,0,0.6)),';
+    html += 'url(./pics/@PIC_MYST@);';
+    html += 'background-position: left top;';
+    html += 'background-size:   cover;';
+    html += 'background-repeat: no-repeat;';
+    html += 'border:     2px solid #ffffff;';
+    html += '">';
+    html += '<br>';
+    html += '<div id="@BOOKFACE2@">';
+    html += '<p id="book_title">';
+    html += '@L_CLASS@殺人事件';
     html += '</p>';
     html += '<br><br>';
     html += '<p id="book_writerinfo">';
@@ -386,7 +443,7 @@ class selector_storyH01 extends SctItm_Selector {
             new SctItm('「誰が呼んだか、@ITEM@の@NICKGOOD@！ @L_HEROFULLNAME@とは私のことだ！」<br><br>@SEL01@'),
             new SctItm('「待たせたな！ @ITEM@の@NICKGOOD@！ @L_HEROFULLNAME@が相手になろう！」<br><br>@SEL01@'),
             new SctItm('「そこまでだ！ @ITEM@の@NICKGOOD@！ @L_HEROFULLNAME@が容赦はしないぞ！」<br><br>@SEL01@'),
-            new SctItm('「人呼んで、@ITEM@の@NICKGOOD@！ @L_HEROFULLNAME@、只今参上！」<br><br>@SEL01@')
+            new SctItm('「我こそは@ITEM@の@NICKGOOD@！ @L_HEROFULLNAME@、只今参上！」<br><br>@SEL01@')
         ];
     }
 }
@@ -414,9 +471,9 @@ class selector_storyE02 extends SctItm_Selector {
     constructor() {
         super('@STE02@');
         this.itms = [
-            new SctItm('　そして、@NICKBAD@のような@KEIN2@形相を浮かべて、@L_HEROFULLNAME@に襲いかかる！<br>「喰らえ！ @EVILATTACK@」<br>@SEL02@'),
-            new SctItm('　次の瞬間、@KEIN2@@ANIMAL@のような@KEIN2@勢いで@L_HEROFULLNAME@に飛びかかった！<br>「死ね！ @EVILATTACK@」<br>@SEL02@'),
-            new SctItm('　そして、@KEIN2@@BIRD@の構えから、@KEIN2@技を繰り出した！<br>「くたばれ@L_HERONAME@！ @EVILATTACK@」<br>@SEL02@')
+            new SctItm('　怪人@L_EVILNAME@は余裕綽々、@NICKBAD@のような@KEIN2@形相を浮かべて、@L_HEROFULLNAME@に襲いかかった！<br>「喰らえ！ @EVILATTACK@」<br>@SEL02@'),
+            new SctItm('　怪人@L_EVILNAME@は次の瞬間、@KEIN2@@ANIMAL@のような@KEIN2@勢いで@L_HEROFULLNAME@に飛びかかった！<br>「死ね！ @EVILATTACK@」<br>@SEL02@'),
+            new SctItm('　怪人@L_EVILNAME@は威勢を改め、@KEIN2@@BIRD@の構えから、@KEIN2@技を繰り出した！<br>「くたばれ@L_HERONAME@！ @EVILATTACK@」<br>@SEL02@')
         ];
     }
 }
@@ -661,7 +718,7 @@ class selector_boyfirst extends SctItm_Selector {
             new SctItm('「やあ、@KEIP2@@L_GIRL@。今日は@KEIP2@@O_DOING@いるんだね？」'),
             new SctItm('「おやおや、@KEIP2@@L_GIRL@。どうして@KEIP2@@O_DOING@るんだい？」'),
             new SctItm('「だめだよ、@KEIP2@@L_GIRL@。そんな@KEIP2@@O_DOING@はいけないと言っただろう」'),
-            new SctItm('「ああ、@KEIP2@@L_GIRL@。キミも一緒に@KEIP2@@O_DOING@はどうだい？」'),
+            new SctItm('「ああ、@KEIP2@@L_GIRL@。キミはいつも@KEIP2@@O_DOING@いるんだね」'),
             new SctItm('「今日の@KEIP2@@L_GIRL@も@KEIP2@のに、どうして@KEIP2@@O_DOING@ないのかい？」')
         ];
     }
@@ -672,22 +729,22 @@ class selector_girlnext extends SctItm_Selector {
         this.itms = [
             new SctItm('「あら、@KEIN2@@L_BOY@。私はそんな@KEIN2@@O_DOING@なんかいないわ。@KEIN2@@O_DOING@いるだけよ」'),
             new SctItm('「@L_BOY@ったら@KEIN2@人ね。私は@KEIN2@@O_DOING@いるんじゃなくて、@KEIN2@@O_DOING@いるのよ」'),
-            new SctItm('「そうよ、@L_BOY@。私が@KEIN2@@O_DOING@いないと、あなたが@O_DOING@しまうから」'),
-            new SctItm('「@KEIN2@@L_BOY@？ 私は@KEIN2@@O_DOING@いないと、@KEIN2@@O_DOING@しまうと前に言ったわよね？」'),
-            new SctItm('「@KEIN2@@L_BOY@。あなたは@KEIN2@@O_DOING@ばかりいるのに、ちっとも私と@KEIN2@@O_DOING@くれないのね」'),
-            new SctItm('「@KEIN2@@L_BOY@が@KEIN2@@O_DOING@くれないなら、私は@KEIN2@@O_DOING@しまうから」'),
-            new SctItm('「@KEIN2@@L_BOY@とこうして@KEIN2@@O_DOING@いると、@KEIN2@@O_DOING@いた@KEIN2@@PART@を思い出すわね」'),
-            new SctItm('「@KEIN2@@L_BOY@が@KEIN2@@O_DOING@くれなかったら、私も今頃は@KEIDN2@@O_DOING@ばかりいたわ」'),
+            new SctItm('「そうよ、@KEIN2@@L_BOY@。私が@KEIN2@@O_DOING@いないと、あなたが@KEIN2@@O_DOING@しまうから」'),
+            new SctItm('「@L_BOY@は@KEIN@わね。 私は@KEIN2@@O_DOING@いないと、@KEIN2@@O_DOING@しまうと前に言ったわよね？」'),
+            new SctItm('「私が@KEIN2@@O_DOING@いると、どうして@KEIN2@@L_BOY@は@KEIN2@@O_DOING@いるの？」'),
+            new SctItm('「@KEIN2@@L_BOY@が@KEIN2@@O_DOING@くれないからよ。私は@KEIN2@@O_DOING@みたいのに」'),
+            new SctItm('「こうして@KEIN2@@O_DOING@いると、@KEIN2@@O_DOING@いた@KEIN2@@L_BOY@の@KEIN2@@PART@を思い出すわね」'),
+            new SctItm('「@KEIN2@@L_BOY@？ 私が@KEIN2@@O_DOING@しまうまで、代わりに@KEIDN2@@O_DOING@くれないかしら」'),
             new SctItm('「それなら、@KEIN2@@L_BOY@も一緒に@KEIN2@@O_DOING@いる筈だったのに、どうして@KEIN2@@O_DOING@いるの？ 」'),
             new SctItm('「@KEIN2@@L_BOY@は知ってる？ 以前、@KEIN2@@O_DOING@いた私の@KEIN2@@PART@が、今は@KEIN2@@O_DOING@いるんですって」'),
             new SctItm('「なら、@KEIN2@@L_BOY@が@KEIN2@@O_DOING@みればいいわ。私が@KEIN2@@O_DOING@もいいから」'),
-            new SctItm('「ねえ、@KEIN2@@L_BOY@も@KEIN2@@O_DOING@くれない？ そのかわり、私が@KEIN2@@O_DOING@もいいから」'),
+            new SctItm('「ねえ、@KEIN2@@L_BOY@も一緒に@KEIN2@@O_DOING@くれない？ そのかわり、私が@KEIN2@@O_DOING@もいいから」'),
             new SctItm('「私が@KEIN2@@O_DOING@いても、@KEIN2@@L_BOY@は@KEIN2@@O_DOING@ばかりいるのね」'),
             new SctItm('「@KEIN2@@L_BOY@は、私が@KEIN2@@O_DOING@いると、どうして@KEIN2@@O_DOING@いるの」'),
             new SctItm('「じゃあ、@KEIN2@@L_BOY@も一緒に@KEIN2@@O_DOING@くれない？ @KEIN2@@O_DOING@ばかりいないで」'),
-            new SctItm('「それじゃあ、次は@KEIN2@@O_DOING@、そして@KEIN2@@O_DOING@、それから――ねえ@KEIN2@@L_BOY@、聞いてるの？」'),
+            new SctItm('「でも、先に@KEIN2@@O_DOING@から、@KEIN2@@O_DOING@、それから――ねえ@KEIN2@@L_BOY@、聞いてるの？」'),
             new SctItm('「だから、@KEIN2@@L_BOY@は@KEIN2@のよ。@KEIN2@@O_DOING@、次は@KEIN2@@O_DOING@しまわないと」'),
-            new SctItm('「それで@KEIN2@@L_BOY@は、昨日まで@KEIN2@@O_DOING@た筈なのに、今日は@KEIN2@@O_DOING@いるのね。」')
+            new SctItm('「それで@KEIN2@@L_BOY@は、昨日まで@KEIN2@@O_DOING@た筈なのに、今日は@KEIN2@@O_DOING@いるのね」')
         ];
     }
 }
@@ -697,7 +754,7 @@ class selector_boynext extends SctItm_Selector {
         this.itms = [
             new SctItm('「でも、@KEIP2@@L_GIRL@が@O_DOING@いると、僕は@KEIP2@@O_DOING@しまうんだ」'),
             new SctItm('「ねえ、@KEIP2@@L_GIRL@。僕が@KEIP2@@O_DOING@いるのは、君も一緒に@KEIP2@@O_DOING@欲しいからなんだ」'),
-            new SctItm('「ああ、@KEIP2@@L_GIRL@。キミは@KEIP2@@O_DOING@、僕は@KEIP2@@O_DOING@いればいいと言うのかい？」'),
+            new SctItm('「それじゃあ、@KEIP2@@L_GIRL@が@KEIP2@@O_DOING@、僕は@KEIP2@@O_DOING@いればいいと言うのかい？」'),
             new SctItm('「@KEIP2@@L_GIRL@、@KEIP2@@O_DOING@ばかりいると、僕は@KEIP2@@O_DOING@しまいたくなる」'),
             new SctItm('「僕は、@KEIP2@@L_GIRL@が@KEIP2@@O_DOING@いると、自分が@KEIP2@@O_DOING@いた頃を思い出してしまうんだ」'),
             new SctItm('「確か、@KEIP2@@L_GIRL@が@KEIP2@@O_DOING@いたのは、僕が@KEIP2@@O_DOING@いた頃だったよね」'),
@@ -723,6 +780,12 @@ class locker_heropic extends SctItm_SelectLocker {
     constructor() {
         super('@L_HEROPIC@');
         this.Add(itms_heropic);
+    }
+}
+class locker_mystpic extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_MYSTPIC@', '', '@PIC_MYST@');
+        this.Add(itms_mystpic);
     }
 }
 // 出版元（画像未設定の解消のため）
@@ -758,6 +821,22 @@ class selector_lovemaker extends SctItm_Selector {
         ];
     }
 }
+class selector_mystmaker extends SctItm_Selector {
+    constructor() {
+        super('@MYSTMAKER@');
+        this.itms = [
+            new SctItm('㈱@L_MYSTPIC@出版'),
+            new SctItm('㈱@L_MYSTPIC@文庫'),
+            new SctItm('㈱@L_MYSTPIC@印刷'),
+            new SctItm('@L_MYSTPIC@書房'),
+            new SctItm('@L_MYSTPIC@書院'),
+            new SctItm('㈱@L_MYSTPIC@文芸'),
+            new SctItm('@L_MYSTPIC@学院'),
+            new SctItm('@L_MYSTPIC@株式会社'),
+            new SctItm('@L_MYSTPIC@財団')
+        ];
+    }
+}
 class selector_heromaker extends SctItm_Selector {
     constructor() {
         super('@HEROMAKER@');
@@ -780,6 +859,7 @@ class book_docs_maker extends news_docs_maker {
         this.dic_push(new selector_bookmaker());
         this.dic_push(new selector_heromaker());
         this.dic_push(new selector_lovemaker());
+        this.dic_push(new selector_mystmaker());
         this.dic_push(new selector_bookinfo());
         this.dic_push(new selector_bookinfo01());
         this.dic_push(new selector_bookinfo02());
@@ -820,6 +900,7 @@ class book_docs_maker extends news_docs_maker {
         this.dic_push(new locker_girl());
         this.dic_push(new locker_heropic());
         this.dic_push(new locker_lovepic());
+        this.dic_push(new locker_mystpic());
         this.dic_push(new OneTime_food());
         this.dic_push(new OneTime_livestock());
         this.dic_push(new OneTime_fish());
