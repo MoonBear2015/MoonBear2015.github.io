@@ -2053,6 +2053,7 @@ class selector_kn extends SctItm_Selector implements ISctItm_Selector {
         super('@KEIN@');
         this.Add(cods_to_itms(cods_ad_nega));
         this.Add(cods_to_itms(cods_ad_danger));
+        this.Add(cods_to_itms(cods_ad_dirty));
         this.Add(cods_to_itms(cods_ad_sense_n));
     }
 }
@@ -2061,6 +2062,7 @@ class selector_kdn extends SctItm_Selector implements ISctItm_Selector {
         super('@KEIDN@');
         this.Add(cods_to_itms(cods_adv_nega));
         this.Add(cods_to_itms(cods_adv_danger));
+        this.Add(cods_to_itms(cods_adv_dirty));
         this.Add(cods_to_itms(cods_adv_sense_n));
     }
 }

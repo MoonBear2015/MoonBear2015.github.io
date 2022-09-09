@@ -2476,8 +2476,8 @@ const   cods_ad_sense_p = [
     ,
     new SctCod_Mv('|甘|あま|い')
     ,
-    new SctCod_Mv('|甘辛|あまから|い')
-    ,
+    // new SctCod_Mv('|甘辛|あまから|い')
+    // ,
     new SctCod_Mv('|涼|すず|しい')
     ,
     new SctCod_Mv('|暖|あたた|かい')
@@ -2498,16 +2498,16 @@ const   cods_ad_sense_n = [
     ,
     new SctCod_Mv('しょっぱい')
     ,
-    new SctCod_Mv('|甘辛|あまから|い')
-    ,
+    // new SctCod_Mv('|甘辛|あまから|い')
+    // ,
     new SctCod_Mv('|苦|にが|い')
     ,
-    new SctCod_Mv('|熱|あつ|い')
-    ,
-    new SctCod_Mv('|冷|つめ|たい')
-    ,
-    new SctCod_Mv('|暑|あつ|い')
-    ,
+    // new SctCod_Mv('|熱|あつ|い')
+    // ,
+    // new SctCod_Mv('|冷|つめ|たい')
+    // ,
+    // new SctCod_Mv('|暑|あつ|い')
+    // ,
     new SctCod_Mv('|蒸|む|し|暑|あつ|い')
     ,
     new SctCod_Mv('|寒|さむ|い')
@@ -2525,8 +2525,8 @@ const   cods_adv_sense_p = [
     new SctCod_It('|美味|おい|しく')
     ,
     new SctCod_It('|甘|あま|く')
-    ,
-    new SctCod_It('|甘辛|あまから|く')
+    // ,
+    // new SctCod_It('|甘辛|あまから|く')
     ,
     // new SctCod_It('|暑|あつ|く')
     // ,
@@ -2550,12 +2550,12 @@ const   cods_adv_sense_n = [
     ,
     new SctCod_It('|苦|にが|く')
     ,
-    new SctCod_It('|熱|あつ|く')
-    ,
-    new SctCod_It('|冷|つめ|たく')
-    ,
-    new SctCod_It('|暑|あつ|く')
-    ,
+    // new SctCod_It('|熱|あつ|く')
+    // ,
+    // new SctCod_It('|冷|つめ|たく')
+    // ,
+    // new SctCod_It('|暑|あつ|く')
+    // ,
     new SctCod_It('|蒸|む|し|暑|あつ|く')
     ,
     new SctCod_It('|寒|さむ|く')
@@ -2647,6 +2647,38 @@ const   cods_adv_beauty = [
     new SctCod_It('|可愛|かわい|らしく')
 ];
 
+const   cods_ad_dirty = [
+    new SctCod_It('|汚|きたな|い','dirty.jpg')
+    ,
+    new SctCod_It('|汚|きたな|らしい')
+    ,
+    new SctCod_It('|醜|みにく|い')
+    ,
+    new SctCod_It('だらしない')
+    ,
+    new SctCod_It('いやらしい')
+    ,
+    new SctCod_It('ずるい')
+    ,
+    new SctCod_It('ずる|賢|がしこ|い')
+];
+
+const   cods_adv_dirty = [
+    new SctCod_It('|汚|きたな|く','dirty.jpg')
+    ,
+    new SctCod_It('|汚|きたな|らしく')
+    ,
+    new SctCod_It('|醜|みにく|く')
+    ,
+    new SctCod_It('だらしなく')
+    ,
+    new SctCod_It('いやらしく')
+    ,
+    new SctCod_It('ずるく')
+    ,
+    new SctCod_It('ずる|賢|がしこ|く')
+];
+
 
 const   cods_ad_danger = [
     new SctCod_Mv('|危|あぶ|ない','danger.png')
@@ -2657,8 +2689,8 @@ const   cods_ad_danger = [
     ,
     // new SctCod_Mv('|怖|こわ|い')
     // ,
-    new SctCod_Mv('|凄|すさ|まじい')
-    ,
+    // new SctCod_Mv('|凄|すさ|まじい')
+    // ,
     new SctCod_Mv('|空恐|そらおそ|ろしい')
     ,
     new SctCod_Mv('|酷|ひど|い')
@@ -2682,8 +2714,8 @@ const   cods_adv_danger = [
     ,
     // new SctCod_It('|怖|こわ|く')
     // ,
-    new SctCod_It('|凄|すさ|まじく')
-    ,
+    // new SctCod_It('|凄|すさ|まじく')
+    // ,
     new SctCod_It('|空恐|そらおそ|ろしく')
     ,
     new SctCod_It('|酷|ひど|く')

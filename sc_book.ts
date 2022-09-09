@@ -9,7 +9,7 @@ function set_book()
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B01.21';
+    html += ' B01.23';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -490,7 +490,7 @@ class selector_storyE01 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('<br>「我が名は@L_EVIL@！ @KEIN2@@TECH@の恐ろしさを身をもって味わうのだ！」@STE_C@')
             ,
-            new SctItm('<br>「俺様は@L_EVIL@！ @KEIN2@@TECH@の@KEIDN2@呪いを受けてみよ！」@STE_C@')
+            new SctItm('<br>「俺様は@L_EVIL@！ @KEIN2@@TECH@の@KEIN2@呪いを受けてみよ！」@STE_C@')
         ]
     }
 }
