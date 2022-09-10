@@ -7,7 +7,7 @@ function set_book() {
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B01.26';
+    html += ' B01.27';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
