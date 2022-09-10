@@ -191,7 +191,7 @@ function make_booktype2() {
 function make_booktype3() {
     let html = '';
     html += '<div id="book_writerpicture">';
-    html += '<span class="l">@L_CLASS@殺人事件</span><br>';
+    html += '<span class="l">@L_MYSTTITLE@</span><br>';
     html += '著者：<br>';
     html += '@L_BOOKWRITER@';
     html += '<br>';
@@ -211,9 +211,9 @@ function make_booktype3() {
     html += 'border:     2px solid #ffffff;';
     html += '">';
     html += '<br>';
-    html += '<div id="@BOOKFACE2@">';
+    html += '<div id="@BOOKFACE3@">';
     html += '<p id="book_title">';
-    html += '@L_CLASS@殺人事件';
+    html += '@L_MYSTTITLE@';
     html += '</p>';
     html += '<br><br>';
     html += '<p id="book_writerinfo">';
@@ -853,9 +853,71 @@ class selector_heromaker extends SctItm_Selector {
         ];
     }
 }
+class locker_boss extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_BOSS@');
+        this.Add(itms_boss);
+    }
+}
+class locker_bossName extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_BOSSNAME@');
+        this.Add(itms_bossName);
+    }
+}
+class locker_mystTitle extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_MYSTTITLE@');
+        this.Add(itms_mysttitle);
+    }
+}
+class selector_bookface0 extends SctItm_Selector {
+    constructor() {
+        super('@BOOKFACE0@');
+        this.itms = [
+            new SctItm('book01'),
+            new SctItm('book02'),
+            new SctItm('book03')
+        ];
+    }
+}
+class selector_bookface1 extends SctItm_Selector {
+    constructor() {
+        super('@BOOKFACE1@');
+        this.itms = [
+            new SctItm('book04'),
+            new SctItm('book05'),
+            new SctItm('book06')
+        ];
+    }
+}
+class selector_bookface2 extends SctItm_Selector {
+    constructor() {
+        super('@BOOKFACE2@');
+        this.itms = [
+            new SctItm('book07'),
+            new SctItm('book08'),
+            new SctItm('book09')
+        ];
+    }
+}
+class selector_bookface3 extends SctItm_Selector {
+    constructor() {
+        super('@BOOKFACE3@');
+        this.itms = [
+            new SctItm('book10'),
+            new SctItm('book11'),
+            new SctItm('book12')
+        ];
+    }
+}
 class book_docs_maker extends news_docs_maker {
     constructor() {
         super();
+        this.dic_push(new selector_bookface0());
+        this.dic_push(new selector_bookface1());
+        this.dic_push(new selector_bookface2());
+        this.dic_push(new selector_bookface3());
         this.dic_push(new selector_bookmaker());
         this.dic_push(new selector_heromaker());
         this.dic_push(new selector_lovemaker());
@@ -908,5 +970,8 @@ class book_docs_maker extends news_docs_maker {
         this.dic_push(new selector_boyfirst());
         this.dic_push(new selector_boynext());
         this.dic_push(new selector_girlnext());
+        this.dic_push(new locker_boss());
+        this.dic_push(new locker_bossName());
+        this.dic_push(new locker_mystTitle());
     }
 }

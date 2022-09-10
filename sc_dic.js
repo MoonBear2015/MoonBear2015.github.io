@@ -5402,3 +5402,56 @@ const itms_mystpic = [
     new SctItm('殺人', 'MYST/Myst02.jpg'),
     new SctItm('狂気', 'MYST/Myst03.jpg')
 ];
+const itms_boss = [
+    new SctItm('探偵'),
+    new SctItm('警部'),
+    new SctItm('刑事'),
+    new SctItm('少佐'),
+    new SctItm('部長'),
+    new SctItm('検事')
+];
+const itms_ass = [
+    new SctItm('助手'),
+    new SctItm('アシスタント'),
+    new SctItm('部下'),
+    new SctItm('使い走り')
+];
+const itms_bossName = [
+    new SctItm('|Александр|アレクサンドル|'),
+    new SctItm('|Михаил|ミハイル|'),
+    new SctItm('|Артём|アルチョム|'),
+    new SctItm('|Максим|マクシム|'),
+    new SctItm('|Даниил|ダニール|'),
+    new SctItm('|Иван|イヴァン|'),
+    new SctItm('|Дмитрий|ドミトリー|'),
+    new SctItm('|Кирилл|キリル|'),
+    new SctItm('|Матвей|マトヴェイ|'),
+    new SctItm('|John|ジョン|'),
+    new SctItm('|Robert|ロバート|'),
+    new SctItm('|Joseph|ジョセフ|'),
+    new SctItm('|Thomas|トーマス|'),
+    new SctItm('|Richard|リチャード|'),
+    new SctItm('|James|ジェームズ|'),
+    new SctItm('|Tom|トム|'),
+    new SctItm('|Sam|サム|'),
+    new SctItm('|Jim|ジム|'),
+    new SctItm('|Michael|マイケル|'),
+    new SctItm('|David|デイビッド|'),
+    new SctItm('|Kenny|ケニー|'),
+    new SctItm('|Ryan|ライアン|'),
+    new SctItm('|Bill|ビル|'),
+    new SctItm('|Tony|トニー|'),
+    new SctItm('|Bob|ボブ|'),
+    new SctItm('|Amuro|アムロ|'),
+    new SctItm('|Char|シャア|'),
+    new SctItm('|Frodo|フロド|'),
+    new SctItm('|Bilbo|ビルボ|'),
+    new SctItm('|Samwise|サムワイズ|'),
+    new SctItm('|Anakin|アナキン|'),
+    new SctItm('|Luke|ルーク|')
+];
+const itms_mysttitle = [
+    new SctItm('@L_ITEM@殺人事件'),
+    new SctItm('@L_ITEM@殺人'),
+    new SctItm('@L_BOSSNAME@@L_BOSS@')
+];

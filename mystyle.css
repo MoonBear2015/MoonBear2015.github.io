@@ -463,7 +463,33 @@ small {
     text-shadow: 3px 3px 0px darkmagenta;
 }
 
-
+#book10 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight:bolder;
+    color:  black;
+    font-style: italic;
+    font-size: 5vw;
+    text-align:left;
+    text-shadow: 3px 3px 0px white;
+}
+#book11 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight:bolder;
+    color:  gray;
+    font-style: italic;
+    font-size: 4vw;
+    text-align:left;
+    text-shadow: 3px 3px 0px black;
+}
+#book12 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight:bolder;
+    color:  darkred;
+    font-style: italic;
+    font-size: 3vw;
+    text-align:left;
+    text-shadow: 3px 3px 0px black;
+}
 
 
 
