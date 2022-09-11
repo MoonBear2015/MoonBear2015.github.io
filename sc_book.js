@@ -7,7 +7,7 @@ function set_book() {
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B01.31';
+    html += ' B01.32';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -795,7 +795,7 @@ class selector_mystApp extends SctItm_Selector {
         this.itms = [
             new SctItm('「ここはずいぶん@KEI_B2@ところですねぇ@L_BOSSNAME@@L_BOSS@？」<br>「そうだね@L_ASS@の@L_GIRL@君、とても@KEI_B2@ところだね」'),
             new SctItm('「あの@KEI_B2@ものはなんですか@L_BOSSNAME@@L_BOSS@？」<br>「いやあ、とても@KEID_B@て判らないよ@L_ASS@の@L_GIRL@君」'),
-            new SctItm('「おやおや、@KEI_B2@なところにきちゃいましたよ@L_BOSSNAME@@L_BOSS@？」<br>「こりゃまたずいぶん@KEID_B@て@KEI_B2@ところだね、@L_ASS@の@L_GIRL@君」'),
+            new SctItm('「おやおや、@KEI_B2@ところにきちゃいましたよ@L_BOSSNAME@@L_BOSS@？」<br>「こりゃまたずいぶん@KEID_B@て@KEI_B2@ところだね、@L_ASS@の@L_GIRL@君」'),
             new SctItm('「あの人、ずいぶん@KEI_B2@ですねぇ@L_BOSSNAME@@L_BOSS@？」<br>「おいおい、そんな@KEI_B2@なこと言っちゃダメだよ@L_ASS@の@L_GIRL@君」'),
             new SctItm('「うわぁ、なんて@KEI_B2@んでしょう。見てくださいよ、@L_BOSSNAME@@L_BOSS@？」<br>「そうだね、@L_ASS@の@L_GIRL@君。やはり@L_WHAT@は@KEI_B3@ねぇ」')
         ];
