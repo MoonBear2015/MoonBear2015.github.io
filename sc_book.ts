@@ -9,7 +9,7 @@ function set_book()
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B01.32';
+    html += ' B01.33';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -1055,9 +1055,9 @@ class selector_myst01 extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('　今日も@MYST_STAGE@@MYST_ST_AP@<br>@MYST_APP@')
             ,
-            new SctItm('　ここは@MYST_STAGE@@MYST_ST_AP@<br>@MYST_APP@')
+            new SctItm('　この@MYST_STAGE@@MYST_ST_AP@<br>@MYST_APP@')
             ,
-            new SctItm('　@MYST_APP@<br>@MYST_AP_ST@@MYST_STAGE@')
+            new SctItm('@MYST_APP@<br>@MYST_AP_ST@@MYST_STAGE@')
         ]
     }
 }
@@ -1074,8 +1074,6 @@ class selector_mystStage extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@KEI_B2@@L_WHAT@には、@KEID_B2@@DOING@暮らす@MANY@@KEI_B2@@L_CLASS@達の姿があった。')
             ,
             new SctItm('@KEI_B2@@L_WHAT@の@LANDMARK@では、@MANY@@KEI_B2@@L_CLASS@達が@KEID_B2@@DOING@いた。')
-            ,
-            new SctItm('@KEI_B2@@L_CLASS@達が@KEID_B2@暮らす@KEI_B@@L_WHAT@。')
         ]
     }
 }
@@ -1097,15 +1095,15 @@ class selector_mystApp extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@MYST_APP@');
         this.itms = [
-            new SctItm('「ここはずいぶん@KEI_B2@ところですねぇ@L_BOSSNAME@@L_BOSS@？」<br>「そうだね@L_ASS@の@L_GIRL@君、とても@KEI_B2@ところだね」')
+            new SctItm('「ここはずいぶん@KEI_A2@ところですねぇ@L_BOSSNAME@@L_BOSS@？」<br>「そうだね@L_ASS@の@L_GIRL@君、とても@KEI_A2@ところだね」')
             ,
-            new SctItm('「あの@KEI_B2@ものはなんですか@L_BOSSNAME@@L_BOSS@？」<br>「いやあ、とても@KEID_B@て判らないよ@L_ASS@の@L_GIRL@君」')
+            new SctItm('「あの@KEI_A2@ものはなんですか@L_BOSSNAME@@L_BOSS@？」<br>「いやあ、とても@KEID_A@て判らないよ@L_ASS@の@L_GIRL@君」')
             ,
-            new SctItm('「おやおや、@KEI_B2@ところにきちゃいましたよ@L_BOSSNAME@@L_BOSS@？」<br>「こりゃまたずいぶん@KEID_B@て@KEI_B2@ところだね、@L_ASS@の@L_GIRL@君」')
+            new SctItm('「おやおや、@KEI_A2@ところにきちゃいましたよ@L_BOSSNAME@@L_BOSS@？」<br>「こりゃまたずいぶん@KEID_A@て@KEI_A2@ところだね、@L_ASS@の@L_GIRL@君」')
             ,
-            new SctItm('「あの人、ずいぶん@KEI_B2@ですねぇ@L_BOSSNAME@@L_BOSS@？」<br>「おいおい、そんな@KEI_B2@なこと言っちゃダメだよ@L_ASS@の@L_GIRL@君」')
+            new SctItm('「あの人、ずいぶん@KEI_A2@ですねぇ@L_BOSSNAME@@L_BOSS@？」<br>「おいおい、そんな@KEI_A2@なこと言っちゃダメだよ@L_ASS@の@L_GIRL@君」')
             ,
-            new SctItm('「うわぁ、なんて@KEI_B2@んでしょう。見てくださいよ、@L_BOSSNAME@@L_BOSS@？」<br>「そうだね、@L_ASS@の@L_GIRL@君。やはり@L_WHAT@は@KEI_B3@ねぇ」')
+            new SctItm('「うわぁ、なんて@KEI_A2@んでしょう。見てくださいよ、@L_BOSSNAME@@L_BOSS@？」<br>「そうだね、@L_ASS@の@L_GIRL@君。やはり@L_WHAT@は@KEI_A3@ねぇ」')
         ]
     }
 }
@@ -1116,7 +1114,7 @@ class selector_mystAP_ST extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('――そんな@KEI_A2@二人組が訪れた')
             ,
-            new SctItm('――そんな場違いにも@KEI_A2@会話が聞こえてきた')
+            new SctItm('――そんな場違いにも@KEI_A2@会話が聞こえてくる')
             ,
             new SctItm('――そんな@KEI_A2@二人がやってきた')
         ]
