@@ -1067,11 +1067,15 @@ class selector_mystStage extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@MYST_STAGE@');
         this.itms = [
-            new SctItm('@KEI_B2@@L_WHAT@では、多くの@KEI_B2@@L_CLASS@達が@KEID_B@@KEID_B@暮らしている。')
-            ,
-            new SctItm('@KEI_B2@@L_CLASS@達が@KEID_B2@暮らす@KEI_B@@L_WHAT@。')
+            new SctItm('@KEI_B2@@L_WHAT@では、@MANY@@KEI_B2@@L_CLASS@達が@KEID_B@@KEID_B@暮らしている。')
             ,
             new SctItm('@KEI_B2@@L_WHAT@では、@MANY@@KEI_B2@@L_CLASS@達が@KEID_B2@@DOING@いる。')
+            ,
+            new SctItm('@KEI_B2@@L_WHAT@には、@KEID_B2@@DOING@暮らす@MANY@@KEI_B2@@L_CLASS@達の姿があった。')
+            ,
+            new SctItm('@KEI_B2@@L_WHAT@の@LANDMARK@では、@MANY@@KEI_B2@@L_CLASS@達が@KEID_B2@@DOING@いた。')
+            ,
+            new SctItm('@KEI_B2@@L_CLASS@達が@KEID_B2@暮らす@KEI_B@@L_WHAT@。')
         ]
     }
 }
