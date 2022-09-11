@@ -8941,6 +8941,10 @@ const   itms_mystpic = [
     new SctItm('殺人' ,'MYST/Myst02.jpg')
     ,
     new SctItm('狂気','MYST/Myst03.jpg')
+    ,
+    new SctItm('死の','MYST/Myst04.jpg')
+    ,
+    new SctItm('殺戮','MYST/Myst05.jpg')
 ]
 
 const   itms_boss = [
@@ -9035,9 +9039,19 @@ const   itms_bossName = [
 ]
 
 const   itms_mysttitle = [
-    new SctItm('@KEI_B2@@L_CLASS@の@KEI_A2@殺人事件')
+    new SctItm('@L_CLASS@の@KEI_A2@殺人事件')
     ,
-    new SctItm('@KEI_B2@@L_CLASS@の@KEI_A2@殺人')
+    new SctItm('@KEI_A2@@L_CLASS@の殺人事件')
     ,
-    new SctItm('@KEI_B2@@L_BOSSNAME@@L_BOSS@の@KEI_A2@事件簿')
+    new SctItm('@KEI_A2@@L_CLASS@の@KEI_A2@殺人事件')
+    ,
+    new SctItm('@L_CLASS@の@KEI_A2@殺人')
+    ,
+    new SctItm('@KEI_A2@@L_CLASS@の殺人')
+    ,
+    new SctItm('@KEI_A2@@L_CLASS@の@KEI_A2@殺人')
+    ,
+    new SctItm('@KEI_A2@@L_BOSSNAME@@L_BOSS@の事件簿')
+    ,
+    new SctItm('@L_BOSSNAME@@L_BOSS@の@KEI_A2@事件簿')
 ]

@@ -9,7 +9,7 @@ function set_book()
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B01.29';
+    html += ' B01.31';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -77,7 +77,7 @@ function make_booktype0() : string {
 
 
     html += '<div id="book_writerpicture">';
-    html += '<span class="xl">@L_BOOK@</span><br>';
+    // html += '<span class="xl">@L_BOOK@</span><br>';
     html += '著者：<br>';
     html += '@L_BOOKWRITER@';
     html += '<br>';
@@ -129,7 +129,7 @@ function make_booktype1() : string {
 
 
     html += '<div id="book_writerpicture">';
-    html += '<span class="l">@L_HEROCATCH@@L_HEROFULLNAME@！</span><br>';
+    // html += '<span class="l">@L_HEROCATCH@@L_HEROFULLNAME@！</span><br>';
     html += '著者：<br>';
     html += '@L_BOOKWRITER@';
     html += '<br>';
@@ -180,7 +180,7 @@ function make_booktype2() : string {
 
 
     html += '<div id="book_writerpicture">';
-    html += '<span class="l">@L_BOY@ と @L_GIRL@</span><br>';
+    // html += '<span class="l">@L_BOY@ と @L_GIRL@</span><br>';
     html += '著者：<br>';
     html += '@L_BOOKWRITER@';
     html += '<br>';
@@ -244,7 +244,7 @@ function make_booktype3() : string {
     let html = '';
 
     html += '<div id="book_writerpicture">';
-    html += '<span class="l">@L_MYSTTITLE@</span><br>';
+    // html += '<span class="l">@L_MYSTTITLE@</span><br>';
     html += '著者：<br>';
     html += '@L_BOOKWRITER@';
     html += '<br>';
@@ -284,7 +284,7 @@ function make_booktype3() : string {
     html += '</div>';
     
     html += '<div id="book_myststory">';
-    html += '@MYST_FIRST@<br>';
+    html += '@MYST01@<br>';
     html += '<p style="text-align: right">(つづく)</p>'
     html += '</div>';
 
@@ -1048,13 +1048,73 @@ class selector_boynext extends SctItm_Selector implements ISctItm_Selector {
     }
 }
 
-class selector_mystfirst extends SctItm_Selector implements ISctItm_Selector {
+
+class selector_myst01 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
-        super('@MYST_FIRST@');
+        super('@MYST01@');
         this.itms = [
-            new SctItm('　ここ、@KEI_A2@@L_WHAT@では、多くの@KEI_A2@@L_CLASS@が@KEID_A@@KEID_A@暮らしている。')
+            new SctItm('　今日も@MYST_STAGE@@MYST_ST_AP@<br>@MYST_APP@')
             ,
-            new SctItm('　ここは@KEI_A2@@L_CLASS@達が暮らす@KEI_A@@L_WHAT@。')
+            new SctItm('　ここは@MYST_STAGE@@MYST_ST_AP@<br>@MYST_APP@')
+            ,
+            new SctItm('　@MYST_APP@<br>@MYST_AP_ST@@MYST_STAGE@')
+        ]
+    }
+}
+
+
+class selector_mystStage extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@MYST_STAGE@');
+        this.itms = [
+            new SctItm('@KEI_B2@@L_WHAT@では、多くの@KEI_B2@@L_CLASS@達が@KEID_B@@KEID_B@暮らしている。')
+            ,
+            new SctItm('@KEI_B2@@L_CLASS@達が@KEID_B2@暮らす@KEI_B@@L_WHAT@。')
+            ,
+            new SctItm('@KEI_B2@@L_WHAT@では、@MANY@@KEI_B2@@L_CLASS@達が@KEID_B2@@DOING@いる。')
+        ]
+    }
+}
+class selector_mystSt_AP extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@MYST_ST_AP@');
+        this.itms = [
+            new SctItm('そこに、場違いにも@KEI_A2@二人組が現れた。')
+            ,
+            new SctItm('そこに、不思議と@KEI_A2@会話が聞こえてくる。')
+            ,
+            new SctItm('そこに現れたのは、何故か@KEI_A2@二人組。')
+            ,
+            new SctItm('その@KEI_B2@@L_WHAT@に訪れたのは、人目もはばからず@KEI_A2@二人。')
+        ]
+    }
+}
+class selector_mystApp extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@MYST_APP@');
+        this.itms = [
+            new SctItm('「ここはずいぶん@KEI_B2@ところですねぇ@L_BOSSNAME@@L_BOSS@？」<br>「そうだね@L_ASS@の@L_GIRL@君、とても@KEI_B2@ところだね」')
+            ,
+            new SctItm('「あの@KEI_B2@ものはなんですか@L_BOSSNAME@@L_BOSS@？」<br>「いやあ、とても@KEID_B@て判らないよ@L_ASS@の@L_GIRL@君」')
+            ,
+            new SctItm('「おやおや、@KEI_B2@なところにきちゃいましたよ@L_BOSSNAME@@L_BOSS@？」<br>「こりゃまたずいぶん@KEID_B@て@KEI_B2@ところだね、@L_ASS@の@L_GIRL@君」')
+            ,
+            new SctItm('「あの人、ずいぶん@KEI_B2@ですねぇ@L_BOSSNAME@@L_BOSS@？」<br>「おいおい、そんな@KEI_B2@なこと言っちゃダメだよ@L_ASS@の@L_GIRL@君」')
+            ,
+            new SctItm('「うわぁ、なんて@KEI_B2@んでしょう。見てくださいよ、@L_BOSSNAME@@L_BOSS@？」<br>「そうだね、@L_ASS@の@L_GIRL@君。やはり@L_WHAT@は@KEI_B3@ねぇ」')
+        ]
+    }
+}
+
+class selector_mystAP_ST extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@MYST_AP_ST@');
+        this.itms = [
+            new SctItm('――そんな@KEI_A2@二人組が訪れた')
+            ,
+            new SctItm('――そんな場違いにも@KEI_A2@会話が聞こえてきた')
+            ,
+            new SctItm('――そんな@KEI_A2@二人がやってきた')
         ]
     }
 }
@@ -1191,6 +1251,12 @@ class locker_bossName extends SctItm_SelectLocker implements ISctItm_Selector{
     constructor(){
         super('@L_BOSSNAME@');
         this.Add(itms_bossName);
+    }
+}
+class locker_ass extends SctItm_SelectLocker implements ISctItm_Selector{
+    constructor(){
+        super('@L_ASS@');
+        this.Add(itms_ass);
     }
 }
 
@@ -1332,9 +1398,14 @@ class book_docs_maker extends news_docs_maker {
 
         this.dic_push(new locker_boss());
         this.dic_push(new locker_bossName());
+        this.dic_push(new locker_ass());
         this.dic_push(new locker_mystTitle());
 
-        this.dic_push(new selector_mystfirst());
+        this.dic_push(new selector_myst01());
+        this.dic_push(new selector_mystSt_AP());
+        this.dic_push(new selector_mystStage());
+        this.dic_push(new selector_mystApp());
+        this.dic_push(new selector_mystAP_ST());
     }
 }
 
