@@ -7,7 +7,7 @@ function set_book() {
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B01.27';
+    html += ' B01.29';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -222,20 +222,8 @@ function make_booktype3() {
     html += '<br>';
     html += '</div>';
     html += '</div>';
-    html += '<div id="book_lovestory">';
-    html += '@BOY_FIRST@<br>';
-    html += '@GIRL_NEXT@<br>';
-    html += '@BOY_NEXT@<br>';
-    html += '@GIRL_NEXT@<br>';
-    html += '@BOY_NEXT@<br>';
-    html += '@GIRL_NEXT@<br>';
-    html += '@BOY_NEXT@<br>';
-    html += '@GIRL_NEXT@<br>';
-    html += '@BOY_NEXT@<br>';
-    html += '@GIRL_NEXT@<br>';
-    html += '@BOY_NEXT@<br>';
-    html += '@GIRL_NEXT@<br>';
-    html += '@BOY_NEXT@<br>';
+    html += '<div id="book_myststory">';
+    html += '@MYST_FIRST@<br>';
     html += '<p style="text-align: right">(つづく)</p>';
     html += '</div>';
     return html;
@@ -770,6 +758,15 @@ class selector_boynext extends SctItm_Selector {
         ];
     }
 }
+class selector_mystfirst extends SctItm_Selector {
+    constructor() {
+        super('@MYST_FIRST@');
+        this.itms = [
+            new SctItm('　ここ、@KEI_A2@@L_WHAT@では、多くの@KEI_A2@@L_CLASS@が@KEID_A@@KEID_A@暮らしている。'),
+            new SctItm('　ここは@KEI_A2@@L_CLASS@達が暮らす@KEI_A@@L_WHAT@。')
+        ];
+    }
+}
 class locker_lovepic extends SctItm_SelectLocker {
     constructor() {
         super('@L_LOVEPIC@', '', '@PIC_LOVE@');
@@ -871,6 +868,15 @@ class locker_mystTitle extends SctItm_SelectLocker {
         this.Add(itms_mysttitle);
     }
 }
+class locker_mystType extends SctItm_SelectLocker {
+    constructor() {
+        super('@KEI_A@');
+        this.itms = [
+            new SctItm('@KEIP@'),
+            new SctItm('@KEIN@')
+        ];
+    }
+}
 class selector_bookface0 extends SctItm_Selector {
     constructor() {
         super('@BOOKFACE0@');
@@ -914,6 +920,7 @@ class selector_bookface3 extends SctItm_Selector {
 class book_docs_maker extends news_docs_maker {
     constructor() {
         super();
+        this.dic_push(new selector_keiSelector());
         this.dic_push(new selector_bookface0());
         this.dic_push(new selector_bookface1());
         this.dic_push(new selector_bookface2());
@@ -973,5 +980,6 @@ class book_docs_maker extends news_docs_maker {
         this.dic_push(new locker_boss());
         this.dic_push(new locker_bossName());
         this.dic_push(new locker_mystTitle());
+        this.dic_push(new selector_mystfirst());
     }
 }

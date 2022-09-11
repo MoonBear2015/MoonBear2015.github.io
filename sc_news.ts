@@ -562,6 +562,57 @@ class selector_age2
 
 }
 
+class selector_keiSelector
+    extends ItmArray<SctItm>
+    implements ISctItm_Selector 
+{
+    // public nameCreater : INameCreater;
+    public itm_key : string;
+    public itm_key2 : string;
+    public pic_key : string;
+    public mode : number;
+    constructor()
+    {
+        super();
+        this.itm_key = "";
+        this.itm_key2 = "";
+        this.pic_key = "";
+        this.mode = -1;
+    }
+    Copy() : ISctItm_Selector
+    {
+        let result = new selector_age();
+        return result;
+    }
+    get rnd_Itm() : SctItm {
+        return new SctItm('','');
+    }
+
+    public Gene_Docs(temp_doc : string) : string {
+        let result : string = temp_doc;
+        if (this.mode == -1)
+        {
+            this.mode = rnd_max(2);
+        }
+        if(this.mode == 0)
+        {
+            result = result.replace("@KEI_A","@KEIP");
+            result = result.replace("@KEI_B","@KEIN");
+            result = result.replace("@KEID_A","@KEIDP");
+            result = result.replace("@KEID_B","@KEIDN");
+        }
+        else
+        {
+            result = result.replace("@KEI_A","@KEIN");
+            result = result.replace("@KEI_B","@KEIP");
+            result = result.replace("@KEID_A","@KEIDN");
+            result = result.replace("@KEID_B","@KEIDP");
+        }
+        return result;
+    }
+
+}
+
 
 class selector_title extends SctItm_Selector implements ISctItm_Selector {
     constructor(){

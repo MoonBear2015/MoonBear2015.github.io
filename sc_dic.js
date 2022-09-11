@@ -1394,8 +1394,10 @@ const cods_ad_sense_p = [
     new SctCod_Mv('|眩|まぶ|しい')
 ];
 const cods_ad_sense_n = [
-    new SctCod_Mv('|不味|まず|い'),
-    new SctCod_Mv('|辛|から|い'),
+    new SctCod_Mv('|不味|まず|い')
+    // ,
+    // new SctCod_Mv('|辛|から|い')
+    ,
     new SctCod_Mv('|塩辛|しおから|い'),
     new SctCod_Mv('しょっぱい'),
     // new SctCod_Mv('|甘辛|あまから|い')
@@ -1431,16 +1433,20 @@ const cods_adv_sense_p = [
     new SctCod_It('|明|あか|るく')
 ];
 const cods_adv_sense_n = [
-    new SctCod_It('|辛|から|く'),
+    // new SctCod_It('|辛|から|く')
+    // ,
     new SctCod_It('|塩辛|しおから|く'),
-    new SctCod_It('しょっぱく'),
-    new SctCod_It('|苦|にが|く'),
+    new SctCod_It('しょっぱく')
+    // ,
+    // new SctCod_It('|苦|にが|く')
+    // ,
     // new SctCod_It('|熱|あつ|く')
     // ,
     // new SctCod_It('|冷|つめ|たく')
     // ,
     // new SctCod_It('|暑|あつ|く')
     // ,
+    ,
     new SctCod_It('|蒸|む|し|暑|あつ|く'),
     new SctCod_It('|寒|さむ|く'),
     new SctCod_It('|暗|くら|く'),
@@ -1497,21 +1503,33 @@ const cods_adv_beauty = [
 ];
 const cods_ad_dirty = [
     new SctCod_It('|汚|きたな|い', 'dirty.jpg'),
-    new SctCod_It('|汚|きたな|らしい'),
-    new SctCod_It('|醜|みにく|い'),
-    new SctCod_It('だらしない'),
+    new SctCod_It('|浅|あさ|ましい'),
     new SctCod_It('いやらしい'),
-    new SctCod_It('ずるい'),
-    new SctCod_It('ずる|賢|がしこ|い')
+    new SctCod_It('|汚|きたな|らしい'),
+    new SctCod_It('ずる|賢|がしこ|い'),
+    new SctCod_It('ずうずうしい'),
+    new SctCod_It('だらしない'),
+    new SctCod_It('みすぼらしい'),
+    new SctCod_It('みっともない'),
+    new SctCod_It('|醜|みにく|い')
+    // ,
+    // new SctCod_It('ずるい')
+    ,
+    new SctCod_It('|見|み|るに|堪|た|えない')
 ];
 const cods_adv_dirty = [
     new SctCod_It('|汚|きたな|く', 'dirty.jpg'),
-    new SctCod_It('|汚|きたな|らしく'),
-    new SctCod_It('|醜|みにく|く'),
-    new SctCod_It('だらしなく'),
+    new SctCod_It('|浅|あさ|ましく'),
     new SctCod_It('いやらしく'),
-    new SctCod_It('ずるく'),
-    new SctCod_It('ずる|賢|がしこ|く')
+    new SctCod_It('|汚|きたな|らしく'),
+    new SctCod_It('ずる|賢|がしこ|く'),
+    new SctCod_It('ずうずうしく'),
+    new SctCod_It('だらしなく'),
+    new SctCod_It('みすぼらしく'),
+    new SctCod_It('みっともなく'),
+    new SctCod_It('|醜|みにく|く')
+    // ,
+    // new SctCod_It('ずるく')
 ];
 const cods_ad_danger = [
     new SctCod_Mv('|危|あぶ|ない', 'danger.png'),
@@ -5451,7 +5469,7 @@ const itms_bossName = [
     new SctItm('|Luke|ルーク|')
 ];
 const itms_mysttitle = [
-    new SctItm('@L_ITEM@殺人事件'),
-    new SctItm('@L_ITEM@殺人'),
-    new SctItm('@L_BOSSNAME@@L_BOSS@')
+    new SctItm('@KEI_B2@@L_CLASS@の@KEI_A2@殺人事件'),
+    new SctItm('@KEI_B2@@L_CLASS@の@KEI_A2@殺人'),
+    new SctItm('@KEI_B2@@L_BOSSNAME@@L_BOSS@の@KEI_A2@事件簿')
 ];

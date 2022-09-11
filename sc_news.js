@@ -375,6 +375,41 @@ class selector_age2 extends ItmArray {
         return replace_docs_A(temp_doc, this);
     }
 }
+class selector_keiSelector extends ItmArray {
+    constructor() {
+        super();
+        this.itm_key = "";
+        this.itm_key2 = "";
+        this.pic_key = "";
+        this.mode = -1;
+    }
+    Copy() {
+        let result = new selector_age();
+        return result;
+    }
+    get rnd_Itm() {
+        return new SctItm('', '');
+    }
+    Gene_Docs(temp_doc) {
+        let result = temp_doc;
+        if (this.mode == -1) {
+            this.mode = rnd_max(2);
+        }
+        if (this.mode == 0) {
+            result = result.replace("@KEI_A", "@KEIP");
+            result = result.replace("@KEI_B", "@KEIN");
+            result = result.replace("@KEID_A", "@KEIDP");
+            result = result.replace("@KEID_B", "@KEIDN");
+        }
+        else {
+            result = result.replace("@KEI_A", "@KEIN");
+            result = result.replace("@KEI_B", "@KEIP");
+            result = result.replace("@KEID_A", "@KEIDN");
+            result = result.replace("@KEID_B", "@KEIDP");
+        }
+        return result;
+    }
+}
 class selector_title extends SctItm_Selector {
     constructor() {
         super('@NEWS_TITLE@');
