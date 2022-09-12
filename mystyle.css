@@ -478,7 +478,7 @@ small {
     font-style:italic;
     font-size: 7vw;
     text-align:right;
-    text-shadow: 3px 3px 0px white;
+    text-shadow: 3px 3px 0px #FF3030;
 }
 #book11 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;

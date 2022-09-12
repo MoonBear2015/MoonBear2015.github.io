@@ -5428,13 +5428,18 @@ const itms_boss = [
     new SctItm('刑事'),
     new SctItm('少佐'),
     new SctItm('部長'),
-    new SctItm('検事')
+    new SctItm('検事'),
+    new SctItm('教授'),
+    new SctItm('先生')
 ];
 const itms_ass = [
     new SctItm('助手'),
     new SctItm('アシスタント'),
     new SctItm('部下'),
-    new SctItm('使い走り')
+    new SctItm('使い走り'),
+    new SctItm('秘書'),
+    new SctItm('弟子'),
+    new SctItm('|愛|まな|弟子')
 ];
 const itms_bossName = [
     new SctItm('|Александр|アレクサンドル|'),
