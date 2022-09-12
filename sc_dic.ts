@@ -2882,6 +2882,8 @@ const   cods_km_posi = [
 	// ,
 	new SctCod_It('|鋭敏|えいびん|')
 	,
+	new SctCod_It('|煌|きら|びやか')
+	,
 	new SctCod_It('|綺麗|きれい|')
 	,
 	new SctCod_It('しなやか')
@@ -9048,20 +9050,80 @@ const   itms_bossName = [
     new SctItm('|Luke|ルーク|')
 ]
 
-const   itms_mysttitle = [
-    new SctItm('@L_CLASS@の@KEI_A2@殺人事件')
+const   itms_mystTitle = [
+    new SctItm('@L_CLASS@の@MYST_ACTNAME@')
     ,
-    new SctItm('@KEI_A2@@L_CLASS@の殺人事件')
+    new SctItm('@L_CLASS@の@KEI_A2@@MYST_ACTNAME@')
     ,
-    new SctItm('@KEI_A2@@L_CLASS@の@KEI_A2@殺人事件')
+    new SctItm('@KEI_A2@@L_CLASS@の@MYST_ACTNAME@')
     ,
-    new SctItm('@L_CLASS@の@KEI_A2@殺人')
+    new SctItm('@KEI_A2@@L_CLASS@の@KEI_A2@@MYST_ACTNAME@')
     ,
-    new SctItm('@KEI_A2@@L_CLASS@の殺人')
+    new SctItm('@L_WHAT@の@MYST_ACTNAME@')
     ,
-    new SctItm('@KEI_A2@@L_CLASS@の@KEI_A2@殺人')
+    new SctItm('@L_WHAT@の@KEI_A2@@MYST_ACTNAME@')
     ,
-    new SctItm('@KEI_A2@@L_BOSSNAME@@L_BOSS@の事件簿')
+    new SctItm('@KEI_A2@@L_WHAT@の@MYST_ACTNAME@')
     ,
-    new SctItm('@L_BOSSNAME@@L_BOSS@の@KEI_A2@事件簿')
+    new SctItm('@KEI_A2@@L_WHAT@の@KEI_A2@@MYST_ACTNAME@')
+    ,
+    new SctItm('@L_BOSSNAME@@L_BOSS@の@MYST_ACTPAPER@')
+    ,
+    new SctItm('@KEI_A2@@L_BOSSNAME@@L_BOSS@の@MYST_ACTPAPER@')
+    ,
+    new SctItm('@L_BOSSNAME@@L_BOSS@の@MYST_ACTPAPER@')
+    ,
+    new SctItm('@L_BOSSNAME@@L_BOSS@の@KEI_A2@@MYST_ACTPAPER@')
+    ,
+    new SctItm('@L_BOSSNAME@@L_BOSS@の@KEI_A2@@MYST_ACTPAPER@')
+]
+
+const   itms_mystActName = [
+    new SctItm('殺人')
+    ,
+    new SctItm('殺人事件')
+    ,
+    new SctItm('殺戮')
+    ,
+    new SctItm('殺意')
+    ,
+    new SctItm('狂気')
+    ,
+    new SctItm('凶器')
+    ,
+    new SctItm('凶行')
+    ,
+    new SctItm('事件')
+    ,
+    new SctItm('暗殺')
+    ,
+    new SctItm('闇')
+    ,
+    new SctItm('犯行現場')
+    ,
+    new SctItm('犯行')
+    ,
+    new SctItm('犯罪')
+    ,
+    new SctItm('罪')
+    ,
+    new SctItm('罪悪')
+    ,
+    new SctItm('罪悪感')
+]
+
+const   itms_mystActPaper = [
+    new SctItm('事件簿')
+    ,
+    new SctItm('犯罪記録')
+    ,
+    new SctItm('カルテ')
+    ,
+    new SctItm('手記')
+    ,
+    new SctItm('記録')
+    ,
+    new SctItm('日誌')
+    ,
+    new SctItm('犯罪日誌')
 ]

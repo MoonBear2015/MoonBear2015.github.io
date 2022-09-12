@@ -1100,7 +1100,7 @@ class selector_mystApp extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('「あの@KEI_B2@ものはなんですか@L_BOSSNAME@@L_BOSS@？」<br>「いやあ、とても@KEID_B@て判らないよ@L_ASS@の@L_GIRL@君」')
             ,
-            new SctItm('「おやおや、@KEI_B2@ところにきちゃいましたよ@L_BOSSNAME@@L_BOSS@？」<br>「こりゃまたずいぶん@KEID_B@て@KEI_B2@ところだね、@L_ASS@の@L_GIRL@君」')
+            new SctItm('「おやおや、なんだか@KEI_B2@ところにきちゃいましたよ@L_BOSSNAME@@L_BOSS@？」<br>「こりゃまたずいぶん@KEID_B@て@KEI_B2@ところだね、@L_ASS@の@L_GIRL@君」')
             ,
             new SctItm('「あの人、ずいぶん@KEI_B@ですねぇ@L_BOSSNAME@@L_BOSS@？」<br>「おいおい、そんな@KEI_B2@こと言っちゃダメだよ@L_ASS@の@L_GIRL@君」')
             ,
@@ -1139,6 +1139,8 @@ class selector_mystAccident extends SctItm_Selector implements ISctItm_Selector 
             ,
             new SctItm('　そんなある時、引き裂くような@KEI_A2@悲鳴に@KEI_B2@@L_CLASS@達は一斉に振り返った！<br>「きゃあああああっ！！」')
             ,
+            new SctItm('　そんな@KEI_A2@二人を尻目に、耳を貫くほどの@KEI_A2@悲鳴が響き渡った！<br>「うわぁぁぁぁぁっ！！」')
+            ,
             new SctItm('　次の瞬間、全てを揺るがす@KEI_A2@悲鳴が！<br>「あああああっ！！」')
         ]
     }
@@ -1151,6 +1153,13 @@ class selector_mystReaction extends SctItm_Selector implements ISctItm_Selector 
             new SctItm('「@L_BOSSNAME@@L_BOSS@！ あの悲鳴は！」<br>「よし、行ってみるぞ@L_ASS@の@L_GIRL@君！」')
             ,
             new SctItm('「いったい何事だ？ @L_ASS@の@L_GIRL@君！」<br>「行きましょう@L_BOSSNAME@@L_BOSS@！」<br>')
+            ,
+            new SctItm('「――どうやら、我々の出番のようだね@L_GIRL@君」<br>「はい、@L_BOSS@」<br>')
+            ,
+            new SctItm('「行ってみましょう@L_BOSSNAME@@L_BOSS@！ ――って、@L_BOSS@？ どこ行ったんですか@L_BOSS@！」<br>「――ああ、ここだよ@L_ASS@の@L_GIRL@君」<br>「もう！ 大変なことが起きたみたいですよ！ 早くして下さい@L_BOSS@！」<br>「わ、判ったよ@L_GIRL@君」')
+            ,
+            new SctItm('「よし、行ってみよう？ @L_ASS@の@L_GIRL@君！ ――おや、@L_GIRL@君？」「――はい、ここです@L_BOSSNAME@@L_BOSS@！ <br>「何処に行ってたんだね。ほら、行くよ@L_GIRL@君！」<br>「ま、待って下さい@L_BOSS@！」')
+
         ]
     }
 }
@@ -1299,9 +1308,22 @@ class locker_ass extends SctItm_SelectLocker implements ISctItm_Selector{
 class locker_mystTitle extends SctItm_SelectLocker implements ISctItm_Selector{
     constructor(){
         super('@L_MYSTTITLE@');
-        this.Add(itms_mysttitle);
+        this.Add(itms_mystTitle);
     }
 }
+class locker_mystActName extends SctItm_SelectLocker implements ISctItm_Selector{
+    constructor(){
+        super('@MYST_ACTNAME@');
+        this.Add(itms_mystActName);
+    }
+}
+class locker_mystActPaper extends SctItm_SelectLocker implements ISctItm_Selector{
+    constructor(){
+        super('@MYST_ACTPAPER@');
+        this.Add(itms_mystActPaper);
+    }
+}
+
 class locker_mystType extends SctItm_SelectLocker implements ISctItm_Selector{
     constructor(){
         super('@KEI_A@');
@@ -1436,6 +1458,8 @@ class book_docs_maker extends news_docs_maker {
         this.dic_push(new locker_bossName());
         this.dic_push(new locker_ass());
         this.dic_push(new locker_mystTitle());
+        this.dic_push(new locker_mystActName());
+        this.dic_push(new locker_mystActPaper());
 
         this.dic_push(new selector_myst01());
         this.dic_push(new selector_mystSt_AP());
