@@ -9,7 +9,7 @@ function set_book()
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B01.34';
+    html += ' B01.35';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -285,7 +285,7 @@ function make_booktype3() : string {
     
     html += '<div id="book_myststory">';
     html += '@MYST01@<br>';
-    html += '　そんな@MYST_ACT@<br>';
+    html += '@MYST_ACT@<br><br>@MYST_REACT@';
     html += '<p style="text-align: right">(つづく)</p>'
     html += '</div>';
 
@@ -1125,9 +1125,24 @@ class selector_mystAccident extends SctItm_Selector implements ISctItm_Selector 
     constructor(){
         super('@MYST_ACT@');
         this.itms = [
-            new SctItm('@KEI_B2@@L_LANDMARK@を切り裂くような、@KEI_A2@悲鳴が響き渡った！<br>「ぎゃああああっ！」<br>')
+            new SctItm('　そんな@KEI_B2@@L_LANDMARK@を切り裂くような、@KEI_A2@悲鳴が響き渡った！<br>「ぎゃああああっ！」')
             ,
-            new SctItm('@KEI_B2@@L_LANDMARK@を揺るがす、@KEID_A@@KEI_A2@事件が巻き起こった！<br>「ひぃぃぃぃっ！！」<br>')
+            new SctItm('　そんな@KEI_B2@@L_LANDMARK@を揺るがす、@KEID_A@@KEI_A2@事件が巻き起こった！<br>「ひぃぃぃぃっ！！」')
+            ,
+            new SctItm('　そんなある時、引き裂くような@KEI_A2@悲鳴に@KEI_B2@@L_CLASS@達は一斉に振り返った！<br>「きゃあああああっ！！」')
+            ,
+            new SctItm('　次の瞬間、全てを揺るがす@KEI_A2@悲鳴が！<br>「あああああっ！！」')
+        ]
+    }
+}
+
+class selector_mystReaction extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@MYST_REACT@');
+        this.itms = [
+            new SctItm('「@L_BOSSNAME@@L_BOSS@！ あの悲鳴は！」<br>「よし、行ってみるぞ@L_ASS@の@L_GIRL@君！」')
+            ,
+            new SctItm('「いったい何事だ？ @L_ASS@の@L_GIRL@君！」<br>「行きましょう@L_BOSSNAME@@L_BOSS@！」<br>')
         ]
     }
 }
@@ -1420,6 +1435,7 @@ class book_docs_maker extends news_docs_maker {
         this.dic_push(new selector_mystApp());
         this.dic_push(new selector_mystAP_ST());
         this.dic_push(new selector_mystAccident());
+        this.dic_push(new selector_mystReaction());
     }
 }
 
