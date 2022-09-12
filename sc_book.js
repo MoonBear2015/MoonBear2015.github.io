@@ -7,7 +7,7 @@ function set_book() {
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B01.33';
+    html += ' B01.34';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -224,6 +224,7 @@ function make_booktype3() {
     html += '</div>';
     html += '<div id="book_myststory">';
     html += '@MYST01@<br>';
+    html += '　そんな@MYST_ACT@<br>';
     html += '<p style="text-align: right">(つづく)</p>';
     html += '</div>';
     return html;
@@ -772,10 +773,10 @@ class selector_mystStage extends SctItm_Selector {
     constructor() {
         super('@MYST_STAGE@');
         this.itms = [
-            new SctItm('@KEI_B2@@L_WHAT@では、@MANY@@KEI_B2@@L_CLASS@達が@KEID_B@@KEID_B@暮らしている。'),
-            new SctItm('@KEI_B2@@L_WHAT@では、@MANY@@KEI_B2@@L_CLASS@達が@KEID_B2@@DOING@いる。'),
-            new SctItm('@KEI_B2@@L_WHAT@には、@KEID_B2@@DOING@暮らす@MANY@@KEI_B2@@L_CLASS@達の姿があった。'),
-            new SctItm('@KEI_B2@@L_WHAT@の@LANDMARK@では、@MANY@@KEI_B2@@L_CLASS@達が@KEID_B2@@DOING@いた。')
+            new SctItm('@KEI_B2@@L_WHAT@の@L_LANDMARK@では、@MANY@@KEI_B2@@L_CLASS@達が@KEID_B@@KEID_B@暮らしている。'),
+            new SctItm('@KEI_B2@@L_WHAT@にある@L_LANDMARK@では、@MANY@@KEI_B2@@L_CLASS@達が@KEID_B2@@DOING@いる。'),
+            new SctItm('@KEI_B2@@L_WHAT@の@L_LANDMARK@には、@KEID_B2@@DOING@暮らす@MANY@@KEI_B2@@L_CLASS@達の姿があった。'),
+            new SctItm('@KEI_B2@@L_WHAT@の@L_LANDMARK@では、@MANY@@KEI_B2@@L_CLASS@達が@KEID_B2@@DOING@いた。')
         ];
     }
 }
@@ -786,7 +787,7 @@ class selector_mystSt_AP extends SctItm_Selector {
             new SctItm('そこに、場違いにも@KEI_A2@二人組が現れた。'),
             new SctItm('そこに、不思議と@KEI_A2@会話が聞こえてくる。'),
             new SctItm('そこに現れたのは、何故か@KEI_A2@二人組。'),
-            new SctItm('その@KEI_B2@@L_WHAT@に訪れたのは、人目もはばからず@KEI_A2@二人。')
+            new SctItm('そんな@KEI_B2@@L_WHAT@に訪れたのは、人目もはばからず@KEI_A2@この二人――。')
         ];
     }
 }
@@ -794,11 +795,11 @@ class selector_mystApp extends SctItm_Selector {
     constructor() {
         super('@MYST_APP@');
         this.itms = [
-            new SctItm('「ここはずいぶん@KEI_A2@ところですねぇ@L_BOSSNAME@@L_BOSS@？」<br>「そうだね@L_ASS@の@L_GIRL@君、とても@KEI_A2@ところだね」'),
-            new SctItm('「あの@KEI_A2@ものはなんですか@L_BOSSNAME@@L_BOSS@？」<br>「いやあ、とても@KEID_A@て判らないよ@L_ASS@の@L_GIRL@君」'),
-            new SctItm('「おやおや、@KEI_A2@ところにきちゃいましたよ@L_BOSSNAME@@L_BOSS@？」<br>「こりゃまたずいぶん@KEID_A@て@KEI_A2@ところだね、@L_ASS@の@L_GIRL@君」'),
-            new SctItm('「あの人、ずいぶん@KEI_A2@ですねぇ@L_BOSSNAME@@L_BOSS@？」<br>「おいおい、そんな@KEI_A2@なこと言っちゃダメだよ@L_ASS@の@L_GIRL@君」'),
-            new SctItm('「うわぁ、なんて@KEI_A2@んでしょう。見てくださいよ、@L_BOSSNAME@@L_BOSS@？」<br>「そうだね、@L_ASS@の@L_GIRL@君。やはり@L_WHAT@は@KEI_A3@ねぇ」')
+            new SctItm('「ここはずいぶん@KEI_B2@ところですねぇ@L_BOSSNAME@@L_BOSS@？」<br>「そうだね@L_ASS@の@L_GIRL@君、とても@KEI_B2@ところだね」'),
+            new SctItm('「あの@KEI_B2@ものはなんですか@L_BOSSNAME@@L_BOSS@？」<br>「いやあ、とても@KEID_B@て判らないよ@L_ASS@の@L_GIRL@君」'),
+            new SctItm('「おやおや、@KEI_B2@ところにきちゃいましたよ@L_BOSSNAME@@L_BOSS@？」<br>「こりゃまたずいぶん@KEID_B@て@KEI_B2@ところだね、@L_ASS@の@L_GIRL@君」'),
+            new SctItm('「あの人、ずいぶん@KEI_B@ですねぇ@L_BOSSNAME@@L_BOSS@？」<br>「おいおい、そんな@KEI_B2@なこと言っちゃダメだよ@L_ASS@の@L_GIRL@君」'),
+            new SctItm('「うわぁ、なんて@KEI_B2@んでしょう。見てくださいよ、@L_BOSSNAME@@L_BOSS@？」<br>「そうだね、@L_ASS@の@L_GIRL@君。やはり@L_WHAT@は@KEI_B3@ねぇ」')
         ];
     }
 }
@@ -809,6 +810,15 @@ class selector_mystAP_ST extends SctItm_Selector {
             new SctItm('――そんな@KEI_A2@二人組が訪れた'),
             new SctItm('――そんな場違いにも@KEI_A2@会話が聞こえてくる'),
             new SctItm('――そんな@KEI_A2@二人がやってきた')
+        ];
+    }
+}
+class selector_mystAccident extends SctItm_Selector {
+    constructor() {
+        super('@MYST_ACT@');
+        this.itms = [
+            new SctItm('@KEI_B2@@L_LANDMARK@を切り裂くような、@KEI_A2@悲鳴が響き渡った！<br>「ぎゃああああっ！」<br>'),
+            new SctItm('@KEI_B2@@L_LANDMARK@を揺るがす、@KEID_A@@KEI_A2@事件が巻き起こった！<br>「ひぃぃぃぃっ！！」<br>')
         ];
     }
 }
@@ -1037,5 +1047,6 @@ class book_docs_maker extends news_docs_maker {
         this.dic_push(new selector_mystStage());
         this.dic_push(new selector_mystApp());
         this.dic_push(new selector_mystAP_ST());
+        this.dic_push(new selector_mystAccident());
     }
 }

@@ -1687,6 +1687,12 @@ class selector_landmark extends SctItm_Selector {
         this.Add(itms_landmark);
     }
 }
+class locker_landmark extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_LANDMARK@');
+        this.Add(itms_landmark);
+    }
+}
 class selector_fruit extends SctItm_Selector {
     constructor() {
         super('@FRUIT@');
@@ -2719,6 +2725,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new locker_country());
         this.dic_push(new selector_history());
         this.dic_push(new selector_landmark());
+        this.dic_push(new locker_landmark());
         this.dic_push(new selector_fruit());
         this.dic_push(new locker_fruit());
         this.dic_push(new selector_fish());
