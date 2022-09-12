@@ -7,7 +7,7 @@ function set_book() {
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B01.36';
+    html += ' B01.37';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -223,7 +223,7 @@ function make_booktype3() {
     html += '</div>';
     html += '</div>';
     html += '<div id="book_myststory">';
-    html += '@MYST01@<br>';
+    html += '@MYST01@<br><br>';
     html += '@MYST_ACT@<br><br>@MYST_REACT@';
     html += '<p style="text-align: right">(つづく)</p>';
     html += '</div>';
@@ -836,8 +836,8 @@ class selector_mystReaction extends SctItm_Selector {
             new SctItm('「@L_BOSSNAME@@L_BOSS@！ あの悲鳴は！」<br>「よし、行ってみるぞ@L_ASS@の@L_GIRL@君！」'),
             new SctItm('「いったい何事だ？ @L_ASS@の@L_GIRL@君！」<br>「行きましょう@L_BOSSNAME@@L_BOSS@！」<br>'),
             new SctItm('「――どうやら、我々の出番のようだね@L_GIRL@君」<br>「はい、@L_BOSS@」<br>'),
-            new SctItm('「行ってみましょう@L_BOSSNAME@@L_BOSS@！ ――って、@L_BOSS@？ どこ行ったんですか@L_BOSS@！」<br>「――ああ、ここだよ@L_ASS@の@L_GIRL@君」<br>「もう！ 大変なことが起きたみたいですよ！ 早くして下さい@L_BOSS@！」<br>「わ、判ったよ@L_GIRL@君」'),
-            new SctItm('「よし、行ってみよう？ @L_ASS@の@L_GIRL@君！ ――おや、@L_GIRL@君？」「――はい、ここです@L_BOSSNAME@@L_BOSS@！ <br>「何処に行ってたんだね。ほら、行くよ@L_GIRL@君！」<br>「ま、待って下さい@L_BOSS@！」')
+            new SctItm('「行ってみましょう@L_BOSSNAME@@L_BOSS@！ ――って、@L_BOSS@？ どこ行ったんですか@L_BOSS@！」<br>「――ああ、ここだよ@L_GIRL@君」<br>「もう！ 早くして下さい@L_BOSS@！」<br>「わ、判ったよ@L_GIRL@君」'),
+            new SctItm('「よし、行ってみよう @L_ASS@の@L_GIRL@君！ ――おや、何処だね@L_GIRL@君？」<br>「――は、はい！ここです@L_BOSS@！ 」<br>「なにやってるんだ。ほら、行くよ@L_GIRL@君！」<br>「ま、待って下さい@L_BOSS@！」')
         ];
     }
 }

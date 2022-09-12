@@ -5499,7 +5499,6 @@ const itms_mystActName = [
     new SctItm('狂気'),
     new SctItm('凶器'),
     new SctItm('凶行'),
-    new SctItm('事件'),
     new SctItm('暗殺'),
     new SctItm('闇'),
     new SctItm('犯行現場'),
