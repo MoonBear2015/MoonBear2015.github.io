@@ -5717,6 +5717,8 @@ const   itms_class = [
     ,
     new SctItm('舞台俳優')
     ,
+    new SctItm('推理小説家')
+    ,
     new SctItm('恋愛小説家')
     ,
     new SctItm('絵本作家')
@@ -5734,10 +5736,6 @@ const   itms_class = [
     new SctItm('事務員')
     ,
     new SctItm('飼育員')
-    ,
-    new SctItm('店員')
-    ,
-    new SctItm('店主')
     ,
     new SctItm('アルバイター')
     ,
@@ -5767,6 +5765,12 @@ const   itms_class = [
     ,
     new SctItm('少女漫画家')
     ,
+    new SctItm('画家')
+    ,
+    new SctItm('プロ野球選手')
+    ,
+    new SctItm('プロゴルファー')
+    ,
     new SctItm('プロサーファー')
     ,
     new SctItm('ユーチューバー')
@@ -5789,7 +5793,7 @@ const   itms_class = [
     ,
     new SctItm('ピアニスト')
     ,
-    new SctItm('指揮者')
+    new SctItm('バイオリニスト')
     ,
     new SctItm('ギターリスト')
     ,
@@ -5798,6 +5802,8 @@ const   itms_class = [
     new SctItm('ホテルマン')
     ,
     new SctItm('デザイナー')
+    ,
+    new SctItm('ファッションモデル')
     ,
     new SctItm('靴磨き')
     ,
@@ -5840,10 +5846,10 @@ const   itms_class = [
     new SctItm('駅員')
     ,
     new SctItm('車掌')
-    ,
-    new SctItm('世界第三位')
-    ,
-    new SctItm('世界第一位')
+    // ,
+    // new SctItm('世界第三位')
+    // ,
+    // new SctItm('世界第一位')
     ,
     new SctItm('旅芸人')
     ,
@@ -5995,6 +6001,8 @@ const   itms_class = [
     ,
     new SctItm('手品師')
     ,
+    new SctItm('奇術師')
+    ,
     new SctItm('マジシャン')
     ,
     new SctItm('庭師')
@@ -6120,6 +6128,10 @@ const   itms_class = [
     new SctItm('吸血鬼')
     ,
     new SctItm('化け猫')
+    ,
+    new SctItm('河童')
+    ,
+    new SctItm('河童')
 ];
 
 
