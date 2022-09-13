@@ -8301,8 +8301,8 @@ const   itms_doing = [
     new SctItm('@ANIMAL@と戦って')
     ,
     new SctItm('@ANIMAL@を退治して')
-    ,
-    new SctItm('@ANIMAL@を檻に入れて')
+    // ,
+    // new SctItm('@ANIMAL@を檻に入れて')
     ,
     new SctItm('@ANIMAL@を追い出して')
     ,
@@ -8505,8 +8505,8 @@ const   itms_doing_l = [
     new SctItm('@L_ANIMAL@と戦って')
     ,
     new SctItm('@L_ANIMAL@を退治して')
-    ,
-    new SctItm('@L_ANIMAL@を檻に入れて')
+    // ,
+    // new SctItm('@L_ANIMAL@を檻に入れて')
     // ,
     // new SctItm('@L_ANIMAL@を追い出して')
     ,
@@ -8691,8 +8691,8 @@ const   itms_doing_o = [
     new SctItm('@L_ANIMAL@と戦って')
     ,
     new SctItm('@L_ANIMAL@を退治して')
-    ,
-    new SctItm('@L_ANIMAL@を檻に入れて')
+    // ,
+    // new SctItm('@L_ANIMAL@を檻に入れて')
     // ,
     // new SctItm('@L_ANIMAL@を追い出して')
     ,

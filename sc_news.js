@@ -2160,12 +2160,14 @@ class selector_answer extends SctItm_Selector {
 }
 class selector_day extends SctItm_Selector {
     constructor() {
-        super('@DAY@');
+        super('@ALSODAY@');
         this.itms = [
-            new SctItm('今朝'),
-            new SctItm('今日'),
-            new SctItm('昨日'),
-            new SctItm('|一昨日|おととい|')
+            new SctItm('今日も変わらず'),
+            new SctItm('|相|あい|も変わらず'),
+            new SctItm('今日も今日とて'),
+            new SctItm('朝から晩まで'),
+            new SctItm('日が暮れるまで'),
+            new SctItm('伝統的な')
         ];
     }
 }
@@ -2431,7 +2433,6 @@ class selector_doing extends SctItm_Selector {
             new SctItm('@DOING02@'),
             new SctItm('@DOING02@'),
             new SctItm('@DOING02@'),
-            new SctItm('@DAY@も@DOING01@'),
             new SctItm('@DOING01@喜んで'),
             new SctItm('@DOING01@笑って'),
             new SctItm('@DOING01@笑い転げて'),
