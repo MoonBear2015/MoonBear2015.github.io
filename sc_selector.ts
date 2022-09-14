@@ -1007,7 +1007,7 @@ class docs_maker {
             cnt++;
             let chk = result.indexOf('@');
             if (chk < 0) break;
-            if (cnt > 10)
+            if (cnt > 30)
             {
                 result = "** over work **<br>" + result;
                 // alert('over work : ' + chk.toString());
