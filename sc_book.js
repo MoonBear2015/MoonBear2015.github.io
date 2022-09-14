@@ -7,7 +7,7 @@ function set_book() {
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B01.39';
+    html += ' B01.41';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -826,7 +826,8 @@ class selector_mystAccident extends SctItm_Selector {
             new SctItm('　そんな@KEI_B2@@L_LANDMARK@を揺るがす、@KEID_A@@KEI_A2@事件が巻き起こった！<br>「ひぃぃぃぃっ！！」'),
             new SctItm('　そんなある時、引き裂くような@KEI_A2@悲鳴に@KEI_B2@@L_CLASS@達は一斉に振り返った！<br>「きゃあああああっ！！」'),
             new SctItm('　そんな@KEI_A2@二人を尻目に、耳を貫くほどの@KEI_A2@悲鳴が響き渡った！<br>「うわぁぁぁぁぁっ！！」'),
-            new SctItm('　次の瞬間、全てを揺るがす@KEI_A2@悲鳴が！<br>「あああああっ！！」')
+            new SctItm('　次の瞬間、全てを揺るがす@KEI_A2@悲鳴が！<br>「あああああっ！！」'),
+            new SctItm('　その時！ いったい何をしくじったのか、世界を揺るがす絶望感！<br>「しまったあああっ！！」')
         ];
     }
 }
@@ -836,7 +837,10 @@ class selector_mystReaction extends SctItm_Selector {
         this.itms = [
             new SctItm('「@L_BOSSNAME@@L_BOSS@！ あの悲鳴は！」<br>「よし、行ってみるぞ@L_ASS@の@L_GIRL@君！」'),
             new SctItm('「いったい何事だ？ @L_ASS@の@L_GIRL@君！」<br>「行きましょう@L_BOSSNAME@@L_BOSS@！」<br>'),
-            new SctItm('「――どうやら、我々の出番のようだね@L_GIRL@君」<br>「はい、@L_BOSS@」<br>'),
+            new SctItm('「――どうやら我々の出番のようだね、@L_GIRL@君」<br>「はい、@L_BOSS@」<br>'),
+            new SctItm('「もしや@L_BOSS@、今のが？」<br>「ああ、予告通りだね、@L_GIRL@君」'),
+            new SctItm('「@L_BOSS@、もしや！？」<br>「しまった！ 間に合わなかったか！」'),
+            new SctItm('「@L_BOSS@、今のが・・・・・」<br>「うむ。伝承の通りだ、@L_GIRL@君」'),
             new SctItm('「事件だぞ@L_GIRL@君！ ――って、こらこら！ @DOING02@いる場合じゃないぞ！」<br>「えっ！？ は、はい、@L_BOSS@！」<br>'),
             new SctItm('「ちょ、ちょっと@L_BOSSNAME@@L_BOSS@！ 事件みたいですよ@L_BOSS@！！」<br>「待ってくれ@L_GIRL@君、この@DOING02@から――」<br>「@L_BOSS@！ そんなの後にして下さい！」<br>「わ、判った判った――」'),
             new SctItm('「行ってみましょう！ ――って、@L_BOSS@？ どこ行ったんですか@L_BOSS@！」<br>「――ああ、ここだよ@L_GIRL@君」<br>「もう！ 早くして下さい@L_BOSS@！」<br>「わ、判ったよ@L_GIRL@君」'),

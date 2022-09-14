@@ -9,7 +9,7 @@ function set_book()
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B01.39';
+    html += ' B01.41';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -1143,6 +1143,8 @@ class selector_mystAccident extends SctItm_Selector implements ISctItm_Selector 
             new SctItm('　そんな@KEI_A2@二人を尻目に、耳を貫くほどの@KEI_A2@悲鳴が響き渡った！<br>「うわぁぁぁぁぁっ！！」')
             ,
             new SctItm('　次の瞬間、全てを揺るがす@KEI_A2@悲鳴が！<br>「あああああっ！！」')
+            ,
+            new SctItm('　その時！ いったい何をしくじったのか、世界を揺るがす絶望感！<br>「しまったあああっ！！」')
         ]
     }
 }
@@ -1155,7 +1157,13 @@ class selector_mystReaction extends SctItm_Selector implements ISctItm_Selector 
             ,
             new SctItm('「いったい何事だ？ @L_ASS@の@L_GIRL@君！」<br>「行きましょう@L_BOSSNAME@@L_BOSS@！」<br>')
             ,
-            new SctItm('「――どうやら、我々の出番のようだね@L_GIRL@君」<br>「はい、@L_BOSS@」<br>')
+            new SctItm('「――どうやら我々の出番のようだね、@L_GIRL@君」<br>「はい、@L_BOSS@」<br>')
+            ,
+            new SctItm('「もしや@L_BOSS@、今のが？」<br>「ああ、予告通りだね、@L_GIRL@君」')
+            ,
+            new SctItm('「@L_BOSS@、もしや！？」<br>「しまった！ 間に合わなかったか！」')
+            ,
+            new SctItm('「@L_BOSS@、今のが・・・・・」<br>「うむ。伝承の通りだ、@L_GIRL@君」')
             ,
             new SctItm('「事件だぞ@L_GIRL@君！ ――って、こらこら！ @DOING02@いる場合じゃないぞ！」<br>「えっ！？ は、はい、@L_BOSS@！」<br>')
             ,
