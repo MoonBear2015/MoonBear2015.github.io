@@ -9,7 +9,7 @@ function set_book()
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B01.48';
+    html += ' B01.49';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -288,10 +288,10 @@ function make_booktype3() : string {
     html += '@MYST_ACT@<br><br>';
     html += '@MYST_REACT@<br><br>';
     html += '@MYST_SPOT@<br><br>';
-
-    let b1 = rnd_max(4);
+    
+    let b1 = rnd_max(5);
     let b2 = 4 - b1;
-
+    
     if (b1 > 0)
     {
         for(let i = 0;i < b1; i++) {
@@ -300,14 +300,17 @@ function make_booktype3() : string {
         
         html += '@MYST_HEAR_A@<br><br>';
     }
-
+    
     if (b2 > 0)
     {
         for(let i = 0;i < b2; i++) {
             html += '@MYST_HEAR_B@<br><br>';
         }
     }
-
+    
+    html += '@MYST_END01@<br><br>';
+    html += '@MYST_END02@<br><br>';
+    
     html += '<p style="text-align: right">(つづく)</p>'
     html += '</div>';
 
@@ -1255,17 +1258,17 @@ class selector_mystHealingB extends SctItm_Selector implements ISctItm_Selector 
     constructor(){
         super('@MYST_HEAR_B@');
         this.itms = [
-            new SctItm('――@KEI_B2@@L_DOING@いる@L_CLASS@の@NAME@@AGE@曰く、<br>「え？ その@KEI_A2@人？ さあ？」')
+            new SctItm('――@KEI_B2@@L_CLASS@の@NAME@@AGE@は一言、<br>「さあ？」')
             ,
-            new SctItm('――@KEI_B2@@L_DOING@いる@L_CLASS@の@NAME@@AGE@曰く、<br>「いやあ、@DOING02@て気付かなかったっすよ」')
+            new SctItm('――@KEI_B2@@L_CLASS@の@NAME@@AGE@曰く、<br>「いやあ、@DOING02@て気付かなかったっすよ」')
             ,
-            new SctItm('――@KEI_B2@@L_DOING@いる@L_CLASS@の@NAME@@AGE@の談、<br>「いや、何があったんですか？」')
+            new SctItm('――@KEI_B2@@L_CLASS@の@NAME@@AGE@の談、<br>「ああ、@LANDMARK@ならあっちですよ」')
             ,
-            new SctItm('――@KEI_B2@@L_DOING@いる@L_CLASS@の@NAME@@AGE@は|狼狽|うろた|えながら、<br>「知らない知らない。何も知らない」')
+            new SctItm('――@KEI_B2@@L_CLASS@の@NAME@@AGE@はすっとぼけて、<br>「そこにいる@L_CLASS@に聞いて下さい」')
             ,
-            new SctItm('――@KEI_B2@@L_DOING@いる@L_CLASS@の@NAME@@AGE@は急ぎ足で、<br>「いや、ちょっと急ぐので、これで・・・」')
+            new SctItm('――@KEI_B2@@L_CLASS@の@NAME@@AGE@は@RIDE@に飛び乗り、<br>「それじゃ急ぐんで」')
             ,
-            new SctItm('――@KEI_B2@@L_DOING@いる@L_CLASS@の@NAME@@AGE@は目も合わさず、<br>「ほら、邪魔だから、どいてどいて」')
+            new SctItm('――@KEI_B2@@L_CLASS@の@NAME@@AGE@は目も合わさず、<br>「ほら、邪魔だから、どいてどいて」')
         ]
     }
 }
@@ -1273,13 +1276,13 @@ class selector_mystHealingA extends SctItm_Selector implements ISctItm_Selector 
     constructor(){
         super('@MYST_HEAR_A@');
         this.itms = [
-            new SctItm('――@KEI_A2@@L_DOING@いた@L_CLASS@の@NAME@@AGE@曰く、<br>「さっきまで@DOING02@いた人でしょう？ どうかしましたか」')
+            new SctItm('――@KEI_A2@@L_CLASS@の@NAME@@AGE@は質問で返す。<br>「さっきまで@L_DOING@いた人でしょう？ どうかしましたか」')
             ,
-            new SctItm('――@KEI_A2@@L_DOING@いた@L_CLASS@の@NAME@@AGE@は遠い目で、<br>「ああ、あの@KEI_B2@人ですよね。可哀相に・・・」')
+            new SctItm('――@KEI_A2@@L_CLASS@の@NAME@@AGE@は遠い目で、<br>「ああ、あの@KEI_B2@人ですよね。可哀相に・・・」')
             ,
-            new SctItm('――@KEI_A2@@L_DOING@いた@L_CLASS@の@NAME@@AGE@は溜息交じりに、<br>「怖いですよね。@KEI_B2@人って――」')
+            new SctItm('――@KEI_A2@@L_CLASS@の@NAME@@AGE@は溜息交じりに、<br>「怖いですよね。@KEI_B2@人って――」')
             ,
-            new SctItm('――@KEI_A2@@L_DOING@いた@L_CLASS@の@NAME@@AGE@は空を仰いで、<br>「いや、@DOING02@いましたから。私は」')
+            new SctItm('――@KEI_A2@@L_CLASS@の@NAME@@AGE@は空を仰いで、<br>「いや、@DOING02@いましたから。私は」')
         ]
     }
 }
@@ -1288,9 +1291,33 @@ class selector_mystEnd01 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@MYST_END01@');
         this.itms = [
-            new SctItm('　彼ら@L_CLASS@達の証言になんの特徴も見いだせず、困り果てる@KEI_A2@二人――。')
+            new SctItm('　彼ら@L_CLASS@達の証言から何も掴めず、困り果てる@KEI_A2@二人。')
             ,
-            new SctItm('　目を伏せ溜息をつく@L_BOSS@を、@L_ASS@は黙って見守るのだが、どうやら結論は見出せないようだ。')
+            new SctItm('　目を伏せ溜息をつく@L_BOSS@を、@L_ASS@の@L_GIRL@は黙って見守る。どうやら結論は見出せないようだ。')
+            ,
+            new SctItm('　淡々と証言を聞き流した@L_BOSS@の@KEI_A2@顔つきを、いぶかしんで見つめる@L_ASS@の@L_GIRL@。果たして、真相に近づくつもりはあるのか、と。')
+            ,
+            new SctItm('　@L_ASS@の@L_GIRL@は@KEI_A2@顔つきで肩をすくめる。ああ、その通りだと、@L_BOSSNAME@@L_BOSS@は@KEI_A2@顔つきで頷いた。')
+            ,
+            new SctItm('　何故か顔を背ける@L_ASS@の@L_GIRL@を、@L_BOSSNAME@@L_BOSS@はチラリと見た。判って居るぞ、と言いたげに。')
+        ]
+    }
+}
+class selector_mystEnd02 extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@MYST_END02@');
+        this.itms = [
+            new SctItm('「――行くか、@L_GIRL@君。そもそも証拠が出なければ証言だけではどうしようもない」<br>「はい、@L_BOSS@」')
+            ,
+            new SctItm('「こんな証言だけじゃどうしようもないね、@L_GIRL@君」<br>「では、現地の警察に任せて退散しますか、@L_BOSS@」<br>「うむ」')
+            ,
+            new SctItm('「やはり何も出てこないか、@L_GIRL@君」<br>「@L_BOSS@、それでは」<br>「よろしい、では次だ・・・」')
+            ,
+            new SctItm('「どうだ、@L_GIRL@君」<br>「@L_BOSS@、やはり怪しいのは」<br>「ああ、判っているとも――」')
+            ,
+            new SctItm('「@L_BOSS@、これで証言は終わりですが」<br>「いや、最後の一人が残って居るぞ、@L_GIRL@君」<br>「え？」<br>「@L_GIRL@君、そこにかけたまえ」')
+            ,
+            new SctItm('「何か判りましたか、@L_BOSS@」<br>「いやあ、これじゃお手上げだよ、@L_GIRL@君」<br>「そうですか。では@L_BOSS@にお聴きしたいことが」<br>「@L_GIRL@君・・・なんだ、その@KEI_A2@目つきは」')
         ]
     }
 }
@@ -1604,6 +1631,8 @@ class book_docs_maker extends news_docs_maker {
         this.dic_push(new selector_mystNames());
         this.dic_push(new selector_mystHealingB());
         this.dic_push(new selector_mystHealingA());
+        this.dic_push(new selector_mystEnd01());
+        this.dic_push(new selector_mystEnd02());
     }
 }
 
