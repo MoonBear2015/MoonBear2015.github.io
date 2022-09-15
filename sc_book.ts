@@ -9,7 +9,7 @@ function set_book()
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B01.43';
+    html += ' B01.45';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -966,7 +966,7 @@ class selector_boyfirst extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('「ああ、@KEIP2@@L_GIRL@。キミはいつも@KEIP2@@O_DOING@いるんだね」')
             ,
-            new SctItm('「今日の@KEIP2@@L_GIRL@も@KEIP2@のに、どうして@KEIP2@@O_DOING@ないのかい？」')
+            new SctItm('「今日も@KEIP2@@L_GIRL@は@KEIP2@のに、どうして@KEIP2@@O_DOING@いるのかい？」')
         ]
     }
 }
