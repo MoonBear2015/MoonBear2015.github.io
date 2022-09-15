@@ -9,7 +9,7 @@ function set_book()
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B01.46';
+    html += ' B01.47';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -288,12 +288,26 @@ function make_booktype3() : string {
     html += '@MYST_ACT@<br><br>';
     html += '@MYST_REACT@<br><br>';
     html += '@MYST_SPOT@<br><br>';
-    html += '@MYST_HEAR_B@<br><br>';
-    html += '@MYST_HEAR_B@<br><br>';
-    html += '@MYST_HEAR_B@<br><br>';
-    html += '@MYST_HEAR_B@<br><br>';
-    html += '@MYST_HEAR_B@<br><br>';
-    html += '@MYST_HEAR_B@<br><br>';
+
+    let b1 = rnd_max(4);
+    let b2 = 4 - b1;
+
+    if (b1 > 0)
+    {
+        for(let i = 0;i < b1; i++) {
+            html += '@MYST_HEAR_B@<br><br>';
+        }
+    }
+
+    html += '@MYST_HEAR_A@<br><br>';
+
+    if (b2 > 0)
+    {
+        for(let i = 0;i < b2; i++) {
+            html += '@MYST_HEAR_B@<br><br>';
+        }
+    }
+
     html += '<p style="text-align: right">(つづく)</p>'
     html += '</div>';
 
@@ -1241,6 +1255,8 @@ class selector_mystHealingB extends SctItm_Selector implements ISctItm_Selector 
     constructor(){
         super('@MYST_HEAR_B@');
         this.itms = [
+            new SctItm('――@KEI_B2@@L_DOING@いる@L_CLASS@の@NAME@@AGE@曰く、<br>「ああ、その@KEI_B2@人？ さあ？」')
+            ,
             new SctItm('――@KEI_B2@@L_DOING@いる@L_CLASS@の@NAME@@AGE@曰く、<br>「いやあ、@DOING02@て気付かなかったっすよ」')
             ,
             new SctItm('――@KEI_B2@@L_DOING@いる@L_CLASS@の@NAME@@AGE@の談、<br>「いや、何があったんですか？」')
@@ -1250,6 +1266,20 @@ class selector_mystHealingB extends SctItm_Selector implements ISctItm_Selector 
             new SctItm('――@KEI_B2@@L_DOING@いる@L_CLASS@の@NAME@@AGE@は急ぎ足で、<br>「いや、ちょっと急ぐので、これで・・・」')
             ,
             new SctItm('――@KEI_B2@@L_DOING@いる@L_CLASS@の@NAME@@AGE@は目も合わさず、<br>「ほら、邪魔だから、どいてどいて」')
+        ]
+    }
+}
+class selector_mystHealingA extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@MYST_HEAR_A@');
+        this.itms = [
+            new SctItm('――@KEI_A2@@L_DOING@いた@L_CLASS@の@NAME@@AGE@曰く、<br>「ああ、さっきまで@DOING02@いた人でしょう？ どうかしましたか」')
+            ,
+            new SctItm('――@KEI_A2@@L_DOING@いた@L_CLASS@の@NAME@@AGE@は遠い目で、<br>「ああ、あの@KEI_B2@人ですよね。可哀相に・・・」')
+            ,
+            new SctItm('――@KEI_A2@@L_DOING@いた@L_CLASS@の@NAME@@AGE@は目を泳がせながら、<br>「ああ、怖いですよね。@KEI_B2@人って――」')
+            ,
+            new SctItm('――@KEI_A2@@L_DOING@いた@L_CLASS@の@NAME@@AGE@は空を仰いで、<br>「いや、@DOING02@いましたから。私は」')
         ]
     }
 }
@@ -1561,6 +1591,7 @@ class book_docs_maker extends news_docs_maker {
         this.dic_push(new selector_mystRes02());
         this.dic_push(new selector_mystNames());
         this.dic_push(new selector_mystHealingB());
+        this.dic_push(new selector_mystHealingA());
     }
 }
 
