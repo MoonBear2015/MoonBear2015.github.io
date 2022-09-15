@@ -7,7 +7,7 @@ function set_book() {
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B01.45';
+    html += ' B01.46';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -226,7 +226,13 @@ function make_booktype3() {
     html += '@MYST01@<br><br>';
     html += '@MYST_ACT@<br><br>';
     html += '@MYST_REACT@<br><br>';
-    html += '@MYST_SPOT@<br>';
+    html += '@MYST_SPOT@<br><br>';
+    html += '@MYST_HEAR_B@<br><br>';
+    html += '@MYST_HEAR_B@<br><br>';
+    html += '@MYST_HEAR_B@<br><br>';
+    html += '@MYST_HEAR_B@<br><br>';
+    html += '@MYST_HEAR_B@<br><br>';
+    html += '@MYST_HEAR_B@<br><br>';
     html += '<p style="text-align: right">(つづく)</p>';
     html += '</div>';
     return html;
@@ -880,10 +886,22 @@ class selector_mystRes02 extends SctItm_Selector {
         super('@MYST_RES02@');
         this.itms = [
             new SctItm('「@L_BOSS@、ここが現場・・・・・・だと思うのですけど」<br>「うーむ、その辺にいる@KEI_B2@人達にきいてみよう、@L_GIRL@君」<br>「ちょ、ちょっと聞こえますよ、@L_BOSS@」<br>'),
-            new SctItm('「さっきの悲鳴はこの辺りですよね、@L_BOSS@」<br>「おかしい。ここから逃げ去った様子も無いな」<br>「@L_BOSS@、あの@KEI_B2@人達に聞いて見ます？」<br>「@L_GIRL@君、本人の前では言わないでね・・・・・・」'),
-            new SctItm('「@L_ASS@の@L_GIRL@君、ここが本当に現場なのか？」<br>「はい、@L_BOSS@。確かにこの辺りから悲鳴が――」<br>「仕方ない。その辺の人に聞いて見てくれ、@L_GIRL@君」<br>「あの@KEI_B2@人達ですか？ 嫌だなあ・・・・・・」<br>'),
+            new SctItm('「さっきの悲鳴はこの辺りですよね、@L_BOSS@」<br>「おかしい。ここから逃げ去った様子も無いな」<br>「@L_BOSS@、あの@KEI_B2@人達に聞いて見ます？」<br>「@L_GIRL@君、本人の前では言わないでね・・・」'),
+            new SctItm('「@L_ASS@の@L_GIRL@君、ここが本当に現場なのか？」<br>「はい、@L_BOSS@。確かにこの辺りから悲鳴が――」<br>「仕方ない。その辺の人に聞いて見てくれ、@L_GIRL@君」<br>「あの@KEI_B2@人達ですか？ 嫌だなあ・・・」<br>'),
             new SctItm('「@L_GIRL@君、取り逃がしたか？」<br>「見失いましたね、@L_BOSS@」<br>「この@KEI_B2@界隈じゃ追うのは大変だぞ、@L_GIRL@君」<br>「とりあえず地道に尋ね歩いてみましょう、@L_BOSS@」<br>'),
             new SctItm('「あれ？ もう現場を片付けちゃったのかな、@L_GIRL@君」<br>「もう！ @L_BOSS@がボヤボヤしてるからですよ！」<br>「こんな@KEI_B2@@L_LANDMARK@じゃ不案内だし、どうしようか@L_GIRL@君」<br>「聞いて見るしかないでしょう、@L_BOSS@」<br>')
+        ];
+    }
+}
+class selector_mystHealingB extends SctItm_Selector {
+    constructor() {
+        super('@MYST_HEAR_B@');
+        this.itms = [
+            new SctItm('――@KEI_B2@@L_DOING@いる@L_CLASS@の@NAME@@AGE@曰く、<br>「いやあ、@DOING02@て気付かなかったっすよ」'),
+            new SctItm('――@KEI_B2@@L_DOING@いる@L_CLASS@の@NAME@@AGE@の談、<br>「いや、何があったんですか？」'),
+            new SctItm('――@KEI_B2@@L_DOING@いる@L_CLASS@の@NAME@@AGE@は|狼狽|うろた|えながら、<br>「知らない知らない。何も知らない」'),
+            new SctItm('――@KEI_B2@@L_DOING@いる@L_CLASS@の@NAME@@AGE@は急ぎ足で、<br>「いや、ちょっと急ぐので、これで・・・」'),
+            new SctItm('――@KEI_B2@@L_DOING@いる@L_CLASS@の@NAME@@AGE@は目も合わさず、<br>「ほら、邪魔だから、どいてどいて」')
         ];
     }
 }
@@ -1006,13 +1024,11 @@ class locker_mystActPaper extends SctItm_SelectLocker {
         this.Add(itms_mystActPaper);
     }
 }
-class locker_mystType extends SctItm_SelectLocker {
+class selector_mystNames extends SctItm_Selector {
     constructor() {
-        super('@KEI_A@');
-        this.itms = [
-            new SctItm('@KEIP@'),
-            new SctItm('@KEIN@')
-        ];
+        super('@NAME@');
+        this.Add(itms_boyName);
+        this.Add(itms_girlName);
     }
 }
 class selector_bookface0 extends SctItm_Selector {
@@ -1131,5 +1147,7 @@ class book_docs_maker extends news_docs_maker {
         this.dic_push(new selector_mystSpot());
         this.dic_push(new selector_mystRes01());
         this.dic_push(new selector_mystRes02());
+        this.dic_push(new selector_mystNames());
+        this.dic_push(new selector_mystHealingB());
     }
 }

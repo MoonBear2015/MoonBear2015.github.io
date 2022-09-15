@@ -82,7 +82,7 @@ function make_news() {
     html += '</p>';
     html += '<br>';
     html += '<p id="news_book">';
-    html += '著書「@BOOK@」より抜粋';
+    html += '著書『@BOOK@』より抜粋';
     html += '</p>';
     html += '<br><br>';
     html += '@WRITER@';
@@ -599,9 +599,9 @@ class selector_who extends SctItm_Selector {
     constructor() {
         super('@WHO@');
         this.itms = [
-            new SctItm('「@CALL@」と@KEID@@ASSES@@HUMAN@@AGE@'),
-            new SctItm('「@CALL@」と@KEID@@ASSES@@L_CLASS@の@HUMAN@@AGE@'),
-            new SctItm('@MANYPEOPLE@より「@CALL@」と@ASSES@@L_CLASS@の@HUMAN@@AGE@')
+            new SctItm('『@CALL@』と@KEID@@ASSES@@HUMAN@@AGE@'),
+            new SctItm('『@CALL@』と@KEID@@ASSES@@L_CLASS@の@HUMAN@@AGE@'),
+            new SctItm('@MANYPEOPLE@より『@CALL@』と@ASSES@@L_CLASS@の@HUMAN@@AGE@')
         ];
     }
 }
@@ -609,10 +609,10 @@ class selector_who2 extends SctItm_Selector {
     constructor() {
         super('@WHO2@');
         this.itms = [
-            new SctItm('「@CALL@」'),
-            new SctItm('「@L_INSCRIPTION@」'),
-            new SctItm('「@CALL@」と@KEID@@ASSES@@PEOPLE@'),
-            new SctItm('@MANYPEOPLE@より「@CALL@」と@KEID@@ASSES@@PEOPLE@')
+            new SctItm('『@CALL@』'),
+            new SctItm('『@L_INSCRIPTION@』'),
+            new SctItm('『@CALL@』と@KEID@@ASSES@@PEOPLE@'),
+            new SctItm('@MANYPEOPLE@より『@CALL@』と@KEID@@ASSES@@PEOPLE@')
         ];
     }
 }
@@ -634,7 +634,7 @@ class selector_who3 extends SctItm_Selector {
             new SctItm('@SCHOOL@在学中の'),
             new SctItm('@SCHOOL@筆頭の'),
             new SctItm('@SCHOOL@を中退した'),
-            new SctItm('「@CALL2@」と呼ばれている'),
+            new SctItm('『@CALL2@』と呼ばれている'),
             new SctItm('@MANYPEOPLE@より@ASSES@'),
             new SctItm('@NICK@そっくりの'),
             new SctItm('@NICK@のような@BODY@をした'),
@@ -655,10 +655,10 @@ class selector_who4 extends SctItm_Selector {
             new SctItm('@L_CLASS@'),
             new SctItm('@COUNTRY@出身'),
             new SctItm('@COUNTRY@在住'),
-            new SctItm('「@CALL2@」'),
-            new SctItm('「@CALL2@」と@KEID@@ASSES@@PEOPLE@'),
-            new SctItm('@MANYPEOPLE@より「@CALL2@」と@KEID@@ASSES@@PEOPLE@'),
-            new SctItm('「@INSCRIPTION@」')
+            new SctItm('『@CALL2@』'),
+            new SctItm('『@CALL2@』と@KEID@@ASSES@@PEOPLE@'),
+            new SctItm('@MANYPEOPLE@より『@CALL2@』と@KEID@@ASSES@@PEOPLE@'),
+            new SctItm('『@INSCRIPTION@』')
         ];
     }
 }

@@ -5023,14 +5023,14 @@ const itms_doing = [
     new SctItm('@PEOPLE@をとっちめて'),
     new SctItm('@PEOPLE@から誘われて'),
     new SctItm('@PEOPLE@の振りをして'),
-    new SctItm('「@CALL@」と署名して'),
-    new SctItm('「@CALL@」と呼ばれて'),
-    new SctItm('「@CALL@」と噂されて'),
-    new SctItm('「@CALL@」と馬鹿にされて'),
-    new SctItm('「@CALL@」と後ろ指を指されて'),
-    new SctItm('「@CALL@」と讃えられて'),
-    new SctItm('「@CALL@」と賞賛されて'),
-    new SctItm('「@CALL@」とおだてられて'),
+    new SctItm('『@CALL@』と署名して'),
+    new SctItm('『@CALL@』と呼ばれて'),
+    new SctItm('『@CALL@』と噂されて'),
+    new SctItm('『@CALL@』と馬鹿にされて'),
+    new SctItm('『@CALL@』と後ろ指を指されて'),
+    new SctItm('『@CALL@』と讃えられて'),
+    new SctItm('『@CALL@』と賞賛されて'),
+    new SctItm('『@CALL@』とおだてられて'),
     new SctItm('@PART@を連れて'),
     new SctItm('@PART@の手を引いて')
     // ,
@@ -5143,13 +5143,13 @@ const itms_doing_l = [
     new SctItm('@L_COUNTRY@に亡命して'),
     new SctItm('@L_CITY@に住んで'),
     new SctItm('@L_CITY@に家を建てて'),
-    new SctItm('「@L_ITEM@の@L_SPECIALIST@」と呼ばれて'),
-    new SctItm('「@L_ITEM@の@L_SPECIALIST@」と噂されて'),
-    new SctItm('「@L_ITEM@の@L_SPECIALIST@」と馬鹿にされて'),
-    new SctItm('「@L_ITEM@の@L_SPECIALIST@」と後ろ指を指されて'),
-    new SctItm('「@L_ITEM@の@L_SPECIALIST@」と讃えられて'),
-    new SctItm('「@L_ITEM@の@L_SPECIALIST@」と賞賛されて'),
-    new SctItm('「@L_ITEM@の@L_SPECIALIST@」とおだてられて'),
+    new SctItm('『@L_ITEM@の@L_SPECIALIST@』と呼ばれて'),
+    new SctItm('『@L_ITEM@の@L_SPECIALIST@』と噂されて'),
+    new SctItm('『@L_ITEM@の@L_SPECIALIST@』と馬鹿にされて'),
+    new SctItm('『@L_ITEM@の@L_SPECIALIST@』と後ろ指を指されて'),
+    new SctItm('『@L_ITEM@の@L_SPECIALIST@』と讃えられて'),
+    new SctItm('『@L_ITEM@の@L_SPECIALIST@』と賞賛されて'),
+    new SctItm('『@L_ITEM@の@L_SPECIALIST@』とおだてられて'),
     new SctItm('@L_PART@を連れて'),
     new SctItm('@L_PART@の手を引いて')
     // ,
@@ -5251,19 +5251,19 @@ const itms_doing_o = [
     new SctItm('@L_CITY@に住んで'),
     new SctItm('@L_CITY@に家を建てて')
     // ,
-    // new SctItm('「@L_ITEM@の@L_SPECIALIST@」と呼ばれて')
+    // new SctItm('『@L_ITEM@の@L_SPECIALIST@』と呼ばれて')
     // ,
-    // new SctItm('「@L_ITEM@の@L_SPECIALIST@」と噂されて')
+    // new SctItm('『@L_ITEM@の@L_SPECIALIST@』と噂されて')
     // ,
-    // new SctItm('「@L_ITEM@の@L_SPECIALIST@」と馬鹿にされて')
+    // new SctItm('『@L_ITEM@の@L_SPECIALIST@』と馬鹿にされて')
     // ,
-    // new SctItm('「@L_ITEM@の@L_SPECIALIST@」と後ろ指を指されて')
+    // new SctItm('『@L_ITEM@の@L_SPECIALIST@』と後ろ指を指されて')
     // ,
-    // new SctItm('「@L_ITEM@の@L_SPECIALIST@」と讃えられて')
+    // new SctItm('『@L_ITEM@の@L_SPECIALIST@』と讃えられて')
     // ,
-    // new SctItm('「@L_ITEM@の@L_SPECIALIST@」と賞賛されて')
+    // new SctItm('『@L_ITEM@の@L_SPECIALIST@』と賞賛されて')
     // ,
-    // new SctItm('「@L_ITEM@の@L_SPECIALIST@」とおだてられて')
+    // new SctItm('『@L_ITEM@の@L_SPECIALIST@』とおだてられて')
     ,
     new SctItm('@L_PART@を連れて'),
     new SctItm('@L_PART@の手を引いて')
