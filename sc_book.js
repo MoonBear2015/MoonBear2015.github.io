@@ -7,7 +7,7 @@ function set_book() {
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B01.47';
+    html += ' B01.48';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -233,8 +233,8 @@ function make_booktype3() {
         for (let i = 0; i < b1; i++) {
             html += '@MYST_HEAR_B@<br><br>';
         }
+        html += '@MYST_HEAR_A@<br><br>';
     }
-    html += '@MYST_HEAR_A@<br><br>';
     if (b2 > 0) {
         for (let i = 0; i < b2; i++) {
             html += '@MYST_HEAR_B@<br><br>';
@@ -850,12 +850,12 @@ class selector_mystReaction extends SctItm_Selector {
         super('@MYST_REACT@');
         this.itms = [
             new SctItm('「@L_BOSSNAME@@L_BOSS@！ あの悲鳴は！」<br>「よし、行ってみるぞ@L_GIRL@君！」'),
-            new SctItm('「いったい何事だ？ @L_GIRL@君！」<br>「行きましょう@L_BOSSNAME@@L_BOSS@！」<br>'),
-            new SctItm('「――どうやら我々の出番のようだね、@L_GIRL@君」<br>「はい、@L_BOSS@」<br>'),
+            new SctItm('「いったい何事だ？ @L_GIRL@君！」<br>「行きましょう@L_BOSSNAME@@L_BOSS@！」'),
+            new SctItm('「――どうやら我々の出番のようだね、@L_GIRL@君」<br>「はい、@L_BOSS@」'),
             new SctItm('「もしや@L_BOSS@、今のが？」<br>「ああ、予告通りだね、@L_GIRL@君」'),
             new SctItm('「@L_BOSS@、もしや！？」<br>「しまった！ 間に合わなかったか！」'),
             new SctItm('「@L_BOSS@、今のが・・・・・」<br>「うむ。伝承の通りだ、@L_GIRL@君」'),
-            new SctItm('「事件だぞ@L_GIRL@君！ ――って、こらこら！ @DOING02@いる場合じゃないぞ！」<br>「えっ！？ は、はい、@L_BOSS@！」<br>'),
+            new SctItm('「事件だぞ@L_GIRL@君！ ――って、こらこら！ @DOING02@いる場合じゃないぞ！」<br>「えっ！？ は、はい、@L_BOSS@！」'),
             new SctItm('「ちょ、ちょっと@L_BOSSNAME@@L_BOSS@！ 事件みたいですよ@L_BOSS@！！」<br>「待ってくれ@L_GIRL@君、この@DOING02@から――」<br>「@L_BOSS@！ そんなの後にして下さい！」<br>「わ、判った判った――」'),
             new SctItm('「行ってみましょう！ ――って、@L_BOSS@？ どこ行ったんですか@L_BOSS@！」<br>「――ああ、ここだよ@L_GIRL@君」<br>「もう！ 早くして下さい@L_BOSS@！」<br>「わ、判ったよ@L_GIRL@君」'),
             new SctItm('「よし、行ってみよう！ ――おや、何処だね@L_GIRL@君？」<br>「――は、はい！ここです@L_BOSS@！ 」<br>「なにやってるんだ。ほら、行くよ@L_GIRL@君！」<br>「ま、待って下さい@L_BOSS@！」')
@@ -880,11 +880,11 @@ class selector_mystRes01 extends SctItm_Selector {
     constructor() {
         super('@MYST_RES01@');
         this.itms = [
-            new SctItm('「@L_BOSSNAME@@L_BOSS@、これはずいぶん@KEI_A2@遺体ですね」<br>「――成る程。では聞き込みをしよう、@L_GIRL@君」<br>「了解です、@L_BOSS@」<br>'),
-            new SctItm('「@L_BOSSNAME@@L_BOSS@。遺体だけで証拠が見当たりません」<br>「これは、どうも@KEI_A2@事件だな、@L_GIRL@君」<br>「では聞き取り調査をしてみましょう、@L_BOSS@」<br>'),
-            new SctItm('「@L_BOSSNAME@@L_BOSS@。@KEI_A2@遺体だけで証拠が――って、@L_BOSS@？ 聞いてます？」<br>「あ、ああ、そうだね。では容疑者を絞るか、@L_GIRL@君」<br>「――はい、@L_BOSS@」<br>'),
-            new SctItm('「証拠らしい証拠も出てこないね、@L_GIRL@君」<br>「@L_BOSS@――なんというか@KEI_A2@感じがしませんか」<br>「ふむ、では目撃者はいないか聞いて見よう@L_GIRL@君」<br>「判りました、@L_BOSS@」<br>'),
-            new SctItm('「@L_GIRL@君、この@KEI_A2@遺体の他は証拠も何もなさそうだね」<br>「・・・・・・」<br>「――@L_GIRL@君？」<br>「あ、は、はい、@L_BOSS@」<br>「聞き込みをするよ、@L_ASS@の@L_GIRL@君」<br>「はい、@L_BOSSNAME@@L_BOSS@」<br>')
+            new SctItm('「@L_BOSSNAME@@L_BOSS@、これはずいぶん@KEI_A2@遺体ですね」<br>「――成る程。では聞き込みをしよう、@L_GIRL@君」<br>「了解です、@L_BOSS@」'),
+            new SctItm('「@L_BOSSNAME@@L_BOSS@。遺体だけで証拠が見当たりません」<br>「これは、どうも@KEI_A2@事件だな、@L_GIRL@君」<br>「では聞き取り調査をしてみましょう、@L_BOSS@」'),
+            new SctItm('「@L_BOSSNAME@@L_BOSS@。@KEI_A2@遺体だけで証拠が――って、@L_BOSS@？ 聞いてます？」<br>「あ、ああ、そうだね。では容疑者を絞るか、@L_GIRL@君」<br>「――はい、@L_BOSS@」'),
+            new SctItm('「証拠らしい証拠も出てこないね、@L_GIRL@君」<br>「@L_BOSS@――なんというか@KEI_A2@感じがしませんか」<br>「ふむ、では目撃者はいないか聞いて見よう@L_GIRL@君」<br>「判りました、@L_BOSS@」'),
+            new SctItm('「@L_GIRL@君、この@KEI_A2@遺体の他は証拠も何もなさそうだね」<br>「・・・・・・」<br>「――@L_GIRL@君？」<br>「あ、は、はい、@L_BOSS@」<br>「聞き込みをするよ、@L_ASS@の@L_GIRL@君」<br>「はい、@L_BOSSNAME@@L_BOSS@」')
         ];
     }
 }
@@ -892,11 +892,11 @@ class selector_mystRes02 extends SctItm_Selector {
     constructor() {
         super('@MYST_RES02@');
         this.itms = [
-            new SctItm('「@L_BOSS@、ここが現場・・・・・・だと思うのですけど」<br>「うーむ、その辺にいる@KEI_B2@人達にきいてみよう、@L_GIRL@君」<br>「ちょ、ちょっと聞こえますよ、@L_BOSS@」<br>'),
+            new SctItm('「@L_BOSS@、ここが現場・・・・・・だと思うのですけど」<br>「うーむ、その辺にいる@KEI_B2@人達にきいてみよう、@L_GIRL@君」<br>「ちょ、ちょっと聞こえますよ、@L_BOSS@」'),
             new SctItm('「さっきの悲鳴はこの辺りですよね、@L_BOSS@」<br>「おかしい。ここから逃げ去った様子も無いな」<br>「@L_BOSS@、あの@KEI_B2@人達に聞いて見ます？」<br>「@L_GIRL@君、本人の前では言わないでね・・・」'),
-            new SctItm('「@L_ASS@の@L_GIRL@君、ここが本当に現場なのか？」<br>「はい、@L_BOSS@。確かにこの辺りから悲鳴が――」<br>「仕方ない。その辺の人に聞いて見てくれ、@L_GIRL@君」<br>「あの@KEI_B2@人達ですか？ 嫌だなあ・・・」<br>'),
-            new SctItm('「@L_GIRL@君、取り逃がしたか？」<br>「見失いましたね、@L_BOSS@」<br>「この@KEI_B2@界隈じゃ追うのは大変だぞ、@L_GIRL@君」<br>「とりあえず地道に尋ね歩いてみましょう、@L_BOSS@」<br>'),
-            new SctItm('「あれ？ もう現場を片付けちゃったのかな、@L_GIRL@君」<br>「もう！ @L_BOSS@がボヤボヤしてるからですよ！」<br>「こんな@KEI_B2@@L_LANDMARK@じゃ不案内だし、どうしようか@L_GIRL@君」<br>「聞いて見るしかないでしょう、@L_BOSS@」<br>')
+            new SctItm('「@L_ASS@の@L_GIRL@君、ここが本当に現場なのか？」<br>「はい、@L_BOSS@。確かにこの辺りから悲鳴が――」<br>「仕方ない。その辺の人に聞いて見てくれ、@L_GIRL@君」<br>「あの@KEI_B2@人達ですか？ 嫌だなあ・・・」'),
+            new SctItm('「@L_GIRL@君、取り逃がしたか？」<br>「見失いましたね、@L_BOSS@」<br>「この@KEI_B2@界隈じゃ追うのは大変だぞ、@L_GIRL@君」<br>「とりあえず地道に尋ね歩いてみましょう、@L_BOSS@」'),
+            new SctItm('「あれ？ もう現場を片付けちゃったのかな、@L_GIRL@君」<br>「もう！ @L_BOSS@がボヤボヤしてるからですよ！」<br>「こんな@KEI_B2@@L_LANDMARK@じゃ不案内だし、どうしようか@L_GIRL@君」<br>「聞いて見るしかないでしょう、@L_BOSS@」')
         ];
     }
 }
@@ -904,7 +904,7 @@ class selector_mystHealingB extends SctItm_Selector {
     constructor() {
         super('@MYST_HEAR_B@');
         this.itms = [
-            new SctItm('――@KEI_B2@@L_DOING@いる@L_CLASS@の@NAME@@AGE@曰く、<br>「ああ、その@KEI_B2@人？ さあ？」'),
+            new SctItm('――@KEI_B2@@L_DOING@いる@L_CLASS@の@NAME@@AGE@曰く、<br>「え？ その@KEI_A2@人？ さあ？」'),
             new SctItm('――@KEI_B2@@L_DOING@いる@L_CLASS@の@NAME@@AGE@曰く、<br>「いやあ、@DOING02@て気付かなかったっすよ」'),
             new SctItm('――@KEI_B2@@L_DOING@いる@L_CLASS@の@NAME@@AGE@の談、<br>「いや、何があったんですか？」'),
             new SctItm('――@KEI_B2@@L_DOING@いる@L_CLASS@の@NAME@@AGE@は|狼狽|うろた|えながら、<br>「知らない知らない。何も知らない」'),
@@ -917,10 +917,19 @@ class selector_mystHealingA extends SctItm_Selector {
     constructor() {
         super('@MYST_HEAR_A@');
         this.itms = [
-            new SctItm('――@KEI_A2@@L_DOING@いた@L_CLASS@の@NAME@@AGE@曰く、<br>「ああ、さっきまで@DOING02@いた人でしょう？ どうかしましたか」'),
+            new SctItm('――@KEI_A2@@L_DOING@いた@L_CLASS@の@NAME@@AGE@曰く、<br>「さっきまで@DOING02@いた人でしょう？ どうかしましたか」'),
             new SctItm('――@KEI_A2@@L_DOING@いた@L_CLASS@の@NAME@@AGE@は遠い目で、<br>「ああ、あの@KEI_B2@人ですよね。可哀相に・・・」'),
-            new SctItm('――@KEI_A2@@L_DOING@いた@L_CLASS@の@NAME@@AGE@は目を泳がせながら、<br>「ああ、怖いですよね。@KEI_B2@人って――」'),
+            new SctItm('――@KEI_A2@@L_DOING@いた@L_CLASS@の@NAME@@AGE@は溜息交じりに、<br>「怖いですよね。@KEI_B2@人って――」'),
             new SctItm('――@KEI_A2@@L_DOING@いた@L_CLASS@の@NAME@@AGE@は空を仰いで、<br>「いや、@DOING02@いましたから。私は」')
+        ];
+    }
+}
+class selector_mystEnd01 extends SctItm_Selector {
+    constructor() {
+        super('@MYST_END01@');
+        this.itms = [
+            new SctItm('　彼ら@L_CLASS@達の証言になんの特徴も見いだせず、困り果てる@KEI_A2@二人――。'),
+            new SctItm('　目を伏せ溜息をつく@L_BOSS@を、@L_ASS@は黙って見守るのだが、どうやら結論は見出せないようだ。')
         ];
     }
 }
