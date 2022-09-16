@@ -7,7 +7,7 @@ function set_book() {
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B01.49';
+    html += ' B01.50';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -942,10 +942,13 @@ class selector_mystEnd02 extends SctItm_Selector {
     constructor() {
         super('@MYST_END02@');
         this.itms = [
-            new SctItm('「――行くか、@L_GIRL@君。そもそも証拠が出なければ証言だけではどうしようもない」<br>「はい、@L_BOSS@」'),
-            new SctItm('「こんな証言だけじゃどうしようもないね、@L_GIRL@君」<br>「では、現地の警察に任せて退散しますか、@L_BOSS@」<br>「うむ」'),
-            new SctItm('「やはり何も出てこないか、@L_GIRL@君」<br>「@L_BOSS@、それでは」<br>「よろしい、では次だ・・・」'),
-            new SctItm('「どうだ、@L_GIRL@君」<br>「@L_BOSS@、やはり怪しいのは」<br>「ああ、判っているとも――」'),
+            new SctItm('「――行くか、@L_GIRL@君。そもそも証拠が出なければ証言だけではどうしようもない」<br>「はい、@L_BOSS@――」'),
+            new SctItm('「こんな証言だけじゃどうしようもないね、@L_GIRL@君」<br>「では、現地の警察に任せて退散しますか、@L_BOSS@」<br>「うむ・・・」'),
+            new SctItm('「これだけ@KEI_A2@事件が起こったというのに、ここの@KEI_B2@連中ときたら――どう思うかね、@L_GIRL@君」<br>「ここは本当に@KEI_B2@ところですねぇ@L_BOSS@」<br>「では、退散だ。メシはここを出てからにしよう」<br>「そうですね」'),
+            new SctItm('「@L_GIRL@君はどう思う？」<br>「いえ@L_BOSS@、@KEI_B2@証言ばかりで、なんとも」<br>「そうかね？ もう答えは出ているぞ、@L_GIRL@君」<br>「――ええ！？」'),
+            new SctItm('「やはり何も出てこないか、@L_GIRL@君」<br>「@L_BOSS@、それでは」<br>「よろしい、では次だ――」'),
+            new SctItm('「どうだ、@L_GIRL@君」<br>「@L_BOSS@、やはり怪しいのは――」<br>「ああ、判っているとも」'),
+            new SctItm('「@L_BOSS@、取り調べは以上ですか？」<br>「そう、現地の警察に伝えておきたまえ、@L_GIRL@君」<br>「了解です。それでは？」<br>「退散だ。立つ鳥跡を濁さず・・・」'),
             new SctItm('「@L_BOSS@、これで証言は終わりですが」<br>「いや、最後の一人が残って居るぞ、@L_GIRL@君」<br>「え？」<br>「@L_GIRL@君、そこにかけたまえ」'),
             new SctItm('「何か判りましたか、@L_BOSS@」<br>「いやあ、これじゃお手上げだよ、@L_GIRL@君」<br>「そうですか。では@L_BOSS@にお聴きしたいことが」<br>「@L_GIRL@君・・・なんだ、その@KEI_A2@目つきは」')
         ];
