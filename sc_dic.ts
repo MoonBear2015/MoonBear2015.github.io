@@ -4787,13 +4787,29 @@ const itms_landmark = [
     ,
     new SctItm('公園')
     ,
+    new SctItm('記念公園')
+    ,
+    new SctItm('自然公園')
+    ,
+    new SctItm('遊園地')
+    ,
+    new SctItm('動物園')
+    ,
+    new SctItm('スタジアム')
+    ,
     new SctItm('大通り')
     ,
-    new SctItm('川')
+    new SctItm('商店街')
     ,
-    new SctItm('河')
+    new SctItm('歓楽街')
     ,
-    new SctItm('湖')
+    new SctItm('繁華街')
+    // ,
+    // new SctItm('川')
+    // ,
+    // new SctItm('河')
+    // ,
+    // new SctItm('湖')
     ,
     new SctItm('山脈')
     ,
@@ -8959,6 +8975,10 @@ const   itms_mystpic = [
     new SctItm('死の','MYST/Myst04.jpg')
     ,
     new SctItm('殺戮','MYST/Myst05.jpg')
+    ,
+    new SctItm('犯罪','MYST/Myst06.jpg')
+    ,
+    new SctItm('抹殺','MYST/Myst07.jpg')
 ]
 
 const   itms_boss = [
