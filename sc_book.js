@@ -7,7 +7,7 @@ function set_book() {
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B01.54';
+    html += ' B01.55';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -910,6 +910,8 @@ class selector_mystHealingB extends SctItm_Selector {
         this.itms = [
             new SctItm('――@KEI_B2@@L_CLASS@の@NAME@@AGE@は一言、<br>「さあ？」'),
             new SctItm('――@KEI_B2@@L_CLASS@の@NAME@@AGE@曰く、<br>「いやあ、@DOING02@て気付かなかったっすよ」'),
+            new SctItm('――@KEI_B2@@L_CLASS@の@NAME@@AGE@が言うには、<br>「そういや、昨日も@NUM10@人ぐらいヤられてましたね」'),
+            new SctItm('――@KEI_B2@@L_CLASS@の@NAME@@AGE@は退屈そうに、<br>「@L_WHAT@じゃよくあることだから」'),
             new SctItm('――@KEI_B2@@L_CLASS@の@NAME@@AGE@の談、<br>「ああ、@LANDMARK@ならあっちですよ」'),
             new SctItm('――@KEI_B2@@L_CLASS@の@NAME@@AGE@はすっとぼけて、<br>「そこにいる@L_CLASS@に聞いて下さい」'),
             new SctItm('――@KEI_B2@@L_CLASS@の@NAME@@AGE@は@RIDE@に飛び乗り、<br>「それじゃ急ぐんで」'),
@@ -921,7 +923,8 @@ class selector_mystHealingA extends SctItm_Selector {
     constructor() {
         super('@MYST_HEAR_A@');
         this.itms = [
-            new SctItm('――@KEI_A2@@L_CLASS@の@NAME@@AGE@は質問で返す。<br>「さっきまで@L_DOING@いた人でしょう？ どうかしましたか」'),
+            new SctItm('――@KEI_A2@@L_CLASS@の@NAME@@AGE@の答えは、<br>「さっきまで@L_DOING@いた人でしょう？ どうかしたんですかね」'),
+            new SctItm('――@KEI_A2@@L_CLASS@の@NAME@@AGE@は質問で返す。<br>「さあ――あんたなら、どう思います？」'),
             new SctItm('――@KEI_A2@@L_CLASS@の@NAME@@AGE@は遠い目で、<br>「ああ、あの@KEI_B2@人ですよね。可哀相に・・・」'),
             new SctItm('――@KEI_A2@@L_CLASS@の@NAME@@AGE@は溜息交じりに、<br>「怖いですよね。@KEI_B2@人って――」'),
             new SctItm('――@KEI_A2@@L_CLASS@の@NAME@@AGE@は空を仰いで、<br>「いや、@DOING02@いましたから。私は」')
