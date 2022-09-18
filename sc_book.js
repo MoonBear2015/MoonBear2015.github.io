@@ -7,7 +7,7 @@ function set_book() {
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B01.56';
+    html += ' B01.57';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -805,7 +805,7 @@ class selector_mystSt_AP extends SctItm_Selector {
             new SctItm('そこに、不思議と@KEI_A2@会話が聞こえてくる。'),
             new SctItm('そこに訪れたのは、何故か@KEI_A2@二人組。'),
             new SctItm('そんな@KEI_B2@@L_LANDMARK@に、妙に@KEI_A2@二人が訪れた。'),
-            new SctItm('☆☆そんな@KEI_B2@@L_LANDMARK@に導かれたのは、@ALSODAY@@KEI_A2@この二人。'),
+            new SctItm('そんな@KEI_B2@@L_LANDMARK@に導かれたのは、@ALSODAY@@KEI_A2@この二人。'),
             new SctItm('そんな@KEI_B2@@L_CLASS@達をかきわけ、相も変わらず@KEI_A2@二人の登場である。')
         ];
     }
@@ -821,9 +821,11 @@ class selector_mystApp extends SctItm_Selector {
             new SctItm('「うわぁ、なんて@KEI_B2@んでしょう。見てくださいよ、@L_BOSSNAME@@L_BOSS@？」<br>「そうだね、@L_ASS@の@L_GIRL@君。やはり@L_WHAT@は@KEI_B3@ねぇ」'),
             new SctItm('「ほら、あの@KEI_B2@@L_CLASS@達を見て下さいよ@L_BOSSNAME@@L_BOSS@」<br>「そうだね、さすが@L_WHAT@の@L_CLASS@達は@KEI_B3@ねぇ@L_ASS@の@L_GIRL@君」'),
             new SctItm('「ちょっとぉ！ そんなに@DOING02@ちゃだめですよ@L_BOSSNAME@@L_BOSS@！」<br>「いやいや@L_ASS@の@L_GIRL@君、@L_WHAT@の@L_LANDMARK@は@KEI_B3@から、つい――」'),
-            new SctItm('「いやあ、@L_WHAT@は相変わらず@KEI_B3@ね、@L_ASS@の@L_GIRL@君」<br>「そうですね、@L_WHAT@の人は@KEI_B@ですからね、@L_BOSSNAME@@L_BOSS@」<br>'),
-            new SctItm('「@L_WHAT@の@LANDMARK@って、@GRADE@@KEI_B3@だね@L_ASS@の@L_GIRL@君」<br>「だから、ここは@L_LANDMARK@ですってば、@L_BOSSNAME@@L_BOSS@」<br>'),
-            new SctItm('「@L_WHAT@の人は、@GRADE@@KEI_B3@ね、@L_ASS@の@L_GIRL@君」<br>「いつも@DOING02@ますからね、@L_BOSSNAME@@L_BOSS@」<br>')
+            new SctItm('「いやあ、@L_WHAT@は相変わらず@KEI_B3@ね、@L_ASS@の@L_GIRL@君」<br>「そうですね、@L_WHAT@の人は@KEI_B@ですからね、@L_BOSSNAME@@L_BOSS@」'),
+            new SctItm('「@L_WHAT@の@LANDMARK@って、@GRADE@@KEI_B3@ね、@L_ASS@の@L_GIRL@君」<br>「だから、ここは@L_LANDMARK@ですってば、@L_BOSSNAME@@L_BOSS@」'),
+            new SctItm('「@L_WHAT@の@L_CLASS@達は、@KEI_B2@人ばかりだね、@L_ASS@の@L_GIRL@君」<br>「いつも@DOING02@ますからね、@L_BOSSNAME@@L_BOSS@」<br>'),
+            new SctItm('「@L_ASS@の@L_GIRL@君、この@KEI_B2@@L_LANDMARK@がそうなのかい？」<br>「はい。間違いありません、@L_BOSSNAME@@L_BOSS@」<br>'),
+            new SctItm('「油断するな、@L_ASS@の@L_GIRL@君。つけられているぞ」<br>「それは気のせいです、@L_BOSSNAME@@L_BOSS@」<br>')
         ];
     }
 }
