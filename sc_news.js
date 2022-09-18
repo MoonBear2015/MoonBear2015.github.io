@@ -2162,6 +2162,7 @@ class selector_day extends SctItm_Selector {
     constructor() {
         super('@ALSODAY@');
         this.itms = [
+            new SctItm('いつも'),
             new SctItm('今日も変わらず'),
             new SctItm('|相|あい|も変わらず'),
             new SctItm('今日も今日とて'),
@@ -2449,7 +2450,8 @@ class selector_doing01 extends SctItm_Selector {
         super('@DOING01@');
         this.itms = [
             new SctItm('@DOING02@'),
-            new SctItm('@L_DOING@'),
+            new SctItm('@DOING02@'),
+            new SctItm('@DOING02@'),
             new SctItm('@PEOPLE@と一緒に@DOING02@'),
             new SctItm('@PEOPLE@と@DOING02@'),
             new SctItm('一人で@DOING02@'),

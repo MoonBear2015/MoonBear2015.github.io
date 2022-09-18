@@ -1639,8 +1639,8 @@ const cods_km_posi = [
     new SctCod_It('しなやか'),
     new SctCod_It('|平和|へいわ|'),
     new SctCod_It('ロマンチック'),
-    new SctCod_It('|幸|しあわ|せ'),
-    new SctCod_It('|親切|しんせつ|'),
+    new SctCod_It('|幸|しあわ|せそう'),
+    new SctCod_It('|親切|しんせつ|そう'),
     // new SctCod_It('|新鮮|しんせん|')
     // ,
     new SctCod_It('|素敵|すてき|'),
@@ -3173,14 +3173,20 @@ const cods_ad_jougo = [
     // new SctCod_Mv('|由々|よしよし|しい')
 ];
 const itms_grade = [
+    new SctItm('微妙に'),
+    new SctItm('妙に'),
     new SctItm('わずかに'),
+    new SctItm('かすかに'),
     new SctItm('少し'),
     new SctItm('なんとなく'),
+    new SctItm('なんだか'),
     new SctItm('ちょっと'),
     new SctItm('大いに'),
     new SctItm('とても'),
     new SctItm('非常に'),
     new SctItm('盛大に'),
+    new SctItm('ずいぶん'),
+    new SctItm('物凄く'),
     new SctItm('@NICK@の様に'),
     new SctItm('@PEOPLE@の様に')
 ];
