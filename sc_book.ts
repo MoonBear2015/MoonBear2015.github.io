@@ -9,7 +9,7 @@ function set_book()
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B01.60';
+    html += ' B01.61';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -1182,13 +1182,15 @@ class selector_mystAccident extends SctItm_Selector implements ISctItm_Selector 
             ,
             new SctItm('　そんな@KEI_B2@@L_LANDMARK@を揺るがす、@KEID_A@@KEI_A2@事件が巻き起こった！<br>「ひぃぃぃぃっ！！」')
             ,
-            new SctItm('　そんなある時、引き裂くような@KEI_A2@悲鳴に@KEI_B2@@L_CLASS@達は一斉に振り返った！<br>「きゃあああああっ！！」')
+            new SctItm('　そんなある時、引き裂くような@KEI_A2@悲鳴に、@KEI_B2@@L_CLASS@達は一斉に振り返った！<br>「きゃあああああっ！！」')
             ,
             new SctItm('　そんな@KEI_A2@二人を尻目に、耳を貫くほどの@KEI_A2@悲鳴が響き渡った！<br>「うわぁぁぁぁぁっ！！」')
             ,
             new SctItm('　次の瞬間、全てを揺るがす@KEI_A2@悲鳴が！<br>「あああああっ！！」')
             ,
             new SctItm('　その時！ いったい何をしくじったのか、世界を揺るがす絶望感！<br>「しまったあああっ！！」')
+            ,
+            new SctItm('　その時、思わず@KEI_B2@@L_CLASS@達は顔を歪めた。世界の全てを否定する拒否反応に！<br>「嫌だあああああああっ！！」')
         ]
     }
 }
@@ -1234,7 +1236,7 @@ class selector_mystSpot extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('　駆けつけた@KEI_B2@現場には、一人の@KEI_A2@@L_CLASS@の遺体が、今正に悲鳴を上げて殺されたままの姿で残されていた。それを見守る@MANY@@KEI_B2@@L_CLASS@達。<br>@MYST_RES01@')
             ,
-            new SctItm('　駆けつけると現場には何も無く、ただし、まだ新しい血痕と、なんとも@KEI_A2@気配。周囲には何があったのかと@KEI_B2@顔を見合わせる@MANY@@KEI_B2@@L_CLASS@達。<br>@MYST_RES02@')
+            new SctItm('　駆けつけると現場には被害者らしき姿は無く、ただし、まだ新しい血痕と、なんとも@KEI_A2@気配。周囲には何があったのかと@KEI_B2@顔を見合わせる@MANY@@KEI_B2@@L_CLASS@達。<br>@MYST_RES02@')
             ,
             new SctItm('　駆けつけた二人は困惑する。確かに@KEI_A2@悲鳴が上がった現場には何も見当たらない。ただ、何故だか@KEI_A2@空気と、@KEI_B2@顔つきをした@MANY@@L_CLASS@達が残されていた。<br>@MYST_RES02@')
         ]
