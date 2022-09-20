@@ -1614,7 +1614,8 @@ const cods_ad_posi = [
     new SctCod_It('|喜|よろこ|ばしい'),
     new SctCod_It('|楽|たの|しい'),
     new SctCod_It('|嬉|うれ|しい'),
-    new SctCod_It('|優|やさ|しい')
+    new SctCod_It('|優|やさ|しい'),
+    new SctCod_It('|面白|おもしろ|い')
 ];
 const cods_adv_posi = [
     new SctCod_It('|勇|いさ|ましく'),
@@ -1655,7 +1656,10 @@ const cods_ad_nega = [
     new SctCod_It('|薄暗|うすぐら|い'),
     new SctCod_It('|醜|みにく|い'),
     new SctCod_It('|阿呆|あほ|らしい'),
-    new SctCod_It('|馬鹿|ばか|らしい')
+    new SctCod_It('|馬鹿|ばか|らしい'),
+    new SctCod_It('つまらない'),
+    new SctCod_It('くだらない'),
+    new SctCod_It('しょうもない')
 ];
 const cods_adv_nega = [
     new SctCod_It('|五月蠅|うるさ|く'),
