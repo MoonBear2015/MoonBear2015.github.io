@@ -9,7 +9,7 @@ function set_book()
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B01.58';
+    html += ' B01.59';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -1100,6 +1100,10 @@ class selector_mystStage extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@KEI_B2@@L_WHAT@の@L_LANDMARK@には、@ALSODAY@@L_DOING@いる@KEI_B2@@L_CLASS@達の@KEI_B2@姿があった。')
             ,
             new SctItm('@KEI_B2@@L_WHAT@の@L_LANDMARK@では、@KEI_B2@@L_CLASS@達が、@ALSODAY@@DOING@@KEID_B@過ごしていた。')
+            ,
+            new SctItm('@L_LANDMARK@は@GRADE@@KEID_B@、@KEI_B2@@L_CLASS@達が集う@KEI_B2@空間が広がっている。')
+            ,
+            new SctItm('@L_LANDMARK@では@KEI_B2@@KEY@が開催され、@KEI_B2@@L_CLASS@達が@GRADE@賑わっていた。')
         ]
     }
 }
@@ -1113,11 +1117,11 @@ class selector_mystSt_AP extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('そこに訪れたのは、何故か@KEI_A2@二人組。')
             ,
-            new SctItm('そんな@KEI_B2@@L_LANDMARK@に、妙に@KEI_A2@二人が訪れた。')
+            new SctItm('そんな@KEI_B2@@L_LANDMARK@に、@GRADE@@KEI_A2@二人が訪れた。')
             ,
             new SctItm('そんな@KEI_B2@@L_LANDMARK@に導かれたのは、@ALSODAY@@KEI_A2@この二人。')
             ,
-            new SctItm('そんな@KEI_B2@@L_CLASS@達をかきわけ、相も変わらず@KEI_A2@二人の登場である。')
+            new SctItm('そんな@KEI_B2@@L_CLASS@達をかきわけ、@ALSODAY@@KEI_A2@二人の登場である。')
         ]
     }
 }
