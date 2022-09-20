@@ -9,7 +9,7 @@ function set_book()
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B01.61';
+    html += ' B01.62';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -1079,9 +1079,9 @@ class selector_myst01 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@MYST01@');
         this.itms = [
-            new SctItm('　今日も@MYST_STAGE@@MYST_ST_AP@<br>@MYST_APP@')
+            new SctItm('　今日も@MYST_STAGE@<br>@MYST_ST_AP@<br>@MYST_APP@')
             ,
-            new SctItm('　この@MYST_STAGE@@MYST_ST_AP@<br>@MYST_APP@')
+            new SctItm('　この@MYST_STAGE@<br>@MYST_ST_AP@<br>@MYST_APP@')
             ,
             new SctItm('@MYST_APP@<br>@MYST_AP_ST@@MYST_STAGE@')
         ]
@@ -1101,7 +1101,7 @@ class selector_mystStage extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@KEI_B2@@L_WHAT@の@L_LANDMARK@では、@KEI_B2@@L_CLASS@達が、@ALSODAY@@DOING@@KEID_B@過ごしていた。')
             ,
-            new SctItm('@L_LANDMARK@は@GRADE@@KEID_B@、@KEI_B2@@L_CLASS@達が集う@KEI_B2@空間が広がっている。')
+            new SctItm('@L_WHAT@の@L_LANDMARK@は@GRADE@@KEID_B@@KEID_B@、@KEI_B2@@L_CLASS@達が集う@KEI_B2@空間が広がっている。')
             ,
             new SctItm('@L_LANDMARK@では@KEI_B2@@KEY@が開催され、@KEI_B2@@L_CLASS@達が@GRADE@賑わっていた。')
         ]
