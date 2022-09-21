@@ -9,7 +9,7 @@ function set_book()
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B01.63';
+    html += ' B01.64';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -284,10 +284,8 @@ function make_booktype3() : string {
     html += '</div>';
     
     html += '<div id="book_myststory">';
-    html += '@MYST01@<br><br>';
-    html += '@MYST_ACT@<br><br>';
-    html += '@MYST_REACT@<br><br>';
-    html += '@MYST_SPOT@<br><br>';
+
+    html += '@MYST01@<br><br>@MYST_ACT@<br><br>@MYST_REACT@<br><br>@MYST_SPOT@<br><br>';
     
     let b1 = rnd_max(5);
     let b2 = 4 - b1;
@@ -1075,13 +1073,19 @@ class selector_boynext extends SctItm_Selector implements ISctItm_Selector {
 }
 
 
+class selector_myst extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@MYST@');
+        this.itms = [
+            new SctItm('@MYST01@<br><br>@MYST_ACT@<br><br>@MYST_REACT@<br><br>@MYST_SPOT@<br><br>')
+        ]
+    }
+}
 class selector_myst01 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@MYST01@');
         this.itms = [
             new SctItm('　今日も@MYST_STAGE@<br>@MYST_ST_AP@<br>@MYST_APP@')
-            ,
-            new SctItm('　この@MYST_STAGE@<br>@MYST_ST_AP@<br>@MYST_APP@')
             ,
             new SctItm('@MYST_APP@<br>@MYST_AP_ST@@MYST_STAGE@')
         ]
@@ -1147,11 +1151,11 @@ class selector_mystApp extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('「@L_WHAT@の@LANDMARK@って、@GRADE@@KEI_B3@ね、@L_ASS@の@L_GIRL@君」<br>「だから、ここは@L_LANDMARK@ですってば、@L_BOSSNAME@@L_BOSS@」')
             ,
-            new SctItm('「@L_WHAT@の@L_CLASS@達は、@KEI_B2@人ばかりだね、@L_ASS@の@L_GIRL@君」<br>「いつも@DOING02@ますからね、@L_BOSSNAME@@L_BOSS@」<br>')
+            new SctItm('「@L_WHAT@の@L_CLASS@達は、@KEI_B2@人ばかりだね、@L_ASS@の@L_GIRL@君」<br>「いつも@DOING02@ますからね、@L_BOSSNAME@@L_BOSS@」')
             ,
-            new SctItm('「@L_ASS@の@L_GIRL@君、この@KEI_B2@@L_LANDMARK@がそうなのかい？」<br>「はい。間違いありません、@L_BOSSNAME@@L_BOSS@」<br>')
+            new SctItm('「@L_ASS@の@L_GIRL@君、この@KEI_B2@@L_LANDMARK@がそうなのかい？」<br>「はい。間違いありません、@L_BOSSNAME@@L_BOSS@」')
             ,
-            new SctItm('「油断するな、@L_ASS@の@L_GIRL@君。つけられているぞ」<br>「それは気のせいです、@L_BOSSNAME@@L_BOSS@」<br>')
+            new SctItm('「油断するな、@L_ASS@の@L_GIRL@君。つけられているぞ」<br>「それは気のせいです、@L_BOSSNAME@@L_BOSS@」')
         ]
     }
 }
