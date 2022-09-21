@@ -7,7 +7,7 @@ function set_book() {
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B01.65';
+    html += ' B01.66';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -786,7 +786,9 @@ class selector_myst01 extends SctItm_Selector {
         super('@MYST01@');
         this.itms = [
             new SctItm('　今日も@MYST_STAGE@<br>@MYST_ST_AP@<br>@MYST_APP@'),
-            new SctItm('　@INSCRIPTION@　――　@L_BOSSNAME@@L_BOSS@<br><br>　今日も@MYST_STAGE@<br>@MYST_ST_AP@<br>@MYST_APP@'),
+            new SctItm('　『@L_INSCRIPTION@』　――　@L_BOSSNAME@@L_BOSS@<br><br>　今日も@MYST_STAGE@<br>@MYST_ST_AP@<br>@MYST_APP@'),
+            new SctItm('　『@L_INSCRIPTION@』　――　@L_GIRL@（@L_ASS@）<br><br>　今日も@MYST_STAGE@<br>@MYST_ST_AP@<br>@MYST_APP@'),
+            new SctItm('　―― 愛しき我が@PART@に捧ぐ　@L_BOOKWRITER@　――　<br><br>　今日も@MYST_STAGE@<br>@MYST_ST_AP@<br>@MYST_APP@'),
             new SctItm('@MYST_APP@<br>@MYST_AP_ST@@MYST_STAGE@')
         ];
     }
