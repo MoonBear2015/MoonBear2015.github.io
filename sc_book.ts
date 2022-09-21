@@ -9,7 +9,7 @@ function set_book()
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B01.64';
+    html += ' B01.65';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -1086,6 +1086,8 @@ class selector_myst01 extends SctItm_Selector implements ISctItm_Selector {
         super('@MYST01@');
         this.itms = [
             new SctItm('　今日も@MYST_STAGE@<br>@MYST_ST_AP@<br>@MYST_APP@')
+            ,
+            new SctItm('　@INSCRIPTION@　――　@L_BOSSNAME@@L_BOSS@<br><br>　今日も@MYST_STAGE@<br>@MYST_ST_AP@<br>@MYST_APP@')
             ,
             new SctItm('@MYST_APP@<br>@MYST_AP_ST@@MYST_STAGE@')
         ]
