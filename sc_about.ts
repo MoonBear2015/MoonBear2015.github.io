@@ -258,8 +258,8 @@ class selector_command1 extends SctItm_Selector implements ISctItm_Selector {
 }
 
 const   itms_inscription = [
-    new SctItm('@COMM@@ITEM@の@ITEM@')
-    ,
+    // new SctItm('@COMM@@ITEM@の@ITEM@')
+    // ,
     new SctItm('@COMM@@ITEM@は@COMM@@ITEM@@END02A@')
     ,
     new SctItm('@COMM@@ITEM@は第二の@COMM@@ITEM@@END02A@')
@@ -277,37 +277,39 @@ const   itms_inscription = [
     new SctItm('@ITEM@と@ITEM@は使いよう')
     ,
     new SctItm('@ITEM@から出た@ITEM@')
-    ,
-    new SctItm('@COMM1@@ITEM@')
+    // ,
+    // new SctItm('@COMM1@@ITEM@')
     ,
     new SctItm('@COMM1@@ITEM@と@ITEM@')
     ,
     new SctItm('@ITEM@！ @ITEM@！ @ITEM@ッ！')
 ];
 const   itms_Lock_inscription = [
-    new SctItm('@COMM@@L_WHAT@の@ITEM@')
-    ,
+    // new SctItm('@COMM@@L_WHAT@の@ITEM@')
+    // ,
     new SctItm('@COMM@@ITEM@は@COMM@@L_WHAT@@END02A@')
     ,
     new SctItm('@COMM@@L_WHAT@は第二の@COMM@@ITEM@@END02A@')
     ,
-    new SctItm('@COMM@@L_WHAT@は@ITEM@の|基|もと|')
+    new SctItm('@COMM@@L_WHAT@は@L_ITEM@の|基|もと|')
     ,
-    new SctItm('@ITEM@が@L_WHAT@を@ITEM@にする')
+    new SctItm('@ITEM@が@L_WHAT@を@L_ITEM@にする')
     ,
-    new SctItm('@COMM@@L_WHAT@は@ITEM@への近道')
+    new SctItm('@COMM@@L_WHAT@は@L_ITEM@への近道')
     ,
-    new SctItm('@COMM@@L_WHAT@が@ITEM@を産む')
+    new SctItm('@COMM@@L_WHAT@が@L_ITEM@を産む')
     ,
     new SctItm('@COMM@@ITEM@は@L_WHAT@の始まり')
     ,
-    new SctItm('@L_WHAT@と@ITEM@は使いよう')
+    new SctItm('@L_WHAT@と@L_ITEM@は使いよう')
     ,
-    new SctItm('@ITEM@から出た@L_WHAT@')
-    ,
-    new SctItm('@COMM1@@L_WHAT@')
-    ,
-    new SctItm('@COMM1@@L_WHAT@と@ITEM@')
+    new SctItm('@L_ITEM@から出た@L_WHAT@')
+    // ,
+    // new SctItm('@COMM1@@L_WHAT@')
+    // ,
+    // new SctItm('@COMM1@@L_WHAT@と@ITEM@')
     ,
     new SctItm('@L_WHAT@！ @L_WHAT@！ @L_WHAT@ッ！')
+    ,
+    new SctItm('@L_ITEM@！ @L_ITEM@！ @L_ITEM@ッ！')
 ];
