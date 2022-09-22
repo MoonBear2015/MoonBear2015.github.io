@@ -1503,6 +1503,14 @@ class locker_country extends SctItm_SelectLocker {
         this.Add(cods_to_itms(cods_country2));
     }
 }
+class locker_Town extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_TOWN@');
+        this.Add(cods_ruby_to_itms(cods_country.slice(1)));
+        this.Add(cods_to_itms(cods_country2));
+        this.Add(itms_city);
+    }
+}
 class selector_bird extends SctItm_Selector {
     constructor() {
         super('@BIRD@');
@@ -2726,6 +2734,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_keime2());
         this.dic_push(new selector_country());
         this.dic_push(new locker_country());
+        this.dic_push(new locker_Town());
         this.dic_push(new selector_history());
         this.dic_push(new selector_landmark());
         this.dic_push(new locker_landmark());
@@ -2838,6 +2847,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_command1());
         this.dic_push(new selector_inscription());
         this.dic_push(new selector_Lock_inscription());
+        this.dic_push(new selector_Lock_TownInscription());
         this.dic_push(new selector_habit());
         this.dic_push(new selector_emotion());
         this.dic_push(new selector_emotion01());

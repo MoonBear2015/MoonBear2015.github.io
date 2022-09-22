@@ -151,6 +151,12 @@ class selector_Lock_inscription extends SctItm_Selector {
         this.Add(itms_Lock_inscription);
     }
 }
+class selector_Lock_TownInscription extends SctItm_Selector {
+    constructor() {
+        super('@L_TOWN_INSCRIPTION@');
+        this.Add(itms_Lock_TownInscription);
+    }
+}
 // 座右の銘：体言
 class selector_item extends SctItm_Selector {
     constructor() {
@@ -231,4 +237,23 @@ const itms_Lock_inscription = [
     ,
     new SctItm('@L_WHAT@！ @L_WHAT@！ @L_WHAT@ッ！'),
     new SctItm('@L_ITEM@！ @L_ITEM@！ @L_ITEM@ッ！')
+];
+const itms_Lock_TownInscription = [
+    // new SctItm('@COMM@@L_WHAT@の@ITEM@')
+    // ,
+    new SctItm('@COMM@@ITEM@は@COMM@@L_TOWN@@END02A@'),
+    new SctItm('@COMM@@L_TOWN@は第二の@COMM@@ITEM@@END02A@'),
+    new SctItm('@COMM@@L_TOWN@は@L_ITEM@の|基|もと|'),
+    new SctItm('@ITEM@が@L_TOWN@を@L_ITEM@にする'),
+    new SctItm('@COMM@@L_TOWN@は@L_ITEM@への近道'),
+    new SctItm('@COMM@@L_TOWN@が@L_ITEM@を産む'),
+    new SctItm('@COMM@@ITEM@は@L_TOWN@の始まり'),
+    new SctItm('@L_TOWN@と@L_ITEM@は使いよう'),
+    new SctItm('@L_ITEM@から出た@L_TOWN@')
+    // ,
+    // new SctItm('@COMM1@@L_WHAT@')
+    // ,
+    // new SctItm('@COMM1@@L_WHAT@と@ITEM@')
+    ,
+    new SctItm('@L_TOWN@！ @L_TOWN@！ @L_TOWN@ッ！')
 ];

@@ -1167,13 +1167,15 @@ const cods_country = [
 const cods_country2 = [
     new SctCod_TI('|日本|にほん|'),
     new SctCod_TI('|韓国|かんこく|'),
+    new SctCod_TI('|中国|ちゅうごく|'),
     new SctCod_TI('|北朝鮮|きたちょうせん|'),
     new SctCod_TI('|台湾|たいわん|'),
     new SctCod_TI('|邪馬台国|やまたいこく|'),
     new SctCod_TI('ガミラス|帝国|ていこく|'),
     new SctCod_TI('ジオン|公国|こうこく|'),
     new SctCod_TI('|銀河帝国|ぎんがていこく|'),
-    new SctCod_TI('ローマ|帝国|ていこく|')
+    new SctCod_TI('ローマ|帝国|ていこく|'),
+    new SctCod_TI('インカ|帝国|ていこく|')
 ];
 const cods_think = [
     new SctCod_TI('|想|おも|い', 'think.jpg'),
@@ -5518,10 +5520,10 @@ const itms_mystTitle = [
     new SctItm('@L_CLASS@の@KEI_A2@@MYST_ACTNAME@'),
     new SctItm('@KEI_A2@@L_CLASS@の@MYST_ACTNAME@'),
     new SctItm('@KEI_A2@@L_CLASS@の@KEI_A2@@MYST_ACTNAME@'),
-    new SctItm('@L_WHAT@の@MYST_ACTNAME@'),
-    new SctItm('@L_WHAT@の@KEI_A2@@MYST_ACTNAME@'),
-    new SctItm('@KEI_A2@@L_WHAT@の@MYST_ACTNAME@'),
-    new SctItm('@KEI_A2@@L_WHAT@の@KEI_A2@@MYST_ACTNAME@'),
+    new SctItm('@L_COUNTRY@の@MYST_ACTNAME@'),
+    new SctItm('@L_COUNTRY@の@KEI_A2@@MYST_ACTNAME@'),
+    new SctItm('@KEI_A2@@L_COUNTRY@の@MYST_ACTNAME@'),
+    new SctItm('@KEI_A2@@L_COUNTRY@の@KEI_A2@@MYST_ACTNAME@'),
     new SctItm('@L_BOSSNAME@@L_BOSS@の@MYST_ACTPAPER@'),
     new SctItm('@KEI_A2@@L_BOSSNAME@@L_BOSS@の@MYST_ACTPAPER@'),
     new SctItm('@L_BOSSNAME@@L_BOSS@の@MYST_ACTPAPER@'),
