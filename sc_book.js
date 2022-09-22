@@ -7,7 +7,7 @@ function set_book() {
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B01.68';
+    html += ' B01.69';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -223,7 +223,7 @@ function make_booktype3() {
     html += '</div>';
     html += '</div>';
     html += '<div id="book_myststory">';
-    html += '@MYST01@<br><br>@MYST_ACT@<br><br>@MYST_REACT@<br><br>@MYST_SPOT@<br><br>';
+    html += '@MYST@';
     let b1 = rnd_max(5);
     let b2 = 4 - b1;
     if (b1 > 0) {
@@ -777,7 +777,20 @@ class selector_myst extends SctItm_Selector {
     constructor() {
         super('@MYST@');
         this.itms = [
-            new SctItm('@MYST01@<br><br>@MYST_ACT@<br><br>@MYST_REACT@<br><br>@MYST_SPOT@<br><br>')
+            new SctItm('@MYST_COM@<br><br>@MYST01@<br><br>その時、@MYST_ACT@<br><br>@MYST_REACT@<br><br>@MYST_SPOT@<br><br>'),
+            new SctItm('@MYST_COM@<br><br>@MYST01@<br><br>次の瞬間、@MYST_ACT@<br><br>@MYST_REACT@<br><br>@MYST_SPOT@<br><br>')
+        ];
+    }
+}
+class selector_mystComment extends SctItm_Selector {
+    constructor() {
+        super('@MYST_COM@');
+        this.itms = [
+            new SctItm('『@L_TOWN_INSCRIPTION@』　――　@L_CLASS@ @HUMAN@'),
+            new SctItm('『@L_TOWN_INSCRIPTION@』　――　@L_BOSSNAME@@L_BOSS@'),
+            new SctItm('『@L_TOWN_INSCRIPTION@』　――　@L_GIRL@（@L_ASS@）'),
+            new SctItm('―― @KEI_A2@我が@PART@に捧ぐ　@L_BOOKWRITER@ ――'),
+            new SctItm('―― @KEI_A2@我が@PART@の思い出に　@L_BOOKWRITER@ ――')
         ];
     }
 }
@@ -785,10 +798,7 @@ class selector_myst01 extends SctItm_Selector {
     constructor() {
         super('@MYST01@');
         this.itms = [
-            new SctItm('　今日も@MYST_STAGE@<br>@MYST_ST_AP@<br>@MYST_APP@'),
-            new SctItm('　『@L_TOWN_INSCRIPTION@』　――　@L_BOSSNAME@@L_BOSS@<br><br>　今日も@MYST_STAGE@<br>@MYST_ST_AP@<br>@MYST_APP@'),
-            new SctItm('　『@L_TOWN_INSCRIPTION@』　――　@L_GIRL@（@L_ASS@）<br><br>　今日も@MYST_STAGE@<br>@MYST_ST_AP@<br>@MYST_APP@'),
-            new SctItm('　―― 愛しき我が@PART@に捧ぐ　@L_BOOKWRITER@　――　<br><br>　今日も@MYST_STAGE@<br>@MYST_ST_AP@<br>@MYST_APP@'),
+            new SctItm('今日も@MYST_STAGE@<br>@MYST_ST_AP@<br>@MYST_APP@'),
             new SctItm('@MYST_APP@<br>@MYST_AP_ST@@MYST_STAGE@')
         ];
     }
@@ -855,13 +865,13 @@ class selector_mystAccident extends SctItm_Selector {
     constructor() {
         super('@MYST_ACT@');
         this.itms = [
-            new SctItm('　そんな@KEI_B2@@L_LANDMARK@を切り裂くような、@KEI_A2@悲鳴が響き渡った！<br>「ぎゃああああっ！」'),
-            new SctItm('　そんな@KEI_B2@@L_LANDMARK@を揺るがす、@KEID_A@@KEI_A2@事件が巻き起こった！<br>「ひぃぃぃぃっ！！」'),
-            new SctItm('　そんなある時、引き裂くような@KEI_A2@悲鳴に、@KEI_B2@@L_CLASS@達は一斉に振り返った！<br>「きゃあああああっ！！」'),
-            new SctItm('　そんな@KEI_A2@二人を尻目に、耳を貫くほどの@KEI_A2@悲鳴が響き渡った！<br>「うわぁぁぁぁぁっ！！」'),
-            new SctItm('　次の瞬間、全てを揺るがす@KEI_A2@悲鳴が！<br>「あああああっ！！」'),
-            new SctItm('　その時！ いったい何をしくじったのか、世界を揺るがす絶望感！<br>「しまったあああっ！！」'),
-            new SctItm('　その時、そこの居る全ての@KEI_B2@@L_CLASS@達は凍り付く。この@KEI_B2@世界の全てを拒絶する拒否反応！<br>「嫌だあああああああっ！！」')
+            new SctItm('まるで@KEI_B2@@L_LANDMARK@を切り裂くような、@KEI_A2@悲鳴が響き渡った！<br>「ぎゃああああっ！」'),
+            new SctItm('正に@KEI_B2@@L_LANDMARK@を揺るがす、@KEID_A@@KEI_A2@事件が巻き起こった！<br>「ひぃぃぃぃっ！！」'),
+            new SctItm('引き裂くような@KEI_A2@悲鳴に、@KEI_B2@@L_CLASS@達は一斉に振り返った！<br>「きゃあああああっ！！」'),
+            new SctItm('耳を貫くほどの@KEI_A2@悲鳴が響き渡った！<br>「うわぁぁぁぁぁっ！！」'),
+            new SctItm('全てを揺るがす@KEI_A2@悲鳴が！<br>「あああああっ！！」'),
+            new SctItm('いったい何をしくじったのか、世界を揺るがす絶望感！<br>「しまったあああっ！！」'),
+            new SctItm('そこの居る全ての@KEI_B2@@L_CLASS@達は凍り付く。この@KEI_B2@世界の全てを拒絶する拒否反応！<br>「嫌だあああああああっ！！」')
         ];
     }
 }
@@ -1208,6 +1218,8 @@ class book_docs_maker extends news_docs_maker {
         this.dic_push(new locker_mystTitle());
         this.dic_push(new locker_mystActName());
         this.dic_push(new locker_mystActPaper());
+        this.dic_push(new selector_myst());
+        this.dic_push(new selector_mystComment());
         this.dic_push(new selector_myst01());
         this.dic_push(new selector_mystSt_AP());
         this.dic_push(new selector_mystStage());

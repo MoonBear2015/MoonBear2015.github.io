@@ -5733,6 +5733,8 @@ const   itms_do = [
 ]
 
 const   itms_class = [
+    new SctItm('@L_COUNTRY@大学教授')
+    ,
     new SctItm('大学教授')
     ,
     new SctItm('高校教師')
@@ -5785,11 +5787,17 @@ const   itms_class = [
     ,
     new SctItm('陸軍少佐')
     ,
+    new SctItm('@L_COUNTRY@陸軍少佐')
+    ,
     new SctItm('元海兵隊')
     ,
     new SctItm('空軍少佐')
     ,
+    new SctItm('@L_COUNTRY@空軍少佐')
+    ,
     new SctItm('海軍将校')
+    ,
+    new SctItm('@L_COUNTRY@海軍将校')
     ,
     new SctItm('陶芸家')
     ,
@@ -6021,17 +6029,29 @@ const   itms_class = [
     ,
     new SctItm('市長')
     ,
-    new SctItm('皇帝')
+    new SctItm('@L_CITY@市長')
+    ,
+    new SctItm('@L_COUNTRY@皇帝')
     ,
     new SctItm('国王')
     ,
+    new SctItm('@L_COUNTRY@国王')
+    ,
     new SctItm('法王')
+    ,
+    new SctItm('@L_COUNTRY@法王')
     ,
     new SctItm('大統領')
     ,
+    new SctItm('@L_COUNTRY@大統領')
+    ,
     new SctItm('女王')
     ,
+    new SctItm('@L_COUNTRY@女王')
+    ,
     new SctItm('総理大臣')
+    ,
+    new SctItm('@L_COUNTRY@総理大臣')
     ,
     new SctItm('独裁者')
     ,
