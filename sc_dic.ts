@@ -6039,8 +6039,6 @@ const   itms_class = [
     ,
     new SctItm('法王')
     ,
-    new SctItm('@L_COUNTRY@法王')
-    ,
     new SctItm('大統領')
     ,
     new SctItm('@L_COUNTRY@大統領')
