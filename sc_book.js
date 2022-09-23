@@ -7,7 +7,7 @@ function set_book() {
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B01.71';
+    html += ' B01.72';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -777,8 +777,8 @@ class selector_myst extends SctItm_Selector {
     constructor() {
         super('@MYST@');
         this.itms = [
-            new SctItm('@MYST_COM@<br><br>@MYST01@<br><br>その時、@MYST_ACT@<br><br>@MYST_REACT@<br><br>@MYST_SPOT@<br><br>'),
-            new SctItm('@MYST_COM@<br><br>@MYST01@<br><br>次の瞬間、@MYST_ACT@<br><br>@MYST_REACT@<br><br>@MYST_SPOT@<br><br>')
+            new SctItm('@MYST_COM@<br><br>　@MYST01@<br><br>　その時、@MYST_ACT@<br><br>@MYST_REACT@<br><br>@MYST_SPOT@<br><br>'),
+            new SctItm('@MYST_COM@<br><br>　@MYST01@<br><br>　次の瞬間、@MYST_ACT@<br><br>@MYST_REACT@<br><br>@MYST_SPOT@<br><br>')
         ];
     }
 }
@@ -897,12 +897,12 @@ class selector_mystSpot extends SctItm_Selector {
     constructor() {
         super('@MYST_SPOT@');
         this.itms = [
-            new SctItm('　@KEI_B2@@L_LANDMARK@の@GRADE@@KEI_A2@現場では、いまだ@KEID_A@@KEI_A2@遺体を中心に、尚も@KEI_B2@@L_CLASS@達の怒号に近い@KEI_B2@悲鳴が飛び交っていた。<br>@MYST_RES01@'),
-            new SctItm('　@KEI_B2@@L_LANDMARK@の事故現場には、@MANY@@L_CLASS@達が野次馬となって集まり、その中心に殺された@KEI_A2@@L_CLASS@が倒れていた。<br>@MYST_RES01@'),
-            new SctItm('　@KEI_B2@@L_LANDMARK@の事故現場には、今正に殺された@KEI_A2@@L_CLASS@の遺体。辺りには、そしらぬ@KEI_B2@顔で行き交い、@L_DOING@いる@KEI_B2@@L_CLASS@達の姿。<br>@MYST_RES01@'),
-            new SctItm('　駆けつけた@KEI_B2@現場には、一人の@KEI_A2@@L_CLASS@の遺体が、今正に悲鳴を上げて殺されたままの姿で残されていた。それを見守る@MANY@@KEI_B2@@L_CLASS@達。<br>@MYST_RES01@'),
-            new SctItm('　駆けつけると現場には被害者らしき姿は無く、ただし、まだ新しい血痕と、なんとも@KEI_A2@気配。周囲には何があったのかと@KEI_B2@顔を見合わせる@MANY@@KEI_B2@@L_CLASS@達。<br>@MYST_RES02@'),
-            new SctItm('　駆けつけた二人は困惑する。確かに@KEI_A2@悲鳴が上がった現場には何も見当たらない。ただ、何故だか@KEI_A2@空気と、@KEI_B2@顔つきをした@MANY@@L_CLASS@達が残されていた。<br>@MYST_RES02@')
+            new SctItm('　@KEI_B2@@L_LANDMARK@の@GRADE@@KEI_A2@現場では、いまだ@KEID_A@@KEI_A2@遺体を中心に、尚も@KEI_B2@@L_CLASS@達の怒号に近い@KEI_B2@悲鳴が飛び交っていた。<br><br>@MYST_RES01@'),
+            new SctItm('　@KEI_B2@@L_LANDMARK@の事故現場には、@MANY@@L_CLASS@達が野次馬となって集まり、その中心に殺された@KEI_A2@@L_CLASS@が倒れていた。<br><br>@MYST_RES01@'),
+            new SctItm('　@KEI_B2@@L_LANDMARK@の事故現場には、今正に殺された@KEI_A2@@L_CLASS@の遺体。辺りには、そしらぬ@KEI_B2@顔で行き交い、@L_DOING@いる@KEI_B2@@L_CLASS@達の姿。<br><br>@MYST_RES01@'),
+            new SctItm('　駆けつけた@KEI_B2@現場には、一人の@KEI_A2@@L_CLASS@の遺体が、今正に悲鳴を上げて殺されたままの姿で残されていた。それを見守る@MANY@@KEI_B2@@L_CLASS@達。<br><br>@MYST_RES01@'),
+            new SctItm('　駆けつけると現場には被害者らしき姿は無く、ただし、まだ新しい血痕と、なんとも@KEI_A2@気配。周囲には何があったのかと@KEI_B2@顔を見合わせる@MANY@@KEI_B2@@L_CLASS@達。<br><br>@MYST_RES02@'),
+            new SctItm('　駆けつけた二人は困惑する。確かに@KEI_A2@悲鳴が上がった現場には何も見当たらない。ただ、何故だか@KEI_A2@空気と、@KEI_B2@顔つきをした@MANY@@L_CLASS@達が残されていた。<br><br>@MYST_RES02@')
         ];
     }
 }
