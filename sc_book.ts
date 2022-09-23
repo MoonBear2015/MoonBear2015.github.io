@@ -1077,9 +1077,9 @@ class selector_myst extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@MYST@');
         this.itms = [
-            new SctItm('@MYST_COM@<br><br>　@MYST01@<br><br>　その時、@MYST_ACT@<br><br>@MYST_REACT@<br><br>@MYST_SPOT@<br><br>')
+            new SctItm('@MYST_COM@<br><br>@MYST01@<br><br>　その時、@MYST_ACT@<br><br>@MYST_REACT@<br><br>@MYST_SPOT@<br><br>')
             ,
-            new SctItm('@MYST_COM@<br><br>　@MYST01@<br><br>　次の瞬間、@MYST_ACT@<br><br>@MYST_REACT@<br><br>@MYST_SPOT@<br><br>')
+            new SctItm('@MYST_COM@<br><br>@MYST01@<br><br>　次の瞬間、@MYST_ACT@<br><br>@MYST_REACT@<br><br>@MYST_SPOT@<br><br>')
         ]
     }
 }
@@ -1106,7 +1106,7 @@ class selector_myst01 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@MYST01@');
         this.itms = [
-            new SctItm('今日も@MYST_STAGE@@MYST_ST_AP@<br><br>@MYST_APP@')
+            new SctItm('　今日も@MYST_STAGE@@MYST_ST_AP@<br><br>@MYST_APP@')
             ,
             new SctItm('@MYST_APP@<br><br>@MYST_AP_ST@@MYST_STAGE@')
         ]
