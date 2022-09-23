@@ -5480,7 +5480,7 @@ const itms_boss = [
     new SctItm('部長'),
     new SctItm('検事'),
     new SctItm('教授'),
-    new SctItm('先生')
+    new SctItm('伯爵')
 ];
 const itms_ass = [
     new SctItm('助手'),

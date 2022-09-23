@@ -9040,7 +9040,7 @@ const   itms_boss = [
     ,
     new SctItm('教授')
     ,
-    new SctItm('先生')
+    new SctItm('伯爵')
 ]
 
 const   itms_ass = [

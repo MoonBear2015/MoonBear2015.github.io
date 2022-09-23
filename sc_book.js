@@ -7,7 +7,7 @@ function set_book() {
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B01.70';
+    html += ' B01.71';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -787,8 +787,8 @@ class selector_mystComment extends SctItm_Selector {
         super('@MYST_COM@');
         this.itms = [
             new SctItm('『@L_TOWN_INSCRIPTION@』　――　@L_CLASS@ @HUMAN@'),
-            new SctItm('これは私にとって、もっとも@KEI_B2@事件と記憶している。　――　@L_BOSSNAME@@L_BOSS@'),
-            new SctItm('これが、@L_BOSSNAME@@L_BOSS@の@DO@と@ASSES02@た事件となるでしょう。<br>　――　@L_GIRL@(@L_ASS@)の@MYST_ACTPAPER@より'),
+            new SctItm('この@MYST_ACTPAPER@は私にとって、もっとも@KEI_B2@事件の記録となるだろう。　――　@L_BOSSNAME@@L_BOSS@'),
+            new SctItm('この事件で、@L_BOSSNAME@@L_BOSS@が@KEID_B2@@DO@したと@ASSES02@ています。<br>　――　@L_GIRL@(@L_ASS@)の@MYST_ACTPAPER@より'),
             new SctItm('―― @KEI_A2@我が@PART@に捧ぐ　@L_BOOKWRITER@ ――'),
             new SctItm('―― @KEI_A2@我が@PART@の思い出に　@L_BOOKWRITER@ ――')
         ];
@@ -798,8 +798,8 @@ class selector_myst01 extends SctItm_Selector {
     constructor() {
         super('@MYST01@');
         this.itms = [
-            new SctItm('今日も@MYST_STAGE@<br>@MYST_ST_AP@<br>@MYST_APP@'),
-            new SctItm('@MYST_APP@<br>@MYST_AP_ST@@MYST_STAGE@')
+            new SctItm('今日も@MYST_STAGE@<br><br>@MYST_ST_AP@<br><br>@MYST_APP@'),
+            new SctItm('@MYST_APP@<br><br>@MYST_AP_ST@@MYST_STAGE@')
         ];
     }
 }
