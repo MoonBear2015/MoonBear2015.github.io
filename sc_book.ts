@@ -1106,7 +1106,7 @@ class selector_myst01 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@MYST01@');
         this.itms = [
-            new SctItm('今日も@MYST_STAGE@<br><br>@MYST_ST_AP@<br><br>@MYST_APP@')
+            new SctItm('今日も@MYST_STAGE@@MYST_ST_AP@<br><br>@MYST_APP@')
             ,
             new SctItm('@MYST_APP@<br><br>@MYST_AP_ST@@MYST_STAGE@')
         ]
