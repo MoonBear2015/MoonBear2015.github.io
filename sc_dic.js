@@ -1637,16 +1637,20 @@ const cods_km_posi = [
     // new SctCod_It('|偉大|いだい|')
     // ,
     new SctCod_It('|鋭敏|えいびん|'),
+    new SctCod_It('|可憐|かれん|'),
     new SctCod_It('|煌|きら|びやか'),
     new SctCod_It('|綺麗|きれい|'),
+    new SctCod_It('|健康的|けんこうてき|'),
     new SctCod_It('しなやか'),
     new SctCod_It('|平和|へいわ|'),
     new SctCod_It('ロマンチック'),
     new SctCod_It('|幸|しあわ|せそう'),
     new SctCod_It('|親切|しんせつ|そう'),
+    new SctCod_It('|情熱的|じょうねつてき|'),
     // new SctCod_It('|新鮮|しんせん|')
     // ,
     new SctCod_It('|素敵|すてき|'),
+    new SctCod_It('|天才的|てんさいてき|'),
     new SctCod_It('|魅力的|みりょくてき|'),
     new SctCod_It('|豊|ゆた|か')
 ];
@@ -1676,6 +1680,8 @@ const cods_adv_nega = [
 const cods_km_nega = [
     new SctCod_It('|曖昧|あいまい|'),
     new SctCod_It('|哀|あわ|れ'),
+    new SctCod_It('|阿呆|あほ|'),
+    new SctCod_It('|愚|おろ|か'),
     // new SctCod_It('|嫌|いや|')
     // ,
     new SctCod_It('|大袈裟|おおげさ|'),
@@ -1690,6 +1696,7 @@ const cods_km_nega = [
     new SctCod_It('|下劣|げれつ|'),
     new SctCod_It('|残虐|ざんぎゃく|'),
     new SctCod_It('|残酷|ざんこく|'),
+    new SctCod_It('|馬鹿|ばか|'),
     new SctCod_It('|悲惨|ひさん|'),
     new SctCod_It('|不潔|ふけつ|'),
     new SctCod_It('|暴虐|ぼうぎゃく|'),
@@ -4232,7 +4239,8 @@ const itms_nickNega = [
     new SctItm('乞食'),
     new SctItm('ペテン師'),
     new SctItm('ゲス野郎'),
-    new SctItm('ホモ野郎'),
+    // new SctItm('ホモ野郎')
+    // ,
     new SctItm('ヒットラー'),
     new SctItm('独裁者'),
     new SctItm('中年男'),
@@ -4243,8 +4251,9 @@ const itms_nickNega = [
     new SctItm('糸コンニャク'),
     new SctItm('乱暴者'),
     new SctItm('狼藉者'),
-    new SctItm('無法者'),
-    new SctItm('風来坊')
+    new SctItm('無法者')
+    // ,
+    // new SctItm('風来坊')
 ];
 const itms_nickPosi = [
     //
@@ -4318,7 +4327,9 @@ const itms_nickPosi = [
     new SctItm('王女様'),
     new SctItm('お姫様'),
     new SctItm('お殿様'),
-    new SctItm('大統領')
+    new SctItm('大統領'),
+    new SctItm('@FLOWER@'),
+    new SctItm('@SWEETS@')
 ];
 const itms_nickNomal = [
     //

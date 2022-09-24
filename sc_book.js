@@ -979,7 +979,7 @@ class selector_mystEnd02 extends SctItm_Selector {
             new SctItm('「@L_GIRL@君はどう思う？」<br>「いえ@L_BOSS@、@KEI_B2@証言ばかりで、なんとも」<br>「そうかね？ もう答えは出ているぞ、@L_GIRL@君」<br>「――ええ！？」'),
             new SctItm('「やはり何も出てこないか、@L_GIRL@君」<br>「@L_BOSS@、それでは」<br>「ああ、間違いない。奴が――」'),
             new SctItm('「どうだ、@L_GIRL@君」<br>「それでは・・・5分お待ちください@L_BOSS@」<br>「頼むぞ、@L_GIRL@君」'),
-            new SctItm('「@L_BOSS@、取り調べはこのくらいで？」<br>「ああ、現地の警察に伝えておきたまえ、@L_GIRL@君」<br>「了解です。@L_BOSS@」<br>「では、次のターゲットを・・・」'),
+            new SctItm('「@L_BOSS@、取り調べはこのくらいで？」<br>「ああ、現地の警察には、そう伝えておきたまえ、@L_GIRL@君」<br>「了解です。@L_BOSS@」<br>「では、次のターゲットを・・・」'),
             new SctItm('「@L_BOSS@、これで証言は終わりですが」<br>「いや、最後の一人が残って居るぞ、@L_GIRL@君」<br>「え？」<br>「@L_GIRL@君、そこにかけたまえ」'),
             new SctItm('「何か判りましたか、@L_BOSS@」<br>「いやあ、これじゃお手上げだよ、@L_GIRL@君」<br>「そうですか。では@L_BOSS@にお聴きしたいことが」<br>「@L_GIRL@君・・・なんだ、その@KEI_A2@目つきは」'),
             new SctItm('「@L_BOSS@、それでは？」<br>「ああ、@L_GIRL@君。恐らく犯人は――ぐふっ！」<br>「@L_BOSS@？ @L_BOSS@ッ！！」')

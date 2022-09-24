@@ -1372,7 +1372,7 @@ class selector_mystEnd02 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('「どうだ、@L_GIRL@君」<br>「それでは・・・5分お待ちください@L_BOSS@」<br>「頼むぞ、@L_GIRL@君」')
             ,
-            new SctItm('「@L_BOSS@、取り調べはこのくらいで？」<br>「ああ、現地の警察に伝えておきたまえ、@L_GIRL@君」<br>「了解です。@L_BOSS@」<br>「では、次のターゲットを・・・」')
+            new SctItm('「@L_BOSS@、取り調べはこのくらいで？」<br>「ああ、現地の警察には、そう伝えておきたまえ、@L_GIRL@君」<br>「了解です。@L_BOSS@」<br>「では、次のターゲットを・・・」')
             ,
             new SctItm('「@L_BOSS@、これで証言は終わりですが」<br>「いや、最後の一人が残って居るぞ、@L_GIRL@君」<br>「え？」<br>「@L_GIRL@君、そこにかけたまえ」')
             ,
