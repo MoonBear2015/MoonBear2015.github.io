@@ -621,6 +621,8 @@ class selector_storyH01 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('「そこまでだ！ @ITEM@の@NICKGOOD@！ @L_HEROFULLNAME@が容赦はしないぞ！」<br><br>@SEL01@')
             ,
             new SctItm('「我こそは@ITEM@の@NICKGOOD@！ @L_HEROFULLNAME@、只今参上！」<br><br>@SEL01@')
+            ,
+            new SctItm('「人呼んで@ITEM@の@NICKGOOD@！ @L_HEROFULLNAME@が、@ITEM@に代わってお仕置きだ！」<br><br>@SEL01@')
         ]
     }
 }

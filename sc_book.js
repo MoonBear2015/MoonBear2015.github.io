@@ -446,7 +446,8 @@ class selector_storyH01 extends SctItm_Selector {
             new SctItm('「誰が呼んだか、@ITEM@の@NICKGOOD@！ @L_HEROFULLNAME@とは私のことだ！」<br><br>@SEL01@'),
             new SctItm('「待たせたな！ @ITEM@の@NICKGOOD@！ @L_HEROFULLNAME@が相手になろう！」<br><br>@SEL01@'),
             new SctItm('「そこまでだ！ @ITEM@の@NICKGOOD@！ @L_HEROFULLNAME@が容赦はしないぞ！」<br><br>@SEL01@'),
-            new SctItm('「我こそは@ITEM@の@NICKGOOD@！ @L_HEROFULLNAME@、只今参上！」<br><br>@SEL01@')
+            new SctItm('「我こそは@ITEM@の@NICKGOOD@！ @L_HEROFULLNAME@、只今参上！」<br><br>@SEL01@'),
+            new SctItm('「人呼んで@ITEM@の@NICKGOOD@！ @L_HEROFULLNAME@が、@ITEM@に代わってお仕置きだ！」<br><br>@SEL01@')
         ];
     }
 }

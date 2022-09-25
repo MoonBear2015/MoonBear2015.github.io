@@ -5829,6 +5829,8 @@ const   itms_class = [
     ,
     new SctItm('画家')
     ,
+    new SctItm('@SPORTS@選手')
+    ,
     new SctItm('プロ野球選手')
     ,
     new SctItm('プロゴルファー')
@@ -6209,7 +6211,7 @@ const   itms_class = [
     ,
     new SctItm('河童')
     ,
-    new SctItm('河童')
+    new SctItm('ゾンビ')
 ];
 
 
@@ -6641,7 +6643,7 @@ const   itms_nickNega = [
     ,
     new SctItm('罰当たり')
     ,
-    new SctItm('蜥蜴')
+    new SctItm('トカゲ')
     ,
     new SctItm('害虫')
     ,
@@ -6699,6 +6701,12 @@ const   itms_nickNega = [
     ,
     new SctItm('蝿')
     ,
+    new SctItm('ダニ')
+    ,
+    new SctItm('ミジンコ')
+    ,
+    new SctItm('ゴキブリ')
+    ,
     new SctItm('虫ケラ')
     ,
     new SctItm('コソ泥')
@@ -6710,6 +6718,12 @@ const   itms_nickNega = [
     new SctItm('公衆便所')
     ,
     new SctItm('病原菌')
+    ,
+    new SctItm('ウイルス')
+    ,
+    new SctItm('バクテリア')
+    ,
+    new SctItm('青カビ')
     ,
     new SctItm('火薬庫')
     ,
@@ -6757,6 +6771,10 @@ const   itms_nickNega = [
     ,
     new SctItm('夜盗')
     ,
+    new SctItm('泥棒')
+    ,
+    new SctItm('コソ泥')
+    ,
     new SctItm('大泥棒')
     ,
     new SctItm('覗き魔')
@@ -6775,6 +6793,10 @@ const   itms_nickNega = [
     ,
     new SctItm('ゲス野郎')
     ,
+    new SctItm('チンピラ')
+    ,
+    new SctItm('ゴロツキ')
+    ,
     // new SctItm('ホモ野郎')
     // ,
     new SctItm('ヒットラー')
@@ -6790,6 +6812,8 @@ const   itms_nickNega = [
     new SctItm('ナンパ野郎')
     ,
     new SctItm('軟弱者')
+    ,
+    new SctItm('腐女子')
     ,
     new SctItm('糸コンニャク')
     ,
@@ -6817,6 +6841,10 @@ const   itms_nickPosi = [
     new SctItm('英雄')
     ,
     new SctItm('勝利者')
+    ,
+    new SctItm('スポーツマン')
+    ,
+    new SctItm('@SPORTS@選手')
     ,
     new SctItm('ヒーロー')
     ,
@@ -6914,7 +6942,7 @@ const   itms_nickPosi = [
     ,
     new SctItm('宝')
     ,
-    new SctItm('化身')
+    new SctItm('@STAR@の化身')
     ,
     new SctItm('スター')
     ,

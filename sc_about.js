@@ -166,13 +166,15 @@ class selector_item extends SctItm_Selector {
             new SctItm('@THEY@'),
             new SctItm('@PART@'),
             new SctItm('@NICK@'),
-            new SctItm('@WHAT@')
+            new SctItm('@WHAT@'),
+            new SctItm('@STAR@')
             // ,
             // new SctItm('@THINK@')
             // ,
             // new SctItm('@DO@')
+            // ,
+            // new SctItm('@HABIT@')
             ,
-            new SctItm('@HABIT@'),
             new SctItm('@COUNTRY@'),
             new SctItm('@COUNTRY@人')
         ];
@@ -221,13 +223,13 @@ const itms_inscription = [
 const itms_Lock_inscription = [
     // new SctItm('@COMM@@L_WHAT@の@ITEM@')
     // ,
-    new SctItm('@COMM@@ITEM@は@COMM@@L_WHAT@@END02A@'),
+    new SctItm('@COMM@@L_ITEM@は@COMM@@L_WHAT@@END02A@'),
     new SctItm('@COMM@@L_WHAT@は第二の@COMM@@ITEM@@END02A@'),
     new SctItm('@COMM@@L_WHAT@は@L_ITEM@の|基|もと|'),
     new SctItm('@ITEM@が@L_WHAT@を@L_ITEM@にする'),
     new SctItm('@COMM@@L_WHAT@は@L_ITEM@への近道'),
     new SctItm('@COMM@@L_WHAT@が@L_ITEM@を産む'),
-    new SctItm('@COMM@@ITEM@は@L_WHAT@の始まり'),
+    new SctItm('@COMM@@L_ITEM@は@L_WHAT@の始まり'),
     new SctItm('@L_WHAT@と@L_ITEM@は使いよう'),
     new SctItm('@L_ITEM@から出た@L_WHAT@')
     // ,
@@ -241,13 +243,13 @@ const itms_Lock_inscription = [
 const itms_Lock_TownInscription = [
     // new SctItm('@COMM@@L_WHAT@の@ITEM@')
     // ,
-    new SctItm('@COMM@@ITEM@は@COMM@@L_TOWN@@END02A@'),
+    new SctItm('@COMM@@L_ITEM@は@COMM@@L_TOWN@@END02A@'),
     new SctItm('@COMM@@L_TOWN@は第二の@COMM@@ITEM@@END02A@'),
     new SctItm('@COMM@@L_TOWN@は@L_ITEM@の|基|もと|'),
     new SctItm('@ITEM@が@L_TOWN@を@L_ITEM@にする'),
     new SctItm('@COMM@@L_TOWN@は@L_ITEM@への近道'),
     new SctItm('@COMM@@L_TOWN@が@L_ITEM@を産む'),
-    new SctItm('@COMM@@ITEM@は@L_TOWN@の始まり'),
+    new SctItm('@COMM@@L_ITEM@は@L_TOWN@の始まり'),
     new SctItm('@L_TOWN@と@L_ITEM@は使いよう'),
     new SctItm('@L_ITEM@から出た@L_TOWN@')
     // ,

@@ -2310,9 +2310,27 @@ class locker_flower extends SctItm_SelectLocker implements ISctItm_Selector{
 }
 
 
+class selector_star extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@STAR@');
+        this.Add(cods_to_itms(cods_star));
+    }
+}
+class locker_star extends SctItm_SelectLocker implements ISctItm_Selector{
+        constructor(){
+        super('L_@STAR@');
+        this.Add(cods_to_itms(cods_star));
+    }
+}
 class selector_sports extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@SPORTS@');
+        this.Add(itms_sports);
+    }
+}
+class locker_sports extends SctItm_SelectLocker implements ISctItm_Selector{
+    constructor(){
+        super('@L_SPORTS@');
         this.Add(itms_sports);
     }
 }
@@ -3637,6 +3655,10 @@ class locker_item extends SctItm_SelectLocker implements ISctItm_Selector{
             new SctItm('@L_HABIT@')
             ,
             new SctItm('@L_MUSIC@')
+            ,
+            new SctItm('@L_STAR@')
+            ,
+            new SctItm('@L_SPORTS@')
         ];
     }
 }
@@ -3970,6 +3992,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new locker_livestock());
         this.dic_push(new selector_flower());
         this.dic_push(new locker_flower());
+        this.dic_push(new selector_star());
         this.dic_push(new selector_sports());
         this.dic_push(new selector_km());
         this.dic_push(new selector_k());
