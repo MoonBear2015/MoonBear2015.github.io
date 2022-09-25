@@ -5853,6 +5853,12 @@ const   itms_class = [
     ,
     new SctItm('保安官')
     ,
+    new SctItm('アイドル歌手')
+    ,
+    new SctItm('演歌歌手')
+    ,
+    new SctItm('オペラ歌手')
+    ,
     new SctItm('ピアニスト')
     ,
     new SctItm('バイオリニスト')
