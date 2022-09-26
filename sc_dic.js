@@ -3892,6 +3892,7 @@ const itms_class = [
     new SctItm('抜け忍'),
     new SctItm('諜報員'),
     new SctItm('狙撃兵'),
+    new SctItm('兵士'),
     new SctItm('株主'),
     new SctItm('筆頭株主'),
     new SctItm('投資家'),
@@ -3939,6 +3940,7 @@ const itms_class = [
     new SctItm('ハッカー'),
     new SctItm('宇宙人'),
     new SctItm('火星人'),
+    new SctItm('@STAR@人'),
     new SctItm('秘密探偵'),
     new SctItm('人魚'),
     new SctItm('半魚人'),
@@ -5202,6 +5204,8 @@ const itms_doing_l = [
     new SctItm('@L_CLASS@に変身して'),
     new SctItm('@L_COUNTRY@に移住して'),
     new SctItm('@L_COUNTRY@に亡命して'),
+    new SctItm('@L_COUNTRY@を支配して'),
+    new SctItm('@L_COUNTRY@を征服して'),
     new SctItm('@L_CITY@に住んで'),
     new SctItm('@L_CITY@に家を建てて'),
     new SctItm('『@L_ITEM@の@L_SPECIALIST@』と呼ばれて'),
@@ -5309,6 +5313,8 @@ const itms_doing_o = [
     new SctItm('@L_CLASS@に変身して'),
     new SctItm('@L_COUNTRY@に移住して'),
     new SctItm('@L_COUNTRY@に亡命して'),
+    new SctItm('@L_COUNTRY@を支配して'),
+    new SctItm('@L_COUNTRY@を征服して'),
     new SctItm('@L_CITY@に住んで'),
     new SctItm('@L_CITY@に家を建てて')
     // ,
@@ -5570,6 +5576,7 @@ const itms_mystTitle = [
 const itms_mystActName = [
     new SctItm('殺人'),
     new SctItm('殺人事件'),
+    new SctItm('連続殺人事件'),
     new SctItm('殺戮'),
     new SctItm('殺意'),
     new SctItm('狂気'),
@@ -5582,7 +5589,10 @@ const itms_mystActName = [
     new SctItm('犯罪'),
     new SctItm('罪'),
     new SctItm('罪悪'),
-    new SctItm('罪悪感')
+    new SctItm('罪悪感'),
+    new SctItm('悪意'),
+    new SctItm('悪魔'),
+    new SctItm('魔物')
 ];
 const itms_mystActPaper = [
     new SctItm('事件簿'),

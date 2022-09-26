@@ -2318,7 +2318,7 @@ class selector_star extends SctItm_Selector implements ISctItm_Selector {
 }
 class locker_star extends SctItm_SelectLocker implements ISctItm_Selector{
         constructor(){
-        super('L_@STAR@');
+        super('@L_STAR@');
         this.Add(cods_to_itms(cods_star));
     }
 }
@@ -3993,7 +3993,9 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_flower());
         this.dic_push(new locker_flower());
         this.dic_push(new selector_star());
+        this.dic_push(new locker_star());
         this.dic_push(new selector_sports());
+        this.dic_push(new locker_sports());
         this.dic_push(new selector_km());
         this.dic_push(new selector_k());
         this.dic_push(new selector_kd());
