@@ -7,7 +7,7 @@ function set_book() {
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B01.74';
+    html += ' B01.75';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -778,8 +778,12 @@ class selector_myst extends SctItm_Selector {
     constructor() {
         super('@MYST@');
         this.itms = [
-            new SctItm('@MYST_COM@<br><br>@MYST01@<br><br>　その時、@MYST_ACT@<br><br>@MYST_REACT@<br><br>@MYST_SPOT@<br><br>'),
-            new SctItm('@MYST_COM@<br><br>@MYST01@<br><br>　次の瞬間、@MYST_ACT@<br><br>@MYST_REACT@<br><br>@MYST_SPOT@<br><br>')
+            new SctItm('@MYST_COM@<br><br>@MYST01@<br>　そんなある時！<br><br>@MYST_ACT@<br><br>@MYST_REACT@<br><br>@MYST_SPOT@<br><br>'),
+            new SctItm('@MYST_COM@<br><br>@MYST01@<br>　次の瞬間！<br><br>@MYST_ACT@<br><br>@MYST_REACT@<br><br>@MYST_SPOT@<br><br>'),
+            new SctItm('@MYST_COM@<br><br>@MYST_ACT@<br><br>　その事件が起こった@MYST_STAGE@<br>　@MYST_ST_AP@<br><br>@MYST_REACT@<br><br>@MYST_SPOT@<br><br>'),
+            new SctItm('@MYST_COM@<br><br>@MYST_ACT@<br><br>　その騒動が起こるまで、@MYST_STAGE@<br>　@MYST_ST_AP@<br><br>@MYST_REACT@<br><br>@MYST_SPOT@<br><br>'),
+            new SctItm('@MYST_COM@<br><br>@MYST_ACT@<br><br>　@MYST_ST_AP@<br><br>@MYST_REACT@<br><br>@MYST_SPOT@<br><br>'),
+            new SctItm('@MYST_COM@<br><br>@MYST_ACT@<br><br>@MYST_REACT@<br><br>@MYST_SPOT@<br><br>')
         ];
     }
 }
@@ -788,8 +792,8 @@ class selector_mystComment extends SctItm_Selector {
         super('@MYST_COM@');
         this.itms = [
             new SctItm('『@L_TOWN_INSCRIPTION@』　――　@L_CLASS@ @HUMAN@'),
-            new SctItm('この@MYST_ACTPAPER@は、もっとも@KEI_A2@事件の記録となるだろう。　――　@L_BOSSNAME@@L_BOSS@'),
-            new SctItm('@L_BOSSNAME@@L_BOSS@は後に、もっとも@EMO@い事件だと@ASSES02@ています。<br>　――　@L_GIRL@(@L_ASS@)の@MYST_ACTPAPER@より'),
+            new SctItm('　この@MYST_ACTPAPER@は、もっとも@KEI_A2@事件の記録となるだろう。　――　@L_BOSSNAME@@L_BOSS@'),
+            new SctItm('　@L_BOSSNAME@@L_BOSS@は後に、もっとも@EMO@い事件だと@ASSES02@ています。<br>　――　@L_GIRL@(@L_ASS@)の@MYST_ACTPAPER@より'),
             new SctItm('―― @KEI_A2@我が@PART@に捧ぐ　@L_BOOKWRITER@ ――'),
             new SctItm('―― @KEI_A2@我が@PART@のために　@L_BOOKWRITER@ ――')
         ];
@@ -808,11 +812,11 @@ class selector_mystStage extends SctItm_Selector {
     constructor() {
         super('@MYST_STAGE@');
         this.itms = [
-            new SctItm('@L_TOWN@の@KEI_B2@@L_LANDMARK@では、@KEI_B2@@L_CLASS@達が、@ALSODAY@@KEID_B@@KEID_B@@DOING@暮らしている。'),
-            new SctItm('@KEI_B2@@L_TOWN@が誇る@L_LANDMARK@では、@KEI_B2@@L_CLASS@達が、@ALSODAY@@KEID_B@@KEID_B@@DOING@いる。'),
+            new SctItm('@L_TOWN@の@KEI_B2@@L_LANDMARK@では、@KEI_B2@@L_CLASS@達が、@ALSODAY@@KEID_B@@KEID_B@@DOING@暮らしていた。'),
+            new SctItm('@KEI_B2@@L_TOWN@が誇る@L_LANDMARK@では、@KEI_B2@@L_CLASS@達が、@ALSODAY@@KEID_B@@KEID_B@@DOING@いた。'),
             new SctItm('@KEI_B2@@L_TOWN@の@L_LANDMARK@には、@ALSODAY@@L_DOING@いる@KEI_B2@@L_CLASS@達の@KEI_B2@姿があった。'),
             new SctItm('@KEI_B2@@L_TOWN@の@L_LANDMARK@では、@KEI_B2@@L_CLASS@達が、@ALSODAY@@DOING@@KEID_B@過ごしていた。'),
-            new SctItm('@L_TOWN@の@L_LANDMARK@は@GRADE@@KEID_B@@KEID_B@、@KEI_B2@@L_CLASS@達が集う@KEI_B2@空間が広がっている。'),
+            new SctItm('@L_TOWN@の@L_LANDMARK@は@GRADE@@KEID_B@@KEID_B@、@KEI_B2@@L_CLASS@達が集う@KEI_B2@空間が広がっていた。'),
             new SctItm('@L_TOWN@の@L_LANDMARK@では@KEI_B2@@KEY@が開催され、@KEI_B2@@L_CLASS@達が@GRADE@賑わっていた。')
         ];
     }
@@ -866,13 +870,13 @@ class selector_mystAccident extends SctItm_Selector {
     constructor() {
         super('@MYST_ACT@');
         this.itms = [
-            new SctItm('まるで@KEI_B2@@L_LANDMARK@を切り裂くような、@KEI_A2@悲鳴が響き渡った！<br>「ぎゃああああっ！」'),
-            new SctItm('正に@KEI_B2@@L_LANDMARK@を揺るがす、@KEID_A@@KEI_A2@事件が巻き起こった！<br>「ひぃぃぃぃっ！！」'),
-            new SctItm('引き裂くような@KEI_A2@悲鳴に、@KEI_B2@@L_CLASS@達は一斉に振り返った！<br>「きゃあああああっ！！」'),
-            new SctItm('耳を貫くほどの@KEI_A2@悲鳴が響き渡った！<br>「うわぁぁぁぁぁっ！！」'),
-            new SctItm('全てを揺るがす@KEI_A2@悲鳴が！<br>「あああああっ！！」'),
-            new SctItm('いったい何をしくじったのか、世界を揺るがす絶望感！<br>「しまったあああっ！！」'),
-            new SctItm('そこの居る全ての@KEI_B2@@L_CLASS@達は凍り付く。この@KEI_B2@世界の全てを拒絶する拒否反応！<br>「嫌だあああああああっ！！」')
+            new SctItm('「ぎゃああああっ！」<br>　まるで@KEI_B2@@L_LANDMARK@を切り裂くような、@KEI_A2@悲鳴が響き渡った！'),
+            new SctItm('「ひぃぃぃぃっ！！」<br>　正に@KEI_B2@@L_LANDMARK@を揺るがす、@KEID_A@@KEI_A2@事件が巻き起こった！'),
+            new SctItm('「きゃあああああっ！！」<br>　引き裂くような@KEI_A2@悲鳴に、@KEI_B2@@L_CLASS@達は一斉に振り返った！'),
+            new SctItm('「うわぁぁぁぁぁっ！！」<br>　耳を貫くほどの@KEI_A2@悲鳴！ いったい何が起こったか！'),
+            new SctItm('「あああああっ！！」<br>　@KEI_A2@叫びが、@KEI_B2@@L_TOWN@全てを揺るがした！'),
+            new SctItm('「しまったあああっ！！」<br>　いったい何をしくじったのか、世界を揺るがす絶望感！'),
+            new SctItm('「嫌だあああああああっ！！」<br>　そこの居る全ての@KEI_B2@@L_CLASS@達は凍り付かせた、この@KEI_B2@世界の全てを拒絶する拒否反応！<br>')
         ];
     }
 }
@@ -901,7 +905,7 @@ class selector_mystSpot extends SctItm_Selector {
             new SctItm('　@KEI_B2@@L_LANDMARK@の@GRADE@@KEI_A2@現場では、いまだ@KEID_A@@KEI_A2@遺体を中心に、尚も@KEI_B2@@L_CLASS@達の怒号に近い@KEI_B2@悲鳴が飛び交っていた。<br><br>@MYST_RES01@'),
             new SctItm('　@KEI_B2@@L_LANDMARK@の事故現場には、@MANY@@L_CLASS@達が野次馬となって集まり、その中心に殺された@KEI_A2@@L_CLASS@が倒れていた。<br><br>@MYST_RES01@'),
             new SctItm('　@KEI_B2@@L_LANDMARK@の事故現場には、今正に殺された@KEI_A2@@L_CLASS@の遺体。辺りには、そしらぬ@KEI_B2@顔で行き交い、@L_DOING@いる@KEI_B2@@L_CLASS@達の姿。<br><br>@MYST_RES01@'),
-            new SctItm('　駆けつけた@KEI_B2@現場には、一人の@KEI_A2@@L_CLASS@の遺体が、今正に悲鳴を上げて殺されたままの姿で残されていた。それを見守る@MANY@@KEI_B2@@L_CLASS@達。<br><br>@MYST_RES01@'),
+            new SctItm('　駆けつけた@KEI_B2@現場には、一人の@KEI_A2@@L_CLASS@の遺体が、今正に悲鳴を上げて殺されたままの姿で残されていた。その周囲でざわめく、@MANY@@KEI_B2@@L_CLASS@達。<br><br>@MYST_RES01@'),
             new SctItm('　駆けつけると現場には被害者らしき姿は無く、ただし、まだ新しい血痕と、なんとも@KEI_A2@気配。周囲には何があったのかと@KEI_B2@顔を見合わせる@MANY@@KEI_B2@@L_CLASS@達。<br><br>@MYST_RES02@'),
             new SctItm('　駆けつけた二人は困惑する。確かに@KEI_A2@悲鳴が上がった現場には何も見当たらない。ただ、何故だか@KEI_A2@空気と、@KEI_B2@顔つきをした@MANY@@L_CLASS@達が残されていた。<br><br>@MYST_RES02@')
         ];
