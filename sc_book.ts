@@ -9,7 +9,7 @@ function set_book()
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B01.75';
+    html += ' B01.76';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -1225,7 +1225,7 @@ class selector_mystAccident extends SctItm_Selector implements ISctItm_Selector 
             ,
             new SctItm('「しまったあああっ！！」<br>　いったい何をしくじったのか、世界を揺るがす絶望感！')
             ,
-            new SctItm('「嫌だあああああああっ！！」<br>　そこの居る全ての@KEI_B2@@L_CLASS@達は凍り付かせた、この@KEI_B2@世界の全てを拒絶する拒否反応！<br>')
+            new SctItm('「嫌だあああああああっ！！」<br>　@L_TOWN@全ての@KEI_B2@@L_CLASS@達を凍り付かせた、@KEI_B2@世界の全てを拒絶する拒否反応！<br>')
         ]
     }
 }
