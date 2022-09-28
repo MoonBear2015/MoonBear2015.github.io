@@ -9,7 +9,7 @@ function set_book()
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B01.76';
+    html += ' B01.78';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -1100,9 +1100,9 @@ class selector_mystComment extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('『@L_TOWN_INSCRIPTION@』　――　@L_CLASS@ @HUMAN@')
             ,
-            new SctItm('　この@MYST_ACTPAPER@は、もっとも@KEI_A2@事件の記録となるだろう。　――　@L_BOSSNAME@@L_BOSS@')
+            new SctItm('　この事件は、私の数ある@MYST_ACTPAPER@の中でも、@KEIFRONT@@KEI_A2@記録となるだろう。　――　@L_BOSSNAME@@L_BOSS@')
             ,
-            new SctItm('　@L_BOSSNAME@@L_BOSS@は後に、もっとも@EMO@い事件だと@ASSES02@ています。<br>　――　@L_GIRL@(@L_ASS@)の@MYST_ACTPAPER@より')
+            new SctItm('　@L_BOSSNAME@@L_BOSS@は後に、@KEIFRONT@@EMO@い事件であったと語っています。<br>　――　@L_GIRL@(@L_ASS@)の@MYST_ACTPAPER@より')
             ,
             new SctItm('―― @KEI_A2@我が@PART@に捧ぐ　@L_BOOKWRITER@ ――')
             ,

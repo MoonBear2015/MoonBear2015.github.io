@@ -1321,6 +1321,30 @@ class selector_emofront extends SctItm_Selector implements ISctItm_Selector {
         ];
     }
 }
+class selector_keifront extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@KEIFRONT@');
+        this.itms = [
+            new SctItm('少し')
+            ,
+            new SctItm('少々')
+            ,
+            new SctItm('ちょっと')
+            ,
+            new SctItm('とても')
+            ,
+            new SctItm('極めて')
+            ,
+            new SctItm('滅多に無いほど')
+            ,
+            new SctItm('非常に')
+            ,
+            new SctItm('怖いくらい')
+            ,
+            new SctItm('恐ろしいほど')
+        ];
+    }
+}
 
 
 class selector_end02a extends SctItm_Selector implements ISctItm_Selector {
@@ -4080,6 +4104,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_emotion());
         this.dic_push(new selector_emotion01());
         this.dic_push(new selector_emofront());
+        this.dic_push(new selector_keifront());
         this.dic_push(new selector_doingend());
         this.dic_push(new selector_doing());
         this.dic_push(new selector_doing01());
