@@ -9,7 +9,7 @@ function set_qa()
     html += '<h1>';
     html += 'Q&A';
     html += '<small>';
-    html += ' Q01.21';
+    html += ' Q01.22';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -296,7 +296,7 @@ class selector_q_title extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('助けて！ @L_PART@に@L_DO@されそうなんです！')
             ,
-            new SctItm('@L_PART@が@KEI2@で仕方がありません')
+            new SctItm('@L_PART@が@KEIMN@で仕方がありません')
             ,
             new SctItm('@L_PART@の@L_HABIT@を止めさせたいんです')
             ,
@@ -306,15 +306,15 @@ class selector_q_title extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@L_PART@が@L_HABIT@で捕まっています')
             ,
-            new SctItm('私の@KEI@@L_PART@を知りませんか')
+            new SctItm('私の@KEIN2@@L_PART@を知りませんか')
             ,
-            new SctItm('私の@KEI@@L_PART@を探しています')
+            new SctItm('私の@KEIN2@@L_PART@を探しています')
             ,
             new SctItm('@L_PART@を募集しています')
             ,
-            new SctItm('どうして、@CLASS@は@KEI1@のでしょうか')
+            new SctItm('どうして、@CLASS@は@KEIN2@のでしょうか')
             ,
-            new SctItm('どうして、@L_PART@は@KEI1@のでしょうか')
+            new SctItm('どうして、@L_PART@は@KEIN2@のでしょうか')
             ,
             new SctItm('どうすれば@CLASS@になれますか')
             ,
@@ -353,7 +353,7 @@ class selector_q_init extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('私が@COUNTRY@にいた頃、@Q_SENT@')
             ,
-            new SctItm('私には@KEI@@L_PART@がいるのですが、@Q_SENT@')
+            new SctItm('私には@KEIN2@@L_PART@がいるのですが、@Q_SENT@')
             ,
             new SctItm('私には@CLASS@をしている@AGE2@の@L_PART@がいるのですが、@Q_SENT@')
         ]
@@ -429,9 +429,9 @@ class selector_q01_me extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@WHO3@私は')
             ,
-            new SctItm('私の@KEI@@L_PART@は')
+            new SctItm('私の@KEIN2@@L_PART@は')
             ,
-            new SctItm('私の@KEI@@L_PART@が')
+            new SctItm('私の@KEIN2@@L_PART@が')
         ]
     }
 }
@@ -500,7 +500,7 @@ class selector_q03_quest extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@MANYPEOPLE@が@ASSES@ので')
             ,
-            new SctItm('@KEI@@PEOPLE@と@ASSES@ので')
+            new SctItm('@KEIN2@@PEOPLE@と@ASSES@ので')
             ,
             new SctItm('@PART@が@DOING@しまい')
             ,
@@ -534,7 +534,7 @@ class selector_q03_quest extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@MANYPEOPLE@に取り囲まれ')
             ,
-            new SctItm('@PART@が@KEI1@ので')
+            new SctItm('@PART@が@KEIN2@ので')
             ,
             new SctItm('本当は@CLASS@になりたいので')
             ,
@@ -728,9 +728,9 @@ class selector_a_msg extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('私は@MANYPEOPLE@から「@CALL2@」と@GRADE@@ASSES@のです')
             ,
-            new SctItm('それは@KEI@@QUESTER@さんが「@CALL2@」と@GRADE@@ASSES@からです')
+            new SctItm('それは@KEIP2@@QUESTER@さんが「@CALL2@」と@GRADE@@ASSES@からです')
             ,
-            new SctItm('それは@KEI@@L_PART@さんが@DOING@からです')
+            new SctItm('それは@KEIP2@@L_PART@さんが@DOING@からです')
             ,
             new SctItm('@QUESTER@さんの@L_PART@さんなら、@CITY@の@PLACE@で@L_DOING@います')
             ,
@@ -757,9 +757,9 @@ class selector_a01_you extends SctItm_Selector implements ISctItm_Selector {
             // ,
             new SctItm('@QUESTER@さんが')
             ,
-            new SctItm('あなたの@KEI@@L_PART@さんが')
+            new SctItm('あなたの@KEIP2@@L_PART@さんが')
             ,
-            new SctItm('@QUESTER@さんの@KEI@@L_PART@さんが')
+            new SctItm('@QUESTER@さんの@KEIP2@@L_PART@さんが')
             ,
             new SctItm('私が')
             ,
@@ -787,7 +787,7 @@ class selector_a02_quest extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@MANYPEOPLE@に@ASSES@のなら')
             ,
-            new SctItm('@KEI@@PEOPLE@と@ASSES@なら')
+            new SctItm('@KEIP2@@PEOPLE@と@ASSES@なら')
             ,
             new SctItm('@DOING@いるなら')
             ,
@@ -827,15 +827,15 @@ class selector_a04_result extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@GRADE@@THINK@しても仕方がありません')
             ,
-            new SctItm('@GRADE@@THINK@しているとは実に@KEI1@話です')
+            new SctItm('@GRADE@@THINK@しているとは実に@KEIP2@話です')
             ,
-            new SctItm('@GRADE@@THINK@するとは@KEI1@話です')
+            new SctItm('@GRADE@@THINK@するとは@KEIP2@話です')
             ,
             new SctItm('@GRADE@@THINK@したってどうしようもありません')
             ,
             new SctItm('@GRADE@@THINK@するのは当然です')
             ,
-            new SctItm('@KEI@@PEOPLE@と@ASSES@のは当たり前です')
+            new SctItm('@KEIP2@@PEOPLE@と@ASSES@のは当たり前です')
             ,
             new SctItm('@DOING@いてはどうしようもありません')
             ,
