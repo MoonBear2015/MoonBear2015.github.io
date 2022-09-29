@@ -855,8 +855,9 @@ class selector_emofront extends SctItm_Selector {
             new SctItm('正直、'),
             new SctItm('とても'),
             new SctItm('ああ、'),
-            new SctItm('いやはや、'),
-            new SctItm('こうなっては')
+            new SctItm('いやはや、')
+            // ,
+            // new SctItm('こうなっては')
         ];
     }
 }

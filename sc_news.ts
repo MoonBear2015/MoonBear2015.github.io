@@ -1316,8 +1316,8 @@ class selector_emofront extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('ああ、')
             ,
             new SctItm('いやはや、')
-            ,
-            new SctItm('こうなっては')
+            // ,
+            // new SctItm('こうなっては')
         ];
     }
 }
