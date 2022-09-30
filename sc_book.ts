@@ -9,7 +9,7 @@ function set_book()
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B01.79';
+    html += ' B01.80';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -778,7 +778,7 @@ class selector_storyEEND extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('　@L_EVILFULLNAME@の@KEIN2@大勝利！<br>「これで@L_WHAT@は私のモノだ！ ガハハハッ！」<br><br>　@HEROCATCH@@L_HERONAME@！<br>　@HEROCATCH@@L_HERONAME@！<br>　このままでは済まされないぞ！<br><p style="text-align: right">(つづく)</p>')
             ,
-            new SctItm('「悪が栄える！ これがこの世の真実だ！」<br>　@L_WHAT@は@KEIN2@@L_EVILJOB@@L_EVILTYPE@の魔の手に落ちた！<br><br>　@HEROCATCH@@L_HERONAME@！<br>　@HEROCATCH@@L_HERONAME@！<br>　@L_WHAT@があなたを待っている！<br><p style="text-align: right">(つづく)</p>')
+            new SctItm('「悪が栄える！ これが宇宙の真実だ！」<br>　@L_WHAT@は@KEIN2@@L_EVILJOB@@L_EVILTYPE@の魔の手に落ちた！<br><br>　@HEROCATCH@@L_HERONAME@！<br>　@HEROCATCH@@L_HERONAME@！<br>　@L_WHAT@があなたを待っている！<br><p style="text-align: right">(つづく)</p>')
             ,
             new SctItm('「さあ、@L_CLASS@共よ！ 俺様に平伏すが良い！ ゲハハハ！」<br>　@L_EVILFULLNAME@の@KEIN2@大勝利！<br><br>　@HEROCATCH@@L_HERONAME@！<br>　@HEROCATCH@@L_HERONAME@！<br>　@L_CLASS@達を救えるのは君だけだ！<br><p style="text-align: right">(つづく)</p>')
         ]
@@ -1343,7 +1343,7 @@ class selector_mystHealingA extends SctItm_Selector implements ISctItm_Selector 
             ,
             new SctItm('――@KEI_A2@@L_CLASS@の@NAME@@AGE@は遠い目で、<br>「ああ、さっきの@KEI_B2@人ですよね。可哀相に」')
             ,
-            new SctItm('――@KEI_A2@@L_CLASS@の@NAME@@AGE@は溜息交じりに、<br>「最近の@L_TOWN@は@KEI_B3@から・・・☆☆」')
+            new SctItm('――@KEI_A2@@L_CLASS@の@NAME@@AGE@は溜息交じりに、<br>「最近の@L_TOWN@は@KEI_B3@から・・・」')
             ,
             new SctItm('――@KEI_A2@@L_CLASS@の@NAME@@AGE@は空を仰いで、<br>「いや、@DOING02@いましたから。私は」')
         ]
