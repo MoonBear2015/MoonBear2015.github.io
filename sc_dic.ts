@@ -8072,6 +8072,10 @@ const   itms_hero_type = [
     new SctItm('博士','HERO/Hero16.jpg')
     ,
     new SctItm('教授','HERO/Hero16.jpg')
+    ,
+    new SctItm('マスク','HERO/Hero17.jpg')
+    ,
+    new SctItm('仮面','HERO/Hero17.jpg')
 ]
 
 const   itms_evil_type = [
