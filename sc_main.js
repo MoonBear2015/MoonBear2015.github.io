@@ -28,7 +28,6 @@ function set_site_footer() {
 function make_site_header() {
     let html = '';
     html += '<div id="header_title">';
-    html += '<a href="https://www.free-counter.jp/"><img src="https://www.f-counter.net/j/61/1677292598/"></a>';
     html += '<h1>';
     html += '「空虚」';
     html += '<small>';
