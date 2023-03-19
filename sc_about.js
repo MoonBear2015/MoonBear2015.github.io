@@ -7,7 +7,7 @@ function set_about() {
     html += '<h1>';
     html += 'ABOUT';
     html += '<small>';
-    html += ' A01.17';
+    html += ' A01.18';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -114,11 +114,13 @@ class about_title extends SctItm_Counter {
     constructor() {
         super('@ABOUT_TITLE@');
         this.itms = [
-            new SctItm('Producer'),
-            new SctItm('"News" Editor'),
-            new SctItm('"Poem" Editor'),
-            new SctItm('"Q&A" Editor'),
-            new SctItm('"Shop" Editor'),
+            new SctItm('Main Producer'),
+            new SctItm('"News" Producer'),
+            new SctItm('"Poem" Producer'),
+            new SctItm('"Q&A" Producer'),
+            new SctItm('"Shop" Producer'),
+            new SctItm('"Horoscope" Producer'),
+            new SctItm('"Book" Producer'),
             new SctItm('Web Designer'),
             new SctItm('Web Designer'),
             new SctItm('Web Designer'),
