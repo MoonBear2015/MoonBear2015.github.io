@@ -28,12 +28,16 @@ function set_site_footer() {
 function make_site_header() {
     let html = '';
     html += '<div id="header_title">';
+    html += '<a href="https://www.free-counter.jp/"><img src="https://www.f-counter.net/j/61/1677576045/" alt="アクセスカウンター"></a>';
     html += '<h1>';
     html += '「空虚」';
-    html += '<small>';
-    html += 'M01.96';
-    html += '</small>';
     html += '</h1>';
+    html += '<small>';
+    html += 'M02.00';
+    html += '</small>';
+    // html += '<small>';
+    // html += 'パソコンのブラウザでご覧下さい';
+    // html += '</small>';
     html += '</div>';
     html += '<div id="header_menu">';
     html += make_header_menu(0);
