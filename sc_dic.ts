@@ -8364,19 +8364,19 @@ const   itms_doing = [
     ,
     new SctItm('『@CALL@』と署名して')
     ,
-    new SctItm('『@CALL@』と呼ばれて')
+    new SctItm('@MANYPEOPLE@から『@CALL@』と呼ばれて')
     ,
-    new SctItm('『@CALL@』と噂されて')
+    new SctItm('@MANYPEOPLE@から『@CALL@』と噂されて')
     ,
-    new SctItm('『@CALL@』と馬鹿にされて')
+    new SctItm('@MANYPEOPLE@から『@CALL@』と馬鹿にされて')
     ,
-    new SctItm('『@CALL@』と後ろ指を指されて')
+    new SctItm('@MANYPEOPLE@から『@CALL@』と後ろ指を指されて')
     ,
-    new SctItm('『@CALL@』と讃えられて')
+    new SctItm('@MANYPEOPLE@から『@CALL@』と讃えられて')
     ,
-    new SctItm('『@CALL@』と賞賛されて')
+    new SctItm('@MANYPEOPLE@から『@CALL@』と賞賛されて')
     ,
-    new SctItm('『@CALL@』とおだてられて')
+    new SctItm('@MANYPEOPLE@から『@CALL@』とおだてられて')
     ,
     new SctItm('@PART@を連れて')
     ,
@@ -8468,11 +8468,13 @@ const   itms_doing = [
     ,
     new SctItm('@SCHOOL@を中退して')
     ,
-    new SctItm('@FLOWER@の花を|捧|ささ|げて')
+    new SctItm('@PART@に@FLOWER@の花を|捧|ささ|げて')
+    ,
+    new SctItm('@PART@に@FLOWER@の花束を|捧|ささ|げて')
     ,
     new SctItm('@FLOWER@の花を咲かせて')
     ,
-    new SctItm('@FLOWER@の花を飾って')
+    new SctItm('@PLACE@に@FLOWER@の花を飾って')
     ,
     new SctItm('@FLOWER@の花の絵を描いて')
     ,
@@ -8574,19 +8576,19 @@ const   itms_doing_l = [
     ,
     new SctItm('@L_CITY@に家を建てて')
     ,
-    new SctItm('『@L_ITEM@の@L_SPECIALIST@』と呼ばれて')
+    new SctItm('@MANYPEOPLE@から『@L_ITEM@の@L_SPECIALIST@』と呼ばれて')
     ,
-    new SctItm('『@L_ITEM@の@L_SPECIALIST@』と噂されて')
+    new SctItm('@MANYPEOPLE@から『@L_ITEM@の@L_SPECIALIST@』と噂されて')
     ,
-    new SctItm('『@L_ITEM@の@L_SPECIALIST@』と馬鹿にされて')
+    new SctItm('@MANYPEOPLE@から『@L_ITEM@の@L_SPECIALIST@』と馬鹿にされて')
     ,
-    new SctItm('『@L_ITEM@の@L_SPECIALIST@』と後ろ指を指されて')
+    new SctItm('@MANYPEOPLE@から『@L_ITEM@の@L_SPECIALIST@』と後ろ指を指されて')
     ,
-    new SctItm('『@L_ITEM@の@L_SPECIALIST@』と讃えられて')
+    new SctItm('@MANYPEOPLE@から『@L_ITEM@の@L_SPECIALIST@』と讃えられて')
     ,
-    new SctItm('『@L_ITEM@の@L_SPECIALIST@』と賞賛されて')
+    new SctItm('@MANYPEOPLE@から『@L_ITEM@の@L_SPECIALIST@』と賞賛されて')
     ,
-    new SctItm('『@L_ITEM@の@L_SPECIALIST@』とおだてられて')
+    new SctItm('@MANYPEOPLE@から『@L_ITEM@の@L_SPECIALIST@』とおだてられて')
     ,
     new SctItm('@L_PART@を連れて')
     ,
@@ -8660,11 +8662,13 @@ const   itms_doing_l = [
     ,
     new SctItm('@L_DRESS@を仮縫いして')
     ,
-    new SctItm('@L_FLOWER@の花を|捧|ささ|げて')
+    new SctItm('@L_PART@に@L_FLOWER@の花を|捧|ささ|げて')
+    ,
+    new SctItm('@L_FLOWER@の花束を|捧|ささ|げて')
     ,
     new SctItm('@L_FLOWER@の花を咲かせて')
     ,
-    new SctItm('@L_FLOWER@の花を飾って')
+    new SctItm('@PLACE@に@L_FLOWER@の花を飾って')
     ,
     new SctItm('@L_FLOWER@の花の絵を描いて')
     ,
