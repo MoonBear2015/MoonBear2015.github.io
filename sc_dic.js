@@ -3696,6 +3696,7 @@ const itms_do = [
     new SctItm('優勝', 'DO/topwin.jpg'),
     new SctItm('発明', 'DO/invention.jpg'),
     new SctItm('開発', 'DO/debelop.jpg'),
+    new SctItm('分析', 'DO/analysis.jpg'),
     new SctItm('革命', 'DO/revolution.jpg'),
     new SctItm('移住', 'DO/emigration.jpg'),
     new SctItm('降臨', 'DO/advent.jpg'),
