@@ -7,7 +7,7 @@ function set_qa() {
     html += '<h1>';
     html += 'Q&A';
     html += '<small>';
-    html += ' Q01.23';
+    html += ' Q01.24';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -473,7 +473,8 @@ class selector_a_sent extends SctItm_Selector {
             new SctItm('@A_MSG@が、@DOING@いる@L_PART@さんを見かけましたよ。'),
             new SctItm('@A_MSG@が、@A_SENT@'),
             new SctItm('@A_MSG@けど、@A_SENT@'),
-            new SctItm('さては、@QUESTER@さんの正体は@L_EVILFULLNAME@だったのですね？ ')
+            new SctItm('さては、@QUESTER@さんの正体は@L_EVILFULLNAME@だったのですね？ '),
+            new SctItm('それでは私の@SONGTYPE@『@SONGTITLE@』を聞いて下さい')
         ];
     }
 }
