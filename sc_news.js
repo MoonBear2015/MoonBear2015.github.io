@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N03.16';
+    html += ' N03.17';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -1488,6 +1488,12 @@ class selector_season extends SctItm_Selector {
         this.Add(itms_season);
     }
 }
+class selector_today extends SctItm_Selector {
+    constructor() {
+        super('@TODAY@');
+        this.Add(cods_to_itms(cods_today));
+    }
+}
 class selector_move extends SctItm_Selector {
     constructor() {
         super('@MOVE@');
@@ -2722,6 +2728,72 @@ class locker_herocatch extends SctItm_SelectLocker {
         this.Add(itms_hero_catch);
     }
 }
+class selector_songColor extends SctItm_Selector {
+    constructor() {
+        super('@SONGCOLOR@');
+        this.Add(itms_songColor1);
+        this.Add(itms_songColor3);
+    }
+}
+class selector_songColorName extends SctItm_Selector {
+    constructor() {
+        super('@SONGCOLORNAME@');
+        this.Add(itms_songColor2);
+        this.Add(itms_songColor3);
+    }
+}
+class selector_songGenre extends SctItm_Selector {
+    constructor() {
+        super('@SONGGENRE@');
+        this.Add(itms_songGenre);
+    }
+}
+class selector_songType extends SctItm_Selector {
+    constructor() {
+        super('@SONGTYPE@');
+        this.Add(itms_songType);
+    }
+}
+class selector_songTema extends SctItm_Selector {
+    constructor() {
+        super('@SONGTEMA@');
+        this.Add(itms_songTema);
+    }
+}
+class locker_songItem extends SctItm_SelectLocker {
+    constructor() {
+        super('@SONGITEM@');
+        this.itms = [
+            new SctItm('@L_WHAT@'),
+            new SctItm('@L_ANIMAL@'),
+            new SctItm('@L_FLOWER@'),
+            new SctItm('@L_FRUIT@'),
+            new SctItm('@L_FOOD@'),
+            new SctItm('@L_RIDE@'),
+            new SctItm('@L_DRESS@'),
+            new SctItm('@L_SEXAGE@'),
+            new SctItm('@L_PART@'),
+            new SctItm('@L_HABIT@'),
+            new SctItm('@L_MUSIC@'),
+            new SctItm('@L_STAR@'),
+            new SctItm('@L_SPORTS@'),
+            new SctItm('@L_TECH@')
+        ];
+    }
+}
+class selector_songTitle extends SctItm_Selector {
+    constructor() {
+        super('@SONGTITLE@');
+        this.itms = [
+            new SctItm('@SONGTEMA@の@SONGITEM@'),
+            new SctItm('@SONGCOLORNAME@の@SONGITEM@'),
+            new SctItm('@SONGCOLOR@@SONGITEM@'),
+            new SctItm('@SONGITEM@の@SONGTEMA@'),
+            new SctItm('@SONGITEM@は@SONGCOLORNAME@'),
+            new SctItm('@SONGITEM@@SONGGENRE@')
+        ];
+    }
+}
 class news_doc {
     constructor(doc) {
         this.doc = doc;
@@ -2839,6 +2911,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_grade());
         this.dic_push(new selector_dir());
         this.dic_push(new selector_season());
+        this.dic_push(new selector_today());
         this.dic_push(new selector_move());
         this.dic_push(new selector_think());
         this.dic_push(new selector_who());
@@ -2931,5 +3004,12 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new locker_heroevil());
         this.dic_push(new selector_herocatch());
         this.dic_push(new locker_herocatch());
+        this.dic_push(new selector_songColor());
+        this.dic_push(new selector_songColorName());
+        this.dic_push(new selector_songGenre());
+        this.dic_push(new selector_songType());
+        this.dic_push(new selector_songTema());
+        this.dic_push(new locker_songItem());
+        this.dic_push(new selector_songTitle());
     }
 }

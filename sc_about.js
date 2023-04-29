@@ -7,7 +7,7 @@ function set_about() {
     html += '<h1>';
     html += 'ABOUT';
     html += '<small>';
-    html += ' A01.18';
+    html += ' A01.19';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -46,7 +46,8 @@ function make_about() {
         shtml += '趣味:@HABIT@<br>';
         shtml += '好物:@FOOD@<br>';
         shtml += '座右の銘:@INSCRIPTION@<br>';
-        shtml += '正体：@L_HEROEVIL@';
+        shtml += '正体：@L_HEROEVIL@<br>';
+        shtml += '@SONGTYPE@：@SONGTITLE@';
         shtml += '<br>';
         shtml += '</div>';
         let maker = new news_docs_maker();

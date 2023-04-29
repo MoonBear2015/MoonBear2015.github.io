@@ -3109,8 +3109,8 @@ const   cods_today = [
     new SctCod_It('|明後日|あさって|')
     ,
     new SctCod_It('|明後日|みょうごにち|')
-    ,
-    new SctCod_It('|何時|いつ|')
+    // ,
+    // new SctCod_It('|何時|いつ|')
 ];
 
 const   cods_future = [
@@ -7489,6 +7489,7 @@ const   itms_music = [
 ]
 
 
+
 const   itms_ride = [
     new SctItm('車')
     ,
@@ -9281,3 +9282,119 @@ const   itms_mystActPaper = [
     ,
     new SctItm('犯罪日誌')
 ]
+
+
+const   itms_songColor1 = [
+    new SctItm('|赤|あか|い')
+    ,
+    new SctItm('|青|あお|い')
+    ,
+    new SctItm('|黄色|きいろ|い')
+    ,
+    new SctItm('|白|しろ|い')
+    ,
+    new SctItm('|黒|くろ|い')
+    ,
+    new SctItm('|淡|あわ|い')
+    ,
+    new SctItm('|薄|うす|い')
+    ,
+    new SctItm('|濃|こ|い')
+];
+
+const   itms_songColor2 = [
+    new SctItm('|水色|みずいろ|')
+    ,
+    new SctItm('|紫色|むらさきいろ|')
+    ,
+    new SctItm('|桃色|ももいろ|')
+    ,
+    new SctItm('@L_FLOWER@色')
+    ,
+    new SctItm('@L_FRUIT@色')
+    ,
+    new SctItm('@L_FISH@色')
+    ,
+    new SctItm('@SEASON@色')
+];
+
+const   itms_songColor3 = [
+    new SctItm('ホワイト')
+    ,
+    new SctItm('イエロー')
+    ,
+    new SctItm('ブルー')
+    ,
+    new SctItm('グリーン')
+    ,
+    new SctItm('ピンク')
+    ,
+    new SctItm('パープル')
+    ,
+    new SctItm('ブラック')
+];
+
+const   itms_songGenre = [
+    new SctItm('応援歌')
+    ,
+    new SctItm('演歌')
+    ,
+    new SctItm('音頭')
+    ,
+    new SctItm('哀歌')
+    ,
+    new SctItm('ロック')
+    ,
+    new SctItm('ブルース')
+    ,
+    new SctItm('ソング')
+]
+const   itms_songType = [
+    new SctItm('デビュー曲')
+    ,
+    new SctItm('テーマソング')
+    ,
+    new SctItm('ヒット曲')
+    ,
+    new SctItm('持ち歌')
+    ,
+    new SctItm('新曲')
+    ,
+    new SctItm('代表曲')
+    ,
+    new SctItm('主題歌')
+]
+
+
+
+// ～の の～
+const   itms_songTema = [
+    new SctItm('愛')
+    ,
+    new SctItm('恋')
+    ,
+    new SctItm('二人')
+    ,
+    new SctItm('哀愁')
+    ,
+    new SctItm('怒り')
+    ,
+    new SctItm('涙')
+    ,
+    new SctItm('絶望')
+    ,
+    new SctItm('希望')
+    ,
+    new SctItm('夢')
+    ,
+    new SctItm('運命')
+    ,
+    new SctItm('奇跡')
+    ,
+    new SctItm('@TODAY@')
+    ,
+    new SctItm('@SEASON@')
+]
+
+
+
