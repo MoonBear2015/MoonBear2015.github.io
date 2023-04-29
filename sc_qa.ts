@@ -9,7 +9,7 @@ function set_qa()
     html += '<h1>';
     html += 'Q&A';
     html += '<small>';
-    html += ' Q01.25';
+    html += ' Q01.26';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -116,6 +116,7 @@ function Make_A() : string {
     {
         html += '@A_SENT@';
     }
+    html += '@A_END@';
     html += '</p>';
 
 
@@ -140,6 +141,7 @@ class qa_docs_maker extends news_docs_maker {
         this.dic_push(new selector_a_title());
         this.dic_push(new selector_a_init());
         this.dic_push(new selector_a_sent());
+        this.dic_push(new selector_a_end());
         this.dic_push(new selector_a_msg());
         this.dic_push(new selector_a01_you());
         this.dic_push(new selector_a03_issue());
@@ -707,13 +709,42 @@ class selector_a_sent extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@A_MSG@が、@A_SENT@')
             ,
             new SctItm('@A_MSG@けど、@A_SENT@')
-            ,
-            new SctItm('さては、@QUESTER@さんの正体は@L_EVILFULLNAME@だったのですね？ ')
-            ,
-            new SctItm('それでは私の@SONGTYPE@『@SONGTITLE@』を聞いて下さい。')
         ]
     }
 }
+
+class selector_a_end extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@A_END@');
+        this.itms = [
+            new SctItm('@A_SENT@')
+            ,
+            new SctItm('@A_SENT@')
+            ,
+            new SctItm('@A_SENT@')
+            ,
+            new SctItm('@A_SENT@')
+            ,
+            new SctItm('@A_SENT@')
+            ,
+            new SctItm('@A_SENT@')
+            ,
+            new SctItm('@A_SENT@')
+            ,
+            new SctItm('@A_SENT@')
+            ,
+            new SctItm('さては、@QUESTER@さんの正体は@L_EVILFULLNAME@だったのですね？ ')
+            ,
+            new SctItm('何を隠そう、私の正体は@L_HEROFULLNAME@だったのです。 ')
+            ,
+            new SctItm('それでは私の@SONGTYPE@『@SONGTITLE@』を聞いて下さい。')
+            ,
+            new SctItm('それでは最後に聞いて下さい。私の@SONGTYPE@『@SONGTITLE@』――。')
+        ]
+    }
+}
+
+
 class selector_a_msg extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@A_MSG@');

@@ -3934,7 +3934,6 @@ class selector_songColorName extends SctItm_Selector implements ISctItm_Selector
     constructor(){
         super('@SONGCOLORNAME@');
         this.Add(itms_songColor2);
-        this.Add(itms_songColor3);
     }
 }
 

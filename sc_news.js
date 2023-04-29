@@ -2741,7 +2741,6 @@ class selector_songColorName extends SctItm_Selector {
     constructor() {
         super('@SONGCOLORNAME@');
         this.Add(itms_songColor2);
-        this.Add(itms_songColor3);
     }
 }
 class selector_songGenre extends SctItm_Selector {
