@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N03.17';
+    html += ' N03.18';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -997,7 +997,9 @@ class selector_who4 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@MANYPEOPLE@より『@CALL2@』と@KEID@@ASSES@@PEOPLE@')
             ,
-            new SctItm('『@INSCRIPTION@』')
+            new SctItm('座右の銘『@INSCRIPTION@』')
+            ,
+            new SctItm('@SONGTYPE@『@SONGTITLE@』')
        ];
     }
 }
@@ -1258,6 +1260,8 @@ class selector_comment2 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('私の@PART@は@DOING@@DOINGEND@')
             ,
             new SctItm('私が@DOING@@DOINGEND@とき、@PART@が@DOING@@DOINGEND@のだ')
+            ,
+            new SctItm('それでは私の@SONGTYPE@、『@SONGTITLE@』を聞いて下さい')
 
         ];
     }
