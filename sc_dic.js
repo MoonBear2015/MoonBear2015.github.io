@@ -5175,7 +5175,8 @@ const itms_doing = [
     new SctItm('@MUSIC@を歌って'),
     new SctItm('@RIDE@に乗って'),
     new SctItm('@FESTIVAL@を開催して'),
-    new SctItm('@FESTIVAL@に参加して')
+    new SctItm('@FESTIVAL@に参加して'),
+    new SctItm('@SONGTYPE@『@SONGTITLE@』を歌って')
 ];
 const itms_doing_l = [
     new SctItm('@L_FOOD@を食べて'),
@@ -5282,7 +5283,8 @@ const itms_doing_l = [
     new SctItm('@L_FRUIT@を叩き売りして'),
     new SctItm('@L_RIDE@に乗って'),
     new SctItm('@L_FESTIVAL@を開催して'),
-    new SctItm('@L_FESTIVAL@に参加して')
+    new SctItm('@L_FESTIVAL@に参加して'),
+    new SctItm('@SONGTYPE@『@SONG_WHAT@』を歌って')
 ];
 const itms_doing_o = [
     new SctItm('@O_FOOD@を食べて'),

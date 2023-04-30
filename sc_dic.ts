@@ -8504,6 +8504,9 @@ const   itms_doing = [
     new SctItm('@FESTIVAL@を開催して')
     ,
     new SctItm('@FESTIVAL@に参加して')
+    ,
+    new SctItm('@SONGTYPE@『@SONGTITLE@』を歌って')
+
 ]
 
 const   itms_doing_l = [
@@ -8696,6 +8699,8 @@ const   itms_doing_l = [
     new SctItm('@L_FESTIVAL@を開催して')
     ,
     new SctItm('@L_FESTIVAL@に参加して')
+    ,
+    new SctItm('@SONGTYPE@『@SONG_WHAT@』を歌って')
 ]
 
 const   itms_doing_o = [

@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N03.19';
+    html += ' N03.20';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -1155,8 +1155,6 @@ class selector_comment extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@NICKBAD@ッ！ @NICKBAD@ッ！ @NICKBAD@ッ！')
             ,
             new SctItm('@L_WHAT@の@NICKBAD@！ @L_WHAT@の@NICKBAD@！ @L_WHAT@の@NICKBAD@！ @L_WHAT@の@NICKBAD@！ ')
-            ,
-            new SctItm('それでは私の@SONGTYPE@『@SONGTITLE@』を聞いて下さい')
         ];
     }
 }
@@ -4010,6 +4008,43 @@ class selector_songTitle extends SctItm_Selector implements ISctItm_Selector {
     }
 }
 
+class selector_songWhat extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@SONG_WHAT@');
+        this.itms = [
+            new SctItm('@SONGTEMA@の@L_WHAT@')
+            ,
+            new SctItm('@SONGCOLORNAME@の@L_WHAT@')
+            ,
+            new SctItm('@SONGCOLOR@@L_WHAT@')
+            ,
+            new SctItm('@L_WHAT@の@SONGTEMA@')
+            ,
+            new SctItm('@L_WHAT@は@SONGCOLORNAME@')
+            ,
+            new SctItm('@L_WHAT@@SONGGENRE@')
+        ];
+    }
+}
+class selector_songPart extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@SONG_PART@');
+        this.itms = [
+            new SctItm('@SONGTEMA@の@L_PART@')
+            ,
+            new SctItm('@SONGCOLORNAME@の@L_PART@')
+            ,
+            new SctItm('@SONGCOLOR@@L_PART@')
+            ,
+            new SctItm('@L_PART@の@SONGTEMA@')
+            ,
+            new SctItm('@L_PART@は@SONGCOLORNAME@')
+            ,
+            new SctItm('@L_PART@@SONGGENRE@')
+        ];
+    }
+}
+
 
 
 class news_doc {
@@ -4242,6 +4277,8 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_songTema());
         this.dic_push(new locker_songItem());
         this.dic_push(new selector_songTitle());
+        this.dic_push(new selector_songWhat());
+        this.dic_push(new selector_songPart());
         
     }
 }

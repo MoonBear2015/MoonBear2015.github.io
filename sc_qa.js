@@ -486,14 +486,10 @@ class selector_a_end extends SctItm_Selector {
             new SctItm('@A_SENT@'),
             new SctItm('@A_SENT@'),
             new SctItm('@A_SENT@'),
-            new SctItm('@A_SENT@'),
-            new SctItm('@A_SENT@'),
-            new SctItm('@A_SENT@'),
-            new SctItm('@A_SENT@'),
             new SctItm('さては、@QUESTER@さんの正体は@L_EVILFULLNAME@だったのですね？ '),
             new SctItm('何を隠そう、私の正体は@L_HEROFULLNAME@だったのです。 '),
-            new SctItm('それでは私の@SONGTYPE@『@SONGTITLE@』を聞いて下さい。'),
-            new SctItm('それでは最後に聞いて下さい。私の@SONGTYPE@『@SONGTITLE@』――。')
+            new SctItm('それでは私の@SONGTYPE@『@SONG_PART@』を聞いて下さい。'),
+            new SctItm('それでは最後に聞いて下さい。私の@SONGTYPE@『@SONG_PART@』――。')
         ];
     }
 }
