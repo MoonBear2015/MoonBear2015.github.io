@@ -1557,8 +1557,10 @@ const cods_adv_danger = [
     // ,
     // new SctCod_It('|凄|すさ|まじく')
     // ,
-    new SctCod_It('|空恐|そらおそ|ろしく'),
-    new SctCod_It('|酷|ひど|く'),
+    new SctCod_It('|空恐|そらおそ|ろしく')
+    // ,
+    // new SctCod_It('|酷|ひど|く')
+    ,
     new SctCod_It('|険|けわ|しく'),
     new SctCod_It('|怪|あや|しく'),
     new SctCod_It('|如何|いかが|わしく'),
@@ -5176,7 +5178,7 @@ const itms_doing = [
     new SctItm('@RIDE@に乗って'),
     new SctItm('@FESTIVAL@を開催して'),
     new SctItm('@FESTIVAL@に参加して'),
-    new SctItm('@SONGTYPE@『@SONGTITLE@』を歌って')
+    new SctItm('@SONGTYPE@『@SONGTITLE@』を@KEI4@歌って')
 ];
 const itms_doing_l = [
     new SctItm('@L_FOOD@を食べて'),
@@ -5284,7 +5286,8 @@ const itms_doing_l = [
     new SctItm('@L_RIDE@に乗って'),
     new SctItm('@L_FESTIVAL@を開催して'),
     new SctItm('@L_FESTIVAL@に参加して'),
-    new SctItm('@SONGTYPE@『@SONG_WHAT@』を歌って')
+    new SctItm('@SONGTYPE@『@SONG_WHAT@』を@KEI4@歌って'),
+    new SctItm('@SONGTYPE@『@SONG_PART@』を@KEI4@歌って')
 ];
 const itms_doing_o = [
     new SctItm('@O_FOOD@を食べて'),

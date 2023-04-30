@@ -2740,8 +2740,8 @@ const   cods_adv_danger = [
     // new SctCod_It('|凄|すさ|まじく')
     // ,
     new SctCod_It('|空恐|そらおそ|ろしく')
-    ,
-    new SctCod_It('|酷|ひど|く')
+    // ,
+    // new SctCod_It('|酷|ひど|く')
     ,
     new SctCod_It('|険|けわ|しく')
     ,
@@ -8505,7 +8505,7 @@ const   itms_doing = [
     ,
     new SctItm('@FESTIVAL@に参加して')
     ,
-    new SctItm('@SONGTYPE@『@SONGTITLE@』を歌って')
+    new SctItm('@SONGTYPE@『@SONGTITLE@』を@KEI4@歌って')
 
 ]
 
@@ -8700,7 +8700,9 @@ const   itms_doing_l = [
     ,
     new SctItm('@L_FESTIVAL@に参加して')
     ,
-    new SctItm('@SONGTYPE@『@SONG_WHAT@』を歌って')
+    new SctItm('@SONGTYPE@『@SONG_WHAT@』を@KEI4@歌って')
+    ,
+    new SctItm('@SONGTYPE@『@SONG_PART@』を@KEI4@歌って')
 ]
 
 const   itms_doing_o = [
