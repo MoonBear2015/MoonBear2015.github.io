@@ -5649,7 +5649,9 @@ const itms_songGenre = [
     new SctItm('哀歌'),
     new SctItm('ロック'),
     new SctItm('ブルース'),
-    new SctItm('ソング')
+    new SctItm('ソング'),
+    new SctItm('マンボ'),
+    new SctItm('サンバ')
 ];
 const itms_songType = [
     new SctItm('デビュー曲'),
@@ -5674,5 +5676,13 @@ const itms_songTema = [
     new SctItm('運命'),
     new SctItm('奇跡'),
     new SctItm('@TODAY@'),
-    new SctItm('@SEASON@')
+    new SctItm('@SEASON@'),
+    new SctItm('夜明け'),
+    new SctItm('夕焼け'),
+    new SctItm('青空'),
+    new SctItm('夜空'),
+    new SctItm('雨'),
+    new SctItm('雪景色'),
+    new SctItm('天下'),
+    new SctItm('天下')
 ];

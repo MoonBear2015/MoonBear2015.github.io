@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N03.21';
+    html += ' N03.22';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -3977,8 +3977,6 @@ class locker_songItem extends SctItm_SelectLocker implements ISctItm_Selector{
             new SctItm('@L_PART@')
             ,
             new SctItm('@L_HABIT@')
-            ,
-            new SctItm('@L_MUSIC@')
             ,
             new SctItm('@L_STAR@')
             ,
