@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N03.22';
+    html += ' N03.23';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -2674,7 +2674,24 @@ class locker_hero extends SctItm_SelectLocker {
     constructor() {
         super('@L_HERO@');
         this.itms = [
-            new SctItm('@ITEM@の@NICKGOOD@ @L_HEROFULLNAME@')
+            new SctItm('「@L_HERONICK@」@L_HEROFULLNAME@')
+        ];
+    }
+}
+class locker_hero2 extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_HERO2@');
+        this.itms = [
+            new SctItm('「@L_HERONICK@」と@ASSES@@L_HEROFULLNAME@')
+        ];
+    }
+}
+class locker_heroNick extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_HERONICK@');
+        this.itms = [
+            new SctItm('@L_WHAT@の@NICKGOOD@'),
+            new SctItm('@L_DO@@END02B@@NICKGOOD@')
         ];
     }
 }
@@ -2704,7 +2721,24 @@ class locker_evil extends SctItm_SelectLocker {
     constructor() {
         super('@L_EVIL@');
         this.itms = [
-            new SctItm('@WHAT@の@NICKBAD@ @L_EVILFULLNAME@')
+            new SctItm('「@L_EVILNICK@」@L_EVILFULLNAME@')
+        ];
+    }
+}
+class locker_evil2 extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_EVIL2@');
+        this.itms = [
+            new SctItm('「@L_EVILNICK@」と@ASSES@@L_EVILFULLNAME@')
+        ];
+    }
+}
+class locker_evilNick extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_EVILNICK@');
+        this.itms = [
+            new SctItm('@L_WHAT@の@NICKBAD@'),
+            new SctItm('@L_DO@@END02B@@NICKBAD@')
         ];
     }
 }
@@ -3018,6 +3052,8 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new locker_herojob());
         this.dic_push(new locker_herofullname());
         this.dic_push(new locker_hero());
+        this.dic_push(new locker_hero2());
+        this.dic_push(new locker_heroNick());
         this.dic_push(new locker_chr_evil1());
         this.dic_push(new locker_chr_evil2());
         this.dic_push(new locker_evilmark());
@@ -3026,6 +3062,8 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new locker_eviljob());
         this.dic_push(new locker_evilfullname());
         this.dic_push(new locker_evil());
+        this.dic_push(new locker_evil2());
+        this.dic_push(new locker_evilNick());
         this.dic_push(new locker_heroevil());
         this.dic_push(new selector_herocatch());
         this.dic_push(new locker_herocatch());

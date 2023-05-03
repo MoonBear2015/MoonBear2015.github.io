@@ -296,8 +296,8 @@ class selector_q_msg extends SctItm_Selector {
             new SctItm('@Q_MSG01@@Q_MSG02@が、@Q_MSG03@@Q_MSG04@'),
             new SctItm('私の@WHO3@@L_PART@の話です'),
             new SctItm('私の「@CALL2@」と@GRADE@@ASSES@@L_PART@のことです'),
-            new SctItm('何を隠そう、私の正体は@L_EVIL@だったのです'),
-            new SctItm('@L_HERO@の居場所を探しているのです')
+            new SctItm('何を隠そう、私の正体は@L_EVIL2@だったのです'),
+            new SctItm('@L_HERO2@の居場所を探しているのです')
         ];
     }
 }
@@ -509,7 +509,7 @@ class selector_a_msg extends SctItm_Selector {
             new SctItm('@CONECT2@、@L_PART@さんが@DOING@います'),
             new SctItm('@CONECT2@、私は@DOING@います'),
             new SctItm('@CONECT2@、私が@DOING@いるからです'),
-            new SctItm('何を隠そう、私の正体は@L_HERO@だったのです'),
+            new SctItm('何を隠そう、私の正体は@L_HERO2@だったのです'),
             new SctItm('その@L_HEROFULLNAME@なら私のことです')
         ];
     }
