@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N03.23';
+    html += ' N03.24';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -2674,7 +2674,7 @@ class locker_hero extends SctItm_SelectLocker {
     constructor() {
         super('@L_HERO@');
         this.itms = [
-            new SctItm('「@L_HERONICK@」@L_HEROFULLNAME@')
+            new SctItm('『@L_HERONICK@』@L_HEROFULLNAME@')
         ];
     }
 }
@@ -2682,7 +2682,7 @@ class locker_hero2 extends SctItm_SelectLocker {
     constructor() {
         super('@L_HERO2@');
         this.itms = [
-            new SctItm('「@L_HERONICK@」と@ASSES@@L_HEROFULLNAME@')
+            new SctItm('『@L_HERONICK@』と@ASSES@@L_HEROFULLNAME@')
         ];
     }
 }
@@ -2721,7 +2721,7 @@ class locker_evil extends SctItm_SelectLocker {
     constructor() {
         super('@L_EVIL@');
         this.itms = [
-            new SctItm('「@L_EVILNICK@」@L_EVILFULLNAME@')
+            new SctItm('『@L_EVILNICK@』@L_EVILFULLNAME@')
         ];
     }
 }
@@ -2729,7 +2729,7 @@ class locker_evil2 extends SctItm_SelectLocker {
     constructor() {
         super('@L_EVIL2@');
         this.itms = [
-            new SctItm('「@L_EVILNICK@」と@ASSES@@L_EVILFULLNAME@')
+            new SctItm('『@L_EVILNICK@』と@ASSES@@L_EVILFULLNAME@')
         ];
     }
 }
