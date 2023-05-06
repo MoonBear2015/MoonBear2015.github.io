@@ -9,7 +9,7 @@ function set_qa()
     html += '<h1>';
     html += 'Q&A';
     html += '<small>';
-    html += ' Q01.26';
+    html += ' Q01.27';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -326,7 +326,7 @@ class selector_q_title extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@NICK@の様になりたいのですが')
             ,
-            new SctItm('「@CALL2@」と呼ばれて@GRADE@@THINK@しています')
+            new SctItm('『@CALL2@』と呼ばれて@GRADE@@THINK@しています')
             ,
             new SctItm('@CLASS@になりたくて@GRADE@@THINK@しています')
         ]
@@ -411,7 +411,7 @@ class selector_q_msg extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('私の@WHO3@@L_PART@の話です')
             ,
-            new SctItm('私の「@CALL2@」と@GRADE@@ASSES@@L_PART@のことです')
+            new SctItm('私の『@CALL2@』と@GRADE@@ASSES@@L_PART@のことです')
             ,
             new SctItm('何を隠そう、私の正体は@L_EVIL2@だったのです')
             ,
@@ -470,7 +470,7 @@ class selector_q02 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@L_HABIT@に夢中なのです')
             ,
-            new SctItm('「@CALL2@」と評判なのです')
+            new SctItm('『@CALL2@』と評判なのです')
             ,
             new SctItm('@HABIT@を止めたいのです')
             ,
@@ -669,7 +669,7 @@ class selector_a_init extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('私は@WHO3@@ADVICER@と云います。')
             ,
-            new SctItm('私は@MANYPEOPLE@から「@CALL2@」と@ASSES@@ADVICER@と云います。')
+            new SctItm('私は@MANYPEOPLE@から『@CALL2@』と@ASSES@@ADVICER@と云います。')
 
         ]
     }
@@ -751,9 +751,9 @@ class selector_a_msg extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@A_MSG01@@A_MSG02@、@A_MSG03@@A_MSG04@')
             ,
-            new SctItm('私は@MANYPEOPLE@から「@CALL2@」と@GRADE@@ASSES@のです')
+            new SctItm('私は@MANYPEOPLE@から『@CALL2@』と@GRADE@@ASSES@のです')
             ,
-            new SctItm('それは@KEIP2@@QUESTER@さんが「@CALL2@」と@GRADE@@ASSES@からです')
+            new SctItm('それは@KEIP2@@QUESTER@さんが『@CALL2@』と@GRADE@@ASSES@からです')
             ,
             new SctItm('それは@KEIP2@@L_PART@さんが@DOING@からです')
             ,

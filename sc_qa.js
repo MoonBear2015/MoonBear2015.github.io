@@ -7,7 +7,7 @@ function set_qa() {
     html += '<h1>';
     html += 'Q&A';
     html += '<small>';
-    html += ' Q01.26';
+    html += ' Q01.27';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -236,7 +236,7 @@ class selector_q_title extends SctItm_Selector {
             new SctItm('@CLASS@になりたいんです'),
             new SctItm('@ANIMAL@に追われて困っています'),
             new SctItm('@NICK@の様になりたいのですが'),
-            new SctItm('「@CALL2@」と呼ばれて@GRADE@@THINK@しています'),
+            new SctItm('『@CALL2@』と呼ばれて@GRADE@@THINK@しています'),
             new SctItm('@CLASS@になりたくて@GRADE@@THINK@しています')
         ];
     }
@@ -295,7 +295,7 @@ class selector_q_msg extends SctItm_Selector {
             new SctItm('@Q_MSG02@けど、@Q_MSG03@@Q_MSG04@'),
             new SctItm('@Q_MSG01@@Q_MSG02@が、@Q_MSG03@@Q_MSG04@'),
             new SctItm('私の@WHO3@@L_PART@の話です'),
-            new SctItm('私の「@CALL2@」と@GRADE@@ASSES@@L_PART@のことです'),
+            new SctItm('私の『@CALL2@』と@GRADE@@ASSES@@L_PART@のことです'),
             new SctItm('何を隠そう、私の正体は@L_EVIL2@だったのです'),
             new SctItm('@L_HERO2@の居場所を探しているのです')
         ];
@@ -336,7 +336,7 @@ class selector_q02 extends SctItm_Selector {
             new SctItm('@COUNTRY@から帰ってきたのです'),
             new SctItm('初めて@COUNTRY@に来たのです'),
             new SctItm('@L_HABIT@に夢中なのです'),
-            new SctItm('「@CALL2@」と評判なのです'),
+            new SctItm('『@CALL2@』と評判なのです'),
             new SctItm('@HABIT@を止めたいのです'),
             new SctItm('@HABIT@が苦手なのです'),
             new SctItm('@HABIT@の@NICK@だと評判なのです'),
@@ -451,7 +451,7 @@ class selector_a_init extends SctItm_Selector {
             new SctItm('@A_SENT@'),
             new SctItm('私は@CLASS@をしている@ADVICER@と云います。'),
             new SctItm('私は@WHO3@@ADVICER@と云います。'),
-            new SctItm('私は@MANYPEOPLE@から「@CALL2@」と@ASSES@@ADVICER@と云います。')
+            new SctItm('私は@MANYPEOPLE@から『@CALL2@』と@ASSES@@ADVICER@と云います。')
         ];
     }
 }
@@ -502,8 +502,8 @@ class selector_a_msg extends SctItm_Selector {
             new SctItm('@A_MSG02@、@A_MSG03@@A_MSG04@'),
             new SctItm('@A_MSG01@@A_MSG03@、@A_MSG04@'),
             new SctItm('@A_MSG01@@A_MSG02@、@A_MSG03@@A_MSG04@'),
-            new SctItm('私は@MANYPEOPLE@から「@CALL2@」と@GRADE@@ASSES@のです'),
-            new SctItm('それは@KEIP2@@QUESTER@さんが「@CALL2@」と@GRADE@@ASSES@からです'),
+            new SctItm('私は@MANYPEOPLE@から『@CALL2@』と@GRADE@@ASSES@のです'),
+            new SctItm('それは@KEIP2@@QUESTER@さんが『@CALL2@』と@GRADE@@ASSES@からです'),
             new SctItm('それは@KEIP2@@L_PART@さんが@DOING@からです'),
             new SctItm('@QUESTER@さんの@L_PART@さんなら、@CITY@の@PLACE@で@L_DOING@います'),
             new SctItm('@CONECT2@、@L_PART@さんが@DOING@います'),

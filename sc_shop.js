@@ -7,7 +7,7 @@ function set_shop() {
     html += '<h1>';
     html += 'Shop';
     html += '<small>';
-    html += ' S00.54';
+    html += ' S00.55';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -349,7 +349,7 @@ class selector_s_info01 extends SctItm_Selector {
             new SctItm('@L_CAMPANY_B@社は@KEI1@@L_TECH@を投入し'),
             new SctItm('@L_CAMPANY_B@社は@MANY@@KEY@を経て'),
             new SctItm('@L_CAMPANY_B@社は@KEI1@@FUTURE@のために'),
-            new SctItm('@MANYPEOPLE@より「@CALL2@」と@ASSES@@L_CAMPANY_B@社は'),
+            new SctItm('@MANYPEOPLE@より『@CALL2@』と@ASSES@@L_CAMPANY_B@社は'),
             new SctItm('@FUTURE@の@L_PLACE@のために'),
             new SctItm('@DO@する@L_PLACE@のために')
         ];
@@ -367,8 +367,8 @@ class selector_s_info02 extends SctItm_Selector {
             new SctItm('@KEI1@@FUTURE@の@SUCCESS@をお約束いたします'),
             new SctItm('@KEI1@@L_PLACE@をご提供いたします'),
             new SctItm('@KEI1@@L_PLACE@で@MANY@@SAY2@を頂いております'),
-            new SctItm('「@CALL2@」と@ASSES@@KEI1@@L_PLACE@へとご案内いたします'),
-            new SctItm('「@CALL2@」と@ASSES@@KEI1@@L_SHOP_B@をご紹介いたします')
+            new SctItm('『@CALL2@』と@ASSES@@KEI1@@L_PLACE@へとご案内いたします'),
+            new SctItm('『@CALL2@』と@ASSES@@KEI1@@L_SHOP_B@をご紹介いたします')
         ];
     }
 }
@@ -519,7 +519,7 @@ class selector_ShopComentDocGood extends SctItm_Selector {
             new SctItm('私は@L_CAMPANY@ @L_SHOP@のお陰で@CLASS@になれました'),
             new SctItm('私は@L_CAMPANY@ @L_SHOP@のお陰で@SUCCESS@できました'),
             new SctItm('@L_CAMPANY@ @L_SHOP@が無ければ、ずっと@CLASS@のままでした'),
-            new SctItm('さすが「@CALL2@」と@ASSES@だけのことはあります'),
+            new SctItm('さすが『@CALL2@』と@ASSES@だけのことはあります'),
             new SctItm('これほど@KEI1@@L_SHOP_B@は見たことがありません')
         ];
     }
@@ -546,7 +546,7 @@ class selector_ShopComentDocBad extends SctItm_Selector {
             new SctItm('@L_SHOP_B@にしては大きすぎます'),
             new SctItm('@L_SHOP_B@ってもう古いんです'),
             new SctItm('@L_SHOP_B@があるから、@KEY@や@KEY@が絶えないんです'),
-            new SctItm('そんなことだから「@CALL2@」と@ASSES@んです'),
+            new SctItm('そんなことだから『@CALL2@』と@ASSES@んです'),
             new SctItm('こんな@KEI1@@L_SHOP_B@なんて有り得ません')
         ];
     }
