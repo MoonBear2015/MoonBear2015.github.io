@@ -5750,6 +5750,10 @@ const   itms_do = [
     new SctItm('開花','DO/openflower.jpg')
     ,
     new SctItm('増殖','DO/Multiple.jpg')
+    ,
+    new SctItm('合併','DO/handshake.jpg')
+    ,
+    new SctItm('開国','DO/kaikoku.jpg')
 ]
 
 const   itms_class = [
