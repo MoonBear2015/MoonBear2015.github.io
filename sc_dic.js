@@ -3696,6 +3696,7 @@ const itms_do = [
     new SctItm('生還', 'DO/surviving.jpg'),
     new SctItm('達成', 'DO/affir.jpg'),
     new SctItm('勝利', 'DO/vict.jpg'),
+    new SctItm('反撃', 'DO/counterattack.jpg'),
     new SctItm('優勝', 'DO/topwin.jpg'),
     new SctItm('発明', 'DO/invention.jpg'),
     new SctItm('開発', 'DO/debelop.jpg'),
@@ -3712,7 +3713,8 @@ const itms_do = [
     new SctItm('アニメ化', 'DO/animated.jpg'),
     new SctItm('機械化', 'DO/Mechanization.jpg'),
     new SctItm('進化', 'DO/evolution2.jpg'),
-    new SctItm('開花', 'DO/openflower.jpg')
+    new SctItm('開花', 'DO/openflower.jpg'),
+    new SctItm('増殖', 'DO/Multiple.jpg')
 ];
 const itms_class = [
     new SctItm('@L_COUNTRY@大学教授'),

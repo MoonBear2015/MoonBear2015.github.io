@@ -5713,6 +5713,8 @@ const   itms_do = [
     ,
     new SctItm('勝利','DO/vict.jpg')
     ,
+    new SctItm('反撃','DO/counterattack.jpg')
+    ,
     new SctItm('優勝','DO/topwin.jpg')
     ,
     new SctItm('発明','DO/invention.jpg')
@@ -5746,6 +5748,8 @@ const   itms_do = [
     new SctItm('進化','DO/evolution2.jpg')
     ,
     new SctItm('開花','DO/openflower.jpg')
+    ,
+    new SctItm('増殖','DO/Multiple.jpg')
 ]
 
 const   itms_class = [
