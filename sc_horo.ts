@@ -9,7 +9,7 @@ function set_horo()
     html += '<h1>';
     html += 'Horoscope';
     html += '<small>';
-    html += ' H00.76';
+    html += ' H00.77';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -143,7 +143,7 @@ function make_horo()
         }
         makerItms.Restart();
         html += '</p>'; // info
-        
+
         html += '</div>';
     }
     html += '<br>';
@@ -210,7 +210,7 @@ class First_love extends SctItm_FirstLocker2 implements ISctItm_Selector{
             ,
             new SctItm('@KEI@@CLASS@を射止める絶好のチャンス')
             ,
-            new SctItm('お薦めデートスポット：@LANDMARK@・@LANDMARK@・@LANDMARK@')
+            new SctItm('お薦めデートスポット：@LANDMARK@')
         ]
     }
 }
@@ -364,6 +364,8 @@ class First_music extends SctItm_FirstLocker2 implements ISctItm_Selector{
             new SctItm('@THEY@で人気の@MUSIC@がお薦め')
             ,
             new SctItm('目覚めの@MUSIC@で元気一杯')
+            ,
+            new SctItm('お薦めソング『@SONGTITLE@』')
         ]
     }
 }

@@ -7,7 +7,7 @@ function set_horo() {
     html += '<h1>';
     html += 'Horoscope';
     html += '<small>';
-    html += ' H00.76';
+    html += ' H00.77';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -147,7 +147,7 @@ class First_love extends SctItm_FirstLocker2 {
             new SctItm('@KEY@で@KEI@出逢いが待っている'),
             new SctItm('@KEI@@CLASS@に要注意'),
             new SctItm('@KEI@@CLASS@を射止める絶好のチャンス'),
-            new SctItm('お薦めデートスポット：@LANDMARK@・@LANDMARK@・@LANDMARK@')
+            new SctItm('お薦めデートスポット：@LANDMARK@')
         ];
     }
 }
@@ -257,7 +257,8 @@ class First_music extends SctItm_FirstLocker2 {
             new SctItm('音楽', 'HORO/music.png', 'Music'),
             new SctItm('@COUNTRY@のヒットチャートに注目'),
             new SctItm('@THEY@で人気の@MUSIC@がお薦め'),
-            new SctItm('目覚めの@MUSIC@で元気一杯')
+            new SctItm('目覚めの@MUSIC@で元気一杯'),
+            new SctItm('お薦めソング『@SONGTITLE@』')
         ];
     }
 }
