@@ -3608,7 +3608,8 @@ const itms_what = [
     new SctItm('富士山', 'WHAT/fuji.jpg'),
     new SctItm('スイス', 'WHAT/switzerland.jpg'),
     new SctItm('ナイル川', 'WHAT/nile_river.jpg'),
-    new SctItm('アマゾン川', 'WHAT/amazons.jpg')
+    new SctItm('アマゾン川', 'WHAT/amazons.jpg'),
+    new SctItm('@L_COUNTRY@海軍', 'WHAT/Navy.jpg')
 ];
 const itms_city = [
     new SctItm('東京', 'CITY/tokyo.jpg'),
@@ -3716,7 +3717,8 @@ const itms_do = [
     new SctItm('開花', 'DO/openflower.jpg'),
     new SctItm('増殖', 'DO/Multiple.jpg'),
     new SctItm('合併', 'DO/handshake.jpg'),
-    new SctItm('開国', 'DO/kaikoku.jpg')
+    new SctItm('開国', 'DO/kaikoku.jpg'),
+    new SctItm('解散', 'DO/kaisan.jpg')
 ];
 const itms_class = [
     new SctItm('@L_COUNTRY@大学教授'),
