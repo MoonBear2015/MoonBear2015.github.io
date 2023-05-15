@@ -5747,6 +5747,8 @@ const   itms_do = [
     ,
     new SctItm('巨大化','DO/Giant.jpg')
     ,
+    new SctItm('映画化','DO/movie.jpg')
+    ,
     new SctItm('アニメ化','DO/animated.jpg')
     ,
     new SctItm('機械化','DO/Mechanization.jpg')
@@ -9365,6 +9367,8 @@ const   itms_songGenre = [
     new SctItm('音頭')
     ,
     new SctItm('哀歌')
+    ,
+    new SctItm('子守歌')
     ,
     new SctItm('ロック')
     ,
