@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N03.30';
+    html += ' N03.31';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -1544,6 +1544,8 @@ class selector_size1 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('大型化')
             ,
+            new SctItm('巨大化')
+            ,
             new SctItm('禁止')
             ,
             new SctItm('停止')
@@ -1551,6 +1553,12 @@ class selector_size1 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('中止')
             ,
             new SctItm('延期')
+            ,
+            new SctItm('停滞')
+            ,
+            new SctItm('回復')
+            ,
+            new SctItm('悪化')
         ];
     }
 }
@@ -2905,6 +2913,10 @@ class selector_say extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('記者会見で発表')
             ,
             new SctItm('演説')
+            ,
+            new SctItm('糾弾')
+            ,
+            new SctItm('追求')
             ,
             new SctItm('リツイート')
         ];
