@@ -5489,6 +5489,8 @@ const   itms_what = [
     ,
     new SctItm('竜宮城','WHAT/ryugu.jpg')
     ,
+    new SctItm('鬼ヶ島','WHAT/onigashima.jpg')
+    ,
     new SctItm('戦場','WHAT/war.jpg')
     ,
     new SctItm('スターバックス','WHAT/Startbucks.jpg')

@@ -3579,6 +3579,7 @@ const itms_what = [
     new SctItm('九竜城', 'WHAT/coulomb.jpg'),
     new SctItm('邪馬台国', 'WHAT/yama.jpg'),
     new SctItm('竜宮城', 'WHAT/ryugu.jpg'),
+    new SctItm('鬼ヶ島', 'WHAT/onigashima.jpg'),
     new SctItm('戦場', 'WHAT/war.jpg'),
     new SctItm('スターバックス', 'WHAT/Startbucks.jpg'),
     new SctItm('マクドナルド', 'WHAT/MacDonald.jpg'),
