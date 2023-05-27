@@ -5689,6 +5689,10 @@ const   itms_do = [
     new SctItm('軽蔑','DO/contempt.jpg')
     ,
     new SctItm('驚愕','DO/Surprise.jpg')
+    ,
+    new SctItm('沈没','DO/sinking.jpg')
+    ,
+    new SctItm('閉鎖','DO/KeepOut.jpg')
     //
     // posi 
     //
@@ -5764,6 +5768,8 @@ const   itms_do = [
     new SctItm('開国','DO/kaikoku.jpg')
     ,
     new SctItm('解散','DO/kaisan.jpg')
+    ,
+    new SctItm('開催','DO/event.jpg')
 ]
 
 const   itms_class = [

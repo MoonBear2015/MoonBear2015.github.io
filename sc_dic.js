@@ -3681,7 +3681,9 @@ const itms_do = [
     new SctItm('退化', 'DO/Degeneration.jpg'),
     new SctItm('失望', 'DO/disappointment.jpg'),
     new SctItm('軽蔑', 'DO/contempt.jpg'),
-    new SctItm('驚愕', 'DO/Surprise.jpg')
+    new SctItm('驚愕', 'DO/Surprise.jpg'),
+    new SctItm('沈没', 'DO/sinking.jpg'),
+    new SctItm('閉鎖', 'DO/KeepOut.jpg')
     //
     // posi 
     //
@@ -3721,7 +3723,8 @@ const itms_do = [
     new SctItm('増殖', 'DO/Multiple.jpg'),
     new SctItm('合併', 'DO/handshake.jpg'),
     new SctItm('開国', 'DO/kaikoku.jpg'),
-    new SctItm('解散', 'DO/kaisan.jpg')
+    new SctItm('解散', 'DO/kaisan.jpg'),
+    new SctItm('開催', 'DO/event.jpg')
 ];
 const itms_class = [
     new SctItm('@L_COUNTRY@大学教授'),
