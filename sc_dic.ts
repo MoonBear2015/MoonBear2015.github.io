@@ -5696,6 +5696,8 @@ const   itms_do = [
     ,
     new SctItm('沈没','DO/sinking.jpg')
     ,
+    new SctItm('墜落','DO/plane.jpg')
+    ,
     new SctItm('閉鎖','DO/KeepOut.jpg')
     //
     // posi 
@@ -5779,9 +5781,9 @@ const   itms_do = [
     ,
     new SctItm('大はしゃぎ','DO/fever.jpg')
     ,
-    new SctItm('爆笑','DO/laugh.jpg')
+    new SctItm('爆笑','DO/laugh2.jpg')
     ,
-    new SctItm('大笑い','DO/laugh.jpg')
+    new SctItm('大笑い','DO/laugh2.jpg')
     ,
     new SctItm('結婚','DO/wedding.jpg')
 ]

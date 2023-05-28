@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N03.35';
+    html += ' N03.36';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
