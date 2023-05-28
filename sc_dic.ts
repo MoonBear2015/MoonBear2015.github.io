@@ -5699,6 +5699,8 @@ const   itms_do = [
     new SctItm('墜落','DO/plane.jpg')
     ,
     new SctItm('閉鎖','DO/KeepOut.jpg')
+    ,
+    new SctItm('占領','DO/occupation.jpg')
     //
     // posi 
     //

@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N03.36';
+    html += ' N03.37';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -1376,23 +1376,19 @@ class selector_end02b extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('した')
             ,
-            // new SctItm('されている')
-            // ,
-            // new SctItm('されていた')
-            // ,
-            // new SctItm('させている')
-            // ,
-            // new SctItm('させていた')
-            // ,
             new SctItm('している')
             ,
             new SctItm('していた')
             ,
             new SctItm('してしまった')
-            // ,
-            // new SctItm('したかった')
-            // ,
-            // new SctItm('させたかった')
+            ,
+            new SctItm('される')
+            ,
+            new SctItm('された')
+            ,
+            new SctItm('されている')
+            ,
+            new SctItm('されていた')
         ];
     }
 }
@@ -1404,6 +1400,10 @@ class selector_end02c extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('する')
             ,
             new SctItm('した')
+            ,
+            new SctItm('される')
+            ,
+            new SctItm('された')
         ];
     }
 }
