@@ -8541,6 +8541,10 @@ const   itms_doing = [
     ,
     new SctItm('@FRUIT@の種を捨てて')
     ,
+    new SctItm('@FRUIT@の種を蒔いて')
+    ,
+    new SctItm('@FRUIT@の畑を耕して')
+    ,
     new SctItm('@MUSIC@を聴いて')
     ,
     new SctItm('@MUSIC@を歌って')
@@ -8740,6 +8744,10 @@ const   itms_doing_l = [
     ,
     new SctItm('@L_FRUIT@を叩き売りして')
     ,
+    new SctItm('@L_FRUIT@の種を蒔いて')
+    ,
+    new SctItm('@L_FRUIT@の畑を耕して')
+    ,
     new SctItm('@L_RIDE@に乗って')
     ,
     new SctItm('@L_FESTIVAL@を開催して')
@@ -8935,6 +8943,10 @@ const   itms_doing_o = [
     new SctItm('@L_FRUIT@を叩き売りして')
     ,
     new SctItm('@L_FRUIT@の種を捨てて')
+    ,
+    new SctItm('@L_FRUIT@の種を蒔いて')
+    ,
+    new SctItm('@L_FRUIT@の畑を耕して')
     ,
     new SctItm('@L_RIDE@に乗って')
     ,
