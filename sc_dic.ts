@@ -5556,6 +5556,10 @@ const   itms_what = [
     new SctItm('@L_COUNTRY@政府','WHAT/Government.jpg')
     ,
     new SctItm('@L_COUNTRY@王国','WHAT/kingdom2.jpg')
+    ,
+    new SctItm('@L_COUNTRY@空港','WHAT/airplane.jpg')
+    ,
+    new SctItm('@L_COUNTRY@航空','WHAT/airplane.jpg')
 ];
 
 

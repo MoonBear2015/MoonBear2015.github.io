@@ -3612,7 +3612,9 @@ const itms_what = [
     new SctItm('アマゾン川', 'WHAT/amazons.jpg'),
     new SctItm('@L_COUNTRY@海軍', 'WHAT/Navy.jpg'),
     new SctItm('@L_COUNTRY@政府', 'WHAT/Government.jpg'),
-    new SctItm('@L_COUNTRY@王国', 'WHAT/kingdom2.jpg')
+    new SctItm('@L_COUNTRY@王国', 'WHAT/kingdom2.jpg'),
+    new SctItm('@L_COUNTRY@空港', 'WHAT/airplane.jpg'),
+    new SctItm('@L_COUNTRY@航空', 'WHAT/airplane.jpg')
 ];
 const itms_city = [
     new SctItm('東京', 'CITY/tokyo.jpg'),
