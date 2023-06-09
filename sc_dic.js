@@ -3610,6 +3610,7 @@ const itms_what = [
     new SctItm('スイス', 'WHAT/switzerland.jpg'),
     new SctItm('ナイル川', 'WHAT/nile_river.jpg'),
     new SctItm('アマゾン川', 'WHAT/amazons.jpg'),
+    new SctItm('アトランティス', 'WHAT/Atlantis.jpg'),
     new SctItm('@L_COUNTRY@海軍', 'WHAT/Navy.jpg'),
     new SctItm('@L_COUNTRY@政府', 'WHAT/Government.jpg'),
     new SctItm('@L_COUNTRY@王国', 'WHAT/kingdom2.jpg'),

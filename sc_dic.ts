@@ -5551,6 +5551,8 @@ const   itms_what = [
     ,
     new SctItm('アマゾン川','WHAT/amazons.jpg')
     ,
+    new SctItm('アトランティス','WHAT/Atlantis.jpg')
+    ,
     new SctItm('@L_COUNTRY@海軍','WHAT/Navy.jpg')
     ,
     new SctItm('@L_COUNTRY@政府','WHAT/Government.jpg')
