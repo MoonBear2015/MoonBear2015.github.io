@@ -3690,7 +3690,9 @@ const itms_do = [
     new SctItm('沈没', 'DO/sinking.jpg'),
     new SctItm('墜落', 'DO/plane.jpg'),
     new SctItm('閉鎖', 'DO/KeepOut.jpg'),
-    new SctItm('占領', 'DO/occupation.jpg')
+    new SctItm('占領', 'DO/occupation.jpg'),
+    new SctItm('失敗', 'DO/error.jpg'),
+    new SctItm('失恋', 'DO/brokenheart.jpg')
     //
     // posi 
     //
