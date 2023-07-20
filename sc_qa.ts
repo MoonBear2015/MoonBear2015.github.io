@@ -9,7 +9,7 @@ function set_qa()
     html += '<h1>';
     html += 'Q&A';
     html += '<small>';
-    html += ' Q01.27';
+    html += ' Q01.28';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -416,6 +416,10 @@ class selector_q_msg extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('何を隠そう、私の正体は@L_EVIL2@だったのです')
             ,
             new SctItm('@L_HERO2@の居場所を探しているのです')
+            ,
+            new SctItm('@L_HERO2@の行方を追っているのです')
+            ,
+            new SctItm('@L_HERO2@の抹殺を命じられたのです')
         ]
     }
 }

@@ -5618,6 +5618,10 @@ const   itms_do = [
     ,
     new SctItm('崩壊','DO/Collapse.jpg')
     ,
+    new SctItm('爆発','DO/bomb.jpg')
+    ,
+    new SctItm('大爆発','DO/bomb.jpg')
+    ,
     new SctItm('捏造','DO/fakeTelop.jpg')
     ,
     new SctItm('絶望','DO/Lonly.jpg')
