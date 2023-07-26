@@ -3746,6 +3746,7 @@ const itms_class = [
     new SctItm('@L_COUNTRY@大学教授'),
     new SctItm('大学教授'),
     new SctItm('高校教師'),
+    new SctItm('家庭教師'),
     new SctItm('数学教師'),
     new SctItm('物理学者'),
     new SctItm('経済学者'),
@@ -3981,7 +3982,8 @@ const itms_class = [
     new SctItm('吸血鬼'),
     new SctItm('化け猫'),
     new SctItm('河童'),
-    new SctItm('ゾンビ')
+    new SctItm('ゾンビ'),
+    new SctItm('ミイラ男')
 ];
 const itms_shop = [
     new SctItm('BICYCLE', 'SHOP/BICYCLE01.jpg', '自転車'),
@@ -4354,18 +4356,25 @@ const itms_nickPosi = [
     new SctItm('神'),
     new SctItm('神様'),
     new SctItm('守り神'),
+    new SctItm('守護神'),
     new SctItm('鬼神'),
     new SctItm('魔神'),
     new SctItm('軍神'),
+    new SctItm('大黒柱'),
     new SctItm('コンピューター'),
     new SctItm('薔薇'),
     new SctItm('百合の花'),
+    new SctItm('白百合'),
     new SctItm('野菊'),
     new SctItm('ダイヤモンド'),
     new SctItm('ルビー'),
     new SctItm('宝石'),
+    new SctItm('原石'),
     new SctItm('宝石箱'),
     new SctItm('宝'),
+    new SctItm('国宝'),
+    new SctItm('宝玉'),
+    new SctItm('化身'),
     new SctItm('@STAR@の化身'),
     new SctItm('スター'),
     new SctItm('スーパースター'),
@@ -4623,8 +4632,10 @@ const itms_music = [
     new SctItm('アニメソング'),
     new SctItm('演歌'),
     new SctItm('オペラ'),
-    new SctItm('カントリーミュージック'),
-    new SctItm('クラシック'),
+    new SctItm('カントリーミュージック')
+    // ,
+    // new SctItm('クラシック')
+    ,
     new SctItm('クリスマスソング'),
     new SctItm('軍歌'),
     new SctItm('ゲームミュージック'),
@@ -4712,6 +4723,7 @@ const itms_dance = [
     new SctItm('コサックダンス'),
     new SctItm('ベリーダンス'),
     new SctItm('日本舞踊'),
+    new SctItm('盆踊り'),
     new SctItm('ヒップホップ'),
     new SctItm('パラパラ')
 ];
@@ -4726,6 +4738,8 @@ const itms_scool = [
     new SctItm('女学校'),
     new SctItm('短期大学'),
     new SctItm('夜間学校'),
+    new SctItm('予備校'),
+    new SctItm('学習塾'),
     new SctItm('@CLASS@専門学校'),
     new SctItm('@CLASS@養成所')
 ];

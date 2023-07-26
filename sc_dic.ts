@@ -5811,6 +5811,8 @@ const   itms_class = [
     ,
     new SctItm('高校教師')
     ,
+    new SctItm('家庭教師')
+    ,
     new SctItm('数学教師')
     ,
     new SctItm('物理学者')
@@ -6274,6 +6276,8 @@ const   itms_class = [
     new SctItm('河童')
     ,
     new SctItm('ゾンビ')
+    ,
+    new SctItm('ミイラ男')
 ];
 
 
@@ -6984,17 +6988,23 @@ const   itms_nickPosi = [
     ,
     new SctItm('守り神')
     ,
+    new SctItm('守護神')
+    ,
     new SctItm('鬼神')
     ,
     new SctItm('魔神')
     ,
     new SctItm('軍神')
     ,
+    new SctItm('大黒柱')
+    ,
     new SctItm('コンピューター')
     ,
     new SctItm('薔薇')
     ,
     new SctItm('百合の花')
+    ,
+    new SctItm('白百合')
     ,
     new SctItm('野菊')
     ,
@@ -7004,9 +7014,17 @@ const   itms_nickPosi = [
     ,
     new SctItm('宝石')
     ,
+    new SctItm('原石')
+    ,
     new SctItm('宝石箱')
     ,
     new SctItm('宝')
+    ,
+    new SctItm('国宝')
+    ,
+    new SctItm('宝玉')
+    ,
+    new SctItm('化身')
     ,
     new SctItm('@STAR@の化身')
     ,
@@ -7504,8 +7522,8 @@ const   itms_music = [
     new SctItm('オペラ')
     ,
     new SctItm('カントリーミュージック')
-    ,
-    new SctItm('クラシック')
+    // ,
+    // new SctItm('クラシック')
     ,
     new SctItm('クリスマスソング')
     ,
@@ -7680,6 +7698,8 @@ const   itms_dance = [
     ,
     new SctItm('日本舞踊')
     ,
+    new SctItm('盆踊り')
+    ,
     new SctItm('ヒップホップ')
     ,
     new SctItm('パラパラ')
@@ -7706,6 +7726,10 @@ const   itms_scool = [
     new SctItm('短期大学')
     ,
     new SctItm('夜間学校')
+    ,
+    new SctItm('予備校')
+    ,
+    new SctItm('学習塾')
     ,
     new SctItm('@CLASS@専門学校')
     ,
