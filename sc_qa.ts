@@ -810,7 +810,7 @@ class selector_a02_quest extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@MANYPEOPLE@のせいで')
             ,
-            new SctItm('@CALL2@と@ASSES@なら')
+            new SctItm('『@CALL2@』と@ASSES@なら')
             ,
             new SctItm('@COUNTRY@にいるなら')
             ,
@@ -840,7 +840,7 @@ class selector_a03_issue extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@L_HABIT@が禁止され')
             ,
-            new SctItm('@CALL2@と呼ばれて')
+            new SctItm('『@CALL2@』と呼ばれて')
         ]
     }
 }

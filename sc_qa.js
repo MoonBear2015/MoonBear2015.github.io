@@ -540,7 +540,7 @@ class selector_a02_quest extends SctItm_Selector {
             new SctItm('@CLASS@になりたいなら'),
             new SctItm('@MANYPEOPLE@のために'),
             new SctItm('@MANYPEOPLE@のせいで'),
-            new SctItm('@CALL2@と@ASSES@なら'),
+            new SctItm('『@CALL2@』と@ASSES@なら'),
             new SctItm('@COUNTRY@にいるなら'),
             new SctItm('@MANYPEOPLE@に@ASSES@のなら'),
             new SctItm('@KEIP2@@PEOPLE@と@ASSES@なら'),
@@ -559,7 +559,7 @@ class selector_a03_issue extends SctItm_Selector {
             new SctItm('@L_HABIT@が出来なくて'),
             new SctItm('@L_HABIT@がしたくて'),
             new SctItm('@L_HABIT@が禁止され'),
-            new SctItm('@CALL2@と呼ばれて')
+            new SctItm('『@CALL2@』と呼ばれて')
         ];
     }
 }

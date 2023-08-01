@@ -3694,7 +3694,8 @@ const itms_do = [
     new SctItm('閉鎖', 'DO/KeepOut.jpg'),
     new SctItm('占領', 'DO/occupation.jpg'),
     new SctItm('失敗', 'DO/error.jpg'),
-    new SctItm('失恋', 'DO/brokenheart.jpg')
+    new SctItm('失恋', 'DO/brokenheart.jpg'),
+    new SctItm('朝寝坊', 'DO/overslept.jpg')
     //
     // posi 
     //

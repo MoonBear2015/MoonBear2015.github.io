@@ -5715,6 +5715,8 @@ const   itms_do = [
     new SctItm('失敗','DO/error.jpg')
     ,
     new SctItm('失恋','DO/brokenheart.jpg')
+    ,
+    new SctItm('朝寝坊','DO/overslept.jpg')
     //
     // posi 
     //
