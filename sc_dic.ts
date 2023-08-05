@@ -5723,6 +5723,10 @@ const   itms_do = [
     new SctItm('激怒','DO/angry.jpg')
     ,
     new SctItm('炎上','DO/burn.png')
+    ,
+    new SctItm('閉店','DO/close.jpg')
+    ,
+    new SctItm('終了','DO/end2.jpg')
     //
     // posi 
     //
@@ -5810,6 +5814,8 @@ const   itms_do = [
     new SctItm('大笑い','DO/laugh2.jpg')
     ,
     new SctItm('結婚','DO/wedding.jpg')
+    ,
+    new SctItm('コンプリート','DO/complete.jpg')
 ]
 
 const   itms_class = [

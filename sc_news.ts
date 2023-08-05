@@ -3206,6 +3206,8 @@ class selector_day extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('日が暮れるまで')
             ,
+            new SctItm('夜が明けるまで')
+            ,
             new SctItm('伝統的な')
         ];
     }
@@ -3303,7 +3305,7 @@ class selector_assessment02 extends SctItm_Selector implements ISctItm_Selector 
             ,
             new SctItm('見間違え')
             ,
-            new SctItm('間違えら')
+            new SctItm('間違えられ')
         ];
     }
 }

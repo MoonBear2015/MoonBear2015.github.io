@@ -2230,6 +2230,7 @@ class selector_day extends SctItm_Selector {
             new SctItm('今日も今日とて'),
             new SctItm('朝から晩まで'),
             new SctItm('日が暮れるまで'),
+            new SctItm('夜が明けるまで'),
             new SctItm('伝統的な')
         ];
     }
@@ -2286,7 +2287,7 @@ class selector_assessment02 extends SctItm_Selector {
             new SctItm('見守られ'),
             new SctItm('訴えられ'),
             new SctItm('見間違え'),
-            new SctItm('間違えら')
+            new SctItm('間違えられ')
         ];
     }
 }
