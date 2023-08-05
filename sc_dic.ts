@@ -5816,6 +5816,10 @@ const   itms_do = [
     new SctItm('結婚','DO/wedding.jpg')
     ,
     new SctItm('コンプリート','DO/complete.jpg')
+    ,
+    new SctItm('正常化','DO/clean.jpg')
+    ,
+    new SctItm('浄化','DO/clean.jpg')
 ]
 
 const   itms_class = [
