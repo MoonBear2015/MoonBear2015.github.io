@@ -3700,7 +3700,8 @@ const itms_do = [
     new SctItm('激怒', 'DO/angry.jpg'),
     new SctItm('炎上', 'DO/burn.png'),
     new SctItm('閉店', 'DO/close.jpg'),
-    new SctItm('終了', 'DO/end2.jpg')
+    new SctItm('終了', 'DO/end2.jpg'),
+    new SctItm('謝罪', 'DO/column.png')
     //
     // posi 
     //
