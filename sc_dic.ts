@@ -5588,6 +5588,10 @@ const   itms_city = [
     ,
     new SctItm('ワシントン','CITY/washington.jpg')
     ,
+    new SctItm('シカゴ','CITY/Chicago.jpg')
+    ,
+    new SctItm('マンハッタン','CITY/Manhattan.jpg')
+    ,
     new SctItm('ハリウッド','CITY/hollywood.jpg')
     ,
     new SctItm('パリ','CITY/Paris.jpg')
@@ -7115,13 +7119,21 @@ const   itms_nickNomal = [
     ,
     new SctItm('市民')
     ,
+    new SctItm('@CITY@市民')
+    ,
     new SctItm('国民')
+    ,
+    new SctItm('@COUNTRY@国民')
     ,
     new SctItm('村長')
     ,
     new SctItm('市長')
     ,
+    new SctItm('@CITY@市長')
+    ,
     new SctItm('国王')
+    ,
+    new SctItm('@COUNTRY@国王')
     ,
     new SctItm('一般大衆')
     ,
