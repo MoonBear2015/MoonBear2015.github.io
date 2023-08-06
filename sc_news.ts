@@ -1724,7 +1724,14 @@ class selector_they extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('野次馬達')
             ,
             new SctItm('@SEXAGE@達')
-
+            ,
+            new SctItm('市民')
+            ,
+            new SctItm('@CITY@市民')
+            ,
+            new SctItm('国民')
+            ,
+            new SctItm('@COUNTRY@国民')
         ];
     }
 }
