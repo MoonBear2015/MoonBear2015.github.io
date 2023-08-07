@@ -7,7 +7,7 @@ function set_about() {
     html += '<h1>';
     html += 'ABOUT';
     html += '<small>';
-    html += ' A01.19';
+    html += ' A01.20';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -42,6 +42,8 @@ function make_about() {
         shtml += '国籍:@COUNTRY@出身<br>';
         shtml += '住所:@COUNTRY@在住<br>';
         shtml += '学歴:@SCHOOL@ @SCOOLAS@<br>';
+        shtml += '専攻:@SCIENCE@<br>';
+        shtml += '受賞歴:@AWARD@ 受賞<br>';
         shtml += '仕事:@L_CLASS@<br>';
         shtml += '趣味:@HABIT@<br>';
         shtml += '好物:@FOOD@<br>';

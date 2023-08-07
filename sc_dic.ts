@@ -8626,6 +8626,10 @@ const   itms_doing = [
     new SctItm('@FESTIVAL@に参加して')
     ,
     new SctItm('@SONGTYPE@『@SONGTITLE@』を@KEI4@歌って')
+    ,
+    new SctItm('@AWARD@を受賞して')
+    ,
+    new SctItm('@PEOPLE@で始めて@AWARD@を受賞して')
 
 ]
 
@@ -8827,6 +8831,10 @@ const   itms_doing_l = [
     new SctItm('@SONGTYPE@『@SONG_WHAT@』を@KEI4@歌って')
     ,
     new SctItm('@SONGTYPE@『@SONG_PART@』を@KEI4@歌って')
+    ,
+    new SctItm('@AWARD@を受賞して')
+    ,
+    new SctItm('@PEOPLE@で始めて@AWARD@を受賞して')
 ]
 
 const   itms_doing_o = [
@@ -9023,6 +9031,10 @@ const   itms_doing_o = [
     new SctItm('@L_FESTIVAL@を開催して')
     ,
     new SctItm('@L_FESTIVAL@に参加して')
+    ,
+    new SctItm('@AWARD@を受賞して')
+    ,
+    new SctItm('@PEOPLE@で始めて@AWARD@を受賞して')
 ]
 
 const   itms_boyName = [
@@ -9490,6 +9502,7 @@ const   itms_songGenre = [
     ,
     new SctItm('サンバ')
 ]
+
 const   itms_songType = [
     new SctItm('デビュー曲')
     ,
@@ -9551,6 +9564,78 @@ const   itms_songTema = [
     new SctItm('天下')
     ,
     new SctItm('天下')
+]
+
+const   itms_Science = [
+    new SctItm('数学')
+    ,
+    new SctItm('物理学')
+    ,
+    new SctItm('天文学')
+    ,
+    new SctItm('科学')
+    ,
+    new SctItm('化学')
+    ,
+    new SctItm('工学')
+    ,
+    new SctItm('建築学')
+    ,
+    new SctItm('デザイン学')
+    ,
+    new SctItm('農学')
+    ,
+    new SctItm('医学')
+    ,
+    new SctItm('政治学')
+    ,
+    new SctItm('法学')
+    ,
+    new SctItm('経済学')
+    ,
+    new SctItm('社会学')
+    ,
+    new SctItm('教育学')
+    ,
+    new SctItm('哲学')
+    ,
+    new SctItm('宗教学')
+    ,
+    new SctItm('言語学')
+    ,
+    new SctItm('考古学')
+    ,
+    new SctItm('歴史学')
+    ,
+    new SctItm('地理学')
+    ,
+    new SctItm('文学')
+    ,
+    new SctItm('芸術')
+    ,
+    new SctItm('心理学')
+]
+
+const   itms_Award = [
+    new SctItm('ノーベル@SCIENCE@賞')
+    ,
+    new SctItm('ノーベル@CLASS@大賞')
+    ,
+    new SctItm('@COUNTRY@アカデミー賞')
+    ,
+    new SctItm('@COUNTRY@アカデミー主演男優賞')
+    ,
+    new SctItm('@COUNTRY@アカデミー主演女優賞')
+    ,
+    new SctItm('@COUNTRY@アカデミー新人賞')
+    ,
+    new SctItm('@COUNTRY@レコード大賞')
+    ,
+    new SctItm('@COUNTRY@お笑い大賞')
+    ,
+    new SctItm('@CITY@お笑い大賞')
+    ,
+    new SctItm('@COUNTRY@文化勲章')
 ]
 
 

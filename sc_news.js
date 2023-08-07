@@ -2132,6 +2132,20 @@ class selector_habit extends SctItm_Selector {
         this.Add(itms_sports);
     }
 }
+// 学問
+class selector_science extends SctItm_Selector {
+    constructor() {
+        super('@SCIENCE@');
+        this.Add(itms_Science);
+    }
+}
+// 受賞
+class selector_award extends SctItm_Selector {
+    constructor() {
+        super('@AWARD@');
+        this.Add(itms_Award);
+    }
+}
 class selector_emotion extends SctItm_Selector {
     constructor() {
         super('@EMO@');
@@ -3081,5 +3095,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_songTitle());
         this.dic_push(new selector_songWhat());
         this.dic_push(new selector_songPart());
+        this.dic_push(new selector_science());
+        this.dic_push(new selector_award());
     }
 }
