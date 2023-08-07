@@ -9619,6 +9619,8 @@ const   itms_Science = [
 const   itms_Award = [
     new SctItm('ノーベル@SCIENCE@賞')
     ,
+    new SctItm('イグノーベル@SCIENCE@賞')
+    ,
     new SctItm('ノーベル@CLASS@大賞')
     ,
     new SctItm('@COUNTRY@アカデミー賞')
@@ -9640,6 +9642,14 @@ const   itms_Award = [
     new SctItm('@COUNTRY@グッドデザイン賞')
     ,
     new SctItm('@COUNTRY@流行語大賞')
+    ,
+    new SctItm('第@NUM10000@回芥川賞')
+    ,
+    new SctItm('第@NUM10000@回直木賞')
+    ,
+    new SctItm('@YEAR@年度グラミー賞')
+    ,
+    new SctItm('最優秀@CLASS@賞')
 ]
 
 
