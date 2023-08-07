@@ -87,7 +87,7 @@ function make_shop()
             if (chk < 0) break;
             if (cnt > 10)
             {
-                alert('over work : ' + chk.toString());
+                alert('over work ~: ' + chk.toString() + html01);
                 break;
             }
         }
@@ -381,7 +381,7 @@ class selector_catch extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('さあ、@KEI1@@L_PLACE@が待っている')
             ,
-            new SctItm('@AWARD@ 受賞')
+            new SctItm('@AWARD@を受賞した@KEI1@@L_TECH@')
         ];
     }
 }
