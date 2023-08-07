@@ -5242,7 +5242,8 @@ const itms_doing = [
     new SctItm('@FESTIVAL@に参加して'),
     new SctItm('@SONGTYPE@『@SONGTITLE@』を@KEI4@歌って'),
     new SctItm('@AWARD@を受賞して'),
-    new SctItm('@PEOPLE@で始めて@AWARD@を受賞して')
+    new SctItm('@PEOPLE@で始めて@AWARD@を受賞して'),
+    new SctItm('@PEOPLE@で唯一、@AWARD@を受賞して')
 ];
 const itms_doing_l = [
     new SctItm('@L_FOOD@を食べて'),
@@ -5355,7 +5356,8 @@ const itms_doing_l = [
     new SctItm('@SONGTYPE@『@SONG_WHAT@』を@KEI4@歌って'),
     new SctItm('@SONGTYPE@『@SONG_PART@』を@KEI4@歌って'),
     new SctItm('@AWARD@を受賞して'),
-    new SctItm('@PEOPLE@で始めて@AWARD@を受賞して')
+    new SctItm('@PEOPLE@で始めて@AWARD@を受賞して'),
+    new SctItm('@PEOPLE@で唯一、@AWARD@を受賞して')
 ];
 const itms_doing_o = [
     new SctItm('@O_FOOD@を食べて'),
@@ -5475,9 +5477,7 @@ const itms_doing_o = [
     new SctItm('@L_FRUIT@の畑を耕して'),
     new SctItm('@L_RIDE@に乗って'),
     new SctItm('@L_FESTIVAL@を開催して'),
-    new SctItm('@L_FESTIVAL@に参加して'),
-    new SctItm('@AWARD@を受賞して'),
-    new SctItm('@PEOPLE@で始めて@AWARD@を受賞して')
+    new SctItm('@L_FESTIVAL@に参加して')
 ];
 const itms_boyName = [
     new SctItm('|Александр|アレクサンドル|'),
@@ -5795,5 +5795,7 @@ const itms_Award = [
     new SctItm('@COUNTRY@レコード大賞'),
     new SctItm('@COUNTRY@お笑い大賞'),
     new SctItm('@CITY@お笑い大賞'),
-    new SctItm('@COUNTRY@文化勲章')
+    new SctItm('@COUNTRY@文化勲章'),
+    new SctItm('@COUNTRY@グッドデザイン賞'),
+    new SctItm('@COUNTRY@流行語大賞')
 ];

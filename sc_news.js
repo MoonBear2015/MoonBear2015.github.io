@@ -659,7 +659,8 @@ class selector_who4 extends SctItm_Selector {
             new SctItm('『@CALL2@』と@KEID@@ASSES@@PEOPLE@'),
             new SctItm('@MANYPEOPLE@より『@CALL2@』と@KEID@@ASSES@@PEOPLE@'),
             new SctItm('座右の銘『@INSCRIPTION@』'),
-            new SctItm('@SONGTYPE@『@SONGTITLE@』')
+            new SctItm('@SONGTYPE@『@SONGTITLE@』'),
+            new SctItm('@AWARD@ 受賞')
         ];
     }
 }

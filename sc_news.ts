@@ -1000,6 +1000,8 @@ class selector_who4 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('座右の銘『@INSCRIPTION@』')
             ,
             new SctItm('@SONGTYPE@『@SONGTITLE@』')
+            ,
+            new SctItm('@AWARD@ 受賞')
        ];
     }
 }

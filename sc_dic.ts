@@ -8630,6 +8630,8 @@ const   itms_doing = [
     new SctItm('@AWARD@を受賞して')
     ,
     new SctItm('@PEOPLE@で始めて@AWARD@を受賞して')
+    ,
+    new SctItm('@PEOPLE@で唯一、@AWARD@を受賞して')
 
 ]
 
@@ -8835,6 +8837,8 @@ const   itms_doing_l = [
     new SctItm('@AWARD@を受賞して')
     ,
     new SctItm('@PEOPLE@で始めて@AWARD@を受賞して')
+    ,
+    new SctItm('@PEOPLE@で唯一、@AWARD@を受賞して')
 ]
 
 const   itms_doing_o = [
@@ -9031,10 +9035,6 @@ const   itms_doing_o = [
     new SctItm('@L_FESTIVAL@を開催して')
     ,
     new SctItm('@L_FESTIVAL@に参加して')
-    ,
-    new SctItm('@AWARD@を受賞して')
-    ,
-    new SctItm('@PEOPLE@で始めて@AWARD@を受賞して')
 ]
 
 const   itms_boyName = [
@@ -9636,6 +9636,10 @@ const   itms_Award = [
     new SctItm('@CITY@お笑い大賞')
     ,
     new SctItm('@COUNTRY@文化勲章')
+    ,
+    new SctItm('@COUNTRY@グッドデザイン賞')
+    ,
+    new SctItm('@COUNTRY@流行語大賞')
 ]
 
 
