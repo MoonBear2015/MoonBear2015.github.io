@@ -906,6 +906,13 @@ class selector_who extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('『@CALL@』と@KEID@@ASSES@@L_CLASS@の@HUMAN@@AGE@')
             ,
             new SctItm('@MANYPEOPLE@より『@CALL@』と@ASSES@@L_CLASS@の@HUMAN@@AGE@')
+            ,
+            new SctItm('@AWARD@を受賞した@HUMAN@@AGE@')
+            ,
+            new SctItm('@AWARD@を獲得した@HUMAN@@AGE@')
+            ,
+            new SctItm('@AWARD@の受賞者、@HUMAN@@AGE@')
+
         ];
     }
 }
@@ -921,6 +928,8 @@ class selector_who2 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('『@CALL@』と@KEID@@ASSES@@PEOPLE@')
             ,
             new SctItm('@MANYPEOPLE@より『@CALL@』と@KEID@@ASSES@@PEOPLE@')
+            ,
+            new SctItm('@AWARD@ 受賞')
         ];
     }
 }
@@ -3044,6 +3053,13 @@ class selector_science extends SctItm_Selector implements ISctItm_Selector {
     }
 }
 
+// 賞
+class selector_awardType extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@AWARDTYPE@');
+        this.Add(itms_AwardType);
+    }
+}
 // 受賞
 class selector_award extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
@@ -4357,6 +4373,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_songPart());
 
         this.dic_push(new selector_science());
+        this.dic_push(new selector_awardType());
         this.dic_push(new selector_award());
         
     }

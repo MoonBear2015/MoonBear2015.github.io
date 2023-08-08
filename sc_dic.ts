@@ -5837,11 +5837,11 @@ const   itms_class = [
     ,
     new SctItm('家庭教師')
     ,
-    new SctItm('数学教師')
+    new SctItm('@SCIENCE@教師')
     ,
-    new SctItm('物理学者')
+    new SctItm('@SCIENCE@者')
     ,
-    new SctItm('経済学者')
+    new SctItm('@SCIENCE@教授')
     ,
     new SctItm('政治評論家')
     ,
@@ -9616,40 +9616,41 @@ const   itms_Science = [
     new SctItm('心理学')
 ]
 
+const   itms_AwardType = [
+    new SctItm('ノーベル')
+    ,
+    new SctItm('イグノーベル')
+    ,
+    new SctItm('ピューリッツァー')
+    ,
+    new SctItm('@YEAR@年度グラミー')
+    ,
+    new SctItm('@L_WHAT@アカデミー')
+    ,
+    new SctItm('@L_WHAT@レコード')
+]
+
+
 const   itms_Award = [
-    new SctItm('ノーベル@SCIENCE@賞')
+    new SctItm('@AWARDTYPE@@SCIENCE@賞')
     ,
-    new SctItm('イグノーベル@SCIENCE@賞')
+    new SctItm('@AWARDTYPE@@L_CLASS@大賞')
     ,
-    new SctItm('ノーベル@CLASS@大賞')
+    new SctItm('@AWARDTYPE@@L_TECH@大賞')
     ,
-    new SctItm('@COUNTRY@アカデミー賞')
+    new SctItm('@AWARDTYPE@@L_DO@大賞')
     ,
-    new SctItm('@COUNTRY@アカデミー主演男優賞')
+    new SctItm('@L_WHAT@文化勲章')
     ,
-    new SctItm('@COUNTRY@アカデミー主演女優賞')
+    new SctItm('@L_WHAT@グッドデザイン賞')
     ,
-    new SctItm('@COUNTRY@アカデミー新人賞')
-    ,
-    new SctItm('@COUNTRY@レコード大賞')
-    ,
-    new SctItm('@COUNTRY@お笑い大賞')
-    ,
-    new SctItm('@CITY@お笑い大賞')
-    ,
-    new SctItm('@COUNTRY@文化勲章')
-    ,
-    new SctItm('@COUNTRY@グッドデザイン賞')
-    ,
-    new SctItm('@COUNTRY@流行語大賞')
+    new SctItm('@L_WHAT@流行語大賞')
     ,
     new SctItm('第@NUM10000@回芥川賞')
     ,
     new SctItm('第@NUM10000@回直木賞')
     ,
-    new SctItm('@YEAR@年度グラミー賞')
-    ,
-    new SctItm('最優秀@CLASS@賞')
+    new SctItm('@L_WHAT@お笑い大賞')
 ]
 
 
