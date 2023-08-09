@@ -2151,6 +2151,12 @@ class selector_awardType extends SctItm_Selector {
         this.Add(itms_AwardType);
     }
 }
+class selector_awardRank extends SctItm_Selector {
+    constructor() {
+        super('@AWARDRANK@');
+        this.Add(itms_AwardRank);
+    }
+}
 // 受賞
 class selector_award extends SctItm_Selector {
     constructor() {
@@ -3109,6 +3115,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_songPart());
         this.dic_push(new selector_science());
         this.dic_push(new selector_awardType());
+        this.dic_push(new selector_awardRank());
         this.dic_push(new selector_award());
     }
 }

@@ -9626,19 +9626,38 @@ const   itms_AwardType = [
     new SctItm('@YEAR@年度グラミー')
     ,
     new SctItm('@L_WHAT@アカデミー')
+]
+const   itms_AwardRank = [
+    new SctItm('金メダル')
     ,
-    new SctItm('@L_WHAT@レコード')
+    new SctItm('銀メダル')
+    ,
+    new SctItm('銅メダル')
+    ,
+    new SctItm('皆勤賞')
+    ,
+    new SctItm('努力賞')
+    ,
+    new SctItm('参加賞')
+    ,
+    new SctItm('ブービー賞')
+    ,
+    new SctItm('特別賞')
 ]
 
 
 const   itms_Award = [
     new SctItm('@AWARDTYPE@@SCIENCE@賞')
     ,
-    new SctItm('@AWARDTYPE@@L_CLASS@大賞')
-    ,
-    new SctItm('@AWARDTYPE@@L_TECH@大賞')
-    ,
     new SctItm('@AWARDTYPE@@L_DO@大賞')
+    ,
+    new SctItm('@AWARDTYPE@お笑い大賞')
+    ,
+    new SctItm('@L_WHAT@お笑い大賞')
+    ,
+    new SctItm('@L_WHAT@レコード大賞')
+    ,
+    new SctItm('@L_WHAT@@L_DO@大賞')
     ,
     new SctItm('@L_WHAT@文化勲章')
     ,
@@ -9650,7 +9669,11 @@ const   itms_Award = [
     ,
     new SctItm('第@NUM10000@回直木賞')
     ,
-    new SctItm('@L_WHAT@お笑い大賞')
+    new SctItm('@L_SPORTS@大会@AWARDRANK@')
+    ,
+    new SctItm('@SCIENCE@オリンピック@AWARDRANK@')
+    ,
+    new SctItm('@L_CITY@オリンピック@AWARDRANK@')
 ]
 
 
