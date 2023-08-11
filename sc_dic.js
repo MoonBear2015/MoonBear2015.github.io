@@ -5241,9 +5241,9 @@ const itms_doing = [
     new SctItm('@FESTIVAL@を開催して'),
     new SctItm('@FESTIVAL@に参加して'),
     new SctItm('@SONGTYPE@『@SONGTITLE@』を@KEI4@歌って'),
-    new SctItm('@AWARD@を受賞して'),
-    new SctItm('@PEOPLE@で始めて@AWARD@を受賞して'),
-    new SctItm('@PEOPLE@で唯一、@AWARD@を受賞して')
+    new SctItm('@AWARD@を@AWARDGET@して'),
+    new SctItm('@PEOPLE@で始めて@AWARD@を@AWARDGET@して'),
+    new SctItm('@PEOPLE@で唯一、@AWARD@を@AWARDGET@して')
 ];
 const itms_doing_l = [
     new SctItm('@L_FOOD@を食べて'),
@@ -5355,9 +5355,9 @@ const itms_doing_l = [
     new SctItm('@L_FESTIVAL@に参加して'),
     new SctItm('@SONGTYPE@『@SONG_WHAT@』を@KEI4@歌って'),
     new SctItm('@SONGTYPE@『@SONG_PART@』を@KEI4@歌って'),
-    new SctItm('@AWARD@を受賞して'),
-    new SctItm('@PEOPLE@で始めて@AWARD@を受賞して'),
-    new SctItm('@PEOPLE@で唯一、@AWARD@を受賞して')
+    new SctItm('@AWARD@を@AWARDGET@して'),
+    new SctItm('@PEOPLE@で始めて@AWARD@を@AWARDGET@して'),
+    new SctItm('@PEOPLE@で唯一、@AWARD@を@AWARDGET@して')
 ];
 const itms_doing_o = [
     new SctItm('@O_FOOD@を食べて'),
@@ -5796,11 +5796,23 @@ const itms_AwardRank = [
     new SctItm('金メダル'),
     new SctItm('銀メダル'),
     new SctItm('銅メダル'),
+    new SctItm('優秀賞'),
+    new SctItm('最優秀賞'),
     new SctItm('皆勤賞'),
     new SctItm('努力賞'),
     new SctItm('参加賞'),
     new SctItm('ブービー賞'),
-    new SctItm('特別賞')
+    new SctItm('特別賞'),
+    new SctItm('主演男優賞'),
+    new SctItm('主演女優賞')
+];
+const itms_AwardGet = [
+    new SctItm('受賞'),
+    new SctItm('獲得'),
+    new SctItm('入賞'),
+    new SctItm('棄権'),
+    new SctItm('辞退'),
+    new SctItm('設立')
 ];
 const itms_Award = [
     new SctItm('@AWARDTYPE@@SCIENCE@賞'),
@@ -5808,13 +5820,15 @@ const itms_Award = [
     new SctItm('@AWARDTYPE@お笑い大賞'),
     new SctItm('@L_WHAT@お笑い大賞'),
     new SctItm('@L_WHAT@レコード大賞'),
+    new SctItm('@L_ITEM@グランプリ@AWARDRANK@'),
+    new SctItm('@L_ITEM@コンテスト@AWARDRANK@'),
     new SctItm('@L_WHAT@@L_DO@大賞'),
     new SctItm('@L_WHAT@文化勲章'),
     new SctItm('@L_WHAT@グッドデザイン賞'),
     new SctItm('@L_WHAT@流行語大賞'),
     new SctItm('第@NUM10000@回芥川賞'),
     new SctItm('第@NUM10000@回直木賞'),
-    new SctItm('@L_SPORTS@大会@AWARDRANK@'),
+    new SctItm('@L_ITEM@大会@AWARDRANK@'),
     new SctItm('@SCIENCE@オリンピック@AWARDRANK@'),
     new SctItm('@L_CITY@オリンピック@AWARDRANK@')
 ];

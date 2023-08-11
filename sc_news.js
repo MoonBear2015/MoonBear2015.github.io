@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N03.41';
+    html += ' N03.42';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -591,7 +591,8 @@ class selector_doc extends SctItm_Selector {
             new SctItm('@DATE@、@WHO@は「@COMMENT@」との@ANSWER@を@SAY@@END02B@。'),
             new SctItm('@WHO@は「@COMMENT@」との@ANSWER@を@SAY@@END02B@。'),
             new SctItm('@WHO@は@DATE@、「@COMMENT@」との@ANSWER@を@SAY@@END02B@。'),
-            new SctItm('「@COMMENT@」との@ANSWER@を@SAY@したのは、@WHO@@END02A@。')
+            new SctItm('「@COMMENT@」との@ANSWER@を@SAY@したのは、@WHO@@END02A@。'),
+            new SctItm('「@COMMENT@」との@ANSWER@を@SAY@し、@AWARD@を@AWARDGET@@END02B@。')
         ];
     }
 }
@@ -602,8 +603,7 @@ class selector_who extends SctItm_Selector {
             new SctItm('『@CALL@』と@KEID@@ASSES@@HUMAN@@AGE@'),
             new SctItm('『@CALL@』と@KEID@@ASSES@@L_CLASS@の@HUMAN@@AGE@'),
             new SctItm('@MANYPEOPLE@より『@CALL@』と@ASSES@@L_CLASS@の@HUMAN@@AGE@'),
-            new SctItm('@AWARD@を受賞した@HUMAN@@AGE@'),
-            new SctItm('@AWARD@を獲得した@HUMAN@@AGE@'),
+            new SctItm('@AWARD@を@AWARDGET@した@HUMAN@@AGE@'),
             new SctItm('@AWARD@の受賞者、@HUMAN@@AGE@')
         ];
     }
@@ -616,7 +616,7 @@ class selector_who2 extends SctItm_Selector {
             new SctItm('『@L_INSCRIPTION@』'),
             new SctItm('『@CALL@』と@KEID@@ASSES@@PEOPLE@'),
             new SctItm('@MANYPEOPLE@より『@CALL@』と@KEID@@ASSES@@PEOPLE@'),
-            new SctItm('@AWARD@ 受賞')
+            new SctItm('@AWARD@ @AWARDGET@')
         ];
     }
 }
@@ -648,7 +648,8 @@ class selector_who3 extends SctItm_Selector {
             new SctItm('@FOOD@の匂いがする'),
             new SctItm('@DOING@ばかり@DOINGEND@'),
             new SctItm('@DOING@@DOINGEND@'),
-            new SctItm('@DOING@@DOINGEND@筈の')
+            new SctItm('@DOING@@DOINGEND@筈の'),
+            new SctItm('@AWARD@を@AWARDGET@@END02B@')
         ];
     }
 }
@@ -664,7 +665,7 @@ class selector_who4 extends SctItm_Selector {
             new SctItm('@MANYPEOPLE@より『@CALL2@』と@KEID@@ASSES@@PEOPLE@'),
             new SctItm('座右の銘『@INSCRIPTION@』'),
             new SctItm('@SONGTYPE@『@SONGTITLE@』'),
-            new SctItm('@AWARD@ 受賞')
+            new SctItm('@AWARD@ @AWARDGET@')
         ];
     }
 }
@@ -904,11 +905,15 @@ class selector_end02b extends SctItm_Selector {
             new SctItm('した'),
             new SctItm('している'),
             new SctItm('していた'),
-            new SctItm('してしまった'),
-            new SctItm('される'),
-            new SctItm('された'),
-            new SctItm('されている'),
-            new SctItm('されていた')
+            new SctItm('してしまった')
+            // ,
+            // new SctItm('される')
+            // ,
+            // new SctItm('された')
+            // ,
+            // new SctItm('されている')
+            // ,
+            // new SctItm('されていた')
         ];
     }
 }
@@ -2157,6 +2162,12 @@ class selector_awardRank extends SctItm_Selector {
         this.Add(itms_AwardRank);
     }
 }
+class selector_awardGet extends SctItm_Selector {
+    constructor() {
+        super('@AWARDGET@');
+        this.Add(itms_AwardGet);
+    }
+}
 // 受賞
 class selector_award extends SctItm_Selector {
     constructor() {
@@ -3116,6 +3127,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_science());
         this.dic_push(new selector_awardType());
         this.dic_push(new selector_awardRank());
+        this.dic_push(new selector_awardGet());
         this.dic_push(new selector_award());
     }
 }
