@@ -8014,9 +8014,9 @@ const   itms_book = [
     ,
     new SctItm('@L_DOING@')
     ,
-    new SctItm('@L_DOING@いた@L_WHAT@')
+    new SctItm('@L_DOING@@DOINGEND@@L_WHAT@')
     ,
-    new SctItm('@L_DOING@いる@L_SEXAGE@')
+    new SctItm('@L_DOING@@DOINGEND@@L_SEXAGE@')
     ,
     new SctItm('@L_ANIMAL@に乗った@L_SEXAGE@')
     ,

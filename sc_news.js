@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N03.42';
+    html += ' N03.43';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -437,7 +437,7 @@ class selector_subtitle01 extends SctItm_Selector {
             new SctItm('@KEI@@L_WHAT@の@L_TECH@'),
             new SctItm('@KEI@@L_WHAT@の@L_CLASS@'),
             new SctItm('@L_CLASS@が@DOING02@いる@L_WHAT@'),
-            new SctItm('@L_CLASS@だけが@DOING02@いた@L_WHAT@'),
+            new SctItm('@L_CLASS@だけが@DOING02@@DOINGEND@@L_WHAT@'),
             new SctItm('@KEI@@L_WHAT@の@L_TECH@'),
             new SctItm('@KEI@@L_WHAT@の@L_CLASS@'),
             new SctItm('@KEI@@L_WHAT@の@THINK@')
@@ -694,7 +694,8 @@ class selector_c01 extends SctItm_Selector {
             new SctItm('@KEI@@MANYPEOPLE@が@KEID@@L_DO@@END01B@'),
             new SctItm('@KEI@@MANYPEOPLE@による@KEI@@KEY@が@SIZE@@END01B@'),
             new SctItm('@MANYPEOPLE@の@THINK@や@THINK@@SIZE2@@L_WHAT@@END01A@'),
-            new SctItm('@MANYPEOPLE@が@DOING@@DOINGEND@@L_WHAT@@END01A@')
+            new SctItm('@MANYPEOPLE@が@DOING@@DOINGEND@@L_WHAT@@END01A@'),
+            new SctItm('@WHO@が@DOING@@DOINGEND@@L_WHAT@@END01A@')
         ];
     }
 }
@@ -734,7 +735,8 @@ class selector_c02 extends SctItm_Selector {
             new SctItm('@MANYPEOPLE@による@KEI@@KEY@が@SIZE@@END02B@'),
             new SctItm('@MANYPEOPLE@による@KEI@@KEY@や@KEY@が@SIZE@@END02B@'),
             new SctItm('@MANYPEOPLE@の@THINK@@SIZE2@'),
-            new SctItm('@MANYPEOPLE@の@THINK@と@THINK@@SIZE2@')
+            new SctItm('@MANYPEOPLE@の@THINK@と@THINK@@SIZE2@'),
+            new SctItm('@WHO@は@DOING@@DOINGEND@')
         ];
     }
 }
@@ -825,8 +827,8 @@ class selector_comment2 extends SctItm_Selector {
             new SctItm('@L_WHAT@の@L_CLASS@、それが@PEOPLE@の@PEOPLE@@END02A@'),
             new SctItm('@EMOFRONT@@EMO@@END02D@'),
             new SctItm('@L_WHAT@で@DOING@@DOINGEND@'),
-            new SctItm('私の@PART@は@DOING@@DOINGEND@'),
-            new SctItm('私が@DOING@@DOINGEND@とき、@PART@が@DOING@@DOINGEND@のだ')
+            new SctItm('@PEOPLE@は@DOING@@DOINGEND@'),
+            new SctItm('私が@DOING@@DOINGEND@とき、@PEOPLE@が@DOING@@DOINGEND@のだ')
         ];
     }
 }
@@ -849,6 +851,7 @@ class selector_YESNO extends SctItm_Selector {
             new SctItm('確かに'),
             new SctItm('紛れもなく'),
             new SctItm('疑いようも無く'),
+            new SctItm('信じられないことだが'),
             new SctItm('やはり'),
             new SctItm('つまり')
         ];
@@ -903,8 +906,7 @@ class selector_end02b extends SctItm_Selector {
         this.itms = [
             new SctItm('する'),
             new SctItm('した'),
-            new SctItm('している'),
-            new SctItm('していた'),
+            new SctItm('して@DOINGEND@'),
             new SctItm('してしまった')
             // ,
             // new SctItm('される')
@@ -1047,17 +1049,19 @@ class selector_size2 extends SctItm_Selector {
     constructor() {
         super('@SIZE2@');
         this.itms = [
-            new SctItm('が広がっている'),
-            new SctItm('が巻き起こっている'),
-            new SctItm('が訴えられている'),
-            new SctItm('が蔓延している'),
-            new SctItm('に包まれている'),
-            new SctItm('で混乱している'),
-            new SctItm('で困惑している'),
-            new SctItm('で言葉を失っている'),
-            new SctItm('に満ちあふれている'),
-            new SctItm('に輝いている'),
-            new SctItm('に囚われている')
+            new SctItm('が広がって@DOINGEND@'),
+            new SctItm('が巻き起こって@DOINGEND@'),
+            new SctItm('が訴えられて@DOINGEND@'),
+            new SctItm('が蔓延して@DOINGEND@'),
+            new SctItm('に包まれて@DOINGEND@'),
+            new SctItm('で混乱して@DOINGEND@'),
+            new SctItm('で困惑して@DOINGEND@'),
+            new SctItm('で言葉を失って@DOINGEND@'),
+            new SctItm('で涙を流して@DOINGEND@'),
+            new SctItm('で顔をしかめて@DOINGEND@'),
+            new SctItm('に満ちあふれて@DOINGEND@'),
+            new SctItm('に輝いて@DOINGEND@'),
+            new SctItm('に囚われて@DOINGEND@')
         ];
     }
 }
@@ -2288,7 +2292,7 @@ class selector_assessment extends SctItm_Selector {
         super('@ASSES@');
         this.itms = [
             new SctItm('@ASSES02@た'),
-            new SctItm('@ASSES02@ている'),
+            new SctItm('@ASSES02@て@DOINGEND@'),
             new SctItm('評価が高い'),
             new SctItm('名高い')
         ];
