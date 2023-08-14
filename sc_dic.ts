@@ -7545,6 +7545,54 @@ const   itms_dress = [
     new SctItm('@L_ANIMAL@の毛皮のコート')
 ]
 
+const   itms_underWare = [
+    new SctItm('ズボン')
+    ,
+    new SctItm('半ズボン')
+    ,
+    new SctItm('短パン')
+    ,
+    new SctItm('トレパン')
+    ,
+    new SctItm('ジーパン')
+    ,
+    new SctItm('パンツ')
+    ,
+    new SctItm('スカート')
+    ,
+    new SctItm('ミニスカ')
+    ,
+    new SctItm('キュロット')
+    ,
+    new SctItm('ブルマ')
+    ,
+    new SctItm('パッチ')
+    ,
+    new SctItm('網タイツ')
+    ,
+    new SctItm('靴下')
+    ,
+    new SctItm('足袋')
+]
+
+const   itms_shoes = [
+    new SctItm('靴')
+    ,
+    new SctItm('スニーカー')
+    ,
+    new SctItm('運動靴')
+    ,
+    new SctItm('ハイヒール')
+    ,
+    new SctItm('スリッパ')
+    ,
+    new SctItm('草履')
+    ,
+    new SctItm('下駄')
+    ,
+    new SctItm('長靴')
+]
+
 
 const   itms_music = [
     new SctItm('アニメソング')
@@ -8572,6 +8620,12 @@ const   itms_doing = [
     new SctItm('@DRESS@を試着して')
     ,
     new SctItm('@DRESS@を仕立て直して')
+    ,
+    new SctItm('@UNDER@をはいて')
+    ,
+    new SctItm('@UNDER@を脱いで')
+    ,
+    new SctItm('@UNDER@のサイズを計って')
     // ,
     // new SctItm('ドレスアップして')
     ,
@@ -8791,6 +8845,12 @@ const   itms_doing_l = [
     new SctItm('@L_DRESS@を洗濯して')
     ,
     new SctItm('@L_DRESS@を仮縫いして')
+    ,
+    new SctItm('@L_UNDER@をはいて')
+    ,
+    new SctItm('@L_UNDER@を脱いで')
+    ,
+    new SctItm('@L_UNDER@のサイズを計って')
     ,
     new SctItm('@L_PART@に@L_FLOWER@の花を|捧|ささ|げて')
     ,

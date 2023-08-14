@@ -853,7 +853,8 @@ class selector_YESNO extends SctItm_Selector {
             new SctItm('疑いようも無く'),
             new SctItm('信じられないことだが'),
             new SctItm('やはり'),
-            new SctItm('つまり')
+            new SctItm('つまり'),
+            new SctItm('とにかく')
         ];
     }
 }
@@ -883,7 +884,10 @@ class selector_keifront extends SctItm_Selector {
             new SctItm('滅多に無いほど'),
             new SctItm('非常に'),
             new SctItm('怖いくらい'),
-            new SctItm('恐ろしいほど')
+            new SctItm('恐ろしいほど'),
+            new SctItm('切ないくらいに'),
+            new SctItm('涙が出るほど'),
+            new SctItm('血がにじむほどに')
         ];
     }
 }
@@ -940,7 +944,8 @@ class selector_end02d extends SctItm_Selector {
             new SctItm('いんだ'),
             new SctItm('いんです'),
             new SctItm('くてどうしようもない'),
-            new SctItm('くて堪らない')
+            new SctItm('くて堪らない'),
+            new SctItm('くて仕方が無い')
         ];
     }
 }
@@ -1843,6 +1848,20 @@ class locker_dress extends SctItm_SelectLocker {
     constructor() {
         super('@L_DRESS@');
         this.Add(itms_dress);
+    }
+}
+class selector_under extends SctItm_Selector {
+    constructor() {
+        super('@UNDER@');
+        this.Add(itms_underWare);
+        this.Add(itms_shoes);
+    }
+}
+class locker_under extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_UNDER@');
+        this.Add(itms_underWare);
+        this.Add(itms_shoes);
     }
 }
 class selector_food1 extends SctItm_Selector {
@@ -2980,6 +2999,9 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new locker_meal());
         this.dic_push(new selector_dress());
         this.dic_push(new locker_dress());
+        this.dic_push(new selector_under());
+        this.dic_push(new locker_under);
+        ;
         this.dic_push(new selector_food1());
         this.dic_push(new locker_food1());
         this.dic_push(new selector_food());
