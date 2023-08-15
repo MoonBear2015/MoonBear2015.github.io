@@ -5844,6 +5844,8 @@ const itms_AwardGet = [
     new SctItm('入賞'),
     new SctItm('棄権'),
     new SctItm('辞退'),
+    new SctItm('返上'),
+    new SctItm('失格'),
     new SctItm('設立')
 ];
 const itms_Award = [
@@ -5852,8 +5854,12 @@ const itms_Award = [
     new SctItm('@AWARDTYPE@お笑い大賞'),
     new SctItm('@L_WHAT@お笑い大賞'),
     new SctItm('@L_WHAT@レコード大賞'),
+    new SctItm('ミス@L_WHAT@@AWARDRANK@'),
     new SctItm('@L_ITEM@グランプリ@AWARDRANK@'),
     new SctItm('@L_ITEM@コンテスト@AWARDRANK@'),
+    new SctItm('@L_ITEM@選手権@AWARDRANK@'),
+    new SctItm('@L_ITEM@トーナメント@AWARDRANK@'),
+    new SctItm('@L_ITEM@デスマッチ@AWARDRANK@'),
     new SctItm('@L_WHAT@@L_DO@大賞'),
     new SctItm('@L_WHAT@文化勲章'),
     new SctItm('@L_WHAT@グッドデザイン賞'),

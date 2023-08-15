@@ -9723,6 +9723,10 @@ const   itms_AwardGet = [
     ,
     new SctItm('辞退')
     ,
+    new SctItm('返上')
+    ,
+    new SctItm('失格')
+    ,
     new SctItm('設立')
 ]
 
@@ -9738,9 +9742,17 @@ const   itms_Award = [
     ,
     new SctItm('@L_WHAT@レコード大賞')
     ,
+    new SctItm('ミス@L_WHAT@@AWARDRANK@')
+    ,
     new SctItm('@L_ITEM@グランプリ@AWARDRANK@')
     ,
     new SctItm('@L_ITEM@コンテスト@AWARDRANK@')
+    ,
+    new SctItm('@L_ITEM@選手権@AWARDRANK@')
+    ,
+    new SctItm('@L_ITEM@トーナメント@AWARDRANK@')
+    ,
+    new SctItm('@L_ITEM@デスマッチ@AWARDRANK@')
     ,
     new SctItm('@L_WHAT@@L_DO@大賞')
     ,
