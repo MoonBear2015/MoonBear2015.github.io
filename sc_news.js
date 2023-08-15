@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N03.43';
+    html += ' N03.44';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -864,6 +864,7 @@ class selector_emofront extends SctItm_Selector {
         super('@EMOFRONT@');
         this.itms = [
             new SctItm('正直、'),
+            new SctItm('なんというか、'),
             new SctItm('とても'),
             new SctItm('ああ、'),
             new SctItm('いやはや、')
@@ -938,11 +939,19 @@ class selector_end02d extends SctItm_Selector {
     constructor() {
         super('@END02D@');
         this.itms = [
+            new SctItm('@END02D2@のだ'),
+            new SctItm('@END02D2@んだ'),
+            new SctItm('@END02D2@のです'),
+            new SctItm('@END02D2@んです')
+        ];
+    }
+}
+class selector_end02d2 extends SctItm_Selector {
+    constructor() {
+        super('@END02D2@');
+        this.itms = [
             new SctItm('い'),
-            new SctItm('いのだ'),
-            new SctItm('いのです'),
-            new SctItm('いんだ'),
-            new SctItm('いんです'),
+            new SctItm('かった'),
             new SctItm('くてどうしようもない'),
             new SctItm('くて堪らない'),
             new SctItm('くて仕方が無い')
@@ -2952,6 +2961,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_end02b());
         this.dic_push(new selector_end02c());
         this.dic_push(new selector_end02d());
+        this.dic_push(new selector_end02d2());
         this.dic_push(new selector_end02e());
         this.dic_push(new selector_comment());
         this.dic_push(new selector_comment1());
