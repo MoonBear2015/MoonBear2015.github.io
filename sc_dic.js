@@ -4655,17 +4655,19 @@ const itms_underWare = [
     new SctItm('ミニスカ'),
     new SctItm('キュロット'),
     new SctItm('ブルマ'),
-    new SctItm('パッチ'),
+    new SctItm('ストッキング'),
     new SctItm('網タイツ'),
     new SctItm('靴下'),
     new SctItm('足袋')
 ];
 const itms_shoes = [
     new SctItm('靴'),
+    new SctItm('革靴'),
     new SctItm('スニーカー'),
     new SctItm('運動靴'),
     new SctItm('ハイヒール'),
     new SctItm('スリッパ'),
+    new SctItm('サンダル'),
     new SctItm('草履'),
     new SctItm('下駄'),
     new SctItm('長靴')
@@ -4776,6 +4778,7 @@ const itms_scool = [
     new SctItm('中学校'),
     new SctItm('高校'),
     new SctItm('大学'),
+    new SctItm('大学@SCIENCE@部'),
     new SctItm('女子大学'),
     new SctItm('女学校'),
     new SctItm('短期大学'),
@@ -5815,7 +5818,8 @@ const itms_Science = [
     new SctItm('地理学'),
     new SctItm('文学'),
     new SctItm('芸術'),
-    new SctItm('心理学')
+    new SctItm('心理学'),
+    new SctItm('@L_ITEM@学')
 ];
 const itms_AwardType = [
     new SctItm('ノーベル'),
