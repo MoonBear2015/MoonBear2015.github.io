@@ -5836,7 +5836,10 @@ const itms_AwardRank = [
     new SctItm('ブービー賞'),
     new SctItm('特別賞'),
     new SctItm('主演男優賞'),
-    new SctItm('主演女優賞')
+    new SctItm('主演女優賞'),
+    new SctItm('助演女優賞'),
+    new SctItm('新人賞'),
+    new SctItm('監督賞')
 ];
 const itms_AwardGet = [
     new SctItm('受賞'),
@@ -5845,8 +5848,7 @@ const itms_AwardGet = [
     new SctItm('棄権'),
     new SctItm('辞退'),
     new SctItm('返上'),
-    new SctItm('失格'),
-    new SctItm('設立')
+    new SctItm('失格')
 ];
 const itms_Award = [
     new SctItm('@AWARDTYPE@@SCIENCE@賞'),
@@ -5854,7 +5856,7 @@ const itms_Award = [
     new SctItm('@AWARDTYPE@お笑い大賞'),
     new SctItm('@L_WHAT@お笑い大賞'),
     new SctItm('@L_WHAT@レコード大賞'),
-    new SctItm('ミス@L_WHAT@@AWARDRANK@'),
+    new SctItm('ミス@L_ITEM@コンテスト@AWARDRANK@'),
     new SctItm('@L_ITEM@グランプリ@AWARDRANK@'),
     new SctItm('@L_ITEM@コンテスト@AWARDRANK@'),
     new SctItm('@L_ITEM@選手権@AWARDRANK@'),
