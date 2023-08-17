@@ -5826,6 +5826,8 @@ const   itms_do = [
     new SctItm('正常化','DO/clean.jpg')
     ,
     new SctItm('浄化','DO/clean.jpg')
+    ,
+    new SctItm('期待','DO/blur.jpg')
 ]
 
 const   itms_class = [

@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N03.44';
+    html += ' N03.45';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -416,6 +416,8 @@ class selector_title extends SctItm_Selector {
         this.itms = [
             new SctItm('@L_WHAT@の@KEI@@L_DO@'),
             new SctItm('@L_WHAT@が@KEID@@L_DO@'),
+            new SctItm('@L_WHAT@の@KEI@@L_DO@@END02C@@L_ITEM@'),
+            new SctItm('@L_WHAT@が@KEI@@L_DO@@END02C@@L_ITEM@'),
             new SctItm('@L_WHAT@の@L_CLASS@が@KEID@@L_DO@'),
             new SctItm('@L_WHAT@が@KEID@@L_DO@@END02C@'),
             new SctItm('@L_WHAT@の@L_CLASS@が@KEID@@L_DO@@END02C@'),
@@ -646,6 +648,8 @@ class selector_who3 extends SctItm_Selector {
             new SctItm('@FLOWER@の香りが漂う'),
             new SctItm('@FRUIT@の香りが漂う'),
             new SctItm('@FOOD@の匂いがする'),
+            new SctItm('@DRESS@を着た'),
+            new SctItm('@UNDER@をはいた'),
             new SctItm('@DOING@ばかり@DOINGEND@'),
             new SctItm('@DOING@@DOINGEND@'),
             new SctItm('@DOING@@DOINGEND@筈の'),
@@ -2620,6 +2624,28 @@ class locker_item extends SctItm_SelectLocker {
         super('@L_ITEM@');
         this.itms = [
             new SctItm('@L_WHAT@'),
+            new SctItm('@L_CLASS@'),
+            new SctItm('@L_ANIMAL@'),
+            new SctItm('@L_FLOWER@'),
+            new SctItm('@L_FRUIT@'),
+            new SctItm('@L_FOOD@'),
+            new SctItm('@L_RIDE@'),
+            new SctItm('@L_DRESS@'),
+            new SctItm('@L_MUSIC@'),
+            new SctItm('@L_SEXAGE@'),
+            new SctItm('@L_PART@'),
+            new SctItm('@L_HABIT@'),
+            new SctItm('@L_MUSIC@'),
+            new SctItm('@L_STAR@'),
+            new SctItm('@L_SPORTS@')
+        ];
+    }
+}
+class locker_item2 extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_ITEM2@');
+        this.itms = [
+            new SctItm('@L_CLASS@'),
             new SctItm('@L_ANIMAL@'),
             new SctItm('@L_FLOWER@'),
             new SctItm('@L_FRUIT@'),
@@ -3127,6 +3153,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new locker_doing());
         this.dic_push(new selector_superitem());
         this.dic_push(new locker_item());
+        this.dic_push(new locker_item2());
         this.dic_push(new locker_chr_hero1());
         this.dic_push(new locker_chr_hero2());
         this.dic_push(new locker_heromark());
