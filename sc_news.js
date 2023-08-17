@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N03.46';
+    html += ' N03.48';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -932,9 +932,11 @@ class selector_end02c extends SctItm_Selector {
         super('@END02C@');
         this.itms = [
             new SctItm('する'),
-            new SctItm('した'),
-            new SctItm('される'),
-            new SctItm('された')
+            new SctItm('した')
+            // ,
+            // new SctItm('される')
+            // ,
+            // new SctItm('された')
         ];
     }
 }
