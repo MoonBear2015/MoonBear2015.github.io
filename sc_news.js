@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N03.45';
+    html += ' N03.46';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -414,7 +414,6 @@ class selector_title extends SctItm_Selector {
     constructor() {
         super('@NEWS_TITLE@');
         this.itms = [
-            new SctItm('@L_WHAT@の@KEI@@L_DO@'),
             new SctItm('@L_WHAT@が@KEID@@L_DO@'),
             new SctItm('@L_WHAT@を@KEID@@L_DO@@END02C@@L_ITEM2@'),
             new SctItm('@L_WHAT@が@KEID@@L_DO@@END02C@@L_ITEM2@'),
