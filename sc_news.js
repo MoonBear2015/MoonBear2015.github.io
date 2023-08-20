@@ -7,7 +7,7 @@ function set_news() {
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N03.50';
+    html += ' N03.51';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -593,7 +593,8 @@ class selector_doc extends SctItm_Selector {
             new SctItm('@WHO@は「@COMMENT@」との@ANSWER@を@SAY@@END02B@。'),
             new SctItm('@WHO@は@DATE@、「@COMMENT@」との@ANSWER@を@SAY@@END02B@。'),
             new SctItm('「@COMMENT@」との@ANSWER@を@SAY@したのは、@WHO@@END02A@。'),
-            new SctItm('@WHO@は「@COMMENT@」との@ANSWER@を@SAY@し、@AWARD@を@AWARDGET@@END02B@。')
+            new SctItm('@WHO@は「@COMMENT@」との@ANSWER@を@SAY@し、@AWARD@を@AWARDGET@@END02B@。'),
+            new SctItm('@WHO@は次の様に@SAY@している。「@COMMENT@」――。')
         ];
     }
 }
