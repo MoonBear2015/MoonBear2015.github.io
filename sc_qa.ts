@@ -9,7 +9,7 @@ function set_qa()
     html += '<h1>';
     html += 'Q&A';
     html += '<small>';
-    html += ' Q01.28';
+    html += ' Q01.29';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -365,13 +365,13 @@ class selector_q_sent extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@Q_SENT@');
         this.itms = [
-            new SctItm('@Q_MSG@。')
+            new SctItm('@TIMEFRONT@@Q_MSG@。')
             ,
-            new SctItm('@CONECT2@、@Q_MSG@。')
+            new SctItm('@TIMEFRONT@@CONECT2@、@Q_MSG@。')
             ,
-            new SctItm('@Q_MSG@が、@Q_SENT@')
+            new SctItm('@TIMEFRONT@@Q_MSG@が、@Q_SENT@')
             ,
-            new SctItm('@Q_MSG@けど、@Q_SENT@')
+            new SctItm('@TIMEFRONT@@Q_MSG@けど、@Q_SENT@')
             // ,
             // new SctItm('私の@KEI@@L_PART@をご存じでしょうか。')
         ]
