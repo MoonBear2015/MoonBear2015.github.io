@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N03.53';
+    html += ' N03.54';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -1364,7 +1364,7 @@ class selector_TimeFront extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('今更だが、')
             ,
-            new SctItm('@AGE@歳の頃、')
+            new SctItm('@AGE2@の頃、')
             ,
             new SctItm('あの時、')
             ,
