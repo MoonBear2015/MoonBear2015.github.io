@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N03.52';
+    html += ' N03.53';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -1139,37 +1139,37 @@ class selector_comment extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@COMMENT@');
         this.itms = [
-            new SctItm('@COMMENT1@')
+            new SctItm('@TIMEFRONT@@COMMENT1@')
             ,
-            new SctItm('@COMMENT1@')
+            new SctItm('@TIMEFRONT@@COMMENT1@')
             ,
-            new SctItm('@COMMENT1@')
+            new SctItm('@TIMEFRONT@@COMMENT1@')
             ,
-            new SctItm('@COMMENT1@')
+            new SctItm('@TIMEFRONT@@COMMENT1@')
             ,
-            new SctItm('@COMMENT1@')
+            new SctItm('@TIMEFRONT@@COMMENT1@')
             ,
-            new SctItm('@COMMENT1@')
+            new SctItm('@TIMEFRONT@@COMMENT1@')
             ,
-            new SctItm('@COMMENT1@')
+            new SctItm('@TIMEFRONT@@COMMENT1@')
             ,
-            new SctItm('@COMMENT1@')
+            new SctItm('@TIMEFRONT@@COMMENT1@')
             ,
-            new SctItm('@COMMENT1@――')
+            new SctItm('@TIMEFRONT@@COMMENT1@――')
             ,
-            new SctItm('@COMMENT1@――')
+            new SctItm('@TIMEFRONT@@COMMENT1@――')
             ,
-            new SctItm('――@COMMENT1@')
+            new SctItm('――@TIMEFRONT@@COMMENT1@')
             ,
-            new SctItm('――@COMMENT1@')
+            new SctItm('――@TIMEFRONT@@COMMENT1@')
             ,
-            new SctItm('@COMMENT1@……')
+            new SctItm('@TIMEFRONT@@COMMENT1@……')
             ,
-            new SctItm('@COMMENT1@……')
-            ,
-            new SctItm('……@COMMENT1@')
+            new SctItm('@TIMEFRONT@@COMMENT1@……')
             ,
             new SctItm('……@COMMENT1@')
+            ,
+            new SctItm('@TIMEFRONT@……@COMMENT1@')
             ,
             new SctItm('@KEI1@@NICK@、@KEI1@@NICK@、@KEI1@@NICK@、@KEI1@@NICK@……')
             ,
@@ -1330,6 +1330,51 @@ class selector_YESNO extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('つまり')
             ,
             new SctItm('とにかく')
+        ];
+    }
+}
+
+class selector_TimeFront extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@TIMEFRONT@');
+        this.itms = [
+            new SctItm('')
+            ,
+            new SctItm('')
+            ,
+            new SctItm('')
+            ,
+            new SctItm('')
+            ,
+            new SctItm('')
+            ,
+            new SctItm('')
+            ,
+            new SctItm('')
+            ,
+            new SctItm('')
+            ,
+            new SctItm('@DATE@、')
+            ,
+            new SctItm('@DATE@には、')
+            ,
+            new SctItm('そういえば、')
+            ,
+            new SctItm('思い起こせば、')
+            ,
+            new SctItm('今更だが、')
+            ,
+            new SctItm('@AGE@歳の頃、')
+            ,
+            new SctItm('あの時、')
+            ,
+            new SctItm('昨日のことだが、')
+            ,
+            new SctItm('今朝、')
+            ,
+            new SctItm('今夜にも、')
+            ,
+            new SctItm('明日になれば、')
         ];
     }
 }
@@ -4240,6 +4285,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_comment1());
         this.dic_push(new selector_comment2());
         this.dic_push(new selector_YESNO());
+        this.dic_push(new selector_TimeFront());
         
         this.dic_push(new selector_date());
         this.dic_push(new selector_random_date01());
