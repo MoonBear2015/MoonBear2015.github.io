@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N03.54';
+    html += ' N03.55';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -1169,7 +1169,7 @@ class selector_comment extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('……@COMMENT1@')
             ,
-            new SctItm('@TIMEFRONT@……@COMMENT1@')
+            new SctItm('……@TIMEFRONT@@COMMENT1@')
             ,
             new SctItm('@KEI1@@NICK@、@KEI1@@NICK@、@KEI1@@NICK@、@KEI1@@NICK@……')
             ,
@@ -3431,6 +3431,8 @@ class selector_assessment02 extends SctItm_Selector implements ISctItm_Selector 
             new SctItm('見捨てられ')
             ,
             new SctItm('馬鹿にされ')
+            ,
+            new SctItm('笑われ')
             ,
             new SctItm('讃えられ')
             ,
