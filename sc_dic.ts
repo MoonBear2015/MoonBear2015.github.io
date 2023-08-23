@@ -8563,6 +8563,8 @@ const   itms_doing = [
     // ,
     // new SctItm('デートして')
     ,
+    new SctItm('@SAY@して')
+    ,
     new SctItm('@PART@をデートに誘って')
     ,
     new SctItm('@PART@に手紙を書いて')
@@ -8796,6 +8798,8 @@ const   itms_doing_l = [
     ,
     new SctItm('@L_PART@をデートに誘って')
     ,
+    new SctItm('@SAY@して')
+    ,
     new SctItm('@L_PART@に手紙を書いて')
     ,
     new SctItm('@L_PART@に電話して')
@@ -9005,6 +9009,8 @@ const   itms_doing_o = [
     // new SctItm('@L_PART@を押しのけて')
     // ,
     // new SctItm('デートして')
+    ,
+    new SctItm('@SAY@して')
     ,
     new SctItm('@L_PART@をデートに誘って')
     ,
