@@ -1702,6 +1702,8 @@ class selector_they extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('子供達')
             ,
+            new SctItm('生徒達')
+            ,
             new SctItm('学生達')
             ,
             new SctItm('女子校生達')
@@ -2979,6 +2981,22 @@ class selector_say extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('狼狽えながらも@SAY@')
             ,
             new SctItm('怯えた様子で@SAY@')
+            ,
+            new SctItm('@MANYPEOPLE@の前で@SAY@')
+            ,
+            new SctItm('@MANYPEOPLE@を集めて@SAY@')
+            ,
+            new SctItm('@MANYPEOPLE@の避難を浴びながら@SAY@')
+            ,
+            new SctItm('@MANYPEOPLE@が喝采する中で@SAY@')
+            ,
+            new SctItm('@MANYPEOPLE@の賛同を得て@SAY@')
+            ,
+            new SctItm('@MANYPEOPLE@の賛成多数で@SAY@')
+            ,
+            new SctItm('@MANYPEOPLE@の承認の元に@SAY@')
+            ,
+            new SctItm('@MANYPEOPLE@の反対を押し切って@SAY@')
             ,
             new SctItm('主張')
             ,

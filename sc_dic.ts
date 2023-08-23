@@ -2812,8 +2812,8 @@ const   cods_adv_etc = [
     new SctCod_It('|口|くち|うるさく')
     ,
     new SctCod_It('|素晴|すば|らしく')
-    ,
-    new SctCod_It('|凄|すご|く')
+    // ,
+    // new SctCod_It('|凄|すご|く')
     ,
     new SctCod_It('|切|せつ|なく')
     ,
@@ -2822,8 +2822,8 @@ const   cods_adv_etc = [
     new SctCod_It('|手堅|てがた|く')
     ,
     new SctCod_It('|年若|としわか|く')
-    ,
-    new SctCod_It('|憎|にく|く')
+    // ,
+    // new SctCod_It('|憎|にく|く')
     ,
     new SctCod_It('|憎|にく|たらしく')
     ,
