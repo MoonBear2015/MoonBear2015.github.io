@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N03.55';
+    html += ' N03.56';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -1180,6 +1180,8 @@ class selector_comment extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@NICKBAD@ッ！ @NICKBAD@ッ！ @NICKBAD@ッ！')
             ,
             new SctItm('@L_WHAT@の@NICKBAD@！ @L_WHAT@の@NICKBAD@！ @L_WHAT@の@NICKBAD@！ @L_WHAT@の@NICKBAD@！ ')
+            ,
+            new SctItm('@L_INSCRIPTION@')
         ];
     }
 }
@@ -1223,8 +1225,6 @@ class selector_comment1 extends SctItm_Selector implements ISctItm_Selector {
             // new SctItm('@L_WHAT@は@NICK@？ @COMMENT@')
             // ,
             // new SctItm('@L_WHAT@が@L_DO@@END02B@？ @COMMENT@')
-            ,
-            new SctItm('@L_INSCRIPTION@')
         ];
     }
 }
