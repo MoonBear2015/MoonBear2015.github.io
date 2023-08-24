@@ -255,6 +255,7 @@ class selector_q_init extends SctItm_Selector {
             new SctItm('私が@CLASS@をしていた頃、@Q_SENT@'),
             new SctItm('私が@COUNTRY@にいた頃、@Q_SENT@'),
             new SctItm('私には@KEIN2@@L_PART@がいるのですが、@Q_SENT@'),
+            new SctItm('私には@FRIENDSHIP@だった@L_PART@がいるのですが、@Q_SENT@'),
             new SctItm('私には@CLASS@をしている@AGE2@の@L_PART@がいるのですが、@Q_SENT@')
         ];
     }
@@ -263,10 +264,10 @@ class selector_q_sent extends SctItm_Selector {
     constructor() {
         super('@Q_SENT@');
         this.itms = [
-            new SctItm('@TIMEFRONT@@Q_MSG@。'),
-            new SctItm('@TIMEFRONT@@CONECT2@、@Q_MSG@。'),
-            new SctItm('@TIMEFRONT@@Q_MSG@が、@Q_SENT@'),
-            new SctItm('@TIMEFRONT@@Q_MSG@けど、@Q_SENT@')
+            new SctItm('@TIMEFRONT2@@Q_MSG@。'),
+            new SctItm('@TIMEFRONT2@@CONECT2@、@Q_MSG@。'),
+            new SctItm('@TIMEFRONT2@@Q_MSG@が、@Q_SENT@'),
+            new SctItm('@TIMEFRONT2@@Q_MSG@けど、@Q_SENT@')
             // ,
             // new SctItm('私の@KEI@@L_PART@をご存じでしょうか。')
         ];
@@ -295,6 +296,7 @@ class selector_q_msg extends SctItm_Selector {
             new SctItm('@Q_MSG02@けど、@Q_MSG03@@Q_MSG04@'),
             new SctItm('@Q_MSG01@@Q_MSG02@が、@Q_MSG03@@Q_MSG04@'),
             new SctItm('私の@WHO3@@L_PART@の話です'),
+            new SctItm('私の@L_PART@とは@FRIENDSHIP@なんです'),
             new SctItm('私の『@CALL2@』と@GRADE@@ASSES@@L_PART@のことです'),
             new SctItm('何を隠そう、私の正体は@L_EVIL2@だったのです'),
             new SctItm('@L_HERO2@の居場所を探しているのです'),
@@ -506,13 +508,15 @@ class selector_a_msg extends SctItm_Selector {
             new SctItm('@A_MSG01@@A_MSG02@、@A_MSG03@@A_MSG04@'),
             new SctItm('私は@MANYPEOPLE@から『@CALL2@』と@GRADE@@ASSES@のです'),
             new SctItm('それは@KEIP2@@QUESTER@さんが『@CALL2@』と@GRADE@@ASSES@からです'),
-            new SctItm('それは@KEIP2@@L_PART@さんが@DOING@からです'),
+            new SctItm('それは@KEIP2@@L_PART@さんが@DOING@いたからです'),
             new SctItm('@QUESTER@さんの@L_PART@さんなら、@CITY@の@PLACE@で@L_DOING@います'),
             new SctItm('@CONECT2@、@L_PART@さんが@DOING@います'),
             new SctItm('@CONECT2@、私は@DOING@います'),
             new SctItm('@CONECT2@、私が@DOING@いるからです'),
             new SctItm('何を隠そう、私の正体は@L_HERO2@だったのです'),
-            new SctItm('その@L_HEROFULLNAME@なら私のことです')
+            new SctItm('その@L_HEROFULLNAME@なら私のことです'),
+            new SctItm('その@L_PART@さんとは@FRIENDSHIP@なのです'),
+            new SctItm('その@L_PART@さんとは@FRIENDSHIP@だったんです')
         ];
     }
 }

@@ -5884,3 +5884,21 @@ const itms_Award = [
     new SctItm('@SCIENCE@オリンピック@AWARDRANK@'),
     new SctItm('@L_CITY@オリンピック@AWARDRANK@')
 ];
+const itms_FriendShip = [
+    new SctItm('知り合い'),
+    new SctItm('友人'),
+    new SctItm('恋仲'),
+    new SctItm('愛人関係'),
+    new SctItm('旧知の間柄'),
+    new SctItm('腐れ縁'),
+    new SctItm('幼なじみ'),
+    new SctItm('同級生'),
+    new SctItm('師弟関係'),
+    new SctItm('主従関係'),
+    new SctItm('同郷のよしみ'),
+    new SctItm('赤の他人'),
+    new SctItm('敵対関係'),
+    new SctItm('犬猿の仲'),
+    new SctItm('ライバル'),
+    new SctItm('宿敵同士')
+];

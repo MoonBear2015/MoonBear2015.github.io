@@ -533,7 +533,8 @@ class selector_call extends SctItm_Selector {
             new SctItm('@L_DO@@END02C@@NICK@'),
             new SctItm('@SIZE@@END02C@@NICK@'),
             new SctItm('@SIZE@@END02C@@L_CLASS@'),
-            new SctItm('@DOING@@DOINGEND@@NICK@')
+            new SctItm('@DOING@@DOINGEND@@NICK@'),
+            new SctItm('@L_ITEM@の@L_PART@')
         ];
     }
 }
@@ -546,7 +547,8 @@ class selector_call2 extends SctItm_Selector {
             new SctItm('@COUNTRY@の@KEI@@ITEM@'),
             new SctItm('@KEI@@ITEM@'),
             new SctItm('@HABIT@の@NICK@'),
-            new SctItm('@DOING@@DOINGEND@@NICK@')
+            new SctItm('@DOING@@DOINGEND@@NICK@'),
+            new SctItm('@L_ITEM@の@L_PART@')
         ];
     }
 }
@@ -605,6 +607,8 @@ class selector_who extends SctItm_Selector {
             new SctItm('『@CALL@』と@KEID@@ASSES@@HUMAN@@AGE@'),
             new SctItm('『@CALL@』と@KEID@@ASSES@@L_CLASS@の@HUMAN@@AGE@'),
             new SctItm('@MANYPEOPLE@より『@CALL@』と@ASSES@@L_CLASS@の@HUMAN@@AGE@'),
+            new SctItm('@MANYPEOPLE@とは@FRIENDSHIP@であった@HUMAN@@AGE@'),
+            new SctItm('@MANYPEOPLE@とは@FRIENDSHIP@だと噂された@HUMAN@@AGE@'),
             new SctItm('@AWARD@を@AWARDGET@した@HUMAN@@AGE@'),
             new SctItm('@AWARD@の受賞者、@HUMAN@@AGE@')
         ];
@@ -881,6 +885,33 @@ class selector_TimeFront extends SctItm_Selector {
             new SctItm('@AGE2@の頃、'),
             new SctItm('あの時、'),
             new SctItm('昨日のことだが、'),
+            new SctItm('今朝、'),
+            new SctItm('今夜にも、'),
+            new SctItm('明日になれば、')
+        ];
+    }
+}
+class selector_TimeFront2 extends SctItm_Selector {
+    constructor() {
+        super('@TIMEFRONT2@');
+        this.itms = [
+            new SctItm(''),
+            new SctItm(''),
+            new SctItm(''),
+            new SctItm(''),
+            new SctItm(''),
+            new SctItm(''),
+            new SctItm(''),
+            new SctItm(''),
+            new SctItm('@DATE@、'),
+            new SctItm('@DATE@には、'),
+            new SctItm('そういえば、'),
+            new SctItm('思い起こせば、'),
+            new SctItm('今更ですが、'),
+            new SctItm('今更なんですが、'),
+            new SctItm('@AGE2@の頃、'),
+            new SctItm('あの時、'),
+            new SctItm('昨日のことですが、'),
             new SctItm('今朝、'),
             new SctItm('今夜にも、'),
             new SctItm('明日になれば、')
@@ -2247,6 +2278,12 @@ class selector_award extends SctItm_Selector {
         this.Add(itms_Award);
     }
 }
+class selector_friendShip extends SctItm_Selector {
+    constructor() {
+        super('@FRIENDSHIP@');
+        this.Add(itms_FriendShip);
+    }
+}
 class selector_emotion extends SctItm_Selector {
     constructor() {
         super('@EMO@');
@@ -3011,6 +3048,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_comment2());
         this.dic_push(new selector_YESNO());
         this.dic_push(new selector_TimeFront());
+        this.dic_push(new selector_TimeFront2());
         this.dic_push(new selector_date());
         this.dic_push(new selector_random_date01());
         this.dic_push(new selector_random_year());
@@ -3208,5 +3246,6 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_awardRank());
         this.dic_push(new selector_awardGet());
         this.dic_push(new selector_award());
+        this.dic_push(new selector_friendShip());
     }
 }
