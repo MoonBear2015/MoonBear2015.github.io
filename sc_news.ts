@@ -901,8 +901,6 @@ class selector_doc extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('「@COMMENT@」との@ANSWER@を@SAY@したのは、@WHO@@END02A@。')
             ,
             new SctItm('@WHO@は「@COMMENT@」との@ANSWER@を@SAY@し、@AWARD@を@AWARDGET@@END02B@。')
-            ,
-            new SctItm('@WHO@は次の様に@SAY@して@DOINGEND@――「@COMMENT@」。')
         ];
     }
 }
