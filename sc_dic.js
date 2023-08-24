@@ -5891,6 +5891,9 @@ const itms_FriendShip = [
     new SctItm('愛人関係'),
     new SctItm('旧知の間柄'),
     new SctItm('腐れ縁'),
+    new SctItm('同じ釜のメシを食った仲'),
+    new SctItm('同期の桜'),
+    new SctItm('@HABIT@仲間'),
     new SctItm('幼なじみ'),
     new SctItm('同級生'),
     new SctItm('師弟関係'),
@@ -5899,6 +5902,6 @@ const itms_FriendShip = [
     new SctItm('赤の他人'),
     new SctItm('敵対関係'),
     new SctItm('犬猿の仲'),
-    new SctItm('ライバル'),
+    new SctItm('ライバル同士'),
     new SctItm('宿敵同士')
 ];

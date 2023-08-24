@@ -9807,6 +9807,12 @@ const   itms_FriendShip = [
     ,
     new SctItm('腐れ縁')
     ,
+    new SctItm('同じ釜のメシを食った仲')
+    ,
+    new SctItm('同期の桜')
+    ,
+    new SctItm('@HABIT@仲間')
+    ,
     new SctItm('幼なじみ')
     ,
     new SctItm('同級生')
@@ -9823,7 +9829,7 @@ const   itms_FriendShip = [
     ,
     new SctItm('犬猿の仲')
     ,
-    new SctItm('ライバル')
+    new SctItm('ライバル同士')
     ,
     new SctItm('宿敵同士')
 ]
