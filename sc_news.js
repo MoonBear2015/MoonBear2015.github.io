@@ -48,7 +48,8 @@ function make_news() {
     html += '<p>@NEWS_SUBTITLE01@</p>';
     html += '</div>';
     html += '<p id="news_doc">';
-    html += '　@NEWS_DOC@';
+    html += '　★@NEWS_FIRST@';
+    // html += '　@NEWS_DOC@';
     for (let i = 0; i < rnd_minmax(4, 6); i++) {
         html += '@CONECT@、';
         html += '@NEWS_DOC@';
@@ -471,6 +472,19 @@ class selector_subtitle03 extends SctItm_Selector {
         ];
     }
 }
+class selector_newsFirst extends SctItm_Selector {
+    constructor() {
+        super('@NEWS_FIRST@');
+        this.itms = [
+            new SctItm('@L_WHAT@が@L_DO@した。'),
+            new SctItm('@DATEBEFORE@、@L_WHAT@が@L_DO@した。'),
+            new SctItm('@DATEBEFORE@、@L_WHAT@が@L_DO@したと思われる。'),
+            new SctItm('@DATEBEFORE@、@L_WHAT@が@L_DO@したと情報が流れている。'),
+            new SctItm('@L_WHAT@が@L_DO@したのは、@DATEBEFORE@のことである。'),
+            new SctItm('@L_WHAT@が@L_DO@した@DATE@のことである。')
+        ];
+    }
+}
 class selector_people extends SctItm_Selector {
     constructor() {
         super('@PEOPLE@');
@@ -580,6 +594,26 @@ class selector_date extends SctItm_Selector {
             new SctItm('@NUM2TO9@年後'),
             new SctItm('@NUM2TO9@年前'),
             new SctItm('@NUM2TO9@ヶ月前'),
+            new SctItm('@NUM2TO9@ヶ月後')
+        ];
+    }
+}
+class selector_dateBefore extends SctItm_Selector {
+    constructor() {
+        super('@DATEBEFORE@');
+        this.itms = [
+            new SctItm('@NUM2TO9@日前'),
+            new SctItm('@NUM2TO9@年前'),
+            new SctItm('@NUM2TO9@ヶ月前')
+        ];
+    }
+}
+class selector_dateAfter extends SctItm_Selector {
+    constructor() {
+        super('@DATEAFTER@');
+        this.itms = [
+            new SctItm('@NUM2TO9@日後'),
+            new SctItm('@NUM2TO9@年後'),
             new SctItm('@NUM2TO9@ヶ月後')
         ];
     }
@@ -3034,6 +3068,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_subtitle01());
         this.dic_push(new selector_subtitle02());
         this.dic_push(new selector_subtitle03());
+        this.dic_push(new selector_newsFirst());
         this.dic_push(new selector_doc());
         this.dic_push(new selector_c01());
         this.dic_push(new selector_c02());
@@ -3052,6 +3087,8 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_TimeFront());
         this.dic_push(new selector_TimeFront2());
         this.dic_push(new selector_date());
+        this.dic_push(new selector_dateBefore());
+        this.dic_push(new selector_dateAfter());
         this.dic_push(new selector_random_date01());
         this.dic_push(new selector_random_year());
         this.dic_push(new selector_random_NUM10());

@@ -5905,3 +5905,15 @@ const itms_FriendShip = [
     new SctItm('ライバル同士'),
     new SctItm('宿敵同士')
 ];
+const itms_Group01 = [
+    new SctItm('政府'),
+    new SctItm('共同通信'),
+    new SctItm('労働組合'),
+    new SctItm('警備保障'),
+    new SctItm('財団法人'),
+    new SctItm('町内会'),
+    new SctItm('子供会'),
+    new SctItm('教育委員会'),
+    new SctItm('医師会'),
+    new SctItm('教団')
+];
