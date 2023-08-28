@@ -5907,6 +5907,16 @@ const itms_FriendShip = [
 ];
 const itms_Group01 = [
     new SctItm('政府'),
+    new SctItm('文部省'),
+    new SctItm('外務省'),
+    new SctItm('大蔵省'),
+    new SctItm('陸軍'),
+    new SctItm('海軍'),
+    new SctItm('空軍'),
+    new SctItm('諜報機関'),
+    new SctItm('海兵隊')
+];
+const itms_Group02 = [
     new SctItm('共同通信'),
     new SctItm('労働組合'),
     new SctItm('警備保障'),
@@ -5915,5 +5925,7 @@ const itms_Group01 = [
     new SctItm('子供会'),
     new SctItm('教育委員会'),
     new SctItm('医師会'),
-    new SctItm('教団')
+    new SctItm('教団'),
+    new SctItm('警察'),
+    new SctItm('郵便')
 ];

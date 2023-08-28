@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N03.56';
+    html += ' N03.57';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -59,7 +59,7 @@ function make_news()
     html += '</div>';
     
     html += '<p id="news_doc">';
-    html += '　★@NEWS_FIRST@';
+    html += '　@NEWS_FIRST@';
     // html += '　@NEWS_DOC@';
     for(let i = 0;i < rnd_minmax(4,6);i++)
     {
@@ -714,15 +714,17 @@ class selector_newsFirst extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('@L_WHAT@が@L_DO@した。')
             ,
-            new SctItm('@DATEBEFORE@、@L_WHAT@が@L_DO@した。')
+            new SctItm('@KEI@@L_WHAT@が@KEID@@L_DO@した。')
             ,
-            new SctItm('@DATEBEFORE@、@L_WHAT@が@L_DO@したと思われる。')
+            new SctItm('@DATE@、@KEI@@L_WHAT@が@KEID@@L_DO@した。')
             ,
-            new SctItm('@DATEBEFORE@、@L_WHAT@が@L_DO@したと情報が流れている。')
+            new SctItm('@DATE@、@KEI@@L_WHAT@が@KEID@@L_DO@したと思われる。')
             ,
-            new SctItm('@L_WHAT@が@L_DO@したのは、@DATEBEFORE@のことである。')
+            new SctItm('@DATE@、@KEI@@L_WHAT@が@KEID@@L_DO@したとの情報が流れている。')
             ,
-            new SctItm('@L_WHAT@が@L_DO@した@DATE@のことである。')
+            new SctItm('@DATE@、@KEI@@L_WHAT@が@KEID@@L_DO@すると推測されていた。')
+            ,
+            new SctItm('@KEI@@L_WHAT@が@KEID@@L_DO@したのは、@DATE@のことである。')
         ];
     }
 }
@@ -867,39 +869,37 @@ class selector_pop1 extends SctItm_Selector implements ISctItm_Selector {
     }
 }
 
+class selector_timedate extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@DATE@');
+        this.itms = [
+            new SctItm('@PINT@@DATE01@')
+            ,
+            new SctItm('@PINT@@DATEBEFORE@')
+            ,
+            new SctItm('@PINT@@DATEAFTER@')
+            ,
+            new SctItm('今から@PINT@@DATEBEFORE@')
+            ,
+            new SctItm('あれから@PINT@@DATEAFTER@')
+        ];
+    }
+}
 
 
 class selector_date extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@DATE@');
         this.itms = [
-            new SctItm('およそ@DATE@')
-            ,
             new SctItm('@DATE01@')
             ,
-            new SctItm('@DATE01@')
+            new SctItm('@DATEBEFORE@')
             ,
-            new SctItm('@DATE01@')
+            new SctItm('@DATEAFTER@')
             ,
-            new SctItm('@DATE01@')
+            new SctItm('およそ@DATEBEFORE@')
             ,
-            new SctItm('@DATE01@')
-            ,
-            new SctItm('@DATE01@')
-            ,
-            new SctItm('@DATE01@')
-            ,
-            new SctItm('@NUM2TO9@日後')
-            ,
-            new SctItm('@NUM2TO9@日前')
-            ,
-            new SctItm('@NUM2TO9@年後')
-            ,
-            new SctItm('@NUM2TO9@年前')
-            ,
-            new SctItm('@NUM2TO9@ヶ月前')
-            ,
-            new SctItm('@NUM2TO9@ヶ月後')
+            new SctItm('およそ@DATEAFTER@')
         ];
     }
 }
@@ -1931,6 +1931,8 @@ class selector_they extends SctItm_Selector implements ISctItm_Selector {
     }
 }
 
+
+
 // 団体の数 （一部の／多くの）人々
 class selector_many extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
@@ -2135,6 +2137,7 @@ class selector_keiyo extends SctItm_Selector implements ISctItm_Selector {
             // new SctItm('@KEIM1@と@ASSES@')
             // ,
             // new SctItm('@KEI2@で@KEI2@、そして@KEI3@')
+            new SctItm('@L_DOING@@DOINGEND@')
         ];
     }
 }
@@ -2682,7 +2685,6 @@ class selector_scool extends SctItm_Selector implements ISctItm_Selector {
     }
 }
 
-
 class selector_scool01 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@SCOOL01@');
@@ -2695,6 +2697,57 @@ class selector_scoolas extends SctItm_Selector implements ISctItm_Selector {
         this.Add(itms_scoolas);
     }
 }
+
+class selector_order extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@ORDER@');
+        this.itms = [
+            new SctItm('@GROUP@の指令によって')
+            ,
+            new SctItm('@GROUP@の密命を受けて')
+            ,
+            new SctItm('@GROUP@の指図で')
+            ,
+            new SctItm('@GROUP@の支援を受けて')
+            ,
+            new SctItm('@GROUP@の賛同を得て')
+            ,
+        ];
+    }
+}
+
+
+class selector_group extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@GROUP@');
+        this.itms = [
+            new SctItm('@COUNTRY@@GROUP01@')
+            ,
+            new SctItm('@CITY@@GROUP02@')
+            ,
+            new SctItm('@COUNTRY@@GROUP02@')
+            ,
+            new SctItm('@SCOOL@')
+            ,
+            new SctItm('@MANYPEOPLE@')
+        ];
+    }
+}
+
+
+class selector_group01 extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@GROUP01@');
+        this.Add(itms_Group01);
+    }
+}
+class selector_group02 extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@GROUP02@');
+        this.Add(itms_Group02);
+    }
+}
+
 
 class selector_landmark extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
@@ -3872,6 +3925,34 @@ class selector_and01 extends SctItm_Selector implements ISctItm_Selector {
     }
 }
 
+class selector_pint extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@PINT@');
+        this.itms = [
+            new SctItm('')
+            ,
+            new SctItm('')
+            ,
+            new SctItm('')
+            ,
+            new SctItm('恐らく')
+            ,
+            new SctItm('およそ')
+            ,
+            new SctItm('おおよそ')
+            ,
+            new SctItm('確か')
+            ,
+            new SctItm('大方')
+            ,
+            new SctItm('約')
+            ,
+            new SctItm('だいたい')
+        ];
+    }
+}
+
+
 class selector_doingend extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@DOINGEND@');
@@ -3890,15 +3971,11 @@ class selector_doing extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('@DOING01@')
             ,
-            new SctItm('@DOING01@')
-            ,
-            new SctItm('@DOING01@')
+            new SctItm('@ORDER@@DOING01@')
             ,
             new SctItm('@DOING02@')
             ,
-            new SctItm('@DOING02@')
-            ,
-            new SctItm('@DOING02@')
+            new SctItm('@ORDER@@DOING02@')
             ,
             new SctItm('@DOING01@喜んで')
             ,
@@ -4476,6 +4553,10 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_scool());
         this.dic_push(new selector_scool01());
         this.dic_push(new selector_scoolas());
+        this.dic_push(new selector_order());
+        this.dic_push(new selector_group());
+        this.dic_push(new selector_group01());
+        this.dic_push(new selector_group02());
         
         this.dic_push(new selector_music());
         this.dic_push(new locker_music());
@@ -4554,6 +4635,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_and());
         this.dic_push(new selector_and00());
         this.dic_push(new selector_and01());
+        this.dic_push(new selector_pint());
         this.dic_push(new selector_nickname());
         this.dic_push(new selector_nickBad());
         this.dic_push(new selector_nickGood());
