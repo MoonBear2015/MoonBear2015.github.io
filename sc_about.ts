@@ -240,6 +240,8 @@ class selector_item extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@COUNTRY@')
             ,
             new SctItm('@COUNTRY@人')
+            ,
+            new SctItm('@GROUP@')
         ];
     }
 }

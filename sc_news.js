@@ -549,7 +549,8 @@ class selector_call extends SctItm_Selector {
             new SctItm('@SIZE@@END02C@@NICK@'),
             new SctItm('@SIZE@@END02C@@L_CLASS@'),
             new SctItm('@DOING@@DOINGEND@@NICK@'),
-            new SctItm('@L_ITEM@の@L_PART@')
+            new SctItm('@L_ITEM@の@L_PART@'),
+            new SctItm('@GROUP@の@L_ITEM@')
         ];
     }
 }
@@ -563,7 +564,8 @@ class selector_call2 extends SctItm_Selector {
             new SctItm('@KEI@@ITEM@'),
             new SctItm('@HABIT@の@NICK@'),
             new SctItm('@DOING@@DOINGEND@@NICK@'),
-            new SctItm('@L_ITEM@の@L_PART@')
+            new SctItm('@L_ITEM@の@L_PART@'),
+            new SctItm('@GROUP@の@L_ITEM@')
         ];
     }
 }

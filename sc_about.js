@@ -181,7 +181,8 @@ class selector_item extends SctItm_Selector {
             // new SctItm('@HABIT@')
             ,
             new SctItm('@COUNTRY@'),
-            new SctItm('@COUNTRY@人')
+            new SctItm('@COUNTRY@人'),
+            new SctItm('@GROUP@')
         ];
     }
 }

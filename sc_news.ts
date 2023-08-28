@@ -828,6 +828,8 @@ class selector_call extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@DOING@@DOINGEND@@NICK@')
             ,
             new SctItm('@L_ITEM@の@L_PART@')
+            ,
+            new SctItm('@GROUP@の@L_ITEM@')
         ];
     }
 }
@@ -850,6 +852,8 @@ class selector_call2 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@DOING@@DOINGEND@@NICK@')
             ,
             new SctItm('@L_ITEM@の@L_PART@')
+            ,
+            new SctItm('@GROUP@の@L_ITEM@')
         ];
     }
 }
