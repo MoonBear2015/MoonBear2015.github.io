@@ -478,10 +478,10 @@ class selector_newsFirst extends SctItm_Selector {
         this.itms = [
             new SctItm('@L_WHAT@が@L_DO@した。'),
             new SctItm('@KEI@@L_WHAT@が@KEID@@L_DO@した。'),
-            new SctItm('@DATE@、@KEI@@L_WHAT@が@KEID@@L_DO@した。'),
-            new SctItm('@DATE@、@KEI@@L_WHAT@が@KEID@@L_DO@したと思われる。'),
-            new SctItm('@DATE@、@KEI@@L_WHAT@が@KEID@@L_DO@したとの情報が流れている。'),
-            new SctItm('@DATE@、@KEI@@L_WHAT@が@KEID@@L_DO@すると推測されていた。'),
+            new SctItm('@DATE@に、@KEI@@L_WHAT@が@KEID@@L_DO@した。'),
+            new SctItm('@DATE@に、@ORDER@@KEI@@L_WHAT@が@KEID@@L_DO@したと思われる。'),
+            new SctItm('@DATE@に、@ORDER@@KEI@@L_WHAT@が@KEID@@L_DO@したとの情報が流れている。'),
+            new SctItm('@DATE@には、@ORDER@@KEI@@L_WHAT@が@KEID@@L_DO@すると推測されていた。'),
             new SctItm('@KEI@@L_WHAT@が@KEID@@L_DO@したのは、@DATE@のことである。')
         ];
     }
@@ -578,25 +578,14 @@ class selector_pop1 extends SctItm_Selector {
         ];
     }
 }
-class selector_timedate extends SctItm_Selector {
-    constructor() {
-        super('@DATE@');
-        this.itms = [
-            new SctItm('@PINT@@DATE01@'),
-            new SctItm('@PINT@@DATEBEFORE@'),
-            new SctItm('@PINT@@DATEAFTER@'),
-            new SctItm('今から@PINT@@DATEBEFORE@'),
-            new SctItm('あれから@PINT@@DATEAFTER@')
-        ];
-    }
-}
 class selector_date extends SctItm_Selector {
     constructor() {
         super('@DATE@');
         this.itms = [
-            new SctItm('@DATE01@'),
-            new SctItm('@DATEBEFORE@'),
-            new SctItm('@DATEAFTER@'),
+            new SctItm('@PINT@@DATE01@'),
+            new SctItm('@PINT@@DATE01@'),
+            new SctItm('@PINT@@DATEBEFORE@'),
+            new SctItm('@PINT@@DATEAFTER@'),
             new SctItm('およそ@DATEBEFORE@'),
             new SctItm('およそ@DATEAFTER@')
         ];
@@ -647,7 +636,16 @@ class selector_who extends SctItm_Selector {
             new SctItm('@MANYPEOPLE@とは@FRIENDSHIP@であった@HUMAN@@AGE@'),
             new SctItm('@MANYPEOPLE@とは@FRIENDSHIP@だと噂された@HUMAN@@AGE@'),
             new SctItm('@AWARD@を@AWARDGET@した@HUMAN@@AGE@'),
-            new SctItm('@AWARD@の受賞者、@HUMAN@@AGE@')
+            new SctItm('@AWARD@の受賞者、@HUMAN@@AGE@'),
+            new SctItm('@GROUP@から密命を受けた@HUMAN@@AGE@'),
+            new SctItm('@GROUP@から派遣された@HUMAN@@AGE@'),
+            new SctItm('@GROUP@から推薦された@HUMAN@@AGE@'),
+            new SctItm('@GROUP@から買収された@HUMAN@@AGE@'),
+            new SctItm('@GROUP@からスカウトされた@HUMAN@@AGE@'),
+            new SctItm('@GROUP@から追放された@HUMAN@@AGE@'),
+            new SctItm('@GROUP@に抹殺された@HUMAN@@AGE@'),
+            new SctItm('@GROUP@に訴えられた@HUMAN@@AGE@'),
+            new SctItm('@GROUP@を壊滅させた@HUMAN@@AGE@')
         ];
     }
 }
@@ -675,7 +673,17 @@ class selector_who3 extends SctItm_Selector {
             new SctItm('@COUNTRY@出身の'),
             new SctItm('@COUNTRY@在住の'),
             new SctItm('@COUNTRY@唯一の'),
-            new SctItm('@COUNTRY@政府から派遣された'),
+            new SctItm('@GROUP@から派遣された'),
+            new SctItm('@GROUP@から密命を受けた'),
+            new SctItm('@GROUP@から推薦された'),
+            new SctItm('@GROUP@から追放された'),
+            new SctItm('@GROUP@から批難された'),
+            new SctItm('@GROUP@にスカウトされた'),
+            new SctItm('@GROUP@に買収された'),
+            new SctItm('@GROUP@に訴えられた'),
+            new SctItm('@GROUP@に抹殺された'),
+            new SctItm('@GROUP@を壊滅させた'),
+            new SctItm('@GROUP@を組織した'),
             new SctItm('@SCHOOL@出身の'),
             new SctItm('@SCHOOL@に通う'),
             new SctItm('@SCHOOL@在学中の'),
@@ -1893,7 +1901,7 @@ class selector_group extends SctItm_Selector {
             new SctItm('@COUNTRY@@GROUP01@'),
             new SctItm('@CITY@@GROUP02@'),
             new SctItm('@COUNTRY@@GROUP02@'),
-            new SctItm('@SCOOL@'),
+            new SctItm('@SCHOOL@'),
             new SctItm('@MANYPEOPLE@')
         ];
     }

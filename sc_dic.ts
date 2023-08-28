@@ -8523,6 +8523,28 @@ const   itms_doing = [
     ,
     new SctItm('@MANYPEOPLE@を募集して')
     ,
+    new SctItm('@GROUP@から派遣されて')
+    ,
+    new SctItm('@GROUP@から密命を受けて')
+    ,
+    new SctItm('@GROUP@から推薦されて')
+    ,
+    new SctItm('@GROUP@から追放されて')
+    ,
+    new SctItm('@GROUP@から批難されて')
+    ,
+    new SctItm('@GROUP@にスカウトされて')
+    ,
+    new SctItm('@GROUP@に買収されて')
+    ,
+    new SctItm('@GROUP@に訴えられて')
+    ,
+    new SctItm('@GROUP@に抹殺されて')
+    ,
+    new SctItm('@GROUP@を壊滅させて')
+    ,
+    new SctItm('@GROUP@を組織して')
+    ,
     new SctItm('@PEOPLE@を集めて')
     ,
     new SctItm('@PEOPLE@を追いかけて')
