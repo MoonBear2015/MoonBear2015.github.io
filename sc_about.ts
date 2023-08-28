@@ -50,7 +50,7 @@ function make_about()
         shtml += '通り名:@CALL2@<br>'
         shtml += '国籍:@COUNTRY@出身<br>';
         shtml += '住所:@COUNTRY@在住<br>';
-        shtml += '学歴:@SCHOOL@ @SCOOLAS@<br>'
+        shtml += '学歴:@SCHOOL@ @SCHOOLAS@<br>'
         shtml += '専攻:@SCIENCE@<br>'
         shtml += '受賞歴:@AWARD@ @AWARDGET@<br>'
         shtml += '仕事:@L_CLASS@<br>'

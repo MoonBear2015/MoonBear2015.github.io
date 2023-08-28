@@ -2671,50 +2671,50 @@ class selector_scool extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@SCHOOL@');
         this.itms = [
-            new SctItm('@CITY@@SCOOL01@')
+            new SctItm('@CITY@@SCHOOL01@')
             ,
-            new SctItm('@CITY@私立@SCOOL01@')
+            new SctItm('@CITY@私立@SCHOOL01@')
             ,
-            new SctItm('@CITY@公立@SCOOL01@')
+            new SctItm('@CITY@公立@SCHOOL01@')
             ,
-            new SctItm('@CITY@市立@SCOOL01@')
+            new SctItm('@CITY@市立@SCHOOL01@')
             ,
-            new SctItm('@CITY@私立第@NUM10@@SCOOL01@')
+            new SctItm('@CITY@私立第@NUM10@@SCHOOL01@')
             ,
-            new SctItm('@CITY@公立第@NUM10@@SCOOL01@')
+            new SctItm('@CITY@公立第@NUM10@@SCHOOL01@')
             ,
-            new SctItm('@CITY@市立第@NUM10@@SCOOL01@')
+            new SctItm('@CITY@市立第@NUM10@@SCHOOL01@')
             ,
-            new SctItm('@CITY@第@NUM10@@SCOOL01@')
+            new SctItm('@CITY@第@NUM10@@SCHOOL01@')
             ,
-            new SctItm('@COUNTRY@@SCOOL01@')
+            new SctItm('@COUNTRY@@SCHOOL01@')
             ,
-            new SctItm('@COUNTRY@私立@SCOOL01@')
+            new SctItm('@COUNTRY@私立@SCHOOL01@')
             ,
-            new SctItm('@COUNTRY@公立@SCOOL01@')
+            new SctItm('@COUNTRY@公立@SCHOOL01@')
             ,
-            new SctItm('@COUNTRY@国立@SCOOL01@')
+            new SctItm('@COUNTRY@国立@SCHOOL01@')
             ,
-            new SctItm('@COUNTRY@私立第@NUM10@@SCOOL01@')
+            new SctItm('@COUNTRY@私立第@NUM10@@SCHOOL01@')
             ,
-            new SctItm('@COUNTRY@公立第@NUM10@@SCOOL01@')
+            new SctItm('@COUNTRY@公立第@NUM10@@SCHOOL01@')
             ,
-            new SctItm('@COUNTRY@国立第@NUM10@@SCOOL01@')
+            new SctItm('@COUNTRY@国立第@NUM10@@SCHOOL01@')
             ,
-            new SctItm('@COUNTRY@第@NUM10@@SCOOL01@')
+            new SctItm('@COUNTRY@第@NUM10@@SCHOOL01@')
         ];
     }
 }
 
-class selector_scool01 extends SctItm_Selector implements ISctItm_Selector {
+class selector_school01 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
-        super('@SCOOL01@');
+        super('@SCHOOL01@');
         this.Add(itms_scool);
     }
 }
-class selector_scoolas extends SctItm_Selector implements ISctItm_Selector {
+class selector_schoolas extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
-        super('@SCOOLAS@');
+        super('@SCHOOLAS@');
         this.Add(itms_scoolas);
     }
 }
@@ -2733,6 +2733,7 @@ class selector_order extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@GROUP@の賛同を得て')
             ,
+            new SctItm('@GROUP@を代表して')
         ];
     }
 }
@@ -4572,8 +4573,8 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_food());
         this.dic_push(new locker_food());
         this.dic_push(new selector_scool());
-        this.dic_push(new selector_scool01());
-        this.dic_push(new selector_scoolas());
+        this.dic_push(new selector_school01());
+        this.dic_push(new selector_schoolas());
         this.dic_push(new selector_order());
         this.dic_push(new selector_group());
         this.dic_push(new selector_group01());

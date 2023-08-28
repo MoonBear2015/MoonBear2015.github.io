@@ -5938,5 +5938,6 @@ const itms_Group02 = [
     new SctItm('医師会'),
     new SctItm('教団'),
     new SctItm('警察'),
-    new SctItm('郵便')
+    new SctItm('消防署'),
+    new SctItm('郵便局')
 ];
