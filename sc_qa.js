@@ -299,9 +299,9 @@ class selector_q_msg extends SctItm_Selector {
             new SctItm('私の@L_PART@とは@FRIENDSHIP@なんです'),
             new SctItm('私の『@CALL2@』と@GRADE@@ASSES@@L_PART@のことです'),
             new SctItm('何を隠そう、私の正体は@L_EVIL2@だったのです'),
-            new SctItm('@L_HERO2@の居場所を探しているのです'),
-            new SctItm('@L_HERO2@の行方を追っているのです'),
-            new SctItm('@L_HERO2@の抹殺を命じられたのです')
+            new SctItm('@ORDER@@L_HERO2@の居場所を探しているのです'),
+            new SctItm('@ORDER@@L_HERO2@の行方を追っているのです'),
+            new SctItm('@ORDER@@L_HERO2@の抹殺を命じられたのです')
         ];
     }
 }
