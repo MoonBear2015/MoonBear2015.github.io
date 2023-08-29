@@ -9871,8 +9871,6 @@ const   itms_Group01 = [
     ,
     new SctItm('空軍')
     ,
-    new SctItm('諜報機関')
-    ,
     new SctItm('海兵隊')
 ]
 const   itms_Group02 = [
@@ -9899,6 +9897,8 @@ const   itms_Group02 = [
     new SctItm('消防署')
     ,
     new SctItm('郵便局')
+    ,
+    new SctItm('市役所')
 ]
 
 

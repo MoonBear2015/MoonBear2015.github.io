@@ -975,6 +975,10 @@ class selector_who extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@GROUP@に訴えられた@HUMAN@@AGE@')
             ,
             new SctItm('@GROUP@を壊滅させた@HUMAN@@AGE@')
+            ,
+            new SctItm('@GROUP@を設立した@HUMAN@@AGE@')
+            ,
+            new SctItm('@GROUP@に買収された@HUMAN@@AGE@')
         ];
     }
 }
@@ -2162,7 +2166,7 @@ class selector_keiyo extends SctItm_Selector implements ISctItm_Selector {
             // new SctItm('@KEIM1@と@ASSES@')
             // ,
             // new SctItm('@KEI2@で@KEI2@、そして@KEI3@')
-            new SctItm('@L_DOING@@DOINGEND@')
+            new SctItm('@DOING@@DOINGEND@')
         ];
     }
 }
