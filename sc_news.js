@@ -634,9 +634,9 @@ class selector_who extends SctItm_Selector {
         this.itms = [
             new SctItm('『@CALL@』と@KEID@@ASSES@@HUMAN@@AGE@'),
             new SctItm('『@CALL@』と@KEID@@ASSES@@L_CLASS@の@HUMAN@@AGE@'),
-            new SctItm('@MANYPEOPLE@より『@CALL@』と@ASSES@@L_CLASS@の@HUMAN@@AGE@'),
-            new SctItm('@MANYPEOPLE@とは@FRIENDSHIP@であった@HUMAN@@AGE@'),
-            new SctItm('@MANYPEOPLE@とは@FRIENDSHIP@だと噂された@HUMAN@@AGE@'),
+            new SctItm('@GROUP@より『@CALL@』と@ASSES@@L_CLASS@の@HUMAN@@AGE@'),
+            new SctItm('@GROUP@とは@FRIENDSHIP@であった@HUMAN@@AGE@'),
+            new SctItm('@GROUP@とは@FRIENDSHIP@だと噂された@HUMAN@@AGE@'),
             new SctItm('@AWARD@を@AWARDGET@した@HUMAN@@AGE@'),
             new SctItm('@AWARD@の受賞者、@HUMAN@@AGE@'),
             new SctItm('@GROUP@から密命を受けた@HUMAN@@AGE@'),
@@ -688,13 +688,14 @@ class selector_who3 extends SctItm_Selector {
             new SctItm('@GROUP@に抹殺された'),
             new SctItm('@GROUP@を壊滅させた'),
             new SctItm('@GROUP@を組織した'),
+            new SctItm('@GROUP@に『@CALL@』と@ASSES@'),
             new SctItm('@SCHOOL@出身の'),
             new SctItm('@SCHOOL@に通う'),
             new SctItm('@SCHOOL@在学中の'),
             new SctItm('@SCHOOL@筆頭の'),
             new SctItm('@SCHOOL@を中退した'),
             new SctItm('『@CALL2@』と呼ばれている'),
-            new SctItm('@MANYPEOPLE@より@ASSES@'),
+            new SctItm('@MANYPEOPLE@より『@CALL@』と@ASSES@'),
             new SctItm('@NICK@そっくりの'),
             new SctItm('@NICK@のような@BODY@をした'),
             new SctItm('@ANIMAL@の@BODY@を持つ'),
@@ -1406,7 +1407,7 @@ class selector_keiyo extends SctItm_Selector {
             // new SctItm('@KEIM1@と@ASSES@')
             // ,
             // new SctItm('@KEI2@で@KEI2@、そして@KEI3@')
-            new SctItm('@DOING@@DOINGEND@')
+            // new SctItm('@DOING@@DOINGEND@')
         ];
     }
 }
@@ -2487,9 +2488,11 @@ class selector_assessment extends SctItm_Selector {
         super('@ASSES@');
         this.itms = [
             new SctItm('@ASSES02@た'),
-            new SctItm('@ASSES02@て@DOINGEND@'),
-            new SctItm('評価が高い'),
-            new SctItm('名高い')
+            new SctItm('@ASSES02@て@DOINGEND@')
+            // ,
+            // new SctItm('評価が高い')
+            // ,
+            // new SctItm('名高い')
         ];
     }
 }
@@ -2513,9 +2516,12 @@ class selector_assessment02 extends SctItm_Selector {
             new SctItm('親しまれ'),
             new SctItm('賞賛され'),
             new SctItm('愛され'),
-            new SctItm('罵倒され'),
-            new SctItm('呼ばれ'),
-            new SctItm('知られ'),
+            new SctItm('罵倒され')
+            // ,
+            // new SctItm('呼ばれ')
+            // ,
+            // new SctItm('知られ')
+            ,
             new SctItm('期待され'),
             new SctItm('丸め込まれ'),
             new SctItm('見放され'),

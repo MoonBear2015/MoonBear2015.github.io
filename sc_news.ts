@@ -948,11 +948,11 @@ class selector_who extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('『@CALL@』と@KEID@@ASSES@@L_CLASS@の@HUMAN@@AGE@')
             ,
-            new SctItm('@MANYPEOPLE@より『@CALL@』と@ASSES@@L_CLASS@の@HUMAN@@AGE@')
+            new SctItm('@GROUP@より『@CALL@』と@ASSES@@L_CLASS@の@HUMAN@@AGE@')
             ,
-            new SctItm('@MANYPEOPLE@とは@FRIENDSHIP@であった@HUMAN@@AGE@')
+            new SctItm('@GROUP@とは@FRIENDSHIP@であった@HUMAN@@AGE@')
             ,
-            new SctItm('@MANYPEOPLE@とは@FRIENDSHIP@だと噂された@HUMAN@@AGE@')
+            new SctItm('@GROUP@とは@FRIENDSHIP@だと噂された@HUMAN@@AGE@')
             ,
             new SctItm('@AWARD@を@AWARDGET@した@HUMAN@@AGE@')
             ,
@@ -1041,6 +1041,8 @@ class selector_who3 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@GROUP@を組織した')
             ,
+            new SctItm('@GROUP@に『@CALL@』と@ASSES@')
+            ,
             new SctItm('@SCHOOL@出身の')
             ,
             new SctItm('@SCHOOL@に通う')
@@ -1053,7 +1055,7 @@ class selector_who3 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('『@CALL2@』と呼ばれている')
             ,
-            new SctItm('@MANYPEOPLE@より@ASSES@')
+            new SctItm('@MANYPEOPLE@より『@CALL@』と@ASSES@')
             ,
             new SctItm('@NICK@そっくりの')
             ,
@@ -2166,7 +2168,7 @@ class selector_keiyo extends SctItm_Selector implements ISctItm_Selector {
             // new SctItm('@KEIM1@と@ASSES@')
             // ,
             // new SctItm('@KEI2@で@KEI2@、そして@KEI3@')
-            new SctItm('@DOING@@DOINGEND@')
+            // new SctItm('@DOING@@DOINGEND@')
         ];
     }
 }
@@ -3583,10 +3585,10 @@ class selector_assessment extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@ASSES02@た')
             ,
             new SctItm('@ASSES02@て@DOINGEND@')
-            ,
-            new SctItm('評価が高い')
-            ,
-            new SctItm('名高い')
+            // ,
+            // new SctItm('評価が高い')
+            // ,
+            // new SctItm('名高い')
         ];
     }
 }
@@ -3628,10 +3630,10 @@ class selector_assessment02 extends SctItm_Selector implements ISctItm_Selector 
             new SctItm('愛され')
             ,
             new SctItm('罵倒され')
-            ,
-            new SctItm('呼ばれ')
-            ,
-            new SctItm('知られ')
+            // ,
+            // new SctItm('呼ばれ')
+            // ,
+            // new SctItm('知られ')
             ,
             new SctItm('期待され')
             ,
