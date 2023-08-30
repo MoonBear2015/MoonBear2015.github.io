@@ -3335,14 +3335,14 @@ const   cods_km = [
     ,
     new SctCod_Km('|困難|こんなん|')
     ,
-    new SctCod_Km('|最悪|さいあく|')
-    ,
-    new SctCod_Km('|最高|さいこう|')
-    ,
-    // new SctCod_Km('|最新|さいしん|')
+    // new SctCod_Km('|最悪|さいあく|')
     // ,
-    new SctCod_Km('|最低|さいてい|')
-    ,
+    // new SctCod_Km('|最高|さいこう|')
+    // ,
+    // // new SctCod_Km('|最新|さいしん|')
+    // // ,
+    // new SctCod_Km('|最低|さいてい|')
+    // ,
     new SctCod_Km('|災難|さいなん|')
     ,
     new SctCod_Km('|残酷|ざんこく|')
@@ -3609,8 +3609,8 @@ const   cods_km = [
     ,
     new SctCod_Km('|無用|むよう|')
     ,
-    new SctCod_Km('|無理|むり|')
-    ,
+    // new SctCod_Km('|無理|むり|')
+    // ,
     new SctCod_Km('|名誉|めいよ|')
     ,
     new SctCod_Km('|迷惑|めいわく|')
