@@ -397,7 +397,8 @@ class selector_q04_result extends SctItm_Selector {
             new SctItm('@GRADE@@EMO@くて@THINK@しているのです'),
             new SctItm('@GRADE@@EMO@くて仕方がありません'),
             new SctItm('@DOING@いたのです'),
-            new SctItm('@DOING@いたいのです'),
+            // new SctItm('@DOING@いたいのです')
+            // ,
             new SctItm('@DOING@いるのです'),
             new SctItm('@DOING@ばかりいるのです')
         ];

@@ -1891,23 +1891,18 @@ const cods_km = [
     new SctCod_Km('|攻撃的|こうげきてき|'),
     new SctCod_Km('|肯定的|こうていてき|'),
     new SctCod_Km('|困難|こんなん|'),
-    // new SctCod_Km('|最悪|さいあく|')
+    new SctCod_Km('|最悪|さいあく|'),
+    new SctCod_Km('|最高|さいこう|'),
+    // new SctCod_Km('|最新|さいしん|')
     // ,
-    // new SctCod_Km('|最高|さいこう|')
-    // ,
-    // // new SctCod_Km('|最新|さいしん|')
-    // // ,
-    // new SctCod_Km('|最低|さいてい|')
-    // ,
+    new SctCod_Km('|最低|さいてい|'),
     new SctCod_Km('|災難|さいなん|'),
-    new SctCod_Km('|残酷|ざんこく|')
-    // ,
-    // new SctCod_Km('|殺伐|さつばつ|')
-    // ,
+    new SctCod_Km('|残酷|ざんこく|'),
+    new SctCod_Km('|殺伐|さつばつ|'),
     // new SctCod_Km('|粛正|しゅくせい|')
     // ,
     // new SctCod_Km('|純潔|じゅんけつ|')
-    ,
+    // ,
     new SctCod_Km('|幸|しあわ|せ'),
     new SctCod_Km('|純粋|じゅんすい|'),
     new SctCod_Km('|衝撃|しょうげき|'),

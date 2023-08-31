@@ -577,8 +577,8 @@ class selector_q04_result extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@DOING@いたのです')
             ,
-            new SctItm('@DOING@いたいのです')
-            ,
+            // new SctItm('@DOING@いたいのです')
+            // ,
             new SctItm('@DOING@いるのです')
             ,
             new SctItm('@DOING@ばかりいるのです')

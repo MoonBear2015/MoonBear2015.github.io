@@ -712,19 +712,19 @@ class selector_newsFirst extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@NEWS_FIRST@');
         this.itms = [
-            new SctItm('@L_WHAT@が@L_DO@した。')
+            new SctItm('@L_WHAT@が@L_DO@@END02B@。')
             ,
-            new SctItm('@KEI@@L_WHAT@が@KEID@@L_DO@した。')
+            new SctItm('@KEI@@L_WHAT@が@KEID@@L_DO@@END02B@。')
             ,
-            new SctItm('@DATE@に、@KEI@@L_WHAT@が@KEID@@L_DO@した。')
+            new SctItm('@DATE@に、@KEI@@L_WHAT@が@KEID@@L_DO@@END02B@。')
             ,
-            new SctItm('@DATE@に、@ORDER@@KEI@@L_WHAT@が@KEID@@L_DO@したと思われる。')
+            new SctItm('@DATE@に、@ORDER@@KEI@@L_WHAT@が@KEID@@L_DO@@END02B@と思われる。')
             ,
-            new SctItm('@DATE@に、@ORDER@@KEI@@L_WHAT@が@KEID@@L_DO@したとの情報が流れている。')
+            new SctItm('@DATE@に、@ORDER@@KEI@@L_WHAT@が@KEID@@L_DO@@END02B@との情報が流れている。')
             ,
             new SctItm('@DATE@には、@ORDER@@KEI@@L_WHAT@が@KEID@@L_DO@すると推測されていた。')
             ,
-            new SctItm('@KEI@@L_WHAT@が@KEID@@L_DO@したのは、@DATE@のことである。')
+            new SctItm('@KEI@@L_WHAT@が@KEID@@L_DO@@END02B@のは、@DATE@のことである。')
         ];
     }
 }
@@ -979,6 +979,12 @@ class selector_who extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@GROUP@を設立した@HUMAN@@AGE@')
             ,
             new SctItm('@GROUP@に買収された@HUMAN@@AGE@')
+            ,
+            new SctItm('@GROUP@と契約した@HUMAN@@AGE@')
+            ,
+            new SctItm('@GROUP@に洗脳された@HUMAN@@AGE@')
+            ,
+            new SctItm('@GROUP@に改造された@HUMAN@@AGE@')
         ];
     }
 }
@@ -1039,7 +1045,13 @@ class selector_who3 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@GROUP@を壊滅させた')
             ,
-            new SctItm('@GROUP@を組織した')
+            new SctItm('@GROUP@を組織@END02B@')
+            ,
+            new SctItm('@GROUP@に洗脳された')
+            ,
+            new SctItm('@GROUP@と契約@END02B@')
+            ,
+            new SctItm('@GROUP@に改造された')
             ,
             new SctItm('@GROUP@に『@CALL@』と@ASSES@')
             ,
@@ -1051,7 +1063,7 @@ class selector_who3 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@SCHOOL@筆頭の')
             ,
-            new SctItm('@SCHOOL@を中退した')
+            new SctItm('@SCHOOL@を中退@END02B@')
             ,
             new SctItm('『@CALL2@』と呼ばれている')
             ,
@@ -2403,8 +2415,8 @@ class selector_kdn2 extends SctItm_Selector implements ISctItm_Selector {
         super('@KEIDN2@');
         this.itms = [
             new SctItm('@KEIDN@')
-            ,
-            new SctItm('@KEIMN@に')
+            // ,
+            // new SctItm('@KEIMN@に')
             ,
             new SctItm('@NICKBAD@のように')
             ,
@@ -2744,6 +2756,8 @@ class selector_order extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@GROUP@の賛同を得て')
             ,
             new SctItm('@GROUP@を代表して')
+            ,
+            new SctItm('@GROUP@に洗脳されて')
         ];
     }
 }
@@ -3974,8 +3988,8 @@ class selector_pint extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('おおよそ')
             ,
             new SctItm('確か')
-            ,
-            new SctItm('大方')
+            // ,
+            // new SctItm('大方')
             ,
             new SctItm('約')
             ,
