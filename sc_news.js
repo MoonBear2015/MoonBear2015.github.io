@@ -632,6 +632,7 @@ class selector_who extends SctItm_Selector {
     constructor() {
         super('@WHO@');
         this.itms = [
+            new SctItm('@DONE@@HUMAN@@AGE@'),
             new SctItm('『@CALL@』と@KEID@@ASSES@@HUMAN@@AGE@'),
             new SctItm('『@CALL@』と@KEID@@ASSES@@L_CLASS@の@HUMAN@@AGE@'),
             new SctItm('@GROUP@より『@CALL@』と@ASSES@@L_CLASS@の@HUMAN@@AGE@'),
@@ -2806,13 +2807,88 @@ class selector_doing01 extends SctItm_Selector {
 class selector_doing02 extends SctItm_Selector {
     constructor() {
         super('@DOING02@');
-        this.Add(itms_doing);
+        this.itms = [
+            new SctItm('@DID@て')
+        ];
+    }
+}
+class selector_done extends SctItm_Selector {
+    constructor() {
+        super('@DONE@');
+        this.itms = [
+            new SctItm('@DONE01@'),
+            new SctItm('@ORDER@@DONE01@'),
+            new SctItm('@DONE02@'),
+            new SctItm('@ORDER@@DONE02@'),
+            new SctItm('@DOING01@喜んだ'),
+            new SctItm('@DOING01@笑った'),
+            new SctItm('@DOING01@笑い転げた'),
+            new SctItm('@DOING01@悲しんた'),
+            new SctItm('@DOING01@泣いた'),
+            new SctItm('@DOING01@泣き叫んた'),
+            new SctItm('@DOING01@涙を流した'),
+            new SctItm('@DOING01@油を売った')
+        ];
+    }
+}
+class selector_done01 extends SctItm_Selector {
+    constructor() {
+        super('@DONE01@');
+        this.itms = [
+            new SctItm('@DONE02@'),
+            new SctItm('@DONE02@'),
+            new SctItm('@DONE02@'),
+            new SctItm('@PEOPLE@と一緒に@DONE02@'),
+            new SctItm('@PEOPLE@と@DONE02@'),
+            new SctItm('一人で@DONE02@'),
+            new SctItm('独りぼっちで@DONE02@'),
+            new SctItm('@ANIMAL@を連れて@DONE02@')
+        ];
+    }
+}
+// 行動 （食べた）
+class selector_done02 extends SctItm_Selector {
+    constructor() {
+        super('@DONE02@');
+        this.itms = [
+            new SctItm('@DID@た')
+        ];
+    }
+}
+// 行動 （食べ）ている　（食べ）た
+class selector_did extends SctItm_Selector {
+    constructor() {
+        super('@DID@');
+        this.Add(itms_did);
     }
 }
 class locker_doing extends SctItm_SelectLocker {
     constructor() {
         super('@L_DOING@');
-        this.Add(itms_doing_l);
+        this.Add(itms_did_l);
+        this.itms = [
+            new SctItm('@L_DID@て')
+        ];
+    }
+}
+class locker_did extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_DID@');
+        this.Add(itms_did_l);
+    }
+}
+class Onetime_doing extends SctItm_OneTimeLocker {
+    constructor() {
+        super('@O_DOING@');
+        this.itms = [
+            new SctItm('@O_DID@て')
+        ];
+    }
+}
+class Onetime_did extends SctItm_OneTimeLocker {
+    constructor() {
+        super('@O_DID@');
+        this.Add(itms_did_o);
     }
 }
 class locker_item extends SctItm_SelectLocker {
@@ -3336,7 +3412,12 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_doing());
         this.dic_push(new selector_doing01());
         this.dic_push(new selector_doing02());
+        this.dic_push(new selector_did());
+        this.dic_push(new selector_done());
+        this.dic_push(new selector_done01());
+        this.dic_push(new selector_done02());
         this.dic_push(new locker_doing());
+        this.dic_push(new locker_did());
         this.dic_push(new selector_superitem());
         this.dic_push(new locker_item());
         this.dic_push(new locker_chr_hero1());

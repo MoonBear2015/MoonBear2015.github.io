@@ -709,12 +709,6 @@ class locker_girl extends SctItm_SelectLocker {
         this.Add(itms_girlName);
     }
 }
-class Onetime_doing extends SctItm_OneTimeLocker {
-    constructor() {
-        super('@O_DOING@');
-        this.Add(itms_doing_o);
-    }
-}
 class selector_boyfirst extends SctItm_Selector {
     constructor() {
         super('@BOY_FIRST@');
@@ -1214,6 +1208,7 @@ class book_docs_maker extends news_docs_maker {
         this.dic_push(new OneTime_livestock());
         this.dic_push(new OneTime_fish());
         this.dic_push(new Onetime_doing());
+        this.dic_push(new Onetime_did());
         this.dic_push(new selector_boyfirst());
         this.dic_push(new selector_boynext());
         this.dic_push(new selector_girlnext());

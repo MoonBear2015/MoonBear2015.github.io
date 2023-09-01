@@ -8424,713 +8424,721 @@ const   itms_evilmark = [
     new SctItm('▽')
 ]
 
-const   itms_doing = [
-    new SctItm('@FOOD@を食べて')
+// ～た、～て
+const   itms_did = [
+    new SctItm('@FOOD@を食べ')
     ,
-    new SctItm('@FOOD@に塩を振って食べて')
+    new SctItm('@FOOD@に塩を振って食べ')
     ,
-    new SctItm('@FOOD@に塩胡椒を振って食べて')
+    new SctItm('@FOOD@に塩胡椒を振って食べ')
     ,
-    new SctItm('@FOOD@に醤油をかけて食べて')
+    new SctItm('@FOOD@に醤油をかけて食べ')
     ,
-    new SctItm('@FOOD@にソースをかけて食べて')
+    new SctItm('@FOOD@にソースをかけて食べ')
     ,
-    new SctItm('@FOOD@にカラシをつけて食べて')
+    new SctItm('@FOOD@にカラシをつけて食べ')
     ,
-    new SctItm('@FOOD@にジャムを塗って食べて')
+    new SctItm('@FOOD@にジャムを塗って食べ')
     ,
-    new SctItm('@FOOD@にレモンを搾って食べて')
+    new SctItm('@FOOD@にレモンを搾って食べ')
     ,
-    new SctItm('@FOOD@をパンに挟んで食べて')
+    new SctItm('@FOOD@をパンに挟んで食べ')
     ,
-    new SctItm('@FOOD@をご飯にのせて食べて')
+    new SctItm('@FOOD@をご飯にのせて食べ')
     ,
-    new SctItm('@FOOD@を温め直して食べて')
+    new SctItm('@FOOD@を温め直して食べ')
     ,
-    new SctItm('@FOOD@を焼き直して食べて')
+    new SctItm('@FOOD@を焼き直して食べ')
     ,
-    new SctItm('@LIVESTOCK@の肉を油で揚げて食べて')
+    new SctItm('@LIVESTOCK@の肉を油で揚げて食べ')
     ,
-    new SctItm('@LIVESTOCK@の肉を丸焼きにして食べて')
+    new SctItm('@LIVESTOCK@の肉を丸焼きにして食べ')
     ,
-    new SctItm('@FISH@を塩焼きにして食べて')
+    new SctItm('@FISH@を塩焼きにして食べ')
     ,
-    new SctItm('@FISH@を蒸し焼きにして食べて')
+    new SctItm('@FISH@を蒸し焼きにして食べ')
     ,
-    new SctItm('@FOOD@を配達して')
+    new SctItm('@FOOD@を配達し')
     ,
-    new SctItm('@FOOD@を注文して')
+    new SctItm('@FOOD@を注文し')
     ,
-    new SctItm('@FOOD@を平らげて')
+    new SctItm('@FOOD@を平らげ')
     ,
-    new SctItm('@FOOD@を食い逃げして')
+    new SctItm('@FOOD@を食い逃げし')
     ,
-    new SctItm('@FOOD@の店を開いて')
+    new SctItm('@FOOD@の店を開い')
     ,
-    new SctItm('@CLASS@に憧れて')
+    new SctItm('@CLASS@に憧れ')
     ,
-    new SctItm('@CLASS@に恋をして')
+    new SctItm('@CLASS@に恋をし')
     ,
-    new SctItm('@CLASS@を目指して')
+    new SctItm('@CLASS@を目指し')
     ,
-    new SctItm('@CLASS@を雇って')
+    new SctItm('@CLASS@を雇っ')
     ,
-    new SctItm('@CLASS@を召還して')
+    new SctItm('@CLASS@を召還し')
     ,
-    new SctItm('@CLASS@を募集して')
+    new SctItm('@CLASS@を募集し')
     ,
-    new SctItm('@CLASS@を呼び出して')
+    new SctItm('@CLASS@を呼び出し')
     ,
-    new SctItm('@CLASS@に変身して')
-    ,
-    new SctItm('@PLACE@に住んで')
-    ,
-    new SctItm('@COUNTRY@に移住して')
-    ,
-    new SctItm('@COUNTRY@に亡命して')
-    ,
-    new SctItm('@CITY@に家を建てて')
-    ,
-    new SctItm('@PLACE@で眠って')
-    ,
-    new SctItm('@PLACE@で遊んで')
-    ,
-    new SctItm('@DANCE@を踊って')
-    ,
-    new SctItm('@KEI@@DANCE@を踊って')
-    ,
-    new SctItm('@KEID@@DANCE@を踊って')
-    ,
-    new SctItm('@CITY@の@LANDMARK@を歩いて')
-    ,
-    new SctItm('@MANYPEOPLE@に追われて')
-    ,
-    new SctItm('@MANYPEOPLE@に囲まれて')
-    ,
-    new SctItm('@MANYPEOPLE@にいじめられて')
-    ,
-    new SctItm('@MANYPEOPLE@に閉じ込められて')
-    ,
-    new SctItm('@MANYPEOPLE@に襲われて')
-    ,
-    new SctItm('@MANYPEOPLE@に殺されかけて')
-    ,
-    new SctItm('@MANYPEOPLE@にもてはやされて')
-    ,
-    new SctItm('@MANYPEOPLE@に喝采されて')
-    ,
-    new SctItm('@MANYPEOPLE@を引き連れて')
-    ,
-    new SctItm('@MANYPEOPLE@を募集して')
-    ,
-    new SctItm('@GROUP@から派遣されて')
-    ,
-    new SctItm('@GROUP@から密命を受けて')
-    ,
-    new SctItm('@GROUP@から推薦されて')
-    ,
-    new SctItm('@GROUP@から追放されて')
-    ,
-    new SctItm('@GROUP@から批難されて')
-    ,
-    new SctItm('@GROUP@にスカウトされて')
-    ,
-    new SctItm('@GROUP@に買収されて')
-    ,
-    new SctItm('@GROUP@に訴えられて')
-    ,
-    new SctItm('@GROUP@に抹殺されて')
-    ,
-    new SctItm('@GROUP@を壊滅させて')
-    ,
-    new SctItm('@GROUP@を組織して')
-    ,
-    new SctItm('@PEOPLE@を集めて')
-    ,
-    new SctItm('@PEOPLE@を追いかけて')
-    ,
-    new SctItm('@PEOPLE@を探して')
-    ,
-    new SctItm('@PEOPLE@をとっちめて')
-    ,
-    new SctItm('@PEOPLE@から誘われて')
-    ,
-    new SctItm('@PEOPLE@の振りをして')
-    ,
-    new SctItm('『@CALL@』と署名して')
-    ,
-    new SctItm('@MANYPEOPLE@から『@CALL@』と呼ばれて')
-    ,
-    new SctItm('@MANYPEOPLE@から『@CALL@』と噂されて')
-    ,
-    new SctItm('@MANYPEOPLE@から『@CALL@』と馬鹿にされて')
-    ,
-    new SctItm('@MANYPEOPLE@から『@CALL@』と後ろ指を指されて')
-    ,
-    new SctItm('@MANYPEOPLE@から『@CALL@』と讃えられて')
-    ,
-    new SctItm('@MANYPEOPLE@から『@CALL@』と賞賛されて')
-    ,
-    new SctItm('@MANYPEOPLE@から『@CALL@』とおだてられて')
-    ,
-    new SctItm('@PART@を連れて')
-    ,
-    new SctItm('@PART@の手を引いて')
+    new SctItm('@CLASS@に変身し')
     // ,
-    // new SctItm('@PART@を置き去りにして')
+    // new SctItm('@PLACE@に住んで')
+    ,
+    new SctItm('@COUNTRY@に移住し')
+    ,
+    new SctItm('@COUNTRY@に亡命し')
+    ,
+    new SctItm('@CITY@に家を建て')
+    ,
+    new SctItm('@PLACE@で眠っ')
     // ,
-    // new SctItm('@PART@を見捨てて')
+    // new SctItm('@PLACE@で遊んで')
+    ,
+    new SctItm('@DANCE@を踊っ')
+    ,
+    new SctItm('@KEI@@DANCE@を踊っ')
+    ,
+    new SctItm('@KEID@@DANCE@を踊っ')
+    ,
+    new SctItm('@CITY@の@LANDMARK@を歩い')
+    ,
+    new SctItm('@MANYPEOPLE@に追われ')
+    ,
+    new SctItm('@MANYPEOPLE@に囲まれ')
+    ,
+    new SctItm('@MANYPEOPLE@にいじめられ')
+    ,
+    new SctItm('@MANYPEOPLE@に閉じ込められ')
+    ,
+    new SctItm('@MANYPEOPLE@に襲われ')
+    ,
+    new SctItm('@MANYPEOPLE@に殺されかけ')
+    ,
+    new SctItm('@MANYPEOPLE@にもてはやされ')
+    ,
+    new SctItm('@MANYPEOPLE@に喝采され')
+    ,
+    new SctItm('@MANYPEOPLE@を引き連れ')
+    ,
+    new SctItm('@MANYPEOPLE@を募集し')
+    ,
+    new SctItm('@GROUP@から派遣され')
+    ,
+    new SctItm('@GROUP@から密命を受け')
+    ,
+    new SctItm('@GROUP@から推薦され')
+    ,
+    new SctItm('@GROUP@から追放され')
+    ,
+    new SctItm('@GROUP@から批難され')
+    ,
+    new SctItm('@GROUP@にスカウトされ')
+    ,
+    new SctItm('@GROUP@と契約し')
+    ,
+    new SctItm('@GROUP@に買収され')
+    ,
+    new SctItm('@GROUP@に訴えられ')
+    ,
+    new SctItm('@GROUP@に抹殺され')
+    ,
+    new SctItm('@GROUP@を壊滅させ')
+    ,
+    new SctItm('@GROUP@を組織し')
+    ,
+    new SctItm('@PEOPLE@を集め')
+    ,
+    new SctItm('@PEOPLE@を追いかけ')
+    ,
+    new SctItm('@PEOPLE@を探し')
+    ,
+    new SctItm('@PEOPLE@をとっちめ')
+    ,
+    new SctItm('@PEOPLE@から誘われ')
+    ,
+    new SctItm('@PEOPLE@の振りをし')
+    ,
+    new SctItm('『@CALL@』と署名し')
+    ,
+    new SctItm('@MANYPEOPLE@から『@CALL@』と呼ばれ')
+    ,
+    new SctItm('@MANYPEOPLE@から『@CALL@』と噂され')
+    ,
+    new SctItm('@MANYPEOPLE@から『@CALL@』と馬鹿にされ')
+    ,
+    new SctItm('@MANYPEOPLE@から『@CALL@』と後ろ指を指され')
+    ,
+    new SctItm('@MANYPEOPLE@から『@CALL@』と讃えられ')
+    ,
+    new SctItm('@MANYPEOPLE@から『@CALL@』と賞賛され')
+    ,
+    new SctItm('@MANYPEOPLE@から『@CALL@』とおだてられ')
+    ,
+    new SctItm('@PART@を連れ')
+    ,
+    new SctItm('@PART@の手を引い')
     // ,
-    // new SctItm('@PART@を押しのけて')
+    // new SctItm('@PART@を置き去りにし')
     // ,
-    // new SctItm('デートして')
-    ,
-    new SctItm('@SAY@して')
-    ,
-    new SctItm('@PART@をデートに誘って')
-    ,
-    new SctItm('@PART@に手紙を書いて')
-    ,
-    new SctItm('@PART@に電話して')
-    ,
-    new SctItm('@PART@にメールして')
+    // new SctItm('@PART@を見捨て')
     // ,
-    // new SctItm('お散歩して')
-    ,
-    new SctItm('@PART@にプロポーズして')
+    // new SctItm('@PART@を押しのけ')
     // ,
-    // new SctItm('食事して')
+    // new SctItm('デートし')
     ,
-    new SctItm('@PART@に別れ話をして')
+    new SctItm('@SAY@し')
+    ,
+    new SctItm('@PART@をデートに誘っ')
+    ,
+    new SctItm('@PART@に手紙を書い')
+    ,
+    new SctItm('@PART@に電話し')
+    ,
+    new SctItm('@PART@にメールし')
     // ,
-    // new SctItm('@PART@と喧嘩して')
+    // new SctItm('お散歩し')
     ,
-    new SctItm('@PART@にお茶を出して')
-    ,
-    new SctItm('@PART@の靴を磨いて')
-    ,
-    new SctItm('@PART@の髪を乾かして')
-    ,
-    new SctItm('@PART@の背中を掻いて')
-    ,
-    new SctItm('@ANIMAL@を連れて')
-    ,
-    new SctItm('@ANIMAL@に乗って')
-    ,
-    new SctItm('@ANIMAL@の散歩をして')
-    ,
-    new SctItm('@ANIMAL@に餌をやって')
-    ,
-    new SctItm('@ANIMAL@の体を洗って')
-    ,
-    new SctItm('@ANIMAL@狩りをして')
-    ,
-    new SctItm('@ANIMAL@に襲われて')
-    ,
-    new SctItm('@ANIMAL@と戦って')
-    ,
-    new SctItm('@ANIMAL@を退治して')
+    new SctItm('@PART@にプロポーズし')
     // ,
-    // new SctItm('@ANIMAL@を檻に入れて')
+    // new SctItm('食事し')
     ,
-    new SctItm('@ANIMAL@を追い出して')
-    ,
-    new SctItm('@ANIMAL@を追い払って')
-    ,
-    new SctItm('@ANIMAL@の絵を描いて')
-    ,
-    new SctItm('@DRESS@を着て')
-    ,
-    new SctItm('@DRESS@を脱いで')
-    ,
-    new SctItm('@DRESS@に着替えて')
-    ,
-    new SctItm('@DRESS@を洗濯して')
-    ,
-    new SctItm('@DRESS@を仮縫いして')
-    ,
-    new SctItm('@DRESS@を試着して')
-    ,
-    new SctItm('@DRESS@を仕立て直して')
-    ,
-    new SctItm('@UNDER@をはいて')
-    ,
-    new SctItm('@UNDER@を脱いで')
-    ,
-    new SctItm('@UNDER@のサイズを計って')
+    new SctItm('@PART@に別れ話をし')
     // ,
-    // new SctItm('ドレスアップして')
+    // new SctItm('@PART@と喧嘩し')
     ,
-    new SctItm('@SCHOOL@に通って')
+    new SctItm('@PART@にお茶を出し')
     ,
-    new SctItm('@SCHOOL@に入学して')
+    new SctItm('@PART@の靴を磨い')
     ,
-    new SctItm('@SCHOOL@に合格して')
+    new SctItm('@PART@の髪を乾かし')
     ,
-    new SctItm('@SCHOOL@を卒業して')
+    new SctItm('@PART@の背中を掻い')
     ,
-    new SctItm('@SCHOOL@を中退して')
+    new SctItm('@ANIMAL@を連れ')
     ,
-    new SctItm('@PART@に@FLOWER@の花を|捧|ささ|げて')
+    new SctItm('@ANIMAL@に乗っ')
     ,
-    new SctItm('@PART@に@FLOWER@の花束を|捧|ささ|げて')
+    new SctItm('@ANIMAL@の散歩をし')
     ,
-    new SctItm('@FLOWER@の花を咲かせて')
+    new SctItm('@ANIMAL@に餌をやっ')
     ,
-    new SctItm('@PLACE@に@FLOWER@の花を飾って')
+    new SctItm('@ANIMAL@の体を洗っ')
     ,
-    new SctItm('@FLOWER@の花の絵を描いて')
+    new SctItm('@ANIMAL@狩りをし')
     ,
-    new SctItm('@FLOWER@の花びらを散らして')
+    new SctItm('@ANIMAL@に襲われ')
     ,
-    new SctItm('@FLOWER@の花を|咥|くわ|えて')
+    new SctItm('@ANIMAL@と戦っ')
     ,
-    new SctItm('@FLOWER@の種を|蒔|ま|いて')
+    new SctItm('@ANIMAL@を退治し')
+    // ,
+    // new SctItm('@ANIMAL@を檻に入れ')
     ,
-    new SctItm('@FRUIT@の皮を|剥|む|いて')
+    new SctItm('@ANIMAL@を追い出し')
     ,
-    new SctItm('@FRUIT@の木を植えて')
+    new SctItm('@ANIMAL@を追い払っ')
     ,
-    new SctItm('@FRUIT@を収穫して')
+    new SctItm('@ANIMAL@の絵を描い')
     ,
-    new SctItm('@FRUIT@を叩き売りして')
+    new SctItm('@DRESS@を着')
+    // ,
+    // new SctItm('@DRESS@を脱いで')
     ,
-    new SctItm('@FRUIT@の種を捨てて')
+    new SctItm('@DRESS@に着替え')
     ,
-    new SctItm('@FRUIT@の種を蒔いて')
+    new SctItm('@DRESS@を洗濯し')
     ,
-    new SctItm('@FRUIT@の畑を耕して')
+    new SctItm('@DRESS@を仮縫いし')
     ,
-    new SctItm('@MUSIC@を聴いて')
+    new SctItm('@DRESS@を試着し')
     ,
-    new SctItm('@MUSIC@を歌って')
+    new SctItm('@DRESS@を仕立て直し')
     ,
-    new SctItm('@RIDE@に乗って')
+    new SctItm('@UNDER@をはい')
+    // ,
+    // new SctItm('@UNDER@を脱いで')
     ,
-    new SctItm('@FESTIVAL@を開催して')
+    new SctItm('@UNDER@のサイズを計っ')
+    // ,
+    // new SctItm('ドレスアップし')
     ,
-    new SctItm('@FESTIVAL@に参加して')
+    new SctItm('@SCHOOL@に通っ')
     ,
-    new SctItm('@SONGTYPE@『@SONGTITLE@』を@KEI4@歌って')
+    new SctItm('@SCHOOL@に入学し')
     ,
-    new SctItm('@AWARD@を@AWARDGET@して')
+    new SctItm('@SCHOOL@に合格し')
     ,
-    new SctItm('@PEOPLE@で始めて@AWARD@を@AWARDGET@して')
+    new SctItm('@SCHOOL@を卒業し')
     ,
-    new SctItm('@PEOPLE@で唯一、@AWARD@を@AWARDGET@して')
-
+    new SctItm('@SCHOOL@を中退し')
+    ,
+    new SctItm('@PART@に@FLOWER@の花を|捧|ささ|げ')
+    ,
+    new SctItm('@PART@に@FLOWER@の花束を|捧|ささ|げ')
+    ,
+    new SctItm('@FLOWER@の花を咲かせ')
+    ,
+    new SctItm('@PLACE@に@FLOWER@の花を飾っ')
+    ,
+    new SctItm('@FLOWER@の花の絵を描い')
+    ,
+    new SctItm('@FLOWER@の花びらを散らし')
+    ,
+    new SctItm('@FLOWER@の花を|咥|くわ|え')
+    ,
+    new SctItm('@FLOWER@の種を|蒔|ま|い')
+    ,
+    new SctItm('@FRUIT@の皮を|剥|む|い')
+    ,
+    new SctItm('@FRUIT@の木を植え')
+    ,
+    new SctItm('@FRUIT@を収穫し')
+    ,
+    new SctItm('@FRUIT@を叩き売りし')
+    ,
+    new SctItm('@FRUIT@の種を捨て')
+    ,
+    new SctItm('@FRUIT@の種を蒔い')
+    ,
+    new SctItm('@FRUIT@の畑を耕し')
+    ,
+    new SctItm('@MUSIC@を聴い')
+    ,
+    new SctItm('@MUSIC@を歌っ')
+    ,
+    new SctItm('@RIDE@に乗っ')
+    ,
+    new SctItm('@FESTIVAL@を開催し')
+    ,
+    new SctItm('@FESTIVAL@に参加し')
+    ,
+    new SctItm('@SONGTYPE@『@SONGTITLE@』を@KEI4@歌っ')
+    ,
+    new SctItm('@AWARD@を@AWARDGET@し')
+    ,
+    new SctItm('@PEOPLE@で始めて@AWARD@を@AWARDGET@し')
+    ,
+    new SctItm('@PEOPLE@で唯一、@AWARD@を@AWARDGET@し')
 ]
 
-const   itms_doing_l = [
-    new SctItm('@L_FOOD@を食べて')
+const   itms_did_l = [
+    new SctItm('@L_FOOD@を食べ')
     ,
-    new SctItm('@L_FOOD@に塩を振って食べて')
+    new SctItm('@L_FOOD@に塩を振って食べ')
     ,
-    new SctItm('@L_FOOD@に塩胡椒を振って食べて')
+    new SctItm('@L_FOOD@に塩胡椒を振って食べ')
     ,
-    new SctItm('@L_FOOD@に醤油をかけて食べて')
+    new SctItm('@L_FOOD@に醤油をかけて食べ')
     ,
-    new SctItm('@L_FOOD@にソースをかけて食べて')
+    new SctItm('@L_FOOD@にソースをかけて食べ')
     ,
-    new SctItm('@L_FOOD@にカラシをつけて食べて')
+    new SctItm('@L_FOOD@にカラシをつけて食べ')
     ,
-    new SctItm('@L_FOOD@にジャムを塗って食べて')
+    new SctItm('@L_FOOD@にジャムを塗って食べ')
     ,
-    new SctItm('@L_FOOD@にレモンを搾って食べて')
+    new SctItm('@L_FOOD@にレモンを搾って食べ')
     ,
-    new SctItm('@L_FOOD@をパンに挟んで食べて')
+    new SctItm('@L_FOOD@をパンに挟んで食べ')
     ,
-    new SctItm('@L_FOOD@をご飯にのせて食べて')
+    new SctItm('@L_FOOD@をご飯にのせて食べ')
     ,
-    new SctItm('@L_FOOD@を温め直して食べて')
+    new SctItm('@L_FOOD@を温め直して食べ')
     ,
-    new SctItm('@L_FOOD@を焼き直して食べて')
+    new SctItm('@L_FOOD@を焼き直して食べ')
     ,
-    new SctItm('@L_LIVESTOCK@の肉を油で揚げて食べて')
+    new SctItm('@L_LIVESTOCK@の肉を油で揚げて食べ')
     ,
-    new SctItm('@L_LIVESTOCK@の肉を丸焼きにして食べて')
+    new SctItm('@L_LIVESTOCK@の肉を丸焼きにして食べ')
     ,
-    new SctItm('@L_FISH@を塩焼きにして食べて')
+    new SctItm('@L_FISH@を塩焼きにして食べ')
     ,
-    new SctItm('@L_FISH@を蒸し焼きにして食べて')
+    new SctItm('@L_FISH@を蒸し焼きにして食べ')
     ,
-    new SctItm('@L_FOOD@を配達して')
+    new SctItm('@L_FOOD@を配達し')
     ,
-    new SctItm('@L_FOOD@を注文して')
+    new SctItm('@L_FOOD@を注文し')
     ,
-    new SctItm('@L_FOOD@を平らげて')
+    new SctItm('@L_FOOD@を平らげ')
     ,
-    new SctItm('@L_FOOD@を食い逃げして')
+    new SctItm('@L_FOOD@を食い逃げし')
     ,
-    new SctItm('@L_FOOD@の店を開いて')
+    new SctItm('@L_FOOD@の店を開い')
     ,
-    new SctItm('@L_CLASS@に憧れて')
+    new SctItm('@L_CLASS@に憧れ')
     ,
-    new SctItm('@L_CLASS@に恋をして')
+    new SctItm('@L_CLASS@に恋をし')
     ,
-    new SctItm('@L_CLASS@を目指して')
+    new SctItm('@L_CLASS@を目指し')
     ,
-    new SctItm('@L_CLASS@を雇って')
+    new SctItm('@L_CLASS@を雇っ')
     ,
-    new SctItm('@L_CLASS@を召還して')
+    new SctItm('@L_CLASS@を召還し')
     ,
-    new SctItm('@L_CLASS@を募集して')
+    new SctItm('@L_CLASS@を募集し')
     ,
-    new SctItm('@L_CLASS@を呼び出して')
+    new SctItm('@L_CLASS@を呼び出し')
     ,
-    new SctItm('@L_CLASS@に変身して')
+    new SctItm('@L_CLASS@に変身し')
     ,
-    new SctItm('@L_COUNTRY@に移住して')
+    new SctItm('@L_COUNTRY@に移住し')
     ,
-    new SctItm('@L_COUNTRY@に亡命して')
+    new SctItm('@L_COUNTRY@に亡命し')
     ,
-    new SctItm('@L_COUNTRY@を支配して')
+    new SctItm('@L_COUNTRY@を支配し')
     ,
-    new SctItm('@L_COUNTRY@を征服して')
-    ,
-    new SctItm('@L_CITY@に住んで')
-    ,
-    new SctItm('@L_CITY@に家を建てて')
-    ,
-    new SctItm('@MANYPEOPLE@から『@L_ITEM@の@L_SPECIALIST@』と呼ばれて')
-    ,
-    new SctItm('@MANYPEOPLE@から『@L_ITEM@の@L_SPECIALIST@』と噂されて')
-    ,
-    new SctItm('@MANYPEOPLE@から『@L_ITEM@の@L_SPECIALIST@』と馬鹿にされて')
-    ,
-    new SctItm('@MANYPEOPLE@から『@L_ITEM@の@L_SPECIALIST@』と後ろ指を指されて')
-    ,
-    new SctItm('@MANYPEOPLE@から『@L_ITEM@の@L_SPECIALIST@』と讃えられて')
-    ,
-    new SctItm('@MANYPEOPLE@から『@L_ITEM@の@L_SPECIALIST@』と賞賛されて')
-    ,
-    new SctItm('@MANYPEOPLE@から『@L_ITEM@の@L_SPECIALIST@』とおだてられて')
-    ,
-    new SctItm('@L_PART@を連れて')
-    ,
-    new SctItm('@L_PART@の手を引いて')
+    new SctItm('@L_COUNTRY@を征服し')
     // ,
-    // new SctItm('@L_PART@を置き去りにして')
+    // new SctItm('@L_CITY@に住んで')
+    ,
+    new SctItm('@L_CITY@に家を建て')
+    ,
+    new SctItm('@MANYPEOPLE@から『@L_ITEM@の@L_SPECIALIST@』と呼ばれ')
+    ,
+    new SctItm('@MANYPEOPLE@から『@L_ITEM@の@L_SPECIALIST@』と噂され')
+    ,
+    new SctItm('@MANYPEOPLE@から『@L_ITEM@の@L_SPECIALIST@』と馬鹿にされ')
+    ,
+    new SctItm('@MANYPEOPLE@から『@L_ITEM@の@L_SPECIALIST@』と後ろ指を指され')
+    ,
+    new SctItm('@MANYPEOPLE@から『@L_ITEM@の@L_SPECIALIST@』と讃えられ')
+    ,
+    new SctItm('@MANYPEOPLE@から『@L_ITEM@の@L_SPECIALIST@』と賞賛され')
+    ,
+    new SctItm('@MANYPEOPLE@から『@L_ITEM@の@L_SPECIALIST@』とおだてられ')
+    ,
+    new SctItm('@L_PART@を連れ')
+    ,
+    new SctItm('@L_PART@の手を引い')
     // ,
-    // new SctItm('@L_PART@を見捨てて')
+    // new SctItm('@L_PART@を置き去りにし')
     // ,
-    // new SctItm('@L_PART@を押しのけて')
+    // new SctItm('@L_PART@を見捨て')
     // ,
-    // new SctItm('デートして')
-    ,
-    new SctItm('@L_PART@をデートに誘って')
-    ,
-    new SctItm('@SAY@して')
-    ,
-    new SctItm('@L_PART@に手紙を書いて')
-    ,
-    new SctItm('@L_PART@に電話して')
-    ,
-    new SctItm('@L_PART@にメールして')
-    ,
-    new SctItm('@L_PART@にプロポーズして')
+    // new SctItm('@L_PART@を押しのけ')
     // ,
-    // new SctItm('食事して')
+    // new SctItm('デートし')
     ,
-    new SctItm('@L_PART@に別れ話をして')
+    new SctItm('@L_PART@をデートに誘っ')
     ,
-    new SctItm('@L_PART@と喧嘩して')
+    new SctItm('@SAY@し')
     ,
-    new SctItm('@L_PART@にお茶を出して')
+    new SctItm('@L_PART@に手紙を書い')
     ,
-    new SctItm('@L_PART@の靴を磨いて')
+    new SctItm('@L_PART@に電話し')
     ,
-    new SctItm('@L_PART@の髪を乾かして')
+    new SctItm('@L_PART@にメールし')
     ,
-    new SctItm('@L_PART@の背中を掻いて')
-    ,
-    new SctItm('@L_ANIMAL@を連れて')
-    ,
-    new SctItm('@L_ANIMAL@に乗って')
-    ,
-    new SctItm('@L_ANIMAL@の散歩をして')
-    ,
-    new SctItm('@L_ANIMAL@に餌をやって')
-    ,
-    new SctItm('@L_ANIMAL@の体を洗って')
-    ,
-    new SctItm('@L_ANIMAL@狩りをして')
-    ,
-    new SctItm('@L_ANIMAL@に襲われて')
-    ,
-    new SctItm('@L_ANIMAL@と戦って')
-    ,
-    new SctItm('@L_ANIMAL@を退治して')
+    new SctItm('@L_PART@にプロポーズし')
     // ,
-    // new SctItm('@L_ANIMAL@を檻に入れて')
+    // new SctItm('食事し')
+    ,
+    new SctItm('@L_PART@に別れ話をし')
+    ,
+    new SctItm('@L_PART@と喧嘩し')
+    ,
+    new SctItm('@L_PART@にお茶を出し')
+    ,
+    new SctItm('@L_PART@の靴を磨い')
+    ,
+    new SctItm('@L_PART@の髪を乾かし')
+    ,
+    new SctItm('@L_PART@の背中を掻い')
+    ,
+    new SctItm('@L_ANIMAL@を連れ')
+    ,
+    new SctItm('@L_ANIMAL@に乗っ')
+    ,
+    new SctItm('@L_ANIMAL@の散歩をし')
+    ,
+    new SctItm('@L_ANIMAL@に餌をやっ')
+    ,
+    new SctItm('@L_ANIMAL@の体を洗っ')
+    ,
+    new SctItm('@L_ANIMAL@狩りをし')
+    ,
+    new SctItm('@L_ANIMAL@に襲われ')
+    ,
+    new SctItm('@L_ANIMAL@と戦っ')
+    ,
+    new SctItm('@L_ANIMAL@を退治し')
     // ,
-    // new SctItm('@L_ANIMAL@を追い出して')
+    // new SctItm('@L_ANIMAL@を檻に入れ')
+    // ,
+    // new SctItm('@L_ANIMAL@を追い出し')
     ,
-    new SctItm('@L_ANIMAL@を追い払って')
+    new SctItm('@L_ANIMAL@を追い払っ')
     ,
-    new SctItm('@L_ANIMAL@の絵を描いて')
+    new SctItm('@L_ANIMAL@の絵を描い')
     ,
-    new SctItm('@L_DRESS@を着て')
+    new SctItm('@L_DRESS@を着')
+    // ,
+    // new SctItm('@L_DRESS@を脱いで')
     ,
-    new SctItm('@L_DRESS@を脱いで')
+    new SctItm('@L_DRESS@に着替え')
     ,
-    new SctItm('@L_DRESS@に着替えて')
+    new SctItm('@L_DRESS@を洗濯し')
     ,
-    new SctItm('@L_DRESS@を洗濯して')
+    new SctItm('@L_DRESS@を仮縫いし')
     ,
-    new SctItm('@L_DRESS@を仮縫いして')
+    new SctItm('@L_UNDER@をはい')
+    // ,
+    // new SctItm('@L_UNDER@を脱いで')
     ,
-    new SctItm('@L_UNDER@をはいて')
+    new SctItm('@L_UNDER@のサイズを計っ')
     ,
-    new SctItm('@L_UNDER@を脱いで')
+    new SctItm('@L_PART@に@L_FLOWER@の花を|捧|ささ|げ')
     ,
-    new SctItm('@L_UNDER@のサイズを計って')
+    new SctItm('@L_FLOWER@の花束を|捧|ささ|げ')
     ,
-    new SctItm('@L_PART@に@L_FLOWER@の花を|捧|ささ|げて')
+    new SctItm('@L_FLOWER@の花を咲かせ')
     ,
-    new SctItm('@L_FLOWER@の花束を|捧|ささ|げて')
+    new SctItm('@PLACE@に@L_FLOWER@の花を飾っ')
     ,
-    new SctItm('@L_FLOWER@の花を咲かせて')
+    new SctItm('@L_FLOWER@の花の絵を描い')
     ,
-    new SctItm('@PLACE@に@L_FLOWER@の花を飾って')
+    new SctItm('@L_FLOWER@の花びらを散らし')
     ,
-    new SctItm('@L_FLOWER@の花の絵を描いて')
+    new SctItm('@L_FLOWER@の花を|咥|くわ|え')
     ,
-    new SctItm('@L_FLOWER@の花びらを散らして')
+    new SctItm('@L_FLOWER@の種を|蒔|ま|い')
     ,
-    new SctItm('@L_FLOWER@の花を|咥|くわ|えて')
+    new SctItm('@L_MUSIC@を聴い')
     ,
-    new SctItm('@L_FLOWER@の種を|蒔|ま|いて')
+    new SctItm('@L_MUSIC@を歌っ')
     ,
-    new SctItm('@L_MUSIC@を聴いて')
+    new SctItm('@L_FRUIT@の皮を|剥|む|い')
     ,
-    new SctItm('@L_MUSIC@を歌って')
+    new SctItm('@L_FRUIT@の木を植え')
     ,
-    new SctItm('@L_FRUIT@の皮を|剥|む|いて')
+    new SctItm('@L_FRUIT@を収穫し')
     ,
-    new SctItm('@L_FRUIT@の木を植えて')
+    new SctItm('@L_FRUIT@を叩き売りし')
     ,
-    new SctItm('@L_FRUIT@を収穫して')
+    new SctItm('@L_FRUIT@の種を蒔い')
     ,
-    new SctItm('@L_FRUIT@を叩き売りして')
+    new SctItm('@L_FRUIT@の畑を耕し')
     ,
-    new SctItm('@L_FRUIT@の種を蒔いて')
+    new SctItm('@L_RIDE@に乗っ')
     ,
-    new SctItm('@L_FRUIT@の畑を耕して')
+    new SctItm('@L_FESTIVAL@を開催し')
     ,
-    new SctItm('@L_RIDE@に乗って')
+    new SctItm('@L_FESTIVAL@に参加し')
     ,
-    new SctItm('@L_FESTIVAL@を開催して')
+    new SctItm('@SONGTYPE@『@SONG_WHAT@』を@KEI4@歌っ')
     ,
-    new SctItm('@L_FESTIVAL@に参加して')
+    new SctItm('@SONGTYPE@『@SONG_PART@』を@KEI4@歌っ')
     ,
-    new SctItm('@SONGTYPE@『@SONG_WHAT@』を@KEI4@歌って')
+    new SctItm('@AWARD@を@AWARDGET@し')
     ,
-    new SctItm('@SONGTYPE@『@SONG_PART@』を@KEI4@歌って')
+    new SctItm('@PEOPLE@で始めて@AWARD@を@AWARDGET@し')
     ,
-    new SctItm('@AWARD@を@AWARDGET@して')
-    ,
-    new SctItm('@PEOPLE@で始めて@AWARD@を@AWARDGET@して')
-    ,
-    new SctItm('@PEOPLE@で唯一、@AWARD@を@AWARDGET@して')
+    new SctItm('@PEOPLE@で唯一、@AWARD@を@AWARDGET@し')
 ]
 
-const   itms_doing_o = [
-    new SctItm('@O_FOOD@を食べて')
+const   itms_did_o = [
+    new SctItm('@O_FOOD@を食べ')
     ,
-    new SctItm('@O_FOOD@に塩を振って食べて')
+    new SctItm('@O_FOOD@に塩を振って食べ')
     ,
-    new SctItm('@O_FOOD@に塩胡椒を振って食べて')
+    new SctItm('@O_FOOD@に塩胡椒を振って食べ')
     ,
-    new SctItm('@O_FOOD@に醤油をかけて食べて')
+    new SctItm('@O_FOOD@に醤油をかけて食べ')
     ,
-    new SctItm('@O_FOOD@にソースをかけて食べて')
+    new SctItm('@O_FOOD@にソースをかけて食べ')
     ,
-    new SctItm('@O_FOOD@にカラシをつけて食べて')
+    new SctItm('@O_FOOD@にカラシをつけて食べ')
     ,
-    new SctItm('@O_FOOD@にジャムを塗って食べて')
+    new SctItm('@O_FOOD@にジャムを塗って食べ')
     ,
-    new SctItm('@O_FOOD@にレモンを搾って食べて')
+    new SctItm('@O_FOOD@にレモンを搾って食べ')
     ,
-    new SctItm('@O_FOOD@をパンに挟んで食べて')
+    new SctItm('@O_FOOD@をパンに挟んで食べ')
     ,
-    new SctItm('@O_FOOD@をご飯にのせて食べて')
+    new SctItm('@O_FOOD@をご飯にのせて食べ')
     ,
-    new SctItm('@O_FOOD@を温め直して食べて')
+    new SctItm('@O_FOOD@を温め直して食べ')
     ,
-    new SctItm('@O_FOOD@を焼き直して食べて')
+    new SctItm('@O_FOOD@を焼き直して食べ')
     ,
-    new SctItm('@O_LIVESTOCK@の肉を油で揚げて食べて')
+    new SctItm('@O_LIVESTOCK@の肉を油で揚げて食べ')
     ,
-    new SctItm('@O_LIVESTOCK@の肉を丸焼きにして食べて')
+    new SctItm('@O_LIVESTOCK@の肉を丸焼きにして食べ')
     ,
-    new SctItm('@O_FISH@を塩焼きにして食べて')
+    new SctItm('@O_FISH@を塩焼きにして食べ')
     ,
-    new SctItm('@O_FISH@を蒸し焼きにして食べて')
+    new SctItm('@O_FISH@を蒸し焼きにして食べ')
     ,
-    new SctItm('@O_FOOD@を配達して')
+    new SctItm('@O_FOOD@を配達し')
     ,
-    new SctItm('@O_FOOD@を注文して')
+    new SctItm('@O_FOOD@を注文し')
     ,
-    new SctItm('@O_FOOD@を平らげて')
+    new SctItm('@O_FOOD@を平らげ')
     ,
-    new SctItm('@O_FOOD@を食い逃げして')
+    new SctItm('@O_FOOD@を食い逃げし')
     ,
-    new SctItm('@O_FOOD@の店を開いて')
+    new SctItm('@O_FOOD@の店を開い')
     // ,
-    // new SctItm('@L_CLASS@に憧れて')
+    // new SctItm('@L_CLASS@に憧れ')
     // ,
-    // new SctItm('@L_CLASS@に恋をして')
+    // new SctItm('@L_CLASS@に恋をし')
     ,
-    new SctItm('@L_CLASS@を目指して')
+    new SctItm('@L_CLASS@を目指し')
     ,
-    new SctItm('@L_CLASS@を雇って')
+    new SctItm('@L_CLASS@を雇っ')
     ,
-    new SctItm('@L_CLASS@を召還して')
+    new SctItm('@L_CLASS@を召還し')
     ,
-    new SctItm('@L_CLASS@を募集して')
+    new SctItm('@L_CLASS@を募集し')
     ,
-    new SctItm('@L_CLASS@を呼び出して')
+    new SctItm('@L_CLASS@を呼び出し')
     ,
-    new SctItm('@L_CLASS@に変身して')
+    new SctItm('@L_CLASS@に変身し')
     ,
-    new SctItm('@L_COUNTRY@に移住して')
+    new SctItm('@L_COUNTRY@に移住し')
     ,
-    new SctItm('@L_COUNTRY@に亡命して')
+    new SctItm('@L_COUNTRY@に亡命し')
     ,
-    new SctItm('@L_COUNTRY@を支配して')
+    new SctItm('@L_COUNTRY@を支配し')
     ,
-    new SctItm('@L_COUNTRY@を征服して')
-    ,
-    new SctItm('@L_CITY@に住んで')
-    ,
-    new SctItm('@L_CITY@に家を建てて')
+    new SctItm('@L_COUNTRY@を征服し')
     // ,
-    // new SctItm('『@L_ITEM@の@L_SPECIALIST@』と呼ばれて')
+    // new SctItm('@L_CITY@に住んで')
+    ,
+    new SctItm('@L_CITY@に家を建て')
     // ,
-    // new SctItm('『@L_ITEM@の@L_SPECIALIST@』と噂されて')
+    // new SctItm('『@L_ITEM@の@L_SPECIALIST@』と呼ばれ')
     // ,
-    // new SctItm('『@L_ITEM@の@L_SPECIALIST@』と馬鹿にされて')
+    // new SctItm('『@L_ITEM@の@L_SPECIALIST@』と噂され')
     // ,
-    // new SctItm('『@L_ITEM@の@L_SPECIALIST@』と後ろ指を指されて')
+    // new SctItm('『@L_ITEM@の@L_SPECIALIST@』と馬鹿にされ')
     // ,
-    // new SctItm('『@L_ITEM@の@L_SPECIALIST@』と讃えられて')
+    // new SctItm('『@L_ITEM@の@L_SPECIALIST@』と後ろ指を指され')
     // ,
-    // new SctItm('『@L_ITEM@の@L_SPECIALIST@』と賞賛されて')
+    // new SctItm('『@L_ITEM@の@L_SPECIALIST@』と讃えられ')
     // ,
-    // new SctItm('『@L_ITEM@の@L_SPECIALIST@』とおだてられて')
-    ,
-    new SctItm('@L_PART@を連れて')
-    ,
-    new SctItm('@L_PART@の手を引いて')
+    // new SctItm('『@L_ITEM@の@L_SPECIALIST@』と賞賛され')
     // ,
-    // new SctItm('@L_PART@を置き去りにして')
+    // new SctItm('『@L_ITEM@の@L_SPECIALIST@』とおだてられ')
+    ,
+    new SctItm('@L_PART@を連れ')
+    ,
+    new SctItm('@L_PART@の手を引い')
     // ,
-    // new SctItm('@L_PART@を見捨てて')
+    // new SctItm('@L_PART@を置き去りにし')
     // ,
-    // new SctItm('@L_PART@を押しのけて')
+    // new SctItm('@L_PART@を見捨て')
     // ,
-    // new SctItm('デートして')
-    ,
-    new SctItm('@SAY@して')
-    ,
-    new SctItm('@L_PART@をデートに誘って')
-    ,
-    new SctItm('@L_PART@に手紙を書いて')
-    ,
-    new SctItm('@L_PART@に電話して')
-    ,
-    new SctItm('@L_PART@にメールして')
-    ,
-    new SctItm('@L_PART@にプロポーズして')
+    // new SctItm('@L_PART@を押しのけ')
     // ,
-    // new SctItm('食事して')
+    // new SctItm('デートし')
     ,
-    new SctItm('@L_PART@に別れ話をして')
+    new SctItm('@SAY@し')
     ,
-    new SctItm('@L_PART@と喧嘩して')
+    new SctItm('@L_PART@をデートに誘っ')
     ,
-    new SctItm('@L_PART@にお茶を出して')
+    new SctItm('@L_PART@に手紙を書い')
     ,
-    new SctItm('@L_PART@の靴を磨いて')
+    new SctItm('@L_PART@に電話し')
     ,
-    new SctItm('@L_PART@の髪を乾かして')
+    new SctItm('@L_PART@にメールし')
     ,
-    new SctItm('@L_PART@の背中を掻いて')
-    ,
-    new SctItm('@L_ANIMAL@を連れて')
-    ,
-    new SctItm('@L_ANIMAL@に乗って')
-    ,
-    new SctItm('@L_ANIMAL@の散歩をして')
-    ,
-    new SctItm('@L_ANIMAL@に餌をやって')
-    ,
-    new SctItm('@L_ANIMAL@の体を洗って')
-    ,
-    new SctItm('@L_ANIMAL@狩りをして')
-    ,
-    new SctItm('@L_ANIMAL@に襲われて')
-    ,
-    new SctItm('@L_ANIMAL@と戦って')
-    ,
-    new SctItm('@L_ANIMAL@を退治して')
+    new SctItm('@L_PART@にプロポーズし')
     // ,
-    // new SctItm('@L_ANIMAL@を檻に入れて')
+    // new SctItm('食事し')
+    ,
+    new SctItm('@L_PART@に別れ話をし')
+    ,
+    new SctItm('@L_PART@と喧嘩し')
+    ,
+    new SctItm('@L_PART@にお茶を出し')
+    ,
+    new SctItm('@L_PART@の靴を磨い')
+    ,
+    new SctItm('@L_PART@の髪を乾かし')
+    ,
+    new SctItm('@L_PART@の背中を掻い')
+    ,
+    new SctItm('@L_ANIMAL@を連れ')
+    ,
+    new SctItm('@L_ANIMAL@に乗っ')
+    ,
+    new SctItm('@L_ANIMAL@の散歩をし')
+    ,
+    new SctItm('@L_ANIMAL@に餌をやっ')
+    ,
+    new SctItm('@L_ANIMAL@の体を洗っ')
+    ,
+    new SctItm('@L_ANIMAL@狩りをし')
+    ,
+    new SctItm('@L_ANIMAL@に襲われ')
+    ,
+    new SctItm('@L_ANIMAL@と戦っ')
+    ,
+    new SctItm('@L_ANIMAL@を退治し')
     // ,
-    // new SctItm('@L_ANIMAL@を追い出して')
+    // new SctItm('@L_ANIMAL@を檻に入れ')
+    // ,
+    // new SctItm('@L_ANIMAL@を追い出し')
     ,
-    new SctItm('@L_ANIMAL@を追い払って')
+    new SctItm('@L_ANIMAL@を追い払っ')
     ,
-    new SctItm('@L_ANIMAL@の絵を描いて')
+    new SctItm('@L_ANIMAL@の絵を描い')
     ,
-    new SctItm('@L_DRESS@を着て')
+    new SctItm('@L_DRESS@を着')
+    // ,
+    // new SctItm('@L_DRESS@を脱いで')
     ,
-    new SctItm('@L_DRESS@を脱いで')
+    new SctItm('@L_DRESS@に着替え')
     ,
-    new SctItm('@L_DRESS@に着替えて')
+    new SctItm('@L_DRESS@を洗濯し')
     ,
-    new SctItm('@L_DRESS@を洗濯して')
+    new SctItm('@L_DRESS@を仮縫いし')
     ,
-    new SctItm('@L_DRESS@を仮縫いして')
+    new SctItm('@L_UNDER@をはい')
+    // ,
+    // new SctItm('@L_UNDER@を脱いで')
     ,
-    new SctItm('@L_FLOWER@の花を|捧|ささ|げて')
+    new SctItm('@L_UNDER@のサイズを計っ')
     ,
-    new SctItm('@L_FLOWER@の花を咲かせて')
+    new SctItm('@L_FLOWER@の花を|捧|ささ|げ')
     ,
-    new SctItm('@L_FLOWER@の花を飾って')
+    new SctItm('@L_FLOWER@の花を咲かせ')
     ,
-    new SctItm('@L_FLOWER@の花の絵を描いて')
+    new SctItm('@L_FLOWER@の花を飾っ')
     ,
-    new SctItm('@L_FLOWER@の花びらを散らして')
+    new SctItm('@L_FLOWER@の花の絵を描い')
     ,
-    new SctItm('@L_FLOWER@の花を|咥|くわ|えて')
+    new SctItm('@L_FLOWER@の花びらを散らし')
     ,
-    new SctItm('@L_FLOWER@の種を|蒔|ま|いて')
+    new SctItm('@L_FLOWER@の花を|咥|くわ|え')
     ,
-    new SctItm('@L_MUSIC@を聴いて')
+    new SctItm('@L_FLOWER@の種を|蒔|ま|い')
     ,
-    new SctItm('@L_MUSIC@を歌って')
+    new SctItm('@L_MUSIC@を聴い')
     ,
-    new SctItm('@L_FRUIT@の皮を|剥|む|いて')
+    new SctItm('@L_MUSIC@を歌っ')
     ,
-    new SctItm('@L_FRUIT@の木を植えて')
+    new SctItm('@L_FRUIT@の皮を|剥|む|い')
     ,
-    new SctItm('@L_FRUIT@を収穫して')
+    new SctItm('@L_FRUIT@の木を植え')
     ,
-    new SctItm('@L_FRUIT@を叩き売りして')
+    new SctItm('@L_FRUIT@を収穫し')
     ,
-    new SctItm('@L_FRUIT@の種を捨てて')
+    new SctItm('@L_FRUIT@を叩き売りし')
     ,
-    new SctItm('@L_FRUIT@の種を蒔いて')
+    new SctItm('@L_FRUIT@の種を捨て')
     ,
-    new SctItm('@L_FRUIT@の畑を耕して')
+    new SctItm('@L_FRUIT@の種を蒔い')
     ,
-    new SctItm('@L_RIDE@に乗って')
+    new SctItm('@L_FRUIT@の畑を耕し')
     ,
-    new SctItm('@L_FESTIVAL@を開催して')
+    new SctItm('@L_RIDE@に乗っ')
     ,
-    new SctItm('@L_FESTIVAL@に参加して')
+    new SctItm('@L_FESTIVAL@を開催し')
+    ,
+    new SctItm('@L_FESTIVAL@に参加し')
 ]
 
 const   itms_boyName = [
