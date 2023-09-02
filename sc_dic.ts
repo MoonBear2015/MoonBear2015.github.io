@@ -9819,9 +9819,13 @@ const   itms_Award = [
     ,
     new SctItm('@L_ITEM@大会@AWARDRANK@')
     ,
+    new SctItm('@RIDE@レース@AWARDRANK@')
+    ,
     new SctItm('@SCIENCE@オリンピック@AWARDRANK@')
     ,
     new SctItm('@L_CITY@オリンピック@AWARDRANK@')
+    ,
+    new SctItm('@L_CITY@マラソン@AWARDRANK@')
 ]
 
 const   itms_FriendShip = [

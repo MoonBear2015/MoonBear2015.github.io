@@ -5916,8 +5916,10 @@ const itms_Award = [
     new SctItm('第@NUM10000@回芥川賞'),
     new SctItm('第@NUM10000@回直木賞'),
     new SctItm('@L_ITEM@大会@AWARDRANK@'),
+    new SctItm('@RIDE@レース@AWARDRANK@'),
     new SctItm('@SCIENCE@オリンピック@AWARDRANK@'),
-    new SctItm('@L_CITY@オリンピック@AWARDRANK@')
+    new SctItm('@L_CITY@オリンピック@AWARDRANK@'),
+    new SctItm('@L_CITY@マラソン@AWARDRANK@')
 ];
 const itms_FriendShip = [
     new SctItm('知り合い'),
