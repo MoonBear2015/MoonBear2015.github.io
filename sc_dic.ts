@@ -6777,6 +6777,8 @@ const   itms_nickNega = [
     ,
     new SctItm('ゴミの山')
     ,
+    new SctItm('産業廃棄物')
+    ,
     new SctItm('猛毒')
     ,
     new SctItm('公害')
@@ -6867,6 +6869,10 @@ const   itms_nickNega = [
     ,
     new SctItm('泥棒')
     ,
+    new SctItm('殺人鬼')
+    ,
+    new SctItm('屠殺人')
+    ,
     new SctItm('コソ泥')
     ,
     new SctItm('大泥棒')
@@ -6916,6 +6922,10 @@ const   itms_nickNega = [
     new SctItm('狼藉者')
     ,
     new SctItm('無法者')
+    ,
+    new SctItm('@ANIMAL@')
+    ,
+    new SctItm('@FISH@')
     // ,
     // new SctItm('風来坊')
 ]
@@ -6969,6 +6979,8 @@ const   itms_nickPosi = [
     new SctItm('白い悪魔')
     ,
     new SctItm('世紀末覇者')
+    ,
+    new SctItm('救世主')
     ,
     new SctItm('星')
     ,
@@ -7141,7 +7153,15 @@ const   itms_nickNomal = [
     ,
     new SctItm('住人')
     ,
-    new SctItm('人')
+    new SctItm('息子')
+    ,
+    new SctItm('娘')
+    ,
+    new SctItm('申し子')
+    ,
+    new SctItm('孫')
+    ,
+    new SctItm('ひ孫')
 ]
 
 
@@ -8481,6 +8501,12 @@ const   itms_did = [
     new SctItm('@CLASS@を呼び出し')
     ,
     new SctItm('@CLASS@に変身し')
+    ,
+    new SctItm('@CLASS@になっ')
+    ,
+    new SctItm('@CLASS@を止め')
+    ,
+    new SctItm('@CLASS@を退職し')
     // ,
     // new SctItm('@PLACE@に住んで')
     ,
@@ -8542,9 +8568,17 @@ const   itms_did = [
     ,
     new SctItm('@GROUP@に抹殺され')
     ,
+    new SctItm('@GROUP@に騙され')
+    ,
+    new SctItm('@GROUP@に何もかも奪われ')
+    ,
     new SctItm('@GROUP@を壊滅させ')
     ,
     new SctItm('@GROUP@を組織し')
+    ,
+    new SctItm('@GROUP@に加わっ')
+    ,
+    new SctItm('@GROUP@に参入し')
     ,
     new SctItm('@GROUP@から@AWARD@を贈呈され')
     ,

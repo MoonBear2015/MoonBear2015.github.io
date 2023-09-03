@@ -881,7 +881,9 @@ class selector_date extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('@PINT@@DATE01@')
             ,
-            new SctItm('@PINT@@DATE01@')
+            new SctItm('@PINT@@DATE02@')
+            ,
+            new SctItm('@PINT@@DATE02@')
             ,
             new SctItm('@PINT@@DATEBEFORE@')
             ,
@@ -890,6 +892,23 @@ class selector_date extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('およそ@DATEBEFORE@')
             ,
             new SctItm('およそ@DATEAFTER@')
+        ];
+    }
+}
+
+class selector_date02 extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@DATE02@');
+        this.itms = [
+            new SctItm('@YEAR@年')
+            ,
+            new SctItm('@YEAR@年の@SEASON@')
+            ,
+            new SctItm('今年の@SEASON@')
+            ,
+            new SctItm('昨年の@SEASON@')
+            ,
+            new SctItm('来年の@SEASON@')
         ];
     }
 }
@@ -938,6 +957,8 @@ class selector_doc extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('「@COMMENT@」との@ANSWER@を@SAY@したのは、@WHO@@END02A@。')
             ,
             new SctItm('@WHO@は「@COMMENT@」との@ANSWER@を@SAY@し、@AWARD@を@AWARDGET@@END02B@。')
+            ,
+            new SctItm('@WHO@が@DID@@DIDEND@のは、@DATE@のことであった。')
         ];
     }
 }
@@ -4687,6 +4708,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_TimeFront2());
         
         this.dic_push(new selector_date());
+        this.dic_push(new selector_date02());
         this.dic_push(new selector_dateBefore());
         this.dic_push(new selector_dateAfter());
 
