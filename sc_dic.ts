@@ -9740,6 +9740,10 @@ const   itms_AwardRank = [
     ,
     new SctItm('銅メダル')
     ,
+    new SctItm('金賞')
+    ,
+    new SctItm('銀賞')
+    ,
     new SctItm('優秀賞')
     ,
     new SctItm('最優秀賞')
@@ -9877,6 +9881,8 @@ const   itms_Group01 = [
     ,
     new SctItm('大蔵省')
     ,
+    new SctItm('情報局')
+    ,
     new SctItm('陸軍')
     ,
     new SctItm('海軍')
@@ -9906,11 +9912,21 @@ const   itms_Group02 = [
     ,
     new SctItm('警察')
     ,
+    new SctItm('交通局')
+    ,
     new SctItm('消防署')
     ,
     new SctItm('郵便局')
     ,
     new SctItm('市役所')
+    ,
+    new SctItm('市議会')
+    ,
+    new SctItm('交響楽団')
+    ,
+    new SctItm('株式市場')
+    ,
+    new SctItm('消費者センター')
 ]
 
 
