@@ -5841,8 +5841,6 @@ const   itms_class = [
     ,
     new SctItm('@SCIENCE@教師')
     ,
-    new SctItm('@SCIENCE@者')
-    ,
     new SctItm('@SCIENCE@教授')
     ,
     new SctItm('政治評論家')
@@ -5915,7 +5913,7 @@ const   itms_class = [
     ,
     new SctItm('画家')
     ,
-    new SctItm('@SPORTS@選手')
+    new SctItm('@L_SPORTS@選手')
     ,
     new SctItm('プロ野球選手')
     ,
@@ -9890,6 +9888,10 @@ const   itms_Group01 = [
     new SctItm('空軍')
     ,
     new SctItm('海兵隊')
+    ,
+    new SctItm('連合艦隊')
+    ,
+    new SctItm('解放戦線')
 ]
 const   itms_Group02 = [
     new SctItm('共同通信')
@@ -9908,9 +9910,21 @@ const   itms_Group02 = [
     ,
     new SctItm('医師会')
     ,
+    new SctItm('記者クラブ')
+    ,
     new SctItm('教団')
     ,
+    new SctItm('暗殺教団')
+    ,
     new SctItm('警察')
+    ,
+    new SctItm('自衛団')
+    ,
+    new SctItm('騎士団')
+    ,
+    new SctItm('雑技団')
+    ,
+    new SctItm('サーカス団')
     ,
     new SctItm('交通局')
     ,
@@ -9921,6 +9935,8 @@ const   itms_Group02 = [
     new SctItm('市役所')
     ,
     new SctItm('市議会')
+    ,
+    new SctItm('市場')
     ,
     new SctItm('交響楽団')
     ,
