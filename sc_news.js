@@ -654,7 +654,10 @@ class selector_who extends SctItm_Selector {
             new SctItm('@GROUP@に買収された@HUMAN@@AGE@'),
             new SctItm('@GROUP@と契約した@HUMAN@@AGE@'),
             new SctItm('@GROUP@に洗脳された@HUMAN@@AGE@'),
-            new SctItm('@GROUP@に改造された@HUMAN@@AGE@')
+            new SctItm('@GROUP@に改造された@HUMAN@@AGE@'),
+            new SctItm('@GROUP@から@AWARD@を贈呈された@HUMAN@@AGE@'),
+            new SctItm('@GROUP@から@AWARD@を授与した@HUMAN@@AGE@'),
+            new SctItm('@GROUP@から@AWARD@を剥奪された@HUMAN@@AGE@')
         ];
     }
 }
@@ -697,6 +700,9 @@ class selector_who3 extends SctItm_Selector {
             new SctItm('@GROUP@と契約@END02B@'),
             new SctItm('@GROUP@に改造された'),
             new SctItm('@GROUP@に『@CALL@』と@ASSES@'),
+            new SctItm('@GROUP@から@AWARD@を贈呈された'),
+            new SctItm('@GROUP@から@AWARD@を授与した'),
+            new SctItm('@GROUP@から@AWARD@を剥奪された'),
             new SctItm('@SCHOOL@出身の'),
             new SctItm('@SCHOOL@に通う'),
             new SctItm('@SCHOOL@在学中の'),
@@ -2627,6 +2633,10 @@ class selector_conect2 extends SctItm_Selector {
             new SctItm('それはそれとして'),
             new SctItm('正直いいますと'),
             new SctItm('話は変わりますが'),
+            new SctItm('言いにくいことですが'),
+            new SctItm('ここだけの話ですが'),
+            new SctItm('大きな声では言えませんが'),
+            new SctItm('よく知らないのですが'),
             new SctItm('そんなことより'),
             new SctItm('つまり'),
             new SctItm('そういう訳で'),
@@ -2638,7 +2648,7 @@ class selector_conect2 extends SctItm_Selector {
             new SctItm('例えば'),
             new SctItm('そういえば'),
             new SctItm('確か'),
-            new SctItm('仮に')
+            new SctItm('実は')
         ];
     }
 }

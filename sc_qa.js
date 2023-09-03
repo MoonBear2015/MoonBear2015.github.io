@@ -477,6 +477,7 @@ class selector_a_sent extends SctItm_Selector {
             new SctItm('@A_MSG@が、その@L_PART@さんなら知っている筈ですよね？ '),
             new SctItm('@A_MSG@が、その@L_PART@さんなら@DOING@いる筈です。'),
             new SctItm('@A_MSG@が、その@L_PART@さんなら@DOING@いましたよ？ '),
+            new SctItm('@A_MSG@が、その@L_PART@さんなら@DOING@いましたね。'),
             new SctItm('@A_MSG@が、@DOING@いる@L_PART@さんを見かけましたよ。'),
             new SctItm('@A_MSG@が、@A_SENT@'),
             new SctItm('@A_MSG@し、@A_SENT@'),

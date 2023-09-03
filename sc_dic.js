@@ -5195,6 +5195,9 @@ const itms_did = [
     new SctItm('@GROUP@に抹殺され'),
     new SctItm('@GROUP@を壊滅させ'),
     new SctItm('@GROUP@を組織し'),
+    new SctItm('@GROUP@から@AWARD@を贈呈され'),
+    new SctItm('@GROUP@から@AWARD@を授与し'),
+    new SctItm('@GROUP@から@AWARD@を剥奪され'),
     new SctItm('@PEOPLE@を集め'),
     new SctItm('@PEOPLE@を追いかけ'),
     new SctItm('@PEOPLE@を探し'),
@@ -5947,14 +5950,20 @@ const itms_Group01 = [
     new SctItm('政府'),
     new SctItm('文部省'),
     new SctItm('外務省'),
+    new SctItm('大使館'),
     new SctItm('大蔵省'),
+    new SctItm('農林水産省'),
+    new SctItm('気象庁'),
     new SctItm('情報局'),
     new SctItm('陸軍'),
     new SctItm('海軍'),
     new SctItm('空軍'),
     new SctItm('海兵隊'),
+    new SctItm('国境警備隊'),
     new SctItm('連合艦隊'),
-    new SctItm('解放戦線')
+    new SctItm('解放戦線'),
+    new SctItm('王室'),
+    new SctItm('貴族院')
 ];
 const itms_Group02 = [
     new SctItm('共同通信'),
@@ -5963,10 +5972,12 @@ const itms_Group02 = [
     new SctItm('財団法人'),
     new SctItm('町内会'),
     new SctItm('子供会'),
+    new SctItm('友の会'),
     new SctItm('教育委員会'),
     new SctItm('医師会'),
     new SctItm('記者クラブ'),
     new SctItm('教団'),
+    new SctItm('密教団'),
     new SctItm('暗殺教団'),
     new SctItm('警察'),
     new SctItm('自衛団'),
@@ -5981,5 +5992,11 @@ const itms_Group02 = [
     new SctItm('市場'),
     new SctItm('交響楽団'),
     new SctItm('株式市場'),
-    new SctItm('消費者センター')
+    new SctItm('消費者センター'),
+    new SctItm('野鳥の会'),
+    new SctItm('動物愛護団体'),
+    new SctItm('自然保護団体'),
+    new SctItm('工業団地'),
+    new SctItm('牧場'),
+    new SctItm('天文台')
 ];

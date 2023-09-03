@@ -712,6 +712,8 @@ class selector_a_sent extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@A_MSG@が、その@L_PART@さんなら@DOING@いましたよ？ ')
             ,
+            new SctItm('@A_MSG@が、その@L_PART@さんなら@DOING@いましたね。')
+            ,
             new SctItm('@A_MSG@が、@DOING@いる@L_PART@さんを見かけましたよ。')
             ,
             new SctItm('@A_MSG@が、@A_SENT@')
