@@ -7137,15 +7137,7 @@ const   itms_nickNomal = [
     ,
     new SctItm('@COUNTRY@国民')
     ,
-    new SctItm('村長')
-    ,
-    new SctItm('市長')
-    ,
-    new SctItm('@CITY@市長')
-    ,
-    new SctItm('国王')
-    ,
-    new SctItm('@COUNTRY@国王')
+    new SctItm('@KING@')
     ,
     new SctItm('一般大衆')
     ,
@@ -8585,7 +8577,15 @@ const   itms_did = [
     new SctItm('@GROUP@から@AWARD@を授与し')
     ,
     new SctItm('@GROUP@から@AWARD@を剥奪され')
-,
+    ,
+    new SctItm('@KING@に命じられ')
+    ,
+    new SctItm('@KING@に即位し')
+    ,
+    new SctItm('@KING@に就任し')
+    ,
+    new SctItm('@KING@を暗殺し')
+    ,
     new SctItm('@PEOPLE@を集め')
     ,
     new SctItm('@PEOPLE@を追いかけ')
@@ -9942,9 +9942,8 @@ const   itms_Group01 = [
     new SctItm('解放戦線')
     ,
     new SctItm('王室')
-    ,
-    new SctItm('貴族院')
 ]
+
 const   itms_Group02 = [
     new SctItm('共同通信')
     ,
@@ -10013,5 +10012,54 @@ const   itms_Group02 = [
     new SctItm('天文台')
 ]
 
+const   itms_King = [
+    new SctItm('@COUNTRY@@KING01@')
+    ,
+    new SctItm('@CITY@@KING02@')
+]
+
+const   itms_King01 = [
+    new SctItm('国王')
+    ,
+    new SctItm('大王')
+    ,
+    new SctItm('帝王')
+    ,
+    new SctItm('魔王')
+    ,
+    new SctItm('大魔王')
+    ,
+    new SctItm('法王')
+    ,
+    new SctItm('龍王')
+    ,
+    new SctItm('皇帝')
+    ,
+    new SctItm('大帝')
+    ,
+    new SctItm('聖帝')
+    ,
+    new SctItm('女王')
+    ,
+    new SctItm('女帝')
+    ,
+    new SctItm('総理大臣')
+    ,
+    new SctItm('大統領')
+    ,
+    new SctItm('総統')
+    ,
+    new SctItm('書記長')
+]
+
+const   itms_King02 = [
+    new SctItm('市長')
+    ,
+    new SctItm('町長')
+    ,
+    new SctItm('村長')
+    ,
+    new SctItm('尊長')
+]
 
 

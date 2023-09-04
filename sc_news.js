@@ -494,7 +494,8 @@ class selector_people extends SctItm_Selector {
             new SctItm('@CLASS@'),
             new SctItm('@PART@'),
             new SctItm('@COUNTRY@人'),
-            new SctItm('@SEXAGE@')
+            new SctItm('@SEXAGE@'),
+            new SctItm('@KING@')
         ];
     }
 }
@@ -662,9 +663,12 @@ class selector_who extends SctItm_Selector {
             new SctItm('@GROUP@からスカウトされた@HUMAN@@AGE@'),
             new SctItm('@GROUP@から追放された@HUMAN@@AGE@'),
             new SctItm('@GROUP@に抹殺された@HUMAN@@AGE@'),
-            new SctItm('@GROUP@に訴えられた@HUMAN@@AGE@'),
-            new SctItm('@GROUP@を壊滅させた@HUMAN@@AGE@'),
-            new SctItm('@GROUP@を設立した@HUMAN@@AGE@'),
+            new SctItm('@GROUP@に訴えられた@HUMAN@@AGE@')
+            // ,
+            // new SctItm('@GROUP@を壊滅させた@HUMAN@@AGE@')
+            // ,
+            // new SctItm('@GROUP@を設立した@HUMAN@@AGE@')
+            ,
             new SctItm('@GROUP@に買収された@HUMAN@@AGE@'),
             new SctItm('@GROUP@と契約した@HUMAN@@AGE@'),
             new SctItm('@GROUP@に洗脳された@HUMAN@@AGE@'),
@@ -707,9 +711,12 @@ class selector_who3 extends SctItm_Selector {
             new SctItm('@GROUP@にスカウトされた'),
             new SctItm('@GROUP@に買収された'),
             new SctItm('@GROUP@に訴えられた'),
-            new SctItm('@GROUP@に抹殺された'),
-            new SctItm('@GROUP@を壊滅させた'),
-            new SctItm('@GROUP@を組織@END02B@'),
+            new SctItm('@GROUP@に抹殺された')
+            // ,
+            // new SctItm('@GROUP@を壊滅させた')
+            // ,
+            // new SctItm('@GROUP@を組織@END02B@')
+            ,
             new SctItm('@GROUP@に洗脳された'),
             new SctItm('@GROUP@と契約@END02B@'),
             new SctItm('@GROUP@に改造された'),
@@ -1940,7 +1947,8 @@ class selector_group extends SctItm_Selector {
             new SctItm('@CITY@@GROUP02@'),
             new SctItm('@COUNTRY@@GROUP02@'),
             new SctItm('@SCHOOL@'),
-            new SctItm('@MANYPEOPLE@')
+            new SctItm('@MANYPEOPLE@'),
+            new SctItm('@KING@')
         ];
     }
 }
@@ -1954,6 +1962,27 @@ class selector_group02 extends SctItm_Selector {
     constructor() {
         super('@GROUP02@');
         this.Add(itms_Group02);
+    }
+}
+class selector_king extends SctItm_Selector {
+    constructor() {
+        super('@KING@');
+        this.itms = [
+            new SctItm('@COUNTRY@@KING01@'),
+            new SctItm('@CITY@@KING02@')
+        ];
+    }
+}
+class selector_king01 extends SctItm_Selector {
+    constructor() {
+        super('@KING01@');
+        this.Add(itms_King01);
+    }
+}
+class selector_king02 extends SctItm_Selector {
+    constructor() {
+        super('@KING02@');
+        this.Add(itms_King02);
     }
 }
 class selector_landmark extends SctItm_Selector {
@@ -3342,6 +3371,9 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_group());
         this.dic_push(new selector_group01());
         this.dic_push(new selector_group02());
+        this.dic_push(new selector_king());
+        this.dic_push(new selector_king01());
+        this.dic_push(new selector_king02());
         this.dic_push(new selector_music());
         this.dic_push(new locker_music());
         this.dic_push(new selector_dance());
