@@ -147,7 +147,7 @@ class First_love extends SctItm_FirstLocker2 {
             new SctItm('@KEY@で@KEI@出逢いが待っている'),
             new SctItm('@KEI@@CLASS@に要注意'),
             new SctItm('@KEI@@CLASS@を射止める絶好のチャンス'),
-            new SctItm('お薦めデートスポット：@LANDMARK@')
+            new SctItm('お薦めデートスポット：@LANDMARK01@')
         ];
     }
 }
@@ -193,8 +193,8 @@ class First_travel extends SctItm_FirstLocker2 {
         super('@I_TRAVEL@', '', '@ICON_HOROITEM@');
         this.itms = [
             new SctItm('旅行', 'HORO/travel.png', 'Travel'),
-            new SctItm('お薦めの国：@COUNTRY@・@COUNTRY@・@COUNTRY@'),
-            new SctItm('@LANDMARK@巡りの季節になりました'),
+            new SctItm('お薦めの国：@COUNTRY@'),
+            new SctItm('@LANDMARK01@巡りの季節になりました'),
             new SctItm('@DIR@への旅路は要注意'),
             new SctItm('@CITY@名物の@SWEETS@をお土産にどうぞ')
         ];

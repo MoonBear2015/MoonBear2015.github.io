@@ -726,7 +726,7 @@ class selector_newsFirst extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@DATE@には、@ORDER@@KEI@@L_WHAT@が@KEID@@L_DO@する筈であった。')
             ,
-            new SctItm('@KEI@@L_WHAT@が@KEID@@L_DO@@END02B@のは、@DATE@のことである。')
+            new SctItm('@KEI@@L_WHAT@が@KEID@@L_DO@@END02B@のは、@DATE@の頃である。')
         ];
     }
 }
@@ -910,7 +910,7 @@ class selector_date02 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('昨年の@SEASON@')
             ,
-            new SctItm('来年の@SEASON@')
+            new SctItm('翌年の@SEASON@')
         ];
     }
 }
@@ -2866,15 +2866,38 @@ class selector_king02 extends SctItm_Selector implements ISctItm_Selector {
 class selector_landmark extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@LANDMARK@');
+        this.itms = [
+            new SctItm('@COUNTRY@@LANDMARK01@')
+            ,
+            new SctItm('@CITY@@LANDMARK01@')
+        ];
+    }
+}
+class selector_landmark01 extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@LANDMARK01@');
         this.Add(itms_landmark);
     }
 }
+
+
 class locker_landmark extends SctItm_SelectLocker implements ISctItm_Selector {
     constructor(){
         super('@L_LANDMARK@');
+        this.itms = [
+            new SctItm('@L_COUNTRY@@L_LANDMARK01@')
+            ,
+            new SctItm('@L_CITY@@L_LANDMARK01@')
+        ];
+    }
+}
+class locker_landmark01 extends SctItm_SelectLocker implements ISctItm_Selector {
+    constructor(){
+        super('@L_LANDMARK01@');
         this.Add(itms_landmark);
     }
 }
+
 class selector_fruit extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@FRUIT@');
@@ -4771,7 +4794,9 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new locker_Town());
         this.dic_push(new selector_history());
         this.dic_push(new selector_landmark());
+        this.dic_push(new selector_landmark01());
         this.dic_push(new locker_landmark());
+        this.dic_push(new locker_landmark01());
         this.dic_push(new selector_fruit());
         this.dic_push(new locker_fruit());
         this.dic_push(new selector_fish());

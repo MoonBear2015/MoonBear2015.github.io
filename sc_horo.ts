@@ -210,7 +210,7 @@ class First_love extends SctItm_FirstLocker2 implements ISctItm_Selector{
             ,
             new SctItm('@KEI@@CLASS@を射止める絶好のチャンス')
             ,
-            new SctItm('お薦めデートスポット：@LANDMARK@')
+            new SctItm('お薦めデートスポット：@LANDMARK01@')
         ]
     }
 }
@@ -271,9 +271,9 @@ class First_travel extends SctItm_FirstLocker2 implements ISctItm_Selector{
         this.itms = [
             new SctItm('旅行','HORO/travel.png','Travel')
             ,
-            new SctItm('お薦めの国：@COUNTRY@・@COUNTRY@・@COUNTRY@')
+            new SctItm('お薦めの国：@COUNTRY@')
             ,
-            new SctItm('@LANDMARK@巡りの季節になりました')
+            new SctItm('@LANDMARK01@巡りの季節になりました')
             ,
             new SctItm('@DIR@への旅路は要注意')
             ,

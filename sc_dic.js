@@ -4816,7 +4816,8 @@ const itms_season = [
     new SctItm('初秋'),
     new SctItm('晩秋'),
     new SctItm('初冬'),
-    new SctItm('晩冬')
+    new SctItm('晩冬'),
+    new SctItm('クリスマスシーズン')
 ];
 const itms_horo_star = [
     new SctItm('DRAGON', 'HORO/dragon.png', '龍'),
@@ -5181,7 +5182,6 @@ const itms_did = [
     new SctItm('@DANCE@を踊っ'),
     new SctItm('@KEI@@DANCE@を踊っ'),
     new SctItm('@KEID@@DANCE@を踊っ'),
-    new SctItm('@CITY@の@LANDMARK@を歩い'),
     new SctItm('@MANYPEOPLE@に追われ'),
     new SctItm('@MANYPEOPLE@に囲まれ'),
     new SctItm('@MANYPEOPLE@にいじめられ'),
@@ -5320,7 +5320,14 @@ const itms_did = [
     new SctItm('@SONGTYPE@『@SONGTITLE@』を@KEI4@歌っ'),
     new SctItm('@AWARD@を@AWARDGET@し'),
     new SctItm('@PEOPLE@で始めて@AWARD@を@AWARDGET@し'),
-    new SctItm('@PEOPLE@で唯一、@AWARD@を@AWARDGET@し')
+    new SctItm('@PEOPLE@で唯一、@AWARD@を@AWARDGET@し'),
+    new SctItm('@LANDMARK@を歩い'),
+    new SctItm('@LANDMARK@に走っ'),
+    new SctItm('@LANDMARK@で寝泊まりし'),
+    new SctItm('@LANDMARK@に荒らし回っ'),
+    new SctItm('@LANDMARK@を破壊し'),
+    new SctItm('@LANDMARK@を建て直し'),
+    new SctItm('@LANDMARK@を建築し')
 ];
 const itms_did_l = [
     new SctItm('@L_FOOD@を食べ'),
@@ -5444,7 +5451,14 @@ const itms_did_l = [
     new SctItm('@SONGTYPE@『@SONG_PART@』を@KEI4@歌っ'),
     new SctItm('@AWARD@を@AWARDGET@し'),
     new SctItm('@PEOPLE@で始めて@AWARD@を@AWARDGET@し'),
-    new SctItm('@PEOPLE@で唯一、@AWARD@を@AWARDGET@し')
+    new SctItm('@PEOPLE@で唯一、@AWARD@を@AWARDGET@し'),
+    new SctItm('@L_LANDMARK@を歩い'),
+    new SctItm('@L_LANDMARK@に走っ'),
+    new SctItm('@L_LANDMARK@で寝泊まりし'),
+    new SctItm('@L_LANDMARK@に荒らし回っ'),
+    new SctItm('@L_LANDMARK@を破壊し'),
+    new SctItm('@L_LANDMARK@を建て直し'),
+    new SctItm('@L_LANDMARK@を建築し')
 ];
 const itms_did_o = [
     new SctItm('@O_FOOD@を食べ'),
@@ -5574,7 +5588,14 @@ const itms_did_o = [
     new SctItm('@L_FRUIT@の畑を耕し'),
     new SctItm('@L_RIDE@に乗っ'),
     new SctItm('@L_FESTIVAL@を開催し'),
-    new SctItm('@L_FESTIVAL@に参加し')
+    new SctItm('@L_FESTIVAL@に参加し'),
+    new SctItm('@L_LANDMARK@を歩い'),
+    new SctItm('@L_LANDMARK@に走っ'),
+    new SctItm('@L_LANDMARK@で寝泊まりし'),
+    new SctItm('@L_LANDMARK@に荒らし回っ'),
+    new SctItm('@L_LANDMARK@を破壊し'),
+    new SctItm('@L_LANDMARK@を建て直し'),
+    new SctItm('@L_LANDMARK@を建築し')
 ];
 const itms_boyName = [
     new SctItm('|Александр|アレクサンドル|'),
