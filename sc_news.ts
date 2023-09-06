@@ -3298,15 +3298,15 @@ class selector_say extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@MANYPEOPLE@を集めて@SAY01@')
             ,
-            new SctItm('@MANYPEOPLE@の避難を浴びながら@SAY01@')
+            new SctItm('@GROUP@の避難を浴びながら@SAY01@')
             ,
             new SctItm('@MANYPEOPLE@が喝采する中で@SAY01@')
             ,
-            new SctItm('@MANYPEOPLE@の賛同を得て@SAY01@')
+            new SctItm('@GROUP@の賛同を得て@SAY01@')
             ,
             new SctItm('@MANYPEOPLE@の賛成多数で@SAY01@')
             ,
-            new SctItm('@MANYPEOPLE@の承認の元に@SAY01@')
+            new SctItm('@GROUP@の承認の元に@SAY01@')
             ,
             new SctItm('@MANYPEOPLE@の反対を押し切って@SAY01@')
         ];
@@ -3317,33 +3317,35 @@ class selector_say01 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@SAY01@');
         this.itms = [
-            new SctItm('主張')
+            new SctItm('@GROUP@に主張')
             ,
-            new SctItm('強調')
+            new SctItm('@GROUP@に強調')
             ,
-            new SctItm('公表')
+            new SctItm('@GROUP@に公表')
             ,
-            new SctItm('分析')
+            new SctItm('@GROUP@に公表')
             ,
-            new SctItm('発言')
+            new SctItm('@GROUP@で分析')
             ,
-            new SctItm('代弁')
+            new SctItm('@@GROUP@に発言')
             ,
-            new SctItm('強弁')
+            new SctItm('@GROUP@に代弁')
             ,
-            new SctItm('記録')
+            new SctItm('@GROUP@に強弁')
             ,
-            new SctItm('解説')
+            // new SctItm('記録')
+            // ,
+            new SctItm('@GROUP@に解説')
             ,
-            new SctItm('説明')
+            new SctItm('@GROUP@に説明')
             ,
-            new SctItm('提案')
+            new SctItm('@GROUP@に提案')
             ,
-            new SctItm('報告')
+            new SctItm('@GROUP@に報告')
             ,
             new SctItm('メモ書き')
             ,
-            new SctItm('コメント')
+            new SctItm('@GROUP@にコメント')
             ,
             new SctItm('@PART@にメール')
             ,
@@ -3351,11 +3353,11 @@ class selector_say01 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@PART@に相談')
             ,
-            new SctItm('@PART@に連絡')
+            new SctItm('@GROUP@に連絡')
             ,
-            new SctItm('@PART@に説明')
+            new SctItm('@GROUP@に説明')
             ,
-            new SctItm('@PART@にFAX')
+            new SctItm('@GROUP@にFAX')
             ,
             new SctItm('@PART@に耳打ち')
             ,
@@ -4154,8 +4156,6 @@ class selector_didend extends SctItm_Selector implements ISctItm_Selector {
         super('@DIDEND@');
         this.itms = [
             new SctItm('た')
-            ,
-            new SctItm('たかった')
             ,
             new SctItm('ている')
             ,
