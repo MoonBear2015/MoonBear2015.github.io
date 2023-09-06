@@ -10067,13 +10067,9 @@ const   itms_King01 = [
     ,
     new SctItm('帝王')
     ,
-    new SctItm('魔王')
-    ,
     new SctItm('大魔王')
     ,
     new SctItm('法王')
-    ,
-    new SctItm('龍王')
     ,
     new SctItm('皇帝')
     ,

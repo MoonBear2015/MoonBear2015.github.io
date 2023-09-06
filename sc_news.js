@@ -418,9 +418,9 @@ class selector_title extends SctItm_Selector {
             new SctItm('@L_WHAT@が@KEID@@L_DO@'),
             new SctItm('@L_WHAT@を@KEID@@L_DO@@END02C@@L_ITEM@'),
             new SctItm('@L_WHAT@が@KEID@@L_DO@@END02C@@L_ITEM@'),
-            new SctItm('@L_WHAT@の@L_ITEM@が@KEID@@L_DO@'),
+            new SctItm('@L_WHAT@の@PEOPLE@が@KEID@@L_DO@'),
             new SctItm('@L_WHAT@が@KEID@@L_DO@@END02C@'),
-            new SctItm('@L_WHAT@の@L_ITEM@が@KEID@@L_DO@@END02C@'),
+            new SctItm('@L_WHAT@の@PEOPLE@が@KEID@@L_DO@@END02C@'),
             new SctItm('@L_WHAT@を@L_DO@@END02E@@L_TECH@'),
             new SctItm('@KEI@@L_WHAT@の@L_DO@'),
             new SctItm('@L_DO@@END02C@@L_WHAT@'),
@@ -675,7 +675,8 @@ class selector_who extends SctItm_Selector {
             new SctItm('@GROUP@に改造された@HUMAN@@AGE@'),
             new SctItm('@GROUP@から@AWARD@を贈呈された@HUMAN@@AGE@'),
             new SctItm('@GROUP@から@AWARD@を授与した@HUMAN@@AGE@'),
-            new SctItm('@GROUP@から@AWARD@を剥奪された@HUMAN@@AGE@')
+            new SctItm('@GROUP@から@AWARD@を剥奪された@HUMAN@@AGE@'),
+            new SctItm('@KING@の@HUMAN@@AGE@')
         ];
     }
 }
@@ -743,7 +744,8 @@ class selector_who3 extends SctItm_Selector {
             new SctItm('@DID@@DIDEND@'),
             new SctItm('@DID@@DIDEND@筈の'),
             new SctItm('@AWARD@を@AWARDGET@@END02B@'),
-            new SctItm('@DONE@')
+            new SctItm('@DONE@'),
+            new SctItm('@KING@の')
         ];
     }
 }
@@ -2285,30 +2287,43 @@ class selector_say extends SctItm_Selector {
     constructor() {
         super('@SAY@');
         this.itms = [
-            new SctItm('興奮気味に@SAY@'),
-            new SctItm('声高らかに@SAY@'),
-            new SctItm('鼻息荒く@SAY@'),
-            new SctItm('落ち着いた様子で@SAY@'),
-            new SctItm('嬉々として@SAY@'),
-            new SctItm('笑いを堪えながら@SAY@'),
-            new SctItm('怒りと共に@SAY@'),
-            new SctItm('涙ながらに@SAY@'),
-            new SctItm('あっけらかんと@SAY@'),
-            new SctItm('大声で@SAY@'),
-            new SctItm('声を潜めて@SAY@'),
-            new SctItm('震える声で@SAY@'),
-            new SctItm('声を震わせて@SAY@'),
-            new SctItm('狼狽えながらも@SAY@'),
-            new SctItm('怯えた様子で@SAY@'),
-            new SctItm('目を血走らせて@SAY@'),
-            new SctItm('@MANYPEOPLE@の前で@SAY@'),
-            new SctItm('@MANYPEOPLE@を集めて@SAY@'),
-            new SctItm('@MANYPEOPLE@の避難を浴びながら@SAY@'),
-            new SctItm('@MANYPEOPLE@が喝采する中で@SAY@'),
-            new SctItm('@MANYPEOPLE@の賛同を得て@SAY@'),
-            new SctItm('@MANYPEOPLE@の賛成多数で@SAY@'),
-            new SctItm('@MANYPEOPLE@の承認の元に@SAY@'),
-            new SctItm('@MANYPEOPLE@の反対を押し切って@SAY@'),
+            new SctItm('@SAY01@'),
+            new SctItm('@SAY01@'),
+            new SctItm('@SAY01@'),
+            new SctItm('@SAY01@'),
+            new SctItm('@SAY01@'),
+            new SctItm('@SAY01@'),
+            new SctItm('興奮気味に@SAY01@'),
+            new SctItm('声高らかに@SAY01@'),
+            new SctItm('鼻息荒く@SAY01@'),
+            new SctItm('落ち着いた様子で@SAY01@'),
+            new SctItm('嬉々として@SAY01@'),
+            new SctItm('笑いを堪えながら@SAY01@'),
+            new SctItm('怒りと共に@SAY01@'),
+            new SctItm('涙ながらに@SAY01@'),
+            new SctItm('あっけらかんと@SAY01@'),
+            new SctItm('大声で@SAY01@'),
+            new SctItm('声を潜めて@SAY01@'),
+            new SctItm('震える声で@SAY01@'),
+            new SctItm('声を震わせて@SAY01@'),
+            new SctItm('狼狽えながらも@SAY01@'),
+            new SctItm('怯えた様子で@SAY01@'),
+            new SctItm('目を血走らせて@SAY01@'),
+            new SctItm('@MANYPEOPLE@の前で@SAY01@'),
+            new SctItm('@MANYPEOPLE@を集めて@SAY01@'),
+            new SctItm('@MANYPEOPLE@の避難を浴びながら@SAY01@'),
+            new SctItm('@MANYPEOPLE@が喝采する中で@SAY01@'),
+            new SctItm('@MANYPEOPLE@の賛同を得て@SAY01@'),
+            new SctItm('@MANYPEOPLE@の賛成多数で@SAY01@'),
+            new SctItm('@MANYPEOPLE@の承認の元に@SAY01@'),
+            new SctItm('@MANYPEOPLE@の反対を押し切って@SAY01@')
+        ];
+    }
+}
+class selector_say01 extends SctItm_Selector {
+    constructor() {
+        super('@SAY01@');
+        this.itms = [
             new SctItm('主張'),
             new SctItm('強調'),
             new SctItm('公表'),
@@ -2344,20 +2359,33 @@ class selector_say2 extends SctItm_Selector {
     constructor() {
         super('@SAY2@');
         this.itms = [
-            new SctItm('@SAY2@や@SAY2@'),
-            new SctItm('興奮気味な@SAY2@'),
-            new SctItm('声高らかに@SAY2@'),
-            new SctItm('鼻息の荒い@SAY2@'),
-            new SctItm('落ち着いた様子で@SAY2@'),
-            new SctItm('嬉々とした@SAY2@'),
-            new SctItm('笑いを堪えながらの@SAY2@'),
-            new SctItm('涙ながらの@SAY2@'),
-            new SctItm('あっけらかんとした@SAY2@'),
-            new SctItm('大声の@SAY2@'),
-            new SctItm('声を潜めた@SAY2@'),
-            new SctItm('狼狽えながらの@SAY2@'),
-            new SctItm('怯えた様子で@SAY2@'),
-            new SctItm('貴重な@SAY2@'),
+            new SctItm('@SAY201@'),
+            new SctItm('@SAY201@'),
+            new SctItm('@SAY201@'),
+            new SctItm('@SAY201@'),
+            new SctItm('@SAY201@'),
+            new SctItm('@SAY201@'),
+            new SctItm('@SAY201@や@SAY201@'),
+            new SctItm('興奮気味な@SAY201@'),
+            new SctItm('声高らかに@SAY201@'),
+            new SctItm('鼻息の荒い@SAY201@'),
+            new SctItm('落ち着いた様子で@SAY201@'),
+            new SctItm('嬉々とした@SAY201@'),
+            new SctItm('笑いを堪えながらの@SAY201@'),
+            new SctItm('涙ながらの@SAY201@'),
+            new SctItm('あっけらかんとした@SAY201@'),
+            new SctItm('大声の@SAY201@'),
+            new SctItm('声を潜めた@SAY201@'),
+            new SctItm('狼狽えながらの@SAY201@'),
+            new SctItm('怯えた様子で@SAY201@'),
+            new SctItm('貴重な@SAY201@')
+        ];
+    }
+}
+class selector_say201 extends SctItm_Selector {
+    constructor() {
+        super('@SAY201@');
+        this.itms = [
             new SctItm('分析'),
             new SctItm('ご意見'),
             new SctItm('ご要望'),
@@ -2847,8 +2875,11 @@ class selector_didend extends SctItm_Selector {
         super('@DIDEND@');
         this.itms = [
             new SctItm('た'),
+            new SctItm('たかった'),
             new SctItm('ている'),
-            new SctItm('ていた')
+            new SctItm('ていた'),
+            new SctItm('ていたかった'),
+            new SctItm('てしまった')
         ];
     }
 }
@@ -3457,7 +3488,9 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_age());
         this.dic_push(new selector_age2());
         this.dic_push(new selector_say());
+        this.dic_push(new selector_say01());
         this.dic_push(new selector_say2());
+        this.dic_push(new selector_say201());
         this.dic_push(new selector_answer());
         this.dic_push(new selector_it());
         this.dic_push(new selector_conect());
