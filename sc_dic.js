@@ -3210,8 +3210,10 @@ const itms_grade = [
     new SctItm('@PEOPLE@の様に')
 ];
 const itms_landmark = [
-    new SctItm('城'),
-    new SctItm('寺'),
+    // new SctItm('城')
+    // ,
+    // new SctItm('寺')
+    // ,
     new SctItm('寺院'),
     new SctItm('大聖堂'),
     new SctItm('洞窟'),
@@ -3340,8 +3342,9 @@ const itms_accident = [
     new SctItm('乱闘騒ぎ'),
     new SctItm('大喧嘩'),
     new SctItm('不法侵入'),
-    new SctItm('同時多発テロ'),
-    new SctItm('諜報活動')
+    new SctItm('同時多発テロ')
+    // ,
+    // new SctItm('諜報活動')
 ];
 const itms_festival = [
     new SctItm('新年会'),
@@ -3441,7 +3444,9 @@ const itms_goodhabit = [
     new SctItm('鷹狩り'),
     new SctItm('花見'),
     new SctItm('芋掘り'),
-    new SctItm('キャンプ')
+    new SctItm('キャンプ'),
+    new SctItm('ハイキング'),
+    new SctItm('山登り')
 ];
 const itms_sports = [
     new SctItm('野球'),
@@ -3940,7 +3945,9 @@ const itms_class = [
     new SctItm('抜け忍'),
     new SctItm('諜報員'),
     new SctItm('狙撃兵'),
+    new SctItm('スナイパー'),
     new SctItm('兵士'),
+    new SctItm('傭兵'),
     new SctItm('株主'),
     new SctItm('筆頭株主'),
     new SctItm('投資家'),
@@ -5901,8 +5908,7 @@ const itms_Science = [
     new SctItm('地理学'),
     new SctItm('文学'),
     new SctItm('芸術'),
-    new SctItm('心理学'),
-    new SctItm('@L_ITEM@学')
+    new SctItm('心理学')
 ];
 const itms_AwardType = [
     new SctItm('ノーベル'),
@@ -5948,7 +5954,9 @@ const itms_Award = [
     new SctItm('ミス@L_ITEM@コンテスト@AWARDRANK@'),
     new SctItm('@L_ITEM@グランプリ@AWARDRANK@'),
     new SctItm('@L_ITEM@コンテスト@AWARDRANK@'),
+    new SctItm('@L_ITEM@コンクール@AWARDRANK@'),
     new SctItm('@L_ITEM@選手権@AWARDRANK@'),
+    new SctItm('@L_ITEM@競争@AWARDRANK@'),
     new SctItm('@L_ITEM@トーナメント@AWARDRANK@'),
     new SctItm('@L_ITEM@デスマッチ@AWARDRANK@'),
     new SctItm('@L_WHAT@@L_DO@大賞'),

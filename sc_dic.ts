@@ -4803,10 +4803,10 @@ const itms_grade = [
 
 
 const itms_landmark = [
-    new SctItm('城')
-    ,
-    new SctItm('寺')
-    ,
+    // new SctItm('城')
+    // ,
+    // new SctItm('寺')
+    // ,
     new SctItm('寺院')
     ,
     new SctItm('大聖堂')
@@ -5046,8 +5046,8 @@ const   itms_accident = [
     new SctItm('不法侵入')
     ,
     new SctItm('同時多発テロ')
-    ,
-    new SctItm('諜報活動')
+    // ,
+    // new SctItm('諜報活動')
 ];
 
 const   itms_festival = [
@@ -5242,6 +5242,10 @@ const   itms_goodhabit = [
     new SctItm('芋掘り')
     ,
     new SctItm('キャンプ')
+    ,
+    new SctItm('ハイキング')
+    ,
+    new SctItm('山登り')
 ];
 
 const   itms_sports = [
@@ -6185,7 +6189,11 @@ const   itms_class = [
     ,
     new SctItm('狙撃兵')
     ,
+    new SctItm('スナイパー')
+    ,
     new SctItm('兵士')
+    ,
+    new SctItm('傭兵')
     ,
     new SctItm('株主')
     ,
@@ -9798,8 +9806,6 @@ const   itms_Science = [
     new SctItm('芸術')
     ,
     new SctItm('心理学')
-    ,
-    new SctItm('@L_ITEM@学')
 ]
 
 const   itms_AwardType = [
@@ -9883,7 +9889,11 @@ const   itms_Award = [
     ,
     new SctItm('@L_ITEM@コンテスト@AWARDRANK@')
     ,
+    new SctItm('@L_ITEM@コンクール@AWARDRANK@')
+    ,
     new SctItm('@L_ITEM@選手権@AWARDRANK@')
+    ,
+    new SctItm('@L_ITEM@競争@AWARDRANK@')
     ,
     new SctItm('@L_ITEM@トーナメント@AWARDRANK@')
     ,

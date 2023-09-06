@@ -416,8 +416,8 @@ class selector_title extends SctItm_Selector {
         super('@NEWS_TITLE@');
         this.itms = [
             new SctItm('@L_WHAT@が@KEID@@L_DO@'),
-            new SctItm('@L_WHAT@を@KEID@@L_DO@@END02C@@L_ITEM@'),
-            new SctItm('@L_WHAT@が@KEID@@L_DO@@END02C@@L_ITEM@'),
+            new SctItm('@L_WHAT@を@KEID@@L_DO@@END02C@@PEOPLE@'),
+            new SctItm('@L_WHAT@が@KEID@@L_DO@@END02C@@PEOPLE@'),
             new SctItm('@L_WHAT@の@PEOPLE@が@KEID@@L_DO@'),
             new SctItm('@L_WHAT@が@KEID@@L_DO@@END02C@'),
             new SctItm('@L_WHAT@の@PEOPLE@が@KEID@@L_DO@@END02C@'),
