@@ -3373,7 +3373,7 @@ class selector_say01 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@GROUP@で分析')
             ,
-            new SctItm('@@GROUP@に発言')
+            new SctItm('@GROUP@に発言')
             ,
             new SctItm('@GROUP@に代弁')
             ,
