@@ -961,6 +961,10 @@ class selector_doc extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@WHO@は「@COMMENT@」との@ANSWER@を@SAY@し、@AWARD@を@AWARDGET@@END02B@。')
             ,
             new SctItm('@WHO@が@DID@@DIDEND@のは、@DATE@のことであった。')
+            ,
+            new SctItm('@NEWS_Q01@？ ')
+            ,
+            new SctItm('@NEWS_Q01@？ @CONECT@、@NEWS_Q01@？ ')
         ];
     }
 }
@@ -1185,7 +1189,7 @@ class selector_co extends SctItm_Selector implements ISctItm_Selector {
 }
 
 
-class selector_c01 extends SctItm_Selector implements ISctItm_Selector {
+class selector_newsC01 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@NEWS_C01@');
         this.itms = [
@@ -1197,9 +1201,9 @@ class selector_c01 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@KEI@@L_WHAT@では@KEI@@KEY@や@KEY@が@SIZE@@END01B@')
             ,
-            new SctItm('@KEY@が@SIZE@する@L_WHAT@@END01A@')
+            new SctItm('@KEY@が@SIZE@@END02B@@L_WHAT@@END01A@')
             ,
-            new SctItm('@KEI@@KEY@や@KEY@が@SIZE@する@L_WHAT@@END01A@')
+            new SctItm('@KEI@@KEY@や@KEY@が@SIZE@@END02B@@L_WHAT@@END01A@')
             ,
             new SctItm('@KEI@@MANYPEOPLE@が@KEID@@L_DO@@END01B@')
             ,
@@ -1251,7 +1255,7 @@ class selector_end01b extends SctItm_Selector implements ISctItm_Selector {
 }
 
 
-class selector_c02 extends SctItm_Selector implements ISctItm_Selector {
+class selector_newsC02 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@NEWS_C02@');
         this.itms = [
@@ -1270,6 +1274,42 @@ class selector_c02 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@MANYPEOPLE@の@THINK@と@THINK@@SIZE2@')
             ,
             new SctItm('@WHO@は@DID@@DIDEND@')
+        ];
+    }
+}
+
+class selector_newsQ01 extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@NEWS_Q01@');
+        this.itms = [
+            new SctItm('@WHY@、@L_WHAT@は@L_DO@したのか')
+            ,
+            new SctItm('@WHY@、@KEI@@L_WHAT@は@KEID@@L_DO@@END02B@のだろうか')
+            ,
+            new SctItm('@WHY@、@KEI@@WHAT@もまた@L_DO@@END02B@のは何故か')
+            ,
+            new SctItm('@WHY@、@KEI@@L_WHAT@は@DOING@しまうのか')
+        ];
+    }
+}
+
+class selector_why extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@WHY@');
+        this.itms = [
+            new SctItm('何故')
+            ,
+            new SctItm('どうして')
+            ,
+            new SctItm('いかに')
+            ,
+            new SctItm('いかにして')
+            ,
+            new SctItm('何があって')
+            ,
+            new SctItm('どういう訳で')
+            ,
+            new SctItm('如何なる理由で')
         ];
     }
 }
@@ -1385,7 +1425,7 @@ class selector_comment2 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@CALL@が@SIZE@@END02B@')
             ,
-            new SctItm('@L_WHAT@は@KEID@@L_DO@する@KEI@@NICK@だと@ASSES@')
+            new SctItm('@L_WHAT@は@KEID@@L_DO@@END02B@@KEI@@NICK@だと@ASSES@')
             ,
             new SctItm('@MANYPEOPLE@は@CALL@@END02A@')
             ,
@@ -1399,7 +1439,7 @@ class selector_comment2 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@L_WHAT@は@KEI@@NICK@の@PART@だと@KEID@@ASSES@')
             ,
-            new SctItm('@L_WHAT@は@KEID@@L_DO@する@KEI@@THEY@@END02A@')
+            new SctItm('@L_WHAT@は@KEID@@L_DO@@END02B@@KEI@@THEY@@END02A@')
             ,
             new SctItm('@CALL@で、@CALL@@END02A@')
             ,
@@ -1413,7 +1453,7 @@ class selector_comment2 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@CALL@、@YESNO@、それが@PART@の@PART@@END02A@')
             ,
-            new SctItm('@KEID@@L_DO@する@KEI@@NICK@と@KEID@@ASSES@@THEY@、@YESNO@、それが@L_WHAT@の@PEOPLE@@END02A@')
+            new SctItm('@KEID@@L_DO@@END02B@@KEI@@NICK@と@KEID@@ASSES@@THEY@、@YESNO@、それが@L_WHAT@の@PEOPLE@@END02A@')
             ,
             new SctItm('@KEID@@L_DO@@END02B@@THEY@、@YESNO@、それが@L_WHAT@@END02A@')
             ,
@@ -3883,6 +3923,8 @@ class selector_conect extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('そして')
             ,
+            new SctItm('加えて')
+            ,
             new SctItm('それに伴い')
             ,
             new SctItm('しかし')
@@ -3906,6 +3948,8 @@ class selector_conect extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('つまり')
             ,
             new SctItm('それはさておき')
+            ,
+            new SctItm('それにしても')
             ,
             new SctItm('その時')
             ,
@@ -4789,8 +4833,10 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_newsFirst());
 
         this.dic_push(new selector_doc());
-        this.dic_push(new selector_c01());
-        this.dic_push(new selector_c02());
+        this.dic_push(new selector_newsC01());
+        this.dic_push(new selector_newsC02());
+        this.dic_push(new selector_newsQ01());
+        this.dic_push(new selector_why());
         this.dic_push(new selector_end01a());
         this.dic_push(new selector_end01b());
         this.dic_push(new selector_end02a());
