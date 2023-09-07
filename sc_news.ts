@@ -3371,8 +3371,8 @@ class selector_say01 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@GROUP@に公表')
             ,
-            new SctItm('@GROUP@で分析')
-            ,
+            // new SctItm('@GROUP@で分析')
+            // ,
             new SctItm('@GROUP@に発言')
             ,
             new SctItm('@GROUP@に代弁')
@@ -3407,15 +3407,15 @@ class selector_say01 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@PART@に耳打ち')
             ,
-            new SctItm('報告書を提出')
+            new SctItm('@GROUP@に報告書を提出')
             ,
             new SctItm('記者会見で発表')
             ,
-            new SctItm('演説')
+            new SctItm('@LANDMARK@で演説')
             ,
-            new SctItm('糾弾')
+            new SctItm('@GROUP@に糾弾')
             ,
-            new SctItm('追求')
+            new SctItm('@GROUP@に追求')
             ,
             new SctItm('リツイート')
         ];
@@ -3473,8 +3473,8 @@ class selector_say201 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@SAY201@');
         this.itms = [
-            new SctItm('分析')
-            ,
+            // new SctItm('分析')
+            // ,
             new SctItm('ご意見')
             ,
             new SctItm('ご要望')
@@ -4182,8 +4182,6 @@ class selector_pint extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('確か')
             // ,
             // new SctItm('大方')
-            ,
-            new SctItm('約')
             ,
             new SctItm('だいたい')
         ];

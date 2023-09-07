@@ -2514,7 +2514,7 @@ const   cods_ad_sense_n = [
     // ,
     new SctCod_Mv('|蒸|む|し|暑|あつ|い')
     ,
-    new SctCod_Mv('|寒|さむ|い')
+    new SctCod_Mv('|肌寒|はだざむ|い')
     ,
     new SctCod_It('ぬるい')
     ,
@@ -2563,7 +2563,7 @@ const   cods_adv_sense_n = [
     ,
     new SctCod_It('|蒸|む|し|暑|あつ|く')
     ,
-    new SctCod_It('|寒|さむ|く')
+    new SctCod_It('|薄|うす|ら|寒|さむ|く')
     ,
     new SctCod_It('|暗|くら|く')
     ,
@@ -3337,8 +3337,8 @@ const   cods_km = [
     ,
     new SctCod_Km('|最悪|さいあく|')
     ,
-    new SctCod_Km('|最高|さいこう|')
-    ,
+    // new SctCod_Km('|最高|さいこう|')
+    // ,
     // new SctCod_Km('|最新|さいしん|')
     // ,
     new SctCod_Km('|最低|さいてい|')
@@ -3347,8 +3347,8 @@ const   cods_km = [
     ,
     new SctCod_Km('|残酷|ざんこく|')
     ,
-    new SctCod_Km('|殺伐|さつばつ|')
-    ,
+    // new SctCod_Km('|殺伐|さつばつ|')
+    // ,
     // new SctCod_Km('|粛正|しゅくせい|')
     // ,
     // new SctCod_Km('|純潔|じゅんけつ|')
@@ -8470,6 +8470,14 @@ const   itms_did = [
     ,
     new SctItm('@FOOD@を焼き直して食べ')
     ,
+    new SctItm('@FOOD@をナイフとフォークで食べ')
+    ,
+    new SctItm('@FOOD@を手づかみで食べ')
+    ,
+    new SctItm('@FOOD@を丸呑みして食べ')
+    ,
+    new SctItm('@FOOD@を一口で平らげ')
+    ,
     new SctItm('@LIVESTOCK@の肉を油で揚げて食べ')
     ,
     new SctItm('@LIVESTOCK@の肉を丸焼きにして食べ')
@@ -8808,6 +8816,14 @@ const   itms_did_l = [
     ,
     new SctItm('@L_FOOD@を焼き直して食べ')
     ,
+    new SctItm('@L_FOOD@をナイフとフォークで食べ')
+    ,
+    new SctItm('@L_FOOD@を手づかみで食べ')
+    ,
+    new SctItm('@L_FOOD@を丸呑みして食べ')
+    ,
+    new SctItm('@L_FOOD@を一口で平らげ')
+    ,
     new SctItm('@L_LIVESTOCK@の肉を油で揚げて食べ')
     ,
     new SctItm('@L_LIVESTOCK@の肉を丸焼きにして食べ')
@@ -9035,6 +9051,14 @@ const   itms_did_o = [
     new SctItm('@O_FOOD@を温め直して食べ')
     ,
     new SctItm('@O_FOOD@を焼き直して食べ')
+    ,
+    new SctItm('@O_FOOD@をナイフとフォークで食べ')
+    ,
+    new SctItm('@O_FOOD@を手づかみで食べ')
+    ,
+    new SctItm('@O_FOOD@を丸呑みして食べ')
+    ,
+    new SctItm('@O_FOOD@を一口で平らげ')
     ,
     new SctItm('@O_LIVESTOCK@の肉を油で揚げて食べ')
     ,
