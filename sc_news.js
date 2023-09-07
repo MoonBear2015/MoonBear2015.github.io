@@ -483,7 +483,8 @@ class selector_newsFirst extends SctItm_Selector {
             new SctItm('@DATE@に、@ORDER@@KEI@@L_WHAT@が@KEID@@L_DO@@END02B@との@ANSWER@が流れている。'),
             new SctItm('@DATE@には、@ORDER@@KEI@@L_WHAT@が@KEID@@L_DO@すると予測されていた。'),
             new SctItm('@DATE@には、@ORDER@@KEI@@L_WHAT@が@KEID@@L_DO@する筈であった。'),
-            new SctItm('@KEI@@L_WHAT@が@KEID@@L_DO@@END02B@のは、@DATE@の頃である。')
+            new SctItm('@KEI@@L_WHAT@が@KEID@@L_DO@@END02B@のは、@DATE@の頃である。'),
+            new SctItm('@NEWS_Q01@？ ')
         ];
     }
 }
@@ -845,7 +846,9 @@ class selector_newsQ01 extends SctItm_Selector {
             new SctItm('@WHY@、@L_WHAT@は@L_DO@したのか'),
             new SctItm('@WHY@、@KEI@@L_WHAT@は@KEID@@L_DO@@END02B@のだろうか'),
             new SctItm('@WHY@、@KEI@@WHAT@もまた@L_DO@@END02B@のは何故か'),
-            new SctItm('@WHY@、@KEI@@L_WHAT@は@DOING@しまうのか')
+            new SctItm('@WHY@、@KEI@@L_WHAT@は@DOING@しまうのか'),
+            new SctItm('@WHY@、@GROUP@は@KEI@@L_WHAT@を@L_DO@してしまったのか'),
+            new SctItm('@WHY@、@L_WHAT@の@KEI@@GROUP@は@L_DO@してしまうのか')
         ];
     }
 }
