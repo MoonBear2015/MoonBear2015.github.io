@@ -2846,9 +2846,19 @@ class selector_order extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@GROUP@の賛同を得て')
             ,
+            new SctItm('@GROUP@の入れ知恵で')
+            ,
             new SctItm('@GROUP@を代表して')
             ,
             new SctItm('@GROUP@に洗脳されて')
+            ,
+            new SctItm('@GROUP@の推薦で')
+            ,
+            new SctItm('@GROUP@の意志に逆らい')
+            ,
+            new SctItm('@GROUP@の期待を裏切って')
+            ,
+            new SctItm('@GROUP@の目を盗んで')
         ];
     }
 }
@@ -3091,6 +3101,8 @@ class selector_food extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@CLASS@のお薦め@FOOD01@')
             ,
             new SctItm('@CLASS@で人気の@FOOD01@')
+            ,
+            new SctItm('@KING@が愛した@FOOD01@')
         ];
     }
 }

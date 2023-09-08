@@ -9,7 +9,7 @@ function set_qa()
     html += '<h1>';
     html += 'Q&A';
     html += '<small>';
-    html += ' Q01.30';
+    html += ' Q01.31';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -664,6 +664,16 @@ class selector_a_title extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@QUESTER@さんが@L_DOING@いる場合ではありません')
             ,
             new SctItm('@QUESTER@さんが@L_DOING@みては？')
+            ,
+            new SctItm('@QUESTER@さんが@DID@@DIDEND@せいだと思いますが？')
+            ,
+            new SctItm('@QUESTER@さんが@DID@@DIDEND@のが原因です')
+            ,
+            new SctItm('@DID@@DIDEND@@QUESTER@さんが悪いんです')
+            ,
+            new SctItm('@DID@@DIDEND@@QUESTER@さんの責任です')
+            ,
+            new SctItm('@DID@@DIDEND@のは@QUESTER@さんですよね？')
             ,
             new SctItm('@L_PART@さんと@L_DOING@みては？')
             ,
