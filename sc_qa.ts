@@ -486,13 +486,15 @@ class selector_q02 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@HABIT@の@NICK@だと評判なのです')
             ,
-            new SctItm('@DOING@いたのです')
+            new SctItm('@HABIT@の@NICK@だと呼ばれているのです')
+            ,
+            new SctItm('@DID@@DIDEND@のです')
             ,
             new SctItm('@DOING@ばかりいるのです')
             ,
-            new SctItm('@DOING@いる筈だったのです')
+            new SctItm('@DID@@DIDEND@筈だったのです')
             ,
-            new SctItm('@DOING@いた時のことです')
+            new SctItm('@DOING@いる時のことです')
         ]
     }
 }
@@ -551,6 +553,8 @@ class selector_q03_quest extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@DOING@ばかりいるので')
             ,
             new SctItm('@DOING@しまうので')
+            ,
+            new SctItm('@DID@@DIDEND@ので')
         ]
     }
 }
@@ -571,6 +575,12 @@ class selector_q04_result extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('取り付く島もありません')
             ,
+            new SctItm('仕方がありません')
+            ,
+            new SctItm('途方に暮れています')
+            ,
+            new SctItm('自分を見失っています')
+            ,
             new SctItm('@GRADE@@EMO@くて@THINK@しているのです')
             ,
             new SctItm('@GRADE@@EMO@くて仕方がありません')
@@ -582,6 +592,8 @@ class selector_q04_result extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@DOING@いるのです')
             ,
             new SctItm('@DOING@ばかりいるのです')
+            ,
+            new SctItm('@DID@@DIDEND@のです')
         ]
     }
 }
