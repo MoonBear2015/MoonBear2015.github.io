@@ -579,8 +579,6 @@ class selector_q04_result extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('途方に暮れています')
             ,
-            new SctItm('自分を見失っています')
-            ,
             new SctItm('@GRADE@@EMO@くて@THINK@しているのです')
             ,
             new SctItm('@GRADE@@EMO@くて仕方がありません')

@@ -398,7 +398,6 @@ class selector_q04_result extends SctItm_Selector {
             new SctItm('取り付く島もありません'),
             new SctItm('仕方がありません'),
             new SctItm('途方に暮れています'),
-            new SctItm('自分を見失っています'),
             new SctItm('@GRADE@@EMO@くて@THINK@しているのです'),
             new SctItm('@GRADE@@EMO@くて仕方がありません'),
             new SctItm('@DOING@いたのです'),

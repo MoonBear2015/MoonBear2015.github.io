@@ -747,8 +747,7 @@ class selector_who3 extends SctItm_Selector {
             new SctItm('@DID@@DIDEND@'),
             new SctItm('@DID@@DIDEND@筈の'),
             new SctItm('@AWARD@を@AWARDGET@@END02B@'),
-            new SctItm('@DONE@'),
-            new SctItm('@KING@の')
+            new SctItm('@DONE@')
         ];
     }
 }
@@ -862,6 +861,7 @@ class selector_why extends SctItm_Selector {
             new SctItm('いかにして'),
             new SctItm('何があって'),
             new SctItm('どういう訳で'),
+            new SctItm('どんな理由で'),
             new SctItm('如何なる理由で')
         ];
     }
@@ -1967,10 +1967,11 @@ class selector_order extends SctItm_Selector {
             new SctItm('@GROUP@の支援を受けて'),
             new SctItm('@GROUP@の賛同を得て'),
             new SctItm('@GROUP@の入れ知恵で'),
+            new SctItm('@GROUP@の差し金で'),
             new SctItm('@GROUP@を代表して'),
             new SctItm('@GROUP@に洗脳されて'),
             new SctItm('@GROUP@の推薦で'),
-            new SctItm('@GROUP@の意志に逆らい'),
+            new SctItm('@GROUP@の意志に逆らって'),
             new SctItm('@GROUP@の期待を裏切って'),
             new SctItm('@GROUP@の目を盗んで')
         ];
@@ -2917,9 +2918,7 @@ class selector_didend extends SctItm_Selector {
         this.itms = [
             new SctItm('た'),
             new SctItm('ている'),
-            new SctItm('ていた'),
-            new SctItm('ていたかった'),
-            new SctItm('てしまった')
+            new SctItm('ていた')
         ];
     }
 }
