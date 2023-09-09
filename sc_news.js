@@ -651,35 +651,57 @@ class selector_who extends SctItm_Selector {
     constructor() {
         super('@WHO@');
         this.itms = [
-            new SctItm('@DONE@@HUMAN@@AGE@'),
-            new SctItm('『@CALL@』と@KEID@@ASSES@@HUMAN@@AGE@'),
-            new SctItm('『@CALL@』と@KEID@@ASSES@@L_CLASS@の@HUMAN@@AGE@'),
-            new SctItm('@GROUP@より『@CALL@』と@ASSES@@L_CLASS@の@HUMAN@@AGE@'),
-            new SctItm('@GROUP@とは@FRIENDSHIP@であった@HUMAN@@AGE@'),
-            new SctItm('@GROUP@とは@FRIENDSHIP@だと噂された@HUMAN@@AGE@'),
-            new SctItm('@AWARD@を@AWARDGET@した@HUMAN@@AGE@'),
-            new SctItm('@AWARD@の受賞者、@HUMAN@@AGE@'),
-            new SctItm('@GROUP@から密命を受けた@HUMAN@@AGE@'),
-            new SctItm('@GROUP@から派遣された@HUMAN@@AGE@'),
-            new SctItm('@GROUP@から推薦された@HUMAN@@AGE@'),
-            new SctItm('@GROUP@から買収された@HUMAN@@AGE@'),
-            new SctItm('@GROUP@からスカウトされた@HUMAN@@AGE@'),
-            new SctItm('@GROUP@から追放された@HUMAN@@AGE@'),
-            new SctItm('@GROUP@に抹殺された@HUMAN@@AGE@'),
-            new SctItm('@GROUP@に訴えられた@HUMAN@@AGE@')
+            // new SctItm('@DONE@@HUMAN@@AGE@')
             // ,
-            // new SctItm('@GROUP@を壊滅させた@HUMAN@@AGE@')
+            new SctItm('@WHO3@@HUMAN@@AGE@')
             // ,
-            // new SctItm('@GROUP@を設立した@HUMAN@@AGE@')
-            ,
-            new SctItm('@GROUP@に買収された@HUMAN@@AGE@'),
-            new SctItm('@GROUP@と契約した@HUMAN@@AGE@'),
-            new SctItm('@GROUP@に洗脳された@HUMAN@@AGE@'),
-            new SctItm('@GROUP@に改造された@HUMAN@@AGE@'),
-            new SctItm('@GROUP@から@AWARD@を贈呈された@HUMAN@@AGE@'),
-            new SctItm('@GROUP@から@AWARD@を授与した@HUMAN@@AGE@'),
-            new SctItm('@GROUP@から@AWARD@を剥奪された@HUMAN@@AGE@'),
-            new SctItm('@KING@の@HUMAN@@AGE@')
+            // new SctItm('『@CALL@』と@KEID@@ASSES@@L_CLASS@の@HUMAN@@AGE@')
+            // ,
+            // new SctItm('@GROUP@より『@CALL@』と@ASSES@@L_CLASS@の@HUMAN@@AGE@')
+            // ,
+            // new SctItm('@GROUP@とは@FRIENDSHIP@であった@HUMAN@@AGE@')
+            // ,
+            // new SctItm('@GROUP@とは@FRIENDSHIP@だと噂された@HUMAN@@AGE@')
+            // ,
+            // new SctItm('@AWARD@を@AWARDGET@した@HUMAN@@AGE@')
+            // ,
+            // new SctItm('@AWARD@の受賞者、@HUMAN@@AGE@')
+            // ,
+            // new SctItm('@GROUP@から密命を受けた@HUMAN@@AGE@')
+            // ,
+            // new SctItm('@GROUP@から派遣された@HUMAN@@AGE@')
+            // ,
+            // new SctItm('@GROUP@から推薦された@HUMAN@@AGE@')
+            // ,
+            // new SctItm('@GROUP@から買収された@HUMAN@@AGE@')
+            // ,
+            // new SctItm('@GROUP@からスカウトされた@HUMAN@@AGE@')
+            // ,
+            // new SctItm('@GROUP@から追放された@HUMAN@@AGE@')
+            // ,
+            // new SctItm('@GROUP@に抹殺された@HUMAN@@AGE@')
+            // ,
+            // new SctItm('@GROUP@に訴えられた@HUMAN@@AGE@')
+            // // ,
+            // // new SctItm('@GROUP@を壊滅させた@HUMAN@@AGE@')
+            // // ,
+            // // new SctItm('@GROUP@を設立した@HUMAN@@AGE@')
+            // ,
+            // new SctItm('@GROUP@に買収された@HUMAN@@AGE@')
+            // ,
+            // new SctItm('@GROUP@と契約した@HUMAN@@AGE@')
+            // ,
+            // new SctItm('@GROUP@に洗脳された@HUMAN@@AGE@')
+            // ,
+            // new SctItm('@GROUP@に改造された@HUMAN@@AGE@')
+            // ,
+            // new SctItm('@GROUP@から@AWARD@を贈呈された@HUMAN@@AGE@')
+            // ,
+            // new SctItm('@GROUP@から@AWARD@を授与した@HUMAN@@AGE@')
+            // ,
+            // new SctItm('@GROUP@から@AWARD@を剥奪された@HUMAN@@AGE@')
+            // ,
+            // new SctItm('@KING@の@HUMAN@@AGE@')
         ];
     }
 }
@@ -707,6 +729,13 @@ class selector_who3 extends SctItm_Selector {
             new SctItm('@COUNTRY@出身の'),
             new SctItm('@COUNTRY@在住の'),
             new SctItm('@COUNTRY@唯一の'),
+            new SctItm('『@CALL@』と@KEID@@ASSES@'),
+            new SctItm('『@CALL@』と@KEID@@ASSES@@L_CLASS@の'),
+            new SctItm('@GROUP@より『@CALL@』と@ASSES@@L_CLASS@の'),
+            new SctItm('@GROUP@とは@FRIENDSHIP@であった'),
+            new SctItm('@GROUP@とは@FRIENDSHIP@だと噂された'),
+            new SctItm('@AWARD@を@AWARDGET@した'),
+            new SctItm('@AWARD@の受賞者、'),
             new SctItm('@GROUP@から派遣された'),
             new SctItm('@GROUP@から密命を受けた'),
             new SctItm('@GROUP@から推薦された'),
@@ -714,7 +743,11 @@ class selector_who3 extends SctItm_Selector {
             new SctItm('@GROUP@から批難された'),
             new SctItm('@GROUP@にスカウトされた'),
             new SctItm('@GROUP@に買収された'),
+            new SctItm('@GROUP@に雇われた'),
             new SctItm('@GROUP@に訴えられた'),
+            new SctItm('@GROUP@から追われている'),
+            new SctItm('@GROUP@から追われている'),
+            new SctItm('@GROUP@から付け狙われている'),
             new SctItm('@GROUP@に抹殺された')
             // ,
             // new SctItm('@GROUP@を壊滅させた')
@@ -724,7 +757,6 @@ class selector_who3 extends SctItm_Selector {
             new SctItm('@GROUP@に洗脳された'),
             new SctItm('@GROUP@と契約@END02B@'),
             new SctItm('@GROUP@に改造された'),
-            new SctItm('@GROUP@に『@CALL@』と@ASSES@'),
             new SctItm('@GROUP@から@AWARD@を贈呈された'),
             new SctItm('@GROUP@から@AWARD@を授与した'),
             new SctItm('@GROUP@から@AWARD@を剥奪された'),
