@@ -776,6 +776,22 @@ class selector_manypeople extends SctItm_Selector implements ISctItm_Selector {
     }
 }
 
+class selector_bigName extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@BIGNAME@');
+        this.itms = [
+            new SctItm('@MANYPEOPLE@')
+            ,
+            new SctItm('@KING@')
+            ,
+            new SctItm('@MANYMAN@@KING@')
+            ,
+            new SctItm('@MANYMAN@@CLASS@')
+        ];
+    }
+}
+
+
 // ☆☆
 // 書籍のタイトル
 class selector_book extends SctItm_Selector implements ISctItm_Selector {
@@ -2804,44 +2820,80 @@ class selector_scool extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@SCHOOL@');
         this.itms = [
-            new SctItm('@CITY@@SCHOOL01@')
+            new SctItm('@SCHOOL01@')
             ,
-            new SctItm('@CITY@私立@SCHOOL01@')
+            new SctItm('@SCHOOL01@')
             ,
-            new SctItm('@CITY@公立@SCHOOL01@')
+            new SctItm('@SCHOOL01@')
             ,
-            new SctItm('@CITY@市立@SCHOOL01@')
+            new SctItm('@SCHOOL01@')
             ,
-            new SctItm('@CITY@私立第@NUM10@@SCHOOL01@')
+            new SctItm('@SCHOOL01@')
             ,
-            new SctItm('@CITY@公立第@NUM10@@SCHOOL01@')
+            new SctItm('@SCHOOL01@')
             ,
-            new SctItm('@CITY@市立第@NUM10@@SCHOOL01@')
+            new SctItm('@SCHOOL01@')
             ,
-            new SctItm('@CITY@第@NUM10@@SCHOOL01@')
+            new SctItm('@SCHOOL01@')
             ,
-            new SctItm('@COUNTRY@@SCHOOL01@')
+            new SctItm('@BIGNAME@が@SCHOOLAS@した@SCHOOL01@')
             ,
-            new SctItm('@COUNTRY@私立@SCHOOL01@')
+            new SctItm('@BIGNAME@を輩出した@SCHOOL01@')
             ,
-            new SctItm('@COUNTRY@公立@SCHOOL01@')
+            new SctItm('@BIGNAME@が在籍中の@SCHOOL01@')
             ,
-            new SctItm('@COUNTRY@国立@SCHOOL01@')
+            new SctItm('@BIGNAME@より『@CALL@』と@ASSES@@SCHOOL01@')
             ,
-            new SctItm('@COUNTRY@私立第@NUM10@@SCHOOL01@')
+            new SctItm('@COUNTRY@で唯一の@SCHOOL02@')
             ,
-            new SctItm('@COUNTRY@公立第@NUM10@@SCHOOL01@')
+            new SctItm('@CITY@で唯一の@SCHOOL02@')
             ,
-            new SctItm('@COUNTRY@国立第@NUM10@@SCHOOL01@')
+            new SctItm('@COUNTRY@で有数の@SCHOOL02@')
+        ];
+    }
+}
+class selector_school01 extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@SCHOOL01@');
+        this.itms = [
+            new SctItm('@CITY@@SCHOOL02@')
             ,
-            new SctItm('@COUNTRY@第@NUM10@@SCHOOL01@')
+            new SctItm('@CITY@私立@SCHOOL02@')
+            ,
+            new SctItm('@CITY@公立@SCHOOL02@')
+            ,
+            new SctItm('@CITY@市立@SCHOOL02@')
+            ,
+            new SctItm('@CITY@私立第@NUM10@@SCHOOL02@')
+            ,
+            new SctItm('@CITY@公立第@NUM10@@SCHOOL02@')
+            ,
+            new SctItm('@CITY@市立第@NUM10@@SCHOOL02@')
+            ,
+            new SctItm('@CITY@第@NUM10@@SCHOOL02@')
+            ,
+            new SctItm('@COUNTRY@@SCHOOL02@')
+            ,
+            new SctItm('@COUNTRY@私立@SCHOOL02@')
+            ,
+            new SctItm('@COUNTRY@公立@SCHOOL02@')
+            ,
+            new SctItm('@COUNTRY@国立@SCHOOL02@')
+            ,
+            new SctItm('@COUNTRY@私立第@NUM10@@SCHOOL02@')
+            ,
+            new SctItm('@COUNTRY@公立第@NUM10@@SCHOOL02@')
+            ,
+            new SctItm('@COUNTRY@国立第@NUM10@@SCHOOL02@')
+            ,
+            new SctItm('@COUNTRY@第@NUM10@@SCHOOL02@')
         ];
     }
 }
 
-class selector_school01 extends SctItm_Selector implements ISctItm_Selector {
+class selector_school02 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
-        super('@SCHOOL01@');
+        super('@SCHOOL02@');
         this.Add(itms_scool);
     }
 }
@@ -3051,6 +3103,44 @@ class locker_meal extends SctItm_SelectLocker implements ISctItm_Selector {
 class selector_dress extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@DRESS@');
+        this.itms = [
+            new SctItm('@DRESS01@')
+            ,
+            new SctItm('@DRESS01@')
+            ,
+            new SctItm('@DRESS01@')
+            ,
+            new SctItm('@DRESS01@')
+            ,
+            new SctItm('@DRESS01@')
+            ,
+            new SctItm('@KEI@@DRESS01@')
+            ,
+            new SctItm('しおれた@DRESS01@')
+            ,
+            new SctItm('似合わない@DRESS01@')
+            ,
+            new SctItm('体に合わない@DRESS01@')
+            ,
+            new SctItm('ツギハギだらけの@DRESS01@')
+            ,
+            new SctItm('色鮮やかな@DRESS01@')
+            ,
+            new SctItm('地味な@DRESS01@')
+            ,
+            new SctItm('ブランドものの@DRESS01@')
+            ,
+            new SctItm('@BIGNAME@が愛着している@DRESS01@')
+            ,
+            new SctItm('@SCHOOL@の制服')
+            ,
+            new SctItm('@SCHOOL@の制服に認定された@DRESS01@')
+        ];
+    }
+}
+class selector_dress01 extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@DRESS01@');
         this.Add(itms_dress);
     }
 }
@@ -3120,11 +3210,11 @@ class selector_food extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@CLASS@の手作り@FOOD01@')
             ,
-            new SctItm('@CLASS@のお薦め@FOOD01@')
+            new SctItm('@BIGNAME@のお薦め@FOOD01@')
             ,
-            new SctItm('@CLASS@で人気の@FOOD01@')
+            new SctItm('@BIGNAME@で人気の@FOOD01@')
             ,
-            new SctItm('@KING@が愛した@FOOD01@')
+            new SctItm('@BIGNAME@が愛した@FOOD01@')
         ];
     }
 }
@@ -4933,6 +5023,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_meal());
         this.dic_push(new locker_meal());
         this.dic_push(new selector_dress());
+        this.dic_push(new selector_dress01());
         this.dic_push(new locker_dress());
         this.dic_push(new selector_under());
         this.dic_push(new locker_under());
@@ -4942,6 +5033,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new locker_food());
         this.dic_push(new selector_scool());
         this.dic_push(new selector_school01());
+        this.dic_push(new selector_school02());
         this.dic_push(new selector_schoolas());
         this.dic_push(new selector_order());
         this.dic_push(new selector_group());
@@ -5041,6 +5133,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_specialist());
         this.dic_push(new locker_specialist());
         this.dic_push(new selector_manypeople());
+        this.dic_push(new selector_bigName());
         this.dic_push(new selector_sexage());
         this.dic_push(new locker_sexage());
         this.dic_push(new selector_partner());

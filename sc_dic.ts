@@ -8766,7 +8766,11 @@ const   itms_did = [
     ,
     new SctItm('@FESTIVAL@を開催し')
     ,
+    new SctItm('@SCHOOL@の@FESTIVAL@を開催し')
+    ,
     new SctItm('@FESTIVAL@に参加し')
+    ,
+    new SctItm('@SCHOOL@の@FESTIVAL@に参加し')
     ,
     new SctItm('@SONGTYPE@『@SONGTITLE@』を@KEI4@歌っ')
     ,
