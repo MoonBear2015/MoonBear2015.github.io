@@ -4792,6 +4792,8 @@ const itms_grade = [
     ,
     new SctItm('盛大に')
     ,
+    new SctItm('膨大な')
+    ,
     new SctItm('ずいぶん')
     ,
     new SctItm('物凄く')
@@ -5213,8 +5215,6 @@ const   itms_goodhabit = [
     ,
     new SctItm('ヒッチハイク')
     ,
-    new SctItm('ひとり旅')
-    ,
     new SctItm('ボランティア活動')
     ,
     new SctItm('募金活動')
@@ -5231,6 +5231,8 @@ const   itms_goodhabit = [
     ,
     new SctItm('魚釣り')
     ,
+    new SctItm('潮干狩り')
+    ,
     new SctItm('熊狩り')
     ,
     new SctItm('鹿狩り')
@@ -5240,6 +5242,10 @@ const   itms_goodhabit = [
     new SctItm('花見')
     ,
     new SctItm('芋掘り')
+    ,
+    new SctItm('栗拾い')
+    ,
+    new SctItm('紅葉狩り')
     ,
     new SctItm('キャンプ')
     ,
@@ -7103,6 +7109,8 @@ const   itms_nickPosi = [
     new SctItm('@FLOWER@')
     ,
     new SctItm('@SWEETS@')
+    ,
+    new SctItm('@FRUIT@')
 ]
 
 const   itms_nickNomal = [
@@ -8616,19 +8624,19 @@ const   itms_did = [
     ,
     new SctItm('『@CALL@』と署名し')
     ,
-    new SctItm('@MANYPEOPLE@から『@CALL@』と呼ばれ')
+    new SctItm('@BIGNAME@から『@CALL@』と呼ばれ')
     ,
-    new SctItm('@MANYPEOPLE@から『@CALL@』と噂され')
+    new SctItm('@BIGNAME@から『@CALL@』と噂され')
     ,
-    new SctItm('@MANYPEOPLE@から『@CALL@』と馬鹿にされ')
+    new SctItm('@BIGNAME@から『@CALL@』と馬鹿にされ')
     ,
-    new SctItm('@MANYPEOPLE@から『@CALL@』と後ろ指を指され')
+    new SctItm('@BIGNAME@から『@CALL@』と後ろ指を指され')
     ,
-    new SctItm('@MANYPEOPLE@から『@CALL@』と讃えられ')
+    new SctItm('@BIGNAME@から『@CALL@』と讃えられ')
     ,
-    new SctItm('@MANYPEOPLE@から『@CALL@』と賞賛され')
+    new SctItm('@BIGNAME@から『@CALL@』と賞賛され')
     ,
-    new SctItm('@MANYPEOPLE@から『@CALL@』とおだてられ')
+    new SctItm('@BIGNAME@から『@CALL@』とおだてられ')
     ,
     new SctItm('@PART@を連れ')
     ,
@@ -8786,7 +8794,7 @@ const   itms_did = [
     ,
     new SctItm('@LANDMARK@で寝泊まりし')
     ,
-    new SctItm('@LANDMARK@に荒らし回っ')
+    new SctItm('@LANDMARK@を荒らし回っ')
     ,
     new SctItm('@LANDMARK@を破壊し')
     ,

@@ -3206,6 +3206,7 @@ const itms_grade = [
     new SctItm('とても'),
     new SctItm('非常に'),
     new SctItm('盛大に'),
+    new SctItm('膨大な'),
     new SctItm('ずいぶん'),
     new SctItm('物凄く'),
     new SctItm('@NICK@の様に'),
@@ -3432,7 +3433,6 @@ const itms_goodhabit = [
     new SctItm('畑仕事'),
     new SctItm('花嫁修業'),
     new SctItm('ヒッチハイク'),
-    new SctItm('ひとり旅'),
     new SctItm('ボランティア活動'),
     new SctItm('募金活動'),
     new SctItm('読書'),
@@ -3441,11 +3441,14 @@ const itms_goodhabit = [
     new SctItm('窓拭き'),
     new SctItm('瞑想'),
     new SctItm('魚釣り'),
+    new SctItm('潮干狩り'),
     new SctItm('熊狩り'),
     new SctItm('鹿狩り'),
     new SctItm('鷹狩り'),
     new SctItm('花見'),
     new SctItm('芋掘り'),
+    new SctItm('栗拾い'),
+    new SctItm('紅葉狩り'),
     new SctItm('キャンプ'),
     new SctItm('ハイキング'),
     new SctItm('山登り')
@@ -4421,7 +4424,8 @@ const itms_nickPosi = [
     new SctItm('お殿様'),
     new SctItm('大統領'),
     new SctItm('@FLOWER@'),
-    new SctItm('@SWEETS@')
+    new SctItm('@SWEETS@'),
+    new SctItm('@FRUIT@')
 ];
 const itms_nickNomal = [
     //
@@ -5235,13 +5239,13 @@ const itms_did = [
     new SctItm('@PEOPLE@から誘われ'),
     new SctItm('@PEOPLE@の振りをし'),
     new SctItm('『@CALL@』と署名し'),
-    new SctItm('@MANYPEOPLE@から『@CALL@』と呼ばれ'),
-    new SctItm('@MANYPEOPLE@から『@CALL@』と噂され'),
-    new SctItm('@MANYPEOPLE@から『@CALL@』と馬鹿にされ'),
-    new SctItm('@MANYPEOPLE@から『@CALL@』と後ろ指を指され'),
-    new SctItm('@MANYPEOPLE@から『@CALL@』と讃えられ'),
-    new SctItm('@MANYPEOPLE@から『@CALL@』と賞賛され'),
-    new SctItm('@MANYPEOPLE@から『@CALL@』とおだてられ'),
+    new SctItm('@BIGNAME@から『@CALL@』と呼ばれ'),
+    new SctItm('@BIGNAME@から『@CALL@』と噂され'),
+    new SctItm('@BIGNAME@から『@CALL@』と馬鹿にされ'),
+    new SctItm('@BIGNAME@から『@CALL@』と後ろ指を指され'),
+    new SctItm('@BIGNAME@から『@CALL@』と讃えられ'),
+    new SctItm('@BIGNAME@から『@CALL@』と賞賛され'),
+    new SctItm('@BIGNAME@から『@CALL@』とおだてられ'),
     new SctItm('@PART@を連れ'),
     new SctItm('@PART@の手を引い')
     // ,
@@ -5339,7 +5343,7 @@ const itms_did = [
     new SctItm('@LANDMARK@を歩い'),
     new SctItm('@LANDMARK@に走っ'),
     new SctItm('@LANDMARK@で寝泊まりし'),
-    new SctItm('@LANDMARK@に荒らし回っ'),
+    new SctItm('@LANDMARK@を荒らし回っ'),
     new SctItm('@LANDMARK@を破壊し'),
     new SctItm('@LANDMARK@を建て直し'),
     new SctItm('@LANDMARK@を建築し')
