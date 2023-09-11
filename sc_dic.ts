@@ -9895,6 +9895,8 @@ const   itms_AwardRank = [
     new SctItm('新人賞')
     ,
     new SctItm('監督賞')
+    ,
+    new SctItm('残念賞')
 ]
 
 const   itms_AwardGet = [
@@ -9925,6 +9927,10 @@ const   itms_Award = [
     ,
     new SctItm('@L_WHAT@レコード大賞')
     ,
+    new SctItm('@L_WHAT@映画際@AWARDRANK@')
+    ,
+    new SctItm('@COUNTRY@映画際@AWARDRANK@')
+    ,
     new SctItm('ミス@L_ITEM@コンテスト@AWARDRANK@')
     ,
     new SctItm('@L_ITEM@グランプリ@AWARDRANK@')
@@ -9946,6 +9952,8 @@ const   itms_Award = [
     new SctItm('@L_WHAT@文化勲章')
     ,
     new SctItm('@L_WHAT@グッドデザイン賞')
+    ,
+    new SctItm('@L_WHAT@ベストドレッサー賞')
     ,
     new SctItm('@L_WHAT@流行語大賞')
     ,
@@ -10099,6 +10107,8 @@ const   itms_Group02 = [
     ,
     new SctItm('自然保護団体')
     ,
+    new SctItm('@ANIMAL@保護団体')
+    ,
     new SctItm('工業団地')
     ,
     new SctItm('牧場')
@@ -10149,7 +10159,11 @@ const   itms_King02 = [
     ,
     new SctItm('村長')
     ,
-    new SctItm('尊長')
+    new SctItm('都知事')
+    ,
+    new SctItm('県知事')
+    ,
+    new SctItm('州知事')
 ]
 
 

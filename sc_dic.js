@@ -5957,7 +5957,8 @@ const itms_AwardRank = [
     new SctItm('主演女優賞'),
     new SctItm('助演女優賞'),
     new SctItm('新人賞'),
-    new SctItm('監督賞')
+    new SctItm('監督賞'),
+    new SctItm('残念賞')
 ];
 const itms_AwardGet = [
     new SctItm('受賞'),
@@ -5974,6 +5975,8 @@ const itms_Award = [
     new SctItm('@AWARDTYPE@お笑い大賞'),
     new SctItm('@L_WHAT@お笑い大賞'),
     new SctItm('@L_WHAT@レコード大賞'),
+    new SctItm('@L_WHAT@映画際@AWARDRANK@'),
+    new SctItm('@COUNTRY@映画際@AWARDRANK@'),
     new SctItm('ミス@L_ITEM@コンテスト@AWARDRANK@'),
     new SctItm('@L_ITEM@グランプリ@AWARDRANK@'),
     new SctItm('@L_ITEM@コンテスト@AWARDRANK@'),
@@ -5985,6 +5988,7 @@ const itms_Award = [
     new SctItm('@L_WHAT@@L_DO@大賞'),
     new SctItm('@L_WHAT@文化勲章'),
     new SctItm('@L_WHAT@グッドデザイン賞'),
+    new SctItm('@L_WHAT@ベストドレッサー賞'),
     new SctItm('@L_WHAT@流行語大賞'),
     new SctItm('第@NUM10000@回芥川賞'),
     new SctItm('第@NUM10000@回直木賞'),
@@ -6064,6 +6068,7 @@ const itms_Group02 = [
     new SctItm('野鳥の会'),
     new SctItm('動物愛護団体'),
     new SctItm('自然保護団体'),
+    new SctItm('@ANIMAL@保護団体'),
     new SctItm('工業団地'),
     new SctItm('牧場'),
     new SctItm('天文台')
@@ -6092,5 +6097,7 @@ const itms_King02 = [
     new SctItm('市長'),
     new SctItm('町長'),
     new SctItm('村長'),
-    new SctItm('尊長')
+    new SctItm('都知事'),
+    new SctItm('県知事'),
+    new SctItm('州知事')
 ];
