@@ -7554,6 +7554,16 @@ const   itms_dress = [
     ,
     new SctItm('デニム')
     ,
+    new SctItm('ジャンパー')
+    ,
+    new SctItm('革ジャン')
+    ,
+    new SctItm('スカジャン')
+    ,
+    new SctItm('コート')
+    ,
+    new SctItm('レインコート')
+    ,
     new SctItm('パジャマ')
     ,
     new SctItm('ネグリジェ')
@@ -7573,6 +7583,8 @@ const   itms_dress = [
     new SctItm('人民服')
     ,
     new SctItm('チマチョゴリ')
+    ,
+    new SctItm('民族衣装')
     ,
     new SctItm('@L_ANIMAL@の着ぐるみ')
     ,
@@ -7708,6 +7720,10 @@ const   itms_ride = [
     new SctItm('三輪車')
     ,
     new SctItm('一輪車')
+    ,
+    new SctItm('馬車')
+    ,
+    new SctItm('牛車')
     ,
     new SctItm('バイク')
     ,
@@ -7856,9 +7872,9 @@ const   itms_scool = [
     new SctItm('@CLASS@養成所')
 ]
 const   itms_scoolas = [
-    // new SctItm('在学中')
+    // new SctItm('在学')
     // ,
-    // new SctItm('休学中')
+    // new SctItm('休学')
     // ,
     new SctItm('卒業')
     ,
@@ -10164,6 +10180,36 @@ const   itms_King02 = [
     new SctItm('県知事')
     ,
     new SctItm('州知事')
+]
+
+const   itms_Store = [
+    new SctItm('デパート')
+    ,
+    new SctItm('市場')
+    ,
+    new SctItm('スーパー')
+    ,
+    new SctItm('売店')
+    ,
+    new SctItm('コンビニ')
+    ,
+    new SctItm('100均')
+    ,
+    new SctItm('バーゲン')
+    ,
+    new SctItm('夜店')
+    ,
+    new SctItm('闇市')
+    ,
+    new SctItm('有名店')
+    ,
+    new SctItm('アマゾン')
+    ,
+    new SctItm('メルカリ')
+    ,
+    new SctItm('ネット')
+    ,
+    new SctItm('質屋')
 ]
 
 

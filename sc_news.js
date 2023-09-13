@@ -2088,6 +2088,12 @@ class selector_king02 extends SctItm_Selector {
         this.Add(itms_King02);
     }
 }
+class selector_store extends SctItm_Selector {
+    constructor() {
+        super('@STORE@');
+        this.Add(itms_Store);
+    }
+}
 class selector_landmark extends SctItm_Selector {
     constructor() {
         super('@LANDMARK@');
@@ -2184,11 +2190,6 @@ class selector_dress extends SctItm_Selector {
     constructor() {
         super('@DRESS@');
         this.itms = [
-            new SctItm('@DRESS01@'),
-            new SctItm('@DRESS01@'),
-            new SctItm('@DRESS01@'),
-            new SctItm('@DRESS01@'),
-            new SctItm('@DRESS01@'),
             new SctItm('@KEI@@DRESS01@'),
             new SctItm('しおれた@DRESS01@'),
             new SctItm('似合わない@DRESS01@'),
@@ -2199,7 +2200,16 @@ class selector_dress extends SctItm_Selector {
             new SctItm('ブランドものの@DRESS01@'),
             new SctItm('@BIGNAME@が愛着している@DRESS01@'),
             new SctItm('@SCHOOL@の制服'),
-            new SctItm('@SCHOOL@の制服に認定された@DRESS01@')
+            new SctItm('@SCHOOL@の制服に認定された@DRESS01@'),
+            new SctItm('@STORE@で買った@DRESS01@'),
+            new SctItm('@STORE@で見かけた@DRESS01@'),
+            new SctItm('@PART@が買ってくれた@DRESS01@'),
+            new SctItm('@PART@が送ってくれた@DRESS01@'),
+            new SctItm('@PART@が編んでくれた@DRESS01@'),
+            new SctItm('@PART@のお下がりの@DRESS01@'),
+            new SctItm('古着屋で見つけた@DRESS01@'),
+            new SctItm('@COUNTRY@伝統の@DRESS01@'),
+            new SctItm('@CITY@伝統の@DRESS01@')
         ];
     }
 }
@@ -2265,7 +2275,13 @@ class selector_food extends SctItm_Selector {
             new SctItm('@CLASS@の手作り@FOOD01@'),
             new SctItm('@BIGNAME@のお薦め@FOOD01@'),
             new SctItm('@BIGNAME@で人気の@FOOD01@'),
-            new SctItm('@BIGNAME@が愛した@FOOD01@')
+            new SctItm('@BIGNAME@が愛した@FOOD01@'),
+            new SctItm('@STORE@で買った@FOOD01@'),
+            new SctItm('田舎から送ってきた@FOOD01@'),
+            new SctItm('学食の@FOOD01@'),
+            new SctItm('キャンプで作った@FOOD01@'),
+            new SctItm('出前で注文した@FOOD01@'),
+            new SctItm('ルームサービスの@FOOD01@')
         ];
     }
 }
@@ -3575,6 +3591,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_king());
         this.dic_push(new selector_king01());
         this.dic_push(new selector_king02());
+        this.dic_push(new selector_store());
         this.dic_push(new selector_music());
         this.dic_push(new locker_music());
         this.dic_push(new selector_dance());
