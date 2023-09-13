@@ -480,7 +480,7 @@ class selector_newsFirst extends SctItm_Selector {
             new SctItm('@KEI@@L_WHAT@が@KEID@@L_DO@@END02B@。'),
             new SctItm('@DATE@に、@KEI@@L_WHAT@が@KEID@@L_DO@@END02B@。'),
             new SctItm('@DATE@に、@ORDER@@KEI@@L_WHAT@が@KEID@@L_DO@@END02B@と思われる。'),
-            new SctItm('@DATE@に、@ORDER@@KEI@@L_WHAT@が@KEID@@L_DO@@END02B@との@ANSWER@が流れている。'),
+            new SctItm('@DATE@に、@ORDER@@KEI@@L_WHAT@が@KEID@@L_DO@@END02B@などという@ANSWER@が流れている。'),
             new SctItm('@DATE@には、@ORDER@@KEI@@L_WHAT@が@KEID@@L_DO@すると予測されていた。'),
             new SctItm('@DATE@には、@ORDER@@KEI@@L_WHAT@が@KEID@@L_DO@する筈であった。'),
             new SctItm('@KEI@@L_WHAT@が@KEID@@L_DO@@END02B@のは、@DATE@の頃である。'),
@@ -647,11 +647,11 @@ class selector_doc extends SctItm_Selector {
             new SctItm('@NEWS_C01@、@NEWS_C02@。'),
             new SctItm('@NEWS_C01@、@DATE@、@NEWS_C02@。'),
             new SctItm('@DATE@、@NEWS_C01@、@NEWS_C02@。'),
-            new SctItm('@DATE@、@WHO@は「@COMMENT@」との@ANSWER@を@SAY@@END02B@。'),
-            new SctItm('@WHO@は「@COMMENT@」との@ANSWER@を@SAY@@END02B@。'),
-            new SctItm('@WHO@は@DATE@、「@COMMENT@」との@ANSWER@を@SAY@@END02B@。'),
-            new SctItm('「@COMMENT@」との@ANSWER@を@SAY@したのは、@WHO@@END02A@。'),
-            new SctItm('@WHO@は「@COMMENT@」との@ANSWER@を@SAY@し、@AWARD@を@AWARDGET@@END02B@。'),
+            new SctItm('@DATE@、@WHO@は「@COMMENT@」と@SAY@@END02B@。'),
+            new SctItm('@WHO@は「@COMMENT@」などという@ANSWER@を@SAY@@END02B@。'),
+            new SctItm('@WHO@は@DATE@、「@COMMENT@」と@ANSWER@@END02B@。'),
+            new SctItm('「@COMMENT@」と@SAY@したのは、@WHO@@END02A@。'),
+            new SctItm('@WHO@は「@COMMENT@」と@SAY@し、@AWARD@を@AWARDGET@@END02B@。'),
             new SctItm('@WHO@が@DID@@DIDEND@のは、@DATE@のことであった。'),
             new SctItm('@NEWS_Q01@？ '),
             new SctItm('@NEWS_Q01@？ @CONECT@、@NEWS_Q01@？ ')
@@ -2675,27 +2675,46 @@ class selector_answer extends SctItm_Selector {
     constructor() {
         super('@ANSWER@');
         this.itms = [
-            new SctItm('意見'),
-            new SctItm('見解'),
+            new SctItm('意見')
+            // ,
+            // new SctItm('見解')
+            ,
             new SctItm('推測'),
-            new SctItm('判断'),
-            new SctItm('戯れ言'),
-            new SctItm('疑問'),
-            new SctItm('悩み'),
-            new SctItm('事例'),
-            new SctItm('妄想'),
-            new SctItm('妄言'),
-            new SctItm('寝言'),
-            new SctItm('言い訳'),
-            new SctItm('世迷い言'),
-            new SctItm('迷信'),
-            new SctItm('予言'),
-            new SctItm('伝説'),
-            new SctItm('仮説'),
+            new SctItm('判断')
+            // ,
+            // new SctItm('戯れ言')
+            // ,
+            // new SctItm('疑問')
+            // ,
+            // new SctItm('悩み')
+            // ,
+            // new SctItm('事例')
+            ,
+            new SctItm('妄想')
+            // ,
+            // new SctItm('妄言')
+            // ,
+            // new SctItm('寝言')
+            // ,
+            // new SctItm('言い訳')
+            // ,
+            // new SctItm('世迷い言')
+            // ,
+            // new SctItm('迷信')
+            ,
+            new SctItm('予言')
+            // ,
+            // new SctItm('伝説')
+            // ,
+            // new SctItm('仮説')
+            ,
             new SctItm('解説'),
-            new SctItm('推理'),
-            new SctItm('叫び'),
-            new SctItm('訴え'),
+            new SctItm('推理')
+            // ,
+            // new SctItm('叫び')
+            // ,
+            // new SctItm('訴え')
+            ,
             new SctItm('絶叫'),
             new SctItm('哀願'),
             new SctItm('熱唱'),
