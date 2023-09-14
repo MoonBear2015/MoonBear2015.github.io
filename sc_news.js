@@ -2277,6 +2277,8 @@ class selector_food extends SctItm_Selector {
             new SctItm('@BIGNAME@で人気の@FOOD01@'),
             new SctItm('@BIGNAME@が愛した@FOOD01@'),
             new SctItm('@STORE@で買った@FOOD01@'),
+            new SctItm('@STORE@のお薦め@FOOD01@'),
+            new SctItm('@STORE@のタイムセールで買った@FOOD01@'),
             new SctItm('田舎から送ってきた@FOOD01@'),
             new SctItm('学食の@FOOD01@'),
             new SctItm('キャンプで作った@FOOD01@'),

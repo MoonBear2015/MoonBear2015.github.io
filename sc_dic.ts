@@ -7892,11 +7892,19 @@ const   itms_season = [
     ,
     new SctItm('冬')
     ,
+    new SctItm('元旦')
+    ,
+    new SctItm('春先')
+    ,
+    new SctItm('新春')
+    ,
     new SctItm('初春')
     ,
     new SctItm('晩春')
     ,
     new SctItm('初夏')
+    ,
+    new SctItm('真夏')
     ,
     new SctItm('晩夏')
     ,

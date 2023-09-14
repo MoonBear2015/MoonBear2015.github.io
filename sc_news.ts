@@ -3232,6 +3232,10 @@ class selector_food extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@STORE@で買った@FOOD01@')
             ,
+            new SctItm('@STORE@のお薦め@FOOD01@')
+            ,
+            new SctItm('@STORE@のタイムセールで買った@FOOD01@')
+            ,
             new SctItm('田舎から送ってきた@FOOD01@')
             ,
             new SctItm('学食の@FOOD01@')
