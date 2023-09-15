@@ -383,9 +383,7 @@ abstract class selector_NameLocker
     public Gene_Docs(temp_doc : string) : string {
         return replace_docs_A(temp_doc,this);
     }
-
 }
-
 class locker_bookwriter 
     extends selector_NameLocker
     implements ISctItm_Selector 
@@ -1121,10 +1119,10 @@ class selector_who3 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@GROUP@から付け狙われている')
             ,
             new SctItm('@GROUP@に抹殺された')
-            // ,
-            // new SctItm('@GROUP@を壊滅させた')
-            // ,
-            // new SctItm('@GROUP@を組織@END02B@')
+            ,
+            new SctItm('@GROUP@を壊滅させた')
+            ,
+            new SctItm('@GROUP@を組織@END02B@')
             ,
             new SctItm('@GROUP@に洗脳された')
             ,
@@ -1137,6 +1135,12 @@ class selector_who3 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@GROUP@から@AWARD@を授与した')
             ,
             new SctItm('@GROUP@から@AWARD@を剥奪された')
+            ,
+            new SctItm('@GROUP@に加入した')
+            ,
+            new SctItm('@GROUP@を退職した')
+            ,
+            new SctItm('@GROUP@をクビになった')
             ,
             new SctItm('@SCHOOL@出身の')
             ,
@@ -2951,8 +2955,8 @@ class selector_group extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@SCHOOL@')
             ,
             new SctItm('@MANYPEOPLE@')
-            ,
-            new SctItm('@KING@')
+            // ,
+            // new SctItm('@KING@')
         ];
     }
 }
@@ -3252,14 +3256,6 @@ class locker_food extends SctItm_SelectLocker implements ISctItm_Selector {
     constructor(){
         super('@L_FOOD@');
         this.itms = [
-            new SctItm('@L_FOOD01@')
-            ,
-            new SctItm('@L_FOOD01@')
-            ,
-            new SctItm('@L_FOOD01@')
-            ,
-            new SctItm('@L_FOOD01@')
-            ,
             new SctItm('@L_FOOD01@')
             ,
             new SctItm('@L_FOOD01@')

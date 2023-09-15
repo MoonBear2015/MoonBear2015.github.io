@@ -759,18 +759,18 @@ class selector_who3 extends SctItm_Selector {
             new SctItm('@GROUP@から追われている'),
             new SctItm('@GROUP@から追われている'),
             new SctItm('@GROUP@から付け狙われている'),
-            new SctItm('@GROUP@に抹殺された')
-            // ,
-            // new SctItm('@GROUP@を壊滅させた')
-            // ,
-            // new SctItm('@GROUP@を組織@END02B@')
-            ,
+            new SctItm('@GROUP@に抹殺された'),
+            new SctItm('@GROUP@を壊滅させた'),
+            new SctItm('@GROUP@を組織@END02B@'),
             new SctItm('@GROUP@に洗脳された'),
             new SctItm('@GROUP@と契約@END02B@'),
             new SctItm('@GROUP@に改造された'),
             new SctItm('@GROUP@から@AWARD@を贈呈された'),
             new SctItm('@GROUP@から@AWARD@を授与した'),
             new SctItm('@GROUP@から@AWARD@を剥奪された'),
+            new SctItm('@GROUP@に加入した'),
+            new SctItm('@GROUP@を退職した'),
+            new SctItm('@GROUP@をクビになった'),
             new SctItm('@SCHOOL@出身の'),
             new SctItm('@SCHOOL@に通う'),
             new SctItm('@SCHOOL@在学中の'),
@@ -2050,8 +2050,9 @@ class selector_group extends SctItm_Selector {
             new SctItm('@CITY@@GROUP02@'),
             new SctItm('@COUNTRY@@GROUP02@'),
             new SctItm('@SCHOOL@'),
-            new SctItm('@MANYPEOPLE@'),
-            new SctItm('@KING@')
+            new SctItm('@MANYPEOPLE@')
+            // ,
+            // new SctItm('@KING@')
         ];
     }
 }
@@ -2291,10 +2292,6 @@ class locker_food extends SctItm_SelectLocker {
     constructor() {
         super('@L_FOOD@');
         this.itms = [
-            new SctItm('@L_FOOD01@'),
-            new SctItm('@L_FOOD01@'),
-            new SctItm('@L_FOOD01@'),
-            new SctItm('@L_FOOD01@'),
             new SctItm('@L_FOOD01@'),
             new SctItm('@L_FOOD01@'),
             new SctItm('@L_FOOD01@'),
