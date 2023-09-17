@@ -3631,7 +3631,10 @@ const itms_what = [
     new SctItm('@L_COUNTRY@政府', 'WHAT/Government.jpg'),
     new SctItm('@L_COUNTRY@王国', 'WHAT/kingdom2.jpg'),
     new SctItm('@L_COUNTRY@空港', 'WHAT/airplane.jpg'),
-    new SctItm('@L_COUNTRY@航空', 'WHAT/airplane.jpg')
+    new SctItm('@L_COUNTRY@航空', 'WHAT/airplane.jpg'),
+    new SctItm('@L_COUNTRY@大学', 'WHAT/college.jpg'),
+    new SctItm('@L_CITY@大学', 'WHAT/college.jpg'),
+    new SctItm('@L_CITY@図書館', 'WHAT/library.jpg')
 ];
 const itms_city = [
     new SctItm('東京', 'CITY/tokyo.jpg'),
@@ -6130,4 +6133,24 @@ const itms_Store = [
     new SctItm('メルカリ'),
     new SctItm('ネット'),
     new SctItm('質屋')
+];
+const itms_where = [
+    new SctItm('誰も居ない@WHERE01@'),
+    new SctItm('@MANYPEOPLE@が集う@WHERE01@'),
+    new SctItm('@MANYPEOPLE@が暮らす@WHERE01@'),
+    new SctItm('@MANYPEOPLE@で賑わう@WHERE01@'),
+    new SctItm('@MANYPEOPLE@が@DID@ている@WHERE01@')
+];
+const itms_where01 = [
+    new SctItm('晴れ渡る@WHERE02@'),
+    new SctItm('陽のあたる@WHERE02@'),
+    new SctItm('嵐の中の@WHERE02@'),
+    new SctItm('荒れ果てた@WHERE02@'),
+    new SctItm('廃れてしまった@WHERE02@'),
+    new SctItm('華やかな@WHERE02@'),
+    new SctItm('@KEI@@WHERE02@')
+];
+const itms_where02 = [
+    new SctItm('@PLACE@'),
+    new SctItm('@WHAT@')
 ];

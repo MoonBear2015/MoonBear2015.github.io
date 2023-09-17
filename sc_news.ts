@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N03.57';
+    html += ' N03.58';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -727,6 +727,16 @@ class selector_newsFirst extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@KEI@@L_WHAT@が@KEID@@L_DO@@END02B@のは、@DATE@の頃である。')
             ,
             new SctItm('@NEWS_Q01@？ ')
+            ,
+            new SctItm('@DATE@、@WHERE@での出来事である。')
+            ,
+            new SctItm('@DATE@、@WHERE@でそれは起こった。')
+            ,
+            new SctItm('@DATE@、私が@WHERE@で、@DID@@DIDEND@時のことである。')
+            ,
+            new SctItm('@DATE@、私が@WHERE@に向かい、@DID@@DIDEND@時と記憶している。')
+            ,
+            new SctItm('@DATE@、@BIGNAME@が@WHERE@に訪れ、@DID@@DIDEND@時にそれは起こった。')
         ];
     }
 }
@@ -964,19 +974,19 @@ class selector_doc extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@NEWS_C01@、@DATE@、@NEWS_C02@。')
             ,
-            new SctItm('@DATE@、@NEWS_C01@、@NEWS_C02@。')
+            new SctItm('@DATE@、@WHERE@で、@NEWS_C01@、@NEWS_C02@。')
             ,
             new SctItm('@DATE@、@WHO@は「@COMMENT@」と@SAY@@END02B@。')
             ,
-            new SctItm('@WHO@は「@COMMENT@」などという@ANSWER@を@SAY@@END02B@。')
+            new SctItm('@WHO@は@WHERE@で、「@COMMENT@」などという@ANSWER@を@SAY@@END02B@。')
             ,
-            new SctItm('@WHO@は@DATE@、「@COMMENT@」と@ANSWER@@END02B@。')
+            new SctItm('@WHO@は@DATE@、@WHERE@で、「@COMMENT@」と@ANSWER@@END02B@。')
             ,
-            new SctItm('「@COMMENT@」と@SAY@したのは、@WHO@@END02A@。')
+            new SctItm('@WHERE@で、「@COMMENT@」と@SAY@したのは、@WHO@@END02A@。')
             ,
-            new SctItm('@WHO@は「@COMMENT@」と@SAY@し、@AWARD@を@AWARDGET@@END02B@。')
+            new SctItm('@WHO@は@WHERE@で、「@COMMENT@」と@SAY@し、@AWARD@を@AWARDGET@@END02B@。')
             ,
-            new SctItm('@WHO@が@DID@@DIDEND@のは、@DATE@のことであった。')
+            new SctItm('@WHO@が@WHERE@で、@DID@@DIDEND@のは、@DATE@のことであった。')
             ,
             new SctItm('@NEWS_Q01@？ ')
             ,
@@ -1330,9 +1340,9 @@ class selector_newsQ01 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@WHY@、@KEI@@L_WHAT@は@DOING@しまうのか')
             ,
-            new SctItm('@WHY@、@GROUP@は@KEI@@L_WHAT@を@L_DO@してしまったのか')
+            new SctItm('@WHY@、@GROUP@は@WHERE@で、@KEI@@L_WHAT@を@L_DO@してしまったのか')
             ,
-            new SctItm('@WHY@、@L_WHAT@の@KEI@@GROUP@は@L_DO@してしまうのか')
+            new SctItm('@WHY@、@L_WHAT@の@KEI@@GROUP@は@WHERE@で、@L_DO@してしまうのか')
         ];
     }
 }
@@ -4330,6 +4340,8 @@ class selector_pint extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('おおよそ')
             ,
             new SctItm('確か')
+            ,
+            new SctItm('あれは確か')
             // ,
             // new SctItm('大方')
             ,
@@ -4444,7 +4456,7 @@ class selector_done extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@DOING01@笑い転げた')
             ,
-            new SctItm('@DOING01@悲しんた')
+            new SctItm('@DOING01@悲しんだ')
             ,
             new SctItm('@DOING01@泣いた')
             ,
@@ -4953,6 +4965,26 @@ class selector_songPart extends SctItm_Selector implements ISctItm_Selector {
     }
 }
 
+class selector_where extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@WHERE@');
+        this.Add(itms_where);
+    }
+}
+class selector_where01 extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@WHERE01@');
+        this.Add(itms_where01);
+    }
+}
+class selector_where02 extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@WHERE02@');
+        this.Add(itms_where02);
+    }
+}
+
+
 
 
 class news_doc {
@@ -5244,6 +5276,10 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_award());
 
         this.dic_push(new selector_friendShip());
+
+        this.dic_push(new selector_where());
+        this.dic_push(new selector_where01());
+        this.dic_push(new selector_where02());
         
     }
 }
