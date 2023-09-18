@@ -703,7 +703,11 @@ class selector_a_init extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@A_SENT@')
             ,
-            new SctItm('私は@CLASS@をしている@ADVICER@と云います。')
+            new SctItm('私は@COUNTRY@で@CLASS@をしている@ADVICER@と云います。')
+            ,
+            new SctItm('私は@CITY@で@CLASS@をしている@ADVICER@と云います。')
+            ,
+            new SctItm('私は@CITY@で@DID@ている@ADVICER@と云います。')
             ,
             new SctItm('私は@WHO3@@ADVICER@と云います。')
             ,
@@ -826,15 +830,15 @@ class selector_a01_you extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             // new SctItm('あなたが')
             // ,
-            new SctItm('@QUESTER@さんが')
+            new SctItm('@QUESTER@さんが@WHERE@で、')
             ,
-            new SctItm('あなたの@KEIP2@@L_PART@さんが')
+            new SctItm('あなたの@KEIP2@@L_PART@さんが、@WHERE@で、')
             ,
-            new SctItm('@QUESTER@さんの@KEIP2@@L_PART@さんが')
+            new SctItm('@QUESTER@さんの@KEIP2@@L_PART@さんが、@WHERE@で、')
             ,
-            new SctItm('私が')
+            new SctItm('私が@WHERE@で、')
             ,
-            new SctItm('@MANYPEOPLE@が')
+            new SctItm('@MANYPEOPLE@が@WHERE@で、')
         ]
     }
 }

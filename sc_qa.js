@@ -474,7 +474,9 @@ class selector_a_init extends SctItm_Selector {
             new SctItm('こんにちは。@A_INIT@'),
             new SctItm('ご無沙汰しております。@A_INIT@'),
             new SctItm('@A_SENT@'),
-            new SctItm('私は@CLASS@をしている@ADVICER@と云います。'),
+            new SctItm('私は@COUNTRY@で@CLASS@をしている@ADVICER@と云います。'),
+            new SctItm('私は@CITY@で@CLASS@をしている@ADVICER@と云います。'),
+            new SctItm('私は@CITY@で@DID@ている@ADVICER@と云います。'),
             new SctItm('私は@WHO3@@ADVICER@と云います。'),
             new SctItm('私は@MANYPEOPLE@から『@CALL2@』と@ASSES@@ADVICER@と云います。')
         ];
@@ -550,11 +552,11 @@ class selector_a01_you extends SctItm_Selector {
         this.itms = [
             // new SctItm('あなたが')
             // ,
-            new SctItm('@QUESTER@さんが'),
-            new SctItm('あなたの@KEIP2@@L_PART@さんが'),
-            new SctItm('@QUESTER@さんの@KEIP2@@L_PART@さんが'),
-            new SctItm('私が'),
-            new SctItm('@MANYPEOPLE@が')
+            new SctItm('@QUESTER@さんが@WHERE@で、'),
+            new SctItm('あなたの@KEIP2@@L_PART@さんが、@WHERE@で、'),
+            new SctItm('@QUESTER@さんの@KEIP2@@L_PART@さんが、@WHERE@で、'),
+            new SctItm('私が@WHERE@で、'),
+            new SctItm('@MANYPEOPLE@が@WHERE@で、')
         ];
     }
 }
