@@ -2830,7 +2830,7 @@ class locker_ride extends SctItm_SelectLocker implements ISctItm_Selector {
     }
 }
 
-class selector_scool extends SctItm_Selector implements ISctItm_Selector {
+class selector_school extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@SCHOOL@');
         this.itms = [
@@ -5091,7 +5091,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new locker_food1());
         this.dic_push(new selector_food());
         this.dic_push(new locker_food());
-        this.dic_push(new selector_scool());
+        this.dic_push(new selector_school());
         this.dic_push(new selector_school01());
         this.dic_push(new selector_school02());
         this.dic_push(new selector_schoolas());

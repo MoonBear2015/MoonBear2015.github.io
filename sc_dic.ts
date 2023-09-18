@@ -2191,6 +2191,8 @@ const   cods_place = [
     new SctCod_TI('|刑務所|けいむしょ|','PLACE/Jail.jpg')
     ,
     new SctCod_TI('ホテル','PLACE/hotel.jpg')
+    ,
+    new SctCod_TI('ゲームセンター','PLACE/gamecenter.jpg')
 ];
 
 
@@ -8866,6 +8868,14 @@ const   itms_did = [
     new SctItm('@LANDMARK@を建て直し')
     ,
     new SctItm('@LANDMARK@を建築し')
+    ,
+    new SctItm('@PLACE@で食事し')
+    ,
+    new SctItm('@PLACE@で眠っ')
+    ,
+    new SctItm('@PLACE@で泊まっ')
+    ,
+    new SctItm('@PLACE@を掃除し')
 ]
 
 const   itms_did_l = [
