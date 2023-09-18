@@ -895,7 +895,7 @@ class selector_newsQ01 extends SctItm_Selector {
             new SctItm('@WHY@、@KEI@@WHAT@もまた@L_DO@@END02B@のは何故か'),
             new SctItm('@WHY@、@KEI@@L_WHAT@は@DOING@しまうのか'),
             new SctItm('@WHY@、@GROUP@は@WHERE@で、@KEI@@L_WHAT@を@L_DO@してしまったのか'),
-            new SctItm('@WHY@、@L_WHAT@の@KEI@@GROUP@は@WHERE@で、@L_DO@してしまうのか')
+            new SctItm('@WHY@、@L_WHAT@の@KEI@@GROUP@は、@WHERE@で@L_DO@してしまうのか')
         ];
     }
 }
@@ -2018,13 +2018,13 @@ class selector_school01 extends SctItm_Selector {
 class selector_school02 extends SctItm_Selector {
     constructor() {
         super('@SCHOOL02@');
-        this.Add(itms_scool);
+        this.Add(itms_school);
     }
 }
 class selector_schoolas extends SctItm_Selector {
     constructor() {
         super('@SCHOOLAS@');
-        this.Add(itms_scoolas);
+        this.Add(itms_schoolas);
     }
 }
 class selector_order extends SctItm_Selector {
@@ -2105,7 +2105,8 @@ class selector_landmark extends SctItm_Selector {
         super('@LANDMARK@');
         this.itms = [
             new SctItm('@COUNTRY@@LANDMARK01@'),
-            new SctItm('@CITY@@LANDMARK01@')
+            new SctItm('@CITY@@LANDMARK01@'),
+            new SctItm('@LANDMARK01@')
         ];
     }
 }

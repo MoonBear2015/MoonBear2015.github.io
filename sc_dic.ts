@@ -7846,7 +7846,7 @@ const   itms_dance = [
 ]
 
 
-const   itms_scool = [
+const   itms_school = [
     new SctItm('幼稚園')
     ,
     new SctItm('保育園')
@@ -7877,7 +7877,7 @@ const   itms_scool = [
     ,
     new SctItm('@CLASS@養成所')
 ]
-const   itms_scoolas = [
+const   itms_schoolas = [
     // new SctItm('在学')
     // ,
     // new SctItm('休学')
@@ -10228,19 +10228,43 @@ const   itms_Store = [
 
 
 const   itms_where = [
+    new SctItm('@WHERE01@')
+    ,
     new SctItm('誰も居ない@WHERE01@')
     ,
     new SctItm('@MANYPEOPLE@が集う@WHERE01@')
     ,
     new SctItm('@MANYPEOPLE@が暮らす@WHERE01@')
     ,
+    new SctItm('@MANYPEOPLE@が寝泊まりしている@WHERE01@')
+    ,
     new SctItm('@MANYPEOPLE@で賑わう@WHERE01@')
     ,
     new SctItm('@MANYPEOPLE@が@DID@ている@WHERE01@')
+    ,
+    new SctItm('@GROUP@が支配する@WHERE01@')
+    ,
+    new SctItm('@GROUP@が管理している@WHERE01@')
+    ,
+    new SctItm('@GROUP@が所有する@WHERE01@')
+    ,
+    new SctItm('@COUNTRY@で最北端の@WHERE01@')
+    ,
+    new SctItm('@COUNTRY@で最南端の@WHERE01@')
+    ,
+    new SctItm('@WHAT@で唯一の@WHERE01@')
+    ,
+    new SctItm('@WHAT@で人気の@WHERE01@')
+    ,
+    new SctItm('@BIGNAME@が愛した@WHERE01@')
+    ,
+    new SctItm('誰も知らない@WHERE01@')
 ]
 
 
 const   itms_where01 = [
+    new SctItm('@WHERE02@')
+    ,
     new SctItm('晴れ渡る@WHERE02@')
     ,
     new SctItm('陽のあたる@WHERE02@')
@@ -10253,11 +10277,19 @@ const   itms_where01 = [
     ,
     new SctItm('華やかな@WHERE02@')
     ,
+    new SctItm('飾り気のない@WHERE02@')
+    ,
+    new SctItm('人けの無い@WHERE02@')
+    ,
+    new SctItm('薄気味悪い@WHERE02@')
+    ,
+    new SctItm('呪われた@WHERE02@')
+    ,
     new SctItm('@KEI@@WHERE02@')
 ]
 const   itms_where02 = [
     new SctItm('@PLACE@')
     ,
-    new SctItm('@WHAT@')
+    new SctItm('@LANDMARK@')
 ]
 
