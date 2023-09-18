@@ -3796,10 +3796,13 @@ const itms_class = [
     new SctItm('工場長'),
     new SctItm('現場監督'),
     new SctItm('会社員'),
+    new SctItm('サラリーマン'),
     new SctItm('事務員'),
     new SctItm('飼育員'),
     new SctItm('アルバイター'),
     new SctItm('釣り師'),
+    new SctItm('ガードマン'),
+    new SctItm('守衛'),
     new SctItm('元警察官'),
     new SctItm('陸軍少佐'),
     new SctItm('@L_COUNTRY@陸軍少佐'),
@@ -3942,6 +3945,8 @@ const itms_class = [
     new SctItm('@L_COUNTRY@女王'),
     new SctItm('総理大臣'),
     new SctItm('@L_COUNTRY@総理大臣'),
+    new SctItm('@L_COUNTRY@総統'),
+    new SctItm('@L_COUNTRY@書記長'),
     new SctItm('独裁者'),
     new SctItm('道化師'),
     new SctItm('ピエロ'),
@@ -4016,7 +4021,9 @@ const itms_class = [
     new SctItm('化け猫'),
     new SctItm('河童'),
     new SctItm('ゾンビ'),
-    new SctItm('ミイラ男')
+    new SctItm('ミイラ男'),
+    new SctItm('ネズミ男'),
+    new SctItm('水先案内人')
 ];
 const itms_shop = [
     new SctItm('BICYCLE', 'SHOP/BICYCLE01.jpg', '自転車'),
@@ -4366,6 +4373,10 @@ const itms_nickPosi = [
     new SctItm('麗人'),
     new SctItm('男前'),
     new SctItm('色男'),
+    new SctItm('美少女'),
+    new SctItm('美少年'),
+    new SctItm('美女'),
+    new SctItm('美男子'),
     new SctItm('看板娘'),
     new SctItm('花'),
     new SctItm('希望'),
@@ -4467,6 +4478,7 @@ const itms_nickNomal = [
 ];
 const itms_specialist = [
     new SctItm('スペシャリスト'),
+    new SctItm('達人'),
     new SctItm('専門家'),
     new SctItm('大家'),
     new SctItm('第一人者'),
@@ -4517,7 +4529,8 @@ const itms_sweets = [
     new SctItm('アイスクリーム'),
     new SctItm('かき氷'),
     new SctItm('あんぱん'),
-    new SctItm('クリームパン')
+    new SctItm('クリームパン'),
+    new SctItm('メロンパン')
 ];
 const itms_sweets_p = [
     new SctItm('@FRUIT@のショートケーキ'),
@@ -4530,7 +4543,7 @@ const itms_sweets_l = [
     new SctItm('@L_FRUIT@のアイスクリーム')
 ];
 const itms_meal = [
-    new SctItm('カレー'),
+    new SctItm('カレーライス'),
     new SctItm('ラーメン'),
     new SctItm('味噌ラーメン'),
     new SctItm('きつねうどん'),
@@ -4550,6 +4563,7 @@ const itms_meal = [
     new SctItm('BBQ'),
     new SctItm('すき焼き'),
     new SctItm('ちゃんこ鍋'),
+    new SctItm('湯豆腐'),
     new SctItm('ピザ'),
     new SctItm('パスタ'),
     new SctItm('タコス'),
@@ -4571,7 +4585,9 @@ const itms_meal = [
     new SctItm('炒飯'),
     new SctItm('ピラフ'),
     new SctItm('グラタン'),
+    new SctItm('海老グラタン'),
     new SctItm('シチュー'),
+    new SctItm('ビーフシチュー'),
     new SctItm('肉じゃが'),
     new SctItm('刺身'),
     new SctItm('おでん'),
@@ -4593,7 +4609,6 @@ const itms_meal = [
     new SctItm('生ハム'),
     new SctItm('|蒲鉾|かまぼこ|'),
     new SctItm('|竹輪|ちくわ|'),
-    new SctItm('|納豆|なっとう|'),
     new SctItm('|納豆|なっとう|')
 ];
 const itms_meal_p = [
@@ -6077,6 +6092,7 @@ const itms_Group02 = [
     new SctItm('消防署'),
     new SctItm('郵便局'),
     new SctItm('市役所'),
+    new SctItm('公民館'),
     new SctItm('市議会'),
     new SctItm('市場'),
     new SctItm('交響楽団'),
@@ -6122,6 +6138,7 @@ const itms_Store = [
     new SctItm('デパート'),
     new SctItm('市場'),
     new SctItm('スーパー'),
+    new SctItm('商店街'),
     new SctItm('売店'),
     new SctItm('コンビニ'),
     new SctItm('100均'),
@@ -6139,7 +6156,6 @@ const itms_where = [
     new SctItm('誰も居ない@WHERE01@'),
     new SctItm('@MANYPEOPLE@が集う@WHERE01@'),
     new SctItm('@MANYPEOPLE@が暮らす@WHERE01@'),
-    new SctItm('@MANYPEOPLE@が寝泊まりしている@WHERE01@'),
     new SctItm('@MANYPEOPLE@で賑わう@WHERE01@'),
     new SctItm('@MANYPEOPLE@が@DID@ている@WHERE01@'),
     new SctItm('@GROUP@が支配する@WHERE01@'),
@@ -6160,10 +6176,14 @@ const itms_where01 = [
     new SctItm('荒れ果てた@WHERE02@'),
     new SctItm('廃れてしまった@WHERE02@'),
     new SctItm('華やかな@WHERE02@'),
+    new SctItm('色鮮やかな@WHERE02@'),
     new SctItm('飾り気のない@WHERE02@'),
     new SctItm('人けの無い@WHERE02@'),
     new SctItm('薄気味悪い@WHERE02@'),
     new SctItm('呪われた@WHERE02@'),
+    new SctItm('散らかった@WHERE02@'),
+    new SctItm('水浸しの@WHERE02@'),
+    new SctItm('火の海と化した@WHERE02@'),
     new SctItm('@KEI@@WHERE02@')
 ];
 const itms_where02 = [
