@@ -347,11 +347,11 @@ class selector_q_init extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('私は@COUNTRY@で@CLASS@をしています。')
             ,
-            new SctItm('私は@CLASS@をしている@QUESTER@と云います。')
+            new SctItm('私は@COUNTRY@で@CLASS@をしている@QUESTER@と云います。')
             ,
             new SctItm('私が@AGE2@の頃、@Q_SENT@')
             ,
-            new SctItm('私が@CLASS@をしていた頃、@Q_SENT@')
+            new SctItm('私が@COUNTRY@で@CLASS@をしていた頃、@Q_SENT@')
             ,
             new SctItm('私が@COUNTRY@にいた頃、@Q_SENT@')
             ,
@@ -433,15 +433,25 @@ class selector_q01_me extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@Q_MSG01@');
         this.itms = [
-            new SctItm('私は')
+            // new SctItm('私は')
+            // ,
+            // new SctItm('私が')
+            // ,
+            // new SctItm('@WHO3@私は')
+            // ,
+            // new SctItm('私の@KEIN2@@L_PART@は')
+            // ,
+            // new SctItm('私の@KEIN2@@L_PART@が')
+            // ,
+            new SctItm('私は@WHERE@で、')
             ,
-            new SctItm('私が')
+            new SctItm('私が@WHERE@で、')
             ,
-            new SctItm('@WHO3@私は')
+            new SctItm('@WHO3@私は@WHERE@で')
             ,
-            new SctItm('私の@KEIN2@@L_PART@は')
+            new SctItm('私の@KEIN2@@L_PART@は、@WHERE@で、')
             ,
-            new SctItm('私の@KEIN2@@L_PART@が')
+            new SctItm('私の@KEIN2@@L_PART@が、@WHERE@で、')
         ]
     }
 }
