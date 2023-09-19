@@ -4813,9 +4813,9 @@ const itms_landmark = [
     // ,
     new SctItm('寺院')
     ,
-    new SctItm('大聖堂')
+    new SctItm('神社')
     ,
-    new SctItm('洞窟')
+    new SctItm('大聖堂')
     ,
     new SctItm('図書館')
     ,
@@ -4833,11 +4833,23 @@ const itms_landmark = [
     ,
     new SctItm('自然公園')
     ,
+    new SctItm('河川敷公園')
+    ,
     new SctItm('遊園地')
     ,
     new SctItm('動物園')
     ,
+    new SctItm('植物園')
+    ,
+    new SctItm('菜園')
+    ,
+    new SctItm('牧場')
+    ,
+    new SctItm('サファリパーク')
+    ,
     new SctItm('スタジアム')
+    ,
+    new SctItm('球場')
     ,
     new SctItm('大通り')
     ,
@@ -4854,6 +4866,12 @@ const itms_landmark = [
     // new SctItm('湖')
     ,
     new SctItm('山脈')
+    ,
+    new SctItm('洞窟')
+    ,
+    new SctItm('鍾乳洞')
+    ,
+    new SctItm('砂丘')
     ,
     new SctItm('海岸')
 ];
@@ -5323,7 +5341,7 @@ const   itms_sports = [
     ,
     new SctItm('ハイキング')
     ,
-    new SctItm('トレッキング')
+    new SctItm('ウォーキング')
     ,
     new SctItm('ラジオ体操')
     ,
@@ -5957,6 +5975,12 @@ const   itms_class = [
     ,
     new SctItm('システムエンジニア')
     ,
+    new SctItm('医者')
+    ,
+    new SctItm('看護婦')
+    ,
+    new SctItm('看護師')
+    ,
     new SctItm('助産婦')
     ,
     new SctItm('ケアマネージャー')
@@ -5974,6 +5998,10 @@ const   itms_class = [
     new SctItm('演歌歌手')
     ,
     new SctItm('オペラ歌手')
+    ,
+    new SctItm('バレリーナ')
+    ,
+    new SctItm('ダンサー')
     ,
     new SctItm('ピアニスト')
     ,
@@ -6148,6 +6176,8 @@ const   itms_class = [
     // new SctItm('野鳥の会')
     // ,
     new SctItm('牧師')
+    ,
+    new SctItm('神父')
     ,
     new SctItm('神主')
     ,
@@ -7097,6 +7127,10 @@ const   itms_nickPosi = [
     new SctItm('ダイヤモンド')
     ,
     new SctItm('ルビー')
+    ,
+    new SctItm('エメラルド')
+    ,
+    new SctItm('サファイア')
     ,
     new SctItm('宝石')
     ,
@@ -10315,6 +10349,8 @@ const   itms_where = [
     ,
     new SctItm('@BIGNAME@が愛した@WHERE01@')
     ,
+    new SctItm('@BIGNAME@が通った@SCHOOL01@')
+    ,
     new SctItm('誰も知らない@WHERE01@')
 ]
 
@@ -10356,5 +10392,7 @@ const   itms_where02 = [
     new SctItm('@PLACE@')
     ,
     new SctItm('@LANDMARK@')
+    ,
+    new SctItm('@SCHOOL02@')
 ]
 
