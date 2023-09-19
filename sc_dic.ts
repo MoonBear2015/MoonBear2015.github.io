@@ -10138,6 +10138,8 @@ const   itms_Group02 = [
     ,
     new SctItm('教団')
     ,
+    new SctItm('宗教団体')
+    ,
     new SctItm('密教団')
     ,
     new SctItm('暗殺教団')
@@ -10167,6 +10169,20 @@ const   itms_Group02 = [
     new SctItm('市場')
     ,
     new SctItm('交響楽団')
+    ,
+    new SctItm('管弦楽団')
+    ,
+    new SctItm('ブラスバンド')
+    ,
+    new SctItm('合唱団')
+    ,
+    new SctItm('混声合唱団')
+    ,
+    new SctItm('少年合唱団')
+    ,
+    new SctItm('少年少女合唱団')
+    ,
+    new SctItm('聖歌隊')
     ,
     new SctItm('株式市場')
     ,
@@ -10281,6 +10297,8 @@ const   itms_where = [
     ,
     new SctItm('@MANYPEOPLE@で賑わう@WHERE01@')
     ,
+    new SctItm('@MANYPEOPLE@で人気の@WHERE01@')
+    ,
     new SctItm('@MANYPEOPLE@が@DID@ている@WHERE01@')
     ,
     new SctItm('@GROUP@が支配する@WHERE01@')
@@ -10294,8 +10312,6 @@ const   itms_where = [
     new SctItm('@COUNTRY@で最南端の@WHERE01@')
     ,
     new SctItm('@WHAT@で唯一の@WHERE01@')
-    ,
-    new SctItm('@WHAT@で人気の@WHERE01@')
     ,
     new SctItm('@BIGNAME@が愛した@WHERE01@')
     ,

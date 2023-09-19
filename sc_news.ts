@@ -978,7 +978,7 @@ class selector_doc extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@DATE@、@WHO@は「@COMMENT@」と@SAY@@END02B@。')
             ,
-            new SctItm('@WHO@は@WHERE@で、「@COMMENT@」などという@ANSWER@を@SAY@@END02B@。')
+            new SctItm('@WHO@は@WHERE@で、「@COMMENT@」などと@ANSWER@を@SAY@@END02B@。')
             ,
             new SctItm('@WHO@は@DATE@、@WHERE@で、「@COMMENT@」と@ANSWER@@END02B@。')
             ,
@@ -1340,9 +1340,9 @@ class selector_newsQ01 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@WHY@、@KEI@@L_WHAT@は@DOING@しまうのか')
             ,
-            new SctItm('@WHY@、@GROUP@は@WHERE@で、@KEI@@L_WHAT@を@L_DO@してしまったのか')
+            new SctItm('@WHY@、@GROUP@は@WHERE@で、@KEI@@L_WHAT@を@KEID@@L_DO@してしまったのか')
             ,
-            new SctItm('@WHY@、@L_WHAT@の@KEI@@GROUP@は、@WHERE@で@L_DO@してしまうのか')
+            new SctItm('@WHY@、@L_WHAT@の@KEI@@GROUP@は、@WHERE@で、@KEID@@L_DO@してしまうのか')
         ];
     }
 }
