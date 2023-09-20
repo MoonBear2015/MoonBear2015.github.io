@@ -978,7 +978,7 @@ class selector_doc extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@DATE@、@WHO@は「@COMMENT@」と@SAY@@END02B@。')
             ,
-            new SctItm('@WHO@は@WHERE@で、「@COMMENT@」などと@ANSWER@を@SAY@@END02B@。')
+            new SctItm('@WHO@は@WHERE@で、「@COMMENT@」との@ANSWER@を@SAY@@END02B@。')
             ,
             new SctItm('@WHO@は@DATE@、@WHERE@で、「@COMMENT@」と@ANSWER@@END02B@。')
             ,

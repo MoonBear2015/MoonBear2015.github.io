@@ -653,7 +653,7 @@ class selector_doc extends SctItm_Selector {
             new SctItm('@NEWS_C01@、@DATE@、@NEWS_C02@。'),
             new SctItm('@DATE@、@WHERE@で、@NEWS_C01@、@NEWS_C02@。'),
             new SctItm('@DATE@、@WHO@は「@COMMENT@」と@SAY@@END02B@。'),
-            new SctItm('@WHO@は@WHERE@で、「@COMMENT@」などと@ANSWER@を@SAY@@END02B@。'),
+            new SctItm('@WHO@は@WHERE@で、「@COMMENT@」との@ANSWER@を@SAY@@END02B@。'),
             new SctItm('@WHO@は@DATE@、@WHERE@で、「@COMMENT@」と@ANSWER@@END02B@。'),
             new SctItm('@WHERE@で、「@COMMENT@」と@SAY@したのは、@WHO@@END02A@。'),
             new SctItm('@WHO@は@WHERE@で、「@COMMENT@」と@SAY@し、@AWARD@を@AWARDGET@@END02B@。'),
