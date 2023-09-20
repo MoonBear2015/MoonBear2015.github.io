@@ -9,7 +9,7 @@ function set_book()
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B01.84';
+    html += ' B01.85';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -1260,9 +1260,9 @@ class selector_mystSpot extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('　@KEI_B2@@L_LANDMARK@の事故現場には、@MANY@@L_CLASS@達が野次馬となって集まり、その中心に殺された@KEI_A2@@L_CLASS@が倒れていた。<br><br>@MYST_RES01@')
             ,
-            new SctItm('　@KEI_B2@@L_LANDMARK@の事故現場には、今正に殺された@KEI_A2@@L_CLASS@の遺体。辺りには、そしらぬ@KEI_B2@顔で行き交い、@L_DOING@いる@KEI_B2@@L_CLASS@達の姿。<br><br>@MYST_RES01@')
+            new SctItm('　@KEI_B2@@L_LANDMARK@の事故現場には、今、正に殺された@KEI_A2@@L_CLASS@の遺体。辺りには、そしらぬ@KEI_B2@顔で行き交い、@L_DOING@いる@KEI_B2@@L_CLASS@達の姿。<br><br>@MYST_RES01@')
             ,
-            new SctItm('　駆けつけた@KEI_B2@現場には、一人の@KEI_A2@@L_CLASS@の遺体が、今正に悲鳴を上げて殺されたままの姿で残されていた。その周囲でざわめく、@MANY@@KEI_B2@@L_CLASS@達。<br><br>@MYST_RES01@')
+            new SctItm('　駆けつけた@KEI_B2@現場には、一人の@KEI_A2@@L_CLASS@の遺体が、今、正に悲鳴を上げて殺されたままの姿で残されていた。その周囲でざわめく、@MANY@@KEI_B2@@L_CLASS@達。<br><br>@MYST_RES01@')
             ,
             new SctItm('　駆けつけると現場には被害者らしき姿は無く、ただし、まだ新しい血痕と、なんとも@KEI_A2@気配。周囲には何があったのかと@KEI_B2@顔を見合わせる@MANY@@KEI_B2@@L_CLASS@達。<br><br>@MYST_RES02@')
             ,
