@@ -409,9 +409,9 @@ class selector_storyE01 extends SctItm_Selector {
     constructor() {
         super('@STE01@');
         this.itms = [
-            new SctItm('<br>「我こそは@WHAT@の@NICKBAD@！ @L_EVILFULLNAME@様のお出ましだ！ さあ、この@KEIN2@@TECH@パワーの餌食となるのだ！」@STE_C@'),
-            new SctItm('<br>「我が名は@WHAT@の@NICKBAD@！ @L_EVILFULLNAME@様だ！ 貴様らは@KEIN2@@TECH@の恐ろしさを身をもって味わうのだ！」@STE_C@'),
-            new SctItm('<br>「俺様は@WHAT@の@NICKBAD@！ @L_EVILFULLNAME@様のご登場だ！ @KEIN2@@TECH@の@KEIN2@呪いを受けてみよ！」@STE_C@')
+            new SctItm('<br>「ワーハッハッハッハ！ 神をも恐れぬ@WHAT@の@NICKBAD@！ @L_EVILFULLNAME@様のお出ましだ！ さあ、この@KEIN2@@TECH@パワーの餌食となるのだ！」@STE_C@'),
+            new SctItm('<br>「ウッシッシッシ！ 我こそは@WHAT@の@NICKBAD@！ @L_EVILFULLNAME@様だ！ 貴様らは@KEIN2@@TECH@の恐ろしさを身をもって味わうのだ！」@STE_C@'),
+            new SctItm('<br>「フハハハ！ かつて世界は@WHAT@の@NICKBAD@などと我を恐れた！ @L_EVILFULLNAME@様のご登場だ！ @KEIN2@@TECH@の@KEIN2@呪いを受けてみよ！」@STE_C@')
         ];
     }
 }
@@ -610,7 +610,7 @@ class selector_storyH_C extends SctItm_Selector {
     constructor() {
         super('@STH_C@');
         this.itms = [
-            new SctItm('　しかし、正義の味方のその姿に、何故か騒ぎ出す@L_WHAT@の@L_CLASS@達。<br>「もしや、アイツはウチで@FOOD@を食い逃げした@L_HERONAME@ではないか？」<br>@STC01@'),
+            new SctItm('　しかし、その正義の味方を見て、何故か騒ぎ出す@L_WHAT@の@L_CLASS@達。<br>「もしや、アイツはウチで@FOOD@を食い逃げした@L_HERONAME@ではないか？」<br>@STC01@'),
             new SctItm('　しかし、せっかく登場した正義の味方に、@L_WHAT@の@L_CLASS@達は不穏な様子。<br>「ちょっと待て！ お前はウチの@ANIMAL@を盗んだ@L_HERONAME@だろう！」<br>@STC01@'),
             new SctItm('　その時、助けに来た正義の味方を、@L_WHAT@の@L_CLASS@達は指さして、<br>「間違いない！ 貴様はウチで@FOOD@を盗み食いした@L_HERONAME@だな？」<br>@STC01@')
         ];
