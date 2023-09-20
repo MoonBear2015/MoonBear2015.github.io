@@ -9,7 +9,7 @@ function set_book()
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B01.83';
+    html += ' B01.84';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -708,11 +708,11 @@ class selector_storyH03 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@STH03@');
         this.itms = [
-            new SctItm('「仕方ない、我が裁きを受けよ！」と@KEIDP2@言いつつ、@KEIP2@@L_HEROJOB@@L_HEROTYPE@はヒラリとかわす！<br>@STH02@')
+            new SctItm('　その@L_EVILTYPE@の@KEIN2@攻撃を、@KEIP2@@L_HEROJOB@@L_HEROTYPE@はヒラリとかわす！<br>「仕方ない、我が裁きを受けよ！」<br>@STH02@')
             ,
-            new SctItm('　それを@KEIP2@@L_HEROJOB@@L_HEROTYPE@は@KEIDP2@弾き返す！「悪が栄える試しは無い！」<br>@STH02@')
+            new SctItm('　そんな@L_EVILTYPE@の@KEIN2@攻撃を、@KEIP2@@L_HEROJOB@@L_HEROTYPE@は@KEIDP2@弾き返す！<br>「悪が栄える試しは無い！」<br>@STH02@')
             ,
-            new SctItm('「それで正義が揺らぐものか！」@KEIP2@@L_HEROJOB@@L_HEROTYPE@はビクともしない！<br>@STH02@')
+            new SctItm('　その@L_EVILTYPE@の@KEIN2@攻撃に「それで正義が揺らぐものか！」と一喝！<br>　@KEIP2@@L_HEROJOB@@L_HEROTYPE@はビクともしない！<br>@STH02@')
         ]
     }
 }
