@@ -5275,6 +5275,7 @@ const itms_did = [
     new SctItm('@GROUP@に騙され'),
     new SctItm('@GROUP@に何もかも奪われ'),
     new SctItm('@GROUP@を壊滅させ'),
+    new SctItm('@GROUP@を襲撃して'),
     new SctItm('@GROUP@を組織し'),
     new SctItm('@GROUP@に加わっ'),
     new SctItm('@GROUP@に参入し'),
@@ -5285,6 +5286,7 @@ const itms_did = [
     new SctItm('@KING@に即位し'),
     new SctItm('@KING@に就任し'),
     new SctItm('@KING@を暗殺し'),
+    new SctItm('@KING@の寝首をかい'),
     new SctItm('@PEOPLE@を集め'),
     new SctItm('@PEOPLE@を追いかけ'),
     new SctItm('@PEOPLE@を探し'),
@@ -6131,10 +6133,14 @@ const itms_Group02 = [
     new SctItm('野鳥の会'),
     new SctItm('動物愛護団体'),
     new SctItm('自然保護団体'),
-    new SctItm('@ANIMAL@保護団体'),
+    new SctItm('@L_ANIMAL@保護団体'),
     new SctItm('工業団地'),
     new SctItm('牧場'),
-    new SctItm('天文台')
+    new SctItm('天文台'),
+    new SctItm('@L_CLASS@連合'),
+    new SctItm('@L_CLASS@組合'),
+    new SctItm('@L_HABIT@愛好会'),
+    new SctItm('@L_HABIT@友の会')
 ];
 const itms_King = [
     new SctItm('@COUNTRY@@KING01@'),

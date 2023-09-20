@@ -4426,6 +4426,8 @@ class selector_doing01 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('独りぼっちで@DOING02@')
             ,
             new SctItm('@ANIMAL@を連れて@DOING02@')
+            ,
+            new SctItm('@GROUP@を率いて@DOING02@')
         ];
     }
 }
@@ -4491,6 +4493,8 @@ class selector_done01 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('独りぼっちで@DONE02@')
             ,
             new SctItm('@ANIMAL@を連れて@DONE02@')
+            ,
+            new SctItm('@GROUP@を率いて@DONE02@')
         ];
     }
 }
