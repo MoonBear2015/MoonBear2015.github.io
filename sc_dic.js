@@ -3350,8 +3350,10 @@ const itms_accident = [
     new SctItm('妨害工作'),
     new SctItm('破壊工作'),
     new SctItm('暴力行為'),
-    new SctItm('乱痴気騒ぎ'),
-    new SctItm('乱交パーティー'),
+    new SctItm('乱痴気騒ぎ')
+    // ,
+    // new SctItm('乱交パーティー')
+    ,
     new SctItm('乱闘騒ぎ'),
     new SctItm('大喧嘩'),
     new SctItm('不法侵入'),
@@ -3371,6 +3373,8 @@ const itms_festival = [
     new SctItm('文化祭'),
     new SctItm('祝賀会'),
     new SctItm('飲み会'),
+    new SctItm('パーティー'),
+    new SctItm('立食パーティー'),
     new SctItm('大掃除'),
     new SctItm('餅つき大会'),
     new SctItm('忘年会'),
@@ -3493,11 +3497,11 @@ const itms_sports = [
     new SctItm('相撲'),
     new SctItm('筋トレ'),
     new SctItm('散歩'),
+    new SctItm('ウォーキング'),
     new SctItm('サイクリング'),
     new SctItm('ジョギング'),
     new SctItm('マラソン'),
     new SctItm('ハイキング'),
-    new SctItm('ウォーキング'),
     new SctItm('ラジオ体操'),
     new SctItm('ヨガ')
 ];
@@ -3651,7 +3655,10 @@ const itms_city = [
     new SctItm('銀座', 'CITY/ginza.jpg'),
     new SctItm('渋谷', 'CITY/shibuya.jpg'),
     new SctItm('秋葉原', 'CITY/akihabara.jpg'),
+    new SctItm('横浜', 'CITY/yokohama.jpg'),
     new SctItm('大阪', 'CITY/osaka.jpg'),
+    new SctItm('神戸', 'CITY/kobe.jpg'),
+    new SctItm('長崎', 'CITY/nagasaki.jpg'),
     new SctItm('沖縄', 'CITY/okinawa.jpg'),
     new SctItm('香港', 'CITY/hongkong.jpg'),
     new SctItm('北京', 'CITY/peking.jpg'),
@@ -5236,7 +5243,8 @@ const itms_did = [
     new SctItm('@CLASS@を募集し'),
     new SctItm('@CLASS@を呼び出し'),
     new SctItm('@CLASS@に変身し'),
-    new SctItm('@CLASS@になっ'),
+    // new SctItm('@CLASS@になっ')
+    // ,
     new SctItm('@CLASS@を止め'),
     new SctItm('@CLASS@を退職し')
     // ,
@@ -5245,10 +5253,8 @@ const itms_did = [
     new SctItm('@COUNTRY@に移住し'),
     new SctItm('@COUNTRY@に亡命し'),
     new SctItm('@CITY@に家を建て'),
-    new SctItm('@PLACE@で眠っ')
-    // ,
-    // new SctItm('@PLACE@で遊んで')
-    ,
+    new SctItm('@PLACE@で眠っ'),
+    new SctItm('@PLACE@で遊んで'),
     new SctItm('@DANCE@を踊っ'),
     new SctItm('@KEI@@DANCE@を踊っ'),
     new SctItm('@KEID@@DANCE@を踊っ'),
@@ -5275,7 +5281,7 @@ const itms_did = [
     new SctItm('@GROUP@に騙され'),
     new SctItm('@GROUP@に何もかも奪われ'),
     new SctItm('@GROUP@を壊滅させ'),
-    new SctItm('@GROUP@を襲撃して'),
+    new SctItm('@GROUP@を襲撃し'),
     new SctItm('@GROUP@を組織し'),
     new SctItm('@GROUP@に加わっ'),
     new SctItm('@GROUP@に参入し'),
@@ -5302,13 +5308,10 @@ const itms_did = [
     new SctItm('@BIGNAME@から『@CALL@』と賞賛され'),
     new SctItm('@BIGNAME@から『@CALL@』とおだてられ'),
     new SctItm('@PART@を連れ'),
-    new SctItm('@PART@の手を引い')
-    // ,
-    // new SctItm('@PART@を置き去りにし')
-    // ,
-    // new SctItm('@PART@を見捨て')
-    // ,
-    // new SctItm('@PART@を押しのけ')
+    new SctItm('@PART@の手を引い'),
+    new SctItm('@PART@を置き去りにし'),
+    new SctItm('@PART@を見捨て'),
+    new SctItm('@PART@を押しのけ')
     // ,
     // new SctItm('デートし')
     ,
@@ -5324,10 +5327,8 @@ const itms_did = [
     // ,
     // new SctItm('食事し')
     ,
-    new SctItm('@PART@に別れ話をし')
-    // ,
-    // new SctItm('@PART@と喧嘩し')
-    ,
+    new SctItm('@PART@に別れ話をし'),
+    new SctItm('@PART@と喧嘩し'),
     new SctItm('@PART@にお茶を出し'),
     new SctItm('@PART@の靴を磨い'),
     new SctItm('@PART@の髪を乾かし'),

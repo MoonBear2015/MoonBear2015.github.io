@@ -5058,8 +5058,8 @@ const   itms_accident = [
     new SctItm('暴力行為')
     ,
     new SctItm('乱痴気騒ぎ')
-    ,
-    new SctItm('乱交パーティー')
+    // ,
+    // new SctItm('乱交パーティー')
     ,
     new SctItm('乱闘騒ぎ')
     ,
@@ -5094,6 +5094,10 @@ const   itms_festival = [
     new SctItm('祝賀会')
     ,
     new SctItm('飲み会')
+    ,
+    new SctItm('パーティー')
+    ,
+    new SctItm('立食パーティー')
     ,
     new SctItm('大掃除')
     ,
@@ -5333,6 +5337,8 @@ const   itms_sports = [
     ,
     new SctItm('散歩')
     ,
+    new SctItm('ウォーキング')
+    ,
     new SctItm('サイクリング')
     ,
     new SctItm('ジョギング')
@@ -5340,8 +5346,6 @@ const   itms_sports = [
     new SctItm('マラソン')
     ,
     new SctItm('ハイキング')
-    ,
-    new SctItm('ウォーキング')
     ,
     new SctItm('ラジオ体操')
     ,
@@ -5616,7 +5620,13 @@ const   itms_city = [
     ,
     new SctItm('秋葉原','CITY/akihabara.jpg')
     ,
+    new SctItm('横浜','CITY/yokohama.jpg')
+    ,
     new SctItm('大阪','CITY/osaka.jpg')
+    ,
+    new SctItm('神戸','CITY/kobe.jpg')
+    ,
+    new SctItm('長崎','CITY/nagasaki.jpg')
     ,
     new SctItm('沖縄','CITY/okinawa.jpg')
     ,
@@ -8621,8 +8631,8 @@ const   itms_did = [
     ,
     new SctItm('@CLASS@に変身し')
     ,
-    new SctItm('@CLASS@になっ')
-    ,
+    // new SctItm('@CLASS@になっ')
+    // ,
     new SctItm('@CLASS@を止め')
     ,
     new SctItm('@CLASS@を退職し')
@@ -8636,8 +8646,8 @@ const   itms_did = [
     new SctItm('@CITY@に家を建て')
     ,
     new SctItm('@PLACE@で眠っ')
-    // ,
-    // new SctItm('@PLACE@で遊んで')
+    ,
+    new SctItm('@PLACE@で遊んで')
     ,
     new SctItm('@DANCE@を踊っ')
     ,
@@ -8691,7 +8701,7 @@ const   itms_did = [
     ,
     new SctItm('@GROUP@を壊滅させ')
     ,
-    new SctItm('@GROUP@を襲撃して')
+    new SctItm('@GROUP@を襲撃し')
     ,
     new SctItm('@GROUP@を組織し')
     ,
@@ -8746,12 +8756,12 @@ const   itms_did = [
     new SctItm('@PART@を連れ')
     ,
     new SctItm('@PART@の手を引い')
-    // ,
-    // new SctItm('@PART@を置き去りにし')
-    // ,
-    // new SctItm('@PART@を見捨て')
-    // ,
-    // new SctItm('@PART@を押しのけ')
+    ,
+    new SctItm('@PART@を置き去りにし')
+    ,
+    new SctItm('@PART@を見捨て')
+    ,
+    new SctItm('@PART@を押しのけ')
     // ,
     // new SctItm('デートし')
     ,
@@ -8772,8 +8782,8 @@ const   itms_did = [
     // new SctItm('食事し')
     ,
     new SctItm('@PART@に別れ話をし')
-    // ,
-    // new SctItm('@PART@と喧嘩し')
+    ,
+    new SctItm('@PART@と喧嘩し')
     ,
     new SctItm('@PART@にお茶を出し')
     ,

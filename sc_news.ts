@@ -1522,7 +1522,24 @@ class selector_comment2 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@PEOPLE@は@DID@@DIDEND@')
             ,
             new SctItm('私が@DID@@DIDEND@とき、@PEOPLE@が@DID@@DIDEND@のだ')
-
+            ,
+            new SctItm('@YESNO@、@L_WHAT@で@DID@てみよう')
+            ,
+            new SctItm('@YESNO@、@L_WHAT@で@DID@てみようではないか')
+            ,
+            new SctItm('@YESNO@、@L_WHAT@で@DID@てはどうだろう')
+            ,
+            new SctItm('@YESNO@、@L_WHAT@で@DID@てはいけない')
+            ,
+            new SctItm('@YESNO@、@L_WHAT@で@DID@てもよいのか')
+            ,
+            new SctItm('@YESNO@、@L_WHAT@で@DID@てしまった')
+            ,
+            new SctItm('@WHY@、@GROUP@は@DID@てしまったのか')
+            ,
+            new SctItm('@WHY@、@GROUP@は@DID@てしまうのか')
+            ,
+            new SctItm('@WHY@、@GROUP@は@DID@てしまったんだ')
         ];
     }
 }
@@ -1567,6 +1584,14 @@ class selector_YESNO extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('つまり')
             ,
             new SctItm('とにかく')
+            ,
+            new SctItm('だから')
+            ,
+            new SctItm('ならば')
+            ,
+            new SctItm('だとしたら')
+            ,
+            new SctItm('もしそうなら')
         ];
     }
 }
