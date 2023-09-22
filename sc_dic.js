@@ -2131,7 +2131,8 @@ const itms_km = [
     new SctItm('@ITEM@の様'),
     new SctItm('@ITEM@みたい'),
     new SctItm('@ITEM@そっくり'),
-    new SctItm('@ITEM@が@DO@したかの様'),
+    // new SctItm('@ITEM@が@DO@したかの様')
+    // ,
     new SctItm('@DO@した@ITEM@の様'),
     new SctItm('@DO@した@ITEM@みたい'),
     new SctItm('@DO@した@ITEM@そっくり')
@@ -6225,7 +6226,7 @@ const itms_where01 = [
     new SctItm('水浸しの@WHERE02@'),
     new SctItm('火の海と化した@WHERE02@'),
     new SctItm('@KEI@@WHERE02@'),
-    new SctItm('★★@MANYCHAR@が@MOVE2@@WHERE02@')
+    new SctItm('@MANYCHAR@が@MOVE2@@WHERE02@')
 ];
 const itms_where02 = [
     new SctItm('@PLACE@'),

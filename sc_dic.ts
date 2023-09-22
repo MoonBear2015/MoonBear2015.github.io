@@ -3682,8 +3682,8 @@ const   itms_km = [
     ,
     new SctItm('@ITEM@そっくり')
     ,
-    new SctItm('@ITEM@が@DO@したかの様')
-    ,
+    // new SctItm('@ITEM@が@DO@したかの様')
+    // ,
     new SctItm('@DO@した@ITEM@の様')
     ,
     new SctItm('@DO@した@ITEM@みたい')
@@ -10414,7 +10414,7 @@ const   itms_where01 = [
     ,
     new SctItm('@KEI@@WHERE02@')
     ,
-    new SctItm('★★@MANYCHAR@が@MOVE2@@WHERE02@')
+    new SctItm('@MANYCHAR@が@MOVE2@@WHERE02@')
 ]
 const   itms_where02 = [
     new SctItm('@PLACE@')
