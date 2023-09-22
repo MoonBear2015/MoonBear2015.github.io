@@ -416,11 +416,11 @@ class selector_title extends SctItm_Selector {
         super('@NEWS_TITLE@');
         this.itms = [
             new SctItm('@L_WHAT@が@KEID@@L_DO@'),
-            new SctItm('@L_WHAT@を@KEID@@L_DO@@END02C@@PEOPLE@'),
-            new SctItm('@L_WHAT@が@KEID@@L_DO@@END02C@@PEOPLE@'),
-            new SctItm('@L_WHAT@の@PEOPLE@が@KEID@@L_DO@'),
+            new SctItm('@L_WHAT@を@KEID@@L_DO@@END02C@@CHAR@'),
+            new SctItm('@L_WHAT@が@KEID@@L_DO@@END02C@@CHAR@'),
+            new SctItm('@L_WHAT@の@CHAR@が@KEID@@L_DO@'),
             new SctItm('@L_WHAT@が@KEID@@L_DO@@END02C@'),
-            new SctItm('@L_WHAT@の@PEOPLE@が@KEID@@L_DO@@END02C@'),
+            new SctItm('@L_WHAT@の@CHAR@が@KEID@@L_DO@@END02C@'),
             new SctItm('@L_WHAT@を@L_DO@@END02E@@L_TECH@'),
             new SctItm('@KEI@@L_WHAT@の@L_DO@'),
             new SctItm('@L_DO@@END02C@@L_WHAT@'),
@@ -450,8 +450,8 @@ class selector_subtitle02 extends SctItm_Selector {
     constructor() {
         super('@NEWS_SUBTITLE02@');
         this.itms = [
-            new SctItm('@L_DO@@END02B@@PEOPLE@'),
-            new SctItm('@L_DO@@END02B@@PEOPLE@の@THINK@'),
+            new SctItm('@L_DO@@END02B@@CHAR@'),
+            new SctItm('@L_DO@@END02B@@CHAR@の@THINK@'),
             new SctItm('@L_DO@@END02B@@L_CLASS@'),
             new SctItm('@L_DO@@END02B@@L_TECH@'),
             new SctItm('@SIZE@@END02B@@L_DO@'),
@@ -521,6 +521,43 @@ class selector_manypeople extends SctItm_Selector {
         ];
     }
 }
+class selector_char extends SctItm_Selector {
+    constructor() {
+        super('@CHAR@');
+        this.itms = [
+            new SctItm('@CLASS@'),
+            new SctItm('@PART@'),
+            new SctItm('@COUNTRY@人'),
+            new SctItm('@SEXAGE@'),
+            new SctItm('@KING@'),
+            new SctItm('@ANIMAL@'),
+            new SctItm('@NICK@')
+        ];
+    }
+}
+class selector_manychar extends SctItm_Selector {
+    constructor() {
+        super('@MANYCHAR@');
+        this.itms = [
+            new SctItm('@MANYMAN@@THEY@'),
+            new SctItm('@MANYMAN@@KEI@@THEY@'),
+            new SctItm('@MANYMAN@@CLASS@'),
+            new SctItm('@MANYMAN@@KEI@@CLASS@'),
+            new SctItm('@MANYMAN@@PART@'),
+            new SctItm('@MANYMAN@@KEI@@PART@'),
+            new SctItm('@MANYMAN@@COUNTRY@人'),
+            new SctItm('@MANYMAN@@KEI@@COUNTRY@人'),
+            new SctItm('@MANYMAN@@SEXAGE@'),
+            new SctItm('@MANYMAN@@KEI@@SEXAGE@'),
+            new SctItm('@MANYMAN@@KING@'),
+            new SctItm('@MANYMAN@@KEI@@KING@'),
+            new SctItm('@MANY@@ANIMAL@'),
+            new SctItm('@MANY@@KEI@@ANIMAL@'),
+            new SctItm('@MANY@@NICK@'),
+            new SctItm('@MANY@@KEI@@NICK@')
+        ];
+    }
+}
 class selector_bigName extends SctItm_Selector {
     constructor() {
         super('@BIGNAME@');
@@ -554,8 +591,8 @@ class selector_call extends SctItm_Selector {
             new SctItm('@COMM1@@L_WHAT@'),
             new SctItm('@L_WHAT@の@KEI@@L_CLASS@'),
             new SctItm('@L_WHAT@の@SPECIALIST@'),
-            new SctItm('@KEID@@L_DO@@END02C@@PEOPLE@'),
-            new SctItm('@KEI@@L_WHAT@の@PEOPLE@'),
+            new SctItm('@KEID@@L_DO@@END02C@@CHAR@'),
+            new SctItm('@KEI@@L_WHAT@の@CHAR@'),
             new SctItm('@L_WHAT@の@NICK@'),
             new SctItm('@L_WHAT@が産んだ@NICK@'),
             new SctItm('@L_WHAT@の@L_TECH@'),
@@ -727,8 +764,8 @@ class selector_who2 extends SctItm_Selector {
         this.itms = [
             new SctItm('『@CALL@』'),
             new SctItm('『@L_INSCRIPTION@』'),
-            new SctItm('『@CALL@』と@KEID@@ASSES@@PEOPLE@'),
-            new SctItm('@MANYPEOPLE@より『@CALL@』と@KEID@@ASSES@@PEOPLE@'),
+            new SctItm('『@CALL@』と@KEID@@ASSES@@CHAR@'),
+            new SctItm('@MANYPEOPLE@より『@CALL@』と@KEID@@ASSES@@CHAR@'),
             new SctItm('@AWARD@ @AWARDGET@')
         ];
     }
@@ -807,8 +844,8 @@ class selector_who4 extends SctItm_Selector {
             new SctItm('@COUNTRY@出身'),
             new SctItm('@COUNTRY@在住'),
             new SctItm('『@CALL2@』'),
-            new SctItm('『@CALL2@』と@KEID@@ASSES@@PEOPLE@'),
-            new SctItm('@MANYPEOPLE@より『@CALL2@』と@KEID@@ASSES@@PEOPLE@'),
+            new SctItm('『@CALL2@』と@KEID@@ASSES@@CHAR@'),
+            new SctItm('@MANYPEOPLE@より『@CALL2@』と@KEID@@ASSES@@CHAR@'),
             new SctItm('座右の銘『@INSCRIPTION@』'),
             new SctItm('@SONGTYPE@『@SONGTITLE@』'),
             new SctItm('@AWARD@ @AWARDGET@')
@@ -837,8 +874,8 @@ class selector_newsC01 extends SctItm_Selector {
             new SctItm('@KEI@@L_WHAT@では@KEI@@KEY@や@KEY@が@SIZE@@END01B@'),
             new SctItm('@KEY@が@SIZE@@END02B@@L_WHAT@@END01A@'),
             new SctItm('@KEI@@KEY@や@KEY@が@SIZE@@END02B@@L_WHAT@@END01A@'),
-            new SctItm('@KEI@@MANYPEOPLE@が@KEID@@L_DO@@END01B@'),
-            new SctItm('@KEI@@MANYPEOPLE@による@KEI@@KEY@が@SIZE@@END01B@'),
+            new SctItm('@MANYPEOPLE@が@KEID@@L_DO@@END01B@'),
+            new SctItm('@MANYPEOPLE@による@KEI@@KEY@が@SIZE@@END01B@'),
             new SctItm('@MANYPEOPLE@の@THINK@や@THINK@@SIZE2@@L_WHAT@@END01A@'),
             new SctItm('@MANYPEOPLE@が@DID@@DIDEND@@L_WHAT@@END01A@'),
             new SctItm('@WHO@が@DID@@DIDEND@@L_WHAT@@END01A@')
@@ -991,17 +1028,17 @@ class selector_comment2 extends SctItm_Selector {
             new SctItm('@L_WHAT@は@KEID@@L_DO@@END02B@@KEI@@THEY@@END02A@'),
             new SctItm('@CALL@で、@CALL@@END02A@'),
             new SctItm('@YESNO@、@CALL@だと@ASSES@'),
-            new SctItm('@YESNO@、@PEOPLE@の@KEY@@END02A@'),
+            new SctItm('@YESNO@、@CHAR@の@KEY@@END02A@'),
             new SctItm('@YESNO@、@L_WHAT@が@KEI@@NICK@@END02A@'),
             new SctItm('@YESNO@、@KEI2@な@PART@が@SAY@@END02B@'),
             new SctItm('@CALL@、@YESNO@、それが@PART@の@PART@@END02A@'),
-            new SctItm('@KEID@@L_DO@@END02B@@KEI@@NICK@と@KEID@@ASSES@@THEY@、@YESNO@、それが@L_WHAT@の@PEOPLE@@END02A@'),
+            new SctItm('@KEID@@L_DO@@END02B@@KEI@@NICK@と@KEID@@ASSES@@THEY@、@YESNO@、それが@L_WHAT@の@CHAR@@END02A@'),
             new SctItm('@KEID@@L_DO@@END02B@@THEY@、@YESNO@、それが@L_WHAT@@END02A@'),
-            new SctItm('@L_WHAT@の@L_CLASS@、それが@PEOPLE@の@PEOPLE@@END02A@'),
+            new SctItm('@L_WHAT@の@L_CLASS@、それが@CHAR@の@CHAR@@END02A@'),
             new SctItm('@EMOFRONT@@EMO@@END02D@'),
             new SctItm('@L_WHAT@で@DID@@DIDEND@'),
-            new SctItm('@PEOPLE@は@DID@@DIDEND@'),
-            new SctItm('私が@DID@@DIDEND@とき、@PEOPLE@が@DID@@DIDEND@のだ'),
+            new SctItm('@CHAR@は@DID@@DIDEND@'),
+            new SctItm('私が@DID@@DIDEND@とき、@CHAR@が@DID@@DIDEND@のだ'),
             new SctItm('@YESNO@、@L_WHAT@で@DID@てみよう'),
             new SctItm('@YESNO@、@L_WHAT@で@DID@てみようではないか'),
             new SctItm('@YESNO@、@L_WHAT@で@DID@てはどうだろう'),
@@ -1788,6 +1825,17 @@ class selector_move extends SctItm_Selector {
         this.Add(cods_to_itms(cods_move_make));
     }
 }
+class selector_move2 extends SctItm_Selector {
+    constructor() {
+        super('@MOVE2@');
+        this.Add(cods_to_itms(cods_move_dance));
+        this.Add(cods_to_itms(cods_move_run));
+        this.Add(cods_to_itms(cods_move_fly));
+        this.Add(cods_to_itms(cods_move_walk));
+        this.Add(cods_to_itms(cods_move_stop));
+        this.Add(cods_to_itms(cods_move_think));
+    }
+}
 class selector_body extends SctItm_Selector {
     constructor() {
         super('@BODY@');
@@ -2468,14 +2516,14 @@ class selector_say extends SctItm_Selector {
             new SctItm('狼狽えながらも@SAY01@'),
             new SctItm('怯えた様子で@SAY01@'),
             new SctItm('目を血走らせて@SAY01@'),
-            new SctItm('@MANYPEOPLE@の前で@SAY01@'),
-            new SctItm('@MANYPEOPLE@を集めて@SAY01@'),
+            new SctItm('@MANYCHAR@の前で@SAY01@'),
+            new SctItm('@MANYCHAR@を集めて@SAY01@'),
             new SctItm('@GROUP@の避難を浴びながら@SAY01@'),
-            new SctItm('@MANYPEOPLE@が喝采する中で@SAY01@'),
+            new SctItm('@MANYCHAR@が喝采する中で@SAY01@'),
             new SctItm('@GROUP@の賛同を得て@SAY01@'),
-            new SctItm('@MANYPEOPLE@の賛成多数で@SAY01@'),
+            new SctItm('@MANYCHAR@の賛成多数で@SAY01@'),
             new SctItm('@GROUP@の承認の元に@SAY01@'),
-            new SctItm('@MANYPEOPLE@の反対を押し切って@SAY01@')
+            new SctItm('@MANYCHAR@の反対を押し切って@SAY01@')
         ];
     }
 }
@@ -3090,8 +3138,8 @@ class selector_doing01 extends SctItm_Selector {
             new SctItm('@DOING02@'),
             new SctItm('@DOING02@'),
             new SctItm('@DOING02@'),
-            new SctItm('@PEOPLE@と一緒に@DOING02@'),
-            new SctItm('@PEOPLE@と@DOING02@'),
+            new SctItm('@CHAR@と一緒に@DOING02@'),
+            new SctItm('@CHAR@と@DOING02@'),
             new SctItm('一人で@DOING02@'),
             new SctItm('独りぼっちで@DOING02@'),
             new SctItm('@ANIMAL@を連れて@DOING02@'),
@@ -3134,8 +3182,8 @@ class selector_done01 extends SctItm_Selector {
             new SctItm('@DONE02@'),
             new SctItm('@DONE02@'),
             new SctItm('@DONE02@'),
-            new SctItm('@PEOPLE@と一緒に@DONE02@'),
-            new SctItm('@PEOPLE@と@DONE02@'),
+            new SctItm('@CHAR@と一緒に@DONE02@'),
+            new SctItm('@CHAR@と@DONE02@'),
             new SctItm('一人で@DONE02@'),
             new SctItm('独りぼっちで@DONE02@'),
             new SctItm('@ANIMAL@を連れて@DONE02@'),
@@ -3668,6 +3716,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_season());
         this.dic_push(new selector_today());
         this.dic_push(new selector_move());
+        this.dic_push(new selector_move2());
         this.dic_push(new selector_think());
         this.dic_push(new selector_who());
         this.dic_push(new selector_who2());
@@ -3719,6 +3768,8 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_specialist());
         this.dic_push(new locker_specialist());
         this.dic_push(new selector_manypeople());
+        this.dic_push(new selector_char());
+        this.dic_push(new selector_manychar());
         this.dic_push(new selector_bigName());
         this.dic_push(new selector_sexage());
         this.dic_push(new locker_sexage());

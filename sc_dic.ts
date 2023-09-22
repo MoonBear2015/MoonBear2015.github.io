@@ -8655,25 +8655,25 @@ const   itms_did = [
     ,
     new SctItm('@KEID@@DANCE@を踊っ')
     ,
-    new SctItm('@MANYPEOPLE@に追われ')
+    new SctItm('@MANYCHAR@に追われ')
     ,
-    new SctItm('@MANYPEOPLE@に囲まれ')
+    new SctItm('@MANYCHAR@に囲まれ')
     ,
-    new SctItm('@MANYPEOPLE@にいじめられ')
+    new SctItm('@MANYCHAR@にいじめられ')
     ,
-    new SctItm('@MANYPEOPLE@に閉じ込められ')
+    new SctItm('@MANYCHAR@に閉じ込められ')
     ,
-    new SctItm('@MANYPEOPLE@に襲われ')
+    new SctItm('@MANYCHAR@に襲われ')
     ,
-    new SctItm('@MANYPEOPLE@に殺されかけ')
+    new SctItm('@MANYCHAR@に殺されかけ')
     ,
-    new SctItm('@MANYPEOPLE@にもてはやされ')
+    new SctItm('@MANYCHAR@にもてはやされ')
     ,
-    new SctItm('@MANYPEOPLE@に喝采され')
+    new SctItm('@MANYCHAR@に喝采され')
     ,
-    new SctItm('@MANYPEOPLE@を引き連れ')
+    new SctItm('@MANYCHAR@を引き連れ')
     ,
-    new SctItm('@MANYPEOPLE@を募集し')
+    new SctItm('@MANYCHAR@を募集し')
     ,
     new SctItm('@GROUP@から派遣され')
     ,
@@ -10363,6 +10363,8 @@ const   itms_where = [
     ,
     new SctItm('@GROUP@が所有する@WHERE01@')
     ,
+    new SctItm('@GROUP@が@MOVE2@@WHERE01@')
+    ,
     new SctItm('@COUNTRY@で最北端の@WHERE01@')
     ,
     new SctItm('@COUNTRY@で最南端の@WHERE01@')
@@ -10372,6 +10374,8 @@ const   itms_where = [
     new SctItm('@BIGNAME@が愛した@WHERE01@')
     ,
     new SctItm('@BIGNAME@が通った@SCHOOL01@')
+    ,
+    new SctItm('@BIGNAME@が@MOVE2@@SCHOOL01@')
     ,
     new SctItm('誰も知らない@WHERE01@')
 ]
@@ -10409,6 +10413,8 @@ const   itms_where01 = [
     new SctItm('火の海と化した@WHERE02@')
     ,
     new SctItm('@KEI@@WHERE02@')
+    ,
+    new SctItm('★★@MANYCHAR@が@MOVE2@@WHERE02@')
 ]
 const   itms_where02 = [
     new SctItm('@PLACE@')
