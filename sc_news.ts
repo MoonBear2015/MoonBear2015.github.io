@@ -1582,15 +1582,25 @@ class selector_comment2 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@CHAR@は@DID@@DIDEND@')
             ,
-            new SctItm('★★私が@DID@@DIDEND@とき、@CHAR@が@DID@@DIDEND@@END02D1@')
+            new SctItm('@L_WHAT@で私は@DID@@DIDEND@@END02D1@')
             ,
-            new SctItm('★★@DATE@に、私は@DID@@DIDEND@@END02D1@')
+            new SctItm('@L_WHAT@で私が@DID@ていると、@MANYPEOPLE@が@DID@@DIDEND@@END02D1@')
             ,
-            new SctItm('★★@DATE@に、私は@L_WHAT@で@DID@@DIDEND@@END02D1@')
+            new SctItm('私が@DID@@DIDEND@とき、@L_WHAT@で@MANYPEOPLE@が@DID@@DIDEND@@END02D1@')
             ,
-            new SctItm('★★@DATE@に私もまた、@L_WHAT@で@DID@@DIDEND@@END02D1@')
+            new SctItm('私が@DID@ていると、@L_WHAT@で@MANYPEOPLE@が@DID@@DIDEND@@END02D1@')
             ,
-            new SctItm('★★@DATE@に私が@DID@@DIDEND@とき、@CHAR@が@DID@@DIDEND@@END02D1@')
+            new SctItm('私が@L_WHAT@で@DID@ていると、@MANYPEOPLE@が@DID@@DIDEND@@END02D1@')
+            ,
+            new SctItm('私が@L_WHAT@に行くと、@MANYPEOPLE@が@DID@@DIDEND@@END02D1@')
+            ,
+            new SctItm('@DATE@に、私は@DID@@DIDEND@@END02D1@')
+            ,
+            new SctItm('@DATE@に、私は@L_WHAT@で@DID@@DIDEND@@END02D1@')
+            ,
+            new SctItm('@DATE@に私もまた、@L_WHAT@で@DID@@DIDEND@@END02D1@')
+            ,
+            new SctItm('@DATE@に私が@DID@@DIDEND@とき、@MANYPEOPLE@が@DID@@DIDEND@@END02D1@')
             ,
             new SctItm('@YESNO@、@L_WHAT@で@DID@てみよう')
             ,
