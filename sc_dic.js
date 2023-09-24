@@ -4543,6 +4543,8 @@ const itms_dir = [
 const itms_sweets = [
     new SctItm('チョコレート'),
     new SctItm('ケーキ'),
+    new SctItm('ロールケーキ'),
+    new SctItm('バームクーヘン'),
     new SctItm('チーズケーキ'),
     new SctItm('ホットケーキ'),
     new SctItm('クッキー'),
@@ -4564,12 +4566,14 @@ const itms_sweets = [
 const itms_sweets_p = [
     new SctItm('@FRUIT@のショートケーキ'),
     new SctItm('@FRUIT@のゼリー'),
-    new SctItm('@FRUIT@のアイスクリーム')
+    new SctItm('@FRUIT@のアイスクリーム'),
+    new SctItm('@FRUIT@のシャーベット')
 ];
 const itms_sweets_l = [
     new SctItm('@L_FRUIT@のショートケーキ'),
     new SctItm('@L_FRUIT@のゼリー'),
-    new SctItm('@L_FRUIT@のアイスクリーム')
+    new SctItm('@L_FRUIT@のアイスクリーム'),
+    new SctItm('@L_FRUIT@のシャーベット')
 ];
 const itms_meal = [
     new SctItm('カレーライス'),
@@ -4702,6 +4706,7 @@ const itms_dress = [
     new SctItm('スウェット'),
     new SctItm('水着'),
     new SctItm('ビキニ'),
+    new SctItm('アロハシャツ'),
     new SctItm('デニム'),
     new SctItm('ジャンパー'),
     new SctItm('革ジャン'),
@@ -4748,6 +4753,7 @@ const itms_shoes = [
     new SctItm('サンダル'),
     new SctItm('草履'),
     new SctItm('下駄'),
+    new SctItm('鉄下駄'),
     new SctItm('長靴')
 ];
 const itms_music = [
@@ -4898,7 +4904,9 @@ const itms_season = [
     new SctItm('@FLOWER@が咲く頃'),
     new SctItm('@FLOWER@の芽が出る頃'),
     new SctItm('@FRUIT@が実る時期'),
-    new SctItm('@MANYPEOPLE@が賑わう頃')
+    new SctItm('@MANYPEOPLE@が賑わう頃'),
+    new SctItm('@KEY@シーズン'),
+    new SctItm('@KEY@が多発する時期')
 ];
 const itms_horo_star = [
     new SctItm('DRAGON', 'HORO/dragon.png', '龍'),

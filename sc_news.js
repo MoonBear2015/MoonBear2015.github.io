@@ -485,11 +485,11 @@ class selector_newsFirst extends SctItm_Selector {
             new SctItm('@DATE@には、@ORDER@@KEI@@L_WHAT@が@KEID@@L_DO@する筈であった。'),
             new SctItm('@KEI@@L_WHAT@が@KEID@@L_DO@@END02B@のは、@DATE@の頃である。'),
             new SctItm('@NEWS_Q01@？ '),
-            new SctItm('@DATE@、@WHERE@での出来事である。'),
-            new SctItm('@DATE@、@WHERE@でそれは起こった。'),
-            new SctItm('@DATE@、私が@WHERE@で、@DID@@DIDEND@時のことである。'),
-            new SctItm('@DATE@、私が@WHERE@に向かい、@DID@@DIDEND@時と記憶している。'),
-            new SctItm('@DATE@、@BIGNAME@が@WHERE@に訪れ、@DID@@DIDEND@時にそれは起こった。')
+            new SctItm('@DATE@の、@WHERE@での出来事である。'),
+            new SctItm('@DATE@に、@WHERE@でそれは起こった。'),
+            new SctItm('@DATE@に、私が@WHERE@で、@DID@@DIDEND@時のことである。'),
+            new SctItm('@DATE@に、私が@WHERE@に向かい、@DID@@DIDEND@時と記憶している。'),
+            new SctItm('@DATE@に、@BIGNAME@が@WHERE@に訪れ、@DID@@DIDEND@時にそれは起こった。')
         ];
     }
 }
@@ -687,11 +687,11 @@ class selector_doc extends SctItm_Selector {
         super('@NEWS_DOC@');
         this.itms = [
             new SctItm('@NEWS_C01@、@NEWS_C02@。'),
-            new SctItm('@NEWS_C01@、@DATE@、@NEWS_C02@。'),
-            new SctItm('@DATE@、@WHERE@で、@NEWS_C01@、@NEWS_C02@。'),
-            new SctItm('@DATE@、@WHO@は「@COMMENT@」と@SAY@@END02B@。'),
+            new SctItm('@NEWS_C01@、@DATE@に、@NEWS_C02@。'),
+            new SctItm('@DATE@に、@WHERE@で、@NEWS_C01@、@NEWS_C02@。'),
+            new SctItm('@DATE@に、@WHO@は「@COMMENT@」と@SAY@@END02B@。'),
             new SctItm('@WHO@は@WHERE@で、「@COMMENT@」との@ANSWER@を@SAY@@END02B@。'),
-            new SctItm('@WHO@は@DATE@、@WHERE@で、「@COMMENT@」と@ANSWER@@END02B@。'),
+            new SctItm('@WHO@は@DATE@に、@WHERE@で、「@COMMENT@」と@ANSWER@@END02B@。'),
             new SctItm('@WHERE@で、「@COMMENT@」と@SAY@したのは、@WHO@@END02A@。'),
             new SctItm('@WHO@は@WHERE@で、「@COMMENT@」と@SAY@し、@AWARD@を@AWARDGET@@END02B@。'),
             new SctItm('@WHO@が@WHERE@で、@DID@@DIDEND@のは、@DATE@のことであった。'),
@@ -1093,7 +1093,7 @@ class selector_TimeFront extends SctItm_Selector {
             new SctItm(''),
             new SctItm(''),
             new SctItm(''),
-            new SctItm('@DATE@、'),
+            new SctItm('@DATE@に、'),
             new SctItm('@DATE@には、'),
             new SctItm('そういえば、'),
             new SctItm('思い起こせば、'),
@@ -1119,7 +1119,7 @@ class selector_TimeFront2 extends SctItm_Selector {
             new SctItm(''),
             new SctItm(''),
             new SctItm(''),
-            new SctItm('@DATE@、'),
+            new SctItm('@DATE@に、'),
             new SctItm('@DATE@には、'),
             new SctItm('そういえば、'),
             new SctItm('思い起こせば、'),
