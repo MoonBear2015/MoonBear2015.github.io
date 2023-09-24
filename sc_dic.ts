@@ -6533,6 +6533,12 @@ const   itms_shop = [
     new SctItm('PYRAMID','SHOP/PYRAMID01.jpg','ピラミッド')
     ,
     new SctItm('CASTLE','SHOP/CASTLE01.jpg','お城')
+    ,
+    new SctItm('BATTLESHIP','SHOP/battleship.jpg','戦艦')
+    ,
+    new SctItm('SPACE BATTLESHIP','SHOP/spacebattleship01.jpg','宇宙戦艦')
+    ,
+    new SctItm('SPACE BATTLESHIP','SHOP/spacebattleship02.jpg','宇宙戦艦')
 ]
 
 
@@ -7998,6 +8004,14 @@ const   itms_season = [
     new SctItm('晩冬')
     ,
     new SctItm('クリスマスシーズン')
+    ,
+    new SctItm('@FLOWER@が咲く頃')
+    ,
+    new SctItm('@FLOWER@の芽が出る頃')
+    ,
+    new SctItm('@FRUIT@が実る時期')
+    ,
+    new SctItm('@MANYPEOPLE@が賑わう頃')
 ]
 
 const   itms_horo_star = [
@@ -10211,6 +10225,10 @@ const   itms_Group02 = [
     new SctItm('市役所')
     ,
     new SctItm('公民館')
+    ,
+    new SctItm('病院')
+    ,
+    new SctItm('刑務所')
     ,
     new SctItm('市議会')
     ,

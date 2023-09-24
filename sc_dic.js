@@ -4122,7 +4122,10 @@ const itms_shop = [
     new SctItm('WATCH', 'SHOP/WATCH01.jpg', '腕時計'),
     new SctItm('WATCH', 'SHOP/WATCH02.jpg', '腕時計'),
     new SctItm('PYRAMID', 'SHOP/PYRAMID01.jpg', 'ピラミッド'),
-    new SctItm('CASTLE', 'SHOP/CASTLE01.jpg', 'お城')
+    new SctItm('CASTLE', 'SHOP/CASTLE01.jpg', 'お城'),
+    new SctItm('BATTLESHIP', 'SHOP/battleship.jpg', '戦艦'),
+    new SctItm('SPACE BATTLESHIP', 'SHOP/spacebattleship01.jpg', '宇宙戦艦'),
+    new SctItm('SPACE BATTLESHIP', 'SHOP/spacebattleship02.jpg', '宇宙戦艦')
 ];
 const itms_campany = [
     new SctItm('Apple', '', 'アップル'),
@@ -4891,7 +4894,11 @@ const itms_season = [
     new SctItm('晩秋'),
     new SctItm('初冬'),
     new SctItm('晩冬'),
-    new SctItm('クリスマスシーズン')
+    new SctItm('クリスマスシーズン'),
+    new SctItm('@FLOWER@が咲く頃'),
+    new SctItm('@FLOWER@の芽が出る頃'),
+    new SctItm('@FRUIT@が実る時期'),
+    new SctItm('@MANYPEOPLE@が賑わう頃')
 ];
 const itms_horo_star = [
     new SctItm('DRAGON', 'HORO/dragon.png', '龍'),
@@ -6120,6 +6127,8 @@ const itms_Group02 = [
     new SctItm('郵便局'),
     new SctItm('市役所'),
     new SctItm('公民館'),
+    new SctItm('病院'),
+    new SctItm('刑務所'),
     new SctItm('市議会'),
     new SctItm('市場'),
     new SctItm('交響楽団'),
