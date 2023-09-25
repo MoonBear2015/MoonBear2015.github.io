@@ -619,15 +619,15 @@ class selector_title extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('@L_WHAT@が@KEID@@L_DO@')
             ,
-            new SctItm('@L_WHAT@を@KEID@@L_DO@@END02C@@CHAR@')
+            new SctItm('@L_WHAT@を@KEID@@L_DO@@END02C@@L_CHAR@')
             ,
-            new SctItm('@L_WHAT@が@KEID@@L_DO@@END02C@@CHAR@')
+            new SctItm('@L_WHAT@が@KEID@@L_DO@@END02C@@L_CHAR@')
             ,
-            new SctItm('@L_WHAT@の@CHAR@が@KEID@@L_DO@')
+            new SctItm('@L_WHAT@の@L_CHAR@が@KEID@@L_DO@')
             ,
             new SctItm('@L_WHAT@が@KEID@@L_DO@@END02C@')
             ,
-            new SctItm('@L_WHAT@の@CHAR@が@KEID@@L_DO@@END02C@')
+            new SctItm('@L_WHAT@の@L_CHAR@が@KEID@@L_DO@@END02C@')
             ,
             new SctItm('@L_WHAT@を@L_DO@@END02E@@L_TECH@')
             ,
@@ -799,8 +799,24 @@ class selector_char extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@KING@')
             ,
             new SctItm('@ANIMAL@')
+        ];
+    }
+}
+class locker_char extends SctItm_SelectLocker implements ISctItm_Selector{
+    constructor(){
+        super('@L_CHAR@');
+        this.itms = [
+            new SctItm('@L_CLASS@')
             ,
-            new SctItm('@NICK@')
+            new SctItm('@L_PART@')
+            ,
+            new SctItm('@L_COUNTRY@人')
+            ,
+            new SctItm('@L_SEXAGE@')
+            ,
+            new SctItm('@L_KING@')
+            ,
+            new SctItm('@L_ANIMAL@')
         ];
     }
 }
@@ -840,6 +856,19 @@ class selector_manychar extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@MANY@@NICK@')
             ,
             new SctItm('@MANY@@KEI@@NICK@')
+        ];
+    }
+}
+
+class locker_manychar extends SctItm_SelectLocker implements ISctItm_Selector{
+    constructor(){
+        super('@L_MANYCHAR@');
+        this.itms = [
+            new SctItm('@MANYMAN@@L_CHAR@')
+            ,
+            new SctItm('@MANYMAN@@KEI@@L_CHAR@')
+            ,
+            new SctItm('@MANY@@KEI@@L_CHAR@')
         ];
     }
 }
@@ -1562,7 +1591,7 @@ class selector_comment2 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@YESNO@、@CALL@だと@ASSES@')
             ,
-            new SctItm('@YESNO@、@CHAR@の@KEY@@END02A@')
+            new SctItm('@YESNO@、@L_CHAR@の@KEY@@END02A@')
             ,
             new SctItm('@YESNO@、@L_WHAT@が@KEI@@NICK@@END02A@')
             ,
@@ -1574,25 +1603,25 @@ class selector_comment2 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@KEID@@L_DO@@END02B@@THEY@、@YESNO@、それが@L_WHAT@@END02A@')
             ,
-            new SctItm('@L_WHAT@の@L_CLASS@、それが@CHAR@の@CHAR@@END02A@')
+            new SctItm('@L_WHAT@の@L_CLASS@、それが@CHAR@の@L_CHAR@@END02A@')
             ,
             new SctItm('@EMOFRONT@@EMO@@END02D@')
             ,
             new SctItm('@L_WHAT@で@DID@@DIDEND@')
             ,
-            new SctItm('@CHAR@は@DID@@DIDEND@')
+            new SctItm('@L_CHAR@は@DID@@DIDEND@')
             ,
             new SctItm('@L_WHAT@で私は@DID@@DIDEND@@END02D1@')
             ,
-            new SctItm('@L_WHAT@で私が@DID@ていると、@MANYPEOPLE@が@DID@@DIDEND@@END02D1@')
+            new SctItm('@L_WHAT@で私が@DID@ていると、@L_MANYCHAR@が@DID@@DIDEND@@END02D1@')
             ,
-            new SctItm('私が@DID@@DIDEND@とき、@L_WHAT@で@MANYPEOPLE@が@DID@@DIDEND@@END02D1@')
+            new SctItm('私が@DID@@DIDEND@とき、@L_WHAT@で@L_MANYCHAR@が@DID@@DIDEND@@END02D1@')
             ,
-            new SctItm('私が@DID@ていると、@L_WHAT@で@MANYPEOPLE@が@DID@@DIDEND@@END02D1@')
+            new SctItm('私が@DID@ていると、@L_WHAT@で@L_MANYCHAR@が@DID@@DIDEND@@END02D1@')
             ,
-            new SctItm('私が@L_WHAT@で@DID@ていると、@MANYPEOPLE@が@DID@@DIDEND@@END02D1@')
+            new SctItm('私が@L_WHAT@で@DID@ていると、@L_MANYCHAR@が@DID@@DIDEND@@END02D1@')
             ,
-            new SctItm('私が@L_WHAT@に行くと、@MANYPEOPLE@が@DID@@DIDEND@@END02D1@')
+            new SctItm('私が@L_WHAT@に行くと、@L_MANYCHAR@が@DID@@DIDEND@@END02D1@')
             ,
             new SctItm('@DATE@に、私は@DID@@DIDEND@@END02D1@')
             ,
@@ -1600,7 +1629,7 @@ class selector_comment2 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@DATE@に私もまた、@L_WHAT@で@DID@@DIDEND@@END02D1@')
             ,
-            new SctItm('@DATE@に私が@DID@@DIDEND@とき、@MANYPEOPLE@が@DID@@DIDEND@@END02D1@')
+            new SctItm('@DATE@に私が@DID@@DIDEND@とき、@L_MANYCHAR@が@DID@@DIDEND@@END02D1@')
             ,
             new SctItm('@YESNO@、@L_WHAT@で@DID@てみよう')
             ,
@@ -1614,11 +1643,11 @@ class selector_comment2 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@YESNO@、@L_WHAT@で@DID@てしまった')
             ,
-            new SctItm('@WHY@、@GROUP@は@DID@てしまったのか')
+            new SctItm('@WHY@、@L_MANYCHAR@は@DID@てしまったのか')
             ,
-            new SctItm('@WHY@、@GROUP@は@DID@てしまうのか')
+            new SctItm('@WHY@、@L_MANYCHAR@は@DID@てしまうのか')
             ,
-            new SctItm('@WHY@、@GROUP@は@DID@てしまったんだ')
+            new SctItm('@WHY@、@L_MANYCHAR@は@DID@てしまったんだ')
         ];
     }
 }
@@ -3123,6 +3152,17 @@ class selector_king extends SctItm_Selector implements ISctItm_Selector {
     }
 }
 
+class locker_king extends SctItm_SelectLocker implements ISctItm_Selector {
+    constructor(){
+        super('@L_KING@');
+        this.itms = [
+            new SctItm('@L_COUNTRY@@L_KING01@')
+            ,
+            new SctItm('@L_CITY@@L_KING02@')
+        ];
+    }
+}
+
 
 class selector_king01 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
@@ -3130,9 +3170,21 @@ class selector_king01 extends SctItm_Selector implements ISctItm_Selector {
         this.Add(itms_King01);
     }
 }
+class locker_king01 extends SctItm_SelectLocker implements ISctItm_Selector {
+    constructor(){
+        super('@L_KING01@');
+        this.Add(itms_King01);
+    }
+}
 class selector_king02 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@KING02@');
+        this.Add(itms_King02);
+    }
+}
+class locker_king02 extends SctItm_SelectLocker implements ISctItm_Selector {
+    constructor(){
+        super('@L_KING02@');
         this.Add(itms_King02);
     }
 }
@@ -5236,6 +5288,10 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_king01());
         this.dic_push(new selector_king02());
 
+        this.dic_push(new locker_king());
+        this.dic_push(new locker_king01());
+        this.dic_push(new locker_king02());
+
         this.dic_push(new selector_store());
         
         this.dic_push(new selector_music());
@@ -5329,7 +5385,9 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new locker_specialist());
         this.dic_push(new selector_manypeople());
         this.dic_push(new selector_char());
+        this.dic_push(new locker_char());
         this.dic_push(new selector_manychar());
+        this.dic_push(new locker_manychar());
         this.dic_push(new selector_bigName());
         this.dic_push(new selector_sexage());
         this.dic_push(new locker_sexage());

@@ -4963,19 +4963,16 @@ const itms_book = [
     new SctItm('@L_WHAT@の@L_DO@'),
     new SctItm('@L_WHAT@の@L_FLOWER@'),
     new SctItm('@L_WHAT@に咲く@L_FLOWER@'),
-    new SctItm('@L_WHAT@の@L_CLASS@達'),
-    new SctItm('@L_WHAT@の@L_PART@'),
-    new SctItm('@L_WHAT@の@L_PART@と呼ばれた@L_SEXAGE@'),
-    new SctItm('@L_WHAT@の@L_ANIMAL@'),
-    new SctItm('@L_WHAT@の@L_ANIMAL@と呼ばれた@L_SEXAGE@'),
-    new SctItm('@L_WHAT@最後の@L_CLASS@'),
-    new SctItm('@L_WHAT@に生きる@L_CLASS@達'),
-    new SctItm('@L_WHAT@から消えた@L_CLASS@達'),
+    new SctItm('@L_WHAT@の@L_CHAR@達'),
+    new SctItm('@L_WHAT@の@L_CHAR@'),
+    new SctItm('@L_WHAT@の@L_CHAR@と呼ばれた@L_SEXAGE@'),
+    new SctItm('@L_WHAT@最後の@L_CHAR@'),
+    new SctItm('@L_WHAT@に生きる@L_CHAR@達'),
+    new SctItm('@L_WHAT@から消えた@L_CHAR@達'),
     new SctItm('@L_WHAT@が産んだ@L_TECH@'),
-    new SctItm('@L_WHAT@の@L_SEXAGE@'),
+    new SctItm('@L_WHAT@の@L_CHAR@'),
     new SctItm('@L_WHAT@の@L_FUTURE@'),
     new SctItm('@L_WHAT@の@L_COURSE@'),
-    new SctItm('@L_WHAT@の@L_ITEM@'),
     new SctItm('@L_WHAT@@L_SEXAGE@'),
     new SctItm('@L_WHAT@の@L_SPECIALIST@'),
     new SctItm('@L_WHAT@の@L_SPECIALIST@と呼ばれた@L_SEXAGE@'),
@@ -5936,14 +5933,18 @@ const itms_songColor3 = [
     new SctItm('ブラック')
 ];
 const itms_songGenre = [
+    new SctItm('の歌'),
+    new SctItm('の唄'),
     new SctItm('応援歌'),
     new SctItm('演歌'),
     new SctItm('音頭'),
     new SctItm('哀歌'),
+    new SctItm('恋歌'),
+    new SctItm('愛唱歌'),
     new SctItm('子守歌'),
+    new SctItm('夜曲'),
     new SctItm('ロック'),
     new SctItm('ブルース'),
-    new SctItm('ソング'),
     new SctItm('マンボ'),
     new SctItm('サンバ')
 ];
@@ -5977,7 +5978,6 @@ const itms_songTema = [
     new SctItm('夜空'),
     new SctItm('雨'),
     new SctItm('雪景色'),
-    new SctItm('天下'),
     new SctItm('天下')
 ];
 const itms_Science = [
