@@ -3281,8 +3281,10 @@ const itms_livestock = [
     new SctItm('龍')
 ];
 const itms_sexage = [
-    new SctItm('男'),
-    new SctItm('女'),
+    // new SctItm('男')
+    // ,
+    // new SctItm('女')
+    // ,
     new SctItm('少年'),
     new SctItm('少女'),
     new SctItm('青年'),
@@ -3290,7 +3292,12 @@ const itms_sexage = [
     new SctItm('淑女'),
     new SctItm('老人'),
     new SctItm('老女'),
-    new SctItm('幼児')
+    new SctItm('幼児'),
+    new SctItm('男前'),
+    new SctItm('色男'),
+    new SctItm('美少女'),
+    new SctItm('美少年'),
+    new SctItm('美女'),
 ];
 const itms_partner = [
     new SctItm('知り合い'),
@@ -3875,6 +3882,7 @@ const itms_class = [
     new SctItm('牧場主'),
     new SctItm('ミイラ職人'),
     new SctItm('花売り娘'),
+    new SctItm('看板娘'),
     new SctItm('大道芸人'),
     new SctItm('吟遊詩人'),
     new SctItm('連邦保安官'),
@@ -5313,13 +5321,13 @@ const itms_did = [
     new SctItm('@PEOPLE@から誘われ'),
     new SctItm('@PEOPLE@の振りをし'),
     new SctItm('『@CALL@』と署名し'),
-    new SctItm('@BIGNAME@から『@CALL@』と呼ばれ'),
-    new SctItm('@BIGNAME@から『@CALL@』と噂され'),
-    new SctItm('@BIGNAME@から『@CALL@』と馬鹿にされ'),
-    new SctItm('@BIGNAME@から『@CALL@』と後ろ指を指され'),
-    new SctItm('@BIGNAME@から『@CALL@』と讃えられ'),
-    new SctItm('@BIGNAME@から『@CALL@』と賞賛され'),
-    new SctItm('@BIGNAME@から『@CALL@』とおだてられ'),
+    new SctItm('@CHAR@から『@CALL@』と呼ばれ'),
+    new SctItm('@CHAR@から『@CALL@』と噂され'),
+    new SctItm('@CHAR@から『@CALL@』と馬鹿にされ'),
+    new SctItm('@CHAR@から『@CALL@』と後ろ指を指され'),
+    new SctItm('@CHAR@から『@CALL@』と讃えられ'),
+    new SctItm('@CHAR@から『@CALL@』と賞賛され'),
+    new SctItm('@CHAR@から『@CALL@』とおだてられ'),
     new SctItm('@PART@を連れ'),
     new SctItm('@PART@の手を引い'),
     new SctItm('@PART@を置き去りにし'),
@@ -6221,9 +6229,9 @@ const itms_where = [
     new SctItm('@COUNTRY@で最北端の@WHERE01@'),
     new SctItm('@COUNTRY@で最南端の@WHERE01@'),
     new SctItm('@WHAT@で唯一の@WHERE01@'),
-    new SctItm('@BIGNAME@が愛した@WHERE01@'),
-    new SctItm('@BIGNAME@が通った@SCHOOL01@'),
-    new SctItm('@BIGNAME@が@MOVE2@@SCHOOL01@'),
+    new SctItm('@CHAR@が愛した@WHERE01@'),
+    new SctItm('@CHAR@が通った@SCHOOL01@'),
+    new SctItm('@CHAR@が@MOVE2@@SCHOOL01@'),
     new SctItm('誰も知らない@WHERE01@')
 ];
 const itms_where01 = [
