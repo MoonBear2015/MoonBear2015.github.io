@@ -293,6 +293,8 @@ const   itms_inscription = [
     ,
     new SctItm('@ITEM@と@ITEM@は使いよう')
     ,
+    new SctItm('@MOVE@@ITEM@、@MOVE@@ITEM@')
+    ,
     new SctItm('@ITEM@から出た@ITEM@')
     // ,
     // new SctItm('@COMM1@@ITEM@')
@@ -319,6 +321,8 @@ const   itms_Lock_inscription = [
     new SctItm('@COMM@@L_ITEM@は@L_WHAT@の始まり')
     ,
     new SctItm('@L_WHAT@と@L_ITEM@は使いよう')
+    ,
+    new SctItm('★★@MOVE@@L_ITEM@、@MOVE@@L_WHAT@')
     ,
     new SctItm('@L_ITEM@から出た@L_WHAT@')
     // ,

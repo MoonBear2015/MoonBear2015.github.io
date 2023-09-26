@@ -1133,6 +1133,8 @@ class selector_who2 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('『@L_INSCRIPTION@』')
             ,
+            new SctItm('『@L_TOWN_INSCRIPTION@』')
+            ,
             new SctItm('『@CALL@』と@KEID@@ASSES@@CHAR@')
             ,
             new SctItm('@MANYPEOPLE@より『@CALL@』と@KEID@@ASSES@@CHAR@')
@@ -1620,6 +1622,8 @@ class selector_comment2 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@YESNO@、@L_WHAT@で@DID@てはいけない')
             ,
+            new SctItm('@YESNO@、@L_WHAT@で@DID@てはダメだ')
+            ,
             new SctItm('@YESNO@、@L_WHAT@で@DID@てもよいのか')
             ,
             new SctItm('@YESNO@、@L_WHAT@で@DID@てしまった')
@@ -2042,8 +2046,8 @@ class selector_size1 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('大型化')
             ,
             new SctItm('巨大化')
-            ,
-            new SctItm('禁止')
+            // ,
+            // new SctItm('禁止')
             ,
             new SctItm('停止')
             ,
@@ -3702,8 +3706,6 @@ class selector_say01 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@GROUP@に公表')
             ,
-            new SctItm('@GROUP@に公表')
-            ,
             // new SctItm('@GROUP@で分析')
             // ,
             new SctItm('@GROUP@に発言')
@@ -3726,29 +3728,29 @@ class selector_say01 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@GROUP@にコメント')
             ,
-            new SctItm('@PART@にメール')
-            ,
             new SctItm('@PART@に電話')
             ,
             new SctItm('@PART@に相談')
             ,
             new SctItm('@GROUP@に連絡')
             ,
-            new SctItm('@GROUP@に説明')
-            ,
             new SctItm('@GROUP@にFAX')
             ,
-            new SctItm('@PART@に耳打ち')
-            ,
             new SctItm('@GROUP@に報告書を提出')
-            ,
-            new SctItm('記者会見で発表')
-            ,
-            new SctItm('@LANDMARK@で演説')
             ,
             new SctItm('@GROUP@に糾弾')
             ,
             new SctItm('@GROUP@に追求')
+            ,
+            new SctItm('@GROUP@に告げ口')
+            ,
+            new SctItm('@PART@にメール')
+            ,
+            new SctItm('@PART@に耳打ち')
+            ,
+            new SctItm('記者会見で発表')
+            ,
+            new SctItm('@LANDMARK@で演説')
             ,
             new SctItm('リツイート')
         ];
