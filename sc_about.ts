@@ -322,7 +322,7 @@ const   itms_Lock_inscription = [
     ,
     new SctItm('@L_WHAT@と@L_ITEM@は使いよう')
     ,
-    new SctItm('★★@MOVE@@L_ITEM@、@MOVE@@L_WHAT@')
+    new SctItm('@MOVE@@L_ITEM@、@MOVE@@L_WHAT@')
     ,
     new SctItm('@L_ITEM@から出た@L_WHAT@')
     // ,
