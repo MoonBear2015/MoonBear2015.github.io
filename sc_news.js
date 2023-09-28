@@ -485,7 +485,7 @@ class selector_newsFirst extends SctItm_Selector {
             new SctItm('@DATE@には、@ORDER@@KEI@@L_WHAT@が@KEID@@L_DO@する筈であった。'),
             new SctItm('@KEI@@L_WHAT@が@KEID@@L_DO@@END02B@のは、@DATE@の頃である。'),
             new SctItm('@NEWS_Q01@？ '),
-            new SctItm('@DATE@の、@WHERE@での出来事である。'),
+            new SctItm('@DATE@の@WHERE@での出来事である。'),
             new SctItm('@DATE@に、@WHERE@でそれは起こった。'),
             new SctItm('@DATE@に、私が@WHERE@で、@DID@@DIDEND@時のことである。'),
             new SctItm('@DATE@に、私が@WHERE@に向かい、@DID@@DIDEND@時と記憶している。'),
@@ -529,7 +529,6 @@ class selector_char extends SctItm_Selector {
             new SctItm('@PART@'),
             new SctItm('@COUNTRY@人'),
             new SctItm('@KING@'),
-            new SctItm('@SEXAGE@'),
             new SctItm('『@KEI@@NICK@』と呼ばれた@SEXAGE@')
         ];
     }
@@ -542,7 +541,6 @@ class locker_char extends SctItm_SelectLocker {
             new SctItm('@L_PART@'),
             new SctItm('@L_COUNTRY@人'),
             new SctItm('@L_KING@'),
-            new SctItm('@L_SEXAGE@'),
             new SctItm('『@KEI@@L_NICK@』と呼ばれた@SEXAGE@')
         ];
     }
@@ -1404,8 +1402,10 @@ class selector_they extends SctItm_Selector {
             new SctItm('女子校生達'),
             new SctItm('女子大生達'),
             new SctItm('彼女達'),
-            new SctItm('ＯＬ達'),
-            new SctItm('彼ら'),
+            new SctItm('ＯＬ達')
+            // ,
+            // new SctItm('彼ら')
+            ,
             new SctItm('先人達'),
             new SctItm('労働者達'),
             new SctItm('兵士達'),

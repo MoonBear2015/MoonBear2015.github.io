@@ -728,7 +728,7 @@ class selector_newsFirst extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@NEWS_Q01@？ ')
             ,
-            new SctItm('@DATE@の、@WHERE@での出来事である。')
+            new SctItm('@DATE@の@WHERE@での出来事である。')
             ,
             new SctItm('@DATE@に、@WHERE@でそれは起こった。')
             ,
@@ -796,8 +796,6 @@ class selector_char extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@KING@')
             ,
-            new SctItm('@SEXAGE@')
-            ,
             new SctItm('『@KEI@@NICK@』と呼ばれた@SEXAGE@')
         ];
     }
@@ -813,8 +811,6 @@ class locker_char extends SctItm_SelectLocker implements ISctItm_Selector{
             new SctItm('@L_COUNTRY@人')
             ,
             new SctItm('@L_KING@')
-            ,
-            new SctItm('@L_SEXAGE@')
             ,
             new SctItm('『@KEI@@L_NICK@』と呼ばれた@SEXAGE@')
         ];
@@ -2125,8 +2121,8 @@ class selector_they extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('彼女達')
             ,
             new SctItm('ＯＬ達')
-            ,
-            new SctItm('彼ら')
+            // ,
+            // new SctItm('彼ら')
             ,
             new SctItm('先人達')
             ,
