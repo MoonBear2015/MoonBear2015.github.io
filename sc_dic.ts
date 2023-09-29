@@ -5633,6 +5633,8 @@ const   itms_city = [
     ,
     new SctItm('横浜','CITY/yokohama.jpg')
     ,
+    new SctItm('京都','CITY/kyoto.jpg')
+    ,
     new SctItm('大阪','CITY/osaka.jpg')
     ,
     new SctItm('神戸','CITY/kobe.jpg')
@@ -5654,6 +5656,8 @@ const   itms_city = [
     new SctItm('シカゴ','CITY/Chicago.jpg')
     ,
     new SctItm('マンハッタン','CITY/Manhattan.jpg')
+    ,
+    new SctItm('ロサンゼルス','CITY/LosAngeles.jpg')
     ,
     new SctItm('ハリウッド','CITY/hollywood.jpg')
     ,
