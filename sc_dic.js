@@ -3683,7 +3683,9 @@ const itms_city = [
     new SctItm('テキサス', 'CITY/texas.jpg'),
     new SctItm('江戸', 'CITY/Edo.jpg'),
     new SctItm('ローマ', 'CITY/rome.jpg'),
-    new SctItm('ウィーン', 'CITY/Vienna.jpg')
+    new SctItm('ウィーン', 'CITY/Vienna.jpg'),
+    new SctItm('モスクワ', 'CITY/moscow.jpg'),
+    new SctItm('リオデジャネイロ', 'CITY/Rio.jpg')
 ];
 const itms_do = [
     //

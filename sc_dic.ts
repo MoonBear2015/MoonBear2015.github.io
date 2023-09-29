@@ -5672,6 +5672,10 @@ const   itms_city = [
     new SctItm('ローマ','CITY/rome.jpg')
     ,
     new SctItm('ウィーン','CITY/Vienna.jpg')
+    ,
+    new SctItm('モスクワ','CITY/moscow.jpg')
+    ,
+    new SctItm('リオデジャネイロ','CITY/Rio.jpg')
 ];
 
 
