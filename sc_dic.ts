@@ -5610,11 +5610,11 @@ const   itms_what = [
     ,
     new SctItm('@L_COUNTRY@王国','WHAT/kingdom2.jpg')
     ,
-    new SctItm('@L_COUNTRY@空港','WHAT/airplane.jpg')
+    new SctItm('@L_TOWN@空港','WHAT/airplane.jpg')
     ,
-    new SctItm('@L_COUNTRY@航空','WHAT/airplane.jpg')
+    new SctItm('@L_TOWN@航空','WHAT/airplane.jpg')
     ,
-    new SctItm('@L_COUNTRY@大学','WHAT/college.jpg')
+    new SctItm('@L_TOWN@大学','WHAT/college.jpg')
     ,
     new SctItm('@L_CITY@大学','WHAT/college.jpg')
     ,
@@ -5667,6 +5667,8 @@ const   itms_city = [
     ,
     new SctItm('ハワイ','CITY/Hawaii.jpg')
     ,
+    new SctItm('ホノルル','CITY/Honolulu.jpg')
+    ,
     new SctItm('ラスベガス','CITY/LasVegas.jpg')
     ,
     new SctItm('テキサス','CITY/texas.jpg')
@@ -5680,6 +5682,16 @@ const   itms_city = [
     new SctItm('モスクワ','CITY/moscow.jpg')
     ,
     new SctItm('リオデジャネイロ','CITY/Rio.jpg')
+    ,
+    new SctItm('バンコク','CITY/Bangkok.jpg')
+    ,
+    new SctItm('シンガポール','CITY/Singapore.jpg')
+    ,
+    new SctItm('マカオ','CITY/Macao.jpg')
+    ,
+    new SctItm('グアム','CITY/Guam.jpg')
+    ,
+    new SctItm('ミラノ','CITY/milano.jpg')
 ];
 
 
@@ -5902,7 +5914,7 @@ const   itms_do = [
 ]
 
 const   itms_class = [
-    new SctItm('@L_COUNTRY@大学教授')
+    new SctItm('@L_TOWN@大学教授')
     ,
     new SctItm('大学教授')
     ,
@@ -8202,17 +8214,17 @@ const   itms_book = [
     ,
     new SctItm('@L_WHAT@で聞く@L_MUSIC@')
     ,
-    new SctItm('@L_CLASS@達の@L_WHAT@')
+    new SctItm('@L_CHAR@達の@L_WHAT@')
     ,
-    new SctItm('@L_CLASS@達の@L_DO@')
+    new SctItm('@L_CHAR@達の@L_DO@')
     ,
-    new SctItm('@L_CLASS@達の@L_MUSIC@')
+    new SctItm('@L_CHAR@達の@L_MUSIC@')
     ,
-    new SctItm('@L_CLASS@達の@L_FUTURE@')
+    new SctItm('@L_CHAR@達の@L_FUTURE@')
     ,
-    new SctItm('実録・@L_ITEM@')
+    new SctItm('実録・@L_CHAR@')
     ,
-    new SctItm('@L_ITEM@の真実')
+    new SctItm('@L_CHAR@の真実')
     ,
     new SctItm('@L_WHAT@の戦い')
     ,
@@ -8220,19 +8232,19 @@ const   itms_book = [
     ,
     new SctItm('@L_WHAT@への道')
     ,
-    new SctItm('@L_ITEM@と平和')
+    new SctItm('@L_CHAR@と平和')
     ,
-    new SctItm('@L_ITEM@のひみつ')
+    new SctItm('@L_CHAR@のひみつ')
     ,
-    new SctItm('@L_ITEM@の冒険')
+    new SctItm('@L_CHAR@の冒険')
     ,
-    new SctItm('@L_ITEM@の@L_DO@')
+    new SctItm('@L_CHAR@の@L_DO@')
     ,
-    new SctItm('@L_WHAT@の@L_ITEM@')
+    new SctItm('@L_WHAT@の@L_CHAR@')
     ,
-    new SctItm('週刊 @L_ITEM@')
+    new SctItm('週刊 @L_CHAR@')
     ,
-    new SctItm('月刊 @L_ITEM@')
+    new SctItm('月刊 @L_CHAR@')
     ,
     new SctItm('漫画で読む@L_WHAT@')
     ,
@@ -8242,9 +8254,9 @@ const   itms_book = [
     ,
     new SctItm('@L_FUTURE@のための@L_WHAT@講座')
     ,
-    new SctItm('@L_CLASS@のための@L_WHAT@講座')
+    new SctItm('@L_CHAR@のための@L_WHAT@講座')
     ,
-    new SctItm('@L_CLASS@のための@L_WHAT@大百科')
+    new SctItm('@L_CHAR@のための@L_WHAT@大百科')
     ,
     new SctItm('@L_ANIMAL@でも判る@L_WHAT@講座')
     ,
@@ -8256,16 +8268,13 @@ const   itms_book = [
     ,
     new SctItm('@L_DOING@@DOINGEND@@L_WHAT@')
     ,
-    new SctItm('@L_DOING@@DOINGEND@@L_SEXAGE@')
+    new SctItm('@L_DOING@@DOINGEND@@L_CHAR@')
     ,
     new SctItm('@L_ANIMAL@に乗った@L_SEXAGE@')
     ,
     new SctItm('@L_ANIMAL@と@L_SEXAGE@')
     ,
-    new SctItm('@L_CLASS@@L_SEXAGE@')
-    ,
-    new SctItm('@L_DO@する@L_CLASS@')
-
+    new SctItm('@L_DO@する@L_CHAR@')
 ]
 
 // 伸ばしても繰り返しても問題ない文字
@@ -9048,7 +9057,7 @@ const   itms_did_l = [
     // ,
     // new SctItm('@L_CITY@に住んで')
     ,
-    new SctItm('@L_CITY@に家を建て')
+    new SctItm('@L_TOWN@に家を建て')
     ,
     new SctItm('@MANYPEOPLE@から『@L_ITEM@の@L_SPECIALIST@』と呼ばれ')
     ,
@@ -9751,13 +9760,13 @@ const   itms_mystTitle = [
     ,
     new SctItm('@KEI_A2@@L_CLASS@の@KEI_A2@@MYST_ACTNAME@')
     ,
-    new SctItm('@L_COUNTRY@の@MYST_ACTNAME@')
+    new SctItm('@L_TOWN@の@MYST_ACTNAME@')
     ,
-    new SctItm('@L_COUNTRY@の@KEI_A2@@MYST_ACTNAME@')
+    new SctItm('@L_TOWN@の@KEI_A2@@MYST_ACTNAME@')
     ,
-    new SctItm('@KEI_A2@@L_COUNTRY@の@MYST_ACTNAME@')
+    new SctItm('@KEI_A2@@L_TOWN@の@MYST_ACTNAME@')
     ,
-    new SctItm('@KEI_A2@@L_COUNTRY@の@KEI_A2@@MYST_ACTNAME@')
+    new SctItm('@KEI_A2@@L_TOWN@の@KEI_A2@@MYST_ACTNAME@')
     ,
     new SctItm('@L_BOSSNAME@@L_BOSS@の@MYST_ACTPAPER@')
     ,
@@ -10097,7 +10106,7 @@ const   itms_Award = [
     ,
     new SctItm('@L_WHAT@映画際@AWARDRANK@')
     ,
-    new SctItm('@COUNTRY@映画際@AWARDRANK@')
+    new SctItm('@TOWN@映画際@AWARDRANK@')
     ,
     new SctItm('ミス@L_ITEM@コンテスト@AWARDRANK@')
     ,
@@ -10420,9 +10429,9 @@ const   itms_where = [
     ,
     new SctItm('@GROUP@が@MOVE2@@WHERE01@')
     ,
-    new SctItm('@COUNTRY@で最北端の@WHERE01@')
+    new SctItm('@TOWN@で最北端の@WHERE01@')
     ,
-    new SctItm('@COUNTRY@で最南端の@WHERE01@')
+    new SctItm('@TOWN@で最南端の@WHERE01@')
     ,
     new SctItm('@WHAT@で唯一の@WHERE01@')
     ,

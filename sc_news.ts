@@ -940,7 +940,7 @@ class selector_call2 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@KEI1@@ITEM@')
             ,
-            new SctItm('@COUNTRY@の@KEI@@ITEM@')
+            new SctItm('@TOWN@の@KEI@@ITEM@')
             ,
             new SctItm('@KEI@@ITEM@')
             ,
@@ -961,7 +961,7 @@ class selector_pop1 extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('@KEI1@@ITEM@')
             ,
-            new SctItm('@COUNTRY@の@KEI@@ITEM@')
+            new SctItm('@TOWN@の@KEI@@ITEM@')
             ,
             new SctItm('@MOVE@@ITEM@')
             ,
@@ -1147,15 +1147,15 @@ class selector_who3 extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('@L_DO@する')
             ,
-            new SctItm('@COUNTRY@で産まれた')
+            new SctItm('@TOWN@で産まれた')
             ,
-            new SctItm('@COUNTRY@から来た')
+            new SctItm('@TOWN@から来た')
             ,
-            new SctItm('@COUNTRY@出身の')
+            new SctItm('@TOWN@出身の')
             ,
-            new SctItm('@COUNTRY@在住の')
+            new SctItm('@TOWN@在住の')
             ,
-            new SctItm('@COUNTRY@唯一の')
+            new SctItm('@TOWN@唯一の')
             ,
             new SctItm('『@CALL@』と@KEID@@ASSES@')
             ,
@@ -1270,9 +1270,9 @@ class selector_who4 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@L_CLASS@')
             ,
-            new SctItm('@COUNTRY@出身')
+            new SctItm('@TOWN@出身')
             ,
-            new SctItm('@COUNTRY@在住')
+            new SctItm('@TOWN@在住')
             ,
             new SctItm('『@CALL2@』')
             ,
@@ -2284,9 +2284,9 @@ class selector_many extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('世界で唯一の')
             ,
-            new SctItm('@COUNTRY@最大の')
+            new SctItm('@TOWN@最大の')
             ,
-            new SctItm('@COUNTRY@で唯一の')
+            new SctItm('@TOWN@で唯一の')
         ];
     }
 }
@@ -2333,7 +2333,7 @@ class selector_manyman extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('世界で唯一の')
             ,
-            new SctItm('@COUNTRY@で唯一の')
+            new SctItm('@TOWN@で唯一の')
         ];
     }
 }
@@ -2783,12 +2783,26 @@ class locker_country extends SctItm_SelectLocker implements ISctItm_Selector{
         this.Add(cods_to_itms(cods_country2));
     }
 }
-class locker_Town extends SctItm_SelectLocker implements ISctItm_Selector{
+
+class selector_town extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@TOWN@');
+        this.itms = [
+            new SctItm('@COUNTRY@')
+            ,
+            new SctItm('@CITY@')
+        ];
+    }
+}
+
+class locker_town extends SctItm_SelectLocker implements ISctItm_Selector{
     constructor(){
         super('@L_TOWN@');
-        this.Add(cods_ruby_to_itms(cods_country.slice(1)));
-        this.Add(cods_to_itms(cods_country2));
-        this.Add(itms_city);
+        this.itms = [
+            new SctItm('@L_COUNTRY@')
+            ,
+            new SctItm('@L_CITY@')
+        ];
     }
 }
 
@@ -2995,11 +3009,9 @@ class selector_school extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@CHAR@より『@CALL@』と@ASSES@@SCHOOL01@')
             ,
-            new SctItm('@COUNTRY@で唯一の@SCHOOL02@')
+            new SctItm('@TOWN@で唯一の@SCHOOL02@')
             ,
-            new SctItm('@CITY@で唯一の@SCHOOL02@')
-            ,
-            new SctItm('@COUNTRY@で有数の@SCHOOL02@')
+            new SctItm('@TOWN@で有数の@SCHOOL02@')
         ];
     }
 }
@@ -3007,37 +3019,21 @@ class selector_school01 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@SCHOOL01@');
         this.itms = [
-            new SctItm('@CITY@@SCHOOL02@')
+            new SctItm('@TOWN@@SCHOOL02@')
             ,
-            new SctItm('@CITY@私立@SCHOOL02@')
+            new SctItm('@TOWN@私立@SCHOOL02@')
             ,
-            new SctItm('@CITY@公立@SCHOOL02@')
+            new SctItm('@TOWN@公立@SCHOOL02@')
             ,
-            new SctItm('@CITY@市立@SCHOOL02@')
+            new SctItm('@TOWN@国立@SCHOOL02@')
             ,
-            new SctItm('@CITY@私立第@NUM10@@SCHOOL02@')
+            new SctItm('@TOWN@私立第@NUM10@@SCHOOL02@')
             ,
-            new SctItm('@CITY@公立第@NUM10@@SCHOOL02@')
+            new SctItm('@TOWN@公立第@NUM10@@SCHOOL02@')
             ,
-            new SctItm('@CITY@市立第@NUM10@@SCHOOL02@')
+            new SctItm('@TOWN@国立第@NUM10@@SCHOOL02@')
             ,
-            new SctItm('@CITY@第@NUM10@@SCHOOL02@')
-            ,
-            new SctItm('@COUNTRY@@SCHOOL02@')
-            ,
-            new SctItm('@COUNTRY@私立@SCHOOL02@')
-            ,
-            new SctItm('@COUNTRY@公立@SCHOOL02@')
-            ,
-            new SctItm('@COUNTRY@国立@SCHOOL02@')
-            ,
-            new SctItm('@COUNTRY@私立第@NUM10@@SCHOOL02@')
-            ,
-            new SctItm('@COUNTRY@公立第@NUM10@@SCHOOL02@')
-            ,
-            new SctItm('@COUNTRY@国立第@NUM10@@SCHOOL02@')
-            ,
-            new SctItm('@COUNTRY@第@NUM10@@SCHOOL02@')
+            new SctItm('@TOWN@第@NUM10@@SCHOOL02@')
         ];
     }
 }
@@ -3095,9 +3091,7 @@ class selector_group extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('@COUNTRY@@GROUP01@')
             ,
-            new SctItm('@CITY@@GROUP02@')
-            ,
-            new SctItm('@COUNTRY@@GROUP02@')
+            new SctItm('@TOWN@@GROUP02@')
             ,
             new SctItm('@SCHOOL@')
             ,
@@ -3181,11 +3175,7 @@ class selector_landmark extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@LANDMARK@');
         this.itms = [
-            new SctItm('@COUNTRY@@LANDMARK01@')
-            ,
-            new SctItm('@CITY@@LANDMARK01@')
-            ,
-            new SctItm('@LANDMARK01@')
+            new SctItm('@TOWN@@LANDMARK01@')
         ];
     }
 }
@@ -3201,9 +3191,7 @@ class locker_landmark extends SctItm_SelectLocker implements ISctItm_Selector {
     constructor(){
         super('@L_LANDMARK@');
         this.itms = [
-            new SctItm('@L_COUNTRY@@L_LANDMARK01@')
-            ,
-            new SctItm('@L_CITY@@L_LANDMARK01@')
+            new SctItm('@L_TOWN@@L_LANDMARK01@')
         ];
     }
 }
@@ -3322,9 +3310,7 @@ class selector_dress extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('古着屋で見つけた@DRESS01@')
             ,
-            new SctItm('@COUNTRY@伝統の@DRESS01@')
-            ,
-            new SctItm('@CITY@伝統の@DRESS01@')
+            new SctItm('@TOWN@伝統の@DRESS01@')
         ];
     }
 }
@@ -3390,9 +3376,9 @@ class selector_food extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@FOOD01@')
             ,
-            new SctItm('@COUNTRY@産@FOOD01@')
+            new SctItm('@TOWN@産@FOOD01@')
             ,
-            new SctItm('@COUNTRY@風@FOOD01@')
+            new SctItm('@TOWN@風@FOOD01@')
             ,
             new SctItm('@ITEM@っぽい@FOOD01@')
             ,
@@ -3436,9 +3422,9 @@ class locker_food extends SctItm_SelectLocker implements ISctItm_Selector {
             ,
             new SctItm('@L_FOOD01@')
             ,
-            new SctItm('@L_COUNTRY@産@L_FOOD01@')
+            new SctItm('@L_TOWN@産@L_FOOD01@')
             ,
-            new SctItm('@L_COUNTRY@風@L_FOOD01@')
+            new SctItm('@L_TOWN@風@L_FOOD01@')
             ,
             new SctItm('@L_PART@が作った@L_FOOD01@')
             ,
@@ -5242,7 +5228,8 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_keime2());
         this.dic_push(new selector_country());
         this.dic_push(new locker_country());
-        this.dic_push(new locker_Town());
+        this.dic_push(new selector_town());
+        this.dic_push(new locker_town());
         this.dic_push(new selector_history());
         this.dic_push(new selector_landmark());
         this.dic_push(new selector_landmark01());
