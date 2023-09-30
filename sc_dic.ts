@@ -6767,6 +6767,8 @@ const   itms_tech = [
     ,
     new SctItm('最終奥義','ICON/kung-fu.jpg')
     ,
+    new SctItm('|功夫|くんふー|','ICON/kung-fu2.jpg')
+    ,
     new SctItm('信仰心','ICON/saint.jpg')
     ,
     new SctItm('神頼み','ICON/pray.jpg')
@@ -8836,8 +8838,6 @@ const   itms_did = [
     new SctItm('@PART@を見捨て')
     ,
     new SctItm('@PART@を押しのけ')
-    // ,
-    // new SctItm('デートし')
     ,
     new SctItm('@SAY@し')
     ,
@@ -8848,12 +8848,8 @@ const   itms_did = [
     new SctItm('@PART@に電話し')
     ,
     new SctItm('@PART@にメールし')
-    // ,
-    // new SctItm('お散歩し')
     ,
     new SctItm('@PART@にプロポーズし')
-    // ,
-    // new SctItm('食事し')
     ,
     new SctItm('@PART@に別れ話をし')
     ,
@@ -8884,8 +8880,6 @@ const   itms_did = [
     new SctItm('@ANIMAL@と戦っ')
     ,
     new SctItm('@ANIMAL@を退治し')
-    // ,
-    // new SctItm('@ANIMAL@を檻に入れ')
     ,
     new SctItm('@ANIMAL@を追い出し')
     ,
@@ -8894,8 +8888,6 @@ const   itms_did = [
     new SctItm('@ANIMAL@の絵を描い')
     ,
     new SctItm('@DRESS@を着')
-    // ,
-    // new SctItm('@DRESS@を脱いで')
     ,
     new SctItm('@DRESS@に着替え')
     ,
@@ -8907,13 +8899,11 @@ const   itms_did = [
     ,
     new SctItm('@DRESS@を仕立て直し')
     ,
+    new SctItm('@DRESS@を引き裂い')
+    ,
     new SctItm('@UNDER@をはい')
-    // ,
-    // new SctItm('@UNDER@を脱いで')
     ,
     new SctItm('@UNDER@のサイズを計っ')
-    // ,
-    // new SctItm('ドレスアップし')
     ,
     new SctItm('@SCHOOL@に通っ')
     ,
@@ -8969,6 +8959,10 @@ const   itms_did = [
     ,
     new SctItm('@SCHOOL@の@FESTIVAL@に参加し')
     ,
+    new SctItm('@FESTIVAL@を妨害し')
+    ,
+    new SctItm('@SCHOOL@の@FESTIVAL@を妨害し')
+    ,
     new SctItm('@SONGTYPE@『@SONGTITLE@』を@KEI4@歌っ')
     ,
     new SctItm('@AWARD@を@AWARDGET@し')
@@ -8979,9 +8973,13 @@ const   itms_did = [
     ,
     new SctItm('@LANDMARK@を歩い')
     ,
+    new SctItm('@LANDMARK@を観光し')
+    ,
     new SctItm('@LANDMARK@に走っ')
     ,
     new SctItm('@LANDMARK@で寝泊まりし')
+    ,
+    new SctItm('@LANDMARK@に落書きし')
     ,
     new SctItm('@LANDMARK@を荒らし回っ')
     ,
@@ -8990,6 +8988,10 @@ const   itms_did = [
     new SctItm('@LANDMARK@を建て直し')
     ,
     new SctItm('@LANDMARK@を建築し')
+    ,
+    new SctItm('@LANDMARK@を改築し')
+    ,
+    new SctItm('@LANDMARK@を復旧し')
     ,
     new SctItm('@PLACE@で食事し')
     ,
@@ -9079,6 +9081,16 @@ const   itms_did_l = [
     ,
     new SctItm('@L_TOWN@に家を建て')
     ,
+    new SctItm('@L_KING@に命じられ')
+    ,
+    new SctItm('@L_KING@に即位し')
+    ,
+    new SctItm('@L_KING@に就任し')
+    ,
+    new SctItm('@L_KING@を暗殺し')
+    ,
+    new SctItm('@L_KING@の寝首をかい')
+    ,
     new SctItm('@MANYPEOPLE@から『@L_ITEM@の@L_SPECIALIST@』と呼ばれ')
     ,
     new SctItm('@MANYPEOPLE@から『@L_ITEM@の@L_SPECIALIST@』と噂され')
@@ -9158,14 +9170,14 @@ const   itms_did_l = [
     new SctItm('@L_ANIMAL@の絵を描い')
     ,
     new SctItm('@L_DRESS@を着')
-    // ,
-    // new SctItm('@L_DRESS@を脱いで')
     ,
     new SctItm('@L_DRESS@に着替え')
     ,
     new SctItm('@L_DRESS@を洗濯し')
     ,
     new SctItm('@L_DRESS@を仮縫いし')
+    ,
+    new SctItm('@L_DRESS@を引き裂い')
     ,
     new SctItm('@L_UNDER@をはい')
     // ,
@@ -9180,6 +9192,12 @@ const   itms_did_l = [
     new SctItm('@L_FLOWER@の花を咲かせ')
     ,
     new SctItm('@PLACE@に@L_FLOWER@の花を飾っ')
+    ,
+    new SctItm('@L_FLOWER@の花を|捧|ささ|げ')
+    ,
+    new SctItm('@L_FLOWER@の花を咲かせ')
+    ,
+    new SctItm('@L_FLOWER@の花を飾っ')
     ,
     new SctItm('@L_FLOWER@の花の絵を描い')
     ,
@@ -9201,6 +9219,8 @@ const   itms_did_l = [
     ,
     new SctItm('@L_FRUIT@を叩き売りし')
     ,
+    new SctItm('@L_FRUIT@の種を捨て')
+    ,
     new SctItm('@L_FRUIT@の種を蒔い')
     ,
     new SctItm('@L_FRUIT@の畑を耕し')
@@ -9208,6 +9228,8 @@ const   itms_did_l = [
     new SctItm('@L_RIDE@に乗っ')
     ,
     new SctItm('@L_FESTIVAL@を開催し')
+    ,
+    new SctItm('@L_FESTIVAL@を妨害し')
     ,
     new SctItm('@L_FESTIVAL@に参加し')
     ,
@@ -9223,17 +9245,25 @@ const   itms_did_l = [
     ,
     new SctItm('@L_LANDMARK@を歩い')
     ,
+    new SctItm('@L_LANDMARK@を観光し')
+    ,
     new SctItm('@L_LANDMARK@に走っ')
     ,
     new SctItm('@L_LANDMARK@で寝泊まりし')
     ,
     new SctItm('@L_LANDMARK@に荒らし回っ')
     ,
+    new SctItm('@L_LANDMARK@に落書きし')
+    ,
     new SctItm('@L_LANDMARK@を破壊し')
     ,
     new SctItm('@L_LANDMARK@を建て直し')
     ,
     new SctItm('@L_LANDMARK@を建築し')
+    ,
+    new SctItm('@L_LANDMARK@を改築し')
+    ,
+    new SctItm('@L_LANDMARK@を復旧し')
 ]
 
 const   itms_did_o = [
@@ -9314,6 +9344,14 @@ const   itms_did_o = [
     // new SctItm('@L_CITY@に住んで')
     ,
     new SctItm('@L_CITY@に家を建て')
+    ,
+    new SctItm('@L_KING@に命じられ')
+    ,
+    new SctItm('@L_KING@に即位し')
+    ,
+    new SctItm('@L_KING@に就任し')
+    ,
+    new SctItm('@L_KING@を暗殺し')
     // ,
     // new SctItm('『@L_ITEM@の@L_SPECIALIST@』と呼ばれ')
     // ,
@@ -9394,8 +9432,6 @@ const   itms_did_o = [
     new SctItm('@L_ANIMAL@の絵を描い')
     ,
     new SctItm('@L_DRESS@を着')
-    // ,
-    // new SctItm('@L_DRESS@を脱いで')
     ,
     new SctItm('@L_DRESS@に着替え')
     ,
@@ -9403,9 +9439,9 @@ const   itms_did_o = [
     ,
     new SctItm('@L_DRESS@を仮縫いし')
     ,
+    new SctItm('@L_DRESS@を引き裂い')
+    ,
     new SctItm('@L_UNDER@をはい')
-    // ,
-    // new SctItm('@L_UNDER@を脱いで')
     ,
     new SctItm('@L_UNDER@のサイズを計っ')
     ,
@@ -9445,9 +9481,13 @@ const   itms_did_o = [
     ,
     new SctItm('@L_FESTIVAL@を開催し')
     ,
+    new SctItm('@L_FESTIVAL@を妨害し')
+    ,
     new SctItm('@L_FESTIVAL@に参加し')
     ,
     new SctItm('@L_LANDMARK@を歩い')
+    ,
+    new SctItm('@L_LANDMARK@を観光し')
     ,
     new SctItm('@L_LANDMARK@に走っ')
     ,
@@ -9455,11 +9495,17 @@ const   itms_did_o = [
     ,
     new SctItm('@L_LANDMARK@に荒らし回っ')
     ,
+    new SctItm('@L_LANDMARK@に落書きし')
+    ,
     new SctItm('@L_LANDMARK@を破壊し')
     ,
     new SctItm('@L_LANDMARK@を建て直し')
     ,
     new SctItm('@L_LANDMARK@を建築し')
+    ,
+    new SctItm('@L_LANDMARK@を改築し')
+    ,
+    new SctItm('@L_LANDMARK@を復旧し')
 ]
 
 const   itms_boyName = [
