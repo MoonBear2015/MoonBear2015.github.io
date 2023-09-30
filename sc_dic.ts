@@ -6725,6 +6725,8 @@ const   itms_tech = [
     ,
     new SctItm('テクノロジー','ICON/technology.jpg')
     ,
+    new SctItm('ナノテクノロジー','ICON/nano.jpg')
+    ,
     new SctItm('バイオテクノロジー','ICON/bio.jpg')
     ,
     new SctItm('努力と根性','ICON/manpower.jpg')
@@ -6774,6 +6776,10 @@ const   itms_tech = [
     new SctItm('超能力','ICON/psychokinesis.jpg')
     ,
     new SctItm('魔力','ICON/magic.jpg')
+    ,
+    new SctItm('錬金術','ICON/renkin.jpg')
+    ,
+    new SctItm('呪術','ICON/noroi.jpg')
     ,
     new SctItm('集客力','ICON/spectators.jpg')
     ,
@@ -7917,11 +7923,23 @@ const   itms_ride = [
     ,
     new SctItm('戦艦')
     ,
+    new SctItm('戦艦『@L_TOWN@』')
+    ,
     new SctItm('巡洋艦')
+    ,
+    new SctItm('巡洋艦『@L_TOWN@』')
     ,
     new SctItm('駆逐艦')
     ,
+    new SctItm('駆逐艦『@L_TOWN@』')
+    ,
+    new SctItm('空母')
+    ,
+    new SctItm('空母『@L_TOWN@』')
+    ,
     new SctItm('潜水艦')
+    ,
+    new SctItm('潜水艦『@L_TOWN@』')
     ,
     new SctItm('ロケット')
     ,
@@ -7930,6 +7948,8 @@ const   itms_ride = [
     new SctItm('宇宙船')
     ,
     new SctItm('宇宙戦艦')
+    ,
+    new SctItm('宇宙戦艦『@L_TOWN@』')
     ,
     new SctItm('ＵＦＯ')
 ]
