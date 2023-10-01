@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N03.58';
+    html += ' N03.59';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -732,11 +732,11 @@ class selector_newsFirst extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@DATE@に、@WHERE@でそれは起こった。')
             ,
-            new SctItm('@DATE@に、私が@WHERE@で、@DID@@DIDEND@時のことである。')
+            new SctItm('@DATE@に@WHERE@で、私が@DID@@DIDEND@時のことである。')
             ,
-            new SctItm('@DATE@に、私が@WHERE@に向かい、@DID@@DIDEND@時と記憶している。')
+            new SctItm('@DATE@に@WHERE@に訪れ、@DID@@DIDEND@時と記憶している。')
             ,
-            new SctItm('@DATE@に、@CHAR@が@WHERE@に訪れ、@DID@@DIDEND@時にそれは起こった。')
+            new SctItm('@CHAR@が@WHERE@に訪れ、@DID@@DIDEND@時にそれは起こった。')
         ];
     }
 }
