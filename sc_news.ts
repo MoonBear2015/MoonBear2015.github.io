@@ -1439,6 +1439,26 @@ class selector_why extends SctItm_Selector implements ISctItm_Selector {
     }
 }
 
+class selector_why2 extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@WHY2@');
+        this.itms = [
+            new SctItm('何故か')
+            ,
+            new SctItm('何故だか')
+            ,
+            new SctItm('何があったのか')
+            ,
+            new SctItm('どういう訳か')
+            ,
+            new SctItm('不思議と')
+            ,
+            new SctItm('意外なことに')
+            ,
+            new SctItm('意外にも')
+        ];
+    }
+}
 
 // 最後に句読点をつけられると困る
 class selector_comment extends SctItm_Selector implements ISctItm_Selector {
@@ -1632,11 +1652,19 @@ class selector_comment2 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@L_WHAT@は@KEIFRONT@@KEIM1@')
             ,
-            new SctItm('@L_WHAT@の@L_MANYCHAR@は@KEIFRONT@@KEIM1@')
+            new SctItm('@L_DO@する@L_WHAT@は、@WHY2@@KEIFRONT@@KEIM1@')
             ,
-            new SctItm('L_WHAT@はどうして@KEIFRONT@@KEI@のか')
+            new SctItm('@L_WHAT@の@L_MANYCHAR@は、@WHY2@@KEIFRONT@@KEIM1@')
             ,
-            new SctItm('@L_WHAT@の@L_MANYCHAR@はどうして@KEIFRONT@@KEI@のか')
+            new SctItm('★★@L_WHAT@で@DID@た@L_MANYCHAR@は、@WHY2@@KEIFRONT@@KEIM1@')
+            ,
+            new SctItm('@L_WHAT@は@WHY@@KEIFRONT@@KEI@のか')
+            ,
+            new SctItm('@L_DO@する@L_WHAT@は、@WHY@@KEIFRONT@@KEI@のか')
+            ,
+            new SctItm('@L_WHAT@の@L_MANYCHAR@は、@WHY@@KEIFRONT@@KEI@のか')
+            ,
+            new SctItm('★★@L_WHAT@で@DID@た@L_MANYCHAR@は、@WHY@@KEIFRONT@@KEI@のか')
         ];
     }
 }
@@ -1823,11 +1851,11 @@ class selector_keifront extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('非常に')
             ,
-            new SctItm('怖いくらい')
+            new SctItm('@EMO@いくらい')
             ,
-            new SctItm('恐ろしいほど')
+            new SctItm('@EMO@いほど')
             ,
-            new SctItm('切ないくらいに')
+            new SctItm('@EMO@いくらいに')
             ,
             new SctItm('涙が出るほど')
             ,
@@ -5188,6 +5216,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_newsC02());
         this.dic_push(new selector_newsQ01());
         this.dic_push(new selector_why());
+        this.dic_push(new selector_why2());
         this.dic_push(new selector_end01a());
         this.dic_push(new selector_end01b());
         this.dic_push(new selector_end02a());
