@@ -9,7 +9,7 @@ function set_news()
     html += '<h1>';
     html += 'NEWS';
     html += '<small>';
-    html += ' N03.59';
+    html += ' N03.60';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -1629,6 +1629,14 @@ class selector_comment2 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@WHY@、@L_MANYCHAR@は@DID@てしまうのか')
             ,
             new SctItm('@WHY@、@L_MANYCHAR@は@DID@てしまったんだ')
+            ,
+            new SctItm('@L_WHAT@は@KEIFRONT@@KEIM1@')
+            ,
+            new SctItm('@L_WHAT@の@L_MANYCHAR@は@KEIFRONT@@KEIM1@')
+            ,
+            new SctItm('L_WHAT@はどうして@KEIFRONT@@KEI@のか')
+            ,
+            new SctItm('@L_WHAT@の@L_MANYCHAR@はどうして@KEIFRONT@@KEI@のか')
         ];
     }
 }
