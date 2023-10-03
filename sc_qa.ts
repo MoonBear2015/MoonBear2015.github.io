@@ -9,7 +9,7 @@ function set_qa()
     html += '<h1>';
     html += 'Q&A';
     html += '<small>';
-    html += ' Q01.31';
+    html += ' Q01.32';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -320,15 +320,21 @@ class selector_q_title extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('どうすれば@CLASS@になれますか')
             ,
+            new SctItm('どうすれば@KING@になれますか')
+            ,
             new SctItm('@CLASS@になりたいんです')
+            ,
+            new SctItm('@KING@になりたいんです')
             ,
             new SctItm('@ANIMAL@に追われて困っています')
             ,
             new SctItm('@NICK@の様になりたいのですが')
             ,
             new SctItm('『@CALL2@』と呼ばれて@GRADE@@THINK@しています')
-            ,
-            new SctItm('@CLASS@になりたくて@GRADE@@THINK@しています')
+            // ,
+            // new SctItm('@CLASS@になりたくて@GRADE@@THINK@しています')
+            // ,
+            // new SctItm('@KING@になりたくて@GRADE@@THINK@しています')
         ]
     }
 }
