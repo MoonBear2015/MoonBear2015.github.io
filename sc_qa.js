@@ -7,7 +7,7 @@ function set_qa() {
     html += '<h1>';
     html += 'Q&A';
     html += '<small>';
-    html += ' Q01.32';
+    html += ' Q01.33';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -342,7 +342,8 @@ class selector_q02 extends SctItm_Selector {
             // ,
             // new SctItm('@HABIT@がしたいのですが')
             // ,
-            new SctItm('@CLASS@を止めたいのです'),
+            // new SctItm('@CLASS@を止めたいのです')
+            // ,
             new SctItm('@CLASS@になりたいのです'),
             new SctItm('@CLASS@をしているのです'),
             new SctItm('@CLASS@をしていたのです'),
@@ -432,6 +433,7 @@ class selector_a_title extends SctItm_Selector {
             new SctItm('初めまして、@QUESTER@さん'),
             new SctItm('こんにちは、@QUESTER@さん'),
             new SctItm('お久しぶりですね、@QUESTER@さん'),
+            new SctItm('あなたが@QUESTER@さんでしたか'),
             new SctItm('大変ですね、@QUESTER@さん'),
             new SctItm('それは@QUESTER@さんの問題では？'),
             new SctItm('それは@QUESTER@さんの思い過ごしですよ'),
@@ -457,6 +459,8 @@ class selector_a_title extends SctItm_Selector {
             new SctItm('@QUESTER@さん、もういい加減にして下さい'),
             new SctItm('@QUESTER@さん、もう来ないで下さい'),
             new SctItm('@QUESTER@さん、もう来ないで下さいといったはずです'),
+            new SctItm('いつまで居るつもりですか、@QUESTER@さん'),
+            new SctItm('お帰りください、@QUESTER@さん'),
             new SctItm('だから@QUESTER@さんは@NICKBAD@なんです'),
             new SctItm('@QUESTER@さんが@SAY@しても仕方がありません'),
             new SctItm('@QUESTER@さんが@L_DOING@いる場合ではありません'),
@@ -483,7 +487,9 @@ class selector_a_init extends SctItm_Selector {
             new SctItm('私は@CITY@で@CLASS@をしている@ADVICER@と云います。'),
             new SctItm('私は@CITY@で@DID@ている@ADVICER@と云います。'),
             new SctItm('私は@WHO3@@ADVICER@と云います。'),
-            new SctItm('私は@MANYPEOPLE@から『@CALL2@』と@ASSES@@ADVICER@と云います。')
+            new SctItm('私は@MANYPEOPLE@から『@CALL2@』と@ASSES@@ADVICER@と云います。'),
+            new SctItm('私は@DID@@DIDEND@@ADVICER@と云います。'),
+            new SctItm('私は@DID@@DIDEND@@CLASS@の@ADVICER@と云います。')
         ];
     }
 }

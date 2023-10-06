@@ -8706,10 +8706,10 @@ const   itms_did = [
     new SctItm('@CLASS@を呼び出し')
     ,
     new SctItm('@CLASS@に変身し')
-    ,
-    // new SctItm('@CLASS@になっ')
     // ,
-    new SctItm('@CLASS@を止め')
+    // new SctItm('@CLASS@になっ')
+    // // ,
+    // new SctItm('@CLASS@を止め')
     ,
     new SctItm('@CLASS@を退職し')
     // ,

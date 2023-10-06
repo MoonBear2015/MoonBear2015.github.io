@@ -5283,10 +5283,12 @@ const itms_did = [
     new SctItm('@CLASS@を召還し'),
     new SctItm('@CLASS@を募集し'),
     new SctItm('@CLASS@を呼び出し'),
-    new SctItm('@CLASS@に変身し'),
-    // new SctItm('@CLASS@になっ')
+    new SctItm('@CLASS@に変身し')
     // ,
-    new SctItm('@CLASS@を止め'),
+    // new SctItm('@CLASS@になっ')
+    // // ,
+    // new SctItm('@CLASS@を止め')
+    ,
     new SctItm('@CLASS@を退職し')
     // ,
     // new SctItm('@PLACE@に住んで')
