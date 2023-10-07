@@ -7,7 +7,7 @@ function set_book() {
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B01.85';
+    html += ' B01.86';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -726,23 +726,23 @@ class selector_girlnext extends SctItm_Selector {
         super('@GIRL_NEXT@');
         this.itms = [
             new SctItm('「あら、@KEIN2@@L_BOY@。私はそんな@KEIN2@@O_DOING@なんかいないわ。@KEIN2@@O_DOING@いるだけよ」'),
-            new SctItm('「@L_BOY@ったら@KEIN2@人ね。私は@KEIN2@@O_DOING@いるんじゃなくて、@KEIN2@@O_DOING@いるのよ」'),
-            new SctItm('「そうよ、@KEIN2@@L_BOY@。私が@KEIN2@@O_DOING@いないと、あなたが@KEIN2@@O_DOING@しまうから」'),
-            new SctItm('「@L_BOY@は@KEIN@わね。 私は@KEIN2@@O_DOING@いないと、@KEIN2@@O_DOING@しまうと前に言ったわよね？」'),
-            new SctItm('「私が@KEIN2@@O_DOING@いると、どうして@KEIN2@@L_BOY@は@KEIN2@@O_DOING@いるの？」'),
-            new SctItm('「@KEIN2@@L_BOY@が@KEIN2@@O_DOING@くれないからよ。私は@KEIN2@@O_DOING@みたいのに」'),
-            new SctItm('「こうして@KEIN2@@O_DOING@いると、@KEIN2@@O_DOING@いた@KEIN2@@L_BOY@の@KEIN2@@PART@を思い出すわね」'),
-            new SctItm('「@KEIN2@@L_BOY@？ 私が@KEIN2@@O_DOING@しまうまで、代わりに@KEIDN2@@O_DOING@くれないかしら」'),
-            new SctItm('「それなら、@KEIN2@@L_BOY@も一緒に@KEIN2@@O_DOING@いる筈だったのに、どうして@KEIN2@@O_DOING@いるの？ 」'),
-            new SctItm('「@KEIN2@@L_BOY@は知ってる？ 以前、@KEIN2@@O_DOING@いた私の@KEIN2@@PART@が、今は@KEIN2@@O_DOING@いるんですって」'),
-            new SctItm('「なら、@KEIN2@@L_BOY@が@KEIN2@@O_DOING@みればいいわ。私が@KEIN2@@O_DOING@もいいから」'),
-            new SctItm('「ねえ、@KEIN2@@L_BOY@も一緒に@KEIN2@@O_DOING@くれない？ そのかわり、私が@KEIN2@@O_DOING@もいいから」'),
-            new SctItm('「私が@KEIN2@@O_DOING@いても、@KEIN2@@L_BOY@は@KEIN2@@O_DOING@ばかりいるのね」'),
-            new SctItm('「@KEIN2@@L_BOY@は、私が@KEIN2@@O_DOING@いると、どうして@KEIN2@@O_DOING@いるの」'),
-            new SctItm('「じゃあ、@KEIN2@@L_BOY@も一緒に@KEIN2@@O_DOING@くれない？ @KEIN2@@O_DOING@ばかりいないで」'),
-            new SctItm('「でも、先に@KEIN2@@O_DOING@から、@KEIN2@@O_DOING@、それから――ねえ@KEIN2@@L_BOY@、聞いてるの？」'),
-            new SctItm('「だから、@KEIN2@@L_BOY@は@KEIN2@のよ。@KEIN2@@O_DOING@、次は@KEIN2@@O_DOING@しまわないと」'),
-            new SctItm('「それで@KEIN2@@L_BOY@は、昨日まで@KEIN2@@O_DOING@た筈なのに、今日は@KEIN2@@O_DOING@いるのね」')
+            new SctItm('「@L_BOY@ったら@KEIN2@人ね。私はそんな@KEIN2@@O_DOING@いるんじゃなくて、@KEIN2@@O_DOING@いるのよ」'),
+            new SctItm('「そうよ、@KEIN2@@L_BOY@。私がこんな@KEIN2@@O_DOING@いないと、あなたが@KEIN2@@O_DOING@しまうから」'),
+            new SctItm('「@L_BOY@は@KEIN@わね。 私がこんな@KEIN2@@O_DOING@いないと、@KEIN2@@O_DOING@しまうと前に言ったわよね？」'),
+            new SctItm('「私がこの@KEIN2@@O_DOING@いると、どうして@KEIN2@@L_BOY@は@KEIN2@@O_DOING@いるの？」'),
+            new SctItm('「@KEIN2@@L_BOY@がその@KEIN2@@O_DOING@くれないからよ。私は@KEIN2@@O_DOING@みたいのに」'),
+            new SctItm('「この@KEIN2@@O_DOING@いると、@KEIN2@@O_DOING@いた@KEIN2@@L_BOY@の@KEIN2@@PART@を思い出すわね」'),
+            new SctItm('「@KEIN2@@L_BOY@？ 私がその@KEIN2@@O_DOING@しまうまで、代わりに@KEIDN2@@O_DOING@くれないかしら」'),
+            new SctItm('「それなら、@KEIN2@@L_BOY@も一緒にその@KEIN2@@O_DOING@いる筈だったのに、どうして@KEIN2@@O_DOING@いるの？ 」'),
+            new SctItm('「@KEIN2@@L_BOY@は知ってる？ 以前、その@KEIN2@@O_DOING@いた私の@KEIN2@@PART@が、今は@KEIN2@@O_DOING@いるんですって」'),
+            new SctItm('「なら、@KEIN2@@L_BOY@がその@KEIN2@@O_DOING@みればいいわ。私が@KEIN2@@O_DOING@もいいから」'),
+            new SctItm('「ねえ、@KEIN2@@L_BOY@も一緒にその@KEIN2@@O_DOING@くれない？ そのかわり、私が@KEIN2@@O_DOING@もいいから」'),
+            new SctItm('「私がこの@KEIN2@@O_DOING@いても、@KEIN2@@L_BOY@は@KEIN2@@O_DOING@ばかりいるのね」'),
+            new SctItm('「@KEIN2@@L_BOY@は、私がこの@KEIN2@@O_DOING@いると、どうして@KEIN2@@O_DOING@いるの」'),
+            new SctItm('「じゃあ、@KEIN2@@L_BOY@も一緒にこの@KEIN2@@O_DOING@くれない？ @KEIN2@@O_DOING@ばかりいないで」'),
+            new SctItm('「でも、先にこの@KEIN2@@O_DOING@から、@KEIN2@@O_DOING@、それから――ねえ@KEIN2@@L_BOY@、聞いてるの？」'),
+            new SctItm('「だから、@KEIN2@@L_BOY@は@KEIN2@のよ。この@KEIN2@@O_DOING@、次はその@KEIN2@@O_DOING@しまわないと」'),
+            new SctItm('「それで@KEIN2@@L_BOY@は、昨日までこの@KEIN2@@O_DOING@た筈なのに、今日は@KEIN2@@O_DOING@いるのね」')
         ];
     }
 }

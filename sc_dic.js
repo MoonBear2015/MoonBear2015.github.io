@@ -3787,6 +3787,7 @@ const itms_do = [
     new SctItm('引退', 'DO/solo.jpg'),
     new SctItm('多様化', 'DO/personal.jpg'),
     new SctItm('恋', 'DO/love.jpg'),
+    new SctItm('溺愛', 'DO/love2.jpg'),
     new SctItm('近代化', 'DO/develop.jpg'),
     new SctItm('巨大化', 'DO/Giant.jpg'),
     new SctItm('映画化', 'DO/movie.jpg'),
@@ -5659,7 +5660,6 @@ const itms_did_o = [
     // ,
     // new SctItm('デートし')
     ,
-    new SctItm('@SAY@し'),
     new SctItm('@L_PART@をデートに誘っ'),
     new SctItm('@L_PART@に手紙を書い'),
     new SctItm('@L_PART@に電話し'),
@@ -6241,21 +6241,26 @@ const itms_Store = [
 const itms_where = [
     new SctItm('@WHERE01@'),
     new SctItm('誰も居ない@WHERE01@'),
-    new SctItm('@MANYPEOPLE@が集う@WHERE01@'),
-    new SctItm('@MANYPEOPLE@が暮らす@WHERE01@'),
+    new SctItm('@MANYPEOPLE@の集う@WHERE01@'),
+    new SctItm('@MANYPEOPLE@の暮らす@WHERE01@'),
     new SctItm('@MANYPEOPLE@で賑わう@WHERE01@'),
     new SctItm('@MANYPEOPLE@で人気の@WHERE01@'),
-    new SctItm('@MANYPEOPLE@が@DID@ている@WHERE01@'),
-    new SctItm('@GROUP@が支配する@WHERE01@'),
-    new SctItm('@GROUP@が管理している@WHERE01@'),
-    new SctItm('@GROUP@が所有する@WHERE01@'),
-    new SctItm('@GROUP@が@MOVE2@@WHERE01@'),
+    new SctItm('@MANYPEOPLE@で@DID@ている@WHERE01@'),
+    new SctItm('@GROUP@に支配された@WHERE01@'),
+    new SctItm('@GROUP@に管理されている@WHERE01@'),
+    new SctItm('@GROUP@の所有する@WHERE01@')
+    // ,
+    // new SctItm('@GROUP@が@MOVE2@@WHERE01@')
+    ,
     new SctItm('@TOWN@で最北端の@WHERE01@'),
     new SctItm('@TOWN@で最南端の@WHERE01@'),
     new SctItm('@WHAT@で唯一の@WHERE01@'),
-    new SctItm('@CHAR@が愛した@WHERE01@'),
-    new SctItm('@CHAR@が通った@SCHOOL01@'),
-    new SctItm('@CHAR@が@MOVE2@@SCHOOL01@'),
+    new SctItm('@CHAR@の愛した@WHERE01@')
+    // ,
+    // new SctItm('@CHAR@が通った@SCHOOL01@')
+    // ,
+    // new SctItm('@CHAR@が@MOVE2@@SCHOOL01@')
+    ,
     new SctItm('誰も知らない@WHERE01@')
 ];
 const itms_where01 = [
