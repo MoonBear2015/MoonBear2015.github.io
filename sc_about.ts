@@ -261,9 +261,9 @@ class selector_command1 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@COMM1@');
         this.itms = [
-            new SctItm('@DOING02@@DOINGEND@')
+            new SctItm('@DID00@@DIDEND@')
             ,
-            new SctItm('@L_DOING@@DOINGEND@')
+            new SctItm('@L_DID@@DIDEND@')
             ,
             new SctItm('@SIZE@@END02C@')
             ,

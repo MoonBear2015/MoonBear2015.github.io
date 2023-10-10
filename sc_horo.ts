@@ -466,7 +466,7 @@ class selector_h_info_item extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@KEI@@ITEM@の化身だと')
             ,
-            new SctItm('@DOING@いる神様だと')
+            new SctItm('@DID@いる神様だと')
             ,
             new SctItm('@ANIMAL@の@BODY@を持つ悪魔と')
             ,

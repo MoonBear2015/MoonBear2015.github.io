@@ -331,7 +331,7 @@ class selector_h_info_item extends SctItm_Selector {
             new SctItm('その姿は@NICK@に瓜二つだと'),
             new SctItm('@CLASS@の象徴であると'),
             new SctItm('@KEI@@ITEM@の化身だと'),
-            new SctItm('@DOING@いる神様だと'),
+            new SctItm('@DID@いる神様だと'),
             new SctItm('@ANIMAL@の@BODY@を持つ悪魔と'),
             new SctItm('@FLOWER@の妖精と')
         ];

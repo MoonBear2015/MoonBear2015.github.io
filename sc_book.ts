@@ -9,7 +9,7 @@ function set_book()
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B01.86';
+    html += ' B01.87';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -393,13 +393,13 @@ class selector_bookinfo02 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@B_INFO02@');
         this.itms = [
-            new SctItm('何故、@L_WHAT@では@DOING@いるのか')
+            new SctItm('何故、@L_WHAT@では@DID@いるのか')
             ,
-            new SctItm('何故、@L_WHAT@の@L_CLASS@は@DOING@いるのか')
+            new SctItm('何故、@L_WHAT@の@L_CLASS@は@DID@いるのか')
             ,
             new SctItm('@L_CLASS@だけが知る@L_ITEM@の真実とは')
             ,
-            new SctItm('@PEOPLE@が@DOING@いた理由とは')
+            new SctItm('@PEOPLE@が@DID@いた理由とは')
             ,
             new SctItm('@L_DO@した@L_WHAT@の@COURSE@は')
         ]
@@ -540,9 +540,9 @@ class selector_story00 extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('　ここは@MANY@@KEIP2@@L_CLASS@達が@KEIDP2@暮らす@KEIP2@@L_WHAT@。@STE00@')
             ,
-            new SctItm('　今日も@KEIP2@@L_WHAT@で@DOING02@いるのは、@MANY@@KEIP2@@L_CLASS@達である。@STE00@')
+            new SctItm('　今日も@KEIP2@@L_WHAT@で@DID00@いるのは、@MANY@@KEIP2@@L_CLASS@達である。@STE00@')
             ,
-            new SctItm('　昔々、@KEIP2@@L_WHAT@で、今日も@KEIDP2@@DOING02@いる@KEIP2@@L_CLASS@達。@STE00@')
+            new SctItm('　昔々、@KEIP2@@L_WHAT@で、今日も@KEIDP2@@DID00@いる@KEIP2@@L_CLASS@達。@STE00@')
         ]
     }
 }
@@ -974,15 +974,15 @@ class selector_boyfirst extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@BOY_FIRST@');
         this.itms = [
-            new SctItm('「やあ、@KEIP2@@L_GIRL@。今日は@KEIP2@@O_DOING@いるんだね？」')
+            new SctItm('「やあ、@KEIP2@@L_GIRL@。今日はずいぶん@KEIP2@@O_DID@いるんだね？」')
             ,
-            new SctItm('「おやおや、@KEIP2@@L_GIRL@。どうして@KEIP2@@O_DOING@るんだい？」')
+            new SctItm('「おやおや、@KEIP2@@L_GIRL@。どうしてそんな@KEIP2@@O_DID@るんだい？」')
             ,
-            new SctItm('「だめだよ、@KEIP2@@L_GIRL@。そんな@KEIP2@@O_DOING@はいけないと言っただろう」')
+            new SctItm('「だめだよ、@KEIP2@@L_GIRL@。そんな@KEIP2@@O_DID@はいけないと言っただろう」')
             ,
-            new SctItm('「ああ、@KEIP2@@L_GIRL@。キミはいつも@KEIP2@@O_DOING@いるんだね」')
+            new SctItm('「ああ、@KEIP2@@L_GIRL@。キミはいつも@KEIP2@@O_DID@いるんだね」')
             ,
-            new SctItm('「今日も@KEIP2@@L_GIRL@は@KEIP2@のに、どうして@KEIP2@@O_DOING@いるのかい？」')
+            new SctItm('「今日も@KEIP2@@L_GIRL@は@KEIP2@のに、どうしてそんな@KEIP2@@O_DID@いるのかい？」')
         ]
     }
 }
@@ -991,41 +991,41 @@ class selector_girlnext extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@GIRL_NEXT@');
         this.itms = [
-            new SctItm('「あら、@KEIN2@@L_BOY@。私はそんな@KEIN2@@O_DOING@なんかいないわ。@KEIN2@@O_DOING@いるだけよ」')
+            new SctItm('「あら、@KEIN2@@L_BOY@。私はそんな@KEIN2@@O_DID@なんかいないわ。@KEIN2@@O_DID@いるだけよ」')
             ,
-            new SctItm('「@L_BOY@ったら@KEIN2@人ね。私はそんな@KEIN2@@O_DOING@いるんじゃなくて、@KEIN2@@O_DOING@いるのよ」')
+            new SctItm('「@L_BOY@ったら@KEIN2@人ね。私はそんな@KEIN2@@O_DID@いるんじゃなくて、@KEIN2@@O_DID@いるのよ」')
             ,
-            new SctItm('「そうよ、@KEIN2@@L_BOY@。私がこんな@KEIN2@@O_DOING@いないと、あなたが@KEIN2@@O_DOING@しまうから」')
+            new SctItm('「そうよ、@KEIN2@@L_BOY@。私がこんな@KEIN2@@O_DID@いないと、あなたが@KEIN2@@O_DID@しまうから」')
             ,
-            new SctItm('「@L_BOY@は@KEIN@わね。 私がこんな@KEIN2@@O_DOING@いないと、@KEIN2@@O_DOING@しまうと前に言ったわよね？」')
+            new SctItm('「@L_BOY@は@KEIN@わね。 私がこんな@KEIN2@@O_DID@いないと、@KEIN2@@O_DID@しまうと前に言ったわよね？」')
             ,
-            new SctItm('「私がこの@KEIN2@@O_DOING@いると、どうして@KEIN2@@L_BOY@は@KEIN2@@O_DOING@いるの？」')
+            new SctItm('「私がこの@KEIN2@@O_DID@いると、どうして@KEIN2@@L_BOY@は@KEIN2@@O_DID@いるの？」')
             ,
-            new SctItm('「@KEIN2@@L_BOY@がその@KEIN2@@O_DOING@くれないからよ。私は@KEIN2@@O_DOING@みたいのに」')
+            new SctItm('「@KEIN2@@L_BOY@がその@KEIN2@@O_DID@くれないからよ。私は@KEIN2@@O_DID@みたいのに」')
             ,
-            new SctItm('「この@KEIN2@@O_DOING@いると、@KEIN2@@O_DOING@いた@KEIN2@@L_BOY@の@KEIN2@@PART@を思い出すわね」')
+            new SctItm('「この@KEIN2@@O_DID@いると、@KEIN2@@O_DID@いた@KEIN2@@L_BOY@の@KEIN2@@PART@を思い出すわね」')
             ,
-            new SctItm('「@KEIN2@@L_BOY@？ 私がその@KEIN2@@O_DOING@しまうまで、代わりに@KEIDN2@@O_DOING@くれないかしら」')
+            new SctItm('「@KEIN2@@L_BOY@？ 私がその@KEIN2@@O_DID@しまうまで、代わりに@KEIDN2@@O_DID@くれないかしら」')
             ,
-            new SctItm('「それなら、@KEIN2@@L_BOY@も一緒にその@KEIN2@@O_DOING@いる筈だったのに、どうして@KEIN2@@O_DOING@いるの？ 」')
+            new SctItm('「それなら、@KEIN2@@L_BOY@も一緒にその@KEIN2@@O_DID@いる筈だったのに、どうして@KEIN2@@O_DID@いるの？ 」')
             ,
-            new SctItm('「@KEIN2@@L_BOY@は知ってる？ 以前、その@KEIN2@@O_DOING@いた私の@KEIN2@@PART@が、今は@KEIN2@@O_DOING@いるんですって」')
+            new SctItm('「@KEIN2@@L_BOY@は知ってる？ 以前、その@KEIN2@@O_DID@いた私の@KEIN2@@PART@が、今は@KEIN2@@O_DID@いるんですって」')
             ,
-            new SctItm('「なら、@KEIN2@@L_BOY@がその@KEIN2@@O_DOING@みればいいわ。私が@KEIN2@@O_DOING@もいいから」')
+            new SctItm('「なら、@KEIN2@@L_BOY@がその@KEIN2@@O_DID@みればいいわ。私が@KEIN2@@O_DID@もいいから」')
             ,
-            new SctItm('「ねえ、@KEIN2@@L_BOY@も一緒にその@KEIN2@@O_DOING@くれない？ そのかわり、私が@KEIN2@@O_DOING@もいいから」')
+            new SctItm('「ねえ、@KEIN2@@L_BOY@も一緒にその@KEIN2@@O_DID@くれない？ そのかわり、私が@KEIN2@@O_DID@もいいから」')
             ,
-            new SctItm('「私がこの@KEIN2@@O_DOING@いても、@KEIN2@@L_BOY@は@KEIN2@@O_DOING@ばかりいるのね」')
+            new SctItm('「私がこの@KEIN2@@O_DID@いても、@KEIN2@@L_BOY@は@KEIN2@@O_DID@ばかりいるのね」')
             ,
-            new SctItm('「@KEIN2@@L_BOY@は、私がこの@KEIN2@@O_DOING@いると、どうして@KEIN2@@O_DOING@いるの」')
+            new SctItm('「@KEIN2@@L_BOY@は、私がこの@KEIN2@@O_DID@いると、どうして@KEIN2@@O_DID@いるの」')
             ,
-            new SctItm('「じゃあ、@KEIN2@@L_BOY@も一緒にこの@KEIN2@@O_DOING@くれない？ @KEIN2@@O_DOING@ばかりいないで」')
+            new SctItm('「じゃあ、@KEIN2@@L_BOY@も一緒にこの@KEIN2@@O_DID@くれない？ @KEIN2@@O_DID@ばかりいないで」')
             ,
-            new SctItm('「でも、先にこの@KEIN2@@O_DOING@から、@KEIN2@@O_DOING@、それから――ねえ@KEIN2@@L_BOY@、聞いてるの？」')
+            new SctItm('「でも、先にこの@KEIN2@@O_DID@から、@KEIN2@@O_DID@、それから――ねえ@KEIN2@@L_BOY@、聞いてるの？」')
             ,
-            new SctItm('「だから、@KEIN2@@L_BOY@は@KEIN2@のよ。この@KEIN2@@O_DOING@、次はその@KEIN2@@O_DOING@しまわないと」')
+            new SctItm('「だから、@KEIN2@@L_BOY@は@KEIN2@のよ。この@KEIN2@@O_DID@、次はその@KEIN2@@O_DID@しまわないと」')
             ,
-            new SctItm('「それで@KEIN2@@L_BOY@は、昨日までこの@KEIN2@@O_DOING@た筈なのに、今日は@KEIN2@@O_DOING@いるのね」')
+            new SctItm('「それで@KEIN2@@L_BOY@は、昨日までこの@KEIN2@@O_DID@た筈なのに、今日は@KEIN2@@O_DID@いるのね」')
         ]
     }
 }
@@ -1034,35 +1034,35 @@ class selector_boynext extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@BOY_NEXT@');
         this.itms = [
-            new SctItm('「でも、@KEIP2@@L_GIRL@が@O_DOING@いると、僕は@KEIP2@@O_DOING@しまうんだ」')
+            new SctItm('「でも、@KEIP2@@L_GIRL@がその@O_DID@いると、僕は@KEIP2@@O_DID@しまうんだ」')
             ,
-            new SctItm('「ねえ、@KEIP2@@L_GIRL@。僕が@KEIP2@@O_DOING@いるのは、君も一緒に@KEIP2@@O_DOING@欲しいからなんだ」')
+            new SctItm('「ねえ、@KEIP2@@L_GIRL@。僕がこの@KEIP2@@O_DID@いるのは、君も一緒に@KEIP2@@O_DID@欲しいからなんだ」')
             ,
-            new SctItm('「それじゃあ、@KEIP2@@L_GIRL@が@KEIP2@@O_DOING@、僕は@KEIP2@@O_DOING@いればいいと言うのかい？」')
+            new SctItm('「それじゃあ、@KEIP2@@L_GIRL@がその@KEIP2@@O_DID@、僕はこんな@KEIP2@@O_DID@いればいいと言うのかい？」')
             ,
-            new SctItm('「@KEIP2@@L_GIRL@、@KEIP2@@O_DOING@ばかりいると、僕は@KEIP2@@O_DOING@しまいたくなる」')
+            new SctItm('「@KEIP2@@L_GIRL@、そんな@KEIP2@@O_DID@ばかりいると、僕は@KEIP2@@O_DID@しまいたくなる」')
             ,
-            new SctItm('「僕は、@KEIP2@@L_GIRL@が@KEIP2@@O_DOING@いると、自分が@KEIP2@@O_DOING@いた頃を思い出してしまうんだ」')
+            new SctItm('「僕は、@KEIP2@@L_GIRL@が@KEIP2@@O_DID@いると、自分が@KEIP2@@O_DID@いた頃を思い出してしまうんだ」')
             ,
-            new SctItm('「確か、@KEIP2@@L_GIRL@が@KEIP2@@O_DOING@いたのは、僕が@KEIP2@@O_DOING@いた頃だったよね」')
+            new SctItm('「確か、@KEIP2@@L_GIRL@が@KEIP2@@O_DID@いたのは、僕が@KEIP2@@O_DID@いた頃だったよね」')
             ,
-            new SctItm('「でも、僕は@KEIP2@@O_DOING@いるより、@KEIP2@@O_DOING@いる@KEIP2@@L_GIRL@の方が好きなんだ」')
+            new SctItm('「でも、僕はこの@KEIP2@@O_DID@いるより、@KEIP2@@O_DID@いる@KEIP2@@L_GIRL@の方が好きなんだ」')
             ,
-            new SctItm('「そういえば、僕が@KEIP2@@O_DOING@いると、いつも@KEIP2@@L_GIRL@は@KEIP2@@O_DOING@いたね」')
+            new SctItm('「そういえば、僕がこの@KEIP2@@O_DID@いると、いつも@KEIP2@@L_GIRL@は@KEIP2@@O_DID@いたね」')
             ,
-            new SctItm('「じゃあ、僕が@KEIP2@@O_DOING@、@KEIP2@@L_GIRL@は@KEIP2@@O_DOING@みるのはどうだい？」')
+            new SctItm('「じゃあ、僕がこの@KEIP2@@O_DID@、@KEIP2@@L_GIRL@は@KEIP2@@O_DID@みるのはどうだい？」')
             ,
-            new SctItm('「@KEIP2@@L_GIRL@は@KEIP2@@O_DOING@いるより、@KEIP2@@O_DOING@いた方が@KEIP3@な」')
+            new SctItm('「@KEIP2@@L_GIRL@はそんな@KEIP2@@O_DID@いるより、@KEIP2@@O_DID@いた方が@KEIP3@な」')
             ,
-            new SctItm('「@KEIP2@@O_DOING@も仕方ないよ。僕は@KEIP2@@L_GIRL@とこうして@KEIP2@@O_DOING@いたいんだ」')
+            new SctItm('「そんな@KEIP2@@O_DID@も仕方ないよ。僕は@KEIP2@@L_GIRL@とこうして@KEIP2@@O_DID@いたいんだ」')
             ,
-            new SctItm('「僕は@KEIP2@@O_DOING@いるより、@KEIP2@@L_GIRL@と@KEIP2@@O_DOING@いる方が@KEIP3@な」')
+            new SctItm('「僕はそんな@KEIP2@@O_DID@いるより、@KEIP2@@L_GIRL@と@KEIP2@@O_DID@いる方が@KEIP3@な」')
             ,
-            new SctItm('「@KEIP2@@O_DOING@いる@KEIP2@@L_GIRL@は、@KEIP2@@O_DOING@いた@KEIP2@@PART@にそっくりだよね」')
+            new SctItm('「その@KEIP2@@O_DID@いる@KEIP2@@L_GIRL@は、@KEIP2@@O_DID@いた@KEIP2@@PART@にそっくりだよね」')
             ,
-            new SctItm('「@KEIP2@@O_DOING@いる@KEIP2@@L_GIRL@は@GRADE@@KEIP3@けど、@KEIP2@@O_DOING@いる@KEIP2@@L_GIRL@も@KEIP3@よね」')
+            new SctItm('「その@KEIP2@@O_DID@いる@KEIP2@@L_GIRL@は@GRADE@@KEIP3@けど、@KEIP2@@O_DID@いる@KEIP2@@L_GIRL@も@KEIP3@よね」')
             ,
-            new SctItm('「最近、@KEIP2@@L_GIRL@は@KEIP2@@O_DOING@ばかりいるから、たまには@KEIP2@@O_DOING@みたらどうかと思ってさ」')
+            new SctItm('「最近、@KEIP2@@L_GIRL@はそんな@KEIP2@@O_DID@ばかりいるから、たまには@KEIP2@@O_DID@みたらどうかと思ってさ」')
         ]
     }
 }
@@ -1121,13 +1121,13 @@ class selector_mystStage extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@MYST_STAGE@');
         this.itms = [
-            new SctItm('@L_TOWN@の@KEI_B2@@L_LANDMARK@では、@KEI_B2@@L_CLASS@達が、@ALSODAY@@KEID_B@@KEID_B@@DOING@暮らしていた。')
+            new SctItm('@L_TOWN@の@KEI_B2@@L_LANDMARK@では、@KEI_B2@@L_CLASS@達が、@ALSODAY@@KEID_B@@KEID_B@@DID@暮らしていた。')
             ,
-            new SctItm('@KEI_B2@@L_TOWN@が誇る@L_LANDMARK@では、@KEI_B2@@L_CLASS@達が、@ALSODAY@@KEID_B@@KEID_B@@DOING@いた。')
+            new SctItm('@KEI_B2@@L_TOWN@が誇る@L_LANDMARK@では、@KEI_B2@@L_CLASS@達が、@ALSODAY@@KEID_B@@KEID_B@@DID@いた。')
             ,
-            new SctItm('@KEI_B2@@L_TOWN@の@L_LANDMARK@には、@ALSODAY@@L_DOING@いる@KEI_B2@@L_CLASS@達の@KEI_B2@姿があった。')
+            new SctItm('@KEI_B2@@L_TOWN@の@L_LANDMARK@には、@ALSODAY@@L_DID@いる@KEI_B2@@L_CLASS@達の@KEI_B2@姿があった。')
             ,
-            new SctItm('@KEI_B2@@L_TOWN@の@L_LANDMARK@では、@KEI_B2@@L_CLASS@達が、@ALSODAY@@DOING@@KEID_B@過ごしていた。')
+            new SctItm('@KEI_B2@@L_TOWN@の@L_LANDMARK@では、@KEI_B2@@L_CLASS@達が、@ALSODAY@@DID@@KEID_B@過ごしていた。')
             ,
             new SctItm('@L_TOWN@の@L_LANDMARK@は@GRADE@@KEID_B@@KEID_B@、@KEI_B2@@L_CLASS@達が集う@KEI_B2@空間が広がっていた。')
             ,
@@ -1169,13 +1169,13 @@ class selector_mystApp extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('「ほら、あの@KEI_B2@@L_CLASS@達を見て下さいよ@L_BOSSNAME@@L_BOSS@」<br>「そうだね、さすが@L_TOWN@の@L_CLASS@達は@KEI_B3@ねぇ@L_ASS@の@L_GIRL@君」')
             ,
-            new SctItm('「ちょっとぉ！ そんなに@DOING02@ちゃだめですよ@L_BOSSNAME@@L_BOSS@！」<br>「いやいや@L_ASS@の@L_GIRL@君、@L_TOWN@の@L_LANDMARK@は@KEI_B3@から、つい――」')
+            new SctItm('「ちょっとぉ！ そんなに@DID00@ちゃだめですよ@L_BOSSNAME@@L_BOSS@！」<br>「いやいや@L_ASS@の@L_GIRL@君、@L_TOWN@の@L_LANDMARK@は@KEI_B3@から、つい――」')
             ,
             new SctItm('「いやあ、@L_TOWN@は相変わらず@KEI_B3@ね、@L_ASS@の@L_GIRL@君」<br>「そうですね、@L_TOWN@の人は@KEI_B@ですからね、@L_BOSSNAME@@L_BOSS@」')
             ,
             new SctItm('「@L_TOWN@の@LANDMARK@って、@GRADE@@KEI_B3@ね、@L_ASS@の@L_GIRL@君」<br>「だから、ここは@L_LANDMARK@ですってば、@L_BOSSNAME@@L_BOSS@」')
             ,
-            new SctItm('「@L_TOWN@の@L_CLASS@達は、@KEI_B2@人ばかりだね、@L_ASS@の@L_GIRL@君」<br>「いつも@DOING02@ますからね、@L_BOSSNAME@@L_BOSS@」')
+            new SctItm('「@L_TOWN@の@L_CLASS@達は、@KEI_B2@人ばかりだね、@L_ASS@の@L_GIRL@君」<br>「いつも@DID00@ますからね、@L_BOSSNAME@@L_BOSS@」')
             ,
             new SctItm('「@L_ASS@の@L_GIRL@君、この@KEI_B2@@L_LANDMARK@がそうなのかい？」<br>「はい。間違いありません、@L_BOSSNAME@@L_BOSS@」')
             ,
@@ -1239,9 +1239,9 @@ class selector_mystReaction extends SctItm_Selector implements ISctItm_Selector 
             ,
             new SctItm('「@L_BOSS@、今のが・・・・・」<br>「うむ。伝承の通りだ、@L_GIRL@君」')
             ,
-            new SctItm('「事件だぞ@L_GIRL@君！ ――って、こらこら！ @DOING02@いる場合じゃないぞ！」<br>「えっ！？ は、はい、@L_BOSS@！」')
+            new SctItm('「事件だぞ@L_GIRL@君！ ――って、こらこら！ @DID00@いる場合じゃないぞ！」<br>「えっ！？ は、はい、@L_BOSS@！」')
             ,
-            new SctItm('「ちょ、ちょっと@L_BOSSNAME@@L_BOSS@！ 事件みたいですよ@L_BOSS@！！」<br>「待ってくれ@L_GIRL@君、この@DOING02@から――」<br>「@L_BOSS@！ そんなの後にして下さい！」<br>「わ、判った判った――」')
+            new SctItm('「ちょ、ちょっと@L_BOSSNAME@@L_BOSS@！ 事件みたいですよ@L_BOSS@！！」<br>「待ってくれ@L_GIRL@君、この@DID00@から――」<br>「@L_BOSS@！ そんなの後にして下さい！」<br>「わ、判った判った――」')
             ,
             new SctItm('「行ってみましょう！ ――って、@L_BOSS@？ どこ行ったんですか@L_BOSS@！」<br>「――ああ、ここだよ@L_GIRL@君」<br>「もう！ 早くして下さい@L_BOSS@！」<br>「わ、判ったよ@L_GIRL@君」')
             ,
@@ -1260,7 +1260,7 @@ class selector_mystSpot extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('　@KEI_B2@@L_LANDMARK@の事故現場には、@MANY@@L_CLASS@達が野次馬となって集まり、その中心に殺された@KEI_A2@@L_CLASS@が倒れていた。<br><br>@MYST_RES01@')
             ,
-            new SctItm('　@KEI_B2@@L_LANDMARK@の事故現場には、今、正に殺された@KEI_A2@@L_CLASS@の遺体。辺りには、そしらぬ@KEI_B2@顔で行き交い、@L_DOING@いる@KEI_B2@@L_CLASS@達の姿。<br><br>@MYST_RES01@')
+            new SctItm('　@KEI_B2@@L_LANDMARK@の事故現場には、今、正に殺された@KEI_A2@@L_CLASS@の遺体。辺りには、そしらぬ@KEI_B2@顔で行き交い、@L_DID@いる@KEI_B2@@L_CLASS@達の姿。<br><br>@MYST_RES01@')
             ,
             new SctItm('　駆けつけた@KEI_B2@現場には、一人の@KEI_A2@@L_CLASS@の遺体が、今、正に悲鳴を上げて殺されたままの姿で残されていた。その周囲でざわめく、@MANY@@KEI_B2@@L_CLASS@達。<br><br>@MYST_RES01@')
             ,
@@ -1310,7 +1310,7 @@ class selector_mystHealingB extends SctItm_Selector implements ISctItm_Selector 
         this.itms = [
             new SctItm('――@KEI_B2@@L_CLASS@の@NAME@@AGE@は一言、<br>「さあ？」')
             ,
-            new SctItm('――@KEI_B2@@L_CLASS@の@NAME@@AGE@曰く、<br>「いやあ、@DOING02@て気付かなかったっすよ」')
+            new SctItm('――@KEI_B2@@L_CLASS@の@NAME@@AGE@曰く、<br>「いやあ、@DID00@て気付かなかったっすよ」')
             ,
             new SctItm('――@KEI_B2@@L_CLASS@の@NAME@@AGE@が言うには、<br>「そういや、昨日も@NUM10@人ぐらいヤられてましたね」')
             ,
@@ -1330,7 +1330,7 @@ class selector_mystHealingA extends SctItm_Selector implements ISctItm_Selector 
     constructor(){
         super('@MYST_HEAR_A@');
         this.itms = [
-            new SctItm('――@KEI_A2@@L_CLASS@の@NAME@@AGE@の問い返す。<br>「ああ、@DOING02@いた人ですね。どうしたんですか？」')
+            new SctItm('――@KEI_A2@@L_CLASS@の@NAME@@AGE@の問い返す。<br>「ああ、@DID00@いた人ですね。どうしたんですか？」')
             ,
             new SctItm('――@KEI_A2@@L_CLASS@の@NAME@@AGE@の答えは、<br>「@KEIFRONT@@KEI_A2@事件ですよね。まったく」')
             ,
@@ -1338,7 +1338,7 @@ class selector_mystHealingA extends SctItm_Selector implements ISctItm_Selector 
             ,
             new SctItm('――@KEI_A2@@L_CLASS@の@NAME@@AGE@は溜息交じりに、<br>「最近の@L_TOWN@は@KEI_B3@から・・・」')
             ,
-            new SctItm('――@KEI_A2@@L_CLASS@の@NAME@@AGE@は空を仰いで、<br>「いや、@DOING02@いましたから。私は」')
+            new SctItm('――@KEI_A2@@L_CLASS@の@NAME@@AGE@は空を仰いで、<br>「いや、@DID00@いましたから。私は」')
         ]
     }
 }
@@ -1669,7 +1669,7 @@ class book_docs_maker extends news_docs_maker {
         this.dic_push(new OneTime_food());
         this.dic_push(new OneTime_livestock());
         this.dic_push(new OneTime_fish());
-        this.dic_push(new Onetime_doing());
+        this.dic_push(new OneTime_drink());
         this.dic_push(new Onetime_did());
 
         this.dic_push(new selector_boyfirst());

@@ -533,9 +533,9 @@ class selector_s_info03 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('もう、@L_CAMPANY@ @L_SHOP@の無い@L_PLACE@など有り得ません')
             ,
-            new SctItm('あなたも@KEI1@@L_CAMPANY@ @L_SHOP@で@DOING@みませんか')
+            new SctItm('あなたも@KEI1@@L_CAMPANY@ @L_SHOP@で@DID@みませんか')
             ,
-            new SctItm('あなたも@KEI1@@L_CAMPANY@ @L_SHOP@で@DOING@みましょう')
+            new SctItm('あなたも@KEI1@@L_CAMPANY@ @L_SHOP@で@DID@みましょう')
         ]
     }
 }
@@ -573,9 +573,9 @@ class selector_s_info05 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@KEI@@PLACE@へと出かけてみませんか')
             ,
-            new SctItm('@DOING@みませんか')
+            new SctItm('@DID@みませんか')
             ,
-            new SctItm('@DOING@みましょう')
+            new SctItm('@DID@みましょう')
         ]
     }
 }
@@ -674,7 +674,7 @@ class selector_ShopComentBad extends SctItm_Selector implements ISctItm_Selector
             ,
             new SctItm('あまり@HABIT@はしないから')
             ,
-            new SctItm('@DOING@いるので@L_SHOP_B@は要りません')
+            new SctItm('@DID@いるので@L_SHOP_B@は要りません')
         ];
     }
 }
