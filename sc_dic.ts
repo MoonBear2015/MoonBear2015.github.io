@@ -10587,7 +10587,7 @@ const   itms_where = [
     ,
     new SctItm('@MANYPEOPLE@で人気の@WHERE01@')
     ,
-    new SctItm('@MANYPEOPLE@で@DID@ている@WHERE01@')
+    new SctItm('@MANYPEOPLE@で@DID@いる@WHERE01@')
     ,
     new SctItm('@GROUP@に支配された@WHERE01@')
     ,

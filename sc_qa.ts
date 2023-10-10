@@ -719,7 +719,7 @@ class selector_a_init extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('私は@CITY@で@CLASS@をしている@ADVICER@と云います。')
             ,
-            new SctItm('私は@CITY@で@DID@ている@ADVICER@と云います。')
+            new SctItm('私は@CITY@で@DID@いる@ADVICER@と云います。')
             ,
             new SctItm('私は@WHO3@@ADVICER@と云います。')
             ,

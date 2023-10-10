@@ -485,7 +485,7 @@ class selector_a_init extends SctItm_Selector {
             new SctItm('@A_SENT@'),
             new SctItm('私は@COUNTRY@で@CLASS@をしている@ADVICER@と云います。'),
             new SctItm('私は@CITY@で@CLASS@をしている@ADVICER@と云います。'),
-            new SctItm('私は@CITY@で@DID@ている@ADVICER@と云います。'),
+            new SctItm('私は@CITY@で@DID@いる@ADVICER@と云います。'),
             new SctItm('私は@WHO3@@ADVICER@と云います。'),
             new SctItm('私は@MANYPEOPLE@から『@CALL2@』と@ASSES@@ADVICER@と云います。'),
             new SctItm('私は@DID@@DIDEND@@ADVICER@と云います。'),
