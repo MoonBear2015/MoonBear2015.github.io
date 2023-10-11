@@ -8804,8 +8804,8 @@ const   itms_did = [
     // new SctItm('@CLASS@を止めて')
     ,
     new SctItm('@CLASS@を退職して')
-    // ,
-    // new SctItm('@PLACE@に住んでて')
+    ,
+    new SctItm('@PLACE@に住んで')
     ,
     new SctItm('@COUNTRY@に移住して')
     ,
@@ -8981,6 +8981,8 @@ const   itms_did = [
     ,
     new SctItm('@DRESS@を着て')
     ,
+    new SctItm('@DRESS@を脱いで')
+    ,
     new SctItm('@DRESS@に着替えて')
     ,
     new SctItm('@DRESS@を洗濯して')
@@ -8994,6 +8996,8 @@ const   itms_did = [
     new SctItm('@DRESS@を引き裂いて')
     ,
     new SctItm('@UNDER@をはいて')
+    ,
+    new SctItm('@UNDER@を脱いで')
     ,
     new SctItm('@UNDER@のサイズを計って')
     ,
@@ -9174,8 +9178,8 @@ const   itms_did_l = [
     new SctItm('@L_COUNTRY@を支配して')
     ,
     new SctItm('@L_COUNTRY@を征服して')
-    // ,
-    // new SctItm('@L_CITY@に住んでて')
+    ,
+    new SctItm('@L_CITY@に住んで')
     ,
     new SctItm('@L_TOWN@に家を建てて')
     ,
@@ -9269,6 +9273,8 @@ const   itms_did_l = [
     ,
     new SctItm('@L_DRESS@を着て')
     ,
+    new SctItm('@L_DRESS@を脱いで')
+    ,
     new SctItm('@L_DRESS@に着替えて')
     ,
     new SctItm('@L_DRESS@を洗濯して')
@@ -9278,8 +9284,8 @@ const   itms_did_l = [
     new SctItm('@L_DRESS@を引き裂いて')
     ,
     new SctItm('@L_UNDER@をはいて')
-    // ,
-    // new SctItm('@L_UNDER@を脱いでて')
+    ,
+    new SctItm('@L_UNDER@を脱いで')
     ,
     new SctItm('@L_UNDER@のサイズを計って')
     ,
@@ -9420,10 +9426,10 @@ const   itms_did_o = [
     new SctItm('@O_DRINK@をお替わりして')
     ,
     new SctItm('@O_DRINK@で乾杯して')
-    // ,
-    // new SctItm('@L_CLASS@に憧れて')
-    // ,
-    // new SctItm('@L_CLASS@に恋をして')
+    ,
+    new SctItm('@L_CLASS@に憧れて')
+    ,
+    new SctItm('@L_CLASS@に恋をして')
     ,
     new SctItm('@L_CLASS@を目指して')
     ,
@@ -9444,8 +9450,8 @@ const   itms_did_o = [
     new SctItm('@L_COUNTRY@を支配して')
     ,
     new SctItm('@L_COUNTRY@を征服して')
-    // ,
-    // new SctItm('@L_CITY@に住んでて')
+    ,
+    new SctItm('@L_CITY@に住んで')
     ,
     new SctItm('@L_CITY@に家を建てて')
     ,
@@ -9535,6 +9541,8 @@ const   itms_did_o = [
     ,
     new SctItm('@L_DRESS@を着て')
     ,
+    new SctItm('@L_DRESS@を脱いで')
+    ,
     new SctItm('@L_DRESS@に着替えて')
     ,
     new SctItm('@L_DRESS@を洗濯して')
@@ -9544,6 +9552,8 @@ const   itms_did_o = [
     new SctItm('@L_DRESS@を引き裂いて')
     ,
     new SctItm('@L_UNDER@をはいて')
+    ,
+    new SctItm('@L_UNDER@を脱いで')
     ,
     new SctItm('@L_UNDER@のサイズを計って')
     ,
