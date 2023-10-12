@@ -4040,8 +4040,10 @@ const itms_class = [
     new SctItm('お茶汲み'),
     new SctItm('コンビニ店員'),
     new SctItm('店員'),
-    new SctItm('組員'),
-    new SctItm('組長'),
+    // new SctItm('組員')
+    // ,
+    // new SctItm('組長')
+    // ,
     new SctItm('ボス'),
     new SctItm('会長'),
     new SctItm('酋長'),
@@ -4055,7 +4057,8 @@ const itms_class = [
     new SctItm('ハッカー'),
     new SctItm('宇宙人'),
     new SctItm('火星人'),
-    new SctItm('@STAR@人'),
+    // new SctItm('@STAR@人')
+    // ,
     new SctItm('秘密探偵'),
     new SctItm('人魚'),
     new SctItm('半魚人'),

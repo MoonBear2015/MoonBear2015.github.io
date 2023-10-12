@@ -878,9 +878,9 @@ class selector_newsC01 extends SctItm_Selector {
         super('@NEWS_C01@');
         this.itms = [
             new SctItm('@KEI@@L_WHAT@の@CHAR@が@KEID@@L_DO@@END01B@'),
-            new SctItm('@KEI@@L_WHAT@の@CHAR@での@KEI@@KEY@@END01A@'),
+            new SctItm('@KEI@@L_WHAT@の@CHAR@による@KEI@@KEY@@END01A@'),
             new SctItm('@KEI@@L_WHAT@の@CHAR@で@KEI@@KEY@が@SIZE@@END01B@'),
-            new SctItm('@KEI@@L_WHAT@の@CHAR@では@KEI@@KEY@や@KEY@が@SIZE@@END01B@'),
+            new SctItm('@KEI@@L_WHAT@では@KEI@@KEY@や@KEY@が@SIZE@@END01B@'),
             new SctItm('@KEY@が@SIZE@@END02B@@L_WHAT@@END01A@'),
             new SctItm('@KEI@@KEY@や@KEY@が@SIZE@@END02B@@L_WHAT@@END01A@'),
             new SctItm('@L_MANYCHAR@が@KEID@@L_DO@@END01B@'),
