@@ -1201,7 +1201,8 @@ const cods_place = [
     new SctCod_TI('|温泉|おんせん|', 'PLACE/onsen.jpg'),
     new SctCod_TI('|大浴場|だいよくじょう|', 'PLACE/bigbath.jpg'),
     new SctCod_TI('グラウンド', 'PLACE/ground.jpg'),
-    new SctCod_TI('マイカー', 'PLACE/mycar.jpg'),
+    // new SctCod_TI('マイカー','PLACE/mycar.jpg')
+    // ,
     new SctCod_TI('|公園|こうえん|', 'PLACE/park.jpg'),
     new SctCod_TI('|遊園地|ゆうえんち|', 'PLACE/yuenchi.jpg'),
     new SctCod_TI('テーマパーク', 'PLACE/temapark.jpg'),
@@ -6313,8 +6314,11 @@ const itms_where01 = [
     new SctItm('@WHERE02@'),
     new SctItm('晴れ渡る@WHERE02@'),
     new SctItm('陽のあたる@WHERE02@'),
+    new SctItm('薄暗い@WHERE02@'),
+    new SctItm('暗闇の@WHERE02@'),
     new SctItm('嵐の中の@WHERE02@'),
     new SctItm('荒れ果てた@WHERE02@'),
+    new SctItm('殺風景な@WHERE02@'),
     new SctItm('廃れてしまった@WHERE02@'),
     new SctItm('華やかな@WHERE02@'),
     new SctItm('色鮮やかな@WHERE02@'),
@@ -6325,6 +6329,7 @@ const itms_where01 = [
     new SctItm('散らかった@WHERE02@'),
     new SctItm('水浸しの@WHERE02@'),
     new SctItm('火の海と化した@WHERE02@'),
+    new SctItm('苔むした@WHERE02@'),
     new SctItm('@KEI@@WHERE02@'),
     new SctItm('@MANYCHAR@が@MOVE2@@WHERE02@')
 ];

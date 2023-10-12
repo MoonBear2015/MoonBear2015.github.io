@@ -938,7 +938,7 @@ class selector_newsQ01 extends SctItm_Selector {
         this.itms = [
             new SctItm('@WHY@、@L_WHAT@の@CHAR@は@L_DO@したのか'),
             new SctItm('@WHY@、@KEI@@L_WHAT@の@CHAR@は@KEID@@L_DO@@END02B@のだろうか'),
-            new SctItm('@WHY@、@KEI@@WHAT@の@CHAR@もまた@L_DO@@END02B@のは何故か'),
+            new SctItm('@WHY@、@KEI@@WHAT@の@CHAR@もまた@L_DO@@END02B@のか'),
             new SctItm('@WHY@、@KEI@@L_WHAT@の@CHAR@は@DID@しまうのか'),
             new SctItm('@WHY@、@GROUP@は@WHERE@で、@KEI@@L_WHAT@を@KEID@@L_DO@してしまったのか'),
             new SctItm('@WHY@、@L_WHAT@の@KEI@@GROUP@は、@WHERE@で、@KEID@@L_DO@してしまうのか')
@@ -1082,12 +1082,12 @@ class selector_comment2 extends SctItm_Selector {
             new SctItm('@WHY@、@L_MANYCHAR@は@DID@しまうのか'),
             new SctItm('@WHY@、@L_MANYCHAR@は@DID@しまったんだ'),
             new SctItm('@L_WHAT@は@KEIFRONT@@KEIM1@'),
-            new SctItm('@L_DO@する@L_WHAT@は、@WHY2@@KEIFRONT@@KEIM1@'),
+            new SctItm('@L_DO@する@L_WHAT@の@L_MANYCHAR@は、@WHY2@@KEIFRONT@@KEIM1@'),
             new SctItm('@L_WHAT@の@L_MANYCHAR@は、@WHY2@@KEIFRONT@@KEIM1@'),
             new SctItm('@L_WHAT@で@DID@た@L_CHAR@は、@WHY2@@KEIFRONT@@KEIM1@'),
             new SctItm('@L_CHAR@は、@WHY2@@KEIFRONT@@KEIM1@'),
             new SctItm('@L_WHAT@は@WHY@@KEIFRONT@@KEI@のか'),
-            new SctItm('@L_DO@する@L_WHAT@の@CHAR@は、@WHY@@KEIFRONT@@KEI@のか'),
+            new SctItm('@L_DO@する@L_WHAT@の@L_CHAR@は、@WHY@@KEIFRONT@@KEI@のか'),
             new SctItm('@L_WHAT@の@L_MANYCHAR@は、@WHY@@KEIFRONT@@KEI@のか'),
             new SctItm('@L_WHAT@で@DID@いた@L_CHAR@は、@WHY@@KEIFRONT@@KEI@のか'),
             new SctItm('@L_CHAR@は、@WHY@@KEIFRONT@@KEI@のか')

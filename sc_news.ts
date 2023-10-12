@@ -1405,7 +1405,7 @@ class selector_newsQ01 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@WHY@、@KEI@@L_WHAT@の@CHAR@は@KEID@@L_DO@@END02B@のだろうか')
             ,
-            new SctItm('@WHY@、@KEI@@WHAT@の@CHAR@もまた@L_DO@@END02B@のは何故か')
+            new SctItm('@WHY@、@KEI@@WHAT@の@CHAR@もまた@L_DO@@END02B@のか')
             ,
             new SctItm('@WHY@、@KEI@@L_WHAT@の@CHAR@は@DID@しまうのか')
             ,
@@ -1652,7 +1652,7 @@ class selector_comment2 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@L_WHAT@は@KEIFRONT@@KEIM1@')
             ,
-            new SctItm('@L_DO@する@L_WHAT@は、@WHY2@@KEIFRONT@@KEIM1@')
+            new SctItm('@L_DO@する@L_WHAT@の@L_MANYCHAR@は、@WHY2@@KEIFRONT@@KEIM1@')
             ,
             new SctItm('@L_WHAT@の@L_MANYCHAR@は、@WHY2@@KEIFRONT@@KEIM1@')
             ,
@@ -1662,7 +1662,7 @@ class selector_comment2 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@L_WHAT@は@WHY@@KEIFRONT@@KEI@のか')
             ,
-            new SctItm('@L_DO@する@L_WHAT@の@CHAR@は、@WHY@@KEIFRONT@@KEI@のか')
+            new SctItm('@L_DO@する@L_WHAT@の@L_CHAR@は、@WHY@@KEIFRONT@@KEI@のか')
             ,
             new SctItm('@L_WHAT@の@L_MANYCHAR@は、@WHY@@KEIFRONT@@KEI@のか')
             ,
