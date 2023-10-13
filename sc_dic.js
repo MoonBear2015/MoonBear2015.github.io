@@ -6371,6 +6371,9 @@ const itms_present = [
     new SctItm('おみやげ'),
     new SctItm('お歳暮'),
     new SctItm('お中元'),
+    new SctItm('暑中見舞'),
+    new SctItm('年賀状'),
+    new SctItm('クリスマスカード'),
     new SctItm('チョコレート'),
     new SctItm('バレンタインのチョコレート'),
     new SctItm('花束'),
@@ -6385,4 +6388,12 @@ const itms_present = [
     new SctItm('履歴書'),
     new SctItm('退職願'),
     new SctItm('辞表')
+];
+const itms_present01 = [
+    new SctItm('@FOOD@'),
+    new SctItm('@FLOWER@の花束')
+];
+const itms_present01_l = [
+    new SctItm('@L_FOOD@'),
+    new SctItm('@L_FLOWER@の花束')
 ];

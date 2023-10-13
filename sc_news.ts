@@ -5176,12 +5176,14 @@ class selector_present extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@PRESENT@');
         this.Add(itms_present);
+        this.Add(itms_present01);
     }
 }
 class locker_present extends SctItm_SelectLocker implements ISctItm_Selector{
     constructor(){
         super('@L_PRESENT@');
         this.Add(itms_present);
+        this.Add(itms_present01_l);
     }
 }
 
