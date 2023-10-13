@@ -3639,6 +3639,18 @@ class selector_where02 extends SctItm_Selector {
         this.Add(itms_where02);
     }
 }
+class selector_present extends SctItm_Selector {
+    constructor() {
+        super('@PRESENT@');
+        this.Add(itms_present);
+    }
+}
+class locker_present extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_PRESENT@');
+        this.Add(itms_present);
+    }
+}
 class news_doc {
     constructor(doc) {
         this.doc = doc;
@@ -3915,5 +3927,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_where());
         this.dic_push(new selector_where01());
         this.dic_push(new selector_where02());
+        this.dic_push(new selector_present());
+        this.dic_push(new locker_present());
     }
 }

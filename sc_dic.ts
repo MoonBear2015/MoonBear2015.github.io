@@ -9096,6 +9096,14 @@ const   itms_did = [
     new SctItm('@PLACE@で泊まって')
     ,
     new SctItm('@PLACE@を掃除して')
+    ,
+    new SctItm('@CHAR@に@PRESENT@を渡して')
+    ,
+    new SctItm('@CHAR@に@PRESENT@を捧げて')
+    ,
+    new SctItm('@CHAR@に@PRESENT@を突きつけて')
+    ,
+    new SctItm('@CHAR@に@PRESENT@を投げつけて')
 ]
 
 const   itms_did_l = [
@@ -9368,6 +9376,14 @@ const   itms_did_l = [
     new SctItm('@L_LANDMARK@を改築して')
     ,
     new SctItm('@L_LANDMARK@を復旧して')
+    ,
+    new SctItm('@L_CHAR@に@L_PRESENT@を渡して')
+    ,
+    new SctItm('@L_CHAR@に@L_PRESENT@を捧げて')
+    ,
+    new SctItm('@L_CHAR@に@L_PRESENT@を突きつけて')
+    ,
+    new SctItm('@L_CHAR@に@L_PRESENT@を投げつけて')
 ]
 
 const   itms_did_o = [
@@ -9618,6 +9634,14 @@ const   itms_did_o = [
     new SctItm('@L_LANDMARK@を改築して')
     ,
     new SctItm('@L_LANDMARK@を復旧して')
+    ,
+    new SctItm('@L_CHAR@に@L_PRESENT@を渡して')
+    ,
+    new SctItm('@L_CHAR@に@L_PRESENT@を捧げて')
+    ,
+    new SctItm('@L_CHAR@に@L_PRESENT@を突きつけて')
+    ,
+    new SctItm('@L_CHAR@に@L_PRESENT@を投げつけて')
 ]
 
 const   itms_boyName = [
@@ -10672,5 +10696,45 @@ const   itms_where02 = [
     new SctItm('@LANDMARK@')
     ,
     new SctItm('@SCHOOL02@')
+]
+
+const   itms_present = [
+    new SctItm('プレゼント')
+    ,
+    new SctItm('贈り物')
+    ,
+    new SctItm('おみやげ')
+    ,
+    new SctItm('お歳暮')
+    ,
+    new SctItm('お中元')
+    ,
+    new SctItm('チョコレート')
+    ,
+    new SctItm('バレンタインのチョコレート')
+    ,
+    new SctItm('花束')
+    ,
+    new SctItm('手紙')
+    ,
+    new SctItm('ラブレター')
+    ,
+    new SctItm('離縁状')
+    ,
+    new SctItm('挑戦状')
+    ,
+    new SctItm('果たし状')
+    ,
+    new SctItm('遺書')
+    ,
+    new SctItm('請求書')
+    ,
+    new SctItm('卒業証書')
+    ,
+    new SctItm('履歴書')
+    ,
+    new SctItm('退職願')
+    ,
+    new SctItm('辞表')
 ]
 
