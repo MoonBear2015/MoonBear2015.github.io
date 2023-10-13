@@ -9104,6 +9104,14 @@ const   itms_did = [
     new SctItm('@CHAR@に@PRESENT@を突きつけて')
     ,
     new SctItm('@CHAR@に@PRESENT@を投げつけて')
+    ,
+    new SctItm('★★@CHAR@から@PRESENT@を受け取って')
+    ,
+    new SctItm('★★@CHAR@から@PRESENT@を手渡されて')
+    ,
+    new SctItm('★★@CHAR@から@PRESENT@を突きつけられて')
+    ,
+    new SctItm('★★@CHAR@から@PRESENT@をねだられて')
 ]
 
 const   itms_did_l = [
@@ -9384,6 +9392,14 @@ const   itms_did_l = [
     new SctItm('@L_CHAR@に@L_PRESENT@を突きつけて')
     ,
     new SctItm('@L_CHAR@に@L_PRESENT@を投げつけて')
+    ,
+    new SctItm('★★@L_CHAR@から@L_PRESENT@を受け取って')
+    ,
+    new SctItm('★★@L_CHAR@から@L_PRESENT@を手渡されて')
+    ,
+    new SctItm('★★@L_CHAR@から@L_PRESENT@を突きつけられて')
+    ,
+    new SctItm('★★@L_CHAR@から@L_PRESENT@をねだられて')
 ]
 
 const   itms_did_o = [
@@ -9642,6 +9658,14 @@ const   itms_did_o = [
     new SctItm('@L_CHAR@に@L_PRESENT@を突きつけて')
     ,
     new SctItm('@L_CHAR@に@L_PRESENT@を投げつけて')
+    ,
+    new SctItm('★★@L_CHAR@から@L_PRESENT@を受け取って')
+    ,
+    new SctItm('★★@L_CHAR@から@L_PRESENT@を手渡されて')
+    ,
+    new SctItm('★★@L_CHAR@から@L_PRESENT@を突きつけられて')
+    ,
+    new SctItm('★★@L_CHAR@から@L_PRESENT@をねだられて')
 ]
 
 const   itms_boyName = [
