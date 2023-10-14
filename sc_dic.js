@@ -5491,10 +5491,12 @@ const itms_did = [
     new SctItm('@CHAR@に@PRESENT@を捧げて'),
     new SctItm('@CHAR@に@PRESENT@を突きつけて'),
     new SctItm('@CHAR@に@PRESENT@を投げつけて'),
+    new SctItm('@CHAR@に@PRESENT@を預けて'),
     new SctItm('@CHAR@から@PRESENT@を受け取って'),
     new SctItm('@CHAR@から@PRESENT@を手渡されて'),
     new SctItm('@CHAR@から@PRESENT@を突きつけられて'),
-    new SctItm('@CHAR@から@PRESENT@をねだられて')
+    new SctItm('@CHAR@から@PRESENT@をねだられて'),
+    new SctItm('@CHAR@から@PRESENT@を託されて')
 ];
 const itms_did_l = [
     new SctItm('@L_FOOD@を食べて'),
@@ -5646,10 +5648,12 @@ const itms_did_l = [
     new SctItm('@L_CHAR@に@L_PRESENT@を捧げて'),
     new SctItm('@L_CHAR@に@L_PRESENT@を突きつけて'),
     new SctItm('@L_CHAR@に@L_PRESENT@を投げつけて'),
+    new SctItm('@L_CHAR@に@L_PRESENT@を預けて'),
     new SctItm('@L_CHAR@から@L_PRESENT@を受け取って'),
     new SctItm('@L_CHAR@から@L_PRESENT@を手渡されて'),
     new SctItm('@L_CHAR@から@L_PRESENT@を突きつけられて'),
-    new SctItm('@L_CHAR@から@L_PRESENT@をねだられて')
+    new SctItm('@L_CHAR@から@L_PRESENT@をねだられて'),
+    new SctItm('@L_CHAR@から@L_PRESENT@を託されて')
 ];
 const itms_did_o = [
     new SctItm('@O_FOOD@を食べて'),
@@ -5798,10 +5802,12 @@ const itms_did_o = [
     new SctItm('@L_CHAR@に@L_PRESENT@を捧げて'),
     new SctItm('@L_CHAR@に@L_PRESENT@を突きつけて'),
     new SctItm('@L_CHAR@に@L_PRESENT@を投げつけて'),
+    new SctItm('@L_CHAR@に@L_PRESENT@を預けて'),
     new SctItm('@L_CHAR@から@L_PRESENT@を受け取って'),
     new SctItm('@L_CHAR@から@L_PRESENT@を手渡されて'),
     new SctItm('@L_CHAR@から@L_PRESENT@を突きつけられて'),
-    new SctItm('@L_CHAR@から@L_PRESENT@をねだられて')
+    new SctItm('@L_CHAR@から@L_PRESENT@をねだられて'),
+    new SctItm('@L_CHAR@から@L_PRESENT@を託されて')
 ];
 const itms_boyName = [
     new SctItm('|Александр|アレクサンドル|'),
@@ -6304,6 +6310,7 @@ const itms_Store = [
     new SctItm('コンビニ'),
     new SctItm('100均'),
     new SctItm('バーゲン'),
+    new SctItm('屋台'),
     new SctItm('夜店'),
     new SctItm('闇市'),
     new SctItm('有名店'),
@@ -6367,6 +6374,7 @@ const itms_where02 = [
 ];
 const itms_present = [
     new SctItm('プレゼント'),
+    new SctItm('クリスマスプレゼント'),
     new SctItm('贈り物'),
     new SctItm('おみやげ'),
     new SctItm('お歳暮'),
@@ -6382,9 +6390,12 @@ const itms_present = [
     new SctItm('離縁状'),
     new SctItm('挑戦状'),
     new SctItm('果たし状'),
+    new SctItm('訴状'),
+    new SctItm('感謝状'),
     new SctItm('遺書'),
     new SctItm('請求書'),
     new SctItm('卒業証書'),
+    new SctItm('表彰状'),
     new SctItm('履歴書'),
     new SctItm('退職願'),
     new SctItm('辞表')
