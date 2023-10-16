@@ -3644,6 +3644,7 @@ class selector_present extends SctItm_Selector {
         super('@PRESENT@');
         this.Add(itms_present);
         this.Add(itms_present01);
+        this.Add(itms_paper01);
     }
 }
 class locker_present extends SctItm_SelectLocker {
@@ -3651,6 +3652,21 @@ class locker_present extends SctItm_SelectLocker {
         super('@L_PRESENT@');
         this.Add(itms_present);
         this.Add(itms_present01_l);
+        this.Add(itms_paper01);
+    }
+}
+class selector_paper extends SctItm_Selector {
+    constructor() {
+        super('@PAPER@');
+        this.Add(itms_paper01);
+        this.Add(itms_paper02);
+    }
+}
+class locker_paper extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_PAPER@');
+        this.Add(itms_paper01);
+        this.Add(itms_paper02);
     }
 }
 class news_doc {
@@ -3931,5 +3947,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_where02());
         this.dic_push(new selector_present());
         this.dic_push(new locker_present());
+        this.dic_push(new selector_paper());
+        this.dic_push(new locker_paper());
     }
 }

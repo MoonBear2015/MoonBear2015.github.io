@@ -9116,6 +9116,30 @@ const   itms_did = [
     new SctItm('@CHAR@から@PRESENT@をねだられて')
     ,
     new SctItm('@CHAR@から@PRESENT@を託されて')
+    ,
+    new SctItm('@PAPER@を書いて')
+    ,
+    new SctItm('@PAPER@を書き下ろして')
+    ,
+    new SctItm('@PAPER@をしたためて')
+    ,
+    new SctItm('@PAPER@を書き綴って')
+    ,
+    new SctItm('@CHAR@に@PAPER@を書いて')
+    ,
+    new SctItm('@CHAR@に@PAPER@を書き下ろして')
+    ,
+    new SctItm('@CHAR@に@PAPER@をしたためて')
+    ,
+    new SctItm('@CHAR@に@PAPER@を書き綴って')
+    ,
+    new SctItm('@CHAR@の@PAPER@を書き写して')
+    ,
+    new SctItm('@CHAR@の@PAPER@を焼いて')
+    ,
+    new SctItm('@CHAR@の@PAPER@を破いて')
+    ,
+    new SctItm('@CHAR@の@PAPER@を引き裂いて')
 ]
 
 const   itms_did_l = [
@@ -9408,6 +9432,30 @@ const   itms_did_l = [
     new SctItm('@L_CHAR@から@L_PRESENT@をねだられて')
     ,
     new SctItm('@L_CHAR@から@L_PRESENT@を託されて')
+    ,
+    new SctItm('@L_PAPER@を書いて')
+    ,
+    new SctItm('@L_PAPER@を書き下ろして')
+    ,
+    new SctItm('@L_PAPER@をしたためて')
+    ,
+    new SctItm('@L_PAPER@を書き綴って')
+    ,
+    new SctItm('@L_CHAR@に@L_PAPER@を書いて')
+    ,
+    new SctItm('@L_CHAR@に@L_PAPER@を書き下ろして')
+    ,
+    new SctItm('@L_CHAR@に@L_PAPER@をしたためて')
+    ,
+    new SctItm('@L_CHAR@に@L_PAPER@を書き綴って')
+    ,
+    new SctItm('@L_CHAR@の@L_PAPER@を書き写して')
+    ,
+    new SctItm('@L_CHAR@の@L_PAPER@を焼いて')
+    ,
+    new SctItm('@L_CHAR@の@L_PAPER@を破いて')
+    ,
+    new SctItm('@L_CHAR@の@L_PAPER@を引き裂いて')
 ]
 
 const   itms_did_o = [
@@ -9678,6 +9726,30 @@ const   itms_did_o = [
     new SctItm('@L_CHAR@から@L_PRESENT@をねだられて')
     ,
     new SctItm('@L_CHAR@から@L_PRESENT@を託されて')
+    ,
+    new SctItm('@L_PAPER@を書いて')
+    ,
+    new SctItm('@L_PAPER@を書き下ろして')
+    ,
+    new SctItm('@L_PAPER@をしたためて')
+    ,
+    new SctItm('@L_PAPER@を書き綴って')
+    ,
+    new SctItm('@L_CHAR@に@L_PAPER@を書いて')
+    ,
+    new SctItm('@L_CHAR@に@L_PAPER@を書き下ろして')
+    ,
+    new SctItm('@L_CHAR@に@L_PAPER@をしたためて')
+    ,
+    new SctItm('@L_CHAR@に@L_PAPER@を書き綴って')
+    ,
+    new SctItm('@L_CHAR@の@L_PAPER@を書き写して')
+    ,
+    new SctItm('@L_CHAR@の@L_PAPER@を焼いて')
+    ,
+    new SctItm('@L_CHAR@の@L_PAPER@を破いて')
+    ,
+    new SctItm('@L_CHAR@の@L_PAPER@を引き裂いて')
 ]
 
 const   itms_boyName = [
@@ -10755,17 +10827,37 @@ const   itms_present = [
     ,
     new SctItm('クリスマスカード')
     ,
-    new SctItm('チョコレート')
-    ,
     new SctItm('バレンタインのチョコレート')
     ,
     new SctItm('花束')
+]
+
+const   itms_present01 = [
+    new SctItm('@FOOD@')
     ,
+    new SctItm('@FLOWER@の花束')
+]
+
+const   itms_present01_l = [
+    new SctItm('@L_FOOD@')
+    ,
+    new SctItm('@L_FLOWER@の花束')
+]
+
+const   itms_paper01 = [
     new SctItm('手紙')
     ,
     new SctItm('ラブレター')
     ,
+    new SctItm('暑中見舞')
+    ,
+    new SctItm('年賀状')
+    ,
+    new SctItm('クリスマスカード')
+    ,
     new SctItm('離縁状')
+    ,
+    new SctItm('絶縁状')
     ,
     new SctItm('挑戦状')
     ,
@@ -10788,16 +10880,32 @@ const   itms_present = [
     new SctItm('退職願')
     ,
     new SctItm('辞表')
+    ,
+    new SctItm('報告書')
+    ,
+    new SctItm('始末書')
 ]
 
-const   itms_present01 = [
-    new SctItm('@FOOD@')
+const   itms_paper02 = [
+    new SctItm('本')
     ,
-    new SctItm('@FLOWER@の花束')
-]
-
-const   itms_present01_l = [
-    new SctItm('@L_FOOD@')
+    new SctItm('日記')
     ,
-    new SctItm('@L_FLOWER@の花束')
+    new SctItm('日誌')
+    ,
+    new SctItm('詩')
+    ,
+    new SctItm('小説')
+    ,
+    new SctItm('漫画')
+    ,
+    new SctItm('絵')
+    ,
+    new SctItm('似顔絵')
+    ,
+    new SctItm('イラスト')
+    ,
+    new SctItm('色紙')
+    ,
+    new SctItm('寄せ書き')
 ]
