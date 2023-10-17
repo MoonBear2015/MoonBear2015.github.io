@@ -10880,7 +10880,7 @@ const   itms_present01_l = [
     new SctItm('@L_FLOWER@の花束')
 ]
 
-const   itms_paper01 = [
+const   itms_present_paper = [
     new SctItm('手紙')
     ,
     new SctItm('ラブレター')
@@ -10922,7 +10922,7 @@ const   itms_paper01 = [
     new SctItm('始末書')
 ]
 
-const   itms_paper02 = [
+const   itms_paper = [
     new SctItm('本')
     ,
     new SctItm('日記')
@@ -10930,10 +10930,6 @@ const   itms_paper02 = [
     new SctItm('日誌')
     ,
     new SctItm('詩')
-    ,
-    new SctItm('小説')
-    ,
-    new SctItm('漫画')
     ,
     new SctItm('絵')
     ,
@@ -10946,9 +10942,24 @@ const   itms_paper02 = [
     new SctItm('寄せ書き')
 ]
 
-const   itms_reader = [
+const   itms_reader_paper = [
     new SctItm('本')
     ,
+    new SctItm('日記')
+    ,
+    new SctItm('日誌')
+    ,
+    new SctItm('小説')
+    ,
+    new SctItm('漫画')
+    ,
+    new SctItm('論文')
+    ,
+    new SctItm('報告書')
+]
+
+
+const   itms_reader = [
     new SctItm('@PART@の日記')
     ,
     new SctItm('@PART@の手紙')
@@ -10957,13 +10968,11 @@ const   itms_reader = [
     ,
     new SctItm('@CLASS@の報告書')
     ,
-    new SctItm('小説')
+    new SctItm('説明書')
     ,
     new SctItm('推理小説')
     ,
     new SctItm('恋愛小説')
-    ,
-    new SctItm('漫画')
     ,
     new SctItm('絵本')
     ,
@@ -10979,12 +10988,14 @@ const   itms_reader = [
     ,
     new SctItm('新聞')
     ,
+    new SctItm('スポーツ新聞')
+    ,
     new SctItm('競馬新聞')
     ,
     new SctItm('雑誌')
     ,
     new SctItm('週刊誌')
     ,
-    new SctItm('ファッション雑誌')
+    new SctItm('ファッション誌')
 ]
 
