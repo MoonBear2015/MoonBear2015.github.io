@@ -3669,6 +3669,18 @@ class locker_paper extends SctItm_SelectLocker {
         this.Add(itms_paper02);
     }
 }
+class selector_reader extends SctItm_Selector {
+    constructor() {
+        super('@READER@');
+        this.Add(itms_reader);
+    }
+}
+class locker_reader extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_READER@');
+        this.Add(itms_reader);
+    }
+}
 class news_doc {
     constructor(doc) {
         this.doc = doc;
@@ -3949,5 +3961,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new locker_present());
         this.dic_push(new selector_paper());
         this.dic_push(new locker_paper());
+        this.dic_push(new selector_reader());
+        this.dic_push(new locker_reader());
     }
 }

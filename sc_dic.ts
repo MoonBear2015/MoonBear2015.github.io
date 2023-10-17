@@ -9140,6 +9140,18 @@ const   itms_did = [
     new SctItm('@CHAR@の@PAPER@を破いて')
     ,
     new SctItm('@CHAR@の@PAPER@を引き裂いて')
+    ,
+    new SctItm('@READER@を読んで')
+    ,
+    new SctItm('@READER@を開いて')
+    ,
+    new SctItm('@READER@を眺めて')
+    ,
+    new SctItm('@READER@に目を通して')
+    ,
+    new SctItm('@READER@を読みふけって')
+    ,
+    new SctItm('@READER@を調べて')
 ]
 
 const   itms_did_l = [
@@ -9456,6 +9468,18 @@ const   itms_did_l = [
     new SctItm('@L_CHAR@の@L_PAPER@を破いて')
     ,
     new SctItm('@L_CHAR@の@L_PAPER@を引き裂いて')
+    ,
+    new SctItm('@L_READER@を読んで')
+    ,
+    new SctItm('@L_READER@を開いて')
+    ,
+    new SctItm('@L_READER@を眺めて')
+    ,
+    new SctItm('@L_READER@に目を通して')
+    ,
+    new SctItm('@L_READER@を読みふけって')
+    ,
+    new SctItm('@L_READER@を調べて')
 ]
 
 const   itms_did_o = [
@@ -9750,6 +9774,18 @@ const   itms_did_o = [
     new SctItm('@L_CHAR@の@L_PAPER@を破いて')
     ,
     new SctItm('@L_CHAR@の@L_PAPER@を引き裂いて')
+    ,
+    new SctItm('@L_READER@を読んで')
+    ,
+    new SctItm('@L_READER@を開いて')
+    ,
+    new SctItm('@L_READER@を眺めて')
+    ,
+    new SctItm('@L_READER@に目を通して')
+    ,
+    new SctItm('@L_READER@を読みふけって')
+    ,
+    new SctItm('@L_READER@を調べて')
 ]
 
 const   itms_boyName = [
@@ -10909,3 +10945,46 @@ const   itms_paper02 = [
     ,
     new SctItm('寄せ書き')
 ]
+
+const   itms_reader = [
+    new SctItm('本')
+    ,
+    new SctItm('@PART@の日記')
+    ,
+    new SctItm('@PART@の手紙')
+    ,
+    new SctItm('@CLASS@の日誌')
+    ,
+    new SctItm('@CLASS@の報告書')
+    ,
+    new SctItm('小説')
+    ,
+    new SctItm('推理小説')
+    ,
+    new SctItm('恋愛小説')
+    ,
+    new SctItm('漫画')
+    ,
+    new SctItm('絵本')
+    ,
+    new SctItm('聖書')
+    ,
+    new SctItm('@SCHOOL02@の教科書')
+    ,
+    new SctItm('辞書')
+    ,
+    new SctItm('国語辞典')
+    ,
+    new SctItm('百科事典')
+    ,
+    new SctItm('新聞')
+    ,
+    new SctItm('競馬新聞')
+    ,
+    new SctItm('雑誌')
+    ,
+    new SctItm('週刊誌')
+    ,
+    new SctItm('ファッション雑誌')
+]
+
