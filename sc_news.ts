@@ -1316,7 +1316,7 @@ class selector_newsC01 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@KEI@@L_WHAT@の@CHAR@による@KEI@@KEY@@END01A@')
             ,
-            new SctItm('@KEI@@L_WHAT@の@CHAR@で@KEI@@KEY@が@SIZE@@END01B@')
+            new SctItm('@KEI@@L_WHAT@で@KEI@@KEY@が@SIZE@@END01B@')
             ,
             new SctItm('@KEI@@L_WHAT@では@KEI@@KEY@や@KEY@が@SIZE@@END01B@')
             ,
@@ -3451,8 +3451,6 @@ class selector_food extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@CHAR@のお薦め@FOOD01@')
             ,
-            new SctItm('@CHAR@で人気の@FOOD01@')
-            ,
             new SctItm('@CHAR@が愛した@FOOD01@')
             ,
             new SctItm('@STORE@で買った@FOOD01@')
@@ -3494,8 +3492,6 @@ class locker_food extends SctItm_SelectLocker implements ISctItm_Selector {
             new SctItm('@L_CLASS@の手作り@L_FOOD01@')
             ,
             new SctItm('@L_CLASS@のお薦め@L_FOOD01@')
-            ,
-            new SctItm('@L_CLASS@で人気の@L_FOOD01@')
         ];
     }
 }

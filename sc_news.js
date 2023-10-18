@@ -879,7 +879,7 @@ class selector_newsC01 extends SctItm_Selector {
         this.itms = [
             new SctItm('@KEI@@L_WHAT@の@CHAR@が@KEID@@L_DO@@END01B@'),
             new SctItm('@KEI@@L_WHAT@の@CHAR@による@KEI@@KEY@@END01A@'),
-            new SctItm('@KEI@@L_WHAT@の@CHAR@で@KEI@@KEY@が@SIZE@@END01B@'),
+            new SctItm('@KEI@@L_WHAT@で@KEI@@KEY@が@SIZE@@END01B@'),
             new SctItm('@KEI@@L_WHAT@では@KEI@@KEY@や@KEY@が@SIZE@@END01B@'),
             new SctItm('@KEY@が@SIZE@@END02B@@L_WHAT@@END01A@'),
             new SctItm('@KEI@@KEY@や@KEY@が@SIZE@@END02B@@L_WHAT@@END01A@'),
@@ -2432,7 +2432,6 @@ class selector_food extends SctItm_Selector {
             new SctItm('@PART@が作った@FOOD01@'),
             new SctItm('@CLASS@の手作り@FOOD01@'),
             new SctItm('@CHAR@のお薦め@FOOD01@'),
-            new SctItm('@CHAR@で人気の@FOOD01@'),
             new SctItm('@CHAR@が愛した@FOOD01@'),
             new SctItm('@STORE@で買った@FOOD01@'),
             new SctItm('@STORE@のお薦め@FOOD01@'),
@@ -2457,8 +2456,7 @@ class locker_food extends SctItm_SelectLocker {
             new SctItm('@L_TOWN@風@L_FOOD01@'),
             new SctItm('@L_PART@が作った@L_FOOD01@'),
             new SctItm('@L_CLASS@の手作り@L_FOOD01@'),
-            new SctItm('@L_CLASS@のお薦め@L_FOOD01@'),
-            new SctItm('@L_CLASS@で人気の@L_FOOD01@')
+            new SctItm('@L_CLASS@のお薦め@L_FOOD01@')
         ];
     }
 }
