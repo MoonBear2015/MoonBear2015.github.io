@@ -6380,8 +6380,9 @@ const itms_where = [
     new SctItm('@MANYPEOPLE@の暮らす@WHERE01@'),
     new SctItm('@MANYPEOPLE@で賑わう@WHERE01@'),
     new SctItm('@MANYPEOPLE@で人気の@WHERE01@'),
-    new SctItm('@MANYPEOPLE@で@DID@いる@WHERE01@'),
+    new SctItm('@MANYPEOPLE@が@DID@いる@WHERE01@'),
     new SctItm('@GROUP@に支配された@WHERE01@'),
+    new SctItm('@GROUP@が居座っている@WHERE01@'),
     new SctItm('@GROUP@に管理されている@WHERE01@'),
     new SctItm('@GROUP@の所有する@WHERE01@')
     // ,
