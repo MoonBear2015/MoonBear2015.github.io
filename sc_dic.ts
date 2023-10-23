@@ -651,6 +651,10 @@ const   cods_star = [
     new SctCod_TI('|水瓶座|みずがめざ|')
     ,
     new SctCod_TI('|魚座|うおざ|')
+    ,
+    new SctCod_TI('|死兆星|しちょうせい|')
+    ,
+    new SctCod_TI('|昴|すばる|')
 ];
 
 const   cods_sky = [
@@ -5432,7 +5436,7 @@ const   itms_what = [
     ,
     new SctItm('タイタン','WHAT/saturn.jpg')
     ,
-    new SctItm('アンドロメダ星雲','WHAT/andromeda.jpg')
+    new SctItm('アンドロメダ大星雲','WHAT/andromeda.jpg')
     ,
     new SctItm('ブラックホール','WHAT/blackhole.jpg')
     ,
@@ -8011,24 +8015,24 @@ const   itms_ride = [
     ,
     new SctItm('戦艦')
     ,
-    new SctItm('戦艦『@L_TOWN@』')
-    ,
+    // new SctItm('戦艦『@L_TOWN@』')
+    // ,
     new SctItm('巡洋艦')
     ,
-    new SctItm('巡洋艦『@L_TOWN@』')
-    ,
+    // new SctItm('巡洋艦『@L_TOWN@』')
+    // ,
     new SctItm('駆逐艦')
     ,
-    new SctItm('駆逐艦『@L_TOWN@』')
-    ,
+    // new SctItm('駆逐艦『@L_TOWN@』')
+    // ,
     new SctItm('空母')
     ,
-    new SctItm('空母『@L_TOWN@』')
-    ,
+    // new SctItm('空母『@L_TOWN@』')
+    // ,
     new SctItm('潜水艦')
     ,
-    new SctItm('潜水艦『@L_TOWN@』')
-    ,
+    // new SctItm('潜水艦『@L_TOWN@』')
+    // ,
     new SctItm('ロケット')
     ,
     new SctItm('スペースシャトル')
@@ -8037,8 +8041,8 @@ const   itms_ride = [
     ,
     new SctItm('宇宙戦艦')
     ,
-    new SctItm('宇宙戦艦『@L_TOWN@』')
-    ,
+    // new SctItm('宇宙戦艦『@L_TOWN@』')
+    // ,
     new SctItm('ＵＦＯ')
 ]
 
@@ -8134,6 +8138,8 @@ const   itms_season = [
     ,
     new SctItm('元旦')
     ,
+    new SctItm('お正月')
+    ,
     new SctItm('春先')
     ,
     new SctItm('新春')
@@ -8169,6 +8175,8 @@ const   itms_season = [
     new SctItm('@KEY@シーズン')
     ,
     new SctItm('@KEY@が多発する時期')
+    ,
+    new SctItm('@FOOD@が美味しい時期')
 ]
 
 const   itms_horo_star = [
@@ -9205,11 +9213,11 @@ const   itms_did_l = [
     ,
     new SctItm('@L_FOOD@の店を開いて')
     ,
-    new SctItm('@L_DRING@を飲んで')
+    new SctItm('@L_DRINK@を飲んで')
     ,
-    new SctItm('@L_DRING@をお替わりして')
+    new SctItm('@L_DRINK@をお替わりして')
     ,
-    new SctItm('@L_DRING@で乾杯して')
+    new SctItm('@L_DRINK@で乾杯して')
     ,
     new SctItm('@L_CLASS@に憧れて')
     ,
@@ -10217,19 +10225,19 @@ const   itms_songColor2 = [
 ];
 
 const   itms_songColor3 = [
-    new SctItm('ホワイト')
+    new SctItm('ホワイト・')
     ,
-    new SctItm('イエロー')
+    new SctItm('イエロー・')
     ,
-    new SctItm('ブルー')
+    new SctItm('ブルー・')
     ,
-    new SctItm('グリーン')
+    new SctItm('グリーン・')
     ,
-    new SctItm('ピンク')
+    new SctItm('ピンク・')
     ,
-    new SctItm('パープル')
+    new SctItm('パープル・')
     ,
-    new SctItm('ブラック')
+    new SctItm('ブラック・')
 ];
 
 const   itms_songGenre = [
