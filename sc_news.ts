@@ -789,12 +789,14 @@ class selector_char extends SctItm_Selector implements ISctItm_Selector {
         super('@CHAR@');
         this.itms = [
             new SctItm('@CLASS@')
-            ,
-            new SctItm('@PART@')
+            // ,
+            // new SctItm('@PART@')
             ,
             new SctItm('@COUNTRY@人')
             ,
             new SctItm('@KING@')
+            ,
+            new SctItm('@KING@の@PART@')
             ,
             new SctItm('『@KEI@@NICK@』と呼ばれた@SEXAGE@')
         ];
@@ -805,12 +807,14 @@ class locker_char extends SctItm_SelectLocker implements ISctItm_Selector{
         super('@L_CHAR@');
         this.itms = [
             new SctItm('@L_CLASS@')
-            ,
-            new SctItm('@L_PART@')
+            // ,
+            // new SctItm('@L_PART@')
             ,
             new SctItm('@L_COUNTRY@人')
             ,
             new SctItm('@L_KING@')
+            ,
+            new SctItm('@L_KING@の@L_PART@')
             ,
             new SctItm('『@KEI@@L_NICK@』と呼ばれた@SEXAGE@')
         ];
@@ -1602,7 +1606,7 @@ class selector_comment2 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@KEID@@L_DO@@END02B@@THEY@、@YESNO@、それが@L_WHAT@@END02A@')
             ,
-            new SctItm('@L_WHAT@の@L_CLASS@、それが@CHAR@の@L_CHAR@@END02A@')
+            new SctItm('@L_WHAT@の@L_CLASS@、それが@CHAR@@END02A@')
             ,
             new SctItm('@EMOFRONT@@EMO@@END02D@')
             ,
