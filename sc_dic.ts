@@ -6423,6 +6423,10 @@ const   itms_class = [
     new SctItm('ネズミ男')
     ,
     new SctItm('水先案内人')
+    ,
+    new SctItm('@L_ANIMAL@の飼い主')
+    ,
+    new SctItm('@L_ANIMAL@の調教師')
 ];
 
 
@@ -8963,29 +8967,31 @@ const   itms_did = [
     ,
     new SctItm('@PART@の背中を掻いて')
     ,
-    new SctItm('@ANIMAL@を連れて')
+    new SctItm('@ANIMALFROM@の@ANIMAL@を連れて')
     ,
-    new SctItm('@ANIMAL@に乗って')
+    new SctItm('@ANIMALFROM@の@ANIMAL@に乗って')
     ,
-    new SctItm('@ANIMAL@の散歩をして')
+    new SctItm('@ANIMALFROM@の@ANIMAL@の散歩をして')
     ,
-    new SctItm('@ANIMAL@に餌をやって')
+    new SctItm('@ANIMALFROM@の@ANIMAL@に餌をやって')
     ,
-    new SctItm('@ANIMAL@の体を洗って')
+    new SctItm('@ANIMALFROM@の@ANIMAL@の体を洗って')
     ,
     new SctItm('@ANIMAL@狩りをして')
     ,
-    new SctItm('@ANIMAL@に襲われて')
+    new SctItm('@ANIMALFROM@の@ANIMAL@に襲われて')
     ,
-    new SctItm('@ANIMAL@と戦って')
+    new SctItm('@ANIMALFROM@の@ANIMAL@と戦って')
     ,
-    new SctItm('@ANIMAL@を退治して')
+    new SctItm('@ANIMALFROM@の@ANIMAL@を退治して')
     ,
-    new SctItm('@ANIMAL@を追い出して')
+    new SctItm('@ANIMALFROM@の@ANIMAL@を追い出して')
     ,
-    new SctItm('@ANIMAL@を追い払って')
+    new SctItm('@ANIMALFROM@の@ANIMAL@を追い払って')
     ,
-    new SctItm('@ANIMAL@の絵を描いて')
+    new SctItm('@ANIMALFROM@の@ANIMAL@の絵を描いて')
+    ,
+    new SctItm('@ANIMALFROM@の@ANIMAL@を放し飼いにして')
     ,
     new SctItm('@DRESS@を着て')
     ,
@@ -9309,31 +9315,33 @@ const   itms_did_l = [
     ,
     new SctItm('@L_PART@の背中を掻いて')
     ,
-    new SctItm('@L_ANIMAL@を連れて')
+    new SctItm('@L_ANIMALFROM@の@L_ANIMAL@を連れて')
     ,
-    new SctItm('@L_ANIMAL@に乗って')
+    new SctItm('@L_ANIMALFROM@の@L_ANIMAL@に乗って')
     ,
-    new SctItm('@L_ANIMAL@の散歩をして')
+    new SctItm('@L_ANIMALFROM@の@L_ANIMAL@の散歩をして')
     ,
-    new SctItm('@L_ANIMAL@に餌をやって')
+    new SctItm('@L_ANIMALFROM@の@L_ANIMAL@に餌をやって')
     ,
-    new SctItm('@L_ANIMAL@の体を洗って')
+    new SctItm('@L_ANIMALFROM@の@L_ANIMAL@の体を洗って')
     ,
     new SctItm('@L_ANIMAL@狩りをして')
     ,
-    new SctItm('@L_ANIMAL@に襲われて')
+    new SctItm('@L_ANIMALFROM@の@L_ANIMAL@に襲われて')
     ,
-    new SctItm('@L_ANIMAL@と戦って')
+    new SctItm('@L_ANIMALFROM@の@L_ANIMAL@と戦って')
     ,
-    new SctItm('@L_ANIMAL@を退治して')
+    new SctItm('@L_ANIMALFROM@の@L_ANIMAL@を退治して')
     // ,
     // new SctItm('@L_ANIMAL@を檻に入れて')
     // ,
     // new SctItm('@L_ANIMAL@を追い出して')
     ,
-    new SctItm('@L_ANIMAL@を追い払って')
+    new SctItm('@L_ANIMALFROM@の@L_ANIMAL@を追い払って')
     ,
-    new SctItm('@L_ANIMAL@の絵を描いて')
+    new SctItm('@L_ANIMALFROM@の@L_ANIMAL@の絵を描いて')
+    ,
+    new SctItm('@L_ANIMALFROM@の@L_ANIMAL@を放し飼いにして')
     ,
     new SctItm('@L_DRESS@を着て')
     ,
@@ -9633,31 +9641,33 @@ const   itms_did_o = [
     ,
     new SctItm('@L_PART@の背中を掻いて')
     ,
-    new SctItm('@L_ANIMAL@を連れて')
+    new SctItm('@L_ANIMALFROM@の@L_ANIMAL@を連れて')
     ,
-    new SctItm('@L_ANIMAL@に乗って')
+    new SctItm('@L_ANIMALFROM@の@L_ANIMAL@に乗って')
     ,
-    new SctItm('@L_ANIMAL@の散歩をして')
+    new SctItm('@L_ANIMALFROM@の@L_ANIMAL@の散歩をして')
     ,
-    new SctItm('@L_ANIMAL@に餌をやって')
+    new SctItm('@L_ANIMALFROM@の@L_ANIMAL@に餌をやって')
     ,
-    new SctItm('@L_ANIMAL@の体を洗って')
+    new SctItm('@L_ANIMALFROM@の@L_ANIMAL@の体を洗って')
     ,
     new SctItm('@L_ANIMAL@狩りをして')
     ,
-    new SctItm('@L_ANIMAL@に襲われて')
+    new SctItm('@L_ANIMALFROM@の@L_ANIMAL@に襲われて')
     ,
-    new SctItm('@L_ANIMAL@と戦って')
+    new SctItm('@L_ANIMALFROM@の@L_ANIMAL@と戦って')
     ,
-    new SctItm('@L_ANIMAL@を退治して')
+    new SctItm('@L_ANIMALFROM@の@L_ANIMAL@を退治して')
     // ,
     // new SctItm('@L_ANIMAL@を檻に入れて')
     // ,
     // new SctItm('@L_ANIMAL@を追い出して')
     ,
-    new SctItm('@L_ANIMAL@を追い払って')
+    new SctItm('@L_ANIMALFROM@の@L_ANIMAL@を追い払って')
     ,
-    new SctItm('@L_ANIMAL@の絵を描いて')
+    new SctItm('@L_ANIMALFROM@の@L_ANIMAL@の絵を描いて')
+    ,
+    new SctItm('@L_ANIMALFROM@の@L_ANIMAL@を放し飼いにして')
     ,
     new SctItm('@L_DRESS@を着て')
     ,
@@ -11007,5 +11017,18 @@ const   itms_reader = [
     new SctItm('週刊誌')
     ,
     new SctItm('ファッション誌')
+]
+
+// ◎◎の@ANIMAL@
+const   itms_animalFrom = [
+    new SctItm('ペット')
+    ,
+    new SctItm('野性')
+    ,
+    new SctItm('動物園')
+    ,
+    new SctItm('牧場')
+    ,
+    new SctItm('檻の中')
 ]
 

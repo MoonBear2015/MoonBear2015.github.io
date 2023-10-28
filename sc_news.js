@@ -1601,19 +1601,6 @@ class selector_history extends SctItm_Selector {
     }
 }
 // 神 ～の@SUPERCLASS@と繋ぐ
-class selector_action extends SctItm_Selector {
-    constructor() {
-        super('@ACTION@');
-        this.itms = [
-            new SctItm('恋愛'),
-            new SctItm('仕事'),
-            new SctItm('学業'),
-            new SctItm('スポーツ'),
-            new SctItm('事故'),
-            new SctItm('天災')
-        ];
-    }
-}
 // 名詞に対する単一形容
 class selector_keiyo extends SctItm_Selector {
     constructor() {
@@ -3236,8 +3223,19 @@ class selector_did01 extends SctItm_Selector {
             new SctItm('@CHAR@と@DID00@'),
             new SctItm('一人で@DID00@'),
             new SctItm('独りぼっちで@DID00@'),
-            new SctItm('@ANIMAL@を連れて@DID00@'),
-            new SctItm('@GROUP@の@THEY@を率いて@DID00@')
+            new SctItm('ペットの@ANIMAL@を連れて@DID00@'),
+            new SctItm('@GROUP@の@THEY@を率いて@DID00@'),
+            new SctItm('気が済むまで@DID00@'),
+            new SctItm('気が狂ったかのように@DID00@'),
+            new SctItm('とち狂ったかのように@DID00@'),
+            new SctItm('日が暮れるまで@DID00@'),
+            new SctItm('暗くなるまで@DID00@'),
+            new SctItm('夜が更けるまで@DID00@'),
+            new SctItm('夜が明けるまで@DID00@'),
+            new SctItm('日が昇るまで@DID00@'),
+            new SctItm('朝まで@DID00@'),
+            new SctItm('徹夜で@DID00@'),
+            new SctItm('一晩中@DID00@')
         ];
     }
 }
@@ -3279,7 +3277,7 @@ class selector_done01 extends SctItm_Selector {
             new SctItm('@CHAR@と@DONE02@'),
             new SctItm('一人で@DONE02@'),
             new SctItm('独りぼっちで@DONE02@'),
-            new SctItm('@ANIMAL@を連れて@DONE02@'),
+            new SctItm('ペットの@ANIMAL@を連れて@DONE02@'),
             new SctItm('@GROUP@を率いて@DONE02@')
         ];
     }
@@ -3687,6 +3685,18 @@ class locker_reader extends SctItm_SelectLocker {
         this.Add(itms_reader_paper);
     }
 }
+class selector_animalFrom extends SctItm_Selector {
+    constructor() {
+        super('@ANIMALFROM@');
+        this.Add(itms_animalFrom);
+    }
+}
+class locker_animalFrom extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_ANIMALFROM@');
+        this.Add(itms_animalFrom);
+    }
+}
 class news_doc {
     constructor(doc) {
         this.doc = doc;
@@ -3969,5 +3979,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new locker_paper());
         this.dic_push(new selector_reader());
         this.dic_push(new locker_reader());
+        this.dic_push(new selector_animalFrom());
+        this.dic_push(new locker_animalFrom());
     }
 }
