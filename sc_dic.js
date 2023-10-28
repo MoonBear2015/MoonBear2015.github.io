@@ -6536,5 +6536,7 @@ const itms_animalFrom = [
     new SctItm('籠の中の'),
     new SctItm('飼い慣らされた'),
     new SctItm('調教済みの'),
-    new SctItm('一緒に育った')
+    new SctItm('一緒に育った'),
+    new SctItm('@L_CHAR@が飼っていた'),
+    new SctItm('@L_CHAR@が育てた')
 ];
