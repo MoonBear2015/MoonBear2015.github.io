@@ -4883,8 +4883,6 @@ const itms_landmark = [
 const itms_livestock = [
     new SctItm('牛')
     ,
-    new SctItm('虎')
-    ,
     new SctItm('ウサギ')
     ,
     new SctItm('馬')
@@ -4893,7 +4891,7 @@ const itms_livestock = [
     ,
     new SctItm('ニワトリ')
     ,
-    new SctItm('犬')
+    new SctItm('七面鳥')
     ,
     new SctItm('猪')
     ,
@@ -4906,10 +4904,6 @@ const itms_livestock = [
     new SctItm('豚')
     ,
     new SctItm('ヤギ')
-    ,
-    new SctItm('鳩')
-    ,
-    new SctItm('雀')
     ,
     new SctItm('鮫')
     ,
@@ -5186,6 +5180,8 @@ const   itms_badhabit = [
     ,
     new SctItm('拾い食い')
     ,
+    new SctItm('梯子酒')
+    ,
     new SctItm('風俗通い')
     ,
     new SctItm('ホスト通い')
@@ -5199,6 +5195,8 @@ const   itms_badhabit = [
     new SctItm('夜更かし')
     ,
     new SctItm('乱痴気騒ぎ')
+    ,
+    new SctItm('ドラッグ')
 ];
 
 const   itms_goodhabit = [
@@ -10468,9 +10466,9 @@ const   itms_Award = [
     ,
     new SctItm('@L_WHAT@レコード大賞')
     ,
-    new SctItm('@L_WHAT@映画際@AWARDRANK@')
+    new SctItm('@L_WHAT@映画祭@AWARDRANK@')
     ,
-    new SctItm('@TOWN@映画際@AWARDRANK@')
+    new SctItm('@TOWN@映画祭@AWARDRANK@')
     ,
     new SctItm('ミス@L_ITEM@コンテスト@AWARDRANK@')
     ,

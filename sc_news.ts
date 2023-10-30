@@ -3453,6 +3453,14 @@ class selector_food extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('出前で注文した@FOOD01@')
             ,
             new SctItm('ルームサービスの@FOOD01@')
+            ,
+            new SctItm('インスタントの@FOOD01@')
+            ,
+            new SctItm('レトルトの@FOOD01@')
+            ,
+            new SctItm('冷凍食品の@FOOD01@')
+            ,
+            new SctItm('出来たての@FOOD01@')
         ];
     }
 }
