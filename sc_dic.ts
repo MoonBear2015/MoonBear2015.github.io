@@ -5621,6 +5621,8 @@ const   itms_what = [
     new SctItm('@L_CITY@大学','WHAT/college.jpg')
     ,
     new SctItm('@L_CITY@図書館','WHAT/library.jpg')
+    ,
+    new SctItm('@L_CITY@小学校','WHAT/school.jpg')
 ];
 
 
@@ -6060,15 +6062,21 @@ const   itms_class = [
     ,
     new SctItm('デザイナー')
     ,
+    new SctItm('美容師')
+    ,
     new SctItm('ファッションモデル')
     ,
     new SctItm('靴磨き')
+    ,
+    new SctItm('侍')
     ,
     new SctItm('武士')
     ,
     new SctItm('野武士')
     ,
     new SctItm('伯爵')
+    ,
+    new SctItm('公爵')
     ,
     new SctItm('男爵')
     ,
@@ -6316,6 +6324,14 @@ const   itms_class = [
     ,
     new SctItm('用心棒')
     ,
+    new SctItm('ヤクザ')
+    ,
+    new SctItm('チンピラ')
+    ,
+    new SctItm('ギャング')
+    ,
+    new SctItm('マフィア')
+    ,
     new SctItm('ハスラー')
     ,
     new SctItm('ギャンブラー')
@@ -6391,6 +6407,8 @@ const   itms_class = [
     new SctItm('テロリスト')
     ,
     new SctItm('ハッカー')
+    ,
+    new SctItm('宇宙飛行士')
     ,
     new SctItm('宇宙人')
     ,
@@ -8055,8 +8073,6 @@ const   itms_dance = [
     new SctItm('フォークダンス')
     ,
     new SctItm('ジャズダンス')
-    ,
-    new SctItm('バレエ')
     ,
     new SctItm('バレエ')
     ,

@@ -3658,7 +3658,8 @@ const itms_what = [
     new SctItm('@L_TOWN@航空', 'WHAT/airplane.jpg'),
     new SctItm('@L_TOWN@大学', 'WHAT/college.jpg'),
     new SctItm('@L_CITY@大学', 'WHAT/college.jpg'),
-    new SctItm('@L_CITY@図書館', 'WHAT/library.jpg')
+    new SctItm('@L_CITY@図書館', 'WHAT/library.jpg'),
+    new SctItm('@L_CITY@小学校', 'WHAT/school.jpg')
 ];
 const itms_city = [
     new SctItm('東京', 'CITY/tokyo.jpg'),
@@ -3884,11 +3885,14 @@ const itms_class = [
     new SctItm('考古学者'),
     new SctItm('ホテルマン'),
     new SctItm('デザイナー'),
+    new SctItm('美容師'),
     new SctItm('ファッションモデル'),
     new SctItm('靴磨き'),
+    new SctItm('侍'),
     new SctItm('武士'),
     new SctItm('野武士'),
     new SctItm('伯爵'),
+    new SctItm('公爵'),
     new SctItm('男爵'),
     new SctItm('水呑百姓'),
     new SctItm('農民'),
@@ -4016,6 +4020,10 @@ const itms_class = [
     new SctItm('セールスマン'),
     new SctItm('庖丁人'),
     new SctItm('用心棒'),
+    new SctItm('ヤクザ'),
+    new SctItm('チンピラ'),
+    new SctItm('ギャング'),
+    new SctItm('マフィア'),
     new SctItm('ハスラー'),
     new SctItm('ギャンブラー'),
     new SctItm('花火職人'),
@@ -4056,6 +4064,7 @@ const itms_class = [
     new SctItm('スパイ'),
     new SctItm('テロリスト'),
     new SctItm('ハッカー'),
+    new SctItm('宇宙飛行士'),
     new SctItm('宇宙人'),
     new SctItm('火星人'),
     // new SctItm('@STAR@人')
@@ -4928,7 +4937,6 @@ const itms_dance = [
     new SctItm('ダンス'),
     new SctItm('フォークダンス'),
     new SctItm('ジャズダンス'),
-    new SctItm('バレエ'),
     new SctItm('バレエ'),
     new SctItm('社交ダンス'),
     new SctItm('チークダンス'),
