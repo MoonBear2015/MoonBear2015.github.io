@@ -385,19 +385,29 @@ class selector_q_sent extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@TIMEFRONT2@@Q_MSG@けど、@Q_MSG@が、なんとかして貰えませんか？ ')
             ,
+            new SctItm('@TIMEFRONT2@@Q_MSG@けど、@Q_MSG@が、お願いできませんか？ ')
+            ,
+            new SctItm('@TIMEFRONT2@@Q_MSG@けど、@Q_MSG@ので、お願いしても構いませんか？ ')
+            ,
+            new SctItm('@TIMEFRONT2@@Q_MSG@けど、@Q_MSG@ので、手を貸して頂けませんか？ ')
+            ,
             new SctItm('@TIMEFRONT2@@Q_MSG@けど、@Q_MSG@ので、手伝って貰えませんか？ ')
             ,
             new SctItm('@TIMEFRONT2@@Q_MSG@けど、@Q_MSG@ので、どなたかお願い出来ないでしょうか？ ')
             ,
             new SctItm('@TIMEFRONT2@@Q_MSG@けど、@Q_MSG@が、どうすれば良いのか教えてください。')
             ,
-            new SctItm('@TIMEFRONT2@@Q_MSG@けど、@Q_MSG@ので、誰か何とかしてください。')
+            new SctItm('@TIMEFRONT2@@Q_MSG@けど、@Q_MSG@が、誰か何とかしてください。')
             ,
-            new SctItm('@TIMEFRONT2@@Q_MSG@けど、@Q_MSG@ので、私と一緒に@DID@貰えないでしょうか？ ')
+            new SctItm('@TIMEFRONT2@@Q_MSG@けど、@Q_MSG@が、私と一緒に@DID@貰えないでしょうか？ ')
             ,
-            new SctItm('@TIMEFRONT2@@Q_MSG@けど、@Q_MSG@ので、@L_PART@の付き添いで@DID@貰えないでしょうか？ ')
+            new SctItm('@TIMEFRONT2@@Q_MSG@けど、@Q_MSG@が、@L_PART@の付き添いで@DID@貰えないでしょうか？ ')
             ,
-            new SctItm('@TIMEFRONT2@@Q_MSG@けど、@Q_MSG@ので、どなたか私の@L_PART@と一緒に@DID@頂けませんか？ ')
+            new SctItm('@TIMEFRONT2@@Q_MSG@けど、@Q_MSG@が、どなたか私の@L_PART@と一緒に@DID@頂けませんか？ ')
+            ,
+            new SctItm('@TIMEFRONT2@@Q_MSG@けど、@Q_MSG@が、どなたか私の代わりに@DID@下さいませんか？ ')
+            ,
+            new SctItm('@TIMEFRONT2@@Q_MSG@けど、@Q_MSG@が、どなたか私の@L_PART@に代わって@DID@頂けませんか？ ')
             // ,
             // new SctItm('私の@KEI@@L_PART@をご存じでしょうか。')
         ]
@@ -721,7 +731,11 @@ class selector_a_title extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@L_PART@さんと@L_DID@みては？')
             ,
+            new SctItm('その@L_PART@さんなら大丈夫です')
+            ,
             new SctItm('@CLASS@に相談しましょう')
+            ,
+            new SctItm('自分でしたらどうですか？')
         ]
     }
 }
