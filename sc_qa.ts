@@ -392,6 +392,12 @@ class selector_q_sent extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@TIMEFRONT2@@Q_MSG@けど、@Q_MSG@が、どうすれば良いのか教えてください。')
             ,
             new SctItm('@TIMEFRONT2@@Q_MSG@けど、@Q_MSG@ので、誰か何とかしてください。')
+            ,
+            new SctItm('@TIMEFRONT2@@Q_MSG@けど、@Q_MSG@ので、私と一緒に@DID@貰えないでしょうか？ ')
+            ,
+            new SctItm('@TIMEFRONT2@@Q_MSG@けど、@Q_MSG@ので、@L_PART@の付き添いで@DID@貰えないでしょうか？ ')
+            ,
+            new SctItm('@TIMEFRONT2@@Q_MSG@けど、@Q_MSG@ので、どなたか私の@L_PART@と一緒に@DID@頂けませんか？ ')
             // ,
             // new SctItm('私の@KEI@@L_PART@をご存じでしょうか。')
         ]
@@ -597,7 +603,11 @@ class selector_q04_result extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@GRADE@困っているのです')
             ,
-            new SctItm('とても手が付けられません')
+            new SctItm('@GRADE@大変なんです')
+            ,
+            new SctItm('@GRADE@大変なことになってしまいました')
+            ,
+            new SctItm('@GRADE@手が付けられません')
             ,
             new SctItm('生きた心地がしないのです')
             ,
