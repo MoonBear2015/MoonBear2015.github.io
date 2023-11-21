@@ -377,9 +377,21 @@ class selector_q_sent extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@TIMEFRONT2@@CONECT2@、@Q_MSG@。')
             ,
-            new SctItm('@TIMEFRONT2@@Q_MSG@が、@Q_SENT@')
+            // new SctItm('@TIMEFRONT2@@Q_MSG@が、@Q_SENT@')
+            // ,
+            // new SctItm('@TIMEFRONT2@@Q_MSG@けど、@Q_SENT@')
+            // ,
+            new SctItm('@TIMEFRONT2@@Q_MSG@けど、@Q_MSG@が、どうすれば良いのでしょう？ ')
             ,
-            new SctItm('@TIMEFRONT2@@Q_MSG@けど、@Q_SENT@')
+            new SctItm('@TIMEFRONT2@@Q_MSG@けど、@Q_MSG@が、なんとかして貰えませんか？ ')
+            ,
+            new SctItm('@TIMEFRONT2@@Q_MSG@けど、@Q_MSG@ので、手伝って貰えませんか？ ')
+            ,
+            new SctItm('@TIMEFRONT2@@Q_MSG@けど、@Q_MSG@ので、どなたかお願い出来ないでしょうか？ ')
+            ,
+            new SctItm('@TIMEFRONT2@@Q_MSG@けど、@Q_MSG@が、どうすれば良いのか教えてください。')
+            ,
+            new SctItm('@TIMEFRONT2@@Q_MSG@けど、@Q_MSG@ので、誰か何とかしてください。')
             // ,
             // new SctItm('私の@KEI@@L_PART@をご存じでしょうか。')
         ]
@@ -581,6 +593,8 @@ class selector_q04_result extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@Q_MSG04@');
         this.itms = [
+            new SctItm('どうしたらいいのか判りません')
+            ,
             new SctItm('@GRADE@困っているのです')
             ,
             new SctItm('とても手が付けられません')
