@@ -9,7 +9,7 @@ function set_qa()
     html += '<h1>';
     html += 'Q&A';
     html += '<small>';
-    html += ' Q01.33';
+    html += ' Q01.34';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -803,6 +803,8 @@ class selector_a_sent extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@A_MSG@が、その@L_PART@さんなら@DID@いましたね。')
             ,
             new SctItm('@A_MSG@が、@DID@いる@L_PART@さんを見かけましたよ。')
+            ,
+            new SctItm('@A_MSG@が、@CITY@の@PLACE@で@DID@いたのは@QUESTER@さんですよね？ ')
             ,
             new SctItm('@A_MSG@が、@A_SENT@')
             ,
