@@ -38,7 +38,7 @@ function make_site_header(): string {
     html += '「空虚」';
     html += '</h1>';
     html += '<small>';
-    html += 'M03.54';
+    html += 'M03.55';
     html += '</small>';
     // html += '<small>';
     // html += 'パソコンのブラウザでご覧下さい';
@@ -69,7 +69,7 @@ function get_menu_items() : menu_item[] {
         new menu_item('序','set_main()'),
         new menu_item('聞','set_news()'),
         new menu_item('詩','set_poem()'),
-        new menu_item('問','set_qa()'),
+        new menu_item('談','set_qa()'),
         new menu_item('店','set_shop()'),
         new menu_item('占','set_horo()'),
         new menu_item('書','set_book()'),

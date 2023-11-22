@@ -9,7 +9,7 @@ function set_qa()
     html += '<h1>';
     html += 'Q&A';
     html += '<small>';
-    html += ' Q01.34';
+    html += ' Q01.35';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -280,13 +280,17 @@ class selector_q_title extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@L_PART@と@L_DID@みたいのです')
             ,
-            new SctItm('誰か@L_PART@と一緒に@L_DID@頂けませんか')
+            new SctItm('@L_PART@と一緒に@L_DID@頂けませんか')
             ,
             new SctItm('@L_PART@に@THINK@しています')
             ,
             new SctItm('@L_PART@が@L_HABIT@ばかりしています')
             ,
             new SctItm('助けて！ @L_PART@がまるで@NICK@なんです')
+            ,
+            new SctItm('助けて！ @L_PART@が@L_DID@しまいました！')
+            ,
+            new SctItm('助けて！ @L_PART@に@L_DO@されそうなんです！')
             ,
             new SctItm('@L_PART@が@NICK@にしか見えません')
             ,
@@ -295,8 +299,6 @@ class selector_q_title extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@L_PART@が@L_DID@いるので困っています')
             ,
             new SctItm('@L_PART@を@L_DO@できなくて困っています')
-            ,
-            new SctItm('助けて！ @L_PART@に@L_DO@されそうなんです！')
             ,
             new SctItm('@L_PART@が@KEIMN@で仕方がありません')
             ,
@@ -707,7 +709,7 @@ class selector_a_title extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@QUESTER@さん、もう来ないで下さいといったはずです')
             ,
-            new SctItm('いつまで居るつもりですか、@QUESTER@さん')
+            new SctItm('まだ居たんですか、@QUESTER@さん')
             ,
             new SctItm('お帰りください、@QUESTER@さん')
             ,
@@ -735,7 +737,7 @@ class selector_a_title extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@CLASS@に相談しましょう')
             ,
-            new SctItm('自分でしたらどうですか？')
+            new SctItm('@QUESTER@さんが自分でしたらどうですか？')
         ]
     }
 }
@@ -804,7 +806,13 @@ class selector_a_sent extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@A_MSG@が、@DID@いる@L_PART@さんを見かけましたよ。')
             ,
-            new SctItm('@A_MSG@が、@CITY@の@PLACE@で@DID@いたのは@QUESTER@さんですよね？ ')
+            new SctItm('@A_MSG@が、@TOWN@の@PLACE@で@DID@いたのは@QUESTER@さんですよね？ ')
+            ,
+            new SctItm('@A_MSG@が、@KEI@@L_PART@を連れて@DID@いたのは@QUESTER@さんですよね？ ')
+            ,
+            new SctItm('@A_MSG@が、@CHAR@と一緒に@DID@いたのは@QUESTER@さんですよね？ ')
+            ,
+            new SctItm('@A_MSG@が、@MANYCHAR@に紛れて@DID@いたのは@QUESTER@さんですよね？ ')
             ,
             new SctItm('@A_MSG@が、@A_SENT@')
             ,
