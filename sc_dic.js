@@ -1224,7 +1224,8 @@ const cods_place = [
     new SctCod_TI('スキー|場|じょう|', 'PLACE/ski.jpg'),
     new SctCod_TI('|刑務所|けいむしょ|', 'PLACE/Jail.jpg'),
     new SctCod_TI('ホテル', 'PLACE/hotel.jpg'),
-    new SctCod_TI('ゲームセンター', 'PLACE/gamecenter.jpg')
+    new SctCod_TI('ゲームセンター', 'PLACE/gamecenter.jpg'),
+    new SctCod_TI('病院', 'PLACE/hosptal.jpg')
 ];
 const cods_move = [
     new SctCod_Mv('|動|うご|く', 'active.jpg'),
@@ -2146,6 +2147,7 @@ const itms_kmd = [
     new SctItm('@ITEM@に等しい'),
     new SctItm('@DO@する@ITEM@に等しい'),
     new SctItm('@ITEM@のような'),
+    new SctItm('@ITEM@みたいな'),
     new SctItm('@DO@する@ITEM@みたいな'),
     new SctItm('@CALL2@と@ASSES@')
 ];
@@ -4582,6 +4584,7 @@ const itms_dir = [
 const itms_sweets = [
     new SctItm('チョコレート'),
     new SctItm('ケーキ'),
+    new SctItm('ショートケーキ'),
     new SctItm('ロールケーキ'),
     new SctItm('バームクーヘン'),
     new SctItm('チーズケーキ'),
@@ -4627,6 +4630,8 @@ const itms_meal = [
     new SctItm('焼きそばパン'),
     new SctItm('ホットドッグ'),
     new SctItm('お寿司'),
+    new SctItm('ちらし寿司'),
+    new SctItm('にぎり寿司'),
     new SctItm('おにぎり'),
     new SctItm('中華料理'),
     new SctItm('イタリア料理'),
@@ -4642,6 +4647,10 @@ const itms_meal = [
     new SctItm('カツ丼'),
     new SctItm('親子丼'),
     new SctItm('天丼'),
+    new SctItm('卵かけご飯'),
+    new SctItm('炊き込みご飯'),
+    new SctItm('ふりかけご飯'),
+    new SctItm('釜飯'),
     new SctItm('うな重'),
     new SctItm('サンドイッチ'),
     new SctItm('たこ焼き'),
@@ -4655,6 +4664,9 @@ const itms_meal = [
     new SctItm('オムレツ'),
     new SctItm('オムライス'),
     new SctItm('炒飯'),
+    new SctItm('天津飯'),
+    new SctItm('北京ダック'),
+    new SctItm('麻婆豆腐'),
     new SctItm('ピラフ'),
     new SctItm('グラタン'),
     new SctItm('海老グラタン'),

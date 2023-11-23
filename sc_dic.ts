@@ -2197,6 +2197,8 @@ const   cods_place = [
     new SctCod_TI('ホテル','PLACE/hotel.jpg')
     ,
     new SctCod_TI('ゲームセンター','PLACE/gamecenter.jpg')
+    ,
+    new SctCod_TI('病院','PLACE/hosptal.jpg')
 ];
 
 
@@ -3705,6 +3707,8 @@ const   itms_kmd = [
     new SctItm('@DO@する@ITEM@に等しい')
     ,
     new SctItm('@ITEM@のような')
+    ,
+    new SctItm('@ITEM@みたいな')
     ,
     new SctItm('@DO@する@ITEM@みたいな')
     ,
@@ -7397,6 +7401,8 @@ const   itms_sweets = [
     ,
     new SctItm('ケーキ')
     ,
+    new SctItm('ショートケーキ')
+    ,
     new SctItm('ロールケーキ')
     ,
     new SctItm('バームクーヘン')
@@ -7481,6 +7487,10 @@ const   itms_meal = [
     ,
     new SctItm('お寿司')
     ,
+    new SctItm('ちらし寿司')
+    ,
+    new SctItm('にぎり寿司')
+    ,
     new SctItm('おにぎり')
     ,
     new SctItm('中華料理')
@@ -7511,6 +7521,14 @@ const   itms_meal = [
     ,
     new SctItm('天丼')
     ,
+    new SctItm('卵かけご飯')
+    ,
+    new SctItm('炊き込みご飯')
+    ,
+    new SctItm('ふりかけご飯')
+    ,
+    new SctItm('釜飯')
+    ,
     new SctItm('うな重')
     ,
     new SctItm('サンドイッチ')
@@ -7536,6 +7554,12 @@ const   itms_meal = [
     new SctItm('オムライス')
     ,
     new SctItm('炒飯')
+    ,
+    new SctItm('天津飯')
+    ,
+    new SctItm('北京ダック')
+    ,
+    new SctItm('麻婆豆腐')
     ,
     new SctItm('ピラフ')
     ,

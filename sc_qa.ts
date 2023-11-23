@@ -808,7 +808,7 @@ class selector_a_sent extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@A_MSG@が、@TOWN@の@PLACE@で@DID@いたのは@QUESTER@さんですよね？ ')
             ,
-            new SctItm('@A_MSG@が、@KEI@@L_PART@を連れて@DID@いたのは@QUESTER@さんですよね？ ')
+            new SctItm('@A_MSG@が、@KEI@@L_PART@に連れられて@DID@いたのは@QUESTER@さんですよね？ ')
             ,
             new SctItm('@A_MSG@が、@CHAR@と一緒に@DID@いたのは@QUESTER@さんですよね？ ')
             ,
