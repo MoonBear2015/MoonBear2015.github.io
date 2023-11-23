@@ -5416,6 +5416,7 @@ const itms_did = [
     new SctItm('@KING@に就任して'),
     new SctItm('@KING@を暗殺して'),
     new SctItm('@KING@の寝首をかいて'),
+    new SctItm('@KING@の@PART@を誘拐して'),
     new SctItm('@PEOPLE@を集めて'),
     new SctItm('@PEOPLE@を追いかけて'),
     new SctItm('@PEOPLE@を探して'),
@@ -5596,6 +5597,7 @@ const itms_did_l = [
     new SctItm('@L_KING@に就任して'),
     new SctItm('@L_KING@を暗殺して'),
     new SctItm('@L_KING@の寝首をかいて'),
+    new SctItm('@L_KING@の@L_PART@を誘拐して'),
     new SctItm('@MANYPEOPLE@から『@L_ITEM@の@L_SPECIALIST@』と呼ばれて'),
     new SctItm('@MANYPEOPLE@から『@L_ITEM@の@L_SPECIALIST@』と噂されて'),
     new SctItm('@MANYPEOPLE@から『@L_ITEM@の@L_SPECIALIST@』と馬鹿にされて'),
@@ -5770,7 +5772,8 @@ const itms_did_o = [
     new SctItm('@L_KING@に命じられて'),
     new SctItm('@L_KING@に即位して'),
     new SctItm('@L_KING@に就任して'),
-    new SctItm('@L_KING@を暗殺して')
+    new SctItm('@L_KING@を暗殺して'),
+    new SctItm('@L_KING@の@L_PART@を誘拐して')
     // ,
     // new SctItm('『@L_ITEM@の@L_SPECIALIST@』と呼ばれて')
     // ,
