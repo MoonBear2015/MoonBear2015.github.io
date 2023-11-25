@@ -905,207 +905,195 @@ const   cods_fruit = [
 const   cods_animal = [
     new SctCod_TI('|獣|けもの|','animal.jpg')
     ,
-    new SctCod_TI('|鼠|ねずみ|')
+    new SctCod_TI('|鼠|ねずみ|','nezumi.png')
     ,
-    new SctCod_TI('|牛|うし|')
+    new SctCod_TI('|牛|うし|','usi.png')
     ,
-    new SctCod_TI('|虎|とら|')
+    new SctCod_TI('|虎|とら|','tora.png')
     ,
-    new SctCod_TI('|兎|うさぎ|')
+    new SctCod_TI('|兎|うさぎ|','usagi.png')
     ,
-    new SctCod_TI('|龍|りゅう|')
+    new SctCod_TI('|龍|りゅう|','ryu.png')
     ,
-    new SctCod_TI('|竜|りゅう|')
+    new SctCod_TI('|竜|りゅう|','ryu.png')
     ,
-    new SctCod_TI('|蛇|へび|')
+    new SctCod_TI('|蛇|へび|','hebi.png')
     ,
-    new SctCod_TI('|馬|うま|')
+    new SctCod_TI('|馬|うま|','uma.png')
     ,
-    new SctCod_TI('|羊|ひつじ|')
+    new SctCod_TI('|羊|ひつじ|','hitsuji.png')
     ,
-    new SctCod_TI('|猿|さる|')
+    new SctCod_TI('|猿|さる|','saru.png')
     ,
-    new SctCod_TI('|犬|いぬ|')
+    new SctCod_TI('|犬|いぬ|','inu.png')
     ,
-    new SctCod_TI('|猪|いのしし|')
+    new SctCod_TI('|猪|いのしし|','inosisi.png')
     ,
-    new SctCod_TI('|鼬|いたち|')
+    new SctCod_TI('|鼬|いたち|','itachi.png')
     ,
-    new SctCod_TI('|熊|くま|')
+    new SctCod_TI('|熊|くま|','kuma.png')
     ,
-    new SctCod_TI('|猫|ねこ|')
+    new SctCod_TI('|猫|ねこ|','neko.png')
     ,
-    new SctCod_TI('|狸|たぬき|')
+    new SctCod_TI('|狸|たぬき|','tanuki.png')
     ,
-    new SctCod_TI('|狐|きつね|')
+    new SctCod_TI('|狐|きつね|','kitsune.png')
     ,
-    new SctCod_TI('|鹿|しか|')
+    new SctCod_TI('|鹿|しか|','sika.png')
     ,
-    new SctCod_TI('|海豹|あざらし|')
+    new SctCod_TI('|海豹|あざらし|','azarasi.png')
     ,
-    new SctCod_TI('|浅蜊|あさり|')
+    new SctCod_TI('|浅蜊|あさり|','asari.png')
     ,
-    new SctCod_TI('|海驢|あしか|')
+    new SctCod_TI('|海驢|あしか|','asika.png')
     ,
-    new SctCod_TI('|雨虎|あめふらし|')
+    new SctCod_TI('|雨虎|あめふらし|','amefurashi.png')
     ,
-    new SctCod_TI('|洗熊|あらいぐま|')
+    new SctCod_TI('|洗熊|あらいぐま|','araiguma.png')
     ,
-    new SctCod_TI('|蟻食|ありくい|')
+    new SctCod_TI('|蟻食|ありくい|','arikui.png')
     ,
-    new SctCod_TI('|羊駱駝|あるぱか|')
+    new SctCod_TI('|羊駱駝|あるぱか|','arupaka.png')
     ,
-    new SctCod_TI('|鮑|あわび|')
+    new SctCod_TI('|鮑|あわび|','awabi.png')
     ,
-    new SctCod_TI('|烏賊|いか|')
+    new SctCod_TI('|烏賊|いか|','ika.png')
     ,
-    new SctCod_TI('|磯巾着|いそぎんちゃく|')
-    ,
-    new SctCod_TI('|鼬|いたち|')
+    new SctCod_TI('|磯巾着|いそぎんちゃく|','isoginchaku.png')
     ,
     // new SctCod_TI('|一角|いっかく|')
     // ,
-    new SctCod_TI('|蝗|いなご|')
+    new SctCod_TI('|蝗|いなご|','inago.png')
     ,
-    new SctCod_TI('|井守|いもり|')
+    new SctCod_TI('|井守|いもり|','imori.png')
     ,
-    new SctCod_TI('|海豚|いるか|')
+    new SctCod_TI('|海豚|いるか|','iruka.png')
     ,
-    new SctCod_TI('|兎|うさぎ|')
+    new SctCod_TI('|海胆|うに|','uni.png')
     ,
-    new SctCod_TI('|海胆|うに|')
+    new SctCod_TI('|海牛|うみうし|','umiusi.png')
+    // ,
+    // new SctCod_TI('|海蛍|うみほたる|')
     ,
-    new SctCod_TI('|海牛|うみうし|')
+    new SctCod_TI('|襟巻蜥蜴|えりまきとかげ|','erimakitokage.png')
     ,
-    new SctCod_TI('|海蛍|うみほたる|')
+    new SctCod_TI('|鸚鵡貝|おうむがい|','oumugai.png')
     ,
-    new SctCod_TI('|襟巻蜥蜴|えりまきとかげ|')
+    new SctCod_TI('|狼|おおかみ|','ookami.png')
     ,
-    new SctCod_TI('|鸚鵡貝|おうむがい|')
+    new SctCod_TI('|御玉杓子|おたまじゃくし|','otamajakusi.png')
     ,
-    new SctCod_TI('|狼|おおかみ|')
+    new SctCod_TI('|膃肭臍|おっとせい|','ottosei.png')
     ,
-    new SctCod_TI('|御玉杓子|おたまじゃくし|')
+    new SctCod_TI('|蛙|かえる|','kaeru.png')
     ,
-    new SctCod_TI('|膃肭臍|おっとせい|')
+    new SctCod_TI('|牡蠣|かき|','kaki.png')
     ,
-    new SctCod_TI('|蛙|かえる|')
+    new SctCod_TI('|蝸牛|かたつむり|','katatumuri.png')
     ,
-    new SctCod_TI('|牡蠣|かき|')
+    new SctCod_TI('|蟹|かに|','kani.png')
     ,
-    new SctCod_TI('|蝸牛|かたつむり|')
+    new SctCod_TI('|河馬|かば|','kaba.png')
     ,
-    new SctCod_TI('|蟹|かに|')
+    new SctCod_TI('|兜蝦|かぶとえび|','kabutoebi.png')
     ,
-    new SctCod_TI('|河馬|かば|')
+    new SctCod_TI('|兜蟹|かぶとがに|','kabutogani.png')
     ,
-    new SctCod_TI('|兜蝦|かぶとえび|')
+    new SctCod_TI('|蝦蟇|がまがえる|','gamagaeru.png')
     ,
-    new SctCod_TI('|兜蟹|かぶとがに|')
+    new SctCod_TI('|避役|かめれおん|','kamereon.png')
     ,
-    new SctCod_TI('|蝦蟇|がま|')
+    new SctCod_TI('|氈鹿|かもしか|','kamosika.png')
     ,
-    new SctCod_TI('|避役|かめれおん|')
+    // new SctCod_TI('|羚羊|かもしか|')
+    // ,
+    new SctCod_TI('|川獺|かわうそ|','kawauso.png')
     ,
-    new SctCod_TI('|氈鹿|かもしか|')
+    new SctCod_TI('|長尾驢|かんがるー|','kangaru.png')
     ,
-    new SctCod_TI('|羚羊|かもしか|')
+    new SctCod_TI('|麒麟|きりん|','kirin.png')
     ,
-    new SctCod_TI('|川獺|かわうそ|')
+    new SctCod_TI('|鯨|くじら|','kujira.png')
     ,
-    new SctCod_TI('|長尾驢|かんがるー|')
+    new SctCod_TI('|海月|くらげ|','kurage.png')
     ,
-    new SctCod_TI('|狐|きつね|')
+    // new SctCod_TI('|笄蛭|こうがいびる|')
+    // ,
+    new SctCod_TI('|蝙蝠|こうもり|','koumori.png')
     ,
-    new SctCod_TI('|麒麟|きりん|')
+    new SctCod_TI('|犀|さい|','sai.png')
     ,
-    new SctCod_TI('|鯨|くじら|')
-    ,
-    new SctCod_TI('|海月|くらげ|')
-    ,
-    new SctCod_TI('|笄蛭|こうがいびる|')
-    ,
-    new SctCod_TI('|蝙蝠|こうもり|')
-    ,
-    new SctCod_TI('|犀|さい|')
-    ,
-    new SctCod_TI('|栄螺|さざえ|')
+    new SctCod_TI('|栄螺|さざえ|','sazae.png')
     ,
     // new SctCod_TI('|真田虫|さなだむし|')
     // ,
-    new SctCod_TI('|珊瑚|さんご|')
+    new SctCod_TI('|珊瑚|さんご|','sango.png')
     ,
-    new SctCod_TI('|山椒魚|さんしょううお|')
+    new SctCod_TI('|山椒魚|さんしょううお|','sanshouo.png')
     ,
-    new SctCod_TI('|獅子|しし|')
+    new SctCod_TI('|蜆|しじみ|','sijimi.png')
     ,
-    new SctCod_TI('|蜆|しじみ|')
+    new SctCod_TI('|縞馬|しまうま|','simauma.png')
     ,
-    new SctCod_TI('|縞馬|しまうま|')
+    new SctCod_TI('|蝦蛄|しゃこ|','shako.png')
     ,
-    new SctCod_TI('|蝦蛄|しゃこ|')
+    new SctCod_TI('|鯱|しゃち|','shachi.png')
     ,
-    new SctCod_TI('|鯱|しゃち|')
+    new SctCod_TI('|儒艮|じゅごん|','jugon.png')
     ,
-    new SctCod_TI('|儒艮|じゅごん|')
+    new SctCod_TI('|水牛|すいぎゅう|','suigyu.png')
     ,
-    new SctCod_TI('|水牛|すいぎゅう|')
+    new SctCod_TI('|鼈|すっぽん|','suppon.png')
     ,
-    new SctCod_TI('|鼈|すっぽん|')
+    new SctCod_TI('|海象|せいうち|','seiuchi.png')
     ,
-    new SctCod_TI('|海象|せいうち|')
+    new SctCod_TI('|蛸|たこ|','tako.png')
     ,
-    new SctCod_TI('|蛸|たこ|')
+    new SctCod_TI('|壁蝨|だに|','dani.png')
     ,
-    new SctCod_TI('|壁蝨|だに|')
+    new SctCod_TI('|田螺|たにし|','tanisi.png')
     ,
-    new SctCod_TI('|田螺|たにし|')
+    new SctCod_TI('|団子虫|だんごむし|','dangomusi.png')
     ,
-    new SctCod_TI('|団子虫|だんごむし|')
+    new SctCod_TI('|蜥蜴|とかげ|','tokage.png')
     ,
-    new SctCod_TI('|蜥蜴|とかげ|')
+    new SctCod_TI('|海馬|とど|','todo.png')
     ,
-    new SctCod_TI('|海馬|とど|')
+    new SctCod_TI('|馴鹿|となかい|','tonakai.png')
     ,
-    new SctCod_TI('|馴鹿|となかい|')
+    new SctCod_TI('|樹懶|なまけもの|','namakemono.png')
     ,
-    new SctCod_TI('|虎|とら|')
+    new SctCod_TI('|海鼠|なまこ|','namako.png')
     ,
-    new SctCod_TI('|樹懶|なまけもの|')
+    new SctCod_TI('|蛞蝓|なめくじ|','namekuji.png')
     ,
-    new SctCod_TI('|海鼠|なまこ|')
+    new SctCod_TI('|大熊猫|ぱんだ|','panda.png')
     ,
-    new SctCod_TI('|蛞蝓|なめくじ|')
+    new SctCod_TI('|獏|ばく|','baku.png')
     ,
-    new SctCod_TI('|鼠|ねずみ|')
+    // new SctCod_TI('|波布|はぶ|')
+    // ,
+    new SctCod_TI('|蛤|はまぐり|','hamaguri.png')
     ,
-    new SctCod_TI('|大熊猫|ぱんだ|')
+    new SctCod_TI('|蜩|ひぐらし|','higurasi.png')
     ,
-    new SctCod_TI('|獏|ばく|')
+    new SctCod_TI('|海星|ひとで|','hitode.png')
     ,
-    new SctCod_TI('|波布|はぶ|')
+    new SctCod_TI('|狒狒|ひひ|','hihi.png')
     ,
-    new SctCod_TI('|蛤|はまぐり|')
+    new SctCod_TI('|豹|ひょう|','hyo.png')
     ,
-    new SctCod_TI('|蜩|ひぐらし|')
+    new SctCod_TI('|蛭|ひる|','hiru.png')
     ,
-    new SctCod_TI('|海星|ひとで|')
+    new SctCod_TI('|富士壺|ふじつぼ|','hujitubo.png')
     ,
-    new SctCod_TI('|狒狒|ひひ|')
+    new SctCod_TI('|船虫|ふなむし|','hunamusi.png')
     ,
-    new SctCod_TI('|豹|ひょう|')
+    new SctCod_TI('|帆立貝|ほたてがい|','hotategai.png')
     ,
-    new SctCod_TI('|蛭|ひる|')
+    new SctCod_TI('|法螺貝|ほらがい|','horagai.png')
     ,
-    new SctCod_TI('|富士壺|ふじつぼ|')
-    ,
-    new SctCod_TI('|船虫|ふなむし|')
-    ,
-    new SctCod_TI('|帆立貝|ほたてがい|')
-    ,
-    new SctCod_TI('|法螺貝|ほらがい|')
-    ,
-    new SctCod_TI('|蝮|まむし|')
+    new SctCod_TI('|蝮|まむし|','mamusi.png')
     ,
     new SctCod_TI('|微塵子|みじんこ|')
     ,
@@ -1142,6 +1130,22 @@ const   cods_animal = [
     new SctCod_TI('|恐竜|きょうりゅう|')
     ,
     new SctCod_TI('|怪獣|かいじゅう|')
+    ,
+    new SctCod_TI('|獅子|らいおん|')
+    ,
+    new SctCod_TI('|象|ぞう|')
+    ,
+    new SctCod_TI('|猟豹|ちーたー|')
+    ,
+    new SctCod_TI('|長尾驢|かんがるー|')
+    ,
+    new SctCod_TI('|企鵝|ぺんぎん|')
+    ,
+    new SctCod_TI('|紅鶴|ふらみんご|')
+    ,
+    new SctCod_TI('|大猩猩|ごりら|')
+    ,
+    new SctCod_TI('|針鼠|はりねずみ|')
 ];
 
 const   cods_fish = [
