@@ -39,8 +39,8 @@ function make_quiz()
     html += 'border-radius:  10px;';
     html += '">';
 
-    html += Make_Q();
-    html += Make_A();
+    html += Make_Chair();
+    html += Make_Play();
 
     //---- this Q&A END
     html += '</div>';
