@@ -521,6 +521,27 @@ small {
     text-shadow: 2px 2px 0px #000000;
 }
 
+#quiz_box {
+    margin:     10px; 
+    padding:    10px; 
+    border:     0.5px solid #606060;
+    border-radius:  10px;
+}
+
+#quiz_title {
+    font-size: 32px;
+    color: #f0f0f0;
+    margin: 0px 20px;
+    text-shadow: 2px 2px 0px #000000;
+}
+#quiz_doc {
+    font-size: 18px;
+    margin: 0px;
+    padding: 0px;
+    color: #c0c0c0;
+    text-shadow: 2px 2px 0px #000000;
+}
+
 #about_box {
     margin:     10px; 
     padding:    10px; 
