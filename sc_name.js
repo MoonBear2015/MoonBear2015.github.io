@@ -139,6 +139,21 @@ class NmItm {
         html += '</h3>';
         return html;
     }
+    html_CHAIR(in_picsize) {
+        let html = '';
+        html += '<div id="face_pic_L">';
+        html += '<figure>';
+        html += '<img src="pics/FACE/' + this.to_FilePath() + '" width="'
+            + in_picsize.toString()
+            + 'px">';
+        html += '</figure>';
+        html += '</div>';
+        html += '<h4 id="chair" align="left">';
+        html += '<span class="xl">' + this.Name + '</span> ' + this.Age + '<br>';
+        html += ' @WHO4@';
+        html += '</h4>';
+        return html;
+    }
     get NameAge() {
         return this.Name + this.Age;
     }

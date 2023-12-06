@@ -63,6 +63,7 @@ function get_menu_items() {
         new menu_item('店', 'set_shop()'),
         new menu_item('占', 'set_horo()'),
         new menu_item('書', 'set_book()'),
+        new menu_item('謎', 'set_quiz()'),
         new menu_item('注', 'set_about()')
     ];
     return menu_items;

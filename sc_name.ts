@@ -57,8 +57,7 @@ interface INmItm {
     html_ADVICER(in_picsize : number) : string;
     html_ABOUTER(in_picsize : number) : string;
     html_BOOKWRITER(in_picsize : number) : string;
-
-
+    html_CHAIR(in_picsize : number) : string;
 }
 
 class NmItm implements INmItm {
@@ -194,6 +193,24 @@ class NmItm implements INmItm {
         return html;
     }
 
+    html_CHAIR(in_picsize : number) {
+        let html = '';
+        html += '<div id="face_pic_L">';
+        html += '<figure>';
+        html += '<img src="pics/FACE/' + this.to_FilePath() + '" width="' 
+            + in_picsize.toString() 
+            + 'px">';
+        html += '</figure>';
+        html += '</div>';
+    
+        html += '<h4 id="chair" align="left">';
+        html += '<span class="xl">' + this.Name + '</span> '  + this.Age + '<br>';
+        html += ' @WHO4@';
+        html += '</h4>';
+        return html;
+    }
+
+    
     get NameAge() {
         return this.Name + this.Age;
     }
