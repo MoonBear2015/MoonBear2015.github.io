@@ -204,11 +204,13 @@ class NmItm implements INmItm {
         html += '</div>';
     
         html += '<h4 id="chair" align="left">';
-        html += '<span class="xl">' + this.Name + '</span> '  + this.Age + '<br>';
+        html += '出題者：';
+        html += '<span style="font-size : 16pt">' + this.Name + '</span> '  + this.Age + '<br>';
         html += ' @WHO4@';
         html += '</h4>';
         return html;
     }
+
 
     
     get NameAge() {

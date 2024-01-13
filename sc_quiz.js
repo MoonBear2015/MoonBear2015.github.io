@@ -7,7 +7,7 @@ function set_quiz() {
     html += '<h1>';
     html += 'Quiz';
     html += '<small>';
-    html += ' Z00.00';
+    html += ' Z00.01';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -30,15 +30,15 @@ function make_quiz() {
     html += 'border:     0.5px solid #606060;';
     html += 'border-radius:  10px;';
     html += '">';
-    html += Make_Chair();
-    html += Make_Play();
+    html += Make_Question();
+    html += Make_Answer();
     //---- this Q&A END
     html += '</div>';
     let maker = new quiz_docs_maker();
     html = maker.gene_docs(html);
     return html;
 }
-function Make_Chair() {
+function Make_Question() {
     let html = '';
     html += '<div id="quiz_box" ';
     html += 'style="';
@@ -55,12 +55,16 @@ function Make_Chair() {
     html += '@CHAIR@';
     html += '<br>';
     html += '<p id="quiz_doc">';
-    html += '@Z_SENT@';
+    html += '問題！<br>';
+    // html += '<figure>';
+    html += '<img src="pics/ANIMAL/@ICON_ANIMAL@" width="100px">';
+    // html += '</figure>';
+    html += '@L_QUIZANIMAL@';
     html += '</p>';
     html += '</div>';
     return html;
 }
-function Make_Play() {
+function Make_Answer() {
     let html = '';
     html += '<div id="quiz_box" ';
     html += 'style="';
@@ -74,9 +78,8 @@ function Make_Play() {
     html += 'background-position: center center;';
     html += 'background-size: cover;';
     html += '">';
-    html += '@PLAYER@';
     html += '<br>';
-    html += '<p id="qa_doc">';
+    html += '<p id="quiz_doc">';
     html += '@P_SENT@';
     html += '</p>';
     html += '</div>';
@@ -86,9 +89,8 @@ class quiz_docs_maker extends news_docs_maker {
     constructor() {
         super();
         this.dic_push(new selector_chair());
-        this.dic_push(new selector_player());
-        this.dic_push(new selector_c_sent());
-        this.dic_push(new selector_p_sent());
+        this.dic_push(new selector_quiz_sent());
+        this.dic_push(new selector_answer_sent());
     }
 }
 class selector_chair extends selector_NameLocker {
@@ -99,15 +101,7 @@ class selector_chair extends selector_NameLocker {
         return new SctItm(this.created_name.html_CHAIR(50), '');
     }
 }
-class selector_player extends selector_NameLocker {
-    constructor() {
-        super("@PLAYER@");
-    }
-    get first_itm() {
-        return new SctItm(this.created_name.html_ADVICER(50), '');
-    }
-}
-class selector_c_sent extends SctItm_Selector {
+class selector_quiz_sent extends SctItm_Selector {
     constructor() {
         super('@Z_SENT@');
         this.itms = [
@@ -136,7 +130,7 @@ class selector_c_sent extends SctItm_Selector {
         ];
     }
 }
-class selector_p_sent extends SctItm_Selector {
+class selector_answer_sent extends SctItm_Selector {
     constructor() {
         super('@A_SENT@');
         this.itms = [
