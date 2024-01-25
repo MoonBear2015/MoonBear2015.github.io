@@ -98,6 +98,15 @@ function cods_to_itms(in_cods : ISctCod[]) : ISctItm[]
 {
     let results = new Array<ISctItm>();
     in_cods.forEach((cod) => {
+        results.push(cod.to_SctItm());
+    });
+    return results;
+}
+
+function cods_NoRubi_to_itms(in_cods : ISctCod[]) : ISctItm[]
+{
+    let results = new Array<ISctItm>();
+    in_cods.forEach((cod) => {
         results.push(cod.to_SctItm_NoRubi());
     });
     return results;

@@ -315,7 +315,7 @@ class locker_place extends SctItm_SelectLocker implements ISctItm_Selector {
     constructor(){
         super('@L_PLACE@','','@ICON_TECH@');
         this.startNumber = 1;
-        this.Add(cods_to_itms(cods_place));
+        this.Add(cods_NoRubi_to_itms(cods_place));
     }
 }
 

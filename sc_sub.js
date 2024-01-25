@@ -69,6 +69,13 @@ function sepalate_number(num) {
 function cods_to_itms(in_cods) {
     let results = new Array();
     in_cods.forEach((cod) => {
+        results.push(cod.to_SctItm());
+    });
+    return results;
+}
+function cods_NoRubi_to_itms(in_cods) {
+    let results = new Array();
+    in_cods.forEach((cod) => {
         results.push(cod.to_SctItm_NoRubi());
     });
     return results;

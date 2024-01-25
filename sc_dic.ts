@@ -1095,13 +1095,13 @@ const   cods_animal = [
     ,
     new SctCod_TI('|蝮|まむし|','mamusi.png')
     ,
-    new SctCod_TI('|微塵子|みじんこ|')
+    new SctCod_TI('|微塵子|みじんこ|','mijinko.png')
     ,
-    new SctCod_TI('|蚯蚓|みみず|')
+    new SctCod_TI('|蚯蚓|みみず|','mimizu.png')
     ,
-    new SctCod_TI('|百足|むかで|')
+    new SctCod_TI('|百足|むかで|','mukade.png')
     ,
-    new SctCod_TI('|土竜|もぐら|')
+    new SctCod_TI('|土竜|もぐら|','mogura.png')
     ,
     new SctCod_TI('|山羊|やぎ|')
     ,

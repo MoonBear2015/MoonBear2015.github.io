@@ -1687,53 +1687,53 @@ class selector_keime2 extends SctItm_Selector {
 class selector_km extends SctItm_Selector {
     constructor() {
         super('@KEI2@');
-        this.Add(cods_to_itms(cods_km));
+        this.Add(cods_NoRubi_to_itms(cods_km));
         this.Add(itms_km);
     }
 }
 class selector_k extends SctItm_Selector {
     constructor() {
         super('@KEI3@');
-        this.Add(cods_to_itms(cods_ad_beauty));
-        this.Add(cods_to_itms(cods_ad_danger));
-        this.Add(cods_to_itms(cods_ad_sense_n));
-        this.Add(cods_to_itms(cods_ad_sense_p));
+        this.Add(cods_NoRubi_to_itms(cods_ad_beauty));
+        this.Add(cods_NoRubi_to_itms(cods_ad_danger));
+        this.Add(cods_NoRubi_to_itms(cods_ad_sense_n));
+        this.Add(cods_NoRubi_to_itms(cods_ad_sense_p));
         // this.Add(cods_to_itms(cods_ad_color));
-        this.Add(cods_to_itms(cods_ad_jougo));
-        this.Add(cods_to_itms(cods_ad_etc));
+        this.Add(cods_NoRubi_to_itms(cods_ad_jougo));
+        this.Add(cods_NoRubi_to_itms(cods_ad_etc));
         this.Add(itms_kmd);
     }
 }
 class selector_kd extends SctItm_Selector {
     constructor() {
         super('@KEI4@');
-        this.Add(cods_to_itms(cods_adv_beauty));
-        this.Add(cods_to_itms(cods_adv_sense_n));
-        this.Add(cods_to_itms(cods_adv_sense_p));
-        this.Add(cods_to_itms(cods_adv_danger));
-        this.Add(cods_to_itms(cods_adv_etc));
+        this.Add(cods_NoRubi_to_itms(cods_adv_beauty));
+        this.Add(cods_NoRubi_to_itms(cods_adv_sense_n));
+        this.Add(cods_NoRubi_to_itms(cods_adv_sense_p));
+        this.Add(cods_NoRubi_to_itms(cods_adv_danger));
+        this.Add(cods_NoRubi_to_itms(cods_adv_etc));
     }
 }
 class selector_kp extends SctItm_Selector {
     constructor() {
         super('@KEIP@');
-        this.Add(cods_to_itms(cods_ad_posi));
-        this.Add(cods_to_itms(cods_ad_beauty));
-        this.Add(cods_to_itms(cods_ad_sense_p));
+        this.Add(cods_NoRubi_to_itms(cods_ad_posi));
+        this.Add(cods_NoRubi_to_itms(cods_ad_beauty));
+        this.Add(cods_NoRubi_to_itms(cods_ad_sense_p));
     }
 }
 class selector_kdp extends SctItm_Selector {
     constructor() {
         super('@KEIDP@');
-        this.Add(cods_to_itms(cods_adv_posi));
-        this.Add(cods_to_itms(cods_adv_beauty));
-        this.Add(cods_to_itms(cods_adv_sense_p));
+        this.Add(cods_NoRubi_to_itms(cods_adv_posi));
+        this.Add(cods_NoRubi_to_itms(cods_adv_beauty));
+        this.Add(cods_NoRubi_to_itms(cods_adv_sense_p));
     }
 }
 class selector_kmp extends SctItm_Selector {
     constructor() {
         super('@KEIMP@');
-        this.Add(cods_to_itms(cods_km_posi));
+        this.Add(cods_NoRubi_to_itms(cods_km_posi));
     }
 }
 class selector_kp2 extends SctItm_Selector {
@@ -1769,25 +1769,25 @@ class selector_kdp2 extends SctItm_Selector {
 class selector_kn extends SctItm_Selector {
     constructor() {
         super('@KEIN@');
-        this.Add(cods_to_itms(cods_ad_nega));
-        this.Add(cods_to_itms(cods_ad_danger));
-        this.Add(cods_to_itms(cods_ad_dirty));
-        this.Add(cods_to_itms(cods_ad_sense_n));
+        this.Add(cods_NoRubi_to_itms(cods_ad_nega));
+        this.Add(cods_NoRubi_to_itms(cods_ad_danger));
+        this.Add(cods_NoRubi_to_itms(cods_ad_dirty));
+        this.Add(cods_NoRubi_to_itms(cods_ad_sense_n));
     }
 }
 class selector_kdn extends SctItm_Selector {
     constructor() {
         super('@KEIDN@');
-        this.Add(cods_to_itms(cods_adv_nega));
-        this.Add(cods_to_itms(cods_adv_danger));
-        this.Add(cods_to_itms(cods_adv_dirty));
-        this.Add(cods_to_itms(cods_adv_sense_n));
+        this.Add(cods_NoRubi_to_itms(cods_adv_nega));
+        this.Add(cods_NoRubi_to_itms(cods_adv_danger));
+        this.Add(cods_NoRubi_to_itms(cods_adv_dirty));
+        this.Add(cods_NoRubi_to_itms(cods_adv_sense_n));
     }
 }
 class selector_kmn extends SctItm_Selector {
     constructor() {
         super('@KEIMN@');
-        this.Add(cods_to_itms(cods_km_nega));
+        this.Add(cods_NoRubi_to_itms(cods_km_nega));
     }
 }
 class selector_kn2 extends SctItm_Selector {
@@ -1852,62 +1852,62 @@ class selector_season extends SctItm_Selector {
 class selector_today extends SctItm_Selector {
     constructor() {
         super('@TODAY@');
-        this.Add(cods_to_itms(cods_today));
+        this.Add(cods_NoRubi_to_itms(cods_today));
     }
 }
 class selector_move extends SctItm_Selector {
     constructor() {
         super('@MOVE@');
-        this.Add(cods_to_itms(cods_move));
-        this.Add(cods_to_itms(cods_move_dance));
-        this.Add(cods_to_itms(cods_move_run));
-        this.Add(cods_to_itms(cods_move_fly));
-        this.Add(cods_to_itms(cods_move_walk));
-        this.Add(cods_to_itms(cods_move_stop));
-        this.Add(cods_to_itms(cods_move_open));
-        this.Add(cods_to_itms(cods_move_life));
-        this.Add(cods_to_itms(cods_move_death));
-        this.Add(cods_to_itms(cods_move_light));
-        this.Add(cods_to_itms(cods_move_think));
-        this.Add(cods_to_itms(cods_move_sense));
-        this.Add(cods_to_itms(cods_move_make));
+        this.Add(cods_NoRubi_to_itms(cods_move));
+        this.Add(cods_NoRubi_to_itms(cods_move_dance));
+        this.Add(cods_NoRubi_to_itms(cods_move_run));
+        this.Add(cods_NoRubi_to_itms(cods_move_fly));
+        this.Add(cods_NoRubi_to_itms(cods_move_walk));
+        this.Add(cods_NoRubi_to_itms(cods_move_stop));
+        this.Add(cods_NoRubi_to_itms(cods_move_open));
+        this.Add(cods_NoRubi_to_itms(cods_move_life));
+        this.Add(cods_NoRubi_to_itms(cods_move_death));
+        this.Add(cods_NoRubi_to_itms(cods_move_light));
+        this.Add(cods_NoRubi_to_itms(cods_move_think));
+        this.Add(cods_NoRubi_to_itms(cods_move_sense));
+        this.Add(cods_NoRubi_to_itms(cods_move_make));
     }
 }
 class selector_move2 extends SctItm_Selector {
     constructor() {
         super('@MOVE2@');
-        this.Add(cods_to_itms(cods_move_dance));
-        this.Add(cods_to_itms(cods_move_run));
-        this.Add(cods_to_itms(cods_move_fly));
-        this.Add(cods_to_itms(cods_move_walk));
-        this.Add(cods_to_itms(cods_move_stop));
-        this.Add(cods_to_itms(cods_move_think));
+        this.Add(cods_NoRubi_to_itms(cods_move_dance));
+        this.Add(cods_NoRubi_to_itms(cods_move_run));
+        this.Add(cods_NoRubi_to_itms(cods_move_fly));
+        this.Add(cods_NoRubi_to_itms(cods_move_walk));
+        this.Add(cods_NoRubi_to_itms(cods_move_stop));
+        this.Add(cods_NoRubi_to_itms(cods_move_think));
     }
 }
 class selector_body extends SctItm_Selector {
     constructor() {
         super('@BODY@');
-        this.Add(cods_to_itms(cods_body));
+        this.Add(cods_NoRubi_to_itms(cods_body));
     }
 }
 class selector_family extends SctItm_Selector {
     constructor() {
         super('@FAMILY@');
-        this.Add(cods_to_itms(cods_family));
+        this.Add(cods_NoRubi_to_itms(cods_family));
     }
 }
 class selector_country extends SctItm_Selector {
     constructor() {
         super('@COUNTRY@');
         this.Add(cods_ruby_to_itms(cods_country.slice(1)));
-        this.Add(cods_to_itms(cods_country2));
+        this.Add(cods_NoRubi_to_itms(cods_country2));
     }
 }
 class locker_country extends SctItm_SelectLocker {
     constructor() {
         super('@L_COUNTRY@');
         this.Add(cods_ruby_to_itms(cods_country.slice(1)));
-        this.Add(cods_to_itms(cods_country2));
+        this.Add(cods_NoRubi_to_itms(cods_country2));
     }
 }
 class selector_town extends SctItm_Selector {
@@ -2015,13 +2015,13 @@ class locker_flower extends SctItm_SelectLocker {
 class selector_star extends SctItm_Selector {
     constructor() {
         super('@STAR@');
-        this.Add(cods_to_itms(cods_star));
+        this.Add(cods_NoRubi_to_itms(cods_star));
     }
 }
 class locker_star extends SctItm_SelectLocker {
     constructor() {
         super('@L_STAR@');
-        this.Add(cods_to_itms(cods_star));
+        this.Add(cods_NoRubi_to_itms(cods_star));
     }
 }
 class selector_sports extends SctItm_Selector {
@@ -2039,32 +2039,32 @@ class locker_sports extends SctItm_SelectLocker {
 class selector_future extends SctItm_Selector {
     constructor() {
         super('@FUTURE@');
-        this.Add(cods_to_itms(cods_future));
+        this.Add(cods_NoRubi_to_itms(cods_future));
     }
 }
 class locker_future extends SctItm_SelectLocker {
     constructor() {
         super('@L_FUTURE@');
-        this.Add(cods_to_itms(cods_future));
+        this.Add(cods_NoRubi_to_itms(cods_future));
     }
 }
 class selector_course extends SctItm_Selector {
     constructor() {
         super('@COURSE@');
-        this.Add(cods_to_itms(cods_course));
+        this.Add(cods_NoRubi_to_itms(cods_course));
     }
 }
 class locker_course extends SctItm_SelectLocker {
     constructor() {
         super('@L_COURSE@');
-        this.Add(cods_to_itms(cods_course));
+        this.Add(cods_NoRubi_to_itms(cods_course));
     }
 }
 class selector_place extends SctItm_Selector {
     constructor() {
         super('@PLACE@');
         this.startNumber = 1;
-        this.Add(cods_to_itms(cods_place));
+        this.Add(cods_NoRubi_to_itms(cods_place));
     }
 }
 class selector_city extends SctItm_Selector {
