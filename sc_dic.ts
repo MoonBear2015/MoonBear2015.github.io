@@ -1103,37 +1103,37 @@ const   cods_animal = [
     ,
     new SctCod_TI('|土竜|もぐら|','mogura.png')
     ,
-    new SctCod_TI('|山羊|やぎ|')
+    new SctCod_TI('|山羊|やぎ|','yagi.png')
     ,
-    new SctCod_TI('|馬陸|やすで|')
+    new SctCod_TI('|馬陸|やすで|','yasude.png')
     ,
-    new SctCod_TI('|寄居虫|やどかり|')
+    new SctCod_TI('|寄居虫|やどかり|','yadokari.png')
     ,
-    new SctCod_TI('|山荒|やまあらし|')
+    new SctCod_TI('|山荒|やまあらし|','yamaarashi.png')
     ,
-    new SctCod_TI('|家守|やもり|')
+    new SctCod_TI('|家守|やもり|','yamori.png')
     ,
-    new SctCod_TI('|駱駝|らくだ|')
+    new SctCod_TI('|駱駝|らくだ|','rakuda.png')
     ,
-    new SctCod_TI('|海獺|らっこ|')
+    new SctCod_TI('|海獺|らっこ|','rakko.png')
     ,
-    new SctCod_TI('|騾馬|らば|')
+    new SctCod_TI('|騾馬|らば|','raba.png')
     ,
-    new SctCod_TI('|栗鼠|りす|')
+    new SctCod_TI('|栗鼠|りす|','risu.png')
     ,
-    new SctCod_TI('|驢馬|ろば|')
+    new SctCod_TI('|驢馬|ろば|','roba.png')
     ,
-    new SctCod_TI('|鳳凰|ほうおう|')
+    new SctCod_TI('|鳳凰|ほうおう|','houou.png')
     ,
-    new SctCod_TI('|朱雀|すじゃく|')
+    new SctCod_TI('|朱雀|すじゃく|','suzaku.png')
     ,
-    new SctCod_TI('|恐竜|きょうりゅう|')
+    new SctCod_TI('|恐竜|きょうりゅう|','kyoryu.png')
     ,
-    new SctCod_TI('|怪獣|かいじゅう|')
+    new SctCod_TI('|怪獣|かいじゅう|','kaiju.png')
     ,
-    new SctCod_TI('|獅子|らいおん|')
+    new SctCod_TI('|獅子|らいおん|','lion.png')
     ,
-    new SctCod_TI('|象|ぞう|')
+    new SctCod_TI('|象|ぞう|','zou.png')
     ,
     new SctCod_TI('|猟豹|ちーたー|')
     ,

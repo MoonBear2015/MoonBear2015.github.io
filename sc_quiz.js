@@ -7,7 +7,7 @@ function set_quiz() {
     html += '<h1>';
     html += 'Quiz';
     html += '<small>';
-    html += ' Z00.01';
+    html += ' Z00.02';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -59,7 +59,7 @@ function Make_Question() {
     // html += '<figure>';
     html += '<img src="pics/ANIMAL/@ICON_ANIMAL@" width="100px">';
     // html += '</figure>';
-    html += '@L_QUIZANIMAL@';
+    html += '@Z_SENT@';
     html += '</p>';
     html += '</div>';
     return html;
@@ -79,8 +79,9 @@ function Make_Answer() {
     html += 'background-size: cover;';
     html += '">';
     html += '<br>';
-    html += '<p id="quiz_doc">';
-    html += '@P_SENT@';
+    html += '<p id="quiz_doc" align="right">';
+    html += '@A_SENT@';
+    html += '<img src="pics/ANIMAL/@ICON_ANIMAL@" width="100px">';
     html += '</p>';
     html += '</div>';
     return html;
@@ -105,28 +106,8 @@ class selector_quiz_sent extends SctItm_Selector {
     constructor() {
         super('@Z_SENT@');
         this.itms = [
-            new SctItm('@TIMEFRONT2@@Q_MSG@。'),
-            new SctItm('@TIMEFRONT2@@CONECT2@、@Q_MSG@。'),
-            // new SctItm('@TIMEFRONT2@@Q_MSG@が、@Q_SENT@')
-            // ,
-            // new SctItm('@TIMEFRONT2@@Q_MSG@けど、@Q_SENT@')
-            // ,
-            new SctItm('@TIMEFRONT2@@Q_MSG@けど、@Q_MSG@が、どうすれば良いのでしょう？ '),
-            new SctItm('@TIMEFRONT2@@Q_MSG@けど、@Q_MSG@が、なんとかして貰えませんか？ '),
-            new SctItm('@TIMEFRONT2@@Q_MSG@けど、@Q_MSG@が、お願いできませんか？ '),
-            new SctItm('@TIMEFRONT2@@Q_MSG@けど、@Q_MSG@ので、お願いしても構いませんか？ '),
-            new SctItm('@TIMEFRONT2@@Q_MSG@けど、@Q_MSG@ので、手を貸して頂けませんか？ '),
-            new SctItm('@TIMEFRONT2@@Q_MSG@けど、@Q_MSG@ので、手伝って貰えませんか？ '),
-            new SctItm('@TIMEFRONT2@@Q_MSG@けど、@Q_MSG@ので、どなたかお願い出来ないでしょうか？ '),
-            new SctItm('@TIMEFRONT2@@Q_MSG@けど、@Q_MSG@が、どうすれば良いのか教えてください。'),
-            new SctItm('@TIMEFRONT2@@Q_MSG@けど、@Q_MSG@が、誰か何とかしてください。'),
-            new SctItm('@TIMEFRONT2@@Q_MSG@けど、@Q_MSG@が、私と一緒に@DID@貰えないでしょうか？ '),
-            new SctItm('@TIMEFRONT2@@Q_MSG@けど、@Q_MSG@が、@L_PART@の付き添いで@DID@貰えないでしょうか？ '),
-            new SctItm('@TIMEFRONT2@@Q_MSG@けど、@Q_MSG@が、どなたか私の@L_PART@と一緒に@DID@頂けませんか？ '),
-            new SctItm('@TIMEFRONT2@@Q_MSG@けど、@Q_MSG@が、どなたか私の代わりに@DID@下さいませんか？ '),
-            new SctItm('@TIMEFRONT2@@Q_MSG@けど、@Q_MSG@が、どなたか私の@L_PART@に代わって@DID@頂けませんか？ ')
-            // ,
-            // new SctItm('私の@KEI@@L_PART@をご存じでしょうか。')
+            new SctItm('どうして@QUIZANIMAL@は@PEOPLE@と@DID@いるの？'),
+            new SctItm('なんで@QUIZANIMAL@は@WHERE@にいるのかな？')
         ];
     }
 }
@@ -134,28 +115,8 @@ class selector_answer_sent extends SctItm_Selector {
     constructor() {
         super('@A_SENT@');
         this.itms = [
-            new SctItm('@A_MSG@。'),
-            new SctItm('@CONECT2@、@A_MSG@。'),
-            new SctItm('@A_MSG@が、@QUESTER@さんはご存じですよね？ '),
-            new SctItm('@A_MSG@が、知らないのは@QUESTER@さんだけです。'),
-            new SctItm('@A_MSG@が、@QUESTER@さんならお判りでしょう。'),
-            new SctItm('@A_MSG@が、@QUESTER@さんとは無関係です。'),
-            new SctItm('@A_MSG@が、@QUESTER@さんには無理ですね。'),
-            new SctItm('@A_MSG@が、@QUESTER@さんにしか出来ませんよ。'),
-            new SctItm('@A_MSG@が、確か@QUESTER@さんもそうでしたよね？ '),
-            new SctItm('@A_MSG@が、@QUESTER@さんは知らなかったのですか？ '),
-            new SctItm('@A_MSG@が、その@L_PART@さんなら知っている筈ですよね？ '),
-            new SctItm('@A_MSG@が、その@L_PART@さんなら@DID@いる筈です。'),
-            new SctItm('@A_MSG@が、その@L_PART@さんなら@DID@いましたよ？ '),
-            new SctItm('@A_MSG@が、その@L_PART@さんなら@DID@いましたね。'),
-            new SctItm('@A_MSG@が、@DID@いる@L_PART@さんを見かけましたよ。'),
-            new SctItm('@A_MSG@が、@TOWN@の@PLACE@で@DID@いたのは@QUESTER@さんですよね？ '),
-            new SctItm('@A_MSG@が、@KEI@@L_PART@に連れられて@DID@いたのは@QUESTER@さんですよね？ '),
-            new SctItm('@A_MSG@が、@CHAR@と一緒に@DID@いたのは@QUESTER@さんですよね？ '),
-            new SctItm('@A_MSG@が、@MANYCHAR@に紛れて@DID@いたのは@QUESTER@さんですよね？ '),
-            new SctItm('@A_MSG@が、@A_SENT@'),
-            new SctItm('@A_MSG@し、@A_SENT@'),
-            new SctItm('@A_MSG@けど、@A_SENT@')
+            new SctItm('@QUIZANIMAL@が@DID@いるから！'),
+            new SctItm('@QUIZANIMAL@が@WHERE@にいるから！')
         ];
     }
 }

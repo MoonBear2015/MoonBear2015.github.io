@@ -2877,6 +2877,12 @@ class locker_animal extends SctItm_SelectLocker implements ISctItm_Selector{
     }
 }
 
+class selector_quizAnimal extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@QUIZANIMAL@','','@ICON_ANIMAL@');
+        this.Add(cods_to_itms(cods_animal.slice(1)));
+    }
+}
 class locker_quizAnimal extends SctItm_SelectLocker implements ISctItm_Selector {
     constructor(){
         super('@L_QUIZANIMAL@','','@ICON_ANIMAL@');
@@ -5385,6 +5391,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new locker_bird());
         this.dic_push(new selector_animal());
         this.dic_push(new locker_animal());
+        this.dic_push(new selector_quizAnimal());
         this.dic_push(new locker_quizAnimal());
         this.dic_push(new selector_livestock());
         this.dic_push(new locker_livestock());
