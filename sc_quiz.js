@@ -7,7 +7,7 @@ function set_quiz() {
     html += '<h1>';
     html += 'Quiz';
     html += '<small>';
-    html += ' Z00.02';
+    html += ' Z00.03';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -55,9 +55,9 @@ function Make_Question() {
     html += '@CHAIR@';
     html += '<br>';
     html += '<p id="quiz_doc">';
-    html += '問題！<br>';
+    html += 'もんだい！<br>';
     // html += '<figure>';
-    html += '<img src="pics/ANIMAL/@ICON_ANIMAL@" width="100px">';
+    html += '<img src="pics/ANIMAL/@ICON_ANIMAL@" width="300px"><br>';
     // html += '</figure>';
     html += '@Z_SENT@';
     html += '</p>';
@@ -80,8 +80,9 @@ function Make_Answer() {
     html += '">';
     html += '<br>';
     html += '<p id="quiz_doc" align="right">';
+    html += 'こたえ！<br>';
     html += '@A_SENT@';
-    html += '<img src="pics/ANIMAL/@ICON_ANIMAL@" width="100px">';
+    html += '<img src="pics/ANIMAL/@ICON_ANSWER@" width="300px">';
     html += '</p>';
     html += '</div>';
     return html;
@@ -115,8 +116,8 @@ class selector_answer_sent extends SctItm_Selector {
     constructor() {
         super('@A_SENT@');
         this.itms = [
-            new SctItm('@QUIZANIMAL@が@DID@いるから！'),
-            new SctItm('@QUIZANIMAL@が@WHERE@にいるから！')
+            new SctItm('@ANSWERANIMAL@が@DID@いるから！'),
+            new SctItm('@ANSWERANIMAL@が@WHERE@にいるから！')
         ];
     }
 }

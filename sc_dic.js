@@ -599,12 +599,12 @@ const cods_animal = [
     new SctCod_TI('|怪獣|かいじゅう|', 'kaiju.png'),
     new SctCod_TI('|獅子|らいおん|', 'lion.png'),
     new SctCod_TI('|象|ぞう|', 'zou.png'),
-    new SctCod_TI('|猟豹|ちーたー|'),
-    new SctCod_TI('|長尾驢|かんがるー|'),
-    new SctCod_TI('|企鵝|ぺんぎん|'),
-    new SctCod_TI('|紅鶴|ふらみんご|'),
-    new SctCod_TI('|大猩猩|ごりら|'),
-    new SctCod_TI('|針鼠|はりねずみ|')
+    new SctCod_TI('|猟豹|ちーたー|', 'chita.png'),
+    new SctCod_TI('|長尾驢|かんがるー|', 'kangaroo.png'),
+    new SctCod_TI('|企鵝|ぺんぎん|', 'penguin.png'),
+    new SctCod_TI('|紅鶴|ふらみんご|', 'flamingo.png'),
+    new SctCod_TI('|大猩猩|ごりら|', 'gorilla.png'),
+    new SctCod_TI('|針鼠|はりねずみ|', 'harinezumi.png')
 ];
 const cods_fish = [
     new SctCod_TI('|魚|さかな|', 'fish.jpg'),

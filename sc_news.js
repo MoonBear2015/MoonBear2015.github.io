@@ -1976,6 +1976,12 @@ class selector_quizAnimal extends SctItm_Selector {
         this.Add(cods_to_itms(cods_animal.slice(1)));
     }
 }
+class selector_answerAnimal extends SctItm_Selector {
+    constructor() {
+        super('@ANSWERANIMAL@', '', '@ICON_ANSWER@');
+        this.Add(cods_to_itms(cods_animal.slice(1)));
+    }
+}
 class locker_quizAnimal extends SctItm_SelectLocker {
     constructor() {
         super('@L_QUIZANIMAL@', '', '@ICON_ANIMAL@');
@@ -3836,6 +3842,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_animal());
         this.dic_push(new locker_animal());
         this.dic_push(new selector_quizAnimal());
+        this.dic_push(new selector_answerAnimal());
         this.dic_push(new locker_quizAnimal());
         this.dic_push(new selector_livestock());
         this.dic_push(new locker_livestock());
