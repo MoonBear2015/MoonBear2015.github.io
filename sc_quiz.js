@@ -7,7 +7,7 @@ function set_quiz() {
     html += '<h1>';
     html += 'Quiz';
     html += '<small>';
-    html += ' Z00.04';
+    html += ' Z00.05';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -112,7 +112,9 @@ class selector_quiz_sent extends SctItm_Selector {
         super('@Z_SENT@');
         this.itms = [
             new SctItm('どうして@QUIZANIMAL@は@DID00@いるの？'),
-            new SctItm('なんで@QUIZANIMAL@は@WHERE@にいるのかな？')
+            new SctItm('なんで@QUIZANIMAL@は@WHERE01@にいるのかな？'),
+            new SctItm('どうして@QUIZANIMAL@が@CLASS@をしているの？'),
+            new SctItm('どうして@QUIZANIMAL@は@KEI@の？')
         ];
     }
 }
@@ -121,7 +123,8 @@ class selector_answer_sent extends SctItm_Selector {
         super('@A_SENT@');
         this.itms = [
             new SctItm('@ANSWERANIMAL@が@DID00@いるから！'),
-            new SctItm('@ANSWERANIMAL@が@WHERE@にいるから！')
+            new SctItm('@ANSWERANIMAL@が@WHERE@にいるから！'),
+            new SctItm('@ANSWERANIMAL@が@KEIFRONT@@KEIM1@から！')
         ];
     }
 }
