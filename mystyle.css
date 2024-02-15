@@ -543,9 +543,10 @@ small {
 
 #quiz_title {
     font-size: 32px;
-    color: #f0f0f0;
+    font-weight: bolder;
+    color: #f0f000;
     margin: 0px 20px;
-    text-shadow: 2px 2px 0px #000000;
+    text-shadow: 4px 4px 0px #f00000;
 }
 #quiz_doc {
     font-size: 24px;
