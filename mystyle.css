@@ -149,7 +149,7 @@ li {
     font-size: 12pt;
     float: left;
     border-right: 1px solid;
-    border-radius: 50%;
+    border-radius: 30%;
 }
 li:last-child{
     float: right;
@@ -548,6 +548,14 @@ small {
     margin: 0px 20px;
     text-shadow: 4px 4px 0px #f00000;
 }
+#answer_title {
+    font-size: 32px;
+    font-weight: bolder;
+    color: #00f0f0;
+    margin: 0px 20px;
+    text-shadow: 4px 4px 0px #007f00;
+}
+
 #quiz_doc {
     font-size: 24px;
     margin: 0px;

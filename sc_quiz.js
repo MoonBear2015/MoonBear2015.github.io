@@ -7,7 +7,7 @@ function set_quiz() {
     html += '<h1>';
     html += 'Quiz';
     html += '<small>';
-    html += ' Z00.06';
+    html += ' Z00.07';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -81,7 +81,7 @@ function Make_Answer() {
     html += 'background-size: cover;';
     html += '">';
     html += '<br>';
-    html += '<p id="quiz_title" align="right">';
+    html += '<p id="answer_title" align="right">';
     html += 'こたえ！<br>';
     html += '</p>';
     html += '<p id="quiz_doc" align="right">';
