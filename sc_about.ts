@@ -9,7 +9,7 @@ function set_about()
     html += '<h1>';
     html += 'ABOUT';
     html += '<small>';
-    html += ' A01.20';
+    html += ' A01.21';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -160,7 +160,7 @@ class about_title extends SctItm_Counter implements ISctItm_Selector{
             ,
             new SctItm('"Book" Producer')
             ,
-            new SctItm('Web Designer')
+            new SctItm('"Quize" Producer')
             ,
             new SctItm('Web Designer')
             ,
