@@ -7,7 +7,7 @@ function set_quiz() {
     html += '<h1>';
     html += 'Quiz';
     html += '<small>';
-    html += ' Z00.07';
+    html += ' Z00.08';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -115,11 +115,10 @@ class selector_quiz_sent extends SctItm_Selector {
             new SctItm('なんで@QUIZANIMAL@は@ALSODAY@@DID00@いるの？'),
             new SctItm('なんで@QUIZANIMAL@は@WHERE01@にいるのかな？'),
             new SctItm('なんで@QUIZANIMAL@は@WHERE02@で@DID00@いるのかな？'),
-            new SctItm('どうして@QUIZANIMAL@が@CLASS@をしているの？'),
+            new SctItm('どうして@WHAT@に@QUIZANIMAL@がいるの？'),
+            new SctItm('どうして@CLASS@が@QUIZANIMAL@なの？'),
             new SctItm('どうして@QUIZANIMAL@は@KEIFRONT@@KEI@の？'),
-            new SctItm('どうして@QUIZANIMAL@は@KEIFRONT@@KEI@の？'),
-            new SctItm('どうして@QUIZANIMAL@は@NICK@みたいなの？'),
-            new SctItm('どうして@QUIZANIMAL@は@NICK@と呼ばれているの？')
+            new SctItm('どうして@QUIZANIMAL@は@NICK@みたいなの？')
         ];
     }
 }
@@ -130,7 +129,8 @@ class selector_answer_sent extends SctItm_Selector {
             new SctItm('@ANSWERANIMAL@が@DID00@いるから！'),
             new SctItm('@ANSWERANIMAL@が@WHERE01@にいるから！'),
             new SctItm('@ANSWERANIMAL@が@WHERE02@で@DID00@いるから！'),
-            new SctItm('@ANSWERANIMAL@が@CLASS@をしているから！'),
+            new SctItm('@WHAT@に@ANSWERANIMAL@がいるから！'),
+            new SctItm('@CLASS@が@ANSWERANIMAL@だったから！'),
             new SctItm('@ANSWERANIMAL@が@KEIFRONT@@KEIM1@から！'),
             new SctItm('@ANSWERANIMAL@が@KEIFRONT@@NICK@みたいだから！')
         ];
