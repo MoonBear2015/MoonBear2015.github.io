@@ -604,7 +604,11 @@ const cods_animal = [
     new SctCod_TI('|企鵝|ぺんぎん|', 'penguin.png'),
     new SctCod_TI('|紅鶴|ふらみんご|', 'flamingo.png'),
     new SctCod_TI('|大猩猩|ごりら|', 'gorilla.png'),
-    new SctCod_TI('|針鼠|はりねずみ|', 'harinezumi.png')
+    new SctCod_TI('|針鼠|はりねずみ|', 'harinezumi.png'),
+    new SctCod_TI('|烏|からす|', 'karasu.png'),
+    new SctCod_TI('|雀|すずめ|', 'suzume.png'),
+    new SctCod_TI('|鳩|はと|', 'hato.png'),
+    new SctCod_TI('|鶏|にわとり|', 'niwatori.png')
 ];
 const cods_fish = [
     new SctCod_TI('|魚|さかな|', 'fish.jpg'),
@@ -4977,7 +4981,8 @@ const itms_school = [
     new SctItm('中学校'),
     new SctItm('高校'),
     new SctItm('大学'),
-    new SctItm('大学@SCIENCE@部'),
+    // new SctItm('大学@SCIENCE@部')
+    // ,
     new SctItm('女子大学'),
     new SctItm('女学校'),
     new SctItm('短期大学'),
