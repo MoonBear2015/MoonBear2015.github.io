@@ -6898,6 +6898,12 @@ const   itms_nickNega = [
     ,
     new SctItm('悪魔')
     ,
+    new SctItm('@CLASS@の悪魔')
+    ,
+    new SctItm('@HABIT@の悪魔')
+    ,
+    new SctItm('@FOOD@の悪魔')
+    ,
     new SctItm('小悪魔')
     ,
     new SctItm('堕天使')
@@ -7094,6 +7100,12 @@ const   itms_nickNega = [
     ,
     new SctItm('無法者')
     ,
+    new SctItm('魔王')
+    ,
+    new SctItm('大魔王')
+    ,
+    new SctItm('借金王')
+    ,
     new SctItm('@ANIMAL@')
     ,
     new SctItm('@FISH@')
@@ -7211,6 +7223,12 @@ const   itms_nickPosi = [
     ,
     new SctItm('軍神')
     ,
+    new SctItm('@CLASS@の神様')
+    ,
+    new SctItm('@HABIT@の神様')
+    ,
+    new SctItm('@FOOD@の神様')
+    ,
     new SctItm('大黒柱')
     ,
     new SctItm('コンピューター')
@@ -7274,6 +7292,32 @@ const   itms_nickPosi = [
     new SctItm('お殿様')
     ,
     new SctItm('大統領')
+    ,
+    new SctItm('ホームラン王')
+    ,
+    new SctItm('三冠王')
+    ,
+    new SctItm('不動明王')
+    ,
+    new SctItm('喜劇王')
+    ,
+    new SctItm('四天王')
+    ,
+    new SctItm('帝王')
+    ,
+    new SctItm('撃墜王')
+    ,
+    new SctItm('発明王')
+    ,
+    new SctItm('石油王')
+    ,
+    new SctItm('賞金王')
+    ,
+    new SctItm('鉄道王')
+    ,
+    new SctItm('クイズ王')
+    ,
+    new SctItm('クイズ王')
     ,
     new SctItm('@FLOWER@')
     ,
