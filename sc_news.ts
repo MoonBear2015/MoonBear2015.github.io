@@ -3567,6 +3567,7 @@ class selector_nickname extends SctItm_Selector implements ISctItm_Selector {
         this.Add(itms_nickNega);
         this.Add(itms_nickPosi);
         this.Add(itms_nickNomal);
+        this.Add(cods_to_itms(cods_animal.slice(1)));
         // this.Add(itms_meal);
         // this.Add(itms_sweets);
         // this.Add(cods_fruit.slice(1));
@@ -3578,6 +3579,7 @@ class locker_nickname extends SctItm_SelectLocker implements ISctItm_Selector {
         this.Add(itms_nickNega);
         this.Add(itms_nickPosi);
         this.Add(itms_nickNomal);
+        this.Add(cods_to_itms(cods_animal.slice(1)));
         // this.Add(itms_meal);
         // this.Add(itms_sweets);
         // this.Add(cods_fruit.slice(1));
@@ -3588,6 +3590,7 @@ class selector_nickBad extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@NICKBAD@');
         this.Add(itms_nickNega);
+        this.Add(cods_to_itms(cods_animal.slice(1)));
     }
 }
 // 敬称 の～
