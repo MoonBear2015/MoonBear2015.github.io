@@ -2525,6 +2525,10 @@ class selector_nickname extends SctItm_Selector {
         this.Add(itms_nickPosi);
         this.Add(itms_nickNomal);
         this.Add(cods_to_itms(cods_animal.slice(1)));
+        this.Add(cods_flower_spring.slice(1));
+        this.Add(cods_flower_summer.slice(1));
+        this.Add(cods_flower_autumn.slice(1));
+        this.Add(cods_flower_winter.slice(1));
         // this.Add(itms_meal);
         // this.Add(itms_sweets);
         // this.Add(cods_fruit.slice(1));
@@ -2537,6 +2541,10 @@ class locker_nickname extends SctItm_SelectLocker {
         this.Add(itms_nickPosi);
         this.Add(itms_nickNomal);
         this.Add(cods_to_itms(cods_animal.slice(1)));
+        this.Add(cods_to_itms(cods_flower_spring.slice(1)));
+        this.Add(cods_to_itms(cods_flower_summer.slice(1)));
+        this.Add(cods_to_itms(cods_flower_autumn.slice(1)));
+        this.Add(cods_to_itms(cods_flower_winter.slice(1)));
         // this.Add(itms_meal);
         // this.Add(itms_sweets);
         // this.Add(cods_fruit.slice(1));
@@ -2555,6 +2563,10 @@ class selector_nickGood extends SctItm_Selector {
     constructor() {
         super('@NICKGOOD@');
         this.Add(itms_nickPosi);
+        this.Add(cods_to_itms(cods_flower_spring.slice(1)));
+        this.Add(cods_to_itms(cods_flower_summer.slice(1)));
+        this.Add(cods_to_itms(cods_flower_autumn.slice(1)));
+        this.Add(cods_to_itms(cods_flower_winter.slice(1)));
     }
 }
 // 意識 ？？に～する
