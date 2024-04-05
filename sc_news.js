@@ -3734,6 +3734,18 @@ class locker_animalFrom extends SctItm_SelectLocker {
         this.Add(itms_animalFrom);
     }
 }
+class selector_gitai extends SctItm_Selector {
+    constructor() {
+        super('@GITAI@');
+        this.Add(itms_Gitai);
+    }
+}
+class locker_gitai extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_GITAI@');
+        this.Add(itms_Gitai);
+    }
+}
 class news_doc {
     constructor(doc) {
         this.doc = doc;
@@ -4021,5 +4033,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new locker_reader());
         this.dic_push(new selector_animalFrom());
         this.dic_push(new locker_animalFrom());
+        this.dic_push(new selector_gitai());
+        this.dic_push(new locker_gitai());
     }
 }

@@ -5581,7 +5581,8 @@ const itms_did = [
     new SctItm('@READER@を眺めて'),
     new SctItm('@READER@に目を通して'),
     new SctItm('@READER@を読みふけって'),
-    new SctItm('@READER@を調べて')
+    new SctItm('@READER@を調べて'),
+    new SctItm('@GITAI@して')
 ];
 const itms_did_l = [
     new SctItm('@L_FOOD@を食べて'),
@@ -5758,7 +5759,8 @@ const itms_did_l = [
     new SctItm('@L_READER@を眺めて'),
     new SctItm('@L_READER@に目を通して'),
     new SctItm('@L_READER@を読みふけって'),
-    new SctItm('@L_READER@を調べて')
+    new SctItm('@L_READER@を調べて'),
+    new SctItm('@L_GITAI@して')
 ];
 const itms_did_o = [
     new SctItm('@O_FOOD@を食べて'),
@@ -5932,7 +5934,8 @@ const itms_did_o = [
     new SctItm('@L_READER@を眺めて'),
     new SctItm('@L_READER@に目を通して'),
     new SctItm('@L_READER@を読みふけって'),
-    new SctItm('@L_READER@を調べて')
+    new SctItm('@L_READER@を調べて'),
+    new SctItm('@L_GITAI@して')
 ];
 const itms_boyName = [
     new SctItm('|Александр|アレクサンドル|'),
@@ -6595,4 +6598,26 @@ const itms_animalFrom = [
     new SctItm('一緒に育った'),
     new SctItm('@L_CHAR@が飼っていた'),
     new SctItm('@L_CHAR@が育てた')
+];
+// 擬態：～して
+const itms_Gitai = [
+    new SctItm('ふらふら'),
+    new SctItm('よろよろ'),
+    new SctItm('むかむか'),
+    new SctItm('ごろごろ'),
+    new SctItm('どたばた'),
+    new SctItm('のんびり'),
+    new SctItm('ぼんやり'),
+    new SctItm('しょんぼり'),
+    new SctItm('あたふた'),
+    new SctItm('びくびく'),
+    new SctItm('いらいら'),
+    new SctItm('ぐったり'),
+    new SctItm('ぼけっと'),
+    new SctItm('うろうろ'),
+    new SctItm('うろちょろ'),
+    new SctItm('こそこそ'),
+    new SctItm('だらだら'),
+    new SctItm('じっと'),
+    new SctItm('だらだら')
 ];
