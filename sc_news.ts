@@ -4637,6 +4637,10 @@ class selector_did extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@DID01@涙を流して')
             ,
             new SctItm('@DID01@油を売って')
+            ,
+            new SctItm('**@GITAI@して')
+            ,
+            new SctItm('**@GITAI@と@DID01@')
         ];
     }
 }
@@ -5292,7 +5296,6 @@ class locker_gitai extends SctItm_SelectLocker implements ISctItm_Selector{
         this.Add(itms_Gitai);
     }
 }
-
 
 class news_doc {
     public pics : string[]

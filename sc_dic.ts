@@ -9262,8 +9262,6 @@ const   itms_did = [
     new SctItm('@READER@を読みふけって')
     ,
     new SctItm('@READER@を調べて')
-    ,
-    new SctItm('@GITAI@して')
 ]
 
 const   itms_did_l = [
@@ -11152,43 +11150,44 @@ const   itms_animalFrom = [
 
 // 擬態：～して
 const   itms_Gitai = [
-    new SctItm('ふらふら')
-    ,
-    new SctItm('よろよろ')
-    ,
-    new SctItm('むかむか')
-    ,
-    new SctItm('ごろごろ')
-    ,
-    new SctItm('どたばた')
-    ,
-    new SctItm('のんびり')
-    ,
-    new SctItm('ぼんやり')
-    ,
-    new SctItm('しょんぼり')
-    ,
     new SctItm('あたふた')
     ,
-    new SctItm('びくびく')
-    ,
     new SctItm('いらいら')
-    ,
-    new SctItm('ぐったり')
-    ,
-    new SctItm('ぼけっと')
     ,
     new SctItm('うろうろ')
     ,
     new SctItm('うろちょろ')
     ,
+    new SctItm('ぐったり')
+    ,
     new SctItm('こそこそ')
     ,
     new SctItm('だらだら')
     ,
-    new SctItm('じっと')
+    new SctItm('ちゃっかり')
     ,
-    new SctItm('だらだら')
+    new SctItm('どたばた')
+    ,
+    new SctItm('のんびり')
+    ,
+    new SctItm('にこにこ')
+    ,
+    new SctItm('ふらふら')
+    ,
+    new SctItm('ほっこり')
+    ,
+    new SctItm('まったり')
+    ,
+    new SctItm('むかむか')
+    ,
+    new SctItm('もぞもぞ')
+    ,
+    new SctItm('ゆっくり')
+    ,
+    new SctItm('よろよろ')
+    ,
+    new SctItm('わくわく')
 ]
+
 
 

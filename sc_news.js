@@ -3245,7 +3245,9 @@ class selector_did extends SctItm_Selector {
             new SctItm('@DID01@泣いて'),
             new SctItm('@DID01@泣き叫んで'),
             new SctItm('@DID01@涙を流して'),
-            new SctItm('@DID01@油を売って')
+            new SctItm('@DID01@油を売って'),
+            new SctItm('**@GITAI@して'),
+            new SctItm('**@GITAI@と@DID01@')
         ];
     }
 }
