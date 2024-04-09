@@ -4638,9 +4638,9 @@ class selector_did extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@DID01@油を売って')
             ,
-            new SctItm('**@GITAI@して')
+            new SctItm('@GITAI@して')
             ,
-            new SctItm('**@GITAI@と@DID01@')
+            new SctItm('@GITAI@と@DID01@')
         ];
     }
 }
