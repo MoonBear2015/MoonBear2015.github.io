@@ -152,13 +152,17 @@ class selector_quiz_sent extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('なんで@QUIZANIMAL@は@WHERE02@で@DID00@いるのかな？')
             ,
-            new SctItm('どうして@WHAT@に@QUIZANIMAL@がいるの？')
+            new SctItm('どうして@WHERE@に@QUIZANIMAL@がいるの？')
             ,
             new SctItm('どうして@CLASS@が@QUIZANIMAL@なの？')
             ,
             new SctItm('どうして@QUIZANIMAL@は@KEIFRONT@@KEI@の？')
             ,
             new SctItm('どうして@QUIZANIMAL@は@NICK@みたいなの？')
+            ,
+            new SctItm('どうして@WHERE@で@QUIZANIMAL@が@DID00@いるの？')
+            ,
+            new SctItm('@QUIZANIMAL@が@WHERE@にいるのはなぜ？')
         ]
     }
 }
@@ -173,7 +177,7 @@ class selector_answer_sent extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@ANSWERANIMAL@が@WHERE02@で@DID00@いるから！')
             ,
-            new SctItm('@WHAT@に@ANSWERANIMAL@がいるから！')
+            new SctItm('@WHERE@に@ANSWERANIMAL@がいるから！')
             ,
             new SctItm('@CLASS@が@ANSWERANIMAL@だったから！')
             ,

@@ -5411,7 +5411,7 @@ const itms_did = [
     new SctItm('@COUNTRY@に亡命して'),
     new SctItm('@CITY@に家を建てて'),
     new SctItm('@PLACE@で眠って'),
-    new SctItm('@PLACE@で遊んでて'),
+    new SctItm('@PLACE@で遊んで'),
     new SctItm('@DANCE@を踊って'),
     new SctItm('@KEI@@DANCE@を踊って'),
     new SctItm('@KEID@@DANCE@を踊って'),
@@ -6596,7 +6596,9 @@ const itms_animalFrom = [
     new SctItm('調教済みの'),
     new SctItm('一緒に育った'),
     new SctItm('@L_CHAR@が飼っていた'),
-    new SctItm('@L_CHAR@が育てた')
+    new SctItm('@L_CHAR@が育てた'),
+    new SctItm('@WHERE@で拾った'),
+    new SctItm('@WHERE@に出現した')
 ];
 // 擬態：～して
 const itms_Gitai = [
@@ -6606,17 +6608,27 @@ const itms_Gitai = [
     new SctItm('うろちょろ'),
     new SctItm('ぐったり'),
     new SctItm('こそこそ'),
+    new SctItm('ごちゃごちゃ'),
+    new SctItm('さっぱり'),
+    new SctItm('そわそわ'),
     new SctItm('だらだら'),
     new SctItm('ちゃっかり'),
+    new SctItm('てきぱき'),
+    new SctItm('てきぱき'),
     new SctItm('どたばた'),
-    new SctItm('のんびり'),
+    new SctItm('どんより'),
     new SctItm('にこにこ'),
+    new SctItm('ぬるぬる'),
+    new SctItm('のんびり'),
     new SctItm('ふらふら'),
+    new SctItm('ぶらぶら'),
     new SctItm('ほっこり'),
     new SctItm('まったり'),
     new SctItm('むかむか'),
     new SctItm('もぞもぞ'),
+    new SctItm('もたもた'),
     new SctItm('ゆっくり'),
+    new SctItm('ゆらゆら'),
     new SctItm('よろよろ'),
     new SctItm('わくわく')
 ];
