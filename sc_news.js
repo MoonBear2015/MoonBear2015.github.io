@@ -489,7 +489,7 @@ class selector_newsFirst extends SctItm_Selector {
             new SctItm('@DATE@に、@WHERE@でそれは起こった。'),
             new SctItm('@DATE@に@WHERE@で、私が@DID@@DIDEND@時のことである。'),
             new SctItm('@DATE@に@WHERE@に訪れ、@DID@@DIDEND@時と記憶している。'),
-            new SctItm('@CHAR@が@WHERE@に訪れ、@DID@@DIDEND@時にそれは起こった。')
+            new SctItm('@L_CHAR@が@WHERE@に訪れ、@DID@@DIDEND@時にそれは起こった。')
         ];
     }
 }
@@ -605,8 +605,8 @@ class selector_call extends SctItm_Selector {
             new SctItm('@COMM1@@L_WHAT@'),
             new SctItm('@L_WHAT@の@KEI@@L_CLASS@'),
             new SctItm('@L_WHAT@の@SPECIALIST@'),
-            new SctItm('@KEID@@L_DO@@END02C@@CHAR@'),
-            new SctItm('@KEI@@L_WHAT@の@CHAR@'),
+            new SctItm('@KEID@@L_DO@@END02C@@L_CHAR@'),
+            new SctItm('@KEI@@L_WHAT@の@L_CHAR@'),
             new SctItm('@L_WHAT@の@NICK@'),
             new SctItm('@L_WHAT@が産んだ@NICK@'),
             new SctItm('@L_WHAT@の@L_TECH@'),
@@ -779,8 +779,8 @@ class selector_who2 extends SctItm_Selector {
             new SctItm('『@CALL@』'),
             new SctItm('『@L_INSCRIPTION@』'),
             new SctItm('『@L_TOWN_INSCRIPTION@』'),
-            new SctItm('『@CALL@』と@KEID@@ASSES@@CHAR@'),
-            new SctItm('@MANYPEOPLE@より『@CALL@』と@KEID@@ASSES@@CHAR@'),
+            new SctItm('『@CALL@』と@KEID@@ASSES@@L_CHAR@'),
+            new SctItm('@MANYPEOPLE@より『@CALL@』と@KEID@@ASSES@@L_CHAR@'),
             new SctItm('@AWARD@ @AWARDGET@')
         ];
     }
@@ -859,8 +859,8 @@ class selector_who4 extends SctItm_Selector {
             new SctItm('@TOWN@出身'),
             new SctItm('@TOWN@在住'),
             new SctItm('『@CALL2@』'),
-            new SctItm('『@CALL2@』と@KEID@@ASSES@@CHAR@'),
-            new SctItm('@MANYPEOPLE@より『@CALL2@』と@KEID@@ASSES@@CHAR@'),
+            new SctItm('『@CALL2@』と@KEID@@ASSES@@L_CHAR@'),
+            new SctItm('@MANYPEOPLE@より『@CALL2@』と@KEID@@ASSES@@L_CHAR@'),
             new SctItm('座右の銘『@INSCRIPTION@』'),
             new SctItm('@SONGTYPE@『@SONGTITLE@』'),
             new SctItm('@AWARD@ @AWARDGET@')
@@ -883,8 +883,8 @@ class selector_newsC01 extends SctItm_Selector {
     constructor() {
         super('@NEWS_C01@');
         this.itms = [
-            new SctItm('@KEI@@L_WHAT@の@CHAR@が@KEID@@L_DO@@END01B@'),
-            new SctItm('@KEI@@L_WHAT@の@CHAR@による@KEI@@KEY@@END01A@'),
+            new SctItm('@KEI@@L_WHAT@の@L_CHAR@が@KEID@@L_DO@@END01B@'),
+            new SctItm('@KEI@@L_WHAT@の@L_CHAR@による@KEI@@KEY@@END01A@'),
             new SctItm('@KEI@@L_WHAT@で@KEI@@KEY@が@SIZE@@END01B@'),
             new SctItm('@KEI@@L_WHAT@では@KEI@@KEY@や@KEY@が@SIZE@@END01B@'),
             new SctItm('@KEY@が@SIZE@@END02B@@L_WHAT@@END01A@'),
@@ -942,10 +942,10 @@ class selector_newsQ01 extends SctItm_Selector {
     constructor() {
         super('@NEWS_Q01@');
         this.itms = [
-            new SctItm('@WHY@、@L_WHAT@の@CHAR@は@L_DO@したのか'),
-            new SctItm('@WHY@、@KEI@@L_WHAT@の@CHAR@は@KEID@@L_DO@@END02B@のだろうか'),
-            new SctItm('@WHY@、@KEI@@WHAT@の@CHAR@もまた@L_DO@@END02B@のか'),
-            new SctItm('@WHY@、@KEI@@L_WHAT@の@CHAR@は@DID@しまうのか'),
+            new SctItm('@WHY@、@L_WHAT@の@L_CHAR@は@L_DO@したのか'),
+            new SctItm('@WHY@、@KEI@@L_WHAT@の@L_CHAR@は@KEID@@L_DO@@END02B@のだろうか'),
+            new SctItm('@WHY@、@KEI@@WHAT@の@L_CHAR@もまた@L_DO@@END02B@のか'),
+            new SctItm('@WHY@、@KEI@@L_WHAT@の@L_CHAR@は@DID@しまうのか'),
             new SctItm('@WHY@、@GROUP@は@WHERE@で、@KEI@@L_WHAT@を@KEID@@L_DO@してしまったのか'),
             new SctItm('@WHY@、@L_WHAT@の@KEI@@GROUP@は、@WHERE@で、@KEID@@L_DO@してしまうのか')
         ];
@@ -1047,23 +1047,23 @@ class selector_comment2 extends SctItm_Selector {
             new SctItm('@CONECT@、@COMMENT2@'),
             new SctItm('@YESNO@、@COMMENT2@'),
             new SctItm('@CALL@が@SIZE@@END02B@'),
-            new SctItm('@L_WHAT@の@CHAR@は@KEID@@L_DO@@END02B@@KEI@@NICK@だと@ASSES@'),
+            new SctItm('@L_WHAT@の@L_CHAR@は@KEID@@L_DO@@END02B@@KEI@@NICK@だと@ASSES@'),
             new SctItm('@MANYPEOPLE@は@CALL@@END02A@'),
             new SctItm('@CALL@@END02A@'),
             new SctItm('@MANYPEOPLE@は、@CALL@@END02A@'),
             new SctItm('@MANYPEOPLE@の@KEY@@END02A@'),
-            new SctItm('@L_WHAT@の@CHAR@は@L_DO@@END02B@'),
-            new SctItm('@L_WHAT@の@CHAR@は@KEI@@NICK@の@PART@だと@KEID@@ASSES@'),
-            new SctItm('@L_WHAT@の@CHAR@は@KEID@@L_DO@@END02B@@KEI@@THEY@@END02A@'),
+            new SctItm('@L_WHAT@の@L_CHAR@は@L_DO@@END02B@'),
+            new SctItm('@L_WHAT@の@L_CHAR@は@KEI@@NICK@の@PART@だと@KEID@@ASSES@'),
+            new SctItm('@L_WHAT@の@L_CHAR@は@KEID@@L_DO@@END02B@@KEI@@THEY@@END02A@'),
             new SctItm('@CALL@で、@CALL@@END02A@'),
             new SctItm('@YESNO@、@CALL@だと@ASSES@'),
             new SctItm('@YESNO@、@L_CHAR@の@KEY@@END02A@'),
-            new SctItm('@YESNO@、@L_WHAT@の@CHAR@が@KEI@@NICK@@END02A@'),
+            new SctItm('@YESNO@、@L_WHAT@の@L_CHAR@が@KEI@@NICK@@END02A@'),
             new SctItm('@YESNO@、@KEI2@な@PART@が@SAY@@END02B@'),
             new SctItm('@CALL@、@YESNO@、それが@PART@の@PART@@END02A@'),
-            new SctItm('@KEID@@L_DO@@END02B@@KEI@@NICK@と@KEID@@ASSES@@THEY@、@YESNO@、それが@L_WHAT@の@CHAR@@END02A@'),
+            new SctItm('@KEID@@L_DO@@END02B@@KEI@@NICK@と@KEID@@ASSES@@THEY@、@YESNO@、それが@L_WHAT@の@L_CHAR@@END02A@'),
             new SctItm('@KEID@@L_DO@@END02B@@THEY@、@YESNO@、それが@L_WHAT@@END02A@'),
-            new SctItm('@L_WHAT@の@L_CLASS@、それが@CHAR@@END02A@'),
+            new SctItm('@L_WHAT@の@L_CLASS@、それが@L_CHAR@@END02A@'),
             new SctItm('@EMOFRONT@@EMO@@END02D@'),
             new SctItm('@L_WHAT@で@DID@@DIDEND@'),
             new SctItm('@L_CHAR@が@DID@@DIDEND@'),
@@ -2119,10 +2119,10 @@ class selector_school extends SctItm_Selector {
             new SctItm('@SCHOOL01@'),
             new SctItm('@SCHOOL01@'),
             new SctItm('@SCHOOL01@'),
-            new SctItm('@CHAR@が@SCHOOLAS@した@SCHOOL01@'),
-            new SctItm('@CHAR@を輩出した@SCHOOL01@'),
-            new SctItm('@CHAR@が在籍中の@SCHOOL01@'),
-            new SctItm('@CHAR@より『@CALL@』と@ASSES@@SCHOOL01@'),
+            new SctItm('@L_CHAR@が@SCHOOLAS@した@SCHOOL01@'),
+            new SctItm('@L_CHAR@を輩出した@SCHOOL01@'),
+            new SctItm('@L_CHAR@が在籍中の@SCHOOL01@'),
+            new SctItm('@L_CHAR@より『@CALL@』と@ASSES@@SCHOOL01@'),
             new SctItm('@TOWN@で唯一の@SCHOOL02@'),
             new SctItm('@TOWN@で有数の@SCHOOL02@')
         ];
@@ -2368,7 +2368,7 @@ class selector_dress extends SctItm_Selector {
             new SctItm('色鮮やかな@DRESS01@'),
             new SctItm('地味な@DRESS01@'),
             new SctItm('ブランドものの@DRESS01@'),
-            new SctItm('@CHAR@が愛着している@DRESS01@'),
+            new SctItm('@L_CHAR@が愛着している@DRESS01@'),
             new SctItm('@SCHOOL@の制服'),
             new SctItm('@SCHOOL@の制服に認定された@DRESS01@'),
             new SctItm('@STORE@で買った@DRESS01@'),
@@ -2442,8 +2442,8 @@ class selector_food extends SctItm_Selector {
             new SctItm('@ITEM@っぽい@FOOD01@'),
             new SctItm('@PART@が作った@FOOD01@'),
             new SctItm('@CLASS@の手作り@FOOD01@'),
-            new SctItm('@CHAR@のお薦め@FOOD01@'),
-            new SctItm('@CHAR@が愛した@FOOD01@'),
+            new SctItm('@L_CHAR@のお薦め@FOOD01@'),
+            new SctItm('@L_CHAR@が愛した@FOOD01@'),
             new SctItm('@STORE@で買った@FOOD01@'),
             new SctItm('@STORE@のお薦め@FOOD01@'),
             new SctItm('@STORE@のタイムセールで買った@FOOD01@'),
@@ -3258,8 +3258,8 @@ class selector_did01 extends SctItm_Selector {
             new SctItm('@DID00@'),
             new SctItm('@DID00@'),
             new SctItm('@DID00@'),
-            new SctItm('@CHAR@と一緒に@DID00@'),
-            new SctItm('@CHAR@と@DID00@'),
+            new SctItm('@L_CHAR@と一緒に@DID00@'),
+            new SctItm('@L_CHAR@と@DID00@'),
             new SctItm('一人で@DID00@'),
             new SctItm('独りぼっちで@DID00@'),
             new SctItm('ペットの@ANIMAL@を連れて@DID00@'),
@@ -3312,8 +3312,8 @@ class selector_done01 extends SctItm_Selector {
             new SctItm('@DONE02@'),
             new SctItm('@DONE02@'),
             new SctItm('@DONE02@'),
-            new SctItm('@CHAR@と一緒に@DONE02@'),
-            new SctItm('@CHAR@と@DONE02@'),
+            new SctItm('@L_CHAR@と一緒に@DONE02@'),
+            new SctItm('@L_CHAR@と@DONE02@'),
             new SctItm('一人で@DONE02@'),
             new SctItm('独りぼっちで@DONE02@'),
             new SctItm('ペットの@ANIMAL@を連れて@DONE02@'),
