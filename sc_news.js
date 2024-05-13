@@ -545,8 +545,11 @@ class locker_char extends SctItm_SelectLocker {
             // new SctItm('@L_PART@')
             ,
             new SctItm('@L_COUNTRY@人'),
+            new SctItm('@L_COUNTRY@@KING01@'),
+            new SctItm('@L_CITY@@KING02@'),
             new SctItm('@L_KING@'),
-            new SctItm('@L_KING@の@L_PART@'),
+            new SctItm('@L_KING@の@PART@'),
+            new SctItm('@KING@の@L_PART@'),
             new SctItm('『@KEI@@L_NICK@』と呼ばれた@SEXAGE@')
         ];
     }
