@@ -6122,6 +6122,8 @@ const   itms_class = [
     ,
     new SctItm('弁護士')
     ,
+    new SctItm('裁判官')
+    ,
     new SctItm('メイド')
     ,
     new SctItm('執事')
