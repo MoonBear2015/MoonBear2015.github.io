@@ -381,7 +381,9 @@ class selector_catch extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('さあ、@KEI1@@L_PLACE@が待っている')
             ,
-            new SctItm('@AWARD@を受賞した@KEI1@@L_TECH@')
+            new SctItm('@AWARD@を@AWARDGET@した@L_TECH@')
+            ,
+            new SctItm('@AWARD@を@AWARDGET@した@KEI1@@L_TECH@')
         ];
     }
 }
