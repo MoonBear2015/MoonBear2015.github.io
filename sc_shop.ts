@@ -387,7 +387,7 @@ class selector_catch extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@AWARD@を@AWARDGET@させた@L_TECH@')
             ,
-            new SctItm('@AWARD@を@AWARDGET@した@KEI1@@L_TECH@')
+            new SctItm('@AWARD@を@AWARDGET@させた@KEI1@@L_TECH@')
         ];
     }
 }

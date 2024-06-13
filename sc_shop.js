@@ -301,7 +301,7 @@ class selector_catch extends SctItm_Selector {
             new SctItm('@AWARD@ @L_AWARDGET2@'),
             new SctItm('@AWARD@を@L_AWARDGET2@しました'),
             new SctItm('@AWARD@を@AWARDGET@させた@L_TECH@'),
-            new SctItm('@AWARD@を@AWARDGET@した@KEI1@@L_TECH@')
+            new SctItm('@AWARD@を@AWARDGET@させた@KEI1@@L_TECH@')
         ];
     }
 }
