@@ -381,6 +381,10 @@ class selector_catch extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('さあ、@KEI1@@L_PLACE@が待っている')
             ,
+            new SctItm('@AWARD@ @L_AWARDGET2@')
+            ,
+            new SctItm('@AWARD@を@L_AWARDGET2@しました')
+            ,
             new SctItm('@AWARD@を@AWARDGET@させた@L_TECH@')
             ,
             new SctItm('@AWARD@を@AWARDGET@した@KEI1@@L_TECH@')
@@ -394,6 +398,14 @@ class locker_status extends SctItm_SelectLocker implements ISctItm_Selector{
         this.Add(itms_status);
     }
 }
+
+class locker_AwardGet2 extends SctItm_SelectLocker implements ISctItm_Selector {
+    constructor(){
+        super('@L_AWARDGET2@','','@ICON_TECH@');
+        this.Add(itms_AwardGet2);
+    }
+}
+
 
 class selector_s_info_init extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
@@ -833,6 +845,7 @@ class shop_docs_maker01 extends news_docs_maker {
         super();
         this.dic_push(new locker_status());
         this.dic_push(new locker_place());
+        this.dic_push(new locker_AwardGet2());
         // this.dic_push(new locker_tech());
     }
 }

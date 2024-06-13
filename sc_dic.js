@@ -6282,6 +6282,14 @@ const itms_AwardGet = [
     new SctItm('返上'),
     new SctItm('失格')
 ];
+const itms_AwardGet2 = [
+    new SctItm('受賞', 'ICON/A_Award.jpg'),
+    new SctItm('獲得', 'ICON/A_Get.jpg'),
+    new SctItm('入賞', 'ICON/A_Win.jpg'),
+    new SctItm('失格', 'ICON/A_Lost.jpg'),
+    new SctItm('落選', 'ICON/A_Fail.jpg'),
+    new SctItm('辞退', 'ICON/A_No.png')
+];
 const itms_Award = [
     new SctItm('@AWARDTYPE@@SCIENCE@賞'),
     new SctItm('@AWARDTYPE@@L_DO@大賞'),
