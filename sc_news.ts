@@ -5171,6 +5171,8 @@ class selector_songTitle extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@SONGITEM@は@SONGCOLORNAME@')
             ,
             new SctItm('@SONGITEM@@SONGGENRE@')
+            ,
+            new SctItm('@SONGITEM@よ @GREET@')
         ];
     }
 }
@@ -5208,6 +5210,10 @@ class selector_songPart extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@L_PART@は@SONGCOLORNAME@')
             ,
             new SctItm('@L_PART@@SONGGENRE@')
+            ,
+            new SctItm('@L_PART@よ @GREET@')
+            ,
+            new SctItm('@COUNTRY@の@L_PART@')
         ];
     }
 }

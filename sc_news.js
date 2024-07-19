@@ -3635,7 +3635,8 @@ class selector_songTitle extends SctItm_Selector {
             new SctItm('@SONGCOLOR@@SONGITEM@'),
             new SctItm('@SONGITEM@の@SONGTEMA@'),
             new SctItm('@SONGITEM@は@SONGCOLORNAME@'),
-            new SctItm('@SONGITEM@@SONGGENRE@')
+            new SctItm('@SONGITEM@@SONGGENRE@'),
+            new SctItm('@SONGITEM@よ @GREET@')
         ];
     }
 }
@@ -3661,7 +3662,9 @@ class selector_songPart extends SctItm_Selector {
             new SctItm('@SONGCOLOR@@L_PART@'),
             new SctItm('@L_PART@の@SONGTEMA@'),
             new SctItm('@L_PART@は@SONGCOLORNAME@'),
-            new SctItm('@L_PART@@SONGGENRE@')
+            new SctItm('@L_PART@@SONGGENRE@'),
+            new SctItm('@L_PART@よ @GREET@'),
+            new SctItm('@COUNTRY@の@L_PART@')
         ];
     }
 }
