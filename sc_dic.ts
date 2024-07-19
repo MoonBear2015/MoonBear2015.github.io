@@ -9270,6 +9270,22 @@ const   itms_did = [
     new SctItm('@READER@を調べて')
     ,
     new SctItm('「@GREET@」と伝えて')
+    ,
+    new SctItm('「@GREET@」と手を振って')
+    ,
+    new SctItm('「@GREET@」と言い残して')
+    ,
+    new SctItm('「@GREET@」とささやいて')
+    ,
+    new SctItm('「@GREET@」とつぶやいて')
+    ,
+    new SctItm('「@GREET@」と叫んで')
+    ,
+    new SctItm('「@GREET@」と手紙に書いて')
+    ,
+    new SctItm('「@GREET@」と書き残して')
+    ,
+    new SctItm('「@GREET@」という気持ちを込めて')
 ]
 
 const   itms_did_l = [
@@ -9605,7 +9621,23 @@ const   itms_did_l = [
     ,
     new SctItm('@L_GITAI@して')
     ,
-    new SctItm('「@L_GREET」@と伝えて')
+    new SctItm('「@L_GREET@」と伝えて')
+    ,
+    new SctItm('「@L_GREET@」と手を振って')
+    ,
+    new SctItm('「@L_GREET@」と言い残して')
+    ,
+    new SctItm('「@L_GREET@」とささやいて')
+    ,
+    new SctItm('「@L_GREET@」とつぶやいて')
+    ,
+    new SctItm('「@L_GREET@」と叫んで')
+    ,
+    new SctItm('「@L_GREET@」と手紙に書いて')
+    ,
+    new SctItm('「@L_GREET@」と書き残して')
+    ,
+    new SctItm('「@L_GREET@」という気持ちを込めて')
 ]
 
 const   itms_did_o = [
@@ -9920,6 +9952,22 @@ const   itms_did_o = [
     new SctItm('@L_GITAI@して')
     ,
     new SctItm('「@L_GREET@」と伝えて')
+    ,
+    new SctItm('「@L_GREET@」と手を振って')
+    ,
+    new SctItm('「@L_GREET@」と言い残して')
+    ,
+    new SctItm('「@L_GREET@」とささやいて')
+    ,
+    new SctItm('「@L_GREET@」とつぶやいて')
+    ,
+    new SctItm('「@L_GREET@」と叫んで')
+    ,
+    new SctItm('「@L_GREET@」と手紙に書いて')
+    ,
+    new SctItm('「@L_GREET@」と書き残して')
+    ,
+    new SctItm('「@L_GREET@」という気持ちを込めて')
 ]
 
 const   itms_boyName = [
@@ -11255,9 +11303,23 @@ const   itms_Greet = [
     ,
     new SctItm('ありがとう')
     ,
+    new SctItm('どういたしまして')
+    ,
     new SctItm('ごきげんよう')
     ,
     new SctItm('おたっしゃで')
+    ,
+    new SctItm('いただきます')
+    ,
+    new SctItm('ごちそうさまでした')
+    ,
+    new SctItm('いってきます')
+    ,
+    new SctItm('いってらっしゃい')
+    ,
+    new SctItm('ただいま')
+    ,
+    new SctItm('おかえりなさい')
 ]
 
 

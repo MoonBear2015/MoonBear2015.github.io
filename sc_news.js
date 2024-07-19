@@ -1093,7 +1093,7 @@ class selector_comment2 extends SctItm_Selector {
             new SctItm('@L_WHAT@は@KEIFRONT@@KEIM1@'),
             new SctItm('@L_DO@する@L_WHAT@の@L_MANYCHAR@は、@WHY2@@KEIFRONT@@KEIM1@'),
             new SctItm('@L_WHAT@の@L_MANYCHAR@は、@WHY2@@KEIFRONT@@KEIM1@'),
-            new SctItm('@L_WHAT@で@DID@た@L_CHAR@は、@WHY2@@KEIFRONT@@KEIM1@'),
+            new SctItm('@L_WHAT@で@DID@いた@L_CHAR@は、@WHY2@@KEIFRONT@@KEIM1@'),
             new SctItm('@L_CHAR@は、@WHY2@@KEIFRONT@@KEIM1@'),
             new SctItm('@L_WHAT@は@WHY@@KEIFRONT@@KEI@のか'),
             new SctItm('@L_DO@する@L_WHAT@の@L_CHAR@は、@WHY@@KEIFRONT@@KEI@のか'),
