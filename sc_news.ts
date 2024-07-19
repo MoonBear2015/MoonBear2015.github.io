@@ -5303,6 +5303,20 @@ class locker_gitai extends SctItm_SelectLocker implements ISctItm_Selector{
     }
 }
 
+class selector_greet extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@GREET@');
+        this.Add(itms_Greet);
+    }
+}
+class locker_greet extends SctItm_SelectLocker implements ISctItm_Selector{
+    constructor(){
+        super('@L_GREET@');
+        this.Add(itms_Greet);
+    }
+}
+
+
 class news_doc {
     public pics : string[]
     constructor(
@@ -5625,5 +5639,8 @@ class news_docs_maker extends docs_maker {
 
         this.dic_push(new selector_gitai());
         this.dic_push(new locker_gitai());
+
+        this.dic_push(new selector_greet());
+        this.dic_push(new locker_greet());
     }
 }

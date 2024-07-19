@@ -3824,7 +3824,9 @@ const itms_do = [
     new SctItm('コンプリート', 'DO/complete.jpg'),
     new SctItm('正常化', 'DO/clean.jpg'),
     new SctItm('浄化', 'DO/clean.jpg'),
-    new SctItm('期待', 'DO/blur.jpg')
+    new SctItm('期待', 'DO/blur.jpg'),
+    new SctItm('デビュー', 'DO/Debut.jpg'),
+    new SctItm('初登場', 'DO/Debut.jpg')
 ];
 const itms_class = [
     new SctItm('@L_TOWN@大学教授'),
@@ -5582,7 +5584,8 @@ const itms_did = [
     new SctItm('@READER@を眺めて'),
     new SctItm('@READER@に目を通して'),
     new SctItm('@READER@を読みふけって'),
-    new SctItm('@READER@を調べて')
+    new SctItm('@READER@を調べて'),
+    new SctItm('「@GREET@」と伝えて')
 ];
 const itms_did_l = [
     new SctItm('@L_FOOD@を食べて'),
@@ -5760,7 +5763,8 @@ const itms_did_l = [
     new SctItm('@L_READER@に目を通して'),
     new SctItm('@L_READER@を読みふけって'),
     new SctItm('@L_READER@を調べて'),
-    new SctItm('@L_GITAI@して')
+    new SctItm('@L_GITAI@して'),
+    new SctItm('「@L_GREET」@と伝えて')
 ];
 const itms_did_o = [
     new SctItm('@O_FOOD@を食べて'),
@@ -5935,7 +5939,8 @@ const itms_did_o = [
     new SctItm('@L_READER@に目を通して'),
     new SctItm('@L_READER@を読みふけって'),
     new SctItm('@L_READER@を調べて'),
-    new SctItm('@L_GITAI@して')
+    new SctItm('@L_GITAI@して'),
+    new SctItm('「@L_GREET@」と伝えて')
 ];
 const itms_boyName = [
     new SctItm('|Александр|アレクサンドル|'),
@@ -6640,4 +6645,15 @@ const itms_Gitai = [
     new SctItm('ゆらゆら'),
     new SctItm('よろよろ'),
     new SctItm('わくわく')
+];
+const itms_Greet = [
+    new SctItm('こんにちは'),
+    new SctItm('おはよう'),
+    new SctItm('おはようございます'),
+    new SctItm('こんばんは'),
+    new SctItm('さようなら'),
+    new SctItm('おやすみなさい'),
+    new SctItm('ありがとう'),
+    new SctItm('ごきげんよう'),
+    new SctItm('おたっしゃで')
 ];

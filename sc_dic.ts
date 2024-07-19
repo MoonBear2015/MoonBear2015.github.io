@@ -5933,6 +5933,10 @@ const   itms_do = [
     new SctItm('浄化','DO/clean.jpg')
     ,
     new SctItm('期待','DO/blur.jpg')
+    ,
+    new SctItm('デビュー','DO/Debut.jpg')
+    ,
+    new SctItm('初登場','DO/Debut.jpg')
 ]
 
 const   itms_class = [
@@ -9264,6 +9268,8 @@ const   itms_did = [
     new SctItm('@READER@を読みふけって')
     ,
     new SctItm('@READER@を調べて')
+    ,
+    new SctItm('「@GREET@」と伝えて')
 ]
 
 const   itms_did_l = [
@@ -9598,6 +9604,8 @@ const   itms_did_l = [
     new SctItm('@L_READER@を調べて')
     ,
     new SctItm('@L_GITAI@して')
+    ,
+    new SctItm('「@L_GREET」@と伝えて')
 ]
 
 const   itms_did_o = [
@@ -9910,6 +9918,8 @@ const   itms_did_o = [
     new SctItm('@L_READER@を調べて')
     ,
     new SctItm('@L_GITAI@して')
+    ,
+    new SctItm('「@L_GREET@」と伝えて')
 ]
 
 const   itms_boyName = [
@@ -11230,5 +11240,24 @@ const   itms_Gitai = [
     new SctItm('わくわく')
 ]
 
+const   itms_Greet = [
+    new SctItm('こんにちは')
+    ,
+    new SctItm('おはよう')
+    ,
+    new SctItm('おはようございます')
+    ,
+    new SctItm('こんばんは')
+    ,
+    new SctItm('さようなら')
+    ,
+    new SctItm('おやすみなさい')
+    ,
+    new SctItm('ありがとう')
+    ,
+    new SctItm('ごきげんよう')
+    ,
+    new SctItm('おたっしゃで')
+]
 
 
