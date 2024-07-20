@@ -5937,6 +5937,8 @@ const   itms_do = [
     new SctItm('デビュー','DO/Debut.jpg')
     ,
     new SctItm('初登場','DO/Debut.jpg')
+    ,
+    new SctItm('殿堂入り','DO/crown.jpg')
 ]
 
 const   itms_class = [
@@ -10626,6 +10628,8 @@ const   itms_AwardGet2 = [
     new SctItm('獲得','ICON/A_Get.jpg')
     ,
     new SctItm('入賞','ICON/A_Win.jpg')
+    ,
+    new SctItm('殿堂入り','ICON/A_Crown.jpg')
     ,
     new SctItm('失格','ICON/A_Lost.jpg')
     ,

@@ -3826,7 +3826,8 @@ const itms_do = [
     new SctItm('浄化', 'DO/clean.jpg'),
     new SctItm('期待', 'DO/blur.jpg'),
     new SctItm('デビュー', 'DO/Debut.jpg'),
-    new SctItm('初登場', 'DO/Debut.jpg')
+    new SctItm('初登場', 'DO/Debut.jpg'),
+    new SctItm('殿堂入り', 'DO/crown.jpg')
 ];
 const itms_class = [
     new SctItm('@L_TOWN@大学教授'),
@@ -6315,6 +6316,7 @@ const itms_AwardGet2 = [
     new SctItm('受賞', 'ICON/A_Award.jpg'),
     new SctItm('獲得', 'ICON/A_Get.jpg'),
     new SctItm('入賞', 'ICON/A_Win.jpg'),
+    new SctItm('殿堂入り', 'ICON/A_Crown.jpg'),
     new SctItm('失格', 'ICON/A_Lost.jpg'),
     new SctItm('落選', 'ICON/A_Fail.jpg'),
     new SctItm('辞退', 'ICON/A_No.png')
