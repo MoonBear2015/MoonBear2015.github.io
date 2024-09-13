@@ -8450,6 +8450,16 @@ const   itms_book = [
     ,
     new SctItm('@L_WHAT@の戦い')
     ,
+    new SctItm('@L_WHAT@戦争')
+    ,
+    new SctItm('@L_WHAT@革命')
+    ,
+    new SctItm('@L_WHAT@の消失')
+    ,
+    new SctItm('@L_WHAT@の没落')
+    ,
+    new SctItm('@L_WHAT@の復活')
+    ,
     new SctItm('@L_WHAT@の旅')
     ,
     new SctItm('@L_WHAT@への道')
@@ -8459,6 +8469,14 @@ const   itms_book = [
     new SctItm('@L_CHAR@のひみつ')
     ,
     new SctItm('@L_CHAR@の冒険')
+    ,
+    new SctItm('@L_CHAR@の復讐')
+    ,
+    new SctItm('@L_CHAR@殺人事件')
+    ,
+    new SctItm('最後の@L_CHAR@')
+    ,
+    new SctItm('@L_ANIMAL@に乗った@L_CHAR@')
     ,
     new SctItm('@L_CHAR@の@L_DO@')
     ,
@@ -8483,6 +8501,14 @@ const   itms_book = [
     new SctItm('@L_ANIMAL@でも判る@L_WHAT@講座')
     ,
     new SctItm('@L_ANIMAL@でも判る@L_WHAT@大百科')
+    ,
+    new SctItm('@L_ANIMAL@でも出来る@L_CHAR@入門')
+    ,
+    new SctItm('@L_ANIMAL@でも受かる@L_CHAR@試験')
+    ,
+    new SctItm('実録・@L_CHAR@')
+    ,
+    new SctItm('@L_ANIMAL@の飼い方')
     ,
     new SctItm('@L_DO@する@L_WHAT@')
     ,

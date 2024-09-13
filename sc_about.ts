@@ -58,7 +58,8 @@ function make_about()
         shtml += '好物:@FOOD@<br>';
         shtml += '座右の銘:@INSCRIPTION@<br>';
         shtml += '正体：@L_HEROEVIL@<br>';
-        shtml += '@SONGTYPE@：@SONGTITLE@';
+        shtml += '@SONGTYPE@：@SONGTITLE@<br>';
+        shtml += '著作：『@BOOK@』<br>';
         shtml += '<br>';
         shtml += '</div>';
 
