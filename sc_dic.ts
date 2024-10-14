@@ -6527,7 +6527,9 @@ const   itms_shop = [
     ,
     new SctItm('CAT','SHOP/CAT03.jpg','飼い猫')
     ,
-    new SctItm('HAMBURGER','SHOP/hamburger.jpg','ハンバーガー')
+    new SctItm('HAMBURGER','SHOP/hamburger01.jpg','ハンバーガー')
+    ,
+    new SctItm('HAMBURGER','SHOP/hamburger02.jpg','ハンバーガー')
     ,
     new SctItm('HELICOPTER','SHOP/helicopter01.jpg','ヘリコプター')
     ,
@@ -6540,6 +6542,16 @@ const   itms_shop = [
     new SctItm('HORSE','SHOP/HORSE02.jpg','馬')
     ,
     new SctItm('HORSE','SHOP/HORSE03.jpg','種馬')
+    ,
+    new SctItm('HOTDOG','SHOP/Hotdog01.jpg','ホットドッグ')
+    ,
+    new SctItm('HOTDOG','SHOP/Hotdog02.jpg','ホットドッグ')
+    ,
+    new SctItm('SPAGHETTI','SHOP/Spaghetti01.jpg','スパゲッティー')
+    ,
+    new SctItm('SPAGHETTI','SHOP/Spaghetti02.jpg','スパゲッティー')
+    ,
+    new SctItm('SPAGHETTI','SHOP/Spaghetti03.jpg','スパゲッティー')
     ,
     new SctItm('SMARTPHONE','SHOP/PHONE01.jpg','スマートフォン')
     ,

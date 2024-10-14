@@ -614,6 +614,10 @@ class selector_ShopComentGood extends SctItm_Selector implements ISctItm_Selecto
             ,
             new SctItm('@L_CAMPANY@ @L_SHOP@！　これで勝てる！')
             ,
+            new SctItm('@L_CAMPANY@ @L_SHOP@！　素晴らしい！')
+            ,
+            new SctItm('@L_CAMPANY@ @L_SHOP@！　なんて美味しそうなんだ！')
+            ,
             new SctItm('なんて@KEI1@@L_SHOP_B@なのだろう！')
             ,
             new SctItm('もう@L_CAMPANY_B@社の@L_SHOP_B@が無ければ生きていけません！')
@@ -645,6 +649,8 @@ class selector_ShopComentNomal extends SctItm_Selector implements ISctItm_Select
             new SctItm('@L_CAMPANY@ @L_SHOP@？　ちょっと@KEIM2@かな')
             ,
             new SctItm('たまにしか@L_SHOP_B@は使わないので')
+            ,
+            new SctItm('最近、@L_SHOP_B@って見ないですよね')
             ,
             new SctItm('@HABIT@の時しか使わないけど')
             ,
@@ -689,6 +695,8 @@ class selector_ShopComentBad extends SctItm_Selector implements ISctItm_Selector
             new SctItm('あまり@HABIT@はしないから')
             ,
             new SctItm('@DID@いるので@L_SHOP_B@は要りません')
+            ,
+            new SctItm('今更、@L_SHOP_B@っていっても')
         ];
     }
 }

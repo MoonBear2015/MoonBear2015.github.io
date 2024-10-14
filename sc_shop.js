@@ -456,6 +456,8 @@ class selector_ShopComentGood extends SctItm_Selector {
             new SctItm('@L_CAMPANY@ @L_SHOP@！　正に@COUNTRY@の@NICKGOOD@！'),
             new SctItm('@L_CAMPANY@ @L_SHOP@！　ああ、なんて@KEI1@！'),
             new SctItm('@L_CAMPANY@ @L_SHOP@！　これで勝てる！'),
+            new SctItm('@L_CAMPANY@ @L_SHOP@！　素晴らしい！'),
+            new SctItm('@L_CAMPANY@ @L_SHOP@！　なんて美味しそうなんだ！'),
             new SctItm('なんて@KEI1@@L_SHOP_B@なのだろう！'),
             new SctItm('もう@L_CAMPANY_B@社の@L_SHOP_B@が無ければ生きていけません！'),
             new SctItm('@COUNTRY@でNo.1！ @L_CAMPANY@ @L_SHOP@！'),
@@ -476,6 +478,7 @@ class selector_ShopComentNomal extends SctItm_Selector {
             new SctItm('@L_CAMPANY@ @L_SHOP@？　へえ？'),
             new SctItm('@L_CAMPANY@ @L_SHOP@？　ちょっと@KEIM2@かな'),
             new SctItm('たまにしか@L_SHOP_B@は使わないので'),
+            new SctItm('最近、@L_SHOP_B@って見ないですよね'),
             new SctItm('@HABIT@の時しか使わないけど'),
             new SctItm('@COUNTRY@だったら売れそうだけど'),
             new SctItm('もう少し@KEIM1@と良いんですが'),
@@ -501,7 +504,8 @@ class selector_ShopComentBad extends SctItm_Selector {
             new SctItm('@L_CAMPANY_B@製は壊れやすいので'),
             new SctItm('どうして@L_CAMPANY_B@製は@KEI1@んですかね'),
             new SctItm('あまり@HABIT@はしないから'),
-            new SctItm('@DID@いるので@L_SHOP_B@は要りません')
+            new SctItm('@DID@いるので@L_SHOP_B@は要りません'),
+            new SctItm('今更、@L_SHOP_B@っていっても')
         ];
     }
 }
