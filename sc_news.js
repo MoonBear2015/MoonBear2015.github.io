@@ -3047,7 +3047,8 @@ class selector_message extends SctItm_Selector {
             new SctItm('@MESSAGE01@'),
             new SctItm('@ORDER@@MESSAGE01@'),
             new SctItm('@DATEBEFORE@に@MESSAGE01@'),
-            new SctItm('@DATEBEFORE@から@MESSAGE02@')
+            new SctItm('@DATEBEFORE@から@MESSAGE02@'),
+            new SctItm('@PART@が@MESSAGE01@')
         ];
     }
 }

@@ -4330,6 +4330,8 @@ class selector_message extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@DATEBEFORE@に@MESSAGE01@')
             ,
             new SctItm('@DATEBEFORE@から@MESSAGE02@')
+            ,
+            new SctItm('@PART@が@MESSAGE01@')
         ];
     }
 }
