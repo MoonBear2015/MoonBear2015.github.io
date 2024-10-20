@@ -3919,9 +3919,12 @@ const itms_class = [
     new SctItm('大道芸人'),
     new SctItm('吟遊詩人'),
     new SctItm('連邦保安官'),
-    new SctItm('公務員'),
-    new SctItm('国家公務員'),
-    new SctItm('国選弁護人'),
+    new SctItm('公務員')
+    // ,
+    // new SctItm('国家公務員')
+    // ,
+    // new SctItm('国選弁護人')
+    ,
     new SctItm('弁護士'),
     new SctItm('裁判官'),
     new SctItm('メイド'),
@@ -5613,7 +5616,10 @@ const itms_did = [
     new SctItm('「@GREET@」と叫んで'),
     new SctItm('「@GREET@」と手紙に書いて'),
     new SctItm('「@GREET@」と書き残して'),
-    new SctItm('「@GREET@」という気持ちを込めて')
+    new SctItm('「@GREET@」という気持ちを込めて'),
+    new SctItm('@CERTIFICATE@に@KEID@@ASSES0301@て'),
+    new SctItm('@GROUP@から@CERTIFICATE@に@KEID@@ASSES0301@て'),
+    new SctItm('多くの@MANYPEOPLE@から@CERTIFICATE@に@KEID@@ASSES0301@て')
 ];
 const itms_did_l = [
     new SctItm('@L_FOOD@を食べて'),
@@ -5800,7 +5806,9 @@ const itms_did_l = [
     new SctItm('「@L_GREET@」と叫んで'),
     new SctItm('「@L_GREET@」と手紙に書いて'),
     new SctItm('「@L_GREET@」と書き残して'),
-    new SctItm('「@L_GREET@」という気持ちを込めて')
+    new SctItm('「@L_GREET@」という気持ちを込めて'),
+    new SctItm('@L_CERTIFICATE@に認定されて'),
+    new SctItm('@L_CERTIFICATE@に推薦されて')
 ];
 const itms_did_o = [
     new SctItm('@O_FOOD@を食べて'),
@@ -5984,7 +5992,9 @@ const itms_did_o = [
     new SctItm('「@L_GREET@」と叫んで'),
     new SctItm('「@L_GREET@」と手紙に書いて'),
     new SctItm('「@L_GREET@」と書き残して'),
-    new SctItm('「@L_GREET@」という気持ちを込めて')
+    new SctItm('「@L_GREET@」という気持ちを込めて'),
+    new SctItm('@L_CERTIFICATE@に認定されて'),
+    new SctItm('@L_CERTIFICATE@に推薦されて')
 ];
 const itms_boyName = [
     new SctItm('|Александр|アレクサンドル|'),
@@ -6367,7 +6377,9 @@ const itms_Award = [
     new SctItm('@RIDE@レース@AWARDRANK@'),
     new SctItm('@SCIENCE@オリンピック@AWARDRANK@'),
     new SctItm('@L_CITY@オリンピック@AWARDRANK@'),
-    new SctItm('@L_CITY@マラソン@AWARDRANK@')
+    new SctItm('@L_CITY@マラソン@AWARDRANK@'),
+    new SctItm('@L_CITY@大運動会@AWARDRANK@'),
+    new SctItm('@L_COUNTRY@国民栄誉賞')
 ];
 const itms_FriendShip = [
     new SctItm('知り合い'),
@@ -6708,4 +6720,36 @@ const itms_Greet = [
     new SctItm('いってらっしゃい'),
     new SctItm('ただいま'),
     new SctItm('おかえりなさい')
+];
+const itms_Certificate = [
+    new SctItm('@L_COUNTRY@天然記念物'),
+    new SctItm('@L_COUNTRY@無形文化財'),
+    new SctItm('@L_COUNTRY@有形文化財'),
+    new SctItm('@L_COUNTRY@文化財'),
+    new SctItm('@L_COUNTRY@重要文化財'),
+    new SctItm('@L_COUNTRY@名誉国民'),
+    new SctItm('@L_COUNTRY@国選@L_CLASS@'),
+    new SctItm('@L_COUNTRY@名誉@L_CLASS@'),
+    new SctItm('@L_CITY@一日@L_CLASS@'),
+    new SctItm('@L_CITY@名誉市民')
+];
+const itms_Message = [
+    new SctItm('@CERTIFICATE@に認定されました'),
+    new SctItm('@COUNTRY@に移住しました'),
+    new SctItm('@CITY@に引っ越ししました'),
+    new SctItm('@FOOD@がマイブームです'),
+    new SctItm('今、@FOOD@を食べています'),
+    new SctItm('@FOOD@が止められません'),
+    new SctItm('@ANIMAL@を飼い始めました'),
+    new SctItm('ペットの@ANIMAL@が亡くなりました'),
+    new SctItm('@SCHOOL@に入学しました'),
+    new SctItm('@SCHOOL@に卒業しました'),
+    new SctItm('@SCHOOL@を退学しました'),
+    new SctItm('@SCHOOL@を落第しました'),
+    new SctItm('@RIDE@を買いました'),
+    new SctItm('@AWARD@を@AWARDGET@しました'),
+    new SctItm('@HABIT@を始めました'),
+    new SctItm('@HABIT@が止められません'),
+    new SctItm('今、@DID@います'),
+    new SctItm('高評価とチャンネル登録をお願いします')
 ];

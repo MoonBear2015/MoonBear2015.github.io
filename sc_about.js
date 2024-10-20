@@ -51,6 +51,7 @@ function make_about() {
         shtml += '正体：@L_HEROEVIL@<br>';
         shtml += '@SONGTYPE@：@SONGTITLE@<br>';
         shtml += '著作：『@BOOK@』<br>';
+        shtml += '一言：@MESSAGE@<br>';
         shtml += '<br>';
         shtml += '</div>';
         let maker = new news_docs_maker();

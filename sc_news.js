@@ -849,7 +849,10 @@ class selector_who3 extends SctItm_Selector {
             new SctItm('@DID@@DIDEND@'),
             new SctItm('@DID@@DIDEND@筈であった'),
             new SctItm('@AWARD@を@AWARDGET@@END02B@'),
-            new SctItm('@DONE@')
+            new SctItm('@DONE@'),
+            new SctItm('@CERTIFICATE@に@KEID@@ASSES03@'),
+            new SctItm('@GROUP@から@CERTIFICATE@に@KEID@@ASSES03@'),
+            new SctItm('多くの@MANYPEOPLE@から@CERTIFICATE@に@KEID@@ASSES03@')
         ];
     }
 }
@@ -3012,6 +3015,46 @@ class selector_assessment02 extends SctItm_Selector {
         ];
     }
 }
+// に～された・されていた
+class selector_assessment03 extends SctItm_Selector {
+    constructor() {
+        super('@ASSES03@');
+        this.itms = [
+            new SctItm('@ASSES0301@た'),
+            new SctItm('@ASSES0301@て@DIDEND@')
+            // ,
+            // new SctItm('評価が高い')
+            // ,
+            // new SctItm('名高い')
+        ];
+    }
+}
+// 評価 に～
+class selector_assessment0301 extends SctItm_Selector {
+    constructor() {
+        super('@ASSES0301@');
+        this.itms = [
+            new SctItm('推薦され'),
+            new SctItm('認定され'),
+            new SctItm('登録され')
+        ];
+    }
+}
+class selector_message extends SctItm_Selector {
+    constructor() {
+        super('@MESSAGE@');
+        this.itms = [
+            new SctItm('@MESSAGE01@'),
+            new SctItm('@ORDER@@MESSAGE01@')
+        ];
+    }
+}
+class selector_message01 extends SctItm_Selector {
+    constructor() {
+        super('@MESSAGE01@');
+        this.Add(itms_Message);
+    }
+}
 // 作品に対する凄い形容
 class selector_superitem extends SctItm_Selector {
     constructor() {
@@ -3766,6 +3809,18 @@ class locker_greet extends SctItm_SelectLocker {
         this.Add(itms_Greet);
     }
 }
+class selector_certificate extends SctItm_Selector {
+    constructor() {
+        super('@CERTIFICATE@');
+        this.Add(itms_Certificate);
+    }
+}
+class locker_certificate extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_CERTIFICATE@');
+        this.Add(itms_Certificate);
+    }
+}
 class news_doc {
     constructor(doc) {
         this.doc = doc;
@@ -3968,6 +4023,8 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_nickGood());
         this.dic_push(new selector_assessment());
         this.dic_push(new selector_assessment02());
+        this.dic_push(new selector_assessment03());
+        this.dic_push(new selector_assessment0301());
         this.dic_push(new selector_people());
         this.dic_push(new selector_specialist());
         this.dic_push(new locker_specialist());
@@ -4057,5 +4114,9 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new locker_gitai());
         this.dic_push(new selector_greet());
         this.dic_push(new locker_greet());
+        this.dic_push(new selector_certificate());
+        this.dic_push(new locker_certificate());
+        this.dic_push(new selector_message());
+        this.dic_push(new selector_message01());
     }
 }
