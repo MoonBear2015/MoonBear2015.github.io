@@ -6733,23 +6733,28 @@ const itms_Certificate = [
     new SctItm('@L_CITY@一日@L_CLASS@'),
     new SctItm('@L_CITY@名誉市民')
 ];
-const itms_Message = [
+// 過去
+const itms_Message01 = [
     new SctItm('@CERTIFICATE@に認定されました'),
     new SctItm('@COUNTRY@に移住しました'),
     new SctItm('@CITY@に引っ越ししました'),
-    new SctItm('@FOOD@がマイブームです'),
-    new SctItm('今、@FOOD@を食べています'),
-    new SctItm('@FOOD@が止められません'),
-    new SctItm('@ANIMAL@を飼い始めました'),
     new SctItm('ペットの@ANIMAL@が亡くなりました'),
     new SctItm('@SCHOOL@に入学しました'),
-    new SctItm('@SCHOOL@に卒業しました'),
-    new SctItm('@SCHOOL@を退学しました'),
+    new SctItm('@SCHOOL@を卒業しました'),
+    new SctItm('@SCHOOL@から退学しました'),
     new SctItm('@SCHOOL@を落第しました'),
+    new SctItm('@CLASS@になりました'),
     new SctItm('@RIDE@を買いました'),
-    new SctItm('@AWARD@を@AWARDGET@しました'),
+    new SctItm('@AWARD@を@AWARDGET@しました')
+];
+// 進行形
+const itms_Message02 = [
+    new SctItm('@FOOD@がマイブームです'),
+    new SctItm('@COUNTRY@に住んでいます'),
+    new SctItm('@FOOD@が止められません'),
+    new SctItm('@ANIMAL@を飼っています'),
+    new SctItm('@ANIMAL@を飼い始めました'),
     new SctItm('@HABIT@を始めました'),
     new SctItm('@HABIT@が止められません'),
-    new SctItm('今、@DID@います'),
-    new SctItm('高評価とチャンネル登録をお願いします')
+    new SctItm('@DID@います')
 ];

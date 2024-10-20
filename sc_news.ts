@@ -4326,6 +4326,10 @@ class selector_message extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@MESSAGE01@')
             ,
             new SctItm('@ORDER@@MESSAGE01@')
+            ,
+            new SctItm('@DATEBEFORE@に@MESSAGE01@')
+            ,
+            new SctItm('@DATEBEFORE@から@MESSAGE02@')
         ];
     }
 }
@@ -4333,7 +4337,13 @@ class selector_message extends SctItm_Selector implements ISctItm_Selector {
 class selector_message01 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@MESSAGE01@');
-        this.Add(itms_Message);
+        this.Add(itms_Message01);
+    }
+}
+class selector_message02 extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@MESSAGE02@');
+        this.Add(itms_Message02);
     }
 }
 
@@ -5723,6 +5733,7 @@ class news_docs_maker extends docs_maker {
 
         this.dic_push(new selector_message());
         this.dic_push(new selector_message01());
+        this.dic_push(new selector_message02());
 
     }
 }
