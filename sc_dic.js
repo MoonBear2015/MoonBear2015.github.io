@@ -6745,7 +6745,9 @@ const itms_Message01 = [
     new SctItm('@SCHOOL@を落第しました'),
     new SctItm('@CLASS@になりました'),
     new SctItm('@RIDE@を買いました'),
-    new SctItm('@AWARD@を@AWARDGET@しました')
+    new SctItm('@AWARD@を@AWARDGET@しました'),
+    new SctItm('新曲「@SONGTITLE@」をリリースしました'),
+    new SctItm('@COUNTRY@の@KING01@に即位しました')
 ];
 // 進行形
 const itms_Message02 = [

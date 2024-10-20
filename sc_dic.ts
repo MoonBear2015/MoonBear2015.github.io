@@ -11429,6 +11429,10 @@ const   itms_Message01 = [
     new SctItm('@RIDE@を買いました')
     ,
     new SctItm('@AWARD@を@AWARDGET@しました')
+    ,
+    new SctItm('新曲「@SONGTITLE@」をリリースしました')
+    ,
+    new SctItm('@COUNTRY@の@KING01@に即位しました')
 ]
 
 // 進行形
