@@ -5472,8 +5472,9 @@ const itms_did = [
     new SctItm('@GROUP@から@AWARD@を授与して'),
     new SctItm('@GROUP@から@AWARD@を剥奪されて'),
     new SctItm('@KING@に命じられて'),
-    new SctItm('@KING@に即位して'),
-    new SctItm('@KING@に就任して'),
+    new SctItm('@COUNTRY@の@KING01@に即位して'),
+    new SctItm('@COUNTRY@の@KING02@に就任して'),
+    new SctItm('@CITY@の@KING03@に就任して'),
     new SctItm('@KING@を暗殺して'),
     new SctItm('@KING@の寝首をかいて'),
     new SctItm('@KING@の@PART@を誘拐して'),
@@ -5619,7 +5620,9 @@ const itms_did = [
     new SctItm('「@GREET@」という気持ちを込めて'),
     new SctItm('@CERTIFICATE@に@KEID@@ASSES0301@て'),
     new SctItm('@GROUP@から@CERTIFICATE@に@KEID@@ASSES0301@て'),
-    new SctItm('多くの@MANYPEOPLE@から@CERTIFICATE@に@KEID@@ASSES0301@て')
+    new SctItm('多くの@MANYPEOPLE@から@CERTIFICATE@に@KEID@@ASSES0301@て'),
+    new SctItm('「@MESSAGE@」と@PAPER@に書いて'),
+    new SctItm('「@MESSAGE@」と@SAY@して')
 ];
 const itms_did_l = [
     new SctItm('@L_FOOD@を食べて'),
@@ -5665,8 +5668,9 @@ const itms_did_l = [
     new SctItm('@L_CITY@に住んで'),
     new SctItm('@L_TOWN@に家を建てて'),
     new SctItm('@L_KING@に命じられて'),
-    new SctItm('@L_KING@に即位して'),
-    new SctItm('@L_KING@に就任して'),
+    new SctItm('@L_COUNTRY@の@L_KING01@に即位して'),
+    new SctItm('@L_COUNTRY@の@L_KING02@に就任して'),
+    new SctItm('@L_CITY@の@L_KING03@に就任して'),
     new SctItm('@L_KING@を暗殺して'),
     new SctItm('@L_KING@の寝首をかいて'),
     new SctItm('@L_KING@の@L_PART@を誘拐して'),
@@ -5854,8 +5858,9 @@ const itms_did_o = [
     new SctItm('@L_CITY@に住んで'),
     new SctItm('@L_CITY@に家を建てて'),
     new SctItm('@L_KING@に命じられて'),
-    new SctItm('@L_KING@に即位して'),
-    new SctItm('@L_KING@に就任して'),
+    new SctItm('@L_COUNTRY@の@L_KING01@に即位して'),
+    new SctItm('@L_COUNTRY@の@L_KING02@に就任して'),
+    new SctItm('@L_CITY@の@L_KING03@に就任して'),
     new SctItm('@L_KING@を暗殺して'),
     new SctItm('@L_KING@の@L_PART@を誘拐して')
     // ,

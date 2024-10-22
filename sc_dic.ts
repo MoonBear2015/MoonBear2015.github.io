@@ -9037,9 +9037,11 @@ const   itms_did = [
     ,
     new SctItm('@KING@に命じられて')
     ,
-    new SctItm('@KING@に即位して')
+    new SctItm('@COUNTRY@の@KING01@に即位して')
     ,
-    new SctItm('@KING@に就任して')
+    new SctItm('@COUNTRY@の@KING02@に就任して')
+    ,
+    new SctItm('@CITY@の@KING03@に就任して')
     ,
     new SctItm('@KING@を暗殺して')
     ,
@@ -9332,6 +9334,10 @@ const   itms_did = [
     new SctItm('@GROUP@から@CERTIFICATE@に@KEID@@ASSES0301@て')
     ,
     new SctItm('多くの@MANYPEOPLE@から@CERTIFICATE@に@KEID@@ASSES0301@て')
+    ,
+    new SctItm('「@MESSAGE@」と@PAPER@に書いて')
+    ,
+    new SctItm('「@MESSAGE@」と@SAY@して')
 
 ]
 
@@ -9422,9 +9428,11 @@ const   itms_did_l = [
     ,
     new SctItm('@L_KING@に命じられて')
     ,
-    new SctItm('@L_KING@に即位して')
+    new SctItm('@L_COUNTRY@の@L_KING01@に即位して')
     ,
-    new SctItm('@L_KING@に就任して')
+    new SctItm('@L_COUNTRY@の@L_KING02@に就任して')
+    ,
+    new SctItm('@L_CITY@の@L_KING03@に就任して')
     ,
     new SctItm('@L_KING@を暗殺して')
     ,
@@ -9779,9 +9787,11 @@ const   itms_did_o = [
     ,
     new SctItm('@L_KING@に命じられて')
     ,
-    new SctItm('@L_KING@に即位して')
+    new SctItm('@L_COUNTRY@の@L_KING01@に即位して')
     ,
-    new SctItm('@L_KING@に就任して')
+    new SctItm('@L_COUNTRY@の@L_KING02@に就任して')
+    ,
+    new SctItm('@L_CITY@の@L_KING03@に就任して')
     ,
     new SctItm('@L_KING@を暗殺して')
     ,

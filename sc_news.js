@@ -1013,7 +1013,8 @@ class selector_comment extends SctItm_Selector {
             new SctItm('@YESNO@ッ！ @NEWS_C02@ッ！'),
             new SctItm('@NICKBAD@ッ！ @NICKBAD@ッ！ @NICKBAD@ッ！'),
             new SctItm('@L_WHAT@の@NICKBAD@！ @L_WHAT@の@NICKBAD@！ @L_WHAT@の@NICKBAD@！ @L_WHAT@の@NICKBAD@！ '),
-            new SctItm('@L_INSCRIPTION@')
+            new SctItm('@L_INSCRIPTION@'),
+            new SctItm('@MESSAGE')
         ];
     }
 }
@@ -2212,7 +2213,8 @@ class selector_king extends SctItm_Selector {
         super('@KING@');
         this.itms = [
             new SctItm('@COUNTRY@@KING01@'),
-            new SctItm('@CITY@@KING02@')
+            new SctItm('@COUNTRY@@KING02@'),
+            new SctItm('@CITY@@KING03@')
         ];
     }
 }
@@ -2221,7 +2223,8 @@ class locker_king extends SctItm_SelectLocker {
         super('@L_KING@');
         this.itms = [
             new SctItm('@L_COUNTRY@@L_KING01@'),
-            new SctItm('@L_CITY@@L_KING02@')
+            new SctItm('@L_COUNTRY@@L_KING02@'),
+            new SctItm('@L_CITY@@L_KING03@')
         ];
     }
 }
