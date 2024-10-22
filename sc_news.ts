@@ -814,7 +814,9 @@ class locker_char extends SctItm_SelectLocker implements ISctItm_Selector{
             ,
             new SctItm('@L_COUNTRY@@KING01@')
             ,
-            new SctItm('@L_CITY@@KING02@')
+            new SctItm('@L_COUNTRY@@KING02@')
+            ,
+            new SctItm('@L_CITY@@KING03@')
             ,
             new SctItm('@L_KING@')
             ,
@@ -3217,12 +3219,30 @@ class selector_king02 extends SctItm_Selector implements ISctItm_Selector {
         this.Add(itms_King02);
     }
 }
+
+
 class locker_king02 extends SctItm_SelectLocker implements ISctItm_Selector {
     constructor(){
         super('@L_KING02@');
         this.Add(itms_King02);
     }
 }
+
+class selector_king03 extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@KING03@');
+        this.Add(itms_King03);
+    }
+}
+
+
+class locker_king03 extends SctItm_SelectLocker implements ISctItm_Selector {
+    constructor(){
+        super('@L_KING03@');
+        this.Add(itms_King03);
+    }
+}
+
 class selector_store extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@STORE@');
@@ -5521,10 +5541,12 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_king());
         this.dic_push(new selector_king01());
         this.dic_push(new selector_king02());
+        this.dic_push(new selector_king03());
 
         this.dic_push(new locker_king());
         this.dic_push(new locker_king01());
         this.dic_push(new locker_king02());
+        this.dic_push(new locker_king03());
 
         this.dic_push(new selector_store());
         

@@ -10931,7 +10931,9 @@ const   itms_Group02 = [
 const   itms_King = [
     new SctItm('@COUNTRY@@KING01@')
     ,
-    new SctItm('@CITY@@KING02@')
+    new SctItm('@COUNTRY@@KING02@')
+    ,
+    new SctItm('@CITY@@KING03@')
 ]
 
 const   itms_King01 = [
@@ -10954,7 +10956,10 @@ const   itms_King01 = [
     new SctItm('女王')
     ,
     new SctItm('女帝')
-    ,
+]
+
+
+const   itms_King02 = [
     new SctItm('総理大臣')
     ,
     new SctItm('大統領')
@@ -10964,7 +10969,7 @@ const   itms_King01 = [
     new SctItm('書記長')
 ]
 
-const   itms_King02 = [
+const   itms_King03 = [
     new SctItm('市長')
     ,
     new SctItm('町長')
@@ -10977,6 +10982,8 @@ const   itms_King02 = [
     ,
     new SctItm('州知事')
 ]
+
+
 
 const   itms_Store = [
     new SctItm('デパート')
@@ -11406,15 +11413,17 @@ const   itms_Certificate = [
     new SctItm('@L_CITY@名誉市民')
 ]
 
-// 過去
+// 過去（PARTが～と共用）
 const   itms_Message01 = [
+    new SctItm('@DO@している@WHAT@に行ってきました')
+    ,
     new SctItm('@CERTIFICATE@に認定されました')
     ,
     new SctItm('@COUNTRY@に移住しました')
     ,
     new SctItm('@CITY@に引っ越ししました')
     ,
-    new SctItm('ペットの@ANIMAL@が亡くなりました')
+    new SctItm('飼っていた@ANIMAL@が亡くなりました')
     ,
     new SctItm('@SCHOOL@に入学しました')
     ,
@@ -11426,6 +11435,8 @@ const   itms_Message01 = [
     ,
     new SctItm('@CLASS@になりました')
     ,
+    new SctItm('@CLASS@を止めました')
+    ,
     new SctItm('@RIDE@を買いました')
     ,
     new SctItm('@AWARD@を@AWARDGET@しました')
@@ -11433,10 +11444,16 @@ const   itms_Message01 = [
     new SctItm('新曲「@SONGTITLE@」をリリースしました')
     ,
     new SctItm('@COUNTRY@の@KING01@に即位しました')
+    ,
+    new SctItm('@COUNTRY@の@KING02@に就任しました')
+    ,
+    new SctItm('@CITY@の@KING03@に就任しました')
 ]
 
 // 進行形
 const   itms_Message02 = [
+    new SctItm('@WHAT@が@DO@しています')
+    ,
     new SctItm('@FOOD@がマイブームです')
     ,
     new SctItm('@COUNTRY@に住んでいます')
