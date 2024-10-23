@@ -3846,6 +3846,12 @@ class locker_certificate extends SctItm_SelectLocker {
         this.Add(itms_Certificate);
     }
 }
+class selector_certificateget extends SctItm_Selector {
+    constructor() {
+        super('@CERTIFICATEGET@');
+        this.Add(itms_CertificateGet);
+    }
+}
 class news_doc {
     constructor(doc) {
         this.doc = doc;
@@ -4143,6 +4149,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new locker_greet());
         this.dic_push(new selector_certificate());
         this.dic_push(new locker_certificate());
+        this.dic_push(new selector_certificateget());
         this.dic_push(new selector_message());
         this.dic_push(new selector_message01());
         this.dic_push(new selector_message02());

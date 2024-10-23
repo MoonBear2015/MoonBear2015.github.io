@@ -301,7 +301,10 @@ class selector_catch extends SctItm_Selector {
             new SctItm('@AWARD@ @L_AWARDGET2@'),
             new SctItm('@AWARD@を@L_AWARDGET2@しました'),
             new SctItm('@AWARD@を@AWARDGET@させた@L_TECH@'),
-            new SctItm('@AWARD@を@AWARDGET@させた@KEI1@@L_TECH@')
+            new SctItm('@AWARD@を@AWARDGET@させた@KEI1@@L_TECH@'),
+            new SctItm('@AWARD@を@AWARDGET@させた@KEI1@@L_TECH@'),
+            new SctItm('@AWARD@を@AWARDGET@させた@KEI1@@L_TECH@'),
+            new SctItm('@CERTIFICATE@に@L_CERTIFICATEGET@されました')
         ];
     }
 }
@@ -316,6 +319,12 @@ class locker_AwardGet2 extends SctItm_SelectLocker {
     constructor() {
         super('@L_AWARDGET2@', '', '@ICON_TECH@');
         this.Add(itms_AwardGet2);
+    }
+}
+class locker_CertificateGet extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_CERTIFICATEGET@', '', '@ICON_TECH@');
+        this.Add(itms_CertificateGet);
     }
 }
 class selector_s_info_init extends SctItm_Selector {
@@ -609,6 +618,7 @@ class shop_docs_maker01 extends news_docs_maker {
         this.dic_push(new locker_status());
         this.dic_push(new locker_place());
         this.dic_push(new locker_AwardGet2());
+        this.dic_push(new locker_CertificateGet());
         // this.dic_push(new locker_tech());
     }
 }

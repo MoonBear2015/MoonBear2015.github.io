@@ -6386,6 +6386,21 @@ const itms_Award = [
     new SctItm('@L_CITY@大運動会@AWARDRANK@'),
     new SctItm('@L_COUNTRY@国民栄誉賞')
 ];
+const itms_CertificateGet = [
+    new SctItm('認定', 'ICON/C_Certified.png'),
+    new SctItm('推薦', 'ICON/C_Recommend.jpeg')
+];
+const itms_Certificate = [
+    new SctItm('@L_COUNTRY@天然記念物'),
+    new SctItm('@L_COUNTRY@無形文化財'),
+    new SctItm('@L_COUNTRY@有形文化財'),
+    new SctItm('@L_COUNTRY@文化財'),
+    new SctItm('@L_COUNTRY@重要文化財'),
+    new SctItm('@L_COUNTRY@名誉国民'),
+    new SctItm('@L_COUNTRY@国選@L_CLASS@'),
+    new SctItm('@L_COUNTRY@名誉@L_CLASS@'),
+    new SctItm('@L_CITY@名誉市民')
+];
 const itms_FriendShip = [
     new SctItm('知り合い'),
     new SctItm('友人'),
@@ -6729,22 +6744,10 @@ const itms_Greet = [
     new SctItm('ただいま'),
     new SctItm('おかえりなさい')
 ];
-const itms_Certificate = [
-    new SctItm('@L_COUNTRY@天然記念物'),
-    new SctItm('@L_COUNTRY@無形文化財'),
-    new SctItm('@L_COUNTRY@有形文化財'),
-    new SctItm('@L_COUNTRY@文化財'),
-    new SctItm('@L_COUNTRY@重要文化財'),
-    new SctItm('@L_COUNTRY@名誉国民'),
-    new SctItm('@L_COUNTRY@国選@L_CLASS@'),
-    new SctItm('@L_COUNTRY@名誉@L_CLASS@'),
-    new SctItm('@L_CITY@一日@L_CLASS@'),
-    new SctItm('@L_CITY@名誉市民')
-];
 // 過去（PARTが～と共用）
 const itms_Message01 = [
     new SctItm('@DO@している@WHAT@に行ってきました'),
-    new SctItm('@CERTIFICATE@に認定されました'),
+    new SctItm('@CERTIFICATE@に@CERTIFICATEGET@されました'),
     new SctItm('@COUNTRY@に移住しました'),
     new SctItm('@CITY@に引っ越ししました'),
     new SctItm('飼っていた@ANIMAL@が亡くなりました'),
