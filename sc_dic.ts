@@ -11470,9 +11470,7 @@ const   itms_Message01 = [
 const   itms_Message02 = [
     new SctItm('@WHAT@が@DO@しています')
     ,
-    new SctItm('@FOOD@がマイブームです')
-    ,
-    new SctItm('@COUNTRY@に住んでいます')
+    new SctItm('@WHERE@に住んでいます')
     ,
     new SctItm('@FOOD@が止められません')
     ,
@@ -11487,4 +11485,12 @@ const   itms_Message02 = [
     new SctItm('@DID@います')
 ]
 
+// その他
+const   itms_Message03 = [
+    new SctItm('一緒に@DID@してみませんか')
+    ,
+    new SctItm('@FOOD@がお薦めです')
+    ,
+    new SctItm('今から@WHERE@に行ってきます')
+]
 
