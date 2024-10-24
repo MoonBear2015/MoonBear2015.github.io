@@ -6537,6 +6537,14 @@ const   itms_shop = [
     ,
     new SctItm('HELICOPTER','SHOP/helicopter03.jpg','ヘリコプター')
     ,
+    new SctItm('AIRPLANE','SHOP/Airplane01.jpg','飛行機')
+    ,
+    new SctItm('AIRPLANE','SHOP/Airplane02.jpg','飛行機')
+    ,
+    new SctItm('FIGHTER JET','SHOP/FighterJet01.jpg','戦闘機')
+    ,
+    new SctItm('FIGHTER JET','SHOP/FighterJet02.jpg','戦闘機')
+    ,
     new SctItm('HORSE','SHOP/HORSE01.jpg','馬')
     ,
     new SctItm('HORSE','SHOP/HORSE02.jpg','馬')
@@ -6552,6 +6560,10 @@ const   itms_shop = [
     new SctItm('SPAGHETTI','SHOP/Spaghetti02.jpg','スパゲッティー')
     ,
     new SctItm('SPAGHETTI','SHOP/Spaghetti03.jpg','スパゲッティー')
+    ,
+    new SctItm('PIZZA','SHOP/Pizza01.jpg','ピザ')
+    ,
+    new SctItm('PIZZA','SHOP/Pizza02.jpg','ピザ')
     ,
     new SctItm('SMARTPHONE','SHOP/PHONE01.jpg','スマートフォン')
     ,
