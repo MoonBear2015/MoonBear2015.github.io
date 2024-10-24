@@ -11431,15 +11431,15 @@ const   itms_Greet = [
 
 // 過去（PARTが～と共用）
 const   itms_Message01 = [
-    new SctItm('@DO@している@WHAT@に行ってきました')
+    new SctItm('@L_DO@している@L_WHAT@に行ってきました')
     ,
-    new SctItm('@CERTIFICATE@に@CERTIFICATEGET@されました')
+    new SctItm('@L_CERTIFICATE@に@CERTIFICATEGET@されました')
     ,
-    new SctItm('@COUNTRY@に移住しました')
+    new SctItm('@L_COUNTRY@に移住しました')
     ,
-    new SctItm('@CITY@に引っ越ししました')
+    new SctItm('@L_CITY@に引っ越ししました')
     ,
-    new SctItm('飼っていた@ANIMAL@が亡くなりました')
+    new SctItm('飼っていた@L_ANIMAL@が亡くなりました')
     ,
     new SctItm('@SCHOOL@に入学しました')
     ,
@@ -11449,47 +11449,47 @@ const   itms_Message01 = [
     ,
     new SctItm('@SCHOOL@を落第しました')
     ,
-    new SctItm('@CLASS@になりました')
+    new SctItm('@L_CLASS@になりました')
     ,
-    new SctItm('@CLASS@を止めました')
+    new SctItm('@L_CLASS@を止めました')
     ,
-    new SctItm('@RIDE@を買いました')
+    new SctItm('@L_RIDE@を買いました')
     ,
     new SctItm('@AWARD@を@AWARDGET@しました')
     ,
     new SctItm('新曲「@SONGTITLE@」をリリースしました')
     ,
-    new SctItm('@COUNTRY@の@KING01@に即位しました')
+    new SctItm('@L_COUNTRY@の@L_KING01@に即位しました')
     ,
-    new SctItm('@COUNTRY@の@KING02@に就任しました')
+    new SctItm('@L_COUNTRY@の@L_KING02@に就任しました')
     ,
-    new SctItm('@CITY@の@KING03@に就任しました')
+    new SctItm('@L_CITY@の@L_KING03@に就任しました')
 ]
 
 // 進行形
 const   itms_Message02 = [
-    new SctItm('@WHAT@が@DO@しています')
+    new SctItm('@L_WHAT@が@L_DO@しています')
     ,
     new SctItm('@WHERE@に住んでいます')
     ,
-    new SctItm('@FOOD@が止められません')
+    new SctItm('@L_FOOD@が止められません')
     ,
-    new SctItm('@ANIMAL@を飼っています')
+    new SctItm('@L_ANIMAL@を飼っています')
     ,
-    new SctItm('@ANIMAL@を飼い始めました')
+    new SctItm('@L_ANIMAL@を飼い始めました')
     ,
-    new SctItm('@HABIT@を始めました')
+    new SctItm('@L_HABIT@を始めました')
     ,
-    new SctItm('@HABIT@が止められません')
+    new SctItm('@L_HABIT@が止められません')
     ,
-    new SctItm('@DID@います')
+    new SctItm('@L_DID@います')
 ]
 
 // その他
 const   itms_Message03 = [
-    new SctItm('一緒に@DID@してみませんか')
+    new SctItm('一緒に@L_DID@みませんか')
     ,
-    new SctItm('@FOOD@がお薦めです')
+    new SctItm('@L_FOOD@がお薦めです')
     ,
     new SctItm('今から@WHERE@に行ってきます')
 ]
