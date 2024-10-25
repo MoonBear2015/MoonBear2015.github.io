@@ -6243,8 +6243,8 @@ const itms_songColor3 = [
     new SctItm('ブラック・')
 ];
 const itms_songGenre = [
-    new SctItm('の歌'),
-    new SctItm('の唄'),
+    new SctItm('歌'),
+    new SctItm('唄'),
     new SctItm('応援歌'),
     new SctItm('演歌'),
     new SctItm('音頭'),

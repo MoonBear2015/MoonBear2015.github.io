@@ -1014,7 +1014,7 @@ class selector_comment extends SctItm_Selector {
             new SctItm('@NICKBAD@ッ！ @NICKBAD@ッ！ @NICKBAD@ッ！'),
             new SctItm('@L_WHAT@の@NICKBAD@！ @L_WHAT@の@NICKBAD@！ @L_WHAT@の@NICKBAD@！ @L_WHAT@の@NICKBAD@！ '),
             new SctItm('@L_INSCRIPTION@'),
-            new SctItm('@MESSAGE')
+            new SctItm('@MESSAGE@')
         ];
     }
 }
@@ -3710,7 +3710,8 @@ class selector_songTitle extends SctItm_Selector {
             new SctItm('@SONGCOLOR@@SONGITEM@'),
             new SctItm('@SONGITEM@の@SONGTEMA@'),
             new SctItm('@SONGITEM@は@SONGCOLORNAME@'),
-            new SctItm('@SONGITEM@@SONGGENRE@'),
+            new SctItm('@SONGITEM@に捧げる@SONGGENRE@'),
+            new SctItm('@SONGITEM@に送る@SONGGENRE@'),
             new SctItm('@SONGITEM@よ @GREET@')
         ];
     }

@@ -1527,7 +1527,7 @@ class selector_comment extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@L_INSCRIPTION@')
             ,
-            new SctItm('@MESSAGE')
+            new SctItm('@MESSAGE@')
         ];
     }
 }
@@ -5270,7 +5270,9 @@ class selector_songTitle extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@SONGITEM@は@SONGCOLORNAME@')
             ,
-            new SctItm('@SONGITEM@@SONGGENRE@')
+            new SctItm('@SONGITEM@に捧げる@SONGGENRE@')
+            ,
+            new SctItm('@SONGITEM@に送る@SONGGENRE@')
             ,
             new SctItm('@SONGITEM@よ @GREET@')
         ];
