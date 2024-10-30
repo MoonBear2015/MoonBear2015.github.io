@@ -466,8 +466,13 @@ class selector_subtitle03 extends SctItm_Selector {
         super('@NEWS_SUBTITLE03@');
         this.itms = [
             new SctItm('@L_DO@@END02B@@L_TECH@'),
+            new SctItm('@L_DO@@END02B@@KEI@@L_TECH@'),
             new SctItm('@L_WHAT@の@KEI@@L_TECH@'),
+            new SctItm('@KEI@@L_WHAT@の@L_TECH@'),
             new SctItm('@KEI@@L_CHAR@の@L_TECH@'),
+            new SctItm('@L_CHAR@の@KEI@@L_TECH@'),
+            new SctItm('@KEI@@L_TECH@が@L_DO@@END02C@'),
+            new SctItm('@L_TECH@が@KEID@@L_DO@@END02C@'),
             new SctItm('@L_WHAT@の@L_TECH@が@L_DO@@END02C@')
         ];
     }
@@ -486,10 +491,10 @@ class selector_newsFirst extends SctItm_Selector {
             new SctItm('@KEI@@L_WHAT@の@L_CHAR@が@KEID@@L_DO@@END02B@のは、@DATE@の頃である。'),
             new SctItm('@NEWS_Q01@？ '),
             new SctItm('@DATE@の@WHERE@での出来事である。'),
-            new SctItm('@DATE@に、@WHERE@でそれは起こった。'),
             new SctItm('@DATE@に@WHERE@で、私が@DID@@DIDEND@時のことである。'),
             new SctItm('@DATE@に@WHERE@に訪れ、@DID@@DIDEND@時と記憶している。'),
-            new SctItm('@L_CHAR@が@WHERE@に訪れ、@DID@@DIDEND@時にそれは起こった。')
+            new SctItm('@DATE@、@KEI@@L_WHAT@の@L_CHAR@は、次の様に@SAY03@@END02C@。「@COMMENT@」――'),
+            new SctItm('これは、@KEI@@L_WHAT@の@L_CHAR@からの@SAY03@である――「@COMMENT@」<br>　')
         ];
     }
 }
@@ -2759,6 +2764,20 @@ class selector_say201 extends SctItm_Selector {
         ];
     }
 }
+// ～からの報告、報告している
+class selector_say03 extends SctItm_Selector {
+    constructor() {
+        super('@SAY03@');
+        this.itms = [
+            new SctItm('報告'),
+            new SctItm('コメント'),
+            new SctItm('分析'),
+            new SctItm('論評'),
+            new SctItm('ツイート'),
+            new SctItm('リツイート')
+        ];
+    }
+}
 // 相手
 class selector_sexage extends SctItm_Selector {
     constructor() {
@@ -4045,6 +4064,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_say01());
         this.dic_push(new selector_say2());
         this.dic_push(new selector_say201());
+        this.dic_push(new selector_say03());
         this.dic_push(new selector_answer());
         this.dic_push(new selector_it());
         this.dic_push(new selector_conect());
