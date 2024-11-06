@@ -2195,7 +2195,8 @@ class selector_group extends SctItm_Selector {
             new SctItm('@COUNTRY@@GROUP01@'),
             new SctItm('@TOWN@@GROUP02@'),
             new SctItm('@SCHOOL@'),
-            new SctItm('@MANYPEOPLE@')
+            new SctItm('@MANYPEOPLE@'),
+            new SctItm('@CLUB@')
             // ,
             // new SctItm('@KING@')
         ];
@@ -3879,6 +3880,43 @@ class selector_certificateget extends SctItm_Selector {
         this.Add(itms_CertificateGet);
     }
 }
+class selector_club_sports extends SctItm_Selector {
+    constructor() {
+        super('@CLUB_SPORTS@');
+        this.Add(itms_club_sports);
+    }
+}
+class selector_club_culture extends SctItm_Selector {
+    constructor() {
+        super('@CLUB_CULTURE@');
+        this.Add(itms_club_culture);
+    }
+}
+class selector_club_study extends SctItm_Selector {
+    constructor() {
+        super('@CLUB_STUDY@');
+        this.Add(itms_club_study);
+    }
+}
+class selector_club01 extends SctItm_Selector {
+    constructor() {
+        super('@CLUB01@');
+        this.itms = [
+            new SctItm('@CLUB_SPORTS@部'),
+            new SctItm('@CLUB_CULTURE@部'),
+            new SctItm('@CLUB_STUDY@研究会')
+        ];
+    }
+}
+class selector_club extends SctItm_Selector {
+    constructor() {
+        super('@CLUB@');
+        this.itms = [
+            new SctItm('@SCHOOL@の@CLUB01@'),
+            new SctItm('@SCHOOL01@@CLUB01@')
+        ];
+    }
+}
 class news_doc {
     constructor(doc) {
         this.doc = doc;
@@ -4182,5 +4220,10 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_message01());
         this.dic_push(new selector_message02());
         this.dic_push(new selector_message03());
+        this.dic_push(new selector_club_sports());
+        this.dic_push(new selector_club_culture());
+        this.dic_push(new selector_club_study());
+        this.dic_push(new selector_club01());
+        this.dic_push(new selector_club());
     }
 }
