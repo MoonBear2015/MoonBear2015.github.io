@@ -3528,24 +3528,38 @@ const itms_sports = [
     new SctItm('ラジオ体操'),
     new SctItm('ヨガ')
 ];
-const itms_club_sports = [
-    new SctItm('野球'),
-    new SctItm('サッカー'),
-    new SctItm('バスケ'),
-    new SctItm('バレー'),
-    new SctItm('卓球'),
-    new SctItm('テニス'),
-    new SctItm('水泳'),
-    new SctItm('柔道'),
-    new SctItm('空手'),
-    new SctItm('剣道'),
-    new SctItm('ボクシング'),
-    new SctItm('相撲'),
-    new SctItm('陸上'),
-    new SctItm('体操'),
-    new SctItm('登山')
-];
-const itms_club_culture = [
+// const   itms_club_sports = [
+//     new SctItm('野球')
+//     ,
+//     new SctItm('サッカー')
+//     ,
+//     new SctItm('バスケ')
+//     ,
+//     new SctItm('バレー')
+//     ,
+//     new SctItm('卓球')
+//     ,
+//     new SctItm('テニス')
+//     ,
+//     new SctItm('水泳')
+//     ,
+//     new SctItm('柔道')
+//     ,
+//     new SctItm('空手')
+//     ,
+//     new SctItm('剣道')
+//     ,
+//     new SctItm('ボクシング')
+//     ,
+//     new SctItm('相撲')
+//     ,
+//     new SctItm('陸上')
+//     ,
+//     new SctItm('体操')
+//     ,
+//     new SctItm('登山')
+// ];
+const itms_culture = [
     new SctItm('吹奏楽'),
     new SctItm('軽音楽'),
     new SctItm('合唱'),
@@ -3553,19 +3567,10 @@ const itms_club_culture = [
     new SctItm('美術'),
     new SctItm('書道'),
     new SctItm('文芸'),
-    new SctItm('科学'),
-    new SctItm('天文学'),
-    new SctItm('新聞'),
-    new SctItm('放送'),
     new SctItm('華道'),
-    new SctItm('茶道')
-];
-const itms_club_study = [
-    new SctItm('英語'),
-    new SctItm('映画'),
+    new SctItm('茶道'),
     new SctItm('落語'),
-    new SctItm('コンピュータ'),
-    new SctItm('@L_ITEM@')
+    new SctItm('映画')
 ];
 const itms_what = [
     new SctItm('日本', 'WHAT/Japan.jpg'),
@@ -5862,7 +5867,11 @@ const itms_did_l = [
     new SctItm('「@L_GREET@」と書き残して'),
     new SctItm('「@L_GREET@」という気持ちを込めて'),
     new SctItm('@L_CERTIFICATE@に認定されて'),
-    new SctItm('@L_CERTIFICATE@に推薦されて')
+    new SctItm('@L_CERTIFICATE@に推薦されて'),
+    new SctItm('@L_CLUB@に入部して'),
+    new SctItm('@L_CLUB@に退部して'),
+    new SctItm('@L_CLUB@の朝練に参加して'),
+    new SctItm('@L_CLUB@の合宿に参加して')
 ];
 const itms_did_o = [
     new SctItm('@O_FOOD@を食べて'),
@@ -6049,7 +6058,11 @@ const itms_did_o = [
     new SctItm('「@L_GREET@」と書き残して'),
     new SctItm('「@L_GREET@」という気持ちを込めて'),
     new SctItm('@L_CERTIFICATE@に認定されて'),
-    new SctItm('@L_CERTIFICATE@に推薦されて')
+    new SctItm('@L_CERTIFICATE@に推薦されて'),
+    new SctItm('@L_CLUB@に入部して'),
+    new SctItm('@L_CLUB@に退部して'),
+    new SctItm('@L_CLUB@の朝練に参加して'),
+    new SctItm('@L_CLUB@の合宿に参加して')
 ];
 const itms_boyName = [
     new SctItm('|Александр|アレクサンドル|'),
