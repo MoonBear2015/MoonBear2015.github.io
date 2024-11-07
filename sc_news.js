@@ -3894,16 +3894,28 @@ class selector_certificateget extends SctItm_Selector {
 //         this.Add(itms_club_sports);
 //     }
 // }
+class selector_club02 extends SctItm_Selector {
+    constructor() {
+        super('@CLUB02@');
+        this.Add(itms_club);
+    }
+}
+class locker_club02 extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_CLUB02@');
+        this.Add(itms_club);
+    }
+}
 class selector_club01 extends SctItm_Selector {
     constructor() {
         super('@CLUB01@');
         this.itms = [
-            new SctItm('@L_HABIT@部'),
-            new SctItm('@L_HABIT@研究会'),
-            new SctItm('@L_HABIT@同好会'),
-            new SctItm('@L_HABIT@愛好会'),
-            new SctItm('@L_HABIT@クラブ'),
-            new SctItm('@L_HABIT@サークル')
+            new SctItm('@CLUB02@部'),
+            new SctItm('@CLUB02@研究会'),
+            new SctItm('@CLUB02@同好会'),
+            new SctItm('@CLUB02@愛好会'),
+            new SctItm('@CLUB02@クラブ'),
+            new SctItm('@CLUB02@サークル')
         ];
     }
 }
@@ -3911,12 +3923,12 @@ class locker_club01 extends SctItm_SelectLocker {
     constructor() {
         super('@L_CLUB01@');
         this.itms = [
-            new SctItm('@L_HABIT@部'),
-            new SctItm('@L_HABIT@研究会'),
-            new SctItm('@L_HABIT@同好会'),
-            new SctItm('@L_HABIT@愛好会'),
-            new SctItm('@L_HABIT@クラブ'),
-            new SctItm('@L_HABIT@サークル')
+            new SctItm('@L_CLUB02@部'),
+            new SctItm('@L_CLUB02@研究会'),
+            new SctItm('@L_CLUB02@同好会'),
+            new SctItm('@L_CLUB02@愛好会'),
+            new SctItm('@L_CLUB02@クラブ'),
+            new SctItm('@L_CLUB02@サークル')
         ];
     }
 }
@@ -4242,8 +4254,10 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_message01());
         this.dic_push(new selector_message02());
         this.dic_push(new selector_message03());
+        this.dic_push(new selector_club02());
         this.dic_push(new selector_club01());
         this.dic_push(new selector_club());
+        this.dic_push(new locker_club02());
         this.dic_push(new locker_club01());
         this.dic_push(new locker_club());
     }

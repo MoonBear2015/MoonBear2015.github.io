@@ -6844,3 +6844,19 @@ const itms_Message03 = [
     new SctItm('@L_FOOD@がお薦めです'),
     new SctItm('今から@WHERE@に行ってきます')
 ];
+const itms_club = [
+    new SctItm('@L_CLASS@'),
+    new SctItm('@L_ANIMAL@'),
+    new SctItm('@L_FLOWER@'),
+    new SctItm('@L_FRUIT@'),
+    new SctItm('@L_FOOD@'),
+    new SctItm('@L_RIDE@'),
+    new SctItm('@L_DRESS@'),
+    new SctItm('@L_MUSIC@'),
+    new SctItm('@L_SEXAGE@'),
+    new SctItm('@L_PART@'),
+    new SctItm('@L_HABIT@'),
+    new SctItm('@L_MUSIC@'),
+    new SctItm('@L_STAR@'),
+    new SctItm('@L_SPORTS@')
+];
