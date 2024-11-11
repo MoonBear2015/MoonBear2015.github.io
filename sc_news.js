@@ -415,12 +415,18 @@ class selector_title extends SctItm_Selector {
     constructor() {
         super('@NEWS_TITLE@');
         this.itms = [
-            new SctItm('@L_WHAT@が@KEID@@L_DO@'),
-            new SctItm('@L_WHAT@を@KEID@@L_DO@@END02C@@L_CHAR@'),
-            new SctItm('@L_WHAT@が@KEID@@L_DO@@END02C@@L_CHAR@'),
-            new SctItm('@L_WHAT@の@L_CHAR@が@KEID@@L_DO@'),
-            new SctItm('@L_WHAT@が@KEID@@L_DO@@END02C@'),
-            new SctItm('@L_WHAT@の@L_CHAR@が@KEID@@L_DO@@END02C@'),
+            new SctItm('@L_WHAT@が@KEID@@L_DO@')
+            // ,
+            // new SctItm('@L_WHAT@を@KEID@@L_DO@@END02C@@L_CHAR@')
+            // ,
+            // new SctItm('@L_WHAT@が@KEID@@L_DO@@END02C@@L_CHAR@')
+            // ,
+            // new SctItm('@L_WHAT@の@L_CHAR@が@KEID@@L_DO@')
+            ,
+            new SctItm('@L_WHAT@が@KEID@@L_DO@@END02C@')
+            // ,
+            // new SctItm('@L_WHAT@の@L_CHAR@が@KEID@@L_DO@@END02C@')
+            ,
             new SctItm('@L_WHAT@を@L_DO@@END02E@@L_TECH@'),
             new SctItm('@KEI@@L_WHAT@の@L_DO@'),
             new SctItm('@L_DO@@END02C@@L_WHAT@'),
@@ -3439,13 +3445,15 @@ class selector_done02 extends SctItm_Selector {
 class locker_did extends SctItm_SelectLocker {
     constructor() {
         super('@L_DID@');
-        this.Add(itms_did_l);
+        this.Add(itms_did01_l);
+        this.Add(itms_did02_l);
     }
 }
 class Onetime_did extends SctItm_OneTimeLocker {
     constructor() {
         super('@O_DID@');
         this.Add(itms_did_o);
+        this.Add(itms_did02_l);
     }
 }
 class locker_item extends SctItm_SelectLocker {
@@ -3682,7 +3690,6 @@ class selector_songColor extends SctItm_Selector {
     constructor() {
         super('@SONGCOLOR@');
         this.Add(itms_songColor1);
-        this.Add(itms_songColor3);
     }
 }
 class selector_songColorName extends SctItm_Selector {

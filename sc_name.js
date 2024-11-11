@@ -452,7 +452,13 @@ class NameCreater_jpn extends NameCreater {
             new NmNon('|山本|やまもと|'),
             new NmNon('|谷口|たにぐち|'),
             new NmNon('|塩見|しおみ|'),
-            new NmNon('|渚|なぎさ|')
+            new NmNon('|渚|なぎさ|'),
+            new NmNon('|川崎|かわさき|'),
+            new NmNon('|山崎|やまざき|'),
+            new NmNon('|鬼龍院|きりゅういん|'),
+            new NmNon('|花京院|かきょういん|'),
+            new NmNon('|早乙女|さおとめ|'),
+            new NmNon('|鬼瓦|おにがわら|')
         ];
         this.name02 = [
             new NmAgM('|一郎|いちろう|'),
@@ -473,6 +479,8 @@ class NameCreater_jpn extends NameCreater {
             new NmAgM('|哲平|てっぺい|'),
             new NmAgM('|小太郎|こたろう|'),
             new NmAgM('|味平|あじへい|'),
+            new NmAgM('|田吾作|たごさく|'),
+            new NmAgM('|権蔵|ごんぞう|'),
             new NmAgF('|聖子|せいこ|'),
             new NmAgF('|久美子|くみこ|'),
             new NmAgF('|佐知子|さちこ|'),
@@ -482,6 +490,7 @@ class NameCreater_jpn extends NameCreater {
             new NmAgF('|貞子|さだこ|'),
             new NmAgF('|由美子|ゆみこ|'),
             new NmAgF('|薫|かをる|'),
+            new NmAgF('|桜|さくら|'),
             new NmAgF('|桜子|さくらこ|'),
             new NmAgF('|順子|じゅんこ|')
         ];

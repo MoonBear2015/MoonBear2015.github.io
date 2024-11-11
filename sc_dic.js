@@ -3389,14 +3389,21 @@ const itms_festival = [
     new SctItm('入学式'),
     new SctItm('海水浴'),
     new SctItm('運動会'),
+    new SctItm('体育祭'),
+    new SctItm('競技会'),
+    new SctItm('@L_SPORTS@の競技会'),
+    new SctItm('オリンピック'),
     new SctItm('キャンプファイヤー'),
-    new SctItm('フォークダンス'),
     new SctItm('文化祭'),
+    new SctItm('展覧会'),
+    new SctItm('展示会'),
     new SctItm('祝賀会'),
     new SctItm('飲み会'),
     new SctItm('パーティー'),
     new SctItm('立食パーティー'),
-    new SctItm('大掃除'),
+    new SctItm('@L_FOOD@の立食パーティー'),
+    new SctItm('舞踏会'),
+    new SctItm('仮面舞踏会'),
     new SctItm('餅つき大会'),
     new SctItm('忘年会'),
     new SctItm('雪合戦'),
@@ -3405,10 +3412,12 @@ const itms_festival = [
     new SctItm('お誕生日会'),
     new SctItm('同窓会'),
     new SctItm('座談会'),
-    new SctItm('街頭演説'),
-    new SctItm('大道芸'),
+    new SctItm('講演会'),
     new SctItm('選挙運動'),
-    new SctItm('デモ行進')
+    new SctItm('デモ行進'),
+    new SctItm('ファッションショー'),
+    new SctItm('@L_DRESS@のファッションショー'),
+    new SctItm('フェスティバル')
 ];
 const itms_badhabit = [
     new SctItm('空き巣'),
@@ -3716,7 +3725,8 @@ const itms_what = [
     new SctItm('@L_TOWN@大学', 'WHAT/college.jpg'),
     new SctItm('@L_CITY@大学', 'WHAT/college.jpg'),
     new SctItm('@L_CITY@図書館', 'WHAT/library.jpg'),
-    new SctItm('@L_CITY@小学校', 'WHAT/school.jpg')
+    new SctItm('@L_CITY@小学校', 'WHAT/school.jpg'),
+    new SctItm('@L_CITY@商店街', 'WHAT/Street.jpg')
 ];
 const itms_city = [
     new SctItm('東京', 'CITY/tokyo.jpg'),
@@ -5679,7 +5689,7 @@ const itms_did = [
     new SctItm('@CLUB@の合宿に参加して'),
     new SctItm('@SCHOOL@に@CLUB01@を設立して')
 ];
-const itms_did_l = [
+const itms_did01_l = [
     new SctItm('@L_FOOD@を食べて'),
     new SctItm('@L_FOOD@に塩を振って食べて'),
     new SctItm('@L_FOOD@に塩胡椒を振って食べて'),
@@ -5707,7 +5717,9 @@ const itms_did_l = [
     new SctItm('@L_FOOD@の店を開いて'),
     new SctItm('@L_DRINK@を飲んで'),
     new SctItm('@L_DRINK@をお替わりして'),
-    new SctItm('@L_DRINK@で乾杯して'),
+    new SctItm('@L_DRINK@で乾杯して')
+];
+const itms_did02_l = [
     new SctItm('@L_CLASS@に憧れて'),
     new SctItm('@L_CLASS@に恋をして'),
     new SctItm('@L_CLASS@を目指して'),
@@ -5737,16 +5749,7 @@ const itms_did_l = [
     new SctItm('@MANYPEOPLE@から『@L_ITEM@の@L_SPECIALIST@』と賞賛されて'),
     new SctItm('@MANYPEOPLE@から『@L_ITEM@の@L_SPECIALIST@』とおだてられて'),
     new SctItm('@L_PART@を連れて'),
-    new SctItm('@L_PART@の手を引いて')
-    // ,
-    // new SctItm('@L_PART@を置き去りにして')
-    // ,
-    // new SctItm('@L_PART@を見捨てて')
-    // ,
-    // new SctItm('@L_PART@を押しのけて')
-    // ,
-    // new SctItm('デートして')
-    ,
+    new SctItm('@L_PART@の手を引いて'),
     new SctItm('@L_PART@をデートに誘って'),
     new SctItm('@SAY@して'),
     new SctItm('@L_PART@に手紙を書いて'),
@@ -5770,12 +5773,7 @@ const itms_did_l = [
     new SctItm('@L_ANIMAL@狩りをして'),
     new SctItm('@L_ANIMALFROM@@L_ANIMAL@に襲われて'),
     new SctItm('@L_ANIMALFROM@@L_ANIMAL@と戦って'),
-    new SctItm('@L_ANIMALFROM@@L_ANIMAL@を退治して')
-    // ,
-    // new SctItm('@L_ANIMAL@を檻に入れて')
-    // ,
-    // new SctItm('@L_ANIMAL@を追い出して')
-    ,
+    new SctItm('@L_ANIMALFROM@@L_ANIMAL@を退治して'),
     new SctItm('@L_ANIMALFROM@@L_ANIMAL@を追い払って'),
     new SctItm('@L_ANIMALFROM@@L_ANIMAL@の絵を描いて'),
     new SctItm('@L_ANIMALFROM@@L_ANIMAL@を放し飼いにして'),
@@ -5901,168 +5899,7 @@ const itms_did_o = [
     new SctItm('@O_FOOD@の店を開いて'),
     new SctItm('@O_DRINK@を飲んで'),
     new SctItm('@O_DRINK@をお替わりして'),
-    new SctItm('@O_DRINK@で乾杯して'),
-    new SctItm('@L_CLASS@に憧れて'),
-    new SctItm('@L_CLASS@に恋をして'),
-    new SctItm('@L_CLASS@を目指して'),
-    new SctItm('@L_CLASS@を雇って'),
-    new SctItm('@L_CLASS@を召還して'),
-    new SctItm('@L_CLASS@を募集して'),
-    new SctItm('@L_CLASS@を呼び出して'),
-    new SctItm('@L_CLASS@に変身して'),
-    new SctItm('@L_COUNTRY@に移住して'),
-    new SctItm('@L_COUNTRY@に亡命して'),
-    new SctItm('@L_COUNTRY@を支配して'),
-    new SctItm('@L_COUNTRY@を征服して'),
-    new SctItm('@L_CITY@に住んで'),
-    new SctItm('@L_CITY@に家を建てて'),
-    new SctItm('@L_KING@に命じられて'),
-    new SctItm('@L_COUNTRY@の@L_KING01@に即位して'),
-    new SctItm('@L_COUNTRY@の@L_KING02@に就任して'),
-    new SctItm('@L_CITY@の@L_KING03@に就任して'),
-    new SctItm('@L_KING@を暗殺して'),
-    new SctItm('@L_KING@の@L_PART@を誘拐して')
-    // ,
-    // new SctItm('『@L_ITEM@の@L_SPECIALIST@』と呼ばれて')
-    // ,
-    // new SctItm('『@L_ITEM@の@L_SPECIALIST@』と噂されて')
-    // ,
-    // new SctItm('『@L_ITEM@の@L_SPECIALIST@』と馬鹿にされて')
-    // ,
-    // new SctItm('『@L_ITEM@の@L_SPECIALIST@』と後ろ指を指されて')
-    // ,
-    // new SctItm('『@L_ITEM@の@L_SPECIALIST@』と讃えられて')
-    // ,
-    // new SctItm('『@L_ITEM@の@L_SPECIALIST@』と賞賛されて')
-    // ,
-    // new SctItm('『@L_ITEM@の@L_SPECIALIST@』とおだてられて')
-    ,
-    new SctItm('@L_PART@を連れて'),
-    new SctItm('@L_PART@の手を引いて')
-    // ,
-    // new SctItm('@L_PART@を置き去りにして')
-    // ,
-    // new SctItm('@L_PART@を見捨てて')
-    // ,
-    // new SctItm('@L_PART@を押しのけて')
-    // ,
-    // new SctItm('デートして')
-    ,
-    new SctItm('@L_PART@をデートに誘って'),
-    new SctItm('@L_PART@に手紙を書いて'),
-    new SctItm('@L_PART@に電話して'),
-    new SctItm('@L_PART@にメールして'),
-    new SctItm('@L_PART@にプロポーズして')
-    // ,
-    // new SctItm('食事して')
-    ,
-    new SctItm('@L_PART@に別れ話をして'),
-    new SctItm('@L_PART@と喧嘩して'),
-    new SctItm('@L_PART@にお茶を出して'),
-    new SctItm('@L_PART@の靴を磨いて'),
-    new SctItm('@L_PART@の髪を乾かして'),
-    new SctItm('@L_PART@の背中を掻いて'),
-    new SctItm('@L_ANIMALFROM@@L_ANIMAL@を連れて'),
-    new SctItm('@L_ANIMALFROM@@L_ANIMAL@に乗って'),
-    new SctItm('@L_ANIMALFROM@@L_ANIMAL@の散歩をして'),
-    new SctItm('@L_ANIMALFROM@@L_ANIMAL@に餌をやって'),
-    new SctItm('@L_ANIMALFROM@@L_ANIMAL@の体を洗って'),
-    new SctItm('@L_ANIMAL@狩りをして'),
-    new SctItm('@L_ANIMALFROM@@L_ANIMAL@に襲われて'),
-    new SctItm('@L_ANIMALFROM@@L_ANIMAL@と戦って'),
-    new SctItm('@L_ANIMALFROM@@L_ANIMAL@を退治して')
-    // ,
-    // new SctItm('@L_ANIMAL@を檻に入れて')
-    // ,
-    // new SctItm('@L_ANIMAL@を追い出して')
-    ,
-    new SctItm('@L_ANIMALFROM@@L_ANIMAL@を追い払って'),
-    new SctItm('@L_ANIMALFROM@@L_ANIMAL@の絵を描いて'),
-    new SctItm('@L_ANIMALFROM@@L_ANIMAL@を放し飼いにして'),
-    new SctItm('@L_DRESS@を着て'),
-    new SctItm('@L_DRESS@を脱いで'),
-    new SctItm('@L_DRESS@に着替えて'),
-    new SctItm('@L_DRESS@を洗濯して'),
-    new SctItm('@L_DRESS@を仮縫いして'),
-    new SctItm('@L_DRESS@を引き裂いて'),
-    new SctItm('@L_UNDER@をはいて'),
-    new SctItm('@L_UNDER@を脱いで'),
-    new SctItm('@L_UNDER@のサイズを計って'),
-    new SctItm('@L_FLOWER@の花を|捧|ささ|げて'),
-    new SctItm('@L_FLOWER@の花を咲かせて'),
-    new SctItm('@L_FLOWER@の花を飾って'),
-    new SctItm('@L_FLOWER@の花の絵を描いて'),
-    new SctItm('@L_FLOWER@の花びらを散らして'),
-    new SctItm('@L_FLOWER@の花を|咥|くわ|えて'),
-    new SctItm('@L_FLOWER@の種を|蒔|ま|いて'),
-    new SctItm('@L_MUSIC@を聴いて'),
-    new SctItm('@L_MUSIC@を歌って'),
-    new SctItm('@L_FRUIT@の皮を|剥|む|いて'),
-    new SctItm('@L_FRUIT@の木を植えて'),
-    new SctItm('@L_FRUIT@を収穫して'),
-    new SctItm('@L_FRUIT@を叩き売りして'),
-    new SctItm('@L_FRUIT@の種を捨てて'),
-    new SctItm('@L_FRUIT@の種を蒔いて'),
-    new SctItm('@L_FRUIT@の畑を耕して'),
-    new SctItm('@L_RIDE@に乗って'),
-    new SctItm('@L_FESTIVAL@を開催して'),
-    new SctItm('@L_FESTIVAL@を妨害して'),
-    new SctItm('@L_FESTIVAL@に参加して'),
-    new SctItm('@L_LANDMARK@を歩いて'),
-    new SctItm('@L_LANDMARK@を観光して'),
-    new SctItm('@L_LANDMARK@に走って'),
-    new SctItm('@L_LANDMARK@で寝泊まりして'),
-    new SctItm('@L_LANDMARK@を荒らし回って'),
-    new SctItm('@L_LANDMARK@に落書きして'),
-    new SctItm('@L_LANDMARK@を破壊して'),
-    new SctItm('@L_LANDMARK@を建て直して'),
-    new SctItm('@L_LANDMARK@を建築して'),
-    new SctItm('@L_LANDMARK@を改築して'),
-    new SctItm('@L_LANDMARK@を復旧して'),
-    new SctItm('@L_CHAR@に@L_PRESENT@を渡して'),
-    new SctItm('@L_CHAR@に@L_PRESENT@を捧げて'),
-    new SctItm('@L_CHAR@に@L_PRESENT@を突きつけて'),
-    new SctItm('@L_CHAR@に@L_PRESENT@を投げつけて'),
-    new SctItm('@L_CHAR@に@L_PRESENT@を預けて'),
-    new SctItm('@L_CHAR@から@L_PRESENT@を受け取って'),
-    new SctItm('@L_CHAR@から@L_PRESENT@を手渡されて'),
-    new SctItm('@L_CHAR@から@L_PRESENT@を突きつけられて'),
-    new SctItm('@L_CHAR@から@L_PRESENT@をねだられて'),
-    new SctItm('@L_CHAR@から@L_PRESENT@を託されて'),
-    new SctItm('@L_PAPER@を書いて'),
-    new SctItm('@L_PAPER@を書き下ろして'),
-    new SctItm('@L_PAPER@をしたためて'),
-    new SctItm('@L_PAPER@を書き綴って'),
-    new SctItm('@L_CHAR@に@L_PAPER@を書いて'),
-    new SctItm('@L_CHAR@に@L_PAPER@を書き下ろして'),
-    new SctItm('@L_CHAR@に@L_PAPER@をしたためて'),
-    new SctItm('@L_CHAR@に@L_PAPER@を書き綴って'),
-    new SctItm('@L_CHAR@の@L_PAPER@を書き写して'),
-    new SctItm('@L_CHAR@の@L_PAPER@を焼いて'),
-    new SctItm('@L_CHAR@の@L_PAPER@を破いて'),
-    new SctItm('@L_CHAR@の@L_PAPER@を引き裂いて'),
-    new SctItm('@L_READER@を読んで'),
-    new SctItm('@L_READER@を開いて'),
-    new SctItm('@L_READER@を眺めて'),
-    new SctItm('@L_READER@に目を通して'),
-    new SctItm('@L_READER@を読みふけって'),
-    new SctItm('@L_READER@を調べて'),
-    new SctItm('@L_GITAI@して'),
-    new SctItm('「@L_GREET@」と伝えて'),
-    new SctItm('「@L_GREET@」と手を振って'),
-    new SctItm('「@L_GREET@」と言い残して'),
-    new SctItm('「@L_GREET@」とささやいて'),
-    new SctItm('「@L_GREET@」とつぶやいて'),
-    new SctItm('「@L_GREET@」と叫んで'),
-    new SctItm('「@L_GREET@」と手紙に書いて'),
-    new SctItm('「@L_GREET@」と書き残して'),
-    new SctItm('「@L_GREET@」という気持ちを込めて'),
-    new SctItm('@L_CERTIFICATE@に認定されて'),
-    new SctItm('@L_CERTIFICATE@に推薦されて'),
-    new SctItm('@L_CLUB@に入部して'),
-    new SctItm('@L_CLUB@に退部して'),
-    new SctItm('@L_CLUB@の朝練に参加して'),
-    new SctItm('@L_CLUB@の合宿に参加して')
+    new SctItm('@O_DRINK@で乾杯して')
 ];
 const itms_boyName = [
     new SctItm('|Александр|アレクサンドル|'),
@@ -6092,6 +5929,8 @@ const itms_boyName = [
     new SctItm('|哲平|てっぺい|'),
     new SctItm('|小太郎|こたろう|'),
     new SctItm('|味平|あじへい|'),
+    new SctItm('|田吾作|たごさく|'),
+    new SctItm('|権蔵|ごんぞう|'),
     new SctItm('|John|ジョン|'),
     new SctItm('|Robert|ロバート|'),
     new SctItm('|Joseph|ジョセフ|'),
@@ -6136,6 +5975,7 @@ const itms_girlName = [
     new SctItm('|貞子|さだこ|'),
     new SctItm('|由美子|ゆみこ|'),
     new SctItm('|薫|かをる|'),
+    new SctItm('|桜|さくら|'),
     new SctItm('|桜子|さくらこ|'),
     new SctItm('|順子|じゅんこ|'),
     new SctItm('|Mary|メアリー|'),
@@ -6289,15 +6129,6 @@ const itms_songColor2 = [
     new SctItm('@L_FRUIT@色'),
     new SctItm('@L_FISH@色'),
     new SctItm('@SEASON@色')
-];
-const itms_songColor3 = [
-    new SctItm('ホワイト・'),
-    new SctItm('イエロー・'),
-    new SctItm('ブルー・'),
-    new SctItm('グリーン・'),
-    new SctItm('ピンク・'),
-    new SctItm('パープル・'),
-    new SctItm('ブラック・')
 ];
 const itms_songGenre = [
     new SctItm('歌'),
@@ -6627,7 +6458,12 @@ const itms_where = [
     // ,
     // new SctItm('@CHAR@が@MOVE2@@SCHOOL01@')
     ,
-    new SctItm('誰も知らない@WHERE01@')
+    new SctItm('誰も知らない@WHERE01@'),
+    new SctItm('@WHERE01@で開催された@FESTIVAL@'),
+    new SctItm('@WHERE01@で催された@FESTIVAL@'),
+    new SctItm('@WHERE01@で予定されていた@FESTIVAL@の会場'),
+    new SctItm('@WHERE01@で中止となった@FESTIVAL@の会場'),
+    new SctItm('@WHERE01@で開催される筈だった@FESTIVAL@の会場')
 ];
 const itms_where01 = [
     new SctItm('@WHERE02@'),
