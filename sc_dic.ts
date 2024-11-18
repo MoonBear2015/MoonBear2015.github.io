@@ -10598,6 +10598,20 @@ const   itms_Certificate = [
 ]
 
 
+
+
+const   itms_Ranking = [
+    new SctItm('ベストテン')
+    ,
+    new SctItm('コンテスト')
+    ,
+    new SctItm('レース')
+    ,
+    new SctItm('ビルボード')
+    ,
+    new SctItm('人気投票')
+]
+
 const   itms_FriendShip = [
     new SctItm('知り合い')
     ,

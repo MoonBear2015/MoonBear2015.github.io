@@ -6295,6 +6295,13 @@ const itms_Certificate = [
     new SctItm('@L_COUNTRY@名誉@L_CLASS@'),
     new SctItm('@L_CITY@名誉市民')
 ];
+const itms_Ranking = [
+    new SctItm('ベストテン'),
+    new SctItm('コンテスト'),
+    new SctItm('レース'),
+    new SctItm('ビルボード'),
+    new SctItm('人気投票')
+];
 const itms_FriendShip = [
     new SctItm('知り合い'),
     new SctItm('友人'),
