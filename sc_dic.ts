@@ -9444,11 +9444,11 @@ const   itms_did = [
     ,
     new SctItm('@PARTY@に参加して')
     ,
-    new SctItm('******@PARTY@に参加して第@NUM1TO100@位にランクインして')
+    new SctItm('@PARTY@に参加して第@NUM1TO100@位にランクインして')
     ,
-    new SctItm('******@PARTY@に参加して@AWARDRANK@に輝いて')
+    new SctItm('@PARTY@に参加して@AWARDRANK@に輝いて')
     ,
-    new SctItm('******@PARTY@に参加して@AWARDRANK@を獲得して')
+    new SctItm('@PARTY@に参加して@AWARDRANK@を獲得して')
 
 ]
 

@@ -5692,9 +5692,9 @@ const itms_did = [
     new SctItm('@RANKING@@AWARDRANK@に輝いて'),
     new SctItm('@PARTY@を開催して'),
     new SctItm('@PARTY@に参加して'),
-    new SctItm('******@PARTY@に参加して第@NUM1TO100@位にランクインして'),
-    new SctItm('******@PARTY@に参加して@AWARDRANK@に輝いて'),
-    new SctItm('******@PARTY@に参加して@AWARDRANK@を獲得して')
+    new SctItm('@PARTY@に参加して第@NUM1TO100@位にランクインして'),
+    new SctItm('@PARTY@に参加して@AWARDRANK@に輝いて'),
+    new SctItm('@PARTY@に参加して@AWARDRANK@を獲得して')
 ];
 const itms_did01_l = [
     new SctItm('@L_FOOD@を食べて'),
