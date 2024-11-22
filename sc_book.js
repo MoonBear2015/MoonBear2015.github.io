@@ -307,6 +307,7 @@ class selector_bookinfo03 extends SctItm_Selector {
     constructor() {
         super('@B_INFO03@');
         this.itms = [
+            new SctItm('@AWARD@を獲得した@L_BOOKWRITER@の@B_TYPE@'),
             new SctItm('@COUNTRY@文学賞に輝く@L_BOOKWRITER@の@B_TYPE@'),
             new SctItm('@COUNTRY@を代表する@L_BOOKWRITER@の@B_TYPE@'),
             new SctItm('@COUNTRY@を含む@NUM10TO99@ヶ国で発売禁止となった@L_BOOKWRITER@の@B_TYPE@'),

@@ -9440,6 +9440,8 @@ const   itms_did = [
     ,
     new SctItm('@RANKING@@AWARDRANK@に輝いて')
     ,
+    new SctItm('@RANKING@からリタイアして')
+    ,
     new SctItm('@PARTY@を開催して')
     ,
     new SctItm('@PARTY@に参加して')
@@ -10623,6 +10625,8 @@ const   itms_Ranking01 = [
     ,
     new SctItm('人気投票')
     ,
+    new SctItm('選手権')
+    ,
     new SctItm('選挙投票')
     ,
     new SctItm('オーディション')
@@ -10646,6 +10650,7 @@ const   itms_party01 = [
     ,
     new SctItm('@L_ACCIDENT@大会')
 ]
+
 const   itms_party = [
     new SctItm('@L_CLASS@だらけの@PARTY01@')
     ,
@@ -10654,6 +10659,8 @@ const   itms_party = [
     new SctItm('@L_COUNTRY@国営@PARTY01@')
     ,
     new SctItm('@L_CITY@恒例@PARTY01@')
+    ,
+    new SctItm('@GROUP@認定@PARTY01@')
 ]
 
 
@@ -11333,6 +11340,12 @@ const   itms_Message01 = [
     ,
     new SctItm('@AWARD@を@AWARDGET@しました')
     ,
+    new SctItm('@RANKING@の第@NUM1TO100@位に返り咲きました')
+    ,
+    new SctItm('@RANKING@からリタイアしました')
+    ,
+    new SctItm('@RANKING@から失格しました')
+    ,
     new SctItm('新曲「@SONGTITLE@」をリリースしました')
     ,
     new SctItm('@L_COUNTRY@の@L_KING01@に即位しました')
@@ -11340,6 +11353,8 @@ const   itms_Message01 = [
     new SctItm('@L_COUNTRY@の@L_KING02@に就任しました')
     ,
     new SctItm('@L_CITY@の@L_KING03@に就任しました')
+    ,
+    new SctItm('@L_CITY@から追放されました')
     ,
     new SctItm('@PARTY@を開催しました')
     ,

@@ -5690,6 +5690,7 @@ const itms_did = [
     new SctItm('@SCHOOL@に@CLUB01@を設立して'),
     new SctItm('@RANKING@を第@NUM1TO100@位でランクインして'),
     new SctItm('@RANKING@@AWARDRANK@に輝いて'),
+    new SctItm('@RANKING@からリタイアして'),
     new SctItm('@PARTY@を開催して'),
     new SctItm('@PARTY@に参加して'),
     new SctItm('@PARTY@に参加して第@NUM1TO100@位にランクインして'),
@@ -6307,6 +6308,7 @@ const itms_Ranking01 = [
     new SctItm('レース'),
     new SctItm('トーナメント'),
     new SctItm('人気投票'),
+    new SctItm('選手権'),
     new SctItm('選挙投票'),
     new SctItm('オーディション')
 ];
@@ -6325,7 +6327,8 @@ const itms_party = [
     new SctItm('@L_CLASS@だらけの@PARTY01@'),
     new SctItm('@L_CHAR@限定@PARTY01@'),
     new SctItm('@L_COUNTRY@国営@PARTY01@'),
-    new SctItm('@L_CITY@恒例@PARTY01@')
+    new SctItm('@L_CITY@恒例@PARTY01@'),
+    new SctItm('@GROUP@認定@PARTY01@')
 ];
 const itms_FriendShip = [
     new SctItm('知り合い'),
@@ -6690,10 +6693,14 @@ const itms_Message01 = [
     new SctItm('@L_CLASS@を止めました'),
     new SctItm('@L_RIDE@を買いました'),
     new SctItm('@AWARD@を@AWARDGET@しました'),
+    new SctItm('@RANKING@の第@NUM1TO100@位に返り咲きました'),
+    new SctItm('@RANKING@からリタイアしました'),
+    new SctItm('@RANKING@から失格しました'),
     new SctItm('新曲「@SONGTITLE@」をリリースしました'),
     new SctItm('@L_COUNTRY@の@L_KING01@に即位しました'),
     new SctItm('@L_COUNTRY@の@L_KING02@に就任しました'),
     new SctItm('@L_CITY@の@L_KING03@に就任しました'),
+    new SctItm('@L_CITY@から追放されました'),
     new SctItm('@PARTY@を開催しました'),
     new SctItm('@PARTY@は中止となりました'),
     new SctItm('@PARTY@は延期になりました'),
