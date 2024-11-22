@@ -5101,40 +5101,28 @@ const   itms_festival = [
     new SctItm('新年会')
     ,
     new SctItm('卒業式')
-    ,
-    new SctItm('記念撮影')
+    // ,
+    // new SctItm('記念撮影')
     ,
     new SctItm('入学式')
     ,
     new SctItm('海水浴')
     ,
-    new SctItm('運動会')
-    ,
-    new SctItm('体育祭')
-    ,
-    new SctItm('競技会')
-    ,
-    new SctItm('@L_SPORTS@の競技会')
-    ,
-    new SctItm('オリンピック')
-    ,
     new SctItm('キャンプファイヤー')
     ,
     new SctItm('文化祭')
     ,
-    new SctItm('展覧会')
+    new SctItm('@L_ITEM@展覧会')
     ,
-    new SctItm('展示会')
+    new SctItm('@L_ITEM@展示会')
     ,
-    new SctItm('祝賀会')
-    ,
-    new SctItm('飲み会')
-    ,
-    new SctItm('パーティー')
-    ,
+    // new SctItm('祝賀会')
+    // ,
+    // new SctItm('@GROUP@の飲み会')
+    // ,
+    // new SctItm('パーティー')
+    // ,
     new SctItm('立食パーティー')
-    ,
-    new SctItm('@L_FOOD@の立食パーティー')
     ,
     new SctItm('舞踏会')
     ,
@@ -5163,8 +5151,6 @@ const   itms_festival = [
     new SctItm('デモ行進')
     ,
     new SctItm('ファッションショー')
-    ,
-    new SctItm('@L_DRESS@のファッションショー')
     ,
     new SctItm('フェスティバル')
 ];
