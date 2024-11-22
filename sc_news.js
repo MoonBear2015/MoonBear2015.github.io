@@ -654,7 +654,10 @@ class selector_call extends SctItm_Selector {
             new SctItm('@SIZE@@END02C@@L_CLASS@'),
             new SctItm('@DID@@DIDEND@@NICK@'),
             new SctItm('@L_ITEM@の@L_PART@'),
-            new SctItm('@GROUP@の@L_ITEM@')
+            new SctItm('@L_CHAR@に捧げる@L_ITEM@'),
+            new SctItm('@GROUP@の@L_ITEM@'),
+            new SctItm('@L_FLOWERCALL@'),
+            new SctItm('@L_FLOWERCALL@と呼ばれた@L_CHAR@')
         ];
     }
 }
@@ -2072,6 +2075,30 @@ class locker_flower extends SctItm_SelectLocker {
         this.Add(cods_flower_summer.slice(1));
         this.Add(cods_flower_autumn.slice(1));
         this.Add(cods_flower_winter.slice(1));
+    }
+}
+class locker_flowerCall01 extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_FLOWERCALL01@');
+        this.itms = [
+            new SctItm('@L_FLOWER@の花'),
+            new SctItm('@L_FLOWER@の花束'),
+            new SctItm('@L_FLOWER@の花びら'),
+            new SctItm('@L_FLOWER@の花飾り'),
+            new SctItm('一輪の@L_FLOWER@'),
+            new SctItm('一輪挿しの@L_FLOWER@')
+        ];
+    }
+}
+class locker_flowerCall extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_FLOWERCALL@');
+        this.itms = [
+            new SctItm('@L_FLOWERCALL01@'),
+            new SctItm('@L_WHAT@に咲いた@L_FLOWERCALL01@'),
+            new SctItm('@L_CHAR@に捧げる@L_FLOWERCALL01@'),
+            new SctItm('@L_CITY@の@L_FLOWERCALL01@')
+        ];
     }
 }
 class selector_star extends SctItm_Selector {
@@ -3529,7 +3556,7 @@ class locker_item extends SctItm_SelectLocker {
             // ,
             new SctItm('@L_CLASS@'),
             new SctItm('@L_ANIMAL@'),
-            new SctItm('@L_FLOWER@'),
+            new SctItm('@L_FLOWERCALL01@'),
             new SctItm('@L_FRUIT@'),
             new SctItm('@L_FOOD@'),
             new SctItm('@L_RIDE@'),
@@ -4156,6 +4183,8 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new locker_livestock());
         this.dic_push(new selector_flower());
         this.dic_push(new locker_flower());
+        this.dic_push(new locker_flowerCall01());
+        this.dic_push(new locker_flowerCall());
         this.dic_push(new selector_star());
         this.dic_push(new locker_star());
         this.dic_push(new selector_sports());

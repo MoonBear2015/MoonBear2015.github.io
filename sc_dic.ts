@@ -3377,8 +3377,8 @@ const   cods_km = [
     ,
     new SctCod_Km('|純粋|じゅんすい|')
     ,
-    new SctCod_Km('|衝撃|しょうげき|')
-    ,
+    // new SctCod_Km('|衝撃|しょうげき|')
+    // ,
     new SctCod_Km('|衝撃的|しょうげきてき|')
     ,
     new SctCod_Km('|精悍|せいかん|')
