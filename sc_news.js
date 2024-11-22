@@ -177,6 +177,25 @@ class selector_random_NUM2TO9 extends ItmArray {
         return replace_docs_A(temp_doc, this);
     }
 }
+class selector_random_NUM1TO100 extends ItmArray {
+    constructor() {
+        super();
+        this.itm_key = "@NUM1TO100@";
+        this.itm_key2 = "";
+        this.pic_key = "";
+    }
+    get rnd_Itm() {
+        return new SctItm(rnd_minmax(1, 100).toString(), "");
+    }
+    Copy() {
+        let result = new selector_random_NUM10();
+        result.Paste(this.itms);
+        return result;
+    }
+    Gene_Docs(temp_doc) {
+        return replace_docs_A(temp_doc, this);
+    }
+}
 class selector_random_NUM10TO99 extends ItmArray {
     constructor() {
         super();
@@ -1349,6 +1368,18 @@ class locker_do extends SctItm_SelectLocker {
     constructor() {
         super('@L_DO@', '', '@PIC_DO@');
         this.Add(itms_do);
+    }
+}
+class selector_accident extends SctItm_Selector {
+    constructor() {
+        super('@ACCIDENT@');
+        this.Add(itms_accident);
+    }
+}
+class locker_accident extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_ACCIDENT@');
+        this.Add(itms_accident);
     }
 }
 // 事象・事件・事故・行事
@@ -2871,6 +2902,40 @@ class selector_award extends SctItm_Selector {
         this.Add(itms_Award);
     }
 }
+class selector_ranking01 extends SctItm_Selector {
+    constructor() {
+        super('@RANKING01@');
+        this.Add(itms_Ranking01);
+    }
+}
+class selector_ranking extends SctItm_Selector {
+    constructor() {
+        super('@RANKING@');
+        this.Add(itms_Ranking);
+    }
+}
+class selector_party01 extends SctItm_Selector {
+    constructor() {
+        super('@PARTY01@');
+        this.Add(itms_party01);
+    }
+}
+class selector_party extends SctItm_Selector {
+    constructor() {
+        super('@PARTY@');
+        this.Add(itms_party);
+    }
+}
+class selector_get01 extends SctItm_Selector {
+    constructor() {
+        super('@GET01@');
+        this.itms = [
+            new SctItm('@AWARD@ @AWARDGET@'),
+            new SctItm('@RANKING@ 第@NUM1TO100@位'),
+            new SctItm('@RANKING@ @AWARDGET@')
+        ];
+    }
+}
 class selector_friendShip extends SctItm_Selector {
     constructor() {
         super('@FRIENDSHIP@');
@@ -4005,6 +4070,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_random_date01());
         this.dic_push(new selector_random_year());
         this.dic_push(new selector_random_NUM10());
+        this.dic_push(new selector_random_NUM1TO100());
         this.dic_push(new selector_random_NUM2TO9());
         this.dic_push(new selector_random_NUM10TO99());
         this.dic_push(new selector_random_NUM10000());
@@ -4012,6 +4078,8 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new locker_do());
         this.dic_push(new selector_what());
         this.dic_push(new selector_do());
+        this.dic_push(new selector_accident());
+        this.dic_push(new locker_accident());
         this.dic_push(new selector_key());
         this.dic_push(new locker_key());
         this.dic_push(new selector_festival());
@@ -4238,6 +4306,11 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_awardRank());
         this.dic_push(new selector_awardGet());
         this.dic_push(new selector_award());
+        this.dic_push(new selector_ranking01());
+        this.dic_push(new selector_ranking());
+        this.dic_push(new selector_party01());
+        this.dic_push(new selector_party());
+        this.dic_push(new selector_get01());
         this.dic_push(new selector_friendShip());
         this.dic_push(new selector_where());
         this.dic_push(new selector_where01());

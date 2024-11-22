@@ -5687,7 +5687,14 @@ const itms_did = [
     new SctItm('@CLUB@に退部して'),
     new SctItm('@CLUB@の朝練に参加して'),
     new SctItm('@CLUB@の合宿に参加して'),
-    new SctItm('@SCHOOL@に@CLUB01@を設立して')
+    new SctItm('@SCHOOL@に@CLUB01@を設立して'),
+    new SctItm('@RANKING@を第@NUM1TO100@位でランクインして'),
+    new SctItm('@RANKING@@AWARDRANK@に輝いて'),
+    new SctItm('@PARTY@を開催して'),
+    new SctItm('@PARTY@に参加して'),
+    new SctItm('******@PARTY@に参加して第@NUM1TO100@位にランクインして'),
+    new SctItm('******@PARTY@に参加して@AWARDRANK@に輝いて'),
+    new SctItm('******@PARTY@に参加して@AWARDRANK@を獲得して')
 ];
 const itms_did01_l = [
     new SctItm('@L_FOOD@を食べて'),
@@ -6272,7 +6279,6 @@ const itms_Award = [
     new SctItm('@L_WHAT@流行語大賞'),
     new SctItm('第@NUM10000@回芥川賞'),
     new SctItm('第@NUM10000@回直木賞'),
-    new SctItm('@L_ITEM@大会@AWARDRANK@'),
     new SctItm('@RIDE@レース@AWARDRANK@'),
     new SctItm('@SCIENCE@オリンピック@AWARDRANK@'),
     new SctItm('@L_CITY@オリンピック@AWARDRANK@'),
@@ -6295,12 +6301,31 @@ const itms_Certificate = [
     new SctItm('@L_COUNTRY@名誉@L_CLASS@'),
     new SctItm('@L_CITY@名誉市民')
 ];
-const itms_Ranking = [
+const itms_Ranking01 = [
     new SctItm('ベストテン'),
     new SctItm('コンテスト'),
     new SctItm('レース'),
-    new SctItm('ビルボード'),
-    new SctItm('人気投票')
+    new SctItm('トーナメント'),
+    new SctItm('人気投票'),
+    new SctItm('選挙投票'),
+    new SctItm('オーディション')
+];
+const itms_Ranking = [
+    new SctItm('@L_CITY@@L_CLASS@@RANKING01@'),
+    new SctItm('歴代@L_KING@@RANKING01@'),
+    new SctItm('@L_COUNTRY@@RIDE@@RANKING01@'),
+    new SctItm('@L_CITY@@L_ITEM@@RANKING01@')
+];
+const itms_party01 = [
+    new SctItm('@L_FESTIVAL@'),
+    new SctItm('@RANKING@'),
+    new SctItm('@L_ACCIDENT@大会')
+];
+const itms_party = [
+    new SctItm('@L_CLASS@だらけの@PARTY01@'),
+    new SctItm('@L_CHAR@限定@PARTY01@'),
+    new SctItm('@L_COUNTRY@国営@PARTY01@'),
+    new SctItm('@L_CITY@恒例@PARTY01@')
 ];
 const itms_FriendShip = [
     new SctItm('知り合い'),
@@ -6668,7 +6693,11 @@ const itms_Message01 = [
     new SctItm('新曲「@SONGTITLE@」をリリースしました'),
     new SctItm('@L_COUNTRY@の@L_KING01@に即位しました'),
     new SctItm('@L_COUNTRY@の@L_KING02@に就任しました'),
-    new SctItm('@L_CITY@の@L_KING03@に就任しました')
+    new SctItm('@L_CITY@の@L_KING03@に就任しました'),
+    new SctItm('@PARTY@を開催しました'),
+    new SctItm('@PARTY@は中止となりました'),
+    new SctItm('@PARTY@は延期になりました'),
+    new SctItm('@PARTY@に参加しました')
 ];
 // 進行形
 const itms_Message02 = [
