@@ -1220,7 +1220,9 @@ class selector_TimeFront2 extends SctItm_Selector {
             new SctItm('昨日のことですが、'),
             new SctItm('今朝、'),
             new SctItm('今夜にも、'),
-            new SctItm('明日になれば、')
+            new SctItm('明日になれば、'),
+            new SctItm('@ANIMAL@の鳴く頃に、'),
+            new SctItm('@ANIMAL@が舞う時期に、')
         ];
     }
 }
@@ -1949,6 +1951,32 @@ class selector_family extends SctItm_Selector {
         this.Add(cods_NoRubi_to_itms(cods_family));
     }
 }
+class selector_bug extends SctItm_Selector {
+    constructor() {
+        super('@BUG@');
+        this.Add(cods_bug.slice(1));
+        this.Add(cods_butterfly.slice(1));
+    }
+}
+class locker_bug extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_BUG@');
+        this.Add(cods_bug.slice(1));
+        this.Add(cods_butterfly.slice(1));
+    }
+}
+class selector_butterfly extends SctItm_Selector {
+    constructor() {
+        super('@BUTTERFLY@');
+        this.Add(cods_butterfly.slice(1));
+    }
+}
+class locker_butterfly extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_BUTTERFLY@');
+        this.Add(cods_butterfly.slice(1));
+    }
+}
 class selector_country extends SctItm_Selector {
     constructor() {
         super('@COUNTRY@');
@@ -2010,6 +2038,8 @@ class selector_animal extends SctItm_Selector {
         this.Add(cods_bird_summer.slice(1));
         this.Add(cods_bird_autumn.slice(1));
         this.Add(cods_bird_winter.slice(1));
+        this.Add(cods_bug.slice(1));
+        this.Add(cods_butterfly.slice(1));
     }
 }
 class locker_animal extends SctItm_SelectLocker {
@@ -2021,6 +2051,8 @@ class locker_animal extends SctItm_SelectLocker {
         this.Add(cods_bird_summer.slice(1));
         this.Add(cods_bird_autumn.slice(1));
         this.Add(cods_bird_winter.slice(1));
+        this.Add(cods_bug.slice(1));
+        this.Add(cods_butterfly.slice(1));
     }
 }
 class selector_quizAnimal extends SctItm_Selector {
@@ -3567,7 +3599,9 @@ class locker_item extends SctItm_SelectLocker {
             new SctItm('@L_HABIT@'),
             new SctItm('@L_MUSIC@'),
             new SctItm('@L_STAR@'),
-            new SctItm('@L_SPORTS@')
+            new SctItm('@L_SPORTS@'),
+            new SctItm('@L_BUG@'),
+            new SctItm('@L_BUTTERFLY@')
         ];
     }
 }
@@ -4174,6 +4208,10 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new locker_tech());
         this.dic_push(new selector_bird());
         this.dic_push(new locker_bird());
+        this.dic_push(new selector_bug());
+        this.dic_push(new locker_bug());
+        this.dic_push(new selector_butterfly());
+        this.dic_push(new locker_butterfly());
         this.dic_push(new selector_animal());
         this.dic_push(new locker_animal());
         this.dic_push(new selector_quizAnimal());

@@ -439,6 +439,35 @@ const cods_bird_winter = [
     new SctCod_TI('|鶴|つる|'),
     new SctCod_TI('|白鳥|はくちょう|')
 ];
+const cods_butterfly = [
+    new SctCod_TI('|蝶|ちょう|', 'butterfly.jpg'),
+    new SctCod_TI('|蝶々|ちょうちょ|'),
+    new SctCod_TI('|紋白蝶|もんしろちょう|'),
+    new SctCod_TI('|揚羽蝶|あげはちょう|'),
+    new SctCod_TI('|鳳蝶|あげはちょう|'),
+    new SctCod_TI('|蛇目蝶|じゃのめちょう|')
+];
+const cods_bug = [
+    new SctCod_TI('|虫|むし|', 'bug.jpg'),
+    new SctCod_TI('|赤蜻蛉|あかとんぼ|'),
+    new SctCod_TI('|蟻|あり|'),
+    new SctCod_TI('|蝗|いなご|'),
+    new SctCod_TI('|鬼蜻蜓|おにやんま|'),
+    new SctCod_TI('|蜻蛉|かげろう|'),
+    new SctCod_TI('|甲虫|かぶとむし|'),
+    new SctCod_TI('|金蚉|かなぶん|'),
+    new SctCod_TI('|蟷螂|かまきり|'),
+    new SctCod_TI('|鍬形|くわがた|'),
+    new SctCod_TI('|蟋蟀|こおろぎ|'),
+    new SctCod_TI('|黄金虫|こがねむし|'),
+    new SctCod_TI('|雀蜂|すずめばち|'),
+    new SctCod_TI('|蝉|せみ|'),
+    new SctCod_TI('|天道虫|てんとうむし|'),
+    new SctCod_TI('|蜻蛉|とんぼ|'),
+    new SctCod_TI('|飛蝗|ばった|'),
+    new SctCod_TI('|蜩|ひぐらし|'),
+    new SctCod_TI('|蜜蜂|みつばち|')
+];
 const cods_fruit = [
     new SctCod_TI('|果実|かじつ|', 'fruit.jpg'),
     new SctCod_TI('|木通|あけび|'),
@@ -4617,7 +4646,8 @@ const itms_nickPosi = [
     new SctItm('クイズ王'),
     new SctItm('@FLOWER@'),
     new SctItm('@SWEETS@'),
-    new SctItm('@FRUIT@')
+    new SctItm('@FRUIT@'),
+    new SctItm('@BUTTERFLY@')
 ];
 const itms_nickNomal = [
     //
@@ -5120,7 +5150,9 @@ const itms_season = [
     new SctItm('@MANYPEOPLE@が賑わう頃'),
     new SctItm('@KEY@シーズン'),
     new SctItm('@KEY@が多発する時期'),
-    new SctItm('@FOOD@が美味しい時期')
+    new SctItm('@FOOD@が美味しい時期'),
+    new SctItm('@ANIMAL@が鳴く頃'),
+    new SctItm('@ANIMAL@が舞う時期')
 ];
 const itms_horo_star = [
     new SctItm('DRAGON', 'HORO/dragon.png', '龍'),
@@ -5694,7 +5726,9 @@ const itms_did = [
     new SctItm('@PARTY@に参加して'),
     new SctItm('@PARTY@に参加して第@NUM1TO100@位にランクインして'),
     new SctItm('@PARTY@に参加して@AWARDRANK@に輝いて'),
-    new SctItm('@PARTY@に参加して@AWARDRANK@を獲得して')
+    new SctItm('@PARTY@に参加して@AWARDRANK@を獲得して'),
+    new SctItm('@BUG@のように舞い踊って'),
+    new SctItm('@BUG@を虫籠に入れて')
 ];
 const itms_did01_l = [
     new SctItm('@L_FOOD@を食べて'),
@@ -5876,7 +5910,8 @@ const itms_did02_l = [
     new SctItm('@L_CLUB@に入部して'),
     new SctItm('@L_CLUB@に退部して'),
     new SctItm('@L_CLUB@の朝練に参加して'),
-    new SctItm('@L_CLUB@の合宿に参加して')
+    new SctItm('@L_CLUB@の合宿に参加して'),
+    new SctItm('@L_BUG@のように舞い踊って')
 ];
 const itms_did_o = [
     new SctItm('@O_FOOD@を食べて'),
