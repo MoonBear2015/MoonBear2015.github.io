@@ -12,6 +12,10 @@ const   cods_cat = [
     new SctCod_TI('|虎猫|とらねこ|')
     ,
     new SctCod_TI('|斑猫|ぶちねこ|')
+    ,
+    new SctCod_TI('シャム|猫|ねこ|')
+    ,
+    new SctCod_TI('ペルシャ|猫|ねこ|')
 ];
 
 const   cods_dog = [
@@ -30,6 +34,14 @@ const   cods_dog = [
     new SctCod_TI('|秋田犬|あきたけん|')
     ,
     new SctCod_TI('|土佐犬|とさけん|')
+    ,
+    new SctCod_TI('チワワ')
+    ,
+    new SctCod_TI('ダックスフント')
+    ,
+    new SctCod_TI('ブルドッグ')
+    ,
+    new SctCod_TI('プードル')
 ];
 
 
@@ -7511,6 +7523,10 @@ const   itms_nickPosi = [
     new SctItm('@FRUIT@')
     ,
     new SctItm('@BUTTERFLY@')
+    ,
+    new SctItm('@CAT@')
+    ,
+    new SctItm('@DOG@')
 ]
 
 const   itms_nickNomal = [
@@ -7887,6 +7903,12 @@ const   itms_meal_p = [
     ,
     new SctItm('@LIVESTOCK@の丸焼き')
     ,
+    new SctItm('@LIVESTOCK@の塩焼き')
+    ,
+    new SctItm('@LIVESTOCK@のすき焼き')
+    ,
+    new SctItm('@LIVESTOCK@の鉄板焼き')
+    ,
     new SctItm('@FRUIT@のサラダ')
 ]
 
@@ -7917,6 +7939,12 @@ const   itms_meal_l = [
     new SctItm('@L_LIVESTOCK@のシチュー')
     ,
     new SctItm('@L_LIVESTOCK@の丸焼き')
+    ,
+    new SctItm('@L_LIVESTOCK@の塩焼き')
+    ,
+    new SctItm('@L_LIVESTOCK@のすき焼き')
+    ,
+    new SctItm('@L_LIVESTOCK@の鉄板焼き')
     ,
     new SctItm('@L_FRUIT@のサラダ')
 ]
@@ -8101,6 +8129,8 @@ const   itms_dress = [
     ,
     new SctItm('民族衣装')
     ,
+    new SctItm('@L_CITY@の民族衣装')
+    ,
     new SctItm('@L_ANIMAL@の着ぐるみ')
     ,
     new SctItm('@L_ANIMAL@の毛皮のコート')
@@ -8158,6 +8188,8 @@ const   itms_shoes = [
     new SctItm('鉄下駄')
     ,
     new SctItm('長靴')
+    ,
+    new SctItm('木靴')
 ]
 
 
@@ -9060,6 +9092,8 @@ const   itms_did = [
     ,
     new SctItm('@FOOD@にソースをかけて食べて')
     ,
+    new SctItm('@FOOD@にドレッシングをかけて食べて')
+    ,
     new SctItm('@FOOD@にカラシをつけて食べて')
     ,
     new SctItm('@FOOD@にジャムを塗って食べて')
@@ -9097,6 +9131,8 @@ const   itms_did = [
     new SctItm('@FOOD@を平らげて')
     ,
     new SctItm('@DRINK@を飲んで')
+    ,
+    new SctItm('@DRINK@を@DRINK@で割って飲んで')
     ,
     new SctItm('@DRINK@をお替わりして')
     ,
@@ -9553,6 +9589,8 @@ const   itms_did01_l = [
     ,
     new SctItm('@L_FOOD@にソースをかけて食べて')
     ,
+    new SctItm('@FOOD@にドレッシングをかけて食べて')
+    ,
     new SctItm('@L_FOOD@にカラシをつけて食べて')
     ,
     new SctItm('@L_FOOD@にジャムを塗って食べて')
@@ -9913,6 +9951,8 @@ const   itms_did_o = [
     new SctItm('@O_FOOD@にソースをかけて食べて')
     ,
     new SctItm('@O_FOOD@にカラシをつけて食べて')
+    ,
+    new SctItm('@O_FOOD@にドレッシングをかけて食べて')
     ,
     new SctItm('@O_FOOD@にジャムを塗って食べて')
     ,

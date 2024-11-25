@@ -877,6 +877,7 @@ class selector_who3 extends SctItm_Selector {
             new SctItm('@FLOWER@の香りが漂う'),
             new SctItm('@FRUIT@の香りが漂う'),
             new SctItm('@FOOD@の匂いがする'),
+            new SctItm('@ANIMAL@の匂いがする'),
             new SctItm('@DRESS@を着た'),
             new SctItm('@UNDER@をはいた'),
             new SctItm('@DID@ばかり@DIDEND@'),
