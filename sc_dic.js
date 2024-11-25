@@ -1,4 +1,23 @@
 "use strict";
+const cods_cat = [
+    new SctCod_TI('|猫|ねこ|', 'cat.jpg'),
+    new SctCod_TI('|白猫|しろねこ|'),
+    new SctCod_TI('|黒猫|くろねこ|'),
+    new SctCod_TI('|三毛猫|みけねこ|'),
+    new SctCod_TI('|錆猫|さびねこ|'),
+    new SctCod_TI('|虎猫|とらねこ|'),
+    new SctCod_TI('|斑猫|ぶちねこ|')
+];
+const cods_dog = [
+    new SctCod_TI('|犬|いぬ|', 'dog.jpg'),
+    new SctCod_TI('|柴犬|しばけん|'),
+    new SctCod_TI('|紀州犬|きしゅうけん|'),
+    new SctCod_TI('|四国犬|しこくけん|'),
+    new SctCod_TI('|北海道犬|ほっかいどうけん|'),
+    new SctCod_TI('|甲斐犬|かいけん|'),
+    new SctCod_TI('|秋田犬|あきたけん|'),
+    new SctCod_TI('|土佐犬|とさけん|')
+];
 const cods_spring = [
     new SctCod_TI('|春|はる|', 'spring.jpg'),
     new SctCod_TI('|立春|りっしゅん|'),

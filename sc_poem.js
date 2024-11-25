@@ -9,7 +9,7 @@ function set_poem() {
     html += '<h1>';
     html += 'POEM';
     html += '<small>';
-    html += ' P01.53';
+    html += ' P01.54';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -126,11 +126,11 @@ class poemer_pattern_B extends SctItm_Selector {
     constructor() {
         super('@TYPE_B@');
         this.itms = [
-            new SctItm('@TEMA05@ @SENT07@ @TEMA05@<br>@SENT07@ @TEMA07@'),
-            new SctItm('@SENT05@ @SENT07@ @TEMA05@<br>@SENT07@ @TEMA07@'),
-            new SctItm('@TEMA05@ @SENT07@ @TEMA05@<br>@SENT07@ @TEMA07@'),
-            new SctItm('@TEMA05@ @SENT07@ @SENT05@<br>@SENT07@ @TEMA07@'),
-            new SctItm('@TEMA05@ @TEMA07@ @TEMA05@<br>@TEMA07@ @TEMA07@')
+            new SctItm('@TEMA05@ @SENT07@ @TEMA05@<br> @SENT07@ @TEMA07@'),
+            new SctItm('@SENT05@ @SENT07@ @TEMA05@<br> @SENT07@ @TEMA07@'),
+            new SctItm('@TEMA05@ @SENT07@ @TEMA05@<br> @SENT07@ @TEMA07@'),
+            new SctItm('@TEMA05@ @SENT07@ @SENT05@<br> @SENT07@ @TEMA07@'),
+            new SctItm('@TEMA05@ @TEMA07@ @TEMA05@<br> @TEMA07@ @TEMA07@')
         ];
     }
 }
@@ -202,7 +202,9 @@ class poemer_tema extends SctItm_SelectLocker {
             new SctItm('@TM30'),
             new SctItm('@TM31'),
             new SctItm('@TM32'),
-            new SctItm('@TM33')
+            new SctItm('@TM33'),
+            new SctItm('@TM34'),
+            new SctItm('@TM35')
         ];
     }
 }
@@ -469,6 +471,20 @@ class Gene_tema33 extends Gene_Poemer {
         this.Add_cods(cods_butterfly);
     }
 }
+// 季語：猫
+class Gene_tema34 extends Gene_Poemer {
+    constructor() {
+        super('@TM34', '@PIC_TEMA@');
+        this.Add_cods(cods_cat);
+    }
+}
+// 季語：犬
+class Gene_tema35 extends Gene_Poemer {
+    constructor() {
+        super('@TM35', '@PIC_TEMA@');
+        this.Add_cods(cods_dog);
+    }
+}
 // 一般
 class Gene_sent extends Gene_Poemer {
     constructor() {
@@ -623,6 +639,8 @@ class poem_docs_maker_tema extends docs_maker {
         this.dic_concat(new Gene_tema31().Generate());
         this.dic_concat(new Gene_tema32().Generate());
         this.dic_concat(new Gene_tema33().Generate());
+        this.dic_concat(new Gene_tema34().Generate());
+        this.dic_concat(new Gene_tema35().Generate());
     }
 }
 class poem_docs_maker_sent extends docs_maker {

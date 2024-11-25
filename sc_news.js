@@ -1951,6 +1951,30 @@ class selector_family extends SctItm_Selector {
         this.Add(cods_NoRubi_to_itms(cods_family));
     }
 }
+class selector_cat extends SctItm_Selector {
+    constructor() {
+        super('@CAT@');
+        this.Add(cods_cat.slice(1));
+    }
+}
+class locker_cat extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_CAT@');
+        this.Add(cods_cat.slice(1));
+    }
+}
+class selector_dog extends SctItm_Selector {
+    constructor() {
+        super('@DOG@');
+        this.Add(cods_dog.slice(1));
+    }
+}
+class locker_dog extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_DOG@');
+        this.Add(cods_dog.slice(1));
+    }
+}
 class selector_bug extends SctItm_Selector {
     constructor() {
         super('@BUG@');
@@ -2038,6 +2062,8 @@ class selector_animal extends SctItm_Selector {
         this.Add(cods_bird_summer.slice(1));
         this.Add(cods_bird_autumn.slice(1));
         this.Add(cods_bird_winter.slice(1));
+        this.Add(cods_cat.slice(1));
+        this.Add(cods_dog.slice(1));
         this.Add(cods_bug.slice(1));
         this.Add(cods_butterfly.slice(1));
     }
@@ -2051,6 +2077,8 @@ class locker_animal extends SctItm_SelectLocker {
         this.Add(cods_bird_summer.slice(1));
         this.Add(cods_bird_autumn.slice(1));
         this.Add(cods_bird_winter.slice(1));
+        this.Add(cods_cat.slice(1));
+        this.Add(cods_dog.slice(1));
         this.Add(cods_bug.slice(1));
         this.Add(cods_butterfly.slice(1));
     }
@@ -3600,6 +3628,8 @@ class locker_item extends SctItm_SelectLocker {
             new SctItm('@L_MUSIC@'),
             new SctItm('@L_STAR@'),
             new SctItm('@L_SPORTS@'),
+            new SctItm('@L_CAT@'),
+            new SctItm('@L_DOG@'),
             new SctItm('@L_BUG@'),
             new SctItm('@L_BUTTERFLY@')
         ];
@@ -4208,6 +4238,10 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new locker_tech());
         this.dic_push(new selector_bird());
         this.dic_push(new locker_bird());
+        this.dic_push(new selector_cat());
+        this.dic_push(new locker_cat());
+        this.dic_push(new selector_dog());
+        this.dic_push(new locker_dog());
         this.dic_push(new selector_bug());
         this.dic_push(new locker_bug());
         this.dic_push(new selector_butterfly());
