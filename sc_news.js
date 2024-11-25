@@ -2321,7 +2321,8 @@ class selector_group extends SctItm_Selector {
             new SctItm('@TOWN@@GROUP02@'),
             new SctItm('@SCHOOL@'),
             new SctItm('@MANYPEOPLE@'),
-            new SctItm('@CLUB@')
+            new SctItm('@CLUB@'),
+            new SctItm('@L_COMPANYNAME@')
             // ,
             // new SctItm('@KING@')
         ];
@@ -4114,6 +4115,18 @@ class locker_club extends SctItm_SelectLocker {
         ];
     }
 }
+class locker_companyname extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_COMPANYNAME@');
+        this.Add(itms_companyname);
+    }
+}
+class locker_companyname01 extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_COMPANYNAME01@');
+        this.Add(itms_companyname01);
+    }
+}
 class news_doc {
     constructor(doc) {
         this.doc = doc;
@@ -4442,5 +4455,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new locker_club02());
         this.dic_push(new locker_club01());
         this.dic_push(new locker_club());
+        this.dic_push(new locker_companyname());
+        this.dic_push(new locker_companyname01());
     }
 }

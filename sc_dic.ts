@@ -16,6 +16,8 @@ const   cods_cat = [
     new SctCod_TI('シャム|猫|ねこ|')
     ,
     new SctCod_TI('ペルシャ|猫|ねこ|')
+    ,
+    new SctCod_TI('|野良猫|のらねこ|')
 ];
 
 const   cods_dog = [
@@ -42,6 +44,10 @@ const   cods_dog = [
     new SctCod_TI('ブルドッグ')
     ,
     new SctCod_TI('プードル')
+    ,
+    new SctCod_TI('ドーベルマン')
+    ,
+    new SctCod_TI('|野良犬|のらいぬ|')
 ];
 
 
@@ -9575,6 +9581,14 @@ const   itms_did = [
     new SctItm('@BUG@のように舞い踊って')
     ,
     new SctItm('@BUG@を虫籠に入れて')
+    ,
+    new SctItm('@L_COMPANYNAME@に就職して')
+    ,
+    new SctItm('@L_COMPANYNAME@に採用されて')
+    ,
+    new SctItm('@L_COMPANYNAME@から内定を貰って')
+    ,
+    new SctItm('@L_COMPANYNAME@をクビになって')
 
 ]
 
@@ -9936,6 +9950,15 @@ const   itms_did02_l = [
     new SctItm('@L_CLUB@の合宿に参加して')
     ,
     new SctItm('@L_BUG@のように舞い踊って')
+    ,
+    new SctItm('@L_COMPANYNAME@に就職して')
+    ,
+    new SctItm('@L_COMPANYNAME@に採用されて')
+    ,
+    new SctItm('@L_COMPANYNAME@から内定を貰って')
+    ,
+    new SctItm('@L_COMPANYNAME@をクビになって')
+
 
 ]
 
@@ -11468,6 +11491,16 @@ const   itms_Message01 = [
     ,
     new SctItm('@L_RIDE@を買いました')
     ,
+    new SctItm('@L_COMPANYNAME@に就職しました')
+    ,
+    new SctItm('@L_COMPANYNAME@に入社しました')
+    ,
+    new SctItm('@L_COMPANYNAME@に採用されました')
+    ,
+    new SctItm('@L_COMPANYNAME@から退職しました')
+    ,
+    new SctItm('@L_COMPANYNAME@をクビになりました')
+    ,
     new SctItm('@AWARD@を@AWARDGET@しました')
     ,
     new SctItm('@RANKING@の第@NUM1TO100@位に返り咲きました')
@@ -11553,4 +11586,44 @@ const   itms_club = [
     new SctItm('@L_SPORTS@')
 ];
 
+const   itms_companyname = [
+    new SctItm('@L_COMPANYNAME01@株式会社')
+    ,
+    new SctItm('@L_COMPANYNAME01@有限会社')
+    ,
+    new SctItm('@L_COMPANYNAME01@商店')
+    ,
+    new SctItm('@L_COMPANYNAME01@工務店')
+    ,
+    new SctItm('@L_COMPANYNAME01@鉄工所')
+    ,
+    new SctItm('@L_COMPANYNAME01@@L_ITEM@専門店')
+    ,
+    new SctItm('@L_COMPANYNAME01@@L_ITEM@工場')
+    ,
+    new SctItm('@L_COMPANYNAME01@鉄工所')
+    ,
+    new SctItm('@L_COMPANYNAME01@運輸')
+    ,
+    new SctItm('@L_COMPANYNAME01@鉄道')
+    ,
+    new SctItm('@L_COMPANYNAME01@空港')
+    ,
+    new SctItm('@L_COMPANYNAME01@食堂')
+    ,
+    new SctItm('@L_COMPANYNAME01@警察署')
+    ,
+    new SctItm('@L_COMPANYNAME01@消防署')
+    ,
+    new SctItm('@L_COMPANYNAME01@病院')
+    ,
+    new SctItm('@L_COMPANYNAME01@鉄工所')
+    ,
+    new SctItm('@L_CAT@宅急便')
+]
 
+const   itms_companyname01 = [
+    new SctItm('@L_CITY@')
+    ,
+    new SctItm('@L_WHAT@')
+]
