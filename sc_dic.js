@@ -6847,20 +6847,17 @@ const itms_companyname = [
     new SctItm('@L_COMPANYNAME01@警察署'),
     new SctItm('@L_COMPANYNAME01@消防署'),
     new SctItm('@L_COMPANYNAME01@病院'),
-    new SctItm('@L_COMPANYNAME01@国立病院'),
     new SctItm('@L_COMPANYNAME01@総合病院'),
     new SctItm('@L_COMPANYNAME01@医院'),
     new SctItm('@L_COMPANYNAME01@保健所'),
     new SctItm('@L_COMPANYNAME01@@L_LANDMARK01@'),
-    new SctItm('@L_CAT@宅急便'),
-    new SctItm('@COUNTRY@@GROUP01@'),
-    new SctItm('@TOWN@@GROUP02@'),
-    new SctItm('@SCHOOL01@'),
-    new SctItm('@CLUB@')
+    new SctItm('@L_CAT@宅急便')
 ];
 const itms_companyname01 = [
+    new SctItm('@L_COUNTRY@'),
+    new SctItm('@L_COUNTRY@国営'),
     new SctItm('@L_CITY@'),
-    new SctItm('@L_WHAT@')
+    new SctItm('@L_CITY@市営')
 ];
 const itms_companyname02 = [
     new SctItm('@L_COMPANYNAME03@'),
