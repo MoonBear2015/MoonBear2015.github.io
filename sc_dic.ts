@@ -11587,25 +11587,25 @@ const   itms_club = [
 ];
 
 const   itms_companyname = [
-    new SctItm('@L_COMPANYNAME01@株式会社')
+    new SctItm('@L_COMPANYNAME01@@L_COMPANYNAME02@株式会社')
     ,
-    new SctItm('@L_COMPANYNAME01@有限会社')
+    new SctItm('@L_COMPANYNAME01@@L_COMPANYNAME02@有限会社')
     ,
-    new SctItm('@L_COMPANYNAME01@商店')
+    new SctItm('@L_COMPANYNAME01@@L_COMPANYNAME02@商店')
     ,
-    new SctItm('@L_COMPANYNAME01@工務店')
+    new SctItm('@L_COMPANYNAME01@@L_COMPANYNAME02@商会')
     ,
-    new SctItm('@L_COMPANYNAME01@鉄工所')
+    new SctItm('@L_COMPANYNAME01@@L_COMPANYNAME03@工務店')
     ,
     new SctItm('@L_COMPANYNAME01@@L_ITEM@専門店')
     ,
-    new SctItm('@L_COMPANYNAME01@@L_ITEM@工場')
+    new SctItm('@L_COMPANYNAME01@@L_COMPANYNAME03@工場')
     ,
-    new SctItm('@L_COMPANYNAME01@鉄工所')
+    new SctItm('@L_COMPANYNAME01@@L_RIDE@工場')
     ,
-    new SctItm('@L_COMPANYNAME01@運輸')
+    new SctItm('@L_COMPANYNAME01@@L_ANIMAL@牧場')
     ,
-    new SctItm('@L_COMPANYNAME01@鉄道')
+    new SctItm('@L_COMPANYNAME01@@L_ANIMAL@養殖所')
     ,
     new SctItm('@L_COMPANYNAME01@空港')
     ,
@@ -11617,13 +11617,103 @@ const   itms_companyname = [
     ,
     new SctItm('@L_COMPANYNAME01@病院')
     ,
-    new SctItm('@L_COMPANYNAME01@鉄工所')
-    ,
     new SctItm('@L_CAT@宅急便')
+    ,
+    new SctItm('@COUNTRY@@GROUP01@')
+    ,
+    new SctItm('@TOWN@@GROUP02@')
+    ,
+    new SctItm('@SCHOOL@')
+    ,
+    new SctItm('@CLUB@')
 ]
 
 const   itms_companyname01 = [
     new SctItm('@L_CITY@')
     ,
     new SctItm('@L_WHAT@')
+]
+const   itms_companyname02 = [
+    new SctItm('@L_COMPANYNAME03@')
+    ,
+    new SctItm('@L_COMPANYNAME04@')
+]
+const   itms_companyname03 = [
+    new SctItm('自動車')
+    ,
+    new SctItm('重機')
+    ,
+    new SctItm('ロボット')
+    ,
+    new SctItm('造船')
+    ,
+    new SctItm('航空機')
+    ,
+    new SctItm('電器')
+    ,
+    new SctItm('家電')
+    ,
+    new SctItm('電子')
+    ,
+    new SctItm('電力')
+    ,
+    new SctItm('石油')
+    ,
+    new SctItm('製紙')
+    ,
+    new SctItm('科学')
+    ,
+    new SctItm('化学')
+    ,
+    new SctItm('ガラス')
+    ,
+    new SctItm('材木')
+    ,
+    new SctItm('製鉄')
+    ,
+    new SctItm('食品')
+    ,
+    new SctItm('食材')
+    ,
+    new SctItm('造酒')
+    ,
+    new SctItm('水産')
+    ,
+    new SctItm('食肉')
+    ,
+    new SctItm('製薬')
+]
+
+const   itms_companyname04 = [
+    new SctItm('エレクトロニクス')
+    ,
+    new SctItm('ソフトウェア')
+    ,
+    new SctItm('情報通信')
+    ,
+    new SctItm('金融')
+    ,
+    new SctItm('証券')
+    ,
+    new SctItm('クレジット')
+    ,
+    new SctItm('生命保険')
+    ,
+    new SctItm('建設')
+    ,
+    new SctItm('不動産')
+    ,
+    new SctItm('住宅')
+    ,
+    new SctItm('運輸')
+    ,
+    new SctItm('鉄道')
+    ,
+    new SctItm('海運')
+    ,
+    new SctItm('航空')
+    ,
+    new SctItm('タクシー')
+    ,
+    new SctItm('旅行')
 ]

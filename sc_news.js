@@ -4127,6 +4127,24 @@ class locker_companyname01 extends SctItm_SelectLocker {
         this.Add(itms_companyname01);
     }
 }
+class locker_companyname02 extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_COMPANYNAME02@');
+        this.Add(itms_companyname02);
+    }
+}
+class locker_companyname03 extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_COMPANYNAME03@');
+        this.Add(itms_companyname03);
+    }
+}
+class locker_companyname04 extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_COMPANYNAME04@');
+        this.Add(itms_companyname04);
+    }
+}
 class news_doc {
     constructor(doc) {
         this.doc = doc;
@@ -4457,5 +4475,8 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new locker_club());
         this.dic_push(new locker_companyname());
         this.dic_push(new locker_companyname01());
+        this.dic_push(new locker_companyname02());
+        this.dic_push(new locker_companyname03());
+        this.dic_push(new locker_companyname04());
     }
 }
