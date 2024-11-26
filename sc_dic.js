@@ -5152,7 +5152,8 @@ const itms_school = [
     new SctItm('予備校'),
     new SctItm('学習塾'),
     new SctItm('@CLASS@専門学校'),
-    new SctItm('@CLASS@養成所')
+    new SctItm('@CLASS@養成所'),
+    new SctItm('@L_COMPANYNAME02@専門学校')
 ];
 const itms_schoolas = [
     // new SctItm('在学')
@@ -6837,17 +6838,24 @@ const itms_companyname = [
     new SctItm('@L_COMPANYNAME01@@L_ITEM@専門店'),
     new SctItm('@L_COMPANYNAME01@@L_COMPANYNAME03@工場'),
     new SctItm('@L_COMPANYNAME01@@L_RIDE@工場'),
+    new SctItm('@L_COMPANYNAME01@@L_RIDE@教習所'),
     new SctItm('@L_COMPANYNAME01@@L_ANIMAL@牧場'),
     new SctItm('@L_COMPANYNAME01@@L_ANIMAL@養殖所'),
+    new SctItm('@L_COMPANYNAME01@@L_CLASS@養成所'),
     new SctItm('@L_COMPANYNAME01@空港'),
     new SctItm('@L_COMPANYNAME01@食堂'),
     new SctItm('@L_COMPANYNAME01@警察署'),
     new SctItm('@L_COMPANYNAME01@消防署'),
     new SctItm('@L_COMPANYNAME01@病院'),
+    new SctItm('@L_COMPANYNAME01@国立病院'),
+    new SctItm('@L_COMPANYNAME01@総合病院'),
+    new SctItm('@L_COMPANYNAME01@医院'),
+    new SctItm('@L_COMPANYNAME01@保健所'),
+    new SctItm('@L_COMPANYNAME01@@L_LANDMARK01@'),
     new SctItm('@L_CAT@宅急便'),
     new SctItm('@COUNTRY@@GROUP01@'),
     new SctItm('@TOWN@@GROUP02@'),
-    new SctItm('@SCHOOL@'),
+    new SctItm('@SCHOOL01@'),
     new SctItm('@CLUB@')
 ];
 const itms_companyname01 = [
