@@ -94,6 +94,18 @@ function sepalate_number(num : number) : Array<AB>
 
 //------------------------------------ japanese text
 
+
+
+
+function wrd2_to_wrd(in_Itms : ISctItm[]) : ISctItm[]
+{
+    let results = new Array<ISctItm>();
+    in_Itms.forEach((itm) => {
+        results.push(itm.To_Wrd2ToWrd());
+    });
+    return results;
+}
+
 function cods_to_itms(in_cods : ISctCod[]) : ISctItm[]
 {
     let results = new Array<ISctItm>();

@@ -42,6 +42,9 @@ class SctItm {
         }
         return this.Wrd;
     }
+    To_Wrd2ToWrd() {
+        return new SctItm(this.Wrd2, this.SctPic, "");
+    }
 }
 class SctCod extends SctItm {
     constructor(in_Wrd, in_SctPic, in_CodLength) {

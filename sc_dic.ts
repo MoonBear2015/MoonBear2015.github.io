@@ -6597,6 +6597,10 @@ const   itms_class = [
     ,
     new SctItm('社長')
     ,
+    new SctItm('受付嬢')
+    ,
+    new SctItm('平社員')
+    ,
     new SctItm('スパイ')
     ,
     new SctItm('テロリスト')
@@ -11185,6 +11189,27 @@ const   itms_where02 = [
     new SctItm('@LANDMARK@')
     ,
     new SctItm('@SCHOOL02@')
+    ,
+    new SctItm('@WHERECOMPANY@')
+]
+
+const   itms_whereCompany = [
+    new SctItm('@L_COMPANYNAME@の本社ビル')
+    ,
+    new SctItm('@L_COMPANYNAME@の@L_CITY@支店')
+    ,
+    new SctItm('@L_COMPANYNAME@の@L_CITY@営業所')
+    ,
+    new SctItm('@L_COMPANYNAME@の受付')
+    ,
+    new SctItm('@L_COMPANYNAME@の社長室')
+    ,
+    new SctItm('@L_COMPANYNAME@の給湯室')
+    ,
+    new SctItm('@L_COMPANYNAME@の社員食堂')
+    ,
+    new SctItm('@L_COMPANYNAME@の裏口')
+
 ]
 
 const   itms_present = [

@@ -66,6 +66,13 @@ function sepalate_number(num) {
     return results;
 }
 //------------------------------------ japanese text
+function wrd2_to_wrd(in_Itms) {
+    let results = new Array();
+    in_Itms.forEach((itm) => {
+        results.push(itm.To_Wrd2ToWrd());
+    });
+    return results;
+}
 function cods_to_itms(in_cods) {
     let results = new Array();
     in_cods.forEach((cod) => {

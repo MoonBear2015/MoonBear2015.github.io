@@ -5583,6 +5583,12 @@ class selector_where02 extends SctItm_Selector implements ISctItm_Selector {
         this.Add(itms_where02);
     }
 }
+class selector_whereCompany extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@WHERECOMPANY@');
+        this.Add(itms_whereCompany);
+    }
+}
 
 class selector_present extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
@@ -5782,6 +5788,7 @@ class locker_companyname01 extends SctItm_SelectLocker implements ISctItm_Select
     constructor(){
         super('@L_COMPANYNAME01@');
         this.Add(itms_companyname01);
+        this.Add(wrd2_to_wrd(itms_campany));
     }
 }
 class locker_companyname02 extends SctItm_SelectLocker implements ISctItm_Selector {
@@ -6147,6 +6154,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_where());
         this.dic_push(new selector_where01());
         this.dic_push(new selector_where02());
+        this.dic_push(new selector_whereCompany());
         
         this.dic_push(new selector_present());
         this.dic_push(new locker_present());

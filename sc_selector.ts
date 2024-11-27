@@ -16,6 +16,7 @@ interface ISctItm extends TestItem {
     Wrd2 : string;
     pnt : number;
     Copy : ISctItm;
+    To_Wrd2ToWrd() : ISctItm;
 }
 
 interface ISctCod extends ISctItm,TestItem {
@@ -72,6 +73,10 @@ class SctItm implements ISctItm,TestItem {
         }
         return this.Wrd;
     }
+    public To_Wrd2ToWrd() : ISctItm {
+        return new SctItm(this.Wrd2,this.SctPic,"");
+    }
+
 }
 
 class SctCod extends SctItm implements ISctCod,TestItem {
