@@ -54,7 +54,7 @@ function make_about()
         shtml += '専攻:@SCIENCE@<br>'
         shtml += '部活:@SCHOOL01@ @CLUB01@<br>'
         shtml += '受賞歴:@GET01@<br>'
-        shtml += '勤務先:@L_COMPANYNAME@<br>'
+        shtml += '勤務先:@L_COMPANYNAME@ @L_COMPANYCLASS@<br>'
         shtml += '仕事:@L_CLASS@<br>'
         shtml += '趣味:@L_HABIT@<br>';
         shtml += '好物:@L_FOOD@<br>';

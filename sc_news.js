@@ -1097,12 +1097,12 @@ class selector_comment2 extends SctItm_Selector {
             new SctItm('@L_WHAT@の@L_CHAR@は@L_DO@@END02B@'),
             new SctItm('@L_WHAT@の@L_CHAR@は@KEI@@NICK@の@PART@だと@KEID@@ASSES@'),
             new SctItm('@L_WHAT@の@L_CHAR@は@KEID@@L_DO@@END02B@@KEI@@THEY@@END02A@'),
-            new SctItm('@CALL@で、@CALL@@END02A@'),
-            new SctItm('@YESNO@、@CALL@だと@ASSES@'),
+            new SctItm('『@CALL@』で、『@CALL@』@END02A@'),
+            new SctItm('@YESNO@、『@CALL@』だと@ASSES@'),
             new SctItm('@YESNO@、@L_CHAR@の@KEY@@END02A@'),
             new SctItm('@YESNO@、@L_WHAT@の@L_CHAR@が@KEI@@NICK@@END02A@'),
             new SctItm('@YESNO@、@KEI2@な@PART@が@SAY@@END02B@'),
-            new SctItm('@CALL@、@YESNO@、それが@PART@の@PART@@END02A@'),
+            new SctItm('『@CALL@』、@YESNO@、それが@PART@の@PART@@END02A@'),
             new SctItm('@KEID@@L_DO@@END02B@@KEI@@NICK@と@KEID@@ASSES@@THEY@、@YESNO@、それが@L_WHAT@の@L_CHAR@@END02A@'),
             new SctItm('@KEID@@L_DO@@END02B@@THEY@、@YESNO@、それが@L_WHAT@@END02A@'),
             new SctItm('@L_WHAT@の@L_CLASS@、それが@L_CHAR@@END02A@'),
@@ -4131,7 +4131,7 @@ class locker_companyname01 extends SctItm_SelectLocker {
     constructor() {
         super('@L_COMPANYNAME01@');
         this.Add(itms_companyname01);
-        this.Add(wrd2_to_wrd(itms_campany));
+        this.Add(wrd2_to_wrd(itms_famouscompany));
     }
 }
 class locker_companyname02 extends SctItm_SelectLocker {
@@ -4150,6 +4150,18 @@ class locker_companyname04 extends SctItm_SelectLocker {
     constructor() {
         super('@L_COMPANYNAME04@');
         this.Add(itms_companyname04);
+    }
+}
+class selector_companyclass extends SctItm_Selector {
+    constructor() {
+        super('@COMPANYCLASS@');
+        this.Add(itms_companyclass);
+    }
+}
+class locker_companyclass extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_COMPANYCLASS@');
+        this.Add(itms_companyclass);
     }
 }
 class news_doc {
@@ -4486,5 +4498,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new locker_companyname02());
         this.dic_push(new locker_companyname03());
         this.dic_push(new locker_companyname04());
+        this.dic_push(new selector_companyclass());
+        this.dic_push(new locker_companyclass());
     }
 }

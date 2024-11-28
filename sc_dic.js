@@ -3959,10 +3959,14 @@ const itms_class = [
     new SctItm('調理師'),
     new SctItm('ケーキ職人'),
     new SctItm('工場長'),
-    new SctItm('現場監督'),
-    new SctItm('会社員'),
-    new SctItm('サラリーマン'),
-    new SctItm('事務員'),
+    new SctItm('現場監督')
+    // ,
+    // new SctItm('会社員')
+    // ,
+    // new SctItm('サラリーマン')
+    // ,
+    // new SctItm('事務員')
+    ,
     new SctItm('飼育員'),
     new SctItm('アルバイター'),
     new SctItm('釣り師'),
@@ -4016,10 +4020,14 @@ const itms_class = [
     new SctItm('靴磨き'),
     new SctItm('侍'),
     new SctItm('武士'),
-    new SctItm('野武士'),
-    new SctItm('伯爵'),
-    new SctItm('公爵'),
-    new SctItm('男爵'),
+    new SctItm('野武士')
+    // ,
+    // new SctItm('伯爵')
+    // ,
+    // new SctItm('公爵')
+    // ,
+    // new SctItm('男爵')
+    ,
     new SctItm('水呑百姓'),
     new SctItm('農民'),
     new SctItm('牧場主'),
@@ -4028,8 +4036,9 @@ const itms_class = [
     new SctItm('看板娘'),
     new SctItm('大道芸人'),
     new SctItm('吟遊詩人'),
-    new SctItm('連邦保安官'),
-    new SctItm('公務員')
+    new SctItm('連邦保安官')
+    // ,
+    // new SctItm('公務員')
     // ,
     // new SctItm('国家公務員')
     // ,
@@ -4047,18 +4056,30 @@ const itms_class = [
     // new SctItm('世界第一位')
     ,
     new SctItm('旅芸人'),
-    new SctItm('サーカス団員'),
-    new SctItm('幼稚園児'),
-    new SctItm('保育園児'),
-    new SctItm('生徒'),
-    new SctItm('学生'),
-    new SctItm('小学生'),
-    new SctItm('中学生'),
-    new SctItm('高校生'),
-    new SctItm('女子校生'),
-    new SctItm('大学生'),
-    new SctItm('転校生'),
-    new SctItm('浪人'),
+    new SctItm('サーカス団員')
+    // ,
+    // new SctItm('幼稚園児')
+    // ,
+    // new SctItm('保育園児')
+    // ,
+    // new SctItm('生徒')
+    // ,
+    // new SctItm('学生')
+    // ,
+    // new SctItm('小学生')
+    // ,
+    // new SctItm('中学生')
+    // ,
+    // new SctItm('高校生')
+    // ,
+    // new SctItm('女子校生')
+    // ,
+    // new SctItm('大学生')
+    // ,
+    // new SctItm('転校生')
+    // ,
+    // new SctItm('浪人')
+    ,
     new SctItm('ラーメン屋'),
     new SctItm('落語家'),
     new SctItm('漫才師'),
@@ -4088,18 +4109,25 @@ const itms_class = [
     new SctItm('スーパーマン'),
     new SctItm('学級委員'),
     new SctItm('図書委員'),
-    new SctItm('生徒会長'),
-    new SctItm('ＰＴＡ会長'),
-    new SctItm('会社員'),
+    new SctItm('生徒会長')
+    // ,
+    // new SctItm('ＰＴＡ会長')
+    // ,
+    // new SctItm('会社員')
+    ,
     new SctItm('専業主婦'),
     new SctItm('家政婦'),
     new SctItm('アニメ声優'),
     new SctItm('アナウンサー'),
     new SctItm('新聞記者'),
-    new SctItm('牛乳配達員'),
-    new SctItm('郵便局員'),
-    new SctItm('公務員'),
-    new SctItm('国会議員'),
+    new SctItm('牛乳配達員')
+    // ,
+    // new SctItm('郵便局員')
+    // ,
+    // new SctItm('公務員')
+    // ,
+    // new SctItm('国会議員')
+    ,
     new SctItm('機関士'),
     // new SctItm('野鳥の会')
     // ,
@@ -4108,25 +4136,44 @@ const itms_class = [
     new SctItm('神主'),
     new SctItm('僧侶'),
     new SctItm('司祭'),
-    new SctItm('司教'),
-    new SctItm('村長'),
-    new SctItm('町長'),
-    new SctItm('庄長'),
-    new SctItm('市長'),
-    new SctItm('@L_CITY@市長'),
-    new SctItm('@L_COUNTRY@皇帝'),
-    new SctItm('国王'),
-    new SctItm('@L_COUNTRY@国王'),
-    new SctItm('法王'),
-    new SctItm('大統領'),
-    new SctItm('@L_COUNTRY@大統領'),
-    new SctItm('女王'),
-    new SctItm('@L_COUNTRY@女王'),
-    new SctItm('総理大臣'),
-    new SctItm('@L_COUNTRY@総理大臣'),
-    new SctItm('@L_COUNTRY@総統'),
-    new SctItm('@L_COUNTRY@書記長'),
-    new SctItm('独裁者'),
+    new SctItm('司教')
+    // ,
+    // new SctItm('村長')
+    // ,
+    // new SctItm('町長')
+    // ,
+    // new SctItm('庄長')
+    // ,
+    // new SctItm('市長')
+    // ,
+    // new SctItm('@L_CITY@市長')
+    // ,
+    // new SctItm('@L_COUNTRY@皇帝')
+    // ,
+    // new SctItm('国王')
+    // ,
+    // new SctItm('@L_COUNTRY@国王')
+    // ,
+    // new SctItm('法王')
+    // ,
+    // new SctItm('大統領')
+    // ,
+    // new SctItm('@L_COUNTRY@大統領')
+    // ,
+    // new SctItm('女王')
+    // ,
+    // new SctItm('@L_COUNTRY@女王')
+    // ,
+    // new SctItm('総理大臣')
+    // ,
+    // new SctItm('@L_COUNTRY@総理大臣')
+    // ,
+    // new SctItm('@L_COUNTRY@総統')
+    // ,
+    // new SctItm('@L_COUNTRY@書記長')
+    // ,
+    // new SctItm('独裁者')
+    ,
     new SctItm('道化師'),
     new SctItm('ピエロ'),
     new SctItm('手品師'),
@@ -4177,22 +4224,34 @@ const itms_class = [
     new SctItm('スチュワーデス'),
     new SctItm('バスガイド'),
     new SctItm('お茶汲み'),
-    new SctItm('コンビニ店員'),
-    new SctItm('店員'),
-    // new SctItm('組員')
+    new SctItm('コンビニ店員')
+    // ,
+    // new SctItm('店員')
+    // ,
+    // // new SctItm('組員')
     // ,
     // new SctItm('組長')
     // ,
-    new SctItm('ボス'),
-    new SctItm('会長'),
-    new SctItm('酋長'),
-    new SctItm('課長'),
-    new SctItm('部長'),
-    new SctItm('本部長'),
-    new SctItm('取締役'),
-    new SctItm('社長'),
-    new SctItm('受付嬢'),
-    new SctItm('平社員'),
+    // new SctItm('ボス')
+    // ,
+    // new SctItm('会長')
+    // ,
+    // new SctItm('酋長')
+    // ,
+    // new SctItm('課長')
+    // ,
+    // new SctItm('部長')
+    // ,
+    // new SctItm('本部長')
+    // ,
+    // new SctItm('取締役')
+    // ,
+    // new SctItm('社長')
+    // ,
+    // new SctItm('受付嬢')
+    // ,
+    // new SctItm('平社員')
+    ,
     new SctItm('スパイ'),
     new SctItm('テロリスト'),
     new SctItm('ハッカー'),
@@ -4306,7 +4365,7 @@ const itms_shop = [
     new SctItm('SPACE BATTLESHIP', 'SHOP/spacebattleship01.jpg', '宇宙戦艦'),
     new SctItm('SPACE BATTLESHIP', 'SHOP/spacebattleship02.jpg', '宇宙戦艦')
 ];
-const itms_campany = [
+const itms_famouscompany = [
     new SctItm('Apple', '', 'アップル'),
     new SctItm('Microsoft', '', 'マイクロソフト'),
     new SctItm('Sony', '', 'ソニー'),
@@ -5775,7 +5834,10 @@ const itms_did = [
     new SctItm('@L_COMPANYNAME@に就職して'),
     new SctItm('@L_COMPANYNAME@に採用されて'),
     new SctItm('@L_COMPANYNAME@から内定を貰って'),
-    new SctItm('@L_COMPANYNAME@をクビになって')
+    new SctItm('@L_COMPANYNAME@をクビになって'),
+    new SctItm('@L_COMPANYNAME@の@COMPANYCLASS@に就任して'),
+    new SctItm('@L_COMPANYNAME@の@COMPANYCLASS@に降格して'),
+    new SctItm('@L_COMPANYNAME@の@COMPANYCLASS@に出世して')
 ];
 const itms_did01_l = [
     new SctItm('@L_FOOD@を食べて'),
@@ -5963,7 +6025,10 @@ const itms_did02_l = [
     new SctItm('@L_COMPANYNAME@に就職して'),
     new SctItm('@L_COMPANYNAME@に採用されて'),
     new SctItm('@L_COMPANYNAME@から内定を貰って'),
-    new SctItm('@L_COMPANYNAME@をクビになって')
+    new SctItm('@L_COMPANYNAME@をクビになって'),
+    new SctItm('@L_COMPANYNAME@の@L_COMPANYCLASS@に就任して'),
+    new SctItm('@L_COMPANYNAME@の@L_COMPANYCLASS@に降格して'),
+    new SctItm('@L_COMPANYNAME@の@L_COMPANYCLASS@に出世して')
 ];
 const itms_did_o = [
     new SctItm('@O_FOOD@を食べて'),
@@ -6482,9 +6547,11 @@ const itms_Group02 = [
     new SctItm('市役所'),
     new SctItm('公民館'),
     new SctItm('病院'),
+    new SctItm('総合病院'),
     new SctItm('刑務所'),
     new SctItm('市議会'),
     new SctItm('市場'),
+    new SctItm('闇市'),
     new SctItm('交響楽団'),
     new SctItm('管弦楽団'),
     new SctItm('ブラスバンド'),
@@ -6558,7 +6625,6 @@ const itms_Store = [
 ];
 const itms_where = [
     new SctItm('@WHERE01@'),
-    new SctItm('誰も居ない@WHERE01@'),
     new SctItm('@MANYPEOPLE@の集う@WHERE01@'),
     new SctItm('@MANYPEOPLE@の暮らす@WHERE01@'),
     new SctItm('@MANYPEOPLE@で賑わう@WHERE01@'),
@@ -6600,6 +6666,7 @@ const itms_where01 = [
     new SctItm('華やかな@WHERE02@'),
     new SctItm('色鮮やかな@WHERE02@'),
     new SctItm('飾り気のない@WHERE02@'),
+    new SctItm('誰も居ない@WHERE02@'),
     new SctItm('人けの無い@WHERE02@'),
     new SctItm('薄気味悪い@WHERE02@'),
     new SctItm('呪われた@WHERE02@'),
@@ -6620,11 +6687,16 @@ const itms_whereCompany = [
     new SctItm('@L_COMPANYNAME@の本社ビル'),
     new SctItm('@L_COMPANYNAME@の@L_CITY@支店'),
     new SctItm('@L_COMPANYNAME@の@L_CITY@営業所'),
+    new SctItm('@L_COMPANYNAME@の待合室'),
+    new SctItm('@L_COMPANYNAME@の応接室'),
+    new SctItm('@L_COMPANYNAME@のエレベーターホール'),
     new SctItm('@L_COMPANYNAME@の受付'),
     new SctItm('@L_COMPANYNAME@の社長室'),
     new SctItm('@L_COMPANYNAME@の給湯室'),
     new SctItm('@L_COMPANYNAME@の社員食堂'),
-    new SctItm('@L_COMPANYNAME@の裏口')
+    new SctItm('@L_COMPANYNAME@の非常階段'),
+    new SctItm('@L_COMPANYNAME@の裏口'),
+    new SctItm('@L_COMPANYNAME@の駐車場')
 ];
 const itms_present = [
     new SctItm('プレゼント'),
@@ -6634,10 +6706,10 @@ const itms_present = [
     new SctItm('お歳暮'),
     new SctItm('お中元'),
     new SctItm('暑中見舞'),
-    new SctItm('年賀状'),
     new SctItm('クリスマスカード'),
     new SctItm('バレンタインのチョコレート'),
-    new SctItm('花束')
+    new SctItm('花束'),
+    new SctItm('玉手箱')
 ];
 const itms_present01 = [
     new SctItm('@FOOD@'),
@@ -6667,7 +6739,9 @@ const itms_present_paper = [
     new SctItm('退職願'),
     new SctItm('辞表'),
     new SctItm('報告書'),
-    new SctItm('始末書')
+    new SctItm('始末書'),
+    new SctItm('請求書'),
+    new SctItm('訴状')
 ];
 const itms_paper = [
     new SctItm('本'),
@@ -6678,7 +6752,8 @@ const itms_paper = [
     new SctItm('似顔絵'),
     new SctItm('イラスト'),
     new SctItm('色紙'),
-    new SctItm('寄せ書き')
+    new SctItm('寄せ書き'),
+    new SctItm('メモ帳')
 ];
 const itms_reader_paper = [
     new SctItm('本'),
@@ -6795,6 +6870,7 @@ const itms_Message01 = [
     new SctItm('@L_COMPANYNAME@に採用されました'),
     new SctItm('@L_COMPANYNAME@から退職しました'),
     new SctItm('@L_COMPANYNAME@をクビになりました'),
+    new SctItm('@L_COMPANYNAME@の@COMPANYCLASS@に就任しました'),
     new SctItm('@AWARD@を@AWARDGET@しました'),
     new SctItm('@RANKING@の第@NUM1TO100@位に返り咲きました'),
     new SctItm('@RANKING@からリタイアしました'),
@@ -6855,14 +6931,8 @@ const itms_companyname = [
     new SctItm('@L_COMPANYNAME01@@L_ANIMAL@牧場'),
     new SctItm('@L_COMPANYNAME01@@L_ANIMAL@養殖所'),
     new SctItm('@L_COMPANYNAME01@@L_CLASS@養成所'),
-    new SctItm('@L_COMPANYNAME01@空港'),
-    new SctItm('@L_COMPANYNAME01@食堂'),
-    new SctItm('@L_COMPANYNAME01@警察署'),
-    new SctItm('@L_COMPANYNAME01@消防署'),
-    new SctItm('@L_COMPANYNAME01@病院'),
-    new SctItm('@L_COMPANYNAME01@総合病院'),
-    new SctItm('@L_COMPANYNAME01@医院'),
-    new SctItm('@L_COMPANYNAME01@保健所'),
+    new SctItm('@L_COUNTRY@@GROUP01@'),
+    new SctItm('@L_COMPANYNAME01@@GROUP02@'),
     new SctItm('@L_COMPANYNAME01@@L_LANDMARK01@'),
     new SctItm('@L_CAT@宅急便')
 ];
@@ -6917,4 +6987,16 @@ const itms_companyname04 = [
     new SctItm('航空'),
     new SctItm('タクシー'),
     new SctItm('旅行')
+];
+const itms_companyclass = [
+    new SctItm('会長'),
+    new SctItm('社長'),
+    new SctItm('取締役'),
+    new SctItm('本部長'),
+    new SctItm('部長'),
+    new SctItm('課長'),
+    new SctItm('係長'),
+    new SctItm('アルバイト'),
+    new SctItm('パートタイマー'),
+    new SctItm('平社員')
 ];

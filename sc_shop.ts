@@ -34,7 +34,7 @@ function make_shop()
     html += '<div id="shop_box">';
 
     html += '<div id="shop_title">';
-    html += '@L_CAMPANY@ @L_SHOP@ @MODEL@';
+    html += '@L_FAMOUSCOMPANY@ @L_SHOP@ @MODEL@';
     html += '</div>';
 
     html += '<div id="shop_pic">';
@@ -267,7 +267,7 @@ function make_site_footer(): string {
 
 
     html += '<div id="foot_title">';
-    html += '@L_CAMPANY@ @L_SHOP@ @MODEL@';
+    html += '@L_FAMOUSCOMPANY@ @L_SHOP@ @MODEL@';
     html += '</div>';
 
     html += '</div>'; // cm
@@ -304,10 +304,10 @@ class locker_shop extends SctItm_SelectLocker implements ISctItm_Selector{
     }
 }
 // （固定）商品
-class locker_campany extends SctItm_SelectLocker implements ISctItm_Selector{
+class locker_faouscompany extends SctItm_SelectLocker implements ISctItm_Selector{
     constructor(){
-        super('@L_CAMPANY@','@L_CAMPANY_B@');
-        this.Add(itms_campany);
+        super('@L_FAMOUSCOMPANY@','@L_FAMOUSCOMPANY_B@');
+        this.Add(itms_famouscompany);
     }
 }
 // （固定）場所
@@ -457,23 +457,23 @@ class selector_s_info01 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@S_INFO01@');
         this.itms = [
-            new SctItm('@L_CAMPANY_B@社の@L_SHOP_B@は')
+            new SctItm('@L_FAMOUSCOMPANY_B@社の@L_SHOP_B@は')
             ,
-            new SctItm('@L_CAMPANY_B@社の@L_TECH@により')
+            new SctItm('@L_FAMOUSCOMPANY_B@社の@L_TECH@により')
             ,
-            new SctItm('@L_CAMPANY_B@社の@CLASS@達により')
+            new SctItm('@L_FAMOUSCOMPANY_B@社の@CLASS@達により')
             ,
-            new SctItm('@L_CAMPANY_B@社が誇る@KEI1@@CLASS@達によって')
+            new SctItm('@L_FAMOUSCOMPANY_B@社が誇る@KEI1@@CLASS@達によって')
             ,
-            new SctItm('@L_CAMPANY_B@社が誇る@KEI1@@L_TECH@によって')
+            new SctItm('@L_FAMOUSCOMPANY_B@社が誇る@KEI1@@L_TECH@によって')
             ,
-            new SctItm('@L_CAMPANY_B@社は@KEI1@@L_TECH@を投入し')
+            new SctItm('@L_FAMOUSCOMPANY_B@社は@KEI1@@L_TECH@を投入し')
             ,
-            new SctItm('@L_CAMPANY_B@社は@MANY@@KEY@を経て')
+            new SctItm('@L_FAMOUSCOMPANY_B@社は@MANY@@KEY@を経て')
             ,
-            new SctItm('@L_CAMPANY_B@社は@KEI1@@FUTURE@のために')
+            new SctItm('@L_FAMOUSCOMPANY_B@社は@KEI1@@FUTURE@のために')
             ,
-            new SctItm('@MANYPEOPLE@より『@CALL2@』と@ASSES@@L_CAMPANY_B@社は')
+            new SctItm('@MANYPEOPLE@より『@CALL2@』と@ASSES@@L_FAMOUSCOMPANY_B@社は')
             ,
             new SctItm('@FUTURE@の@L_PLACE@のために')
             ,
@@ -527,11 +527,11 @@ class selector_s_info03 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('あなたの@HABIT@、@HABIT@、そして@HABIT@のお供にどうぞ')
             ,
-            new SctItm('@L_CAMPANY@ @L_SHOP@が、あなたの@KEI@パートナーとなるでしょう')
+            new SctItm('@L_FAMOUSCOMPANY@ @L_SHOP@が、あなたの@KEI@パートナーとなるでしょう')
             ,
-            new SctItm('@L_CAMPANY@ @L_SHOP@が、あなたの@KEI@@PART@となるでしょう')
+            new SctItm('@L_FAMOUSCOMPANY@ @L_SHOP@が、あなたの@KEI@@PART@となるでしょう')
             ,
-            new SctItm('@KEI@@L_CAMPANY@ @L_SHOP@なら、あなたの@THINK@や@THINK@が@SUCCESS@できます')
+            new SctItm('@KEI@@L_FAMOUSCOMPANY@ @L_SHOP@なら、あなたの@THINK@や@THINK@が@SUCCESS@できます')
             ,
             new SctItm('@KEI1@@PART@へのプレゼントに如何でしょうか')
             ,
@@ -541,13 +541,13 @@ class selector_s_info03 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('もう、@PLACE@に行かなくても大丈夫')
             ,
-            new SctItm('@L_CAMPANY@ @L_SHOP@は、あなたとの出逢いを待っています')
+            new SctItm('@L_FAMOUSCOMPANY@ @L_SHOP@は、あなたとの出逢いを待っています')
             ,
-            new SctItm('@L_CAMPANY@ @L_SHOP@により、あなたの@KEI1@@HABIT@が@SUCCESS@します')
+            new SctItm('@L_FAMOUSCOMPANY@ @L_SHOP@により、あなたの@KEI1@@HABIT@が@SUCCESS@します')
             ,
-            new SctItm('もはや、@L_CAMPANY@ @L_SHOP@は手放せません')
+            new SctItm('もはや、@L_FAMOUSCOMPANY@ @L_SHOP@は手放せません')
             ,
-            new SctItm('@L_CAMPANY@ @L_SHOP@の@KEI1@新モデルが誕生しました')
+            new SctItm('@L_FAMOUSCOMPANY@ @L_SHOP@の@KEI1@新モデルが誕生しました')
             ,
             new SctItm('これから、@L_PLACE@の@FUTURE@が変わります')
             ,
@@ -557,11 +557,11 @@ class selector_s_info03 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('もはや、@L_PLACE@では欠かせないアイテムです')
             ,
-            new SctItm('もう、@L_CAMPANY@ @L_SHOP@の無い@L_PLACE@など有り得ません')
+            new SctItm('もう、@L_FAMOUSCOMPANY@ @L_SHOP@の無い@L_PLACE@など有り得ません')
             ,
-            new SctItm('あなたも@KEI1@@L_CAMPANY@ @L_SHOP@で@DID@みませんか')
+            new SctItm('あなたも@KEI1@@L_FAMOUSCOMPANY@ @L_SHOP@で@DID@みませんか')
             ,
-            new SctItm('あなたも@KEI1@@L_CAMPANY@ @L_SHOP@で@DID@みましょう')
+            new SctItm('あなたも@KEI1@@L_FAMOUSCOMPANY@ @L_SHOP@で@DID@みましょう')
         ]
     }
 }
@@ -571,13 +571,13 @@ class selector_s_info04 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@S_INFO04@');
         this.itms = [
-            new SctItm('さあ、@KEI1@@L_CAMPANY@ @L_SHOP@と共に')
+            new SctItm('さあ、@KEI1@@L_FAMOUSCOMPANY@ @L_SHOP@と共に')
             ,
-            new SctItm('さあ、@KEI1@@L_CAMPANY@ @L_SHOP@を片手に')
+            new SctItm('さあ、@KEI1@@L_FAMOUSCOMPANY@ @L_SHOP@を片手に')
             ,
-            new SctItm('さあ、@KEI1@@L_CAMPANY@ @L_SHOP@と一緒に')
+            new SctItm('さあ、@KEI1@@L_FAMOUSCOMPANY@ @L_SHOP@と一緒に')
             ,
-            new SctItm('@KEI1@@L_CAMPANY@ @L_SHOP@でパワーアップして')
+            new SctItm('@KEI1@@L_FAMOUSCOMPANY@ @L_SHOP@でパワーアップして')
         ]
     }
 }
@@ -612,29 +612,29 @@ class selector_ShopComentGood extends SctItm_Selector implements ISctItm_Selecto
     constructor(){
         super('@SHOPCOM_G@');
         this.itms = [
-            new SctItm('待ってました！ @L_CAMPANY@ @L_SHOP@！')
+            new SctItm('待ってました！ @L_FAMOUSCOMPANY@ @L_SHOP@！')
             ,
             new SctItm('遂に来た！ これぞ@FUTURE@の@L_SHOP_B@です！')
             ,
-            new SctItm('@L_CAMPANY@！　@L_CAMPANY@！　@L_CAMPANY@！')
+            new SctItm('@L_FAMOUSCOMPANY@！　@L_FAMOUSCOMPANY@！　@L_FAMOUSCOMPANY@！')
             ,
-            new SctItm('@L_CAMPANY@ @L_SHOP@！　もう待ちきれない！')
+            new SctItm('@L_FAMOUSCOMPANY@ @L_SHOP@！　もう待ちきれない！')
             ,
-            new SctItm('@L_CAMPANY@ @L_SHOP@！　正に@COUNTRY@の@NICKGOOD@！')
+            new SctItm('@L_FAMOUSCOMPANY@ @L_SHOP@！　正に@COUNTRY@の@NICKGOOD@！')
             ,
-            new SctItm('@L_CAMPANY@ @L_SHOP@！　ああ、なんて@KEI1@！')
+            new SctItm('@L_FAMOUSCOMPANY@ @L_SHOP@！　ああ、なんて@KEI1@！')
             ,
-            new SctItm('@L_CAMPANY@ @L_SHOP@！　これで勝てる！')
+            new SctItm('@L_FAMOUSCOMPANY@ @L_SHOP@！　これで勝てる！')
             ,
-            new SctItm('@L_CAMPANY@ @L_SHOP@！　素晴らしい！')
+            new SctItm('@L_FAMOUSCOMPANY@ @L_SHOP@！　素晴らしい！')
             ,
-            new SctItm('@L_CAMPANY@ @L_SHOP@！　なんて美味しそうなんだ！')
+            new SctItm('@L_FAMOUSCOMPANY@ @L_SHOP@！　なんて美味しそうなんだ！')
             ,
             new SctItm('なんて@KEI1@@L_SHOP_B@なのだろう！')
             ,
-            new SctItm('もう@L_CAMPANY_B@社の@L_SHOP_B@が無ければ生きていけません！')
+            new SctItm('もう@L_FAMOUSCOMPANY_B@社の@L_SHOP_B@が無ければ生きていけません！')
             ,
-            new SctItm('@COUNTRY@でNo.1！ @L_CAMPANY@ @L_SHOP@！')
+            new SctItm('@COUNTRY@でNo.1！ @L_FAMOUSCOMPANY@ @L_SHOP@！')
             ,
             new SctItm('@HABIT@する時の必需品です！')
             ,
@@ -648,17 +648,17 @@ class selector_ShopComentNomal extends SctItm_Selector implements ISctItm_Select
     constructor(){
         super('@SHOPCOM_N@');
         this.itms = [
-            new SctItm('ああ、新しい@L_CAMPANY@ @L_SHOP@ですか')
+            new SctItm('ああ、新しい@L_FAMOUSCOMPANY@ @L_SHOP@ですか')
             ,
-            new SctItm('@L_CAMPANY@ @L_SHOP@？　様子見かなぁ')
+            new SctItm('@L_FAMOUSCOMPANY@ @L_SHOP@？　様子見かなぁ')
             ,
-            new SctItm('@L_CAMPANY@ @L_SHOP@？ 知らなかったな')
+            new SctItm('@L_FAMOUSCOMPANY@ @L_SHOP@？ 知らなかったな')
             ,
-            new SctItm('@L_CAMPANY_B@社でも@L_SHOP_B@を出してたんだ')
+            new SctItm('@L_FAMOUSCOMPANY_B@社でも@L_SHOP_B@を出してたんだ')
             ,
-            new SctItm('@L_CAMPANY@ @L_SHOP@？　へえ？')
+            new SctItm('@L_FAMOUSCOMPANY@ @L_SHOP@？　へえ？')
             ,
-            new SctItm('@L_CAMPANY@ @L_SHOP@？　ちょっと@KEIM2@かな')
+            new SctItm('@L_FAMOUSCOMPANY@ @L_SHOP@？　ちょっと@KEIM2@かな')
             ,
             new SctItm('たまにしか@L_SHOP_B@は使わないので')
             ,
@@ -680,7 +680,7 @@ class selector_ShopComentBad extends SctItm_Selector implements ISctItm_Selector
     constructor(){
         super('@SHOPCOM_B@');
         this.itms = [
-            new SctItm('@L_CAMPANY_B@社の@L_SHOP_B@は、ちょっとなあ')
+            new SctItm('@L_FAMOUSCOMPANY_B@社の@L_SHOP_B@は、ちょっとなあ')
             ,
             new SctItm('これが@L_SHOP_B@？　@NICKBAD@かと思った・・・')
             ,
@@ -698,11 +698,11 @@ class selector_ShopComentBad extends SctItm_Selector implements ISctItm_Selector
             ,
             new SctItm('もう@COUNTRY@でしか使ってないですよ')
             ,
-            new SctItm('@L_CAMPANY_B@製はもういいです')
+            new SctItm('@L_FAMOUSCOMPANY_B@製はもういいです')
             ,
-            new SctItm('@L_CAMPANY_B@製は壊れやすいので')
+            new SctItm('@L_FAMOUSCOMPANY_B@製は壊れやすいので')
             ,
-            new SctItm('どうして@L_CAMPANY_B@製は@KEI1@んですかね')
+            new SctItm('どうして@L_FAMOUSCOMPANY_B@製は@KEI1@んですかね')
             ,
             new SctItm('あまり@HABIT@はしないから')
             ,
@@ -719,43 +719,43 @@ class selector_ShopComentDocGood extends SctItm_Selector implements ISctItm_Sele
     constructor(){
         super('@SHOPCOMDOC_G@');
         this.itms = [
-            new SctItm('ずっと@PLACE@で@L_CAMPANY_B@の@L_SHOP_B@を使っています')
+            new SctItm('ずっと@PLACE@で@L_FAMOUSCOMPANY_B@の@L_SHOP_B@を使っています')
             ,
-            new SctItm('@L_SHOP_B@は@L_CAMPANY_B@でなければ有り得ません')
+            new SctItm('@L_SHOP_B@は@L_FAMOUSCOMPANY_B@でなければ有り得ません')
             ,
-            new SctItm('今度の@L_CAMPANY@ @L_SHOP@は@KEI2@で@KEI1@んです')
+            new SctItm('今度の@L_FAMOUSCOMPANY@ @L_SHOP@は@KEI2@で@KEI1@んです')
             ,
-            new SctItm('もう@L_CAMPANY@ @L_SHOP@は手放せません')
+            new SctItm('もう@L_FAMOUSCOMPANY@ @L_SHOP@は手放せません')
             ,
             new SctItm('すぐに@PART@や@PART@に奨めなければいけません')
             ,
-            new SctItm('今度、@L_CAMPANY@ @L_SHOP@が我が社で採用されました')
+            new SctItm('今度、@L_FAMOUSCOMPANY@ @L_SHOP@が我が社で採用されました')
             ,
-            new SctItm('今では@CLASS@の誰もが@L_CAMPANY@ @L_SHOP@を使っています')
+            new SctItm('今では@CLASS@の誰もが@L_FAMOUSCOMPANY@ @L_SHOP@を使っています')
             ,
-            new SctItm('正に@L_CAMPANY@ @L_SHOP@は@CLASS@の必需品です')
+            new SctItm('正に@L_FAMOUSCOMPANY@ @L_SHOP@は@CLASS@の必需品です')
             ,
-            new SctItm('@L_CAMPANY@ @L_SHOP@さえあれば、@CLASS@を呼ぶ必要はありません')
+            new SctItm('@L_FAMOUSCOMPANY@ @L_SHOP@さえあれば、@CLASS@を呼ぶ必要はありません')
             ,
-            new SctItm('@L_CAMPANY@ @L_SHOP@なら値段なんて気にしません')
+            new SctItm('@L_FAMOUSCOMPANY@ @L_SHOP@なら値段なんて気にしません')
             ,
             new SctItm('@PART@や@PART@、@PART@にも買ってあげようと思います')
             ,
             new SctItm('もうこれで@PLACE@に行かなくてすみます')
             ,
-            new SctItm('もう@L_CAMPANY@ @L_SHOP@が無ければ生きていけません')
+            new SctItm('もう@L_FAMOUSCOMPANY@ @L_SHOP@が無ければ生きていけません')
             ,
             new SctItm('@PLACE@に行くときに必ず持って行きます')
             ,
-            new SctItm('私を@KEY@や@KEY@から救ってくれたのが@L_CAMPANY@ @L_SHOP@だったのです')
+            new SctItm('私を@KEY@や@KEY@から救ってくれたのが@L_FAMOUSCOMPANY@ @L_SHOP@だったのです')
             ,
-            new SctItm('私は@L_CAMPANY@ @L_SHOP@のお陰で悩みから解放されました')
+            new SctItm('私は@L_FAMOUSCOMPANY@ @L_SHOP@のお陰で悩みから解放されました')
             ,
-            new SctItm('私は@L_CAMPANY@ @L_SHOP@のお陰で@CLASS@になれました')
+            new SctItm('私は@L_FAMOUSCOMPANY@ @L_SHOP@のお陰で@CLASS@になれました')
             ,
-            new SctItm('私は@L_CAMPANY@ @L_SHOP@のお陰で@SUCCESS@できました')
+            new SctItm('私は@L_FAMOUSCOMPANY@ @L_SHOP@のお陰で@SUCCESS@できました')
             ,
-            new SctItm('@L_CAMPANY@ @L_SHOP@が無ければ、ずっと@CLASS@のままでした')
+            new SctItm('@L_FAMOUSCOMPANY@ @L_SHOP@が無ければ、ずっと@CLASS@のままでした')
             ,
             new SctItm('さすが『@CALL2@』と@ASSES@だけのことはあります')
             ,
@@ -769,15 +769,15 @@ class selector_ShopComentDocBad extends SctItm_Selector implements ISctItm_Selec
     constructor(){
         super('@SHOPCOMDOC_B@');
         this.itms = [
-            new SctItm('@L_CAMPANY_B@の@L_SHOP_B@って、なんだか使いにくいんです')
+            new SctItm('@L_FAMOUSCOMPANY_B@の@L_SHOP_B@って、なんだか使いにくいんです')
             ,
-            new SctItm('@L_CAMPANY_B@の@L_SHOP_B@って、すぐ壊れるんです')
+            new SctItm('@L_FAMOUSCOMPANY_B@の@L_SHOP_B@って、すぐ壊れるんです')
             ,
-            new SctItm('最近、@L_CAMPANY_B@の@L_SHOP_B@って見かけません')
+            new SctItm('最近、@L_FAMOUSCOMPANY_B@の@L_SHOP_B@って見かけません')
             ,
-            new SctItm('今時、@L_CAMPANY_B@の@L_SHOP_B@を使うの恥ずかしいんです')
+            new SctItm('今時、@L_FAMOUSCOMPANY_B@の@L_SHOP_B@を使うの恥ずかしいんです')
             ,
-            new SctItm('もう@L_CAMPANY_B@の@L_SHOP_B@は使いたくないです')
+            new SctItm('もう@L_FAMOUSCOMPANY_B@の@L_SHOP_B@は使いたくないです')
             ,
             new SctItm('@PART@や@PART@はダメだと云ってます')
             ,
@@ -835,7 +835,7 @@ class shop_docs_maker extends news_docs_maker {
     constructor(){
         super();
         this.dic_push(new locker_shop());
-        this.dic_push(new locker_campany());
+        this.dic_push(new locker_faouscompany());
         this.dic_push(new selector_model());
         this.dic_push(new selector_status());
         this.dic_push(new selector_catch());
