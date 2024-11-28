@@ -6927,10 +6927,8 @@ const itms_club = [
     new SctItm('@L_SPORTS@')
 ];
 const itms_companyname = [
-    new SctItm('@L_COMPANYNAME01@@L_COMPANYNAME02@株式会社'),
-    new SctItm('@L_COMPANYNAME01@@L_COMPANYNAME02@有限会社'),
-    new SctItm('@L_COMPANYNAME01@@L_COMPANYNAME02@商店'),
-    new SctItm('@L_COMPANYNAME01@@L_COMPANYNAME02@商会'),
+    new SctItm('@L_COMPANYNAME01@株式会社'),
+    new SctItm('@L_COMPANYNAME01@有限会社'),
     new SctItm('@L_COMPANYNAME01@@L_COMPANYNAME03@工務店'),
     new SctItm('@L_COMPANYNAME01@@L_ITEM@専門店'),
     new SctItm('@L_COMPANYNAME01@@L_COMPANYNAME03@工場'),
@@ -6941,14 +6939,15 @@ const itms_companyname = [
     new SctItm('@L_COMPANYNAME01@@L_CLASS@養成所'),
     new SctItm('@L_COUNTRY@@GROUP01@'),
     new SctItm('@L_COMPANYNAME01@@GROUP02@'),
-    new SctItm('@L_COMPANYNAME01@@L_LANDMARK01@'),
+    new SctItm('@L_CITY@@L_LANDMARK01@'),
     new SctItm('@L_CAT@宅急便')
 ];
 const itms_companyname01 = [
     new SctItm('@L_COUNTRY@'),
     new SctItm('@L_COUNTRY@国営'),
     new SctItm('@L_CITY@'),
-    new SctItm('@L_CITY@市営')
+    new SctItm('@L_CITY@市営'),
+    new SctItm('@L_FAMOUSCOMPANY02@')
 ];
 const itms_companyname02 = [
     new SctItm('@L_COMPANYNAME03@'),

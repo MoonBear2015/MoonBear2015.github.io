@@ -818,7 +818,8 @@ class selector_who2 extends SctItm_Selector {
             new SctItm('『@L_TOWN_INSCRIPTION@』'),
             new SctItm('『@CALL@』と@KEID@@ASSES@@L_CHAR@'),
             new SctItm('@MANYPEOPLE@より『@CALL@』と@KEID@@ASSES@@L_CHAR@'),
-            new SctItm('@AWARD@ @AWARDGET@')
+            new SctItm('@AWARD@ @AWARDGET@'),
+            new SctItm('@L_COMPANYNAME@(@L_COMPANYCLASS@)')
         ];
     }
 }
@@ -887,7 +888,12 @@ class selector_who3 extends SctItm_Selector {
             new SctItm('@DONE@'),
             new SctItm('@CERTIFICATE@に@KEID@@ASSES03@'),
             new SctItm('@GROUP@から@CERTIFICATE@に@KEID@@ASSES03@'),
-            new SctItm('多くの@MANYPEOPLE@から@CERTIFICATE@に@KEID@@ASSES03@')
+            new SctItm('多くの@MANYPEOPLE@から@CERTIFICATE@に@KEID@@ASSES03@'),
+            new SctItm('@L_COMPANYNAME@に採用された'),
+            new SctItm('@L_COMPANYNAME@に修飾した'),
+            new SctItm('@L_COMPANYNAME@より派遣された'),
+            new SctItm('@L_COMPANYNAME@から退職した'),
+            new SctItm('@L_COMPANYNAME@からクビになった')
         ];
     }
 }
@@ -4141,6 +4147,11 @@ class locker_companyname01 extends SctItm_SelectLocker {
     constructor() {
         super('@L_COMPANYNAME01@');
         this.Add(itms_companyname01);
+    }
+}
+class locker_famouscompany02 extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_FAMOUSCOMPANY02@');
         this.Add(wrd2_to_wrd(itms_famouscompany));
     }
 }
@@ -4505,6 +4516,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new locker_club01());
         this.dic_push(new locker_club());
         this.dic_push(new locker_companyname());
+        this.dic_push(new locker_famouscompany02());
         this.dic_push(new locker_companyname01());
         this.dic_push(new locker_companyname02());
         this.dic_push(new locker_companyname03());
