@@ -1193,7 +1193,7 @@ class selector_who2 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@MANYPEOPLE@より『@CALL@』と@KEID@@ASSES@@L_CHAR@')
             ,
-            new SctItm('@AWARD@ @AWARDGET@')
+            new SctItm('@GET01@')
             ,
             new SctItm('@L_COMPANYNAME@(@L_COMPANYCLASS@)')
         ];
@@ -1362,7 +1362,9 @@ class selector_who4 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@SONGTYPE@『@SONGTITLE@』')
             ,
-            new SctItm('@AWARD@ @AWARDGET@')
+            new SctItm('@GET01@')
+            ,
+            new SctItm('@L_COMPANYNAME@(@L_COMPANYCLASS@)')
        ];
     }
 }
@@ -4268,6 +4270,10 @@ class selector_get01 extends SctItm_Selector implements ISctItm_Selector {
         super('@GET01@');
         this.itms = [
             new SctItm('@AWARD@ @AWARDGET@')
+            ,
+            new SctItm('@RANKING@ 首位')
+            ,
+            new SctItm('@RANKING@ 最下位')
             ,
             new SctItm('@RANKING@ 第@NUM1TO100@位')
             ,
