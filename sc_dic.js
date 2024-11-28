@@ -3959,19 +3959,16 @@ const itms_class = [
     new SctItm('調理師'),
     new SctItm('ケーキ職人'),
     new SctItm('工場長'),
-    new SctItm('現場監督')
-    // ,
-    // new SctItm('会社員')
-    // ,
-    // new SctItm('サラリーマン')
-    // ,
-    // new SctItm('事務員')
-    ,
+    new SctItm('現場監督'),
+    new SctItm('会社員'),
+    new SctItm('サラリーマン'),
+    new SctItm('事務員'),
     new SctItm('飼育員'),
     new SctItm('アルバイター'),
     new SctItm('釣り師'),
     new SctItm('ガードマン'),
     new SctItm('守衛'),
+    new SctItm('警察官'),
     new SctItm('元警察官'),
     new SctItm('陸軍少佐'),
     new SctItm('@L_COUNTRY@陸軍少佐'),
@@ -4108,8 +4105,9 @@ const itms_class = [
     new SctItm('バルタン星人'),
     new SctItm('スーパーマン'),
     new SctItm('学級委員'),
-    new SctItm('図書委員'),
-    new SctItm('生徒会長')
+    new SctItm('図書委員')
+    // ,
+    // new SctItm('生徒会長')
     // ,
     // new SctItm('ＰＴＡ会長')
     // ,
@@ -4145,35 +4143,30 @@ const itms_class = [
     // new SctItm('庄長')
     // ,
     // new SctItm('市長')
-    // ,
-    // new SctItm('@L_CITY@市長')
-    // ,
-    // new SctItm('@L_COUNTRY@皇帝')
+    ,
+    new SctItm('@L_CITY@市長'),
+    new SctItm('@L_COUNTRY@皇帝')
     // ,
     // new SctItm('国王')
-    // ,
-    // new SctItm('@L_COUNTRY@国王')
+    ,
+    new SctItm('@L_COUNTRY@国王')
     // ,
     // new SctItm('法王')
     // ,
     // new SctItm('大統領')
-    // ,
-    // new SctItm('@L_COUNTRY@大統領')
+    ,
+    new SctItm('@L_COUNTRY@大統領')
     // ,
     // new SctItm('女王')
-    // ,
-    // new SctItm('@L_COUNTRY@女王')
+    ,
+    new SctItm('@L_COUNTRY@女王')
     // ,
     // new SctItm('総理大臣')
-    // ,
-    // new SctItm('@L_COUNTRY@総理大臣')
-    // ,
-    // new SctItm('@L_COUNTRY@総統')
-    // ,
-    // new SctItm('@L_COUNTRY@書記長')
-    // ,
-    // new SctItm('独裁者')
     ,
+    new SctItm('@L_COUNTRY@総理大臣'),
+    new SctItm('@L_COUNTRY@総統'),
+    new SctItm('@L_COUNTRY@書記長'),
+    new SctItm('独裁者'),
     new SctItm('道化師'),
     new SctItm('ピエロ'),
     new SctItm('手品師'),
@@ -5837,7 +5830,13 @@ const itms_did = [
     new SctItm('@L_COMPANYNAME@をクビになって'),
     new SctItm('@L_COMPANYNAME@の@COMPANYCLASS@に就任して'),
     new SctItm('@L_COMPANYNAME@の@COMPANYCLASS@に降格して'),
-    new SctItm('@L_COMPANYNAME@の@COMPANYCLASS@に出世して')
+    new SctItm('@L_COMPANYNAME@の@COMPANYCLASS@に出世して'),
+    new SctItm('@STORE@で買い物をして'),
+    new SctItm('@STORE@で現金で買い物をして'),
+    new SctItm('@STORE@でカードで買い物をして'),
+    new SctItm('@STORE@でツケで買い物をして'),
+    new SctItm('@STORE@で万引きをして'),
+    new SctItm('@STORE@で強盗を捕まえて')
 ];
 const itms_did01_l = [
     new SctItm('@L_FOOD@を食べて'),
@@ -6028,7 +6027,13 @@ const itms_did02_l = [
     new SctItm('@L_COMPANYNAME@をクビになって'),
     new SctItm('@L_COMPANYNAME@の@L_COMPANYCLASS@に就任して'),
     new SctItm('@L_COMPANYNAME@の@L_COMPANYCLASS@に降格して'),
-    new SctItm('@L_COMPANYNAME@の@L_COMPANYCLASS@に出世して')
+    new SctItm('@L_COMPANYNAME@の@L_COMPANYCLASS@に出世して'),
+    new SctItm('@L_STORE@で買い物をして'),
+    new SctItm('@L_STORE@で現金で買い物をして'),
+    new SctItm('@L_STORE@でカードで買い物をして'),
+    new SctItm('@L_STORE@でツケで買い物をして'),
+    new SctItm('@L_STORE@で万引きをして'),
+    new SctItm('@L_STORE@で強盗を捕まえて')
 ];
 const itms_did_o = [
     new SctItm('@O_FOOD@を食べて'),
@@ -6461,7 +6466,6 @@ const itms_Ranking01 = [
     new SctItm('トーナメント'),
     new SctItm('人気投票'),
     new SctItm('選手権'),
-    new SctItm('選挙投票'),
     new SctItm('オーディション')
 ];
 const itms_Ranking = [
@@ -6503,6 +6507,7 @@ const itms_FriendShip = [
     new SctItm('ライバル同士'),
     new SctItm('宿敵同士')
 ];
+// 国家
 const itms_Group01 = [
     new SctItm('政府'),
     new SctItm('文部省'),
@@ -6519,8 +6524,11 @@ const itms_Group01 = [
     new SctItm('国境警備隊'),
     new SctItm('連合艦隊'),
     new SctItm('解放戦線'),
-    new SctItm('王室')
+    new SctItm('王室'),
+    new SctItm('王宮'),
+    new SctItm('皇室')
 ];
+// 国・市
 const itms_Group02 = [
     new SctItm('共同通信'),
     new SctItm('労働組合'),
@@ -6646,7 +6654,6 @@ const itms_where = [
     // ,
     // new SctItm('@CHAR@が@MOVE2@@SCHOOL01@')
     ,
-    new SctItm('誰も知らない@WHERE01@'),
     new SctItm('@WHERE01@で開催された@FESTIVAL@'),
     new SctItm('@WHERE01@で催された@FESTIVAL@'),
     new SctItm('@WHERE01@で予定されていた@FESTIVAL@の会場'),
@@ -6667,6 +6674,7 @@ const itms_where01 = [
     new SctItm('色鮮やかな@WHERE02@'),
     new SctItm('飾り気のない@WHERE02@'),
     new SctItm('誰も居ない@WHERE02@'),
+    new SctItm('誰も知らない@WHERE01@'),
     new SctItm('人けの無い@WHERE02@'),
     new SctItm('薄気味悪い@WHERE02@'),
     new SctItm('呪われた@WHERE02@'),

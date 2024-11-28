@@ -1096,13 +1096,17 @@ class selector_comment2 extends SctItm_Selector {
             new SctItm('@MANYPEOPLE@の@KEY@@END02A@'),
             new SctItm('@L_WHAT@の@L_CHAR@は@L_DO@@END02B@'),
             new SctItm('@L_WHAT@の@L_CHAR@は@KEI@@NICK@の@PART@だと@KEID@@ASSES@'),
-            new SctItm('@L_WHAT@の@L_CHAR@は@KEID@@L_DO@@END02B@@KEI@@THEY@@END02A@'),
-            new SctItm('『@CALL@』で、『@CALL@』@END02A@'),
+            new SctItm('@L_WHAT@の@L_CHAR@は@KEID@@L_DO@@END02B@@KEI@@THEY@@END02A@')
+            // ,
+            // new SctItm('『@CALL@』で、『@CALL@』@END02A@')
+            ,
             new SctItm('@YESNO@、『@CALL@』だと@ASSES@'),
             new SctItm('@YESNO@、@L_CHAR@の@KEY@@END02A@'),
             new SctItm('@YESNO@、@L_WHAT@の@L_CHAR@が@KEI@@NICK@@END02A@'),
-            new SctItm('@YESNO@、@KEI2@な@PART@が@SAY@@END02B@'),
-            new SctItm('『@CALL@』、@YESNO@、それが@PART@の@PART@@END02A@'),
+            new SctItm('@YESNO@、@KEI2@な@PART@が@SAY@@END02B@')
+            // ,
+            // new SctItm('『@CALL@』、@YESNO@、それが@PART@の@PART@@END02A@')
+            ,
             new SctItm('@KEID@@L_DO@@END02B@@KEI@@NICK@と@KEID@@ASSES@@THEY@、@YESNO@、それが@L_WHAT@の@L_CHAR@@END02A@'),
             new SctItm('@KEID@@L_DO@@END02B@@THEY@、@YESNO@、それが@L_WHAT@@END02A@'),
             new SctItm('@L_WHAT@の@L_CLASS@、それが@L_CHAR@@END02A@'),
@@ -2399,6 +2403,12 @@ class locker_king03 extends SctItm_SelectLocker {
 class selector_store extends SctItm_Selector {
     constructor() {
         super('@STORE@');
+        this.Add(itms_Store);
+    }
+}
+class locker_store extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_STORE@');
         this.Add(itms_Store);
     }
 }
@@ -4282,6 +4292,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new locker_king02());
         this.dic_push(new locker_king03());
         this.dic_push(new selector_store());
+        this.dic_push(new locker_store());
         this.dic_push(new selector_music());
         this.dic_push(new locker_music());
         this.dic_push(new selector_dance());

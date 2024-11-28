@@ -1653,8 +1653,8 @@ class selector_comment2 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@L_WHAT@の@L_CHAR@は@KEI@@NICK@の@PART@だと@KEID@@ASSES@')
             ,
             new SctItm('@L_WHAT@の@L_CHAR@は@KEID@@L_DO@@END02B@@KEI@@THEY@@END02A@')
-            ,
-            new SctItm('『@CALL@』で、『@CALL@』@END02A@')
+            // ,
+            // new SctItm('『@CALL@』で、『@CALL@』@END02A@')
             ,
             new SctItm('@YESNO@、『@CALL@』だと@ASSES@')
             ,
@@ -1663,8 +1663,8 @@ class selector_comment2 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@YESNO@、@L_WHAT@の@L_CHAR@が@KEI@@NICK@@END02A@')
             ,
             new SctItm('@YESNO@、@KEI2@な@PART@が@SAY@@END02B@')
-            ,
-            new SctItm('『@CALL@』、@YESNO@、それが@PART@の@PART@@END02A@')
+            // ,
+            // new SctItm('『@CALL@』、@YESNO@、それが@PART@の@PART@@END02A@')
             ,
             new SctItm('@KEID@@L_DO@@END02B@@KEI@@NICK@と@KEID@@ASSES@@THEY@、@YESNO@、それが@L_WHAT@の@L_CHAR@@END02A@')
             ,
@@ -3418,6 +3418,12 @@ class locker_king03 extends SctItm_SelectLocker implements ISctItm_Selector {
 class selector_store extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@STORE@');
+        this.Add(itms_Store);
+    }
+}
+class locker_store extends SctItm_SelectLocker implements ISctItm_Selector {
+    constructor(){
+        super('@L_STORE@');
         this.Add(itms_Store);
     }
 }
@@ -5956,6 +5962,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new locker_king03());
 
         this.dic_push(new selector_store());
+        this.dic_push(new locker_store());
         
         this.dic_push(new selector_music());
         this.dic_push(new locker_music());
