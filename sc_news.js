@@ -1766,7 +1766,7 @@ class selector_k extends SctItm_Selector {
         this.Add(cods_NoRubi_to_itms(cods_ad_sense_n));
         this.Add(cods_NoRubi_to_itms(cods_ad_sense_p));
         // this.Add(cods_to_itms(cods_ad_color));
-        this.Add(cods_NoRubi_to_itms(cods_ad_jougo));
+        this.Add(cods_to_itms(cods_ad_jougo));
         this.Add(cods_NoRubi_to_itms(cods_ad_etc));
         this.Add(itms_kmd);
     }

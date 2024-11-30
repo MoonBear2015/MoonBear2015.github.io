@@ -3316,7 +3316,8 @@ const itms_landmark = [
     new SctItm('大通り'),
     new SctItm('商店街'),
     new SctItm('歓楽街'),
-    new SctItm('繁華街')
+    new SctItm('繁華街'),
+    new SctItm('闇市')
     // ,
     // new SctItm('川')
     // ,
@@ -3382,6 +3383,9 @@ const itms_partner = [
     new SctItm('夫'),
     new SctItm('父'),
     new SctItm('母'),
+    new SctItm('|継母|ままはは|'),
+    new SctItm('|姑|しゅうと|'),
+    new SctItm('|小姑|こじゅうと|'),
     new SctItm('娘'),
     new SctItm('息子'),
     new SctItm('孫'),
@@ -3829,8 +3833,10 @@ const itms_do = [
     new SctItm('死滅', 'DO/dead.jpg'),
     new SctItm('崩壊', 'DO/Collapse.jpg'),
     new SctItm('爆発', 'DO/bomb.jpg'),
-    new SctItm('大爆発', 'DO/bomb.jpg'),
-    new SctItm('捏造', 'DO/fakeTelop.jpg'),
+    new SctItm('大爆発', 'DO/bomb.jpg')
+    // ,
+    // new SctItm('捏造','DO/fakeTelop.jpg')
+    ,
     new SctItm('絶望', 'DO/Lonly.jpg'),
     new SctItm('孤立', 'DO/Lonly2.jpg'),
     new SctItm('消滅', 'DO/Dis.jpg'),
@@ -3843,10 +3849,14 @@ const itms_do = [
     new SctItm('滅亡', 'DO/Destruction.jpg'),
     new SctItm('自滅', 'DO/self.jpg'),
     new SctItm('困惑', 'DO/panic.jpg'),
-    new SctItm('混乱', 'DO/panic.jpg'),
-    new SctItm('嘲笑', 'DO/laugh.jpg'),
-    new SctItm('哄笑', 'DO/laugh.jpg'),
-    new SctItm('罵倒', 'DO/taunt.jpg'),
+    new SctItm('混乱', 'DO/panic.jpg')
+    // ,
+    // new SctItm('嘲笑','DO/laugh.jpg')
+    // ,
+    // new SctItm('哄笑','DO/laugh.jpg')
+    // ,
+    // new SctItm('罵倒','DO/taunt.jpg')
+    ,
     new SctItm('堕落', 'DO/depra.jpg'),
     new SctItm('失業', 'DO/lostjob.jpg'),
     new SctItm('支配', 'DO/mad.jpg'),
@@ -3855,8 +3865,10 @@ const itms_do = [
     new SctItm('束縛', 'DO/sm.jpg'),
     new SctItm('拘束', 'DO/sm.jpg'),
     new SctItm('否定', 'DO/no.jpg'),
-    new SctItm('警告', 'DO/warning.jpg'),
-    new SctItm('漏洩', 'DO/infoleak.jpg'),
+    new SctItm('警告', 'DO/warning.jpg')
+    // ,
+    // new SctItm('漏洩','DO/infoleak.jpg')
+    ,
     new SctItm('復讐', 'DO/revenge.jpg'),
     new SctItm('号泣', 'DO/cry.jpg'),
     new SctItm('荒廃', 'DO/devastation.jpg'),
@@ -6929,7 +6941,8 @@ const itms_club = [
 const itms_companyname = [
     new SctItm('@L_COMPANYNAME01@株式会社'),
     new SctItm('@L_COMPANYNAME01@有限会社'),
-    new SctItm('@L_COMPANYNAME01@@L_COMPANYNAME03@工務店'),
+    // new SctItm('@L_COMPANYNAME01@@L_COMPANYNAME03@工務店')
+    // ,
     new SctItm('@L_COMPANYNAME01@@L_ITEM@専門店'),
     new SctItm('@L_COMPANYNAME01@@L_COMPANYNAME03@工場'),
     new SctItm('@L_COMPANYNAME01@@L_RIDE@工場'),

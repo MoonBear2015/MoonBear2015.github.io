@@ -4988,6 +4988,8 @@ const itms_landmark = [
     new SctItm('歓楽街')
     ,
     new SctItm('繁華街')
+    ,
+    new SctItm('闇市')
     // ,
     // new SctItm('川')
     // ,
@@ -5103,6 +5105,12 @@ const itms_partner = [
     new SctItm('父')
     ,
     new SctItm('母')
+    ,
+    new SctItm('|継母|ままはは|')
+    ,
+    new SctItm('|姑|しゅうと|')
+    ,
+    new SctItm('|小姑|こじゅうと|')
     ,
     new SctItm('娘')
     ,
@@ -5899,8 +5907,8 @@ const   itms_do = [
     new SctItm('爆発','DO/bomb.jpg')
     ,
     new SctItm('大爆発','DO/bomb.jpg')
-    ,
-    new SctItm('捏造','DO/fakeTelop.jpg')
+    // ,
+    // new SctItm('捏造','DO/fakeTelop.jpg')
     ,
     new SctItm('絶望','DO/Lonly.jpg')
     ,
@@ -5927,12 +5935,12 @@ const   itms_do = [
     new SctItm('困惑','DO/panic.jpg')
     ,
     new SctItm('混乱','DO/panic.jpg')
-    ,
-    new SctItm('嘲笑','DO/laugh.jpg')
-    ,
-    new SctItm('哄笑','DO/laugh.jpg')
-    ,
-    new SctItm('罵倒','DO/taunt.jpg')
+    // ,
+    // new SctItm('嘲笑','DO/laugh.jpg')
+    // ,
+    // new SctItm('哄笑','DO/laugh.jpg')
+    // ,
+    // new SctItm('罵倒','DO/taunt.jpg')
     ,
     new SctItm('堕落','DO/depra.jpg')
     ,
@@ -5951,8 +5959,8 @@ const   itms_do = [
     new SctItm('否定','DO/no.jpg')
     ,
     new SctItm('警告','DO/warning.jpg')
-    ,
-    new SctItm('漏洩','DO/infoleak.jpg')
+    // ,
+    // new SctItm('漏洩','DO/infoleak.jpg')
     ,
     new SctItm('復讐','DO/revenge.jpg')
     ,
@@ -11682,8 +11690,8 @@ const   itms_companyname = [
     ,
     new SctItm('@L_COMPANYNAME01@有限会社')
     ,
-    new SctItm('@L_COMPANYNAME01@@L_COMPANYNAME03@工務店')
-    ,
+    // new SctItm('@L_COMPANYNAME01@@L_COMPANYNAME03@工務店')
+    // ,
     new SctItm('@L_COMPANYNAME01@@L_ITEM@専門店')
     ,
     new SctItm('@L_COMPANYNAME01@@L_COMPANYNAME03@工場')
