@@ -300,6 +300,8 @@ class selector_catch extends SctItm_Selector {
             new SctItm('さあ、@KEI1@@L_PLACE@が待っている'),
             new SctItm('@AWARD@ @L_AWARDGET2@'),
             new SctItm('@AWARD@を@L_AWARDGET2@しました'),
+            new SctItm('@RANKING@で第@NUM1TO100@位に@L_AWARDGET3@しました'),
+            new SctItm('おかげさまで@RANKING@第@NUM1TO100@位に@L_AWARDGET3@！'),
             new SctItm('@AWARD@を@AWARDGET@させた@L_TECH@'),
             new SctItm('@AWARD@を@AWARDGET@させた@KEI1@@L_TECH@'),
             new SctItm('@AWARD@を@AWARDGET@させた@KEI1@@L_TECH@'),
@@ -319,6 +321,12 @@ class locker_AwardGet2 extends SctItm_SelectLocker {
     constructor() {
         super('@L_AWARDGET2@', '', '@ICON_TECH@');
         this.Add(itms_AwardGet2);
+    }
+}
+class locker_AwardGet3 extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_AWARDGET3@', '', '@ICON_TECH@');
+        this.Add(itms_AwardGet3);
     }
 }
 class locker_CertificateGet extends SctItm_SelectLocker {
@@ -618,6 +626,7 @@ class shop_docs_maker01 extends news_docs_maker {
         this.dic_push(new locker_status());
         this.dic_push(new locker_place());
         this.dic_push(new locker_AwardGet2());
+        this.dic_push(new locker_AwardGet3());
         this.dic_push(new locker_CertificateGet());
         // this.dic_push(new locker_tech());
     }

@@ -10731,6 +10731,12 @@ const   itms_AwardGet2 = [
 ]
 
 
+const   itms_AwardGet3 = [
+    new SctItm('ランクイン','ICON/A_Win.jpg')
+    ,
+    new SctItm('ランキング入り','ICON/R_Rankin.webp')
+]
+
 
 const   itms_Award = [
     new SctItm('@AWARDTYPE@@SCIENCE@賞')
