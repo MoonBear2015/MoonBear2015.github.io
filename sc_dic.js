@@ -6427,8 +6427,11 @@ const itms_AwardGet2 = [
     new SctItm('辞退', 'ICON/A_No.png')
 ];
 const itms_AwardGet3 = [
-    new SctItm('ランクイン', 'ICON/A_Win.jpg'),
-    new SctItm('ランキング入り', 'ICON/R_Rankin.webp')
+    new SctItm('ランクインし', 'ICON/A_Win.jpg'),
+    new SctItm('ランキング入りし', 'ICON/R_Rankin.webp'),
+    new SctItm('ランクアップし', 'ICON/R_Up.png'),
+    new SctItm('降格し', 'ICON/R_Down.png'),
+    new SctItm('輝き', 'ICON/R_Flash.png')
 ];
 const itms_Award = [
     new SctItm('@AWARDTYPE@@SCIENCE@賞'),

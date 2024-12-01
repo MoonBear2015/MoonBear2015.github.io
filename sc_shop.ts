@@ -385,15 +385,13 @@ class selector_catch extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@AWARD@を@L_AWARDGET2@しました')
             ,
-            new SctItm('@RANKING@で第@NUM1TO100@位に@L_AWARDGET3@しました')
+            new SctItm('@RANKING@で第@NUM2TO100@位に@L_AWARDGET3@ました')
             ,
-            new SctItm('おかげさまで@RANKING@第@NUM1TO100@位に@L_AWARDGET3@！')
+            new SctItm('おかげさまで、@RANKING@第@NUM2TO100@位に@L_AWARDGET3@ました')
+            ,
+            new SctItm('ありがとう！　@RANKING@第@NUM2TO100@位に@L_AWARDGET3@ました！')
             ,
             new SctItm('@AWARD@を@AWARDGET@させた@L_TECH@')
-            ,
-            new SctItm('@AWARD@を@AWARDGET@させた@KEI1@@L_TECH@')
-            ,
-            new SctItm('@AWARD@を@AWARDGET@させた@KEI1@@L_TECH@')
             ,
             new SctItm('@AWARD@を@AWARDGET@させた@KEI1@@L_TECH@')
             ,
