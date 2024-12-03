@@ -6431,7 +6431,8 @@ const itms_AwardGet3 = [
     new SctItm('ランキング入りし', 'ICON/R_Rankin.webp'),
     new SctItm('ランクアップし', 'ICON/R_Up.png'),
     new SctItm('降格し', 'ICON/R_Down.png'),
-    new SctItm('輝き', 'ICON/R_Flash.png')
+    new SctItm('輝き', 'ICON/R_Flash.png'),
+    new SctItm('返り咲き', 'ICON/R_Return.png')
 ];
 const itms_Award = [
     new SctItm('@AWARDTYPE@@SCIENCE@賞'),
@@ -6714,6 +6715,8 @@ const itms_whereCompany = [
     new SctItm('@L_COMPANYNAME@の本社ビル'),
     new SctItm('@L_COMPANYNAME@の@L_CITY@支店'),
     new SctItm('@L_COMPANYNAME@の@L_CITY@営業所'),
+    new SctItm('@L_COMPANYNAME@の@L_CITY@事務所'),
+    new SctItm('@L_COMPANYNAME@の@L_CITY@事業所'),
     new SctItm('@L_COMPANYNAME@の待合室'),
     new SctItm('@L_COMPANYNAME@の応接室'),
     new SctItm('@L_COMPANYNAME@のエレベーターホール'),
@@ -6899,7 +6902,9 @@ const itms_Message01 = [
     new SctItm('@L_COMPANYNAME@をクビになりました'),
     new SctItm('@L_COMPANYNAME@の@COMPANYCLASS@に就任しました'),
     new SctItm('@AWARD@を@AWARDGET@しました'),
-    new SctItm('@RANKING@の第@NUM1TO100@位に返り咲きました'),
+    new SctItm('おかげさまで@AWARD@を@AWARDGET@しました'),
+    new SctItm('@RANKING@で第@NUM1TO100@位になりました'),
+    new SctItm('@RANKING@で第@NUM1TO100@位に返り咲きました'),
     new SctItm('@RANKING@からリタイアしました'),
     new SctItm('@RANKING@から失格しました'),
     new SctItm('新曲「@SONGTITLE@」をリリースしました'),

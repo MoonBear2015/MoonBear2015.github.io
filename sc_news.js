@@ -4019,14 +4019,14 @@ class selector_paper extends SctItm_Selector {
     constructor() {
         super('@PAPER@');
         this.Add(itms_present_paper);
-        this.Add(itms_paper);
+        // this.Add(itms_paper);
     }
 }
 class locker_paper extends SctItm_SelectLocker {
     constructor() {
         super('@L_PAPER@');
         this.Add(itms_present_paper);
-        this.Add(itms_paper);
+        // this.Add(itms_paper);
     }
 }
 class selector_reader extends SctItm_Selector {

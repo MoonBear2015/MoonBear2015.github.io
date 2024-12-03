@@ -10741,6 +10741,8 @@ const   itms_AwardGet3 = [
     new SctItm('降格し','ICON/R_Down.png')
     ,
     new SctItm('輝き','ICON/R_Flash.png')
+    ,
+    new SctItm('返り咲き','ICON/R_Return.png')
 ]
 
 
@@ -11266,6 +11268,10 @@ const   itms_whereCompany = [
     ,
     new SctItm('@L_COMPANYNAME@の@L_CITY@営業所')
     ,
+    new SctItm('@L_COMPANYNAME@の@L_CITY@事務所')
+    ,
+    new SctItm('@L_COMPANYNAME@の@L_CITY@事業所')
+    ,
     new SctItm('@L_COMPANYNAME@の待合室')
     ,
     new SctItm('@L_COMPANYNAME@の応接室')
@@ -11614,7 +11620,11 @@ const   itms_Message01 = [
     ,
     new SctItm('@AWARD@を@AWARDGET@しました')
     ,
-    new SctItm('@RANKING@の第@NUM1TO100@位に返り咲きました')
+    new SctItm('おかげさまで@AWARD@を@AWARDGET@しました')
+    ,
+    new SctItm('@RANKING@で第@NUM1TO100@位になりました')
+    ,
+    new SctItm('@RANKING@で第@NUM1TO100@位に返り咲きました')
     ,
     new SctItm('@RANKING@からリタイアしました')
     ,
