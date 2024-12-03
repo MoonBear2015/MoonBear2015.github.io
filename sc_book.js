@@ -314,6 +314,8 @@ class selector_bookinfo03 extends SctItm_Selector {
             new SctItm('かつて@COUNTRY@で禁書に指定された@L_BOOKWRITER@の@B_TYPE@'),
             new SctItm('@NUM2TO9@度に渡り映画化された@L_BOOKWRITER@の@B_TYPE@'),
             new SctItm('映画化不可能と云われた@L_BOOKWRITER@の@B_TYPE@'),
+            new SctItm('@L_BOOKWRITER@が死力を尽くした@B_TYPE@'),
+            new SctItm('@L_BOOKWRITER@の悲願であった@B_TYPE@'),
             new SctItm('@PEOPLE@達にもっとも@ASSES@@L_BOOKWRITER@の@B_TYPE@')
         ];
     }
@@ -741,7 +743,6 @@ class selector_girlnext extends SctItm_Selector {
             new SctItm('「私がこの@KEIN2@@O_DID@いても、@KEIN2@@L_BOY@は@KEIN2@@O_DID@ばかりいるのね」'),
             new SctItm('「@KEIN2@@L_BOY@は、私がこの@KEIN2@@O_DID@いると、どうして@KEIN2@@O_DID@いるの」'),
             new SctItm('「じゃあ、@KEIN2@@L_BOY@も一緒にこの@KEIN2@@O_DID@くれない？ @KEIN2@@O_DID@ばかりいないで」'),
-            new SctItm('「でも、先にこの@KEIN2@@O_DID@から、@KEIN2@@O_DID@、それから――ねえ@KEIN2@@L_BOY@、聞いてるの？」'),
             new SctItm('「だから、@KEIN2@@L_BOY@は@KEIN2@のよ。この@KEIN2@@O_DID@、次はその@KEIN2@@O_DID@しまわないと」'),
             new SctItm('「それで@KEIN2@@L_BOY@は、昨日までこの@KEIN2@@O_DID@た筈なのに、今日は@KEIN2@@O_DID@いるのね」')
         ];

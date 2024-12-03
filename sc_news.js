@@ -536,9 +536,11 @@ class selector_newsFirst extends SctItm_Selector {
             new SctItm('@NEWS_Q01@？ '),
             new SctItm('@DATE@の@WHERE@での出来事である。'),
             new SctItm('@DATE@に@WHERE@で、私が@DID@@DIDEND@時のことである。'),
-            new SctItm('@DATE@に@WHERE@に訪れ、@DID@@DIDEND@時と記憶している。'),
-            new SctItm('@DATE@、@KEI@@L_WHAT@の@L_CHAR@は、次の様に@SAY03@@END02C@。「@COMMENT@」――'),
-            new SctItm('これは、@KEI@@L_WHAT@の@L_CHAR@からの@SAY03@である――「@COMMENT@」<br>　')
+            new SctItm('@DATE@に@WHERE@に訪れ、@DID@@DIDEND@時と記憶している。')
+            // ,
+            // new SctItm('@DATE@、@KEI@@L_WHAT@の@L_CHAR@は、次の様に@SAY03@@END02C@。「@COMMENT@」――')
+            // ,
+            // new SctItm('これは、@KEI@@L_WHAT@の@L_CHAR@からの@SAY03@である――「@COMMENT@」<br>　')
         ];
     }
 }
@@ -865,6 +867,7 @@ class selector_who3 extends SctItm_Selector {
             new SctItm('@GROUP@から推薦された'),
             new SctItm('@GROUP@から追放された'),
             new SctItm('@GROUP@から批難された'),
+            new SctItm('@GROUP@が誇る'),
             new SctItm('@GROUP@にスカウトされた'),
             new SctItm('@GROUP@に買収された'),
             new SctItm('@GROUP@に雇われた'),
@@ -875,15 +878,20 @@ class selector_who3 extends SctItm_Selector {
             new SctItm('@GROUP@に抹殺された'),
             new SctItm('@GROUP@を壊滅させた'),
             new SctItm('@GROUP@を組織@END02B@'),
+            new SctItm('@GROUP@を設立した@'),
             new SctItm('@GROUP@に洗脳された'),
             new SctItm('@GROUP@と契約@END02B@'),
             new SctItm('@GROUP@に改造された'),
+            new SctItm('@GROUP@に丸め込まれた'),
+            new SctItm('@GROUP@に|騙|だま|されている'),
+            new SctItm('@GROUP@に利用されているだけの'),
             new SctItm('@GROUP@から@AWARD@を贈呈された'),
             new SctItm('@GROUP@から@AWARD@を授与した'),
             new SctItm('@GROUP@から@AWARD@を剥奪された'),
             new SctItm('@GROUP@に加入した'),
             new SctItm('@GROUP@を退職した'),
             new SctItm('@GROUP@をクビになった'),
+            new SctItm('@GROUP@から追放された'),
             new SctItm('@SCHOOL@出身の'),
             new SctItm('@SCHOOL@に通う'),
             new SctItm('@SCHOOL@在学中の'),
@@ -909,7 +917,7 @@ class selector_who3 extends SctItm_Selector {
             new SctItm('@GROUP@から@CERTIFICATE@に@KEID@@ASSES03@'),
             new SctItm('多くの@MANYPEOPLE@から@CERTIFICATE@に@KEID@@ASSES03@'),
             new SctItm('@L_COMPANYNAME@に採用された'),
-            new SctItm('@L_COMPANYNAME@に修飾した'),
+            new SctItm('@L_COMPANYNAME@に就職した'),
             new SctItm('@L_COMPANYNAME@より派遣された'),
             new SctItm('@L_COMPANYNAME@から退職した'),
             new SctItm('@L_COMPANYNAME@からクビになった')
@@ -1059,11 +1067,16 @@ class selector_comment extends SctItm_Selector {
             new SctItm('@TIMEFRONT@@COMMENT1@'),
             new SctItm('@TIMEFRONT@@COMMENT1@'),
             new SctItm('@TIMEFRONT@@COMMENT1@'),
-            new SctItm('@TIMEFRONT@@COMMENT1@'),
-            new SctItm('@TIMEFRONT@@COMMENT1@――'),
-            new SctItm('@TIMEFRONT@@COMMENT1@――'),
-            new SctItm('――@TIMEFRONT@@COMMENT1@'),
-            new SctItm('――@TIMEFRONT@@COMMENT1@'),
+            new SctItm('@TIMEFRONT@@COMMENT1@')
+            // ,
+            // new SctItm('@TIMEFRONT@@COMMENT1@――')
+            // ,
+            // new SctItm('@TIMEFRONT@@COMMENT1@――')
+            // ,
+            // new SctItm('――@TIMEFRONT@@COMMENT1@')
+            // ,
+            // new SctItm('――@TIMEFRONT@@COMMENT1@')
+            ,
             new SctItm('@TIMEFRONT@@COMMENT1@……'),
             new SctItm('@TIMEFRONT@@COMMENT1@……'),
             new SctItm('……@COMMENT1@'),
@@ -1151,9 +1164,11 @@ class selector_comment2 extends SctItm_Selector {
             new SctItm('@DATE@に私が@DID@@DIDEND@とき、@L_MANYCHAR@が@DID@@DIDEND@@END02D1@'),
             new SctItm('@YESNO@、@L_WHAT@で@DID@みよう'),
             new SctItm('@YESNO@、@L_WHAT@で@DID@みようではないか'),
+            new SctItm('@YESNO@、@L_WHAT@で@DID@みたかったんだ'),
+            new SctItm('@YESNO@、@L_WHAT@で@DID@みた@END02D@'),
             new SctItm('@YESNO@、@L_WHAT@で@DID@はどうだろう'),
             new SctItm('@YESNO@、@L_WHAT@で@DID@はいけない'),
-            new SctItm('@YESNO@、@L_WHAT@で@DID@はダメだ'),
+            new SctItm('@YESNO@、@L_WHAT@で@DID@はダメな@END02D1@'),
             new SctItm('@YESNO@、@L_WHAT@で@DID@もよいのか'),
             new SctItm('@YESNO@、@L_WHAT@で@DID@しまった'),
             new SctItm('@WHY@、@L_MANYCHAR@は@DID@しまったのか'),
@@ -3148,13 +3163,13 @@ class selector_answer extends SctItm_Selector {
             // ,
             // new SctItm('事例')
             ,
-            new SctItm('妄想')
+            new SctItm('|妄想|もうそう|')
             // ,
-            // new SctItm('妄言')
+            // new SctItm('|妄言|もうげん|')
             // ,
             // new SctItm('寝言')
-            // ,
-            // new SctItm('言い訳')
+            ,
+            new SctItm('言い訳')
             // ,
             // new SctItm('世迷い言')
             // ,
@@ -3172,10 +3187,13 @@ class selector_answer extends SctItm_Selector {
             // new SctItm('叫び')
             // ,
             // new SctItm('訴え')
+            // ,
+            // new SctItm('絶叫')
+            // ,
+            // new SctItm('哀願')
+            // ,
+            // new SctItm('熱唱')
             ,
-            new SctItm('絶叫'),
-            new SctItm('哀願'),
-            new SctItm('熱唱'),
             new SctItm('告白')
         ];
     }

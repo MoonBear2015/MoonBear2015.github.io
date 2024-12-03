@@ -9570,7 +9570,7 @@ const   itms_did = [
     ,
     new SctItm('@CLUB@に入部して')
     ,
-    new SctItm('@CLUB@に退部して')
+    new SctItm('@CLUB@から退部して')
     ,
     new SctItm('@CLUB@の朝練に参加して')
     ,
@@ -9977,7 +9977,7 @@ const   itms_did02_l = [
     ,
     new SctItm('@L_CLUB@に入部して')
     ,
-    new SctItm('@L_CLUB@に退部して')
+    new SctItm('@L_CLUB@から退部して')
     ,
     new SctItm('@L_CLUB@の朝練に参加して')
     ,

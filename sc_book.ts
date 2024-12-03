@@ -425,6 +425,10 @@ class selector_bookinfo03 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('映画化不可能と云われた@L_BOOKWRITER@の@B_TYPE@')
             ,
+            new SctItm('@L_BOOKWRITER@が死力を尽くした@B_TYPE@')
+            ,
+            new SctItm('@L_BOOKWRITER@の悲願であった@B_TYPE@')
+            ,
             new SctItm('@PEOPLE@達にもっとも@ASSES@@L_BOOKWRITER@の@B_TYPE@')
         ]
     }
@@ -1022,8 +1026,6 @@ class selector_girlnext extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('「@KEIN2@@L_BOY@は、私がこの@KEIN2@@O_DID@いると、どうして@KEIN2@@O_DID@いるの」')
             ,
             new SctItm('「じゃあ、@KEIN2@@L_BOY@も一緒にこの@KEIN2@@O_DID@くれない？ @KEIN2@@O_DID@ばかりいないで」')
-            ,
-            new SctItm('「でも、先にこの@KEIN2@@O_DID@から、@KEIN2@@O_DID@、それから――ねえ@KEIN2@@L_BOY@、聞いてるの？」')
             ,
             new SctItm('「だから、@KEIN2@@L_BOY@は@KEIN2@のよ。この@KEIN2@@O_DID@、次はその@KEIN2@@O_DID@しまわないと」')
             ,
