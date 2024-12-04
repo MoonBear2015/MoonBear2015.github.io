@@ -4036,7 +4036,7 @@ class selector_whereCompany extends SctItm_Selector {
         super('@WHERECOMPANY@');
         this.itms = [
             new SctItm('@WHERECOMPANY01@'),
-            new SctItm('@WHERECOMPANY01@の@WHERECOMPANY02@'),
+            new SctItm('@WHERECOMPANY01@にある@WHERECOMPANY02@'),
             new SctItm('@WHERECOMPANY01@には無かった筈の@WHERECOMPANY02@'),
             new SctItm('@WHERECOMPANY01@では@DIDFRONT@取り壊された@WHERECOMPANY02@'),
             new SctItm('@WHERECOMPANY01@では@DIDFRONT@封鎖されていた@WHERECOMPANY02@'),

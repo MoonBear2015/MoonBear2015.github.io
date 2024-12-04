@@ -5692,7 +5692,7 @@ class selector_whereCompany extends SctItm_Selector implements ISctItm_Selector 
         this.itms = [
             new SctItm('@WHERECOMPANY01@')
             ,
-            new SctItm('@WHERECOMPANY01@の@WHERECOMPANY02@')
+            new SctItm('@WHERECOMPANY01@にある@WHERECOMPANY02@')
             ,
             new SctItm('@WHERECOMPANY01@には無かった筈の@WHERECOMPANY02@')
             ,
