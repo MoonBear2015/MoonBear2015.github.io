@@ -11261,7 +11261,7 @@ const   itms_where02 = [
     new SctItm('@WHERECOMPANY@')
 ]
 
-const   itms_whereCompany = [
+const   itms_whereCompany01 = [
     new SctItm('@L_COMPANYNAME@の本社ビル')
     ,
     new SctItm('@L_COMPANYNAME@の@L_CITY@支店')
@@ -11271,28 +11271,36 @@ const   itms_whereCompany = [
     new SctItm('@L_COMPANYNAME@の@L_CITY@事務所')
     ,
     new SctItm('@L_COMPANYNAME@の@L_CITY@事業所')
-    ,
-    new SctItm('@L_COMPANYNAME@の待合室')
-    ,
-    new SctItm('@L_COMPANYNAME@の応接室')
-    ,
-    new SctItm('@L_COMPANYNAME@のエレベーターホール')
-    ,
-    new SctItm('@L_COMPANYNAME@の受付')
-    ,
-    new SctItm('@L_COMPANYNAME@の社長室')
-    ,
-    new SctItm('@L_COMPANYNAME@の給湯室')
-    ,
-    new SctItm('@L_COMPANYNAME@の社員食堂')
-    ,
-    new SctItm('@L_COMPANYNAME@の非常階段')
-    ,
-    new SctItm('@L_COMPANYNAME@の裏口')
-    ,
-    new SctItm('@L_COMPANYNAME@の駐車場')
-
 ]
+
+const   itms_whereCompany02 = [
+    new SctItm('待合室')
+    ,
+    new SctItm('応接室')
+    ,
+    new SctItm('エレベーターホール')
+    ,
+    new SctItm('受付')
+    ,
+    new SctItm('社長室')
+    ,
+    new SctItm('給湯室')
+    ,
+    new SctItm('社員食堂')
+    ,
+    new SctItm('非常階段')
+    ,
+    new SctItm('裏口')
+    ,
+    new SctItm('駐車場')
+    ,
+    new SctItm('研究室')
+    ,
+    new SctItm('保健室')
+    ,
+    new SctItm('地下牢')
+]
+
 
 const   itms_present = [
     new SctItm('プレゼント')
@@ -11316,18 +11324,28 @@ const   itms_present = [
     new SctItm('花束')
     ,
     new SctItm('玉手箱')
+    ,
+    new SctItm('@L_FOOD@の詰め合わせ')
+    ,
+    new SctItm('@L_FOOD@の折り詰め')
+    ,
+    new SctItm('@L_FOOD@の弁当')
 ]
 
 const   itms_present01 = [
     new SctItm('@FOOD@')
     ,
     new SctItm('@FLOWER@の花束')
+    ,
+    new SctItm('@FLOWER@の花飾り')
 ]
 
 const   itms_present01_l = [
     new SctItm('@L_FOOD@')
     ,
     new SctItm('@L_FLOWER@の花束')
+    ,
+    new SctItm('@L_FLOWER@の花飾り')
 ]
 
 const   itms_present_paper = [

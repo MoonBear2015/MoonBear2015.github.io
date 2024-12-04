@@ -5657,7 +5657,35 @@ class selector_where02 extends SctItm_Selector implements ISctItm_Selector {
 class selector_whereCompany extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@WHERECOMPANY@');
-        this.Add(itms_whereCompany);
+        this.itms = [
+            new SctItm('@WHERECOMPANY01@')
+            ,
+            new SctItm('@WHERECOMPANY01@にある@WHERECOMPANY02@')
+            ,
+            new SctItm('@WHERECOMPANY01@には無かった筈の@WHERECOMPANY02@')
+            ,
+            new SctItm('@WHERECOMPANY01@ではもう取り壊された@WHERECOMPANY02@')
+            ,
+            new SctItm('@WHERECOMPANY01@では既に封鎖された@WHERECOMPANY02@')
+            ,
+            new SctItm('@WHERECOMPANY01@では閉鎖されてしまった@WHERECOMPANY02@')
+            ,
+            new SctItm('@WHERECOMPANY01@では封印されたという@WHERECOMPANY02@')
+            ,
+            new SctItm('@WHERECOMPANY01@で新設された@WHERECOMPANY02@')
+        ];
+    }
+}
+class selector_whereCompany01 extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@WHERECOMPANY01@');
+        this.Add(itms_whereCompany01);
+    }
+}
+class selector_whereCompany02 extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@WHERECOMPANY02@');
+        this.Add(itms_whereCompany02);
     }
 }
 
@@ -6248,6 +6276,8 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_where01());
         this.dic_push(new selector_where02());
         this.dic_push(new selector_whereCompany());
+        this.dic_push(new selector_whereCompany01());
+        this.dic_push(new selector_whereCompany02());
         
         this.dic_push(new selector_present());
         this.dic_push(new locker_present());
