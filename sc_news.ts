@@ -1964,16 +1964,6 @@ class selector_DIDFRONT extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('')
             ,
-            new SctItm('')
-            ,
-            new SctItm('')
-            ,
-            new SctItm('')
-            ,
-            new SctItm('')
-            ,
-            new SctItm('')
-            ,
             new SctItm('|既|すで|に')
             ,
             new SctItm('もう')
@@ -1983,8 +1973,6 @@ class selector_DIDFRONT extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('早くも')
             ,
             new SctItm('いつの間にか')
-            ,
-            new SctItm('あっけなく')
             ,
             new SctItm('理由も無く')
             ,
@@ -5704,7 +5692,7 @@ class selector_whereCompany extends SctItm_Selector implements ISctItm_Selector 
         this.itms = [
             new SctItm('@WHERECOMPANY01@')
             ,
-            new SctItm('@WHERECOMPANY01@にある@WHERECOMPANY02@')
+            new SctItm('@WHERECOMPANY01@の@WHERECOMPANY02@')
             ,
             new SctItm('@WHERECOMPANY01@には無かった筈の@WHERECOMPANY02@')
             ,
@@ -5716,7 +5704,7 @@ class selector_whereCompany extends SctItm_Selector implements ISctItm_Selector 
             ,
             new SctItm('@WHERECOMPANY01@では@DIDFRONT@封印された@WHERECOMPANY02@')
             ,
-            new SctItm('@WHERECOMPANY01@で@DIDFRONT@新設されていた@WHERECOMPANY02@')
+            new SctItm('@WHERECOMPANY01@に@DIDFRONT@新設されていた@WHERECOMPANY02@')
         ];
     }
 }

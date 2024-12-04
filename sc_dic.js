@@ -6717,11 +6717,11 @@ const itms_where02 = [
     new SctItm('@WHERECOMPANY@')
 ];
 const itms_whereCompany01 = [
-    new SctItm('@L_COMPANYNAME@の本社ビル'),
-    new SctItm('@L_COMPANYNAME@の@L_CITY@支店'),
-    new SctItm('@L_COMPANYNAME@の@L_CITY@営業所'),
-    new SctItm('@L_COMPANYNAME@の@L_CITY@事務所'),
-    new SctItm('@L_COMPANYNAME@の@L_CITY@事業所')
+    new SctItm('@L_COMPANYNAME@本社ビル'),
+    new SctItm('@L_COMPANYNAME@@L_CITY@支店'),
+    new SctItm('@L_COMPANYNAME@@L_CITY@営業所'),
+    new SctItm('@L_COMPANYNAME@@L_CITY@事務所'),
+    new SctItm('@L_COMPANYNAME@@L_CITY@事業所')
 ];
 const itms_whereCompany02 = [
     new SctItm('待合室'),
