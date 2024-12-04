@@ -5230,6 +5230,8 @@ const   itms_festival = [
     ,
     new SctItm('文化祭')
     ,
+    new SctItm('運動会')
+    ,
     new SctItm('@L_ITEM@展覧会')
     ,
     new SctItm('@L_ITEM@展示会')
@@ -10840,6 +10842,10 @@ const   itms_Ranking01 = [
     ,
     new SctItm('レース')
     ,
+    new SctItm('マラソン')
+    ,
+    new SctItm('競争')
+    ,
     new SctItm('トーナメント')
     ,
     new SctItm('人気投票')
@@ -10857,6 +10863,10 @@ const   itms_Ranking = [
     new SctItm('@L_COUNTRY@@RIDE@@RANKING01@')
     ,
     new SctItm('@L_CITY@@L_ITEM@@RANKING01@')
+    ,
+    new SctItm('@L_FOOD@大食い競争')
+    ,
+    new SctItm('@L_FOOD@早食い競争')
 ]
 
 

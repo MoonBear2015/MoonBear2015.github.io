@@ -3454,6 +3454,7 @@ const itms_festival = [
     new SctItm('海水浴'),
     new SctItm('キャンプファイヤー'),
     new SctItm('文化祭'),
+    new SctItm('運動会'),
     new SctItm('@L_ITEM@展覧会'),
     new SctItm('@L_ITEM@展示会'),
     // new SctItm('祝賀会')
@@ -6483,6 +6484,8 @@ const itms_Ranking01 = [
     new SctItm('ベストテン'),
     new SctItm('コンテスト'),
     new SctItm('レース'),
+    new SctItm('マラソン'),
+    new SctItm('競争'),
     new SctItm('トーナメント'),
     new SctItm('人気投票'),
     new SctItm('選手権'),
@@ -6492,7 +6495,9 @@ const itms_Ranking = [
     new SctItm('@L_CITY@@L_CLASS@@RANKING01@'),
     new SctItm('歴代@L_KING@@RANKING01@'),
     new SctItm('@L_COUNTRY@@RIDE@@RANKING01@'),
-    new SctItm('@L_CITY@@L_ITEM@@RANKING01@')
+    new SctItm('@L_CITY@@L_ITEM@@RANKING01@'),
+    new SctItm('@L_FOOD@大食い競争'),
+    new SctItm('@L_FOOD@早食い競争')
 ];
 const itms_party01 = [
     new SctItm('@L_FESTIVAL@'),

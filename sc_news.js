@@ -865,33 +865,34 @@ class selector_who3 extends SctItm_Selector {
             new SctItm('@GROUP@から派遣された'),
             new SctItm('@GROUP@から密命を受けた'),
             new SctItm('@GROUP@から推薦された'),
-            new SctItm('@GROUP@から追放された'),
+            new SctItm('@GROUP@から@DIDFRONT@追放された'),
             new SctItm('@GROUP@から批難された'),
             new SctItm('@GROUP@が誇る'),
             new SctItm('@GROUP@にスカウトされた'),
             new SctItm('@GROUP@に買収された'),
-            new SctItm('@GROUP@に雇われた'),
+            new SctItm('@GROUP@に@DIDFRONT@雇われた'),
             new SctItm('@GROUP@に訴えられた'),
             new SctItm('@GROUP@から追われている'),
-            new SctItm('@GROUP@から追われている'),
+            new SctItm('@GROUP@からいつも追われている'),
             new SctItm('@GROUP@から付け狙われている'),
-            new SctItm('@GROUP@に抹殺された'),
-            new SctItm('@GROUP@を壊滅させた'),
+            new SctItm('@GROUP@から何故か付け狙われている'),
+            new SctItm('@GROUP@に@DIDFRONT@抹殺された'),
+            new SctItm('@GROUP@を@DIDFRONT@壊滅させた'),
             new SctItm('@GROUP@を組織@END02B@'),
-            new SctItm('@GROUP@を設立した@'),
-            new SctItm('@GROUP@に洗脳された'),
-            new SctItm('@GROUP@と契約@END02B@'),
-            new SctItm('@GROUP@に改造された'),
+            new SctItm('@GROUP@を@DIDFRONT@設立した'),
+            new SctItm('@GROUP@に@DIDFRONT@洗脳された'),
+            new SctItm('@GROUP@と@DIDFRONT@契約@END02B@'),
+            new SctItm('@GROUP@に@DIDFRONT@改造された'),
             new SctItm('@GROUP@に丸め込まれた'),
             new SctItm('@GROUP@に|騙|だま|されている'),
             new SctItm('@GROUP@に利用されているだけの'),
-            new SctItm('@GROUP@から@AWARD@を贈呈された'),
+            new SctItm('@GROUP@から@DIDFRONT@@AWARD@を贈呈された'),
             new SctItm('@GROUP@から@AWARD@を授与した'),
             new SctItm('@GROUP@から@AWARD@を剥奪された'),
             new SctItm('@GROUP@に加入した'),
-            new SctItm('@GROUP@を退職した'),
-            new SctItm('@GROUP@をクビになった'),
-            new SctItm('@GROUP@から追放された'),
+            new SctItm('@GROUP@を@DIDFRONT@退職した'),
+            new SctItm('@GROUP@を@DIDFRONT@クビになった'),
+            new SctItm('@GROUP@から@DIDFRONT@追放された'),
             new SctItm('@SCHOOL@出身の'),
             new SctItm('@SCHOOL@に通う'),
             new SctItm('@SCHOOL@在学中の'),
@@ -919,6 +920,7 @@ class selector_who3 extends SctItm_Selector {
             new SctItm('@L_COMPANYNAME@に採用された'),
             new SctItm('@L_COMPANYNAME@に就職した'),
             new SctItm('@L_COMPANYNAME@より派遣された'),
+            new SctItm('@L_COMPANYNAME@に転職された'),
             new SctItm('@L_COMPANYNAME@から退職した'),
             new SctItm('@L_COMPANYNAME@からクビになった')
         ];
@@ -1269,6 +1271,30 @@ class selector_TimeFront2 extends SctItm_Selector {
             new SctItm('明日になれば、'),
             new SctItm('@ANIMAL@の鳴く頃に、'),
             new SctItm('@ANIMAL@が舞う時期に、')
+        ];
+    }
+}
+class selector_DIDFRONT extends SctItm_Selector {
+    constructor() {
+        super('@DIDFRONT@');
+        this.itms = [
+            new SctItm(''),
+            new SctItm(''),
+            new SctItm(''),
+            new SctItm(''),
+            new SctItm(''),
+            new SctItm(''),
+            new SctItm(''),
+            new SctItm(''),
+            new SctItm('|既|すで|に'),
+            new SctItm('もう'),
+            new SctItm('もはや'),
+            new SctItm('早くも'),
+            new SctItm('いつの間にか'),
+            new SctItm('あっけなく'),
+            new SctItm('理由も無く'),
+            new SctItm('意味も無く'),
+            new SctItm('訳も判らず')
         ];
     }
 }
@@ -4018,11 +4044,11 @@ class selector_whereCompany extends SctItm_Selector {
             new SctItm('@WHERECOMPANY01@'),
             new SctItm('@WHERECOMPANY01@にある@WHERECOMPANY02@'),
             new SctItm('@WHERECOMPANY01@には無かった筈の@WHERECOMPANY02@'),
-            new SctItm('@WHERECOMPANY01@ではもう取り壊された@WHERECOMPANY02@'),
-            new SctItm('@WHERECOMPANY01@では既に封鎖された@WHERECOMPANY02@'),
-            new SctItm('@WHERECOMPANY01@では閉鎖されてしまった@WHERECOMPANY02@'),
-            new SctItm('@WHERECOMPANY01@では封印されたという@WHERECOMPANY02@'),
-            new SctItm('@WHERECOMPANY01@で新設された@WHERECOMPANY02@')
+            new SctItm('@WHERECOMPANY01@では@DIDFRONT@取り壊された@WHERECOMPANY02@'),
+            new SctItm('@WHERECOMPANY01@では@DIDFRONT@封鎖されていた@WHERECOMPANY02@'),
+            new SctItm('@WHERECOMPANY01@では@DIDFRONT@閉鎖されてしまった@WHERECOMPANY02@'),
+            new SctItm('@WHERECOMPANY01@では@DIDFRONT@封印された@WHERECOMPANY02@'),
+            new SctItm('@WHERECOMPANY01@で@DIDFRONT@新設されていた@WHERECOMPANY02@')
         ];
     }
 }
@@ -4287,6 +4313,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_YESNO());
         this.dic_push(new selector_TimeFront());
         this.dic_push(new selector_TimeFront2());
+        this.dic_push(new selector_DIDFRONT());
         this.dic_push(new selector_date());
         this.dic_push(new selector_date02());
         this.dic_push(new selector_dateBefore());
