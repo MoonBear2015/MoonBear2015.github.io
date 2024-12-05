@@ -11290,6 +11290,14 @@ const   itms_whereCompany02 = [
     ,
     new SctItm('エレベーターホール')
     ,
+    new SctItm('ダンスホール')
+    ,
+    new SctItm('喫煙所')
+    ,
+    new SctItm('シャワールーム')
+    ,
+    new SctItm('トイレ')
+    ,
     new SctItm('受付')
     ,
     new SctItm('社長室')
@@ -11308,7 +11316,15 @@ const   itms_whereCompany02 = [
     ,
     new SctItm('保健室')
     ,
+    new SctItm('託児所')
+    ,
+    new SctItm('地下室')
+    ,
     new SctItm('地下牢')
+    ,
+    new SctItm('屋根裏部屋')
+    ,
+    new SctItm('屋上')
 ]
 
 

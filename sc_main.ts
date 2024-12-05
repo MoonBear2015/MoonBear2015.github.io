@@ -38,7 +38,7 @@ function make_site_header(): string {
     html += '「空虚」';
     html += '</h1>';
     html += '<small>';
-    html += 'M04.29';
+    html += 'M04.30';
     html += '</small>';
     // html += '<small>';
     // html += 'パソコンのブラウザでご覧下さい';

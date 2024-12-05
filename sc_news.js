@@ -917,12 +917,12 @@ class selector_who3 extends SctItm_Selector {
             new SctItm('@CERTIFICATE@に@KEID@@ASSES03@'),
             new SctItm('@GROUP@から@CERTIFICATE@に@KEID@@ASSES03@'),
             new SctItm('多くの@MANYPEOPLE@から@CERTIFICATE@に@KEID@@ASSES03@'),
-            new SctItm('@L_COMPANYNAME@に採用された'),
-            new SctItm('@L_COMPANYNAME@に就職した'),
+            new SctItm('@L_COMPANYNAME@に@DIDFRONT@採用された'),
+            new SctItm('@L_COMPANYNAME@に@DIDFRONT@就職した'),
             new SctItm('@L_COMPANYNAME@より派遣された'),
-            new SctItm('@L_COMPANYNAME@に転職された'),
-            new SctItm('@L_COMPANYNAME@から退職した'),
-            new SctItm('@L_COMPANYNAME@からクビになった')
+            new SctItm('@L_COMPANYNAME@に@DIDFRONT@転職した'),
+            new SctItm('@L_COMPANYNAME@から@DIDFRONT@退職した'),
+            new SctItm('@L_COMPANYNAME@から@DIDFRONT@クビになった')
         ];
     }
 }
@@ -1281,14 +1281,18 @@ class selector_DIDFRONT extends SctItm_Selector {
             new SctItm(''),
             new SctItm(''),
             new SctItm(''),
-            new SctItm('|既|すで|に'),
-            new SctItm('もう'),
-            new SctItm('もはや'),
+            new SctItm('|既|すで|に')
+            // ,
+            // new SctItm('もう')
+            // ,
+            // new SctItm('もはや')
+            ,
             new SctItm('早くも'),
             new SctItm('いつの間にか'),
             new SctItm('理由も無く'),
             new SctItm('意味も無く'),
-            new SctItm('訳も判らず')
+            new SctItm('訳も判らず'),
+            new SctItm('@ORDER@')
         ];
     }
 }
@@ -2374,7 +2378,12 @@ class selector_order extends SctItm_Selector {
             new SctItm('@GROUP@の推薦で'),
             new SctItm('@GROUP@の意志に逆らって'),
             new SctItm('@GROUP@の期待を裏切って'),
-            new SctItm('@GROUP@の目を盗んで')
+            new SctItm('@GROUP@の目を盗んで'),
+            new SctItm('@CHAR@から密命によって'),
+            new SctItm('@CHAR@の命により'),
+            new SctItm('@CHAR@の指令で'),
+            new SctItm('@CHAR@の鶴の一声によって'),
+            new SctItm('@CHAR@の遺言に基づき')
         ];
     }
 }
@@ -4038,11 +4047,11 @@ class selector_whereCompany extends SctItm_Selector {
             new SctItm('@WHERECOMPANY01@'),
             new SctItm('@WHERECOMPANY01@にある@WHERECOMPANY02@'),
             new SctItm('@WHERECOMPANY01@には無かった筈の@WHERECOMPANY02@'),
-            new SctItm('@WHERECOMPANY01@では@DIDFRONT@取り壊された@WHERECOMPANY02@'),
-            new SctItm('@WHERECOMPANY01@では@DIDFRONT@封鎖されていた@WHERECOMPANY02@'),
-            new SctItm('@WHERECOMPANY01@では@DIDFRONT@閉鎖されてしまった@WHERECOMPANY02@'),
-            new SctItm('@WHERECOMPANY01@では@DIDFRONT@封印された@WHERECOMPANY02@'),
-            new SctItm('@WHERECOMPANY01@に@DIDFRONT@新設されていた@WHERECOMPANY02@')
+            new SctItm('@WHERECOMPANY01@にある@DIDFRONT@取り壊された@WHERECOMPANY02@'),
+            new SctItm('@WHERECOMPANY01@にある@DIDFRONT@封鎖されていた@WHERECOMPANY02@'),
+            new SctItm('@WHERECOMPANY01@にある@DIDFRONT@閉鎖されてしまった@WHERECOMPANY02@'),
+            new SctItm('@WHERECOMPANY01@にある@DIDFRONT@封印された@WHERECOMPANY02@'),
+            new SctItm('@WHERECOMPANY01@に@DIDFRONT@新設された@WHERECOMPANY02@')
         ];
     }
 }
