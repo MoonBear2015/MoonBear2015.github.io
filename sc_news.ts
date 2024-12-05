@@ -1958,6 +1958,14 @@ class selector_DIDFRONT extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@DIDFRONT@');
         this.itms = [
+            new SctItm('')
+            ,
+            new SctItm('')
+            ,
+            new SctItm('')
+            ,
+            new SctItm('')
+            ,
             new SctItm('|既|すで|に')
             ,
             // new SctItm('もう')
@@ -5688,10 +5696,10 @@ class selector_where01 extends SctItm_Selector implements ISctItm_Selector {
         this.Add(itms_where01);
     }
 }
-class selector_where02 extends SctItm_Selector implements ISctItm_Selector {
+class selector_whereKind extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
-        super('@WHERE02@');
-        this.Add(itms_where02);
+        super('@WHEREKIND@');
+        this.Add(itms_whereKind);
     }
 }
 class selector_whereCompany extends SctItm_Selector implements ISctItm_Selector {
@@ -5700,19 +5708,19 @@ class selector_whereCompany extends SctItm_Selector implements ISctItm_Selector 
         this.itms = [
             new SctItm('@WHERECOMPANY01@')
             ,
-            new SctItm('@WHERECOMPANY01@にある@WHERECOMPANY02@')
+            new SctItm('@WHERECOMPANY01@にある@WHEREKIND@@WHERECOMPANY02@')
             ,
-            new SctItm('@WHERECOMPANY01@には無かった筈の@WHERECOMPANY02@')
+            new SctItm('@WHERECOMPANY01@には無かった筈の@WHEREKIND@@WHERECOMPANY02@')
             ,
-            new SctItm('@WHERECOMPANY01@にある、@DIDFRONT@取り壊された@WHERECOMPANY02@')
+            new SctItm('@WHERECOMPANY01@にある@DIDFRONT@取り壊された@WHEREKIND@@WHERECOMPANY02@')
             ,
-            new SctItm('@WHERECOMPANY01@にある、@DIDFRONT@封鎖されていた@WHERECOMPANY02@')
+            new SctItm('@WHERECOMPANY01@にある@DIDFRONT@封鎖されていた@WHEREKIND@@WHERECOMPANY02@')
             ,
-            new SctItm('@WHERECOMPANY01@にある、@DIDFRONT@閉鎖されてしまった@WHERECOMPANY02@')
+            new SctItm('@WHERECOMPANY01@にある@DIDFRONT@閉鎖されてしまった@WHEREKIND@@WHERECOMPANY02@')
             ,
-            new SctItm('@WHERECOMPANY01@にある、@DIDFRONT@封印された@WHERECOMPANY02@')
+            new SctItm('@WHERECOMPANY01@にある@DIDFRONT@封印された@WHEREKIND@@WHERECOMPANY02@')
             ,
-            new SctItm('@WHERECOMPANY01@に、@DIDFRONT@新設された@WHERECOMPANY02@')
+            new SctItm('@WHERECOMPANY01@に@DIDFRONT@新設された@WHEREKIND@@WHERECOMPANY02@')
         ];
     }
 }
@@ -6315,7 +6323,7 @@ class news_docs_maker extends docs_maker {
 
         this.dic_push(new selector_where());
         this.dic_push(new selector_where01());
-        this.dic_push(new selector_where02());
+        this.dic_push(new selector_whereKind());
         this.dic_push(new selector_whereCompany());
         this.dic_push(new selector_whereCompany01());
         this.dic_push(new selector_whereCompany02());

@@ -11211,64 +11211,19 @@ const   itms_where = [
     new SctItm('@WHERE01@で中止となった@FESTIVAL@の会場')
     ,
     new SctItm('@WHERE01@で開催される筈だった@FESTIVAL@の会場')
+    ,
+    new SctItm('@WHERECOMPANY@')
 ]
 
 
 const   itms_where01 = [
-    new SctItm('@WHERE02@')
+    new SctItm('@WHEREKIND@@PLACE@')
     ,
-    new SctItm('晴れ渡る@WHERE02@')
+    new SctItm('@WHEREKIND@@LANDMARK@')
     ,
-    new SctItm('陽のあたる@WHERE02@')
+    new SctItm('@WHEREKIND@@SCHOOL02@')
     ,
-    new SctItm('薄暗い@WHERE02@')
-    ,
-    new SctItm('暗闇の@WHERE02@')
-    ,
-    new SctItm('嵐の中の@WHERE02@')
-    ,
-    new SctItm('荒れ果てた@WHERE02@')
-    ,
-    new SctItm('殺風景な@WHERE02@')
-    ,
-    new SctItm('廃れてしまった@WHERE02@')
-    ,
-    new SctItm('華やかな@WHERE02@')
-    ,
-    new SctItm('色鮮やかな@WHERE02@')
-    ,
-    new SctItm('飾り気のない@WHERE02@')
-    ,
-    new SctItm('誰も居ない@WHERE02@')
-    ,
-    new SctItm('誰も知らない@WHERE01@')
-    ,
-    new SctItm('人けの無い@WHERE02@')
-    ,
-    new SctItm('薄気味悪い@WHERE02@')
-    ,
-    new SctItm('呪われた@WHERE02@')
-    ,
-    new SctItm('散らかった@WHERE02@')
-    ,
-    new SctItm('水浸しの@WHERE02@')
-    ,
-    new SctItm('火の海と化した@WHERE02@')
-    ,
-    new SctItm('苔むした@WHERE02@')
-    ,
-    new SctItm('@KEI@@WHERE02@')
-    ,
-    new SctItm('@MANYCHAR@が@MOVE2@@WHERE02@')
-]
-const   itms_where02 = [
-    new SctItm('@PLACE@')
-    ,
-    new SctItm('@LANDMARK@')
-    ,
-    new SctItm('@SCHOOL02@')
-    ,
-    new SctItm('@WHERECOMPANY@')
+    new SctItm('@WHEREKIND@@WHERECOMPANY02@')
 ]
 
 const   itms_whereCompany01 = [
@@ -11325,6 +11280,52 @@ const   itms_whereCompany02 = [
     new SctItm('屋根裏部屋')
     ,
     new SctItm('屋上')
+]
+
+const   itms_whereKind = [
+    new SctItm('')
+    ,
+    new SctItm('晴れ渡る')
+    ,
+    new SctItm('陽のあたる')
+    ,
+    new SctItm('薄暗い')
+    ,
+    new SctItm('暗闇の')
+    ,
+    new SctItm('嵐の中の')
+    ,
+    new SctItm('荒れ果てた')
+    ,
+    new SctItm('殺風景な')
+    ,
+    new SctItm('廃れてしまった')
+    ,
+    new SctItm('華やかな')
+    ,
+    new SctItm('色鮮やかな')
+    ,
+    new SctItm('飾り気のない')
+    ,
+    new SctItm('誰も居ない')
+    ,
+    new SctItm('人けの無い')
+    ,
+    new SctItm('薄気味悪い')
+    ,
+    new SctItm('呪われた')
+    ,
+    new SctItm('散らかった')
+    ,
+    new SctItm('水浸しの')
+    ,
+    new SctItm('火の海と化した')
+    ,
+    new SctItm('苔むした')
+    ,
+    new SctItm('@KEI@')
+    ,
+    new SctItm('@MANYCHAR@が@MOVE2@')
 ]
 
 
