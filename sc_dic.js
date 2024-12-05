@@ -6828,6 +6828,7 @@ const itms_reader = [
     new SctItm('絵本'),
     new SctItm('聖書'),
     new SctItm('@SCHOOL02@の教科書'),
+    new SctItm('@SCIENCE@の教科書'),
     new SctItm('辞書'),
     new SctItm('国語辞典'),
     new SctItm('百科事典'),

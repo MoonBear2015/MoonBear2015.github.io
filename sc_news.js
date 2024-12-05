@@ -1278,17 +1278,14 @@ class selector_DIDFRONT extends SctItm_Selector {
     constructor() {
         super('@DIDFRONT@');
         this.itms = [
-            new SctItm(''),
-            new SctItm(''),
-            new SctItm(''),
-            new SctItm('|既|すで|に')
-            // ,
+            new SctItm('|既|すで|に'),
             // new SctItm('もう')
             // ,
             // new SctItm('もはや')
-            ,
+            // ,
             new SctItm('早くも'),
             new SctItm('いつの間にか'),
+            new SctItm('あっという間に'),
             new SctItm('理由も無く'),
             new SctItm('意味も無く'),
             new SctItm('訳も判らず'),
@@ -4047,11 +4044,11 @@ class selector_whereCompany extends SctItm_Selector {
             new SctItm('@WHERECOMPANY01@'),
             new SctItm('@WHERECOMPANY01@にある@WHERECOMPANY02@'),
             new SctItm('@WHERECOMPANY01@には無かった筈の@WHERECOMPANY02@'),
-            new SctItm('@WHERECOMPANY01@にある@DIDFRONT@取り壊された@WHERECOMPANY02@'),
-            new SctItm('@WHERECOMPANY01@にある@DIDFRONT@封鎖されていた@WHERECOMPANY02@'),
-            new SctItm('@WHERECOMPANY01@にある@DIDFRONT@閉鎖されてしまった@WHERECOMPANY02@'),
-            new SctItm('@WHERECOMPANY01@にある@DIDFRONT@封印された@WHERECOMPANY02@'),
-            new SctItm('@WHERECOMPANY01@に@DIDFRONT@新設された@WHERECOMPANY02@')
+            new SctItm('@WHERECOMPANY01@にある、@DIDFRONT@取り壊された@WHERECOMPANY02@'),
+            new SctItm('@WHERECOMPANY01@にある、@DIDFRONT@封鎖されていた@WHERECOMPANY02@'),
+            new SctItm('@WHERECOMPANY01@にある、@DIDFRONT@閉鎖されてしまった@WHERECOMPANY02@'),
+            new SctItm('@WHERECOMPANY01@にある、@DIDFRONT@封印された@WHERECOMPANY02@'),
+            new SctItm('@WHERECOMPANY01@に、@DIDFRONT@新設された@WHERECOMPANY02@')
         ];
     }
 }
