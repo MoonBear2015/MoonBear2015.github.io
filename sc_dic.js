@@ -6926,6 +6926,8 @@ const itms_Message01 = [
     new SctItm('@L_CLASS@になりました'),
     new SctItm('@L_CLASS@を止めました'),
     new SctItm('@L_RIDE@を買いました'),
+    new SctItm('@GROUP@から@L_RIDE@を買いました'),
+    new SctItm('@NUM100MIL@@MONEY@で@L_RIDE@を買いました'),
     new SctItm('@L_COMPANYNAME@に就職しました'),
     new SctItm('@L_COMPANYNAME@に入社しました'),
     new SctItm('@L_COMPANYNAME@に採用されました'),

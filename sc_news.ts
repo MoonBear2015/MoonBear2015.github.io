@@ -3842,6 +3842,8 @@ class selector_dress extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@STORE@で買った@DRESS01@')
             ,
+            new SctItm('@NUM10TO99@万@MONEY@で買った@DRESS01@')
+            ,
             new SctItm('@STORE@で見かけた@DRESS01@')
             ,
             new SctItm('@PART@が買ってくれた@DRESS01@')

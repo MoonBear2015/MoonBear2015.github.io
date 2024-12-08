@@ -2709,6 +2709,7 @@ class selector_dress extends SctItm_Selector {
             new SctItm('@SCHOOL@の制服'),
             new SctItm('@SCHOOL@の制服に認定された@DRESS01@'),
             new SctItm('@STORE@で買った@DRESS01@'),
+            new SctItm('@NUM10TO99@万@MONEY@で買った@DRESS01@'),
             new SctItm('@STORE@で見かけた@DRESS01@'),
             new SctItm('@PART@が買ってくれた@DRESS01@'),
             new SctItm('@PART@が送ってくれた@DRESS01@'),
