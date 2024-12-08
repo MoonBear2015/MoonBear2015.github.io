@@ -7066,7 +7066,7 @@ const itms_companyclass = [
 const itms_pay = [
     new SctItm('時給 @NUM10TO99@0@MONEY@'),
     new SctItm('月給 @NUM10TO99@万@MONEY@'),
-    new SctItm('年収 @NUM100TO10000CUT@万@MONEY@')
+    new SctItm('年収 @NUM100MIL@@MONEY@')
 ];
 const itms_money = [
     new SctItm('円'),

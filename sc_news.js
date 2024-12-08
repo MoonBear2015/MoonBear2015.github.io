@@ -314,6 +314,40 @@ class selector_random_NUM100to10000CUT extends ItmArray {
         return replace_docs_A(temp_doc, this);
     }
 }
+class selector_random_NUM100MIL extends ItmArray {
+    constructor() {
+        super();
+        this.itm_key = "@NUM100MIL@";
+        this.itm_key2 = "";
+        this.pic_key = "";
+    }
+    get rnd_Itm() {
+        let num = rnd_minmax(100, 100000);
+        let numA = rnd_minmax(0, 10);
+        let numB = rnd_minmax(0, 9);
+        let result = "";
+        if (numA == 0) {
+            if (numB == 0) {
+                numB = rnd_minmax(1, 9);
+            }
+        }
+        else {
+            result += numA.toString().trim() + "億";
+        }
+        if (numB > 0) {
+            result += numB.toString().trim() + "000万";
+        }
+        return new SctItm(result, "");
+    }
+    Copy() {
+        let result = new selector_random_NUM10000();
+        result.Paste(this.itms);
+        return result;
+    }
+    Gene_Docs(temp_doc) {
+        return replace_docs_A(temp_doc, this);
+    }
+}
 class selector_human extends ItmArray {
     constructor() {
         super();
@@ -903,7 +937,7 @@ class selector_who2 extends SctItm_Selector {
             new SctItm('@GET01@'),
             new SctItm('@L_COMPANYNAME@(@L_COMPANYCLASS@)'),
             new SctItm('@PAY@'),
-            new SctItm('懸賞金 @NUM100TO10000CUT@万@MONEY@')
+            new SctItm('懸賞金 @NUM100MIL@@MONEY@')
         ];
     }
 }
@@ -987,8 +1021,8 @@ class selector_who3 extends SctItm_Selector {
             new SctItm('@L_COMPANYNAME@から@DIDFRONT@退職した'),
             new SctItm('@L_COMPANYNAME@から@DIDFRONT@クビになった'),
             new SctItm('@L_COMPANYNAME@から@DIDFRONT@クビになった'),
-            new SctItm('年収@NUM100TO10000CUT@万@MONEY@の'),
-            new SctItm('@NUM100TO10000CUT@万@MONEY@で買収された')
+            new SctItm('年収@NUM100MIL@@MONEY@の'),
+            new SctItm('@NUM100MIL@@MONEY@で買収された')
         ];
     }
 }
@@ -1008,7 +1042,7 @@ class selector_who4 extends SctItm_Selector {
             new SctItm('@GET01@'),
             new SctItm('@L_COMPANYNAME@(@L_COMPANYCLASS@)'),
             new SctItm('@PAY@'),
-            new SctItm('懸賞金 @NUM100TO10000CUT@万@MONEY@')
+            new SctItm('懸賞金 @NUM100MIL@@MONEY@')
         ];
     }
 }
@@ -4418,6 +4452,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_random_NUMPAY());
         this.dic_push(new selector_random_NUM10000());
         this.dic_push(new selector_random_NUM100to10000CUT());
+        this.dic_push(new selector_random_NUM100MIL());
         this.dic_push(new locker_what());
         this.dic_push(new locker_do());
         this.dic_push(new selector_what());
