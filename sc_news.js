@@ -2793,7 +2793,7 @@ class selector_food extends SctItm_Selector {
             new SctItm('レトルトの@FOOD01@'),
             new SctItm('冷凍食品の@FOOD01@'),
             new SctItm('出来たての@FOOD01@'),
-            new SctItm('wwwww@NUM10TO99@0@MONEY@の@FOOD01@')
+            new SctItm('@NUM10TO99@0@MONEY@の@FOOD01@')
         ];
     }
 }

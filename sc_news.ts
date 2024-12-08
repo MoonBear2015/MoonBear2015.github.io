@@ -3958,7 +3958,7 @@ class selector_food extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('出来たての@FOOD01@')
             ,
-            new SctItm('wwwww@NUM10TO99@0@MONEY@の@FOOD01@')
+            new SctItm('@NUM10TO99@0@MONEY@の@FOOD01@')
         ];
     }
 }
