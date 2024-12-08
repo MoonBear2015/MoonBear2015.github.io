@@ -9626,13 +9626,19 @@ const   itms_did = [
     ,
     new SctItm('@STORE@で強盗を捕まえて')
     ,
-    new SctItm('@PRICE@の@NUM980@@MONEY@を支払って')
+    new SctItm('@GROUP@に@PRICE@の@NUMPAY@@MONEY@を支払って')
     ,
-    new SctItm('@PRICE@の@NUM980@@MONEY@を受け取って')
+    new SctItm('@GROUP@から@PRICE@の@NUMPAY@@MONEY@を受け取って')
     ,
-    new SctItm('@PRICE@の@NUM980@@MONEY@を工面して')
+    new SctItm('@PRICE@の@NUMPAY@@MONEY@を工面して')
     ,
-    new SctItm('@PRICE@の@NUM980@@MONEY@を返して')
+    new SctItm('@GROUP@に@PRICE@の@NUMPAY@@MONEY@を返して')
+    ,
+    new SctItm('@PRICE@の@NUMPAY@@MONEY@を踏み倒して')
+    ,
+    new SctItm('@GROUP@を@NUMPAY@@MONEY@で買収して')
+    ,
+    new SctItm('@GROUP@から@NUMPAY@@MONEY@で買収されて')
 
 ]
 

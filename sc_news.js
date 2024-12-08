@@ -234,10 +234,10 @@ class selector_random_NUM10TO99 extends ItmArray {
         return replace_docs_A(temp_doc, this);
     }
 }
-class selector_random_NUM980 extends ItmArray {
+class selector_random_NUMPAY extends ItmArray {
     constructor() {
         super();
-        this.itm_key = "@NUM980@";
+        this.itm_key = "@NUMPAY@";
         this.itm_key2 = "";
         this.pic_key = "";
     }
@@ -248,9 +248,15 @@ class selector_random_NUM980 extends ItmArray {
             numA = '';
         }
         else {
-            numA = numA + ",";
+            numA = numA + "万";
         }
-        return new SctItm(numA + numB + '80', "");
+        if (numB == '0') {
+            numB = '';
+        }
+        else {
+            numB = numB + "千";
+        }
+        return new SctItm(numA + numB, "");
     }
     Copy() {
         let result = new selector_random_NUM10();
@@ -979,7 +985,10 @@ class selector_who3 extends SctItm_Selector {
             new SctItm('@L_COMPANYNAME@より派遣された'),
             new SctItm('@L_COMPANYNAME@に@DIDFRONT@転職した'),
             new SctItm('@L_COMPANYNAME@から@DIDFRONT@退職した'),
-            new SctItm('@L_COMPANYNAME@から@DIDFRONT@クビになった')
+            new SctItm('@L_COMPANYNAME@から@DIDFRONT@クビになった'),
+            new SctItm('@L_COMPANYNAME@から@DIDFRONT@クビになった'),
+            new SctItm('年収@NUM100TO10000CUT@万@MONEY@の'),
+            new SctItm('@NUM100TO10000CUT@万@MONEY@で買収された')
         ];
     }
 }
@@ -4406,7 +4415,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_random_NUM2TO100());
         this.dic_push(new selector_random_NUM2TO9());
         this.dic_push(new selector_random_NUM10TO99());
-        this.dic_push(new selector_random_NUM980());
+        this.dic_push(new selector_random_NUMPAY());
         this.dic_push(new selector_random_NUM10000());
         this.dic_push(new selector_random_NUM100to10000CUT());
         this.dic_push(new locker_what());
