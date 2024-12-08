@@ -47,6 +47,7 @@ function make_about() {
         shtml += '受賞歴:@GET01@<br>';
         shtml += '勤務先:@L_COMPANYNAME@(@L_COMPANYCLASS@)<br>';
         shtml += '仕事:@L_CLASS@<br>';
+        shtml += '収入:@PAY@<br>';
         shtml += '趣味:@L_HABIT@<br>';
         shtml += '好物:@L_FOOD@<br>';
         shtml += '座右の銘:@L_INSCRIPTION@<br>';

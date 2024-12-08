@@ -9625,6 +9625,14 @@ const   itms_did = [
     new SctItm('@STORE@で万引きをして')
     ,
     new SctItm('@STORE@で強盗を捕まえて')
+    ,
+    new SctItm('@PRICE@の@NUM980@@MONEY@を支払って')
+    ,
+    new SctItm('@PRICE@の@NUM980@@MONEY@を受け取って')
+    ,
+    new SctItm('@PRICE@の@NUM980@@MONEY@を工面して')
+    ,
+    new SctItm('@PRICE@の@NUM980@@MONEY@を返して')
 
 ]
 
@@ -11902,3 +11910,58 @@ const   itms_companyclass = [
     new SctItm('平社員')
 ]
 
+const   itms_pay = [
+    new SctItm('時給 @NUM10TO99@0@MONEY@')
+    ,
+    new SctItm('月給 @NUM10TO99@万@MONEY@')
+    ,
+    new SctItm('年収 @NUM100TO10000CUT@万@MONEY@')
+]
+
+const   itms_money = [
+    new SctItm('円')
+    ,
+    new SctItm('ドル')
+    ,
+    new SctItm('ポンド')
+    ,
+    new SctItm('ユーロ')
+    ,
+    new SctItm('フラン')
+    ,
+    new SctItm('ペソ')
+    ,
+    new SctItm('ルーブル')
+    ,
+    new SctItm('ウォン')
+    ,
+    new SctItm('元')
+    ,
+    new SctItm('ルピー')
+]
+
+const   itms_price = [
+    new SctItm('代金')
+    ,
+    new SctItm('料金')
+    ,
+    new SctItm('交通費')
+    ,
+    new SctItm('食費')
+    ,
+    new SctItm('光熱費')
+    ,
+    new SctItm('給料')
+    ,
+    new SctItm('月謝')
+    ,
+    new SctItm('給食費')
+    ,
+    new SctItm('税金')
+    ,
+    new SctItm('借金')
+    ,
+    new SctItm('身代金')
+    ,
+    new SctItm('慰謝料')
+]

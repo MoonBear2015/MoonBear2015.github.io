@@ -234,6 +234,33 @@ class selector_random_NUM10TO99 extends ItmArray {
         return replace_docs_A(temp_doc, this);
     }
 }
+class selector_random_NUM980 extends ItmArray {
+    constructor() {
+        super();
+        this.itm_key = "@NUM980@";
+        this.itm_key2 = "";
+        this.pic_key = "";
+    }
+    get rnd_Itm() {
+        let numA = rnd_minmax(0, 100).toString();
+        let numB = rnd_minmax(0, 9).toString();
+        if (numA == '0') {
+            numA = '';
+        }
+        else {
+            numA = numA + ",";
+        }
+        return new SctItm(numA + numB + '80', "");
+    }
+    Copy() {
+        let result = new selector_random_NUM10();
+        result.Paste(this.itms);
+        return result;
+    }
+    Gene_Docs(temp_doc) {
+        return replace_docs_A(temp_doc, this);
+    }
+}
 class selector_random_NUM10000 extends ItmArray {
     constructor() {
         super();
@@ -243,6 +270,34 @@ class selector_random_NUM10000 extends ItmArray {
     }
     get rnd_Itm() {
         return new SctItm(rnd_max(10000).toString(), "");
+    }
+    Copy() {
+        let result = new selector_random_NUM10000();
+        result.Paste(this.itms);
+        return result;
+    }
+    Gene_Docs(temp_doc) {
+        return replace_docs_A(temp_doc, this);
+    }
+}
+class selector_random_NUM100to10000CUT extends ItmArray {
+    constructor() {
+        super();
+        this.itm_key = "@NUM100TO10000CUT@";
+        this.itm_key2 = "";
+        this.pic_key = "";
+    }
+    get rnd_Itm() {
+        let num = rnd_minmax(100, 100000);
+        let strNum = num.toString().trim();
+        let result = "";
+        if (num >= 1000) {
+            result = strNum.substring(0, strNum.length - 3) + ",000";
+        }
+        else {
+            result = strNum;
+        }
+        return new SctItm(result, "");
     }
     Copy() {
         let result = new selector_random_NUM10000();
@@ -840,7 +895,9 @@ class selector_who2 extends SctItm_Selector {
             new SctItm('『@CALL@』と@KEID@@ASSES@@L_CHAR@'),
             new SctItm('@MANYPEOPLE@より『@CALL@』と@KEID@@ASSES@@L_CHAR@'),
             new SctItm('@GET01@'),
-            new SctItm('@L_COMPANYNAME@(@L_COMPANYCLASS@)')
+            new SctItm('@L_COMPANYNAME@(@L_COMPANYCLASS@)'),
+            new SctItm('@PAY@'),
+            new SctItm('懸賞金 @NUM100TO10000CUT@万@MONEY@')
         ];
     }
 }
@@ -940,7 +997,9 @@ class selector_who4 extends SctItm_Selector {
             new SctItm('座右の銘『@INSCRIPTION@』'),
             new SctItm('@SONGTYPE@『@SONGTITLE@』'),
             new SctItm('@GET01@'),
-            new SctItm('@L_COMPANYNAME@(@L_COMPANYCLASS@)')
+            new SctItm('@L_COMPANYNAME@(@L_COMPANYCLASS@)'),
+            new SctItm('@PAY@'),
+            new SctItm('懸賞金 @NUM100TO10000CUT@万@MONEY@')
         ];
     }
 }
@@ -4276,6 +4335,24 @@ class locker_companyclass extends SctItm_SelectLocker {
         this.Add(itms_companyclass);
     }
 }
+class selector_pay extends SctItm_Selector {
+    constructor() {
+        super('@PAY@');
+        this.Add(itms_pay);
+    }
+}
+class selector_money extends SctItm_Selector {
+    constructor() {
+        super('@MONEY@');
+        this.Add(itms_money);
+    }
+}
+class selector_price extends SctItm_Selector {
+    constructor() {
+        super('@PRICE@');
+        this.Add(itms_price);
+    }
+}
 class news_doc {
     constructor(doc) {
         this.doc = doc;
@@ -4329,7 +4406,9 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_random_NUM2TO100());
         this.dic_push(new selector_random_NUM2TO9());
         this.dic_push(new selector_random_NUM10TO99());
+        this.dic_push(new selector_random_NUM980());
         this.dic_push(new selector_random_NUM10000());
+        this.dic_push(new selector_random_NUM100to10000CUT());
         this.dic_push(new locker_what());
         this.dic_push(new locker_do());
         this.dic_push(new selector_what());
@@ -4618,5 +4697,8 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new locker_companyname04());
         this.dic_push(new selector_companyclass());
         this.dic_push(new locker_companyclass());
+        this.dic_push(new selector_pay());
+        this.dic_push(new selector_money());
+        this.dic_push(new selector_price());
     }
 }

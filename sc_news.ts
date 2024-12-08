@@ -338,6 +338,46 @@ class selector_random_NUM10TO99
  
 }
 
+class selector_random_NUM980
+    extends ItmArray<SctItm>
+    implements ISctItm_Selector
+{
+    public itm_key : string;
+    public itm_key2 : string;
+    public pic_key : string;
+    constructor()
+    {
+        super();
+        this.itm_key = "@NUM980@";
+        this.itm_key2 = "";
+        this.pic_key = "";
+    }
+    get rnd_Itm() : SctItm {
+        let numA = rnd_minmax(0,100).toString();
+        let numB = rnd_minmax(0,9).toString();
+        if (numA == '0') {
+            numA = '';
+        }
+        else
+        {
+            numA = numA + ",";
+        }
+        return new SctItm(numA + numB + '80',"");
+    }
+    Copy() : ISctItm_Selector
+    {
+        let result = new selector_random_NUM10();
+        result.Paste(this.itms);
+        return result;
+    }
+
+    public Gene_Docs(temp_doc : string) : string {
+        return replace_docs_A(temp_doc,this);
+    }
+ 
+}
+
+
 
 class selector_random_NUM10000
     extends ItmArray<SctItm>
@@ -368,6 +408,48 @@ class selector_random_NUM10000
     }
  
 }
+
+class selector_random_NUM100to10000CUT
+    extends ItmArray<SctItm>
+    implements ISctItm_Selector
+{
+    public itm_key : string;
+    public itm_key2 : string;
+    public pic_key : string;
+    constructor()
+    {
+        super();
+        this.itm_key = "@NUM100TO10000CUT@";
+        this.itm_key2 = "";
+        this.pic_key = "";
+    }
+    get rnd_Itm() : SctItm {
+        let num = rnd_minmax(100,100000);
+        let strNum = num.toString().trim();
+        let result = "";
+        if (num >= 1000){
+            result = strNum.substring(0,strNum.length - 3) + ",000";
+        }
+        else
+        {
+            result = strNum;
+        }
+
+        return new SctItm(result,"");
+    }
+    Copy() : ISctItm_Selector
+    {
+        let result = new selector_random_NUM10000();
+        result.Paste(this.itms);
+        return result;
+    }
+
+    public Gene_Docs(temp_doc : string) : string {
+        return replace_docs_A(temp_doc,this);
+    }
+ 
+}
+
 
 class selector_human 
     extends ItmArray<SctItm>
@@ -1227,6 +1309,10 @@ class selector_who2 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@GET01@')
             ,
             new SctItm('@L_COMPANYNAME@(@L_COMPANYCLASS@)')
+            ,
+            new SctItm('@PAY@')
+            ,
+            new SctItm('懸賞金 @NUM100TO10000CUT@万@MONEY@')
         ];
     }
 }
@@ -1412,6 +1498,10 @@ class selector_who4 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@GET01@')
             ,
             new SctItm('@L_COMPANYNAME@(@L_COMPANYCLASS@)')
+            ,
+            new SctItm('@PAY@')
+            ,
+            new SctItm('懸賞金 @NUM100TO10000CUT@万@MONEY@')
        ];
     }
 }
@@ -5977,6 +6067,24 @@ class locker_companyclass extends SctItm_SelectLocker implements ISctItm_Selecto
     }
 }
 
+class selector_pay extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@PAY@');
+        this.Add(itms_pay);
+    }
+}
+class selector_money extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@MONEY@');
+        this.Add(itms_money);
+    }
+}
+class selector_price extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@PRICE@');
+        this.Add(itms_price);
+    }
+}
 
 class news_doc {
     public pics : string[]
@@ -6040,7 +6148,9 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_random_NUM2TO100());
         this.dic_push(new selector_random_NUM2TO9());
         this.dic_push(new selector_random_NUM10TO99());
+        this.dic_push(new selector_random_NUM980());
         this.dic_push(new selector_random_NUM10000());
+        this.dic_push(new selector_random_NUM100to10000CUT());
         this.dic_push(new locker_what());
         this.dic_push(new locker_do());
         this.dic_push(new selector_what());
@@ -6370,6 +6480,9 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new locker_companyname04());
         this.dic_push(new selector_companyclass());
         this.dic_push(new locker_companyclass());
-
+        
+        this.dic_push(new selector_pay());
+        this.dic_push(new selector_money());
+        this.dic_push(new selector_price());
     }
 }
