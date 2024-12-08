@@ -1297,7 +1297,8 @@ class selector_who extends SctItm_Selector implements ISctItm_Selector {
             // new SctItm('@DONE@@HUMAN@@AGE@')
             // ,
             new SctItm('@WHO3@@L_CHAR@の@HUMAN@@AGE@')
-            // ,
+            ,
+            new SctItm('@WHO3@@HUMAN@@AGE@')
             // new SctItm('『@CALL@』と@KEID@@ASSES@@L_CLASS@の@HUMAN@@AGE@')
             // ,
             // new SctItm('@GROUP@より『@CALL@』と@ASSES@@L_CLASS@の@HUMAN@@AGE@')
@@ -3956,6 +3957,8 @@ class selector_food extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('冷凍食品の@FOOD01@')
             ,
             new SctItm('出来たての@FOOD01@')
+            ,
+            new SctItm('wwwww@NUM10TO99@0@MONEY@の@FOOD01@')
         ];
     }
 }
