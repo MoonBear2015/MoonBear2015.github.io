@@ -561,6 +561,8 @@ class selector_title extends SctItm_Selector {
             // new SctItm('@L_WHAT@の@L_CHAR@が@KEID@@L_DO@@END02C@')
             ,
             new SctItm('@L_WHAT@を@L_DO@@END02E@@L_TECH@'),
+            new SctItm('@L_WHAT@で@L_DO@@END02B@@L_CHAR@'),
+            new SctItm('@L_WHAT@を@L_DO@@END02E@@L_CHAR@'),
             new SctItm('@KEI@@L_WHAT@の@L_DO@'),
             new SctItm('@L_DO@@END02C@@L_WHAT@'),
             new SctItm('@KEID@@L_DO@@END02C@@L_WHAT@'),
