@@ -6158,6 +6158,32 @@ class selector_price extends SctItm_Selector implements ISctItm_Selector {
     }
 }
 
+class selector_pen extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@PEN@');
+        this.Add(cods_to_itms(cods_pen));
+    }
+}
+class locker_pen extends SctItm_SelectLocker implements ISctItm_Selector {
+    constructor(){
+        super('@L_PEN@');
+        this.Add(cods_to_itms(cods_pen));
+    }
+}
+class selector_toy extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@TOY@');
+        this.Add(cods_to_itms(cods_toy));
+    }
+}
+class locker_toy extends SctItm_SelectLocker implements ISctItm_Selector {
+    constructor(){
+        super('@L_TOY@');
+        this.Add(cods_to_itms(cods_toy));
+    }
+}
+
+
 class news_doc {
     public pics : string[]
     constructor(
@@ -6557,5 +6583,11 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_pay());
         this.dic_push(new selector_money());
         this.dic_push(new selector_price());
+
+        this.dic_push(new selector_pen());
+        this.dic_push(new locker_pen());
+
+        this.dic_push(new selector_toy());
+        this.dic_push(new locker_toy());
     }
 }

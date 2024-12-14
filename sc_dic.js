@@ -1,4 +1,42 @@
 "use strict";
+const cods_pen = [
+    new SctCod_TI('ペン', 'pen.jpg'),
+    new SctCod_TI('ペン'),
+    new SctCod_TI('シャープペンシル'),
+    new SctCod_TI('|鉛筆|えんぴつ|'),
+    new SctCod_TI('ボールペン'),
+    new SctCod_TI('|万年筆|まんねんひつ|'),
+    new SctCod_TI('|毛筆|もうひつ|'),
+    new SctCod_TI('|色鉛筆|いろえんぴつ|'),
+    new SctCod_TI('クレヨン'),
+    new SctCod_TI('サインペン'),
+    new SctCod_TI('|油性|ゆせい|ペン'),
+    new SctCod_TI('チョーク')
+];
+const cods_toy = [
+    new SctCod_TI('おもちゃ', 'toy.jpg'),
+    new SctCod_TI('おもちゃ'),
+    new SctCod_TI('縫いぐるみ'),
+    new SctCod_TI('バービー|人形|にんぎょう|'),
+    new SctCod_TI('リカちゃん|人形|にんぎょう|'),
+    new SctCod_TI('ミニカー'),
+    new SctCod_TI('ラジコンカー'),
+    new SctCod_TI('レゴブロック'),
+    new SctCod_TI('|積木|つみき|'),
+    new SctCod_TI('プラモデル'),
+    new SctCod_TI('お|面|めん|'),
+    new SctCod_TI('|独楽|こま|'),
+    new SctCod_TI('ベーゴマ'),
+    new SctCod_TI('|凧|たこ|'),
+    new SctCod_TI('|風車|かざぐるま|'),
+    new SctCod_TI('|竹|たけ|とんぼ'),
+    new SctCod_TI('|竹馬|たけうま|'),
+    new SctCod_TI('|羽子板|はごいた|'),
+    new SctCod_TI('|双六|すごろく|'),
+    new SctCod_TI('|賽子|さいころ|'),
+    new SctCod_TI('ビー|玉|だま|'),
+    new SctCod_TI('|面子|めんこ|')
+];
 const cods_cat = [
     new SctCod_TI('|猫|ねこ|', 'cat.jpg'),
     new SctCod_TI('|白猫|しろねこ|'),
@@ -5698,7 +5736,7 @@ const itms_did = [
     new SctItm('@PART@を押しのけて'),
     new SctItm('@SAY@して'),
     new SctItm('@PART@をデートに誘って'),
-    new SctItm('@PART@に手紙を書いて'),
+    new SctItm('@PEN@で@PART@に手紙を書いて'),
     new SctItm('@PART@に電話して'),
     new SctItm('@PART@にメールして'),
     new SctItm('@PART@にプロポーズして'),
@@ -5790,10 +5828,10 @@ const itms_did = [
     new SctItm('@CHAR@から@PRESENT@を突きつけられて'),
     new SctItm('@CHAR@から@PRESENT@をねだられて'),
     new SctItm('@CHAR@から@PRESENT@を託されて'),
-    new SctItm('@PAPER@を書いて'),
-    new SctItm('@PAPER@を書き下ろして'),
-    new SctItm('@PAPER@をしたためて'),
-    new SctItm('@PAPER@を書き綴って'),
+    new SctItm('@PEN@で@PAPER@を書いて'),
+    new SctItm('@PEN@で@PAPER@を書き下ろして'),
+    new SctItm('@PEN@で@PAPER@をしたためて'),
+    new SctItm('@PEN@で@PAPER@を書き綴って'),
     new SctItm('@CHAR@に@PAPER@を書いて'),
     new SctItm('@CHAR@に@PAPER@を書き下ろして'),
     new SctItm('@CHAR@に@PAPER@をしたためて'),
@@ -5856,7 +5894,10 @@ const itms_did = [
     new SctItm('@GROUP@に@PRICE@の@NUMPAY@@MONEY@を返して'),
     new SctItm('@PRICE@の@NUMPAY@@MONEY@を踏み倒して'),
     new SctItm('@GROUP@を@NUMPAY@@MONEY@で買収して'),
-    new SctItm('@GROUP@から@NUMPAY@@MONEY@で買収されて')
+    new SctItm('@GROUP@から@NUMPAY@@MONEY@で買収されて'),
+    new SctItm('@TOY@で遊んで'),
+    new SctItm('@TOY@を買って貰って'),
+    new SctItm('@TOY@をプレゼントして')
 ];
 const itms_did01_l = [
     new SctItm('@L_FOOD@を食べて'),
@@ -5922,7 +5963,7 @@ const itms_did02_l = [
     new SctItm('@L_PART@の手を引いて'),
     new SctItm('@L_PART@をデートに誘って'),
     new SctItm('@SAY@して'),
-    new SctItm('@L_PART@に手紙を書いて'),
+    new SctItm('@L_PEN@で@L_PART@に手紙を書いて'),
     new SctItm('@L_PART@に電話して'),
     new SctItm('@L_PART@にメールして'),
     new SctItm('@L_PART@にプロポーズして')
@@ -6006,10 +6047,10 @@ const itms_did02_l = [
     new SctItm('@L_CHAR@から@L_PRESENT@を突きつけられて'),
     new SctItm('@L_CHAR@から@L_PRESENT@をねだられて'),
     new SctItm('@L_CHAR@から@L_PRESENT@を託されて'),
-    new SctItm('@L_PAPER@を書いて'),
-    new SctItm('@L_PAPER@を書き下ろして'),
-    new SctItm('@L_PAPER@をしたためて'),
-    new SctItm('@L_PAPER@を書き綴って'),
+    new SctItm('@L_PEN@で@L_PAPER@を書いて'),
+    new SctItm('@L_PEN@で@L_PAPER@を書き下ろして'),
+    new SctItm('@L_PEN@で@L_PAPER@をしたためて'),
+    new SctItm('@L_PEN@で@L_PAPER@を書き綴って'),
     new SctItm('@L_CHAR@に@L_PAPER@を書いて'),
     new SctItm('@L_CHAR@に@L_PAPER@を書き下ろして'),
     new SctItm('@L_CHAR@に@L_PAPER@をしたためて'),
@@ -6053,7 +6094,10 @@ const itms_did02_l = [
     new SctItm('@L_STORE@でカードで買い物をして'),
     new SctItm('@L_STORE@でツケで買い物をして'),
     new SctItm('@L_STORE@で万引きをして'),
-    new SctItm('@L_STORE@で強盗を捕まえて')
+    new SctItm('@L_STORE@で強盗を捕まえて'),
+    new SctItm('@L_TOY@で遊んで'),
+    new SctItm('@L_TOY@を買って貰って'),
+    new SctItm('@L_TOY@をプレゼントして')
 ];
 const itms_did_o = [
     new SctItm('@O_FOOD@を食べて'),

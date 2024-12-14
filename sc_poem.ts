@@ -303,6 +303,10 @@ class poemer_tema extends SctItm_SelectLocker implements ISctItm_Selector{
             new SctItm('@TM34')
             ,
             new SctItm('@TM35')
+            ,
+            new SctItm('@TM36')
+            ,
+            new SctItm('@TM37')
         ];
     }
 }
@@ -619,6 +623,20 @@ class Gene_tema35 extends Gene_Poemer {
         this.Add_cods(cods_dog);
     }
 }
+// 季語：ペン
+class Gene_tema36 extends Gene_Poemer {
+    constructor(){
+        super('@TM36','@PIC_TEMA@');
+        this.Add_cods(cods_pen);
+    }
+}
+// 季語：おもちゃ
+class Gene_tema37 extends Gene_Poemer {
+    constructor(){
+        super('@TM37','@PIC_TEMA@');
+        this.Add_cods(cods_toy);
+    }
+}
 
 // 一般
 class Gene_sent extends Gene_Poemer {
@@ -792,6 +810,8 @@ class poem_docs_maker_tema extends docs_maker {
         this.dic_concat(new Gene_tema33().Generate());
         this.dic_concat(new Gene_tema34().Generate());
         this.dic_concat(new Gene_tema35().Generate());
+        this.dic_concat(new Gene_tema36().Generate());
+        this.dic_concat(new Gene_tema37().Generate());
     }
 }
 
