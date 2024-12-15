@@ -219,37 +219,77 @@ class selector_Lock_TownInscription extends SctItm_Selector implements ISctItm_S
     }
 }
 
-// 座右の銘：体言
-class selector_item extends SctItm_Selector implements ISctItm_Selector {
-    constructor(){
-        super('@ITEM@');
-        this.itms = [
-            new SctItm('@CLASS@')
-            ,
-            new SctItm('@THEY@')
-            ,
-            new SctItm('@PART@')
-            ,
-            new SctItm('@NICK@')
-            ,
-            new SctItm('@WHAT@')
-            ,
-            new SctItm('@STAR@')
-            // ,
-            // new SctItm('@THINK@')
-            // ,
-            // new SctItm('@DO@')
-            // ,
-            // new SctItm('@HABIT@')
-            ,
-            new SctItm('@COUNTRY@')
-            ,
-            new SctItm('@COUNTRY@人')
-            ,
-            new SctItm('@GROUP@')
-        ];
-    }
-}
+// // 座右の銘：体言
+// class selector_item extends SctItm_Selector implements ISctItm_Selector {
+//     constructor(){
+//         super('@ITEM@');
+//         this.itms = [
+//             // new SctItm('@CLASS@')
+//             // ,
+//             // new SctItm('@THEY@')
+//             // ,
+//             // new SctItm('@PART@')
+//             // ,
+//             // new SctItm('@NICK@')
+//             // ,
+//             // new SctItm('@WHAT@')
+//             // ,
+//             // new SctItm('@STAR@')
+//             // ,
+//             // new SctItm('@COUNTRY@')
+//             // ,
+//             // new SctItm('@COUNTRY@人')
+//             // ,
+//             // new SctItm('@GROUP@')
+//             // ,
+//             // new SctItm('@GROUP@')
+//             // ,
+
+//             new SctItm('@CLASS@')
+//             ,
+//             new SctItm('@ANIMAL@')
+//             ,
+//             new SctItm('@FLOWERCALL01@')
+//             ,
+//             new SctItm('@FRUIT@')
+//             ,
+//             new SctItm('@FOOD@')
+//             ,
+//             new SctItm('@RIDE@')
+//             ,
+//             new SctItm('@DRESS@')
+//             ,
+//             new SctItm('@MUSIC@')
+//             ,
+//             new SctItm('@SEXAGE@')
+//             ,
+//             new SctItm('@PART@')
+//             ,
+//             new SctItm('@HABIT@')
+//             ,
+//             new SctItm('@MUSIC@')
+//             ,
+//             new SctItm('@STAR@')
+//             ,
+//             new SctItm('@SPORTS@')
+//             ,
+//             new SctItm('@CAT@')
+//             ,
+//             new SctItm('@DOG@')
+//             ,
+//             new SctItm('@BUG@')
+//             ,
+//             new SctItm('@BUTTERFLY@')
+//             ,
+//             new SctItm('@TOY@')
+//             ,
+//             new SctItm('@PEN@')
+//             ,
+//             new SctItm('@WEAPON@')
+
+//         ];
+//     }
+// }
 
 // 座右の銘：形容詞  名詞の前に置く「○○する～」「○○な～」「○○をする～」
 class selector_command extends SctItm_Selector implements ISctItm_Selector {

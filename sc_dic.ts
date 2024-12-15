@@ -23,12 +23,13 @@ const   cods_pen = [
     ,
     new SctCod_TI('チョーク')
 ];
+
 const   cods_toy = [
     new SctCod_TI('おもちゃ' ,'toy.jpg')
     ,
     new SctCod_TI('おもちゃ' )
     ,
-    new SctCod_TI('縫いぐるみ' )
+    new SctCod_TI('|縫|ぬ|いぐるみ' )
     ,
     new SctCod_TI('バービー|人形|にんぎょう|' )
     ,
@@ -68,6 +69,78 @@ const   cods_toy = [
     ,
     new SctCod_TI('|面子|めんこ|')
 ];
+
+const   cods_sword = [
+    new SctCod_TI('|剣|けん|' ,'sword.jpg')
+    ,
+    new SctCod_TI('|刀剣|とうけん|' )
+    ,
+    new SctCod_TI('|刀|かたな|' )
+    ,
+    new SctCod_TI('|日本刀|にほんとう|' )
+    ,
+    new SctCod_TI('|青竜刀|せいりゅうとう|' )
+    ,
+    new SctCod_TI('ナイフ')
+    ,
+    new SctCod_TI('レイピア')
+    ,
+    new SctCod_TI('サーベル')
+];
+
+const   cods_weapon = [
+    new SctCod_TI('|武器|ぶき|' ,'weapon.jpg')
+    ,
+    new SctCod_TI('|槍|やり|' )
+    ,
+    new SctCod_TI('|長刀|なぎなた|' )
+    ,
+    new SctCod_TI('|刺股|さすまた|' )
+    ,
+    new SctCod_TI('|戦斧|せんぷ|' )
+    ,
+    new SctCod_TI('|戦斧|バトルアックス|')
+    ,
+    new SctCod_TI('|棍棒|こんぼう|')
+];
+
+const   cods_gun = [
+    new SctCod_TI('|銃器|じゅうき|' ,'gun.jpg')
+    ,
+    new SctCod_TI('ピストル' )
+    ,
+    new SctCod_TI('|拳銃|けんじゅう|' )
+    ,
+    new SctCod_TI('マグナム' )
+    ,
+    new SctCod_TI('マシンガン' )
+    ,
+    new SctCod_TI('バズーカー' )
+    ,
+    new SctCod_TI('|散弾銃|さんだんじゅう|')
+    ,
+    new SctCod_TI('ショットガン')
+    ,
+    new SctCod_TI('ライフル')
+    ,
+    new SctCod_TI('|大砲|たいほう|')
+    ,
+    new SctCod_TI('|巨砲|きょほう|')
+    ,
+    new SctCod_TI('|戦車砲|せんしゃほう|')
+    ,
+    new SctCod_TI('|主砲|しゅほう|')
+    ,
+    new SctCod_TI('ミサイル')
+    ,
+    new SctCod_TI('|ＩＣＢＭ|アイシービーエム|')
+    ,
+    new SctCod_TI('|核弾頭|かくだんとう|')
+    ,
+    new SctCod_TI('|波動砲|はどうほう|')
+];
+
+
 
 const   cods_cat = [
     new SctCod_TI('|猫|ねこ|' ,'cat.jpg')
@@ -9287,7 +9360,7 @@ const   itms_did = [
     ,
     new SctItm('@MANYCHAR@に襲われて')
     ,
-    new SctItm('@MANYCHAR@に殺されかけて')
+    new SctItm('@MANYCHAR@に@WEAPON@で殺されかけて')
     ,
     new SctItm('@MANYCHAR@にもてはやされて')
     ,

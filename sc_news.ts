@@ -5412,6 +5412,76 @@ class Onetime_did extends SctItm_OneTimeLocker implements ISctItm_Selector{
 }
 
 
+class selector_item extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@ITEM@');
+        this.itms = [
+            // new SctItm('@CLASS@')
+            // ,
+            // new SctItm('@THEY@')
+            // ,
+            // new SctItm('@PART@')
+            // ,
+            // new SctItm('@NICK@')
+            // ,
+            // new SctItm('@WHAT@')
+            // ,
+            // new SctItm('@STAR@')
+            // ,
+            // new SctItm('@COUNTRY@')
+            // ,
+            // new SctItm('@COUNTRY@人')
+            // ,
+            // new SctItm('@GROUP@')
+            // ,
+            // new SctItm('@GROUP@')
+            // ,
+
+            new SctItm('@CLASS@')
+            ,
+            new SctItm('@ANIMAL@')
+            ,
+            new SctItm('@FRUIT@')
+            ,
+            new SctItm('@FOOD@')
+            ,
+            new SctItm('@RIDE@')
+            ,
+            new SctItm('@DRESS@')
+            ,
+            new SctItm('@MUSIC@')
+            ,
+            new SctItm('@SEXAGE@')
+            ,
+            new SctItm('@PART@')
+            ,
+            new SctItm('@HABIT@')
+            ,
+            new SctItm('@MUSIC@')
+            ,
+            new SctItm('@STAR@')
+            ,
+            new SctItm('@SPORTS@')
+            ,
+            new SctItm('@CAT@')
+            ,
+            new SctItm('@DOG@')
+            ,
+            new SctItm('@BUG@')
+            ,
+            new SctItm('@BUTTERFLY@')
+            ,
+            new SctItm('@TOY@')
+            ,
+            new SctItm('@PEN@')
+            ,
+            new SctItm('@WEAPON@')
+
+        ];
+    }
+}
+
+
 
 class locker_item extends SctItm_SelectLocker implements ISctItm_Selector{
     constructor(){
@@ -5454,6 +5524,12 @@ class locker_item extends SctItm_SelectLocker implements ISctItm_Selector{
             new SctItm('@L_BUG@')
             ,
             new SctItm('@L_BUTTERFLY@')
+            ,
+            new SctItm('@L_TOY@')
+            ,
+            new SctItm('@L_PEN@')
+            ,
+            new SctItm('@L_WEAPON@')
         ];
     }
 }
@@ -5778,6 +5854,12 @@ class locker_songItem extends SctItm_SelectLocker implements ISctItm_Selector{
             new SctItm('@L_SPORTS@')
             ,
             new SctItm('@L_TECH@')
+            ,
+            new SctItm('@L_TOY@')
+            ,
+            new SctItm('@L_PEN@')
+            ,
+            new SctItm('@L_WEAPON@')
         ];
     }
 }
@@ -6182,6 +6264,50 @@ class locker_toy extends SctItm_SelectLocker implements ISctItm_Selector {
         this.Add(cods_to_itms(cods_toy));
     }
 }
+
+class selector_sword extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@SWORD@');
+        this.Add(cods_to_itms(cods_sword));
+    }
+}
+class locker_sword extends SctItm_SelectLocker implements ISctItm_Selector {
+    constructor(){
+        super('@L_SWORD@');
+        this.Add(cods_to_itms(cods_sword));
+    }
+}
+
+class selector_gun extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@GUN@');
+        this.Add(cods_to_itms(cods_gun));
+    }
+}
+class locker_gun extends SctItm_SelectLocker implements ISctItm_Selector {
+    constructor(){
+        super('@L_GUN@');
+        this.Add(cods_to_itms(cods_gun));
+    }
+}
+
+class selector_weapon extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@WEAPON@');
+        this.Add(cods_to_itms(cods_weapon));
+        this.Add(cods_to_itms(cods_gun));
+        this.Add(cods_to_itms(cods_sword));
+    }
+}
+class locker_weapon extends SctItm_SelectLocker implements ISctItm_Selector {
+    constructor(){
+        super('@L_WEAPON@');
+        this.Add(cods_to_itms(cods_weapon));
+        this.Add(cods_to_itms(cods_gun));
+        this.Add(cods_to_itms(cods_sword));
+    }
+}
+
 
 
 class news_doc {
@@ -6589,5 +6715,12 @@ class news_docs_maker extends docs_maker {
 
         this.dic_push(new selector_toy());
         this.dic_push(new locker_toy());
+
+        this.dic_push(new selector_sword());
+        this.dic_push(new locker_sword());
+        this.dic_push(new selector_gun());
+        this.dic_push(new locker_gun());
+        this.dic_push(new selector_weapon());
+        this.dic_push(new locker_weapon());
     }
 }
