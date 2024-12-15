@@ -688,6 +688,11 @@ class Gene_sent extends Gene_Poemer {
 
         // this.Add_cods(cods_jougo);
         this.Add_cods(cods_km);
+        
+        this.Add_cods(cods_km_power);
+        this.Add_cods(cods_km_big);
+        this.Add_cods(cods_km_low);
+        this.Add_cods(cods_km_small);
 
         this.Add_cods(cods_move);
         this.Add_cods(cods_move_dance);
@@ -716,6 +721,17 @@ class Gene_sent extends Gene_Poemer {
         this.Add_cods(cods_adv_sense_p);
         this.Add_cods(cods_adv_sense_n);
         this.Add_cods(cods_adv_beauty);
+
+        this.Add_cods(cods_ad_power);
+        this.Add_cods(cods_ad_big);
+        this.Add_cods(cods_ad_low);
+        this.Add_cods(cods_ad_small);
+
+
+        this.Add_cods(cods_adv_power);
+        this.Add_cods(cods_adv_big);
+        this.Add_cods(cods_adv_low);
+        this.Add_cods(cods_adv_small);
 
     }
 }
@@ -746,6 +762,12 @@ class Gene_move extends Gene_Poemer {
         this.Add_cods(cods_ad_etc);
         this.Add_cods(cods_ad_jougo);
         // this.Add_cods(cods_move_which);
+        
+        this.Add_cods(cods_ad_power);
+        this.Add_cods(cods_ad_big);
+        this.Add_cods(cods_ad_low);
+        this.Add_cods(cods_ad_small);
+
     }
 }
 
@@ -770,6 +792,16 @@ class Gene_item extends Gene_Poemer {
 
         // this.Add_cods(cods_jougo);
         this.Add_cods(cods_km);
+
+        this.Add_cods(cods_km_power);
+        this.Add_cods(cods_km_big);
+        this.Add_cods(cods_km_low);
+        this.Add_cods(cods_km_small);
+
+        this.Add_cods(cods_adv_power);
+        this.Add_cods(cods_adv_big);
+        this.Add_cods(cods_adv_low);
+        this.Add_cods(cods_adv_small);
 
     }
 }

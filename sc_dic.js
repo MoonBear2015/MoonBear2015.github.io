@@ -1717,16 +1717,71 @@ const cods_adv_danger = [
     new SctCod_It('|疑|うたが|わしく'),
     new SctCod_It('|覚束|おぼつか|なく')
 ];
+const cods_ad_power = [
+    new SctCod_Mv('|強|つよ|い'),
+    new SctCod_Mv('|力強|ちからづよ|い'),
+    new SctCod_Mv('|勇|いさ|ましい'),
+    new SctCod_Mv('|固|かた|い'),
+    new SctCod_Mv('|凄|すご|い'),
+    new SctCod_Mv('|物凄|ものすご|い'),
+    new SctCod_Mv('|頼|たの|もしい')
+];
+const cods_adv_power = [
+    new SctCod_Mv('|強|つよ|く'),
+    new SctCod_Mv('|力強|ちからづよ|く'),
+    new SctCod_Mv('|勇|いさ|ましく'),
+    new SctCod_Mv('|固|かた|く'),
+    new SctCod_Mv('|凄|すご|く'),
+    new SctCod_Mv('|物凄|ものすご|く'),
+    new SctCod_Mv('|頼|たの|もしく')
+];
+const cods_ad_low = [
+    new SctCod_Mv('|弱|よわ|い'),
+    new SctCod_Mv('か|弱|よわ|い'),
+    new SctCod_Mv('|力無|ちからな|い'),
+    new SctCod_Mv('|柔|やわら|かい'),
+    new SctCod_Mv('|頼|たよ|りない')
+];
+const cods_adv_low = [
+    new SctCod_Mv('|弱|よわ|く'),
+    new SctCod_Mv('か|弱|よわ|く'),
+    new SctCod_Mv('|力無|ちからな|く'),
+    new SctCod_Mv('|柔|やわら|かく'),
+    new SctCod_Mv('|頼|たよ|りなく')
+];
+const cods_ad_big = [
+    new SctCod_Mv('|大|おお|きい'),
+    new SctCod_Mv('|太|ふと|い'),
+    new SctCod_Mv('|図太|ずぶと|い'),
+    new SctCod_Mv('デカい'),
+    new SctCod_Mv('|馬鹿|ばか|デカい')
+];
+const cods_adv_big = [
+    new SctCod_Mv('|大|おお|きく'),
+    new SctCod_Mv('|太|ふと|く'),
+    new SctCod_Mv('|図太|ずぶと|く'),
+    new SctCod_Mv('デカく'),
+    new SctCod_Mv('|馬鹿|ばか|デカく')
+];
+const cods_ad_small = [
+    new SctCod_Mv('|小|ちい|さい'),
+    new SctCod_Mv('|細|ほそ|い'),
+    new SctCod_Mv('か|細|ぼそ|い'),
+    new SctCod_Mv('ちっちゃい')
+];
+const cods_adv_small = [
+    new SctCod_Mv('|小|ちい|さな'),
+    new SctCod_Mv('|細|ほそ|な'),
+    new SctCod_Mv('か|細|ぼそ|な'),
+    new SctCod_Mv('ちっちゃな')
+];
 const cods_ad_etc = [
     new SctCod_Mv('|新|あたら|しい'),
-    new SctCod_Mv('|勇|いさ|ましい'),
     new SctCod_Mv('|五月蠅|うるさ|い'),
     new SctCod_Mv('|大|おお|きい'),
     new SctCod_Mv('|賢|かしこ|い'),
-    new SctCod_Mv('|固|かた|い'),
     new SctCod_Mv('|口|くち|うるさい'),
     new SctCod_Mv('|素晴|すば|らしい'),
-    new SctCod_Mv('|凄|すご|い'),
     new SctCod_Mv('|切|せつ|ない'),
     new SctCod_Mv('|小|ちい|さい'),
     new SctCod_Mv('|手堅|てがた|い'),
@@ -1734,7 +1789,6 @@ const cods_ad_etc = [
     new SctCod_Mv('|年若|としわか|い'),
     new SctCod_Mv('|憎|にく|い'),
     new SctCod_Mv('|憎|にく|たらしい'),
-    new SctCod_Mv('|物凄|ものすご|い'),
     new SctCod_Mv('|柔|やわ|らかい'),
     new SctCod_Mv('|喜|よろこ|ばしい')
 ];
@@ -1742,9 +1796,7 @@ const cods_adv_etc = [
     new SctCod_It('|新|あたら|しく'),
     new SctCod_It('|勇|いさ|ましく'),
     new SctCod_It('|五月蠅|うるさ|く'),
-    new SctCod_It('|大|おお|きく'),
     new SctCod_It('|賢|かしこ|く'),
-    new SctCod_It('|固|かた|く'),
     new SctCod_It('|口|くち|うるさく'),
     new SctCod_It('|素晴|すば|らしく')
     // ,
@@ -1758,7 +1810,6 @@ const cods_adv_etc = [
     // new SctCod_It('|憎|にく|く')
     ,
     new SctCod_It('|憎|にく|たらしく'),
-    new SctCod_It('|物凄|ものすご|く'),
     new SctCod_It('|柔|やわ|らかく'),
     new SctCod_It('|喜|よろこ|ばしく')
 ];
@@ -2000,8 +2051,6 @@ const cods_km = [
     new SctCod_Km('|快適|かいてき|'),
     new SctCod_Km('|過酷|かこく|'),
     new SctCod_Km('|過激|かげき|'),
-    // new SctCod_Km('|華奢|かしゃ|')
-    // ,
     new SctCod_Km('|果断|かだん|'),
     new SctCod_Km('|華美|かび|'),
     new SctCod_Km('|華麗|かれい|'),
@@ -2009,20 +2058,14 @@ const cods_km = [
     new SctCod_Km('|甘美|かんび|'),
     new SctCod_Km('|感動的|かんどうてき|'),
     new SctCod_Km('|官能的|かんのうてき|'),
-    new SctCod_Km('|奇跡的|きせきてき|')
-    // ,
-    // new SctCod_Km('|毅然|きぜん|')
-    ,
+    new SctCod_Km('|奇跡的|きせきてき|'),
     new SctCod_Km('|希薄|きはく|'),
     new SctCod_Km('|凶猛|きょうもう|'),
     new SctCod_Km('|巨大|きょだい|'),
     new SctCod_Km('|気|き|の|毒|どく|'),
     new SctCod_Km('|綺麗|きれい|'),
     new SctCod_Km('|勤勉|きんべん|'),
-    new SctCod_Km('|近代的|きんだいてき|')
-    // ,
-    // new SctCod_Km('|空虚|くうきょ|')
-    ,
+    new SctCod_Km('|近代的|きんだいてき|'),
     new SctCod_Km('|屈強|くっきょう|'),
     new SctCod_Km('|具体的|ぐたいてき|'),
     new SctCod_Km('|愚直|ぐちょく|'),
@@ -2041,83 +2084,41 @@ const cods_km = [
     new SctCod_Km('|肯定的|こうていてき|'),
     new SctCod_Km('|困難|こんなん|'),
     new SctCod_Km('|最悪|さいあく|'),
-    // new SctCod_Km('|最高|さいこう|')
-    // ,
-    // new SctCod_Km('|最新|さいしん|')
-    // ,
     new SctCod_Km('|最低|さいてい|'),
     new SctCod_Km('|災難|さいなん|'),
     new SctCod_Km('|残酷|ざんこく|'),
-    // new SctCod_Km('|殺伐|さつばつ|')
-    // ,
-    // new SctCod_Km('|粛正|しゅくせい|')
-    // ,
-    // new SctCod_Km('|純潔|じゅんけつ|')
-    // ,
     new SctCod_Km('|幸|しあわ|せ'),
     new SctCod_Km('|純粋|じゅんすい|'),
-    // new SctCod_Km('|衝撃|しょうげき|')
-    // ,
     new SctCod_Km('|衝撃的|しょうげきてき|'),
     new SctCod_Km('|精悍|せいかん|'),
     new SctCod_Km('|凄惨|せいさん|'),
     new SctCod_Km('|清楚|せいそ|'),
     new SctCod_Km('|清廉潔白|せいれんけっぱく|'),
     new SctCod_Km('|赤裸々|せきらら|'),
-    new SctCod_Km('|爽快|そうかい|')
-    // ,
-    // new SctCod_Km('|俗|ぞく|')
-    ,
+    new SctCod_Km('|爽快|そうかい|'),
     new SctCod_Km('|率直|そっちょく|'),
     new SctCod_Km('|粗暴|そぼう|'),
     new SctCod_Km('|素朴|そぼく|'),
     new SctCod_Km('|怠慢|たいまん|'),
-    new SctCod_Km('|淡泊|たんぱく|')
-    // ,
-    // new SctCod_Km('|痛哭|つうこく|')
-    ,
+    new SctCod_Km('|淡泊|たんぱく|'),
     new SctCod_Km('|低俗|ていぞく|'),
     new SctCod_Km('|丁重|ていちょう|'),
     new SctCod_Km('|適切|てきせつ|'),
-    new SctCod_Km('|適当|てきとう|')
-    // ,
-    // new SctCod_Km('てへぺろ')
-    // ,
-    // new SctCod_Km('|天下一品|てんかいっぴん|')
-    ,
+    new SctCod_Km('|適当|てきとう|'),
     new SctCod_Km('|天才的|てんさいてき|'),
     new SctCod_Km('|伝統的|でんとうてき|'),
     new SctCod_Km('|獰猛|どうもう|'),
-    // new SctCod_Km('|突兀|とっこつ|')
-    // ,
     new SctCod_Km('|貪欲|どんよく|'),
     new SctCod_Km('|軟弱|なんじゃく|'),
     new SctCod_Km('|難解|なんかい|'),
     new SctCod_Km('|柔弱|にゅうじゃく|'),
-    // new SctCod_Km('|佞奸|ねいかん|')
-    // ,
     new SctCod_Km('|熱烈|ねつれつ|'),
     new SctCod_Km('|念入|ねんい|り'),
-    new SctCod_Km('|濃厚|のうこう|')
-    // ,
-    // new SctCod_Km('|伸|の|び|伸|の|び')
-    ,
+    new SctCod_Km('|濃厚|のうこう|'),
     new SctCod_Km('のどか'),
-    new SctCod_Km('のどやか')
-    // ,
-    // new SctCod_Km('|沛然|はいぜん|')
-    ,
+    new SctCod_Km('のどやか'),
     new SctCod_Km('|薄弱|はくじゃく|'),
-    new SctCod_Km('|破天荒|はてんこう|')
-    // ,
-    // new SctCod_Km('ばらばら')
-    // ,
-    // new SctCod_Km('ぱらぱら')
-    // ,
-    // new SctCod_Km('はらぺこ')
-    // ,
-    // new SctCod_Km('ばりばり')
-    ,
+    new SctCod_Km('|破天荒|はてんこう|'),
     new SctCod_Km('|破廉恥|はれんち|'),
     new SctCod_Km('|反抗的|はんこうてき|'),
     new SctCod_Km('|煩雑|はんざつ|'),
@@ -2136,47 +2137,16 @@ const cods_km = [
     new SctCod_Km('|非論理的|ひろんりてき|'),
     new SctCod_Km('|卑猥|ひわい|'),
     new SctCod_Km('|敏感|びんかん|'),
-    new SctCod_Km('|敏捷|びんしょう|')
-    // ,
-    // new SctCod_Km('|貧乏|びんぼう|')
-    // ,
-    // new SctCod_Km('|不安|ふあん|')
-    // ,
-    // new SctCod_Km('|不意|ふい|')
-    // ,
-    // new SctCod_Km('|不可欠|ふかけつ|')
-    // ,
-    // new SctCod_Km('|不可能|ふかのう|')
-    ,
+    new SctCod_Km('|敏捷|びんしょう|'),
     new SctCod_Km('|不完全|ふかんぜん|'),
     new SctCod_Km('|不可解|ふかかい|'),
     new SctCod_Km('|不気味|ぶきみ|'),
     new SctCod_Km('|無粋|ぶすい|'),
-    new SctCod_Km('|不揃|ふぞろ|い')
-    // ,
-    // new SctCod_Km('|不憫|ふびん|')
-    ,
-    // new SctCod_Km('|不満|ふまん|')
-    // ,
+    new SctCod_Km('|不揃|ふぞろ|い'),
     new SctCod_Km('|不毛|ふもう|'),
     new SctCod_Km('|不愉快|ふゆかい|'),
-    new SctCod_Km('|不要|ふよう|')
-    // ,
-    // new SctCod_Km('ぶよぶよ')
-    // ,
-    // new SctCod_Km('ぷよぷよ')
-    ,
-    // new SctCod_Km('|無頼|ぶらい|')
-    // ,
+    new SctCod_Km('|不要|ふよう|'),
     new SctCod_Km('|不埒|ふらち|'),
-    // new SctCod_Km('ふらふら')
-    // ,
-    // new SctCod_Km('ぶらぶら')
-    // ,
-    // new SctCod_Km('ぷらぷら')
-    // ,
-    // new SctCod_Km('|不利|ふり|')
-    // ,
     new SctCod_Km('|無礼|ぶれい|'),
     new SctCod_Km('|平安|へいあん|'),
     new SctCod_Km('|平穏|へいおん|'),
@@ -2186,30 +2156,11 @@ const cods_km = [
     new SctCod_Km('|平凡|へいぼん|'),
     new SctCod_Km('|平和|へいわ|'),
     new SctCod_Km('|平和的|へいわてき|'),
-    // new SctCod_Km('へろへろ')
-    // ,
-    // new SctCod_Km('べろべろ')
-    // ,
-    // new SctCod_Km('ぺろぺろ')
-    // ,
     new SctCod_Km('|便利|べんり|'),
-    new SctCod_Km('|暴虐|ぼうぎゃく|')
-    // ,
-    // new SctCod_Km('|豊饒|ほうじょう|')
-    // ,
-    // new SctCod_Km('|呆然|ぼうぜん|')
-    // ,
-    // new SctCod_Km('|豊饒|ほうじょう|')
-    ,
+    new SctCod_Km('|膨大|ぼうだい|'),
+    new SctCod_Km('|暴虐|ぼうぎゃく|'),
     new SctCod_Km('|豊満|ほうまん|'),
-    // new SctCod_Km('ほかほか')
-    // ,
-    // new SctCod_Km('ぽかぽか')
-    // ,
-    new SctCod_Km('|本格的|ほんかくてき|')
-    // ,
-    // new SctCod_Km('|本当|ほんとう|')
-    ,
+    new SctCod_Km('|本格的|ほんかくてき|'),
     new SctCod_Km('|摩訶不思議|まかふしぎ|'),
     new SctCod_Km('|真|ま|っ|直|す|ぐ'),
     new SctCod_Km('|真|ま|っ|青|さお|'),
@@ -2218,41 +2169,26 @@ const cods_km = [
     new SctCod_Km('|無意味|むいみ|'),
     new SctCod_Km('|無害|むがい|'),
     new SctCod_Km('|無価値|むかち|'),
-    new SctCod_Km('|無傷|むきず|')
-    // ,
-    // new SctCod_Km('|無作為|むさくい|')
-    ,
+    new SctCod_Km('|無傷|むきず|'),
     new SctCod_Km('|無慈悲|むじひ|'),
     new SctCod_Km('|無邪気|むじゃき|'),
     new SctCod_Km('|無情|むじょう|'),
     new SctCod_Km('|無尽蔵|むじんぞう|'),
-    new SctCod_Km('|無責任|むせきにん|')
-    // ,
-    // new SctCod_Km('|無双|むそう|')
-    ,
+    new SctCod_Km('|無責任|むせきにん|'),
     new SctCod_Km('|無念|むねん|'),
     new SctCod_Km('|無能|むのう|'),
     new SctCod_Km('|無用|むよう|'),
-    // new SctCod_Km('|無理|むり|')
-    // ,
     new SctCod_Km('|名誉|めいよ|'),
     new SctCod_Km('|迷惑|めいわく|'),
-    new SctCod_Km('|滅茶苦茶|めちゃくちゃ|')
-    // ,
-    // new SctCod_Km('|猛然|もうぜん|')
-    ,
+    new SctCod_Km('|滅茶苦茶|めちゃくちゃ|'),
     new SctCod_Km('|猛烈|もうれつ|'),
     new SctCod_Km('|野性的|やせいてき|'),
-    // new SctCod_Km('|厄介|やっかい|')
-    // ,
     new SctCod_Km('|野蛮|やばん|'),
     new SctCod_Km('|有名|ゆうめい|'),
     new SctCod_Km('|勇猛|ゆうもう|'),
     new SctCod_Km('|優良|ゆうりょう|'),
     new SctCod_Km('|愉快|ゆかい|'),
     new SctCod_Km('|緩|ゆる|やか'),
-    // new SctCod_Km('ゆるゆる')
-    // ,
     new SctCod_Km('|陽気|ようき|'),
     new SctCod_Km('|楽観的|らっかんてき|'),
     new SctCod_Km('|乱暴|らんぼう|'),
@@ -2260,20 +2196,54 @@ const cods_km = [
     new SctCod_Km('|良好|りょうこう|'),
     new SctCod_Km('|冷酷|れいこく|'),
     new SctCod_Km('|冷淡|れいたん|'),
-    new SctCod_Km('|劣悪|れつあく|')
-    // ,
-    // new SctCod_Km('|劣等|れっとう|')
-    ,
+    new SctCod_Km('|劣悪|れつあく|'),
     new SctCod_Km('|老獪|ろうかい|'),
     new SctCod_Km('|露骨|ろこつ|'),
-    new SctCod_Km('|論外|ろんがい|')
-    // ,
-    // new SctCod_Km('|矮小|わいしょう|')
-    ,
+    new SctCod_Km('|論外|ろんがい|'),
     new SctCod_Km('|猥褻|わいせつ|'),
     new SctCod_Km('|我|わ|が|儘|まま|')
-    // ,
-    // new SctCod_Km('|和気藹々|わきあいあい|')
+];
+const cods_km_power = [
+    new SctCod_Km('|圧倒的|あっとうてき|'),
+    new SctCod_Km('|過激|かげき|'),
+    new SctCod_Km('|凶猛|きょうもう|'),
+    new SctCod_Km('|激烈|げきれつ|'),
+    new SctCod_Km('|豪快|ごうかい|'),
+    new SctCod_Km('|精悍|せいかん|'),
+    new SctCod_Km('|獰猛|どうもう|'),
+    new SctCod_Km('|熱烈|ねつれつ|'),
+    new SctCod_Km('|破天荒|はてんこう|'),
+    new SctCod_Km('|猛烈|もうれつ|'),
+    new SctCod_Km('|野性的|やせいてき|'),
+    new SctCod_Km('|野蛮|やばん|'),
+    new SctCod_Km('|勇猛|ゆうもう|'),
+    new SctCod_Km('|乱暴|らんぼう|'),
+    new SctCod_Km('|我|わ|が|儘|まま|'),
+    new SctCod_Km('パワフル'),
+    new SctCod_Km('エキサイティング')
+];
+const cods_km_big = [
+    new SctCod_Km('|偉大|いだい|'),
+    new SctCod_Km('|巨大|きょだい|'),
+    new SctCod_Km('|桁違|けたちが|い'),
+    new SctCod_Km('ビッグ'),
+    new SctCod_Km('ダイナミック')
+];
+const cods_km_low = [
+    new SctCod_Km('|可憐|かれん|'),
+    new SctCod_Km('|気|き|の|毒|どく|'),
+    new SctCod_Km('|最悪|さいあく|'),
+    new SctCod_Km('|最低|さいてい|'),
+    new SctCod_Km('|災難|さいなん|'),
+    new SctCod_Km('|軟弱|なんじゃく|'),
+    new SctCod_Km('|悲劇的|ひげきてき|')
+];
+const cods_km_small = [
+    new SctCod_Km('|小柄|こがら|'),
+    new SctCod_Km('|小|こ|ぶり'),
+    new SctCod_Km('コンパクト'),
+    new SctCod_Km('|微細|びさい|'),
+    new SctCod_Km('|微妙|びみょう|')
 ];
 // 名詞による形容
 const itms_km = [
@@ -5721,7 +5691,7 @@ const itms_did = [
     new SctItm('@MANYCHAR@にいじめられて'),
     new SctItm('@MANYCHAR@に閉じ込められて'),
     new SctItm('@MANYCHAR@に襲われて'),
-    new SctItm('@MANYCHAR@に@WEAPON@で殺されかけて'),
+    new SctItm('@MANYCHAR@に@KEIP2@@WEAPON@で殺されかけて'),
     new SctItm('@MANYCHAR@にもてはやされて'),
     new SctItm('@MANYCHAR@に喝采されて'),
     new SctItm('@MANYCHAR@を引き連れて'),
@@ -5935,7 +5905,14 @@ const itms_did = [
     new SctItm('@GROUP@から@NUMPAY@@MONEY@で買収されて'),
     new SctItm('@TOY@で遊んで'),
     new SctItm('@TOY@を買って貰って'),
-    new SctItm('@TOY@をプレゼントして')
+    new SctItm('@TOY@をプレゼントして'),
+    new SctItm('wwwww@KEIP2@@SWORD@を構えて'),
+    new SctItm('wwwww@KEIP2@@SWORD@を腰に差して'),
+    new SctItm('wwwww@KEIP2@@SWORD@を腰に差して'),
+    new SctItm('wwwww@KEIP2@@WEAPON@で武装して'),
+    new SctItm('wwwww@KEIP2@@GUN@を発射して'),
+    new SctItm('wwwww@KEIP2@@GUN@を乱射して'),
+    new SctItm('wwwww@KEIP2@@GUN@をぶっ放して')
 ];
 const itms_did01_l = [
     new SctItm('@L_FOOD@を食べて'),
@@ -6135,7 +6112,14 @@ const itms_did02_l = [
     new SctItm('@L_STORE@で強盗を捕まえて'),
     new SctItm('@L_TOY@で遊んで'),
     new SctItm('@L_TOY@を買って貰って'),
-    new SctItm('@L_TOY@をプレゼントして')
+    new SctItm('@L_TOY@をプレゼントして'),
+    new SctItm('@L_SWORD@を構えて'),
+    new SctItm('@L_SWORD@を腰に差して'),
+    new SctItm('@L_SWORD@を腰に差して'),
+    new SctItm('@L_WEAPON@で武装して'),
+    new SctItm('@L_GUN@を発射して'),
+    new SctItm('@L_GUN@を乱射して'),
+    new SctItm('@L_GUN@をぶっ放して')
 ];
 const itms_did_o = [
     new SctItm('@O_FOOD@を食べて'),
