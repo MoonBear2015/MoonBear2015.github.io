@@ -9851,19 +9851,19 @@ const   itms_did = [
     ,
     new SctItm('@TOY@をプレゼントして')
     ,
-    new SctItm('wwwww@KEIP2@@SWORD@を構えて')
+    new SctItm('@KEIP2@@SWORD@を構えて')
     ,
-    new SctItm('wwwww@KEIP2@@SWORD@を腰に差して')
+    new SctItm('@KEIP2@@SWORD@を腰に差して')
     ,
-    new SctItm('wwwww@KEIP2@@SWORD@を腰に差して')
+    new SctItm('@KEIP2@@SWORD@を腰に差して')
     ,
-    new SctItm('wwwww@KEIP2@@WEAPON@で武装して')
+    new SctItm('@KEIP2@@WEAPON@で武装して')
     ,
-    new SctItm('wwwww@KEIP2@@GUN@を発射して')
+    new SctItm('@KEIP2@@GUN@を発射して')
     ,
-    new SctItm('wwwww@KEIP2@@GUN@を乱射して')
+    new SctItm('@KEIP2@@GUN@を乱射して')
     ,
-    new SctItm('wwwww@KEIP2@@GUN@をぶっ放して')
+    new SctItm('@KEIP2@@GUN@をぶっ放して')
 
 ]
 
