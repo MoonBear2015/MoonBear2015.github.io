@@ -5906,13 +5906,13 @@ const itms_did = [
     new SctItm('@TOY@で遊んで'),
     new SctItm('@TOY@を買って貰って'),
     new SctItm('@TOY@をプレゼントして'),
-    new SctItm('@KEIP2@@SWORD@を構えて'),
-    new SctItm('@KEIP2@@SWORD@を腰に差して'),
-    new SctItm('@KEIP2@@SWORD@を腰に差して'),
-    new SctItm('@KEIP2@@WEAPON@で武装して'),
-    new SctItm('@KEIP2@@GUN@を発射して'),
-    new SctItm('@KEIP2@@GUN@を乱射して'),
-    new SctItm('@KEIP2@@GUN@をぶっ放して')
+    new SctItm('@KEIW2@@SWORD@を構えて'),
+    new SctItm('@KEIW2@@SWORD@を腰に差して'),
+    new SctItm('@KEIW2@@SWORD@を腰に差して'),
+    new SctItm('@KEIW2@@WEAPON@で武装して'),
+    new SctItm('@KEIW2@@GUN@を発射して'),
+    new SctItm('@KEIW2@@GUN@を乱射して'),
+    new SctItm('@KEIW2@@GUN@をぶっ放して')
 ];
 const itms_did01_l = [
     new SctItm('@L_FOOD@を食べて'),
@@ -5920,7 +5920,7 @@ const itms_did01_l = [
     new SctItm('@L_FOOD@に塩胡椒を振って食べて'),
     new SctItm('@L_FOOD@に醤油をかけて食べて'),
     new SctItm('@L_FOOD@にソースをかけて食べて'),
-    new SctItm('@FOOD@にドレッシングをかけて食べて'),
+    new SctItm('@L_FOOD@にドレッシングをかけて食べて'),
     new SctItm('@L_FOOD@にカラシをつけて食べて'),
     new SctItm('@L_FOOD@にジャムを塗って食べて'),
     new SctItm('@L_FOOD@にレモンを搾って食べて'),

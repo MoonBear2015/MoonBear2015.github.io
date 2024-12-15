@@ -2985,6 +2985,67 @@ class selector_kdp2 extends SctItm_Selector implements ISctItm_Selector {
     }
 }
 
+//---------------------------------------------------------------------------------------
+class selector_kw extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@KEIW@');
+        this.Add(cods_NoRubi_to_itms(cods_ad_power));
+        this.Add(cods_NoRubi_to_itms(cods_ad_big));
+
+    }
+}
+
+class selector_kdw extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@KEIDW@');
+        this.Add(cods_NoRubi_to_itms(cods_adv_power));
+        this.Add(cods_NoRubi_to_itms(cods_adv_big));
+    }
+}
+
+class selector_kmw extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@KEIMW@');
+        this.Add(cods_NoRubi_to_itms(cods_km_power));
+        this.Add(cods_NoRubi_to_itms(cods_km_big));
+    }
+}
+
+class selector_kw2 extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@KEIW2@');
+        this.itms = [
+            new SctItm('@KEIW@')
+            ,
+            new SctItm('@KEIMW@な')
+        ];
+    }
+}
+
+class selector_kw3 extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@KEIW3@');
+        this.itms = [
+            new SctItm('@KEIW@')
+            ,
+            new SctItm('@KEIMW@だ')
+        ];
+    }
+}
+class selector_kdw2 extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@KEIDW2@');
+        this.itms = [
+            new SctItm('@KEIDW@')
+            ,
+            new SctItm('@KEIMW@に')
+        ];
+    }
+}
+
+//---------------------------------------------------------------------------------------
+
+
 
 class selector_kn extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
@@ -3067,6 +3128,61 @@ class selector_kdn2 extends SctItm_Selector implements ISctItm_Selector {
         ];
     }
 }
+
+//---------------------------------------------------------------------------------------
+class selector_ks extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@KEIS@');
+        this.Add(cods_NoRubi_to_itms(cods_ad_low));
+        this.Add(cods_NoRubi_to_itms(cods_ad_small));
+    }
+}
+class selector_kds extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@KEIDS@');
+        this.Add(cods_NoRubi_to_itms(cods_adv_low));
+        this.Add(cods_NoRubi_to_itms(cods_adv_small));
+    }
+}
+
+class selector_kms extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@KEIMS@');
+        this.Add(cods_NoRubi_to_itms(cods_km_low));
+        this.Add(cods_NoRubi_to_itms(cods_km_small));
+    }
+}
+
+class selector_ks2 extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@KEIS2@');
+        this.itms = [
+            new SctItm('@KEIS@')
+            ,
+            new SctItm('@KEIMS@な')
+        ];
+    }
+}
+
+class selector_ks3 extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@KEIS3@');
+        this.itms = [
+            new SctItm('@KEIS@')
+            ,
+            new SctItm('@KEIMS@だ')
+        ];
+    }
+}
+class selector_kds2 extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@KEIDS2@');
+        this.itms = [
+            new SctItm('@KEIDS@')
+        ];
+    }
+}
+//---------------------------------------------------------------------------------------
 
 
 class selector_grade extends SctItm_Selector implements ISctItm_Selector {
@@ -6501,18 +6617,35 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_km());
         this.dic_push(new selector_k());
         this.dic_push(new selector_kd());
+
         this.dic_push(new selector_kp());
         this.dic_push(new selector_kdp());
         this.dic_push(new selector_kdp2());
         this.dic_push(new selector_kmp());
         this.dic_push(new selector_kp2());
         this.dic_push(new selector_kp3());
+
+        this.dic_push(new selector_kw());
+        this.dic_push(new selector_kdw());
+        this.dic_push(new selector_kdw2());
+        this.dic_push(new selector_kmw());
+        this.dic_push(new selector_kw2());
+        this.dic_push(new selector_kw3());
+
         this.dic_push(new selector_kn());
         this.dic_push(new selector_kdn());
         this.dic_push(new selector_kdn2());
         this.dic_push(new selector_kmn());
         this.dic_push(new selector_kn2());
         this.dic_push(new selector_kn3());
+        
+        this.dic_push(new selector_ks());
+        this.dic_push(new selector_kds());
+        this.dic_push(new selector_kds2());
+        this.dic_push(new selector_kms());
+        this.dic_push(new selector_ks2());
+        this.dic_push(new selector_ks3());
+
         this.dic_push(new selector_grade());
         this.dic_push(new selector_dir());
         this.dic_push(new selector_season());
