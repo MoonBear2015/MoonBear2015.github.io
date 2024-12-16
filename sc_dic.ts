@@ -3087,7 +3087,6 @@ const   cods_adv_low = [
     new SctCod_Mv('|頼|たよ|りなく')
 ];
 
-
 const   cods_ad_big = [
     new SctCod_Mv('|大|おお|きい')
     ,
@@ -3099,6 +3098,7 @@ const   cods_ad_big = [
     ,
     new SctCod_Mv('|馬鹿|ばか|デカい')
 ];
+
 const   cods_adv_big = [
     new SctCod_Mv('|大|おお|きく')
     ,
@@ -3122,13 +3122,13 @@ const   cods_ad_small = [
 ];
 
 const   cods_adv_small = [
-    new SctCod_Mv('|小|ちい|さな')
+    new SctCod_Mv('|小|ちい|さく')
     ,
-    new SctCod_Mv('|細|ほそ|な')
+    new SctCod_Mv('|細|ほそ|く')
     ,
-    new SctCod_Mv('か|細|ぼそ|な')
+    new SctCod_Mv('か|細|ぼそ|く')
     ,
-    new SctCod_Mv('ちっちゃな')
+    new SctCod_Mv('ちっちゃく')
 ];
 
 

@@ -1770,10 +1770,10 @@ const cods_ad_small = [
     new SctCod_Mv('ちっちゃい')
 ];
 const cods_adv_small = [
-    new SctCod_Mv('|小|ちい|さな'),
-    new SctCod_Mv('|細|ほそ|な'),
-    new SctCod_Mv('か|細|ぼそ|な'),
-    new SctCod_Mv('ちっちゃな')
+    new SctCod_Mv('|小|ちい|さく'),
+    new SctCod_Mv('|細|ほそ|く'),
+    new SctCod_Mv('か|細|ぼそ|く'),
+    new SctCod_Mv('ちっちゃく')
 ];
 const cods_ad_etc = [
     new SctCod_Mv('|新|あたら|しい'),

@@ -2953,7 +2953,15 @@ class selector_kp2 extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('@KEIP@')
             ,
+            new SctItm('@KEIDP@て@KEIP@')
+            ,
+            new SctItm('@KEIMP@で@KEIP@')
+            ,
             new SctItm('@KEIMP@な')
+            ,
+            new SctItm('@KEIDP@て@KEIMP@な')
+            ,
+            new SctItm('@KEIMP@で@KEIMP@な')
             ,
             new SctItm('@NICKGOOD@のような')
         ];
@@ -2966,7 +2974,15 @@ class selector_kp3 extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('@KEIP@')
             ,
+            new SctItm('@KEIDP@て@KEIP@')
+            ,
+            new SctItm('@KEIMP@で@KEIP@')
+            ,
             new SctItm('@KEIMP@だ')
+            ,
+            new SctItm('@KEIDP@て@KEIMP@だ')
+            ,
+            new SctItm('@KEIMP@で@KEIMP@だ')
             ,
             new SctItm('@NICKGOOD@のようだ')
         ];
@@ -3017,7 +3033,15 @@ class selector_kw2 extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('@KEIW@')
             ,
+            new SctItm('@KEIDW@て@KEIW@')
+            ,
+            new SctItm('@KEIMW@で@KEIW@')
+            ,
             new SctItm('@KEIMW@な')
+            ,
+            new SctItm('@KEIDW@て@KEIMW@な')
+            ,
+            new SctItm('@KEIMW@で@KEIMW@な')
         ];
     }
 }
@@ -3028,7 +3052,15 @@ class selector_kw3 extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('@KEIW@')
             ,
+            new SctItm('@KEIDW@て@KEIW@')
+            ,
+            new SctItm('@KEIMW@で@KEIW@')
+            ,
             new SctItm('@KEIMW@だ')
+            ,
+            new SctItm('@KEIDW@て@KEIMW@だ')
+            ,
+            new SctItm('@KEIMW@で@KEIMW@だ')
         ];
     }
 }
@@ -3085,7 +3117,15 @@ class selector_kn2 extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('@KEIN@')
             ,
+            new SctItm('@KEIDN@て@KEIN@')
+            ,
+            new SctItm('@KEIMN@で@KEIN@')
+            ,
             new SctItm('@KEIMN@な')
+            ,
+            new SctItm('@KEIDN@て@KEIMN@な')
+            ,
+            new SctItm('@KEIMN@で@KEIMN@な')
             ,
             new SctItm('@NICKBAD@のような')
             ,
@@ -3102,7 +3142,15 @@ class selector_kn3 extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('@KEIN@')
             ,
+            new SctItm('@KEIDN@て@KEIN@')
+            ,
+            new SctItm('@KEIMN@で@KEIN@')
+            ,
             new SctItm('@KEIMN@だ')
+            ,
+            new SctItm('@KEIDN@て@KEIMN@だ')
+            ,
+            new SctItm('@KEIMN@で@KEIMN@だ')
             ,
             new SctItm('@NICKBAD@のようだ')
             ,
@@ -3159,7 +3207,15 @@ class selector_ks2 extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('@KEIS@')
             ,
+            new SctItm('@KEIDS@て@KEIS@')
+            ,
+            new SctItm('@KEIMS@で@KEIS@')
+            ,
             new SctItm('@KEIMS@な')
+            ,
+            new SctItm('@KEIDS@て@KEIMS@な')
+            ,
+            new SctItm('@KEIMS@で@KEIMS@な')
         ];
     }
 }
@@ -3170,7 +3226,15 @@ class selector_ks3 extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('@KEIS@')
             ,
+            new SctItm('@KEIDS@て@KEIS@')
+            ,
+            new SctItm('@KEIMS@で@KEIS@')
+            ,
             new SctItm('@KEIMS@だ')
+            ,
+            new SctItm('@KEIDS@て@KEIMS@だ')
+            ,
+            new SctItm('@KEIMS@で@KEIMS@だ')
         ];
     }
 }

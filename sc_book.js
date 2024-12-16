@@ -7,7 +7,7 @@ function set_book() {
     html += '<h1>';
     html += 'Book';
     html += '<small>';
-    html += ' B01.87';
+    html += ' B01.88';
     html += '</small>';
     html += '</h1>';
     html += '</div>';
@@ -30,7 +30,7 @@ function make_book() {
     html += 'border:     0.5px solid #606060;';
     html += 'border-radius:  10px;';
     html += '">';
-    switch (rnd_max(4)) {
+    switch (rnd_max(5)) {
         case 0:
             {
                 html += make_booktype1();
@@ -44,6 +44,11 @@ function make_book() {
         case 2:
             {
                 html += make_booktype3();
+                break;
+            }
+        case 3:
+            {
+                html += make_booktype4();
                 break;
             }
         default:
@@ -239,6 +244,54 @@ function make_booktype3() {
     }
     html += '@MYST_END01@<br><br>';
     html += '@MYST_END02@<br><br>';
+    html += '<p style="text-align: right">(つづく)</p>';
+    html += '</div>';
+    return html;
+}
+function make_booktype4() {
+    let html = '';
+    html += '<div id="book_writerpicture">';
+    // html += '<span class="l">@L_BOY@ と @L_GIRL@</span><br>';
+    html += '著者：<br>';
+    html += '@L_BOOKWRITER@';
+    html += '<br>';
+    html += '<p id="book_maker">';
+    html += '出版元：@LOVEMAKER@';
+    html += '</p>';
+    html += '<br>';
+    html += '</div>';
+    html += '<div id="book_face" ';
+    html += 'style="';
+    html += 'background: ';
+    html += 'linear-gradient(0deg,rgba(0,0,0,0.6),rgba(0,0,0,0.6)),';
+    html += 'url(./pics/@PIC_LOVE@);';
+    html += 'background-position: left top;';
+    html += 'background-size:   cover;';
+    html += 'background-repeat: no-repeat;';
+    html += 'border:     2px solid #ffffff;';
+    html += '">';
+    html += '<br>';
+    html += '<div id="@BOOKFACE2@">';
+    html += '<p id="book_title">';
+    html += '@L_BOY@ と @L_GIRL@';
+    html += '</p>';
+    html += '<br><br>';
+    html += '<p id="book_writerinfo">';
+    html += '@L_BOOKWRITER@';
+    html += '</p>';
+    html += '<br>';
+    html += '</div>';
+    html += '</div>';
+    html += '<div id="book_lovestory">';
+    html += '@EROBOY_FIRST@<br>';
+    html += '@EROGIRL_NEXT@<br>';
+    html += '@EROBOY_NEXT@<br>';
+    html += '@EROGIRL_NEXT@<br>';
+    html += '@EROBOY_NEXT@<br>';
+    html += '@EROGIRL_NEXT@<br>';
+    html += '@EROBOY_NEXT@<br>';
+    html += '@EROGIRL_NEXT@<br>';
+    html += '@EROBOY_NEXT@<br>';
     html += '<p style="text-align: right">(つづく)</p>';
     html += '</div>';
     return html;
@@ -700,6 +753,7 @@ class selector_classattack extends SctItm_Selector {
         ];
     }
 }
+//---------------------------------------------------------------------------love
 class locker_boy extends SctItm_SelectLocker {
     constructor() {
         super('@L_BOY@');
@@ -770,6 +824,38 @@ class selector_boynext extends SctItm_Selector {
         ];
     }
 }
+//---------------------------------------------------------------------------Ero
+class selector_eroBoyfirst extends SctItm_Selector {
+    constructor() {
+        super('@EROBOY_FIRST@');
+        this.itms = [
+            new SctItm('「やあ、@KEIP2@@L_GIRL@。僕の@KEIW2@@WEAPON@を見てくれ。どう思う？'),
+            new SctItm('「なあ、@KEIP2@@L_GIRL@。この@KEIW2@@WEAPON@をどうにかしてくれないか？」'),
+            new SctItm('「@KEIP2@@L_GIRL@。キミを見ていると僕の@KEIW2@@WEAPON@が@DID@しまいそうなんだ」')
+        ];
+    }
+}
+class selector_eroGirlnext extends SctItm_Selector {
+    constructor() {
+        super('@EROGIRL_NEXT@');
+        this.itms = [
+            new SctItm('「あら、@KEIN2@@L_BOY@。そんな@KEIS2@@PEN@でどうしようというのかしら」'),
+            new SctItm('「@L_BOY@ったら@KEIN2@人ね。私はそんな@KEIS2@@PEN@なんて欲しくないわ」'),
+            new SctItm('「だめよ、@KEIN2@@L_BOY@。そんな@KEIS2@@PEN@なんか捨ててしまえばいいわ」'),
+            new SctItm('「@L_BOY@は@KEIN@わね。 あなたの@KEIS2@@PEN@なんか見たくもないわ」')
+        ];
+    }
+}
+class selector_eroBoynext extends SctItm_Selector {
+    constructor() {
+        super('@EROBOY_NEXT@');
+        this.itms = [
+            new SctItm('「そんなこと言わないでくれ、@KEIP2@@L_GIRL@。僕の@WEAPON@はこんなに@KEIW2@のに」'),
+            new SctItm('「@KEIP2@@L_GIRL@。そうはいっても僕の@KEIW2@@WEAPON@が@KEIP3@と思っているんだろう？」')
+        ];
+    }
+}
+//---------------------------------------------------------------------------Myst
 class selector_myst extends SctItm_Selector {
     constructor() {
         super('@MYST@');
@@ -1214,6 +1300,9 @@ class book_docs_maker extends news_docs_maker {
         this.dic_push(new selector_boyfirst());
         this.dic_push(new selector_boynext());
         this.dic_push(new selector_girlnext());
+        this.dic_push(new selector_eroBoyfirst());
+        this.dic_push(new selector_eroBoynext());
+        this.dic_push(new selector_eroGirlnext());
         this.dic_push(new locker_boss());
         this.dic_push(new locker_bossName());
         this.dic_push(new locker_ass());
