@@ -832,7 +832,7 @@ class selector_eroBoyfirst extends SctItm_Selector {
             new SctItm('「やあ、@KEIP2@@L_GIRL@。僕の@KEIW2@@WEAPON@を見てくれ。どう思う？」'),
             new SctItm('「なあ、@KEIP2@@L_GIRL@。この@KEIW2@@WEAPON@をどうにかしてくれないか？」'),
             new SctItm('「@KEIP2@@L_GIRL@。キミを見ていると僕の@KEIW2@@WEAPON@が@DID@しまいそうなんだ」'),
-            new SctItm('「どうだい、@KEIP2@@L_GIRL@。僕の@WEAPON@は@KEIW2@だろう？」')
+            new SctItm('「どうだい、@KEIP2@@L_GIRL@。僕の@WEAPON@はなんて@KEIW3@んだろう」')
         ];
     }
 }

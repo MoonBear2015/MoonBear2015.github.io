@@ -3064,16 +3064,7 @@ class selector_kw3 extends SctItm_Selector implements ISctItm_Selector {
         ];
     }
 }
-class selector_kdw2 extends SctItm_Selector implements ISctItm_Selector {
-    constructor(){
-        super('@KEIDW2@');
-        this.itms = [
-            new SctItm('@KEIDW@')
-            ,
-            new SctItm('@KEIMW@に')
-        ];
-    }
-}
+
 
 //---------------------------------------------------------------------------------------
 
@@ -3136,30 +3127,6 @@ class selector_kn2 extends SctItm_Selector implements ISctItm_Selector {
     }
 }
 
-class selector_kn3 extends SctItm_Selector implements ISctItm_Selector {
-    constructor(){
-        super('@KEIN3@');
-        this.itms = [
-            new SctItm('@KEIN@')
-            ,
-            new SctItm('@KEIDN@て@KEIN@')
-            ,
-            new SctItm('@KEIMN@で@KEIN@')
-            ,
-            new SctItm('@KEIMN@だ')
-            ,
-            new SctItm('@KEIDN@て@KEIMN@だ')
-            ,
-            new SctItm('@KEIMN@で@KEIMN@だ')
-            ,
-            new SctItm('@NICKBAD@のようだ')
-            ,
-            new SctItm('@NICKBAD@みたいだ')
-            ,
-            new SctItm('@NICKBAD@っぽい')
-        ];
-    }
-}
 class selector_kdn2 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@KEIDN2@');
@@ -3219,7 +3186,6 @@ class selector_ks2 extends SctItm_Selector implements ISctItm_Selector {
         ];
     }
 }
-
 class selector_ks3 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@KEIS3@');
@@ -3238,14 +3204,7 @@ class selector_ks3 extends SctItm_Selector implements ISctItm_Selector {
         ];
     }
 }
-class selector_kds2 extends SctItm_Selector implements ISctItm_Selector {
-    constructor(){
-        super('@KEIDS2@');
-        this.itms = [
-            new SctItm('@KEIDS@')
-        ];
-    }
-}
+
 //---------------------------------------------------------------------------------------
 
 
@@ -6691,7 +6650,6 @@ class news_docs_maker extends docs_maker {
 
         this.dic_push(new selector_kw());
         this.dic_push(new selector_kdw());
-        this.dic_push(new selector_kdw2());
         this.dic_push(new selector_kmw());
         this.dic_push(new selector_kw2());
         this.dic_push(new selector_kw3());
@@ -6701,11 +6659,9 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_kdn2());
         this.dic_push(new selector_kmn());
         this.dic_push(new selector_kn2());
-        this.dic_push(new selector_kn3());
         
         this.dic_push(new selector_ks());
         this.dic_push(new selector_kds());
-        this.dic_push(new selector_kds2());
         this.dic_push(new selector_kms());
         this.dic_push(new selector_ks2());
         this.dic_push(new selector_ks3());

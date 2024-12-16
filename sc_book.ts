@@ -1154,7 +1154,7 @@ class selector_eroBoyfirst extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('「@KEIP2@@L_GIRL@。キミを見ていると僕の@KEIW2@@WEAPON@が@DID@しまいそうなんだ」')
             ,
-            new SctItm('「どうだい、@KEIP2@@L_GIRL@。僕の@WEAPON@は@KEIW2@だろう？」')
+            new SctItm('「どうだい、@KEIP2@@L_GIRL@。僕の@WEAPON@はなんて@KEIW3@んだろう」')
         ]
     }
 }
