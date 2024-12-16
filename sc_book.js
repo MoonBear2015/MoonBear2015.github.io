@@ -829,10 +829,10 @@ class selector_eroBoyfirst extends SctItm_Selector {
     constructor() {
         super('@EROBOY_FIRST@');
         this.itms = [
-            new SctItm('「やあ、@KEIP2@@L_GIRL@。僕の@KEIW2@@WEAPON@を見てくれ。どう思う？」'),
-            new SctItm('「なあ、@KEIP2@@L_GIRL@。この@KEIW2@@WEAPON@をどうにかしてくれないか？」'),
-            new SctItm('「@KEIP2@@L_GIRL@。キミを見ていると僕の@KEIW2@@WEAPON@が@DID@しまいそうなんだ」'),
-            new SctItm('「どうだい、@KEIP2@@L_GIRL@。僕の@WEAPON@は@KEIW3@と思わないかい？」')
+            new SctItm('「やあ、@KEIP2@@L_GIRL@。僕の@KEIW2@@POWERITEM@を見てくれ。どう思う？」'),
+            new SctItm('「なあ、@KEIP2@@L_GIRL@。この@KEIW2@@POWERITEM@をどうにかしてくれないか？」'),
+            new SctItm('「@KEIP2@@L_GIRL@。キミを見ていると僕の@KEIW2@@POWERITEM@が@DID@しまいそうなんだ」'),
+            new SctItm('「どうだい、@KEIP2@@L_GIRL@。僕の@POWERITEM@は@KEIW3@と思わないかい？」')
         ];
     }
 }
@@ -852,10 +852,10 @@ class selector_eroBoynext extends SctItm_Selector {
     constructor() {
         super('@EROBOY_NEXT@');
         this.itms = [
-            new SctItm('「そんなこと言わないでくれ、@KEIP2@@L_GIRL@。僕の@WEAPON@はこんなに@KEIW2@のに」'),
-            new SctItm('「ああ、@KEIP2@@L_GIRL@。僕の@KEIW2@@WEAPON@はキミじゃなきゃダメなんだ」'),
-            new SctItm('「@KEIP2@@L_GIRL@。そうはいっても僕の@KEIW2@@WEAPON@が@KEIP3@と思っているんだろう？」'),
-            new SctItm('「でも、@KEIP2@@L_GIRL@。この僕の@WEAPON@をよく見てくれよ。@KEIMW@で@KEIMW@だろう？」')
+            new SctItm('「そんなこと言わないでくれ、@KEIP2@@L_GIRL@。僕の@POWERITEM@はこんなに@KEIW2@のに」'),
+            new SctItm('「ああ、@KEIP2@@L_GIRL@。僕の@KEIW2@@POWERITEM@はキミじゃなきゃダメなんだ」'),
+            new SctItm('「@KEIP2@@L_GIRL@。そうはいっても僕の@KEIW2@@POWERITEM@が@KEIP3@と思っているんだろう？」'),
+            new SctItm('「でも、@KEIP2@@L_GIRL@。この僕の@POWERITEM@をよく見てくれよ。@KEIMW@で@KEIMW@だろう？」')
         ];
     }
 }

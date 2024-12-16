@@ -2921,9 +2921,6 @@ class selector_kp extends SctItm_Selector implements ISctItm_Selector {
         this.Add(cods_NoRubi_to_itms(cods_ad_posi));
         this.Add(cods_NoRubi_to_itms(cods_ad_beauty));
         this.Add(cods_NoRubi_to_itms(cods_ad_sense_p));
-        this.Add(cods_NoRubi_to_itms(cods_ad_power));
-        this.Add(cods_NoRubi_to_itms(cods_ad_big));
-
     }
 }
 
@@ -2933,8 +2930,6 @@ class selector_kdp extends SctItm_Selector implements ISctItm_Selector {
         this.Add(cods_NoRubi_to_itms(cods_adv_posi));
         this.Add(cods_NoRubi_to_itms(cods_adv_beauty));
         this.Add(cods_NoRubi_to_itms(cods_adv_sense_p));
-        this.Add(cods_NoRubi_to_itms(cods_adv_power));
-        this.Add(cods_NoRubi_to_itms(cods_adv_big));
     }
 }
 
@@ -2942,8 +2937,6 @@ class selector_kmp extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@KEIMP@');
         this.Add(cods_NoRubi_to_itms(cods_km_posi));
-        this.Add(cods_NoRubi_to_itms(cods_km_power));
-        this.Add(cods_NoRubi_to_itms(cods_km_big));
     }
 }
 
@@ -3042,6 +3035,12 @@ class selector_kw2 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@KEIDW@て@KEIMW@な')
             ,
             new SctItm('@KEIMW@で@KEIMW@な')
+            ,
+            new SctItm('@NICKSTRONG@のような')
+            ,
+            new SctItm('@KEIDW@て@NICKSTRONG@のような')
+            ,
+            new SctItm('@KEIMW@で@NICKSTRONG@のような')
         ];
     }
 }
@@ -3061,6 +3060,12 @@ class selector_kw3 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@KEIDW@て@KEIMW@だ')
             ,
             new SctItm('@KEIMW@で@KEIMW@だ')
+            ,
+            new SctItm('@NICKSTRONG@のようだ')
+            ,
+            new SctItm('@KEIDW@て@NICKSTRONG@のようだ')
+            ,
+            new SctItm('@KEIMW@で@NICKSTRONG@のようだ')
         ];
     }
 }
@@ -3077,8 +3082,6 @@ class selector_kn extends SctItm_Selector implements ISctItm_Selector {
         this.Add(cods_NoRubi_to_itms(cods_ad_danger));
         this.Add(cods_NoRubi_to_itms(cods_ad_dirty));
         this.Add(cods_NoRubi_to_itms(cods_ad_sense_n));
-        this.Add(cods_NoRubi_to_itms(cods_ad_low));
-        this.Add(cods_NoRubi_to_itms(cods_ad_small));
     }
 }
 class selector_kdn extends SctItm_Selector implements ISctItm_Selector {
@@ -3088,8 +3091,6 @@ class selector_kdn extends SctItm_Selector implements ISctItm_Selector {
         this.Add(cods_NoRubi_to_itms(cods_adv_danger));
         this.Add(cods_NoRubi_to_itms(cods_adv_dirty));
         this.Add(cods_NoRubi_to_itms(cods_adv_sense_n));
-        this.Add(cods_NoRubi_to_itms(cods_adv_low));
-        this.Add(cods_NoRubi_to_itms(cods_adv_small));
     }
 }
 
@@ -3097,8 +3098,6 @@ class selector_kmn extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@KEIMN@');
         this.Add(cods_NoRubi_to_itms(cods_km_nega));
-        this.Add(cods_NoRubi_to_itms(cods_km_low));
-        this.Add(cods_NoRubi_to_itms(cods_km_small));
     }
 }
 
@@ -3207,6 +3206,12 @@ class selector_ks2 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@KEIDS@て@KEIMS@な')
             ,
             new SctItm('@KEIMS@で@KEIMS@な')
+            ,
+            new SctItm('@NICKPOOR@みたいな')
+            ,
+            new SctItm('@KEIDS@て@NICKPOOR@みたいな')
+            ,
+            new SctItm('@KEIMS@で@NICKPOOR@みたいな')
         ];
     }
 }
@@ -3225,6 +3230,12 @@ class selector_ks3 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@KEIDS@て@KEIMS@だ')
             ,
             new SctItm('@KEIMS@で@KEIMS@だ')
+            ,
+            new SctItm('@NICKPOOR@みたいだ')
+            ,
+            new SctItm('@KEIDS@て@NICKPOOR@みたいだ')
+            ,
+            new SctItm('@KEIMS@で@NICKPOOR@みたいだ')
         ];
     }
 }
@@ -4223,6 +4234,8 @@ class selector_nickname extends SctItm_Selector implements ISctItm_Selector {
         this.Add(itms_nickNega);
         this.Add(itms_nickPosi);
         this.Add(itms_nickNomal);
+        this.Add(itms_nickStrong);
+        this.Add(itms_nickPoor);
         this.Add(cods_to_itms(cods_animal.slice(1)));
         this.Add(cods_flower_spring.slice(1));
         this.Add(cods_flower_summer.slice(1));
@@ -4239,6 +4252,8 @@ class locker_nickname extends SctItm_SelectLocker implements ISctItm_Selector {
         this.Add(itms_nickNega);
         this.Add(itms_nickPosi);
         this.Add(itms_nickNomal);
+        this.Add(itms_nickStrong);
+        this.Add(itms_nickPoor);
         this.Add(cods_to_itms(cods_animal.slice(1)));
         this.Add(cods_to_itms(cods_flower_spring.slice(1)));
         this.Add(cods_to_itms(cods_flower_summer.slice(1)));
@@ -4266,6 +4281,19 @@ class selector_nickGood extends SctItm_Selector implements ISctItm_Selector {
         this.Add(cods_to_itms(cods_flower_summer.slice(1)));
         this.Add(cods_to_itms(cods_flower_autumn.slice(1)));
         this.Add(cods_to_itms(cods_flower_winter.slice(1)));
+    }
+}
+
+class selector_nickStrong extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@NICKSTRONG@');
+        this.Add(itms_nickStrong);
+    }
+}
+class selector_nickPoor extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@NICKPOOR@');
+        this.Add(itms_nickPoor);
     }
 }
 
@@ -6466,10 +6494,28 @@ class locker_gun extends SctItm_SelectLocker implements ISctItm_Selector {
     }
 }
 
+class selector_powerItem extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@POWERITEM@');
+        this.Add(cods_to_itms(cods_weapon.slice(1)));
+        this.Add(cods_to_itms(cods_gun).slice(1));
+        this.Add(cods_to_itms(cods_sword).slice(1));
+        this.Add(itms_nickStrong);
+    }
+}
+class locker_powerItem extends SctItm_SelectLocker implements ISctItm_Selector {
+    constructor(){
+        super('@L_POWERITEM@');
+        this.Add(cods_to_itms(cods_weapon).slice(1));
+        this.Add(cods_to_itms(cods_gun).slice(1));
+        this.Add(cods_to_itms(cods_sword).slice(1));
+        this.Add(itms_nickStrong);
+    }
+}
 class selector_weapon extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@WEAPON@');
-        this.Add(cods_to_itms(cods_weapon));
+        this.Add(cods_to_itms(cods_weapon).slice(1));
         this.Add(cods_to_itms(cods_gun).slice(1));
         this.Add(cods_to_itms(cods_sword).slice(1));
     }
@@ -6477,7 +6523,7 @@ class selector_weapon extends SctItm_Selector implements ISctItm_Selector {
 class locker_weapon extends SctItm_SelectLocker implements ISctItm_Selector {
     constructor(){
         super('@L_WEAPON@');
-        this.Add(cods_to_itms(cods_weapon));
+        this.Add(cods_to_itms(cods_weapon).slice(1));
         this.Add(cods_to_itms(cods_gun).slice(1));
         this.Add(cods_to_itms(cods_sword).slice(1));
     }
@@ -6745,6 +6791,8 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new locker_nickname());
         this.dic_push(new selector_nickBad());
         this.dic_push(new selector_nickGood());
+        this.dic_push(new selector_nickStrong());
+        this.dic_push(new selector_nickPoor());
         this.dic_push(new selector_assessment());
         this.dic_push(new selector_assessment02());
         this.dic_push(new selector_assessment03());
@@ -6912,5 +6960,7 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new locker_gun());
         this.dic_push(new selector_weapon());
         this.dic_push(new locker_weapon());
+        this.dic_push(new selector_powerItem());
+        this.dic_push(new locker_powerItem());
     }
 }

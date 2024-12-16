@@ -7815,6 +7815,110 @@ const   itms_nickNomal = [
     new SctItm('ひ孫')
 ]
 
+const   itms_nickStrong = [
+    //
+    // Strong
+    //
+    new SctItm('猛獣')
+    ,
+    new SctItm('怪獣')
+    ,
+    new SctItm('ゴジラ')
+    ,
+    new SctItm('メカゴジラ')
+    ,
+    new SctItm('キングギドラ')
+    ,
+    new SctItm('ガメラ')
+    ,
+    new SctItm('ドラゴン')
+    ,
+    new SctItm('恐竜')
+    ,
+    new SctItm('狂犬')
+    ,
+    new SctItm('人食い虎')
+    ,
+    new SctItm('大蛇')
+    ,
+    new SctItm('コブラ')
+    ,
+    new SctItm('キングコブラ')
+    ,
+    new SctItm('キングコング')
+    ,
+    new SctItm('ジャイアント')
+    ,
+    new SctItm('サイクロプス')
+    ,
+    new SctItm('デーモン')
+    ,
+    new SctItm('オクトパス')
+    ,
+    new SctItm('クラーケン')
+    ,
+    new SctItm('キメラ')
+    ,
+    new SctItm('ケルベロス')
+    ,
+    new SctItm('スレイプニル')
+    ,
+    new SctItm('キングベヒーモス')
+    ,
+    new SctItm('黒王号')
+    ,
+    new SctItm('|赤兎馬|せきとば|')
+    ,
+    new SctItm('|白虎|びゃっこ|')
+    ,
+    new SctItm('|青龍|せいりゅう|')
+    ,
+    new SctItm('|玄武|げんぶ|')
+    ,
+    new SctItm('|朱雀|すじゃく|')
+]
+
+const   itms_nickPoor = [
+    //
+    // Poor
+    //
+    new SctItm('|微塵子|みじんこ|')
+    ,
+    new SctItm('|羽蟻|はねあり|')
+    ,
+    new SctItm('|壁蝨|ダニ|')
+    ,
+    new SctItm('|蚤|のみ|')
+    ,
+    new SctItm('|虱|しらみ|')
+    ,
+    new SctItm('|毛虫|けむし|')
+    ,
+    new SctItm('|団子虫|ダンゴムシ|')
+    ,
+    new SctItm('ドブネズミ')
+    ,
+    new SctItm('ハムスター')
+    ,
+    new SctItm('子ウサギ')
+    ,
+    new SctItm('子リス')
+    ,
+    new SctItm('子鹿')
+    ,
+    new SctItm('小魚')
+    ,
+    new SctItm('ミミズ')
+    ,
+    new SctItm('|雀|すずめ|')
+    ,
+    new SctItm('|雲雀|ひばり|')
+    ,
+    new SctItm('ケシ粒')
+    ,
+    new SctItm('消しゴム')
+]
+
 
 const   itms_specialist = [
     new SctItm('スペシャリスト')
