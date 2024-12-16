@@ -6248,6 +6248,15 @@ const itms_lovepic = [
     new SctItm('恋人', 'LOVE/Love06.jpg'),
     new SctItm('結婚', 'LOVE/Love07.jpg')
 ];
+const itms_eropic = [
+    new SctItm('夜の', 'ERO/Ero01.jpg'),
+    new SctItm('ナイト', 'ERO/Ero02.jpg'),
+    new SctItm('秘めた', 'ERO/Ero03.jpg'),
+    new SctItm('秘密の', 'ERO/Ero04.jpg'),
+    new SctItm('秘めごと', 'ERO/Ero05.jpg'),
+    new SctItm('欲望', 'ERO/Ero06.jpg'),
+    new SctItm('肉体', 'ERO/Ero07.jpg')
+];
 const itms_heropic = [
     new SctItm('勇者', 'HERO/Hero01.jpg'),
     new SctItm('英雄', 'HERO/Hero02.jpg'),

@@ -332,7 +332,7 @@ function make_booktype4() : string {
     html += '@L_BOOKWRITER@';
     html += '<br>';
     html += '<p id="book_maker">';
-    html += '出版元：@LOVEMAKER@';
+    html += '出版元：@EROMAKER@';
     html += '</p>';
     html += '<br>';
 
@@ -342,7 +342,7 @@ function make_booktype4() : string {
     html += 'style="';
     html += 'background: ';
     html += 'linear-gradient(0deg,rgba(0,0,0,0.6),rgba(0,0,0,0.6)),';
-    html += 'url(./pics/@PIC_LOVE@);';
+    html += 'url(./pics/@PIC_ERO@);';
 
     html += 'background-position: left top;';
     html += 'background-size:   cover;';
@@ -366,7 +366,7 @@ function make_booktype4() : string {
 
     html += '</div>';
     
-    html += '<div id="book_lovestory">';
+    html += '<div id="book_erostory">';
     html += '@EROBOY_FIRST@<br>';
     html += '@EROGIRL_NEXT@<br>';
     html += '@EROBOY_NEXT@<br>';
@@ -1148,11 +1148,13 @@ class selector_eroBoyfirst extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@EROBOY_FIRST@');
         this.itms = [
-            new SctItm('「やあ、@KEIP2@@L_GIRL@。僕の@KEIW2@@WEAPON@を見てくれ。どう思う？')
+            new SctItm('「やあ、@KEIP2@@L_GIRL@。僕の@KEIW2@@WEAPON@を見てくれ。どう思う？」')
             ,
             new SctItm('「なあ、@KEIP2@@L_GIRL@。この@KEIW2@@WEAPON@をどうにかしてくれないか？」')
             ,
             new SctItm('「@KEIP2@@L_GIRL@。キミを見ていると僕の@KEIW2@@WEAPON@が@DID@しまいそうなんだ」')
+            ,
+            new SctItm('「どうだい、@KEIP2@@L_GIRL@。僕の@WEAPON@は@KEIW2@だろう？」')
         ]
     }
 }
@@ -1168,6 +1170,8 @@ class selector_eroGirlnext extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('「だめよ、@KEIN2@@L_BOY@。そんな@KEIS2@@PEN@なんか捨ててしまえばいいわ」')
             ,
             new SctItm('「@L_BOY@は@KEIN@わね。 あなたの@KEIS2@@PEN@なんか見たくもないわ」')
+            ,
+            new SctItm('「@KEIN@@L_BOY@、そんな@KEIS2@@PEN@なんか自分でどうにかしたら？」')
         ]
     }
 }
@@ -1178,7 +1182,11 @@ class selector_eroBoynext extends SctItm_Selector implements ISctItm_Selector {
         this.itms = [
             new SctItm('「そんなこと言わないでくれ、@KEIP2@@L_GIRL@。僕の@WEAPON@はこんなに@KEIW2@のに」')
             ,
+            new SctItm('「ああ、@KEIP2@@L_GIRL@。僕の@KEIW2@@WEAPON@はキミじゃなきゃダメなんだ」')
+            ,
             new SctItm('「@KEIP2@@L_GIRL@。そうはいっても僕の@KEIW2@@WEAPON@が@KEIP3@と思っているんだろう？」')
+            ,
+            new SctItm('「でも、@KEIP2@@L_GIRL@。この僕の@WEAPON@をよく見てくれよ。@KEIMW@で@KEIMW@だろう？」')
         ]
     }
 }
@@ -1511,6 +1519,12 @@ class locker_lovepic extends SctItm_SelectLocker implements ISctItm_Selector{
         this.Add(itms_lovepic);
     }
 }
+class locker_eropic extends SctItm_SelectLocker implements ISctItm_Selector{
+    constructor(){
+        super('@L_EROPIC@','','@PIC_ERO@');
+        this.Add(itms_eropic);
+    }
+}
 class locker_heropic extends SctItm_SelectLocker implements ISctItm_Selector{
     constructor(){
         super('@L_HEROPIC@');
@@ -1571,6 +1585,30 @@ class selector_lovemaker extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('@L_LOVEPIC@株式会社')
             ,
             new SctItm('@L_LOVEPIC@財団')
+        ];
+    }
+}
+class selector_eromaker extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@EROMAKER@');
+        this.itms = [
+            new SctItm('㈱@L_EROPIC@出版')
+            ,
+            new SctItm('㈱@L_EROPIC@文庫')
+            ,
+            new SctItm('㈱@L_EROPIC@印刷')
+            ,
+            new SctItm('@L_EROPIC@書房')
+            ,
+            new SctItm('@L_EROPIC@書院')
+            ,
+            new SctItm('㈱@L_EROPIC@文芸')
+            ,
+            new SctItm('@L_EROPIC@学院')
+            ,
+            new SctItm('@L_EROPIC@株式会社')
+            ,
+            new SctItm('@L_EROPIC@財団')
         ];
     }
 }
@@ -1724,6 +1762,19 @@ class selector_bookface3 extends SctItm_Selector implements ISctItm_Selector {
     }
 }
 
+class selector_bookface4 extends SctItm_Selector implements ISctItm_Selector {
+    constructor(){
+        super('@BOOKFACE2@');
+        this.itms = [
+            new SctItm('book13')
+            ,
+            new SctItm('book14')
+            ,
+            new SctItm('book15')
+        ]
+    }
+}
+
 
 class book_docs_maker extends news_docs_maker {
     constructor(){
@@ -1735,10 +1786,12 @@ class book_docs_maker extends news_docs_maker {
         this.dic_push(new selector_bookface1());
         this.dic_push(new selector_bookface2());
         this.dic_push(new selector_bookface3());
+        this.dic_push(new selector_bookface4());
 
         this.dic_push(new selector_bookmaker());
         this.dic_push(new selector_heromaker());
         this.dic_push(new selector_lovemaker());
+        this.dic_push(new selector_eromaker());
         this.dic_push(new selector_mystmaker());
 
         this.dic_push(new selector_bookinfo());
@@ -1782,6 +1835,7 @@ class book_docs_maker extends news_docs_maker {
 
         this.dic_push(new locker_heropic());
         this.dic_push(new locker_lovepic());
+        this.dic_push(new locker_eropic());
         this.dic_push(new locker_mystpic());
 
         this.dic_push(new OneTime_food());

@@ -378,6 +378,13 @@ small {
     grid-row: 2 / 3;
     grid-column: 1 / 3;    
 }
+#book_erostory {
+    font-family: '游明朝', 'Yu Mincho', sans-serif;
+    margin:     5px; 
+    padding:    5px; 
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;    
+}
 
 #book_myststory {
     font-family: 'メイリオ', 'Meiryo', sans-serif;
@@ -478,7 +485,7 @@ small {
     font-family: 'Times New Roman', Times, serif;
     font-weight:bolder;
     font-style: italic;
-    color:  magenta;
+    color:  lightgoldenrodyellow;
     font-size: 4vw;
     text-align:center;
     text-shadow: 3px 3px 0px darkmagenta;
@@ -510,6 +517,32 @@ small {
     font-size: 7vw;
     text-align:center;
     text-shadow: 3px 3px 0px #600000;
+}
+
+#book13 {
+    font-family: 'Yu Mincho';
+    color:  pink;
+    font-style: italic;
+    font-size: 4vw;
+    text-align:center;
+    text-shadow: 3px 3px 0px red;
+}
+#book14 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight:bolder;
+    color:  magenta;
+    font-size: 4vw;
+    text-align:center;
+    text-shadow: 3px 3px 0px darkred;
+}
+#book15 {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight:bolder;
+    font-style: italic;
+    color:  orange;
+    font-size: 4vw;
+    text-align:center;
+    text-shadow: 3px 3px 0px darkmagenta;
 }
 
 
