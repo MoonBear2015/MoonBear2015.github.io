@@ -1152,7 +1152,7 @@ class selector_eroBoyfirst extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('「なあ、@KEIP2@@L_GIRL@。この@KEIW2@@POWERITEM@をどうにかしてくれないか？」')
             ,
-            new SctItm('「@KEIP2@@L_GIRL@。キミを見ていると僕の@KEIW2@@POWERITEM@が@DID@しまいそうなんだ」')
+            new SctItm('「@KEIP2@@L_GIRL@。キミを見ていると僕の@KEIW2@@POWERITEM@が@DOPOWER@しまいそうなんだ」')
             ,
             new SctItm('「どうだい、@KEIP2@@L_GIRL@。僕の@POWERITEM@は@KEIW3@と思わないかい？」')
         ]
@@ -1172,6 +1172,8 @@ class selector_eroGirlnext extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('「@L_BOY@は@KEIN@わね。 あなたの@KEIS2@@PEN@なんか見たくもないわ」')
             ,
             new SctItm('「@KEIN@@L_BOY@、そんな@KEIS2@@PEN@なんか自分でどうにかしたら？」')
+            ,
+            new SctItm('「ねえ、@KEIN@@L_BOY@？　その今にも@DOPOOR@しそうな@KEIS2@@PEN@のことを云ってるのかしら」')
         ]
     }
 }
@@ -1184,7 +1186,9 @@ class selector_eroBoynext extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('「ああ、@KEIP2@@L_GIRL@。僕の@KEIW2@@POWERITEM@はキミじゃなきゃダメなんだ」')
             ,
-            new SctItm('「@KEIP2@@L_GIRL@。そうはいっても僕の@KEIW2@@POWERITEM@が@KEIP3@と思っているんだろう？」')
+            new SctItm('「頼むよ、@KEIP2@@L_GIRL@！ 僕の@KEIW2@@POWERITEM@が今にも@DOPOWER@しそうなんだ！」')
+            ,
+            new SctItm('「@KEIP2@@L_GIRL@。そうはいっても僕の@KEIW2@@POWERITEM@が@KEIW3@と思っているんだろう？」')
             ,
             new SctItm('「でも、@KEIP2@@L_GIRL@。この僕の@POWERITEM@をよく見てくれよ。@KEIMW@で@KEIMW@だろう？」')
         ]

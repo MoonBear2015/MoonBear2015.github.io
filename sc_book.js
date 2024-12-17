@@ -831,7 +831,7 @@ class selector_eroBoyfirst extends SctItm_Selector {
         this.itms = [
             new SctItm('「やあ、@KEIP2@@L_GIRL@。僕の@KEIW2@@POWERITEM@を見てくれ。どう思う？」'),
             new SctItm('「なあ、@KEIP2@@L_GIRL@。この@KEIW2@@POWERITEM@をどうにかしてくれないか？」'),
-            new SctItm('「@KEIP2@@L_GIRL@。キミを見ていると僕の@KEIW2@@POWERITEM@が@DID@しまいそうなんだ」'),
+            new SctItm('「@KEIP2@@L_GIRL@。キミを見ていると僕の@KEIW2@@POWERITEM@が@DOPOWER@しまいそうなんだ」'),
             new SctItm('「どうだい、@KEIP2@@L_GIRL@。僕の@POWERITEM@は@KEIW3@と思わないかい？」')
         ];
     }
@@ -844,7 +844,8 @@ class selector_eroGirlnext extends SctItm_Selector {
             new SctItm('「@L_BOY@ったら@KEIN2@人ね。私はそんな@KEIS2@@PEN@なんて欲しくないわ」'),
             new SctItm('「だめよ、@KEIN2@@L_BOY@。そんな@KEIS2@@PEN@なんか捨ててしまえばいいわ」'),
             new SctItm('「@L_BOY@は@KEIN@わね。 あなたの@KEIS2@@PEN@なんか見たくもないわ」'),
-            new SctItm('「@KEIN@@L_BOY@、そんな@KEIS2@@PEN@なんか自分でどうにかしたら？」')
+            new SctItm('「@KEIN@@L_BOY@、そんな@KEIS2@@PEN@なんか自分でどうにかしたら？」'),
+            new SctItm('「ねえ、@KEIN@@L_BOY@？　その今にも@DOPOOR@しそうな@KEIS2@@PEN@のことを云ってるのかしら」')
         ];
     }
 }
@@ -854,7 +855,8 @@ class selector_eroBoynext extends SctItm_Selector {
         this.itms = [
             new SctItm('「そんなこと言わないでくれ、@KEIP2@@L_GIRL@。僕の@POWERITEM@はこんなに@KEIW2@のに」'),
             new SctItm('「ああ、@KEIP2@@L_GIRL@。僕の@KEIW2@@POWERITEM@はキミじゃなきゃダメなんだ」'),
-            new SctItm('「@KEIP2@@L_GIRL@。そうはいっても僕の@KEIW2@@POWERITEM@が@KEIP3@と思っているんだろう？」'),
+            new SctItm('「頼むよ、@KEIP2@@L_GIRL@！ 僕の@KEIW2@@POWERITEM@が今にも@DOPOWER@しそうなんだ！」'),
+            new SctItm('「@KEIP2@@L_GIRL@。そうはいっても僕の@KEIW2@@POWERITEM@が@KEIW3@と思っているんだろう？」'),
             new SctItm('「でも、@KEIP2@@L_GIRL@。この僕の@POWERITEM@をよく見てくれよ。@KEIMW@で@KEIMW@だろう？」')
         ];
     }

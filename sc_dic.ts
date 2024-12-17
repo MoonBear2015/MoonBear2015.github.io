@@ -6105,40 +6105,38 @@ const   itms_do = [
     //
     // nega 
     //
-    new SctItm('壊滅','DO/break.jpg')
-    ,
-    new SctItm('死滅','DO/dead.jpg')
-    ,
-    new SctItm('崩壊','DO/Collapse.jpg')
-    ,
-    new SctItm('爆発','DO/bomb.jpg')
-    ,
-    new SctItm('大爆発','DO/bomb.jpg')
+    // new SctItm('壊滅','DO/break.jpg')
     // ,
-    // new SctItm('捏造','DO/fakeTelop.jpg')
-    ,
-    new SctItm('絶望','DO/Lonly.jpg')
-    ,
+    // new SctItm('死滅','DO/dead.jpg')
+    // ,
+    // new SctItm('崩壊','DO/Collapse.jpg')
+    // ,
+    // new SctItm('爆発','DO/bomb.jpg')
+    // ,
+    // new SctItm('大爆発','DO/bomb.jpg')
+    // ,
+    // new SctItm('絶望','DO/Lonly.jpg')
+    // ,
     new SctItm('孤立','DO/Lonly2.jpg')
     ,
-    new SctItm('消滅','DO/Dis.jpg')
-    ,
+    // new SctItm('消滅','DO/Dis.jpg')
+    // ,
     new SctItm('感染','DO/infection.jpg')
     ,
-    new SctItm('暴走','DO/Wild.jpg')
-    ,
-    new SctItm('発狂','DO/crazy.jpg')
-    ,
+    // new SctItm('暴走','DO/Wild.jpg')
+    // ,
+    // new SctItm('発狂','DO/crazy.jpg')
+    // ,
     new SctItm('洗脳','DO/brainwash.jpg')
     ,
     new SctItm('終焉','DO/end.jpg')
     ,
     new SctItm('衰退','DO/decline.jpg')
     ,
-    new SctItm('滅亡','DO/Destruction.jpg')
-    ,
-    new SctItm('自滅','DO/self.jpg')
-    ,
+    // new SctItm('滅亡','DO/Destruction.jpg')
+    // ,
+    // new SctItm('自滅','DO/self.jpg')
+    // ,
     new SctItm('困惑','DO/panic.jpg')
     ,
     new SctItm('混乱','DO/panic.jpg')
@@ -6175,8 +6173,8 @@ const   itms_do = [
     ,
     new SctItm('荒廃','DO/devastation.jpg')
     ,
-    new SctItm('腐敗','DO/oldtimer.jpg')
-    ,
+    // new SctItm('腐敗','DO/oldtimer.jpg')
+    // ,
     new SctItm('敗北','DO/lost.jpg')
     ,
     new SctItm('降伏','DO/lose.jpg')
@@ -6189,8 +6187,8 @@ const   itms_do = [
     ,
     new SctItm('侮辱','DO/insult.jpg')
     ,
-    new SctItm('退化','DO/Degeneration.jpg')
-    ,
+    // new SctItm('退化','DO/Degeneration.jpg')
+    // ,
     new SctItm('失望','DO/disappointment.jpg')
     ,
     new SctItm('軽蔑','DO/contempt.jpg')
@@ -6217,8 +6215,8 @@ const   itms_do = [
     ,
     new SctItm('炎上','DO/burn.png')
     ,
-    new SctItm('閉店','DO/close.jpg')
-    ,
+    // new SctItm('閉店','DO/close.jpg')
+    // ,
     new SctItm('終了','DO/end2.jpg')
     ,
     new SctItm('謝罪','DO/column.png')
@@ -6302,10 +6300,10 @@ const   itms_do = [
     ,
     new SctItm('開催','DO/event.jpg')
     ,
-    new SctItm('フィーバー','DO/fever.jpg')
-    ,
-    new SctItm('大はしゃぎ','DO/fever.jpg')
-    ,
+    // new SctItm('フィーバー','DO/fever.jpg')
+    // ,
+    // new SctItm('大はしゃぎ','DO/fever.jpg')
+    // ,
     new SctItm('爆笑','DO/laugh2.jpg')
     ,
     new SctItm('大笑い','DO/laugh2.jpg')
@@ -6326,6 +6324,47 @@ const   itms_do = [
     ,
     new SctItm('殿堂入り','DO/crown.jpg')
 ]
+
+const   itms_do_power = [
+    new SctItm('爆発','DO/bomb.jpg')
+    ,
+    new SctItm('暴発','DO/bomb.jpg')
+    ,
+    new SctItm('大爆発','DO/bomb.jpg')
+    ,
+    new SctItm('暴走','DO/Wild.jpg')
+    ,
+    new SctItm('発狂','DO/crazy.jpg')
+    ,
+    new SctItm('炎上','DO/burn.png')
+    ,
+    new SctItm('フィーバー','DO/fever.jpg')
+    ,
+    new SctItm('大はしゃぎ','DO/fever.jpg')
+]
+
+const   itms_do_poor = [
+    new SctItm('壊滅','DO/break.jpg')
+    ,
+    new SctItm('死滅','DO/dead.jpg')
+    ,
+    new SctItm('崩壊','DO/Collapse.jpg')
+    ,
+    new SctItm('絶望','DO/Lonly.jpg')
+    ,
+    new SctItm('消滅','DO/Dis.jpg')
+    ,
+    new SctItm('滅亡','DO/Destruction.jpg')
+    ,
+    new SctItm('自滅','DO/self.jpg')
+    ,
+    new SctItm('腐敗','DO/oldtimer.jpg')
+    ,
+    new SctItm('退化','DO/Degeneration.jpg')
+    ,
+    new SctItm('閉店','DO/close.jpg')
+]
+
 
 const   itms_class = [
     new SctItm('@L_TOWN@大学教授')

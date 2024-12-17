@@ -1541,6 +1541,8 @@ class selector_do extends SctItm_Selector {
     constructor() {
         super('@DO@');
         this.Add(itms_do);
+        this.Add(itms_do_power);
+        this.Add(itms_do_poor);
     }
 }
 // （固定）動名詞 の～
@@ -1548,6 +1550,34 @@ class locker_do extends SctItm_SelectLocker {
     constructor() {
         super('@L_DO@', '', '@PIC_DO@');
         this.Add(itms_do);
+        this.Add(itms_do_power);
+        this.Add(itms_do_poor);
+    }
+}
+class selector_do_power extends SctItm_Selector {
+    constructor() {
+        super('@DOPOWER@');
+        this.Add(itms_do_power);
+    }
+}
+// （固定）動名詞 の～
+class locker_do_power extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_DOPOWER@', '', '@PIC_DO@');
+        this.Add(itms_do_power);
+    }
+}
+class selector_do_poor extends SctItm_Selector {
+    constructor() {
+        super('@DOPOOR@');
+        this.Add(itms_do_poor);
+    }
+}
+// （固定）動名詞 の～
+class locker_do_poor extends SctItm_SelectLocker {
+    constructor() {
+        super('@L_DOPOOR@', '', '@PIC_DO@');
+        this.Add(itms_do_poor);
     }
 }
 class selector_accident extends SctItm_Selector {
@@ -4735,8 +4765,12 @@ class news_docs_maker extends docs_maker {
         this.dic_push(new selector_random_NUM100MIL());
         this.dic_push(new locker_what());
         this.dic_push(new locker_do());
+        this.dic_push(new locker_do_power());
+        this.dic_push(new locker_do_poor());
         this.dic_push(new selector_what());
         this.dic_push(new selector_do());
+        this.dic_push(new selector_do_power());
+        this.dic_push(new selector_do_poor());
         this.dic_push(new selector_accident());
         this.dic_push(new locker_accident());
         this.dic_push(new selector_key());
