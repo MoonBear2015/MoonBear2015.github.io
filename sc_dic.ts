@@ -80,14 +80,15 @@ const   cods_sword = [
     new SctCod_TI('|日本刀|にほんとう|' )
     ,
     new SctCod_TI('|青竜刀|せいりゅうとう|' )
-    ,
-    new SctCod_TI('ナイフ')
-    ,
-    new SctCod_TI('レイピア')
-    ,
-    new SctCod_TI('サーベル')
+    // ,
+    // new SctCod_TI('ナイフ')
+    // ,
+    // new SctCod_TI('レイピア')
+    // ,
+    // new SctCod_TI('サーベル')
 ];
 
+// 銃・剣 以外
 const   cods_weapon = [
     new SctCod_TI('|武器|ぶき|' ,'weapon.jpg')
     ,
@@ -96,12 +97,18 @@ const   cods_weapon = [
     new SctCod_TI('|長刀|なぎなた|' )
     ,
     new SctCod_TI('|刺股|さすまた|' )
+    // ,
+    // new SctCod_TI('|戦斧|せんぷ|' )
     ,
-    new SctCod_TI('|戦斧|せんぷ|' )
+    new SctCod_TI('|斧|おの|')
+    ,
+    new SctCod_TI('|石斧|いしおの|')
     ,
     new SctCod_TI('|戦斧|バトルアックス|')
     ,
     new SctCod_TI('|棍棒|こんぼう|')
+    ,
+    new SctCod_TI('ハンマー')
 ];
 
 const   cods_gun = [
@@ -123,9 +130,15 @@ const   cods_gun = [
     ,
     new SctCod_TI('ライフル')
     ,
+    new SctCod_TI('マシンガン')
+    ,
+    new SctCod_TI('|機関銃|きかんじゅう|')
+    ,
     new SctCod_TI('|大砲|たいほう|')
     ,
     new SctCod_TI('|巨砲|きょほう|')
+    ,
+    new SctCod_TI('キャノン|砲|ほう|')
     ,
     new SctCod_TI('|戦車砲|せんしゃほう|')
     ,
@@ -3283,45 +3296,59 @@ const   cods_km_posi = [
 
 
 const   cods_ad_nega = [
+	new SctCod_It('|阿呆|あほ|らしい')
+	,
+    new SctCod_It('いやらしい')
+    ,
+    new SctCod_It('えげつない')
+    ,
+    new SctCod_It('|薄暗|うすぐら|い')
+    ,
     new SctCod_It('|五月蠅|うるさ|い')
     ,
+	new SctCod_It('くだらない')
+	,
     new SctCod_It('|口|くち|うるさい')
+	,
+	new SctCod_It('しょうもない')
     ,
     new SctCod_It('|切|せつ|ない')
     ,
     new SctCod_It('|憎|にく|たらしい')
     ,
-    new SctCod_It('|薄暗|うすぐら|い')
-    ,
-    new SctCod_It('|醜|みにく|い')
-    ,
-	new SctCod_It('|阿呆|あほ|らしい')
-	,
-	new SctCod_It('|馬鹿|ばか|らしい')
-	,
 	new SctCod_It('つまらない')
 	,
-	new SctCod_It('くだらない')
+	new SctCod_It('|馬鹿|ばか|らしい')
+    ,
+    new SctCod_It('|醜|みにく|い')
 	,
-	new SctCod_It('しょうもない')
+	new SctCod_It('だらしない')
+	,
+	new SctCod_It('みすぼらしい')
 ];
 
 const   cods_adv_nega = [
-    new SctCod_It('|五月蠅|うるさ|く')
+	new SctCod_It('|阿呆|あほ|らしく')
+	,
+    new SctCod_It('いやらしく')
     ,
+    new SctCod_It('えげつなく')
+    ,
+    new SctCod_It('|薄暗|うすぐら|く')
+    ,
+    new SctCod_It('|五月蠅|うるさ|く')
+	,
     new SctCod_It('|口|くち|うるさく')
     ,
     new SctCod_It('|切|せつ|なく')
     ,
     new SctCod_It('|憎|にく|たらしく')
-    ,
-    new SctCod_It('|薄暗|うすぐら|く')
-    ,
-	new SctCod_It('|阿呆|あほ|らしく')
 	,
 	new SctCod_It('|馬鹿|ばか|らしく')
-	,
+    ,
     new SctCod_It('|醜|みにく|く')
+	,
+	new SctCod_It('みすぼらしく')
 ];
 
 const   cods_km_nega = [
@@ -3936,6 +3963,8 @@ const   cods_km_power = [
     ,
     new SctCod_Km('|過激|かげき|')
     ,
+    new SctCod_Km('|驚異的|きょういてき|')
+    ,
     new SctCod_Km('|凶猛|きょうもう|')
     ,
     new SctCod_Km('|激烈|げきれつ|')
@@ -3970,7 +3999,13 @@ const   cods_km_power = [
 const   cods_km_big = [
     new SctCod_Km('|偉大|いだい|')
     ,
+    new SctCod_Km('|大型|おおがた|')
+    ,
     new SctCod_Km('|巨大|きょだい|')
+    ,
+    new SctCod_Km('|膨大|ぼうだい|')
+    ,
+    new SctCod_Km('|莫大|ばくだい|')
     ,
     new SctCod_Km('|桁違|けたちが|い')
     ,
@@ -3990,9 +4025,15 @@ const   cods_km_low = [
     ,
     new SctCod_Km('|災難|さいなん|')
     ,
+    new SctCod_Km('|醜悪|しゅうあく|')
+    ,
     new SctCod_Km('|軟弱|なんじゃく|')
     ,
     new SctCod_Km('|悲劇的|ひげきてき|')
+    ,
+    new SctCod_Km('|悲惨|ひさん|')
+    ,
+    new SctCod_Km('|貧弱|ひんじゃく|')
 ];
 
 const   cods_km_small = [
@@ -7907,14 +7948,14 @@ const   itms_nickStrong = [
     new SctItm('黒王号')
     ,
     new SctItm('|赤兎馬|せきとば|')
-    ,
-    new SctItm('|白虎|びゃっこ|')
-    ,
-    new SctItm('|青龍|せいりゅう|')
-    ,
-    new SctItm('|玄武|げんぶ|')
-    ,
-    new SctItm('|朱雀|すじゃく|')
+    // ,
+    // new SctItm('|白虎|びゃっこ|')
+    // ,
+    // new SctItm('|青龍|せいりゅう|')
+    // ,
+    // new SctItm('|玄武|げんぶ|')
+    // ,
+    // new SctItm('|朱雀|すじゃく|')
 ]
 
 const   itms_nickPoor = [

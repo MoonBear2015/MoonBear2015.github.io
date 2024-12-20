@@ -1597,7 +1597,7 @@ class selector_newsC01 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@NEWS_C01@');
         this.itms = [
-            new SctItm('@KEI@@L_WHAT@の@L_CHAR@が@KEID@@L_DO@@END01B@')
+            new SctItm('@KEI@@L_WHAT@の@L_CHAR@が@WHERE@で@KEID@@L_DO@@END01B@')
             ,
             new SctItm('@KEI@@L_WHAT@の@L_CHAR@による@KEI@@KEY@@END01A@')
             ,
@@ -1901,9 +1901,9 @@ class selector_comment2 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@L_WHAT@で私が@DID@いると、@L_MANYCHAR@が@DID@@DIDEND@@END02D1@')
             ,
-            new SctItm('私が@DID@@DIDEND@とき、@L_WHAT@で@L_MANYCHAR@が@DID@@DIDEND@@END02D1@')
+            new SctItm('私が@WHERE@で@DID@@DIDEND@とき、@L_WHAT@で@L_MANYCHAR@が@DID@@DIDEND@@END02D1@')
             ,
-            new SctItm('私が@DID@いると、@L_WHAT@で@L_MANYCHAR@が@DID@@DIDEND@@END02D1@')
+            new SctItm('私が@WHERE@で@DID@いると、@L_WHAT@で@L_MANYCHAR@が@DID@@DIDEND@@END02D1@')
             ,
             new SctItm('私が@L_WHAT@で@DID@いると、@L_MANYCHAR@が@DID@@DIDEND@@END02D1@')
             ,
@@ -1915,7 +1915,7 @@ class selector_comment2 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@DATE@に私もまた、@L_WHAT@で@DID@@DIDEND@@END02D1@')
             ,
-            new SctItm('@DATE@に私が@DID@@DIDEND@とき、@L_MANYCHAR@が@DID@@DIDEND@@END02D1@')
+            new SctItm('@DATE@に私が@WHERE@で@DID@@DIDEND@とき、@L_MANYCHAR@が@DID@@DIDEND@@END02D1@')
             ,
             new SctItm('@YESNO@、@L_WHAT@で@DID@みよう')
             ,
@@ -2429,12 +2429,12 @@ class selector_size1 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('暴発')
             ,
             new SctItm('多発')
+            // ,
+            // new SctItm('復活')
             ,
-            new SctItm('復活')
-            ,
-            new SctItm('衰退')
-            ,
-            new SctItm('解消')
+            new SctItm('減少')
+            // ,
+            // new SctItm('解消')
             ,
             new SctItm('消失')
             ,
@@ -2459,16 +2459,16 @@ class selector_size1 extends SctItm_Selector implements ISctItm_Selector {
             new SctItm('巨大化')
             // ,
             // new SctItm('禁止')
-            ,
-            new SctItm('停止')
+            // ,
+            // new SctItm('停止')
             ,
             new SctItm('中止')
-            ,
-            new SctItm('延期')
+            // ,
+            // new SctItm('延期')
             ,
             new SctItm('停滞')
-            ,
-            new SctItm('回復')
+            // ,
+            // new SctItm('回復')
             ,
             new SctItm('悪化')
         ];
@@ -3032,7 +3032,7 @@ class selector_kw extends SctItm_Selector implements ISctItm_Selector {
         super('@KEIW@');
         this.Add(cods_NoRubi_to_itms(cods_ad_power));
         this.Add(cods_NoRubi_to_itms(cods_ad_big));
-
+        this.Add(cods_NoRubi_to_itms(cods_ad_danger));
     }
 }
 
@@ -3041,6 +3041,7 @@ class selector_kdw extends SctItm_Selector implements ISctItm_Selector {
         super('@KEIDW@');
         this.Add(cods_NoRubi_to_itms(cods_adv_power));
         this.Add(cods_NoRubi_to_itms(cods_adv_big));
+        this.Add(cods_NoRubi_to_itms(cods_adv_danger));
     }
 }
 
@@ -3111,7 +3112,6 @@ class selector_kn extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@KEIN@');
         this.Add(cods_NoRubi_to_itms(cods_ad_nega));
-        this.Add(cods_NoRubi_to_itms(cods_ad_danger));
         this.Add(cods_NoRubi_to_itms(cods_ad_dirty));
         this.Add(cods_NoRubi_to_itms(cods_ad_sense_n));
     }
@@ -3120,7 +3120,6 @@ class selector_kdn extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@KEIDN@');
         this.Add(cods_NoRubi_to_itms(cods_adv_nega));
-        this.Add(cods_NoRubi_to_itms(cods_adv_danger));
         this.Add(cods_NoRubi_to_itms(cods_adv_dirty));
         this.Add(cods_NoRubi_to_itms(cods_adv_sense_n));
     }
