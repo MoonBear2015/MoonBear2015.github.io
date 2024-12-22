@@ -47,8 +47,8 @@ const cods_sword = [
     // new SctCod_TI('ナイフ')
     // ,
     // new SctCod_TI('レイピア')
-    // ,
-    // new SctCod_TI('サーベル')
+    ,
+    new SctCod_TI('サーベル')
 ];
 // 銃・剣 以外
 const cods_weapon = [
@@ -63,7 +63,7 @@ const cods_weapon = [
     new SctCod_TI('|石斧|いしおの|'),
     new SctCod_TI('|戦斧|バトルアックス|'),
     new SctCod_TI('|棍棒|こんぼう|'),
-    new SctCod_TI('ハンマー')
+    new SctCod_TI('ロンギヌスの|槍|やり|')
 ];
 const cods_gun = [
     new SctCod_TI('|銃器|じゅうき|', 'gun.jpg'),
@@ -6038,7 +6038,9 @@ const itms_did = [
     new SctItm('@TOY@をプレゼントして'),
     new SctItm('@KEIW2@@SWORD@を構えて'),
     new SctItm('@KEIW2@@SWORD@を腰に差して'),
-    new SctItm('@KEIW2@@SWORD@を腰に差して'),
+    new SctItm('@KEIW2@@SWORD@を研いで'),
+    new SctItm('@KEIW2@@SWORD@を鞘に治めて'),
+    new SctItm('@KEIW2@@SWORD@の鞘を捨てて'),
     new SctItm('@KEIW2@@WEAPON@で武装して'),
     new SctItm('@KEIW2@@GUN@を発射して'),
     new SctItm('@KEIW2@@GUN@を乱射して'),
@@ -6246,6 +6248,8 @@ const itms_did02_l = [
     new SctItm('@L_SWORD@を構えて'),
     new SctItm('@L_SWORD@を腰に差して'),
     new SctItm('@L_SWORD@を腰に差して'),
+    new SctItm('@L_SWORD@を鞘に治めて'),
+    new SctItm('@L_SWORD@の鞘を捨てて'),
     new SctItm('@L_WEAPON@で武装して'),
     new SctItm('@L_GUN@を発射して'),
     new SctItm('@L_GUN@を乱射して'),

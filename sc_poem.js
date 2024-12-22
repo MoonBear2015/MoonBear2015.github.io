@@ -114,10 +114,12 @@ class poemer_pattern_A extends SctItm_Selector {
     constructor() {
         super('@TYPE_A@');
         this.itms = [
+            new SctItm('@TEMA05@ @SENT07@ @SENT05@'),
             new SctItm('@SENT05@ @TEMA07@ @SENT05@'),
             new SctItm('@SENT05@ @SENT07@ @TEMA05@'),
             new SctItm('@TEMA05@ @SENT07@ @TEMA05@'),
             new SctItm('@SENT05@ @TEMA07@ @TEMA05@'),
+            new SctItm('@TEMA05@ @TEMA07@ @SENT05@'),
             new SctItm('@TEMA05@ @TEMA07@ @TEMA05@')
         ];
     }

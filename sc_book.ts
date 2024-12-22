@@ -1173,7 +1173,7 @@ class selector_eroGirlnext extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('「@KEIN@@L_BOY@、そんな@KEIS2@@PEN@なんか自分でどうにかしたら？」')
             ,
-            new SctItm('「ねえ、@KEIN@@L_BOY@？　その今にも@DOPOOR@しそうな@KEIS2@@PEN@のことを云ってるのかしら」')
+            new SctItm('「ねえ、@KEIN@@L_BOY@？ その今にも@DOPOOR@しそうな@KEIS2@@PEN@のことを云ってるのかしら」')
             ,
             new SctItm('「そんな@KEIN@@L_BOY@の@KEIS2@@PEN@なんか、勝手に@DOPOWER@してればいいんだわ」')
         ]

@@ -845,7 +845,7 @@ class selector_eroGirlnext extends SctItm_Selector {
             new SctItm('「だめよ、@KEIN2@@L_BOY@。そんな@KEIS2@@PEN@なんか捨ててしまえばいいわ」'),
             new SctItm('「@L_BOY@は@KEIN@わね。 あなたの@KEIS2@@PEN@なんか見たくもないわ」'),
             new SctItm('「@KEIN@@L_BOY@、そんな@KEIS2@@PEN@なんか自分でどうにかしたら？」'),
-            new SctItm('「ねえ、@KEIN@@L_BOY@？　その今にも@DOPOOR@しそうな@KEIS2@@PEN@のことを云ってるのかしら」'),
+            new SctItm('「ねえ、@KEIN@@L_BOY@？ その今にも@DOPOOR@しそうな@KEIS2@@PEN@のことを云ってるのかしら」'),
             new SctItm('「そんな@KEIN@@L_BOY@の@KEIS2@@PEN@なんか、勝手に@DOPOWER@してればいいんだわ」')
         ];
     }
