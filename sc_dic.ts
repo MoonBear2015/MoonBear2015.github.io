@@ -5732,7 +5732,7 @@ const   itms_sports = [
     ,
     new SctItm('|筋|きん|トレ')
     ,
-    new SctItm('|散歩|さんぽ')
+    new SctItm('|散歩|さんぽ|')
     ,
     new SctItm('ウォーキング')
     ,

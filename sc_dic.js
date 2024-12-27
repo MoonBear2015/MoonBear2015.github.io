@@ -3668,7 +3668,7 @@ const itms_sports = [
     new SctItm('レスリング'),
     new SctItm('|相撲|すもう|'),
     new SctItm('|筋|きん|トレ'),
-    new SctItm('|散歩|さんぽ'),
+    new SctItm('|散歩|さんぽ|'),
     new SctItm('ウォーキング'),
     new SctItm('サイクリング'),
     new SctItm('ジョギング'),
