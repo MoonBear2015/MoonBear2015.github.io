@@ -5146,9 +5146,9 @@ const   cods_ad_jougo = [
 ];
 
 const itms_grade = [
-    new SctItm('微妙に')
+    new SctItm('|微妙|びみょう|に')
     ,
-    new SctItm('妙に')
+    new SctItm('|妙|みょう|に')
     ,
     new SctItm('わずかに')
     ,
@@ -5168,13 +5168,13 @@ const itms_grade = [
     ,
     new SctItm('非常に')
     ,
-    new SctItm('盛大に')
+    new SctItm('|盛大|せいだい|に')
     ,
-    new SctItm('膨大な')
+    new SctItm('|膨大|ぼうだい|な')
     ,
     new SctItm('ずいぶん')
     ,
-    new SctItm('物凄く')
+    new SctItm('|物凄|ものすご|く')
     ,
     new SctItm('@NICK@の様に')
     ,
@@ -5231,11 +5231,11 @@ const itms_landmark = [
     ,
     new SctItm('商店街')
     ,
-    new SctItm('歓楽街')
+    new SctItm('|歓楽街|かんらくがい|')
     ,
-    new SctItm('繁華街')
+    new SctItm('|繁華街|はんかがい|')
     ,
-    new SctItm('闇市')
+    new SctItm('|闇市|やみいち|')
     // ,
     // new SctItm('川')
     // ,
@@ -5245,9 +5245,9 @@ const itms_landmark = [
     ,
     new SctItm('山脈')
     ,
-    new SctItm('洞窟')
+    new SctItm('|洞窟|どうくつ|')
     ,
-    new SctItm('鍾乳洞')
+    new SctItm('|鍾乳洞|しょうにゅうどう|')
     ,
     new SctItm('砂丘')
     ,
@@ -5255,43 +5255,43 @@ const itms_landmark = [
 ];
 
 const itms_livestock = [
-    new SctItm('牛')
+    new SctItm('|牛|うし|')
     ,
     new SctItm('ウサギ')
     ,
-    new SctItm('馬')
+    new SctItm('|馬|うま|')
     ,
-    new SctItm('羊')
+    new SctItm('|羊|ひつじ|')
     ,
     new SctItm('ニワトリ')
     ,
-    new SctItm('七面鳥')
+    new SctItm('|七面鳥|しちめんちょう|')
     ,
-    new SctItm('猪')
+    new SctItm('|猪|いのしし|')
     ,
-    new SctItm('鹿')
+    new SctItm('|鹿|しか|')
     ,
-    new SctItm('カモシカ')
+    new SctItm('|氈鹿|かもしか|')
     ,
-    new SctItm('シマウマ')
+    new SctItm('|縞馬|シマウマ|')
     ,
-    new SctItm('豚')
+    new SctItm('|豚|ぶた|')
     ,
-    new SctItm('ヤギ')
+    new SctItm('|山羊|ヤギ|')
     ,
-    new SctItm('鮫')
+    new SctItm('|鮫|さめ|')
     ,
     new SctItm('クジラ')
     ,
-    new SctItm('蟹')
+    new SctItm('|蟹|かに|')
     ,
-    new SctItm('海老')
+    new SctItm('|海老|えび|')
     ,
     new SctItm('タコ')
     ,
     new SctItm('イカ')
     ,
-    new SctItm('龍')
+    new SctItm('|龍|りゅう|')
 ];
 
 
@@ -5374,11 +5374,11 @@ const itms_partner = [
     ,
     new SctItm('兄')
     ,
-    new SctItm('師匠')
+    new SctItm('|師匠|ししょう|')
     ,
     new SctItm('弟子')
     ,
-    new SctItm('恩師')
+    new SctItm('|恩師|おんし|')
     ,
     new SctItm('愛弟子')
     ,
@@ -5390,73 +5390,71 @@ const itms_partner = [
     ,
     new SctItm('お客様')
     ,
-    new SctItm('顧客')
+    new SctItm('|顧客|こきゃく|')
     ,
     new SctItm('取引先')
     ,
     new SctItm('メイド')
     ,
-    new SctItm('執事')
+    new SctItm('|執事|しつじ|')
     ,
-    new SctItm('秘書')
+    new SctItm('|秘書|ひしょ|')
     ,
     new SctItm('ボス')
     ,
-    new SctItm('愛人')
+    new SctItm('|愛人|あいじん|')
     ,
-    new SctItm('不倫相手')
+    new SctItm('|不倫相手|ふりんあいて|')
     ,
-    new SctItm('相方')
+    new SctItm('|相方|あいかた|')
     ,
     new SctItm('ライバル')
     ,
-    new SctItm('親の仇')
+    new SctItm('親の|仇|かたき|')
     ,
-    new SctItm('裏切り者')
+    new SctItm('|裏切|うらぎ|り者')
 ]
 
 const   itms_accident = [
-    new SctItm('児童虐待')
+    new SctItm('|児童虐待|じどうぎゃくたい|')
     ,
-    new SctItm('婦女暴行')
+    new SctItm('|婦女暴行|ふじょぼうこう|')
     ,
-    new SctItm('人種差別')
+    new SctItm('|人種差別|じんしゅさべつ|')
     // ,
     // new SctItm('暗黒化')
     ,
-    new SctItm('無差別殺人')
+    new SctItm('|無差別殺人|むさべつさつじん|')
     ,
-    new SctItm('殺戮行為')
+    new SctItm('|殺戮行為|さつりくこうい|')
     ,
-    new SctItm('犯罪行為')
+    new SctItm('|犯罪行為|はんざいこうい|')
     ,
-    new SctItm('強盗殺人')
+    new SctItm('|強盗殺人|ごうとうさつじん|')
     ,
-    new SctItm('辻斬り')
+    new SctItm('|辻斬|つじぎ|り')
     ,
-    new SctItm('傷害事件')
+    new SctItm('|傷害事件|しょうがいじけん|')
     ,
-    new SctItm('虐殺行為')
+    new SctItm('|虐殺行為|ぎゃくさつこうい|')
     ,
-    new SctItm('大量虐殺')
+    new SctItm('|大量虐殺|たいりょうぎゃくさつ|')
     ,
-    new SctItm('妨害工作')
+    new SctItm('|妨害工作|ぼうがいこうさく|')
     ,
-    new SctItm('破壊工作')
+    new SctItm('|破壊工作|はかいこうさく|')
     ,
-    new SctItm('暴力行為')
+    new SctItm('|暴力行為|ぼうりょくこうい|')
     ,
-    new SctItm('乱痴気騒ぎ')
+    new SctItm('|乱痴気騒|らんちきさわ|ぎ')
     // ,
     // new SctItm('乱交パーティー')
     ,
-    new SctItm('乱闘騒ぎ')
+    new SctItm('|大喧嘩|おおげんか|')
     ,
-    new SctItm('大喧嘩')
+    new SctItm('|不法侵入|ふほうしんにゅう|')
     ,
-    new SctItm('不法侵入')
-    ,
-    new SctItm('同時多発テロ')
+    new SctItm('|同時多発|どうじたはつ|テロ')
     // ,
     // new SctItm('諜報活動')
 ];
@@ -5490,11 +5488,11 @@ const   itms_festival = [
     // ,
     new SctItm('立食パーティー')
     ,
-    new SctItm('舞踏会')
+    new SctItm('|舞踏会|ぶとうかい|')
     ,
-    new SctItm('仮面舞踏会')
+    new SctItm('|仮面舞踏会|かめんぶとうかい|')
     ,
-    new SctItm('餅つき大会')
+    new SctItm('|餅|もち|つき大会')
     ,
     new SctItm('忘年会')
     ,
@@ -5504,15 +5502,15 @@ const   itms_festival = [
     ,
     new SctItm('送別会')
     ,
-    new SctItm('お誕生日会')
+    new SctItm('お|誕生日会|たんじょうびかい|')
     ,
-    new SctItm('同窓会')
+    new SctItm('|同窓会|どうそうかい|')
     ,
-    new SctItm('座談会')
+    new SctItm('|座談会|ざだんかい|')
     ,
-    new SctItm('講演会')
+    new SctItm('|講演会|こうえんかい|')
     ,
-    new SctItm('選挙運動')
+    new SctItm('|選挙運動|せんきょうんどう|')
     ,
     new SctItm('デモ行進')
     ,
@@ -5534,7 +5532,7 @@ const   itms_badhabit = [
     ,
     new SctItm('買い食い')
     ,
-    new SctItm('賭け事')
+    new SctItm('|賭|か|け事')
     ,
     new SctItm('ギャンブル')
     ,
@@ -5548,11 +5546,11 @@ const   itms_badhabit = [
     ,
     new SctItm('万引き')
     ,
-    new SctItm('衝動買い')
+    new SctItm('|衝動買|しょうどうが|い')
     ,
     new SctItm('ストーカー')
     ,
-    new SctItm('辻斬り')
+    new SctItm('|辻斬|つじぎ|り')
     ,
     new SctItm('つまみ食い')
     ,
@@ -5566,29 +5564,29 @@ const   itms_badhabit = [
     ,
     new SctItm('拾い食い')
     ,
-    new SctItm('梯子酒')
+    new SctItm('|梯子酒|はしござけ|')
     ,
     new SctItm('風俗通い')
     ,
     new SctItm('ホスト通い')
     ,
-    new SctItm('賭け麻雀')
+    new SctItm('|賭|か|け|麻雀|マージャン|')
     ,
-    new SctItm('無駄遣い')
+    new SctItm('|無駄遣|むだづか|い')
     ,
-    new SctItm('夜這い')
+    new SctItm('|夜這|よば|い')
     ,
-    new SctItm('夜更かし')
+    new SctItm('|夜更|よふ|かし')
     ,
-    new SctItm('乱痴気騒ぎ')
+    new SctItm('|乱痴気騒|らんちきさわ|ぎ')
     ,
     new SctItm('ドラッグ')
 ];
 
 const   itms_goodhabit = [
-    new SctItm('編み物')
+    new SctItm('|編|あ|み物')
     ,
-    new SctItm('映画鑑賞')
+    new SctItm('|映画鑑賞|えいがかんしょう|')
     ,
     new SctItm('アルバイト')
     ,
@@ -5608,25 +5606,25 @@ const   itms_goodhabit = [
     ,
     new SctItm('牛乳配達')
     ,
-    new SctItm('靴磨き')
+    new SctItm('|靴磨|くつみが|き')
     ,
-    new SctItm('工場勤務')
+    new SctItm('|工場勤務|こうじょうきんむ|')
     ,
-    new SctItm('婚活')
+    new SctItm('|婚活|こんかつ|')
     ,
-    new SctItm('慈善事業')
+    new SctItm('|慈善事業|じぜんじぎょう|')
     ,
-    new SctItm('塾通い')
+    new SctItm('|塾通|じゅくがよ|い')
     ,
-    new SctItm('受験勉強')
+    new SctItm('|受験勉強|じゅけんべんきょう|')
     ,
     new SctItm('新聞配達')
     ,
-    new SctItm('断食')
+    new SctItm('|断食|だんじき|')
     ,
-    new SctItm('ティッシュ配り')
+    new SctItm('ティッシュ|配|くば|り')
     ,
-    new SctItm('トイレ掃除')
+    new SctItm('トイレ|掃除|そうじ|')
     ,
     new SctItm('飛び込み営業')
     ,
@@ -5634,41 +5632,41 @@ const   itms_goodhabit = [
     ,
     new SctItm('畑仕事')
     ,
-    new SctItm('花嫁修業')
+    new SctItm('|花嫁修業|はなよめしゅぎょう|')
     ,
     new SctItm('ヒッチハイク')
     ,
     new SctItm('ボランティア活動')
     ,
-    new SctItm('募金活動')
+    new SctItm('|募金活動|ぼきんかつどう|')
     ,
     new SctItm('読書')
     ,
-    new SctItm('歯磨き')
+    new SctItm('|歯磨|はみが|き')
     ,
-    new SctItm('風呂掃除')
+    new SctItm('|風呂掃除|ふろそうじ|')
     ,
-    new SctItm('窓拭き')
+    new SctItm('|窓拭|まどふ|き')
     ,
-    new SctItm('瞑想')
+    new SctItm('|瞑想|めいそう|')
     ,
     new SctItm('魚釣り')
     ,
-    new SctItm('潮干狩り')
+    new SctItm('|潮干狩|しおひが|り')
     ,
-    new SctItm('熊狩り')
+    new SctItm('|熊狩|くまが|り')
     ,
-    new SctItm('鹿狩り')
+    new SctItm('|鹿狩|しかが|り')
     ,
-    new SctItm('鷹狩り')
+    new SctItm('|鷹狩|たかが|り')
     ,
     new SctItm('花見')
     ,
-    new SctItm('芋掘り')
+    new SctItm('|芋掘|いもほ|り')
     ,
-    new SctItm('栗拾い')
+    new SctItm('|栗拾|くりひろ|い')
     ,
-    new SctItm('紅葉狩り')
+    new SctItm('|紅葉狩|もみじが|り')
     ,
     new SctItm('キャンプ')
     ,
@@ -5678,7 +5676,7 @@ const   itms_goodhabit = [
 ];
 
 const   itms_sports = [
-    new SctItm('野球')
+    new SctItm('|野球|やきゅう|')
     ,
     new SctItm('サッカー')
     ,
@@ -5686,7 +5684,7 @@ const   itms_sports = [
     ,
     new SctItm('バレーボール')
     ,
-    new SctItm('卓球')
+    new SctItm('|卓球|たっきゅう|')
     ,
     new SctItm('テニス')
     ,
@@ -5710,19 +5708,19 @@ const   itms_sports = [
     ,
     new SctItm('ウィンドサーフィン')
     ,
-    new SctItm('遠泳')
+    new SctItm('|遠泳|えんえい|')
     ,
     new SctItm('スキューバダイビング')
     ,
-    new SctItm('柔道')
+    new SctItm('|柔道|じゅうどう|')
     ,
-    new SctItm('空手')
+    new SctItm('|空手|からて|')
     ,
-    new SctItm('合気道')
+    new SctItm('|合気道|あいきどう|')
     ,
-    new SctItm('剣道')
+    new SctItm('|剣道|けんどう|')
     ,
-    new SctItm('太極拳')
+    new SctItm('|太極拳|たいきょくけん|')
     ,
     new SctItm('フェンシング')
     ,
@@ -5730,11 +5728,11 @@ const   itms_sports = [
     ,
     new SctItm('レスリング')
     ,
-    new SctItm('相撲')
+    new SctItm('|相撲|すもう|')
     ,
-    new SctItm('筋トレ')
+    new SctItm('|筋|きん|トレ')
     ,
-    new SctItm('散歩')
+    new SctItm('|散歩|さんぽ')
     ,
     new SctItm('ウォーキング')
     ,
@@ -5746,7 +5744,7 @@ const   itms_sports = [
     ,
     new SctItm('ハイキング')
     ,
-    new SctItm('ラジオ体操')
+    new SctItm('ラジオ|体操|たいそう|')
     ,
     new SctItm('ヨガ')
 ];

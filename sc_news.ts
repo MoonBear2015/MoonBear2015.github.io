@@ -1374,7 +1374,7 @@ class selector_who2 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@PAY@')
             ,
-            new SctItm('懸賞金 @NUM100MIL@@MONEY@')
+            new SctItm('|懸賞金|けんしょうきん| @NUM100MIL@@MONEY@')
         ];
     }
 }
@@ -1404,7 +1404,7 @@ class selector_who3 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@GROUP@とは@FRIENDSHIP@であった')
             ,
-            new SctItm('@GROUP@とは@FRIENDSHIP@だと噂された')
+            new SctItm('@GROUP@とは@FRIENDSHIP@だと|噂|うわさ|された')
             ,
             new SctItm('@AWARD@を@AWARDGET@した')
             ,
@@ -1418,15 +1418,15 @@ class selector_who3 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@GROUP@から@DIDFRONT@追放された')
             ,
-            new SctItm('@GROUP@から批難された')
+            new SctItm('@GROUP@から|批難|ひなん|された')
             ,
-            new SctItm('@GROUP@が誇る')
+            new SctItm('@GROUP@が|誇|ほこ|る')
             ,
             new SctItm('@GROUP@にスカウトされた')
             ,
             new SctItm('@GROUP@に買収された')
             ,
-            new SctItm('@GROUP@に@DIDFRONT@雇われた')
+            new SctItm('@GROUP@に@DIDFRONT@|雇|やと|われた')
             ,
             new SctItm('@GROUP@に訴えられた')
             ,
@@ -1438,9 +1438,9 @@ class selector_who3 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@GROUP@から何故か付け狙われている')
             ,
-            new SctItm('@GROUP@に@DIDFRONT@抹殺された')
+            new SctItm('@GROUP@に@DIDFRONT@|抹殺|まっさつ|された')
             ,
-            new SctItm('@GROUP@を@DIDFRONT@壊滅させた')
+            new SctItm('@GROUP@を@DIDFRONT@|壊滅|かいめつ|させた')
             ,
             new SctItm('@GROUP@を組織@END02B@')
             ,
@@ -1559,7 +1559,7 @@ class selector_who4 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@MANYPEOPLE@より『@CALL2@』と@KEID@@ASSES@@L_CHAR@')
             ,
-            new SctItm('座右の銘『@INSCRIPTION@』')
+            new SctItm('|座右|ざゆう|の|銘|めい|『@INSCRIPTION@』')
             ,
             new SctItm('@SONGTYPE@『@SONGTITLE@』')
             ,
@@ -1569,7 +1569,7 @@ class selector_who4 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@PAY@')
             ,
-            new SctItm('懸賞金 @NUM100MIL@@MONEY@')
+            new SctItm('|懸賞金|けんしょうきん| @NUM100MIL@@MONEY@')
        ];
     }
 }
@@ -1719,7 +1719,7 @@ class selector_why extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('どんな理由で')
             ,
-            new SctItm('如何なる理由で')
+            new SctItm('|如何|いか|なる理由で')
         ];
     }
 }
@@ -2420,37 +2420,37 @@ class selector_size1 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@SIZE@');
         this.itms = [
-            new SctItm('勃発')
+            new SctItm('|勃発|ぼっぱつ|')
             ,
-            new SctItm('蔓延')
+            new SctItm('|蔓延|まんえん|')
             ,
-            new SctItm('急増')
+            new SctItm('|急増|きゅうぞう|')
             ,
-            new SctItm('暴発')
+            new SctItm('|暴発|ぼうはつ|')
             ,
-            new SctItm('多発')
+            new SctItm('|多発|たはつ|')
             // ,
             // new SctItm('復活')
-            ,
-            new SctItm('減少')
+            // ,
+            // new SctItm('減少')
             // ,
             // new SctItm('解消')
+            // ,
+            // new SctItm('消失')
+            // ,
+            // new SctItm('流行')
+            // ,
+            // new SctItm('再発')
+            // ,
+            // new SctItm('浸透')
             ,
-            new SctItm('消失')
-            ,
-            new SctItm('流行')
-            ,
-            new SctItm('再発')
-            ,
-            new SctItm('浸透')
-            ,
-            new SctItm('影響')
+            new SctItm('|影響|えいきょう|')
             ,
             new SctItm('無力化')
             ,
             new SctItm('活性化')
             ,
-            new SctItm('肥大化')
+            new SctItm('|肥大化|ひだいか|')
             ,
             new SctItm('無力化')
             ,
@@ -2461,12 +2461,12 @@ class selector_size1 extends SctItm_Selector implements ISctItm_Selector {
             // new SctItm('禁止')
             // ,
             // new SctItm('停止')
-            ,
-            new SctItm('中止')
+            // ,
+            // new SctItm('中止')
             // ,
             // new SctItm('延期')
-            ,
-            new SctItm('停滞')
+            // ,
+            // new SctItm('停滞')
             // ,
             // new SctItm('回復')
             ,
@@ -2486,7 +2486,7 @@ class selector_size2 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('が訴えられて@DIDEND@')
             ,
-            new SctItm('が蔓延して@DIDEND@')
+            new SctItm('が|蔓延|まんえん|して@DIDEND@')
             ,
             new SctItm('に包まれて@DIDEND@')
             ,
@@ -2500,11 +2500,11 @@ class selector_size2 extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('で顔をしかめて@DIDEND@')
             ,
-            new SctItm('に満ちあふれて@DIDEND@')
+            new SctItm('に|満|み|ちあふれて@DIDEND@')
             ,
-            new SctItm('に輝いて@DIDEND@')
+            new SctItm('に|輝|かがや|いて@DIDEND@')
             ,
-            new SctItm('に囚われて@DIDEND@')
+            new SctItm('に|囚|とら|われて@DIDEND@')
         ];
     }
 }
@@ -2521,7 +2521,7 @@ class selector_they extends SctItm_Selector implements ISctItm_Selector {
             // ,
             new SctItm('一般大衆')
             ,
-            new SctItm('有識者達')
+            new SctItm('|有識者|ゆうしきしゃ|達')
             ,
             new SctItm('子供達')
             ,
@@ -2563,7 +2563,7 @@ class selector_they extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('ヤクザ達')
             ,
-            new SctItm('過激派')
+            new SctItm('|過激派|かげきは|')
             ,
             new SctItm('移住者達')
             ,
@@ -2571,7 +2571,7 @@ class selector_they extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('旅芸人達')
             ,
-            new SctItm('奴隷達')
+            new SctItm('|奴隷|どれい|達')
             ,
             new SctItm('飼い猫達')
             ,
@@ -2595,7 +2595,7 @@ class selector_they extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('エリート層')
             ,
-            new SctItm('傭兵達')
+            new SctItm('|傭兵|ようへい|達')
             ,
             new SctItm('民衆')
             ,
@@ -2617,13 +2617,13 @@ class selector_they extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('家族')
             ,
-            new SctItm('親戚一同')
+            new SctItm('|親戚|しんせき|一同')
             ,
-            new SctItm('親類縁者')
+            new SctItm('|親類縁者|しんるいえんじゃ|')
             // ,
             // new SctItm('先祖代々')
             ,
-            new SctItm('犠牲者達')
+            new SctItm('|犠牲者|ぎせいしゃ|達')
             ,
             new SctItm('生徒一同')
             ,
@@ -2671,9 +2671,9 @@ class selector_many extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('大多数の')
             ,
-            new SctItm('ごく僅かな')
+            new SctItm('ごく|僅|わず|かな')
             ,
-            new SctItm('一握りの')
+            new SctItm('一|握|にぎ|りの')
             ,
             new SctItm('ほとんどの')
             // ,
@@ -2689,9 +2689,9 @@ class selector_many extends SctItm_Selector implements ISctItm_Selector {
             // ,
             new SctItm('数え切れない程の')
             ,
-            new SctItm('掃いて捨てるほどの')
+            new SctItm('|掃|は|いて捨てるほどの')
             ,
-            new SctItm('膨大な')
+            new SctItm('|膨大|ぼうだい|な')
             ,
             new SctItm('世界最高の')
             ,
@@ -2718,7 +2718,7 @@ class selector_manyman extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('数名の')
             ,
-            new SctItm('幾人もの')
+            new SctItm('|幾人|いくにん|もの')
             ,
             new SctItm('多くの')
             ,
@@ -2740,9 +2740,9 @@ class selector_manyman extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('数え切れない程の')
             ,
-            new SctItm('掃いて捨てるほどの')
+            new SctItm('|掃|は|いて捨てるほどの')
             ,
-            new SctItm('膨大な')
+            new SctItm('|膨大|ぼうだい|な')
             ,
             new SctItm('世界最高の')
             ,
@@ -2789,29 +2789,29 @@ class selector_history extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@HISTORY@');
         this.itms = [
-            new SctItm('伝説')
+            new SctItm('|伝説|でんせつ|')
             ,
-            new SctItm('神話')
+            new SctItm('|神話|しんわ|')
             ,
-            new SctItm('伝記')
+            new SctItm('|伝記|でんき|')
             ,
-            new SctItm('民話')
+            new SctItm('|民話|みんわ|')
             ,
-            new SctItm('聖書')
+            new SctItm('|聖書|せいしょ|')
             ,
-            new SctItm('経典')
+            new SctItm('|経典|きょうてん|')
             ,
-            new SctItm('怪談')
+            new SctItm('|怪談|かいだん|')
             ,
-            new SctItm('全集')
+            new SctItm('|全集|ぜんしゅう|')
             ,
-            new SctItm('石碑')
+            new SctItm('|石碑|せきひ|')
             ,
-            new SctItm('辞書')
+            new SctItm('|辞書|じしょ|')
             ,
-            new SctItm('大百科')
+            new SctItm('|大百科|だいひゃっか|')
             ,
-            new SctItm('刑法')
+            new SctItm('|刑法|けいほう|')
         ];
     }
 }
@@ -3111,24 +3111,24 @@ class selector_kw3 extends SctItm_Selector implements ISctItm_Selector {
 class selector_kn extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@KEIN@');
-        this.Add(cods_NoRubi_to_itms(cods_ad_nega));
-        this.Add(cods_NoRubi_to_itms(cods_ad_dirty));
-        this.Add(cods_NoRubi_to_itms(cods_ad_sense_n));
+        this.Add(cods_to_itms(cods_ad_nega));
+        this.Add(cods_to_itms(cods_ad_dirty));
+        this.Add(cods_to_itms(cods_ad_sense_n));
     }
 }
 class selector_kdn extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@KEIDN@');
-        this.Add(cods_NoRubi_to_itms(cods_adv_nega));
-        this.Add(cods_NoRubi_to_itms(cods_adv_dirty));
-        this.Add(cods_NoRubi_to_itms(cods_adv_sense_n));
+        this.Add(cods_to_itms(cods_adv_nega));
+        this.Add(cods_to_itms(cods_adv_dirty));
+        this.Add(cods_to_itms(cods_adv_sense_n));
     }
 }
 
 class selector_kmn extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@KEIMN@');
-        this.Add(cods_NoRubi_to_itms(cods_km_nega));
+        this.Add(cods_to_itms(cods_km_nega));
     }
 }
 
@@ -3202,23 +3202,23 @@ class selector_kdn2 extends SctItm_Selector implements ISctItm_Selector {
 class selector_ks extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@KEIS@');
-        this.Add(cods_NoRubi_to_itms(cods_ad_low));
-        this.Add(cods_NoRubi_to_itms(cods_ad_small));
+        this.Add(cods_to_itms(cods_ad_low));
+        this.Add(cods_to_itms(cods_ad_small));
     }
 }
 class selector_kds extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@KEIDS@');
-        this.Add(cods_NoRubi_to_itms(cods_adv_low));
-        this.Add(cods_NoRubi_to_itms(cods_adv_small));
+        this.Add(cods_to_itms(cods_adv_low));
+        this.Add(cods_to_itms(cods_adv_small));
     }
 }
 
 class selector_kms extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@KEIMS@');
-        this.Add(cods_NoRubi_to_itms(cods_km_low));
-        this.Add(cods_NoRubi_to_itms(cods_km_small));
+        this.Add(cods_to_itms(cods_km_low));
+        this.Add(cods_to_itms(cods_km_small));
     }
 }
 
@@ -3306,31 +3306,31 @@ class selector_today extends SctItm_Selector implements ISctItm_Selector {
 class selector_move extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@MOVE@');
-        this.Add(cods_NoRubi_to_itms(cods_move));
-        this.Add(cods_NoRubi_to_itms(cods_move_dance));
-        this.Add(cods_NoRubi_to_itms(cods_move_run));
-        this.Add(cods_NoRubi_to_itms(cods_move_fly));
-        this.Add(cods_NoRubi_to_itms(cods_move_walk));
-        this.Add(cods_NoRubi_to_itms(cods_move_stop));
-        this.Add(cods_NoRubi_to_itms(cods_move_open));
-        this.Add(cods_NoRubi_to_itms(cods_move_life));
-        this.Add(cods_NoRubi_to_itms(cods_move_death));
-        this.Add(cods_NoRubi_to_itms(cods_move_light));
-        this.Add(cods_NoRubi_to_itms(cods_move_think));
-        this.Add(cods_NoRubi_to_itms(cods_move_sense));
-        this.Add(cods_NoRubi_to_itms(cods_move_make));
+        this.Add(cods_to_itms(cods_move));
+        this.Add(cods_to_itms(cods_move_dance));
+        this.Add(cods_to_itms(cods_move_run));
+        this.Add(cods_to_itms(cods_move_fly));
+        this.Add(cods_to_itms(cods_move_walk));
+        this.Add(cods_to_itms(cods_move_stop));
+        this.Add(cods_to_itms(cods_move_open));
+        this.Add(cods_to_itms(cods_move_life));
+        this.Add(cods_to_itms(cods_move_death));
+        this.Add(cods_to_itms(cods_move_light));
+        this.Add(cods_to_itms(cods_move_think));
+        this.Add(cods_to_itms(cods_move_sense));
+        this.Add(cods_to_itms(cods_move_make));
     }
 }
 
 class selector_move2 extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@MOVE2@');
-        this.Add(cods_NoRubi_to_itms(cods_move_dance));
-        this.Add(cods_NoRubi_to_itms(cods_move_run));
-        this.Add(cods_NoRubi_to_itms(cods_move_fly));
-        this.Add(cods_NoRubi_to_itms(cods_move_walk));
-        this.Add(cods_NoRubi_to_itms(cods_move_stop));
-        this.Add(cods_NoRubi_to_itms(cods_move_think));
+        this.Add(cods_to_itms(cods_move_dance));
+        this.Add(cods_to_itms(cods_move_run));
+        this.Add(cods_to_itms(cods_move_fly));
+        this.Add(cods_to_itms(cods_move_walk));
+        this.Add(cods_to_itms(cods_move_stop));
+        this.Add(cods_to_itms(cods_move_think));
     }
 }
 
@@ -3338,13 +3338,13 @@ class selector_move2 extends SctItm_Selector implements ISctItm_Selector {
 class selector_body extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@BODY@');
-        this.Add(cods_NoRubi_to_itms(cods_body));
+        this.Add(cods_to_itms(cods_body));
     }
 }
 class selector_family extends SctItm_Selector implements ISctItm_Selector {
     constructor(){
         super('@FAMILY@');
-        this.Add(cods_NoRubi_to_itms(cods_family));
+        this.Add(cods_to_itms(cods_family));
     }
 }
 
@@ -3583,7 +3583,7 @@ class locker_flowerCall extends SctItm_SelectLocker implements ISctItm_Selector{
             ,
             new SctItm('@L_WHAT@に咲いた@L_FLOWERCALL01@')
             ,
-            new SctItm('@L_CHAR@に捧げる@L_FLOWERCALL01@')
+            new SctItm('@L_CHAR@に|捧|ささ|げる@L_FLOWERCALL01@')
             ,
             new SctItm('@L_CITY@の@L_FLOWERCALL01@')
         ];
@@ -3703,13 +3703,13 @@ class selector_school extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@L_CHAR@が@SCHOOLAS@した@SCHOOL01@')
             ,
-            new SctItm('@L_CHAR@を輩出した@SCHOOL01@')
+            new SctItm('@L_CHAR@を|輩出|さいしゅつ|した@SCHOOL01@')
             ,
-            new SctItm('@L_CHAR@が在籍中の@SCHOOL01@')
+            new SctItm('@L_CHAR@が|在籍中|ざいせきちゅう|の@SCHOOL01@')
             ,
             new SctItm('@L_CHAR@より『@CALL@』と@ASSES@@SCHOOL01@')
             ,
-            new SctItm('@TOWN@で唯一の@SCHOOL02@')
+            new SctItm('@TOWN@で|唯一|ゆいいつ|の@SCHOOL02@')
             ,
             new SctItm('@TOWN@で有数の@SCHOOL02@')
         ];
@@ -3773,7 +3773,7 @@ class selector_order extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@GROUP@に洗脳されて')
             ,
-            new SctItm('@GROUP@の推薦で')
+            new SctItm('@GROUP@の|推薦|すいせん|で')
             ,
             new SctItm('@GROUP@の意志に逆らって')
             ,
@@ -3789,7 +3789,7 @@ class selector_order extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@CHAR@の鶴の一声によって')
             ,
-            new SctItm('@CHAR@の遺言に基づき')
+            new SctItm('@CHAR@の|遺言|ゆいごん|に|基|もと|づき')
         ];
     }
 }
