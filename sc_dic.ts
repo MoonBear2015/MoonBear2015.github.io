@@ -5911,7 +5911,7 @@ const   itms_what = [
     ,
     new SctItm('ホワイトハウス','WHAT/whitehouse.jpg')
     ,
-    new SctItm('紫禁城','WHAT/shikin.jpg')
+    new SctItm('|紫禁城|しきんじょう|','WHAT/shikin.jpg')
     ,
     new SctItm('イギリス王家','WHAT/kingdom.jpg')
     ,

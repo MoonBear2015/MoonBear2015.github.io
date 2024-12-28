@@ -625,8 +625,10 @@ class selector_newsFirst extends SctItm_Selector {
             new SctItm('@L_WHAT@が@L_DO@@END02B@。'),
             new SctItm('@KEI@@L_WHAT@の@L_CHAR@が@KEID@@L_DO@@END02B@。'),
             new SctItm('@DATE@に、@KEI@@L_WHAT@の@L_CHAR@が@KEID@@L_DO@@END02B@。'),
-            new SctItm('@DATE@に、@ORDER@@KEI@@L_WHAT@の@L_CHAR@が@KEID@@L_DO@@END02B@と思われる。'),
-            new SctItm('@DATE@に、@ORDER@@KEI@@L_WHAT@の@L_CHAR@が@KEID@@L_DO@@END02B@などという@ANSWER@が流れている。'),
+            new SctItm('@DATE@に、@ORDER@@KEI@@L_WHAT@の@L_CHAR@が@KEID@@L_DO@@END02B@と思われる。')
+            // ,
+            // new SctItm('@DATE@に、@ORDER@@KEI@@L_WHAT@の@L_CHAR@が@KEID@@L_DO@@END02B@などという@ANSWER@が流れている。')
+            ,
             new SctItm('@DATE@には、@ORDER@@KEI@@L_WHAT@の@L_CHAR@が@KEID@@L_DO@すると予測されていた。'),
             new SctItm('@DATE@には、@ORDER@@KEI@@L_WHAT@の@L_CHAR@が@KEID@@L_DO@する筈であった。'),
             new SctItm('@KEI@@L_WHAT@の@L_CHAR@が@KEID@@L_DO@@END02B@のは、@DATE@の頃である。'),
@@ -858,8 +860,10 @@ class selector_doc extends SctItm_Selector {
             new SctItm('@NEWS_C01@、@NEWS_C02@。'),
             new SctItm('@NEWS_C01@、@DATE@に、@NEWS_C02@。'),
             new SctItm('@DATE@に、@WHERE@で、@NEWS_C01@、@NEWS_C02@。'),
-            new SctItm('@DATE@に、@WHO@は「@COMMENT@」と@SAY@@END02B@。'),
-            new SctItm('@WHO@は@WHERE@で、「@COMMENT@」との@ANSWER@を@SAY@@END02B@。'),
+            new SctItm('@DATE@に、@WHO@は「@COMMENT@」と@SAY@@END02B@。')
+            // ,
+            // new SctItm('@WHO@は@WHERE@で、「@COMMENT@」との@ANSWER@を@SAY@@END02B@。')
+            ,
             new SctItm('@WHO@は@DATE@に、@WHERE@で、「@COMMENT@」と@ANSWER@@END02B@。'),
             new SctItm('@WHERE@で、「@COMMENT@」と@SAY@したのは、@WHO@@END02A@。'),
             new SctItm('@WHO@は@WHERE@で、「@COMMENT@」と@SAY@し、@AWARD@を@AWARDGET@@END02B@。'),
@@ -3473,7 +3477,7 @@ class selector_answer extends SctItm_Selector {
             // new SctItm('見解')
             ,
             new SctItm('推測'),
-            new SctItm('判断')
+            new SctItm('|断言|だんげん|')
             // ,
             // new SctItm('戯れ言')
             // ,
@@ -3507,10 +3511,9 @@ class selector_answer extends SctItm_Selector {
             // new SctItm('叫び')
             // ,
             // new SctItm('訴え')
-            // ,
-            // new SctItm('絶叫')
-            // ,
-            // new SctItm('哀願')
+            ,
+            new SctItm('|絶叫|ぜっきょう|'),
+            new SctItm('|哀願|あいがん|')
             // ,
             // new SctItm('熱唱')
             ,
@@ -3580,13 +3583,13 @@ class selector_assessment02 extends SctItm_Selector {
             new SctItm('見捨てられ'),
             new SctItm('馬鹿にされ'),
             new SctItm('笑われ'),
-            new SctItm('讃えられ'),
-            new SctItm('語り継がれ'),
-            new SctItm('推薦され'),
-            new SctItm('表彰され'),
+            new SctItm('|讃|たた|えられ'),
+            new SctItm('|語|かた|り|継|つ|がれ'),
+            new SctItm('|推薦|すいせん|され'),
+            new SctItm('|表彰|ひょうしょう|され'),
             new SctItm('認定され'),
             new SctItm('認められ'),
-            new SctItm('太鼓判を押され'),
+            new SctItm('|太鼓判|たいこばん|を押され'),
             new SctItm('名付けられ'),
             new SctItm('見守られ'),
             new SctItm('訴えられ'),
@@ -3614,8 +3617,8 @@ class selector_assessment0301 extends SctItm_Selector {
     constructor() {
         super('@ASSES0301@');
         this.itms = [
-            new SctItm('推薦され'),
-            new SctItm('認定され'),
+            new SctItm('|推薦|すいせん|され'),
+            new SctItm('|認定|にんてい|され'),
             new SctItm('登録され')
         ];
     }
@@ -3658,12 +3661,12 @@ class selector_superitem extends SctItm_Selector {
         this.itms = [
             new SctItm('究極の'),
             new SctItm('至高の'),
-            new SctItm('衝撃の'),
-            new SctItm('驚愕の'),
-            new SctItm('渾身の'),
-            new SctItm('不朽の'),
+            new SctItm('|衝撃|しょうげき|の'),
+            new SctItm('|驚愕|きょうがく|の'),
+            new SctItm('|渾身|こんしん|の'),
+            new SctItm('|不朽|ふきゅう|の'),
             new SctItm('未完の'),
-            new SctItm('磨き抜かれた'),
+            new SctItm('|磨|みが|き|抜|ぬ|かれた'),
             new SctItm('洗練された'),
             new SctItm('@KEI@'),
             new SctItm('@KEI3@'),
@@ -3707,8 +3710,8 @@ class selector_conect extends SctItm_Selector {
             new SctItm('かつて'),
             new SctItm('以前'),
             new SctItm('確かに'),
-            new SctItm('流石に'),
-            new SctItm('兎に角'),
+            new SctItm('|流石|さすが|に'),
+            new SctItm('|兎|と|に|角|かく|'),
             new SctItm('恐らく'),
             new SctItm('すなわち'),
             new SctItm('ところが')
@@ -3738,7 +3741,7 @@ class selector_conect2 extends SctItm_Selector {
             new SctItm('正直に言うと'),
             new SctItm('例えば'),
             new SctItm('そういえば'),
-            new SctItm('確か'),
+            new SctItm('|確|たし|か'),
             new SctItm('実は')
         ];
     }
@@ -3915,7 +3918,7 @@ class selector_did01 extends SctItm_Selector {
             new SctItm('夜が明けるまで@DID00@'),
             new SctItm('日が昇るまで@DID00@'),
             new SctItm('朝まで@DID00@'),
-            new SctItm('徹夜で@DID00@'),
+            new SctItm('|徹夜|てつや|で@DID00@'),
             new SctItm('一晩中@DID00@')
         ];
     }

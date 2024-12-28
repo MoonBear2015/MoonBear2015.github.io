@@ -3790,7 +3790,7 @@ const itms_what = [
     new SctItm('オリンピック', 'WHAT/Olympic.jpg'),
     new SctItm('江戸幕府', 'WHAT/edoBack.jpg'),
     new SctItm('ホワイトハウス', 'WHAT/whitehouse.jpg'),
-    new SctItm('紫禁城', 'WHAT/shikin.jpg'),
+    new SctItm('|紫禁城|しきんじょう|', 'WHAT/shikin.jpg'),
     new SctItm('イギリス王家', 'WHAT/kingdom.jpg'),
     new SctItm('ピラミッド', 'WHAT/pyramid.jpg'),
     new SctItm('国連', 'WHAT/nation.jpg'),
