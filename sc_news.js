@@ -2604,7 +2604,7 @@ class selector_school extends SctItm_Selector {
             new SctItm('@SCHOOL01@'),
             new SctItm('@SCHOOL01@'),
             new SctItm('@L_CHAR@が@SCHOOLAS@した@SCHOOL01@'),
-            new SctItm('@L_CHAR@を|輩出|さいしゅつ|した@SCHOOL01@'),
+            new SctItm('@L_CHAR@を|輩出|はいしゅつ|した@SCHOOL01@'),
             new SctItm('@L_CHAR@が|在籍中|ざいせきちゅう|の@SCHOOL01@'),
             new SctItm('@L_CHAR@より『@CALL@』と@ASSES@@SCHOOL01@'),
             new SctItm('@TOWN@で|唯一|ゆいいつ|の@SCHOOL02@'),

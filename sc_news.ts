@@ -3703,7 +3703,7 @@ class selector_school extends SctItm_Selector implements ISctItm_Selector {
             ,
             new SctItm('@L_CHAR@が@SCHOOLAS@した@SCHOOL01@')
             ,
-            new SctItm('@L_CHAR@を|輩出|さいしゅつ|した@SCHOOL01@')
+            new SctItm('@L_CHAR@を|輩出|はいしゅつ|した@SCHOOL01@')
             ,
             new SctItm('@L_CHAR@が|在籍中|ざいせきちゅう|の@SCHOOL01@')
             ,

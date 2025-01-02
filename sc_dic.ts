@@ -5807,19 +5807,19 @@ const   itms_culture = [
 
 
 const   itms_what = [
-    new SctItm('日本' ,'WHAT/Japan.jpg')
+    new SctItm('|日本|にほん|' ,'WHAT/Japan.jpg')
     ,
     new SctItm('アメリカ','WHAT/America.jpg')
     ,
-    new SctItm('米国','WHAT/America.jpg')
+    new SctItm('|米国|べいこく|','WHAT/America.jpg')
     ,
-    new SctItm('中国','WHAT/China.jpg')
+    new SctItm('|中国|ちゅうごく|','WHAT/China.jpg')
     ,
     new SctItm('イギリス','WHAT/England.jpg')
     ,
-    new SctItm('英国','WHAT/England.jpg')
+    new SctItm('|英国|えいこく|','WHAT/England.jpg')
     ,
-    new SctItm('大英帝国','WHAT/England.jpg')
+    new SctItm('|大英帝国|だいえいていこく|','WHAT/England.jpg')
     ,
     new SctItm('ロシア','WHAT/Russia.jpg')
     ,
@@ -5831,15 +5831,15 @@ const   itms_what = [
     ,
     new SctItm('ドイツ','WHAT/German.jpg')
     ,
-    new SctItm('韓国','WHAT/koria.jpg')
+    new SctItm('|韓国|かんこく|','WHAT/koria.jpg')
     ,
     new SctItm('エジプト','WHAT/pyramid.jpg')
     ,
-    new SctItm('ガミラス帝国','WHAT/gamilas.jpg')
+    new SctItm('ガミラス|帝国|ていこく|','WHAT/gamilas.jpg')
     ,
     new SctItm('イスカンダル','WHAT/iskandar.jpg')
-    ,
-    new SctItm('株式市場','WHAT/Economy.jpg')
+    // ,
+    // new SctItm('|株式市場|かぶしきしじょう|','WHAT/Economy.jpg')
     // ,
     // new SctItm('科学','WHAT/Science.jpg')
     // ,
@@ -5869,11 +5869,11 @@ const   itms_what = [
     // ,
     // new SctItm('天文学','WHAT/space.jpg')
     ,
-    new SctItm('火星','WHAT/mars.jpg')
+    new SctItm('|火星|かせい|','WHAT/mars.jpg')
     ,
     new SctItm('タイタン','WHAT/saturn.jpg')
     ,
-    new SctItm('アンドロメダ大星雲','WHAT/andromeda.jpg')
+    new SctItm('アンドロメダ|大星雲|だいせいうん|','WHAT/andromeda.jpg')
     ,
     new SctItm('ブラックホール','WHAT/blackhole.jpg')
     ,
@@ -5893,7 +5893,7 @@ const   itms_what = [
     ,
     new SctItm('キリスト教','WHAT/christ.jpg')
     ,
-    new SctItm('仏教','WHAT/buddha.jpg')
+    new SctItm('|仏教|ぶっきょう|','WHAT/buddha.jpg')
     ,
     new SctItm('イスラム教','WHAT/Islam.jpg')
     ,
@@ -5907,7 +5907,7 @@ const   itms_what = [
     ,
     new SctItm('オリンピック','WHAT/Olympic.jpg')
     ,
-    new SctItm('江戸幕府','WHAT/edoBack.jpg')
+    new SctItm('|江戸幕府|えどばくふ|','WHAT/edoBack.jpg')
     ,
     new SctItm('ホワイトハウス','WHAT/whitehouse.jpg')
     ,
@@ -5917,15 +5917,15 @@ const   itms_what = [
     ,
     new SctItm('ピラミッド','WHAT/pyramid.jpg')
     ,
-    new SctItm('国連','WHAT/nation.jpg')
+    new SctItm('|国連|こくれん|','WHAT/nation.jpg')
     ,
-    new SctItm('魔界','WHAT/hell.jpg')
+    new SctItm('|魔界|まかい|','WHAT/hell.jpg')
     ,
-    new SctItm('天国','WHAT/heaven.jpg')
+    new SctItm('|天国|てんごく|','WHAT/heaven.jpg')
     ,
-    new SctItm('極楽浄土','WHAT/heaven2.jpg')
+    new SctItm('|極楽浄土|ごくらくじょうど|','WHAT/heaven2.jpg')
     ,
-    new SctItm('地獄','WHAT/enma.jpg')
+    new SctItm('|地獄|じごく|','WHAT/enma.jpg')
     ,
     new SctItm('南国','WHAT/seaside.jpg')
     ,
@@ -5945,7 +5945,7 @@ const   itms_what = [
     ,
     new SctItm('としまえん','WHAT/toshimaen.jpg')
     ,
-    new SctItm('上野動物園','WHAT/ueno_zoo.jpg')
+    new SctItm('|上野動物園|うえのどうぶつえん|','WHAT/ueno_zoo.jpg')
     ,
     new SctItm('ジオン公国','WHAT/jion.jpg')
     ,
@@ -5953,7 +5953,7 @@ const   itms_what = [
     ,
     new SctItm('ホビット床','WHAT/Shire.jpg')
     ,
-    new SctItm('銀河帝国','WHAT/GalaxyEmpire.jpg')
+    new SctItm('|銀河帝国|ぎんがていこく|','WHAT/GalaxyEmpire.jpg')
     ,
     new SctItm('デス・スター','WHAT/deathstar.jpg')
     ,
@@ -5965,17 +5965,17 @@ const   itms_what = [
     ,
     new SctItm('近未来','WHAT/nearfuture.jpg')
     ,
-    new SctItm('縄文時代','WHAT/joumon.jpg')
+    new SctItm('|縄文時代|じょうもんじだい|','WHAT/joumon.jpg')
     ,
     new SctItm('スラム街','WHAT/slum.jpg')
     ,
-    new SctItm('九竜城','WHAT/coulomb.jpg')
+    new SctItm('|九竜城|くーろんじょう|','WHAT/coulomb.jpg')
     ,
-    new SctItm('邪馬台国','WHAT/yama.jpg')
+    new SctItm('|邪馬台国|やまたいこく|','WHAT/yama.jpg')
     ,
-    new SctItm('竜宮城','WHAT/ryugu.jpg')
+    new SctItm('|竜宮城|りゅうぐうじょう|','WHAT/ryugu.jpg')
     ,
-    new SctItm('鬼ヶ島','WHAT/onigashima.jpg')
+    new SctItm('|鬼ヶ島|おにがしま|','WHAT/onigashima.jpg')
     ,
     new SctItm('戦場','WHAT/war.jpg')
     ,
@@ -6029,7 +6029,7 @@ const   itms_what = [
     ,
     new SctItm('グランドキャニオン','WHAT/grand-canyon.jpg')
     ,
-    new SctItm('富士山','WHAT/fuji.jpg')
+    new SctItm('|富士山|ふじさん|','WHAT/fuji.jpg')
     ,
     new SctItm('スイス','WHAT/switzerland.jpg')
     ,
@@ -6068,31 +6068,31 @@ const   itms_what = [
 
 
 const   itms_city = [
-    new SctItm('東京','CITY/tokyo.jpg')
+    new SctItm('|東京|とうきょう|','CITY/tokyo.jpg')
     ,
-    new SctItm('銀座','CITY/ginza.jpg')
+    new SctItm('|銀座|ぎんざ|','CITY/ginza.jpg')
     ,
-    new SctItm('渋谷','CITY/shibuya.jpg')
+    new SctItm('|渋谷|しぶや|','CITY/shibuya.jpg')
     ,
-    new SctItm('秋葉原','CITY/akihabara.jpg')
+    new SctItm('|秋葉原|あきはばら|','CITY/akihabara.jpg')
     ,
-    new SctItm('横浜','CITY/yokohama.jpg')
+    new SctItm('|横浜|よこはま|','CITY/yokohama.jpg')
     ,
-    new SctItm('京都','CITY/kyoto.jpg')
+    new SctItm('|京都|きょうと|','CITY/kyoto.jpg')
     ,
-    new SctItm('大阪','CITY/osaka.jpg')
+    new SctItm('|大阪|おおさか|','CITY/osaka.jpg')
     ,
-    new SctItm('神戸','CITY/kobe.jpg')
+    new SctItm('|神戸|こうべ|','CITY/kobe.jpg')
     ,
-    new SctItm('長崎','CITY/nagasaki.jpg')
+    new SctItm('|長崎|ながさき|','CITY/nagasaki.jpg')
     ,
-    new SctItm('沖縄','CITY/okinawa.jpg')
+    new SctItm('|沖縄|おきなわ|','CITY/okinawa.jpg')
     ,
-    new SctItm('香港','CITY/hongkong.jpg')
+    new SctItm('|香港|ほんこん|','CITY/hongkong.jpg')
     ,
-    new SctItm('北京','CITY/peking.jpg')
+    new SctItm('|北京|ぺきん|','CITY/peking.jpg')
     ,
-    new SctItm('上海','CITY/shanghigh.jpg')
+    new SctItm('|上海|しゃんはい|','CITY/shanghigh.jpg')
     ,
     new SctItm('ニューヨーク','CITY/newyork.jpg')
     ,
