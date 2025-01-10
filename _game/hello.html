@@ -19,9 +19,8 @@
             // ボタンが押されたときに実行される関数
             function talk_click() {
                 // サーバーからメッセージを読み込む
-                $.get(".\message.txt",function(result){
+                $.get("message.txt",function(result) {
                     // 読み込んだメッセージを差し込む
-                    alert(result);
                     $("#msg").html(result);
                     $("#btn").text("先に進む");
                 });
