@@ -1,4 +1,63 @@
 "use strict";
+const element = document.getElementById('a_canvas');
+var CVS;
+if (element instanceof HTMLCanvasElement) {
+    CVS = element;
+    CVS.ontouchstart = function (e) {
+        var t1 = e.touches[0];
+        touchCall(t1.pageX, t1.pageY);
+    };
+    if (!isSmartphone()) {
+        CVS.onmousedown = function (e) {
+            touchCall(e.clientX, e.clientY);
+        };
+    }
+}
+else {
+    alert("Can not!");
+}
+var Width;
+var Height;
+var Step = 0;
+function resizeCanvas() {
+    // const canvas = document.getElementById('a_canvas'); 
+    if (CVS == null)
+        return;
+    call_writer();
+    Width = window.innerWidth;
+    Height = window.innerHeight;
+    CVS.width = Width;
+    CVS.height = Height;
+}
+window.addEventListener('resize', resizeCanvas);
+document.addEventListener('DOMContentLoaded', () => {
+    resizeCanvas();
+    call_writer();
+});
+setInterval(call_step, 100);
+window.onload = function () {
+    PicLoad();
+    call_writer();
+};
+function call_step() {
+    Step++;
+    if (Step > 10) {
+        changeBox();
+        Step = 0;
+    }
+    call_writer();
+}
+function call_writer() {
+    canvas_writer(CVS, Width, Height);
+}
+// iOS/Android検出
+function isSmartphone() {
+    var ua = navigator.userAgent;
+    return (ua.match(/iPhone|iPod|iPad|Android/) !== null);
+}
+function touchCall(x, y) {
+    touchHandler(x, y, CVS, Width, Height);
+}
 var BoxSts = Array(12).fill(0);
 var BOX_OFF = 0;
 var BOX_ON = 1;

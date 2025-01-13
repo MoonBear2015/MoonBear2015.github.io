@@ -1,3 +1,76 @@
+const element = document.getElementById('a_canvas');
+var CVS : HTMLCanvasElement;
+if (element instanceof HTMLCanvasElement ) {
+    CVS = element;
+    CVS.ontouchstart = function (e) {
+        var t1 : Touch = e.touches[0];
+        touchCall(t1.pageX,t1.pageY);
+    }
+    if (!isSmartphone()){
+        CVS.onmousedown = function(e) {
+            touchCall(e.clientX,e.clientY);
+        }
+    }
+} else {
+    alert("Can not!");
+}
+
+var Width : number;
+var Height : number;
+var Step : number = 0;
+
+function resizeCanvas() { 
+    // const canvas = document.getElementById('a_canvas'); 
+    if (CVS == null) return;
+    call_writer();
+    Width = window.innerWidth; 
+    Height = window.innerHeight; 
+    CVS.width = Width; 
+    CVS.height = Height; 
+} 
+
+window.addEventListener('resize', resizeCanvas); 
+document.addEventListener('DOMContentLoaded', () => { 
+    resizeCanvas();
+    call_writer();
+});
+
+setInterval(
+    call_step,100
+);
+
+window.onload = function () {
+    PicLoad();
+    call_writer();
+}
+
+function call_step()
+{
+    Step++;
+    if (Step > 10) {
+        changeBox();
+        Step  = 0;
+    }
+    call_writer();
+}
+
+function call_writer() {
+    canvas_writer(CVS,Width,Height);
+}
+
+// iOS/Android検出
+function isSmartphone() {
+    var ua = navigator.userAgent;
+    return (ua.match(/iPhone|iPod|iPad|Android/) !== null);
+}
+
+
+function touchCall(x : number,y : number) {
+    touchHandler(x,y,CVS,Width,Height);
+}
+
+
+
 
 var BoxSts : number[] = Array(12).fill(0);
 var BOX_OFF : number = 0;
