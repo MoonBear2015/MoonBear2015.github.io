@@ -6,37 +6,71 @@
         <script type="text/javascript" src="gs_random.js"></script>
         <script type="text/javascript" src="test.js"></script>
     </head>
-    <style> 
-        * { margin:0; padding:0; }
-        canvas { display: block; }
-        p { padding: 4px; }
-    </style>
     <body>
         <canvas id="a_canvas"></canvas>
     <script type="text/javascript">
+        var cvs = document.getElementById('a_canvas'); 
+        var Width;
+        var Height;
+        var step = 0;
+
+        function resizeCanvas() { 
+            // const canvas = document.getElementById('a_canvas'); 
+            call_writer();
+            Width = window.innerWidth; 
+            Height = window.innerHeight; 
+            cvs.width = Width; 
+            cvs.height = Height; 
+        } 
+
         window.addEventListener('resize', resizeCanvas); 
         document.addEventListener('DOMContentLoaded', () => { 
             resizeCanvas();
             call_writer();
         });
+
         setInterval(
-            call_writer,50
+            call_step,100
         );
 
-        var Width;
-        var Height;
-        function resizeCanvas() { 
-            const canvas = document.getElementById('a_canvas'); 
-            Width = window.innerWidth; 
-            Height = window.innerHeight; 
-            canvas.width = Width; 
-            canvas.height = Height; 
-        } 
-
-        function call_writer() {
-            canvas_writer(document.getElementById("a_canvas"),Width,Height);
-
+        window.onload = function () {
+            PicLoad();
+            call_writer();
         }
+
+        function call_step()
+        {
+            step++;
+            if (step > 10) {
+                changeBox();
+                step  = 0;
+            }
+            call_writer();
+        }
+        
+        function call_writer() {
+            canvas_writer(cvs,Width,Height);
+        }
+
+        // iOS/Android検出
+        function isSmartphone() {
+            var ua = navigator.userAgent;
+            return (ua.match(/iPhone|iPod|iPad|Android/) !== null);
+        }
+        cvs.ontouchstart = function (e) {
+            var t1 = e.touches[0];
+            touchCall(t1.pageX,t1.pageY);
+        }
+        if (!isSmartphone()){
+            cvs.onmousedown = function(e) {
+                touchCall(e.clientX,e.clientY);
+            }
+        }
+
+        function touchCall(x,y) {
+            touchHandler(x,y,cvs,Width,Height);
+        }
+
 
     </script>
     </body>
