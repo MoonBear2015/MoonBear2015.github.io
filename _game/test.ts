@@ -1,18 +1,21 @@
 const element = document.getElementById('a_canvas');
 var CVS : HTMLCanvasElement;
-if (element instanceof HTMLCanvasElement ) {
-    CVS = element;
-    CVS.ontouchstart = function (e) {
-        var t1 : Touch = e.touches[0];
-        touchCall(t1.pageX,t1.pageY);
-    }
-    if (!isSmartphone()){
-        CVS.onmousedown = function(e) {
-            touchCall(e.clientX,e.clientY);
+
+function GetCanvas(element : HTMLCanvasElement) {
+    if (element instanceof HTMLCanvasElement ) {
+        CVS = element;
+        CVS.ontouchstart = function (e) {
+            var t1 : Touch = e.touches[0];
+            touchCall(t1.pageX,t1.pageY);
         }
+        if (!isSmartphone()){
+            CVS.onmousedown = function(e) {
+                touchCall(e.clientX,e.clientY);
+            }
+        }
+    } else {
+        alert("Can not!");
     }
-} else {
-    alert("Can not!");
 }
 
 var Width : number;
