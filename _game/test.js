@@ -1,13 +1,4 @@
 "use strict";
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
 var CVS;
 // canvasの取得
 function GetCanvas(element) {
@@ -49,6 +40,8 @@ window.onload = function () {
     Init();
     PicLoad();
     Call_Writer();
+    alert("year!!");
+    shufflePuzzle(CVS, WIDTH, HEIGHT);
 };
 // 画面サイズ変更の検知
 window.addEventListener('resize', ResizeCanvas);
@@ -88,25 +81,23 @@ var Block = Array(COL * ROW).fill(0);
 var Image_Pic = new Image();
 // 画像ソース設定
 function PicLoad() {
-    processAfterLoad(Image_Pic, ".\\pics\\test\\monalisa.jpg");
+    Image_Pic.src = ".\\pics\\test\\monalisa.jpg";
+    //    processAfterLoad(Image_Pic,".\\pics\\test\\monalisa.jpg");
 }
-function loadImage(image, src) {
-    return new Promise((resolve, reject) => {
-        image.src = src;
-        image.onload = () => resolve(image);
-        image.onerror = () => reject(new Error('Failed to load image: ' + src));
-    });
-}
-function processAfterLoad(image, src) {
-    return __awaiter(this, void 0, void 0, function* () {
-        try {
-            const loadedimage = yield loadImage(image, src);
-        }
-        catch (error) {
-            console.error(error);
-        }
-    });
-}
+// function loadImage(image : HTMLImageElement, src: string): Promise<HTMLImageElement> { 
+//     return new Promise((resolve, reject) => { 
+//         image.src = src; 
+//         image.onload = () => resolve(image); 
+//         image.onerror = () => reject(new Error('Failed to load image: ' + src)); 
+//     }); 
+// }
+// async function processAfterLoad(image : HTMLImageElement, src: string): Promise<void> {
+//      try { 
+//         const loadedimage = await loadImage(image,src);
+//     } catch (error) { 
+//         console.error(error); 
+//     } 
+// }
 function Init() {
     for (var i = 0; i < Block.length; i++) {
         Block[i] = i;
@@ -114,9 +105,6 @@ function Init() {
     Block[COL * ROW - 1] = -1;
 }
 function Canvas_Writer(canvas, width, height) {
-    if (!(Image_Pic instanceof HTMLImageElement)) {
-        alert("nono!");
-    }
     if (canvas == undefined)
         return;
     if (canvas == null)
@@ -128,9 +116,9 @@ function Canvas_Writer(canvas, width, height) {
     let block_h = height / ROW;
     let pic_w = Image_Pic.width / COL;
     let pic_h = Image_Pic.height / ROW;
-    for (var i = 0; i < Block.length; i++) {
-        let dx = (i % COL) * block_w;
-        let dy = Math.floor(i / COL) * block_h;
+    for (let i = 0; i < Block.length; i++) {
+        let dx = getX(i) * block_w;
+        let dy = getY(i) * block_h;
         let no = Block[i];
         if (no < 0) {
             // 空きブロック
@@ -138,13 +126,49 @@ function Canvas_Writer(canvas, width, height) {
             context.fillRect(dx, dy, block_w, block_h);
         }
         else {
-            let sx = (no % COL) * pic_w;
-            let sy = Math.floor(no / COL) * pic_h;
+            let sx = getX(no) * pic_w;
+            let sy = getY(no) * pic_h;
             // 画像の一部を切り取って描画
             context.drawImage(Image_Pic, sx, sy, pic_w, pic_h, dx, dy, block_w, block_h);
         }
     }
 }
+var UDRL = [[0, -1], [1, 0], [0, 1], [-1, 0]];
+function shufflePuzzle(canvas, width, height) {
+    let scount = 50;
+    let blank = ROW * COL - 1;
+    let shuffle = function () {
+        scount--;
+        if (scount <= 0)
+            return;
+        let r = -1;
+        let px = -1;
+        let py = -1;
+        let no = -1;
+        while (1) {
+            r = Math.floor(g_rnd(UDRL.length));
+            px = getX(blank) + UDRL[r][0];
+            py = getY(blank) + UDRL[r][1];
+            if (px < 0 || px >= COL)
+                continue;
+            if (py < 0 || py >= ROW)
+                continue;
+            no = getNo(px, py);
+            break;
+        }
+        alert(no);
+        if (no >= 0) {
+            Block[blank] = Block[no];
+            Block[no] = -1;
+            blank = no;
+            Canvas_Writer(canvas, width, height);
+            setTimeout(shuffle, 100);
+        }
+    };
+}
+let getNo = (x, y) => y * COL + x;
+let getX = (no) => no % COL;
+let getY = (no) => Math.floor(no / COL);
 // タッチ処理
 function touchHandler(x, y, canvas, width, height) {
     let px = x;
