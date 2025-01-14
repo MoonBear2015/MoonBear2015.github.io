@@ -1,4 +1,13 @@
 "use strict";
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 var CVS;
 // canvasの取得
 function GetCanvas(element) {
@@ -79,7 +88,24 @@ var Block = Array(COL * ROW).fill(0);
 var Image_Pic = new Image();
 // 画像ソース設定
 function PicLoad() {
-    Image_Pic.src = ".\\pics\\test\\Monalisa.jpg";
+    processAfterLoad(Image_Pic, ".\\pics\\test\\monalisa.jpg");
+}
+function loadImage(image, src) {
+    return new Promise((resolve, reject) => {
+        image.src = src;
+        image.onload = () => resolve(image);
+        image.onerror = () => reject(new Error('Failed to load image: ' + src));
+    });
+}
+function processAfterLoad(image, src) {
+    return __awaiter(this, void 0, void 0, function* () {
+        try {
+            const loadedimage = yield loadImage(image, src);
+        }
+        catch (error) {
+            console.error(error);
+        }
+    });
 }
 function Init() {
     for (var i = 0; i < Block.length; i++) {
@@ -88,6 +114,9 @@ function Init() {
     Block[COL * ROW - 1] = -1;
 }
 function Canvas_Writer(canvas, width, height) {
+    if (!(Image_Pic instanceof HTMLImageElement)) {
+        alert("nono!");
+    }
     if (canvas == undefined)
         return;
     if (canvas == null)

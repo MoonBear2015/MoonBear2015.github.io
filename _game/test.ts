@@ -96,8 +96,25 @@ var Block : number[] = Array(COL * ROW).fill(0);
 var Image_Pic : HTMLImageElement = new Image();
 // 画像ソース設定
 function PicLoad() {
-    Image_Pic.src = ".\\pics\\test\\Monalisa.jpg";
+    processAfterLoad(Image_Pic,".\\pics\\test\\monalisa.jpg");
 }
+
+function loadImage(image : HTMLImageElement, src: string): Promise<HTMLImageElement> { 
+    return new Promise((resolve, reject) => { 
+        image.src = src; 
+        image.onload = () => resolve(image); 
+        image.onerror = () => reject(new Error('Failed to load image: ' + src)); 
+    }); 
+}
+
+async function processAfterLoad(image : HTMLImageElement, src: string): Promise<void> {
+     try { 
+        const loadedimage = await loadImage(image,src);
+    } catch (error) { 
+        console.error(error); 
+    } 
+}
+
 
 function Init(){
     for(var i = 0; i < Block.length; i++) {
@@ -112,6 +129,11 @@ function Canvas_Writer (canvas : HTMLCanvasElement,
     width : number,
     height : number
 ) {
+    if (!(Image_Pic instanceof HTMLImageElement)) {
+        alert("nono!");
+    }
+
+
     if (canvas == undefined) return;
     if (canvas == null) return;
     let context = canvas.getContext("2d");
