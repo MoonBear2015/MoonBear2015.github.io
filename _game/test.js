@@ -156,15 +156,15 @@ function shufflePuzzle(canvas, width, height) {
             no = getNo(px, py);
             break;
         }
-        alert(no);
         if (no >= 0) {
             Block[blank] = Block[no];
             Block[no] = -1;
             blank = no;
             Canvas_Writer(canvas, width, height);
-            setTimeout(shuffle, 100);
+            setTimeout(shuffle, 30);
         }
     };
+    shuffle();
 }
 let getNo = (x, y) => y * COL + x;
 let getX = (no) => no % COL;

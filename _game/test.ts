@@ -46,7 +46,6 @@ window.onload = function () {
     Init();
     PicLoad();
     Call_Writer();
-    alert("year!!");
     shufflePuzzle(CVS,WIDTH,HEIGHT);
 }
 
@@ -187,15 +186,15 @@ function shufflePuzzle(canvas : HTMLCanvasElement,
             no = getNo(px,py)
             break;
         }
-        alert(no);
         if (no >= 0) {
             Block[blank] = Block[no];
             Block[no] = -1;
             blank = no;
             Canvas_Writer(canvas,width,height);
-            setTimeout(shuffle,100);
+            setTimeout(shuffle,30);
         }
     }
+    shuffle();
 }
 
 let getNo = (x : number, y : number) : number => y * COL + x;
