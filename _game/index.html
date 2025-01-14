@@ -5,74 +5,33 @@
         <meta name="viewport" content="width=device-width">
         <script type="text/javascript" src="gs_random.js"></script>
         <script type="text/javascript" src="test.js"></script>
+        <title>Puzzle</title>
+        <style> 
+            body, html { 
+                margin: 0; 
+                padding: 0; 
+                width: 100%; 
+                height: 100%; 
+                display: flex; 
+                justify-content: center; 
+                align-items: center; 
+                background-color: #f0f0f0; 
+                /* 背景色を少し目立たせる */ 
+            } 
+            canvas { 
+                /* ウィンドウサイズの90%に指定 */ 
+                width: 90%; 
+                height: 90%; 
+                border: 1px solid #000; 
+                /* キャンバスを視覚的に区別するための境界線 */ 
+            }
+        </style>    
     </head>
     <body>
         <canvas id="a_canvas"></canvas>
     <script type="text/javascript">
         var cvs = document.getElementById('a_canvas'); 
         GetCanvas(cvs);
-        // var Width;
-        // var Height;
-        // var step = 0;
-
-        // function resizeCanvas() { 
-        //     // const canvas = document.getElementById('a_canvas'); 
-        //     call_writer();
-        //     Width = window.innerWidth; 
-        //     Height = window.innerHeight; 
-        //     cvs.width = Width; 
-        //     cvs.height = Height; 
-        // } 
-
-        // window.addEventListener('resize', resizeCanvas); 
-        // document.addEventListener('DOMContentLoaded', () => { 
-        //     resizeCanvas();
-        //     call_writer();
-        // });
-
-        // setInterval(
-        //     call_step,100
-        // );
-
-        // window.onload = function () {
-        //     PicLoad();
-        //     call_writer();
-        // }
-
-        // function call_step()
-        // {
-        //     step++;
-        //     if (step > 10) {
-        //         changeBox();
-        //         step  = 0;
-        //     }
-        //     call_writer();
-        // }
-        
-        // function call_writer() {
-        //     canvas_writer(cvs,Width,Height);
-        // }
-
-        // // iOS/Android検出
-        // function isSmartphone() {
-        //     var ua = navigator.userAgent;
-        //     return (ua.match(/iPhone|iPod|iPad|Android/) !== null);
-        // }
-        // cvs.ontouchstart = function (e) {
-        //     var t1 = e.touches[0];
-        //     touchCall(t1.pageX,t1.pageY);
-        // }
-        // if (!isSmartphone()){
-        //     cvs.onmousedown = function(e) {
-        //         touchCall(e.clientX,e.clientY);
-        //     }
-        // }
-
-        // function touchCall(x,y) {
-        //     touchHandler(x,y,cvs,Width,Height);
-        // }
-
-
     </script>
     </body>
 

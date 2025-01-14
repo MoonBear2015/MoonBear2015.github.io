@@ -1,110 +1,114 @@
-const element = document.getElementById('a_canvas');
+
 var CVS : HTMLCanvasElement;
 
+// canvasの取得
 function GetCanvas(element : HTMLCanvasElement) {
-    if (element instanceof HTMLCanvasElement ) {
-        CVS = element;
+    if (!(element instanceof HTMLCanvasElement)) {
+        alert("Can not!");
+        return;
+    }
+    // canvas設定
+    CVS = element;
+    // タッチイベントの設定
+    // スマホの場合
+    if (isSmartphone())
+    {
         CVS.ontouchstart = function (e) {
             var t1 : Touch = e.touches[0];
             touchCall(t1.pageX,t1.pageY);
         }
-        if (!isSmartphone()){
-            CVS.onmousedown = function(e) {
-                touchCall(e.clientX,e.clientY);
-            }
-        }
     } else {
-        alert("Can not!");
+        // スマホ以外
+        CVS.onmousedown = function(e) {
+            touchCall(e.clientX,e.clientY);
+        }
     }
 }
 
-var Width : number;
-var Height : number;
-var Step : number = 0;
-
-function resizeCanvas() { 
-    // const canvas = document.getElementById('a_canvas'); 
-    if (CVS == null) return;
-    call_writer();
-    Width = window.innerWidth; 
-    Height = window.innerHeight; 
-    CVS.width = Width; 
-    CVS.height = Height; 
-} 
-
-window.addEventListener('resize', resizeCanvas); 
-document.addEventListener('DOMContentLoaded', () => { 
-    resizeCanvas();
-    call_writer();
-});
-
-setInterval(
-    call_step,100
-);
-
-window.onload = function () {
-    PicLoad();
-    call_writer();
-}
-
-function call_step()
-{
-    Step++;
-    if (Step > 10) {
-        changeBox();
-        Step  = 0;
-    }
-    call_writer();
-}
-
-function call_writer() {
-    canvas_writer(CVS,Width,Height);
-}
+// タッチイベント関連
 
 // iOS/Android検出
 function isSmartphone() {
     var ua = navigator.userAgent;
     return (ua.match(/iPhone|iPod|iPad|Android/) !== null);
 }
-
-
 function touchCall(x : number,y : number) {
-    touchHandler(x,y,CVS,Width,Height);
+    touchHandler(x,y,CVS,WIDTH,HEIGHT);
 }
 
 
+var WIDTH : number;
+var HEIGHT : number;
+var TURN : number = 0;
 
-
-var BoxSts : number[] = Array(12).fill(0);
-var BOX_OFF : number = 0;
-var BOX_ON : number = 1;
-var BOX_HIT : number = 2;
-
-var Image_Off : HTMLImageElement = new Image();
-var Image_On : HTMLImageElement = new Image();
-var Image_Hit : HTMLImageElement = new Image();
-var Image_Back : HTMLImageElement = new Image();
-
-function PicLoad() {
-    Image_Off.src = ".\\pics\\test\\box.png";
-    Image_On.src = ".\\pics\\test\\box_blank.png";
-    Image_Hit.src = ".\\pics\\test\\box_max.png";
-    Image_Back.src = ".\\pics\\test\\umi.jpg";
+// リソース読込完了
+window.onload = function () {
+    Init();
+    PicLoad();
+    Call_Writer();
 }
 
-function changeBox() {
-    for(let i = 0;i < BoxSts.length; i++) {
-        if (g_rnd(9) > 3) {
-            BoxSts[i] = BOX_OFF;
-        } else {
-            BoxSts[i] = BOX_ON;
-        }
-        
+// 画面サイズ変更の検知
+window.addEventListener('resize', ResizeCanvas); 
+document.addEventListener('DOMContentLoaded', () => { 
+    ResizeCanvas();
+    Call_Writer();
+});
+
+// 画面サイズ変更
+function ResizeCanvas() { 
+    if (CVS == null) return;
+    WIDTH = window.innerWidth * 0.9; 
+    HEIGHT = window.innerHeight * 0.9; 
+    CVS.width = WIDTH; 
+    CVS.height = HEIGHT; 
+} 
+
+// タイマー処理
+setInterval(
+    Call_Turn,100
+);
+// ターン処理
+function Call_Turn()
+{
+    TURN++;
+    if (TURN > 10) {
+        TURN  = 0;
     }
+    Call_Writer();
+}
+
+// 画面更新処理を呼び出す
+function Call_Writer() {
+    Canvas_Writer(CVS,WIDTH,HEIGHT);
 }
 
 
-function canvas_writer (canvas : HTMLCanvasElement,
+
+// ゲーム列数
+var COL = 4;
+// ゲーム行数
+var ROW = 4;
+
+var Block : number[] = Array(COL * ROW).fill(0);
+
+// 画像ソース
+var Image_Pic : HTMLImageElement = new Image();
+// 画像ソース設定
+function PicLoad() {
+    Image_Pic.src = ".\\pics\\test\\Monalisa.jpg";
+}
+
+function Init(){
+    for(var i = 0; i < Block.length; i++) {
+        Block[i] = i;
+    }
+    Block[COL * ROW - 1] = -1;
+}
+
+
+
+function Canvas_Writer (canvas : HTMLCanvasElement,
     width : number,
     height : number
 ) {
@@ -113,31 +117,34 @@ function canvas_writer (canvas : HTMLCanvasElement,
     let context = canvas.getContext("2d");
     if (context == null) return;
 
-    let BACK_SIZE : number = height / 4;
-    let BOX_W : number = width / 4;
-    let BOX_H : number = height / 4;
+    let block_w = width / COL;
+    let block_h = height / ROW;
 
+    let pic_w = Image_Pic.width / COL;
+    let pic_h = Image_Pic.height / ROW;
 
-    context.drawImage(Image_Back,0,0,width,BACK_SIZE);
-
-    for(let i : number = 0; i < BoxSts.length; i++)
+    for(var i = 0; i < Block.length; i++)
     {
-        let x = ( i % 4) * BOX_W;
-        let y = BACK_SIZE + Math.floor(i / 4) * BOX_H;
-        switch(BoxSts[i]) {
-            case BOX_OFF:
-                context.drawImage(Image_Off,x,y,BOX_W,BOX_H);
-                break;
-        case BOX_ON:
-                context.drawImage(Image_On,x,y,BOX_W,BOX_H);
-                break;
-            case BOX_HIT:
-                context.drawImage(Image_Hit,x,y,BOX_W,BOX_H);
-                break;
+        let dx : number = (i % COL) * block_w;
+        let dy : number = Math.floor(i / COL) * block_h;
+        let no = Block[i];
+        if (no < 0) {
+            // 空きブロック
+            context.fillStyle = "#cccccc";
+            context.fillRect(dx,dy,block_w,block_h);
+        } else {
+            let sx = (no % COL) * pic_w;
+            let sy = Math.floor(no / COL) * pic_h;
+            // 画像の一部を切り取って描画
+            context.drawImage(
+                Image_Pic,sx,sy,pic_w,pic_h,
+                dx,dy,block_w,block_h);
         }
     }
+
 }
 
+// タッチ処理
 function touchHandler(
     x : number,
     y : number,
@@ -147,18 +154,13 @@ function touchHandler(
 ) {
     let px = x;
     let py = y;
-    let BACK_SIZE : number = height / 4;
-    let BOX_W : number = width / 4;
-    let BOX_H : number = height / 4;
+    let pic_w : number = width / COL;
+    let pic_h : number = height / ROW;
 
-    let px2 = Math.floor(px / BOX_W);
-    let py2 = Math.floor((py - BACK_SIZE) / BOX_H);
-    let no = py2 * 4 + px2;
-    console.log(px2 + "," + py2 + "=" + no);
-    if (BoxSts[no] == BOX_ON) {
-        BoxSts[no] = BOX_HIT;
-    }
-    canvas_writer(canvas,width,height);
+    let px2 = Math.floor(px / pic_w);
+    let py2 = Math.floor(py / pic_h);
+    let no = py2 * COL + px2;
+    Canvas_Writer(canvas,width,height);
 }
 
 let toRad = (deg : number) : number => deg * Math.PI / 180;
