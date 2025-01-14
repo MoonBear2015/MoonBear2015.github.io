@@ -87,9 +87,9 @@ function Call_Writer() {
 
 
 // ゲーム列数
-var COL = 4;
+var COL = 3;
 // ゲーム行数
-var ROW = 4;
+var ROW = 3;
 
 var Block : number[] = Array(COL * ROW).fill(0);
 
@@ -119,10 +119,42 @@ function PicLoad() {
 
 
 function Init(){
-    for(var i = 0; i < Block.length; i++) {
+    localSave();
+
+    for(let i : number = 0; i < Block.length; i++) {
         Block[i] = i;
     }
     Block[COL * ROW - 1] = -1;
+    Dirs = new Array(Block.length).fill(0).map(
+        ()=> new Array(4).fill(0)
+    );
+
+    for(let i : number = 0; i < Block.length; i++) {
+        for(let d : number = 0; d < 4; d++) {
+            let x = getX(i);
+            let y = getY(i);
+            let dx = x + UDRL[d][0];
+            let dy = y + UDRL[d][1];
+            if (dx < 0 || dx >= COL) {
+                Dirs[i][d] = -1;
+                continue;
+            }
+            if (dy < 0 || dy >= ROW) {
+                Dirs[i][d] = -1;
+                continue;
+            }
+            Dirs[i][d] = 0;
+        }
+    }
+}
+
+function localSave() {
+    let c = localStorage.counter;
+    if (c == undefined) c = 0;
+    c++;
+    alert(c + "回目");
+    localStorage.counter = c;
+    
 }
 
 function Canvas_Writer (canvas : HTMLCanvasElement,
@@ -163,6 +195,10 @@ function Canvas_Writer (canvas : HTMLCanvasElement,
 
 
 var UDRL = [[0,-1],[1,0],[0,1],[-1,0]];
+var TurnNo = [2,3,0,1];
+
+var Dirs : number[][];
+
 
 function shufflePuzzle(canvas : HTMLCanvasElement,
     width : number,
@@ -170,6 +206,7 @@ function shufflePuzzle(canvas : HTMLCanvasElement,
 )  {
     let scount = 50;
     let blank = ROW * COL - 1;
+    let beforeNo = -1;
     let shuffle = function () {
         scount--;
         if (scount <= 0) return;
@@ -178,11 +215,22 @@ function shufflePuzzle(canvas : HTMLCanvasElement,
         let py : number = -1;
         let no : number = -1;
         while(1) {
-            r = Math.floor(g_rnd(UDRL.length));
+            let c : number = 0;
+            while(true) {
+                r = Math.floor(g_rnd(UDRL.length));
+                if (beforeNo != TurnNo[r]) break;
+                if (Dirs[blank][r] == 1) break;
+                c++;
+                if ( c > 10 ) {
+                    alert("NO!!");
+                    break;
+                }
+            }
             px = getX(blank) + UDRL[r][0];
             py = getY(blank) + UDRL[r][1];
             if (px < 0 || px >= COL) continue;
             if (py < 0 || py >= ROW) continue;
+            beforeNo = r;
             no = getNo(px,py)
             break;
         }
@@ -191,7 +239,7 @@ function shufflePuzzle(canvas : HTMLCanvasElement,
             Block[no] = -1;
             blank = no;
             Canvas_Writer(canvas,width,height);
-            setTimeout(shuffle,30);
+            setTimeout(shuffle,100);
         }
     }
     shuffle();
@@ -216,8 +264,22 @@ function touchHandler(
 
     let px2 = Math.floor(px / pic_w);
     let py2 = Math.floor(py / pic_h);
-    let no = py2 * COL + px2;
-    Canvas_Writer(canvas,width,height);
+    let no2 = getNo(px2,py2);
+
+    if (Block[no2] == -1) return;
+    for(let i : number = 0; i < UDRL.length; i++) {
+        let pt = UDRL[i];
+        let bx = px2 + pt[0];
+        let by = py2 + pt[1];
+        let bNo = getNo(bx,by);
+        if (bx < 0 || bx >= COL) continue;
+        if (by < 0 || by >= ROW) continue;
+        if (Block[bNo] == -1) {
+            Block[bNo] = Block[no2];
+            Block[no2] = -1;
+            Call_Writer();
+        }
+    }
 }
 
 let toRad = (deg : number) : number => deg * Math.PI / 180;
