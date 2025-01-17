@@ -35,23 +35,29 @@
         .score-container {
             flex-grow: 1;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            align-items: right;
             background-color: lightgray;
         }
 
         .score {
-            font-size: 2rem;
+            font-size: calc(10px + 2vw);
+            border-color: black;
+            border-style: dotted;
+            text-align: right;
+            flex-grow: 1;
+            display: flex;
         }
     </style>
 </head>
 <body>
-    <div class="container" id="cont">
+    <div class="container" id="vcont">
         <div class="canvas-container">
             <canvas id="myCanvas"></canvas>
         </div>
-        <div class="score-container">
+        <div class="score-container" id="scont">
             <div class="score" id="scoreDisplay">Score: 0</div>
+            <div class="score" id="levelDisplay">Score: 0</div>
+            <div class="score" id="stageDisplay">Score: 0</div>
         </div>
     </div>
 
@@ -61,10 +67,13 @@
         window.addEventListener('resize', resizeCanvas);
         window.addEventListener('load', resizeCanvas);
         var sc = 0;
+        var lv = 0;
+        var st = 0;
 
         function resizeCanvas() {
             const canvas = document.getElementById('myCanvas');
-            const cont = document.getElementById('cont');
+            const vcont = document.getElementById('vcont');
+            const scont = document.getElementById('scont');
             const scoreContainer = document.querySelector('.score-container');
             const canvasContainer = document.querySelector('.canvas-container');
 
@@ -73,25 +82,33 @@
             const height = window.innerHeight;
 
             var score = document.getElementById("scoreDisplay");
+            var level = document.getElementById("levelDisplay");
+            var stage = document.getElementById("stageDisplay");
 
             // 画面形式に応じてフレックスボックスの方向を調整
             if (width > height) {
-                cont.style.flexDirection = 'row';
+                vcont.style.flexDirection = 'row';
+                scont.style.flexDirection = 'column';
                 // document.body.style.flexDirection = 'row';
                 scoreContainer.style.height = '100%';
                 scoreContainer.style.width = '25%';
                 canvasContainer.style.width = '75%';
                 canvasContainer.style.height = '100%';
-                sc+=10;
+                sc += 1001;
+                lv += 101;
+                st += 11;
             } else {
-                cont.style.flexDirection = 'column';
+                vcont.style.flexDirection = 'column';
+                scont.style.flexDirection = 'row';
 
                 // document.body.style.flexDirection = 'column';
                 scoreContainer.style.height = '25%';
                 scoreContainer.style.width = '100%';
                 canvasContainer.style.height = '75%';
                 canvasContainer.style.width = '100%';
-                sc += 2;
+                sc += 2000;
+                lv += 200;
+                st += 20;
             }
 
             // キャンバスの大きさを設定
@@ -99,7 +116,10 @@
             canvas.width = size;
             canvas.height = size;
 
-            document.getElementById('scoreDisplay').textContent = cont.style.flexDirection.toString(); 
+            score.textContent = "SCORE : " + sc;
+            level.textContent = "LEVEL : " + lv;
+            stage.textContent = "STAGE : " + st;
+
             // キャンバスにグラフィックを描画
             const ctx = canvas.getContext('2d');
             ctx.fillStyle = 'blue';
