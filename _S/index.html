@@ -5,37 +5,121 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="ページの説明">
         <title>新しいタイトル</title>
+        <style>
+            .default-style {
+                color: black;
+                background-color: white;
+                font-size: 10px;
+            }
+
+            #container {
+                display:    flex;
+                width: 100%;
+            }
+            #item01 {
+                flex: 1;
+                background-color: red;
+                box-sizing: border-box;
+            }
+            #item02 {
+                flex: 1;
+                background-color: blue;
+                box-sizing: border-box;
+            }
+            #item03 {
+                flex: 1;
+                background-color: green;
+                box-sizing: border-box;
+            }
+
+        </style>
+    
     </head>
     <body>
-        <!-- 4段階の見出し -->
-        <h1>メインタイトル</h1>
-        <p>単一の段落です。単一の段落です。単一の段落です。単一の段落です。単一の段落です。</p>
-        <ul>
-            <li>リスト１</li>
-            <li>リスト２</li>
-            <li>リスト３</li>
-        </ul>
-        <h2>最上位のみだし</h2>
-        <a href="pics\\monalisa.jpg">monalisa</a>
-        <a href="https://www.google.com">google</a>
-        <p>単一の段落です。<strong>単一の段落です。</strong> 単一の段落です。単一の段落です。単一の段落です。</p>
-        <h3>小見出し</h3>
-        <p>単一の段落です。単一の段落です。単一の段落です。単一の段落です。単一の段落です。</p>
-        <h4>孫見出し</h4>
-        <p>単一の段落です。単一の段落です。単一の段落です。単一の段落です。単一の段落です。</p>
-        <h5>ひ孫見出し</h5>
-        <p>単一の段落です。単一の段落です。単一の段落です。単一の段落です。単一の段落です。</p>
-        <h6>玄孫見出し</h6>
-        <p>単一の段落です。単一の段落です。単一の段落です。単一の段落です。単一の段落です。</p>
-        
-        <a href="pics\\monalisa.jpg">
-            <img src="pics\\monalisa.jpg" alt="monaliza" />
-            monalisa 
-            <ul>
-                <li>mona</li>
-                <li>lisa</li>
-            </ul>
-        </a>
+
+        <input type="range" id="SizeSlider" min="10" max="100" value="50">
+        <span id="sizeOutput">50</span>
+        <br>
+        <br>
+
+        <select id="typeSelector">
+            <option value="cm">cm</option>
+            <option value="mm">mm</option>
+            <option value="Q">Q</option>
+            <option value="in">in</option>
+            <option value="pc">pc</option>
+            <option value="pt">pt</option>
+            <option value="px">px</option>
+            <option value="%">%</option>
+            <option value="em">em</option>
+            <option value="rem">rem</option>
+            <option value="vw">vw</option>
+            <option value="vh">vh</option>
+        </select>
     
+        <p>size: <span id="sizetypeOutput">// </span></p>
+
+        <div id="container">
+            <div id="item01" class="item">1</div>
+            <div id="item02" class="item">2</div>
+            <div id="item03" class="item">3</div>
+        </div>
+    
+        <p id="myText" class="default-style">このテキストのスタイルを変更します。</p>
+
+        
+        <script>
+            var sizeSlider = document.getElementById("SizeSlider");
+            var sizeOutput = document.getElementById("sizeOutput");
+            sizeOutput.innerHTML = sizeSlider.value; // 初期値を表示
+            sizeSlider.oninput = function() {
+                sizeOutput.innerHTML = this.value;
+                sizetypeOutput.innerHTML = getFontStyle();
+                changeStyle();
+            }
+
+            var typeSelector = document.getElementById("typeSelector");
+            var sizetypeOutput = document.getElementById("sizetypeOutput");
+            typeSelector.onchange = function () {
+                sizetypeOutput.innerHTML = getFontStyle();
+                changeStyle();
+            }
+
+            function getFontStyle () {
+                var style = sizeSlider.value + typeSelector.value;
+                return style;
+            }
+
+            // typeSelector.addEventListener('change', function () {
+            //     var selectedType = typeSelector.value;
+            //     sizetypeOutput.innerHTML = sizeSlider.value + selectedType;
+            //     changeStyle();
+            // });
+
+            // document.getElementById('fontType').addEventListener('change', function() {
+            //     var selectedType = this.options[this.selectedIndex].value;
+            //     document.getElementById("selected-fontType").innerText = "size:" + slider.value + selectedType;
+            // });
+
+            function changeStyle() {
+                var element = document.getElementById("myText");
+                var e01 = document.getElementById("item01");
+                var e02 = document.getElementById("item02");
+                var e03 = document.getElementById("item03");
+                element.style.color = "white";
+                element.style.backgroundColor = "black";
+
+                var fontStyle = getFontStyle();
+
+                element.style.fontSize = fontStyle;
+                e01.style.fontSize = fontStyle;
+                e02.style.fontSize = fontStyle;
+                e03.style.fontSize = fontStyle;
+
+
+            }
+        </script>
+        
     </body>
+
 </html>
