@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="ページの説明">
-        <title>新しいタイトル</title>
+        <title>font size sampler</title>
         <style>
             .default-style {
                 color: black;
@@ -12,7 +12,7 @@
                 font-size: 10px;
             }
 
-            #container {
+            #flexContainer {
                 display:    flex;
                 width: 100%;
             }
@@ -34,6 +34,41 @@
 
             #SizeSlider{
                 width: 90vw;
+            }
+
+
+            #gridContainer {
+                display: grid;
+                grid-template-columns: 1fr 2fr; /* 2列のグリッドを作成 */
+                grid-template-rows: 1fr 2fr;
+            }
+            #grid00 {
+                grid-column: 1; /* 左側に配置 */
+                grid-row: 1;
+                background-color: lightblue;
+                color: blue;
+                padding: 10px;
+            }
+            #grid01 {
+                grid-column: 2; /* 右側に配置 */
+                grid-row: 1;
+                background-color: lightgreen;
+                color: green;
+                padding: 10px;
+            }
+            #grid10 {
+                grid-column: 1; /* 左側に配置 */
+                grid-row: 2;
+                background-color: blue;
+                color: lightblue;
+                padding: 10px;
+            }
+            #grid11 {
+                grid-column: 2; /* 右側に配置 */
+                grid-row: 2;
+                background-color: green;
+                color: lightgreen;
+                padding: 10px;
             }
 
         </style>
@@ -78,10 +113,20 @@
         </select>
         <p>Align: <span id="alignOutput">// </span></p>
 
-        <div id="container">
+
+        <div id="flexContainer">
             <div id="item01" class="item">1</div>
             <div id="item02" class="item">2</div>
             <div id="item03" class="item">3</div>
+        </div>
+
+        <br>
+
+        <div id="gridContainer">
+            <div id="grid00">00</div>
+            <div id="grid01">01</div>
+            <div id="grid10">10</div>
+            <div id="grid11">11</div>
         </div>
     
         <p id="myText" class="default-style">このテキストのスタイルを変更します。</p>
@@ -132,6 +177,11 @@
                 var e01 = document.getElementById("item01");
                 var e02 = document.getElementById("item02");
                 var e03 = document.getElementById("item03");
+                var g00 = document.getElementById("grid00");
+                var g01 = document.getElementById("grid01");
+                var g10 = document.getElementById("grid10");
+                var g11 = document.getElementById("grid11");
+                
                 element.style.color = "white";
                 element.style.backgroundColor = "black";
 
@@ -141,11 +191,19 @@
                 e01.style.fontSize = fontStyle;
                 e02.style.fontSize = fontStyle;
                 e03.style.fontSize = fontStyle;
+                g00.style.fontSize = fontStyle;
+                g01.style.fontSize = fontStyle;
+                g10.style.fontSize = fontStyle;
+                g11.style.fontSize = fontStyle;
 
                 element.style.textAlign = alignSelector.value;
                 e01.style.textAlign = alignSelector.value;
                 e02.style.textAlign = alignSelector.value;
                 e03.style.textAlign = alignSelector.value;
+                g00.style.textAlign = alignSelector.value;
+                g01.style.textAlign = alignSelector.value;
+                g10.style.textAlign = alignSelector.value;
+                g11.style.textAlign = alignSelector.value;
             }
         </script>
         
