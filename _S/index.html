@@ -32,32 +32,51 @@
                 box-sizing: border-box;
             }
 
+            #SizeSlider{
+                width: 90vw;
+            }
+
         </style>
     
     </head>
     <body>
-
-        <input type="range" id="SizeSlider" min="10" max="100" value="50">
+        <label for="SizeSlider">Select Font Size</label>
+        <input type="range" id="SizeSlider" min="1" max="300" value="1">
         <span id="sizeOutput">50</span>
         <br>
         <br>
 
-        <select id="typeSelector">
-            <option value="cm">cm</option>
-            <option value="mm">mm</option>
-            <option value="Q">Q</option>
-            <option value="in">in</option>
-            <option value="pc">pc</option>
-            <option value="pt">pt</option>
-            <option value="px">px</option>
-            <option value="%">%</option>
-            <option value="em">em</option>
-            <option value="rem">rem</option>
-            <option value="vw">vw</option>
-            <option value="vh">vh</option>
+        <label for="typeSelector">Select Font Size Type</label>
+        <select id="typeSelector" title="Select Font Size Type">
+            <option value="pt">pt: (ポイント) 印刷業界で使用される単位で、1ptは約1/72インチ。</option>
+            <option value="px">px: (ピクセル) 画面上の1ピクセルを表す単位。スクリーン解像度に依存する。</option>
+            <option value="cm">cm: (センチメートル) 実際の物理的な長さを表す。</option>
+            <option value="mm">mm: (ミリメートル) 実際の物理的な長さを表す。</option>
+            <option value="in">in: (インチ) 実際の物理的な長さを表す。</option>
+            <option value="pc">pc: (パイカ) 1パイカは12ポイントに相当。</option>
+            <option value="em">em: 親要素のフォントサイズを基準とする。例えば、親要素のフォントサイズが16pxの場合、1emは16px。</option>
+            <option value="rem">rem: ルート要素（html）のフォントサイズを基準とする。例えば、ルート要素のフォントサイズが16pxの場合、1remは16px。</option>
+            <option value="%">%: (パーセント) 親要素のフォントサイズに対する割合。例えば、親要素のフォントサイズが20pxで、50%と設定すると10px。</option>
+            <option value="vw">vw: (ビューポート幅) ビューポートの幅の1%。例えば、ビューポート幅が1000pxの場合、1vwは10px。</option>
+            <option value="vh">vh: (ビューポート高さ) ビューポートの高さの1%。例えば、ビューポート高さが800pxの場合、1vhは8px.</option>
+            <option value="vmin">vmin: ビューポートの幅と高さのうち、より小さい方の1%。</option>
+            <option value="vmax">vmax: ビューポートの幅と高さのうち、より大きい方の1%。</option>
+            <option value="ch">ch: 数字の「0」の幅を基準とする。フォントによって異なる。</option>
+            <option value="ex">ex: フォントの「x」の高さを基準とする。フォントによって異なる.</option>
         </select>
-    
         <p>size: <span id="sizetypeOutput">// </span></p>
+
+        <label for="alignSelector">Select Align Type</label>
+        <select id="alignSelector" title="Select Align Type">
+            <option value="start">start:書字方向が左から右の場合は left、右から左の場合は right と同じです。</option>
+            <option value="end">end:書字方向が左から右の場合は right、右から左の場合は left と同じです。</option>
+            <option value="left">left:インラインコンテンツはラインボックスの左辺に寄せられます。</option>
+            <option value="right">right:インラインコンテンツはラインボックスの右辺に寄せられます。</option>
+            <option value="center">center:インラインコンテンツはラインボックス内で中央に寄せられます。</option>
+            <option value="justify">justify:インラインコンテンツは両端揃えになります。テキストは最終行を除いて、その左右の端がラインボックスの左右の端に揃うように間隔が空けられます。</option>
+            <option value="match-parent">match-parent:inherit と似ていますが、start と end の値は親要素の direction に従って計算されて、適切な leftもしくは right の値で置き換えられます。</option>
+        </select>
+        <p>Align: <span id="alignOutput">// </span></p>
 
         <div id="container">
             <div id="item01" class="item">1</div>
@@ -82,6 +101,13 @@
             var sizetypeOutput = document.getElementById("sizetypeOutput");
             typeSelector.onchange = function () {
                 sizetypeOutput.innerHTML = getFontStyle();
+                changeStyle();
+            }
+
+            var alignSelector = document.getElementById("alignSelector");
+            var alignOutput = document.getElementById("alignOutput");
+            alignSelector.onchange = function () {
+                alignOutput.innerHTML = alignSelector.value;
                 changeStyle();
             }
 
@@ -115,6 +141,13 @@
                 e01.style.fontSize = fontStyle;
                 e02.style.fontSize = fontStyle;
                 e03.style.fontSize = fontStyle;
+
+                element.style.textAlign = alignSelector.value;
+                e01.style.textAlign = alignSelector.value;
+                e02.style.textAlign = alignSelector.value;
+                e03.style.textAlign = alignSelector.value;
+
+                
 
 
             }
