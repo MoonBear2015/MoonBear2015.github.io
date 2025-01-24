@@ -41,6 +41,7 @@
                 display: grid;
                 grid-template-columns: 1fr 2fr; /* 2列のグリッドを作成 */
                 grid-template-rows: 1fr 2fr;
+                align-items:end;
             }
             #grid00 {
                 grid-column: 1; /* 左側に配置 */
@@ -69,6 +70,7 @@
                 background-color: green;
                 color: lightgreen;
                 padding: 10px;
+                
             }
 
         </style>
@@ -113,6 +115,19 @@
         </select>
         <p>Align: <span id="alignOutput">// </span></p>
 
+        <label for="alignItemSelector">Select align-Item Type</label>
+        <select id="alignItemSelector" title="Select align-Item Type">
+            <option value="stretch (デフォルト)">stretch (デフォルト): アイテムをコンテナの高さに伸ばします。</option>
+            <option value="start">start: アイテムをコンテナの開始位置（上）に揃えます。</option>
+            <option value="end">end: アイテムをコンテナの終了位置（下）に揃えます。</option>
+            <option value="flex-start">flex-start: アイテムをコンテナの開始位置（上）に揃えます。</option>
+            <option value="flex-end">flex-end: アイテムをコンテナの終了位置（下）に揃えます。</option>
+            <option value="center">center: アイテムをコンテナの中央に揃えます。</option>
+            <option value="baseline">baseline: アイテムのベースラインを揃えます。</option>
+        </select>
+        <p>Align Item: <span id="alignItemOutput">// </span></p>
+
+
         <div id="flexContainer">
             <div id="item01" class="item">1</div>
             <div id="item02" class="item">2</div>
@@ -155,6 +170,13 @@
                 changeStyle();
             }
 
+            var alignItemSelector = document.getElementById("alignItemSelector");
+            var alignItemOutput = document.getElementById("alignItemOutput");
+            alignItemSelector.onchange = function () {
+                alignItemOutput.innerHTML = alignItemSelector.value;
+                changeStyle();
+            }
+
 
             function getFontStyle () {
                 var style = sizeSlider.value + typeSelector.value;
@@ -181,6 +203,9 @@
                 var g01 = document.getElementById("grid01");
                 var g10 = document.getElementById("grid10");
                 var g11 = document.getElementById("grid11");
+
+                var fCon = document.getElementById("flexContainer");
+                var gCon = document.getElementById("gridContainer");
                 
                 element.style.color = "white";
                 element.style.backgroundColor = "black";
@@ -204,6 +229,9 @@
                 g01.style.textAlign = alignSelector.value;
                 g10.style.textAlign = alignSelector.value;
                 g11.style.textAlign = alignSelector.value;
+
+                fCon.style.alignItems = alignItemSelector.value;
+                gCon.style.alignItems = alignItemSelector.value;
 
             }
         </script>
