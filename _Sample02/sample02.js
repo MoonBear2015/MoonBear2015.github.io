@@ -36,23 +36,30 @@ var sample02;
             };
         }
     }
+    sample02.GetCanvas = GetCanvas;
     // タッチイベント関連
     // iOS/Android検出
     function isSmartphone() {
         var ua = navigator.userAgent;
         return (ua.match(/iPhone|iPod|iPad|Android/) !== null);
     }
+    sample02.isSmartphone = isSmartphone;
     function touchCall(x, y) {
         touchHandler(x, y, CVS, CVSWIDTH, CVSHEIGHT);
     }
+    sample02.touchCall = touchCall;
     // リソース読込完了
     window.onload = function () {
         Init();
-        PicLoad();
+        ResizeCanvas();
         Call_Writer();
     };
     // 画面サイズ変更の検知
-    window.addEventListener('resize', ResizeCanvas);
+    function addResizeEvent() {
+        window.addEventListener('resize', ResizeCanvas);
+    }
+    sample02.addResizeEvent = addResizeEvent;
+    sample02.addResizeEvent();
     document.addEventListener('DOMContentLoaded', () => {
         ResizeCanvas();
         Call_Writer();
@@ -65,14 +72,18 @@ var sample02;
         CVSHEIGHT = CVS.offsetHeight;
         CVS.width = CVSWIDTH;
         CVS.height = CVSHEIGHT;
+        Call_Writer();
     }
+    sample02.ResizeCanvas = ResizeCanvas;
     // 画面更新処理を呼び出す
     function Call_Writer() {
         Canvas_Writer(CVS, CVSWIDTH, CVSHEIGHT);
     }
+    sample02.Call_Writer = Call_Writer;
     // 初期処理
     function Init() {
     }
+    sample02.Init = Init;
     function Canvas_Writer(canvas, width, height) {
         var ctx = canvas.getContext('2d');
         if (ctx == null)
@@ -80,4 +91,5 @@ var sample02;
         ctx.fillStyle = 'blue';
         ctx.fillRect(0, 0, width, height);
     }
+    sample02.Canvas_Writer = Canvas_Writer;
 })(sample02 || (sample02 = {}));

@@ -1,6 +1,4 @@
 namespace sample02 {
-
-
     var IsError : boolean = false;
 
     // GetCanvas('a_canvas');
@@ -10,7 +8,7 @@ namespace sample02 {
     var CVSHEIGHT : number;
 
     // canvasの取得
-    function GetCanvas(idName : string) {
+    export function GetCanvas(idName : string) {
         var element = document.getElementById(idName);
         if (element == null) {
             alert("no get!");
@@ -43,48 +41,55 @@ namespace sample02 {
     // タッチイベント関連
 
     // iOS/Android検出
-    function isSmartphone() {
+    export function isSmartphone() {
         var ua = navigator.userAgent;
         return (ua.match(/iPhone|iPod|iPad|Android/) !== null);
     }
-    function touchCall(x : number,y : number) {
+    export function touchCall(x : number,y : number) {
         touchHandler(x,y,CVS,CVSWIDTH,CVSHEIGHT);
     }
 
     // リソース読込完了
     window.onload = function () {
         Init();
-        PicLoad();
+        ResizeCanvas();
         Call_Writer();
     }
 
     // 画面サイズ変更の検知
-    window.addEventListener('resize', ResizeCanvas); 
+    export function addResizeEvent() {
+        window.addEventListener('resize', ResizeCanvas); 
+    }
+    sample02.addResizeEvent();
+    
     document.addEventListener('DOMContentLoaded', () => { 
         ResizeCanvas();
         Call_Writer();
     });
 
+
     // 画面サイズ変更
-    function ResizeCanvas() { 
+    export function ResizeCanvas() { 
         if (IsError) return;
         CVSWIDTH = CVS.offsetWidth;
         CVSHEIGHT = CVS.offsetHeight;
 
         CVS.width = CVSWIDTH;
         CVS.height = CVSHEIGHT;
+        Call_Writer();
+
     }
 
     // 画面更新処理を呼び出す
-    function Call_Writer() {
+    export function Call_Writer() {
         Canvas_Writer(CVS,CVSWIDTH,CVSHEIGHT);
     }
 
     // 初期処理
-    function Init(){
+    export function Init(){
     }
     
-    function Canvas_Writer (canvas : HTMLCanvasElement,
+    export function Canvas_Writer (canvas : HTMLCanvasElement,
         width : number,
         height : number
     ) {
