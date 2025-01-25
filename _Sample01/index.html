@@ -12,6 +12,12 @@
                 font-size: 10px;
             }
 
+            .cell {
+                text-align: justify;
+                vertical-align: bottom;
+                font-style:italic;
+            }
+
             #flexContainer {
                 display:    flex;
                 width: 100%;
@@ -39,9 +45,10 @@
 
             #gridContainer {
                 display: grid;
-                grid-template-columns: 1fr 2fr; /* 2列のグリッドを作成 */
-                grid-template-rows: 1fr 2fr;
+                grid-template-columns: 1fr 3fr; /* 2列のグリッドを作成 */
+                grid-template-rows: 1fr 3fr;
                 align-items:end;
+                background-color: black;
             }
             #grid00 {
                 grid-column: 1; /* 左側に配置 */
@@ -78,7 +85,7 @@
     </head>
     <body>
         <label for="SizeSlider">Select Font Size</label>
-        <input type="range" id="SizeSlider" min="1" max="300" value="1">
+        <input type="range" id="SizeSlider" min="1" max="300" value="50">
         <span id="sizeOutput">50</span>
         <br>
         <br>
@@ -117,7 +124,8 @@
 
         <label for="alignItemSelector">Select align-Item Type</label>
         <select id="alignItemSelector" title="Select align-Item Type">
-            <option value="stretch (デフォルト)">stretch (デフォルト): アイテムをコンテナの高さに伸ばします。</option>
+            <option value="stretch">stretch (デフォルト): アイテムをコンテナの高さに伸ばします。</option>
+            <option value="nomal">normal:このキーワードの効果は現在のレイアウトモードに依存します。start: アイテムをコンテナの開始位置（上）に揃えます。</option>
             <option value="start">start: アイテムをコンテナの開始位置（上）に揃えます。</option>
             <option value="end">end: アイテムをコンテナの終了位置（下）に揃えます。</option>
             <option value="flex-start">flex-start: アイテムをコンテナの開始位置（上）に揃えます。</option>
@@ -137,10 +145,10 @@
         <br>
 
         <div id="gridContainer">
-            <div id="grid00">00</div>
-            <div id="grid01">01</div>
-            <div id="grid10">10</div>
-            <div id="grid11">11</div>
+            <div id="grid00"><p class="cell">00</p></div>
+            <div id="grid01"><p class="cell">01</p></div>
+            <div id="grid10"><p class="cell">10</p></div>
+            <div id="grid11"><p class="cell">11</p></div>
         </div>
     
         <p id="myText" class="default-style">このテキストのスタイルを変更します。</p>
@@ -177,22 +185,14 @@
                 changeStyle();
             }
 
+            // 一度反映
+            changeStyle();
+
 
             function getFontStyle () {
                 var style = sizeSlider.value + typeSelector.value;
                 return style;
             }
-
-            // typeSelector.addEventListener('change', function () {
-            //     var selectedType = typeSelector.value;
-            //     sizetypeOutput.innerHTML = sizeSlider.value + selectedType;
-            //     changeStyle();
-            // });
-
-            // document.getElementById('fontType').addEventListener('change', function() {
-            //     var selectedType = this.options[this.selectedIndex].value;
-            //     document.getElementById("selected-fontType").innerText = "size:" + slider.value + selectedType;
-            // });
 
             function changeStyle() {
                 var element = document.getElementById("myText");
@@ -206,6 +206,8 @@
 
                 var fCon = document.getElementById("flexContainer");
                 var gCon = document.getElementById("gridContainer");
+
+                var item = document.getElementsByClassName("item");
                 
                 element.style.color = "white";
                 element.style.backgroundColor = "black";

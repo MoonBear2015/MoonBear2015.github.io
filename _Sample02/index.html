@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="ページの説明">
+        <script type="text/javascript" src="sample02.js"></script>
+        <title>Grid Sample</title>
+
+        <style>
+            #gridContainer {
+                display: grid;
+                grid-template-columns: 80% auto; /* 2列のグリッドを作成 */
+                grid-template-rows: 80% auto;
+                align-items:end;
+                background-color: black;
+            }
+            #grid11 {
+                grid-column: 1; /* 左側に配置 */
+                grid-row: 1;
+                background-color: lightblue;
+                color: blue;
+                padding: 10px;
+            }
+            #grid21 {
+                grid-column: 2; /* 右側に配置 */
+                grid-row: 1;
+                background-color: lightgreen;
+                color: green;
+                padding: 10px;
+            }
+            #grid12 {
+                grid-column: 1; /* 左側に配置 */
+                grid-row: 2;
+                background-color: blue;
+                color: lightblue;
+                padding: 10px;
+            }
+            #grid22 {
+                grid-column: 2; /* 右側に配置 */
+                grid-row: 2;
+                background-color: green;
+                color: lightgreen;
+                padding: 10px;
+                
+            }
+
+            #flexContainer {
+                display:    flex;
+                width: 100%;
+            }
+            .flexCell {
+                flex: 1;
+                color:white;
+                background-color: black;
+                box-sizing: border-box;
+            }
+
+        </style>
+    </head>
+
+
+
+    <body>
+        <div id="gridContainer">
+            <div id="grid11">
+                <canvas id="a_canvas"></canvas>
+            </div>
+            <div id="grid21">
+                <div id="flexContainer">
+                    <div id="cell00" class="flexCell"></div>
+                    <div id="cell01" class="flexCell"></div>
+                    <div id="cell02" class="flexCell"></div>
+                    <div id="cell03" class="flexCell"></div>
+                </div>
+            </div>
+            <div id="grid12"></div>
+            <div id="grid22"></div>
+        </div>
+        
+        
+
+    </body>
+</html>
