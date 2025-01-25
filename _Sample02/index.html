@@ -12,32 +12,39 @@
                 display: grid;
                 grid-template-columns: 80% auto; /* 2列のグリッドを作成 */
                 grid-template-rows: 80% auto;
-                align-items:end;
+                align-items: stretch;
                 background-color: black;
+                height: 100vh; /* 高さをビューポート全体に設定 */
+                gap: 10px;
+
             }
             #grid11 {
                 grid-column: 1; /* 左側に配置 */
                 grid-row: 1;
                 background-color: lightpink;
                 color: pink;
+                padding: 10px;
             }
             #grid21 {
                 grid-column: 2; /* 右側に配置 */
                 grid-row: 1;
                 background-color: lightgreen;
                 color: yellow;
+                padding: 10px;
             }
             #grid12 {
                 grid-column: 1; /* 左側に配置 */
                 grid-row: 2;
                 background-color: blue;
                 color: lightblue;
+                padding: 10px;
             }
             #grid22 {
                 grid-column: 2; /* 右側に配置 */
                 grid-row: 2;
                 background-color: green;
                 color: lightgreen;
+                padding: 10px;
             }
 
             #flexContainer {
@@ -52,9 +59,10 @@
             }
             canvas { 
                 /* ウィンドウサイズの90%に指定 */ 
-                width: 90%; 
-                height: 90%; 
-                border: 1px solid #000; 
+                width: 100%; 
+                height: 100%; 
+                border: 1px solid #000;
+                display: block;
                 /* キャンバスを視覚的に区別するための境界線 */ 
             }
 
