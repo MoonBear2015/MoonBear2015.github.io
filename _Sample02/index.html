@@ -18,15 +18,15 @@
             #grid11 {
                 grid-column: 1; /* 左側に配置 */
                 grid-row: 1;
-                background-color: lightblue;
-                color: blue;
+                background-color: lightpink;
+                color: pink;
                 padding: 10px;
             }
             #grid21 {
                 grid-column: 2; /* 右側に配置 */
                 grid-row: 1;
                 background-color: lightgreen;
-                color: green;
+                color: yellow;
                 padding: 10px;
             }
             #grid12 {
@@ -55,6 +55,14 @@
                 background-color: black;
                 box-sizing: border-box;
             }
+            canvas { 
+                /* ウィンドウサイズの90%に指定 */ 
+                width: 100%; 
+                height: 100%; 
+                border: 1px solid #000; 
+                /* キャンバスを視覚的に区別するための境界線 */ 
+            }
+
 
         </style>
     </head>
@@ -77,8 +85,12 @@
             <div id="grid12"></div>
             <div id="grid22"></div>
         </div>
-        
-        
+
+        <script>
+            
+            GetCanvas('a_canvas');
+
+        </script>
 
     </body>
 </html>
