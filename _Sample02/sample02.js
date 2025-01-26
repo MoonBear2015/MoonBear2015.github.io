@@ -1,13 +1,61 @@
 "use strict";
 var sample02;
 (function (sample02) {
+    var test = getElementByIdWithType("a_canvas");
+    if (test) {
+        alert("Year!!");
+    }
+    else {
+        alert("NoNo!");
+    }
+    Init();
+    // 初期処理
+    function Init() {
+        alert("Now Init");
+        GetCanvas("a_canvas");
+        CELL01 = getElementByIdWithType("Cell01");
+        if (IsError)
+            return;
+        CELL02 = getElementByIdWithType("Cell02");
+        if (IsError)
+            return;
+        CELL03 = getElementByIdWithType("Cell03");
+        if (IsError)
+            return;
+        CELL04 = getElementByIdWithType("Cell04");
+        if (IsError)
+            return;
+    }
+    sample02.Init = Init;
     var IsError = false;
     // GetCanvas('a_canvas');
     var CVS;
     var CVSWIDTH;
     var CVSHEIGHT;
+    var CELL01;
+    var CELL02;
+    var CELL03;
+    var CELL04;
+    function getElementByIdWithType(id) {
+        alert("get " + id);
+        alert("from " + document.documentElement.outerHTML);
+        const element = document.getElementById(id);
+        if (element) {
+            return element;
+        }
+        IsError = true;
+        return null;
+    }
+    sample02.getElementByIdWithType = getElementByIdWithType;
     // canvasの取得
     function GetCanvas(idName) {
+        alert("Now GetCanvas");
+        alert(document);
+        var ele = getElementByIdWithType(idName);
+        if (!ele) {
+            alert("no " + idName + "!");
+            return;
+        }
         var element = document.getElementById(idName);
         if (element == null) {
             alert("no get!");
@@ -50,7 +98,6 @@ var sample02;
     sample02.touchCall = touchCall;
     // リソース読込完了
     window.onload = function () {
-        Init();
         ResizeCanvas();
         Call_Writer();
     };
@@ -80,16 +127,16 @@ var sample02;
         Canvas_Writer(CVS, CVSWIDTH, CVSHEIGHT);
     }
     sample02.Call_Writer = Call_Writer;
-    // 初期処理
-    function Init() {
-    }
-    sample02.Init = Init;
     function Canvas_Writer(canvas, width, height) {
         var ctx = canvas.getContext('2d');
         if (ctx == null)
             return;
         ctx.fillStyle = 'blue';
         ctx.fillRect(0, 0, width, height);
+        if (CELL01)
+            CELL01.textContent = width.toString();
+        if (CELL02)
+            CELL02.textContent = height.toString();
     }
     sample02.Canvas_Writer = Canvas_Writer;
 })(sample02 || (sample02 = {}));

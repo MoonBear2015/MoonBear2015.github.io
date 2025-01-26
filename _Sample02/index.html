@@ -4,47 +4,54 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="ページの説明">
-        <script type="text/javascript" src="sample02.js"></script>
         <title>Grid Sample</title>
 
         <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+            }
+
             #gridContainer {
                 display: grid;
+                
                 grid-template-columns: 80% auto; /* 2列のグリッドを作成 */
                 grid-template-rows: 80% auto;
                 align-items: stretch;
                 background-color: black;
-                height: 100vh; /* 高さをビューポート全体に設定 */
-                gap: 10px;
-
+                height: 90vh; /* 高さをビューポート全体に設定 */
+                width: 90vw;
             }
             #grid11 {
                 grid-column: 1; /* 左側に配置 */
                 grid-row: 1;
                 background-color: lightpink;
                 color: pink;
-                padding: 10px;
+                margin: 3pt;
             }
             #grid21 {
                 grid-column: 2; /* 右側に配置 */
                 grid-row: 1;
                 background-color: lightgreen;
                 color: yellow;
-                padding: 10px;
+                margin: 3pt;
             }
             #grid12 {
                 grid-column: 1; /* 左側に配置 */
                 grid-row: 2;
                 background-color: blue;
                 color: lightblue;
-                padding: 10px;
+                margin: 3pt;
             }
             #grid22 {
                 grid-column: 2; /* 右側に配置 */
                 grid-row: 2;
                 background-color: green;
                 color: lightgreen;
-                padding: 10px;
+                margin: 3pt;
             }
 
             #flexContainer {
@@ -54,6 +61,7 @@
             .flexCell {
                 flex: 1;
                 color:white;
+                text-align: right;
                 background-color: black;
                 box-sizing: border-box;
             }
@@ -89,9 +97,10 @@
             <div id="grid22"></div>
         </div>
 
+        <script type="text/javascript" src="sample02.js"></script>
         <script>
-            
-            sample02.GetCanvas('a_canvas');
+            alert("from main " + document.documentElement.outerHTML);
+            // sample02.GetCanvas('a_canvas');
 
         </script>
 

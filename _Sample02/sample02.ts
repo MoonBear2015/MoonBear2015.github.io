@@ -1,4 +1,31 @@
 namespace sample02 {
+
+    var test = getElementByIdWithType<HTMLCanvasElement>("a_canvas");
+    if (test) {
+        alert("Year!!");
+    } else {
+        alert("NoNo!");
+    }
+
+    Init();
+
+    // 初期処理
+    export function Init(){
+        alert("Now Init");
+
+        GetCanvas("a_canvas");
+
+        CELL01 = getElementByIdWithType<HTMLElement>("Cell01");
+        if (IsError) return;
+        CELL02 = getElementByIdWithType<HTMLElement>("Cell02");
+        if (IsError) return;
+        CELL03 = getElementByIdWithType<HTMLElement>("Cell03");
+        if (IsError) return;
+        CELL04 = getElementByIdWithType<HTMLElement>("Cell04");
+        if (IsError) return;
+    }
+
+
     var IsError : boolean = false;
 
     // GetCanvas('a_canvas');
@@ -7,8 +34,34 @@ namespace sample02 {
     var CVSWIDTH : number;
     var CVSHEIGHT : number;
 
+    var CELL01 : HTMLElement | null;
+    var CELL02 : HTMLElement | null;
+    var CELL03 : HTMLElement | null;
+    var CELL04 : HTMLElement | null;
+
+    export function getElementByIdWithType<T extends HTMLElement>(id: string): T | null {
+        alert("get "+id);
+        alert("from " + document.documentElement.outerHTML);
+        const element = document.getElementById(id);
+        if (element) {
+            return element as T;
+        }
+        IsError = true;
+        return null;
+    }
+    
+
     // canvasの取得
     export function GetCanvas(idName : string) {
+        alert("Now GetCanvas");
+        alert(document);
+
+        var ele = getElementByIdWithType<HTMLCanvasElement>(idName);
+        if (!ele) {
+            alert("no "+ idName + "!");
+            return;
+        }
+
         var element = document.getElementById(idName);
         if (element == null) {
             alert("no get!");
@@ -51,7 +104,6 @@ namespace sample02 {
 
     // リソース読込完了
     window.onload = function () {
-        Init();
         ResizeCanvas();
         Call_Writer();
     }
@@ -85,9 +137,6 @@ namespace sample02 {
         Canvas_Writer(CVS,CVSWIDTH,CVSHEIGHT);
     }
 
-    // 初期処理
-    export function Init(){
-    }
     
     export function Canvas_Writer (canvas : HTMLCanvasElement,
         width : number,
@@ -97,8 +146,8 @@ namespace sample02 {
         if (ctx == null) return;
         ctx.fillStyle = 'blue';
         ctx.fillRect(0, 0, width, height);
+        if (CELL01) CELL01.textContent = width.toString();
+        if (CELL02) CELL02.textContent = height.toString();
     }
-    
-
 
 }
