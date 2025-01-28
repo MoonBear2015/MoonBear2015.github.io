@@ -1,16 +1,13 @@
 "use strict";
+function pInit() {
+    alert("out init");
+}
 var sample02;
 (function (sample02) {
-    var test = getElementByIdWithType("a_canvas");
-    if (test) {
-        alert("Year!!");
-    }
-    else {
-        alert("NoNo!");
-    }
-    Init();
+    // pInit();
+    // window.pInit();
     // 初期処理
-    function Init() {
+    function pInit() {
         alert("Now Init");
         GetCanvas("a_canvas");
         CELL01 = getElementByIdWithType("Cell01");
@@ -26,7 +23,7 @@ var sample02;
         if (IsError)
             return;
     }
-    sample02.Init = Init;
+    sample02.pInit = pInit;
     var IsError = false;
     // GetCanvas('a_canvas');
     var CVS;
@@ -37,8 +34,6 @@ var sample02;
     var CELL03;
     var CELL04;
     function getElementByIdWithType(id) {
-        alert("get " + id);
-        alert("from " + document.documentElement.outerHTML);
         const element = document.getElementById(id);
         if (element) {
             return element;
@@ -49,21 +44,16 @@ var sample02;
     sample02.getElementByIdWithType = getElementByIdWithType;
     // canvasの取得
     function GetCanvas(idName) {
-        alert("Now GetCanvas");
-        alert(document);
         var ele = getElementByIdWithType(idName);
         if (!ele) {
-            alert("no " + idName + "!");
             return;
         }
         var element = document.getElementById(idName);
         if (element == null) {
-            alert("no get!");
             IsError = true;
             return;
         }
         if (!(element instanceof HTMLCanvasElement)) {
-            alert("Can not!");
             IsError = true;
             return;
         }
@@ -140,3 +130,5 @@ var sample02;
     }
     sample02.Canvas_Writer = Canvas_Writer;
 })(sample02 || (sample02 = {}));
+sample02.pInit();
+pInit();

@@ -1,16 +1,14 @@
+function pInit() {
+    alert("out init");
+}
+
 namespace sample02 {
 
-    var test = getElementByIdWithType<HTMLCanvasElement>("a_canvas");
-    if (test) {
-        alert("Year!!");
-    } else {
-        alert("NoNo!");
-    }
-
-    Init();
+    // pInit();
+    // window.pInit();
 
     // 初期処理
-    export function Init(){
+    export function pInit(){
         alert("Now Init");
 
         GetCanvas("a_canvas");
@@ -40,8 +38,6 @@ namespace sample02 {
     var CELL04 : HTMLElement | null;
 
     export function getElementByIdWithType<T extends HTMLElement>(id: string): T | null {
-        alert("get "+id);
-        alert("from " + document.documentElement.outerHTML);
         const element = document.getElementById(id);
         if (element) {
             return element as T;
@@ -53,23 +49,18 @@ namespace sample02 {
 
     // canvasの取得
     export function GetCanvas(idName : string) {
-        alert("Now GetCanvas");
-        alert(document);
 
         var ele = getElementByIdWithType<HTMLCanvasElement>(idName);
         if (!ele) {
-            alert("no "+ idName + "!");
             return;
         }
 
         var element = document.getElementById(idName);
         if (element == null) {
-            alert("no get!");
             IsError = true;
             return;
         }
         if (!(element instanceof HTMLCanvasElement)) {
-            alert("Can not!");
             IsError = true;
             return;
         }
@@ -149,5 +140,8 @@ namespace sample02 {
         if (CELL01) CELL01.textContent = width.toString();
         if (CELL02) CELL02.textContent = height.toString();
     }
-
 }
+
+
+sample02.pInit();
+pInit();
