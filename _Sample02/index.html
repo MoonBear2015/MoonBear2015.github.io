@@ -53,8 +53,22 @@
                 color: lightgreen;
                 margin: 3pt;
             }
+            #MainFlex {
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                height: 100vh;
+                width: 100vw;
+            }
+            #PlayWindow {
+                background-color: lightblue;
+                flex: 1;
+            }
+            #InfoWindow {
+                background-color: lightcoral;
+            }
 
-            #flexContainer {
+            #Infoflex {
                 display:    flex;
                 flex-direction: column;
                 width: 100%;
@@ -97,20 +111,18 @@
 
 
     <body>
-        <div id="gridContainer">
-            <div id="grid11">
+        <div id="MainFlex">
+            <div id="PlayWindow">
                 <canvas id="a_canvas"></canvas>
             </div>
-            <div id="grid21">
-                <div id="flexContainer">
+            <div id="InfoWindow">
+                <div id="Infoflex">
                     <div id="cell00" class="flexCell"></div>
                     <div id="cell01" class="flexCell"></div>
                     <div id="cell02" class="flexCell"></div>
                     <div id="cell03" class="flexCell"></div>
                 </div>
             </div>
-            <div id="grid12"></div>
-            <div id="grid22"></div>
         </div>
 
         <script type="text/javascript" src="sample02.js"></script>

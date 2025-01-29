@@ -5,6 +5,10 @@ namespace sample02 {
 
     // GetCanvas('a_canvas');
 
+    var MAIN_FLEX : HTMLDivElement | null;
+    var PLAY_WINDOW : HTMLDivElement | null;
+    var INFO_WINDOW : HTMLDivElement | null;
+
     var CVS : HTMLCanvasElement | null; 
     var CVSWIDTH : number;
     var CVSHEIGHT : number;
@@ -27,19 +31,11 @@ namespace sample02 {
         Call_Writer();
 
     }
-
-
-
-    
-
-
     
     // document.addEventListener('DOMContentLoaded', () => { 
     //     ResizeCanvas();
     //     Call_Writer();
     // });
-
-    
 
     // 初期処理
     export function Init(){
@@ -70,6 +66,10 @@ namespace sample02 {
             }
         }
 
+        MAIN_FLEX = getElement<HTMLDivElement>("MainFlex");
+        PLAY_WINDOW = getElement<HTMLDivElement>("PlayWindow");
+        INFO_WINDOW = getElement<HTMLDivElement>("InfoWindow");
+
         CELL00 = getElement<HTMLDivElement>("cell00");
         if (IsError) return;
         CELL01 = getElement<HTMLDivElement>("cell01");
@@ -79,7 +79,6 @@ namespace sample02 {
         CELL03 = getElement<HTMLDivElement>("cell03");
         if (IsError) return;
     }
-
 
     export function getElement<T extends HTMLElement>(id: string): T | null {
         const element = document.getElementById(id);
@@ -92,7 +91,6 @@ namespace sample02 {
         IsError = true;
         return null;
     }
-    
 
     // canvasの取得
     export function GetCanvas(idName : string) {
@@ -115,6 +113,36 @@ namespace sample02 {
     export function ResizeCanvas() { 
         if (IsError) return;
         if (CVS == null) return;
+
+        if (window.innerWidth > window.innerHeight) { 
+            // 横長の場合
+            if (PLAY_WINDOW) {
+                PLAY_WINDOW.style.height = '100%';
+                PLAY_WINDOW.style.width = '70%';
+            }
+            if (INFO_WINDOW) {
+                INFO_WINDOW.style.height = '100%';
+                INFO_WINDOW.style.width = '30%';
+            }
+            if (MAIN_FLEX) {
+                MAIN_FLEX.style.flexDirection = 'row';
+            }
+
+        } else { 
+            // 縦長の場合
+            if (PLAY_WINDOW) {
+                PLAY_WINDOW.style.height = '70%';
+                PLAY_WINDOW.style.width = '100%';
+            }
+            if (INFO_WINDOW) {
+                INFO_WINDOW.style.height = '30%';
+                INFO_WINDOW.style.width = '100%';
+            }
+            if (MAIN_FLEX) {
+                MAIN_FLEX.style.flexDirection = 'column';
+            }
+        }
+
         CVSWIDTH = CVS.offsetWidth;
         CVSHEIGHT = CVS.offsetHeight;
 

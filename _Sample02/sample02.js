@@ -3,6 +3,9 @@ var sample02;
 (function (sample02) {
     var IsError = false;
     // GetCanvas('a_canvas');
+    var MAIN_FLEX;
+    var PLAY_WINDOW;
+    var INFO_WINDOW;
     var CVS;
     var CVSWIDTH;
     var CVSHEIGHT;
@@ -51,6 +54,9 @@ var sample02;
                 touchCall(e.clientX, e.clientY);
             };
         }
+        MAIN_FLEX = getElement("MainFlex");
+        PLAY_WINDOW = getElement("PlayWindow");
+        INFO_WINDOW = getElement("InfoWindow");
         CELL00 = getElement("cell00");
         if (IsError)
             return;
@@ -101,6 +107,34 @@ var sample02;
             return;
         if (CVS == null)
             return;
+        if (window.innerWidth > window.innerHeight) {
+            // 横長の場合
+            if (PLAY_WINDOW) {
+                PLAY_WINDOW.style.height = '100%';
+                PLAY_WINDOW.style.width = '70%';
+            }
+            if (INFO_WINDOW) {
+                INFO_WINDOW.style.height = '100%';
+                INFO_WINDOW.style.width = '30%';
+            }
+            if (MAIN_FLEX) {
+                MAIN_FLEX.style.flexDirection = 'row';
+            }
+        }
+        else {
+            // 縦長の場合
+            if (PLAY_WINDOW) {
+                PLAY_WINDOW.style.height = '70%';
+                PLAY_WINDOW.style.width = '100%';
+            }
+            if (INFO_WINDOW) {
+                INFO_WINDOW.style.height = '30%';
+                INFO_WINDOW.style.width = '100%';
+            }
+            if (MAIN_FLEX) {
+                MAIN_FLEX.style.flexDirection = 'column';
+            }
+        }
         CVSWIDTH = CVS.offsetWidth;
         CVSHEIGHT = CVS.offsetHeight;
         if (CELL02)
