@@ -1,75 +1,64 @@
-function pInit() {
-    alert("out init");
-}
 
 namespace sample02 {
-
-    // pInit();
-    // window.pInit();
-
-    // 初期処理
-    export function pInit(){
-        alert("Now Init");
-
-        GetCanvas("a_canvas");
-
-        CELL01 = getElementByIdWithType<HTMLElement>("Cell01");
-        if (IsError) return;
-        CELL02 = getElementByIdWithType<HTMLElement>("Cell02");
-        if (IsError) return;
-        CELL03 = getElementByIdWithType<HTMLElement>("Cell03");
-        if (IsError) return;
-        CELL04 = getElementByIdWithType<HTMLElement>("Cell04");
-        if (IsError) return;
-    }
-
-
+    
     var IsError : boolean = false;
 
     // GetCanvas('a_canvas');
 
-    var CVS : HTMLCanvasElement;
+    var CVS : HTMLCanvasElement | null; 
     var CVSWIDTH : number;
     var CVSHEIGHT : number;
 
-    var CELL01 : HTMLElement | null;
-    var CELL02 : HTMLElement | null;
-    var CELL03 : HTMLElement | null;
-    var CELL04 : HTMLElement | null;
+    var CELL00 : HTMLDivElement | null;
+    var CELL01 : HTMLDivElement | null;
+    var CELL02 : HTMLDivElement | null;
+    var CELL03 : HTMLDivElement | null;
 
-    export function getElementByIdWithType<T extends HTMLElement>(id: string): T | null {
-        const element = document.getElementById(id);
-        if (element) {
-            return element as T;
+        
+    // リソース読込完了
+    window.onload = function () {
+        Init();
+        if (IsError) {
+            alert("Init " + IsError);
         }
-        IsError = true;
-        return null;
-    }
     
 
-    // canvasの取得
-    export function GetCanvas(idName : string) {
+        ResizeCanvas();
+        Call_Writer();
 
-        var ele = getElementByIdWithType<HTMLCanvasElement>(idName);
-        if (!ele) {
+    }
+
+
+
+    
+
+
+    
+    // document.addEventListener('DOMContentLoaded', () => { 
+    //     ResizeCanvas();
+    //     Call_Writer();
+    // });
+
+    
+
+    // 初期処理
+    export function Init(){
+        // canvasの取得
+        GetCanvas("a_canvas");
+        if (IsError) return;
+        if (CVS == null) {
+            alert("CANVAS ERROR");
             return;
         }
 
-        var element = document.getElementById(idName);
-        if (element == null) {
-            IsError = true;
-            return;
-        }
-        if (!(element instanceof HTMLCanvasElement)) {
-            IsError = true;
-            return;
-        }
-        // canvas設定
-        CVS = element;
+        // サイズ変更時のイベントを設定
+        addResizeEvent();
+        // リサイズ処理の実行
+        ResizeCanvas();
+
         // タッチイベントの設定
         // スマホの場合
-        if (isSmartphone())
-        {
+        if (isSmartphone()){
             CVS.ontouchstart = function (e) {
                 var t1 : Touch = e.touches[0];
                 touchCall(t1.pageX,t1.pageY);
@@ -80,7 +69,64 @@ namespace sample02 {
                 touchCall(e.clientX,e.clientY);
             }
         }
+
+        CELL00 = getElement<HTMLDivElement>("cell00");
+        if (IsError) return;
+        CELL01 = getElement<HTMLDivElement>("cell01");
+        if (IsError) return;
+        CELL02 = getElement<HTMLDivElement>("cell02");
+        if (IsError) return;
+        CELL03 = getElement<HTMLDivElement>("cell03");
+        if (IsError) return;
     }
+
+
+    export function getElement<T extends HTMLElement>(id: string): T | null {
+        const element = document.getElementById(id);
+        // alert("get " + id + "=> " + Object.prototype.toString.call(element));
+        if (element) {
+            return element as T;
+        }
+        // alert(document.documentElement.outerHTML);
+        // alert(id + "is error");
+        IsError = true;
+        return null;
+    }
+    
+
+    // canvasの取得
+    export function GetCanvas(idName : string) {
+
+        let element : HTMLCanvasElement | null = getElement<HTMLCanvasElement>(idName);
+        if (IsError) return;
+        // canvas設定
+        CVS = element;
+        if (CVS == null) {
+            IsError = true;
+            return; 
+        }
+    }
+
+    // 画面サイズ変更の検知
+    export function addResizeEvent() {
+        window.addEventListener('resize', ResizeCanvas); 
+    }
+    // 画面サイズ変更
+    export function ResizeCanvas() { 
+        if (IsError) return;
+        if (CVS == null) return;
+        CVSWIDTH = CVS.offsetWidth;
+        CVSHEIGHT = CVS.offsetHeight;
+
+        if (CELL02) CELL02.textContent = CVS.offsetWidth.toString();
+        if (CELL03) CELL03.textContent = CVS.offsetHeight.toString();
+
+
+        CVS.width = CVSWIDTH;
+        CVS.height = CVSHEIGHT;
+        Call_Writer();
+    }
+    
 
     // タッチイベント関連
 
@@ -92,36 +138,18 @@ namespace sample02 {
     export function touchCall(x : number,y : number) {
         touchHandler(x,y,CVS,CVSWIDTH,CVSHEIGHT);
     }
+    // canvasに対するタッチハンドラー
+    function touchHandler(
+        x : number,
+        y : number,
+        canvas : HTMLCanvasElement | null,
+        width : number,
+        height : number
+    ) {
 
-    // リソース読込完了
-    window.onload = function () {
-        ResizeCanvas();
-        Call_Writer();
     }
-
-    // 画面サイズ変更の検知
-    export function addResizeEvent() {
-        window.addEventListener('resize', ResizeCanvas); 
-    }
-    sample02.addResizeEvent();
     
-    document.addEventListener('DOMContentLoaded', () => { 
-        ResizeCanvas();
-        Call_Writer();
-    });
 
-
-    // 画面サイズ変更
-    export function ResizeCanvas() { 
-        if (IsError) return;
-        CVSWIDTH = CVS.offsetWidth;
-        CVSHEIGHT = CVS.offsetHeight;
-
-        CVS.width = CVSWIDTH;
-        CVS.height = CVSHEIGHT;
-        Call_Writer();
-
-    }
 
     // 画面更新処理を呼び出す
     export function Call_Writer() {
@@ -129,19 +157,16 @@ namespace sample02 {
     }
 
     
-    export function Canvas_Writer (canvas : HTMLCanvasElement,
+    export function Canvas_Writer (canvas : HTMLCanvasElement | null,
         width : number,
         height : number
     ) {
+        if (canvas == null) return;
         var ctx = canvas.getContext('2d');
         if (ctx == null) return;
         ctx.fillStyle = 'blue';
         ctx.fillRect(0, 0, width, height);
-        if (CELL01) CELL01.textContent = width.toString();
-        if (CELL02) CELL02.textContent = height.toString();
+        if (CELL00) CELL00.textContent = width.toString();
+        if (CELL01) CELL01.textContent = height.toString();
     }
 }
-
-
-sample02.pInit();
-pInit();

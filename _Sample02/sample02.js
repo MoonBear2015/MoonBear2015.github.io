@@ -1,64 +1,42 @@
 "use strict";
-function pInit() {
-    alert("out init");
-}
 var sample02;
 (function (sample02) {
-    // pInit();
-    // window.pInit();
-    // 初期処理
-    function pInit() {
-        alert("Now Init");
-        GetCanvas("a_canvas");
-        CELL01 = getElementByIdWithType("Cell01");
-        if (IsError)
-            return;
-        CELL02 = getElementByIdWithType("Cell02");
-        if (IsError)
-            return;
-        CELL03 = getElementByIdWithType("Cell03");
-        if (IsError)
-            return;
-        CELL04 = getElementByIdWithType("Cell04");
-        if (IsError)
-            return;
-    }
-    sample02.pInit = pInit;
     var IsError = false;
     // GetCanvas('a_canvas');
     var CVS;
     var CVSWIDTH;
     var CVSHEIGHT;
+    var CELL00;
     var CELL01;
     var CELL02;
     var CELL03;
-    var CELL04;
-    function getElementByIdWithType(id) {
-        const element = document.getElementById(id);
-        if (element) {
-            return element;
+    // リソース読込完了
+    window.onload = function () {
+        Init();
+        if (IsError) {
+            alert("Init " + IsError);
         }
-        IsError = true;
-        return null;
-    }
-    sample02.getElementByIdWithType = getElementByIdWithType;
-    // canvasの取得
-    function GetCanvas(idName) {
-        var ele = getElementByIdWithType(idName);
-        if (!ele) {
+        ResizeCanvas();
+        Call_Writer();
+    };
+    // document.addEventListener('DOMContentLoaded', () => { 
+    //     ResizeCanvas();
+    //     Call_Writer();
+    // });
+    // 初期処理
+    function Init() {
+        // canvasの取得
+        GetCanvas("a_canvas");
+        if (IsError)
+            return;
+        if (CVS == null) {
+            alert("CANVAS ERROR");
             return;
         }
-        var element = document.getElementById(idName);
-        if (element == null) {
-            IsError = true;
-            return;
-        }
-        if (!(element instanceof HTMLCanvasElement)) {
-            IsError = true;
-            return;
-        }
-        // canvas設定
-        CVS = element;
+        // サイズ変更時のイベントを設定
+        addResizeEvent();
+        // リサイズ処理の実行
+        ResizeCanvas();
         // タッチイベントの設定
         // スマホの場合
         if (isSmartphone()) {
@@ -73,8 +51,67 @@ var sample02;
                 touchCall(e.clientX, e.clientY);
             };
         }
+        CELL00 = getElement("cell00");
+        if (IsError)
+            return;
+        CELL01 = getElement("cell01");
+        if (IsError)
+            return;
+        CELL02 = getElement("cell02");
+        if (IsError)
+            return;
+        CELL03 = getElement("cell03");
+        if (IsError)
+            return;
+    }
+    sample02.Init = Init;
+    function getElement(id) {
+        const element = document.getElementById(id);
+        // alert("get " + id + "=> " + Object.prototype.toString.call(element));
+        if (element) {
+            return element;
+        }
+        // alert(document.documentElement.outerHTML);
+        // alert(id + "is error");
+        IsError = true;
+        return null;
+    }
+    sample02.getElement = getElement;
+    // canvasの取得
+    function GetCanvas(idName) {
+        let element = getElement(idName);
+        if (IsError)
+            return;
+        // canvas設定
+        CVS = element;
+        if (CVS == null) {
+            IsError = true;
+            return;
+        }
     }
     sample02.GetCanvas = GetCanvas;
+    // 画面サイズ変更の検知
+    function addResizeEvent() {
+        window.addEventListener('resize', ResizeCanvas);
+    }
+    sample02.addResizeEvent = addResizeEvent;
+    // 画面サイズ変更
+    function ResizeCanvas() {
+        if (IsError)
+            return;
+        if (CVS == null)
+            return;
+        CVSWIDTH = CVS.offsetWidth;
+        CVSHEIGHT = CVS.offsetHeight;
+        if (CELL02)
+            CELL02.textContent = CVS.offsetWidth.toString();
+        if (CELL03)
+            CELL03.textContent = CVS.offsetHeight.toString();
+        CVS.width = CVSWIDTH;
+        CVS.height = CVSHEIGHT;
+        Call_Writer();
+    }
+    sample02.ResizeCanvas = ResizeCanvas;
     // タッチイベント関連
     // iOS/Android検出
     function isSmartphone() {
@@ -86,49 +123,26 @@ var sample02;
         touchHandler(x, y, CVS, CVSWIDTH, CVSHEIGHT);
     }
     sample02.touchCall = touchCall;
-    // リソース読込完了
-    window.onload = function () {
-        ResizeCanvas();
-        Call_Writer();
-    };
-    // 画面サイズ変更の検知
-    function addResizeEvent() {
-        window.addEventListener('resize', ResizeCanvas);
+    // canvasに対するタッチハンドラー
+    function touchHandler(x, y, canvas, width, height) {
     }
-    sample02.addResizeEvent = addResizeEvent;
-    sample02.addResizeEvent();
-    document.addEventListener('DOMContentLoaded', () => {
-        ResizeCanvas();
-        Call_Writer();
-    });
-    // 画面サイズ変更
-    function ResizeCanvas() {
-        if (IsError)
-            return;
-        CVSWIDTH = CVS.offsetWidth;
-        CVSHEIGHT = CVS.offsetHeight;
-        CVS.width = CVSWIDTH;
-        CVS.height = CVSHEIGHT;
-        Call_Writer();
-    }
-    sample02.ResizeCanvas = ResizeCanvas;
     // 画面更新処理を呼び出す
     function Call_Writer() {
         Canvas_Writer(CVS, CVSWIDTH, CVSHEIGHT);
     }
     sample02.Call_Writer = Call_Writer;
     function Canvas_Writer(canvas, width, height) {
+        if (canvas == null)
+            return;
         var ctx = canvas.getContext('2d');
         if (ctx == null)
             return;
         ctx.fillStyle = 'blue';
         ctx.fillRect(0, 0, width, height);
+        if (CELL00)
+            CELL00.textContent = width.toString();
         if (CELL01)
-            CELL01.textContent = width.toString();
-        if (CELL02)
-            CELL02.textContent = height.toString();
+            CELL01.textContent = height.toString();
     }
     sample02.Canvas_Writer = Canvas_Writer;
 })(sample02 || (sample02 = {}));
-sample02.pInit();
-pInit();
