@@ -4,6 +4,7 @@ var sample02;
     var IsError = false;
     // GetCanvas('a_canvas');
     var MAIN_FLEX;
+    var INFO_FLEX;
     var PLAY_WINDOW;
     var INFO_WINDOW;
     var CVS;
@@ -55,8 +56,17 @@ var sample02;
             };
         }
         MAIN_FLEX = getElement("MainFlex");
+        if (IsError)
+            return;
+        INFO_FLEX = getElement("InfoFlex");
+        if (IsError)
+            return;
         PLAY_WINDOW = getElement("PlayWindow");
+        if (IsError)
+            return;
         INFO_WINDOW = getElement("InfoWindow");
+        if (IsError)
+            return;
         CELL00 = getElement("cell00");
         if (IsError)
             return;
@@ -77,8 +87,8 @@ var sample02;
         if (element) {
             return element;
         }
-        // alert(document.documentElement.outerHTML);
-        // alert(id + "is error");
+        alert(document.documentElement.outerHTML);
+        alert(id + " is error");
         IsError = true;
         return null;
     }
@@ -107,32 +117,40 @@ var sample02;
             return;
         if (CVS == null)
             return;
-        if (window.innerWidth > window.innerHeight) {
+        let w = window.innerWidth;
+        let h = window.innerHeight;
+        if (w > h) {
             // 横長の場合
             if (PLAY_WINDOW) {
-                PLAY_WINDOW.style.height = '100%';
-                PLAY_WINDOW.style.width = '70%';
+                PLAY_WINDOW.style.height = "100%";
+                PLAY_WINDOW.style.width = "70%";
             }
             if (INFO_WINDOW) {
-                INFO_WINDOW.style.height = '100%';
-                INFO_WINDOW.style.width = '30%';
+                INFO_WINDOW.style.height = "100%";
+                INFO_WINDOW.style.width = "30%";
             }
             if (MAIN_FLEX) {
                 MAIN_FLEX.style.flexDirection = 'row';
+            }
+            if (INFO_FLEX) {
+                INFO_FLEX.style.flexDirection = 'column';
             }
         }
         else {
             // 縦長の場合
             if (PLAY_WINDOW) {
-                PLAY_WINDOW.style.height = '70%';
-                PLAY_WINDOW.style.width = '100%';
+                PLAY_WINDOW.style.height = "90%";
+                PLAY_WINDOW.style.width = "100%";
             }
             if (INFO_WINDOW) {
-                INFO_WINDOW.style.height = '30%';
-                INFO_WINDOW.style.width = '100%';
+                INFO_WINDOW.style.height = "10%";
+                INFO_WINDOW.style.width = "100%";
             }
             if (MAIN_FLEX) {
                 MAIN_FLEX.style.flexDirection = 'column';
+            }
+            if (INFO_FLEX) {
+                INFO_FLEX.style.flexDirection = 'row';
             }
         }
         CVSWIDTH = CVS.offsetWidth;
