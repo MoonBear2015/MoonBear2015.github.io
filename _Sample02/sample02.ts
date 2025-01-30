@@ -6,8 +6,14 @@ namespace sample02 {
     // GetCanvas('a_canvas');
 
     var MAIN_FLEX : HTMLDivElement | null;
+
+    var PLAY_FLEX : HTMLDivElement | null;
     var INFO_FLEX : HTMLDivElement | null;
+    
     var PLAY_WINDOW : HTMLDivElement | null;
+    var GAME_WINDOW : HTMLDivElement | null;
+    var MSG_WINDOW : HTMLDivElement | null;
+
     var INFO_WINDOW : HTMLDivElement | null;
 
     var CVS : HTMLCanvasElement | null; 
@@ -71,8 +77,18 @@ namespace sample02 {
         if (IsError) return;
         INFO_FLEX = getElement<HTMLDivElement>("InfoFlex");
         if (IsError) return;
+
         PLAY_WINDOW = getElement<HTMLDivElement>("PlayWindow");
         if (IsError) return;
+
+        PLAY_FLEX = getElement<HTMLDivElement>("PlayFlex");
+        if (IsError) return;
+
+        GAME_WINDOW = getElement<HTMLDivElement>("GameWindow");
+        if (IsError) return;
+        MSG_WINDOW = getElement<HTMLDivElement>("MsgWindow");
+        if (IsError) return;
+
         INFO_WINDOW = getElement<HTMLDivElement>("InfoWindow");
         if (IsError) return;
 
@@ -163,7 +179,6 @@ namespace sample02 {
         if (CELL02) CELL02.textContent = CVS.offsetWidth.toString();
         if (CELL03) CELL03.textContent = CVS.offsetHeight.toString();
 
-
         CVS.width = CVSWIDTH;
         CVS.height = CVSHEIGHT;
         Call_Writer();
@@ -206,7 +221,7 @@ namespace sample02 {
         if (canvas == null) return;
         var ctx = canvas.getContext('2d');
         if (ctx == null) return;
-        ctx.fillStyle = 'blue';
+        ctx.fillStyle = 'black';
         ctx.fillRect(0, 0, width, height);
         if (CELL00) CELL00.textContent = width.toString();
         if (CELL01) CELL01.textContent = height.toString();
