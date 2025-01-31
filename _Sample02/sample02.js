@@ -10,10 +10,14 @@ var sample02;
     var CVS;
     var CVSWIDTH;
     var CVSHEIGHT;
-    var CELL00;
-    var CELL01;
-    var CELL02;
-    var CELL03;
+    var STS00NAME;
+    var STS00VALUE;
+    var STS01NAME;
+    var STS01VALUE;
+    var STS02NAME;
+    var STS02VALUE;
+    var STS03NAME;
+    var STS03VALUE;
     // リソース読込完了
     window.onload = function () {
         Init();
@@ -67,16 +71,28 @@ var sample02;
         INFO_WINDOW = getElement("InfoWindow");
         if (IsError)
             return;
-        CELL00 = getElement("cell00");
+        STS00NAME = getElement("sts00Name");
         if (IsError)
             return;
-        CELL01 = getElement("cell01");
+        STS00VALUE = getElement("sts00Value");
         if (IsError)
             return;
-        CELL02 = getElement("cell02");
+        STS01NAME = getElement("sts01Name");
         if (IsError)
             return;
-        CELL03 = getElement("cell03");
+        STS01VALUE = getElement("sts01Value");
+        if (IsError)
+            return;
+        STS02NAME = getElement("sts02Name");
+        if (IsError)
+            return;
+        STS02VALUE = getElement("sts02Value");
+        if (IsError)
+            return;
+        STS03NAME = getElement("sts03Name");
+        if (IsError)
+            return;
+        STS03VALUE = getElement("sts03Value");
         if (IsError)
             return;
     }
@@ -155,10 +171,14 @@ var sample02;
         }
         CVSWIDTH = CVS.offsetWidth;
         CVSHEIGHT = CVS.offsetHeight;
-        if (CELL02)
-            CELL02.textContent = CVS.offsetWidth.toString();
-        if (CELL03)
-            CELL03.textContent = CVS.offsetHeight.toString();
+        if (STS02NAME)
+            STS02NAME.textContent = "CVS.offsetWidth";
+        if (STS02VALUE)
+            STS02VALUE.textContent = CVS.offsetWidth.toString();
+        if (STS03NAME)
+            STS03NAME.textContent = "CVS.offsetHeight";
+        if (STS03VALUE)
+            STS03VALUE.textContent = CVS.offsetHeight.toString();
         CVS.width = CVSWIDTH;
         CVS.height = CVSHEIGHT;
         Call_Writer();
@@ -191,10 +211,14 @@ var sample02;
             return;
         ctx.fillStyle = 'blue';
         ctx.fillRect(0, 0, width, height);
-        if (CELL00)
-            CELL00.textContent = width.toString();
-        if (CELL01)
-            CELL01.textContent = height.toString();
+        if (STS00NAME)
+            STS00NAME.textContent = "width";
+        if (STS00VALUE)
+            STS00VALUE.textContent = width.toString();
+        if (STS01NAME)
+            STS01NAME.textContent = "Height";
+        if (STS01VALUE)
+            STS01VALUE.textContent = height.toString();
     }
     sample02.Canvas_Writer = Canvas_Writer;
 })(sample02 || (sample02 = {}));

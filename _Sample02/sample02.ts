@@ -14,11 +14,17 @@ namespace sample02 {
     var CVSWIDTH : number;
     var CVSHEIGHT : number;
 
-    var CELL00 : HTMLDivElement | null;
-    var CELL01 : HTMLDivElement | null;
-    var CELL02 : HTMLDivElement | null;
-    var CELL03 : HTMLDivElement | null;
+    var STS00NAME : HTMLDivElement | null;
+    var STS00VALUE : HTMLDivElement | null;
 
+    var STS01NAME : HTMLDivElement | null;
+    var STS01VALUE : HTMLDivElement | null;
+
+    var STS02NAME : HTMLDivElement | null;
+    var STS02VALUE : HTMLDivElement | null;
+
+    var STS03NAME : HTMLDivElement | null;
+    var STS03VALUE : HTMLDivElement | null;
         
     // リソース読込完了
     window.onload = function () {
@@ -76,14 +82,28 @@ namespace sample02 {
         INFO_WINDOW = getElement<HTMLDivElement>("InfoWindow");
         if (IsError) return;
 
-        CELL00 = getElement<HTMLDivElement>("cell00");
+
+
+        STS00NAME = getElement<HTMLDivElement>("sts00Name");
         if (IsError) return;
-        CELL01 = getElement<HTMLDivElement>("cell01");
+        STS00VALUE = getElement<HTMLDivElement>("sts00Value");
         if (IsError) return;
-        CELL02 = getElement<HTMLDivElement>("cell02");
+
+        STS01NAME = getElement<HTMLDivElement>("sts01Name");
         if (IsError) return;
-        CELL03 = getElement<HTMLDivElement>("cell03");
+        STS01VALUE = getElement<HTMLDivElement>("sts01Value");
         if (IsError) return;
+
+        STS02NAME = getElement<HTMLDivElement>("sts02Name");
+        if (IsError) return;
+        STS02VALUE = getElement<HTMLDivElement>("sts02Value");
+        if (IsError) return;
+
+        STS03NAME = getElement<HTMLDivElement>("sts03Name");
+        if (IsError) return;
+        STS03VALUE = getElement<HTMLDivElement>("sts03Value");
+        if (IsError) return;
+
     }
 
     export function getElement<T extends HTMLElement>(id: string): T | null {
@@ -160,8 +180,11 @@ namespace sample02 {
         CVSWIDTH = CVS.offsetWidth;
         CVSHEIGHT = CVS.offsetHeight;
 
-        if (CELL02) CELL02.textContent = CVS.offsetWidth.toString();
-        if (CELL03) CELL03.textContent = CVS.offsetHeight.toString();
+        if (STS02NAME) STS02NAME.textContent = "CVS.offsetWidth";
+        if (STS02VALUE) STS02VALUE.textContent = CVS.offsetWidth.toString();
+
+        if (STS03NAME) STS03NAME.textContent = "CVS.offsetHeight";
+        if (STS03VALUE) STS03VALUE.textContent = CVS.offsetHeight.toString();
 
 
         CVS.width = CVSWIDTH;
@@ -208,7 +231,12 @@ namespace sample02 {
         if (ctx == null) return;
         ctx.fillStyle = 'blue';
         ctx.fillRect(0, 0, width, height);
-        if (CELL00) CELL00.textContent = width.toString();
-        if (CELL01) CELL01.textContent = height.toString();
+
+        if (STS00NAME) STS00NAME.textContent = "width";
+        if (STS00VALUE) STS00VALUE.textContent = width.toString();
+
+        if (STS01NAME) STS01NAME.textContent = "Height";
+        if (STS01VALUE) STS01VALUE.textContent = height.toString();
+
     }
 }

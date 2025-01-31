@@ -40,28 +40,27 @@
                 height: 100%;
                 font-size: calc(10px + 2vmin);
             }
-            .flexCell {
-                flex: 1;
-                text-align: right;
+
+            .StsFlex {
+                display:    flex;
+                flex-direction: column;
+                align-items: stretch;
+                width: 100%;
+                height: 100%;
+                font-size: calc((10px + 2vmin) * 0.8);
                 box-sizing: border-box;
                 border: 3px solid white;
             }
-            #cell00{
-                color:white;
-                background-color: blue;
+            .StsName {
+                flex: 1;
+                text-align: left;
+                order: 1;
             }
-            #cell01{
-                color:white;
-                background-color: green;
+            .StsValue {
+                text-align: right;
+                order: 2;
             }
-            #cell02{
-                color:white;
-                background-color: red;
-            }
-            #cell03{
-                color:white;
-                background-color: darkmagenta;
-            }
+
             canvas { 
                 /* ウィンドウサイズの90%に指定 */ 
                 width: 100%; 
@@ -84,10 +83,22 @@
             </div>
             <div id="InfoWindow">
                 <div id="InfoFlex">
-                    <div id="cell00" class="flexCell"></div>
-                    <div id="cell01" class="flexCell"></div>
-                    <div id="cell02" class="flexCell"></div>
-                    <div id="cell03" class="flexCell"></div>
+                    <div id="Sts00" class="StsFlex">
+                        <div id="sts00Name" class="StsName"></div>
+                        <div id="sts00Value" class="StsValue"></div>
+                    </div>
+                    <div id="Sts01" class="StsFlex">
+                        <div id="sts01Name" class="StsName"></div>
+                        <div id="sts01Value" class="StsValue"></div>
+                    </div>
+                    <div id="Sts02" class="StsFlex">
+                        <div id="sts02Name" class="StsName"></div>
+                        <div id="sts02Value" class="StsValue"></div>
+                    </div>
+                    <div id="Sts03" class="StsFlex">
+                        <div id="sts03Name" class="StsName"></div>
+                        <div id="sts03Value" class="StsValue"></div>
+                    </div>
                 </div>
             </div>
         </div>
