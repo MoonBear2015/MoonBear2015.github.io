@@ -4,8 +4,11 @@ var sample02;
     var IsError = false;
     // GetCanvas('a_canvas');
     var MAIN_FLEX;
+    var PLAY_FLEX;
     var INFO_FLEX;
     var PLAY_WINDOW;
+    var GAME_WINDOW;
+    var MSG_WINDOW;
     var INFO_WINDOW;
     var CVS;
     var CVSWIDTH;
@@ -66,6 +69,15 @@ var sample02;
         if (IsError)
             return;
         PLAY_WINDOW = getElement("PlayWindow");
+        if (IsError)
+            return;
+        PLAY_FLEX = getElement("PlayFlex");
+        if (IsError)
+            return;
+        GAME_WINDOW = getElement("GameWindow");
+        if (IsError)
+            return;
+        MSG_WINDOW = getElement("MsgWindow");
         if (IsError)
             return;
         INFO_WINDOW = getElement("InfoWindow");
@@ -209,7 +221,7 @@ var sample02;
         var ctx = canvas.getContext('2d');
         if (ctx == null)
             return;
-        ctx.fillStyle = 'blue';
+        ctx.fillStyle = 'black';
         ctx.fillRect(0, 0, width, height);
         if (STS00NAME)
             STS00NAME.textContent = "width";

@@ -31,6 +31,27 @@
                 background-color: lightcoral;
             }
 
+            #PlayFlex {
+                display:    flex;
+                flex-direction: column;
+                width: 100%;
+                height: 100%;
+            }
+
+            #GameWindow {
+                background-color: darkblue;
+                /* flex: 1; */
+                order: 1;
+                width: 100%;
+                height: 90%;
+            }
+
+            #MsgWindow {
+                background-color: darkorange;
+                order: 2;
+                width: 100%;
+                height: 10%;
+            }
 
             #InfoFlex {
                 display:    flex;
@@ -79,7 +100,12 @@
     <body>
         <div id="MainFlex">
             <div id="PlayWindow">
-                <canvas id="a_canvas"></canvas>
+                <div id="PlayFlex">
+                    <div id="GameWindow">
+                        <canvas id="a_canvas"></canvas>
+                    </div>
+                    <div id="MsgWindow"></div>
+                </div>
             </div>
             <div id="InfoWindow">
                 <div id="InfoFlex">
