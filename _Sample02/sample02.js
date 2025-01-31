@@ -21,6 +21,41 @@ var sample02;
     var STS02VALUE;
     var STS03NAME;
     var STS03VALUE;
+    // ゲーム枠座標
+    // W:幅 H:丈 X:横位置 Y:縦位置 P:隙間（縦横同一） M:余白（縦横別）
+    var gCell;
+    // 正方形に切り取る大外枠
+    var gW0;
+    var gH0;
+    // 大外枠のパディングサイズ
+    var gP0;
+    // 大外枠の表示位置
+    var gX0;
+    var gY0;
+    // 大外枠の余白
+    var gWM0;
+    var gHM0;
+    function CalcGameSize(cell, cvs) {
+        if (!cvs)
+            return;
+        // 大外枠の計算
+        if (cvs.width > cvs.height) {
+            gP0 = Math.floor(cvs.height / 300);
+            gW0 = cvs.height - gP0 * 2;
+            gH0 = cvs.height - gP0 * 2;
+            gWM0 = Math.floor((cvs.width - cvs.height) / 2);
+            gHM0 = 0;
+        }
+        else {
+            gP0 = Math.floor(cvs.width / 300);
+            gW0 = cvs.width - gP0 * 2;
+            gH0 = cvs.width - gP0 * 2;
+            gWM0 = 0;
+            gHM0 = Math.floor((cvs.height - cvs.width) / 2);
+        }
+        gX0 = gWM0 + gP0;
+        gY0 = gHM0 + gP0;
+    }
     // リソース読込完了
     window.onload = function () {
         Init();
@@ -221,8 +256,11 @@ var sample02;
         var ctx = canvas.getContext('2d');
         if (ctx == null)
             return;
+        CalcGameSize(8, canvas);
         ctx.fillStyle = 'black';
         ctx.fillRect(0, 0, width, height);
+        ctx.fillStyle = 'white';
+        ctx.fillRect(gX0, gY0, gW0, gH0);
         if (STS00NAME)
             STS00NAME.textContent = "width";
         if (STS00VALUE)
