@@ -52,14 +52,14 @@ namespace sample02 {
         if (!cvs) return;
         // 大外枠の計算
         if (cvs.width > cvs.height) {
-            gP0 = Math.floor(cvs.height / 300);
+            gP0 = Math.floor(cvs.height / 200);
             gW0 = cvs.height - gP0 * 2;
             gH0 = cvs.height - gP0 * 2;
             gWM0 = Math.floor((cvs.width - cvs.height) / 2);
             gHM0 = 0;
         }
         else {
-            gP0 = Math.floor(cvs.width / 300);
+            gP0 = Math.floor(cvs.width / 200);
             gW0 = cvs.width - gP0 * 2;
             gH0 = cvs.width - gP0 * 2;
             gWM0 = 0;
@@ -135,8 +135,6 @@ namespace sample02 {
         INFO_WINDOW = getElement<HTMLDivElement>("InfoWindow");
         if (IsError) return;
 
-
-
         STS00NAME = getElement<HTMLDivElement>("sts00Name");
         if (IsError) return;
         STS00VALUE = getElement<HTMLDivElement>("sts00Value");
@@ -199,12 +197,13 @@ namespace sample02 {
             // 横長の場合
             if (PLAY_WINDOW) {
                 PLAY_WINDOW.style.height = "100%";
-                PLAY_WINDOW.style.width = "70%";
+                PLAY_WINDOW.style.width = "65%";
             }
             if (INFO_WINDOW) {
                 INFO_WINDOW.style.height = "100%";
                 INFO_WINDOW.style.width = "30%"
             }
+
             if (MAIN_FLEX) {
                 MAIN_FLEX.style.flexDirection = 'row';
             }
@@ -222,6 +221,7 @@ namespace sample02 {
                 INFO_WINDOW.style.height = "10%";
                 INFO_WINDOW.style.width = "100%";
             }
+
             if (MAIN_FLEX) {
                 MAIN_FLEX.style.flexDirection = 'column';
             }

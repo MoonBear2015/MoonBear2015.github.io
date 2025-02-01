@@ -40,14 +40,14 @@ var sample02;
             return;
         // 大外枠の計算
         if (cvs.width > cvs.height) {
-            gP0 = Math.floor(cvs.height / 300);
+            gP0 = Math.floor(cvs.height / 200);
             gW0 = cvs.height - gP0 * 2;
             gH0 = cvs.height - gP0 * 2;
             gWM0 = Math.floor((cvs.width - cvs.height) / 2);
             gHM0 = 0;
         }
         else {
-            gP0 = Math.floor(cvs.width / 300);
+            gP0 = Math.floor(cvs.width / 200);
             gW0 = cvs.width - gP0 * 2;
             gH0 = cvs.width - gP0 * 2;
             gWM0 = 0;
@@ -186,7 +186,7 @@ var sample02;
             // 横長の場合
             if (PLAY_WINDOW) {
                 PLAY_WINDOW.style.height = "100%";
-                PLAY_WINDOW.style.width = "70%";
+                PLAY_WINDOW.style.width = "65%";
             }
             if (INFO_WINDOW) {
                 INFO_WINDOW.style.height = "100%";
