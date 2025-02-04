@@ -23,7 +23,6 @@ var sample02;
     var STS03VALUE;
     // ゲーム枠座標
     // W:幅 H:丈 X:横位置 Y:縦位置 P:隙間（縦横同一） M:余白（縦横別）
-    var gCell;
     // 正方形に切り取る大外枠
     var gW0;
     var gH0;
@@ -51,6 +50,9 @@ var sample02;
     // 升に使われる広さ
     var gWm;
     var gHm;
+    // 升の表示開始位置
+    var gX2;
+    var gY2;
     // 全升の広さ
     var gW2;
     var gH2;
@@ -89,20 +91,23 @@ var sample02;
         // 盤上の大きさ
         gW1 = gW0 - gP1 * 2;
         gH1 = gH0 - gP1 * 2;
+        // 升の表示開始位置
+        gX2 = gX1 + gP1;
+        gY2 = gY1 + gP1;
         // 升の数
         gCellCount = cellCount;
         // 全升の広さ（仮
         gW2w = gW1 - gP1 * 2;
         gH2w = gH1 - gP1 * 2;
-        // 升に使われる広さ
+        // 升に使われる広さ(枠線を除く)
         gWm = gW2w - gP1 * (gCellCount - 1);
         gHm = gH2w - gP1 * (gCellCount - 1);
         // 升の大きさ
-        gW3 = Math.floor(gW2w / gCellCount);
-        gH3 = Math.floor(gH2w / gCellCount);
+        gW3 = Math.floor(gWm / gCellCount);
+        gH3 = Math.floor(gHm / gCellCount);
         // 全升の広さの再計算
-        gW3 = gW3 * gCellCount + gP1 * (gCellCount - 1);
-        gH3 = gH3 * gCellCount + gP1 * (gCellCount - 1);
+        gW2 = gW3 * gCellCount + gP1 * (gCellCount - 1);
+        gH2 = gH3 * gCellCount + gP1 * (gCellCount - 1);
         // 全升の座標
         // 配列の初期化
         gX3 = Array(gCellCount).fill([]).map(_ => Array(gCellCount).fill(0));
@@ -110,8 +115,8 @@ var sample02;
         // 座標計算
         for (let y = 0; y < gCellCount; y++) {
             for (let x = 0; x < gCellCount; x++) {
-                gX3[x][y] = (gW3 + gP1) * x;
-                gY3[x][y] = (gH3 + gP1) * y;
+                gX3[x][y] = gX2 + (gW3 + gP1) * x;
+                gY3[x][y] = gY2 + (gH3 + gP1) * y;
             }
         }
     }
@@ -318,8 +323,14 @@ var sample02;
         CalcGameSize(8, canvas);
         ctx.fillStyle = 'black';
         ctx.fillRect(0, 0, width, height);
-        ctx.fillStyle = 'white';
+        ctx.fillStyle = 'darkgray';
         ctx.fillRect(gX0, gY0, gW0, gH0);
+        for (let y = 0; y < gCellCount; y++) {
+            for (let x = 0; x < gCellCount; x++) {
+                ctx.fillStyle = 'white';
+                ctx.fillRect(gX3[x][y], gY3[x][y], gW3, gH3);
+            }
+        }
         if (STS00NAME)
             STS00NAME.textContent = "width";
         if (STS00VALUE)

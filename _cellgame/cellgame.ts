@@ -1,5 +1,5 @@
 
-namespace sample02 {
+namespace cellgame {
     
     var IsError : boolean = false;
 
