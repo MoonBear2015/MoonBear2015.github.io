@@ -35,12 +35,38 @@ var sample02;
     // 大外枠の余白
     var gWM0;
     var gHM0;
-    function CalcGameSize(cell, cvs) {
+    // 盤上のパディング
+    var gP1;
+    // 盤上の表示位置
+    var gX1;
+    var gY1;
+    // 盤上の大きさ
+    var gW1;
+    var gH1;
+    // 升の数
+    var gCellCount;
+    // 全升の広さ（仮
+    var gW2w;
+    var gH2w;
+    // 升に使われる広さ
+    var gWm;
+    var gHm;
+    // 全升の広さ
+    var gW2;
+    var gH2;
+    // 升の大きさ
+    var gW3;
+    var gH3;
+    // 升の座標
+    var gX3;
+    var gY3;
+    function CalcGameSize(cellCount, cvs) {
         if (!cvs)
             return;
         // 大外枠の計算
         if (cvs.width > cvs.height) {
             gP0 = Math.floor(cvs.height / 200);
+            gP1 = Math.floor(cvs.height / 100);
             gW0 = cvs.height - gP0 * 2;
             gH0 = cvs.height - gP0 * 2;
             gWM0 = Math.floor((cvs.width - cvs.height) / 2);
@@ -48,13 +74,46 @@ var sample02;
         }
         else {
             gP0 = Math.floor(cvs.width / 200);
+            gP1 = Math.floor(cvs.width / 100);
             gW0 = cvs.width - gP0 * 2;
             gH0 = cvs.width - gP0 * 2;
             gWM0 = 0;
             gHM0 = Math.floor((cvs.height - cvs.width) / 2);
         }
+        // 大外枠の表示位置
         gX0 = gWM0 + gP0;
         gY0 = gHM0 + gP0;
+        // 盤上の表示位置
+        gX1 = gX0 + gP1;
+        gY1 = gY0 + gP1;
+        // 盤上の大きさ
+        gW1 = gW0 - gP1 * 2;
+        gH1 = gH0 - gP1 * 2;
+        // 升の数
+        gCellCount = cellCount;
+        // 全升の広さ（仮
+        gW2w = gW1 - gP1 * 2;
+        gH2w = gH1 - gP1 * 2;
+        // 升に使われる広さ
+        gWm = gW2w - gP1 * (gCellCount - 1);
+        gHm = gH2w - gP1 * (gCellCount - 1);
+        // 升の大きさ
+        gW3 = Math.floor(gW2w / gCellCount);
+        gH3 = Math.floor(gH2w / gCellCount);
+        // 全升の広さの再計算
+        gW3 = gW3 * gCellCount + gP1 * (gCellCount - 1);
+        gH3 = gH3 * gCellCount + gP1 * (gCellCount - 1);
+        // 全升の座標
+        // 配列の初期化
+        gX3 = Array(gCellCount).fill([]).map(_ => Array(gCellCount).fill(0));
+        gY3 = Array(gCellCount).fill([]).map(_ => Array(gCellCount).fill(0));
+        // 座標計算
+        for (let y = 0; y < gCellCount; y++) {
+            for (let x = 0; x < gCellCount; x++) {
+                gX3[x][y] = (gW3 + gP1) * x;
+                gY3[x][y] = (gH3 + gP1) * y;
+            }
+        }
     }
     // リソース読込完了
     window.onload = function () {
