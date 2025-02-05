@@ -292,7 +292,7 @@ namespace sample02 {
             }
             if (INFO_WINDOW) {
                 INFO_WINDOW.style.height = "10%";
-                INFO_WINDOW.style.width = "100%";
+                INFO_WINDOW.style.width = "90%";
             }
 
             if (MAIN_FLEX) {
