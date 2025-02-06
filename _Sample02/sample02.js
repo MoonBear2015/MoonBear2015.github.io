@@ -271,7 +271,7 @@ var sample02;
             }
             if (INFO_WINDOW) {
                 INFO_WINDOW.style.height = "10%";
-                INFO_WINDOW.style.width = "90%";
+                INFO_WINDOW.style.width = "100%";
             }
             if (MAIN_FLEX) {
                 MAIN_FLEX.style.flexDirection = 'column';
