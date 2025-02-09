@@ -1,4 +1,5 @@
 "use strict";
+/// <reference path="cellgameLib.ts" />
 /// <reference path="cellgameSub.ts" />
 var cellgame;
 (function (cellgame) {
@@ -334,7 +335,7 @@ var cellgame;
         }
         for (let y = 0; y < gCellCount; y++) {
             for (let x = 0; x < gCellCount; x++) {
-                TextWriter(canvas, "農", gX3[x][y], gY3[x][y], gW3, gH3, cellgame.Colors.White, cellgame.Colors.Red);
+                TextWriter(canvas, "農", cellgame.Colors.White, cellgame.Colors.Red, gX3[x][y], gY3[x][y], gW3, gH3);
             }
         }
         if (STS00NAME)
@@ -347,26 +348,26 @@ var cellgame;
             STS01VALUE.textContent = height.toString();
     }
     cellgame.CanvasWriter = CanvasWriter;
-    function TextWriter(canvas, text, left, top, width, height, foreColor, backColor) {
+    function TextWriter(canvas, char, foreColor, backColor, left, top, width, height) {
         if (canvas == null || canvas == undefined)
             return;
         let ctx = canvas.getContext('2d');
         if (ctx == null)
             return;
-        if (text.length < 1)
+        if (char.length < 1)
             return;
-        let char = text.substring(0, 1);
+        let char0 = char.substring(0, 1);
         // フォントサイズを計算
         let fontSize = Math.min(width, height);
         ctx.font = `${fontSize}px serif`;
         // テキストの位置を計算して描画
-        let charWidth = ctx.measureText(char).width;
+        let charWidth = ctx.measureText(char0).width;
         let textX = (width - charWidth) / 2;
         let textY = (height + fontSize * 0.75) / 2;
         ctx.fillStyle = backColor;
         ctx.fillRect(left, top, width, height);
         ctx.fillStyle = foreColor;
-        ctx.fillText(char, left + textX, top + textY);
+        ctx.fillText(char0, left + textX, top + textY);
     }
     cellgame.TextWriter = TextWriter;
 })(cellgame || (cellgame = {}));

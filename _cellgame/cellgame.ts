@@ -1,3 +1,4 @@
+/// <reference path="cellgameLib.ts" />
 /// <reference path="cellgameSub.ts" />
 namespace cellgame {
     
@@ -338,8 +339,6 @@ namespace cellgame {
     ) {
 
     }
-    
-
 
     // 画面更新処理を呼び出す
     export function Call_Writer() {
@@ -371,8 +370,9 @@ namespace cellgame {
 
         for(let y = 0; y < gCellCount; y++) {
             for (let x = 0; x < gCellCount; x++) {
-                TextWriter(canvas,"農",gX3[x][y],gY3[x][y],gW3,gH3,
-                    Colors.White,Colors.Red
+                TextWriter(canvas,"農",
+                    Colors.White,Colors.Red,
+                    gX3[x][y],gY3[x][y],gW3,gH3
                 );
             }
         }
@@ -386,39 +386,35 @@ namespace cellgame {
     }
 
     export function TextWriter (canvas : HTMLCanvasElement | null,
-        text : string,
+        char : string,
+        foreColor : string,
+        backColor : string,
         left : number,
         top : number,
         width : number,
-        height : number,
-        foreColor : string,
-        backColor : string
+        height : number
     ) {
         if (canvas == null || canvas == undefined) return;
         let ctx = canvas.getContext('2d');
         if (ctx == null) return;
 
-        if (text.length < 1) return;
-        let char = text.substring(0,1);
+        if (char.length < 1) return;
+        let char0 = char.substring(0,1);
         // フォントサイズを計算
         let fontSize = Math.min(width, height);
         ctx.font = `${fontSize}px serif`;
 
         // テキストの位置を計算して描画
-        let charWidth = ctx.measureText(char).width;
+        let charWidth = ctx.measureText(char0).width;
         let textX = (width - charWidth) / 2;
         let textY = (height + fontSize * 0.75) / 2;
-
-        
         
         ctx.fillStyle = backColor;
         ctx.fillRect(left , top, width, height);
 
         ctx.fillStyle = foreColor;
-        ctx.fillText(char, left + textX, top + textY);
+        ctx.fillText(char0, left + textX, top + textY);
 
     }
-
-    
 
 }
