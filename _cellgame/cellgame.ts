@@ -412,11 +412,13 @@ namespace cellgame {
         
         
         ctx.fillStyle = backColor;
-        ctx.clearRect(top, left, width, height);
+        ctx.fillRect(left , top, width, height);
 
         ctx.fillStyle = foreColor;
         ctx.fillText(char, left + textX, top + textY);
 
     }
+
+    
 
 }

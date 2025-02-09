@@ -364,7 +364,7 @@ var cellgame;
         let textX = (width - charWidth) / 2;
         let textY = (height + fontSize * 0.75) / 2;
         ctx.fillStyle = backColor;
-        ctx.clearRect(top, left, width, height);
+        ctx.fillRect(left, top, width, height);
         ctx.fillStyle = foreColor;
         ctx.fillText(char, left + textX, top + textY);
     }
