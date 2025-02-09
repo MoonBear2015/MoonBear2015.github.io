@@ -1,4 +1,4 @@
-
+/// <reference path="cellgameSub.ts" />
 namespace cellgame {
     
     var IsError : boolean = false;
@@ -343,16 +343,16 @@ namespace cellgame {
 
     // 画面更新処理を呼び出す
     export function Call_Writer() {
-        Canvas_Writer(CVS,CVSWIDTH,CVSHEIGHT);
+        CanvasWriter(CVS,CVSWIDTH,CVSHEIGHT);
     }
 
     
-    export function Canvas_Writer (canvas : HTMLCanvasElement | null,
+    export function CanvasWriter (canvas : HTMLCanvasElement | null,
         width : number,
         height : number
     ) {
         if (canvas == null) return;
-        var ctx = canvas.getContext('2d');
+        let ctx = canvas.getContext('2d');
         if (ctx == null) return;
         
         CalcGameSize(8,canvas);
@@ -363,10 +363,17 @@ namespace cellgame {
         ctx.fillRect(gX0,gY0,gW0,gH0);
 
         for(let y = 0; y < gCellCount; y++) {
-            for(let x = 0; x < gCellCount; x++)
-            {
+            for(let x = 0; x < gCellCount; x++) {
                 ctx.fillStyle = 'white';
                 ctx.fillRect(gX3[x][y],gY3[x][y],gW3,gH3);
+            }
+        }
+
+        for(let y = 0; y < gCellCount; y++) {
+            for (let x = 0; x < gCellCount; x++) {
+                TextWriter(canvas,"農",gX3[x][y],gY3[x][y],gW3,gH3,
+                    Colors.White,Colors.Red
+                );
             }
         }
 
@@ -377,4 +384,39 @@ namespace cellgame {
         if (STS01VALUE) STS01VALUE.textContent = height.toString();
 
     }
+
+    export function TextWriter (canvas : HTMLCanvasElement | null,
+        text : string,
+        left : number,
+        top : number,
+        width : number,
+        height : number,
+        foreColor : string,
+        backColor : string
+    ) {
+        if (canvas == null || canvas == undefined) return;
+        let ctx = canvas.getContext('2d');
+        if (ctx == null) return;
+
+        if (text.length < 1) return;
+        let char = text.substring(0,1);
+        // フォントサイズを計算
+        let fontSize = Math.min(width, height);
+        ctx.font = `${fontSize}px serif`;
+
+        // テキストの位置を計算して描画
+        let charWidth = ctx.measureText(char).width;
+        let textX = (width - charWidth) / 2;
+        let textY = (height + fontSize * 0.75) / 2;
+
+        
+        
+        ctx.fillStyle = backColor;
+        ctx.clearRect(top, left, width, height);
+
+        ctx.fillStyle = foreColor;
+        ctx.fillText(char, left + textX, top + textY);
+
+    }
+
 }

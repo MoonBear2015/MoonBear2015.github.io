@@ -1,4 +1,5 @@
 "use strict";
+/// <reference path="cellgameSub.ts" />
 var cellgame;
 (function (cellgame) {
     var IsError = false;
@@ -311,13 +312,13 @@ var cellgame;
     }
     // 画面更新処理を呼び出す
     function Call_Writer() {
-        Canvas_Writer(CVS, CVSWIDTH, CVSHEIGHT);
+        CanvasWriter(CVS, CVSWIDTH, CVSHEIGHT);
     }
     cellgame.Call_Writer = Call_Writer;
-    function Canvas_Writer(canvas, width, height) {
+    function CanvasWriter(canvas, width, height) {
         if (canvas == null)
             return;
-        var ctx = canvas.getContext('2d');
+        let ctx = canvas.getContext('2d');
         if (ctx == null)
             return;
         CalcGameSize(8, canvas);
@@ -331,6 +332,11 @@ var cellgame;
                 ctx.fillRect(gX3[x][y], gY3[x][y], gW3, gH3);
             }
         }
+        for (let y = 0; y < gCellCount; y++) {
+            for (let x = 0; x < gCellCount; x++) {
+                TextWriter(canvas, "農", gX3[x][y], gY3[x][y], gW3, gH3, cellgame.Colors.White, cellgame.Colors.Red);
+            }
+        }
         if (STS00NAME)
             STS00NAME.textContent = "width";
         if (STS00VALUE)
@@ -340,5 +346,27 @@ var cellgame;
         if (STS01VALUE)
             STS01VALUE.textContent = height.toString();
     }
-    cellgame.Canvas_Writer = Canvas_Writer;
+    cellgame.CanvasWriter = CanvasWriter;
+    function TextWriter(canvas, text, left, top, width, height, foreColor, backColor) {
+        if (canvas == null || canvas == undefined)
+            return;
+        let ctx = canvas.getContext('2d');
+        if (ctx == null)
+            return;
+        if (text.length < 1)
+            return;
+        let char = text.substring(0, 1);
+        // フォントサイズを計算
+        let fontSize = Math.min(width, height);
+        ctx.font = `${fontSize}px serif`;
+        // テキストの位置を計算して描画
+        let charWidth = ctx.measureText(char).width;
+        let textX = (width - charWidth) / 2;
+        let textY = (height + fontSize * 0.75) / 2;
+        ctx.fillStyle = backColor;
+        ctx.clearRect(top, left, width, height);
+        ctx.fillStyle = foreColor;
+        ctx.fillText(char, left + textX, top + textY);
+    }
+    cellgame.TextWriter = TextWriter;
 })(cellgame || (cellgame = {}));
