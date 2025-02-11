@@ -1,6 +1,7 @@
 "use strict";
 var cellgame;
 (function (cellgame) {
+    /** 乱数（最小値～この数値未満） */
     function rnd(minOrMax, max) {
         let min;
         if (max === undefined) {
@@ -12,9 +13,30 @@ var cellgame;
         }
         return Math.floor(Math.random() * (max - min)) + min;
     }
-    let randomColor = () => "#" + rnd(0xFFFFFF).toString(16);
+    cellgame.rnd = rnd;
+    /** アトランダムな65535色コード */
+    cellgame.randomColor = () => "#" + rnd(0xFFFFFF).toString(16);
+    /** 升目の番号計算（x:横，y:縦，w:横幅） */
+    cellgame.addressCalc = (x, y, w) => x * w + y;
+    /** 升目の座標計算（a:番号,w:横幅） */
+    cellgame.pointCalc = (a, w) => {
+        let y = Math.floor(a / w);
+        let x = a % w;
+        return new Point(x, y);
+    };
+    /** 座標 */
+    class Point {
+        constructor(x = 0, y = 0) {
+            this.x = 0;
+            this.y = 0;
+            this.x = x;
+            this.y = y;
+        }
+    }
+    cellgame.Point = Point;
     class Colors {
     }
+    // ピンク
     Colors.MediumVioletRed = "#C71585";
     Colors.DeepPink = "#FF1493";
     Colors.PaleVioletRed = "#DB7093";

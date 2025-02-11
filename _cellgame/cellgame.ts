@@ -57,8 +57,8 @@ namespace cellgame {
     var gW1 : number;
     var gH1 : number;
 
-    // 升の数
-    var gCellCount : number;
+    // 升の幅
+    var gCellWidth : number;
     // 全升の広さ（仮
     var gW2w : number;
     var gH2w : number;
@@ -77,9 +77,13 @@ namespace cellgame {
     // 升の大きさ
     var gW3 : number;
     var gH3 : number;
-    // 升の座標
-    var gX3 : number[][];
-    var gY3 : number[][];
+
+    // 升の座標[cell番号]
+    var gX3 : number[];
+    var gY3 : number[];
+
+    // 升のコード[cell番号]
+    var gCodes : number[];
 
     function CalcGameSize(cellCount : number,cvs : HTMLCanvasElement | null) {
         if (!cvs) return;
@@ -115,30 +119,31 @@ namespace cellgame {
         gY2 = gY1 + gP1;
 
         // 升の数
-        gCellCount = cellCount;
+        gCellWidth = cellCount;
         // 全升の広さ（仮
         gW2w = gW1 - gP1 * 2;
         gH2w = gH1 - gP1 * 2;
         // 升に使われる広さ(枠線を除く)
-        gWm = gW2w - gP1 * (gCellCount - 1);
-        gHm = gH2w - gP1 * (gCellCount - 1);
+        gWm = gW2w - gP1 * (gCellWidth - 1);
+        gHm = gH2w - gP1 * (gCellWidth - 1);
         // 升の大きさ
-        gW3 = Math.floor(gWm / gCellCount);
-        gH3 = Math.floor(gHm / gCellCount);
+        gW3 = Math.floor(gWm / gCellWidth);
+        gH3 = Math.floor(gHm / gCellWidth);
 
         // 全升の広さの再計算
-        gW2 = gW3 * gCellCount + gP1 * (gCellCount - 1);
-        gH2 = gH3 * gCellCount + gP1 * (gCellCount - 1);
+        gW2 = gW3 * gCellWidth + gP1 * (gCellWidth - 1);
+        gH2 = gH3 * gCellWidth + gP1 * (gCellWidth - 1);
 
         // 全升の座標
         // 配列の初期化
-        gX3 = Array(gCellCount).fill([]).map(_ => Array(gCellCount).fill(0));
-        gY3 = Array(gCellCount).fill([]).map(_ => Array(gCellCount).fill(0));
+        gX3 = Array(gCellWidth * gCellWidth).fill(0);
+        gY3 = Array(gCellWidth * gCellWidth).fill(0);
         // 座標計算
-        for(let y = 0; y < gCellCount; y++) {
-            for (let x = 0; x < gCellCount; x++) {
-                gX3[x][y] = gX2 + (gW3 + gP1) * x;
-                gY3[x][y] = gY2 + (gH3 + gP1) * y;
+        for(let y = 0; y < gCellWidth; y++) {
+            for (let x = 0; x < gCellWidth; x++) {
+                let a = addressCalc(x,y,gCellWidth);
+                gX3[a] = gX2 + (gW3 + gP1) * x;
+                gY3[a] = gY2 + (gH3 + gP1) * y;
             }
         }
     }
@@ -228,6 +233,9 @@ namespace cellgame {
         if (IsError) return;
         STS03VALUE = getElement<HTMLDivElement>("sts03Value");
         if (IsError) return;
+
+        // 升目の初期化（とりあえず１０×１０）
+        gCodes = Array(100).fill(0);
 
     }
 
@@ -361,18 +369,12 @@ namespace cellgame {
         ctx.fillStyle = 'darkgray';
         ctx.fillRect(gX0,gY0,gW0,gH0);
 
-        for(let y = 0; y < gCellCount; y++) {
-            for(let x = 0; x < gCellCount; x++) {
-                ctx.fillStyle = 'white';
-                ctx.fillRect(gX3[x][y],gY3[x][y],gW3,gH3);
-            }
-        }
-
-        for(let y = 0; y < gCellCount; y++) {
-            for (let x = 0; x < gCellCount; x++) {
+        for(let y = 0; y < gCellWidth; y++) {
+            for (let x = 0; x < gCellWidth; x++) {
+                let a = addressCalc(x,y,gCellWidth);
                 TextWriter(canvas,"農",
                     Colors.White,Colors.Red,
-                    gX3[x][y],gY3[x][y],gW3,gH3
+                    gX3[a],gY3[a],gW3,gH3
                 );
             }
         }
@@ -414,7 +416,21 @@ namespace cellgame {
 
         ctx.fillStyle = foreColor;
         ctx.fillText(char0, left + textX, top + textY);
+    }
 
+    export function CellWriter (canvas : HTMLCanvasElement | null,
+        code : number,
+        x : number,
+        y : number
+    ) {
+        if (canvas == null || canvas == undefined) return;
+        let a = addressCalc(x,y,gCellWidth);
+        TextWriter(canvas,
+            cells[a].char,
+            cells[a].foreColor,
+            cells[a].backColor,
+            gX3[a],gY3[a],gW3,gH3
+        );
     }
 
 }

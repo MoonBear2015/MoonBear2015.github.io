@@ -1,8 +1,10 @@
-
 namespace cellgame {
-    function rnd(max: number): number;
-    function rnd(min: number, max: number): number;
-    function rnd(minOrMax: number, max?: number): number {
+    /** 乱数（０～この数値未満） */
+    export function rnd(max: number): number;
+    /** 乱数（最小値～この数値未満） */
+    export function rnd(min: number, max: number): number;
+    /** 乱数（最小値～この数値未満） */
+    export function rnd(minOrMax: number, max?: number): number {
         let min: number;
         if (max === undefined) {
             min = 0;
@@ -14,9 +16,31 @@ namespace cellgame {
         return Math.floor(Math.random() * (max - min)) + min;
     }
 
-    let randomColor = () :string => "#" + rnd(0xFFFFFF).toString(16);
+    /** アトランダムな65535色コード */
+    export const randomColor = () :string => "#" + rnd(0xFFFFFF).toString(16);
+
+    /** 升目の番号計算（x:横，y:縦，w:横幅） */
+    export const addressCalc = (x : number, y : number, w : number): number => x * w + y;
+
+    /** 升目の座標計算（a:番号,w:横幅） */
+    export const pointCalc = (a : number,w : number) => {
+        let y = Math.floor(a / w);
+        let x = a % w;
+        return new Point(x,y);
+    };
+
+    /** 座標 */
+    export class Point {
+        x : number = 0;
+        y : number = 0;
+        constructor(x = 0,y = 0) {
+            this.x = x;
+            this.y = y;
+        }
+    }
 
     export class Colors {
+        // ピンク
         static readonly MediumVioletRed : string = "#C71585";
         static readonly DeepPink : string = "#FF1493";
         static readonly PaleVioletRed : string = "#DB7093";
