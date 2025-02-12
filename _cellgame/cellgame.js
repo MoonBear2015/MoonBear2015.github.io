@@ -333,7 +333,7 @@ var cellgame;
         ctx.fillStyle = 'black';
         ctx.fillRect(0, 0, width, height);
         ctx.fillStyle = 'darkgray';
-        ctx.fillRect(gX0, gY0, gW0, gH0);
+        ctx.fillRect(gX2, gY2, gW2, gH2);
         let c = 0;
         for (let i = 0; i < gCodes.length; i++) {
             gCodes[i] = c;
@@ -360,6 +360,23 @@ var cellgame;
             STS01VALUE.textContent = height.toString();
     }
     cellgame.CanvasWriter = CanvasWriter;
+    /** Box Writer */
+    function BoxWriter(canvas, backColor, x, y) {
+        if (canvas == null || canvas == undefined)
+            return;
+        let ctx = canvas.getContext('2d');
+        if (ctx == null)
+            return;
+        let a = cellgame.addressCalc(x, y, gCellWidth);
+        let c = gCodes[a];
+        let left = gX3[a] - gP1;
+        let top = gY3[a] - gP1;
+        let width = gW3 + gP1 * 2;
+        let height = gW3 + gP1 * 2;
+        ctx.fillStyle = backColor;
+        ctx.fillRect(left, top, width, height);
+    }
+    cellgame.BoxWriter = BoxWriter;
     /** Text Writer : 升目に文字と背景色を記入 */
     function TextWriter(canvas, char, foreColor, backColor, left, top, width, height) {
         if (canvas == null || canvas == undefined)
