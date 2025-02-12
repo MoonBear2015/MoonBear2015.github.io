@@ -141,7 +141,7 @@ var cellgame;
         // 升目データの初期値設定
         cellgame.cellsUpdate(0);
         // 升目の広さ
-        gCellWidth = 10;
+        gCellWidth = 6;
         // canvasの取得
         GetCanvas("a_canvas");
         if (IsError)

@@ -169,7 +169,7 @@ namespace cellgame {
         cellsUpdate(0);
 
         // 升目の広さ
-        gCellWidth = 10;
+        gCellWidth = 6;
 
         // canvasの取得
         GetCanvas("a_canvas");

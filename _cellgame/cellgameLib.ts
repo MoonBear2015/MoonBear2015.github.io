@@ -25,11 +25,11 @@ namespace cellgame {
     
         /** Cell 規定値 02 */
         cells02 = [];
-        cells[0] = new Cell(0,"　","無し",Colors.White,Colors.Black);
-        cells[1] = new Cell(1,"Ｓ","Samurai：侍",Colors.White,Colors.Red);
-        cells[2] = new Cell(2,"Ｆ","Farmer：農民",Colors.White,Colors.DarkOrange);
-        cells[3] = new Cell(3,"Ａ","Artisans：職人",Colors.White,Colors.DarkBlue);
-        cells[4] = new Cell(4,"Ｍ","Merchants：商人",Colors.White,Colors.DarkGreen);
+        cells02[0] = new Cell(0,"　","無し",Colors.White,Colors.Black);
+        cells02[1] = new Cell(1,"Ｓ","Samurai：侍",Colors.White,Colors.Red);
+        cells02[2] = new Cell(2,"Ｆ","Farmer：農民",Colors.White,Colors.DarkOrange);
+        cells02[3] = new Cell(3,"Ａ","Artisans：職人",Colors.White,Colors.DarkBlue);
+        cells02[4] = new Cell(4,"Ｍ","Merchants：商人",Colors.White,Colors.DarkGreen);
     }
 
     /** Cell設定の選択 */

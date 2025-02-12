@@ -19,11 +19,11 @@ var cellgame;
         cellgame.cells01[4] = new Cell(4, "商", "商人", cellgame.Colors.White, cellgame.Colors.DarkGreen);
         /** Cell 規定値 02 */
         cellgame.cells02 = [];
-        cellgame.cells[0] = new Cell(0, "　", "無し", cellgame.Colors.White, cellgame.Colors.Black);
-        cellgame.cells[1] = new Cell(1, "Ｓ", "Samurai：侍", cellgame.Colors.White, cellgame.Colors.Red);
-        cellgame.cells[2] = new Cell(2, "Ｆ", "Farmer：農民", cellgame.Colors.White, cellgame.Colors.DarkOrange);
-        cellgame.cells[3] = new Cell(3, "Ａ", "Artisans：職人", cellgame.Colors.White, cellgame.Colors.DarkBlue);
-        cellgame.cells[4] = new Cell(4, "Ｍ", "Merchants：商人", cellgame.Colors.White, cellgame.Colors.DarkGreen);
+        cellgame.cells02[0] = new Cell(0, "　", "無し", cellgame.Colors.White, cellgame.Colors.Black);
+        cellgame.cells02[1] = new Cell(1, "Ｓ", "Samurai：侍", cellgame.Colors.White, cellgame.Colors.Red);
+        cellgame.cells02[2] = new Cell(2, "Ｆ", "Farmer：農民", cellgame.Colors.White, cellgame.Colors.DarkOrange);
+        cellgame.cells02[3] = new Cell(3, "Ａ", "Artisans：職人", cellgame.Colors.White, cellgame.Colors.DarkBlue);
+        cellgame.cells02[4] = new Cell(4, "Ｍ", "Merchants：商人", cellgame.Colors.White, cellgame.Colors.DarkGreen);
     }
     cellgame.cellsInit = cellsInit;
     /** Cell設定の選択 */
