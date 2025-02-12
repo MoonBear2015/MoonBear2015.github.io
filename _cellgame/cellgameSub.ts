@@ -20,7 +20,8 @@ namespace cellgame {
     export const randomColor = () :string => "#" + rnd(0xFFFFFF).toString(16);
 
     /** 升目の番号計算（x:横，y:縦，w:横幅） */
-    export const addressCalc = (x : number, y : number, w : number): number => x * w + y;
+    export const addressCalc = (x : number, y : number, w : number): number => 
+        y * w + x;
 
     /** 升目の座標計算（a:番号,w:横幅） */
     export const pointCalc = (a : number,w : number) => {

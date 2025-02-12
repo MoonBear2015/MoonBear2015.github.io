@@ -2,8 +2,38 @@ namespace cellgame {
     /** Cell設定 */
     export var cells: ICell[] = [];
 
-    /** Cell設定の初期化 */
-    export function cellSetting(set : number) {
+    /** Cell 規定値設定 */
+    export var cells00 : ICell[];
+    export var cells01 : ICell[];
+    export var cells02 : ICell[];
+
+    export function cellsInit() {
+        cells00 = [];
+        cells00[0] = new Cell(0,"　","無し",Colors.White,Colors.Black);
+        cells00[1] = new Cell(1,"士","武士",Colors.White,Colors.Red);
+        cells00[2] = new Cell(2,"農","農民",Colors.White,Colors.DarkOrange);
+        cells00[3] = new Cell(3,"工","職人",Colors.White,Colors.DarkBlue);
+        cells00[4] = new Cell(4,"商","商人",Colors.White,Colors.DarkGreen);
+    
+        /** Cell 規定値 01 */
+        cells01 = [];
+        cells01[0] = new Cell(0,"　","無し",Colors.White,Colors.Black);
+        cells01[1] = new Cell(1,"侍","武士",Colors.White,Colors.Red);
+        cells01[2] = new Cell(2,"農","農民",Colors.White,Colors.DarkOrange);
+        cells01[3] = new Cell(3,"工","職人",Colors.White,Colors.DarkBlue);
+        cells01[4] = new Cell(4,"商","商人",Colors.White,Colors.DarkGreen);
+    
+        /** Cell 規定値 02 */
+        cells02 = [];
+        cells[0] = new Cell(0,"　","無し",Colors.White,Colors.Black);
+        cells[1] = new Cell(1,"Ｓ","Samurai：侍",Colors.White,Colors.Red);
+        cells[2] = new Cell(2,"Ｆ","Farmer：農民",Colors.White,Colors.DarkOrange);
+        cells[3] = new Cell(3,"Ａ","Artisans：職人",Colors.White,Colors.DarkBlue);
+        cells[4] = new Cell(4,"Ｍ","Merchants：商人",Colors.White,Colors.DarkGreen);
+    }
+
+    /** Cell設定の選択 */
+    export function cellsUpdate(set : number) {
         switch(set) {
             case 0: {
                 cells = cells00;
@@ -91,44 +121,5 @@ namespace cellgame {
 
     }
 
-    /** Cell 規定値 00 */
-    export const cells00 : ICell[] = [
-        new Cell(0,"　","無し",Colors.White,Colors.Black)
-        ,
-        new Cell(1,"士","武士",Colors.White,Colors.Red)
-        ,
-        new Cell(2,"農","農民",Colors.White,Colors.DarkOrange)
-        ,
-        new Cell(3,"工","職人",Colors.White,Colors.DarkBlue)
-        ,
-        new Cell(4,"商","商人",Colors.White,Colors.DarkGreen)
-    ];
-
-    /** Cell 規定値 01 */
-    export const cells01 : ICell[] = [
-        new Cell(0,"　","無し",Colors.White,Colors.Black)
-        ,
-        new Cell(1,"侍","武士",Colors.White,Colors.Red)
-        ,
-        new Cell(2,"農","農民",Colors.White,Colors.DarkOrange)
-        ,
-        new Cell(3,"工","職人",Colors.White,Colors.DarkBlue)
-        ,
-        new Cell(4,"商","商人",Colors.White,Colors.DarkGreen)
-    ];
-
-    /** Cell 規定値 02 */
-    export const cells02 : ICell[] = [
-        new Cell(0,"　","無し",Colors.White,Colors.Black)
-        ,
-        new Cell(1,"Ｓ","Samurai：侍",Colors.White,Colors.Red)
-        ,
-        new Cell(2,"Ｆ","Farmer：農民",Colors.White,Colors.DarkOrange)
-        ,
-        new Cell(3,"Ａ","Artisans：職人",Colors.White,Colors.DarkBlue)
-        ,
-        new Cell(4,"Ｍ","Merchants：商人",Colors.White,Colors.DarkGreen)
-    ];
-    
 
 }

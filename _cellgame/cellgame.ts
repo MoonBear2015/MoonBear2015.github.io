@@ -59,6 +59,7 @@ namespace cellgame {
 
     // 升の幅
     var gCellWidth : number;
+
     // 全升の広さ（仮
     var gW2w : number;
     var gH2w : number;
@@ -78,14 +79,14 @@ namespace cellgame {
     var gW3 : number;
     var gH3 : number;
 
-    // 升の座標[cell番号]
+    // 升の座標[cell番地]
     var gX3 : number[];
     var gY3 : number[];
 
-    // 升のコード[cell番号]
+    // 升のコード[cell番地]
     var gCodes : number[];
 
-    function CalcGameSize(cellCount : number,cvs : HTMLCanvasElement | null) {
+    function CalcGameSize(cellWidth : number,cvs : HTMLCanvasElement | null) {
         if (!cvs) return;
         // 大外枠の計算
         if (cvs.width > cvs.height) {
@@ -118,30 +119,28 @@ namespace cellgame {
         gX2 = gX1 + gP1;
         gY2 = gY1 + gP1;
 
-        // 升の数
-        gCellWidth = cellCount;
         // 全升の広さ（仮
         gW2w = gW1 - gP1 * 2;
         gH2w = gH1 - gP1 * 2;
         // 升に使われる広さ(枠線を除く)
-        gWm = gW2w - gP1 * (gCellWidth - 1);
-        gHm = gH2w - gP1 * (gCellWidth - 1);
+        gWm = gW2w - gP1 * (cellWidth - 1);
+        gHm = gH2w - gP1 * (cellWidth - 1);
         // 升の大きさ
-        gW3 = Math.floor(gWm / gCellWidth);
-        gH3 = Math.floor(gHm / gCellWidth);
+        gW3 = Math.floor(gWm / cellWidth);
+        gH3 = Math.floor(gHm / cellWidth);
 
         // 全升の広さの再計算
-        gW2 = gW3 * gCellWidth + gP1 * (gCellWidth - 1);
-        gH2 = gH3 * gCellWidth + gP1 * (gCellWidth - 1);
+        gW2 = gW3 * cellWidth + gP1 * (cellWidth - 1);
+        gH2 = gH3 * cellWidth + gP1 * (cellWidth - 1);
 
         // 全升の座標
         // 配列の初期化
-        gX3 = Array(gCellWidth * gCellWidth).fill(0);
-        gY3 = Array(gCellWidth * gCellWidth).fill(0);
+        gX3 = Array(cellWidth * cellWidth).fill(0);
+        gY3 = Array(cellWidth * cellWidth).fill(0);
         // 座標計算
-        for(let y = 0; y < gCellWidth; y++) {
-            for (let x = 0; x < gCellWidth; x++) {
-                let a = addressCalc(x,y,gCellWidth);
+        for(let y = 0; y < cellWidth; y++) {
+            for (let x = 0; x < cellWidth; x++) {
+                let a = addressCalc(x,y,cellWidth);
                 gX3[a] = gX2 + (gW3 + gP1) * x;
                 gY3[a] = gY2 + (gH3 + gP1) * y;
             }
@@ -154,20 +153,24 @@ namespace cellgame {
         if (IsError) {
             alert("Init " + IsError);
         }
-    
-
         ResizeCanvas();
         Call_Writer();
-
     }
-    
-    // document.addEventListener('DOMContentLoaded', () => { 
-    //     ResizeCanvas();
-    //     Call_Writer();
-    // });
 
     // 初期処理
     export function Init(){
+
+        // 升目の論理値の初期化（とりあえず１０×１０）
+        gCodes = Array(100).fill(0);
+
+        // 升目データの初期化
+        cellsInit();
+        // 升目データの初期値設定
+        cellsUpdate(0);
+
+        // 升目の広さ
+        gCellWidth = 10;
+
         // canvasの取得
         GetCanvas("a_canvas");
         if (IsError) return;
@@ -194,6 +197,8 @@ namespace cellgame {
                 touchCall(e.clientX,e.clientY);
             }
         }
+
+        // 画面要素の取得
 
         MAIN_FLEX = getElement<HTMLDivElement>("MainFlex");
         if (IsError) return;
@@ -234,14 +239,11 @@ namespace cellgame {
         STS03VALUE = getElement<HTMLDivElement>("sts03Value");
         if (IsError) return;
 
-        // 升目の初期化（とりあえず１０×１０）
-        gCodes = Array(100).fill(0);
-
     }
 
+    /** 要素を取得する */
     export function getElement<T extends HTMLElement>(id: string): T | null {
         const element = document.getElementById(id);
-        // alert("get " + id + "=> " + Object.prototype.toString.call(element));
         if (element) {
             return element as T;
         }
@@ -267,6 +269,8 @@ namespace cellgame {
     export function addResizeEvent() {
         window.addEventListener('resize', ResizeCanvas); 
     }
+
+
     // 画面サイズ変更
     export function ResizeCanvas() { 
         if (IsError) return;
@@ -325,7 +329,6 @@ namespace cellgame {
         CVS.height = CVSHEIGHT;
         Call_Writer();
     }
-    
 
     // タッチイベント関連
 
@@ -353,7 +356,7 @@ namespace cellgame {
         CanvasWriter(CVS,CVSWIDTH,CVSHEIGHT);
     }
 
-    
+    /** Canvas Writer */    
     export function CanvasWriter (canvas : HTMLCanvasElement | null,
         width : number,
         height : number
@@ -362,20 +365,28 @@ namespace cellgame {
         let ctx = canvas.getContext('2d');
         if (ctx == null) return;
         
-        CalcGameSize(8,canvas);
+        CalcGameSize(gCellWidth,canvas);
         
         ctx.fillStyle = 'black';
         ctx.fillRect(0, 0, width, height);
         ctx.fillStyle = 'darkgray';
         ctx.fillRect(gX0,gY0,gW0,gH0);
 
+        let c = 0;
+        for(let i : number = 0;i < gCodes.length; i++) {
+            gCodes[i] = c;
+            c++;
+            if (c >= cells.length) {
+                c = 0;
+            }
+        }
+
         for(let y = 0; y < gCellWidth; y++) {
             for (let x = 0; x < gCellWidth; x++) {
                 let a = addressCalc(x,y,gCellWidth);
-                TextWriter(canvas,"農",
-                    Colors.White,Colors.Red,
-                    gX3[a],gY3[a],gW3,gH3
-                );
+                if (gCodes[a] < cells.length) {
+                    CellWriter(canvas,gCodes[a],x,y);
+                }
             }
         }
 
@@ -387,6 +398,7 @@ namespace cellgame {
 
     }
 
+    /** Text Writer : 升目に文字と背景色を記入 */
     export function TextWriter (canvas : HTMLCanvasElement | null,
         char : string,
         foreColor : string,
@@ -425,12 +437,28 @@ namespace cellgame {
     ) {
         if (canvas == null || canvas == undefined) return;
         let a = addressCalc(x,y,gCellWidth);
+        let c = gCodes[a];
         TextWriter(canvas,
-            cells[a].char,
-            cells[a].foreColor,
-            cells[a].backColor,
+            cells[c].char,
+            cells[c].foreColor,
+            cells[c].backColor,
             gX3[a],gY3[a],gW3,gH3
         );
     }
+
+    export function AllCellWriter (canvas : HTMLCanvasElement | null) {
+        if (canvas == null || canvas == undefined) return;
+
+        for(let y = 0; y < gCellWidth; y++) {
+            for (let x = 0; x < gCellWidth; x++) {
+                let a = addressCalc(x,y,gCellWidth);
+                if (gCodes[a] < cells.length) {
+                    CellWriter(canvas,gCodes[a],x,y);
+                }
+            }
+        }
+    }
+
+
 
 }

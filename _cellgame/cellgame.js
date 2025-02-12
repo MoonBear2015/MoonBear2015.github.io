@@ -61,12 +61,12 @@ var cellgame;
     // 升の大きさ
     var gW3;
     var gH3;
-    // 升の座標[cell番号]
+    // 升の座標[cell番地]
     var gX3;
     var gY3;
-    // 升のコード[cell番号]
+    // 升のコード[cell番地]
     var gCodes;
-    function CalcGameSize(cellCount, cvs) {
+    function CalcGameSize(cellWidth, cvs) {
         if (!cvs)
             return;
         // 大外枠の計算
@@ -98,28 +98,26 @@ var cellgame;
         // 升の表示開始位置
         gX2 = gX1 + gP1;
         gY2 = gY1 + gP1;
-        // 升の数
-        gCellWidth = cellCount;
         // 全升の広さ（仮
         gW2w = gW1 - gP1 * 2;
         gH2w = gH1 - gP1 * 2;
         // 升に使われる広さ(枠線を除く)
-        gWm = gW2w - gP1 * (gCellWidth - 1);
-        gHm = gH2w - gP1 * (gCellWidth - 1);
+        gWm = gW2w - gP1 * (cellWidth - 1);
+        gHm = gH2w - gP1 * (cellWidth - 1);
         // 升の大きさ
-        gW3 = Math.floor(gWm / gCellWidth);
-        gH3 = Math.floor(gHm / gCellWidth);
+        gW3 = Math.floor(gWm / cellWidth);
+        gH3 = Math.floor(gHm / cellWidth);
         // 全升の広さの再計算
-        gW2 = gW3 * gCellWidth + gP1 * (gCellWidth - 1);
-        gH2 = gH3 * gCellWidth + gP1 * (gCellWidth - 1);
+        gW2 = gW3 * cellWidth + gP1 * (cellWidth - 1);
+        gH2 = gH3 * cellWidth + gP1 * (cellWidth - 1);
         // 全升の座標
         // 配列の初期化
-        gX3 = Array(gCellWidth * gCellWidth).fill(0);
-        gY3 = Array(gCellWidth * gCellWidth).fill(0);
+        gX3 = Array(cellWidth * cellWidth).fill(0);
+        gY3 = Array(cellWidth * cellWidth).fill(0);
         // 座標計算
-        for (let y = 0; y < gCellWidth; y++) {
-            for (let x = 0; x < gCellWidth; x++) {
-                let a = cellgame.addressCalc(x, y, gCellWidth);
+        for (let y = 0; y < cellWidth; y++) {
+            for (let x = 0; x < cellWidth; x++) {
+                let a = cellgame.addressCalc(x, y, cellWidth);
                 gX3[a] = gX2 + (gW3 + gP1) * x;
                 gY3[a] = gY2 + (gH3 + gP1) * y;
             }
@@ -134,12 +132,16 @@ var cellgame;
         ResizeCanvas();
         Call_Writer();
     };
-    // document.addEventListener('DOMContentLoaded', () => { 
-    //     ResizeCanvas();
-    //     Call_Writer();
-    // });
     // 初期処理
     function Init() {
+        // 升目の論理値の初期化（とりあえず１０×１０）
+        gCodes = Array(100).fill(0);
+        // 升目データの初期化
+        cellgame.cellsInit();
+        // 升目データの初期値設定
+        cellgame.cellsUpdate(0);
+        // 升目の広さ
+        gCellWidth = 10;
         // canvasの取得
         GetCanvas("a_canvas");
         if (IsError)
@@ -166,6 +168,7 @@ var cellgame;
                 touchCall(e.clientX, e.clientY);
             };
         }
+        // 画面要素の取得
         MAIN_FLEX = getElement("MainFlex");
         if (IsError)
             return;
@@ -211,13 +214,11 @@ var cellgame;
         STS03VALUE = getElement("sts03Value");
         if (IsError)
             return;
-        // 升目の初期化（とりあえず１０×１０）
-        gCodes = Array(100).fill(0);
     }
     cellgame.Init = Init;
+    /** 要素を取得する */
     function getElement(id) {
         const element = document.getElementById(id);
-        // alert("get " + id + "=> " + Object.prototype.toString.call(element));
         if (element) {
             return element;
         }
@@ -321,21 +322,32 @@ var cellgame;
         CanvasWriter(CVS, CVSWIDTH, CVSHEIGHT);
     }
     cellgame.Call_Writer = Call_Writer;
+    /** Canvas Writer */
     function CanvasWriter(canvas, width, height) {
         if (canvas == null)
             return;
         let ctx = canvas.getContext('2d');
         if (ctx == null)
             return;
-        CalcGameSize(8, canvas);
+        CalcGameSize(gCellWidth, canvas);
         ctx.fillStyle = 'black';
         ctx.fillRect(0, 0, width, height);
         ctx.fillStyle = 'darkgray';
         ctx.fillRect(gX0, gY0, gW0, gH0);
+        let c = 0;
+        for (let i = 0; i < gCodes.length; i++) {
+            gCodes[i] = c;
+            c++;
+            if (c >= cellgame.cells.length) {
+                c = 0;
+            }
+        }
         for (let y = 0; y < gCellWidth; y++) {
             for (let x = 0; x < gCellWidth; x++) {
                 let a = cellgame.addressCalc(x, y, gCellWidth);
-                TextWriter(canvas, "農", cellgame.Colors.White, cellgame.Colors.Red, gX3[a], gY3[a], gW3, gH3);
+                if (gCodes[a] < cellgame.cells.length) {
+                    CellWriter(canvas, gCodes[a], x, y);
+                }
             }
         }
         if (STS00NAME)
@@ -348,6 +360,7 @@ var cellgame;
             STS01VALUE.textContent = height.toString();
     }
     cellgame.CanvasWriter = CanvasWriter;
+    /** Text Writer : 升目に文字と背景色を記入 */
     function TextWriter(canvas, char, foreColor, backColor, left, top, width, height) {
         if (canvas == null || canvas == undefined)
             return;
@@ -374,7 +387,21 @@ var cellgame;
         if (canvas == null || canvas == undefined)
             return;
         let a = cellgame.addressCalc(x, y, gCellWidth);
-        TextWriter(canvas, cellgame.cells[a].char, cellgame.cells[a].foreColor, cellgame.cells[a].backColor, gX3[a], gY3[a], gW3, gH3);
+        let c = gCodes[a];
+        TextWriter(canvas, cellgame.cells[c].char, cellgame.cells[c].foreColor, cellgame.cells[c].backColor, gX3[a], gY3[a], gW3, gH3);
     }
     cellgame.CellWriter = CellWriter;
+    function AllCellWriter(canvas) {
+        if (canvas == null || canvas == undefined)
+            return;
+        for (let y = 0; y < gCellWidth; y++) {
+            for (let x = 0; x < gCellWidth; x++) {
+                let a = cellgame.addressCalc(x, y, gCellWidth);
+                if (gCodes[a] < cellgame.cells.length) {
+                    CellWriter(canvas, gCodes[a], x, y);
+                }
+            }
+        }
+    }
+    cellgame.AllCellWriter = AllCellWriter;
 })(cellgame || (cellgame = {}));

@@ -17,7 +17,7 @@ var cellgame;
     /** アトランダムな65535色コード */
     cellgame.randomColor = () => "#" + rnd(0xFFFFFF).toString(16);
     /** 升目の番号計算（x:横，y:縦，w:横幅） */
-    cellgame.addressCalc = (x, y, w) => x * w + y;
+    cellgame.addressCalc = (x, y, w) => y * w + x;
     /** 升目の座標計算（a:番号,w:横幅） */
     cellgame.pointCalc = (a, w) => {
         let y = Math.floor(a / w);

@@ -3,8 +3,31 @@ var cellgame;
 (function (cellgame) {
     /** Cell設定 */
     cellgame.cells = [];
-    /** Cell設定の初期化 */
-    function cellSetting(set) {
+    function cellsInit() {
+        cellgame.cells00 = [];
+        cellgame.cells00[0] = new Cell(0, "　", "無し", cellgame.Colors.White, cellgame.Colors.Black);
+        cellgame.cells00[1] = new Cell(1, "士", "武士", cellgame.Colors.White, cellgame.Colors.Red);
+        cellgame.cells00[2] = new Cell(2, "農", "農民", cellgame.Colors.White, cellgame.Colors.DarkOrange);
+        cellgame.cells00[3] = new Cell(3, "工", "職人", cellgame.Colors.White, cellgame.Colors.DarkBlue);
+        cellgame.cells00[4] = new Cell(4, "商", "商人", cellgame.Colors.White, cellgame.Colors.DarkGreen);
+        /** Cell 規定値 01 */
+        cellgame.cells01 = [];
+        cellgame.cells01[0] = new Cell(0, "　", "無し", cellgame.Colors.White, cellgame.Colors.Black);
+        cellgame.cells01[1] = new Cell(1, "侍", "武士", cellgame.Colors.White, cellgame.Colors.Red);
+        cellgame.cells01[2] = new Cell(2, "農", "農民", cellgame.Colors.White, cellgame.Colors.DarkOrange);
+        cellgame.cells01[3] = new Cell(3, "工", "職人", cellgame.Colors.White, cellgame.Colors.DarkBlue);
+        cellgame.cells01[4] = new Cell(4, "商", "商人", cellgame.Colors.White, cellgame.Colors.DarkGreen);
+        /** Cell 規定値 02 */
+        cellgame.cells02 = [];
+        cellgame.cells[0] = new Cell(0, "　", "無し", cellgame.Colors.White, cellgame.Colors.Black);
+        cellgame.cells[1] = new Cell(1, "Ｓ", "Samurai：侍", cellgame.Colors.White, cellgame.Colors.Red);
+        cellgame.cells[2] = new Cell(2, "Ｆ", "Farmer：農民", cellgame.Colors.White, cellgame.Colors.DarkOrange);
+        cellgame.cells[3] = new Cell(3, "Ａ", "Artisans：職人", cellgame.Colors.White, cellgame.Colors.DarkBlue);
+        cellgame.cells[4] = new Cell(4, "Ｍ", "Merchants：商人", cellgame.Colors.White, cellgame.Colors.DarkGreen);
+    }
+    cellgame.cellsInit = cellsInit;
+    /** Cell設定の選択 */
+    function cellsUpdate(set) {
         switch (set) {
             case 0: {
                 cellgame.cells = cellgame.cells00;
@@ -23,7 +46,7 @@ var cellgame;
             }
         }
     }
-    cellgame.cellSetting = cellSetting;
+    cellgame.cellsUpdate = cellsUpdate;
     /**
      * class Cell
      */
@@ -59,28 +82,4 @@ var cellgame;
         }
     }
     cellgame.Cell = Cell;
-    /** Cell 規定値 00 */
-    cellgame.cells00 = [
-        new Cell(0, "　", "無し", cellgame.Colors.White, cellgame.Colors.Black),
-        new Cell(1, "士", "武士", cellgame.Colors.White, cellgame.Colors.Red),
-        new Cell(2, "農", "農民", cellgame.Colors.White, cellgame.Colors.DarkOrange),
-        new Cell(3, "工", "職人", cellgame.Colors.White, cellgame.Colors.DarkBlue),
-        new Cell(4, "商", "商人", cellgame.Colors.White, cellgame.Colors.DarkGreen)
-    ];
-    /** Cell 規定値 01 */
-    cellgame.cells01 = [
-        new Cell(0, "　", "無し", cellgame.Colors.White, cellgame.Colors.Black),
-        new Cell(1, "侍", "武士", cellgame.Colors.White, cellgame.Colors.Red),
-        new Cell(2, "農", "農民", cellgame.Colors.White, cellgame.Colors.DarkOrange),
-        new Cell(3, "工", "職人", cellgame.Colors.White, cellgame.Colors.DarkBlue),
-        new Cell(4, "商", "商人", cellgame.Colors.White, cellgame.Colors.DarkGreen)
-    ];
-    /** Cell 規定値 02 */
-    cellgame.cells02 = [
-        new Cell(0, "　", "無し", cellgame.Colors.White, cellgame.Colors.Black),
-        new Cell(1, "Ｓ", "Samurai：侍", cellgame.Colors.White, cellgame.Colors.Red),
-        new Cell(2, "Ｆ", "Farmer：農民", cellgame.Colors.White, cellgame.Colors.DarkOrange),
-        new Cell(3, "Ａ", "Artisans：職人", cellgame.Colors.White, cellgame.Colors.DarkBlue),
-        new Cell(4, "Ｍ", "Merchants：商人", cellgame.Colors.White, cellgame.Colors.DarkGreen)
-    ];
 })(cellgame || (cellgame = {}));
