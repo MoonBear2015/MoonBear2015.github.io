@@ -86,6 +86,9 @@ namespace cellgame {
     // 升のコード[cell番地]
     var gCodes : number[];
 
+    // 升のフラッシュ
+    var gFlashFlgs : boolean[];
+
     function CalcGameSize(cellWidth : number,cvs : HTMLCanvasElement | null) {
         if (!cvs) return;
         // 大外枠の計算
@@ -162,6 +165,7 @@ namespace cellgame {
 
         // 升目の論理値の初期化（とりあえず１０×１０）
         gCodes = Array(100).fill(0);
+        gFlashFlgs = Array(100).fill(false);
 
         // 升目データの初期化
         cellsInit();
@@ -240,6 +244,39 @@ namespace cellgame {
         if (IsError) return;
 
     }
+
+    /** 番地計算 */
+    export function gAddress(x : number, y : number) : number {
+        if (x < 0 || x >= gCellWidth) return -1;
+        if (y < 0 || y >= gCellWidth) return -1;
+        return y * gCellWidth + x;
+    }
+
+    /** cellコード（x,y指定） */
+    export const gCode = (x : number,y : number) : number => {
+        let a : number = gAddress(x,y);
+        if (a < 0) return -1;
+        return gCodes[a];
+    }
+    /** cellコード設定 (x,y指定) */
+    export function gCodeSetter(x:number,y:number,code: number) {
+        let a : number = gAddress(x,y);
+        if (a < 0) return;
+        gCodes[a] = code;
+    }
+    // Flashフラグ(x,y指定)
+    export const gIsFlash = (x : number,y : number) : boolean => {
+        let a : number = gAddress(x,y);
+        if (a < 0) return false;
+        return gFlashFlgs[a];
+    } 
+    // Flashフラグ設定(x,y指定)
+    export function gIsFlashSetter(x:number,y:number,isFlash:boolean) {
+        let a : number = gAddress(x,y);
+        if (a < 0) return;
+        gFlashFlgs[a] = isFlash;
+    }
+
 
     /** 要素を取得する */
     export function getElement<T extends HTMLElement>(id: string): T | null {
@@ -370,9 +407,9 @@ namespace cellgame {
         
         CalcGameSize(gCellWidth,canvas);
         
-        ctx.fillStyle = 'black';
+        ctx.fillStyle = Colors.Black;
         ctx.fillRect(0, 0, width, height);
-        ctx.fillStyle = 'darkgray';
+        ctx.fillStyle = Colors.DarkSlateGray;
         ctx.fillRect(gX2,gY2,gW2,gH2);
 
         let c = 0;
@@ -384,22 +421,16 @@ namespace cellgame {
             }
         }
 
-        for(let y = 0; y < gCellWidth; y++) {
-            for (let x = 0; x < gCellWidth; x++) {
-                let a = addressCalc(x,y,gCellWidth);
-                if (gCodes[a] < cells.length) {
-                    CellWriter(canvas,gCodes[a],x,y,true);
-                }
-            }
-        }
+        AllCellWriter(canvas);
 
-        // BorderWriter(canvas,randomColor(),0,1,gCellWidth,1);
-        for(let y = 0; y <= gCellWidth; y++ ){
-            BorderWriter(canvas,randomColor(),0,y,gCellWidth,y,true);
-        }
-        for(let x = 0; x <= gCellWidth; x++){
-            BorderWriter(canvas,randomColor(),x,0,x,gCellWidth,true);
-        }
+        // for(let y = 0; y < gCellWidth; y++) {
+        //     for (let x = 0; x < gCellWidth; x++) {
+        //         let a = addressCalc(x,y,gCellWidth);
+        //         if (gCodes[a] < cells.length) {
+        //             CellWriter(canvas,gCodes[a],x,y,true);
+        //         }
+        //     }
+        // }
 
         if (STS00NAME) STS00NAME.textContent = "width";
         if (STS00VALUE) STS00VALUE.textContent = width.toString();
@@ -516,7 +547,7 @@ namespace cellgame {
             for (let x = 0; x < gCellWidth; x++) {
                 let a = addressCalc(x,y,gCellWidth);
                 if (gCodes[a] < cells.length) {
-                    CellWriter(canvas,gCodes[a],x,y,false);
+                    CellWriter(canvas,gCodes[a],x,y,gFlashFlgs[a]);
                 }
             }
         }

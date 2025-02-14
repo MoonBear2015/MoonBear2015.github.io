@@ -66,6 +66,8 @@ var cellgame;
     var gY3;
     // 升のコード[cell番地]
     var gCodes;
+    // 升のフラッシュ
+    var gFlashFlgs;
     function CalcGameSize(cellWidth, cvs) {
         if (!cvs)
             return;
@@ -136,6 +138,7 @@ var cellgame;
     function Init() {
         // 升目の論理値の初期化（とりあえず１０×１０）
         gCodes = Array(100).fill(0);
+        gFlashFlgs = Array(100).fill(false);
         // 升目データの初期化
         cellgame.cellsInit();
         // 升目データの初期値設定
@@ -216,6 +219,45 @@ var cellgame;
             return;
     }
     cellgame.Init = Init;
+    /** 番地計算 */
+    function gAddress(x, y) {
+        if (x < 0 || x >= gCellWidth)
+            return -1;
+        if (y < 0 || y >= gCellWidth)
+            return -1;
+        return y * gCellWidth + x;
+    }
+    cellgame.gAddress = gAddress;
+    /** cellコード（x,y指定） */
+    cellgame.gCode = (x, y) => {
+        let a = gAddress(x, y);
+        if (a < 0)
+            return -1;
+        return gCodes[a];
+    };
+    /** cellコード設定 (x,y指定) */
+    function gCodeSetter(x, y, code) {
+        let a = gAddress(x, y);
+        if (a < 0)
+            return;
+        gCodes[a] = code;
+    }
+    cellgame.gCodeSetter = gCodeSetter;
+    // Flashフラグ(x,y指定)
+    cellgame.gIsFlash = (x, y) => {
+        let a = gAddress(x, y);
+        if (a < 0)
+            return false;
+        return gFlashFlgs[a];
+    };
+    // Flashフラグ設定(x,y指定)
+    function gIsFlashSetter(x, y, isFlash) {
+        let a = gAddress(x, y);
+        if (a < 0)
+            return;
+        gFlashFlgs[a] = isFlash;
+    }
+    cellgame.gIsFlashSetter = gIsFlashSetter;
     /** 要素を取得する */
     function getElement(id) {
         const element = document.getElementById(id);
@@ -332,9 +374,9 @@ var cellgame;
         if (ctx == null)
             return;
         CalcGameSize(gCellWidth, canvas);
-        ctx.fillStyle = 'black';
+        ctx.fillStyle = cellgame.Colors.Black;
         ctx.fillRect(0, 0, width, height);
-        ctx.fillStyle = 'darkgray';
+        ctx.fillStyle = cellgame.Colors.DarkSlateGray;
         ctx.fillRect(gX2, gY2, gW2, gH2);
         let c = 0;
         for (let i = 0; i < gCodes.length; i++) {
@@ -344,21 +386,15 @@ var cellgame;
                 c = 0;
             }
         }
-        for (let y = 0; y < gCellWidth; y++) {
-            for (let x = 0; x < gCellWidth; x++) {
-                let a = cellgame.addressCalc(x, y, gCellWidth);
-                if (gCodes[a] < cellgame.cells.length) {
-                    CellWriter(canvas, gCodes[a], x, y, true);
-                }
-            }
-        }
-        // BorderWriter(canvas,randomColor(),0,1,gCellWidth,1);
-        for (let y = 0; y <= gCellWidth; y++) {
-            BorderWriter(canvas, cellgame.randomColor(), 0, y, gCellWidth, y, true);
-        }
-        for (let x = 0; x <= gCellWidth; x++) {
-            BorderWriter(canvas, cellgame.randomColor(), x, 0, x, gCellWidth, true);
-        }
+        AllCellWriter(canvas);
+        // for(let y = 0; y < gCellWidth; y++) {
+        //     for (let x = 0; x < gCellWidth; x++) {
+        //         let a = addressCalc(x,y,gCellWidth);
+        //         if (gCodes[a] < cells.length) {
+        //             CellWriter(canvas,gCodes[a],x,y,true);
+        //         }
+        //     }
+        // }
         if (STS00NAME)
             STS00NAME.textContent = "width";
         if (STS00VALUE)
@@ -439,7 +475,7 @@ var cellgame;
             for (let x = 0; x < gCellWidth; x++) {
                 let a = cellgame.addressCalc(x, y, gCellWidth);
                 if (gCodes[a] < cellgame.cells.length) {
-                    CellWriter(canvas, gCodes[a], x, y, false);
+                    CellWriter(canvas, gCodes[a], x, y, gFlashFlgs[a]);
                 }
             }
         }
