@@ -89,27 +89,27 @@ var cellgame;
         // 大外枠の表示位置
         gX0 = gWM0 + gP0;
         gY0 = gHM0 + gP0;
-        // 盤上の表示位置
+        // 盤上の表示位置（上下左右に隙間をつくる）
         gX1 = gX0 + gP1;
         gY1 = gY0 + gP1;
-        // 盤上の大きさ
+        // 盤上の大きさ(上下左右に隙間をつくる)
         gW1 = gW0 - gP1 * 2;
         gH1 = gH0 - gP1 * 2;
-        // 升の表示開始位置
+        // 升の表示開始位置（上下左右に隙間をつくる）
         gX2 = gX1 + gP1;
         gY2 = gY1 + gP1;
-        // 全升の広さ（仮
+        // 全升の広さ（仮（隙間をひいた大きさ）
         gW2w = gW1 - gP1 * 2;
         gH2w = gH1 - gP1 * 2;
         // 升に使われる広さ(枠線を除く)
-        gWm = gW2w - gP1 * (cellWidth - 1);
-        gHm = gH2w - gP1 * (cellWidth - 1);
+        gWm = gW2w - gP1 * (cellWidth + 1);
+        gHm = gH2w - gP1 * (cellWidth + 1);
         // 升の大きさ
         gW3 = Math.floor(gWm / cellWidth);
         gH3 = Math.floor(gHm / cellWidth);
         // 全升の広さの再計算
-        gW2 = gW3 * cellWidth + gP1 * (cellWidth - 1);
-        gH2 = gH3 * cellWidth + gP1 * (cellWidth - 1);
+        gW2 = gW3 * cellWidth + gP1 * (cellWidth + 1);
+        gH2 = gH3 * cellWidth + gP1 * (cellWidth + 1);
         // 全升の座標
         // 配列の初期化
         gX3 = Array(cellWidth * cellWidth).fill(0);
@@ -118,8 +118,8 @@ var cellgame;
         for (let y = 0; y < cellWidth; y++) {
             for (let x = 0; x < cellWidth; x++) {
                 let a = cellgame.addressCalc(x, y, cellWidth);
-                gX3[a] = gX2 + (gW3 + gP1) * x;
-                gY3[a] = gY2 + (gH3 + gP1) * y;
+                gX3[a] = gX2 + gP1 + (gW3 + gP1) * x;
+                gY3[a] = gY2 + gP1 + (gH3 + gP1) * y;
             }
         }
     }
@@ -317,6 +317,8 @@ var cellgame;
     // canvasに対するタッチハンドラー
     function touchHandler(x, y, canvas, width, height) {
     }
+    // 定期的に更新（アニメーション、フラッシュ効果）
+    setInterval(Call_Writer, 10);
     // 画面更新処理を呼び出す
     function Call_Writer() {
         CanvasWriter(CVS, CVSWIDTH, CVSHEIGHT);
@@ -346,9 +348,16 @@ var cellgame;
             for (let x = 0; x < gCellWidth; x++) {
                 let a = cellgame.addressCalc(x, y, gCellWidth);
                 if (gCodes[a] < cellgame.cells.length) {
-                    CellWriter(canvas, gCodes[a], x, y);
+                    CellWriter(canvas, gCodes[a], x, y, true);
                 }
             }
+        }
+        // BorderWriter(canvas,randomColor(),0,1,gCellWidth,1);
+        for (let y = 0; y <= gCellWidth; y++) {
+            BorderWriter(canvas, cellgame.randomColor(), 0, y, gCellWidth, y, true);
+        }
+        for (let x = 0; x <= gCellWidth; x++) {
+            BorderWriter(canvas, cellgame.randomColor(), x, 0, x, gCellWidth, true);
         }
         if (STS00NAME)
             STS00NAME.textContent = "width";
@@ -361,7 +370,7 @@ var cellgame;
     }
     cellgame.CanvasWriter = CanvasWriter;
     /** Box Writer */
-    function BoxWriter(canvas, backColor, x, y) {
+    function BoxWriter(canvas, backColor, x, y, isFlash) {
         if (canvas == null || canvas == undefined)
             return;
         let ctx = canvas.getContext('2d');
@@ -373,12 +382,27 @@ var cellgame;
         let top = gY3[a] - gP1;
         let width = gW3 + gP1 * 2;
         let height = gW3 + gP1 * 2;
-        ctx.fillStyle = backColor;
+        ctx.fillStyle = cellgame.isRandomColor(isFlash, backColor);
         ctx.fillRect(left, top, width, height);
     }
     cellgame.BoxWriter = BoxWriter;
+    /** Border Writer */
+    function BorderWriter(canvas, backColor, x0, y0, x1, y1, isFlash) {
+        if (canvas == null || canvas == undefined)
+            return;
+        let ctx = canvas.getContext('2d');
+        if (ctx == null)
+            return;
+        let px0 = x0 * (gP1 + gW3);
+        let py0 = y0 * (gP1 + gH3);
+        let px1 = x1 * (gP1 + gW3) + gP1 - px0;
+        let py1 = y1 * (gP1 + gH3) + gP1 - py0;
+        ctx.fillStyle = cellgame.isRandomColor(isFlash, backColor);
+        ctx.fillRect(gX2 + px0, gY2 + py0, px1, py1);
+    }
+    cellgame.BorderWriter = BorderWriter;
     /** Text Writer : 升目に文字と背景色を記入 */
-    function TextWriter(canvas, char, foreColor, backColor, left, top, width, height) {
+    function TextWriter(canvas, char, foreColor, backColor, left, top, width, height, isFlash) {
         if (canvas == null || canvas == undefined)
             return;
         let ctx = canvas.getContext('2d');
@@ -394,18 +418,18 @@ var cellgame;
         let charWidth = ctx.measureText(char0).width;
         let textX = (width - charWidth) / 2;
         let textY = (height + fontSize * 0.75) / 2;
-        ctx.fillStyle = backColor;
+        ctx.fillStyle = cellgame.isRandomColor(isFlash, backColor);
         ctx.fillRect(left, top, width, height);
         ctx.fillStyle = foreColor;
         ctx.fillText(char0, left + textX, top + textY);
     }
     cellgame.TextWriter = TextWriter;
-    function CellWriter(canvas, code, x, y) {
+    function CellWriter(canvas, code, x, y, isFlash) {
         if (canvas == null || canvas == undefined)
             return;
         let a = cellgame.addressCalc(x, y, gCellWidth);
         let c = gCodes[a];
-        TextWriter(canvas, cellgame.cells[c].char, cellgame.cells[c].foreColor, cellgame.cells[c].backColor, gX3[a], gY3[a], gW3, gH3);
+        TextWriter(canvas, cellgame.cells[c].char, cellgame.cells[c].foreColor, cellgame.cells[c].backColor, gX3[a], gY3[a], gW3, gH3, isFlash);
     }
     cellgame.CellWriter = CellWriter;
     function AllCellWriter(canvas) {
@@ -415,7 +439,7 @@ var cellgame;
             for (let x = 0; x < gCellWidth; x++) {
                 let a = cellgame.addressCalc(x, y, gCellWidth);
                 if (gCodes[a] < cellgame.cells.length) {
-                    CellWriter(canvas, gCodes[a], x, y);
+                    CellWriter(canvas, gCodes[a], x, y, false);
                 }
             }
         }

@@ -1,3 +1,4 @@
+/// <reference path="cellgameSub.ts" />
 namespace cellgame {
     /** Cell設定 */
     export var cells: ICell[] = [];

@@ -108,30 +108,30 @@ namespace cellgame {
         // 大外枠の表示位置
         gX0 = gWM0 + gP0;
         gY0 = gHM0 + gP0;
-        // 盤上の表示位置
+        // 盤上の表示位置（上下左右に隙間をつくる）
         gX1 = gX0 + gP1;
         gY1 = gY0 + gP1;
-        // 盤上の大きさ
+        // 盤上の大きさ(上下左右に隙間をつくる)
         gW1 = gW0 - gP1 * 2;
         gH1 = gH0 - gP1 * 2;
         
-        // 升の表示開始位置
+        // 升の表示開始位置（上下左右に隙間をつくる）
         gX2 = gX1 + gP1;
         gY2 = gY1 + gP1;
 
-        // 全升の広さ（仮
+        // 全升の広さ（仮（隙間をひいた大きさ）
         gW2w = gW1 - gP1 * 2;
         gH2w = gH1 - gP1 * 2;
         // 升に使われる広さ(枠線を除く)
-        gWm = gW2w - gP1 * (cellWidth - 1);
-        gHm = gH2w - gP1 * (cellWidth - 1);
+        gWm = gW2w - gP1 * (cellWidth + 1);
+        gHm = gH2w - gP1 * (cellWidth + 1);
         // 升の大きさ
         gW3 = Math.floor(gWm / cellWidth);
         gH3 = Math.floor(gHm / cellWidth);
 
         // 全升の広さの再計算
-        gW2 = gW3 * cellWidth + gP1 * (cellWidth - 1);
-        gH2 = gH3 * cellWidth + gP1 * (cellWidth - 1);
+        gW2 = gW3 * cellWidth + gP1 * (cellWidth + 1);
+        gH2 = gH3 * cellWidth + gP1 * (cellWidth + 1);
 
         // 全升の座標
         // 配列の初期化
@@ -141,8 +141,8 @@ namespace cellgame {
         for(let y = 0; y < cellWidth; y++) {
             for (let x = 0; x < cellWidth; x++) {
                 let a = addressCalc(x,y,cellWidth);
-                gX3[a] = gX2 + (gW3 + gP1) * x;
-                gY3[a] = gY2 + (gH3 + gP1) * y;
+                gX3[a] = gX2 + gP1 + (gW3 + gP1) * x;
+                gY3[a] = gY2 + gP1 + (gH3 + gP1) * y;
             }
         }
     }
@@ -351,6 +351,9 @@ namespace cellgame {
 
     }
 
+    // 定期的に更新（アニメーション、フラッシュ効果）
+    setInterval(Call_Writer,10);
+
     // 画面更新処理を呼び出す
     export function Call_Writer() {
         CanvasWriter(CVS,CVSWIDTH,CVSHEIGHT);
@@ -385,9 +388,17 @@ namespace cellgame {
             for (let x = 0; x < gCellWidth; x++) {
                 let a = addressCalc(x,y,gCellWidth);
                 if (gCodes[a] < cells.length) {
-                    CellWriter(canvas,gCodes[a],x,y);
+                    CellWriter(canvas,gCodes[a],x,y,true);
                 }
             }
+        }
+
+        // BorderWriter(canvas,randomColor(),0,1,gCellWidth,1);
+        for(let y = 0; y <= gCellWidth; y++ ){
+            BorderWriter(canvas,randomColor(),0,y,gCellWidth,y,true);
+        }
+        for(let x = 0; x <= gCellWidth; x++){
+            BorderWriter(canvas,randomColor(),x,0,x,gCellWidth,true);
         }
 
         if (STS00NAME) STS00NAME.textContent = "width";
@@ -403,6 +414,7 @@ namespace cellgame {
         backColor : string,
         x : number,
         y : number,
+        isFlash : boolean
     ) {
         if (canvas == null || canvas == undefined) return;
         let ctx = canvas.getContext('2d');
@@ -415,8 +427,32 @@ namespace cellgame {
         let width = gW3 + gP1 * 2;
         let height = gW3 + gP1 * 2;
 
-        ctx.fillStyle = backColor;
+        ctx.fillStyle = isRandomColor(isFlash,backColor);
         ctx.fillRect(left , top, width, height);
+    }
+
+    
+    /** Border Writer */
+    export function BorderWriter (canvas : HTMLCanvasElement | null,
+        backColor : string,
+        x0 : number,
+        y0 : number,
+        x1 : number,
+        y1 : number,
+        isFlash : boolean
+    ) {
+
+        if (canvas == null || canvas == undefined) return;
+        let ctx = canvas.getContext('2d');
+        if (ctx == null) return;
+
+        let px0 = x0 * (gP1 + gW3);
+        let py0 = y0 * (gP1 + gH3);
+        let px1 = x1 * (gP1 + gW3) + gP1 - px0;
+        let py1 = y1 * (gP1 + gH3) + gP1 - py0;
+
+        ctx.fillStyle = isRandomColor(isFlash,backColor);
+        ctx.fillRect(gX2 + px0 , gY2 + py0, px1, py1);
     }
 
 
@@ -428,7 +464,8 @@ namespace cellgame {
         left : number,
         top : number,
         width : number,
-        height : number
+        height : number,
+        isFlash : boolean
     ) {
         if (canvas == null || canvas == undefined) return;
         let ctx = canvas.getContext('2d');
@@ -445,7 +482,7 @@ namespace cellgame {
         let textX = (width - charWidth) / 2;
         let textY = (height + fontSize * 0.75) / 2;
         
-        ctx.fillStyle = backColor;
+        ctx.fillStyle = isRandomColor(isFlash,backColor);
         ctx.fillRect(left , top, width, height);
 
         ctx.fillStyle = foreColor;
@@ -455,7 +492,9 @@ namespace cellgame {
     export function CellWriter (canvas : HTMLCanvasElement | null,
         code : number,
         x : number,
-        y : number
+        y : number,
+        isFlash : boolean
+
     ) {
         if (canvas == null || canvas == undefined) return;
 
@@ -465,7 +504,8 @@ namespace cellgame {
             cells[c].char,
             cells[c].foreColor,
             cells[c].backColor,
-            gX3[a],gY3[a],gW3,gH3
+            gX3[a],gY3[a],gW3,gH3,
+            isFlash
         );
     }
 
@@ -476,7 +516,7 @@ namespace cellgame {
             for (let x = 0; x < gCellWidth; x++) {
                 let a = addressCalc(x,y,gCellWidth);
                 if (gCodes[a] < cells.length) {
-                    CellWriter(canvas,gCodes[a],x,y);
+                    CellWriter(canvas,gCodes[a],x,y,false);
                 }
             }
         }

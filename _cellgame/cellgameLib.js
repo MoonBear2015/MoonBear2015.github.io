@@ -1,4 +1,5 @@
 "use strict";
+/// <reference path="cellgameSub.ts" />
 var cellgame;
 (function (cellgame) {
     /** Cell設定 */

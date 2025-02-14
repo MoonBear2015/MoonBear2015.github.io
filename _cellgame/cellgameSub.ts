@@ -19,6 +19,9 @@ namespace cellgame {
     /** アトランダムな65535色コード */
     export const randomColor = () :string => "#" + rnd(0xFFFFFF).toString(16);
 
+    /** ランダムカラーとの選択 */
+    export const isRandomColor = (isFlash : boolean,backColor : string) : string => (isFlash) ? randomColor() : backColor;
+    
     /** 升目の番号計算（x:横，y:縦，w:横幅） */
     export const addressCalc = (x : number, y : number, w : number): number => 
         y * w + x;
