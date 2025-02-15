@@ -131,8 +131,9 @@ var cellgame;
         if (IsError) {
             alert("Init " + IsError);
         }
-        ResizeCanvas();
-        Call_Writer();
+        gameReset();
+        canvasResize();
+        writerCall();
     };
     // 初期処理
     function Init() {
@@ -146,7 +147,7 @@ var cellgame;
         // 升目の広さ
         gCellWidth = 6;
         // canvasの取得
-        GetCanvas("a_canvas");
+        canvasGetter("a_canvas");
         if (IsError)
             return;
         if (CVS == null) {
@@ -156,7 +157,7 @@ var cellgame;
         // サイズ変更時のイベントを設定
         addResizeEvent();
         // リサイズ処理の実行
-        ResizeCanvas();
+        canvasResize();
         // タッチイベントの設定
         // スマホの場合
         if (isSmartphone()) {
@@ -172,53 +173,55 @@ var cellgame;
             };
         }
         // 画面要素の取得
-        MAIN_FLEX = getElement("MainFlex");
+        MAIN_FLEX = elementGetter("MainFlex");
         if (IsError)
             return;
-        INFO_FLEX = getElement("InfoFlex");
+        INFO_FLEX = elementGetter("InfoFlex");
         if (IsError)
             return;
-        PLAY_WINDOW = getElement("PlayWindow");
+        PLAY_WINDOW = elementGetter("PlayWindow");
         if (IsError)
             return;
-        PLAY_FLEX = getElement("PlayFlex");
+        PLAY_FLEX = elementGetter("PlayFlex");
         if (IsError)
             return;
-        GAME_WINDOW = getElement("GameWindow");
+        GAME_WINDOW = elementGetter("GameWindow");
         if (IsError)
             return;
-        MSG_WINDOW = getElement("MsgWindow");
+        MSG_WINDOW = elementGetter("MsgWindow");
         if (IsError)
             return;
-        INFO_WINDOW = getElement("InfoWindow");
+        INFO_WINDOW = elementGetter("InfoWindow");
         if (IsError)
             return;
-        STS00NAME = getElement("sts00Name");
+        STS00NAME = elementGetter("sts00Name");
         if (IsError)
             return;
-        STS00VALUE = getElement("sts00Value");
+        STS00VALUE = elementGetter("sts00Value");
         if (IsError)
             return;
-        STS01NAME = getElement("sts01Name");
+        STS01NAME = elementGetter("sts01Name");
         if (IsError)
             return;
-        STS01VALUE = getElement("sts01Value");
+        STS01VALUE = elementGetter("sts01Value");
         if (IsError)
             return;
-        STS02NAME = getElement("sts02Name");
+        STS02NAME = elementGetter("sts02Name");
         if (IsError)
             return;
-        STS02VALUE = getElement("sts02Value");
+        STS02VALUE = elementGetter("sts02Value");
         if (IsError)
             return;
-        STS03NAME = getElement("sts03Name");
+        STS03NAME = elementGetter("sts03Name");
         if (IsError)
             return;
-        STS03VALUE = getElement("sts03Value");
+        STS03VALUE = elementGetter("sts03Value");
         if (IsError)
             return;
     }
     cellgame.Init = Init;
+    /** 番地の数 */
+    cellgame.gCellLength = () => gCellWidth * gCellWidth;
     /** 番地計算 */
     function gAddress(x, y) {
         if (x < 0 || x >= gCellWidth)
@@ -235,31 +238,49 @@ var cellgame;
             return -1;
         return gCodes[a];
     };
-    /** cellコード設定 (x,y指定) */
+    /** cellコード設定 (x,y指定) 画面出力込み */
     function gCodeSetter(x, y, code) {
         let a = gAddress(x, y);
         if (a < 0)
             return;
         gCodes[a] = code;
+        writerCall();
     }
     cellgame.gCodeSetter = gCodeSetter;
-    // Flashフラグ(x,y指定)
+    /** Flashフラグ(x,y指定) */
     cellgame.gIsFlash = (x, y) => {
         let a = gAddress(x, y);
         if (a < 0)
             return false;
         return gFlashFlgs[a];
     };
-    // Flashフラグ設定(x,y指定)
+    /** Flashフラグ設定(x,y指定) 画面出力込み */
     function gIsFlashSetter(x, y, isFlash) {
         let a = gAddress(x, y);
         if (a < 0)
             return;
         gFlashFlgs[a] = isFlash;
+        writerCall();
     }
     cellgame.gIsFlashSetter = gIsFlashSetter;
+    /** タッチ位置の番地 */
+    function touchAddress(x, y) {
+        let result = new cellgame.Point();
+        for (let a = 0; a < cellgame.gCellLength(); a++) {
+            let x0 = gX3[a];
+            let y0 = gY3[a];
+            let x1 = x0 + gW3;
+            let y1 = y0 + gH3;
+            if (x >= x0 && x < x1 && y >= y0 && y < y1) {
+                result = cellgame.pointCalc(a, gCellWidth);
+                return result;
+            }
+        }
+        return result;
+    }
+    cellgame.touchAddress = touchAddress;
     /** 要素を取得する */
-    function getElement(id) {
+    function elementGetter(id) {
         const element = document.getElementById(id);
         if (element) {
             return element;
@@ -269,10 +290,10 @@ var cellgame;
         IsError = true;
         return null;
     }
-    cellgame.getElement = getElement;
+    cellgame.elementGetter = elementGetter;
     // canvasの取得
-    function GetCanvas(idName) {
-        let element = getElement(idName);
+    function canvasGetter(idName) {
+        let element = elementGetter(idName);
         if (IsError)
             return;
         // canvas設定
@@ -282,14 +303,14 @@ var cellgame;
             return;
         }
     }
-    cellgame.GetCanvas = GetCanvas;
+    cellgame.canvasGetter = canvasGetter;
     // 画面サイズ変更の検知
     function addResizeEvent() {
-        window.addEventListener('resize', ResizeCanvas);
+        window.addEventListener('resize', canvasResize);
     }
     cellgame.addResizeEvent = addResizeEvent;
     // 画面サイズ変更
-    function ResizeCanvas() {
+    function canvasResize() {
         if (IsError)
             return;
         if (CVS == null)
@@ -342,9 +363,9 @@ var cellgame;
             STS03VALUE.textContent = CVS.offsetHeight.toString();
         CVS.width = CVSWIDTH;
         CVS.height = CVSHEIGHT;
-        Call_Writer();
+        writerCall();
     }
-    cellgame.ResizeCanvas = ResizeCanvas;
+    cellgame.canvasResize = canvasResize;
     // タッチイベント関連
     // iOS/Android検出
     function isSmartphone() {
@@ -358,16 +379,31 @@ var cellgame;
     cellgame.touchCall = touchCall;
     // canvasに対するタッチハンドラー
     function touchHandler(x, y, canvas, width, height) {
+        alert("touchHandler" + x + "," + y);
     }
+    function gameReset() {
+        let c = 0;
+        for (let y = 0; y < gCellWidth; y++) {
+            for (let x = 0; x < gCellWidth; x++) {
+                gCodeSetter(x, y, c);
+                gIsFlashSetter(x, y, false);
+                c++;
+                if (c >= cellgame.cells.length) {
+                    c = 0;
+                }
+            }
+        }
+    }
+    cellgame.gameReset = gameReset;
     // 定期的に更新（アニメーション、フラッシュ効果）
-    setInterval(Call_Writer, 10);
+    setInterval(writerCall, 100);
     // 画面更新処理を呼び出す
-    function Call_Writer() {
-        CanvasWriter(CVS, CVSWIDTH, CVSHEIGHT);
+    function writerCall() {
+        canvasWriter(CVS, CVSWIDTH, CVSHEIGHT);
     }
-    cellgame.Call_Writer = Call_Writer;
+    cellgame.writerCall = writerCall;
     /** Canvas Writer */
-    function CanvasWriter(canvas, width, height) {
+    function canvasWriter(canvas, width, height) {
         if (canvas == null)
             return;
         let ctx = canvas.getContext('2d');
@@ -378,14 +414,14 @@ var cellgame;
         ctx.fillRect(0, 0, width, height);
         ctx.fillStyle = cellgame.Colors.DarkSlateGray;
         ctx.fillRect(gX2, gY2, gW2, gH2);
-        let c = 0;
-        for (let i = 0; i < gCodes.length; i++) {
-            gCodes[i] = c;
-            c++;
-            if (c >= cellgame.cells.length) {
-                c = 0;
-            }
-        }
+        // let c = 0;
+        // for(let i : number = 0;i < gCodes.length; i++) {
+        //     gCodes[i] = c;
+        //     c++;
+        //     if (c >= cells.length) {
+        //         c = 0;
+        //     }
+        // }
         AllCellWriter(canvas);
         // for(let y = 0; y < gCellWidth; y++) {
         //     for (let x = 0; x < gCellWidth; x++) {
@@ -404,7 +440,7 @@ var cellgame;
         if (STS01VALUE)
             STS01VALUE.textContent = height.toString();
     }
-    cellgame.CanvasWriter = CanvasWriter;
+    cellgame.canvasWriter = canvasWriter;
     /** Box Writer */
     function BoxWriter(canvas, backColor, x, y, isFlash) {
         if (canvas == null || canvas == undefined)

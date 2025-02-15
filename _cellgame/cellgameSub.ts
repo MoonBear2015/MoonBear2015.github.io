@@ -30,16 +30,18 @@ namespace cellgame {
     export const pointCalc = (a : number,w : number) => {
         let y = Math.floor(a / w);
         let x = a % w;
-        return new Point(x,y);
+        return new Point(true,x,y);
     };
 
     /** 座標 */
     export class Point {
         x : number = 0;
         y : number = 0;
-        constructor(x = 0,y = 0) {
+        isUndefined : boolean = false;
+        constructor(isUndefined : boolean = true,x : number = 0,y : number = 0) {
             this.x = x;
             this.y = y;
+            this.isUndefined = isUndefined;
         }
     }
 

@@ -156,8 +156,9 @@ namespace cellgame {
         if (IsError) {
             alert("Init " + IsError);
         }
-        ResizeCanvas();
-        Call_Writer();
+        gameReset();
+        canvasResize();
+        writerCall();
     }
 
     // 初期処理
@@ -176,7 +177,7 @@ namespace cellgame {
         gCellWidth = 6;
 
         // canvasの取得
-        GetCanvas("a_canvas");
+        canvasGetter("a_canvas");
         if (IsError) return;
         if (CVS == null) {
             alert("CANVAS ERROR");
@@ -186,7 +187,7 @@ namespace cellgame {
         // サイズ変更時のイベントを設定
         addResizeEvent();
         // リサイズ処理の実行
-        ResizeCanvas();
+        canvasResize();
 
         // タッチイベントの設定
         // スマホの場合
@@ -204,46 +205,49 @@ namespace cellgame {
 
         // 画面要素の取得
 
-        MAIN_FLEX = getElement<HTMLDivElement>("MainFlex");
+        MAIN_FLEX = elementGetter<HTMLDivElement>("MainFlex");
         if (IsError) return;
-        INFO_FLEX = getElement<HTMLDivElement>("InfoFlex");
-        if (IsError) return;
-
-        PLAY_WINDOW = getElement<HTMLDivElement>("PlayWindow");
+        INFO_FLEX = elementGetter<HTMLDivElement>("InfoFlex");
         if (IsError) return;
 
-        PLAY_FLEX = getElement<HTMLDivElement>("PlayFlex");
+        PLAY_WINDOW = elementGetter<HTMLDivElement>("PlayWindow");
         if (IsError) return;
 
-        GAME_WINDOW = getElement<HTMLDivElement>("GameWindow");
-        if (IsError) return;
-        MSG_WINDOW = getElement<HTMLDivElement>("MsgWindow");
+        PLAY_FLEX = elementGetter<HTMLDivElement>("PlayFlex");
         if (IsError) return;
 
-        INFO_WINDOW = getElement<HTMLDivElement>("InfoWindow");
+        GAME_WINDOW = elementGetter<HTMLDivElement>("GameWindow");
+        if (IsError) return;
+        MSG_WINDOW = elementGetter<HTMLDivElement>("MsgWindow");
         if (IsError) return;
 
-        STS00NAME = getElement<HTMLDivElement>("sts00Name");
-        if (IsError) return;
-        STS00VALUE = getElement<HTMLDivElement>("sts00Value");
+        INFO_WINDOW = elementGetter<HTMLDivElement>("InfoWindow");
         if (IsError) return;
 
-        STS01NAME = getElement<HTMLDivElement>("sts01Name");
+        STS00NAME = elementGetter<HTMLDivElement>("sts00Name");
         if (IsError) return;
-        STS01VALUE = getElement<HTMLDivElement>("sts01Value");
-        if (IsError) return;
-
-        STS02NAME = getElement<HTMLDivElement>("sts02Name");
-        if (IsError) return;
-        STS02VALUE = getElement<HTMLDivElement>("sts02Value");
+        STS00VALUE = elementGetter<HTMLDivElement>("sts00Value");
         if (IsError) return;
 
-        STS03NAME = getElement<HTMLDivElement>("sts03Name");
+        STS01NAME = elementGetter<HTMLDivElement>("sts01Name");
         if (IsError) return;
-        STS03VALUE = getElement<HTMLDivElement>("sts03Value");
+        STS01VALUE = elementGetter<HTMLDivElement>("sts01Value");
+        if (IsError) return;
+
+        STS02NAME = elementGetter<HTMLDivElement>("sts02Name");
+        if (IsError) return;
+        STS02VALUE = elementGetter<HTMLDivElement>("sts02Value");
+        if (IsError) return;
+
+        STS03NAME = elementGetter<HTMLDivElement>("sts03Name");
+        if (IsError) return;
+        STS03VALUE = elementGetter<HTMLDivElement>("sts03Value");
         if (IsError) return;
 
     }
+
+    /** 番地の数 */
+    export const gCellLength = () : number => gCellWidth * gCellWidth;
 
     /** 番地計算 */
     export function gAddress(x : number, y : number) : number {
@@ -258,28 +262,46 @@ namespace cellgame {
         if (a < 0) return -1;
         return gCodes[a];
     }
-    /** cellコード設定 (x,y指定) */
+    /** cellコード設定 (x,y指定) 画面出力込み */
     export function gCodeSetter(x:number,y:number,code: number) {
         let a : number = gAddress(x,y);
         if (a < 0) return;
         gCodes[a] = code;
+        writerCall();
     }
-    // Flashフラグ(x,y指定)
+    /** Flashフラグ(x,y指定) */
     export const gIsFlash = (x : number,y : number) : boolean => {
         let a : number = gAddress(x,y);
         if (a < 0) return false;
         return gFlashFlgs[a];
     } 
-    // Flashフラグ設定(x,y指定)
+    /** Flashフラグ設定(x,y指定) 画面出力込み */
     export function gIsFlashSetter(x:number,y:number,isFlash:boolean) {
         let a : number = gAddress(x,y);
         if (a < 0) return;
         gFlashFlgs[a] = isFlash;
+        writerCall();
+    }
+
+    /** タッチ位置の番地 */
+    export function touchAddress(x : number,y : number) : Point {
+        let result : Point = new Point();
+        for(let a = 0; a < gCellLength(); a++) {
+            let x0 = gX3[a];
+            let y0 = gY3[a];
+            let x1 = x0 + gW3;
+            let y1 = y0 + gH3;
+            if (x >= x0 && x < x1 && y >= y0 && y < y1) {
+                result = pointCalc(a,gCellWidth);
+                return result;
+            }
+        }
+        return result;
     }
 
 
     /** 要素を取得する */
-    export function getElement<T extends HTMLElement>(id: string): T | null {
+    export function elementGetter<T extends HTMLElement>(id: string): T | null {
         const element = document.getElementById(id);
         if (element) {
             return element as T;
@@ -291,8 +313,8 @@ namespace cellgame {
     }
 
     // canvasの取得
-    export function GetCanvas(idName : string) {
-        let element : HTMLCanvasElement | null = getElement<HTMLCanvasElement>(idName);
+    export function canvasGetter(idName : string) {
+        let element : HTMLCanvasElement | null = elementGetter<HTMLCanvasElement>(idName);
         if (IsError) return;
         // canvas設定
         CVS = element;
@@ -304,12 +326,12 @@ namespace cellgame {
 
     // 画面サイズ変更の検知
     export function addResizeEvent() {
-        window.addEventListener('resize', ResizeCanvas); 
+        window.addEventListener('resize', canvasResize); 
     }
 
 
     // 画面サイズ変更
-    export function ResizeCanvas() { 
+    export function canvasResize() { 
         if (IsError) return;
         if (CVS == null) return;
 
@@ -364,13 +386,13 @@ namespace cellgame {
 
         CVS.width = CVSWIDTH;
         CVS.height = CVSHEIGHT;
-        Call_Writer();
+        writerCall();
     }
 
     // タッチイベント関連
 
     // iOS/Android検出
-    export function isSmartphone() {
+    export function isSmartphone() : boolean {
         var ua = navigator.userAgent;
         return (ua.match(/iPhone|iPod|iPad|Android/) !== null);
     }
@@ -385,19 +407,33 @@ namespace cellgame {
         width : number,
         height : number
     ) {
+        alert("touchHandler" + x + "," + y);
+    }
 
+    export function gameReset() {
+        let c = 0;
+        for(let y = 0; y < gCellWidth; y++) {
+            for(let x = 0; x < gCellWidth; x++) {
+                gCodeSetter(x,y,c);
+                gIsFlashSetter(x,y,false);
+                c++;
+                if (c >= cells.length) {
+                    c = 0;
+                }
+            }
+        }
     }
 
     // 定期的に更新（アニメーション、フラッシュ効果）
-    setInterval(Call_Writer,10);
+    setInterval(writerCall,100);
 
     // 画面更新処理を呼び出す
-    export function Call_Writer() {
-        CanvasWriter(CVS,CVSWIDTH,CVSHEIGHT);
+    export function writerCall() {
+        canvasWriter(CVS,CVSWIDTH,CVSHEIGHT);
     }
 
     /** Canvas Writer */    
-    export function CanvasWriter (canvas : HTMLCanvasElement | null,
+    export function canvasWriter (canvas : HTMLCanvasElement | null,
         width : number,
         height : number
     ) {
@@ -412,14 +448,14 @@ namespace cellgame {
         ctx.fillStyle = Colors.DarkSlateGray;
         ctx.fillRect(gX2,gY2,gW2,gH2);
 
-        let c = 0;
-        for(let i : number = 0;i < gCodes.length; i++) {
-            gCodes[i] = c;
-            c++;
-            if (c >= cells.length) {
-                c = 0;
-            }
-        }
+        // let c = 0;
+        // for(let i : number = 0;i < gCodes.length; i++) {
+        //     gCodes[i] = c;
+        //     c++;
+        //     if (c >= cells.length) {
+        //         c = 0;
+        //     }
+        // }
 
         AllCellWriter(canvas);
 

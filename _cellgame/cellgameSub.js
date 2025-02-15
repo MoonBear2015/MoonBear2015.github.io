@@ -24,15 +24,17 @@ var cellgame;
     cellgame.pointCalc = (a, w) => {
         let y = Math.floor(a / w);
         let x = a % w;
-        return new Point(x, y);
+        return new Point(true, x, y);
     };
     /** 座標 */
     class Point {
-        constructor(x = 0, y = 0) {
+        constructor(isUndefined = true, x = 0, y = 0) {
             this.x = 0;
             this.y = 0;
+            this.isUndefined = false;
             this.x = x;
             this.y = y;
+            this.isUndefined = isUndefined;
         }
     }
     cellgame.Point = Point;
