@@ -1,12 +1,16 @@
 "use strict";
+/// <reference path="icellSystem.ts" />
+/// <reference path="cellSystem00.ts" />
 /// <reference path="cellgame.ts" />
 /// <reference path="cellgameLib.ts" />
 /// <reference path="cellgameSub.ts" />
 var cellgame;
 (function (cellgame) {
-    class CellGameSystem01 {
+    /** セルゲームシステム ０１： */
+    class CellGameSystem01 extends cellgame.CellGameSystem00 {
         constructor() {
-            this.cellWidth = 10;
+            super();
+            this.cellWidth = 8;
         }
     }
     cellgame.CellGameSystem01 = CellGameSystem01;

@@ -2,6 +2,8 @@
 /// <reference path="cellgameSub.ts" />
 /// <reference path="cellSystem00.ts" />
 /// <reference path="cellSystem01.ts" />
+
+/** 対ブラウザ表示処理 */
 namespace cellgame {
     
     var IsError : boolean = false;
@@ -10,6 +12,8 @@ namespace cellgame {
     var gameSystem : ICellGameSystem;
 
     // GetCanvas('a_canvas');
+
+    // ブラウザ要素確保先
 
     var MAIN_FLEX : HTMLDivElement | null;
 
@@ -93,7 +97,19 @@ namespace cellgame {
 
     // 升のフラッシュ
     var gFlashFlgs : boolean[];
+        
+    /** ブラウザ最初期処理 */
+    window.onload = function () {
+        init(gameSystem ?? new CellGameSystem01());
+        if (IsError) {
+            alert("Init " + IsError);
+        }
+        gameReset();
+        canvasResize();
+        writerCall();
+    }
 
+    /** ブラウザ要素のサイズ計算 */
     function CalcGameSize(cellWidth : number,cvs : HTMLCanvasElement | null) {
         if (!cvs) return;
         // 大外枠の計算
@@ -154,22 +170,11 @@ namespace cellgame {
             }
         }
     }
-        
-    // リソース読込完了
-    window.onload = function () {
-        Init(new CellGameSystem01());
-        if (IsError) {
-            alert("Init " + IsError);
-        }
-        gameReset();
-        canvasResize();
-        writerCall();
-    }
 
-    // 初期処理
-    export function Init(cellGameSystem : ICellGameSystem) {
+    // セルゲーム画面初期化処理
+    export function init(cellgameSystem : ICellGameSystem) {
 
-        gameSystem = cellGameSystem;
+        gameSystem = new CellGameSystem01();
 
         // 升目の論理値の初期化（とりあえず１０×１０）
         gCodes = Array(100).fill(0);

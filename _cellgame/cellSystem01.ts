@@ -1,12 +1,16 @@
+/// <reference path="icellSystem.ts" />
+/// <reference path="cellSystem00.ts" />
 /// <reference path="cellgame.ts" />
 /// <reference path="cellgameLib.ts" />
 /// <reference path="cellgameSub.ts" />
 namespace cellgame {
-    export class CellGameSystem01 implements ICellGameSystem {
-        public cellWidth : number;
+    /** セルゲームシステム ０１： */
+    export class CellGameSystem01 extends CellGameSystem00
+    implements ICellGameSystem {
 
         constructor() {
-            this.cellWidth = 10;
+            super();
+            this.cellWidth = 8;
         }
 
     }
