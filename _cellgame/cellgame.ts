@@ -1,8 +1,13 @@
 /// <reference path="cellgameLib.ts" />
 /// <reference path="cellgameSub.ts" />
+/// <reference path="cellSystem00.ts" />
+/// <reference path="cellSystem01.ts" />
 namespace cellgame {
     
     var IsError : boolean = false;
+
+    /** ゲームシステム */
+    var gameSystem : ICellGameSystem;
 
     // GetCanvas('a_canvas');
 
@@ -152,7 +157,7 @@ namespace cellgame {
         
     // リソース読込完了
     window.onload = function () {
-        Init();
+        Init(new CellGameSystem01());
         if (IsError) {
             alert("Init " + IsError);
         }
@@ -162,7 +167,9 @@ namespace cellgame {
     }
 
     // 初期処理
-    export function Init(){
+    export function Init(cellGameSystem : ICellGameSystem) {
+
+        gameSystem = cellGameSystem;
 
         // 升目の論理値の初期化（とりあえず１０×１０）
         gCodes = Array(100).fill(0);
@@ -174,7 +181,7 @@ namespace cellgame {
         cellsUpdate(0);
 
         // 升目の広さ
-        gCellWidth = 6;
+        gCellWidth = gameSystem.cellWidth;
 
         // canvasの取得
         canvasGetter("a_canvas");
@@ -284,7 +291,7 @@ namespace cellgame {
     }
 
     /** タッチ位置の番地 */
-    export function touchAddress(x : number,y : number) : Point {
+    export function touchPoint(x : number,y : number) : Point {
         let result : Point = new Point();
         for(let a = 0; a < gCellLength(); a++) {
             let x0 = gX3[a];
@@ -407,7 +414,9 @@ namespace cellgame {
         width : number,
         height : number
     ) {
-        alert("touchHandler" + x + "," + y);
+        let p = touchPoint(x,y);
+        if (p.isUndefined) return;
+        alert("touchHandler (" + p.x + "," + p.y + ") : " + p.address(gCellWidth));
     }
 
     export function gameReset() {

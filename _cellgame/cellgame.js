@@ -1,9 +1,13 @@
 "use strict";
 /// <reference path="cellgameLib.ts" />
 /// <reference path="cellgameSub.ts" />
+/// <reference path="cellSystem00.ts" />
+/// <reference path="cellSystem01.ts" />
 var cellgame;
 (function (cellgame) {
     var IsError = false;
+    /** ゲームシステム */
+    var gameSystem;
     // GetCanvas('a_canvas');
     var MAIN_FLEX;
     var PLAY_FLEX;
@@ -127,7 +131,7 @@ var cellgame;
     }
     // リソース読込完了
     window.onload = function () {
-        Init();
+        Init(new cellgame.CellGameSystem01());
         if (IsError) {
             alert("Init " + IsError);
         }
@@ -136,7 +140,8 @@ var cellgame;
         writerCall();
     };
     // 初期処理
-    function Init() {
+    function Init(cellGameSystem) {
+        gameSystem = cellGameSystem;
         // 升目の論理値の初期化（とりあえず１０×１０）
         gCodes = Array(100).fill(0);
         gFlashFlgs = Array(100).fill(false);
@@ -145,7 +150,7 @@ var cellgame;
         // 升目データの初期値設定
         cellgame.cellsUpdate(0);
         // 升目の広さ
-        gCellWidth = 6;
+        gCellWidth = gameSystem.cellWidth;
         // canvasの取得
         canvasGetter("a_canvas");
         if (IsError)
@@ -264,7 +269,7 @@ var cellgame;
     }
     cellgame.gIsFlashSetter = gIsFlashSetter;
     /** タッチ位置の番地 */
-    function touchAddress(x, y) {
+    function touchPoint(x, y) {
         let result = new cellgame.Point();
         for (let a = 0; a < cellgame.gCellLength(); a++) {
             let x0 = gX3[a];
@@ -278,7 +283,7 @@ var cellgame;
         }
         return result;
     }
-    cellgame.touchAddress = touchAddress;
+    cellgame.touchPoint = touchPoint;
     /** 要素を取得する */
     function elementGetter(id) {
         const element = document.getElementById(id);
@@ -379,7 +384,10 @@ var cellgame;
     cellgame.touchCall = touchCall;
     // canvasに対するタッチハンドラー
     function touchHandler(x, y, canvas, width, height) {
-        alert("touchHandler" + x + "," + y);
+        let p = touchPoint(x, y);
+        if (p.isUndefined)
+            return;
+        alert("touchHandler (" + p.x + "," + p.y + ") : " + p.address(gCellWidth));
     }
     function gameReset() {
         let c = 0;

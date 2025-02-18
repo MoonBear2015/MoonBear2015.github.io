@@ -30,7 +30,7 @@ namespace cellgame {
     export const pointCalc = (a : number,w : number) => {
         let y = Math.floor(a / w);
         let x = a % w;
-        return new Point(true,x,y);
+        return new Point(false,x,y);
     };
 
     /** 座標 */
@@ -42,6 +42,12 @@ namespace cellgame {
             this.x = x;
             this.y = y;
             this.isUndefined = isUndefined;
+        }
+        public address(w : number) : number {
+            if (this.isUndefined) {
+                return -1;
+            }
+            return this.y * w + this.x;
         }
     }
 
