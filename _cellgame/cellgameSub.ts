@@ -1,4 +1,9 @@
 namespace cellgame {
+    /** 未設定判定 */
+    export function isNone(value: any): value is null | undefined {
+        return value === null || value === undefined;
+    }
+
     /** 乱数（０～この数値未満） */
     export function rnd(max: number): number;
     /** 乱数（最小値～この数値未満） */

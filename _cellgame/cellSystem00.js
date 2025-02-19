@@ -9,7 +9,7 @@ var cellgame;
         /** コンストラクタ */
         constructor() {
             this.codes = [];
-            this.flashFlgs = [];
+            this.isflashes = [];
             /** 番地の数 */
             this.cellLength = () => this.cellWidth * this.cellWidth;
             /** cellコード（x,y指定） */
@@ -24,7 +24,7 @@ var cellgame;
                 let a = cellgame.gAddress(x, y);
                 if (a < 0)
                     return false;
-                return this.flashFlgs[a];
+                return this.isflashes[a];
             };
             this.cellWidth = 10;
             // 初期化
@@ -33,7 +33,7 @@ var cellgame;
         /** 初期化 */
         init() {
             this.codes = Array(this.cellLength()).fill(0);
-            this.flashFlgs = Array(this.cellLength()).fill(false);
+            this.isflashes = Array(this.cellLength()).fill(false);
         }
         /** 番地計算 */
         cellAddress(x, y) {
@@ -56,7 +56,7 @@ var cellgame;
             let a = cellgame.gAddress(x, y);
             if (a < 0)
                 return;
-            this.flashFlgs[a] = isFlash;
+            this.isflashes[a] = isFlash;
             //           writerCall();
         }
     }

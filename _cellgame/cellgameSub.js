@@ -1,6 +1,11 @@
 "use strict";
 var cellgame;
 (function (cellgame) {
+    /** 未設定判定 */
+    function isNone(value) {
+        return value === null || value === undefined;
+    }
+    cellgame.isNone = isNone;
     /** 乱数（最小値～この数値未満） */
     function rnd(minOrMax, max) {
         let min;

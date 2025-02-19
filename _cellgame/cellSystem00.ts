@@ -6,7 +6,7 @@ namespace cellgame {
     export abstract class CellGameSystem00 implements ICellGameSystem {
         public cellWidth : number;
         public codes : number[] = [];
-        public flashFlgs : boolean[] = [];
+        public isflashes : boolean[] = [];
 
         /** コンストラクタ */
         constructor() {
@@ -19,7 +19,7 @@ namespace cellgame {
         /** 初期化 */
         public init() {
             this.codes = Array(this.cellLength()).fill(0);
-            this.flashFlgs = Array(this.cellLength()).fill(false);
+            this.isflashes = Array(this.cellLength()).fill(false);
         }
             
         /** 番地の数 */
@@ -49,13 +49,13 @@ namespace cellgame {
         public isFlash = (x : number,y : number) : boolean => {
             let a : number = gAddress(x,y);
             if (a < 0) return false;
-            return this.flashFlgs[a];
+            return this.isflashes[a];
         } 
         /** Flashフラグ設定(x,y指定) 画面出力込み */
         public isFlashSetter(x:number,y:number,isFlash:boolean) {
             let a : number = gAddress(x,y);
             if (a < 0) return;
-            this.flashFlgs[a] = isFlash;
+            this.isflashes[a] = isFlash;
  //           writerCall();
         }
     }

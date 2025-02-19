@@ -8,7 +8,7 @@ namespace cellgame {
         cellWidth : number;
         
         /** 初期化 */
-        init() : any;
+        init() : void;
             
         /** 番地の数 */
         cellLength() : number;
@@ -20,13 +20,13 @@ namespace cellgame {
         code(x : number,y : number) : number;
 
         /** cellコード設定 (x,y指定) 画面出力込み */
-        codeSetter( x : number, y : number, code : number) : any;
+        codeSetter( x : number, y : number, code : number) : void;
 
         /** Flashフラグ(x,y指定) */
         isFlash(x : number,y : number) : boolean;
 
         /** Flashフラグ設定(x,y指定) 画面出力込み */
-        isFlashSetter(x:number,y:number,isFlash:boolean) : any;
+        isFlashSetter(x:number,y:number,isFlash:boolean) : void;
 
     }
 

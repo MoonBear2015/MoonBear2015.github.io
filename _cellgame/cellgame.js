@@ -415,33 +415,19 @@ var cellgame;
     cellgame.writerCall = writerCall;
     /** Canvas Writer */
     function canvasWriter(canvas, width, height) {
-        if (canvas == null)
+        if (cellgame.isNone(canvas))
             return;
         let ctx = canvas.getContext('2d');
         if (ctx == null)
             return;
-        CalcGameSize(gCellWidth, canvas);
+        if (cellgame.isNone(gameSystem))
+            return;
+        CalcGameSize(gameSystem.cellWidth, canvas);
         ctx.fillStyle = cellgame.Colors.Black;
         ctx.fillRect(0, 0, width, height);
         ctx.fillStyle = cellgame.Colors.DarkSlateGray;
         ctx.fillRect(gX2, gY2, gW2, gH2);
-        // let c = 0;
-        // for(let i : number = 0;i < gCodes.length; i++) {
-        //     gCodes[i] = c;
-        //     c++;
-        //     if (c >= cells.length) {
-        //         c = 0;
-        //     }
-        // }
         AllCellWriter(canvas);
-        // for(let y = 0; y < gCellWidth; y++) {
-        //     for (let x = 0; x < gCellWidth; x++) {
-        //         let a = addressCalc(x,y,gCellWidth);
-        //         if (gCodes[a] < cells.length) {
-        //             CellWriter(canvas,gCodes[a],x,y,true);
-        //         }
-        //     }
-        // }
         if (STS00NAME)
             STS00NAME.textContent = "width";
         if (STS00VALUE)
