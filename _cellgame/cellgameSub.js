@@ -47,6 +47,11 @@ var cellgame;
             }
             return this.y * w + this.x;
         }
+        toString() {
+            if (this.isUndefined)
+                return "undefined";
+            return " (" + this.x + "," + this.y + ")";
+        }
     }
     cellgame.Point = Point;
     class Colors {

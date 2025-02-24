@@ -54,6 +54,11 @@ namespace cellgame {
             }
             return this.y * w + this.x;
         }
+
+        public toString() : string {
+            if (this.isUndefined) return "undefined";
+            return " (" + this.x + "," + this.y + ")";
+        }
     }
 
     export class Colors {

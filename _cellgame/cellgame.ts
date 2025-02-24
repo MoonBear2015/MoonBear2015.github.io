@@ -185,6 +185,7 @@ namespace cellgame {
         // 大外枠の表示位置
         gX0 = gWM0 + gP0;
         gY0 = gHM0 + gP0;
+        
         // 盤上の表示位置（上下左右に隙間をつくる）
         gX1 = gX0 + gP1;
         gY1 = gY0 + gP1;
@@ -217,7 +218,7 @@ namespace cellgame {
         // 座標計算
         for(let y = 0; y < cellCount; y++) {
             for (let x = 0; x < cellCount; x++) {
-                let a = addressCalc(x,y,cellCount);
+                let a = gameSystem.cellAddress(x,y);
                 gX3[a] = gX2 + gP1 + (gW3 + gP1) * x;
                 gY3[a] = gY2 + gP1 + (gH3 + gP1) * y;
             }
@@ -238,8 +239,8 @@ namespace cellgame {
         // 升目データの初期値設定
         cellsUpdate(0);
 
-        // 升目の広さ
-        gCellWidth = gameSystem.cellCount;
+        // // 升目の広さ
+        // gCellWidth = gameSystem.cellCount;
 
         // canvasの取得
         canvasGetter("a_canvas");
@@ -253,13 +254,17 @@ namespace cellgame {
         // スマホの場合
         if (isSmartphone()){
             CVS.ontouchstart = function (e) {
+                if (CVS == null) return;
+                const rect = CVS.getBoundingClientRect();
                 var t1 : Touch = e.touches[0];
-                touchCall(t1.pageX,t1.pageY);
+                touchCall(t1.pageX- rect.left,t1.pageY - rect.top);
             }
         } else {
             // スマホ以外
             CVS.onmousedown = function(e) {
-                touchCall(e.clientX,e.clientY);
+                if (CVS == null) return;
+                const rect = CVS.getBoundingClientRect();
+                touchCall(e.clientX - rect.left,e.clientY - rect.top);
             }
         }
         
@@ -352,14 +357,17 @@ namespace cellgame {
 
     /** タッチ位置の番地 */
     export function touchPoint(x : number,y : number) : Point {
+        let p0 = new Point(false,x,y);
+
         let result : Point = new Point();
-        for(let a = 0; a < gameSystem.cellCount; a++) {
+
+        for(let a = 0; a < gameSystem.addressLength(); a++) {
             let x0 = gX3[a];
             let y0 = gY3[a];
             let x1 = x0 + gW3;
             let y1 = y0 + gH3;
             if (x >= x0 && x < x1 && y >= y0 && y < y1) {
-                result = pointCalc(a,gCellWidth);
+                result = pointCalc(a,gameSystem.cellCount);
                 return result;
             }
         }
@@ -482,7 +490,7 @@ namespace cellgame {
     export function gameReset() {
         let c = 0;
         for(let y = 0; y < gameSystem.cellCount; y++) {
-            for(let x = 0; x < gCellWidth; x++) {
+            for(let x = 0; x < gameSystem.cellCount; x++) {
                 gameSystem.codeSetter(x,y,c);
                 gameSystem.isFlashSetter(x,y,false);
                 c++;
@@ -506,11 +514,20 @@ namespace cellgame {
         width : number,
         height : number
     ) {
-        if (isNone(canvas)) return;
+        if (isNone(canvas)) {
+            alert("Canvas is None");
+            return;
+        }
         let ctx = canvas.getContext('2d');
-        if (ctx == null) return;
+        if (ctx == null) {
+            alert("Canvas Context is None");
+            return;
+        }
 
-        if (isNone(gameSystem)) return;
+        if (isNone(gameSystem)) {
+            alert("GameSystem is None");
+            return;
+        }
         
         CalcGameSize(gameSystem.cellCount,canvas);
         
@@ -631,11 +648,11 @@ namespace cellgame {
     export function AllCellWriter (canvas : HTMLCanvasElement | null) {
         if (canvas == null || canvas == undefined) return;
 
-        for(let y = 0; y < gCellWidth; y++) {
-            for (let x = 0; x < gCellWidth; x++) {
-                let a = addressCalc(x,y,gCellWidth);
-                if (gCodes[a] < cells.length) {
-                    CellWriter(canvas,gCodes[a],x,y,gFlashFlgs[a]);
+        for(let y = 0; y < gameSystem.cellCount; y++) {
+            for (let x = 0; x < gameSystem.cellCount; x++) {
+                let a = gameSystem.cellAddress(x,y);
+                if (gameSystem.codes[a] < cells.length) {
+                    CellWriter(canvas,gameSystem.codes[a],x,y,gameSystem.isflashes[a]);
                 }
             }
         }
