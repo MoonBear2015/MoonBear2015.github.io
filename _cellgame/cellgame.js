@@ -6,73 +6,118 @@
 /** 対ブラウザ表示処理 */
 var cellgame;
 (function (cellgame) {
+    /** 全体を通して何かエラーがあった場合 */
     var IsError = false;
-    /** ゲームシステム */
+    /** ゲームシステム インターフェース */
     var gameSystem;
     // GetCanvas('a_canvas');
     // ブラウザ要素確保先
+    /** ブラウザページを使用する部分 下に余白を付ける */
     var MAIN_FLEX;
+    /** ゲームに使用する部分 */
     var PLAY_FLEX;
+    /** スコアなど情報表示する部分 */
     var INFO_FLEX;
+    /** ゲームに使用する領域 */
     var PLAY_WINDOW;
+    /** ゲーム盤に使用する領域 */
     var GAME_WINDOW;
+    /** ゲーム中のメッセージなどを表示する領域 */
     var MSG_WINDOW;
+    /** 情報表示する領域 */
     var INFO_WINDOW;
+    /** Canvas要素を紐付け */
     var CVS;
+    /** Canvasの幅 */
     var CVSWIDTH;
+    /** Canvasの丈 */
     var CVSHEIGHT;
+    /** 情報表示 名称 00 */
     var STS00NAME;
+    /** 情報表示 値 00 */
     var STS00VALUE;
+    /** 情報表示 名称 01 */
     var STS01NAME;
+    /** 情報表示 値 01 */
     var STS01VALUE;
+    /** 情報表示 名称 02 */
     var STS02NAME;
+    /** 情報表示 値 02 */
     var STS02VALUE;
+    /** 情報表示 名称 03 */
     var STS03NAME;
+    /** 情報表示 値 03 */
     var STS03VALUE;
     // ゲーム枠座標
     // W:幅 H:丈 X:横位置 Y:縦位置 P:隙間（縦横同一） M:余白（縦横別）
     // 正方形に切り取る大外枠
+    // Canvas 
+    // → 大外枠：Canvasから隙間を空けた大外枠 
+    // → ゲーム盤：大外枠から正方形に切り取ったゲーム盤
+    // → 升目：ゲーム盤から隙間を空けた升目
+    /** 大外枠：幅 */
     var gW0;
+    /** 大外枠：丈 */
     var gH0;
-    // 大外枠のパディングサイズ
+    /** Canvas → 大外枠の隙間 */
     var gP0;
-    // 大外枠の表示位置
+    // Canvas → 大外枠の表示位置
+    /** 大外枠の表示位置：横 */
     var gX0;
+    /** 大外枠の表示位置：縦 */
     var gY0;
-    // 大外枠の余白
+    // 大外枠の余白：ゲーム盤を正方形にするために使用
+    /** 大外枠→ゲーム盤の左右の余白 */
     var gWM0;
+    /** 大外枠→ゲーム盤の上下の余白 */
     var gHM0;
-    // 盤上のパディング
+    /** 盤上のあらゆる隙間 */
     var gP1;
-    // 盤上の表示位置
+    // ゲーム盤の表示位置
+    /** ゲーム盤の開始位置：横 */
     var gX1;
+    /** ゲーム盤の開始位置：縦 */
     var gY1;
-    // 盤上の大きさ
+    // ゲーム盤の大きさ
+    /** ゲーム盤の大きさ：幅 */
     var gW1;
+    /** ゲーム盤の大きさ：丈 */
     var gH1;
-    // 升の幅
+    /** 升目の個々の幅・丈（正方形） */
     var gCellWidth;
-    // 全升の広さ（仮
+    // 全升の広さ（仮計算
+    /** 全升の幅 */
     var gW2w;
+    /** 全升の丈 */
     var gH2w;
-    // 升に使われる広さ
+    // 枠線の幅を除いた升に使われる広さ
+    /** 枠線の幅を除いた升に使われる広さ：幅 */
     var gWm;
+    /** 枠線の幅を除いた升に使われる広さ：丈 */
     var gHm;
-    // 升の表示開始位置
+    // 升の表示開始位置：ゲーム升の外の枠線を除いた位置
+    /** 升の表示開始位置：横 */
     var gX2;
+    /** 升の表示開始位置：縦 */
     var gY2;
-    // 全升の広さ
+    // 全升の広さ：升の数で割ると個々の升目の広さになる
+    /** 全升の広さ：幅 */
     var gW2;
+    /** 全升の広さ：丈 */
     var gH2;
     // 升の大きさ
+    /** 個々の升の広さ：幅 */
     var gW3;
+    /** 個々の升の広さ：丈 */
     var gH3;
     // 升の座標[cell番地]
+    /** 升の座標[cell番地]：横 */
     var gX3;
+    /** 升の座標[cell番地]：縦 */
     var gY3;
-    // 升のコード[cell番地]
+    /** 升のコード[cell番地] */
     var gCodes;
-    // 升のフラッシュ
+    /** バックカラーのフラッシュの有無 */
     var gFlashFlgs;
     /** ブラウザ最初期処理 */
     window.onload = function () {
@@ -85,7 +130,7 @@ var cellgame;
         writerCall();
     };
     /** ブラウザ要素のサイズ計算 */
-    function CalcGameSize(cellWidth, cvs) {
+    function CalcGameSize(cellCount, cvs) {
         if (!cvs)
             return;
         // 大外枠の計算
@@ -121,30 +166,30 @@ var cellgame;
         gW2w = gW1 - gP1 * 2;
         gH2w = gH1 - gP1 * 2;
         // 升に使われる広さ(枠線を除く)
-        gWm = gW2w - gP1 * (cellWidth + 1);
-        gHm = gH2w - gP1 * (cellWidth + 1);
+        gWm = gW2w - gP1 * (cellCount + 1);
+        gHm = gH2w - gP1 * (cellCount + 1);
         // 升の大きさ
-        gW3 = Math.floor(gWm / cellWidth);
-        gH3 = Math.floor(gHm / cellWidth);
+        gW3 = Math.floor(gWm / cellCount);
+        gH3 = Math.floor(gHm / cellCount);
         // 全升の広さの再計算
-        gW2 = gW3 * cellWidth + gP1 * (cellWidth + 1);
-        gH2 = gH3 * cellWidth + gP1 * (cellWidth + 1);
+        gW2 = gW3 * cellCount + gP1 * (cellCount + 1);
+        gH2 = gH3 * cellCount + gP1 * (cellCount + 1);
         // 全升の座標
         // 配列の初期化
-        gX3 = Array(cellWidth * cellWidth).fill(0);
-        gY3 = Array(cellWidth * cellWidth).fill(0);
+        gX3 = Array(cellCount * cellCount).fill(0);
+        gY3 = Array(cellCount * cellCount).fill(0);
         // 座標計算
-        for (let y = 0; y < cellWidth; y++) {
-            for (let x = 0; x < cellWidth; x++) {
-                let a = cellgame.addressCalc(x, y, cellWidth);
+        for (let y = 0; y < cellCount; y++) {
+            for (let x = 0; x < cellCount; x++) {
+                let a = cellgame.addressCalc(x, y, cellCount);
                 gX3[a] = gX2 + gP1 + (gW3 + gP1) * x;
                 gY3[a] = gY2 + gP1 + (gH3 + gP1) * y;
             }
         }
     }
-    // セルゲーム画面初期化処理
+    /** セルゲーム 画面初期化処理 */
     function init(cellgameSystem) {
-        gameSystem = new cellgame.CellGameSystem01();
+        gameSystem = cellgameSystem;
         // 升目の論理値の初期化（とりあえず１０×１０）
         gCodes = Array(100).fill(0);
         gFlashFlgs = Array(100).fill(false);
@@ -153,7 +198,7 @@ var cellgame;
         // 升目データの初期値設定
         cellgame.cellsUpdate(0);
         // 升目の広さ
-        gCellWidth = gameSystem.cellWidth;
+        gCellWidth = gameSystem.cellCount;
         // canvasの取得
         canvasGetter("a_canvas");
         if (IsError)
@@ -422,7 +467,7 @@ var cellgame;
             return;
         if (cellgame.isNone(gameSystem))
             return;
-        CalcGameSize(gameSystem.cellWidth, canvas);
+        CalcGameSize(gameSystem.cellCount, canvas);
         ctx.fillStyle = cellgame.Colors.Black;
         ctx.fillRect(0, 0, width, height);
         ctx.fillStyle = cellgame.Colors.DarkSlateGray;

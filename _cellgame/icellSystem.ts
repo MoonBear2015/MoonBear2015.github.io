@@ -5,7 +5,7 @@
 namespace cellgame {
     export interface ICellGameSystem {
         /** 升目の数（縦・横） */
-        cellWidth : number;
+        cellCount : number;
         
         /** 初期化 */
         init() : void;
