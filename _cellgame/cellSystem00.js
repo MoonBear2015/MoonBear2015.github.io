@@ -28,13 +28,25 @@ var cellgame;
                     return false;
                 return this.isflashes[a];
             };
-            // // 初期化
-            // this.init();
+            // 初期化
+            this.init();
         }
         /** 初期化 */
         init() {
             this.codes = Array(this.addressLength()).fill(0);
             this.isflashes = Array(this.addressLength()).fill(false);
+            let c = 0;
+            for (let y = 0; y < this.cellCount; y++) {
+                for (let x = 0; x < this.cellCount; x++) {
+                    let flg = false;
+                    if (cellgame.rnd(2) == 0)
+                        flg = true;
+                    this.cellSetter(x, y, c, flg);
+                }
+                c++;
+                if (c >= cellgame.cells.length)
+                    c = 0;
+            }
         }
         /** 番地計算 */
         cellAddress(x, y) {
@@ -57,6 +69,12 @@ var cellgame;
             if (a < 0)
                 return;
             this.isflashes[a] = isFlash;
+        }
+        /** Cell設定 ＋ 画面表示 */
+        cellSetter(x, y, code, isFlash) {
+            this.codeSetter(x, y, code);
+            this.isFlashSetter(x, y, isFlash);
+            cellgame.CellWriter(x, y, isFlash);
         }
     }
     cellgame.CellGameSystem00 = CellGameSystem00;

@@ -12,11 +12,6 @@ var cellgame;
             super();
             this.cellCount = 8;
             this.init();
-            for (let y = 0; y < this.cellCount; y++) {
-                for (let x = 0; x < this.cellCount; x++) {
-                    this.codeSetter(x, y, cellgame.rnd(5));
-                }
-            }
         }
     }
     cellgame.CellGameSystem01 = CellGameSystem01;

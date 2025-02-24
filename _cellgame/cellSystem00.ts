@@ -12,14 +12,25 @@ namespace cellgame {
         constructor() {            
             // this.cellCount = 10;
 
-            // // 初期化
-            // this.init();
+            // 初期化
+            this.init();
         }
 
         /** 初期化 */
         public init() {
             this.codes = Array(this.addressLength()).fill(0);
             this.isflashes = Array(this.addressLength()).fill(false);
+
+            let c = 0;
+            for(let y = 0; y < this.cellCount; y++) {
+                for(let x = 0; x < this.cellCount; x++) {
+                    let flg = false;
+                    if (rnd(2) == 0) flg = true;
+                    this.cellSetter(x,y,c,flg);
+                }
+                c++;
+                if (c >= cells.length) c = 0;
+            }
         }
             
         /** 番地の数 */
@@ -55,6 +66,13 @@ namespace cellgame {
             let a : number = this.cellAddress(x,y);
             if (a < 0) return;
             this.isflashes[a] = isFlash;
+        }
+
+        /** Cell設定 ＋ 画面表示 */
+        public cellSetter(x:number,y:number,code:number,isFlash:boolean) {
+            this.codeSetter(x,y,code);
+            this.isFlashSetter(x,y,isFlash);
+            cellgame.CellWriter(x,y,isFlash);
         }
     }
 
