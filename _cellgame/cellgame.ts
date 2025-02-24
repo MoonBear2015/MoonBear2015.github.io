@@ -153,11 +153,11 @@ namespace cellgame {
         
     /** ブラウザ最初期処理 */
     window.onload = function () {
-        init(gameSystem ?? new CellGameSystem01());
+        pageInit(gameSystem ?? new CellGameSystem01());
         if (IsError) {
             alert("Init " + IsError);
         }
-        gameReset();
+        // gameReset();
         canvasResize();
         writerCall();
     }
@@ -225,7 +225,7 @@ namespace cellgame {
     }
 
     /** セルゲーム 画面初期化処理 */
-    export function init(cellgameSystem : ICellGameSystem) {
+    export function pageInit(cellgameSystem : ICellGameSystem) {
 
         gameSystem = cellgameSystem;
 
@@ -249,11 +249,6 @@ namespace cellgame {
             return;
         }
 
-        // サイズ変更時のイベントを設定
-        addResizeEvent();
-        // リサイズ処理の実行
-        canvasResize();
-
         // タッチイベントの設定
         // スマホの場合
         if (isSmartphone()){
@@ -267,6 +262,11 @@ namespace cellgame {
                 touchCall(e.clientX,e.clientY);
             }
         }
+        
+        // サイズ変更時のイベントを設定
+        addResizeEvent();
+        // リサイズ処理の実行
+        canvasResize();
 
         // 画面要素の取得
 
@@ -311,47 +311,49 @@ namespace cellgame {
 
     }
 
-    /** 番地の数 */
-    export const gCellLength = () : number => gCellWidth * gCellWidth;
+    // cellSystemに移行    
 
-    /** 番地計算 */
-    export function gAddress(x : number, y : number) : number {
-        if (x < 0 || x >= gCellWidth) return -1;
-        if (y < 0 || y >= gCellWidth) return -1;
-        return y * gCellWidth + x;
-    }
+    // /** 番地の数 */
+    // export const gCellLength = () : number => gCellWidth * gCellWidth;
 
-    /** cellコード（x,y指定） */
-    export const gCode = (x : number,y : number) : number => {
-        let a : number = gAddress(x,y);
-        if (a < 0) return -1;
-        return gCodes[a];
-    }
-    /** cellコード設定 (x,y指定) 画面出力込み */
-    export function gCodeSetter(x:number,y:number,code: number) {
-        let a : number = gAddress(x,y);
-        if (a < 0) return;
-        gCodes[a] = code;
-        writerCall();
-    }
-    /** Flashフラグ(x,y指定) */
-    export const gIsFlash = (x : number,y : number) : boolean => {
-        let a : number = gAddress(x,y);
-        if (a < 0) return false;
-        return gFlashFlgs[a];
-    } 
-    /** Flashフラグ設定(x,y指定) 画面出力込み */
-    export function gIsFlashSetter(x:number,y:number,isFlash:boolean) {
-        let a : number = gAddress(x,y);
-        if (a < 0) return;
-        gFlashFlgs[a] = isFlash;
-        writerCall();
-    }
+    // /** 番地計算 */
+    // export function gAddress(x : number, y : number) : number {
+    //     if (x < 0 || x >= gCellWidth) return -1;
+    //     if (y < 0 || y >= gCellWidth) return -1;
+    //     return y * gCellWidth + x;
+    // }
+
+    // /** cellコード（x,y指定） */
+    // export const gCode = (x : number,y : number) : number => {
+    //     let a : number = gAddress(x,y);
+    //     if (a < 0) return -1;
+    //     return gCodes[a];
+    // }
+    // /** cellコード設定 (x,y指定) 画面出力込み */
+    // export function gCodeSetter(x:number,y:number,code: number) {
+    //     let a : number = gAddress(x,y);
+    //     if (a < 0) return;
+    //     gCodes[a] = code;
+    //     writerCall();
+    // }
+    // /** Flashフラグ(x,y指定) */
+    // export const gIsFlash = (x : number,y : number) : boolean => {
+    //     let a : number = gAddress(x,y);
+    //     if (a < 0) return false;
+    //     return gFlashFlgs[a];
+    // } 
+    // /** Flashフラグ設定(x,y指定) 画面出力込み */
+    // export function gIsFlashSetter(x:number,y:number,isFlash:boolean) {
+    //     let a : number = gAddress(x,y);
+    //     if (a < 0) return;
+    //     gFlashFlgs[a] = isFlash;
+    //     writerCall();
+    // }
 
     /** タッチ位置の番地 */
     export function touchPoint(x : number,y : number) : Point {
         let result : Point = new Point();
-        for(let a = 0; a < gCellLength(); a++) {
+        for(let a = 0; a < gameSystem.cellCount; a++) {
             let x0 = gX3[a];
             let y0 = gY3[a];
             let x1 = x0 + gW3;
@@ -474,15 +476,15 @@ namespace cellgame {
     ) {
         let p = touchPoint(x,y);
         if (p.isUndefined) return;
-        alert("touchHandler (" + p.x + "," + p.y + ") : " + p.address(gCellWidth));
+        alert("touchHandler (" + p.x + "," + p.y + ") : " + p.address(gameSystem.cellCount));
     }
 
     export function gameReset() {
         let c = 0;
-        for(let y = 0; y < gCellWidth; y++) {
+        for(let y = 0; y < gameSystem.cellCount; y++) {
             for(let x = 0; x < gCellWidth; x++) {
-                gCodeSetter(x,y,c);
-                gIsFlashSetter(x,y,false);
+                gameSystem.codeSetter(x,y,c);
+                gameSystem.isFlashSetter(x,y,false);
                 c++;
                 if (c >= cells.length) {
                     c = 0;
@@ -538,8 +540,7 @@ namespace cellgame {
         let ctx = canvas.getContext('2d');
         if (ctx == null) return;
 
-        let a = addressCalc(x,y,gCellWidth);
-        let c = gCodes[a];
+        let a = gameSystem.cellAddress(x,y);
         let left = gX3[a] - gP1;
         let top = gY3[a] - gP1;
         let width = gW3 + gP1 * 2;
@@ -616,8 +617,8 @@ namespace cellgame {
     ) {
         if (canvas == null || canvas == undefined) return;
 
-        let a = addressCalc(x,y,gCellWidth);
-        let c = gCodes[a];
+        let a = gameSystem.cellAddress(x,y);
+        let c = gameSystem.codes[a];
         TextWriter(canvas,
             cells[c].char,
             cells[c].foreColor,

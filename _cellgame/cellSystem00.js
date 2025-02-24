@@ -13,17 +13,17 @@ var cellgame;
             this.codes = [];
             this.isflashes = [];
             /** 番地の数 */
-            this.cellLength = () => this.cellCount * this.cellCount;
+            this.addressLength = () => this.cellCount * this.cellCount;
             /** cellコード（x,y指定） */
             this.code = (x, y) => {
-                let a = cellgame.gAddress(x, y);
+                let a = this.cellAddress(x, y);
                 if (a < 0)
                     return -1;
                 return this.codes[a];
             };
             /** Flashフラグ(x,y指定) */
             this.isFlash = (x, y) => {
-                let a = cellgame.gAddress(x, y);
+                let a = this.cellAddress(x, y);
                 if (a < 0)
                     return false;
                 return this.isflashes[a];
@@ -33,8 +33,8 @@ var cellgame;
         }
         /** 初期化 */
         init() {
-            this.codes = Array(this.cellLength()).fill(0);
-            this.isflashes = Array(this.cellLength()).fill(false);
+            this.codes = Array(this.addressLength()).fill(0);
+            this.isflashes = Array(this.addressLength()).fill(false);
         }
         /** 番地計算 */
         cellAddress(x, y) {
@@ -46,14 +46,14 @@ var cellgame;
         }
         /** cellコード設定 (x,y指定) 画面出力込み */
         codeSetter(x, y, code) {
-            let a = cellgame.gAddress(x, y);
+            let a = this.cellAddress(x, y);
             if (a < 0)
                 return;
             this.codes[a] = code;
         }
         /** Flashフラグ設定(x,y指定) 画面出力込み */
         isFlashSetter(x, y, isFlash) {
-            let a = cellgame.gAddress(x, y);
+            let a = this.cellAddress(x, y);
             if (a < 0)
                 return;
             this.isflashes[a] = isFlash;

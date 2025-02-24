@@ -6,12 +6,18 @@ namespace cellgame {
     export interface ICellGameSystem {
         /** 升目の数（縦・横） */
         cellCount : number;
+
+        /** cellコード */
+        codes : number[];
+
+        /** 背景色のフラッシュ？ */
+        isflashes : boolean[];
         
         /** 初期化 */
         init() : void;
             
         /** 番地の数 */
-        cellLength() : number;
+        addressLength() : number;
 
         /** 番地計算 */
         cellAddress(x : number, y : number) : number;
