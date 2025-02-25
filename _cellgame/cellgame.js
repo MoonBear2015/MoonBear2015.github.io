@@ -14,7 +14,7 @@ var cellgame;
     var gFlashFlgs;
     /** ブラウザ最初期処理 */
     window.onload = function () {
-        pageInit(cellgame.gameSystem !== null && cellgame.gameSystem !== void 0 ? cellgame.gameSystem : new cellgame.CellGameSystem01());
+        pageInit();
         if (cellgame.IsError) {
             alert("Init " + cellgame.IsError);
         }
@@ -83,15 +83,15 @@ var cellgame;
         }
     }
     /** セルゲーム 画面初期化処理 */
-    function pageInit(cellgameSystem) {
-        cellgame.gameSystem = cellgameSystem;
-        // 升目の論理値の初期化（とりあえず１０×１０）
-        gCodes = Array(100).fill(0);
-        gFlashFlgs = Array(100).fill(false);
+    function pageInit() {
         // 升目データの初期化
         cellgame.cellsInit();
         // 升目データの初期値設定
         cellgame.cellsUpdate(0);
+        cellgame.gameSystem = new cellgame.CellGameSystem01();
+        // // 升目の論理値の初期化（とりあえず１０×１０）
+        // gCodes = Array(100).fill(0);
+        // gFlashFlgs = Array(100).fill(false);
         // // 升目の広さ
         // gCellWidth = gameSystem.cellCount;
         // canvasの取得

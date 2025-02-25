@@ -153,7 +153,7 @@ namespace cellgame {
         
     /** ブラウザ最初期処理 */
     window.onload = function () {
-        pageInit(gameSystem ?? new CellGameSystem01());
+        pageInit();
         if (IsError) {
             alert("Init " + IsError);
         }
@@ -230,18 +230,19 @@ namespace cellgame {
     }
 
     /** セルゲーム 画面初期化処理 */
-    export function pageInit(cellgameSystem : ICellGameSystem) {
-
-        gameSystem = cellgameSystem;
-
-        // 升目の論理値の初期化（とりあえず１０×１０）
-        gCodes = Array(100).fill(0);
-        gFlashFlgs = Array(100).fill(false);
+    export function pageInit() {
 
         // 升目データの初期化
         cellsInit();
+
         // 升目データの初期値設定
         cellsUpdate(0);
+
+        gameSystem = new CellGameSystem01();
+
+        // // 升目の論理値の初期化（とりあえず１０×１０）
+        // gCodes = Array(100).fill(0);
+        // gFlashFlgs = Array(100).fill(false);
 
         // // 升目の広さ
         // gCellWidth = gameSystem.cellCount;
