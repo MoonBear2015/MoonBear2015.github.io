@@ -8,6 +8,8 @@ namespace cellgame {
     /** 全体を通して何かエラーがあった場合 */
     export var IsError : boolean = false;
 
+    export var wasPageInit : boolean = false;
+
     /** ゲームシステム インターフェース */
     export var gameSystem : ICellGameSystem;
 
@@ -62,6 +64,14 @@ namespace cellgame {
     export var STS03NAME : HTMLDivElement | null;
     /** 情報表示 値 03 */
     export var STS03VALUE : HTMLDivElement | null;
+
+    /** ステータス表示 枠[] */
+    export var STSBOX : (HTMLDivElement | null)[];
+    /** ステータス表示 名称[] */
+    export var STSNAME : (HTMLDivElement | null)[];
+    /** ステータス表示 値[] */
+    export var STSVALUE : (HTMLDivElement | null)[];
+
 
     // ゲーム枠座標
     // W:幅 H:丈 X:横位置 Y:縦位置 P:隙間（縦横同一） M:余白（縦横別）
@@ -299,25 +309,24 @@ namespace cellgame {
         INFO_WINDOW = elementGetter<HTMLDivElement>("InfoWindow");
         if (IsError) return;
 
-        STS00NAME = elementGetter<HTMLDivElement>("sts00Name");
-        if (IsError) return;
-        STS00VALUE = elementGetter<HTMLDivElement>("sts00Value");
-        if (IsError) return;
+        STSBOX = Array(4).fill(null);
+        STSNAME = Array(4).fill(null);
+        STSVALUE = Array(4).fill(null);
 
-        STS01NAME = elementGetter<HTMLDivElement>("sts01Name");
-        if (IsError) return;
-        STS01VALUE = elementGetter<HTMLDivElement>("sts01Value");
-        if (IsError) return;
+        STSBOX[0] = elementGetter<HTMLDivElement>("sts00Box");
+        STSNAME[0] = elementGetter<HTMLDivElement>("sts00Name");
+        STSVALUE[0] = elementGetter<HTMLDivElement>("sts00Value");
+        STSBOX[1] = elementGetter<HTMLDivElement>("sts01Box");
+        STSNAME[1] = elementGetter<HTMLDivElement>("sts01Name");
+        STSVALUE[1] = elementGetter<HTMLDivElement>("sts01Value");
+        STSBOX[2] = elementGetter<HTMLDivElement>("sts02Box");
+        STSNAME[2] = elementGetter<HTMLDivElement>("sts02Name");
+        STSVALUE[2] = elementGetter<HTMLDivElement>("sts02Value");
+        STSBOX[3] = elementGetter<HTMLDivElement>("sts03Box");
+        STSNAME[3] = elementGetter<HTMLDivElement>("sts03Name");
+        STSVALUE[3] = elementGetter<HTMLDivElement>("sts03Value");
 
-        STS02NAME = elementGetter<HTMLDivElement>("sts02Name");
-        if (IsError) return;
-        STS02VALUE = elementGetter<HTMLDivElement>("sts02Value");
-        if (IsError) return;
-
-        STS03NAME = elementGetter<HTMLDivElement>("sts03Name");
-        if (IsError) return;
-        STS03VALUE = elementGetter<HTMLDivElement>("sts03Value");
-        if (IsError) return;
+        wasPageInit = true;
 
     }
 
@@ -457,15 +466,9 @@ namespace cellgame {
 
         CVSWIDTH = CVS.offsetWidth;
         CVSHEIGHT = CVS.offsetHeight;
-
-        if (STS02NAME) STS02NAME.textContent = "CVS.offsetWidth";
-        if (STS02VALUE) STS02VALUE.textContent = CVS.offsetWidth.toString();
-
-        if (STS03NAME) STS03NAME.textContent = "CVS.offsetHeight";
-        if (STS03VALUE) STS03VALUE.textContent = CVS.offsetHeight.toString();
-
         CVS.width = CVSWIDTH;
         CVS.height = CVSHEIGHT;
+
         displayCall();
     }
 
@@ -508,6 +511,7 @@ namespace cellgame {
 
     // 画面更新処理を呼び出す
     export function displayCall() {
+        if (!wasPageInit) return;
         canvasDisplay();
         statusDisplay()
     }
@@ -547,18 +551,24 @@ namespace cellgame {
             alert("GameSystem is None");
             return;
         }
+        for(let i = 0; i < 4; i++) {
+            let box = STSBOX[i];
+            if (isNone(box)) continue;
+            let name = STSNAME[i];
+            if (isNone(name)) continue;
+            let value = STSVALUE[i];
+            if (isNone(value)) continue;
+            if (gameSystem.statusName[i].length < 1) {
+                box.style.backgroundColor = Colors.Black;
+                name.textContent = "";
+                value.textContent = "";
+            } else {
+                box.style.backgroundColor = Colors.DarkBlue;
+                name.textContent = gameSystem.statusName[i];
+                value.textContent = gameSystem.status[i].toString();
+            }
 
-        if (STS00NAME) STS00NAME.textContent = gameSystem.statusName[0];
-        if (STS00VALUE) STS00VALUE.textContent = gameSystem.status[0].toString();
-
-        if (STS01NAME) STS01NAME.textContent = gameSystem.statusName[1];
-        if (STS01VALUE) STS01VALUE.textContent = gameSystem.status[1].toString();
-
-        if (STS02NAME) STS02NAME.textContent = gameSystem.statusName[2];
-        if (STS02VALUE) STS02VALUE.textContent = gameSystem.status[2].toString();
-
-        if (STS03NAME) STS03NAME.textContent = gameSystem.statusName[3];
-        if (STS03VALUE) STS03VALUE.textContent = gameSystem.status[3].toString();
+        }
     }
 
 

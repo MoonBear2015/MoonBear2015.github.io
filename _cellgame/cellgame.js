@@ -8,6 +8,7 @@ var cellgame;
 (function (cellgame) {
     /** 全体を通して何かエラーがあった場合 */
     cellgame.IsError = false;
+    cellgame.wasPageInit = false;
     /** 升のコード[cell番地] */
     var gCodes;
     /** バックカラーのフラッシュの有無 */
@@ -148,30 +149,22 @@ var cellgame;
         cellgame.INFO_WINDOW = elementGetter("InfoWindow");
         if (cellgame.IsError)
             return;
-        cellgame.STS00NAME = elementGetter("sts00Name");
-        if (cellgame.IsError)
-            return;
-        cellgame.STS00VALUE = elementGetter("sts00Value");
-        if (cellgame.IsError)
-            return;
-        cellgame.STS01NAME = elementGetter("sts01Name");
-        if (cellgame.IsError)
-            return;
-        cellgame.STS01VALUE = elementGetter("sts01Value");
-        if (cellgame.IsError)
-            return;
-        cellgame.STS02NAME = elementGetter("sts02Name");
-        if (cellgame.IsError)
-            return;
-        cellgame.STS02VALUE = elementGetter("sts02Value");
-        if (cellgame.IsError)
-            return;
-        cellgame.STS03NAME = elementGetter("sts03Name");
-        if (cellgame.IsError)
-            return;
-        cellgame.STS03VALUE = elementGetter("sts03Value");
-        if (cellgame.IsError)
-            return;
+        cellgame.STSBOX = Array(4).fill(null);
+        cellgame.STSNAME = Array(4).fill(null);
+        cellgame.STSVALUE = Array(4).fill(null);
+        cellgame.STSBOX[0] = elementGetter("sts00Box");
+        cellgame.STSNAME[0] = elementGetter("sts00Name");
+        cellgame.STSVALUE[0] = elementGetter("sts00Value");
+        cellgame.STSBOX[1] = elementGetter("sts01Box");
+        cellgame.STSNAME[1] = elementGetter("sts01Name");
+        cellgame.STSVALUE[1] = elementGetter("sts01Value");
+        cellgame.STSBOX[2] = elementGetter("sts02Box");
+        cellgame.STSNAME[2] = elementGetter("sts02Name");
+        cellgame.STSVALUE[2] = elementGetter("sts02Value");
+        cellgame.STSBOX[3] = elementGetter("sts03Box");
+        cellgame.STSNAME[3] = elementGetter("sts03Name");
+        cellgame.STSVALUE[3] = elementGetter("sts03Value");
+        cellgame.wasPageInit = true;
     }
     cellgame.pageInit = pageInit;
     // cellSystemに移行    
@@ -300,14 +293,6 @@ var cellgame;
         }
         cellgame.CVSWIDTH = cellgame.CVS.offsetWidth;
         cellgame.CVSHEIGHT = cellgame.CVS.offsetHeight;
-        if (cellgame.STS02NAME)
-            cellgame.STS02NAME.textContent = "CVS.offsetWidth";
-        if (cellgame.STS02VALUE)
-            cellgame.STS02VALUE.textContent = cellgame.CVS.offsetWidth.toString();
-        if (cellgame.STS03NAME)
-            cellgame.STS03NAME.textContent = "CVS.offsetHeight";
-        if (cellgame.STS03VALUE)
-            cellgame.STS03VALUE.textContent = cellgame.CVS.offsetHeight.toString();
         cellgame.CVS.width = cellgame.CVSWIDTH;
         cellgame.CVS.height = cellgame.CVSHEIGHT;
         displayCall();
@@ -349,6 +334,8 @@ var cellgame;
     // setInterval(writerCall,100);
     // 画面更新処理を呼び出す
     function displayCall() {
+        if (!cellgame.wasPageInit)
+            return;
         canvasDisplay();
         statusDisplay();
     }
@@ -382,22 +369,27 @@ var cellgame;
             alert("GameSystem is None");
             return;
         }
-        if (cellgame.STS00NAME)
-            cellgame.STS00NAME.textContent = cellgame.gameSystem.statusName[0];
-        if (cellgame.STS00VALUE)
-            cellgame.STS00VALUE.textContent = cellgame.gameSystem.status[0].toString();
-        if (cellgame.STS01NAME)
-            cellgame.STS01NAME.textContent = cellgame.gameSystem.statusName[1];
-        if (cellgame.STS01VALUE)
-            cellgame.STS01VALUE.textContent = cellgame.gameSystem.status[1].toString();
-        if (cellgame.STS02NAME)
-            cellgame.STS02NAME.textContent = cellgame.gameSystem.statusName[2];
-        if (cellgame.STS02VALUE)
-            cellgame.STS02VALUE.textContent = cellgame.gameSystem.status[2].toString();
-        if (cellgame.STS03NAME)
-            cellgame.STS03NAME.textContent = cellgame.gameSystem.statusName[3];
-        if (cellgame.STS03VALUE)
-            cellgame.STS03VALUE.textContent = cellgame.gameSystem.status[3].toString();
+        for (let i = 0; i < 4; i++) {
+            let box = cellgame.STSBOX[i];
+            if (cellgame.isNone(box))
+                continue;
+            let name = cellgame.STSNAME[i];
+            if (cellgame.isNone(name))
+                continue;
+            let value = cellgame.STSVALUE[i];
+            if (cellgame.isNone(value))
+                continue;
+            if (cellgame.gameSystem.statusName[i].length < 1) {
+                box.style.backgroundColor = cellgame.Colors.Black;
+                name.textContent = "";
+                value.textContent = "";
+            }
+            else {
+                box.style.backgroundColor = cellgame.Colors.DarkBlue;
+                name.textContent = cellgame.gameSystem.statusName[i];
+                value.textContent = cellgame.gameSystem.status[i].toString();
+            }
+        }
     }
     cellgame.statusDisplay = statusDisplay;
     /** Box Writer */

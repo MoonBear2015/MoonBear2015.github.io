@@ -13,7 +13,7 @@ namespace cellgame {
             this.cellCount = 8;
             this.init();
 
-            this.statusName = ["段位","体力","知力","運"];
+            this.statusName = ["段位","","体力",""];
             this.status = [1,2,3,4];
         }
 
