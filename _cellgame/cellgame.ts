@@ -159,10 +159,10 @@ namespace cellgame {
         }
         // gameReset();
         canvasResize();
-        writerCall();
+        displayCall();
 
         // 定期的に更新（アニメーション、フラッシュ効果）
-        setInterval(writerCall,100);
+        setInterval(displayCall,100);
 
     }
 
@@ -466,7 +466,7 @@ namespace cellgame {
 
         CVS.width = CVSWIDTH;
         CVS.height = CVSHEIGHT;
-        writerCall();
+        displayCall();
     }
 
     // タッチイベント関連
@@ -507,12 +507,13 @@ namespace cellgame {
     // setInterval(writerCall,100);
 
     // 画面更新処理を呼び出す
-    export function writerCall() {
-        canvasWriter();
+    export function displayCall() {
+        canvasDisplay();
+        statusDisplay()
     }
 
     /** Canvas Writer */    
-    export function canvasWriter (
+    export function canvasDisplay (
     ) {
         if (isNone(CVS)) {
             // alert("Canvas is None");
@@ -536,18 +537,34 @@ namespace cellgame {
         ctx.fillStyle = Colors.DarkSlateGray;
         ctx.fillRect(gX2,gY2,gW2,gH2);
 
-        AllCellWriter();
-
-        if (STS00NAME) STS00NAME.textContent = "CVSWIDTH";
-        if (STS00VALUE) STS00VALUE.textContent = CVSWIDTH.toString();
-
-        if (STS01NAME) STS01NAME.textContent = "Height";
-        if (STS01VALUE) STS01VALUE.textContent = CVSHEIGHT.toString();
+        AllCellDisplay();
 
     }
 
+    /** ステータス表示 */
+    export function statusDisplay() {
+        if (isNone(gameSystem)) {
+            alert("GameSystem is None");
+            return;
+        }
+
+        if (STS00NAME) STS00NAME.textContent = gameSystem.statusName[0];
+        if (STS00VALUE) STS00VALUE.textContent = gameSystem.status[0].toString();
+
+        if (STS01NAME) STS01NAME.textContent = gameSystem.statusName[1];
+        if (STS01VALUE) STS01VALUE.textContent = gameSystem.status[1].toString();
+
+        if (STS02NAME) STS02NAME.textContent = gameSystem.statusName[2];
+        if (STS02VALUE) STS02VALUE.textContent = gameSystem.status[2].toString();
+
+        if (STS03NAME) STS03NAME.textContent = gameSystem.statusName[3];
+        if (STS03VALUE) STS03VALUE.textContent = gameSystem.status[3].toString();
+    }
+
+
+
     /** Box Writer */
-    export function BoxWriter (
+    export function boxDisplay (
         backColor : string,
         x : number,
         y : number,
@@ -572,7 +589,7 @@ namespace cellgame {
 
     
     /** Border Writer */
-    export function BorderWriter (
+    export function borderDisplay (
         backColor : string,
         x0 : number,
         y0 : number,
@@ -599,7 +616,7 @@ namespace cellgame {
 
 
     /** Text Writer : 升目に文字と背景色を記入 */
-    export function TextWriter (
+    export function cellTextDisplay (
         char : string,
         foreColor : string,
         backColor : string,
@@ -634,7 +651,8 @@ namespace cellgame {
         ctx.fillText(char0, left + textX, top + textY);
     }
 
-    export function CellWriter (
+    /** 升目の表示 */
+    export function cellDisplay (
         x : number,
         y : number,
         isFlash : boolean
@@ -647,7 +665,7 @@ namespace cellgame {
 
         let a = gameSystem.cellAddress(x,y);
         let c = gameSystem.codes[a];
-        TextWriter(
+        cellTextDisplay(
             cells[c].char,
             cells[c].foreColor,
             cells[c].backColor,
@@ -656,7 +674,8 @@ namespace cellgame {
         );
     }
 
-    export function AllCellWriter () {
+    /** 全升 表示 */
+    export function AllCellDisplay () {
         if (isNone(CVS)) {
             // alert("Canvas is None");
             return;
@@ -665,7 +684,7 @@ namespace cellgame {
             for (let x = 0; x < gameSystem.cellCount; x++) {
                 let a = gameSystem.cellAddress(x,y);
                 if (gameSystem.codes[a] < cells.length) {
-                    CellWriter(x,y,gameSystem.isflashes[a]);
+                    cellDisplay(x,y,gameSystem.isflashes[a]);
                 }
             }
         }

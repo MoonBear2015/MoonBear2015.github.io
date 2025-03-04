@@ -34,6 +34,12 @@ namespace cellgame {
         /** Flashフラグ設定(x,y指定) 画面出力込み */
         isFlashSetter(x:number,y:number,isFlash:boolean) : void;
 
+        /** ステータス名称 */
+        statusName : string[];
+
+        /** ステータス */
+        status : number[];
+
     }
 
 }

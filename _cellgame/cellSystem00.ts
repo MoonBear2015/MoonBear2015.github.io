@@ -7,6 +7,8 @@ namespace cellgame {
         public cellCount : number = 0;
         public codes : number[] = [];
         public isflashes : boolean[] = [];
+        public statusName : string[] = [];
+        public status : number[] = [];
 
         /** コンストラクタ */
         constructor() {            
@@ -20,6 +22,8 @@ namespace cellgame {
         public init() {
             this.codes = Array(this.addressLength()).fill(0);
             this.isflashes = Array(this.addressLength()).fill(false);
+            this.statusName = Array(4).fill("");
+            this.status = Array(4).fill(0);
 
             let c = 0;
             for(let y = 0; y < this.cellCount; y++) {
@@ -72,7 +76,7 @@ namespace cellgame {
         public cellSetter(x:number,y:number,code:number,isFlash:boolean) {
             this.codeSetter(x,y,code);
             this.isFlashSetter(x,y,isFlash);
-            cellgame.CellWriter(x,y,isFlash);
+            cellgame.cellDisplay(x,y,isFlash);
         }
     }
 

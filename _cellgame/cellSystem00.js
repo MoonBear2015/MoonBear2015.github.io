@@ -12,6 +12,8 @@ var cellgame;
             this.cellCount = 0;
             this.codes = [];
             this.isflashes = [];
+            this.statusName = [];
+            this.status = [];
             /** 番地の数 */
             this.addressLength = () => this.cellCount * this.cellCount;
             /** cellコード（x,y指定） */
@@ -35,6 +37,8 @@ var cellgame;
         init() {
             this.codes = Array(this.addressLength()).fill(0);
             this.isflashes = Array(this.addressLength()).fill(false);
+            this.statusName = Array(4).fill("");
+            this.status = Array(4).fill(0);
             let c = 0;
             for (let y = 0; y < this.cellCount; y++) {
                 for (let x = 0; x < this.cellCount; x++) {
@@ -74,7 +78,7 @@ var cellgame;
         cellSetter(x, y, code, isFlash) {
             this.codeSetter(x, y, code);
             this.isFlashSetter(x, y, isFlash);
-            cellgame.CellWriter(x, y, isFlash);
+            cellgame.cellDisplay(x, y, isFlash);
         }
     }
     cellgame.CellGameSystem00 = CellGameSystem00;

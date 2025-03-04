@@ -20,9 +20,9 @@ var cellgame;
         }
         // gameReset();
         canvasResize();
-        writerCall();
+        displayCall();
         // 定期的に更新（アニメーション、フラッシュ効果）
-        setInterval(writerCall, 100);
+        setInterval(displayCall, 100);
     };
     /** ブラウザ要素のサイズ計算 */
     function CalcGameSize(cellCount) {
@@ -310,7 +310,7 @@ var cellgame;
             cellgame.STS03VALUE.textContent = cellgame.CVS.offsetHeight.toString();
         cellgame.CVS.width = cellgame.CVSWIDTH;
         cellgame.CVS.height = cellgame.CVSHEIGHT;
-        writerCall();
+        displayCall();
     }
     cellgame.canvasResize = canvasResize;
     // タッチイベント関連
@@ -348,12 +348,13 @@ var cellgame;
     // // 定期的に更新（アニメーション、フラッシュ効果）
     // setInterval(writerCall,100);
     // 画面更新処理を呼び出す
-    function writerCall() {
-        canvasWriter();
+    function displayCall() {
+        canvasDisplay();
+        statusDisplay();
     }
-    cellgame.writerCall = writerCall;
+    cellgame.displayCall = displayCall;
     /** Canvas Writer */
-    function canvasWriter() {
+    function canvasDisplay() {
         if (cellgame.isNone(cellgame.CVS)) {
             // alert("Canvas is None");
             return;
@@ -372,19 +373,35 @@ var cellgame;
         ctx.fillRect(0, 0, cellgame.CVSWIDTH, cellgame.CVSHEIGHT);
         ctx.fillStyle = cellgame.Colors.DarkSlateGray;
         ctx.fillRect(cellgame.gX2, cellgame.gY2, cellgame.gW2, cellgame.gH2);
-        AllCellWriter();
-        if (cellgame.STS00NAME)
-            cellgame.STS00NAME.textContent = "CVSWIDTH";
-        if (cellgame.STS00VALUE)
-            cellgame.STS00VALUE.textContent = cellgame.CVSWIDTH.toString();
-        if (cellgame.STS01NAME)
-            cellgame.STS01NAME.textContent = "Height";
-        if (cellgame.STS01VALUE)
-            cellgame.STS01VALUE.textContent = cellgame.CVSHEIGHT.toString();
+        AllCellDisplay();
     }
-    cellgame.canvasWriter = canvasWriter;
+    cellgame.canvasDisplay = canvasDisplay;
+    /** ステータス表示 */
+    function statusDisplay() {
+        if (cellgame.isNone(cellgame.gameSystem)) {
+            alert("GameSystem is None");
+            return;
+        }
+        if (cellgame.STS00NAME)
+            cellgame.STS00NAME.textContent = cellgame.gameSystem.statusName[0];
+        if (cellgame.STS00VALUE)
+            cellgame.STS00VALUE.textContent = cellgame.gameSystem.status[0].toString();
+        if (cellgame.STS01NAME)
+            cellgame.STS01NAME.textContent = cellgame.gameSystem.statusName[1];
+        if (cellgame.STS01VALUE)
+            cellgame.STS01VALUE.textContent = cellgame.gameSystem.status[1].toString();
+        if (cellgame.STS02NAME)
+            cellgame.STS02NAME.textContent = cellgame.gameSystem.statusName[2];
+        if (cellgame.STS02VALUE)
+            cellgame.STS02VALUE.textContent = cellgame.gameSystem.status[2].toString();
+        if (cellgame.STS03NAME)
+            cellgame.STS03NAME.textContent = cellgame.gameSystem.statusName[3];
+        if (cellgame.STS03VALUE)
+            cellgame.STS03VALUE.textContent = cellgame.gameSystem.status[3].toString();
+    }
+    cellgame.statusDisplay = statusDisplay;
     /** Box Writer */
-    function BoxWriter(backColor, x, y, isFlash) {
+    function boxDisplay(backColor, x, y, isFlash) {
         if (cellgame.isNone(cellgame.CVS)) {
             // alert("Canvas is None");
             return;
@@ -400,9 +417,9 @@ var cellgame;
         ctx.fillStyle = cellgame.isRandomColor(isFlash, backColor);
         ctx.fillRect(left, top, width, height);
     }
-    cellgame.BoxWriter = BoxWriter;
+    cellgame.boxDisplay = boxDisplay;
     /** Border Writer */
-    function BorderWriter(backColor, x0, y0, x1, y1, isFlash) {
+    function borderDisplay(backColor, x0, y0, x1, y1, isFlash) {
         if (cellgame.isNone(cellgame.CVS)) {
             // alert("Canvas is None");
             return;
@@ -417,9 +434,9 @@ var cellgame;
         ctx.fillStyle = cellgame.isRandomColor(isFlash, backColor);
         ctx.fillRect(cellgame.gX2 + px0, cellgame.gY2 + py0, px1, py1);
     }
-    cellgame.BorderWriter = BorderWriter;
+    cellgame.borderDisplay = borderDisplay;
     /** Text Writer : 升目に文字と背景色を記入 */
-    function TextWriter(char, foreColor, backColor, left, top, width, height, isFlash) {
+    function cellTextDisplay(char, foreColor, backColor, left, top, width, height, isFlash) {
         if (cellgame.isNone(cellgame.CVS)) {
             // alert("Canvas is None");
             return;
@@ -442,18 +459,20 @@ var cellgame;
         ctx.fillStyle = foreColor;
         ctx.fillText(char0, left + textX, top + textY);
     }
-    cellgame.TextWriter = TextWriter;
-    function CellWriter(x, y, isFlash) {
+    cellgame.cellTextDisplay = cellTextDisplay;
+    /** 升目の表示 */
+    function cellDisplay(x, y, isFlash) {
         if (cellgame.isNone(cellgame.CVS)) {
             // alert("Canvas is None");
             return;
         }
         let a = cellgame.gameSystem.cellAddress(x, y);
         let c = cellgame.gameSystem.codes[a];
-        TextWriter(cellgame.cells[c].char, cellgame.cells[c].foreColor, cellgame.cells[c].backColor, cellgame.gX3[a], cellgame.gY3[a], cellgame.gW3, cellgame.gH3, isFlash);
+        cellTextDisplay(cellgame.cells[c].char, cellgame.cells[c].foreColor, cellgame.cells[c].backColor, cellgame.gX3[a], cellgame.gY3[a], cellgame.gW3, cellgame.gH3, isFlash);
     }
-    cellgame.CellWriter = CellWriter;
-    function AllCellWriter() {
+    cellgame.cellDisplay = cellDisplay;
+    /** 全升 表示 */
+    function AllCellDisplay() {
         if (cellgame.isNone(cellgame.CVS)) {
             // alert("Canvas is None");
             return;
@@ -462,10 +481,10 @@ var cellgame;
             for (let x = 0; x < cellgame.gameSystem.cellCount; x++) {
                 let a = cellgame.gameSystem.cellAddress(x, y);
                 if (cellgame.gameSystem.codes[a] < cellgame.cells.length) {
-                    CellWriter(x, y, cellgame.gameSystem.isflashes[a]);
+                    cellDisplay(x, y, cellgame.gameSystem.isflashes[a]);
                 }
             }
         }
     }
-    cellgame.AllCellWriter = AllCellWriter;
+    cellgame.AllCellDisplay = AllCellDisplay;
 })(cellgame || (cellgame = {}));
