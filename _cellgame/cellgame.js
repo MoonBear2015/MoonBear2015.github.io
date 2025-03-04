@@ -337,7 +337,7 @@ var cellgame;
         if (!cellgame.wasPageInit)
             return;
         canvasDisplay();
-        statusDisplay();
+        allStatusDisplay();
     }
     cellgame.displayCall = displayCall;
     /** Canvas Writer */
@@ -363,32 +363,44 @@ var cellgame;
         AllCellDisplay();
     }
     cellgame.canvasDisplay = canvasDisplay;
-    /** ステータス表示 */
-    function statusDisplay() {
+    /** 全ステータス表示 */
+    function allStatusDisplay() {
         if (cellgame.isNone(cellgame.gameSystem)) {
             alert("GameSystem is None");
             return;
         }
         for (let i = 0; i < 4; i++) {
-            let box = cellgame.STSBOX[i];
-            if (cellgame.isNone(box))
-                continue;
-            let name = cellgame.STSNAME[i];
-            if (cellgame.isNone(name))
-                continue;
-            let value = cellgame.STSVALUE[i];
-            if (cellgame.isNone(value))
-                continue;
-            if (cellgame.gameSystem.statusName[i].length < 1) {
-                box.style.backgroundColor = cellgame.Colors.Black;
-                name.textContent = "";
-                value.textContent = "";
-            }
-            else {
-                box.style.backgroundColor = cellgame.Colors.DarkBlue;
-                name.textContent = cellgame.gameSystem.statusName[i];
-                value.textContent = cellgame.gameSystem.status[i].toString();
-            }
+            statusDisplay(i);
+        }
+    }
+    cellgame.allStatusDisplay = allStatusDisplay;
+    /** ステータス表示 */
+    function statusDisplay(statusIndex) {
+        if (cellgame.isNone(cellgame.gameSystem)) {
+            alert("GameSystem is None");
+            return;
+        }
+        let i = statusIndex;
+        if (i < 0 || i >= 4)
+            return;
+        let box = cellgame.STSBOX[i];
+        if (cellgame.isNone(box))
+            return;
+        let name = cellgame.STSNAME[i];
+        if (cellgame.isNone(name))
+            return;
+        let value = cellgame.STSVALUE[i];
+        if (cellgame.isNone(value))
+            return;
+        if (cellgame.gameSystem.statusName[i].length < 1) {
+            box.style.backgroundColor = cellgame.Colors.Black;
+            name.textContent = "";
+            value.textContent = "";
+        }
+        else {
+            box.style.backgroundColor = cellgame.Colors.DarkBlue;
+            name.textContent = cellgame.gameSystem.statusName[i];
+            value.textContent = cellgame.gameSystem.status[i].toString();
         }
     }
     cellgame.statusDisplay = statusDisplay;

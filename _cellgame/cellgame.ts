@@ -513,7 +513,7 @@ namespace cellgame {
     export function displayCall() {
         if (!wasPageInit) return;
         canvasDisplay();
-        statusDisplay()
+        allStatusDisplay()
     }
 
     /** Canvas Writer */    
@@ -545,30 +545,43 @@ namespace cellgame {
 
     }
 
-    /** ステータス表示 */
-    export function statusDisplay() {
+    /** 全ステータス表示 */
+    export function allStatusDisplay() {
         if (isNone(gameSystem)) {
             alert("GameSystem is None");
             return;
         }
         for(let i = 0; i < 4; i++) {
-            let box = STSBOX[i];
-            if (isNone(box)) continue;
-            let name = STSNAME[i];
-            if (isNone(name)) continue;
-            let value = STSVALUE[i];
-            if (isNone(value)) continue;
-            if (gameSystem.statusName[i].length < 1) {
-                box.style.backgroundColor = Colors.Black;
-                name.textContent = "";
-                value.textContent = "";
-            } else {
-                box.style.backgroundColor = Colors.DarkBlue;
-                name.textContent = gameSystem.statusName[i];
-                value.textContent = gameSystem.status[i].toString();
-            }
-
+            statusDisplay(i);
         }
+    }
+
+    /** ステータス表示 */
+    export function statusDisplay(statusIndex : number) {
+        if (isNone(gameSystem)) {
+            alert("GameSystem is None");
+            return;
+        }
+        let i = statusIndex;
+
+        if (i < 0 || i >= 4) return;        
+        let box = STSBOX[i];
+        if (isNone(box)) return;
+        let name = STSNAME[i];
+        if (isNone(name)) return;
+        let value = STSVALUE[i];
+        if (isNone(value)) return;
+
+        if (gameSystem.statusName[i].length < 1) {
+            box.style.backgroundColor = Colors.Black;
+            name.textContent = "";
+            value.textContent = "";
+        } else {
+            box.style.backgroundColor = Colors.DarkBlue;
+            name.textContent = gameSystem.statusName[i];
+            value.textContent = gameSystem.status[i].toString();
+        }
+
     }
 
 
