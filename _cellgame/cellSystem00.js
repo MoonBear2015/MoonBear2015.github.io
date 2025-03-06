@@ -8,7 +8,6 @@ var cellgame;
     class CellGameSystem00 {
         /** コンストラクタ */
         constructor() {
-            // this.cellCount = 10;
             this.cellCount = 0;
             this.codes = [];
             this.statusName = [];
@@ -22,14 +21,21 @@ var cellgame;
                     return -1;
                 return this.codes[a];
             };
+            this.statusName = Array(4).fill("");
+            this.status = Array(4).fill(0);
             // 初期化
             this.init();
         }
         /** 初期化 */
         init() {
+            this.cellReset(10);
+        }
+        /** 盤面白紙
+         * @param cellCount : セル数
+         */
+        cellReset(cellCount = 10) {
+            this.cellCount = cellCount;
             this.codes = Array(this.addressLength()).fill(0);
-            this.statusName = Array(4).fill("");
-            this.status = Array(4).fill(0);
             let c = 0;
             for (let y = 0; y < this.cellCount; y++) {
                 for (let x = 0; x < this.cellCount; x++) {

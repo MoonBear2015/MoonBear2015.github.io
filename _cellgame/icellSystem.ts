@@ -12,6 +12,11 @@ namespace cellgame {
         
         /** 初期化 */
         init() : void;
+
+        /** 盤面白紙
+         * @param cellCount : セル数
+         */
+        cellReset(cellCount : number) : void;
             
         /** 番地の数 */
         addressLength() : number;

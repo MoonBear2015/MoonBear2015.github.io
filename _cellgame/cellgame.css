@@ -14,12 +14,12 @@ body {
     margin: 0;
     display: flex;
     flex-direction: column;
-    height: 90%;
+    height: 70%;
     width: 100%;
 }
 #UnderSpace {
     order: 2;
-    height: 10%;
+    height: 30%;
     background-color: black;
 }
 
@@ -35,6 +35,7 @@ body {
     background-color: darkgreen;
 }
 
+
 #PlayFlex {
     display:    flex;
     flex-direction: column;
@@ -47,12 +48,19 @@ body {
     /* flex: 1; */
     order: 1;
     width: 100%;
-    height: 90%;
+    height: 80%;
 }
+
+#SelecgtWindow {
+    order: 2;
+    background-color: darkred;
+    height: 10%;
+}
+
 
 #MsgWindow {
     background-color: darkslategray;
-    order: 2;
+    order: 3;
     width: 100%;
     height: 10%;
 }

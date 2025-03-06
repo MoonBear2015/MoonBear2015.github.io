@@ -11,7 +11,8 @@ namespace cellgame {
 
         /** コンストラクタ */
         constructor() {            
-            // this.cellCount = 10;
+            this.statusName = Array(4).fill("");
+            this.status = Array(4).fill(0);
 
             // 初期化
             this.init();
@@ -19,9 +20,15 @@ namespace cellgame {
 
         /** 初期化 */
         public init() {
+            this.cellReset(10);
+        }
+
+        /** 盤面白紙
+         * @param cellCount : セル数
+         */
+        public cellReset(cellCount : number = 10) : void {
+            this.cellCount = cellCount;
             this.codes = Array(this.addressLength()).fill(0);
-            this.statusName = Array(4).fill("");
-            this.status = Array(4).fill(0);
 
             let c = 0;
             for(let y = 0; y < this.cellCount; y++) {
