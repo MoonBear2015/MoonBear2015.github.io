@@ -51,10 +51,21 @@ body {
     height: 80%;
 }
 
-#SelecgtWindow {
+#SelectWindow {
     order: 2;
     background-color: darkred;
     height: 10%;
+    font-size: calc(10px + 3vmin);
+    text-align-last: center;
+}
+
+#SelectGameLabel {
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+#SelectGame {
+    font-size: calc(10px + 2vmin);
 }
 
 
