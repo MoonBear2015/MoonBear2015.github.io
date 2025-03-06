@@ -10,12 +10,23 @@ namespace cellgame {
 
         constructor() {
             super();
-            this.cellCount = 8;
+            this.cellCount = 6;
             this.init();
 
             this.statusName = ["段位","","体力",""];
             this.status = [1,2,3,4];
         }
+
+        
+        /** セル選択
+         * @param p : 選択桁位置
+         */
+        public pointSelect(p : Point) : void {
+            this.cellCount++;
+            if (this.cellCount > 10) this.cellCount = 4;
+            return;
+        }
+
 
     }
 

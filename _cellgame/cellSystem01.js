@@ -10,10 +10,19 @@ var cellgame;
     class CellGameSystem01 extends cellgame.CellGameSystem00 {
         constructor() {
             super();
-            this.cellCount = 8;
+            this.cellCount = 6;
             this.init();
             this.statusName = ["段位", "", "体力", ""];
             this.status = [1, 2, 3, 4];
+        }
+        /** セル選択
+         * @param p : 選択桁位置
+         */
+        pointSelect(p) {
+            this.cellCount++;
+            if (this.cellCount > 10)
+                this.cellCount = 4;
+            return;
         }
     }
     cellgame.CellGameSystem01 = CellGameSystem01;

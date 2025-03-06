@@ -314,8 +314,15 @@ var cellgame;
         let p = touchPoint(x, y);
         if (p.isUndefined)
             return;
-        alert("touchHandler (" + p.x + "," + p.y + ") : " + p.address(cellgame.gameSystem.cellCount));
+        touchPointSend(p);
     }
+    /** タッチ箇所送信 */
+    function touchPointSend(p) {
+        if (cellgame.isNone(cellgame.gameSystem))
+            return;
+        cellgame.gameSystem.touchPointRecv(p);
+    }
+    cellgame.touchPointSend = touchPointSend;
     function gameReset() {
         // let c = 0;
         // for(let y = 0; y < gameSystem.cellCount; y++) {
@@ -465,14 +472,14 @@ var cellgame;
     }
     cellgame.cellTextDisplay = cellTextDisplay;
     /** 升目の表示 */
-    function cellDisplay(x, y, isFlash) {
+    function cellDisplay(x, y) {
         if (cellgame.isNone(cellgame.CVS)) {
             // alert("Canvas is None");
             return;
         }
         let a = cellgame.gameSystem.cellAddress(x, y);
         let c = cellgame.gameSystem.codes[a];
-        cellTextDisplay(cellgame.cells[c].char, cellgame.cells[c].foreColor, cellgame.cells[c].backColor, cellgame.gX3[a], cellgame.gY3[a], cellgame.gW3, cellgame.gH3, isFlash);
+        cellTextDisplay(cellgame.cells[c].char, cellgame.cells[c].foreColor, cellgame.cells[c].backColor, cellgame.gX3[a], cellgame.gY3[a], cellgame.gW3, cellgame.gH3, cellgame.cells[c].isFlash);
     }
     cellgame.cellDisplay = cellDisplay;
     /** 全升 表示 */
@@ -485,7 +492,7 @@ var cellgame;
             for (let x = 0; x < cellgame.gameSystem.cellCount; x++) {
                 let a = cellgame.gameSystem.cellAddress(x, y);
                 if (cellgame.gameSystem.codes[a] < cellgame.cells.length) {
-                    cellDisplay(x, y, cellgame.gameSystem.isflashes[a]);
+                    cellDisplay(x, y);
                 }
             }
         }

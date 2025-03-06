@@ -9,9 +9,6 @@ namespace cellgame {
 
         /** cellコード */
         codes : number[];
-
-        /** 背景色のフラッシュ？ */
-        isflashes : boolean[];
         
         /** 初期化 */
         init() : void;
@@ -28,17 +25,27 @@ namespace cellgame {
         /** cellコード設定 (x,y指定) 画面出力込み */
         codeSetter( x : number, y : number, code : number) : void;
 
-        /** Flashフラグ(x,y指定) */
-        isFlash(x : number,y : number) : boolean;
-
-        /** Flashフラグ設定(x,y指定) 画面出力込み */
-        isFlashSetter(x:number,y:number,isFlash:boolean) : void;
-
         /** ステータス名称 */
         statusName : string[];
 
         /** ステータス */
         status : number[];
+
+        /** タッチ箇所受信
+         * @param p : タッチ桁位置
+         */
+        touchPointRecv(p : Point) : void;
+
+        /** コードカウントアップ 
+         * @param code : 現在のコード
+         * @returns 次のコード 
+        */
+        codeCountUp(code : number) : number;
+
+        /** セル選択
+         * @param p : 選択桁位置
+         */
+        pointSelect(p : Point) : void;
 
     }
 

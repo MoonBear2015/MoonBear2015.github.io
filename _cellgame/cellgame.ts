@@ -489,7 +489,13 @@ namespace cellgame {
     ) {
         let p = touchPoint(x,y);
         if (p.isUndefined) return;
-        alert("touchHandler (" + p.x + "," + p.y + ") : " + p.address(gameSystem.cellCount));
+        touchPointSend(p);
+    }
+
+    /** タッチ箇所送信 */
+    export function touchPointSend(p : Point) {
+        if (isNone(gameSystem)) return;
+        gameSystem.touchPointRecv(p);
     }
 
     export function gameReset() {
@@ -678,8 +684,6 @@ namespace cellgame {
     export function cellDisplay (
         x : number,
         y : number,
-        isFlash : boolean
-
     ) {
         if (isNone(CVS)) {
             // alert("Canvas is None");
@@ -693,7 +697,7 @@ namespace cellgame {
             cells[c].foreColor,
             cells[c].backColor,
             gX3[a],gY3[a],gW3,gH3,
-            isFlash
+            cells[c].isFlash
         );
     }
 
@@ -707,7 +711,7 @@ namespace cellgame {
             for (let x = 0; x < gameSystem.cellCount; x++) {
                 let a = gameSystem.cellAddress(x,y);
                 if (gameSystem.codes[a] < cells.length) {
-                    cellDisplay(x,y,gameSystem.isflashes[a]);
+                    cellDisplay(x,y);
                 }
             }
         }
