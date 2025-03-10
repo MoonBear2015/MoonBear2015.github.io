@@ -6,6 +6,7 @@ namespace cellgame {
     export abstract class CellGameSystem00 implements ICellGameSystem {
         public cellCount : number = 0;
         public codes : number[] = [];
+        public messages : IMessage[] = [];
         public statusName : string[] = [];
         public status : number[] = [];
 
@@ -29,6 +30,7 @@ namespace cellgame {
         public cellReset(cellCount : number = 10) : void {
             this.cellCount = cellCount;
             this.codes = Array(this.addressLength()).fill(0);
+            this.messages = [];
             this.displayMaker();
         }
             
@@ -48,17 +50,11 @@ namespace cellgame {
             if (a < 0) return -1;
             return this.codes[a];
         }
-        /** cellコード設定 (x,y指定) 画面出力込み */
+        /** cellコード設定 (x,y指定) */
         public codeSetter( x : number, y : number, code : number) {
             let a : number = this.cellAddress(x,y);
             if (a < 0) return;
             this.codes[a] = code;
-        }
-
-        /** Cell設定 ＋ 画面表示 */
-        public cellSetter(x:number,y:number,code:number) {
-            this.codeSetter(x,y,code);
-            // cellgame.cellDisplay(x,y);
         }
 
         /** タッチ箇所受信 */
@@ -99,7 +95,7 @@ namespace cellgame {
             if (a < 0) return;
             let code = this.code(p.x,p.y);
             code = this.codeCountUp(code);
-            this.cellSetter(p.x,p.y,code);
+            this.codeSetter(p.x,p.y,code);
             return;
         }
 
@@ -117,10 +113,13 @@ namespace cellgame {
             let c = 0;
             for(let y = 0; y < this.cellCount; y++) {
                 for(let x = 0; x < this.cellCount; x++) {
-                    this.cellSetter(x,y,c);
+                    this.codeSetter(x,y,c);
                 }
-                c = this.codeCountUp(c);
+                c = this.codeCountUp(c);                
             }
+            this.messages = [];
+            this.messages.push(new Message("メッセージ",1,0,Colors.White,Colors.Blue,true));
+            
         }
 
 

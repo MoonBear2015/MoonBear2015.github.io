@@ -347,6 +347,7 @@ var cellgame;
             return;
         cellgame.gameSystem.displayMaker();
         canvasDisplay();
+        messagesDisplay();
         allStatusDisplay();
     }
     cellgame.displayCall = displayCall;
@@ -485,8 +486,23 @@ var cellgame;
         cellTextDisplay(cellgame.cells[c].char, cellgame.cells[c].foreColor, cellgame.cells[c].backColor, cellgame.gX3[a], cellgame.gY3[a], cellgame.gW3, cellgame.gH3, cellgame.cells[c].isFlash);
     }
     cellgame.cellDisplay = cellDisplay;
+    /**
+     * 全メッセージ表示
+     */
+    function messagesDisplay() {
+        if (cellgame.isNone(cellgame.gameSystem))
+            return;
+        for (let i = 0; i < cellgame.gameSystem.messages.length; i++) {
+            cellgame.messageDisplay(cellgame.gameSystem.messages[i]);
+        }
+    }
+    cellgame.messagesDisplay = messagesDisplay;
+    /** メッセージ表示
+     * @param message : メッセージ
+     */
+    cellgame.messageDisplay = (message) => textDisplay(message.text, message.x, message.y, message.foreColor, message.backColor, message.isFlash);
     /** 文字列表示
-     * @param text : 表示文字
+     * @param text : 表示文字列
      * @param x : 横位置
      * @param y : 縦位置
      * @param foreColor : 文字色
@@ -501,6 +517,10 @@ var cellgame;
         if (ctx == null)
             return;
         if (text.length < 1)
+            return;
+        if (x < 0 || x >= cellgame.gameSystem.cellCount)
+            return;
+        if (y < 0 || y >= cellgame.gameSystem.cellCount)
             return;
         let fontSize = Math.min(cellgame.gW3, cellgame.gH3) * 0.75;
         ctx.font = `${fontSize}px serif`;

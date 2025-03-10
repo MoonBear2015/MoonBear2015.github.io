@@ -10,6 +10,7 @@ var cellgame;
         constructor() {
             this.cellCount = 0;
             this.codes = [];
+            this.messages = [];
             this.statusName = [];
             this.status = [];
             /** 番地の数 */
@@ -36,6 +37,7 @@ var cellgame;
         cellReset(cellCount = 10) {
             this.cellCount = cellCount;
             this.codes = Array(this.addressLength()).fill(0);
+            this.messages = [];
             this.displayMaker();
         }
         /** 番地計算 */
@@ -46,17 +48,12 @@ var cellgame;
                 return -1;
             return y * this.cellCount + x;
         }
-        /** cellコード設定 (x,y指定) 画面出力込み */
+        /** cellコード設定 (x,y指定) */
         codeSetter(x, y, code) {
             let a = this.cellAddress(x, y);
             if (a < 0)
                 return;
             this.codes[a] = code;
-        }
-        /** Cell設定 ＋ 画面表示 */
-        cellSetter(x, y, code) {
-            this.codeSetter(x, y, code);
-            // cellgame.cellDisplay(x,y);
         }
         /** タッチ箇所受信 */
         touchPointRecv(p) {
@@ -96,7 +93,7 @@ var cellgame;
                 return;
             let code = this.code(p.x, p.y);
             code = this.codeCountUp(code);
-            this.cellSetter(p.x, p.y, code);
+            this.codeSetter(p.x, p.y, code);
             return;
         }
         /**
@@ -112,10 +109,12 @@ var cellgame;
             let c = 0;
             for (let y = 0; y < this.cellCount; y++) {
                 for (let x = 0; x < this.cellCount; x++) {
-                    this.cellSetter(x, y, c);
+                    this.codeSetter(x, y, c);
                 }
                 c = this.codeCountUp(c);
             }
+            this.messages = [];
+            this.messages.push(new cellgame.Message("メッセージ", 1, 0, cellgame.Colors.White, cellgame.Colors.Blue, true));
         }
     }
     cellgame.CellGameSystem00 = CellGameSystem00;

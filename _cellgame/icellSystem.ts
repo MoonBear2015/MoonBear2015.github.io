@@ -9,6 +9,9 @@ namespace cellgame {
 
         /** cellコード */
         codes : number[];
+
+        /** 表示メッセージ */
+        messages : IMessage[];
         
         /** 初期化 */
         init() : void;
@@ -27,7 +30,7 @@ namespace cellgame {
         /** cellコード（x,y指定） */
         code(x : number,y : number) : number;
 
-        /** cellコード設定 (x,y指定) 画面出力込み */
+        /** cellコード設定 (x,y指定) */
         codeSetter( x : number, y : number, code : number) : void;
 
         /** ステータス名称 */

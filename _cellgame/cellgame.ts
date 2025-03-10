@@ -521,6 +521,7 @@ namespace cellgame {
         if (isNone(gameSystem)) return;
         gameSystem.displayMaker();
         canvasDisplay();
+        messagesDisplay();
         allStatusDisplay();
     }
 
@@ -703,8 +704,24 @@ namespace cellgame {
         );
     }
 
+    /**
+     * 全メッセージ表示
+     */
+    export function messagesDisplay() : void {
+        if (isNone(gameSystem)) return;
+        for(let i = 0; i < gameSystem.messages.length; i++) {
+            messageDisplay(gameSystem.messages[i]);
+        }   
+    }
+
+    /** メッセージ表示
+     * @param message : メッセージ
+     */
+    export const messageDisplay = ( message : IMessage) => 
+        textDisplay(message.text,message.x,message.y,message.foreColor,message.backColor,message.isFlash);
+
     /** 文字列表示
-     * @param text : 表示文字
+     * @param text : 表示文字列
      * @param x : 横位置
      * @param y : 縦位置
      * @param foreColor : 文字色
@@ -726,6 +743,9 @@ namespace cellgame {
         if (ctx == null) return;
 
         if (text.length < 1) return;
+
+        if (x < 0 || x >= gameSystem.cellCount) return;
+        if (y < 0 || y >= gameSystem.cellCount) return;
 
         let fontSize = Math.min(gW3, gH3) * 0.75;
         ctx.font = `${fontSize}px serif`;

@@ -103,4 +103,39 @@ var cellgame;
         }
     }
     cellgame.Cell = Cell;
+    /**
+     * class Message
+     * メッセージ
+     */
+    class Message {
+        constructor(text = '', x = 0, y = 0, foreColor = cellgame.Colors.White, backColor = cellgame.Colors.Black, isFlash = false) {
+            this.text = text;
+            this.x = x;
+            this.y = y;
+            this.foreColor = foreColor;
+            this.backColor = backColor;
+            this.isFlash = isFlash;
+        }
+        /** Copy
+         * @param msg:コピー元
+         * @returns 新規インスタンス
+         */
+        static Copy(msg) {
+            let result = new Message();
+            result.Paste(msg);
+            return result;
+        }
+        /** Paste
+         * @param msg:貼り付け元
+         */
+        Paste(msg) {
+            this.text = msg.text;
+            this.x = msg.x;
+            this.y = msg.y;
+            this.foreColor = msg.foreColor;
+            this.backColor = msg.backColor;
+            this.isFlash = msg.isFlash;
+        }
+    }
+    cellgame.Message = Message;
 })(cellgame || (cellgame = {}));

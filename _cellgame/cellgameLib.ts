@@ -156,11 +156,76 @@ namespace cellgame {
             this.backColor = cell.backColor;
             this.isFlash = cell.isFlash;
         }
+    }
 
+    /**
+     * interface IMessage
+     * メッセージ
+     */
+    export interface IMessage {
+        /** メッセージ文字列 */
+        text : string;
+        /** 表示位置 x */
+        x : number;
+        /** 表示位置 y */
+        y : number;
+        /** 文字色 */
+        foreColor : string;
+        /** 背景色 */
+        backColor : string;
+        /** フラッシュ？ */        
+        isFlash : boolean;
+    }
 
+    /**
+     * class Message
+     * メッセージ
+     */
+    export class Message implements IMessage {
+        text : string;
+        x : number;
+        y : number;
+        foreColor : string;
+        backColor : string;
+        isFlash : boolean;
 
-        
+        constructor(
+            text : string = '',
+            x : number = 0,
+            y : number = 0,
+            foreColor : string = Colors.White,
+            backColor : string = Colors.Black,
+            isFlash : boolean = false
+        ) {
+            this.text = text;
+            this.x = x;
+            this.y = y;
+            this.foreColor = foreColor;
+            this.backColor = backColor;
+            this.isFlash = isFlash;
+        }
 
+        /** Copy
+         * @param msg:コピー元
+         * @returns 新規インスタンス
+         */
+        static Copy(msg : IMessage) : IMessage {
+            let result = new Message();
+            result.Paste(msg);
+            return result;
+        }
+
+        /** Paste
+         * @param msg:貼り付け元
+         */
+        public Paste(msg : IMessage) : void {
+            this.text = msg.text;
+            this.x = msg.x;
+            this.y = msg.y;
+            this.foreColor = msg.foreColor;
+            this.backColor = msg.backColor;
+            this.isFlash = msg.isFlash;
+        }
     }
 
 
