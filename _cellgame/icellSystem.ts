@@ -52,6 +52,16 @@ namespace cellgame {
          */
         pointSelect(p : Point) : void;
 
+        /**
+         * 表示処理
+         */
+        display() : void;
+
+        /**
+         * 表示作成
+         */
+        displayMaker() : void;
+
     }
 
 }

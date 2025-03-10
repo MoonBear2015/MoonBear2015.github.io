@@ -16,7 +16,7 @@ var cellgame;
         init() {
             this.statusName = ["段位", "", "", "設問"];
             this.status = [1, 0, 0, 1];
-            this.cellReset(2);
+            this.cellReset(6);
         }
         /** セル選択
          * @param p : 選択桁位置
@@ -24,7 +24,7 @@ var cellgame;
         pointSelect(p) {
             let c = this.cellCount + 1;
             if (c > 10)
-                c = 2;
+                c = 6;
             this.cellReset(c);
             return;
         }

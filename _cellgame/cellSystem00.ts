@@ -29,14 +29,7 @@ namespace cellgame {
         public cellReset(cellCount : number = 10) : void {
             this.cellCount = cellCount;
             this.codes = Array(this.addressLength()).fill(0);
-
-            let c = 0;
-            for(let y = 0; y < this.cellCount; y++) {
-                for(let x = 0; x < this.cellCount; x++) {
-                    this.cellSetter(x,y,c);
-                }
-                c = this.codeCountUp(c);
-            }
+            this.displayMaker();
         }
             
         /** 番地の数 */
@@ -65,7 +58,7 @@ namespace cellgame {
         /** Cell設定 ＋ 画面表示 */
         public cellSetter(x:number,y:number,code:number) {
             this.codeSetter(x,y,code);
-            cellgame.cellDisplay(x,y);
+            // cellgame.cellDisplay(x,y);
         }
 
         /** タッチ箇所受信 */
@@ -107,9 +100,29 @@ namespace cellgame {
             let code = this.code(p.x,p.y);
             code = this.codeCountUp(code);
             this.cellSetter(p.x,p.y,code);
-
             return;
         }
+
+        /**
+         * 表示処理
+         */
+        public display() : void {
+            cellgame.textDisplay("メッセージ",1,0,Colors.White,Colors.Blue,true);
+        }
+
+        /**
+         * 表示作成
+         */
+        public displayMaker() : void {
+            let c = 0;
+            for(let y = 0; y < this.cellCount; y++) {
+                for(let x = 0; x < this.cellCount; x++) {
+                    this.cellSetter(x,y,c);
+                }
+                c = this.codeCountUp(c);
+            }
+        }
+
 
     }
 

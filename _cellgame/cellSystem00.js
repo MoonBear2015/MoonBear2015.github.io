@@ -36,13 +36,7 @@ var cellgame;
         cellReset(cellCount = 10) {
             this.cellCount = cellCount;
             this.codes = Array(this.addressLength()).fill(0);
-            let c = 0;
-            for (let y = 0; y < this.cellCount; y++) {
-                for (let x = 0; x < this.cellCount; x++) {
-                    this.cellSetter(x, y, c);
-                }
-                c = this.codeCountUp(c);
-            }
+            this.displayMaker();
         }
         /** 番地計算 */
         cellAddress(x, y) {
@@ -62,7 +56,7 @@ var cellgame;
         /** Cell設定 ＋ 画面表示 */
         cellSetter(x, y, code) {
             this.codeSetter(x, y, code);
-            cellgame.cellDisplay(x, y);
+            // cellgame.cellDisplay(x,y);
         }
         /** タッチ箇所受信 */
         touchPointRecv(p) {
@@ -104,6 +98,24 @@ var cellgame;
             code = this.codeCountUp(code);
             this.cellSetter(p.x, p.y, code);
             return;
+        }
+        /**
+         * 表示処理
+         */
+        display() {
+            cellgame.textDisplay("メッセージ", 1, 0, cellgame.Colors.White, cellgame.Colors.Blue, true);
+        }
+        /**
+         * 表示作成
+         */
+        displayMaker() {
+            let c = 0;
+            for (let y = 0; y < this.cellCount; y++) {
+                for (let x = 0; x < this.cellCount; x++) {
+                    this.cellSetter(x, y, c);
+                }
+                c = this.codeCountUp(c);
+            }
         }
     }
     cellgame.CellGameSystem00 = CellGameSystem00;

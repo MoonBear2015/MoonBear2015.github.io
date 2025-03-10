@@ -343,6 +343,9 @@ var cellgame;
     function displayCall() {
         if (!cellgame.wasPageInit)
             return;
+        if (cellgame.isNone(cellgame.gameSystem))
+            return;
+        cellgame.gameSystem.displayMaker();
         canvasDisplay();
         allStatusDisplay();
     }
@@ -365,7 +368,7 @@ var cellgame;
         CalcGameSize(cellgame.gameSystem.cellCount);
         ctx.fillStyle = cellgame.Colors.Black;
         ctx.fillRect(0, 0, cellgame.CVSWIDTH, cellgame.CVSHEIGHT);
-        ctx.fillStyle = cellgame.Colors.DarkSlateGray;
+        ctx.fillStyle = cellgame.Colors.Black;
         ctx.fillRect(cellgame.gX2, cellgame.gY2, cellgame.gW2, cellgame.gH2);
         AllCellDisplay();
     }
@@ -482,6 +485,37 @@ var cellgame;
         cellTextDisplay(cellgame.cells[c].char, cellgame.cells[c].foreColor, cellgame.cells[c].backColor, cellgame.gX3[a], cellgame.gY3[a], cellgame.gW3, cellgame.gH3, cellgame.cells[c].isFlash);
     }
     cellgame.cellDisplay = cellDisplay;
+    /** 文字列表示
+     * @param text : 表示文字
+     * @param x : 横位置
+     * @param y : 縦位置
+     * @param foreColor : 文字色
+     * @param backColor : 背景色
+     */
+    function textDisplay(text, x, y, foreColor, backColor, isFlash) {
+        if (cellgame.isNone(cellgame.CVS)) {
+            // alert("Canvas is None");
+            return;
+        }
+        let ctx = cellgame.CVS.getContext('2d');
+        if (ctx == null)
+            return;
+        if (text.length < 1)
+            return;
+        let fontSize = Math.min(cellgame.gW3, cellgame.gH3) * 0.75;
+        ctx.font = `${fontSize}px serif`;
+        // テキストの位置を計算して描画
+        let textX = (cellgame.gW3 - fontSize) / 2;
+        let textY = (cellgame.gH3 + fontSize * 0.75) / 2;
+        let marginY = (fontSize * 0.25) / 2;
+        let a = cellgame.gameSystem.cellAddress(x, y);
+        let charWidth = ctx.measureText(text).width;
+        ctx.fillStyle = cellgame.isRandomColor(isFlash, backColor);
+        ctx.fillRect(cellgame.gX3[a] + textX, cellgame.gY3[a] + marginY, charWidth, fontSize);
+        ctx.fillStyle = foreColor;
+        ctx.fillText(text, cellgame.gX3[a] + textX, cellgame.gY3[a] + textY);
+    }
+    cellgame.textDisplay = textDisplay;
     /** 全升 表示 */
     function AllCellDisplay() {
         if (cellgame.isNone(cellgame.CVS)) {

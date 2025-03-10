@@ -18,7 +18,7 @@ namespace cellgame {
             this.statusName = ["段位","","","設問"];
             this.status = [1,0,0,1];
 
-            this.cellReset(2);
+            this.cellReset(6);
         }
 
         
@@ -27,7 +27,7 @@ namespace cellgame {
          */
         public pointSelect(p : Point) : void {
             let c = this.cellCount + 1;
-            if (c > 10) c = 2;
+            if (c > 10) c = 6;
             this.cellReset(c);
             return;
         }

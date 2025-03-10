@@ -10,7 +10,7 @@ namespace cellgame {
 
     export function cellsInit() {
         cells00 = [];
-        cells00[0] = new Cell(0,"・","虚無",Colors.White,Colors.Black);
+        cells00[0] = new Cell(0,"　","虚無",Colors.White,Colors.Black);
 
         cells00[10] = new Cell(10,"　","空き",Colors.White,Colors.Black);
         cells00[11] = new Cell(11,"士","武士",Colors.White,Colors.Red);
@@ -26,7 +26,7 @@ namespace cellgame {
     
         /** Cell 規定値 01 */
         cells01 = [];
-        cells01[0] = new Cell(0,"・","虚無",Colors.White,Colors.Black);
+        cells01[0] = new Cell(0,"　","虚無",Colors.White,Colors.Black);
 
         cells01[10] = new Cell(10,"　","空き",Colors.White,Colors.Black);
         cells01[11] = new Cell(11,"武","武士",Colors.White,Colors.Red);
@@ -42,7 +42,7 @@ namespace cellgame {
     
         /** Cell 規定値 02 */
         cells02 = [];
-        cells02[0] = new Cell(0,"・","虚無",Colors.White,Colors.Black);
+        cells02[0] = new Cell(0,"　","虚無",Colors.White,Colors.Black);
 
         cells02[10] = new Cell(10,"　","空き",Colors.White,Colors.Black);
         cells02[11] = new Cell(11,"Ｓ","Samurai（侍）",Colors.White,Colors.Red);

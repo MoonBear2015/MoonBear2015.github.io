@@ -6,7 +6,7 @@ var cellgame;
     cellgame.cells = [];
     function cellsInit() {
         cellgame.cells00 = [];
-        cellgame.cells00[0] = new Cell(0, "・", "虚無", cellgame.Colors.White, cellgame.Colors.Black);
+        cellgame.cells00[0] = new Cell(0, "　", "虚無", cellgame.Colors.White, cellgame.Colors.Black);
         cellgame.cells00[10] = new Cell(10, "　", "空き", cellgame.Colors.White, cellgame.Colors.Black);
         cellgame.cells00[11] = new Cell(11, "士", "武士", cellgame.Colors.White, cellgame.Colors.Red);
         cellgame.cells00[12] = new Cell(12, "農", "農民", cellgame.Colors.White, cellgame.Colors.DarkOrange);
@@ -19,7 +19,7 @@ var cellgame;
         cellgame.cells00[24] = new Cell(24, "商", "商人:明滅", cellgame.Colors.White, cellgame.Colors.DarkGreen, true);
         /** Cell 規定値 01 */
         cellgame.cells01 = [];
-        cellgame.cells01[0] = new Cell(0, "・", "虚無", cellgame.Colors.White, cellgame.Colors.Black);
+        cellgame.cells01[0] = new Cell(0, "　", "虚無", cellgame.Colors.White, cellgame.Colors.Black);
         cellgame.cells01[10] = new Cell(10, "　", "空き", cellgame.Colors.White, cellgame.Colors.Black);
         cellgame.cells01[11] = new Cell(11, "武", "武士", cellgame.Colors.White, cellgame.Colors.Red);
         cellgame.cells01[12] = new Cell(12, "農", "農民", cellgame.Colors.White, cellgame.Colors.DarkOrange);
@@ -32,7 +32,7 @@ var cellgame;
         cellgame.cells01[24] = new Cell(24, "売", "売人:明滅", cellgame.Colors.White, cellgame.Colors.DarkGreen, true);
         /** Cell 規定値 02 */
         cellgame.cells02 = [];
-        cellgame.cells02[0] = new Cell(0, "・", "虚無", cellgame.Colors.White, cellgame.Colors.Black);
+        cellgame.cells02[0] = new Cell(0, "　", "虚無", cellgame.Colors.White, cellgame.Colors.Black);
         cellgame.cells02[10] = new Cell(10, "　", "空き", cellgame.Colors.White, cellgame.Colors.Black);
         cellgame.cells02[11] = new Cell(11, "Ｓ", "Samurai（侍）", cellgame.Colors.White, cellgame.Colors.Red);
         cellgame.cells02[12] = new Cell(12, "Ｆ", "Farmer（農民）", cellgame.Colors.White, cellgame.Colors.DarkOrange);

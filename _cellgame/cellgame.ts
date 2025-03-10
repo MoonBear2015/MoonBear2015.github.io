@@ -518,8 +518,10 @@ namespace cellgame {
     // 画面更新処理を呼び出す
     export function displayCall() {
         if (!wasPageInit) return;
+        if (isNone(gameSystem)) return;
+        gameSystem.displayMaker();
         canvasDisplay();
-        allStatusDisplay()
+        allStatusDisplay();
     }
 
     /** Canvas Writer */    
@@ -544,7 +546,7 @@ namespace cellgame {
         
         ctx.fillStyle = Colors.Black;
         ctx.fillRect(0, 0, CVSWIDTH, CVSHEIGHT);
-        ctx.fillStyle = Colors.DarkSlateGray;
+        ctx.fillStyle = Colors.Black;
         ctx.fillRect(gX2,gY2,gW2,gH2);
 
         AllCellDisplay();
@@ -699,6 +701,48 @@ namespace cellgame {
             gX3[a],gY3[a],gW3,gH3,
             cells[c].isFlash
         );
+    }
+
+    /** 文字列表示
+     * @param text : 表示文字
+     * @param x : 横位置
+     * @param y : 縦位置
+     * @param foreColor : 文字色
+     * @param backColor : 背景色
+     */
+    export function textDisplay (
+        text : string,
+        x : number,
+        y : number,
+        foreColor : string,
+        backColor : string,
+        isFlash : boolean
+    ) {
+        if (isNone(CVS)) {
+            // alert("Canvas is None");
+            return;
+        }
+        let ctx = CVS.getContext('2d');
+        if (ctx == null) return;
+
+        if (text.length < 1) return;
+
+        let fontSize = Math.min(gW3, gH3) * 0.75;
+        ctx.font = `${fontSize}px serif`;
+
+        // テキストの位置を計算して描画
+        let textX = (gW3 - fontSize) / 2;
+        let textY = (gH3 + fontSize * 0.75) / 2;
+        let marginY = (fontSize * 0.25) / 2;
+
+        let a = gameSystem.cellAddress(x,y);
+
+        let charWidth = ctx.measureText(text).width;
+        ctx.fillStyle = isRandomColor(isFlash,backColor);
+        ctx.fillRect(gX3[a] + textX,gY3[a] + marginY , charWidth, fontSize);
+
+        ctx.fillStyle = foreColor;
+        ctx.fillText(text, gX3[a] + textX,gY3[a] + textY);
     }
 
     /** 全升 表示 */
