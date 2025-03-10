@@ -22,10 +22,9 @@ var cellgame;
          * @param p : 選択桁位置
          */
         pointSelect(p) {
-            let c = this.cellCount + 1;
-            if (c > 10)
-                c = 6;
-            this.cellReset(c);
+            let code = this.codeFromPoint(p);
+            code = this.codeCountUp(code);
+            this.codeSetterToPoint(p, code);
             return;
         }
     }

@@ -22,6 +22,15 @@ namespace cellgame {
         /** 初期化 */
         public init() {
             this.cellReset(10);
+            // 仮
+            let c = 0;
+            for(let y = 0; y < this.cellCount; y++) {
+                for(let x = 0; x < this.cellCount; x++) {
+                    this.codeSetter(x,y,c);
+                }
+                c = this.codeCountUp(c);                
+            }
+            
         }
 
         /** 盤面白紙
@@ -50,11 +59,25 @@ namespace cellgame {
             if (a < 0) return -1;
             return this.codes[a];
         }
+        /** cellコード（ポイント指定） */
+        public codeFromPoint(p : Point) : number {
+            return this.code(p.x,p.y);
+        }
+
         /** cellコード設定 (x,y指定) */
         public codeSetter( x : number, y : number, code : number) {
             let a : number = this.cellAddress(x,y);
             if (a < 0) return;
             this.codes[a] = code;
+        }
+        /** cellコード設定 (番地指定) */
+        public codeSetterToAddress(a : number, code : number) {
+            let p = pointCalc(a,this.cellCount);
+            this.codeSetter(p.x,p.y,code);
+        }
+        /** cellコード設定 (Point指定) */
+        public codeSetterToPoint(p : Point, code : number) {
+            this.codeSetter(p.x,p.y,code);
         }
 
         /** タッチ箇所受信 */
@@ -100,24 +123,11 @@ namespace cellgame {
         }
 
         /**
-         * 表示処理
-         */
-        public display() : void {
-            cellgame.textDisplay("メッセージ",1,0,Colors.White,Colors.Blue,true);
-        }
-
-        /**
          * 表示作成
          */
         public displayMaker() : void {
-            let c = 0;
-            for(let y = 0; y < this.cellCount; y++) {
-                for(let x = 0; x < this.cellCount; x++) {
-                    this.codeSetter(x,y,c);
-                }
-                c = this.codeCountUp(c);                
-            }
             this.messages = [];
+            // 仮
             this.messages.push(new Message("メッセージ",1,0,Colors.White,Colors.Blue,true));
             
         }

@@ -30,6 +30,14 @@ var cellgame;
         /** 初期化 */
         init() {
             this.cellReset(10);
+            // 仮
+            let c = 0;
+            for (let y = 0; y < this.cellCount; y++) {
+                for (let x = 0; x < this.cellCount; x++) {
+                    this.codeSetter(x, y, c);
+                }
+                c = this.codeCountUp(c);
+            }
         }
         /** 盤面白紙
          * @param cellCount : セル数
@@ -48,12 +56,25 @@ var cellgame;
                 return -1;
             return y * this.cellCount + x;
         }
+        /** cellコード（ポイント指定） */
+        codeFromPoint(p) {
+            return this.code(p.x, p.y);
+        }
         /** cellコード設定 (x,y指定) */
         codeSetter(x, y, code) {
             let a = this.cellAddress(x, y);
             if (a < 0)
                 return;
             this.codes[a] = code;
+        }
+        /** cellコード設定 (番地指定) */
+        codeSetterToAddress(a, code) {
+            let p = cellgame.pointCalc(a, this.cellCount);
+            this.codeSetter(p.x, p.y, code);
+        }
+        /** cellコード設定 (Point指定) */
+        codeSetterToPoint(p, code) {
+            this.codeSetter(p.x, p.y, code);
         }
         /** タッチ箇所受信 */
         touchPointRecv(p) {
@@ -97,23 +118,11 @@ var cellgame;
             return;
         }
         /**
-         * 表示処理
-         */
-        display() {
-            cellgame.textDisplay("メッセージ", 1, 0, cellgame.Colors.White, cellgame.Colors.Blue, true);
-        }
-        /**
          * 表示作成
          */
         displayMaker() {
-            let c = 0;
-            for (let y = 0; y < this.cellCount; y++) {
-                for (let x = 0; x < this.cellCount; x++) {
-                    this.codeSetter(x, y, c);
-                }
-                c = this.codeCountUp(c);
-            }
             this.messages = [];
+            // 仮
             this.messages.push(new cellgame.Message("メッセージ", 1, 0, cellgame.Colors.White, cellgame.Colors.Blue, true));
         }
     }
