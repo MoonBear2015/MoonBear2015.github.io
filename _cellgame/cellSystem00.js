@@ -13,6 +13,7 @@ var cellgame;
             this.messages = [];
             this.statusName = [];
             this.status = [];
+            this.gameStep = 0;
             /** 番地の数 */
             this.addressLength = () => this.cellCount * this.cellCount;
             /** cellコード（x,y指定） */
@@ -46,7 +47,6 @@ var cellgame;
             this.cellCount = cellCount;
             this.codes = Array(this.addressLength()).fill(0);
             this.messages = [];
-            this.displayMaker();
         }
         /** 番地計算 */
         cellAddress(x, y) {
@@ -75,6 +75,37 @@ var cellgame;
         /** cellコード設定 (Point指定) */
         codeSetterToPoint(p, code) {
             this.codeSetter(p.x, p.y, code);
+        }
+        /** 四方セル設定
+         * @param x0 : 左上X y0 : 左上Y x1 : 右下X y1 : 右下Y code : 設定コード
+         */
+        cellBoxSetter(x0, y0, x1, y1, code) {
+            for (let y = y0; y <= y1; y++) {
+                for (let x = x0; x <= x1; x++) {
+                    this.codeSetter(x, y, code);
+                }
+            }
+        }
+        /** 全セル塗りつぶし
+         * @param code : 設定コード
+         */
+        cellAllPaint(code) {
+            for (let y = 0; y < this.cellCount; y++) {
+                for (let x = 0; x < this.cellCount; x++) {
+                    this.codeSetter(x, y, code);
+                }
+            }
+        }
+        /** 中央穴あけ
+         * @param size : 穴あけサイズ
+         * @param code : 穴あけコード
+         */
+        centerHoleMaker(size, code) {
+            let x0 = (this.cellCount - size) / 2;
+            let y0 = (this.cellCount - size) / 2;
+            let x1 = x0 + size - 1;
+            let y1 = y0 + size - 1;
+            this.cellBoxSetter(x0, y0, x1, y1, code);
         }
         /** タッチ箇所受信 */
         touchPointRecv(p) {

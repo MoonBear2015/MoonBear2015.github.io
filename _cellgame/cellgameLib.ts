@@ -11,6 +11,15 @@ namespace cellgame {
     export function cellsInit() {
         cells00 = [];
         cells00[0] = new Cell(0,"　","虚無",Colors.White,Colors.Black);
+        cells00[1] = new Cell(1,"　","赤壁",Colors.White,Colors.Red);
+        cells00[2] = new Cell(2,"　","新緑",Colors.White,Colors.Green);
+        cells00[3] = new Cell(3,"　","辛子",Colors.White,Colors.Yellow);
+        cells00[4] = new Cell(4,"　","青々",Colors.White,Colors.Blue);
+        cells00[5] = new Cell(5,"　","紫煙",Colors.White,Colors.Magenta);
+        cells00[6] = new Cell(6,"　","水面",Colors.White,Colors.Cyan);
+        cells00[7] = new Cell(7,"　","白塗",Colors.White,Colors.White);
+        cells00[8] = new Cell(8,"　","灰被",Colors.White,Colors.Gray);
+        cells00[9] = new Cell(9,"　","暗雲",Colors.White,Colors.DarkGray);
 
         cells00[10] = new Cell(10,"　","空き",Colors.White,Colors.Black);
         cells00[11] = new Cell(11,"士","武士",Colors.White,Colors.Red);
@@ -27,6 +36,15 @@ namespace cellgame {
         /** Cell 規定値 01 */
         cells01 = [];
         cells01[0] = new Cell(0,"　","虚無",Colors.White,Colors.Black);
+        cells01[1] = new Cell(1,"　","赤壁",Colors.White,Colors.Red);
+        cells01[2] = new Cell(2,"　","新緑",Colors.White,Colors.Green);
+        cells01[3] = new Cell(3,"　","辛子",Colors.White,Colors.Yellow);
+        cells01[4] = new Cell(4,"　","青々",Colors.White,Colors.Blue);
+        cells01[5] = new Cell(5,"　","紫煙",Colors.White,Colors.Magenta);
+        cells01[6] = new Cell(6,"　","水面",Colors.White,Colors.Cyan);
+        cells01[7] = new Cell(7,"　","白塗",Colors.White,Colors.White);
+        cells01[8] = new Cell(8,"　","灰被",Colors.White,Colors.Gray);
+        cells01[9] = new Cell(9,"　","暗雲",Colors.White,Colors.DarkGray);
 
         cells01[10] = new Cell(10,"　","空き",Colors.White,Colors.Black);
         cells01[11] = new Cell(11,"武","武士",Colors.White,Colors.Red);
@@ -43,6 +61,15 @@ namespace cellgame {
         /** Cell 規定値 02 */
         cells02 = [];
         cells02[0] = new Cell(0,"　","虚無",Colors.White,Colors.Black);
+        cells02[1] = new Cell(1,"　","赤壁",Colors.White,Colors.Red);
+        cells02[2] = new Cell(2,"　","新緑",Colors.White,Colors.Green);
+        cells02[3] = new Cell(3,"　","辛子",Colors.White,Colors.Yellow);
+        cells02[4] = new Cell(4,"　","青々",Colors.White,Colors.Blue);
+        cells02[5] = new Cell(5,"　","紫煙",Colors.White,Colors.Magenta);
+        cells02[6] = new Cell(6,"　","水面",Colors.White,Colors.Cyan);
+        cells02[7] = new Cell(7,"　","白塗",Colors.White,Colors.White);
+        cells02[8] = new Cell(8,"　","灰被",Colors.White,Colors.Gray);
+        cells02[9] = new Cell(9,"　","暗雲",Colors.White,Colors.DarkGray);
 
         cells02[10] = new Cell(10,"　","空き",Colors.White,Colors.Black);
         cells02[11] = new Cell(11,"Ｓ","Samurai（侍）",Colors.White,Colors.Red);

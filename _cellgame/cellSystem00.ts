@@ -10,6 +10,8 @@ namespace cellgame {
         public statusName : string[] = [];
         public status : number[] = [];
 
+        public gameStep : number = 0;
+
         /** コンストラクタ */
         constructor() {            
             this.statusName = Array(4).fill("");
@@ -40,7 +42,6 @@ namespace cellgame {
             this.cellCount = cellCount;
             this.codes = Array(this.addressLength()).fill(0);
             this.messages = [];
-            this.displayMaker();
         }
             
         /** 番地の数 */
@@ -80,6 +81,41 @@ namespace cellgame {
             this.codeSetter(p.x,p.y,code);
         }
 
+        /** 四方セル設定
+         * @param x0 : 左上X y0 : 左上Y x1 : 右下X y1 : 右下Y code : 設定コード
+         */
+        public cellBoxSetter(x0 : number,y0 : number,x1 : number,y1 : number,code : number) : void {
+            for(let y = y0; y <= y1; y++) {
+                for(let x = x0; x <= x1; x++) {
+                    this.codeSetter(x,y,code);
+                }
+            }
+        }
+
+        /** 全セル塗りつぶし
+         * @param code : 設定コード
+         */
+        public cellAllPaint(code : number) : void {
+            for(let y = 0; y < this.cellCount; y++) {
+                for(let x = 0; x < this.cellCount; x++) {
+                    this.codeSetter(x,y,code);
+                }
+            }
+        }
+
+        /** 中央穴あけ
+         * @param size : 穴あけサイズ
+         * @param code : 穴あけコード
+         */
+        public centerHoleMaker(size : number, code : number) : void {
+            let x0 = (this.cellCount - size) / 2;
+            let y0 = (this.cellCount - size) / 2;
+            let x1 = x0 + size - 1;
+            let y1 = y0 + size - 1;
+            this.cellBoxSetter(x0,y0,x1,y1,code);
+        }
+        
+
         /** タッチ箇所受信 */
         public touchPointRecv(p : Point) : void {
             if (p.x < 0 || p.x >= this.cellCount) return;
@@ -113,7 +149,6 @@ namespace cellgame {
          * @param p : 選択桁位置
          */
         public pointSelect(p : Point) : void {
-
             let a = this.cellAddress(p.x,p.y);
             if (a < 0) return;
             let code = this.code(p.x,p.y);

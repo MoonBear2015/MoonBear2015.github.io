@@ -26,11 +26,40 @@ namespace cellgame {
          * @param p : 選択桁位置
          */
         public pointSelect(p : Point) : void {
-            let code = this.codeFromPoint(p);
-            code = this.codeCountUp(code);
-            this.codeSetterToPoint(p,code);
+            let code00 = this.codeFromPoint(p);
+            let code01 = this.codeCountUp(code00);
+            this.codeSetterToPoint(p,code01);
+            alert("code = " + code00 + " -> " + code01);
             return;
         }
+
+        /**
+         * 表示作成
+         */
+        public displayMaker() : void {
+            switch(this.gameStep) {
+                case 0:
+                    {
+                        this.cellReset(8);
+                        this.cellAllPaint(9);
+                        this.messages = [];
+                        this.messages.push(new Message("士農工商を並べよ",1,0,Colors.White,Colors.Black));
+                        this.gameStep = 1;
+                        break
+                    }
+                case 1:
+                    {
+                        this.centerHoleMaker(2,10);
+                        break;
+                    }
+                default:
+                    {
+                        break;
+                    }
+            }
+            
+        }
+        
 
 
     }

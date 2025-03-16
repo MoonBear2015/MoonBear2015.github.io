@@ -12,6 +12,18 @@ namespace cellgame {
 
         /** 表示メッセージ */
         messages : IMessage[];
+
+        /** ステータス名称 */
+        statusName : string[];
+
+        /** ステータス */
+        status : number[];
+        
+        /** 
+         * ゲームステップ : ゲームの現在の状態 
+         * ゲームスタート・ゲーム中のレベル・ゲームオーバーなど
+         * */
+        gameStep : number;
         
         /** 初期化 */
         init() : void;
@@ -32,12 +44,6 @@ namespace cellgame {
 
         /** cellコード設定 (x,y指定) */
         codeSetter( x : number, y : number, code : number) : void;
-
-        /** ステータス名称 */
-        statusName : string[];
-
-        /** ステータス */
-        status : number[];
 
         /** タッチ箇所受信
          * @param p : タッチ桁位置
