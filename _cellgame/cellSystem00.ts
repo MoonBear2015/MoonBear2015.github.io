@@ -55,14 +55,14 @@ namespace cellgame {
         }
 
         /** cellコード（x,y指定） */
-        public code = (x : number,y : number) : number => {
+        public codeGetter = (x : number,y : number) : number => {
             let a : number = this.cellAddress(x,y);
             if (a < 0) return -1;
             return this.codes[a];
         }
         /** cellコード（ポイント指定） */
-        public codeFromPoint(p : Point) : number {
-            return this.code(p.x,p.y);
+        public codeGetterFromPoint(p : Point) : number {
+            return this.codeGetter(p.x,p.y);
         }
 
         /** cellコード設定 (x,y指定) */
@@ -108,11 +108,20 @@ namespace cellgame {
          * @param code : 穴あけコード
          */
         public centerHoleMaker(size : number, code : number) : void {
-            let x0 = (this.cellCount - size) / 2;
-            let y0 = (this.cellCount - size) / 2;
-            let x1 = x0 + size - 1;
-            let y1 = y0 + size - 1;
-            this.cellBoxSetter(x0,y0,x1,y1,code);
+            let p0 = this.centerHolePoint(size);
+            let x1 = p0.x + size - 1;
+            let y1 = p0.y + size - 1;
+            this.cellBoxSetter(p0.x,p0.y,x1,y1,code);
+        }
+
+        /** 中央穴あけ開始ポイント
+         * @param size : 穴あけサイズ
+         * @returns 穴あけ開始ポイント
+         */
+        public centerHolePoint(size : number) : Point {
+            let x = (this.cellCount - size) / 2;
+            let y = (this.cellCount - size) / 2;
+            return new Point(false,x,y);
         }
         
 
@@ -151,7 +160,7 @@ namespace cellgame {
         public pointSelect(p : Point) : void {
             let a = this.cellAddress(p.x,p.y);
             if (a < 0) return;
-            let code = this.code(p.x,p.y);
+            let code = this.codeGetter(p.x,p.y);
             code = this.codeCountUp(code);
             this.codeSetter(p.x,p.y,code);
             return;

@@ -40,7 +40,7 @@ namespace cellgame {
         cellAddress(x : number, y : number) : number;
 
         /** cellコード（x,y指定） */
-        code(x : number,y : number) : number;
+        codeGetter(x : number,y : number) : number;
 
         /** cellコード設定 (x,y指定) */
         codeSetter( x : number, y : number, code : number) : void;

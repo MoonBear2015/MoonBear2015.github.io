@@ -17,7 +17,7 @@ var cellgame;
             /** 番地の数 */
             this.addressLength = () => this.cellCount * this.cellCount;
             /** cellコード（x,y指定） */
-            this.code = (x, y) => {
+            this.codeGetter = (x, y) => {
                 let a = this.cellAddress(x, y);
                 if (a < 0)
                     return -1;
@@ -57,8 +57,8 @@ var cellgame;
             return y * this.cellCount + x;
         }
         /** cellコード（ポイント指定） */
-        codeFromPoint(p) {
-            return this.code(p.x, p.y);
+        codeGetterFromPoint(p) {
+            return this.codeGetter(p.x, p.y);
         }
         /** cellコード設定 (x,y指定) */
         codeSetter(x, y, code) {
@@ -101,11 +101,19 @@ var cellgame;
          * @param code : 穴あけコード
          */
         centerHoleMaker(size, code) {
-            let x0 = (this.cellCount - size) / 2;
-            let y0 = (this.cellCount - size) / 2;
-            let x1 = x0 + size - 1;
-            let y1 = y0 + size - 1;
-            this.cellBoxSetter(x0, y0, x1, y1, code);
+            let p0 = this.centerHolePoint(size);
+            let x1 = p0.x + size - 1;
+            let y1 = p0.y + size - 1;
+            this.cellBoxSetter(p0.x, p0.y, x1, y1, code);
+        }
+        /** 中央穴あけ開始ポイント
+         * @param size : 穴あけサイズ
+         * @returns 穴あけ開始ポイント
+         */
+        centerHolePoint(size) {
+            let x = (this.cellCount - size) / 2;
+            let y = (this.cellCount - size) / 2;
+            return new cellgame.Point(false, x, y);
         }
         /** タッチ箇所受信 */
         touchPointRecv(p) {
@@ -143,7 +151,7 @@ var cellgame;
             let a = this.cellAddress(p.x, p.y);
             if (a < 0)
                 return;
-            let code = this.code(p.x, p.y);
+            let code = this.codeGetter(p.x, p.y);
             code = this.codeCountUp(code);
             this.codeSetter(p.x, p.y, code);
             return;
