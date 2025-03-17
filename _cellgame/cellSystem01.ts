@@ -26,16 +26,25 @@ namespace cellgame {
         // game01 self
 
         public gameSize = 2;
+        public nowCell = 0;
+
+
         
         /** セル選択
          * @param p : 選択桁位置
          */
         public pointSelect(p : Point) : void {
-            let code00 = this.codeGetterFromPoint(p);
-            let code01 = this.codeCountUp(code00);
-            this.codeSetterToPoint(p,code01);
-            alert("code = " + code00 + " -> " + code01);
-            return;
+            if (this.gameStep >= 2) {
+                let x = p.x;
+                let y = p.y;
+                let c = this.codeGetter(x,y);
+                if (c == 20) {
+                    this.nowCell = this.codeLoop(this.nowCell,1);
+                    alert(this.nowCell);
+                    this.codeSetter(x,y,this.nowCell);
+                    this.selectCellSetter(x,y);
+                }
+            }        
         }
 
         /**
@@ -59,7 +68,8 @@ namespace cellgame {
                         let p = this.centerHolePoint(this.gameSize);
                         let x0 = p.x + (this.gameSize - 1) * rnd(2);
                         let y0 = p.y + (this.gameSize - 1) * rnd(2);
-                        this.codeSetter(x0,y0,11);
+                        this.nowCell = 11;
+                        this.codeSetter(x0,y0,this.nowCell);
                         this.selectCellSetter(x0,y0);
                         this.gameStep = 2;
                         break;

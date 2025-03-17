@@ -222,7 +222,7 @@ var cellgame;
     Colors.Gray = "#808080";
     Colors.LightSlateGray = "#778899";
     Colors.DarkGray = "#A9A9A9";
-    Colors.DeepDarkGray = "#7F7F7F";
+    Colors.DeepDarkGray = "#3F3F3F";
     Colors.Silver = "#C0C0C0";
     Colors.LightGray = "#D3D3D3";
     Colors.Gainsboro = "#DCDCDC";

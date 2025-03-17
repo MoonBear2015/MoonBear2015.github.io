@@ -155,6 +155,24 @@ namespace cellgame {
             return c;
         }
 
+        /** コードループ 11-14,21-24
+         * @param code : 現在のコード
+         * @param count : 加算値
+         * @returns 次のコード
+         */
+        public codeLoop(code : number,count : number) : number {
+            let c = code;
+            c += count;
+            if (code < 20) {
+                if (c < 11) c = 14;
+                if (c > 14) c = 11;
+                return c;   
+            }
+            if (c < 21) c = 24;
+            if (c > 24) c = 21;
+            return c;
+        }
+
         /** セル選択
          * @param p : 選択桁位置
          */

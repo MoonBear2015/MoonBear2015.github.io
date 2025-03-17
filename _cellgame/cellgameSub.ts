@@ -229,7 +229,7 @@ namespace cellgame {
         static readonly Gray : string = "#808080";
         static readonly LightSlateGray : string = "#778899";
         static readonly DarkGray : string = "#A9A9A9";
-        static readonly DeepDarkGray : string = "#7F7F7F";
+        static readonly DeepDarkGray : string = "#3F3F3F";
         static readonly Silver : string = "#C0C0C0";
         static readonly LightGray : string = "#D3D3D3";
         static readonly Gainsboro : string = "#DCDCDC";

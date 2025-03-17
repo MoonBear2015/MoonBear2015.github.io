@@ -13,6 +13,7 @@ var cellgame;
             this.backColor = cellgame.Colors.DeepDarkGray;
             // game01 self
             this.gameSize = 2;
+            this.nowCell = 0;
             this.init();
         }
         /** 初期化 */
@@ -25,11 +26,17 @@ var cellgame;
          * @param p : 選択桁位置
          */
         pointSelect(p) {
-            let code00 = this.codeGetterFromPoint(p);
-            let code01 = this.codeCountUp(code00);
-            this.codeSetterToPoint(p, code01);
-            alert("code = " + code00 + " -> " + code01);
-            return;
+            if (this.gameStep >= 2) {
+                let x = p.x;
+                let y = p.y;
+                let c = this.codeGetter(x, y);
+                if (c == 20) {
+                    this.nowCell = this.codeLoop(this.nowCell, 1);
+                    alert(this.nowCell);
+                    this.codeSetter(x, y, this.nowCell);
+                    this.selectCellSetter(x, y);
+                }
+            }
         }
         /**
          * 表示作成
@@ -52,7 +59,8 @@ var cellgame;
                         let p = this.centerHolePoint(this.gameSize);
                         let x0 = p.x + (this.gameSize - 1) * cellgame.rnd(2);
                         let y0 = p.y + (this.gameSize - 1) * cellgame.rnd(2);
-                        this.codeSetter(x0, y0, 11);
+                        this.nowCell = 11;
+                        this.codeSetter(x0, y0, this.nowCell);
                         this.selectCellSetter(x0, y0);
                         this.gameStep = 2;
                         break;
