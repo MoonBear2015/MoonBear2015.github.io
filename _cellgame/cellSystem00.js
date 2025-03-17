@@ -9,6 +9,7 @@ var cellgame;
         /** コンストラクタ */
         constructor() {
             this.cellCount = 0;
+            this.backColor = cellgame.Colors.Black;
             this.codes = [];
             this.messages = [];
             this.statusName = [];

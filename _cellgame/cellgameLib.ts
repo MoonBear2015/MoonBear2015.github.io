@@ -19,7 +19,7 @@ namespace cellgame {
         cells00[6] = new Cell(6,"　","水面",Colors.White,Colors.Cyan);
         cells00[7] = new Cell(7,"　","白塗",Colors.White,Colors.White);
         cells00[8] = new Cell(8,"　","灰被",Colors.White,Colors.Gray);
-        cells00[9] = new Cell(9,"　","暗雲",Colors.White,Colors.DarkGray);
+        cells00[9] = new Cell(9,"　","暗雲",Colors.White,Colors.DeepDarkGray);
 
         cells00[10] = new Cell(10,"　","空き",Colors.White,Colors.Black);
         cells00[11] = new Cell(11,"士","武士",Colors.White,Colors.Red);
@@ -44,7 +44,7 @@ namespace cellgame {
         cells01[6] = new Cell(6,"　","水面",Colors.White,Colors.Cyan);
         cells01[7] = new Cell(7,"　","白塗",Colors.White,Colors.White);
         cells01[8] = new Cell(8,"　","灰被",Colors.White,Colors.Gray);
-        cells01[9] = new Cell(9,"　","暗雲",Colors.White,Colors.DarkGray);
+        cells01[9] = new Cell(9,"　","暗雲",Colors.White,Colors.DeepDarkGray);
 
         cells01[10] = new Cell(10,"　","空き",Colors.White,Colors.Black);
         cells01[11] = new Cell(11,"武","武士",Colors.White,Colors.Red);
@@ -69,7 +69,7 @@ namespace cellgame {
         cells02[6] = new Cell(6,"　","水面",Colors.White,Colors.Cyan);
         cells02[7] = new Cell(7,"　","白塗",Colors.White,Colors.White);
         cells02[8] = new Cell(8,"　","灰被",Colors.White,Colors.Gray);
-        cells02[9] = new Cell(9,"　","暗雲",Colors.White,Colors.DarkGray);
+        cells02[9] = new Cell(9,"　","暗雲",Colors.White,Colors.DeepDarkGray);
 
         cells02[10] = new Cell(10,"　","空き",Colors.White,Colors.Black);
         cells02[11] = new Cell(11,"Ｓ","Samurai（侍）",Colors.White,Colors.Red);

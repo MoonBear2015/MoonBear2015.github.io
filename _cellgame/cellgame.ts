@@ -512,9 +512,6 @@ namespace cellgame {
         // }
     }
 
-    // // 定期的に更新（アニメーション、フラッシュ効果）
-    // setInterval(writerCall,100);
-
     // 画面更新処理を呼び出す
     export function displayCall() {
         if (!wasPageInit) return;
@@ -545,9 +542,10 @@ namespace cellgame {
         
         CalcGameSize(gameSystem.cellCount);
         
-        ctx.fillStyle = Colors.Black;
+        ctx.fillStyle = gameSystem.backColor;
+
         ctx.fillRect(0, 0, CVSWIDTH, CVSHEIGHT);
-        ctx.fillStyle = Colors.Black;
+        ctx.fillStyle = gameSystem.backColor;
         ctx.fillRect(gX2,gY2,gW2,gH2);
 
         AllCellDisplay();

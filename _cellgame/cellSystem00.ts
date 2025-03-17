@@ -5,6 +5,7 @@ namespace cellgame {
     /** セルゲームシステム 共通項 */
     export abstract class CellGameSystem00 implements ICellGameSystem {
         public cellCount : number = 0;
+        public backColor : string = Colors.Black;
         public codes : number[] = [];
         public messages : IMessage[] = [];
         public statusName : string[] = [];

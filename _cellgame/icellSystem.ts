@@ -4,6 +4,9 @@
 /// <reference path="cellgameSub.ts" />
 namespace cellgame {
     export interface ICellGameSystem {
+        /** 背景色 */
+        backColor : string;
+
         /** 升目の数（縦・横） */
         cellCount : number;
 

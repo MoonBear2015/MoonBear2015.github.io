@@ -54,6 +54,24 @@ var cellgame;
         }
     }
     cellgame.Point = Point;
+    /** 4方向 */
+    cellgame.Direction4s = [
+        new Point(false, 0, -1),
+        new Point(false, 1, 0),
+        new Point(false, 0, 1),
+        new Point(false, -1, 0) // 左 
+    ];
+    /** 8方向 */
+    cellgame.Direction8s = [
+        new Point(false, 0, -1),
+        new Point(false, 1, -1),
+        new Point(false, 1, 0),
+        new Point(false, 1, 1),
+        new Point(false, 0, 1),
+        new Point(false, -1, 1),
+        new Point(false, -1, 0),
+        new Point(false, -1, -1) // 左上
+    ];
     class Colors {
     }
     // ピンク
@@ -204,6 +222,7 @@ var cellgame;
     Colors.Gray = "#808080";
     Colors.LightSlateGray = "#778899";
     Colors.DarkGray = "#A9A9A9";
+    Colors.DeepDarkGray = "#7F7F7F";
     Colors.Silver = "#C0C0C0";
     Colors.LightGray = "#D3D3D3";
     Colors.Gainsboro = "#DCDCDC";

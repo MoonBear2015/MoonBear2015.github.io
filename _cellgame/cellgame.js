@@ -337,8 +337,6 @@ var cellgame;
         // }
     }
     cellgame.gameReset = gameReset;
-    // // 定期的に更新（アニメーション、フラッシュ効果）
-    // setInterval(writerCall,100);
     // 画面更新処理を呼び出す
     function displayCall() {
         if (!cellgame.wasPageInit)
@@ -367,9 +365,9 @@ var cellgame;
             return;
         }
         CalcGameSize(cellgame.gameSystem.cellCount);
-        ctx.fillStyle = cellgame.Colors.Black;
+        ctx.fillStyle = cellgame.gameSystem.backColor;
         ctx.fillRect(0, 0, cellgame.CVSWIDTH, cellgame.CVSHEIGHT);
-        ctx.fillStyle = cellgame.Colors.Black;
+        ctx.fillStyle = cellgame.gameSystem.backColor;
         ctx.fillRect(cellgame.gX2, cellgame.gY2, cellgame.gW2, cellgame.gH2);
         AllCellDisplay();
     }

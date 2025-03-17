@@ -8,6 +8,8 @@ namespace cellgame {
     export class CellGameSystem01 extends CellGameSystem00
     implements ICellGameSystem {
 
+        public backColor: string = Colors.DeepDarkGray;
+
         constructor() {
             super();
             this.init();
@@ -55,9 +57,9 @@ namespace cellgame {
                     {
                         this.centerHoleMaker(this.gameSize,10);
                         let p = this.centerHolePoint(this.gameSize);
-                        let x0 = p.x + this.gameSize * cellgame.rnd(2);
-                        let y0 = p.y + this.gameSize * cellgame.rnd(2);
-                        this.codeSetter(x0,y0,9);
+                        let x0 = p.x + (this.gameSize - 1) * rnd(2);
+                        let y0 = p.y + (this.gameSize - 1) * rnd(2);
+                        this.codeSetter(x0,y0,11);
                         this.selectCellSetter(x0,y0);
                         this.gameStep = 2;
                         break;
@@ -88,23 +90,16 @@ namespace cellgame {
                 }
             }
             // 設定
-            for(let hy = -1; hy < 2; hy++) {
-                for(let hx = -1; hx < 2; hx++) {
-                    let xx = x + hx;
-                    let yy = y + hy;
-                    if (xx < 0 || xx >= this.cellCount) continue;
-                    if (yy < 0 || yy >= this.cellCount) continue;
-                    let c = this.codeGetter(xx,yy);
-                    if (c != 10) continue;
+            for(let d = 0; d < 4; d++) {
+                let xx = x + Direction4s[d].x;
+                let yy = y + Direction4s[d].y;
+                if (xx < 0 || xx >= this.cellCount) continue;
+                if (yy < 0 || yy >= this.cellCount) continue;
+                let c = this.codeGetter(xx,yy);
+                if (c == 10) {
                     this.codeSetter(xx,yy,20);
                 }
             }
         }
-        
-
-        
-
-
     }
-
 }

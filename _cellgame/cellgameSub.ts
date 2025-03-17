@@ -61,6 +61,25 @@ namespace cellgame {
         }
     }
 
+    /** 4方向 */
+    export const Direction4s = [
+        new Point(false,0,-1),  // 上
+        new Point(false,1,0),   // 右 
+        new Point(false,0,1),   // 下
+        new Point(false,-1,0)   // 左 
+    ];
+    /** 8方向 */
+    export const Direction8s = [
+        new Point(false,0,-1),  // 上
+        new Point(false,1,-1),  // 右上
+        new Point(false,1,0),   // 右 
+        new Point(false,1,1),   // 右下
+        new Point(false,0,1),   // 下
+        new Point(false,-1,1),  // 左下
+        new Point(false,-1,0),  // 左 
+        new Point(false,-1,-1)  // 左上
+    ];
+
     export class Colors {
         // ピンク
         static readonly MediumVioletRed : string = "#C71585";
@@ -210,6 +229,7 @@ namespace cellgame {
         static readonly Gray : string = "#808080";
         static readonly LightSlateGray : string = "#778899";
         static readonly DarkGray : string = "#A9A9A9";
+        static readonly DeepDarkGray : string = "#7F7F7F";
         static readonly Silver : string = "#C0C0C0";
         static readonly LightGray : string = "#D3D3D3";
         static readonly Gainsboro : string = "#DCDCDC";
