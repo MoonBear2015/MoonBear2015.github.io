@@ -4,6 +4,11 @@ var cellgame;
 (function (cellgame) {
     /** Cell設定 */
     cellgame.cells = [];
+    cellgame.msgPatterns = [];
+    /** Message パターン */
+    cellgame.msgPatterns00 = [];
+    cellgame.msgPatterns01 = [];
+    cellgame.msgPatterns02 = [];
     function cellsInit() {
         cellgame.cells00 = [];
         cellgame.cells00[0] = new Cell(0, "　", "虚無", cellgame.Colors.White, cellgame.Colors.Black);
@@ -26,8 +31,29 @@ var cellgame;
         cellgame.cells00[22] = new Cell(22, "農", "農民:明滅", cellgame.Colors.White, cellgame.Colors.DarkOrange, true);
         cellgame.cells00[23] = new Cell(23, "工", "職人:明滅", cellgame.Colors.White, cellgame.Colors.DarkBlue, true);
         cellgame.cells00[24] = new Cell(24, "商", "商人:明滅", cellgame.Colors.White, cellgame.Colors.DarkGreen, true);
-        cellgame.cells00[90] = new Cell(90, "可", "可:明滅", cellgame.Colors.White, cellgame.Colors.Black, true);
+        cellgame.cells00[90] = new Cell(90, "了", "了:明滅", cellgame.Colors.White, cellgame.Colors.Black, true);
         cellgame.cells00[99] = new Cell(91, "否", "否:明滅", cellgame.Colors.Red, cellgame.Colors.Red, true);
+        cellgame.msgPatterns00 = [];
+        cellgame.msgPatterns00[0] = "　よくやった！　";
+        cellgame.msgPatterns00[1] = "　　いいぞ！　　";
+        cellgame.msgPatterns00[2] = "　でかした！！　";
+        cellgame.msgPatterns00[3] = "　さすがた！！　";
+        cellgame.msgPatterns00[4] = "　おみごと！！　";
+        cellgame.msgPatterns00[5] = "　　すごい！　　";
+        cellgame.msgPatterns00[6] = "　すばらしい！　";
+        cellgame.msgPatterns00[7] = "そのちょうしだ！";
+        cellgame.msgPatterns00[8] = "　　やった！　　";
+        cellgame.msgPatterns00[9] = "　ごうかく！！　";
+        cellgame.msgPatterns00[10] = "　　だめだ！　　";
+        cellgame.msgPatterns00[11] = "　ざんねん！！　";
+        cellgame.msgPatterns00[12] = "　しっぱいだ！　";
+        cellgame.msgPatterns00[13] = "　もういちど！　";
+        cellgame.msgPatterns00[14] = "　やりなおせ！　";
+        cellgame.msgPatterns00[15] = "もういっかい！！";
+        cellgame.msgPatterns00[16] = "　ふごうかく！　";
+        cellgame.msgPatterns00[17] = "　　だめ！！　　";
+        cellgame.msgPatterns00[18] = "　あーあ・・・　";
+        cellgame.msgPatterns00[19] = "やれやれ・・・・";
         /** Cell 規定値 01 */
         cellgame.cells01 = [];
         cellgame.cells01[0] = new Cell(0, "　", "虚無", cellgame.Colors.White, cellgame.Colors.Black);
@@ -50,8 +76,29 @@ var cellgame;
         cellgame.cells01[22] = new Cell(22, "農", "農民:明滅", cellgame.Colors.White, cellgame.Colors.DarkOrange, true);
         cellgame.cells01[23] = new Cell(23, "匠", "匠:明滅", cellgame.Colors.White, cellgame.Colors.DarkBlue, true);
         cellgame.cells01[24] = new Cell(24, "売", "売人:明滅", cellgame.Colors.White, cellgame.Colors.DarkGreen, true);
-        cellgame.cells01[90] = new Cell(90, "可", "可:明滅", cellgame.Colors.White, cellgame.Colors.Black, true);
+        cellgame.cells01[90] = new Cell(90, "了", "了:明滅", cellgame.Colors.White, cellgame.Colors.Black, true);
         cellgame.cells01[99] = new Cell(91, "否", "否:明滅", cellgame.Colors.Red, cellgame.Colors.Red, true);
+        cellgame.msgPatterns01 = [];
+        cellgame.msgPatterns01[0] = "　　偉いぞ！　　";
+        cellgame.msgPatterns01[1] = "　　合格だ！　　";
+        cellgame.msgPatterns01[2] = "　　お見事！　　";
+        cellgame.msgPatterns01[3] = "　　流石だ！　　";
+        cellgame.msgPatterns01[4] = "　　天晴れ！　　";
+        cellgame.msgPatterns01[5] = "　素晴らしい！　";
+        cellgame.msgPatterns01[6] = "　お目出度う！　";
+        cellgame.msgPatterns01[7] = "　その調子だ！　";
+        cellgame.msgPatterns01[8] = "　　成功！！　　";
+        cellgame.msgPatterns01[9] = "　　合格！！　　";
+        cellgame.msgPatterns01[10] = "　　失敗だ！　　";
+        cellgame.msgPatterns01[11] = "　　残念！！　　";
+        cellgame.msgPatterns01[12] = "　もう一度！！　";
+        cellgame.msgPatterns01[13] = "　やり直せ！！　";
+        cellgame.msgPatterns01[14] = "　　不合格！　　";
+        cellgame.msgPatterns01[15] = "　　失格！！　　";
+        cellgame.msgPatterns01[16] = "　　駄目だ！　　";
+        cellgame.msgPatterns01[17] = "　　落第だ！　　";
+        cellgame.msgPatterns01[18] = "　嗚呼・・・。　";
+        cellgame.msgPatterns01[19] = "　残念・・・。";
         /** Cell 規定値 02 */
         cellgame.cells02 = [];
         cellgame.cells02[0] = new Cell(0, "　", "虚無", cellgame.Colors.White, cellgame.Colors.Black);
@@ -76,6 +123,27 @@ var cellgame;
         cellgame.cells02[24] = new Cell(24, "Ｍ", "Merchants（商人）:明滅", cellgame.Colors.White, cellgame.Colors.DarkGreen);
         cellgame.cells02[90] = new Cell(90, "Ｙ", "可:明滅", cellgame.Colors.White, cellgame.Colors.Black, true);
         cellgame.cells02[99] = new Cell(91, "Ｎ", "否:明滅", cellgame.Colors.Red, cellgame.Colors.Red, true);
+        cellgame.msgPatterns02 = [];
+        cellgame.msgPatterns02[0] = "　　ＯＫ！！　　";
+        cellgame.msgPatterns02[1] = "　ＧＲＥＡＴ！　";
+        cellgame.msgPatterns02[2] = "　ＮＩＣＥ！！　";
+        cellgame.msgPatterns02[3] = "　ＷＥＬＬ！！　";
+        cellgame.msgPatterns02[4] = "　ＣＯＯＬ！！　";
+        cellgame.msgPatterns02[5] = "　ＳＵＰＥＲ！　";
+        cellgame.msgPatterns02[6] = "　ＦＩＮＥ！！　";
+        cellgame.msgPatterns02[7] = "　ＧＯＯＤ！！　";
+        cellgame.msgPatterns02[8] = "ＳＵＣＣＥＳＳ！";
+        cellgame.msgPatterns02[9] = "　ＣＬＥＡＲ！　";
+        cellgame.msgPatterns02[10] = "　　ＮＯ！！　　";
+        cellgame.msgPatterns02[11] = "　　ＢＡＤ！　　";
+        cellgame.msgPatterns02[12] = "　ＡＧＡＩＮ！　";
+        cellgame.msgPatterns02[13] = "　ＲＥＴＲＹ！　";
+        cellgame.msgPatterns02[14] = "　ＦＡＩＬ！！　";
+        cellgame.msgPatterns02[15] = "　ＬＯＳＥ！！　";
+        cellgame.msgPatterns02[16] = "　　ＮＧ！！　　";
+        cellgame.msgPatterns02[17] = "　ＮＯＮＯ！！　";
+        cellgame.msgPatterns02[18] = "　ＯＨ・・・・　";
+        cellgame.msgPatterns02[19] = "　ＳＩＧＨ・・　";
     }
     cellgame.cellsInit = cellsInit;
     /** Cell設定の選択 */
@@ -83,18 +151,22 @@ var cellgame;
         switch (set) {
             case 0: {
                 cellgame.cells = cellgame.cells00;
+                cellgame.msgPatterns = cellgame.msgPatterns00;
                 break;
             }
             case 1: {
                 cellgame.cells = cellgame.cells01;
+                cellgame.msgPatterns = cellgame.msgPatterns01;
                 break;
             }
             case 2: {
                 cellgame.cells = cellgame.cells02;
+                cellgame.msgPatterns = cellgame.msgPatterns02;
                 break;
             }
             default: {
                 cellgame.cells = cellgame.cells00;
+                cellgame.msgPatterns = cellgame.msgPatterns00;
             }
         }
     }

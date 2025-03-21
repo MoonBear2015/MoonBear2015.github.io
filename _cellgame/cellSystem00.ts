@@ -195,6 +195,11 @@ namespace cellgame {
             
         }
 
+        /** 勝利メッセージ返却 */
+        public msgWinSelector=() : string => msgPatterns[rnd(10)];
+        /**　敗北メッセージ返却 */
+        public msgLoseSelector=() : string => msgPatterns[rnd(10) + 10];
+
 
     }
 

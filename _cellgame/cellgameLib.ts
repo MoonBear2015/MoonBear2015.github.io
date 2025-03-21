@@ -2,11 +2,17 @@
 namespace cellgame {
     /** Cell設定 */
     export var cells: ICell[] = [];
+    export var msgPatterns: string[] = [];
 
     /** Cell 規定値設定 */
     export var cells00 : ICell[];
     export var cells01 : ICell[];
     export var cells02 : ICell[];
+
+    /** Message パターン */
+    export var msgPatterns00 : string[] = [];
+    export var msgPatterns01 : string[] = [];
+    export var msgPatterns02 : string[] = [];
 
     export function cellsInit() {
         cells00 = [];
@@ -33,10 +39,31 @@ namespace cellgame {
         cells00[23] = new Cell(23,"工","職人:明滅",Colors.White,Colors.DarkBlue,true);
         cells00[24] = new Cell(24,"商","商人:明滅",Colors.White,Colors.DarkGreen,true);
 
-        cells00[90] = new Cell(90,"可","可:明滅",Colors.White,Colors.Black,true);
+        cells00[90] = new Cell(90,"了","了:明滅",Colors.White,Colors.Black,true);
         cells00[99] = new Cell(91,"否","否:明滅",Colors.Red,Colors.Red,true);
 
-    
+        msgPatterns00 = [];
+        msgPatterns00[0] = "　よくやった！　";
+        msgPatterns00[1] = "　　いいぞ！　　";
+        msgPatterns00[2] = "　でかした！！　";
+        msgPatterns00[3] = "　さすがた！！　";
+        msgPatterns00[4] = "　おみごと！！　";
+        msgPatterns00[5] = "　　すごい！　　";
+        msgPatterns00[6] = "　すばらしい！　";
+        msgPatterns00[7] = "そのちょうしだ！";
+        msgPatterns00[8] = "　　やった！　　";
+        msgPatterns00[9] = "　ごうかく！！　";
+        msgPatterns00[10] = "　　だめだ！　　";
+        msgPatterns00[11] = "　ざんねん！！　";
+        msgPatterns00[12] = "　しっぱいだ！　";
+        msgPatterns00[13] = "　もういちど！　";
+        msgPatterns00[14] = "　やりなおせ！　";
+        msgPatterns00[15] = "もういっかい！！";
+        msgPatterns00[16] = "　ふごうかく！　";
+        msgPatterns00[17] = "　　だめ！！　　";
+        msgPatterns00[18] = "　あーあ・・・　";
+        msgPatterns00[19] = "やれやれ・・・・";
+        
         /** Cell 規定値 01 */
         cells01 = [];
         cells01[0] = new Cell(0,"　","虚無",Colors.White,Colors.Black);
@@ -62,8 +89,32 @@ namespace cellgame {
         cells01[23] = new Cell(23,"匠","匠:明滅",Colors.White,Colors.DarkBlue,true);
         cells01[24] = new Cell(24,"売","売人:明滅",Colors.White,Colors.DarkGreen,true);
     
-        cells01[90] = new Cell(90,"可","可:明滅",Colors.White,Colors.Black,true);
+        cells01[90] = new Cell(90,"了","了:明滅",Colors.White,Colors.Black,true);
         cells01[99] = new Cell(91,"否","否:明滅",Colors.Red,Colors.Red,true);
+
+        msgPatterns01 = [];
+        msgPatterns01[0] = "　　偉いぞ！　　";
+        msgPatterns01[1] = "　　合格だ！　　";
+        msgPatterns01[2] = "　　お見事！　　";
+        msgPatterns01[3] = "　　流石だ！　　";
+        msgPatterns01[4] = "　　天晴れ！　　";
+        msgPatterns01[5] = "　素晴らしい！　";
+        msgPatterns01[6] = "　お目出度う！　";
+        msgPatterns01[7] = "　その調子だ！　";
+        msgPatterns01[8] = "　　成功！！　　";
+        msgPatterns01[9] = "　　合格！！　　";
+        msgPatterns01[10] = "　　失敗だ！　　";
+        msgPatterns01[11] = "　　残念！！　　"; 
+        msgPatterns01[12] = "　もう一度！！　";
+        msgPatterns01[13] = "　やり直せ！！　";
+        msgPatterns01[14] = "　　不合格！　　";
+        msgPatterns01[15] = "　　失格！！　　";
+        msgPatterns01[16] = "　　駄目だ！　　";
+        msgPatterns01[17] = "　　落第だ！　　";
+        msgPatterns01[18] = "　嗚呼・・・。　";
+        msgPatterns01[19] = "　残念・・・。";
+
+
         /** Cell 規定値 02 */
         cells02 = [];
         cells02[0] = new Cell(0,"　","虚無",Colors.White,Colors.Black);
@@ -93,6 +144,28 @@ namespace cellgame {
         cells02[90] = new Cell(90,"Ｙ","可:明滅",Colors.White,Colors.Black,true);
         cells02[99] = new Cell(91,"Ｎ","否:明滅",Colors.Red,Colors.Red,true);
 
+        msgPatterns02 = [];
+        msgPatterns02[0] = "　　ＯＫ！！　　";
+        msgPatterns02[1] = "　ＧＲＥＡＴ！　";
+        msgPatterns02[2] = "　ＮＩＣＥ！！　";
+        msgPatterns02[3] = "　ＷＥＬＬ！！　";
+        msgPatterns02[4] = "　ＣＯＯＬ！！　";
+        msgPatterns02[5] = "　ＳＵＰＥＲ！　";
+        msgPatterns02[6] = "　ＦＩＮＥ！！　";
+        msgPatterns02[7] = "　ＧＯＯＤ！！　";
+        msgPatterns02[8] = "ＳＵＣＣＥＳＳ！";
+        msgPatterns02[9] = "　ＣＬＥＡＲ！　";
+        msgPatterns02[10] = "　　ＮＯ！！　　";
+        msgPatterns02[11] = "　　ＢＡＤ！　　";
+        msgPatterns02[12] = "　ＡＧＡＩＮ！　";
+        msgPatterns02[13] = "　ＲＥＴＲＹ！　";
+        msgPatterns02[14] = "　ＦＡＩＬ！！　";
+        msgPatterns02[15] = "　ＬＯＳＥ！！　";
+        msgPatterns02[16] = "　　ＮＧ！！　　";
+        msgPatterns02[17] = "　ＮＯＮＯ！！　";
+        msgPatterns02[18] = "　ＯＨ・・・・　";
+        msgPatterns02[19] = "　ＳＩＧＨ・・　";
+
     }
 
     /** Cell設定の選択 */
@@ -100,18 +173,22 @@ namespace cellgame {
         switch(set) {
             case 0: {
                 cells = cells00;
+                msgPatterns = msgPatterns00;
                 break;
             }
             case 1: {
                 cells = cells01;
+                msgPatterns = msgPatterns01;
                 break;
             }
             case 2: {
                 cells = cells02;
+                msgPatterns = msgPatterns02;
                 break;
             }
             default: {
                 cells = cells00;
+                msgPatterns = msgPatterns00;
             }
         }
     } 

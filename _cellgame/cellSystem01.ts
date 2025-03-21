@@ -76,7 +76,7 @@ namespace cellgame {
                     {
                         this.cellReset(8);
                         this.gameStep = 1;
-                        this.gameSize = 3;
+                        this.gameSize = 2;
                         this.isGameClear = false;
                         this.isGameOver = false;
                         this.isGamePlay = false;
@@ -95,7 +95,6 @@ namespace cellgame {
                         let p = this.centerHolePoint(this.gameSize);
                         let x0 = p.x + (this.gameSize - 1) * rnd(2);
                         let y0 = p.y + (this.gameSize - 1) * rnd(2);
-                        alert(x0 + "," + y0);
                         this.nowCell = 11;
                         this.codeSetter(x0,y0,this.nowCell);
                         this.selectCellSetter(x0,y0);
@@ -120,10 +119,10 @@ namespace cellgame {
                     }
                 /** ゲームクリア 表示*/
                 case 3:
-                    {
+                    {                        
                         this.messages = [];
-                        this.messages.push(new Message("　よくやった！　",1,0,Colors.White,Colors.Black,true));
-                        this.codeSetter(4,7,90);
+                        this.messages.push(new Message(this.msgWinSelector(),1,0,Colors.White,Colors.Black,true));
+                        this.okButtonSetter();
                         this.gameStep = 5;
                         break;
                     }
@@ -131,8 +130,8 @@ namespace cellgame {
                 case 4:
                     {
                         this.messages = [];
-                        this.messages.push(new Message("　　だめだ！　　",1,0,Colors.Black,Colors.Red,false));
-                        this.codeSetter(4,7,90);
+                        this.messages.push(new Message(this.msgLoseSelector(),1,0,Colors.Black,Colors.Red,false));
+                        this.okButtonSetter();
                         this.gameStep = 5;
                         break;
                     }
@@ -146,6 +145,12 @@ namespace cellgame {
                         break;
                     }   
             }
+        }
+
+        /** okボタン設定 */
+        private okButtonSetter() : void {
+            let center = Math.floor(this.cellCount / 2);
+            this.codeSetter(center,this.cellCount - 1,90);
         }
 
         /** 選択箇所を作成（01専用）

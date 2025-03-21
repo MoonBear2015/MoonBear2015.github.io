@@ -69,6 +69,12 @@ namespace cellgame {
          */
         displayMaker() : void;
 
+        /** 勝利メッセージ返却 */
+        msgWinSelector() : string;
+        /**　敗北メッセージ返却 */
+        msgLoseSelector() : string;
+        
+
     }
 
 }

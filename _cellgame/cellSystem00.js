@@ -24,6 +24,10 @@ var cellgame;
                     return -1;
                 return this.codes[a];
             };
+            /** 勝利メッセージ返却 */
+            this.msgWinSelector = () => cellgame.msgPatterns[cellgame.rnd(10)];
+            /**　敗北メッセージ返却 */
+            this.msgLoseSelector = () => cellgame.msgPatterns[cellgame.rnd(10) + 10];
             this.statusName = Array(4).fill("");
             this.status = Array(4).fill(0);
             // 初期化
