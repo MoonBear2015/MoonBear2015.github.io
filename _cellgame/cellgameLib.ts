@@ -32,6 +32,10 @@ namespace cellgame {
         cells00[22] = new Cell(22,"農","農民:明滅",Colors.White,Colors.DarkOrange,true);
         cells00[23] = new Cell(23,"工","職人:明滅",Colors.White,Colors.DarkBlue,true);
         cells00[24] = new Cell(24,"商","商人:明滅",Colors.White,Colors.DarkGreen,true);
+
+        cells00[90] = new Cell(90,"可","可:明滅",Colors.White,Colors.Black,true);
+        cells00[99] = new Cell(91,"否","否:明滅",Colors.Red,Colors.Red,true);
+
     
         /** Cell 規定値 01 */
         cells01 = [];
@@ -58,6 +62,8 @@ namespace cellgame {
         cells01[23] = new Cell(23,"匠","匠:明滅",Colors.White,Colors.DarkBlue,true);
         cells01[24] = new Cell(24,"売","売人:明滅",Colors.White,Colors.DarkGreen,true);
     
+        cells01[90] = new Cell(90,"可","可:明滅",Colors.White,Colors.Black,true);
+        cells01[99] = new Cell(91,"否","否:明滅",Colors.Red,Colors.Red,true);
         /** Cell 規定値 02 */
         cells02 = [];
         cells02[0] = new Cell(0,"　","虚無",Colors.White,Colors.Black);
@@ -82,6 +88,11 @@ namespace cellgame {
         cells02[22] = new Cell(22,"Ｆ","Farmer（農民）:明滅",Colors.White,Colors.DarkOrange);
         cells02[23] = new Cell(23,"Ａ","Artisans（職人）:明滅",Colors.White,Colors.DarkBlue);
         cells02[24] = new Cell(24,"Ｍ","Merchants（商人）:明滅",Colors.White,Colors.DarkGreen);
+
+            
+        cells02[90] = new Cell(90,"Ｙ","可:明滅",Colors.White,Colors.Black,true);
+        cells02[99] = new Cell(91,"Ｎ","否:明滅",Colors.Red,Colors.Red,true);
+
     }
 
     /** Cell設定の選択 */

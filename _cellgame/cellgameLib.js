@@ -26,6 +26,8 @@ var cellgame;
         cellgame.cells00[22] = new Cell(22, "農", "農民:明滅", cellgame.Colors.White, cellgame.Colors.DarkOrange, true);
         cellgame.cells00[23] = new Cell(23, "工", "職人:明滅", cellgame.Colors.White, cellgame.Colors.DarkBlue, true);
         cellgame.cells00[24] = new Cell(24, "商", "商人:明滅", cellgame.Colors.White, cellgame.Colors.DarkGreen, true);
+        cellgame.cells00[90] = new Cell(90, "可", "可:明滅", cellgame.Colors.White, cellgame.Colors.Black, true);
+        cellgame.cells00[99] = new Cell(91, "否", "否:明滅", cellgame.Colors.Red, cellgame.Colors.Red, true);
         /** Cell 規定値 01 */
         cellgame.cells01 = [];
         cellgame.cells01[0] = new Cell(0, "　", "虚無", cellgame.Colors.White, cellgame.Colors.Black);
@@ -48,6 +50,8 @@ var cellgame;
         cellgame.cells01[22] = new Cell(22, "農", "農民:明滅", cellgame.Colors.White, cellgame.Colors.DarkOrange, true);
         cellgame.cells01[23] = new Cell(23, "匠", "匠:明滅", cellgame.Colors.White, cellgame.Colors.DarkBlue, true);
         cellgame.cells01[24] = new Cell(24, "売", "売人:明滅", cellgame.Colors.White, cellgame.Colors.DarkGreen, true);
+        cellgame.cells01[90] = new Cell(90, "可", "可:明滅", cellgame.Colors.White, cellgame.Colors.Black, true);
+        cellgame.cells01[99] = new Cell(91, "否", "否:明滅", cellgame.Colors.Red, cellgame.Colors.Red, true);
         /** Cell 規定値 02 */
         cellgame.cells02 = [];
         cellgame.cells02[0] = new Cell(0, "　", "虚無", cellgame.Colors.White, cellgame.Colors.Black);
@@ -70,6 +74,8 @@ var cellgame;
         cellgame.cells02[22] = new Cell(22, "Ｆ", "Farmer（農民）:明滅", cellgame.Colors.White, cellgame.Colors.DarkOrange);
         cellgame.cells02[23] = new Cell(23, "Ａ", "Artisans（職人）:明滅", cellgame.Colors.White, cellgame.Colors.DarkBlue);
         cellgame.cells02[24] = new Cell(24, "Ｍ", "Merchants（商人）:明滅", cellgame.Colors.White, cellgame.Colors.DarkGreen);
+        cellgame.cells02[90] = new Cell(90, "Ｙ", "可:明滅", cellgame.Colors.White, cellgame.Colors.Black, true);
+        cellgame.cells02[99] = new Cell(91, "Ｎ", "否:明滅", cellgame.Colors.Red, cellgame.Colors.Red, true);
     }
     cellgame.cellsInit = cellsInit;
     /** Cell設定の選択 */
