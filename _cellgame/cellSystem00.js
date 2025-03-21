@@ -112,8 +112,8 @@ var cellgame;
          * @returns 穴あけ開始ポイント
          */
         centerHolePoint(size) {
-            let x = (this.cellCount - size) / 2;
-            let y = (this.cellCount - size) / 2;
+            let x = Math.floor((this.cellCount - size) / 2);
+            let y = Math.floor((this.cellCount - size) / 2);
             return new cellgame.Point(false, x, y);
         }
         /** タッチ箇所受信 */

@@ -120,8 +120,8 @@ namespace cellgame {
          * @returns 穴あけ開始ポイント
          */
         public centerHolePoint(size : number) : Point {
-            let x = (this.cellCount - size) / 2;
-            let y = (this.cellCount - size) / 2;
+            let x = Math.floor((this.cellCount - size) / 2);
+            let y = Math.floor((this.cellCount - size) / 2);
             return new Point(false,x,y);
         }
         
