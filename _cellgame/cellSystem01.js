@@ -84,6 +84,10 @@ var cellgame;
                     this.selectCellSetter(x, y);
                     return;
                 }
+                if (c == 92) {
+                    this.gameStep = 1;
+                    return;
+                }
             }
             if (this.gameStep == 5) {
                 let c = this.codeGetter(p.x, p.y);
@@ -120,6 +124,14 @@ var cellgame;
                 /** ゲームスタート */
                 case 1:
                     {
+                        if (this.gameLevel > 0) {
+                            this.statusName[3] = "段位";
+                            this.status[3] = this.gameLevel;
+                        }
+                        else {
+                            this.statusName[3] = "";
+                            this.status[3] = 0;
+                        }
                         this.gameSizeCalc();
                         this.isGameClear = false;
                         this.isGameOver = false;
@@ -144,6 +156,7 @@ var cellgame;
                         this.selectCellSetter(x0, y0);
                         this.gameStep = 2;
                         this.isGamePlay = true;
+                        this.codeSetter(this.cellCount - 1, this.cellCount - 1, 92);
                         break;
                     }
                 /** ゲームプレイ */
@@ -165,6 +178,7 @@ var cellgame;
                 /** ゲームクリア 表示*/
                 case 3:
                     {
+                        this.codeSetter(this.cellCount - 1, this.cellCount - 1, 9);
                         this.messages = [];
                         this.messages.push(new cellgame.Message(this.msgWinSelector(), 1, 0, cellgame.Colors.White, cellgame.Colors.Black, true));
                         this.okButtonSetter();
@@ -174,6 +188,7 @@ var cellgame;
                 /** ゲームオーバー 表示*/
                 case 4:
                     {
+                        this.codeSetter(this.cellCount - 1, this.cellCount - 1, 9);
                         this.messages = [];
                         this.messages.push(new cellgame.Message(this.msgLoseSelector(), 1, 0, cellgame.Colors.Black, cellgame.Colors.Red, false));
                         this.okButtonSetter();

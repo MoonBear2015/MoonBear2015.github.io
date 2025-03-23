@@ -39,14 +39,15 @@ namespace cellgame {
         cells00[23] = new Cell(23,"工","職人:明滅",Colors.White,Colors.DarkBlue,true);
         cells00[24] = new Cell(24,"商","商人:明滅",Colors.White,Colors.DarkGreen,true);
 
-        cells00[90] = new Cell(90,"了","了:明滅",Colors.White,Colors.Black,true);
-        cells00[99] = new Cell(91,"否","否:明滅",Colors.Red,Colors.Red,true);
+        cells00[90] = new Cell(90,"了","了解:明滅",Colors.White,Colors.Black,true);
+        cells00[91] = new Cell(91,"否","否定:明滅",Colors.White,Colors.Red,true);
+        cells00[92] = new Cell(92,"再","再考:明滅",Colors.Black,Colors.Yellow,true);
 
         msgPatterns00 = [];
         msgPatterns00[0] = "　よくやった！　";
         msgPatterns00[1] = "　　いいぞ！　　";
         msgPatterns00[2] = "　でかした！！　";
-        msgPatterns00[3] = "　さすがた！！　";
+        msgPatterns00[3] = "　さすがだ！！　";
         msgPatterns00[4] = "　おみごと！！　";
         msgPatterns00[5] = "　　すごい！　　";
         msgPatterns00[6] = "　すばらしい！　";
@@ -89,8 +90,9 @@ namespace cellgame {
         cells01[23] = new Cell(23,"匠","匠:明滅",Colors.White,Colors.DarkBlue,true);
         cells01[24] = new Cell(24,"売","売人:明滅",Colors.White,Colors.DarkGreen,true);
     
-        cells01[90] = new Cell(90,"了","了:明滅",Colors.White,Colors.Black,true);
-        cells01[99] = new Cell(91,"否","否:明滅",Colors.Red,Colors.Red,true);
+        cells01[90] = new Cell(90,"了","了解:明滅",Colors.White,Colors.Black,true);
+        cells01[91] = new Cell(91,"否","否定:明滅",Colors.White,Colors.Red,true);
+        cells01[92] = new Cell(92,"再","再考:明滅",Colors.Black,Colors.Yellow,true);
 
         msgPatterns01 = [];
         msgPatterns01[0] = "　　偉いぞ！　　";
@@ -141,8 +143,9 @@ namespace cellgame {
         cells02[24] = new Cell(24,"Ｍ","Merchants（商人）:明滅",Colors.White,Colors.DarkGreen);
 
             
-        cells02[90] = new Cell(90,"Ｙ","可:明滅",Colors.White,Colors.Black,true);
-        cells02[99] = new Cell(91,"Ｎ","否:明滅",Colors.Red,Colors.Red,true);
+        cells02[90] = new Cell(90,"Ｙ","Yes 了解:明滅",Colors.White,Colors.Black,true);
+        cells02[91] = new Cell(91,"Ｎ","No 拒否:明滅",Colors.White,Colors.Red,true);
+        cells02[92] = new Cell(92,"Ｒ","Retry 再考:明滅",Colors.Black,Colors.Yellow,true);
 
         msgPatterns02 = [];
         msgPatterns02[0] = "　　ＯＫ！！　　";
