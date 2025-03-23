@@ -11,7 +11,9 @@ var cellgame;
         constructor() {
             super();
             // game01 self
+            this.gameLevel = 0;
             this.gameSize = 2;
+            this.canFreePotision = false;
             this.nowCell = 0;
             this.isGameOver = false;
             this.isGameClear = false;
@@ -22,9 +24,51 @@ var cellgame;
         }
         /** 初期化 */
         init() {
-            this.statusName = ["段位", "", "", "設問"];
-            this.status = [1, 0, 0, 1];
+            this.statusName = ["", "", "", ""];
+            this.status = [0, 0, 0, 0];
+            this.gameLevel = 0;
+            this.gameSize = 2;
+            this.canFreePotision = false;
             this.cellReset(6);
+        }
+        gameSizeCalc() {
+            let s = 2 + this.gameLevel;
+            if (this.gameLevel == 0) {
+                this.gameSize = 2;
+                this.canFreePotision = false;
+                return;
+            }
+            if (this.gameLevel > 0 && this.gameLevel < 4) {
+                this.gameSize = 3;
+                if (this.gameLevel > 1) {
+                    this.canFreePotision = true;
+                }
+                else {
+                    this.canFreePotision = false;
+                }
+                return;
+            }
+            let r = Math.floor(this.gameLevel / 4);
+            this.gameSize = r * 4;
+            if (this.gameSize > 5) {
+                this.gameSize = 5;
+            }
+            let mod = this.gameLevel % 4;
+            if (mod == 0) {
+                this.canFreePotision = false;
+            }
+            else {
+                this.canFreePotision = true;
+            }
+            return;
+        }
+        /** 2の階乗であるかどうかの確認 */
+        isPowerOfTwo(n) {
+            if (n <= 0) {
+                return false;
+            }
+            // n & (n - 1) が 0 である場合、n は 2 の階乗
+            return (n & (n - 1)) === 0;
         }
         /** セル選択
          * @param p : 選択桁位置
@@ -46,9 +90,7 @@ var cellgame;
                 if (c == 90) {
                     if (this.isGameClear) {
                         this.gameStep = 1;
-                        if (this.gameSize < 6) {
-                            this.gameSize++;
-                        }
+                        this.gameLevel++;
                         this.gameStep = 1;
                         return;
                     }
@@ -78,6 +120,7 @@ var cellgame;
                 /** ゲームスタート */
                 case 1:
                     {
+                        this.gameSizeCalc();
                         this.isGameClear = false;
                         this.isGameOver = false;
                         this.isGamePlay = false;
@@ -86,8 +129,16 @@ var cellgame;
                         this.messages.push(new cellgame.Message("士農工商を並べよ", 1, 0, cellgame.Colors.White, cellgame.Colors.Black));
                         this.centerHoleMaker(this.gameSize, 10);
                         let p = this.centerHolePoint(this.gameSize);
-                        let x0 = p.x + (this.gameSize - 1) * cellgame.rnd(2);
-                        let y0 = p.y + (this.gameSize - 1) * cellgame.rnd(2);
+                        let x0 = p.x;
+                        let y0 = p.y;
+                        if (this.canFreePotision) {
+                            x0 = p.x + cellgame.rnd(this.gameSize);
+                            y0 = p.y + cellgame.rnd(this.gameSize);
+                        }
+                        else {
+                            x0 = p.x + (this.gameSize - 1) * cellgame.rnd(2);
+                            y0 = p.y + (this.gameSize - 1) * cellgame.rnd(2);
+                        }
                         this.nowCell = 11;
                         this.codeSetter(x0, y0, this.nowCell);
                         this.selectCellSetter(x0, y0);

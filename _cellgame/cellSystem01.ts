@@ -10,11 +10,13 @@ namespace cellgame {
 
         // game01 self
 
-        public gameSize = 2;
-        public nowCell = 0;
-        public isGameOver = false;
-        public isGameClear = false;
-        public isGamePlay = false;
+        public gameLevel : number = 0;
+        public gameSize : number = 2;
+        public canFreePotision : boolean = false;
+        public nowCell : number = 0;
+        public isGameOver : boolean = false;
+        public isGameClear : boolean = false;
+        public isGamePlay : boolean = false;
 
         /** 背景色 */
         public backColor: string = Colors.DeepDarkGray;
@@ -26,10 +28,55 @@ namespace cellgame {
 
         /** 初期化 */
         public init() {
-            this.statusName = ["段位","","","設問"];
-            this.status = [1,0,0,1];
+            this.statusName = ["","","",""];
+            this.status = [0,0,0,0];
 
+            this.gameLevel = 0;
+            this.gameSize = 2;
+            this.canFreePotision = false;
             this.cellReset(6);
+        }
+
+        private gameSizeCalc() : void {
+            let s = 2 + this.gameLevel;
+            if (this.gameLevel == 0) {
+                this.gameSize = 2;
+                this.canFreePotision = false;
+                return;
+            }
+            if (this.gameLevel > 0 && this.gameLevel < 4) {
+                this.gameSize = 3;
+                if (this.gameLevel > 1) {
+                    this.canFreePotision = true;
+                }
+                else
+                {
+                    this.canFreePotision = false;
+                }
+                return;
+            }
+            let r = Math.floor(this.gameLevel / 4);
+            this.gameSize = r * 4;
+            if (this.gameSize > 5) {
+                this.gameSize = 5;
+            }
+            let mod = this.gameLevel % 4;
+            if (mod == 0) {
+                this.canFreePotision = false;
+            } else {
+                this.canFreePotision = true;
+            }
+            return;
+
+        }
+
+        /** 2の階乗であるかどうかの確認 */
+        private isPowerOfTwo(n: number): boolean {
+            if (n <= 0) {
+                return false;
+            }
+            // n & (n - 1) が 0 である場合、n は 2 の階乗
+            return (n & (n - 1)) === 0;
         }
         
         /** セル選択
@@ -52,9 +99,7 @@ namespace cellgame {
                 if (c == 90) {
                     if (this.isGameClear) {
                         this.gameStep = 1;
-                        if (this.gameSize < 6) {
-                            this.gameSize++;
-                        }
+                        this.gameLevel++;
                         this.gameStep = 1;
                         return;
                     }
@@ -85,6 +130,7 @@ namespace cellgame {
                 /** ゲームスタート */
                 case 1:
                     {
+                        this.gameSizeCalc();
                         this.isGameClear = false;
                         this.isGameOver = false;
                         this.isGamePlay = false;
@@ -93,8 +139,15 @@ namespace cellgame {
                         this.messages.push(new Message("士農工商を並べよ",1,0,Colors.White,Colors.Black));
                         this.centerHoleMaker(this.gameSize,10);
                         let p = this.centerHolePoint(this.gameSize);
-                        let x0 = p.x + (this.gameSize - 1) * rnd(2);
-                        let y0 = p.y + (this.gameSize - 1) * rnd(2);
+                        let x0 = p.x;
+                        let y0 = p.y;
+                        if (this.canFreePotision) {
+                            x0 = p.x + rnd(this.gameSize);
+                            y0 = p.y + rnd(this.gameSize);
+                        } else {
+                            x0 = p.x + (this.gameSize - 1) * rnd(2);
+                            y0 = p.y + (this.gameSize - 1) * rnd(2);
+                        }
                         this.nowCell = 11;
                         this.codeSetter(x0,y0,this.nowCell);
                         this.selectCellSetter(x0,y0);
