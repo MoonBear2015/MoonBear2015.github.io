@@ -42,6 +42,7 @@ namespace cellgame {
         cells00[90] = new Cell(90,"了","了解:明滅",Colors.White,Colors.Black,true);
         cells00[91] = new Cell(91,"否","否定:明滅",Colors.White,Colors.Red,true);
         cells00[92] = new Cell(92,"再","再考:明滅",Colors.Black,Colors.Yellow,true);
+        cells00[93] = new Cell(93,"説","説明:明滅",Colors.Black,Colors.White,false);
 
         msgPatterns00 = [];
         msgPatterns00[0] = "　よくやった！　";
@@ -93,6 +94,7 @@ namespace cellgame {
         cells01[90] = new Cell(90,"了","了解:明滅",Colors.White,Colors.Black,true);
         cells01[91] = new Cell(91,"否","否定:明滅",Colors.White,Colors.Red,true);
         cells01[92] = new Cell(92,"再","再考:明滅",Colors.Black,Colors.Yellow,true);
+        cells01[92] = new Cell(93,"説","説明:明滅",Colors.Black,Colors.White,false);
 
         msgPatterns01 = [];
         msgPatterns01[0] = "　　偉いぞ！　　";
@@ -141,11 +143,11 @@ namespace cellgame {
         cells02[22] = new Cell(22,"Ｆ","Farmer（農民）:明滅",Colors.White,Colors.DarkOrange);
         cells02[23] = new Cell(23,"Ａ","Artisans（職人）:明滅",Colors.White,Colors.DarkBlue);
         cells02[24] = new Cell(24,"Ｍ","Merchants（商人）:明滅",Colors.White,Colors.DarkGreen);
-
             
         cells02[90] = new Cell(90,"Ｙ","Yes 了解:明滅",Colors.White,Colors.Black,true);
         cells02[91] = new Cell(91,"Ｎ","No 拒否:明滅",Colors.White,Colors.Red,true);
         cells02[92] = new Cell(92,"Ｒ","Retry 再考:明滅",Colors.Black,Colors.Yellow,true);
+        cells02[92] = new Cell(92,"？","? 説明:明滅",Colors.Black,Colors.White,false);
 
         msgPatterns02 = [];
         msgPatterns02[0] = "　　ＯＫ！！　　";

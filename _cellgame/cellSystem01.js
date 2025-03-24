@@ -14,6 +14,8 @@ var cellgame;
             this.gameLevel = 0;
             this.gameSize = 2;
             this.canFreePotision = false;
+            this.haveBlock = false;
+            this.blockCount = 0;
             this.nowCell = 0;
             this.isGameOver = false;
             this.isGameClear = false;
@@ -42,9 +44,15 @@ var cellgame;
                 this.gameSize = 3;
                 if (this.gameLevel > 1) {
                     this.canFreePotision = true;
+                    if (!this.haveBlock) {
+                        this.haveBlock = true;
+                        this.blockCount = 1;
+                    }
                 }
                 else {
                     this.canFreePotision = false;
+                    this.haveBlock = false;
+                    this.blockCount = 0;
                 }
                 return;
             }
@@ -56,19 +64,24 @@ var cellgame;
             let mod = this.gameLevel % 4;
             if (mod == 0) {
                 this.canFreePotision = false;
+                this.haveBlock = false;
+                this.blockCount = 0;
             }
             else {
                 this.canFreePotision = true;
+                if (!this.haveBlock) {
+                    this.haveBlock = true;
+                    this.blockCount = 1;
+                }
+                else {
+                    this.blockCount++;
+                    let max = this.gameSize - 2;
+                    if (this.blockCount > max) {
+                        this.blockCount = max;
+                    }
+                }
             }
             return;
-        }
-        /** 2の階乗であるかどうかの確認 */
-        isPowerOfTwo(n) {
-            if (n <= 0) {
-                return false;
-            }
-            // n & (n - 1) が 0 である場合、n は 2 の階乗
-            return (n & (n - 1)) === 0;
         }
         /** セル選択
          * @param p : 選択桁位置
@@ -86,6 +99,10 @@ var cellgame;
                 }
                 if (c == 92) {
                     this.gameStep = 1;
+                    return;
+                }
+                if (c == 93) {
+                    alert(this.toComment());
                     return;
                 }
             }
@@ -143,9 +160,29 @@ var cellgame;
                         let p = this.centerHolePoint(this.gameSize);
                         let x0 = p.x;
                         let y0 = p.y;
+                        if (this.haveBlock) {
+                            for (let i = 0; i < this.blockCount; i++) {
+                                while (true) {
+                                    let x = x0 + cellgame.rnd(this.gameSize - 2) + 1;
+                                    let y = y0 + cellgame.rnd(this.gameSize - 2) + 1;
+                                    if (this.codeGetter(x, y) != 10) {
+                                        continue;
+                                    }
+                                    this.codeSetter(x, y, 9);
+                                    break;
+                                }
+                            }
+                        }
                         if (this.canFreePotision) {
-                            x0 = p.x + cellgame.rnd(this.gameSize);
-                            y0 = p.y + cellgame.rnd(this.gameSize);
+                            while (true) {
+                                x0 = p.x + cellgame.rnd(this.gameSize);
+                                y0 = p.y + cellgame.rnd(this.gameSize);
+                                // 空きセルでなければやり直し
+                                if (this.codeGetter(x0, y0) != 10) {
+                                    continue;
+                                }
+                                break;
+                            }
                         }
                         else {
                             x0 = p.x + (this.gameSize - 1) * cellgame.rnd(2);
@@ -157,6 +194,7 @@ var cellgame;
                         this.gameStep = 2;
                         this.isGamePlay = true;
                         this.codeSetter(this.cellCount - 1, this.cellCount - 1, 92);
+                        this.codeSetter(0, this.cellCount - 1, 93);
                         break;
                     }
                 /** ゲームプレイ */
@@ -270,6 +308,16 @@ var cellgame;
                 this.isGamePlay = false;
                 this.isGameOver = true;
             }
+        }
+        toComment() {
+            let result = "";
+            result += "★ 士農工商 ★\n";
+            result += "士農工商を順に配置し、\n";
+            result += "士農工商の順列を学ぶのだ。\n";
+            result += "尚、盤面の整合性は計られていない。\n";
+            result += "無理な場合は'再'を選んでやり直せ。\n";
+            result += "その場合の罰則は無い。\n";
+            return result;
         }
     }
     cellgame.CellGameSystem01 = CellGameSystem01;
