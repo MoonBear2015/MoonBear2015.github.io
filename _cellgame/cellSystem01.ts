@@ -15,6 +15,7 @@ namespace cellgame {
         public canFreePotision : boolean = false;
         public haveBlock : boolean = false;
         public blockCount : number = 0;
+        public isEndless : boolean = false;
         public nowCell : number = 0;
         public isGameOver : boolean = false;
         public isGameClear : boolean = false;
@@ -44,6 +45,7 @@ namespace cellgame {
             if (this.gameLevel == 0) {
                 this.gameSize = 2;
                 this.canFreePotision = false;
+                this.isEndless = false;
                 return;
             }
             if (this.gameLevel > 0 && this.gameLevel < 4) {
@@ -67,9 +69,10 @@ namespace cellgame {
             this.gameSize = r * 4;
             if (this.gameSize > 5) {
                 this.gameSize = 5;
+                this.isEndless = true
             }
             let mod = this.gameLevel % 4;
-            if (mod == 0) {
+            if (mod == 0 && !this.isEndless) {
                 this.canFreePotision = false;
                 this.haveBlock = false;
                 this.blockCount = 0;
@@ -90,6 +93,9 @@ namespace cellgame {
             return;
 
         }
+
+        /** メッセージ表示位置 */
+        public messagePotision　=　() : number => Math.floor((this.gameSize + 4 - 6) / 2);
 
         /** セル選択
          * @param p : 選択桁位置
@@ -139,7 +145,6 @@ namespace cellgame {
                 /** ゲームタイトル */
                 case 0:
                     {
-                        this.cellReset(8);
                         this.gameStep = 1;
                         this.gameSize = 2;
                         this.isGameClear = false;
@@ -159,12 +164,14 @@ namespace cellgame {
                         }
                         
                         this.gameSizeCalc();
+                        this.cellReset(this.gameSize + 4);
+
                         this.isGameClear = false;
                         this.isGameOver = false;
                         this.isGamePlay = false;
                         this.cellAllPaint(9);
                         this.messages = [];
-                        this.messages.push(new Message("士農工商を並べよ",1,0,Colors.White,Colors.Black));
+                        this.messages.push(new Message("士農工商を並べよ",this.messagePotision(),0,Colors.White,Colors.Black));
                         this.centerHoleMaker(this.gameSize,10);
                         let p = this.centerHolePoint(this.gameSize);
                         let x0 = p.x;
@@ -226,7 +233,7 @@ namespace cellgame {
                         this.codeSetter(this.cellCount - 1,this.cellCount - 1,9);
                         
                         this.messages = [];
-                        this.messages.push(new Message(this.msgWinSelector(),1,0,Colors.White,Colors.Black,true));
+                        this.messages.push(new Message(this.msgWinSelector(),this.messagePotision(),0,Colors.White,Colors.Black,true));
                         this.okButtonSetter();
                         this.gameStep = 5;
                         break;
@@ -237,7 +244,7 @@ namespace cellgame {
                         this.codeSetter(this.cellCount - 1,this.cellCount - 1,9);
 
                         this.messages = [];
-                        this.messages.push(new Message(this.msgLoseSelector(),1,0,Colors.Black,Colors.Red,false));
+                        this.messages.push(new Message(this.msgLoseSelector(),this.messagePotision(),0,Colors.Black,Colors.Red,false));
                         this.okButtonSetter();
                         this.gameStep = 5;
                         break;
