@@ -149,6 +149,7 @@ var cellgame;
                 /** ゲームスタート */
                 case 1:
                     {
+                        this.gameSizeCalc();
                         if (this.gameLevel > 0) {
                             this.statusName[3] = "段位";
                             this.status[3] = this.gameLevel;
@@ -159,11 +160,12 @@ var cellgame;
                         }
                         if (this.isEndless) {
                             this.statusName[0] = "無限";
+                            this.status[0] = -1;
                         }
                         else {
                             this.statusName[0] = "";
+                            this.status[0] = -1;
                         }
-                        this.gameSizeCalc();
                         this.cellReset(this.gameSize + 4);
                         this.isGameClear = false;
                         this.isGameOver = false;

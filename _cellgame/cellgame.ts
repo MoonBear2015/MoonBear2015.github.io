@@ -586,7 +586,11 @@ namespace cellgame {
         } else {
             box.style.backgroundColor = Colors.DarkBlue;
             name.textContent = gameSystem.statusName[i];
-            value.textContent = gameSystem.status[i].toString();
+            if (gameSystem.status[i] < 0) {
+                value.textContent = "";
+            } else {
+                value.textContent = gameSystem.status[i].toString();
+            }
         }
 
     }

@@ -409,7 +409,12 @@ var cellgame;
         else {
             box.style.backgroundColor = cellgame.Colors.DarkBlue;
             name.textContent = cellgame.gameSystem.statusName[i];
-            value.textContent = cellgame.gameSystem.status[i].toString();
+            if (cellgame.gameSystem.status[i] < 0) {
+                value.textContent = "";
+            }
+            else {
+                value.textContent = cellgame.gameSystem.status[i].toString();
+            }
         }
     }
     cellgame.statusDisplay = statusDisplay;
