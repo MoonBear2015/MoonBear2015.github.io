@@ -40,6 +40,7 @@ namespace cellgame {
             this.cellReset(6);
         }
 
+        /** ゲーム枠の大きさを計算 */
         private gameSizeCalc() : void {
             let s = 2 + this.gameLevel;
             if (this.gameLevel == 0) {
@@ -66,32 +67,33 @@ namespace cellgame {
                 return;
             }
             let r = Math.floor(this.gameLevel / 4);
-            this.gameSize = r * 4;
+            this.gameSize = 3 + r;
             if (this.gameSize > 5) {
                 this.gameSize = 5;
-                this.isEndless = true
+                this.haveBlock = true;
+                this.blockCount = 3;
+                this.isEndless = true;
+                return;
+            } else {
+                this.isEndless = false;
             }
             let mod = this.gameLevel % 4;
-            if (mod == 0 && !this.isEndless) {
+            if (mod == 0 ) {
                 this.canFreePotision = false;
                 this.haveBlock = false;
                 this.blockCount = 0;
             } else {
-                this.canFreePotision = true;
-                if (!this.haveBlock) {
+                if (mod == 1) {
+                    this.canFreePotision = true;
+                    this.haveBlock = false;
+                    this.blockCount = 0;
+                } else {
+                    this.canFreePotision = true;
                     this.haveBlock = true;
-                    this.blockCount = 1;
-                }
-                else {
-                    this.blockCount++;
-                    let max = this.gameSize - 2;
-                    if (this.blockCount > max) {
-                        this.blockCount = max;
-                    }
+                    this.blockCount = mod - 1;
                 }
             }
             return;
-
         }
 
         /** メッセージ表示位置 */
@@ -126,7 +128,6 @@ namespace cellgame {
                     if (this.isGameClear) {
                         this.gameStep = 1;
                         this.gameLevel++;
-                        this.gameStep = 1;
                         return;
                     }
                     if (this.isGameOver) {
@@ -161,6 +162,11 @@ namespace cellgame {
                         } else {
                             this.statusName[3] = "";
                             this.status[3] = 0;
+                        }
+                        if (this.isEndless) {
+                            this.statusName[0] = "無限";
+                        } else {
+                            this.statusName[0] = "";
                         }
                         
                         this.gameSizeCalc();
@@ -332,8 +338,9 @@ namespace cellgame {
             let result = "";
             result +="★ 士農工商 ★\n";
             result +="士農工商を順に配置し、\n";
+            result +="士農工商で盤面を埋めて、\n";
             result +="士農工商の順列を学ぶのだ。\n";
-            result +="尚、盤面の整合性は計られていない。\n";
+            result +="尚、盤面に整合性は計られていない。\n";
             result +="無理な場合は'再'を選んでやり直せ。\n";
             result +="その場合の罰則は無い。\n";
             return result;
