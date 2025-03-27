@@ -20,6 +20,7 @@ namespace cellgame {
         public isGameOver : boolean = false;
         public isGameClear : boolean = false;
         public isGamePlay : boolean = false;
+        public isPlayStarted : boolean = false;
 
         /** 背景色 */
         public backColor: string = Colors.DeepDarkGray;
@@ -111,6 +112,7 @@ namespace cellgame {
                     this.nowCell = this.codeLoop(this.nowCell,1);
                     this.codeSetter(x,y,this.nowCell);
                     this.selectCellSetter(x,y);
+                    this.isPlayStarted = true;
                     return;
                 }
                 if (c == 92) {
@@ -216,7 +218,9 @@ namespace cellgame {
                         this.selectCellSetter(x0,y0);
                         this.gameStep = 2;
                         this.isGamePlay = true;
-                        this.codeSetter(this.cellCount - 1,this.cellCount - 1,92);
+                        // 再ボタン消去
+                        this.codeSetter(this.cellCount - 1,this.cellCount - 1,9);
+                        // 説ボタン設置
                         this.codeSetter(0,this.cellCount - 1,93);
                         break;
                     }
@@ -224,6 +228,16 @@ namespace cellgame {
                 case 2:
                     {
                         if (!this.isGamePlay) break;
+                        this.messages = [];
+                        if (this.isPlayStarted) {
+                            // 再ボタン設置
+                            this.codeSetter(this.cellCount - 1,this.cellCount - 1,92);
+                        }
+                        else {
+                            this.messages.push(new Message("士農工商を並べよ",this.messagePotision(),0,Colors.White,Colors.Black));
+                            // 再ボタン消去
+                            this.codeSetter(this.cellCount - 1,this.cellCount - 1,9);
+                        }
                         this.checkGame01();
                         if (this.isGameClear) {
                             this.gameStep = 3;
@@ -238,7 +252,9 @@ namespace cellgame {
                 /** ゲームクリア 表示*/
                 case 3:
                     {
+                        // 再ボタン消去
                         this.codeSetter(this.cellCount - 1,this.cellCount - 1,9);
+                        this.isPlayStarted = false;
                         
                         this.messages = [];
                         this.messages.push(new Message(this.msgWinSelector(),this.messagePotision(),0,Colors.White,Colors.Black,true));
@@ -249,7 +265,9 @@ namespace cellgame {
                 /** ゲームオーバー 表示*/
                 case 4:
                     {
+                        // 再ボタン消去
                         this.codeSetter(this.cellCount - 1,this.cellCount - 1,9);
+                        this.isPlayStarted = false;
 
                         this.messages = [];
                         this.messages.push(new Message(this.msgLoseSelector(),this.messagePotision(),0,Colors.Black,Colors.Red,false));
