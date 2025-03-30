@@ -1,48 +1,48 @@
 /// <reference path="cellgameSub.ts" />
 namespace cellgame {
     /** Cell設定 */
-    export var cells: ICell[] = [];
+    export var komas: IKoma[] = [];
     export var msgPatterns: string[] = [];
 
     /** Cell 規定値設定 */
-    export var cells00 : ICell[];
-    export var cells01 : ICell[];
-    export var cells02 : ICell[];
+    export var komas00 : IKoma[];
+    export var komas01 : IKoma[];
+    export var komas02 : IKoma[];
 
     /** Message パターン */
     export var msgPatterns00 : string[] = [];
     export var msgPatterns01 : string[] = [];
     export var msgPatterns02 : string[] = [];
 
-    export function cellsInit() {
-        cells00 = [];
-        cells00[0] = new Cell(0,"　","虚無",Colors.White,Colors.Black);
-        cells00[1] = new Cell(1,"　","赤壁",Colors.White,Colors.Red);
-        cells00[2] = new Cell(2,"　","新緑",Colors.White,Colors.Green);
-        cells00[3] = new Cell(3,"　","辛子",Colors.White,Colors.Yellow);
-        cells00[4] = new Cell(4,"　","青々",Colors.White,Colors.Blue);
-        cells00[5] = new Cell(5,"　","紫煙",Colors.White,Colors.Magenta);
-        cells00[6] = new Cell(6,"　","水面",Colors.White,Colors.Cyan);
-        cells00[7] = new Cell(7,"　","白塗",Colors.White,Colors.White);
-        cells00[8] = new Cell(8,"　","灰被",Colors.White,Colors.Gray);
-        cells00[9] = new Cell(9,"　","暗雲",Colors.White,Colors.DeepDarkGray);
+    export function komasInit() {
+        komas00 = [];
+        komas00[0] = new Koma(0,"　","虚無",Colors.White,Colors.Black);
+        komas00[1] = new Koma(1,"　","赤壁",Colors.White,Colors.Red);
+        komas00[2] = new Koma(2,"　","新緑",Colors.White,Colors.Green);
+        komas00[3] = new Koma(3,"　","辛子",Colors.White,Colors.Yellow);
+        komas00[4] = new Koma(4,"　","青々",Colors.White,Colors.Blue);
+        komas00[5] = new Koma(5,"　","紫煙",Colors.White,Colors.Magenta);
+        komas00[6] = new Koma(6,"　","水面",Colors.White,Colors.Cyan);
+        komas00[7] = new Koma(7,"　","白塗",Colors.White,Colors.White);
+        komas00[8] = new Koma(8,"　","灰被",Colors.White,Colors.Gray);
+        komas00[9] = new Koma(9,"　","暗雲",Colors.White,Colors.DeepDarkGray);
 
-        cells00[10] = new Cell(10,"　","空き",Colors.White,Colors.Black);
-        cells00[11] = new Cell(11,"士","武士",Colors.White,Colors.Red);
-        cells00[12] = new Cell(12,"農","農民",Colors.White,Colors.DarkOrange);
-        cells00[13] = new Cell(13,"工","職人",Colors.White,Colors.DarkBlue);
-        cells00[14] = new Cell(14,"商","商人",Colors.White,Colors.DarkGreen);
+        komas00[10] = new Koma(10,"　","空き",Colors.White,Colors.Black);
+        komas00[11] = new Koma(11,"士","武士",Colors.White,Colors.Red);
+        komas00[12] = new Koma(12,"農","農民",Colors.White,Colors.DarkOrange);
+        komas00[13] = new Koma(13,"工","職人",Colors.White,Colors.DarkBlue);
+        komas00[14] = new Koma(14,"商","商人",Colors.White,Colors.DarkGreen);
 
-        cells00[20] = new Cell(20,"　","空き:明滅",Colors.White,Colors.Black,true);
-        cells00[21] = new Cell(21,"士","武士:明滅",Colors.White,Colors.Red,true);
-        cells00[22] = new Cell(22,"農","農民:明滅",Colors.White,Colors.DarkOrange,true);
-        cells00[23] = new Cell(23,"工","職人:明滅",Colors.White,Colors.DarkBlue,true);
-        cells00[24] = new Cell(24,"商","商人:明滅",Colors.White,Colors.DarkGreen,true);
+        komas00[20] = new Koma(20,"　","空き:明滅",Colors.White,Colors.Black,true);
+        komas00[21] = new Koma(21,"士","武士:明滅",Colors.White,Colors.Red,true);
+        komas00[22] = new Koma(22,"農","農民:明滅",Colors.White,Colors.DarkOrange,true);
+        komas00[23] = new Koma(23,"工","職人:明滅",Colors.White,Colors.DarkBlue,true);
+        komas00[24] = new Koma(24,"商","商人:明滅",Colors.White,Colors.DarkGreen,true);
 
-        cells00[90] = new Cell(90,"了","了解:明滅",Colors.White,Colors.Black,true);
-        cells00[91] = new Cell(91,"否","否定:明滅",Colors.White,Colors.Red,true);
-        cells00[92] = new Cell(92,"再","再考:明滅",Colors.Black,Colors.Yellow,true);
-        cells00[93] = new Cell(93,"説","説明:明滅",Colors.Black,Colors.White,false);
+        komas00[90] = new Koma(90,"了","了解:明滅",Colors.White,Colors.Black,true);
+        komas00[91] = new Koma(91,"否","否定:明滅",Colors.White,Colors.Red,true);
+        komas00[92] = new Koma(92,"再","再考:明滅",Colors.Black,Colors.Yellow,true);
+        komas00[93] = new Koma(93,"説","説明:明滅",Colors.Black,Colors.White,false);
 
         msgPatterns00 = [];
         msgPatterns00[0] = "　よくやった！　";
@@ -67,34 +67,34 @@ namespace cellgame {
         msgPatterns00[19] = "やれやれ・・・・";
         
         /** Cell 規定値 01 */
-        cells01 = [];
-        cells01[0] = new Cell(0,"　","虚無",Colors.White,Colors.Black);
-        cells01[1] = new Cell(1,"　","赤壁",Colors.White,Colors.Red);
-        cells01[2] = new Cell(2,"　","新緑",Colors.White,Colors.Green);
-        cells01[3] = new Cell(3,"　","辛子",Colors.White,Colors.Yellow);
-        cells01[4] = new Cell(4,"　","青々",Colors.White,Colors.Blue);
-        cells01[5] = new Cell(5,"　","紫煙",Colors.White,Colors.Magenta);
-        cells01[6] = new Cell(6,"　","水面",Colors.White,Colors.Cyan);
-        cells01[7] = new Cell(7,"　","白塗",Colors.White,Colors.White);
-        cells01[8] = new Cell(8,"　","灰被",Colors.White,Colors.Gray);
-        cells01[9] = new Cell(9,"　","暗雲",Colors.White,Colors.DeepDarkGray);
+        komas01 = [];
+        komas01[0] = new Koma(0,"　","虚無",Colors.White,Colors.Black);
+        komas01[1] = new Koma(1,"　","赤壁",Colors.White,Colors.Red);
+        komas01[2] = new Koma(2,"　","新緑",Colors.White,Colors.Green);
+        komas01[3] = new Koma(3,"　","辛子",Colors.White,Colors.Yellow);
+        komas01[4] = new Koma(4,"　","青々",Colors.White,Colors.Blue);
+        komas01[5] = new Koma(5,"　","紫煙",Colors.White,Colors.Magenta);
+        komas01[6] = new Koma(6,"　","水面",Colors.White,Colors.Cyan);
+        komas01[7] = new Koma(7,"　","白塗",Colors.White,Colors.White);
+        komas01[8] = new Koma(8,"　","灰被",Colors.White,Colors.Gray);
+        komas01[9] = new Koma(9,"　","暗雲",Colors.White,Colors.DeepDarkGray);
 
-        cells01[10] = new Cell(10,"　","空き",Colors.White,Colors.Black);
-        cells01[11] = new Cell(11,"武","武士",Colors.White,Colors.Red);
-        cells01[12] = new Cell(12,"農","農民",Colors.White,Colors.DarkOrange);
-        cells01[13] = new Cell(13,"匠","匠",Colors.White,Colors.DarkBlue);
-        cells01[14] = new Cell(14,"売","売人",Colors.White,Colors.DarkGreen);
+        komas01[10] = new Koma(10,"　","空き",Colors.White,Colors.Black);
+        komas01[11] = new Koma(11,"武","武士",Colors.White,Colors.Red);
+        komas01[12] = new Koma(12,"農","農民",Colors.White,Colors.DarkOrange);
+        komas01[13] = new Koma(13,"匠","匠",Colors.White,Colors.DarkBlue);
+        komas01[14] = new Koma(14,"売","売人",Colors.White,Colors.DarkGreen);
 
-        cells01[20] = new Cell(20,"　","空き:明滅",Colors.White,Colors.Black,true);
-        cells01[21] = new Cell(21,"武","武士:明滅",Colors.White,Colors.Red,true);
-        cells01[22] = new Cell(22,"農","農民:明滅",Colors.White,Colors.DarkOrange,true);
-        cells01[23] = new Cell(23,"匠","匠:明滅",Colors.White,Colors.DarkBlue,true);
-        cells01[24] = new Cell(24,"売","売人:明滅",Colors.White,Colors.DarkGreen,true);
+        komas01[20] = new Koma(20,"　","空き:明滅",Colors.White,Colors.Black,true);
+        komas01[21] = new Koma(21,"武","武士:明滅",Colors.White,Colors.Red,true);
+        komas01[22] = new Koma(22,"農","農民:明滅",Colors.White,Colors.DarkOrange,true);
+        komas01[23] = new Koma(23,"匠","匠:明滅",Colors.White,Colors.DarkBlue,true);
+        komas01[24] = new Koma(24,"売","売人:明滅",Colors.White,Colors.DarkGreen,true);
     
-        cells01[90] = new Cell(90,"了","了解:明滅",Colors.White,Colors.Black,true);
-        cells01[91] = new Cell(91,"否","否定:明滅",Colors.White,Colors.Red,true);
-        cells01[92] = new Cell(92,"再","再考:明滅",Colors.Black,Colors.Yellow,true);
-        cells01[92] = new Cell(93,"説","説明:明滅",Colors.Black,Colors.White,false);
+        komas01[90] = new Koma(90,"了","了解:明滅",Colors.White,Colors.Black,true);
+        komas01[91] = new Koma(91,"否","否定:明滅",Colors.White,Colors.Red,true);
+        komas01[92] = new Koma(92,"再","再考:明滅",Colors.Black,Colors.Yellow,true);
+        komas01[92] = new Koma(93,"説","説明:明滅",Colors.Black,Colors.White,false);
 
         msgPatterns01 = [];
         msgPatterns01[0] = "　　偉いぞ！　　";
@@ -120,34 +120,34 @@ namespace cellgame {
 
 
         /** Cell 規定値 02 */
-        cells02 = [];
-        cells02[0] = new Cell(0,"　","虚無",Colors.White,Colors.Black);
-        cells02[1] = new Cell(1,"　","赤壁",Colors.White,Colors.Red);
-        cells02[2] = new Cell(2,"　","新緑",Colors.White,Colors.Green);
-        cells02[3] = new Cell(3,"　","辛子",Colors.White,Colors.Yellow);
-        cells02[4] = new Cell(4,"　","青々",Colors.White,Colors.Blue);
-        cells02[5] = new Cell(5,"　","紫煙",Colors.White,Colors.Magenta);
-        cells02[6] = new Cell(6,"　","水面",Colors.White,Colors.Cyan);
-        cells02[7] = new Cell(7,"　","白塗",Colors.White,Colors.White);
-        cells02[8] = new Cell(8,"　","灰被",Colors.White,Colors.Gray);
-        cells02[9] = new Cell(9,"　","暗雲",Colors.White,Colors.DeepDarkGray);
+        komas02 = [];
+        komas02[0] = new Koma(0,"　","虚無",Colors.White,Colors.Black);
+        komas02[1] = new Koma(1,"　","赤壁",Colors.White,Colors.Red);
+        komas02[2] = new Koma(2,"　","新緑",Colors.White,Colors.Green);
+        komas02[3] = new Koma(3,"　","辛子",Colors.White,Colors.Yellow);
+        komas02[4] = new Koma(4,"　","青々",Colors.White,Colors.Blue);
+        komas02[5] = new Koma(5,"　","紫煙",Colors.White,Colors.Magenta);
+        komas02[6] = new Koma(6,"　","水面",Colors.White,Colors.Cyan);
+        komas02[7] = new Koma(7,"　","白塗",Colors.White,Colors.White);
+        komas02[8] = new Koma(8,"　","灰被",Colors.White,Colors.Gray);
+        komas02[9] = new Koma(9,"　","暗雲",Colors.White,Colors.DeepDarkGray);
 
-        cells02[10] = new Cell(10,"　","空き",Colors.White,Colors.Black);
-        cells02[11] = new Cell(11,"Ｓ","Samurai（侍）",Colors.White,Colors.Red);
-        cells02[12] = new Cell(12,"Ｆ","Farmer（農民）",Colors.White,Colors.DarkOrange);
-        cells02[13] = new Cell(13,"Ａ","Artisans（職人）",Colors.White,Colors.DarkBlue);
-        cells02[14] = new Cell(14,"Ｍ","Merchants（商人）",Colors.White,Colors.DarkGreen);
+        komas02[10] = new Koma(10,"　","空き",Colors.White,Colors.Black);
+        komas02[11] = new Koma(11,"Ｓ","Samurai（侍）",Colors.White,Colors.Red);
+        komas02[12] = new Koma(12,"Ｆ","Farmer（農民）",Colors.White,Colors.DarkOrange);
+        komas02[13] = new Koma(13,"Ａ","Artisans（職人）",Colors.White,Colors.DarkBlue);
+        komas02[14] = new Koma(14,"Ｍ","Merchants（商人）",Colors.White,Colors.DarkGreen);
 
-        cells02[20] = new Cell(20,"　","空き:明滅",Colors.White,Colors.Black);
-        cells02[21] = new Cell(21,"Ｓ","Samurai（侍）:明滅",Colors.White,Colors.Red);
-        cells02[22] = new Cell(22,"Ｆ","Farmer（農民）:明滅",Colors.White,Colors.DarkOrange);
-        cells02[23] = new Cell(23,"Ａ","Artisans（職人）:明滅",Colors.White,Colors.DarkBlue);
-        cells02[24] = new Cell(24,"Ｍ","Merchants（商人）:明滅",Colors.White,Colors.DarkGreen);
+        komas02[20] = new Koma(20,"　","空き:明滅",Colors.White,Colors.Black);
+        komas02[21] = new Koma(21,"Ｓ","Samurai（侍）:明滅",Colors.White,Colors.Red);
+        komas02[22] = new Koma(22,"Ｆ","Farmer（農民）:明滅",Colors.White,Colors.DarkOrange);
+        komas02[23] = new Koma(23,"Ａ","Artisans（職人）:明滅",Colors.White,Colors.DarkBlue);
+        komas02[24] = new Koma(24,"Ｍ","Merchants（商人）:明滅",Colors.White,Colors.DarkGreen);
             
-        cells02[90] = new Cell(90,"Ｙ","Yes 了解:明滅",Colors.White,Colors.Black,true);
-        cells02[91] = new Cell(91,"Ｎ","No 拒否:明滅",Colors.White,Colors.Red,true);
-        cells02[92] = new Cell(92,"Ｒ","Retry 再考:明滅",Colors.Black,Colors.Yellow,true);
-        cells02[92] = new Cell(92,"？","? 説明:明滅",Colors.Black,Colors.White,false);
+        komas02[90] = new Koma(90,"Ｙ","Yes 了解:明滅",Colors.White,Colors.Black,true);
+        komas02[91] = new Koma(91,"Ｎ","No 拒否:明滅",Colors.White,Colors.Red,true);
+        komas02[92] = new Koma(92,"Ｒ","Retry 再考:明滅",Colors.Black,Colors.Yellow,true);
+        komas02[92] = new Koma(92,"？","? 説明:明滅",Colors.Black,Colors.White,false);
 
         msgPatterns02 = [];
         msgPatterns02[0] = "　　ＯＫ！！　　";
@@ -174,25 +174,25 @@ namespace cellgame {
     }
 
     /** Cell設定の選択 */
-    export function cellsUpdate(set : number) {
+    export function komasUpdate(set : number) {
         switch(set) {
             case 0: {
-                cells = cells00;
+                komas = komas00;
                 msgPatterns = msgPatterns00;
                 break;
             }
             case 1: {
-                cells = cells01;
+                komas = komas01;
                 msgPatterns = msgPatterns01;
                 break;
             }
             case 2: {
-                cells = cells02;
+                komas = komas02;
                 msgPatterns = msgPatterns02;
                 break;
             }
             default: {
-                cells = cells00;
+                komas = komas00;
                 msgPatterns = msgPatterns00;
             }
         }
@@ -200,12 +200,12 @@ namespace cellgame {
 
 
     /**
-     * interface ICell
+     * interface IKoma
      */
-    export interface ICell {
-        /** cell種類 整理番号 */
+    export interface IKoma {
+        /** Koma種類 整理番号 */
         code : number;
-        /** cellの表示文字 */
+        /** Komaの表示文字 */
         char : string;
         /** 名前 */
         name : string;
@@ -218,16 +218,16 @@ namespace cellgame {
 
         /**
          * 貼り付け
-         * @param cell:貼り付け元
+         * @param koma:貼り付け元
          */
-        Paste(cell : ICell) : void;
+        Paste(koma : IKoma) : void;
 
     }
 
     /**
      * class Cell
      */
-    export class Cell implements ICell {
+    export class Koma implements IKoma {
         code : number;
         char : string;
         name : string;
@@ -254,27 +254,27 @@ namespace cellgame {
         }
 
         /**
-         * Cell 複写
-         * @param cell:コピー元
+         * Koma 複写
+         * @param koma:コピー元
          * @returns 新規インスタンス
          */
-        static Copy(cell : ICell) : ICell {
-            let result = new Cell();
-            result.Paste(cell);
+        static Copy(koma : IKoma) : IKoma {
+            let result = new Koma();
+            result.Paste(koma);
             return result;
         }
 
         /**
          * 貼り付け
-         * @param cell 貼り付け元
+         * @param koma 貼り付け元
          */
-        public Paste(cell : ICell) : void{
-            this.code = cell.code;
-            this.char = cell.char;
-            this.name = cell.name;
-            this.foreColor = cell.foreColor;
-            this.backColor = cell.backColor;
-            this.isFlash = cell.isFlash;
+        public Paste(koma : IKoma) : void{
+            this.code = koma.code;
+            this.char = koma.char;
+            this.name = koma.name;
+            this.foreColor = koma.foreColor;
+            this.backColor = koma.backColor;
+            this.isFlash = koma.isFlash;
         }
     }
 
@@ -346,6 +346,54 @@ namespace cellgame {
             this.backColor = msg.backColor;
             this.isFlash = msg.isFlash;
         }
+    }
+
+    /**
+     * interface IHand
+     * 手
+     */
+    export interface IHand {
+        /** 手の番地 */
+        address : number;
+        /** 手のコード */
+        code : number;
+
+        /** 貼り付け */
+        Paste(hand : IHand) : void;
+        /** 番地計算 */
+        toPoint(w : number) : Point;
+    }
+
+    /**
+     * class Hand
+     * 手
+     */
+    export class Hand {
+        /** 手の番地 */    
+        address : number = 0;
+        /** 手のコード */
+        code : number = 0;
+        /** コンストラクタ */
+        constructor(address : number = 0, code : number = 0) {
+            this.address = address;
+            this.code = code;
+        }
+        /** 複写 */
+        static Copy(hand : IHand) : IHand {
+            let result = new Hand();
+            result.Paste(hand);
+            return result;
+        }
+
+        /** 貼り付け */
+        public Paste(hand : IHand) : void {
+            this.address = hand.address;
+            this.code = hand.code;
+        }
+
+        /** 番地計算 */
+        public toPoint = (w : number) : Point => pointCalc(this.address,w);
+
     }
 
 

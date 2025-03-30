@@ -141,11 +141,11 @@ namespace cellgame {
             let c = code;
             c++;
             while(true) {
-                if (c >= cells.length){
+                if (c >= komas.length){
                     c = 0;
                     break;
                 }
-                if (cells[c] === undefined){
+                if (komas[c] === undefined){
                     c++;
                 }
                 else {

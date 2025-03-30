@@ -243,10 +243,10 @@ namespace cellgame {
     export function pageInit() {
 
         // 升目データの初期化
-        cellsInit();
+        komasInit();
 
         // 升目データの初期値設定
-        cellsUpdate(0);
+        komasUpdate(0);
 
         gameSystem = new CellGameSystem01();
 
@@ -698,11 +698,11 @@ namespace cellgame {
         let a = gameSystem.cellAddress(x,y);
         let c = gameSystem.codes[a];
         cellTextDisplay(
-            cells[c].char,
-            cells[c].foreColor,
-            cells[c].backColor,
+            komas[c].char,
+            komas[c].foreColor,
+            komas[c].backColor,
             gX3[a],gY3[a],gW3,gH3,
-            cells[c].isFlash
+            komas[c].isFlash
         );
     }
 
@@ -776,7 +776,7 @@ namespace cellgame {
         for(let y = 0; y < gameSystem.cellCount; y++) {
             for (let x = 0; x < gameSystem.cellCount; x++) {
                 let a = gameSystem.cellAddress(x,y);
-                if (gameSystem.codes[a] < cells.length) {
+                if (gameSystem.codes[a] < komas.length) {
                     cellDisplay(x,y);
                 }
             }

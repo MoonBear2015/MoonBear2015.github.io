@@ -22,6 +22,12 @@ namespace cellgame {
         public isGamePlay : boolean = false;
         public isPlayStarted : boolean = false;
 
+        public board : number[] = [];
+        public boardWidth : number = 0;
+        public boardHand : IHand[] = [];
+        public boardStep : number = 0;
+
+
         /** 背景色 */
         public backColor: string = Colors.DeepDarkGray;
 
@@ -353,6 +359,59 @@ namespace cellgame {
             }
 
         }
+
+        /** ゲーム初期化 （レベル等初期値）*/
+        public boardInit() : void {
+            this.statusName = ["","","",""];
+            this.status = [0,0,0,0];
+
+            this.gameLevel = 0;
+            this.gameSize = 2;
+            this.canFreePotision = false;
+            this.haveBlock = false;
+            this.blockCount = 0;
+            this.isEndless = false;
+            this.nowCell = 0;
+            this.isGameOver = false;
+            this.isGameClear = false;
+            this.isGamePlay = false;
+            this.isPlayStarted = false;
+            this.gameStep = 0;
+
+            this.board = [];
+            this.boardHand = [];          
+        }
+
+        /** ゲームリセット そのレベル・ステージなどの初期化 */
+        public boardReset() : void {
+            this.gameSizeCalc();
+            this.boardWidth = this.gameSize;
+            this.board = [];
+            for(let i = 0; i < this.boardWidth * this.boardWidth; i++) {
+                this.board.push(0);
+            }
+        }
+
+        /** ボードからセル情報への転送 */
+        public boardToCells() : void {
+            for(let i = 0; i < this.boardWidth * this.boardWidth; i++) {
+                this.boardToCellSelectAddress(i);
+            }
+        }
+
+        /** ボードから指定アドレスのみ転送 */
+        public boardToCellSelectAddress(boardAddress : number) : void {
+            let point = pointCalc(boardAddress,this.boardWidth);
+            let center = this.centerHolePoint(this.gameSize);
+            let x = center.x + point.x;
+            let y = center.y + point.y;   
+            this.codeSetter(x,y,this.board[boardAddress]);         
+        }
+
+        public boardHandPaste(hand : IHand) : void {
+            
+        }
+
 
         public toComment() : string {
             let result = "";

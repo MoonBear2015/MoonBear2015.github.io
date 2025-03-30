@@ -136,11 +136,11 @@ var cellgame;
             let c = code;
             c++;
             while (true) {
-                if (c >= cellgame.cells.length) {
+                if (c >= cellgame.komas.length) {
                     c = 0;
                     break;
                 }
-                if (cellgame.cells[c] === undefined) {
+                if (cellgame.komas[c] === undefined) {
                     c++;
                 }
                 else {

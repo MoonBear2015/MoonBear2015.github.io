@@ -22,6 +22,10 @@ var cellgame;
             this.isGameClear = false;
             this.isGamePlay = false;
             this.isPlayStarted = false;
+            this.board = [];
+            this.boardWidth = 0;
+            this.boardHand = [];
+            this.boardStep = 0;
             /** 背景色 */
             this.backColor = cellgame.Colors.DeepDarkGray;
             /** メッセージ表示位置 */
@@ -343,6 +347,50 @@ var cellgame;
                 this.isGamePlay = false;
                 this.isGameOver = true;
             }
+        }
+        /** ゲーム初期化 （レベル等初期値）*/
+        boardInit() {
+            this.statusName = ["", "", "", ""];
+            this.status = [0, 0, 0, 0];
+            this.gameLevel = 0;
+            this.gameSize = 2;
+            this.canFreePotision = false;
+            this.haveBlock = false;
+            this.blockCount = 0;
+            this.isEndless = false;
+            this.nowCell = 0;
+            this.isGameOver = false;
+            this.isGameClear = false;
+            this.isGamePlay = false;
+            this.isPlayStarted = false;
+            this.gameStep = 0;
+            this.board = [];
+            this.boardHand = [];
+        }
+        /** ゲームリセット そのレベル・ステージなどの初期化 */
+        boardReset() {
+            this.gameSizeCalc();
+            this.boardWidth = this.gameSize;
+            this.board = [];
+            for (let i = 0; i < this.boardWidth * this.boardWidth; i++) {
+                this.board.push(0);
+            }
+        }
+        /** ボードからセル情報への転送 */
+        boardToCells() {
+            for (let i = 0; i < this.boardWidth * this.boardWidth; i++) {
+                this.boardToCellSelectAddress(i);
+            }
+        }
+        /** ボードから指定アドレスのみ転送 */
+        boardToCellSelectAddress(boardAddress) {
+            let point = cellgame.pointCalc(boardAddress, this.boardWidth);
+            let center = this.centerHolePoint(this.gameSize);
+            let x = center.x + point.x;
+            let y = center.y + point.y;
+            this.codeSetter(x, y, this.board[boardAddress]);
+        }
+        boardHandPaste(hand) {
         }
         toComment() {
             let result = "";

@@ -86,9 +86,9 @@ var cellgame;
     /** セルゲーム 画面初期化処理 */
     function pageInit() {
         // 升目データの初期化
-        cellgame.cellsInit();
+        cellgame.komasInit();
         // 升目データの初期値設定
-        cellgame.cellsUpdate(0);
+        cellgame.komasUpdate(0);
         cellgame.gameSystem = new cellgame.CellGameSystem01();
         // // 升目の論理値の初期化（とりあえず１０×１０）
         // gCodes = Array(100).fill(0);
@@ -486,7 +486,7 @@ var cellgame;
         }
         let a = cellgame.gameSystem.cellAddress(x, y);
         let c = cellgame.gameSystem.codes[a];
-        cellTextDisplay(cellgame.cells[c].char, cellgame.cells[c].foreColor, cellgame.cells[c].backColor, cellgame.gX3[a], cellgame.gY3[a], cellgame.gW3, cellgame.gH3, cellgame.cells[c].isFlash);
+        cellTextDisplay(cellgame.komas[c].char, cellgame.komas[c].foreColor, cellgame.komas[c].backColor, cellgame.gX3[a], cellgame.gY3[a], cellgame.gW3, cellgame.gH3, cellgame.komas[c].isFlash);
     }
     cellgame.cellDisplay = cellDisplay;
     /**
@@ -548,7 +548,7 @@ var cellgame;
         for (let y = 0; y < cellgame.gameSystem.cellCount; y++) {
             for (let x = 0; x < cellgame.gameSystem.cellCount; x++) {
                 let a = cellgame.gameSystem.cellAddress(x, y);
-                if (cellgame.gameSystem.codes[a] < cellgame.cells.length) {
+                if (cellgame.gameSystem.codes[a] < cellgame.komas.length) {
                     cellDisplay(x, y);
                 }
             }
