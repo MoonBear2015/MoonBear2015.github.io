@@ -382,6 +382,64 @@ namespace cellgame {
             this.boardHand = [];          
         }
 
+        /** ボードからの取得 */
+        public boardGetter = (x : number, y : number) : number => {
+            let a = addressCalc(x,y,this.boardWidth);
+            return this.board[a];
+        }
+        /** ボードへの設定 */
+        public boardSetter = (x : number, y : number,code : number) : void => {
+            let a = addressCalc(x,y,this.boardWidth);
+            this.board[a] = code;
+        }
+
+
+        /** ゲーム作成　設定済みレベルに応じて作成 */
+        public boardMake() : void {
+            this.gameSizeCalc();
+            this.boardWidth = this.gameSize;
+            this.board = [];
+            for(let i = 0; i < this.boardWidth * this.boardWidth; i++) {
+                this.board.push(10);
+            }
+            // 邪魔ブロック
+            if (this.haveBlock) {
+                for(let i = 0; i < this.blockCount; i++) {
+                    while(true) {
+                        let x = rnd(this.boardWidth - 2) + 1;
+                        let y = rnd(this.boardWidth - 2) + 1;
+                        if (this.boardGetter(x,y) != 10) {
+                            continue;
+                        }
+                        this.boardSetter(x,y,9);
+                        break;
+                    }
+                }
+            }
+            // スタート位置
+            let x0 = 0;
+            let y0 = 0;
+            if (this.canFreePotision) {
+                // 自由位置
+                while(true) {
+                    x0 = rnd(this.boardWidth);
+                    y0 = rnd(this.boardWidth);
+                    // 空きセルでなければやり直し
+                    if (this.boardGetter(x0,y0) != 10) {
+                        continue;
+                    }
+                    break;
+                }
+            } else {
+                // 四つ角
+                x0 = (this.gameSize - 1) * rnd(2);
+                y0 = (this.gameSize - 1) * rnd(2);
+            }
+            this.nowCell = 11;
+            this.boardSetter(x0,y0,this.nowCell);
+            /** ★★ */
+        }
+
         /** ゲームリセット そのレベル・ステージなどの初期化 */
         public boardReset() : void {
             this.gameSizeCalc();
@@ -408,8 +466,24 @@ namespace cellgame {
             this.codeSetter(x,y,this.board[boardAddress]);         
         }
 
-        public boardHandPaste(hand : IHand) : void {
-            
+        /** 手の反映 */
+        public boardHandPaste (hand : IHand) : void { 
+            this.board[hand.address] = hand.code;
+        }
+
+        /** 初手から指定の手まで進める */
+        public boardHandMove(handNo : number) : void {
+            this.boardReset();
+            for(let i = 0; i <= handNo; i++) {
+                this.boardHandPaste(this.boardHand[i]);
+            }
+        }
+
+        /** ボードの初期化（０１専用） */
+        public board01Clear() : void {
+            for(let i = 0; i < this.board.length; i++) {
+                if (this.board[i] == 20) this.board[i] = 10;
+            }
         }
 
 

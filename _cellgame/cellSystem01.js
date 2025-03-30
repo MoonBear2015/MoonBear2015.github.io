@@ -30,6 +30,16 @@ var cellgame;
             this.backColor = cellgame.Colors.DeepDarkGray;
             /** メッセージ表示位置 */
             this.messagePotision = () => Math.floor((this.gameSize + 4 - 6) / 2);
+            /** ボードからの取得 */
+            this.boardGetter = (x, y) => {
+                let a = cellgame.addressCalc(x, y, this.boardWidth);
+                return this.board[a];
+            };
+            /** ボードへの設定 */
+            this.boardSetter = (x, y, code) => {
+                let a = cellgame.addressCalc(x, y, this.boardWidth);
+                this.board[a] = code;
+            };
             this.init();
         }
         /** 初期化 */
@@ -367,6 +377,52 @@ var cellgame;
             this.board = [];
             this.boardHand = [];
         }
+        /** ゲーム作成　設定済みレベルに応じて作成 */
+        boardMake() {
+            this.gameSizeCalc();
+            this.boardWidth = this.gameSize;
+            this.board = [];
+            for (let i = 0; i < this.boardWidth * this.boardWidth; i++) {
+                this.board.push(10);
+            }
+            // 邪魔ブロック
+            if (this.haveBlock) {
+                for (let i = 0; i < this.blockCount; i++) {
+                    while (true) {
+                        let x = cellgame.rnd(this.boardWidth - 2) + 1;
+                        let y = cellgame.rnd(this.boardWidth - 2) + 1;
+                        if (this.boardGetter(x, y) != 10) {
+                            continue;
+                        }
+                        this.boardSetter(x, y, 9);
+                        break;
+                    }
+                }
+            }
+            // スタート位置
+            let x0 = 0;
+            let y0 = 0;
+            if (this.canFreePotision) {
+                // 自由位置
+                while (true) {
+                    x0 = cellgame.rnd(this.boardWidth);
+                    y0 = cellgame.rnd(this.boardWidth);
+                    // 空きセルでなければやり直し
+                    if (this.boardGetter(x0, y0) != 10) {
+                        continue;
+                    }
+                    break;
+                }
+            }
+            else {
+                // 四つ角
+                x0 = (this.gameSize - 1) * cellgame.rnd(2);
+                y0 = (this.gameSize - 1) * cellgame.rnd(2);
+            }
+            this.nowCell = 11;
+            this.boardSetter(x0, y0, this.nowCell);
+            /** ★★ */
+        }
         /** ゲームリセット そのレベル・ステージなどの初期化 */
         boardReset() {
             this.gameSizeCalc();
@@ -390,7 +446,23 @@ var cellgame;
             let y = center.y + point.y;
             this.codeSetter(x, y, this.board[boardAddress]);
         }
+        /** 手の反映 */
         boardHandPaste(hand) {
+            this.board[hand.address] = hand.code;
+        }
+        /** 初手から指定の手まで進める */
+        boardHandMove(handNo) {
+            this.boardReset();
+            for (let i = 0; i <= handNo; i++) {
+                this.boardHandPaste(this.boardHand[i]);
+            }
+        }
+        /** ボードの初期化（０１専用） */
+        board01Clear() {
+            for (let i = 0; i < this.board.length; i++) {
+                if (this.board[i] == 20)
+                    this.board[i] = 10;
+            }
         }
         toComment() {
             let result = "";
