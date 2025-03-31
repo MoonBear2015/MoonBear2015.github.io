@@ -8,7 +8,7 @@ var cellgame;
     class CellGameSystem00 {
         /** コンストラクタ */
         constructor() {
-            this.cellCount = 0;
+            this.cellSize = 0;
             this.backColor = cellgame.Colors.Black;
             this.codes = [];
             this.messages = [];
@@ -16,7 +16,7 @@ var cellgame;
             this.status = [];
             this.gameStep = 0;
             /** 番地の数 */
-            this.addressLength = () => this.cellCount * this.cellCount;
+            this.addressLength = () => this.cellSize * this.cellSize;
             /** cellコード（x,y指定） */
             this.codeGetter = (x, y) => {
                 let a = this.cellAddress(x, y);
@@ -38,28 +38,28 @@ var cellgame;
             this.cellReset(10);
             // 仮
             let c = 0;
-            for (let y = 0; y < this.cellCount; y++) {
-                for (let x = 0; x < this.cellCount; x++) {
+            for (let y = 0; y < this.cellSize; y++) {
+                for (let x = 0; x < this.cellSize; x++) {
                     this.codeSetter(x, y, c);
                 }
                 c = this.codeCountUp(c);
             }
         }
         /** 盤面白紙
-         * @param cellCount : セル数
+         * @param cellSize : 縦横セル数
          */
-        cellReset(cellCount = 10) {
-            this.cellCount = cellCount;
+        cellReset(cellSize = 10) {
+            this.cellSize = cellSize;
             this.codes = Array(this.addressLength()).fill(0);
             this.messages = [];
         }
         /** 番地計算 */
         cellAddress(x, y) {
-            if (x < 0 || x >= this.cellCount)
+            if (x < 0 || x >= this.cellSize)
                 return -1;
-            if (y < 0 || y >= this.cellCount)
+            if (y < 0 || y >= this.cellSize)
                 return -1;
-            return y * this.cellCount + x;
+            return y * this.cellSize + x;
         }
         /** cellコード（ポイント指定） */
         codeGetterFromPoint(p) {
@@ -74,7 +74,7 @@ var cellgame;
         }
         /** cellコード設定 (番地指定) */
         codeSetterToAddress(a, code) {
-            let p = cellgame.pointCalc(a, this.cellCount);
+            let p = cellgame.pointCalc(a, this.cellSize);
             this.codeSetter(p.x, p.y, code);
         }
         /** cellコード設定 (Point指定) */
@@ -95,8 +95,8 @@ var cellgame;
          * @param code : 設定コード
          */
         cellAllPaint(code) {
-            for (let y = 0; y < this.cellCount; y++) {
-                for (let x = 0; x < this.cellCount; x++) {
+            for (let y = 0; y < this.cellSize; y++) {
+                for (let x = 0; x < this.cellSize; x++) {
                     this.codeSetter(x, y, code);
                 }
             }
@@ -116,15 +116,15 @@ var cellgame;
          * @returns 穴あけ開始ポイント
          */
         centerHolePoint(size) {
-            let x = Math.floor((this.cellCount - size) / 2);
-            let y = Math.floor((this.cellCount - size) / 2);
+            let x = Math.floor((this.cellSize - size) / 2);
+            let y = Math.floor((this.cellSize - size) / 2);
             return new cellgame.Point(false, x, y);
         }
         /** タッチ箇所受信 */
         touchPointRecv(p) {
-            if (p.x < 0 || p.x >= this.cellCount)
+            if (p.x < 0 || p.x >= this.cellSize)
                 return;
-            if (p.y < 0 || p.y >= this.cellCount)
+            if (p.y < 0 || p.y >= this.cellSize)
                 return;
             this.pointSelect(p);
         }

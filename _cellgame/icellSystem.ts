@@ -8,7 +8,7 @@ namespace cellgame {
         backColor : string;
 
         /** 升目の数（縦・横） */
-        cellCount : number;
+        cellSize : number;
 
         /** cellコード */
         codes : number[];

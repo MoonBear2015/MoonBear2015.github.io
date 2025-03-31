@@ -101,7 +101,7 @@ namespace cellgame {
                 /** ゲームタイトル */
                 case 0:
                     {
-                        this.gameInit();
+                        this.boardInit();
                         this.gameStep = 1;
                         break
                     }
@@ -130,8 +130,6 @@ namespace cellgame {
                         this.cellReset(this.boardSize + 4);
                         
                         this.cellAllPaint(9);
-                        this.messages = [];
-                        this.messages.push(new Message("士農工商を並べよ",this.messagePotision(),0,Colors.White,Colors.Black));
                         this.centerHoleMaker(this.boardSize,10);
 
                         this.boardToCellsSetter();
@@ -139,11 +137,10 @@ namespace cellgame {
                         this.gameStep = 2;
                         this.isGamePlay = true;
                         // 再ボタン消去
-                        this.codeSetter(this.cellCount - 1,this.cellCount - 1,9);
+                        this.codeSetter(this.cellSize - 1,this.boardSize - 1,9);
                         // 説ボタン設置
-                        this.codeSetter(0,this.cellCount - 1,93);
+                        this.codeSetter(0,this.cellSize - 1,93);
                         break;
-                        /** ここまで★★ */
                     }
                 /** ゲームプレイ */
                 case 2:
@@ -152,14 +149,14 @@ namespace cellgame {
                         this.messages = [];
                         if (this.isPlayStarted) {
                             // 再ボタン設置
-                            this.codeSetter(this.cellCount - 1,this.cellCount - 1,92);
+                            this.codeSetter(this.cellSize - 1,this.cellSize - 1,92);
                         }
                         else {
                             this.messages.push(new Message("士農工商を並べよ",this.messagePotision(),0,Colors.White,Colors.Black));
                             // 再ボタン消去
-                            this.codeSetter(this.cellCount - 1,this.cellCount - 1,9);
+                            this.codeSetter(this.cellSize - 1,this.cellSize - 1,9);
                         }
-                        this.checkGame01();
+                        this.boardCheck();
                         if (this.isGameClear) {
                             this.gameStep = 3;
                             break;
@@ -174,7 +171,7 @@ namespace cellgame {
                 case 3:
                     {
                         // 再ボタン消去
-                        this.codeSetter(this.cellCount - 1,this.cellCount - 1,9);
+                        this.codeSetter(this.cellSize - 1,this.cellSize - 1,9);
                         this.isPlayStarted = false;
                         
                         this.messages = [];
@@ -187,7 +184,7 @@ namespace cellgame {
                 case 4:
                     {
                         // 再ボタン消去
-                        this.codeSetter(this.cellCount - 1,this.cellCount - 1,9);
+                        this.codeSetter(this.cellSize - 1,this.cellSize - 1,9);
                         this.isPlayStarted = false;
 
                         this.messages = [];
@@ -210,71 +207,9 @@ namespace cellgame {
 
         /** okボタン設定 */
         private okButtonSetter() : void {
-            let center = Math.floor(this.cellCount / 2);
-            this.codeSetter(center,this.cellCount - 1,90);
+            let center = Math.floor(this.cellSize / 2);
+            this.codeSetter(center,this.cellSize - 1,90);
         }
-
-        // /** 選択箇所を作成（01専用）
-        //  * @param x : 横位置
-        //  * @param y : 縦位置
-        //  */        
-        // private selectCellSetter(x : number, y : number) : void {
-        //     // 初期化
-        //     for(let y0 = 0; y0 < this.cellCount; y0++) {
-        //         for(let x0 = 0; x0 < this.cellCount; x0++) {
-        //             let c = this.codeGetter(x0,y0);
-        //             if (c == 20) {
-        //                 this.codeSetter(x0,y0,10);
-        //             }
-        //         }
-        //     }
-        //     // 設定
-        //     for(let d = 0; d < 4; d++) {
-        //         let xx = x + Direction4s[d].x;
-        //         let yy = y + Direction4s[d].y;
-        //         if (xx < 0 || xx >= this.cellCount) continue;
-        //         if (yy < 0 || yy >= this.cellCount) continue;
-        //         let c = this.codeGetter(xx,yy);
-        //         if (c == 10) {
-        //             this.codeSetter(xx,yy,20);
-        //         }
-        //     }
-        // }
-
-        /** ゲーム終了判定 */
-        private checkGame01() : void {
-            if (this.gameStep != 2) return;
-
-            /** 残りのセルを数える */
-            /** 選択肢の数 */
-            let count20 = 0;
-            /** 空きセルの数 */
-            let count10 = 0;
-            /** カウント */
-            for(let y0 = 0; y0 < this.cellCount; y0++) {
-                for(let x0 = 0; x0 < this.cellCount; x0++) {
-                    let c = this.codeGetter(x0,y0);
-                    if (c == 20) {
-                        count20++;
-                    }
-                    if (c == 10) {
-                        count10++;
-                    }
-                }
-            }
-            /** 選択肢がなく、全てのセルが埋まっているなら、ゲームクリアー */
-            if (count20 == 0 && count10 == 0) {
-                this.isGamePlay = false;
-                this.isGameClear = true;
-            }
-            /** 選択肢がなく、空きセルが残っているなら、ゲームオーバー */
-            if (count20 == 0 && count10 > 0) {
-                this.isGamePlay = false;
-                this.isGameOver = true;
-            }
-
-        }
-
         
         /** ゲーム盤からの取得 */
         public boardGetter = (x : number, y : number) : number => {
@@ -288,7 +223,7 @@ namespace cellgame {
         }
 
         /** ゲーム盤初期化 （レベル等初期値）*/
-        public gameInit() : void {
+        public boardInit() : void {
             this.gameLevel = 0;
             this.boardSize = 2;
 
@@ -499,6 +434,40 @@ namespace cellgame {
                 if (this.boardCell[i] == 20) this.boardCell[i] = 10;
             }
         }
+
+        /** ゲーム終了判定 */
+        private boardCheck() : void {
+            if (this.gameStep != 2) return;
+
+            /** 残りのセルを数える */
+            /** 選択肢の数 */
+            let count20 = 0;
+            /** 空きセルの数 */
+            let count10 = 0;
+            /** カウント */
+            for(let y = 0; y < this.boardSize; y++) {
+                for(let x = 0; x < this.boardSize; x++) {
+                    let c = this.boardGetter(x,y);
+                    if (c == 20) {
+                        count20++;
+                    }
+                    if (c == 10) {
+                        count10++;
+                    }
+                }
+            }
+            /** 選択肢がなく、全てのセルが埋まっているなら、ゲームクリアー */
+            if (count20 == 0 && count10 == 0) {
+                this.isGamePlay = false;
+                this.isGameClear = true;
+            }
+            /** 選択肢がなく、空きセルが残っているなら、ゲームオーバー */
+            if (count20 == 0 && count10 > 0) {
+                this.isGamePlay = false;
+                this.isGameOver = true;
+            }
+        }
+        
 
 
         public toComment() : string {

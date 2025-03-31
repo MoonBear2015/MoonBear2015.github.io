@@ -4,7 +4,7 @@
 namespace cellgame {
     /** セルゲームシステム 共通項 */
     export abstract class CellGameSystem00 implements ICellGameSystem {
-        public cellCount : number = 0;
+        public cellSize : number = 0;
         public backColor : string = Colors.Black;
         public codes : number[] = [];
         public messages : IMessage[] = [];
@@ -27,8 +27,8 @@ namespace cellgame {
             this.cellReset(10);
             // 仮
             let c = 0;
-            for(let y = 0; y < this.cellCount; y++) {
-                for(let x = 0; x < this.cellCount; x++) {
+            for(let y = 0; y < this.cellSize; y++) {
+                for(let x = 0; x < this.cellSize; x++) {
                     this.codeSetter(x,y,c);
                 }
                 c = this.codeCountUp(c);                
@@ -37,22 +37,22 @@ namespace cellgame {
         }
 
         /** 盤面白紙
-         * @param cellCount : セル数
+         * @param cellSize : 縦横セル数
          */
-        public cellReset(cellCount : number = 10) : void {
-            this.cellCount = cellCount;
+        public cellReset(cellSize : number = 10) : void {
+            this.cellSize = cellSize;
             this.codes = Array(this.addressLength()).fill(0);
             this.messages = [];
         }
             
         /** 番地の数 */
-        public addressLength = () : number => this.cellCount * this.cellCount;
+        public addressLength = () : number => this.cellSize * this.cellSize;
 
         /** 番地計算 */
         public cellAddress(x : number, y : number) : number {
-            if (x < 0 || x >= this.cellCount) return -1;
-            if (y < 0 || y >= this.cellCount) return -1;
-            return y * this.cellCount + x;
+            if (x < 0 || x >= this.cellSize) return -1;
+            if (y < 0 || y >= this.cellSize) return -1;
+            return y * this.cellSize + x;
         }
 
         /** cellコード（x,y指定） */
@@ -74,7 +74,7 @@ namespace cellgame {
         }
         /** cellコード設定 (番地指定) */
         public codeSetterToAddress(a : number, code : number) {
-            let p = pointCalc(a,this.cellCount);
+            let p = pointCalc(a,this.cellSize);
             this.codeSetter(p.x,p.y,code);
         }
         /** cellコード設定 (Point指定) */
@@ -97,8 +97,8 @@ namespace cellgame {
          * @param code : 設定コード
          */
         public cellAllPaint(code : number) : void {
-            for(let y = 0; y < this.cellCount; y++) {
-                for(let x = 0; x < this.cellCount; x++) {
+            for(let y = 0; y < this.cellSize; y++) {
+                for(let x = 0; x < this.cellSize; x++) {
                     this.codeSetter(x,y,code);
                 }
             }
@@ -120,16 +120,16 @@ namespace cellgame {
          * @returns 穴あけ開始ポイント
          */
         public centerHolePoint(size : number) : Point {
-            let x = Math.floor((this.cellCount - size) / 2);
-            let y = Math.floor((this.cellCount - size) / 2);
+            let x = Math.floor((this.cellSize - size) / 2);
+            let y = Math.floor((this.cellSize - size) / 2);
             return new Point(false,x,y);
         }
         
 
         /** タッチ箇所受信 */
         public touchPointRecv(p : Point) : void {
-            if (p.x < 0 || p.x >= this.cellCount) return;
-            if (p.y < 0 || p.y >= this.cellCount) return;
+            if (p.x < 0 || p.x >= this.cellSize) return;
+            if (p.y < 0 || p.y >= this.cellSize) return;
             this.pointSelect(p);
         }
 

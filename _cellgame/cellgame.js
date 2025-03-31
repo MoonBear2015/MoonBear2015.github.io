@@ -212,7 +212,7 @@ var cellgame;
             let x1 = x0 + cellgame.gW3;
             let y1 = y0 + cellgame.gH3;
             if (x >= x0 && x < x1 && y >= y0 && y < y1) {
-                result = cellgame.pointCalc(a, cellgame.gameSystem.cellCount);
+                result = cellgame.pointCalc(a, cellgame.gameSystem.cellSize);
                 return result;
             }
         }
@@ -364,7 +364,7 @@ var cellgame;
             alert("GameSystem is None");
             return;
         }
-        CalcGameSize(cellgame.gameSystem.cellCount);
+        CalcGameSize(cellgame.gameSystem.cellSize);
         ctx.fillStyle = cellgame.gameSystem.backColor;
         ctx.fillRect(0, 0, cellgame.CVSWIDTH, cellgame.CVSHEIGHT);
         ctx.fillStyle = cellgame.gameSystem.backColor;
@@ -521,9 +521,9 @@ var cellgame;
             return;
         if (text.length < 1)
             return;
-        if (x < 0 || x >= cellgame.gameSystem.cellCount)
+        if (x < 0 || x >= cellgame.gameSystem.cellSize)
             return;
-        if (y < 0 || y >= cellgame.gameSystem.cellCount)
+        if (y < 0 || y >= cellgame.gameSystem.cellSize)
             return;
         let fontSize = Math.min(cellgame.gW3, cellgame.gH3) * 0.75;
         ctx.font = `${fontSize}px serif`;
@@ -545,8 +545,8 @@ var cellgame;
             // alert("Canvas is None");
             return;
         }
-        for (let y = 0; y < cellgame.gameSystem.cellCount; y++) {
-            for (let x = 0; x < cellgame.gameSystem.cellCount; x++) {
+        for (let y = 0; y < cellgame.gameSystem.cellSize; y++) {
+            for (let x = 0; x < cellgame.gameSystem.cellSize; x++) {
                 let a = cellgame.gameSystem.cellAddress(x, y);
                 if (cellgame.gameSystem.codes[a] < cellgame.komas.length) {
                     cellDisplay(x, y);

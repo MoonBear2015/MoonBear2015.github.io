@@ -37,6 +37,15 @@ var cellgame;
             this.x = 0;
             this.y = 0;
             this.isUndefined = false;
+            this.equal = (point) => {
+                if (this.isUndefined != point.isUndefined)
+                    return false;
+                if (this.x != point.x)
+                    return false;
+                if (this.y != point.y)
+                    return false;
+                return true;
+            };
             this.x = x;
             this.y = y;
             this.isUndefined = isUndefined;

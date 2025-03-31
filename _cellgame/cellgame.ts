@@ -381,7 +381,7 @@ namespace cellgame {
             let x1 = x0 + gW3;
             let y1 = y0 + gH3;
             if (x >= x0 && x < x1 && y >= y0 && y < y1) {
-                result = pointCalc(a,gameSystem.cellCount);
+                result = pointCalc(a,gameSystem.cellSize);
                 return result;
             }
         }
@@ -540,7 +540,7 @@ namespace cellgame {
             return;
         }
         
-        CalcGameSize(gameSystem.cellCount);
+        CalcGameSize(gameSystem.cellSize);
         
         ctx.fillStyle = gameSystem.backColor;
 
@@ -746,8 +746,8 @@ namespace cellgame {
 
         if (text.length < 1) return;
 
-        if (x < 0 || x >= gameSystem.cellCount) return;
-        if (y < 0 || y >= gameSystem.cellCount) return;
+        if (x < 0 || x >= gameSystem.cellSize) return;
+        if (y < 0 || y >= gameSystem.cellSize) return;
 
         let fontSize = Math.min(gW3, gH3) * 0.75;
         ctx.font = `${fontSize}px serif`;
@@ -773,8 +773,8 @@ namespace cellgame {
             // alert("Canvas is None");
             return;
         }
-        for(let y = 0; y < gameSystem.cellCount; y++) {
-            for (let x = 0; x < gameSystem.cellCount; x++) {
+        for(let y = 0; y < gameSystem.cellSize; y++) {
+            for (let x = 0; x < gameSystem.cellSize; x++) {
                 let a = gameSystem.cellAddress(x,y);
                 if (gameSystem.codes[a] < komas.length) {
                     cellDisplay(x,y);
