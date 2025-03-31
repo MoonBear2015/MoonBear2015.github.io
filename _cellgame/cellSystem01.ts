@@ -11,7 +11,16 @@ namespace cellgame {
         // game01 self
 
         public gameLevel : number = 0;
-        public gameSize : number = 2;
+        public boardSize : number = 2;
+
+        public boardCell : number[] = [];
+        // public boardWidth : number = 0;
+        public boardHand : IHand[] = [];
+        // public boardStep : number = 0;
+
+        public blockPoints : Point[] = [];
+        public startPoint : Point = new Point(true);
+
         public canFreePotision : boolean = false;
         public haveBlock : boolean = false;
         public blockCount : number = 0;
@@ -21,12 +30,6 @@ namespace cellgame {
         public isGameClear : boolean = false;
         public isGamePlay : boolean = false;
         public isPlayStarted : boolean = false;
-
-        public board : number[] = [];
-        public boardWidth : number = 0;
-        public boardHand : IHand[] = [];
-        public boardStep : number = 0;
-
 
         /** 背景色 */
         public backColor: string = Colors.DeepDarkGray;
@@ -42,69 +45,13 @@ namespace cellgame {
             this.status = [0,0,0,0];
 
             this.gameLevel = 0;
-            this.gameSize = 2;
+            this.boardSize = 2;
             this.canFreePotision = false;
             this.cellReset(6);
         }
 
-        /** ゲーム枠の大きさを計算 */
-        private gameSizeCalc() : void {
-            let s = 2 + this.gameLevel;
-            if (this.gameLevel == 0) {
-                this.gameSize = 2;
-                this.canFreePotision = false;
-                this.isEndless = false;
-                return;
-            }
-            if (this.gameLevel > 0 && this.gameLevel < 4) {
-                this.gameSize = 3;
-                if (this.gameLevel > 1) {
-                    this.canFreePotision = true;
-                    if (!this.haveBlock) {
-                        this.haveBlock = true;
-                        this.blockCount = 1;
-                    } 
-                }
-                else
-                {
-                    this.canFreePotision = false;
-                    this.haveBlock = false;
-                    this.blockCount = 0;
-                }
-                return;
-            }
-            let r = Math.floor(this.gameLevel / 4);
-            this.gameSize = 3 + r;
-            if (this.gameSize > 5) {
-                this.gameSize = 5;
-                this.haveBlock = true;
-                this.blockCount = 3;
-                this.isEndless = true;
-                return;
-            } else {
-                this.isEndless = false;
-            }
-            let mod = this.gameLevel % 4;
-            if (mod == 0 ) {
-                this.canFreePotision = false;
-                this.haveBlock = false;
-                this.blockCount = 0;
-            } else {
-                if (mod == 1) {
-                    this.canFreePotision = true;
-                    this.haveBlock = false;
-                    this.blockCount = 0;
-                } else {
-                    this.canFreePotision = true;
-                    this.haveBlock = true;
-                    this.blockCount = mod - 1;
-                }
-            }
-            return;
-        }
-
         /** メッセージ表示位置 */
-        public messagePotision　=　() : number => Math.floor((this.gameSize + 4 - 6) / 2);
+        public messagePotision　=　() : number => Math.floor((this.boardSize + 4 - 6) / 2);
 
         /** セル選択
          * @param p : 選択桁位置
@@ -154,18 +101,18 @@ namespace cellgame {
                 /** ゲームタイトル */
                 case 0:
                     {
+                        this.gameInit();
                         this.gameStep = 1;
-                        this.gameSize = 2;
-                        this.isGameClear = false;
-                        this.isGameOver = false;
-                        this.isGamePlay = false;
                         break
                     }
                 /** ゲームスタート */
                 case 1:
                     {
-                        this.gameSizeCalc();
+                        this.boardMake();
 
+                        this.statusName = ["","","",""];
+                        this.status = [0,0,0,0];
+            
                         if (this.gameLevel > 0) {
                             this.statusName[3] = "段位";
                             this.status[3] = this.gameLevel;
@@ -180,48 +127,15 @@ namespace cellgame {
                             this.statusName[0] = "";
                             this.status[0] = -1;
                         }
-                        this.cellReset(this.gameSize + 4);
-
-                        this.isGameClear = false;
-                        this.isGameOver = false;
-                        this.isGamePlay = false;
+                        this.cellReset(this.boardSize + 4);
+                        
                         this.cellAllPaint(9);
                         this.messages = [];
                         this.messages.push(new Message("士農工商を並べよ",this.messagePotision(),0,Colors.White,Colors.Black));
-                        this.centerHoleMaker(this.gameSize,10);
-                        let p = this.centerHolePoint(this.gameSize);
-                        let x0 = p.x;
-                        let y0 = p.y;
-                        if (this.haveBlock) {
-                            for(let i = 0; i < this.blockCount; i++) {
-                                while(true) {
-                                    let x = x0 + rnd(this.gameSize - 2) + 1;
-                                    let y = y0 + rnd(this.gameSize - 2) + 1;
-                                    if (this.codeGetter(x,y) != 10) {
-                                        continue;
-                                    }
-                                    this.codeSetter(x,y,9);
-                                    break;
-                                }
-                            }
-                        }
-                        if (this.canFreePotision) {
-                            while(true) {
-                                x0 = p.x + rnd(this.gameSize);
-                                y0 = p.y + rnd(this.gameSize);
-                                // 空きセルでなければやり直し
-                                if (this.codeGetter(x0,y0) != 10) {
-                                    continue;
-                                }
-                                break;
-                            }
-                        } else {
-                            x0 = p.x + (this.gameSize - 1) * rnd(2);
-                            y0 = p.y + (this.gameSize - 1) * rnd(2);
-                        }
-                        this.nowCell = 11;
-                        this.codeSetter(x0,y0,this.nowCell);
-                        this.selectCellSetter(x0,y0);
+                        this.centerHoleMaker(this.boardSize,10);
+
+                        this.boardToCellsSetter();
+
                         this.gameStep = 2;
                         this.isGamePlay = true;
                         // 再ボタン消去
@@ -229,6 +143,7 @@ namespace cellgame {
                         // 説ボタン設置
                         this.codeSetter(0,this.cellCount - 1,93);
                         break;
+                        /** ここまで★★ */
                     }
                 /** ゲームプレイ */
                 case 2:
@@ -299,32 +214,32 @@ namespace cellgame {
             this.codeSetter(center,this.cellCount - 1,90);
         }
 
-        /** 選択箇所を作成（01専用）
-         * @param x : 横位置
-         * @param y : 縦位置
-         */        
-        private selectCellSetter(x : number, y : number) : void {
-            // 初期化
-            for(let y0 = 0; y0 < this.cellCount; y0++) {
-                for(let x0 = 0; x0 < this.cellCount; x0++) {
-                    let c = this.codeGetter(x0,y0);
-                    if (c == 20) {
-                        this.codeSetter(x0,y0,10);
-                    }
-                }
-            }
-            // 設定
-            for(let d = 0; d < 4; d++) {
-                let xx = x + Direction4s[d].x;
-                let yy = y + Direction4s[d].y;
-                if (xx < 0 || xx >= this.cellCount) continue;
-                if (yy < 0 || yy >= this.cellCount) continue;
-                let c = this.codeGetter(xx,yy);
-                if (c == 10) {
-                    this.codeSetter(xx,yy,20);
-                }
-            }
-        }
+        // /** 選択箇所を作成（01専用）
+        //  * @param x : 横位置
+        //  * @param y : 縦位置
+        //  */        
+        // private selectCellSetter(x : number, y : number) : void {
+        //     // 初期化
+        //     for(let y0 = 0; y0 < this.cellCount; y0++) {
+        //         for(let x0 = 0; x0 < this.cellCount; x0++) {
+        //             let c = this.codeGetter(x0,y0);
+        //             if (c == 20) {
+        //                 this.codeSetter(x0,y0,10);
+        //             }
+        //         }
+        //     }
+        //     // 設定
+        //     for(let d = 0; d < 4; d++) {
+        //         let xx = x + Direction4s[d].x;
+        //         let yy = y + Direction4s[d].y;
+        //         if (xx < 0 || xx >= this.cellCount) continue;
+        //         if (yy < 0 || yy >= this.cellCount) continue;
+        //         let c = this.codeGetter(xx,yy);
+        //         if (c == 10) {
+        //             this.codeSetter(xx,yy,20);
+        //         }
+        //     }
+        // }
 
         /** ゲーム終了判定 */
         private checkGame01() : void {
@@ -360,13 +275,23 @@ namespace cellgame {
 
         }
 
-        /** ゲーム初期化 （レベル等初期値）*/
-        public boardInit() : void {
-            this.statusName = ["","","",""];
-            this.status = [0,0,0,0];
+        
+        /** ゲーム盤からの取得 */
+        public boardGetter = (x : number, y : number) : number => {
+            let a = addressCalc(x,y,this.boardSize);
+            return this.boardCell[a];
+        }
+        /** ゲーム盤への設定 */
+        public boardSetter = (x : number, y : number,code : number) : void => {
+            let a = addressCalc(x,y,this.boardSize);
+            this.boardCell[a] = code;
+        }
 
+        /** ゲーム盤初期化 （レベル等初期値）*/
+        public gameInit() : void {
             this.gameLevel = 0;
-            this.gameSize = 2;
+            this.boardSize = 2;
+
             this.canFreePotision = false;
             this.haveBlock = false;
             this.blockCount = 0;
@@ -376,41 +301,86 @@ namespace cellgame {
             this.isGameClear = false;
             this.isGamePlay = false;
             this.isPlayStarted = false;
-            this.gameStep = 0;
 
-            this.board = [];
+            this.boardCell = [];
             this.boardHand = [];          
         }
 
-        /** ボードからの取得 */
-        public boardGetter = (x : number, y : number) : number => {
-            let a = addressCalc(x,y,this.boardWidth);
-            return this.board[a];
-        }
-        /** ボードへの設定 */
-        public boardSetter = (x : number, y : number,code : number) : void => {
-            let a = addressCalc(x,y,this.boardWidth);
-            this.board[a] = code;
-        }
-
-
-        /** ゲーム作成　設定済みレベルに応じて作成 */
-        public boardMake() : void {
-            this.gameSizeCalc();
-            this.boardWidth = this.gameSize;
-            this.board = [];
-            for(let i = 0; i < this.boardWidth * this.boardWidth; i++) {
-                this.board.push(10);
+        /** ゲーム枠の大きさを計算 */
+        private boardSizeCalc() : void {
+            let s = 2 + this.gameLevel;
+            if (this.gameLevel == 0) {
+                this.boardSize = 2;
+                this.canFreePotision = false;
+                this.isEndless = false;
+                return;
             }
-            // 邪魔ブロック
+            if (this.gameLevel > 0 && this.gameLevel < 4) {
+                this.boardSize = 3;
+                if (this.gameLevel > 1) {
+                    this.canFreePotision = true;
+                    if (!this.haveBlock) {
+                        this.haveBlock = true;
+                        this.blockCount = 1;
+                    } 
+                }
+                else
+                {
+                    this.canFreePotision = false;
+                    this.haveBlock = false;
+                    this.blockCount = 0;
+                }
+                return;
+            }
+            let r = Math.floor(this.gameLevel / 4);
+            this.boardSize = 3 + r;
+            if (this.boardSize > 5) {
+                this.boardSize = 5;
+                this.haveBlock = true;
+                this.blockCount = 3;
+                this.isEndless = true;
+                return;
+            } else {
+                this.isEndless = false;
+            }
+            let mod = this.gameLevel % 4;
+            if (mod == 0 ) {
+                this.canFreePotision = false;
+                this.haveBlock = false;
+                this.blockCount = 0;
+            } else {
+                if (mod == 1) {
+                    this.canFreePotision = true;
+                    this.haveBlock = false;
+                    this.blockCount = 0;
+                } else {
+                    this.canFreePotision = true;
+                    this.haveBlock = true;
+                    this.blockCount = mod - 1;
+                }
+            }
+            return;
+        }
+
+        /** ゲーム盤作成　設定済みレベルに応じて作成 */
+        public boardMake() : void {
+            this.boardSizeCalc();
+            this.boardCell = [];
+            for(let i = 0; i < this.boardSize * this.boardSize; i++) {
+                this.boardCell.push(10);
+            }
+            // 邪魔ブロック（端には置かない）
+            this.blockPoints = [];
             if (this.haveBlock) {
                 for(let i = 0; i < this.blockCount; i++) {
                     while(true) {
-                        let x = rnd(this.boardWidth - 2) + 1;
-                        let y = rnd(this.boardWidth - 2) + 1;
+                        let x = rnd(this.boardSize - 2) + 1;
+                        let y = rnd(this.boardSize - 2) + 1;
                         if (this.boardGetter(x,y) != 10) {
                             continue;
                         }
+                        let point = new Point(false,x,y);
+                        this.blockPoints.push(point);
                         this.boardSetter(x,y,9);
                         break;
                     }
@@ -422,8 +392,8 @@ namespace cellgame {
             if (this.canFreePotision) {
                 // 自由位置
                 while(true) {
-                    x0 = rnd(this.boardWidth);
-                    y0 = rnd(this.boardWidth);
+                    x0 = rnd(this.boardSize);
+                    y0 = rnd(this.boardSize);
                     // 空きセルでなければやり直し
                     if (this.boardGetter(x0,y0) != 10) {
                         continue;
@@ -432,43 +402,87 @@ namespace cellgame {
                 }
             } else {
                 // 四つ角
-                x0 = (this.gameSize - 1) * rnd(2);
-                y0 = (this.gameSize - 1) * rnd(2);
+                x0 = (this.boardSize - 1) * rnd(2);
+                y0 = (this.boardSize - 1) * rnd(2);
             }
+            this.startPoint = new Point(false,x0,y0);
             this.nowCell = 11;
             this.boardSetter(x0,y0,this.nowCell);
-            /** ★★ */
+
+            this.selectCellSetter(x0,y0);
+            
+            this.isGameClear = false;
+            this.isGameOver = false;
+            this.isGamePlay = false;
+
+        }
+        
+        /** 選択箇所を作成（01専用）
+         * @param x : 横位置
+         * @param y : 縦位置
+         */        
+        private selectCellSetter(x : number, y : number) : void {
+            // 初期化
+            for(let y0 = 0; y0 < this.boardSize; y0++) {
+                for(let x0 = 0; x0 < this.boardSize; x0++) {
+                    let c = this.boardGetter(x0,y0);
+                    if (c == 20) {
+                        this.boardSetter(x0,y0,10);
+                    }
+                }
+            }
+            // 設定
+            for(let d = 0; d < 4; d++) {
+                let xx = x + Direction4s[d].x;
+                let yy = y + Direction4s[d].y;
+                if (xx < 0 || xx >= this.boardSize) continue;
+                if (yy < 0 || yy >= this.boardSize) continue;
+                let c = this.boardGetter(xx,yy);
+                if (c == 10) {
+                    this.boardSetter(xx,yy,20);
+                }
+            }
         }
 
         /** ゲームリセット そのレベル・ステージなどの初期化 */
         public boardReset() : void {
-            this.gameSizeCalc();
-            this.boardWidth = this.gameSize;
-            this.board = [];
-            for(let i = 0; i < this.boardWidth * this.boardWidth; i++) {
-                this.board.push(0);
+            // ゲーム盤の初期化
+            this.boardCell = [];
+            for(let i = 0; i < this.boardSize * this.boardSize; i++) {
+                this.boardCell.push(10);
             }
+            // ブロックの再現
+            for(let i = 0; i < this.blockPoints.length; i++) {
+                let p = this.blockPoints[i];
+                this.boardSetter(p.x,p.y,9);
+            }
+            // 初期位置の再現
+            let p = this.startPoint;
+            this.nowCell = 11;
+            this.boardSetter(p.x,p.y,this.nowCell);
+
+            this.selectCellSetter(p.x,p.y);
         }
 
         /** ボードからセル情報への転送 */
-        public boardToCells() : void {
-            for(let i = 0; i < this.boardWidth * this.boardWidth; i++) {
-                this.boardToCellSelectAddress(i);
+        public boardToCellsSetter() : void {
+            for(let i = 0; i < this.boardSize * this.boardSize; i++) {
+                this.boardToCellSelectAddressSetter(i);
             }
         }
 
         /** ボードから指定アドレスのみ転送 */
-        public boardToCellSelectAddress(boardAddress : number) : void {
-            let point = pointCalc(boardAddress,this.boardWidth);
-            let center = this.centerHolePoint(this.gameSize);
+        public boardToCellSelectAddressSetter(boardAddress : number) : void {
+            let point = pointCalc(boardAddress,this.boardSize);
+            let center = this.centerHolePoint(this.boardSize);
             let x = center.x + point.x;
             let y = center.y + point.y;   
-            this.codeSetter(x,y,this.board[boardAddress]);         
+            this.codeSetter(x,y,this.boardCell[boardAddress]);         
         }
 
         /** 手の反映 */
         public boardHandPaste (hand : IHand) : void { 
-            this.board[hand.address] = hand.code;
+            this.boardCell[hand.address] = hand.code;
         }
 
         /** 初手から指定の手まで進める */
@@ -481,8 +495,8 @@ namespace cellgame {
 
         /** ボードの初期化（０１専用） */
         public board01Clear() : void {
-            for(let i = 0; i < this.board.length; i++) {
-                if (this.board[i] == 20) this.board[i] = 10;
+            for(let i = 0; i < this.boardCell.length; i++) {
+                if (this.boardCell[i] == 20) this.boardCell[i] = 10;
             }
         }
 

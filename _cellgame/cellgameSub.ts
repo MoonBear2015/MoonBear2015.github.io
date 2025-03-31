@@ -55,6 +55,13 @@ namespace cellgame {
             return this.y * w + this.x;
         }
 
+        public equal = (point : Point) : boolean => {
+            if (this.isUndefined != point.isUndefined) return false;
+            if (this.x != point.x) return false;
+            if (this.y != point.y) return false;
+            return true;
+        }
+
         public toString() : string {
             if (this.isUndefined) return "undefined";
             return " (" + this.x + "," + this.y + ")";
