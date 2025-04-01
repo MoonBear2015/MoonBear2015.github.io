@@ -21,6 +21,34 @@ namespace cellgame {
         /** 平方データ時の全件数 */
         cellCount() : number;
 
+        /**平方データ初期化 */
+        cellReset(width : number,value : T) : void;
+
+        /** 四方セル設定
+         * @param x0 : 左上X y0 : 左上Y x1 : 右下X y1 : 右下Y code : 設定コード
+         */
+        cellBoxSetter(x0 : number,y0 : number,x1 : number,y1 : number,value : T) : void;
+
+        /** 中央穴あけ
+         * @param size : 穴あけサイズ
+         * @param code : 穴あけコード
+         */
+        cellCenterHoleMaker(size : number, value : T) : void;
+
+        /** 全セル塗りつぶし
+         * @param code : 設定コード
+         */
+        cellAllPaint(value : T) : void;
+
+        /** 中央穴あけ開始ポイント
+         * @param size : 穴あけサイズ
+         * @returns 穴あけ開始ポイント
+         */
+        centerHolePoint(size : number) : Point;
+        
+        /**データ初期化 */
+        reset(length : number,value : T) : void;
+
         /** 個数 */
         length() : number;
 
@@ -59,10 +87,62 @@ namespace cellgame {
         public cellCount = () : number => this.cellWidth * this.cellWidth;
 
         /**平方データ初期化 */
-        public CellInit(width : number,value : T = this.itemNew()) : void {
+        public cellReset(width : number,value : T = this.itemNew()) : void {
             this.cellWidth = width;
             this.items = [];
             for(let i = 0; i < this.cellCount(); i++) {
+                this.items.push(value);
+            }
+        }
+
+        /** 四方セル設定
+         * @param x0 : 左上X y0 : 左上Y x1 : 右下X y1 : 右下Y code : 設定コード
+         */
+        public cellBoxSetter(x0 : number,y0 : number,x1 : number,y1 : number,value : T) : void {
+            for(let y = y0; y <= y1; y++) {
+                for(let x = x0; x <= x1; x++) {
+                    this.cellSetter(x,y,value);
+                }
+            }
+        }
+
+        /** 全セル塗りつぶし
+         * @param code : 設定コード
+         */
+        public cellAllPaint(value : T) : void {
+            for(let y = 0; y < this.cellWidth; y++) {
+                for(let x = 0; x < this.cellWidth; x++) {
+                    this.cellSetter(x,y,value);
+                }
+            }
+        }
+        
+
+        /** 中央穴あけ
+         * @param size : 穴あけサイズ
+         * @param code : 穴あけコード
+         */
+        public cellCenterHoleMaker(size : number, value : T) : void {
+            let p0 = this.centerHolePoint(size);
+            let x1 = p0.x + size - 1;
+            let y1 = p0.y + size - 1;
+            this.cellBoxSetter(p0.x,p0.y,x1,y1,value);
+        }
+
+        /** 中央穴あけ開始ポイント
+         * @param size : 穴あけサイズ
+         * @returns 穴あけ開始ポイント
+         */
+        public centerHolePoint(size : number) : Point {
+            let x = Math.floor((this.cellWidth - size) / 2);
+            let y = Math.floor((this.cellWidth - size) / 2);
+            return new Point(false,x,y);
+        }
+
+        /**データ初期化 */
+        public reset(length : number,value : T = this.itemNew()) : void {
+            this.items = [];
+            for(let i = 0; i < length; i++) {
                 this.items.push(value);
             }
         }

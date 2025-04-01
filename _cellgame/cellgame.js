@@ -1,6 +1,8 @@
 "use strict";
 /// <reference path="cellgameLib.ts" />
-/// <reference path="cellgameSub.ts" />
+/// <reference path="cellgameSub01.ts" />
+/// <reference path="cellgameSub02.ts" />
+/// <reference path="icellSystem.ts" />
 /// <reference path="cellSystem00.ts" />
 /// <reference path="cellSystem01.ts" />
 /** 対ブラウザ表示処理 */

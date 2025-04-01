@@ -13,7 +13,7 @@ namespace cellgame {
         cellSize : number;
 
         /** cellコード */
-        codes : number[];
+        cells : ICellArray<number>;
 
         /** 表示メッセージ */
         messages : IMessage[];
@@ -32,23 +32,6 @@ namespace cellgame {
         
         /** 初期化 */
         init() : void;
-
-        /** 盤面白紙
-         * @param cellCount : セル数
-         */
-        cellReset(cellCount : number) : void;
-            
-        /** 番地の数 */
-        addressLength() : number;
-
-        /** 番地計算 */
-        cellAddress(x : number, y : number) : number;
-
-        /** cellコード（x,y指定） */
-        codeGetter(x : number,y : number) : number;
-
-        /** cellコード設定 (x,y指定) */
-        codeSetter( x : number, y : number, code : number) : void;
 
         /** タッチ箇所受信
          * @param p : タッチ桁位置
