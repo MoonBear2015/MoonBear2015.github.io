@@ -99,6 +99,7 @@ namespace cellgame {
 
     }
 
+    /** 数値型配列支援クラス */
     export class NumArray extends CellArray<number> implements ICellArray<number> {
         /** item初期値 */
         public itemNew =() => 0;
