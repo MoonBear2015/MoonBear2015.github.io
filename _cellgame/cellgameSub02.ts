@@ -7,98 +7,101 @@
 
 namespace cellgame {
 
-    /** 突合可能アイテム */
-    export interface IEqual<T> {
-        /** 突合 */
-        equal(item : T) : boolean;
-
-        /** 複写 */
-        copy() : T;
-
-        /** 貼付 */
-        paste(item : T) : void;
-    }
-
     /** 配列支援インターフェース */
-    export interface ICellArray<T extends IEqual<T>> {
+    export interface ICellArray<T extends number | string> {
         /** 配列 */
         items : T[];
 
+        /** item初期値 */
+        itemNew(item : T) : T;
+
         /** 平方データを設定する際 */
-        width : number;
+        cellWidth : number;
 
         /** 平方データ時の全件数 */
-        squareSize() : number;
-
-        /**平方データ初期化 */
-        squareInit(size : number,initItem : T) : void;
+        cellCount() : number;
 
         /** 個数 */
         length() : number;
 
+        /** 座標の番地 */
+        cellAddress(x : number, y : number) : number;
+
         /** 平方時・座標で取得 */
-        Getter(point : Point) : T;
-        Getter(x : number, y : number) : T;
+        cellGetter(x : number, y : number) : T;
 
         /** 平方時・座標で設定 */
-        Setter(point : Point, item : T) : void;
-        Setter(x : number, y : number, item : T) : void;
+        cellSetter(x : number, y : number, item : T) : void;
 
         /** 検索 -1:見つからない */
         search(item : T) : number;
     }
     
     /** 配列支援クラス */
-    export class CellArray<T extends IEqual<T>> implements ICellArray<T> {
+    export abstract class CellArray<T extends number | string> implements ICellArray<T> {
         
         /** コンストラクタ */
         public constructor() {
             this.items = [];
-            this.width = 0;
+            this.cellWidth = 0;
         }
         
         /** 配列 */
         public items : T[] = [];
+        
+        /** item初期値 */
+        abstract itemNew() : T;
 
         /** 平方データを設定する際 */
-        public width : number = 0;
+        public cellWidth : number = 0;
 
         /** 平方データ時の全件数 */
-        public squareSize = () : number => this.width * this.width;
+        public cellCount = () : number => this.cellWidth * this.cellWidth;
 
         /**平方データ初期化 */
-        public squareInit(width : number,initItem : T) : void {
-            this.width = width;
+        public CellInit(width : number,value : T = this.itemNew()) : void {
+            this.cellWidth = width;
             this.items = [];
-            for(let i = 0; i < this.squareSize(); i++) {
-                this.items.push(initItem.copy());
+            for(let i = 0; i < this.cellCount(); i++) {
+                this.items.push(value);
             }
         }
 
         /** 個数 */
-        length() : number;
+        public length = () : number => this.items.length;
+
+        /** 座標の番地 */
+        public cellAddress = (x : number, y : number) : number => y * this.cellWidth + x;
 
         /** 平方時・座標で取得 */
-        Getter(point : Point) : T;
-        Getter(x : number, y : number) : T;
+        public cellGetter (x : number, y : number) : T
+        {
+            if (this.cellWidth == 0) return this.itemNew();
+            return this.items[this.cellAddress(x,y)];
+        }
 
         /** 平方時・座標で設定 */
-        Setter(point : Point, item : T) : void;
-        Setter(x : number, y : number, item : T) : void;
+        public cellSetter(x : number, y : number, item : T) : void {
+            if (this.cellWidth == 0) return;
+            this.items[this.cellAddress(x,y)] = item;
+        }
 
         /** 検索 -1:見つからない */
-        search(item : T) : number;
-
         public search(item : T) : number {
             let result = -1;
             for(let i = 0; i < this.length(); i++) {
-                if (this.items[i].equal(item)) {
+                if (this.items[i] === item) {
                     return i;
                 }
             }
             return result;
         }
 
+    }
+
+    export class NumArray extends CellArray<number> implements ICellArray<number> {
+        /** item初期値 */
+        public itemNew =() => 0;
     }
 
 }
