@@ -1,8 +1,9 @@
+/// <reference path="cellgameLib.ts" />
+/// <reference path="cellgameSub01.ts" />
+/// <reference path="cellgameSub02.ts" />
+/// <reference path="cellgame.ts" />
 /// <reference path="icellSystem.ts" />
 /// <reference path="cellSystem00.ts" />
-/// <reference path="cellgame.ts" />
-/// <reference path="cellgameLib.ts" />
-/// <reference path="cellgameSub.ts" />
 namespace cellgame {
     /** セルゲームシステム ０１： */
     export class CellGameSystem01 extends CellGameSystem00

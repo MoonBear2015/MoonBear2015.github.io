@@ -1,3 +1,9 @@
+/// <reference path="cellgameLib.ts" />
+/// <reference path="cellgameSub02.ts" />
+/// <reference path="cellgame.ts" />
+/// <reference path="icellSystem.ts" />
+/// <reference path="cellSystem00.ts" />
+/// <reference path="cellSystem01.ts" />
 namespace cellgame {
     /** 未設定判定 */
     export function isNone(value: any): value is null | undefined {
@@ -240,8 +246,7 @@ namespace cellgame {
         static readonly Silver : string = "#C0C0C0";
         static readonly LightGray : string = "#D3D3D3";
         static readonly Gainsboro : string = "#DCDCDC";
-    }
-    
+    }    
 }
 
 
