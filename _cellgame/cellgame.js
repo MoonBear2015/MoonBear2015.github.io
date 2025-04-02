@@ -79,7 +79,7 @@ var cellgame;
         // 座標計算
         for (let y = 0; y < cellCount; y++) {
             for (let x = 0; x < cellCount; x++) {
-                let a = cellgame.gameSystem.cellAddress(x, y);
+                let a = cellgame.gameSystem.cells.cellAddress(x, y);
                 cellgame.gX3[a] = cellgame.gX2 + cellgame.gP1 + (cellgame.gW3 + cellgame.gP1) * x;
                 cellgame.gY3[a] = cellgame.gY2 + cellgame.gP1 + (cellgame.gH3 + cellgame.gP1) * y;
             }
@@ -208,7 +208,7 @@ var cellgame;
     function touchPoint(x, y) {
         let p0 = new cellgame.Point(false, x, y);
         let result = new cellgame.Point();
-        for (let a = 0; a < cellgame.gameSystem.addressLength(); a++) {
+        for (let a = 0; a < cellgame.gameSystem.cells.cellCount(); a++) {
             let x0 = cellgame.gX3[a];
             let y0 = cellgame.gY3[a];
             let x1 = x0 + cellgame.gW3;
@@ -429,7 +429,7 @@ var cellgame;
         let ctx = cellgame.CVS.getContext('2d');
         if (ctx == null)
             return;
-        let a = cellgame.gameSystem.cellAddress(x, y);
+        let a = cellgame.gameSystem.cells.cellAddress(x, y);
         let left = cellgame.gX3[a] - cellgame.gP1;
         let top = cellgame.gY3[a] - cellgame.gP1;
         let width = cellgame.gW3 + cellgame.gP1 * 2;
@@ -486,8 +486,8 @@ var cellgame;
             // alert("Canvas is None");
             return;
         }
-        let a = cellgame.gameSystem.cellAddress(x, y);
-        let c = cellgame.gameSystem.codes[a];
+        let a = cellgame.gameSystem.cells.cellAddress(x, y);
+        let c = cellgame.gameSystem.cells.items[a];
         cellTextDisplay(cellgame.komas[c].char, cellgame.komas[c].foreColor, cellgame.komas[c].backColor, cellgame.gX3[a], cellgame.gY3[a], cellgame.gW3, cellgame.gH3, cellgame.komas[c].isFlash);
     }
     cellgame.cellDisplay = cellDisplay;
@@ -533,7 +533,7 @@ var cellgame;
         let textX = (cellgame.gW3 - fontSize) / 2;
         let textY = (cellgame.gH3 + fontSize * 0.75) / 2;
         let marginY = (fontSize * 0.25) / 2;
-        let a = cellgame.gameSystem.cellAddress(x, y);
+        let a = cellgame.gameSystem.cells.cellAddress(x, y);
         let charWidth = ctx.measureText(text).width;
         ctx.fillStyle = cellgame.isRandomColor(isFlash, backColor);
         ctx.fillRect(cellgame.gX3[a] + textX, cellgame.gY3[a] + marginY, charWidth, fontSize);
@@ -549,8 +549,8 @@ var cellgame;
         }
         for (let y = 0; y < cellgame.gameSystem.cellSize; y++) {
             for (let x = 0; x < cellgame.gameSystem.cellSize; x++) {
-                let a = cellgame.gameSystem.cellAddress(x, y);
-                if (cellgame.gameSystem.codes[a] < cellgame.komas.length) {
+                let a = cellgame.gameSystem.cells.cellAddress(x, y);
+                if (cellgame.gameSystem.cells.items[a] < cellgame.komas.length) {
                     cellDisplay(x, y);
                 }
             }

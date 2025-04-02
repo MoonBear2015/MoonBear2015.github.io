@@ -234,7 +234,7 @@ namespace cellgame {
         // 座標計算
         for(let y = 0; y < cellCount; y++) {
             for (let x = 0; x < cellCount; x++) {
-                let a = gameSystem.cellAddress(x,y);
+                let a = gameSystem.cells.cellAddress(x,y);
                 gX3[a] = gX2 + gP1 + (gW3 + gP1) * x;
                 gY3[a] = gY2 + gP1 + (gH3 + gP1) * y;
             }
@@ -377,7 +377,7 @@ namespace cellgame {
 
         let result : Point = new Point();
 
-        for(let a = 0; a < gameSystem.addressLength(); a++) {
+        for(let a = 0; a < gameSystem.cells.cellCount(); a++) {
             let x0 = gX3[a];
             let y0 = gY3[a];
             let x1 = x0 + gW3;
@@ -613,7 +613,7 @@ namespace cellgame {
         let ctx = CVS.getContext('2d');
         if (ctx == null) return;
 
-        let a = gameSystem.cellAddress(x,y);
+        let a = gameSystem.cells.cellAddress(x,y);
         let left = gX3[a] - gP1;
         let top = gY3[a] - gP1;
         let width = gW3 + gP1 * 2;
@@ -697,8 +697,8 @@ namespace cellgame {
             return;
         }
 
-        let a = gameSystem.cellAddress(x,y);
-        let c = gameSystem.codes[a];
+        let a = gameSystem.cells.cellAddress(x,y);
+        let c = gameSystem.cells.items[a];
         cellTextDisplay(
             komas[c].char,
             komas[c].foreColor,
@@ -759,7 +759,7 @@ namespace cellgame {
         let textY = (gH3 + fontSize * 0.75) / 2;
         let marginY = (fontSize * 0.25) / 2;
 
-        let a = gameSystem.cellAddress(x,y);
+        let a = gameSystem.cells.cellAddress(x,y);
 
         let charWidth = ctx.measureText(text).width;
         ctx.fillStyle = isRandomColor(isFlash,backColor);
@@ -777,8 +777,8 @@ namespace cellgame {
         }
         for(let y = 0; y < gameSystem.cellSize; y++) {
             for (let x = 0; x < gameSystem.cellSize; x++) {
-                let a = gameSystem.cellAddress(x,y);
-                if (gameSystem.codes[a] < komas.length) {
+                let a = gameSystem.cells.cellAddress(x,y);
+                if (gameSystem.cells.items[a] < komas.length) {
                     cellDisplay(x,y);
                 }
             }
