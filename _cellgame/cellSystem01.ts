@@ -10,17 +10,13 @@ namespace cellgame {
     implements ICellGameSystem {
 
         // game01 self
-
         
         public gameLevel : number = 0;
         public boardSize : number = 2;
 
         public board : ICellArray<number> = new NumArray();
 
-        // public boardCell : number[] = [];
-        // public boardWidth : number = 0;
         public hands : IHand[] = [];
-        // public boardStep : number = 0;
 
         public blockPoints : Point[] = [];
         public startPoint : Point = new Point(true);
@@ -214,17 +210,6 @@ namespace cellgame {
             let center = Math.floor(this.cellSize / 2);
             this.cells.cellSetter(center,this.cellSize - 1,90);
         }
-        
-        // /** ゲーム盤からの取得 */
-        // public boardGetter = (x : number, y : number) : number => {
-        //     let a = addressCalc(x,y,this.boardSize);
-        //     return this.boardCell[a];
-        // }
-        // /** ゲーム盤への設定 */
-        // public boardSetter = (x : number, y : number,code : number) : void => {
-        //     let a = addressCalc(x,y,this.boardSize);
-        //     this.boardCell[a] = code;
-        // }
 
         /** ゲーム盤初期化 （レベル等初期値）*/
         public boardInit() : void {
