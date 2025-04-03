@@ -206,7 +206,7 @@ var cellgame;
             this.isGameClear = false;
             this.isGamePlay = false;
             this.isPlayStarted = false;
-            this.board.items = [];
+            this.board.cellReset(this.boardSize, 10);
             this.hands = [];
         }
         /** ゲーム枠の大きさを計算 */

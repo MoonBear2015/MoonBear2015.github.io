@@ -226,7 +226,7 @@ namespace cellgame {
             this.isGamePlay = false;
             this.isPlayStarted = false;
 
-            this.board.items = [];
+            this.board.cellReset(this.boardSize,10);
             this.hands = [];          
         }
 
