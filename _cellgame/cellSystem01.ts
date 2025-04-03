@@ -11,6 +11,7 @@ namespace cellgame {
 
         // game01 self
 
+        
         public gameLevel : number = 0;
         public boardSize : number = 2;
 
