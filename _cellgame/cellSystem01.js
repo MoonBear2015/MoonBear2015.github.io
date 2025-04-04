@@ -115,7 +115,8 @@ var cellgame;
                             this.statusName[0] = "";
                             this.status[0] = -1;
                         }
-                        this.cells.cellReset(this.boardSize + 4, 0);
+                        this.cellSize = this.boardSize + 4;
+                        this.cells.cellReset(this.cellSize, 0);
                         this.cells.cellAllPaint(9);
                         this.cells.cellCenterHoleMaker(this.boardSize, 10);
                         this.boardToCellsSetter();

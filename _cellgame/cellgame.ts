@@ -696,7 +696,6 @@ namespace cellgame {
             // alert("Canvas is None");
             return;
         }
-
         let a = gameSystem.cells.cellAddress(x,y);
         let c = gameSystem.cells.items[a];
         cellTextDisplay(
