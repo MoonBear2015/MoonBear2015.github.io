@@ -31,9 +31,10 @@ namespace cellgame {
 
         /** 中央穴あけ
          * @param size : 穴あけサイズ
-         * @param code : 穴あけコード
+         * @param value : 穴あけコード
+         * @returns 穴あけ開始ポイント
          */
-        cellCenterHoleMaker(size : number, value : T) : void;
+        cellCenterHoleMaker(size : number, value : T) : Point;
 
         /** 全セル塗りつぶし
          * @param code : 設定コード
@@ -120,13 +121,15 @@ namespace cellgame {
 
         /** 中央穴あけ
          * @param size : 穴あけサイズ
-         * @param code : 穴あけコード
+         * @param value : 穴あけコード
+         * @returns 穴あけ開始ポイント
          */
-        public cellCenterHoleMaker(size : number, value : T) : void {
+        public cellCenterHoleMaker(size : number, value : T) : Point {
             let p0 = this.centerHolePoint(size);
             let x1 = p0.x + size - 1;
             let y1 = p0.y + size - 1;
             this.cellBoxSetter(p0.x,p0.y,x1,y1,value);
+            return p0;
         }
 
         /** 中央穴あけ開始ポイント

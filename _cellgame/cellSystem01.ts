@@ -15,6 +15,7 @@ namespace cellgame {
         public boardSize : number = 2;
 
         public board : ICellArray<number> = new NumArray();
+        public boardPoint : Point = new Point(true);
 
         public hands : IHand[] = [];
 
@@ -62,9 +63,13 @@ namespace cellgame {
                 let y = p.y;
                 let c = this.cells.cellGetter(x,y);
                 if (c == 20) {
+                    let bx = x - this.boardPoint.x;
+                    let by = y - this.boardPoint.y; 
                     this.nowCell = this.codeLoop(this.nowCell,1);
-                    this.cells.cellSetter(x,y,this.nowCell);
-                    this.selectCellSetter(x,y);
+                    this.board.cellSetter(bx,by,this.nowCell);
+                    this.boardToCellsSetter(bx,by);
+                    this.hands.push(new Hand(addressCalc(bx,by,this.boardSize),this.nowCell));
+                    this.selectCellSetter(bx,by);
                     this.isPlayStarted = true;
                     return;
                 }
@@ -131,9 +136,9 @@ namespace cellgame {
                         this.cells.cellReset(this.cellSize,0);
                         
                         this.cells.cellAllPaint(9);
-                        this.cells.cellCenterHoleMaker(this.boardSize,10);
+                        this.boardPoint = this.cells.cellCenterHoleMaker(this.boardSize,10);
 
-                        this.boardToCellsSetter();
+                        this.boardToCellsAllSetter();
 
                         this.gameStep = 2;
                         this.isGamePlay = true;
@@ -233,7 +238,6 @@ namespace cellgame {
 
         /** ゲーム枠の大きさを計算 */
         private boardSizeCalc() : void {
-            let s = 2 + this.gameLevel;
             if (this.gameLevel == 0) {
                 this.boardSize = 2;
                 this.canFreePotision = false;
@@ -364,6 +368,7 @@ namespace cellgame {
                     this.board.cellSetter(xx,yy,20);
                 }
             }
+            this.boardToCellsAllSetter();
         }
 
         /** ゲームリセット そのレベル・ステージなどの初期化 */
@@ -381,27 +386,35 @@ namespace cellgame {
             this.board.cellSetter(p.x,p.y,this.nowCell);
 
             this.selectCellSetter(p.x,p.y);
+
+            this.boardToCellsAllSetter();
         }
 
-        /** ボードからセル情報への転送 */
-        public boardToCellsSetter() : void {
+        /** ボードからセル情報への全ての転送 */
+        public boardToCellsAllSetter() : void {
             for(let i = 0; i < this.boardSize * this.boardSize; i++) {
-                this.boardToCellSelectAddressSetter(i);
+                this.boardToCellsSelectAddressSetter(i);
             }
         }
 
+        /** ボードから指定座標のみ転送 */
+        public boardToCellsSetter(x : number, y : number) : void {
+            let address = addressCalc(x,y,this.boardSize);
+            this.boardToCellsSelectAddressSetter(address);
+}
+
         /** ボードから指定アドレスのみ転送 */
-        public boardToCellSelectAddressSetter(boardAddress : number) : void {
+        public boardToCellsSelectAddressSetter(boardAddress : number) : void {
             let point = pointCalc(boardAddress,this.boardSize);
-            let center = this.cells.centerHolePoint(this.boardSize);
-            let x = center.x + point.x;
-            let y = center.y + point.y;   
+            let x = this.boardPoint.x + point.x;
+            let y = this.boardPoint.y + point.y;   
             this.cells.cellSetter(x,y,this.board.items[boardAddress]);         
         }
 
         /** 手の反映 */
         public boardHandPaste (hand : IHand) : void { 
             this.board.items[hand.address] = hand.code;
+            this.boardToCellsSelectAddressSetter(hand.address);
         }
 
         /** 初手から指定の手まで進める */
@@ -412,8 +425,8 @@ namespace cellgame {
             }
         }
 
-        /** ボードの初期化（０１専用） */
-        public board01Clear() : void {
+        /** ボードの初期化 */
+        public boardClear() : void {
             this.board.cellAllPaint(10);
         }
 
