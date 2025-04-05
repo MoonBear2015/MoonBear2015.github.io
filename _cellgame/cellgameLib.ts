@@ -48,8 +48,8 @@ namespace cellgame {
         komas00[91] = new Koma(91,"否","否定:明滅",Colors.White,Colors.Red,true);
         komas00[92] = new Koma(92,"再","再考:明滅",Colors.Black,Colors.Yellow,true);
         komas00[93] = new Koma(93,"却","却下:明滅",Colors.Red,Colors.Black,true);
-        komas00[94] = new Koma(94,"戻","戻る 説明",Colors.White,Colors.DarkGray,false);
-        komas00[95] = new Koma(95,"進","進む 説明",Colors.White,Colors.DarkGray,false);
+        komas00[94] = new Koma(94,"戻","戻る 説明",Colors.White,Colors.DeepDarkGray,false);
+        komas00[95] = new Koma(95,"進","進む 説明",Colors.White,Colors.DeepDarkGray,false);
         komas00[99] = new Koma(99,"説","説明",Colors.Black,Colors.White,false);
 
         msgPatterns00 = [];

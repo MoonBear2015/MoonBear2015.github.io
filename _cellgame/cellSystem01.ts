@@ -27,6 +27,7 @@ namespace cellgame {
         public blockCount : number = 0;
         public isEndless : boolean = false;
         public nowCell : number = 0;
+        public nowHand : number = 0;
         public isGameOver : boolean = false;
         public isGameClear : boolean = false;
         public isGamePlay : boolean = false;
@@ -54,7 +55,11 @@ namespace cellgame {
         }
 
         /** メッセージ表示位置 */
-        public messagePotision　=　() : number => Math.floor((this.boardSize + 4 - 6) / 2);
+        public messagePotision() : number {
+            let x = this.boardSize + 4 - 6;
+            if (x < 2) return x;
+            return Math.floor(x / 2);        
+        }
 
         /** セル選択
          * @param p : 選択桁位置
@@ -71,6 +76,10 @@ namespace cellgame {
                     this.boardAndCellsSetter(bx,by,this.nowCell);
 
                     this.hands.push(new Hand(addressCalc(bx,by,this.boardSize),this.nowCell));
+                    if (this.hands.length - 1 > this.nowHand) {
+                        this.nowHand++;
+                    }
+
                     this.selectCellSetter(bx,by);
                     this.isPlayStarted = true;
                     return;
@@ -156,7 +165,7 @@ namespace cellgame {
                             this.buttonSetter();
                         }
                         else {
-                            this.messages.push(new Message("士農工商を並べよ",this.messagePotision(),1,Colors.White,Colors.Black));
+                            // this.messages.push(new Message("士農工商を並べよ",this.messagePotision(),1,Colors.White,Colors.Black));
                             this.buttonSetter();
                         }
                         this.boardCheck();
@@ -207,16 +216,16 @@ namespace cellgame {
         }
 
         /** okボタン設定 flase:消去 */
-        private okButtonSetter(isClear : boolean = true) : void {
+        private okButtonSetter(isDisplay : boolean = true) : void {
             let center = Math.floor(this.cellSize / 2);
-            this.cells.cellSetter(center,this.cellSize - 1,isClear ? 90 : 9);
+            this.cells.cellSetter(center,this.cellSize - 1,isDisplay ? 90 : 9);
         }
 
         /** 却・戻・進 ボタン設置 flase:消去 */
-        private controllButtonSetter(isClear : boolean = true) : void {
-            this.cells.cellSetter(this.cellSize - 1,0,isClear ? 93 : 9);
-            this.cells.cellSetter(0,this.cellSize - 1,isClear ? 94 : 9);
-            this.cells.cellSetter(this.cellSize - 1,this.cellSize - 1,isClear ? 95 : 9);
+        private controllButtonSetter(isDisplay : boolean = true) : void {
+            this.cells.cellSetter(this.cellSize - 1,0,isDisplay ? 93 : 9);
+            this.cells.cellSetter(0,this.cellSize - 1,(isDisplay && this.nowHand > -1) ? 94 : 9);
+            this.cells.cellSetter(this.cellSize - 1,this.cellSize - 1,(isDisplay && this.nowHand < this.hands.length - 1) ? 95 : 9);
         }
 
         /** ボタン設置制御 */
@@ -373,6 +382,9 @@ namespace cellgame {
             this.isGameClear = false;
             this.isGameOver = false;
             this.isGamePlay = false;
+
+            this.hands = [];
+            this.nowHand = -1;
 
         }
         
