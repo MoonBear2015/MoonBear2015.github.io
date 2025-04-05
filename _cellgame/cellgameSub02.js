@@ -21,6 +21,8 @@ var cellgame;
             this.length = () => this.items.length;
             /** 座標の番地 */
             this.cellAddress = (x, y) => y * this.cellWidth + x;
+            /** 番地の座標 */
+            this.cellPoint = (address) => cellgame.pointCalc(address, this.cellWidth);
             this.items = [];
             this.cellWidth = 0;
         }

@@ -32,6 +32,8 @@ namespace cellgame {
         public isGamePlay : boolean = false;
         public isPlayStarted : boolean = false;
 
+        public loopCodes : number[] = [11,12,13,14];
+
         /** 背景色 */
         public backColor: string = Colors.DeepDarkGray;
 
@@ -66,18 +68,18 @@ namespace cellgame {
                     let bx = x - this.boardPoint.x;
                     let by = y - this.boardPoint.y; 
                     this.nowCell = this.codeLoop(this.nowCell,1);
-                    this.board.cellSetter(bx,by,this.nowCell);
-                    this.boardToCellsSetter(bx,by);
+                    this.boardAndCellsSetter(bx,by,this.nowCell);
+
                     this.hands.push(new Hand(addressCalc(bx,by,this.boardSize),this.nowCell));
                     this.selectCellSetter(bx,by);
                     this.isPlayStarted = true;
                     return;
                 }
-                if (c == 92) {
+                if (c == 93) {
                     this.gameStep = 1;
                     return;
                 }
-                if (c == 93) {
+                if (c == 99) {
                     alert(this.toComment());
                     return;
                 }
@@ -139,13 +141,10 @@ namespace cellgame {
                         this.boardPoint = this.cells.cellCenterHoleMaker(this.boardSize,10);
 
                         this.boardToCellsAllSetter();
+                        this.buttonSetter();
 
                         this.gameStep = 2;
                         this.isGamePlay = true;
-                        // 再ボタン消去
-                        this.cells.cellSetter(this.cellSize - 1,this.boardSize - 1,9);
-                        // 説ボタン設置
-                        this.cells.cellSetter(0,this.cellSize - 1,93);
                         break;
                     }
                 /** ゲームプレイ */
@@ -154,13 +153,11 @@ namespace cellgame {
                         if (!this.isGamePlay) break;
                         this.messages = [];
                         if (this.isPlayStarted) {
-                            // 再ボタン設置
-                            this.cells.cellSetter(this.cellSize - 1,this.cellSize - 1,92);
+                            this.buttonSetter();
                         }
                         else {
-                            this.messages.push(new Message("士農工商を並べよ",this.messagePotision(),0,Colors.White,Colors.Black));
-                            // 再ボタン消去
-                            this.cells.cellSetter(this.cellSize - 1,this.cellSize - 1,9);
+                            this.messages.push(new Message("士農工商を並べよ",this.messagePotision(),1,Colors.White,Colors.Black));
+                            this.buttonSetter();
                         }
                         this.boardCheck();
                         if (this.isGameClear) {
@@ -176,12 +173,11 @@ namespace cellgame {
                 /** ゲームクリア 表示*/
                 case 3:
                     {
-                        // 再ボタン消去
-                        this.cells.cellSetter(this.cellSize - 1,this.cellSize - 1,9);
+                        this.buttonSetter();
                         this.isPlayStarted = false;
                         
                         this.messages = [];
-                        this.messages.push(new Message(this.msgWinSelector(),this.messagePotision(),0,Colors.White,Colors.Black,true));
+                        this.messages.push(new Message(this.msgWinSelector(),this.messagePotision(),1,Colors.White,Colors.Black,true));
                         this.okButtonSetter();
                         this.gameStep = 5;
                         break;
@@ -189,12 +185,11 @@ namespace cellgame {
                 /** ゲームオーバー 表示*/
                 case 4:
                     {
-                        // 再ボタン消去
-                        this.cells.cellSetter(this.cellSize - 1,this.cellSize - 1,9);
+                        this.buttonSetter();
                         this.isPlayStarted = false;
 
                         this.messages = [];
-                        this.messages.push(new Message(this.msgLoseSelector(),this.messagePotision(),0,Colors.Black,Colors.Red,false));
+                        this.messages.push(new Message(this.msgLoseSelector(),this.messagePotision(),1,Colors.Black,Colors.Red,false));
                         this.okButtonSetter();
                         this.gameStep = 5;
                         break;
@@ -211,10 +206,48 @@ namespace cellgame {
             }
         }
 
-        /** okボタン設定 */
-        private okButtonSetter() : void {
+        /** okボタン設定 flase:消去 */
+        private okButtonSetter(isClear : boolean = true) : void {
             let center = Math.floor(this.cellSize / 2);
-            this.cells.cellSetter(center,this.cellSize - 1,90);
+            this.cells.cellSetter(center,this.cellSize - 1,isClear ? 90 : 9);
+        }
+
+        /** 却・戻・進 ボタン設置 flase:消去 */
+        private controllButtonSetter(isClear : boolean = true) : void {
+            this.cells.cellSetter(this.cellSize - 1,0,isClear ? 93 : 9);
+            this.cells.cellSetter(0,this.cellSize - 1,isClear ? 94 : 9);
+            this.cells.cellSetter(this.cellSize - 1,this.cellSize - 1,isClear ? 95 : 9);
+        }
+
+        /** ボタン設置制御 */
+        private buttonSetter() : void {
+            // 説ボタン設置
+            this.cells.cellSetter(0,0,99);
+            switch(this.gameStep) {
+                case 1:
+                    break;
+                case 2:
+                    // ok ボタン消去
+                    this.okButtonSetter(false);
+
+                    if (this.isPlayStarted) {
+                        // 却・戻・進 ボタン設置
+                        this.controllButtonSetter();
+                    } else {
+                        // 却・戻・進 ボタン消去
+                        this.controllButtonSetter(false);
+                    }
+                    break;
+                case 3:
+                case 4:
+                    // ok ボタン設置
+                    this.okButtonSetter();
+                    // 却・戻・進 ボタン消去
+                    this.controllButtonSetter(false);
+                    break;
+                default:
+                    break;
+            }
         }
 
         /** ゲーム盤初期化 （レベル等初期値）*/
@@ -390,22 +423,28 @@ namespace cellgame {
             this.boardToCellsAllSetter();
         }
 
+        //** ゲーム盤と画面セルの同時セット */
+        public boardAndCellsSetter(x : number, y : number, code : number) : void {
+            this.board.cellSetter(x,y,code);
+            this.boardToCellsCopy(x,y);
+        }
+
         /** ボードからセル情報への全ての転送 */
         public boardToCellsAllSetter() : void {
-            for(let i = 0; i < this.boardSize * this.boardSize; i++) {
-                this.boardToCellsSelectAddressSetter(i);
+            for(let i = 0; i < this.board.cellCount(); i++) {
+                this.boardToCellsAddressCopy(i);
             }
         }
 
         /** ボードから指定座標のみ転送 */
-        public boardToCellsSetter(x : number, y : number) : void {
-            let address = addressCalc(x,y,this.boardSize);
-            this.boardToCellsSelectAddressSetter(address);
-}
+        public boardToCellsCopy(x : number, y : number) : void {
+            let address = this.board.cellAddress(x,y);
+            this.boardToCellsAddressCopy(address);
+        }
 
         /** ボードから指定アドレスのみ転送 */
-        public boardToCellsSelectAddressSetter(boardAddress : number) : void {
-            let point = pointCalc(boardAddress,this.boardSize);
+        public boardToCellsAddressCopy(boardAddress : number) : void {
+            let point = this.board.cellPoint(boardAddress);
             let x = this.boardPoint.x + point.x;
             let y = this.boardPoint.y + point.y;   
             this.cells.cellSetter(x,y,this.board.items[boardAddress]);         
@@ -414,7 +453,7 @@ namespace cellgame {
         /** 手の反映 */
         public boardHandPaste (hand : IHand) : void { 
             this.board.items[hand.address] = hand.code;
-            this.boardToCellsSelectAddressSetter(hand.address);
+            this.boardToCellsAddressCopy(hand.address);
         }
 
         /** 初手から指定の手まで進める */
@@ -471,9 +510,6 @@ namespace cellgame {
             result +="士農工商を順に配置し、\n";
             result +="士農工商で盤面を埋めて、\n";
             result +="士農工商の順列を学ぶのだ。\n";
-            result +="尚、盤面に整合性は計られていない。\n";
-            result +="無理な場合は'再'を選んでやり直せ。\n";
-            result +="その場合の罰則は無い。\n";
             return result;
         }
     }

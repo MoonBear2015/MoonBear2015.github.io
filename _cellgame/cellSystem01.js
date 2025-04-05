@@ -28,6 +28,7 @@ var cellgame;
             this.isGameClear = false;
             this.isGamePlay = false;
             this.isPlayStarted = false;
+            this.loopCodes = [11, 12, 13, 14];
             /** 背景色 */
             this.backColor = cellgame.Colors.DeepDarkGray;
             /** メッセージ表示位置 */
@@ -55,18 +56,17 @@ var cellgame;
                     let bx = x - this.boardPoint.x;
                     let by = y - this.boardPoint.y;
                     this.nowCell = this.codeLoop(this.nowCell, 1);
-                    this.board.cellSetter(bx, by, this.nowCell);
-                    this.boardToCellsSetter(bx, by);
+                    this.boardAndCellsSetter(bx, by, this.nowCell);
                     this.hands.push(new cellgame.Hand(cellgame.addressCalc(bx, by, this.boardSize), this.nowCell));
                     this.selectCellSetter(bx, by);
                     this.isPlayStarted = true;
                     return;
                 }
-                if (c == 92) {
+                if (c == 93) {
                     this.gameStep = 1;
                     return;
                 }
-                if (c == 93) {
+                if (c == 99) {
                     alert(this.toComment());
                     return;
                 }
@@ -125,12 +125,9 @@ var cellgame;
                         this.cells.cellAllPaint(9);
                         this.boardPoint = this.cells.cellCenterHoleMaker(this.boardSize, 10);
                         this.boardToCellsAllSetter();
+                        this.buttonSetter();
                         this.gameStep = 2;
                         this.isGamePlay = true;
-                        // 再ボタン消去
-                        this.cells.cellSetter(this.cellSize - 1, this.boardSize - 1, 9);
-                        // 説ボタン設置
-                        this.cells.cellSetter(0, this.cellSize - 1, 93);
                         break;
                     }
                 /** ゲームプレイ */
@@ -140,13 +137,11 @@ var cellgame;
                             break;
                         this.messages = [];
                         if (this.isPlayStarted) {
-                            // 再ボタン設置
-                            this.cells.cellSetter(this.cellSize - 1, this.cellSize - 1, 92);
+                            this.buttonSetter();
                         }
                         else {
-                            this.messages.push(new cellgame.Message("士農工商を並べよ", this.messagePotision(), 0, cellgame.Colors.White, cellgame.Colors.Black));
-                            // 再ボタン消去
-                            this.cells.cellSetter(this.cellSize - 1, this.cellSize - 1, 9);
+                            this.messages.push(new cellgame.Message("士農工商を並べよ", this.messagePotision(), 1, cellgame.Colors.White, cellgame.Colors.Black));
+                            this.buttonSetter();
                         }
                         this.boardCheck();
                         if (this.isGameClear) {
@@ -162,11 +157,10 @@ var cellgame;
                 /** ゲームクリア 表示*/
                 case 3:
                     {
-                        // 再ボタン消去
-                        this.cells.cellSetter(this.cellSize - 1, this.cellSize - 1, 9);
+                        this.buttonSetter();
                         this.isPlayStarted = false;
                         this.messages = [];
-                        this.messages.push(new cellgame.Message(this.msgWinSelector(), this.messagePotision(), 0, cellgame.Colors.White, cellgame.Colors.Black, true));
+                        this.messages.push(new cellgame.Message(this.msgWinSelector(), this.messagePotision(), 1, cellgame.Colors.White, cellgame.Colors.Black, true));
                         this.okButtonSetter();
                         this.gameStep = 5;
                         break;
@@ -174,11 +168,10 @@ var cellgame;
                 /** ゲームオーバー 表示*/
                 case 4:
                     {
-                        // 再ボタン消去
-                        this.cells.cellSetter(this.cellSize - 1, this.cellSize - 1, 9);
+                        this.buttonSetter();
                         this.isPlayStarted = false;
                         this.messages = [];
-                        this.messages.push(new cellgame.Message(this.msgLoseSelector(), this.messagePotision(), 0, cellgame.Colors.Black, cellgame.Colors.Red, false));
+                        this.messages.push(new cellgame.Message(this.msgLoseSelector(), this.messagePotision(), 1, cellgame.Colors.Black, cellgame.Colors.Red, false));
                         this.okButtonSetter();
                         this.gameStep = 5;
                         break;
@@ -194,10 +187,46 @@ var cellgame;
                     }
             }
         }
-        /** okボタン設定 */
-        okButtonSetter() {
+        /** okボタン設定 flase:消去 */
+        okButtonSetter(isClear = true) {
             let center = Math.floor(this.cellSize / 2);
-            this.cells.cellSetter(center, this.cellSize - 1, 90);
+            this.cells.cellSetter(center, this.cellSize - 1, isClear ? 90 : 9);
+        }
+        /** 却・戻・進 ボタン設置 flase:消去 */
+        controllButtonSetter(isClear = true) {
+            this.cells.cellSetter(this.cellSize - 1, 0, isClear ? 93 : 9);
+            this.cells.cellSetter(0, this.cellSize - 1, isClear ? 94 : 9);
+            this.cells.cellSetter(this.cellSize - 1, this.cellSize - 1, isClear ? 95 : 9);
+        }
+        /** ボタン設置制御 */
+        buttonSetter() {
+            // 説ボタン設置
+            this.cells.cellSetter(0, 0, 99);
+            switch (this.gameStep) {
+                case 1:
+                    break;
+                case 2:
+                    // ok ボタン消去
+                    this.okButtonSetter(false);
+                    if (this.isPlayStarted) {
+                        // 却・戻・進 ボタン設置
+                        this.controllButtonSetter();
+                    }
+                    else {
+                        // 却・戻・進 ボタン消去
+                        this.controllButtonSetter(false);
+                    }
+                    break;
+                case 3:
+                case 4:
+                    // ok ボタン設置
+                    this.okButtonSetter();
+                    // 却・戻・進 ボタン消去
+                    this.controllButtonSetter(false);
+                    break;
+                default:
+                    break;
+            }
         }
         /** ゲーム盤初期化 （レベル等初期値）*/
         boardInit() {
@@ -365,20 +394,25 @@ var cellgame;
             this.selectCellSetter(p.x, p.y);
             this.boardToCellsAllSetter();
         }
+        //** ゲーム盤と画面セルの同時セット */
+        boardAndCellsSetter(x, y, code) {
+            this.board.cellSetter(x, y, code);
+            this.boardToCellsCopy(x, y);
+        }
         /** ボードからセル情報への全ての転送 */
         boardToCellsAllSetter() {
-            for (let i = 0; i < this.boardSize * this.boardSize; i++) {
-                this.boardToCellsSelectAddressSetter(i);
+            for (let i = 0; i < this.board.cellCount(); i++) {
+                this.boardToCellsAddressCopy(i);
             }
         }
         /** ボードから指定座標のみ転送 */
-        boardToCellsSetter(x, y) {
-            let address = cellgame.addressCalc(x, y, this.boardSize);
-            this.boardToCellsSelectAddressSetter(address);
+        boardToCellsCopy(x, y) {
+            let address = this.board.cellAddress(x, y);
+            this.boardToCellsAddressCopy(address);
         }
         /** ボードから指定アドレスのみ転送 */
-        boardToCellsSelectAddressSetter(boardAddress) {
-            let point = cellgame.pointCalc(boardAddress, this.boardSize);
+        boardToCellsAddressCopy(boardAddress) {
+            let point = this.board.cellPoint(boardAddress);
             let x = this.boardPoint.x + point.x;
             let y = this.boardPoint.y + point.y;
             this.cells.cellSetter(x, y, this.board.items[boardAddress]);
@@ -386,7 +420,7 @@ var cellgame;
         /** 手の反映 */
         boardHandPaste(hand) {
             this.board.items[hand.address] = hand.code;
-            this.boardToCellsSelectAddressSetter(hand.address);
+            this.boardToCellsAddressCopy(hand.address);
         }
         /** 初手から指定の手まで進める */
         boardHandMove(handNo) {
@@ -437,9 +471,6 @@ var cellgame;
             result += "士農工商を順に配置し、\n";
             result += "士農工商で盤面を埋めて、\n";
             result += "士農工商の順列を学ぶのだ。\n";
-            result += "尚、盤面に整合性は計られていない。\n";
-            result += "無理な場合は'再'を選んでやり直せ。\n";
-            result += "その場合の罰則は無い。\n";
             return result;
         }
     }

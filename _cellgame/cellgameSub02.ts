@@ -56,6 +56,9 @@ namespace cellgame {
         /** 座標の番地 */
         cellAddress(x : number, y : number) : number;
 
+        /** 番地の座標 */
+        cellPoint(address : number) : Point;
+
         /** 平方時・座標で取得 */
         cellGetter(x : number, y : number) : T;
 
@@ -155,6 +158,9 @@ namespace cellgame {
 
         /** 座標の番地 */
         public cellAddress = (x : number, y : number) : number => y * this.cellWidth + x;
+
+        /** 番地の座標 */
+        public cellPoint = (address : number) : Point => pointCalc(address, this.cellWidth);
 
         /** 平方時・座標で取得 */
         public cellGetter (x : number, y : number) : T

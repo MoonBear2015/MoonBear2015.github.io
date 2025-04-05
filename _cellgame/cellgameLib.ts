@@ -47,7 +47,10 @@ namespace cellgame {
         komas00[90] = new Koma(90,"了","了解:明滅",Colors.White,Colors.Black,true);
         komas00[91] = new Koma(91,"否","否定:明滅",Colors.White,Colors.Red,true);
         komas00[92] = new Koma(92,"再","再考:明滅",Colors.Black,Colors.Yellow,true);
-        komas00[93] = new Koma(93,"説","説明:明滅",Colors.Black,Colors.White,false);
+        komas00[93] = new Koma(93,"却","却下:明滅",Colors.Red,Colors.Black,true);
+        komas00[94] = new Koma(94,"戻","戻る 説明",Colors.White,Colors.DarkGray,false);
+        komas00[95] = new Koma(95,"進","進む 説明",Colors.White,Colors.DarkGray,false);
+        komas00[99] = new Koma(99,"説","説明",Colors.Black,Colors.White,false);
 
         msgPatterns00 = [];
         msgPatterns00[0] = "　よくやった！　";
@@ -99,7 +102,10 @@ namespace cellgame {
         komas01[90] = new Koma(90,"了","了解:明滅",Colors.White,Colors.Black,true);
         komas01[91] = new Koma(91,"否","否定:明滅",Colors.White,Colors.Red,true);
         komas01[92] = new Koma(92,"再","再考:明滅",Colors.Black,Colors.Yellow,true);
-        komas01[92] = new Koma(93,"説","説明:明滅",Colors.Black,Colors.White,false);
+        komas01[93] = new Koma(93,"却","却下:明滅",Colors.Red,Colors.Black,true);
+        komas01[94] = new Koma(94,"戻","戻る 説明",Colors.White,Colors.DarkGray,false);
+        komas01[95] = new Koma(95,"進","進む 説明",Colors.White,Colors.DarkGray,false);
+        komas01[99] = new Koma(99,"説","説明",Colors.Black,Colors.White,false);
 
         msgPatterns01 = [];
         msgPatterns01[0] = "　　偉いぞ！　　";
@@ -149,10 +155,13 @@ namespace cellgame {
         komas02[23] = new Koma(23,"Ａ","Artisans（職人）:明滅",Colors.White,Colors.DarkBlue);
         komas02[24] = new Koma(24,"Ｍ","Merchants（商人）:明滅",Colors.White,Colors.DarkGreen);
             
-        komas02[90] = new Koma(90,"Ｙ","Yes 了解:明滅",Colors.White,Colors.Black,true);
-        komas02[91] = new Koma(91,"Ｎ","No 拒否:明滅",Colors.White,Colors.Red,true);
-        komas02[92] = new Koma(92,"Ｒ","Retry 再考:明滅",Colors.Black,Colors.Yellow,true);
-        komas02[92] = new Koma(92,"？","? 説明:明滅",Colors.Black,Colors.White,false);
+        komas02[90] = new Koma(90,"ｙ","yes 了解:明滅",Colors.White,Colors.Black,true);
+        komas02[91] = new Koma(91,"ｎ","no 拒否:明滅",Colors.White,Colors.Red,true);
+        komas02[92] = new Koma(92,"ｒ","retry 再考:明滅",Colors.Black,Colors.Yellow,true);
+        komas02[93] = new Koma(93,"ｃ","cancel 却下:明滅",Colors.Red,Colors.Black,true);
+        komas02[94] = new Koma(94,"ｂ","back 戻る",Colors.White,Colors.DarkGray,false);
+        komas02[95] = new Koma(95,"ｆ","forward 進む",Colors.White,Colors.DarkGray,false);
+        komas02[99] = new Koma(99,"？","? 説明",Colors.Black,Colors.White,false);
 
         msgPatterns02 = [];
         msgPatterns02[0] = "　　ＯＫ！！　　";
