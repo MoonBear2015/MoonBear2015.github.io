@@ -26,6 +26,10 @@ var cellgame;
             this.items = [];
             this.cellWidth = 0;
         }
+        /** item比較 */
+        itemEqual(item1, item2) {
+            return item1 === item2;
+        }
         /**平方データ初期化 */
         cellReset(width, value = this.itemNew()) {
             this.cellWidth = width;
@@ -98,7 +102,7 @@ var cellgame;
         search(item) {
             let result = -1;
             for (let i = 0; i < this.length(); i++) {
-                if (this.items[i] === item) {
+                if (this.itemEqual(this.items[i], item)) {
                     return i;
                 }
             }
@@ -112,7 +116,20 @@ var cellgame;
             super(...arguments);
             /** item初期値 */
             this.itemNew = () => 0;
+            /** item比較 */
+            this.itemEqual = (item1, item2) => item1 === item2;
         }
     }
     cellgame.NumArray = NumArray;
+    /** 座標クラス配列支援クラス */
+    class PointArray extends CellArray {
+        constructor() {
+            super(...arguments);
+            /** item初期値 */
+            this.itemNew = () => new cellgame.Point(false, 0, 0);
+            /** item比較 */
+            this.itemEqual = (item1, item2) => item1.equal(item2);
+        }
+    }
+    cellgame.PointArray = PointArray;
 })(cellgame || (cellgame = {}));

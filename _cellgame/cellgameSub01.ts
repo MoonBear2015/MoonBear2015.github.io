@@ -63,6 +63,8 @@ namespace cellgame {
 
         public equal = (point : Point) : boolean => {
             if (this.isUndefined != point.isUndefined) return false;
+            if (point == undefined) return false;
+            if (this.isUndefined != point.isUndefined) return false;
             if (this.x != point.x) return false;
             if (this.y != point.y) return false;
             return true;

@@ -8,12 +8,15 @@
 namespace cellgame {
 
     /** 配列支援インターフェース */
-    export interface ICellArray<T extends number | string> {
+    export interface ICellArray<T> {
         /** 配列 */
         items : T[];
 
         /** item初期値 */
         itemNew(item : T) : T;
+
+        /** item比較 */
+        itemEqual(item1 : T, item2 : T) : boolean;
 
         /** 平方データを設定する際 */
         cellWidth : number;
@@ -70,7 +73,7 @@ namespace cellgame {
     }
     
     /** 配列支援クラス */
-    export abstract class CellArray<T extends number | string> implements ICellArray<T> {
+    export abstract class CellArray<T> implements ICellArray<T> {
         
         /** コンストラクタ */
         public constructor() {
@@ -80,9 +83,14 @@ namespace cellgame {
         
         /** 配列 */
         public items : T[] = [];
-        
+
         /** item初期値 */
         abstract itemNew() : T;
+
+        /** item比較 */
+        public itemEqual(item1 : T, item2 : T) : boolean {
+            return item1 === item2;
+        }
 
         /** 平方データを設定する際 */
         public cellWidth : number = 0;
@@ -179,7 +187,7 @@ namespace cellgame {
         public search(item : T) : number {
             let result = -1;
             for(let i = 0; i < this.length(); i++) {
-                if (this.items[i] === item) {
+                if (this.itemEqual(this.items[i], item)) {
                     return i;
                 }
             }
@@ -192,6 +200,17 @@ namespace cellgame {
     export class NumArray extends CellArray<number> implements ICellArray<number> {
         /** item初期値 */
         public itemNew =() => 0;
+        /** item比較 */
+        public itemEqual = (item1 : number, item2 : number) : boolean => item1 === item2;
+    }
+
+    /** 座標クラス配列支援クラス */
+    export class PointArray extends CellArray<Point> implements ICellArray<Point> {
+        /** item初期値 */
+        public itemNew = () => new Point(false,0,0);
+        /** item比較 */
+        public itemEqual = (item1 : Point, item2 : Point) : boolean => item1.equal(item2);
+
     }
 
 }
