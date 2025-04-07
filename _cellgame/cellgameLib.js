@@ -14,6 +14,13 @@ var cellgame;
     cellgame.msgPatterns00 = [];
     cellgame.msgPatterns01 = [];
     cellgame.msgPatterns02 = [];
+    cellgame.buttonOk = 90;
+    cellgame.buttonNo = 91;
+    cellgame.buttonRetry = 92;
+    cellgame.buttonCancel = 93;
+    cellgame.buttonBack = 94;
+    cellgame.buttonForward = 95;
+    cellgame.buttonHelp = 99;
     function komasInit() {
         cellgame.komas00 = [];
         cellgame.komas00[0] = new Koma(0, "　", "虚無", cellgame.Colors.White, cellgame.Colors.Black);
@@ -269,14 +276,12 @@ var cellgame;
      */
     class Hand {
         /** コンストラクタ */
-        constructor(address = 0, code = 0) {
-            /** 手の番地 */
-            this.address = 0;
+        constructor(point = cellgame.Point.New(0, 0), code = 0) {
+            /** 手の座標 */
+            this.point = cellgame.Point.New(0, 0);
             /** 手のコード */
             this.code = 0;
-            /** 番地計算 */
-            this.toPoint = (w) => cellgame.pointCalc(this.address, w);
-            this.address = address;
+            this.point.Paste(point);
             this.code = code;
         }
         /** 複写 */
@@ -287,7 +292,7 @@ var cellgame;
         }
         /** 貼り付け */
         Paste(hand) {
-            this.address = hand.address;
+            this.point.Paste(hand.point);
             this.code = hand.code;
         }
     }

@@ -45,9 +45,9 @@ namespace cellgame {
         codeCountUp(code : number) : number;
 
         /** セル選択
-         * @param p : 選択桁位置
+         * @param point : 選択桁位置
          */
-        pointSelect(p : Point) : void;
+        pointSelect(point : Point) : void;
 
         /**
          * 表示作成
@@ -58,8 +58,7 @@ namespace cellgame {
         msgWinSelector() : string;
         /**　敗北メッセージ返却 */
         msgLoseSelector() : string;
-        
-
+ 
     }
 
 }

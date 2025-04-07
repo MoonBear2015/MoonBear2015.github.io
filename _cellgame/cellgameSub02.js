@@ -20,7 +20,7 @@ var cellgame;
             /** 個数 */
             this.length = () => this.items.length;
             /** 座標の番地 */
-            this.cellAddress = (x, y) => y * this.cellWidth + x;
+            this.cellAddress = (point) => point.y * this.cellWidth + point.x;
             /** 番地の座標 */
             this.cellPoint = (address) => cellgame.pointCalc(address, this.cellWidth);
             this.items = [];
@@ -39,12 +39,12 @@ var cellgame;
             }
         }
         /** 四方セル設定
-         * @param x0 : 左上X y0 : 左上Y x1 : 右下X y1 : 右下Y code : 設定コード
+         * @param point0 : 左上 point1 : 右下 code : 設定コード
          */
-        cellBoxSetter(x0, y0, x1, y1, value) {
-            for (let y = y0; y <= y1; y++) {
-                for (let x = x0; x <= x1; x++) {
-                    this.cellSetter(x, y, value);
+        cellBoxSetter(point0, point1, value) {
+            for (let y = point0.y; y <= point1.y; y++) {
+                for (let x = point0.x; x <= point1.x; x++) {
+                    this.cellSetter(cellgame.Point.New(x, y), value);
                 }
             }
         }
@@ -54,7 +54,7 @@ var cellgame;
         cellAllPaint(value) {
             for (let y = 0; y < this.cellWidth; y++) {
                 for (let x = 0; x < this.cellWidth; x++) {
-                    this.cellSetter(x, y, value);
+                    this.cellSetter(cellgame.Point.New(x, y), value);
                 }
             }
         }
@@ -67,7 +67,7 @@ var cellgame;
             let p0 = this.centerHolePoint(size);
             let x1 = p0.x + size - 1;
             let y1 = p0.y + size - 1;
-            this.cellBoxSetter(p0.x, p0.y, x1, y1, value);
+            this.cellBoxSetter(p0, cellgame.Point.New(x1, y1), value);
             return p0;
         }
         /** 中央穴あけ開始ポイント
@@ -77,7 +77,7 @@ var cellgame;
         centerHolePoint(size) {
             let x = Math.floor((this.cellWidth - size) / 2);
             let y = Math.floor((this.cellWidth - size) / 2);
-            return new cellgame.Point(false, x, y);
+            return cellgame.Point.New(x, y);
         }
         /**データ初期化 */
         reset(length, value = this.itemNew()) {
@@ -87,16 +87,16 @@ var cellgame;
             }
         }
         /** 平方時・座標で取得 */
-        cellGetter(x, y) {
+        cellGetter(point) {
             if (this.cellWidth == 0)
                 return this.itemNew();
-            return this.items[this.cellAddress(x, y)];
+            return this.items[this.cellAddress(point)];
         }
         /** 平方時・座標で設定 */
-        cellSetter(x, y, item) {
+        cellSetter(point, item) {
             if (this.cellWidth == 0)
                 return;
-            this.items[this.cellAddress(x, y)] = item;
+            this.items[this.cellAddress(point)] = item;
         }
         /** 検索 -1:見つからない */
         search(item) {
@@ -126,7 +126,7 @@ var cellgame;
         constructor() {
             super(...arguments);
             /** item初期値 */
-            this.itemNew = () => new cellgame.Point(false, 0, 0);
+            this.itemNew = () => cellgame.Point.Zero;
             /** item比較 */
             this.itemEqual = (item1, item2) => item1.equal(item2);
         }

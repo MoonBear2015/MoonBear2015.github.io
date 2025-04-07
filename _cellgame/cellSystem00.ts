@@ -78,14 +78,14 @@ namespace cellgame {
         }
 
         /** セル選択
-         * @param p : 選択桁位置
+         * @param point : 選択桁位置
          */
-        public pointSelect(p : Point) : void {
-            let a = this.cells.cellAddress(p.x,p.y);
+        public pointSelect(point : Point) : void {
+            let a = this.cells.cellAddress(point);
             if (a < 0) return;
-            let code = this.cells.cellGetter(p.x,p.y);
+            let code = this.cells.cellGetter(point);
             code = this.codeCountUp(code);
-            this.cells.cellSetter(p.x,p.y,code);
+            this.cells.cellSetter(point,code);
             return;
         }
 

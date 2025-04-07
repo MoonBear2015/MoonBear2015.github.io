@@ -33,9 +33,9 @@ namespace cellgame {
     /** ランダムカラーとの選択 */
     export const isRandomColor = (isFlash : boolean,backColor : string) : string => (isFlash) ? randomColor() : backColor;
     
-    /** 升目の番号計算（x:横，y:縦，w:横幅） */
-    export const addressCalc = (x : number, y : number, w : number): number => 
-        y * w + x;
+    // /** 升目の番号計算（x:横，y:縦，w:横幅） */
+    // export const addressCalc = (point : Point, w : number): number => 
+    //     point.y * w + point.x;
 
     /** 升目の座標計算（a:番号,w:横幅） */
     export const pointCalc = (a : number,w : number) => {
@@ -49,11 +49,28 @@ namespace cellgame {
         x : number = 0;
         y : number = 0;
         isUndefined : boolean = false;
+
+        /** undefined */
+        static readonly Undefined : Point = new Point(true);
+        /** 新インスタンス */
+        static readonly New = (x : number = 0,y : number = 0) => new Point(false,x,y);
+        /** 0座標 */
+        static readonly Zero : Point = Point.New(0,0);
+
+        /** 加算 */
+        static readonly Add = (point1 : Point, point2 : Point) => Point.New(point1.x + point2.x,point1.y + point2.y);
+
+        /** 減算 */
+        static readonly Sub = (point1 : Point, point2 : Point) => Point.New(point1.x - point2.x,point1.y - point2.y);
+
+        /** コンストラクタ */
         constructor(isUndefined : boolean = true,x : number = 0,y : number = 0) {
             this.x = x;
             this.y = y;
             this.isUndefined = isUndefined;
         }
+
+        /** 座標計算 */
         public address(w : number) : number {
             if (this.isUndefined) {
                 return -1;
@@ -61,6 +78,18 @@ namespace cellgame {
             return this.y * w + this.x;
         }
 
+        /** 貼り付け */
+        public Paste = (point : Point) : void => {
+            this.x = point.x;
+            this.y = point.y;
+            this.isUndefined = point.isUndefined;
+        }
+        /** コピー */
+        public copy = () : Point => {
+            return new Point(this.isUndefined,this.x,this.y);
+        }
+
+        /** 突合チェック */
         public equal = (point : Point) : boolean => {
             if (this.isUndefined != point.isUndefined) return false;
             if (point == undefined) return false;

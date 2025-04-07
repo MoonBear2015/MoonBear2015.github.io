@@ -28,9 +28,9 @@ namespace cellgame {
         cellReset(width : number,value : T) : void;
 
         /** 四方セル設定
-         * @param x0 : 左上X y0 : 左上Y x1 : 右下X y1 : 右下Y code : 設定コード
+         * @param point0 : 左上 point1 : 右下 code : 設定コード
          */
-        cellBoxSetter(x0 : number,y0 : number,x1 : number,y1 : number,value : T) : void;
+        cellBoxSetter(point0 : Point, point1 : Point, value : T) : void;
 
         /** 中央穴あけ
          * @param size : 穴あけサイズ
@@ -57,16 +57,16 @@ namespace cellgame {
         length() : number;
 
         /** 座標の番地 */
-        cellAddress(x : number, y : number) : number;
+        cellAddress(point : Point) : number;
 
         /** 番地の座標 */
         cellPoint(address : number) : Point;
 
         /** 平方時・座標で取得 */
-        cellGetter(x : number, y : number) : T;
+        cellGetter(point : Point) : T;
 
         /** 平方時・座標で設定 */
-        cellSetter(x : number, y : number, item : T) : void;
+        cellSetter(point : Point, item : T) : void;
 
         /** 検索 -1:見つからない */
         search(item : T) : number;
@@ -108,12 +108,12 @@ namespace cellgame {
         }
 
         /** 四方セル設定
-         * @param x0 : 左上X y0 : 左上Y x1 : 右下X y1 : 右下Y code : 設定コード
+         * @param point0 : 左上 point1 : 右下 code : 設定コード
          */
-        public cellBoxSetter(x0 : number,y0 : number,x1 : number,y1 : number,value : T) : void {
-            for(let y = y0; y <= y1; y++) {
-                for(let x = x0; x <= x1; x++) {
-                    this.cellSetter(x,y,value);
+        public cellBoxSetter(point0 : Point, point1 : Point,value : T) : void {
+            for(let y = point0.y; y <= point1.y; y++) {
+                for(let x = point0.x; x <= point1.x; x++) {
+                    this.cellSetter(Point.New(x,y),value);
                 }
             }
         }
@@ -124,7 +124,7 @@ namespace cellgame {
         public cellAllPaint(value : T) : void {
             for(let y = 0; y < this.cellWidth; y++) {
                 for(let x = 0; x < this.cellWidth; x++) {
-                    this.cellSetter(x,y,value);
+                    this.cellSetter(Point.New(x,y),value);
                 }
             }
         }
@@ -139,7 +139,7 @@ namespace cellgame {
             let p0 = this.centerHolePoint(size);
             let x1 = p0.x + size - 1;
             let y1 = p0.y + size - 1;
-            this.cellBoxSetter(p0.x,p0.y,x1,y1,value);
+            this.cellBoxSetter(p0,Point.New(x1,y1),value);
             return p0;
         }
 
@@ -150,7 +150,7 @@ namespace cellgame {
         public centerHolePoint(size : number) : Point {
             let x = Math.floor((this.cellWidth - size) / 2);
             let y = Math.floor((this.cellWidth - size) / 2);
-            return new Point(false,x,y);
+            return Point.New(x,y);
         }
 
         /**データ初期化 */
@@ -165,22 +165,22 @@ namespace cellgame {
         public length = () : number => this.items.length;
 
         /** 座標の番地 */
-        public cellAddress = (x : number, y : number) : number => y * this.cellWidth + x;
+        public cellAddress = (point : Point) : number => point.y * this.cellWidth + point.x;
 
         /** 番地の座標 */
         public cellPoint = (address : number) : Point => pointCalc(address, this.cellWidth);
 
         /** 平方時・座標で取得 */
-        public cellGetter (x : number, y : number) : T
+        public cellGetter (point : Point) : T
         {
             if (this.cellWidth == 0) return this.itemNew();
-            return this.items[this.cellAddress(x,y)];
+            return this.items[this.cellAddress(point)];
         }
 
         /** 平方時・座標で設定 */
-        public cellSetter(x : number, y : number, item : T) : void {
+        public cellSetter(point : Point, item : T) : void {
             if (this.cellWidth == 0) return;
-            this.items[this.cellAddress(x,y)] = item;
+            this.items[this.cellAddress(point)] = item;
         }
 
         /** 検索 -1:見つからない */
@@ -207,7 +207,7 @@ namespace cellgame {
     /** 座標クラス配列支援クラス */
     export class PointArray extends CellArray<Point> implements ICellArray<Point> {
         /** item初期値 */
-        public itemNew = () => new Point(false,0,0);
+        public itemNew = () => Point.Zero;
         /** item比較 */
         public itemEqual = (item1 : Point, item2 : Point) : boolean => item1.equal(item2);
 

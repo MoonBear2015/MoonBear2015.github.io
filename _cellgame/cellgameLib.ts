@@ -19,6 +19,14 @@ namespace cellgame {
     export var msgPatterns01 : string[] = [];
     export var msgPatterns02 : string[] = [];
 
+    export const buttonOk : number = 90;
+    export const buttonNo : number = 91;
+    export const buttonRetry : number = 92;
+    export const buttonCancel : number = 93;
+    export const buttonBack : number = 94;
+    export const buttonForward : number = 95;
+    export const buttonHelp : number = 99;
+
     export function komasInit() {
         komas00 = [];
         komas00[0] = new Koma(0,"　","虚無",Colors.White,Colors.Black);
@@ -367,15 +375,15 @@ namespace cellgame {
      * 手
      */
     export interface IHand {
-        /** 手の番地 */
-        address : number;
+
+        /** 手の座標 */
+        point : Point;
+
         /** 手のコード */
         code : number;
 
         /** 貼り付け */
         Paste(hand : IHand) : void;
-        /** 番地計算 */
-        toPoint(w : number) : Point;
     }
 
     /**
@@ -383,30 +391,27 @@ namespace cellgame {
      * 手
      */
     export class Hand {
-        /** 手の番地 */    
-        address : number = 0;
+        /** 手の座標 */    
+        point : Point = Point.New(0,0);
         /** 手のコード */
         code : number = 0;
         /** コンストラクタ */
-        constructor(address : number = 0, code : number = 0) {
-            this.address = address;
+        constructor(point : Point = Point.New(0,0), code : number = 0) {
+            this.point.Paste(point);
             this.code = code;
         }
         /** 複写 */
         static Copy(hand : IHand) : IHand {
-            let result = new Hand();
+            let result : IHand = new Hand();
             result.Paste(hand);
             return result;
         }
 
         /** 貼り付け */
         public Paste(hand : IHand) : void {
-            this.address = hand.address;
+            this.point.Paste(hand.point);
             this.code = hand.code;
         }
-
-        /** 番地計算 */
-        public toPoint = (w : number) : Point => pointCalc(this.address,w);
 
     }
 

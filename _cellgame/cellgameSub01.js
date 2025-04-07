@@ -29,8 +29,9 @@ var cellgame;
     cellgame.randomColor = () => "#" + rnd(0xFFFFFF).toString(16);
     /** ランダムカラーとの選択 */
     cellgame.isRandomColor = (isFlash, backColor) => (isFlash) ? cellgame.randomColor() : backColor;
-    /** 升目の番号計算（x:横，y:縦，w:横幅） */
-    cellgame.addressCalc = (x, y, w) => y * w + x;
+    // /** 升目の番号計算（x:横，y:縦，w:横幅） */
+    // export const addressCalc = (point : Point, w : number): number => 
+    //     point.y * w + point.x;
     /** 升目の座標計算（a:番号,w:横幅） */
     cellgame.pointCalc = (a, w) => {
         let y = Math.floor(a / w);
@@ -39,10 +40,22 @@ var cellgame;
     };
     /** 座標 */
     class Point {
+        /** コンストラクタ */
         constructor(isUndefined = true, x = 0, y = 0) {
             this.x = 0;
             this.y = 0;
             this.isUndefined = false;
+            /** 貼り付け */
+            this.Paste = (point) => {
+                this.x = point.x;
+                this.y = point.y;
+                this.isUndefined = point.isUndefined;
+            };
+            /** コピー */
+            this.copy = () => {
+                return new Point(this.isUndefined, this.x, this.y);
+            };
+            /** 突合チェック */
             this.equal = (point) => {
                 if (this.isUndefined != point.isUndefined)
                     return false;
@@ -60,6 +73,7 @@ var cellgame;
             this.y = y;
             this.isUndefined = isUndefined;
         }
+        /** 座標計算 */
         address(w) {
             if (this.isUndefined) {
                 return -1;
@@ -72,6 +86,16 @@ var cellgame;
             return " (" + this.x + "," + this.y + ")";
         }
     }
+    /** undefined */
+    Point.Undefined = new Point(true);
+    /** 新インスタンス */
+    Point.New = (x = 0, y = 0) => new Point(false, x, y);
+    /** 0座標 */
+    Point.Zero = Point.New(0, 0);
+    /** 加算 */
+    Point.Add = (point1, point2) => Point.New(point1.x + point2.x, point1.y + point2.y);
+    /** 減算 */
+    Point.Sub = (point1, point2) => Point.New(point1.x - point2.x, point1.y - point2.y);
     cellgame.Point = Point;
     /** 4方向 */
     cellgame.Direction4s = [
