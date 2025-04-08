@@ -97,7 +97,6 @@ namespace cellgame {
                     let hand = new Hand(point,this.nowCode);
                     this.newHand = hand;
                     this.boardHandPush(hand);
-                    this.nowCode = this.codeLoop(this.nowCode,1);
                     this.isPlayStarted = true;
                     return;
                 }
@@ -111,9 +110,11 @@ namespace cellgame {
                 }
                 if (code == buttonBack) {
                     if (this.nowHandCount > -1) {
+                        alert("戻る:" + this.nowHandCount);
                         this.nowHandCount--;
+                        alert("戻った:" + this.nowHandCount);
+
                         this.boardHandMove(this.nowHandCount);
-                        this.nowCode = this.codeLoop(this.nowCode,-1);
                     }
                     return;
                 }
@@ -372,7 +373,7 @@ namespace cellgame {
             return;
         }
 
-        /** ゲーム盤作成　設定済みレベルに応じて作成 */
+        /** ゲーム盤作成 設定済みレベルに応じて作成 */
         public boardCreate() : void {
             this.boardSizeCalc();
             // this.board.cellReset(this.boardSize,10);
@@ -523,19 +524,30 @@ namespace cellgame {
             this.boardHandPaste(hand);
             this.nowHandCount++;
             let str : string = "";
-            for(let i = 0; i < this.hands.length; i++) {
-                str += this.hands[i].code + ",";
-            }
-            if (this.nowHandCount < this.hands.length - 1) {
-                this.hands = this.hands.splice(this.nowHandCount);
+            this.BugLog("古い手を削除？");
+            if (this.nowHandCount <= this.hands.length - 1) {
+                this.hands.splice(this.nowHandCount);
+                this.BugLog("削除しました。");
             }
             this.hands.push(hand);
-
+            this.BugLog("手を追加しました。");
             this.newHand = hand;
             this.selectCellSetter(this.ToBoardPoint(this.newHand.point));
 
             return true;
         }
+
+        private BugLog(str0 : string ) : void {
+            let str : string = "[";
+            for(let i = 0; i < this.hands.length; i++) {
+                str += this.hands[i].code + ",";
+            }
+            str += "]";
+            alert(str0 + " handCount:" + this.nowHandCount + " hands:" + this.hands.length + " " + str);
+        }
+
+
+
 
         /** 手の反映 */
         public boardHandPaste(hand : IHand) : void {
@@ -546,15 +558,15 @@ namespace cellgame {
         /** 初手から指定の手まで進める */
         public boardHandMove(handNo : number) : void {
             this.boardReset();
-            if (handNo > 0) {
+            if (handNo >= 0) {
                 for(let i = 0; i <= handNo; i++) {
                     this.boardHandPaste(this.hands[i]);
                 }
                 this.newHand = this.hands[handNo];
-                this.nowCode = this.codeLoop(this.newHand.code,1);
+                this.nowCode = this.newHand.code;
                 this.selectCellSetter(this.ToBoardPoint(this.newHand.point));
             } else {
-                this.nowCode = 12;
+                this.nowCode = 11;
                 this.selectCellSetter(this.startPoint);
             }
         }
