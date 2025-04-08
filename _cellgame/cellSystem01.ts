@@ -521,11 +521,15 @@ namespace cellgame {
         public boardHandPush (hand : IHand) : boolean { 
             if (!this.boardHandCheck(hand)) return false;
             this.boardHandPaste(hand);
+            this.nowHandCount++;
+            let str : string = "";
+            for(let i = 0; i < this.hands.length; i++) {
+                str += this.hands[i].code + ",";
+            }
             if (this.nowHandCount < this.hands.length - 1) {
-                this.hands.splice(this.nowHandCount + 1);
+                this.hands = this.hands.splice(this.nowHandCount);
             }
             this.hands.push(hand);
-            this.nowHandCount++;
 
             this.newHand = hand;
             this.selectCellSetter(this.ToBoardPoint(this.newHand.point));
@@ -547,8 +551,10 @@ namespace cellgame {
                     this.boardHandPaste(this.hands[i]);
                 }
                 this.newHand = this.hands[handNo];
+                this.nowCode = this.codeLoop(this.newHand.code,1);
                 this.selectCellSetter(this.ToBoardPoint(this.newHand.point));
             } else {
+                this.nowCode = 12;
                 this.selectCellSetter(this.startPoint);
             }
         }
