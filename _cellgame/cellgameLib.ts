@@ -56,8 +56,8 @@ namespace cellgame {
         komas00[91] = new Koma(91,"否","否定:明滅",Colors.White,Colors.Red,true);
         komas00[92] = new Koma(92,"再","再考:明滅",Colors.Black,Colors.Yellow,true);
         komas00[93] = new Koma(93,"却","却下:明滅",Colors.Red,Colors.Black,true);
-        komas00[94] = new Koma(94,"戻","戻る 説明",Colors.White,Colors.DeepDarkGray,false);
-        komas00[95] = new Koma(95,"進","進む 説明",Colors.White,Colors.DeepDarkGray,false);
+        komas00[94] = new Koma(94,"戻","戻る 説明",Colors.White,Colors.Black,false);
+        komas00[95] = new Koma(95,"進","進む 説明",Colors.White,Colors.Black,false);
         komas00[99] = new Koma(99,"説","説明",Colors.Black,Colors.White,false);
 
         msgPatterns00 = [];
@@ -111,8 +111,8 @@ namespace cellgame {
         komas01[91] = new Koma(91,"否","否定:明滅",Colors.White,Colors.Red,true);
         komas01[92] = new Koma(92,"再","再考:明滅",Colors.Black,Colors.Yellow,true);
         komas01[93] = new Koma(93,"却","却下:明滅",Colors.Red,Colors.Black,true);
-        komas01[94] = new Koma(94,"戻","戻る 説明",Colors.White,Colors.DarkGray,false);
-        komas01[95] = new Koma(95,"進","進む 説明",Colors.White,Colors.DarkGray,false);
+        komas01[94] = new Koma(94,"戻","戻る 説明",Colors.White,Colors.Black,false);
+        komas01[95] = new Koma(95,"進","進む 説明",Colors.White,Colors.Black,false);
         komas01[99] = new Koma(99,"説","説明",Colors.Black,Colors.White,false);
 
         msgPatterns01 = [];
@@ -167,8 +167,8 @@ namespace cellgame {
         komas02[91] = new Koma(91,"ｎ","no 拒否:明滅",Colors.White,Colors.Red,true);
         komas02[92] = new Koma(92,"ｒ","retry 再考:明滅",Colors.Black,Colors.Yellow,true);
         komas02[93] = new Koma(93,"ｃ","cancel 却下:明滅",Colors.Red,Colors.Black,true);
-        komas02[94] = new Koma(94,"ｂ","back 戻る",Colors.White,Colors.DarkGray,false);
-        komas02[95] = new Koma(95,"ｆ","forward 進む",Colors.White,Colors.DarkGray,false);
+        komas02[94] = new Koma(94,"ｂ","back 戻る",Colors.White,Colors.Black,false);
+        komas02[95] = new Koma(95,"ｆ","forward 進む",Colors.White,Colors.Black,false);
         komas02[99] = new Koma(99,"？","? 説明",Colors.Black,Colors.White,false);
 
         msgPatterns02 = [];
