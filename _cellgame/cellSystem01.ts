@@ -249,6 +249,7 @@ namespace cellgame {
                     {
                         this.buttonSetter();
                         this.isPlayStarted = false;
+                        this.lostCellSetter();
 
                         this.messages = [];
                         this.messages.push(new Message(this.msgLoseSelector(),this.messagePotision(),1,Colors.Black,Colors.Red,false));
@@ -498,6 +499,22 @@ namespace cellgame {
                 let c = this.board.cellGetter(pp);
                 if (c == 10) {
                     this.board.cellSetter(pp,20);
+                }
+            }
+            this.boardToCellsAllSetter();
+        }
+
+        /** 塗り残した箇所を特定
+         */
+        private lostCellSetter() : void {
+            // 塗り残しを赤く示す
+            for(let y0 = 0; y0 < this.boardSize; y0++) {
+                for(let x0 = 0; x0 < this.boardSize; x0++) {
+                    let point0 = Point.New(x0,y0);
+                    let c = this.board.cellGetter(point0);
+                    if (c == 20 || c == 10) {
+                        this.board.cellSetter(point0,1);
+                    }
                 }
             }
             this.boardToCellsAllSetter();
