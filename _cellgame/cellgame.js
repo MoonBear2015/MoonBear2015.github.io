@@ -404,7 +404,7 @@ var cellgame;
         let value = cellgame.STSVALUE[i];
         if (cellgame.isNone(value))
             return;
-        if (cellgame.gameSystem.statusName[i].length < 1) {
+        if (cellgame.gameSystem.statusNameIsVisible[i] == false) {
             box.style.backgroundColor = cellgame.Colors.Black;
             name.textContent = "";
             value.textContent = "";
@@ -412,7 +412,7 @@ var cellgame;
         else {
             box.style.backgroundColor = cellgame.Colors.DarkBlue;
             name.textContent = cellgame.gameSystem.statusName[i];
-            if (cellgame.gameSystem.status[i] < 0) {
+            if (cellgame.gameSystem.statusIsVisible[i] == false) {
                 value.textContent = "";
             }
             else {

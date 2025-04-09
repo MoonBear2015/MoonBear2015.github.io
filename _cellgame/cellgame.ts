@@ -582,14 +582,14 @@ namespace cellgame {
         let value = STSVALUE[i];
         if (isNone(value)) return;
 
-        if (gameSystem.statusName[i].length < 1) {
+        if (gameSystem.statusNameIsVisible[i] == false) {
             box.style.backgroundColor = Colors.Black;
             name.textContent = "";
             value.textContent = "";
         } else {
             box.style.backgroundColor = Colors.DarkBlue;
             name.textContent = gameSystem.statusName[i];
-            if (gameSystem.status[i] < 0) {
+            if (gameSystem.statusIsVisible[i] == false) {
                 value.textContent = "";
             } else {
                 value.textContent = gameSystem.status[i].toString();

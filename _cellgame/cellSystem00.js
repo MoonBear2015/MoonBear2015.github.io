@@ -16,20 +16,31 @@ var cellgame;
             this.cells = new cellgame.NumArray();
             this.messages = [];
             this.statusName = [];
+            this.statusNameIsVisible = [];
             this.status = [];
+            this.statusIsVisible = [];
             this.gameStep = 0;
             /** 勝利メッセージ返却 */
             this.msgWinSelector = () => cellgame.msgPatterns[cellgame.rnd(10)];
             /**　敗北メッセージ返却 */
             this.msgLoseSelector = () => cellgame.msgPatterns[cellgame.rnd(10) + 10];
             this.statusName = Array(4).fill("");
+            this.statusNameIsVisible = Array(4).fill(false);
             this.status = Array(4).fill(0);
+            this.statusIsVisible = Array(4).fill(false);
             // 初期化
             this.init();
         }
         /** 初期化 */
         init() {
             this.cells.cellReset(0, 10);
+        }
+        /** ステータス初期化 */
+        statusInit() {
+            this.statusName = ["", "", "", ""];
+            this.statusNameIsVisible = [false, false, false, false];
+            this.status = [0, 0, 0, 0];
+            this.statusIsVisible = [false, false, false, false];
         }
         /** タッチ箇所受信 */
         touchPointRecv(p) {

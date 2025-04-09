@@ -11,7 +11,16 @@ namespace cellgame {
 
         // game01 self
         
+        /** 段位 */
         public gameLevel : number = 0;
+
+        /** 賭点 */
+        public gameBet : number = 0;
+
+        /** 得点 */
+        public gamePoint : number = 0;
+
+        /** ゲーム盤の大きさ */
         public boardSize : number = 2;
 
         /** ゲーム盤 */
@@ -70,8 +79,7 @@ namespace cellgame {
 
         /** 初期化 */
         public init() {
-            this.statusName = ["","","",""];
-            this.status = [0,0,0,0];
+            this.statusInit();
 
             this.gameLevel = 0;
             this.boardSize = 2;
@@ -110,10 +118,14 @@ namespace cellgame {
                 }
                 if (code == buttonBack) {
                     if (this.nowHandCount > -1) {
-                        alert("戻る:" + this.nowHandCount);
                         this.nowHandCount--;
-                        alert("戻った:" + this.nowHandCount);
-
+                        this.boardHandMove(this.nowHandCount);
+                    }
+                    return;
+                }
+                if (code == buttonForward) {
+                    if (this.nowHandCount < this.hands.length - 1) {
+                        this.nowHandCount++;
                         this.boardHandMove(this.nowHandCount);
                     }
                     return;
@@ -151,23 +163,8 @@ namespace cellgame {
                     {
                         this.boardCreate();
 
-                        this.statusName = ["","","",""];
-                        this.status = [0,0,0,0];
-            
-                        if (this.gameLevel > 0) {
-                            this.statusName[3] = "段位";
-                            this.status[3] = this.gameLevel;
-                        } else {
-                            this.statusName[3] = "";
-                            this.status[3] = 0;
-                        }
-                        if (this.isEndless) {
-                            this.statusName[0] = "無限";
-                            this.status[0] = -1;
-                        } else {
-                            this.statusName[0] = "";
-                            this.status[0] = -1;
-                        }
+                        this.statusDisplayer();
+
                         this.cellSize = this.boardSize + 4;
                         this.cells.cellReset(this.cellSize,0);
                         
@@ -190,6 +187,9 @@ namespace cellgame {
                         if (!this.isPlayStarted) {
                             this.messages.push(new Message("士農工商を並べよ",this.messagePotision(),1,Colors.White,Colors.Black));
                         }
+
+                        this.statusDisplayer();
+
                         this.boardCheck();
                         if (this.isGameClear) {
                             this.gameStep = 3;
@@ -524,19 +524,20 @@ namespace cellgame {
             this.boardHandPaste(hand);
             this.nowHandCount++;
             let str : string = "";
-            this.BugLog("古い手を削除？");
+            // this.BugLog("古い手を削除？");
             if (this.nowHandCount <= this.hands.length - 1) {
                 this.hands.splice(this.nowHandCount);
-                this.BugLog("削除しました。");
+                // this.BugLog("削除しました。");
             }
             this.hands.push(hand);
-            this.BugLog("手を追加しました。");
+            // this.BugLog("手を追加しました。");
             this.newHand = hand;
             this.selectCellSetter(this.ToBoardPoint(this.newHand.point));
 
             return true;
         }
 
+        /** デバッグ用 */
         private BugLog(str0 : string ) : void {
             let str : string = "[";
             for(let i = 0; i < this.hands.length; i++) {
@@ -545,9 +546,6 @@ namespace cellgame {
             str += "]";
             alert(str0 + " handCount:" + this.nowHandCount + " hands:" + this.hands.length + " " + str);
         }
-
-
-
 
         /** 手の反映 */
         public boardHandPaste(hand : IHand) : void {
@@ -607,6 +605,50 @@ namespace cellgame {
                 this.isGamePlay = false;
                 this.isGameOver = true;
             }
+        }
+
+        /** ゲームステータス表示 */
+        public statusDisplayer() : void {
+            this.statusInit();
+
+            if (this.gameLevel > 0) {
+                this.statusName[0] = "段位";
+                this.status[0] = this.gameLevel;
+                this.statusNameIsVisible[0] = true;
+                this.statusIsVisible[0] = true;
+            } else {
+                this.statusNameIsVisible[0] = false;
+                this.statusIsVisible[0] = false;
+            }
+            if (this.isEndless) {
+                this.statusName[1] = "無限";
+                this.statusNameIsVisible[1] = true;
+                this.statusIsVisible[1] = false;
+            } else {
+                this.statusNameIsVisible[1] = false;
+                this.statusIsVisible[1] = false;
+            }
+
+
+            if (this.gameBet > 0) {
+                this.statusName[2] = "賭点";
+                this.status[2] = this.gameBet;
+                this.statusNameIsVisible[2] = true;
+                this.statusIsVisible[2] = true;
+            } else {
+                this.statusNameIsVisible[2] = false;
+                this.statusIsVisible[2] = false;
+            }
+            if (this.gamePoint > 0) {
+                this.statusName[3] = "得点";
+                this.status[3] = this.gamePoint;
+                this.statusNameIsVisible[3] = true;
+                this.statusIsVisible[3] = true;
+            } else {
+                this.statusNameIsVisible[3] = false;
+                this.statusIsVisible[3] = false;
+            }
+
         }
         
 

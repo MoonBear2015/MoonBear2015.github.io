@@ -12,14 +12,18 @@ namespace cellgame {
         public cells : ICellArray<number> = new NumArray();
         public messages : IMessage[] = [];
         public statusName : string[] = [];
+        public statusNameIsVisible : boolean[] = [];
         public status : number[] = [];
+        public statusIsVisible : boolean[] = [];
 
         public gameStep : number = 0;
 
         /** コンストラクタ */
         constructor() {            
             this.statusName = Array(4).fill("");
+            this.statusNameIsVisible = Array(4).fill(false);
             this.status = Array(4).fill(0);
+            this.statusIsVisible = Array(4).fill(false);
 
             // 初期化
             this.init();
@@ -28,6 +32,14 @@ namespace cellgame {
         /** 初期化 */
         public init() {
             this.cells.cellReset(0,10);
+        }
+
+        /** ステータス初期化 */
+        public statusInit() : void {
+            this.statusName = ["","","",""];
+            this.statusNameIsVisible = [false,false,false,false];
+            this.status = [0,0,0,0];
+            this.statusIsVisible = [false,false,false,false];
         }
 
         /** タッチ箇所受信 */

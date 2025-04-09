@@ -21,8 +21,14 @@ namespace cellgame {
         /** ステータス名称 */
         statusName : string[];
 
+        /** ステータス名称表示フラグ */
+        statusNameIsVisible : boolean[];
+
         /** ステータス */
         status : number[];
+
+        /** ステータス表示フラグ */
+        statusIsVisible : boolean[];
         
         /** 
          * ゲームステップ : ゲームの現在の状態 
@@ -32,6 +38,9 @@ namespace cellgame {
         
         /** 初期化 */
         init() : void;
+
+        /** ステータス初期化 */
+        statusInit() : void;
 
         /** タッチ箇所受信
          * @param p : タッチ桁位置
