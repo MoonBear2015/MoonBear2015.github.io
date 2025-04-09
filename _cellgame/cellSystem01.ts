@@ -106,6 +106,8 @@ namespace cellgame {
                     this.newHand = hand;
                     this.boardHandPush(hand);
                     this.isPlayStarted = true;
+                    this.gameBet += this.betPoint();
+                    this.statusDisplayer();
                     return;
                 }
                 if (code == buttonCancel) {
@@ -119,13 +121,15 @@ namespace cellgame {
                 if (code == buttonBack) {
                     if (this.nowHandCount > -1) {
                         this.nowHandCount--;
+                        this.gameBet -= this.betPoint();
                         this.boardHandMove(this.nowHandCount);
                     }
                     return;
                 }
                 if (code == buttonForward) {
                     if (this.nowHandCount < this.hands.length - 1) {
-                        this.nowHandCount++;
+                        this.nowHandCount += 1;
+                        this.gameBet++;
                         this.boardHandMove(this.nowHandCount);
                     }
                     return;
@@ -135,16 +139,21 @@ namespace cellgame {
                 if (code == buttonOk) {
                     if (this.isGameClear) {
                         this.gameStep = 1;
+                        this.gamePoint += this.gameBet;
                         this.gameLevel++;
                         return;
                     }
                     if (this.isGameOver) {
                         this.gameStep = 1;
+                        this.gamePoint -= this.betPoint();
                         return;
                     }
                 }
             }
         }
+
+        /** 賭け点の単価 */
+        public betPoint = () : number => this.blockCount + 1;
 
         /**
          * 表示作成
@@ -175,6 +184,7 @@ namespace cellgame {
                         this.buttonSetter();
 
                         this.gameStep = 2;
+                        this.gameBet = 0;
                         this.isGamePlay = true;
                         break;
                     }
@@ -302,7 +312,11 @@ namespace cellgame {
         /** ゲーム盤初期化 （レベル等初期値）*/
         public boardInit() : void {
             this.gameLevel = 0;
+            this.gamePoint = 0;
+            this.gameBet = 0;
+            
             this.boardSize = 2;
+
 
             this.canFreePotision = false;
             this.haveBlock = false;
@@ -659,6 +673,10 @@ namespace cellgame {
             result +="士農工商を順に配置し、\n";
             result +="士農工商で盤面を埋めて、\n";
             result +="士農工商の順列を学ぶのだ。\n";
+            result +="\n";
+            result +="却：盤面の却下\n";
+            result +="戻：手を戻す\n";
+            result +="進：手を進める\n";
             return result;
         }
     }
