@@ -17,6 +17,9 @@ namespace cellgame {
         /** 賭点 */
         public gameBet : number = 0;
 
+        /** 賭点最大値 */
+        public gameBetMax : number = 0;
+
         /** 得点 */
         public gamePoint : number = 0;
 
@@ -107,10 +110,14 @@ namespace cellgame {
                     this.boardHandPush(hand);
                     this.isPlayStarted = true;
                     this.gameBet += this.betPoint();
+                    if (this.gameBet > this.gameBetMax) {
+                        this.gameBetMax = this.gameBet;
+                    }
                     this.statusDisplayer();
                     return;
                 }
                 if (code == buttonCancel) {
+                    this.gamePoint -= this.gameBetMax;
                     this.gameStep = 1;
                     return;
                 }
@@ -129,7 +136,10 @@ namespace cellgame {
                 if (code == buttonForward) {
                     if (this.nowHandCount < this.hands.length - 1) {
                         this.nowHandCount += 1;
-                        this.gameBet++;
+                        this.gameBet += this.betPoint();
+                        if (this.gameBet > this.gameBetMax) {
+                            this.gameBetMax = this.gameBet;
+                        }
                         this.boardHandMove(this.nowHandCount);
                     }
                     return;
@@ -139,13 +149,13 @@ namespace cellgame {
                 if (code == buttonOk) {
                     if (this.isGameClear) {
                         this.gameStep = 1;
-                        this.gamePoint += this.gameBet;
+                        this.gamePoint += this.gameBetMax;
                         this.gameLevel++;
                         return;
                     }
                     if (this.isGameOver) {
                         this.gameStep = 1;
-                        this.gamePoint -= this.betPoint();
+                        this.gamePoint -= this.gameBetMax;
                         return;
                     }
                 }
@@ -185,6 +195,7 @@ namespace cellgame {
 
                         this.gameStep = 2;
                         this.gameBet = 0;
+                        this.gameBetMax = 0;
                         this.isGamePlay = true;
                         break;
                     }
@@ -314,6 +325,7 @@ namespace cellgame {
             this.gameLevel = 0;
             this.gamePoint = 0;
             this.gameBet = 0;
+            this.gameBetMax = 0;
             
             this.boardSize = 2;
 
@@ -644,9 +656,9 @@ namespace cellgame {
             }
 
 
-            if (this.gameBet > 0) {
+            if (this.gameBetMax > 0) {
                 this.statusName[2] = "賭点";
-                this.status[2] = this.gameBet;
+                this.status[2] = this.gameBetMax;
                 this.statusNameIsVisible[2] = true;
                 this.statusIsVisible[2] = true;
             } else {

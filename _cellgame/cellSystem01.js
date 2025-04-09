@@ -16,6 +16,8 @@ var cellgame;
             this.gameLevel = 0;
             /** 賭点 */
             this.gameBet = 0;
+            /** 賭点最大値 */
+            this.gameBetMax = 0;
             /** 得点 */
             this.gamePoint = 0;
             /** ゲーム盤の大きさ */
@@ -102,10 +104,14 @@ var cellgame;
                     this.boardHandPush(hand);
                     this.isPlayStarted = true;
                     this.gameBet += this.betPoint();
+                    if (this.gameBet > this.gameBetMax) {
+                        this.gameBetMax = this.gameBet;
+                    }
                     this.statusDisplayer();
                     return;
                 }
                 if (code == cellgame.buttonCancel) {
+                    this.gamePoint -= this.gameBetMax;
                     this.gameStep = 1;
                     return;
                 }
@@ -124,7 +130,10 @@ var cellgame;
                 if (code == cellgame.buttonForward) {
                     if (this.nowHandCount < this.hands.length - 1) {
                         this.nowHandCount += 1;
-                        this.gameBet++;
+                        this.gameBet += this.betPoint();
+                        if (this.gameBet > this.gameBetMax) {
+                            this.gameBetMax = this.gameBet;
+                        }
                         this.boardHandMove(this.nowHandCount);
                     }
                     return;
@@ -134,13 +143,13 @@ var cellgame;
                 if (code == cellgame.buttonOk) {
                     if (this.isGameClear) {
                         this.gameStep = 1;
-                        this.gamePoint += this.gameBet;
+                        this.gamePoint += this.gameBetMax;
                         this.gameLevel++;
                         return;
                     }
                     if (this.isGameOver) {
                         this.gameStep = 1;
-                        this.gamePoint -= this.betPoint();
+                        this.gamePoint -= this.gameBetMax;
                         return;
                     }
                 }
@@ -171,6 +180,7 @@ var cellgame;
                         this.buttonSetter();
                         this.gameStep = 2;
                         this.gameBet = 0;
+                        this.gameBetMax = 0;
                         this.isGamePlay = true;
                         break;
                     }
@@ -279,6 +289,7 @@ var cellgame;
             this.gameLevel = 0;
             this.gamePoint = 0;
             this.gameBet = 0;
+            this.gameBetMax = 0;
             this.boardSize = 2;
             this.canFreePotision = false;
             this.haveBlock = false;
@@ -579,9 +590,9 @@ var cellgame;
                 this.statusNameIsVisible[1] = false;
                 this.statusIsVisible[1] = false;
             }
-            if (this.gameBet > 0) {
+            if (this.gameBetMax > 0) {
                 this.statusName[2] = "賭点";
-                this.status[2] = this.gameBet;
+                this.status[2] = this.gameBetMax;
                 this.statusNameIsVisible[2] = true;
                 this.statusIsVisible[2] = true;
             }
