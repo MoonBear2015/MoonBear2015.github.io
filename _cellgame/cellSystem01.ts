@@ -20,8 +20,14 @@ namespace cellgame {
         /** 賭点最大値 */
         public gameBetMax : number = 0;
 
+        /** 賭点表示 */
+        public canDisplayBet : boolean = false;
+
         /** 得点 */
         public gamePoint : number = 0;
+
+        /** 得点表示 */
+        public canDisplayPoint : boolean = false;
 
         /** ゲーム盤の大きさ */
         public boardSize : number = 2;
@@ -112,12 +118,14 @@ namespace cellgame {
                     this.gameBet += this.betPoint();
                     if (this.gameBet > this.gameBetMax) {
                         this.gameBetMax = this.gameBet;
+                        this.canDisplayBet = true;
                     }
                     this.statusDisplayer();
                     return;
                 }
                 if (code == buttonCancel) {
                     this.gamePoint -= this.gameBetMax;
+                    this.canDisplayPoint = true;
                     this.gameStep = 1;
                     return;
                 }
@@ -150,12 +158,14 @@ namespace cellgame {
                     if (this.isGameClear) {
                         this.gameStep = 1;
                         this.gamePoint += this.gameBetMax;
+                        this.canDisplayPoint = true;
                         this.gameLevel++;
                         return;
                     }
                     if (this.isGameOver) {
                         this.gameStep = 1;
                         this.gamePoint -= this.gameBetMax;
+                        this.canDisplayPoint = true;
                         return;
                     }
                 }
@@ -324,8 +334,10 @@ namespace cellgame {
         public boardInit() : void {
             this.gameLevel = 0;
             this.gamePoint = 0;
+            this.canDisplayPoint = false;
             this.gameBet = 0;
             this.gameBetMax = 0;
+            this.canDisplayBet = false;
             
             this.boardSize = 2;
 
@@ -656,7 +668,7 @@ namespace cellgame {
             }
 
 
-            if (this.gameBetMax > 0) {
+            if (this.canDisplayBet) {
                 this.statusName[2] = "賭点";
                 this.status[2] = this.gameBetMax;
                 this.statusNameIsVisible[2] = true;
@@ -665,7 +677,7 @@ namespace cellgame {
                 this.statusNameIsVisible[2] = false;
                 this.statusIsVisible[2] = false;
             }
-            if (this.gamePoint > 0) {
+            if (this.canDisplayPoint) {
                 this.statusName[3] = "得点";
                 this.status[3] = this.gamePoint;
                 this.statusNameIsVisible[3] = true;

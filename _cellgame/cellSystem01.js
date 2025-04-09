@@ -18,8 +18,12 @@ var cellgame;
             this.gameBet = 0;
             /** 賭点最大値 */
             this.gameBetMax = 0;
+            /** 賭点表示 */
+            this.canDisplayBet = false;
             /** 得点 */
             this.gamePoint = 0;
+            /** 得点表示 */
+            this.canDisplayPoint = false;
             /** ゲーム盤の大きさ */
             this.boardSize = 2;
             /** ゲーム盤 */
@@ -106,12 +110,14 @@ var cellgame;
                     this.gameBet += this.betPoint();
                     if (this.gameBet > this.gameBetMax) {
                         this.gameBetMax = this.gameBet;
+                        this.canDisplayBet = true;
                     }
                     this.statusDisplayer();
                     return;
                 }
                 if (code == cellgame.buttonCancel) {
                     this.gamePoint -= this.gameBetMax;
+                    this.canDisplayPoint = true;
                     this.gameStep = 1;
                     return;
                 }
@@ -144,12 +150,14 @@ var cellgame;
                     if (this.isGameClear) {
                         this.gameStep = 1;
                         this.gamePoint += this.gameBetMax;
+                        this.canDisplayPoint = true;
                         this.gameLevel++;
                         return;
                     }
                     if (this.isGameOver) {
                         this.gameStep = 1;
                         this.gamePoint -= this.gameBetMax;
+                        this.canDisplayPoint = true;
                         return;
                     }
                 }
@@ -288,8 +296,10 @@ var cellgame;
         boardInit() {
             this.gameLevel = 0;
             this.gamePoint = 0;
+            this.canDisplayPoint = false;
             this.gameBet = 0;
             this.gameBetMax = 0;
+            this.canDisplayBet = false;
             this.boardSize = 2;
             this.canFreePotision = false;
             this.haveBlock = false;
@@ -590,7 +600,7 @@ var cellgame;
                 this.statusNameIsVisible[1] = false;
                 this.statusIsVisible[1] = false;
             }
-            if (this.gameBetMax > 0) {
+            if (this.canDisplayBet) {
                 this.statusName[2] = "賭点";
                 this.status[2] = this.gameBetMax;
                 this.statusNameIsVisible[2] = true;
@@ -600,7 +610,7 @@ var cellgame;
                 this.statusNameIsVisible[2] = false;
                 this.statusIsVisible[2] = false;
             }
-            if (this.gamePoint > 0) {
+            if (this.canDisplayPoint) {
                 this.statusName[3] = "得点";
                 this.status[3] = this.gamePoint;
                 this.statusNameIsVisible[3] = true;
