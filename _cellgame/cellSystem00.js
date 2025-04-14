@@ -5,6 +5,8 @@ var cellgame;
     class CellGameSystem00 {
         /** コンストラクタ */
         constructor() {
+            /** ゲーム名 */
+            this.gameName = "骨";
             this.cellSize = 0;
             this.backColor = cellgame.Colors.Black;
             this.cells = new cellgame.NumArray();

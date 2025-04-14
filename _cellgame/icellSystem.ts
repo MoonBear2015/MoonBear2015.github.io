@@ -1,5 +1,8 @@
 namespace cellgame {
     export interface ICellGameSystem {
+        /** ゲーム名 */
+        gameName : string;
+
         /** 背景色 */
         backColor : string;
 

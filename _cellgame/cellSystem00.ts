@@ -1,6 +1,9 @@
 namespace cellgame {
     /** セルゲームシステム 共通項 */
     export abstract class CellGameSystem00 implements ICellGameSystem {
+        /** ゲーム名 */
+        public gameName : string = "骨";
+
         public cellSize : number = 0;
         public backColor : string = Colors.Black;
         public cells : ICellArray<number> = new NumArray();

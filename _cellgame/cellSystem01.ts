@@ -2,6 +2,8 @@ namespace cellgame {
     /** セルゲームシステム ０１： */
     export class CellGameSystem01 extends CellGameSystem00
     implements ICellGameSystem {
+        /** ゲーム名 */
+        public gameName : string = "士農工商";
 
         // game01 self
         

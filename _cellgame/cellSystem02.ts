@@ -1,7 +1,9 @@
 namespace cellgame {
-    /** セルゲームシステム ０１： */
+    /** セルゲームシステム ０２： */
     export class CellGameSystem02 extends CellGameSystem00
     implements ICellGameSystem {
+        /** ゲーム名 */
+        public gameName : string = "士農工商 拾い";
 
         // game01 self
         
@@ -77,13 +79,13 @@ namespace cellgame {
 
         constructor() {
             super();
+            alert("cellSystem02!!");
             this.init();
         }
 
         /** 初期化 */
         public init() {
             this.statusInit();
-
             this.gameLevel = 0;
             this.boardSize = 2;
             this.canFreePotision = false;

@@ -9,6 +9,8 @@ namespace cellgame {
     /** ゲームシステム インターフェース */
     export var gameSystem : ICellGameSystem;
 
+    export var gameSystems : ICellGameSystem[] = [];
+
     /** ゲーム番号 */
     export var selectGameNo = 1;
 
@@ -241,20 +243,23 @@ namespace cellgame {
         }
     }
 
-    // ゲームシステム
-    const gameSystems = (gameNo : number) : ICellGameSystem => {
-        switch(gameNo) {
-            case 1: 
-                return new CellGameSystem01();
-            case 2:
-                return new CellGameSystem02();
-            default:
-                return new CellGameSystem02();
-        }
-    }
+    // // ゲームシステム
+    // const gameSystems = (gameNo : number) : ICellGameSystem => {
+    //     switch(gameNo) {
+    //         case 1: 
+    //             return new CellGameSystem01();
+    //         case 2:
+    //             alert("CellGameSystem02");
+    //             return new CellGameSystem02();
+    //         default:
+    //             return new CellGameSystem02();
+    //     }
+    // }
 
     /** セルゲーム 画面初期化処理 */
     export function pageInit() {
+        gameSystems[1] = new CellGameSystem01();
+        gameSystems[2] = new CellGameSystem02();
 
         // 升目データの初期化
         komasInit();
@@ -545,7 +550,8 @@ namespace cellgame {
     // ゲーム起動
     export function gameReset() {
         alert(selectGameNo);
-        gameSystem = gameSystems(selectGameNo);
+        gameSystem = gameSystems[selectGameNo];
+        alert(gameSystem.gameName);
         gameSystem.displayMaker();
     }
 

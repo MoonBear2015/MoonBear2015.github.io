@@ -5,6 +5,8 @@ var cellgame;
     class CellGameSystem01 extends cellgame.CellGameSystem00 {
         constructor() {
             super();
+            /** ゲーム名 */
+            this.gameName = "士農工商";
             // game01 self
             /** 段位 */
             this.gameLevel = 0;

@@ -5,6 +5,7 @@ var cellgame;
     /** 全体を通して何かエラーがあった場合 */
     cellgame.IsError = false;
     cellgame.wasPageInit = false;
+    cellgame.gameSystems = [];
     /** ゲーム番号 */
     cellgame.selectGameNo = 1;
     /** 升のコード[cell番地] */
@@ -82,19 +83,22 @@ var cellgame;
             }
         }
     }
-    // ゲームシステム
-    const gameSystems = (gameNo) => {
-        switch (gameNo) {
-            case 1:
-                return new cellgame.CellGameSystem01();
-            case 2:
-                return new cellgame.CellGameSystem02();
-            default:
-                return new cellgame.CellGameSystem02();
-        }
-    };
+    // // ゲームシステム
+    // const gameSystems = (gameNo : number) : ICellGameSystem => {
+    //     switch(gameNo) {
+    //         case 1: 
+    //             return new CellGameSystem01();
+    //         case 2:
+    //             alert("CellGameSystem02");
+    //             return new CellGameSystem02();
+    //         default:
+    //             return new CellGameSystem02();
+    //     }
+    // }
     /** セルゲーム 画面初期化処理 */
     function pageInit() {
+        cellgame.gameSystems[1] = new cellgame.CellGameSystem01();
+        cellgame.gameSystems[2] = new cellgame.CellGameSystem02();
         // 升目データの初期化
         cellgame.komasInit();
         // 升目データの初期値設定
@@ -359,7 +363,8 @@ var cellgame;
     // ゲーム起動
     function gameReset() {
         alert(cellgame.selectGameNo);
-        cellgame.gameSystem = gameSystems(cellgame.selectGameNo);
+        cellgame.gameSystem = cellgame.gameSystems[cellgame.selectGameNo];
+        alert(cellgame.gameSystem.gameName);
         cellgame.gameSystem.displayMaker();
     }
     cellgame.gameReset = gameReset;
