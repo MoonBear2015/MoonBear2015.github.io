@@ -249,7 +249,7 @@ namespace cellgame {
             case 2:
                 return new CellGameSystem02();
             default:
-                return new CellGameSystem01();
+                return new CellGameSystem02();
         }
     }
 
@@ -544,7 +544,9 @@ namespace cellgame {
 
     // ゲーム起動
     export function gameReset() {
+        alert(selectGameNo);
         gameSystem = gameSystems(selectGameNo);
+        gameSystem.displayMaker();
     }
 
     // 画面更新処理を呼び出す

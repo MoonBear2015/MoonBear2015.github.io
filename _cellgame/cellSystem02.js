@@ -194,7 +194,7 @@ var cellgame;
                         this.messages = [];
                         this.buttonSetter();
                         if (!this.isPlayStarted) {
-                            this.messages.push(new cellgame.Message("士農工商を並べよ", this.messagePotision(), 1, cellgame.Colors.White, cellgame.Colors.Black));
+                            this.messages.push(new cellgame.Message("士農工商を拾え", this.messagePotision(), 1, cellgame.Colors.White, cellgame.Colors.Black));
                         }
                         this.statusDisplayer();
                         this.boardCheck();

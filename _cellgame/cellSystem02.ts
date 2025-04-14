@@ -210,7 +210,7 @@ namespace cellgame {
                         this.messages = [];
                         this.buttonSetter();
                         if (!this.isPlayStarted) {
-                            this.messages.push(new Message("士農工商を並べよ",this.messagePotision(),1,Colors.White,Colors.Black));
+                            this.messages.push(new Message("士農工商を拾え",this.messagePotision(),1,Colors.White,Colors.Black));
                         }
 
                         this.statusDisplayer();

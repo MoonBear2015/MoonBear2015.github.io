@@ -90,7 +90,7 @@ var cellgame;
             case 2:
                 return new cellgame.CellGameSystem02();
             default:
-                return new cellgame.CellGameSystem01();
+                return new cellgame.CellGameSystem02();
         }
     };
     /** セルゲーム 画面初期化処理 */
@@ -358,7 +358,9 @@ var cellgame;
     cellgame.touchPointSend = touchPointSend;
     // ゲーム起動
     function gameReset() {
+        alert(cellgame.selectGameNo);
         cellgame.gameSystem = gameSystems(cellgame.selectGameNo);
+        cellgame.gameSystem.displayMaker();
     }
     cellgame.gameReset = gameReset;
     // 画面更新処理を呼び出す
