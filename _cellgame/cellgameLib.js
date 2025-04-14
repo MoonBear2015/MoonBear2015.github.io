@@ -1,10 +1,4 @@
 "use strict";
-/// <reference path="cellgameSub01.ts" />
-/// <reference path="cellgameSub02.ts" />
-/// <reference path="cellgame.ts" />
-/// <reference path="icellSystem.ts" />
-/// <reference path="cellSystem00.ts" />
-/// <reference path="cellSystem01.ts" />
 var cellgame;
 (function (cellgame) {
     /** Cell設定 */

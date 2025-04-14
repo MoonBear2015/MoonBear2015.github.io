@@ -1,16 +1,12 @@
 "use strict";
-/// <reference path="cellgameLib.ts" />
-/// <reference path="cellgameSub01.ts" />
-/// <reference path="cellgameSub02.ts" />
-/// <reference path="icellSystem.ts" />
-/// <reference path="cellSystem00.ts" />
-/// <reference path="cellSystem01.ts" />
 /** 対ブラウザ表示処理 */
 var cellgame;
 (function (cellgame) {
     /** 全体を通して何かエラーがあった場合 */
     cellgame.IsError = false;
     cellgame.wasPageInit = false;
+    /** ゲーム番号 */
+    cellgame.selectGameNo = 1;
     /** 升のコード[cell番地] */
     var gCodes;
     /** バックカラーのフラッシュの有無 */
@@ -21,7 +17,7 @@ var cellgame;
         if (cellgame.IsError) {
             alert("Init " + cellgame.IsError);
         }
-        // gameReset();
+        gameReset();
         canvasResize();
         displayCall();
         // 定期的に更新（アニメーション、フラッシュ効果）
@@ -86,13 +82,26 @@ var cellgame;
             }
         }
     }
+    // ゲームシステム
+    const gameSystems = (gameNo) => {
+        switch (gameNo) {
+            case 1:
+                return new cellgame.CellGameSystem01();
+            case 2:
+                return new cellgame.CellGameSystem02();
+            default:
+                return new cellgame.CellGameSystem01();
+        }
+    };
     /** セルゲーム 画面初期化処理 */
     function pageInit() {
         // 升目データの初期化
         cellgame.komasInit();
         // 升目データの初期値設定
         cellgame.komasUpdate(0);
-        cellgame.gameSystem = new cellgame.CellGameSystem01();
+        // 選択ゲーム設定
+        cellgame.selectGameNo = 1;
+        // gameSystem = gameSystems(selectGameNo);
         // // 升目の論理値の初期化（とりあえず１０×１０）
         // gCodes = Array(100).fill(0);
         // gFlashFlgs = Array(100).fill(false);
@@ -167,6 +176,27 @@ var cellgame;
         cellgame.STSBOX[3] = elementGetter("sts03Box");
         cellgame.STSNAME[3] = elementGetter("sts03Name");
         cellgame.STSVALUE[3] = elementGetter("sts03Value");
+        cellgame.SELECTGAME = elementGetter("SelectGame");
+        // ゲームセレクターイベントの設定
+        if (cellgame.SELECTGAME != null) {
+            cellgame.SELECTGAME.addEventListener("change", (event) => {
+                const target = event.target;
+                const selectedValue = target.value;
+                switch (selectedValue) {
+                    case "GAME01": {
+                        cellgame.selectGameNo = 1;
+                        break;
+                    }
+                    case "GAME02": {
+                        cellgame.selectGameNo = 2;
+                        break;
+                    }
+                }
+                gameReset();
+            });
+        }
+        if (cellgame.IsError)
+            return;
         cellgame.wasPageInit = true;
     }
     cellgame.pageInit = pageInit;
@@ -326,18 +356,9 @@ var cellgame;
         cellgame.gameSystem.touchPointRecv(p);
     }
     cellgame.touchPointSend = touchPointSend;
+    // ゲーム起動
     function gameReset() {
-        // let c = 0;
-        // for(let y = 0; y < gameSystem.cellCount; y++) {
-        //     for(let x = 0; x < gameSystem.cellCount; x++) {
-        //         gameSystem.codeSetter(x,y,c);
-        //         gameSystem.isFlashSetter(x,y,false);
-        //         c++;
-        //         if (c >= cells.length) {
-        //             c = 0;
-        //         }
-        //     }
-        // }
+        cellgame.gameSystem = gameSystems(cellgame.selectGameNo);
     }
     cellgame.gameReset = gameReset;
     // 画面更新処理を呼び出す

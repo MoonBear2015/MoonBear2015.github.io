@@ -1,9 +1,3 @@
-/// <reference path="cellgameLib.ts" />
-/// <reference path="cellgameSub01.ts" />
-/// <reference path="cellgameSub02.ts" />
-/// <reference path="icellSystem.ts" />
-/// <reference path="cellSystem00.ts" />
-/// <reference path="cellSystem01.ts" />
 
 /** 対ブラウザ表示処理 */
 namespace cellgame {
@@ -14,6 +8,9 @@ namespace cellgame {
 
     /** ゲームシステム インターフェース */
     export var gameSystem : ICellGameSystem;
+
+    /** ゲーム番号 */
+    export var selectGameNo = 1;
 
     // GetCanvas('a_canvas');
 
@@ -66,14 +63,16 @@ namespace cellgame {
     export var STS03NAME : HTMLDivElement | null;
     /** 情報表示 値 03 */
     export var STS03VALUE : HTMLDivElement | null;
-
+    
     /** ステータス表示 枠[] */
     export var STSBOX : (HTMLDivElement | null)[];
     /** ステータス表示 名称[] */
     export var STSNAME : (HTMLDivElement | null)[];
     /** ステータス表示 値[] */
     export var STSVALUE : (HTMLDivElement | null)[];
-
+    
+    /** ゲームセレクター */
+    export var SELECTGAME : HTMLSelectElement | null;
 
     // ゲーム枠座標
     // W:幅 H:丈 X:横位置 Y:縦位置 P:隙間（縦横同一） M:余白（縦横別）
@@ -169,7 +168,7 @@ namespace cellgame {
         if (IsError) {
             alert("Init " + IsError);
         }
-        // gameReset();
+        gameReset();
         canvasResize();
         displayCall();
 
@@ -242,6 +241,18 @@ namespace cellgame {
         }
     }
 
+    // ゲームシステム
+    const gameSystems = (gameNo : number) : ICellGameSystem => {
+        switch(gameNo) {
+            case 1: 
+                return new CellGameSystem01();
+            case 2:
+                return new CellGameSystem02();
+            default:
+                return new CellGameSystem01();
+        }
+    }
+
     /** セルゲーム 画面初期化処理 */
     export function pageInit() {
 
@@ -251,7 +262,10 @@ namespace cellgame {
         // 升目データの初期値設定
         komasUpdate(0);
 
-        gameSystem = new CellGameSystem01();
+        // 選択ゲーム設定
+        selectGameNo = 1;
+
+        // gameSystem = gameSystems(selectGameNo);
 
         // // 升目の論理値の初期化（とりあえず１０×１０）
         // gCodes = Array(100).fill(0);
@@ -329,6 +343,33 @@ namespace cellgame {
         STSNAME[3] = elementGetter<HTMLDivElement>("sts03Name");
         STSVALUE[3] = elementGetter<HTMLDivElement>("sts03Value");
 
+        SELECTGAME = elementGetter<HTMLSelectElement>("SelectGame");
+
+        // ゲームセレクターイベントの設定
+        if (SELECTGAME != null) {
+
+            SELECTGAME.addEventListener("change", (event) => {
+                const target = event.target as HTMLSelectElement;
+                const selectedValue = target.value;
+
+                switch(selectedValue) {
+                    case "GAME01" : {
+                        selectGameNo = 1;
+                        break;
+                    }
+                    case "GAME02" : {
+                        selectGameNo = 2;
+                        break;
+                    }
+                }
+
+                gameReset(); 
+            });
+        }
+            
+
+
+        if (IsError) return;
         wasPageInit = true;
 
     }
@@ -501,18 +542,9 @@ namespace cellgame {
         gameSystem.touchPointRecv(p);
     }
 
+    // ゲーム起動
     export function gameReset() {
-        // let c = 0;
-        // for(let y = 0; y < gameSystem.cellCount; y++) {
-        //     for(let x = 0; x < gameSystem.cellCount; x++) {
-        //         gameSystem.codeSetter(x,y,c);
-        //         gameSystem.isFlashSetter(x,y,false);
-        //         c++;
-        //         if (c >= cells.length) {
-        //             c = 0;
-        //         }
-        //     }
-        // }
+        gameSystem = gameSystems(selectGameNo);
     }
 
     // 画面更新処理を呼び出す

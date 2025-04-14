@@ -1,6 +1,6 @@
 namespace cellgame {
     /** セルゲームシステム ０１： */
-    export class CellGameSystem01 extends CellGameSystem00
+    export class CellGameSystem02 extends CellGameSystem00
     implements ICellGameSystem {
 
         // game01 self
@@ -73,7 +73,7 @@ namespace cellgame {
         public loopCodes : number[] = [11,12,13,14];
 
         /** 背景色 */
-        public backColor: string = Colors.DeepDarkGray;
+        public backColor: string = Colors.DarkBlue;
 
         constructor() {
             super();

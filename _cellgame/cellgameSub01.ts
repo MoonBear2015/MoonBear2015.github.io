@@ -1,9 +1,4 @@
-/// <reference path="cellgameLib.ts" />
-/// <reference path="cellgameSub02.ts" />
-/// <reference path="cellgame.ts" />
-/// <reference path="icellSystem.ts" />
-/// <reference path="cellSystem00.ts" />
-/// <reference path="cellSystem01.ts" />
+
 namespace cellgame {
     /** 未設定判定 */
     export function isNone(value: any): value is null | undefined {
