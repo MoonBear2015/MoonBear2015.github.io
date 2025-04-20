@@ -1,4 +1,10 @@
 "use strict";
+/// <reference path="cellgame.ts" />
+/// <reference path="cellgameLib.ts" />
+// <reference path="cellgameSub01.ts" />
+/// <reference path="cellgameSub02.ts" />
+/// <reference path="icellSystem.ts" />
+/// <reference path="cellSystem00.ts" />
 var cellgame;
 (function (cellgame) {
     /** 未設定判定 */
@@ -32,6 +38,25 @@ var cellgame;
         let x = a % w;
         return new Point(false, x, y);
     };
+    /** 数列の配列を出力 */
+    function range(start, end) {
+        const step = start < end ? 1 : -1;
+        return Array.from({ length: Math.abs(end - start) }, (_, i) => start + i * step);
+    }
+    cellgame.range = range;
+    /** 2点間の座標を出力 */
+    function pointRange(startPoint, endPoint) {
+        const xRange = range(startPoint.x, endPoint.x);
+        const yRange = range(startPoint.y, endPoint.y);
+        const points = [];
+        for (const y of yRange) {
+            for (const x of xRange) {
+                points.push(new Point(false, x, y));
+            }
+        }
+        return points;
+    }
+    cellgame.pointRange = pointRange;
     /** 座標 */
     class Point {
         /** コンストラクタ */

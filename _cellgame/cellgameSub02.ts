@@ -1,4 +1,9 @@
-
+/// <reference path="cellgame.ts" />
+/// <reference path="cellgameLib.ts" />
+/// <reference path="cellgameSub01.ts" />
+// <reference path="cellgameSub02.ts" />
+/// <reference path="icellSystem.ts" />
+/// <reference path="cellSystem00.ts" />
 namespace cellgame {
 
     /** 配列支援インターフェース */
@@ -104,12 +109,21 @@ namespace cellgame {
         /** 四方セル設定
          * @param point0 : 左上 point1 : 右下 code : 設定コード
          */
-        public cellBoxSetter(point0 : Point, point1 : Point,value : T) : void {
-            for(let y = point0.y; y <= point1.y; y++) {
-                for(let x = point0.x; x <= point1.x; x++) {
-                    this.cellSetter(Point.New(x,y),value);
-                }
-            }
+        // public cellBoxSetter(point0 : Point, point1 : Point,value : T) : void {
+        //     for(let y = point0.y; y <= point1.y; y++) {
+        //         for(let x = point0.x; x <= point1.x; x++) {
+        //             this.cellSetter(Point.New(x,y),value);
+        //         }
+        //     }
+        // }
+
+        /** 四方セル設定
+         * @param point0 : 左上 point1 : 右下 code : 設定コード
+         */
+        public cellBoxSetter = (point0 : Point, point1 : Point,value : T) : void => {
+            pointRange(point0,point1).forEach((point) => {
+                this.cellSetter(point,value);
+            }); 
         }
 
         /** 全セル塗りつぶし

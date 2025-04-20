@@ -1,4 +1,10 @@
 "use strict";
+/// <reference path="cellgame.ts" />
+/// <reference path="cellgameLib.ts" />
+/// <reference path="cellgameSub01.ts" />
+// <reference path="cellgameSub02.ts" />
+/// <reference path="icellSystem.ts" />
+/// <reference path="cellSystem00.ts" />
 var cellgame;
 (function (cellgame) {
     /** 配列支援クラス */
@@ -11,6 +17,24 @@ var cellgame;
             this.cellWidth = 0;
             /** 平方データ時の全件数 */
             this.cellCount = () => this.cellWidth * this.cellWidth;
+            /** 四方セル設定
+             * @param point0 : 左上 point1 : 右下 code : 設定コード
+             */
+            // public cellBoxSetter(point0 : Point, point1 : Point,value : T) : void {
+            //     for(let y = point0.y; y <= point1.y; y++) {
+            //         for(let x = point0.x; x <= point1.x; x++) {
+            //             this.cellSetter(Point.New(x,y),value);
+            //         }
+            //     }
+            // }
+            /** 四方セル設定
+             * @param point0 : 左上 point1 : 右下 code : 設定コード
+             */
+            this.cellBoxSetter = (point0, point1, value) => {
+                cellgame.pointRange(point0, point1).forEach((point) => {
+                    this.cellSetter(point, value);
+                });
+            };
             /** 個数 */
             this.length = () => this.items.length;
             /** 座標の番地 */
@@ -30,16 +54,6 @@ var cellgame;
             this.items = [];
             for (let i = 0; i < this.cellCount(); i++) {
                 this.items.push(value);
-            }
-        }
-        /** 四方セル設定
-         * @param point0 : 左上 point1 : 右下 code : 設定コード
-         */
-        cellBoxSetter(point0, point1, value) {
-            for (let y = point0.y; y <= point1.y; y++) {
-                for (let x = point0.x; x <= point1.x; x++) {
-                    this.cellSetter(cellgame.Point.New(x, y), value);
-                }
             }
         }
         /** 全セル塗りつぶし

@@ -1,5 +1,12 @@
+/// <reference path="cellgame.ts" />
+/// <reference path="cellgameLib.ts" />
+// <reference path="cellgameSub01.ts" />
+/// <reference path="cellgameSub02.ts" />
+/// <reference path="icellSystem.ts" />
+/// <reference path="cellSystem00.ts" />
 
 namespace cellgame {
+
     /** 未設定判定 */
     export function isNone(value: any): value is null | undefined {
         return value === null || value === undefined;
@@ -38,6 +45,25 @@ namespace cellgame {
         let x = a % w;
         return new Point(false,x,y);
     };
+
+    /** 数列の配列を出力 */
+    export function range(start: number, end: number): number[] {
+        const step = start < end ? 1 : -1;
+        return Array.from({ length: Math.abs(end - start)}, (_, i) => start + i * step);
+    }
+
+    /** 2点間の座標を出力 */
+    export function pointRange(startPoint : Point, endPoint : Point) : Point[] {
+        const xRange = range(startPoint.x, endPoint.x);
+        const yRange = range(startPoint.y, endPoint.y);
+        const points: Point[] = [];
+        for (const y of yRange) {
+                for (const x of xRange) {
+                    points.push(new Point(false,x,y));
+            }
+        }
+        return points;
+    }
 
     /** 座標 */
     export class Point {
