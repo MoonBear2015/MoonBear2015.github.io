@@ -48,7 +48,7 @@ body {
     background-color: darkred;
     height: 10%;
     font-size: calc(10px + 3vmin);
-    text-align-last: center;
+    display: flex;
 }
 
 #GameWindow {
@@ -59,12 +59,34 @@ body {
     height: 80%;
 }
 
+#Selecter00 {
+    flex: 1;
+    align-self: left;
+}
+#Selecter01 {
+    flex: 2;
+    align-self: center;
+}
+#Selecter02 {
+    flex: 1;
+    align-self: right;;
+}
+
 #SelectGameLabel {
     font-size: calc(10px + 2vmin);
     color: white;
 }
 
 #SelectGame {
+    font-size: calc(10px + 2vmin);
+}
+
+#SelectCharLabel {
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+#SelectChar {
     font-size: calc(10px + 2vmin);
 }
 

@@ -80,7 +80,6 @@ var cellgame;
             this.ToBoardPoint = (cellsPoint) => cellgame.Point.Sub(cellsPoint, this.boardCorner);
             /** ボードから指定アドレスのみ転送 */
             this.boardToCellsAddressCopy = (address) => this.boardToCellsCopy(this.board.cellPoint(address));
-            alert("cellSystem02!!");
             this.init();
         }
         /** 初期化 */

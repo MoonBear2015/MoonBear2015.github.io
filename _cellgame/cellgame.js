@@ -14,6 +14,8 @@ var cellgame;
     cellgame.gameSystems = [];
     /** ゲーム番号 */
     cellgame.selectGameNo = 1;
+    /** 文字番号 */
+    cellgame.selectCharNo = 0;
     /** 升のコード[cell番地] */
     var gCodes;
     /** バックカラーのフラッシュの有無 */
@@ -107,10 +109,10 @@ var cellgame;
         cellgame.gameSystems[2] = new cellgame.CellGameSystem02();
         // 升目データの初期化
         cellgame.komasInit();
-        // 升目データの初期値設定
-        cellgame.komasUpdate(0);
         // 選択ゲーム設定
         cellgame.selectGameNo = 1;
+        // 升目データの初期値設定
+        cellgame.komasUpdate(cellgame.selectCharNo);
         // gameSystem = gameSystems(selectGameNo);
         // // 升目の論理値の初期化（とりあえず１０×１０）
         // gCodes = Array(100).fill(0);
@@ -187,6 +189,7 @@ var cellgame;
         cellgame.STSNAME[3] = elementGetter("sts03Name");
         cellgame.STSVALUE[3] = elementGetter("sts03Value");
         cellgame.SELECTGAME = elementGetter("SelectGame");
+        cellgame.SELECTCHAR = elementGetter("SelectChar");
         // ゲームセレクターイベントの設定
         if (cellgame.SELECTGAME != null) {
             cellgame.SELECTGAME.addEventListener("change", (event) => {
@@ -203,6 +206,29 @@ var cellgame;
                     }
                 }
                 gameReset();
+            });
+        }
+        // 文字セレクターイベントの設定
+        if (cellgame.SELECTCHAR != null) {
+            cellgame.SELECTCHAR.addEventListener("change", (event) => {
+                const target = event.target;
+                const selectedValue = target.value;
+                switch (selectedValue) {
+                    case "CHAR00": {
+                        cellgame.selectCharNo = 0;
+                        break;
+                    }
+                    case "CHAR01": {
+                        cellgame.selectCharNo = 1;
+                        break;
+                    }
+                    case "CHAR02": {
+                        cellgame.selectCharNo = 2;
+                        break;
+                    }
+                }
+                cellgame.komasUpdate(cellgame.selectCharNo);
+                displayCall();
             });
         }
         if (cellgame.IsError)
@@ -368,9 +394,7 @@ var cellgame;
     cellgame.touchPointSend = touchPointSend;
     // ゲーム起動
     function gameReset() {
-        alert(cellgame.selectGameNo);
         cellgame.gameSystem = cellgame.gameSystems[cellgame.selectGameNo];
-        alert(cellgame.gameSystem.gameName);
         cellgame.gameSystem.displayMaker();
     }
     cellgame.gameReset = gameReset;

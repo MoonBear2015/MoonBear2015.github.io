@@ -20,6 +20,8 @@ namespace cellgame {
 
     /** ゲーム番号 */
     export var selectGameNo = 1;
+    /** 文字番号 */
+    export var selectCharNo = 0;
 
     // GetCanvas('a_canvas');
 
@@ -82,6 +84,9 @@ namespace cellgame {
     
     /** ゲームセレクター */
     export var SELECTGAME : HTMLSelectElement | null;
+
+    /** ゲームセレクター */
+    export var SELECTCHAR : HTMLSelectElement | null;
 
     // ゲーム枠座標
     // W:幅 H:丈 X:横位置 Y:縦位置 P:隙間（縦横同一） M:余白（縦横別）
@@ -270,12 +275,12 @@ namespace cellgame {
 
         // 升目データの初期化
         komasInit();
-
-        // 升目データの初期値設定
-        komasUpdate(0);
-
+        
         // 選択ゲーム設定
         selectGameNo = 1;
+
+        // 升目データの初期値設定
+        komasUpdate(selectCharNo);
 
         // gameSystem = gameSystems(selectGameNo);
 
@@ -356,6 +361,7 @@ namespace cellgame {
         STSVALUE[3] = elementGetter<HTMLDivElement>("sts03Value");
 
         SELECTGAME = elementGetter<HTMLSelectElement>("SelectGame");
+        SELECTCHAR = elementGetter<HTMLSelectElement>("SelectChar");
 
         // ゲームセレクターイベントの設定
         if (SELECTGAME != null) {
@@ -376,6 +382,30 @@ namespace cellgame {
                 }
 
                 gameReset(); 
+            });
+        }
+        // 文字セレクターイベントの設定
+        if (SELECTCHAR != null) {
+
+            SELECTCHAR.addEventListener("change", (event) => {
+                const target = event.target as HTMLSelectElement;
+                const selectedValue = target.value;
+                switch(selectedValue) {
+                    case "CHAR00" : {
+                        selectCharNo = 0;
+                        break;
+                    }
+                    case "CHAR01" : {
+                        selectCharNo = 1;
+                        break;
+                    }
+                    case "CHAR02" : {
+                        selectCharNo = 2;
+                        break;
+                    }
+                }
+                komasUpdate(selectCharNo);
+                displayCall();
             });
         }
             
@@ -556,9 +586,7 @@ namespace cellgame {
 
     // ゲーム起動
     export function gameReset() {
-        alert(selectGameNo);
         gameSystem = gameSystems[selectGameNo];
-        alert(gameSystem.gameName);
         gameSystem.displayMaker();
     }
 

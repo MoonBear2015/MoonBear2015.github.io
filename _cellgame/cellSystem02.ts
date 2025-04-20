@@ -85,7 +85,6 @@ namespace cellgame {
 
         constructor() {
             super();
-            alert("cellSystem02!!");
             this.init();
         }
 
