@@ -64,6 +64,12 @@ namespace cellgame {
         msgWinSelector() : string;
         /**　敗北メッセージ返却 */
         msgLoseSelector() : string;
+
+        /** 説明 */
+        toComment() : string;
+
+        /** 駒の説明 */
+        toKomaHelp() : string;
  
     }
 

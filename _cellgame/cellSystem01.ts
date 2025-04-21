@@ -709,9 +709,8 @@ namespace cellgame {
             }
 
         }
-        
 
-
+        /** 説明 */
         public toComment() : string {
             let result = "";
             result +="★ 士農工商 ★\n";
@@ -719,9 +718,7 @@ namespace cellgame {
             result +="士農工商で盤面を埋めて、\n";
             result +="士農工商の順列を学ぶのだ。\n";
             result +="\n";
-            result +="却：盤面の却下\n";
-            result +="戻：手を戻す\n";
-            result +="進：手を進める\n";
+            result += this.toKomaHelp();
             return result;
         }
     }

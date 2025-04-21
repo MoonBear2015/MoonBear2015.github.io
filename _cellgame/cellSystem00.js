@@ -20,6 +20,22 @@ var cellgame;
             this.msgWinSelector = () => cellgame.msgPatterns[cellgame.rnd(10)];
             /**　敗北メッセージ返却 */
             this.msgLoseSelector = () => cellgame.msgPatterns[cellgame.rnd(10) + 10];
+            /** 駒の説明 */
+            this.toKomaHelp = () => {
+                let result = cellgame.komas[100].name + "\n";
+                for (let i = 11; i < 20; i++) {
+                    if (cellgame.komas[i] === undefined)
+                        continue;
+                    result += cellgame.komas[i].toHelp() + "\n";
+                }
+                result += "\n";
+                for (let i = 90; i < 100; i++) {
+                    if (cellgame.komas[i] === undefined)
+                        continue;
+                    result += cellgame.komas[i].toHelp() + "\n";
+                }
+                return result;
+            };
             this.statusName = Array(4).fill("");
             this.statusNameIsVisible = Array(4).fill(false);
             this.status = Array(4).fill(0);

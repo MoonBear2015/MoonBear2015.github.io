@@ -112,6 +112,24 @@ namespace cellgame {
         /**　敗北メッセージ返却 */
         public msgLoseSelector=() : string => msgPatterns[rnd(10) + 10];
 
+        /** 説明 */
+        abstract toComment() : string;
+
+        /** 駒の説明 */
+        public toKomaHelp = () : string => {
+            let result : string = komas[100].name + "\n";
+            for(let i = 11; i < 20; i++){
+                if (komas[i] === undefined) continue;
+                result += komas[i].toHelp() + "\n";
+            }
+            result += "\n";
+            for(let i = 90; i < 100; i++){
+                if (komas[i] === undefined) continue;
+                result += komas[i].toHelp() + "\n";
+            }
+            return result;
+        }
+
     }
 
 
