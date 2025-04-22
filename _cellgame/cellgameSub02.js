@@ -7,6 +7,7 @@
 /// <reference path="cellSystem00.ts" />
 var cellgame;
 (function (cellgame) {
+    cellgame.TITLE = "@TITLE@";
     /** 配列支援クラス */
     class CellArray {
         /** コンストラクタ */

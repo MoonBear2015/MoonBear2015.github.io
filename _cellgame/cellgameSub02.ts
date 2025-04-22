@@ -6,6 +6,8 @@
 /// <reference path="cellSystem00.ts" />
 namespace cellgame {
 
+    export const TITLE = "@TITLE@";
+
     /** 配列支援インターフェース */
     export interface ICellArray<T> {
         /** 配列 */

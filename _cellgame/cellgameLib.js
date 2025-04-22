@@ -7,9 +7,13 @@
 /// <reference path="cellSystem00.ts" />
 var cellgame;
 (function (cellgame) {
-    /** Cell設定 */
+    /** Koma 設定 */
     cellgame.komas = [];
     cellgame.msgPatterns = [];
+    /** Koma 規定値集 */
+    cellgame.komasArray = [];
+    /** Message パターン集 */
+    cellgame.msgPatternsArray = [];
     /** Message パターン */
     cellgame.msgPatterns00 = [];
     cellgame.msgPatterns01 = [];
@@ -189,6 +193,12 @@ var cellgame;
         cellgame.msgPatterns02[17] = "　ＮＯＮＯ！！　";
         cellgame.msgPatterns02[18] = "　ＯＨ・・・・　";
         cellgame.msgPatterns02[19] = "　ＳＩＧＨ・・　";
+        cellgame.komasArray[0] = cellgame.komas00;
+        cellgame.komasArray[1] = cellgame.komas01;
+        cellgame.komasArray[2] = cellgame.komas02;
+        cellgame.msgPatternsArray[0] = cellgame.msgPatterns00;
+        cellgame.msgPatternsArray[1] = cellgame.msgPatterns01;
+        cellgame.msgPatternsArray[2] = cellgame.msgPatterns02;
     }
     cellgame.komasInit = komasInit;
     /** Cell設定の選択 */
@@ -256,6 +266,15 @@ var cellgame;
             this.isFlash = koma.isFlash;
         }
     }
+    /** タイトル文字 */
+    Koma.titleCode = 11;
+    /** ゲームタイトル */
+    Koma.gameTitle = (komas) => {
+        return komas[Koma.titleCode].char
+            + komas[Koma.titleCode + 1].char
+            + komas[Koma.titleCode + 2].char
+            + komas[Koma.titleCode + 3].char;
+    };
     cellgame.Koma = Koma;
     /**
      * class Message

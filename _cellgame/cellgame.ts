@@ -866,6 +866,8 @@ namespace cellgame {
         }
     }
 
-
+    /** ゲームタイトルの変更 */
+    export const titleChange = (message: string): string => 
+        message.replace(TITLE, Koma.gameTitle(komas));
 
 }

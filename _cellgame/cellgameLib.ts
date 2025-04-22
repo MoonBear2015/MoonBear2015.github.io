@@ -6,14 +6,20 @@
 /// <reference path="cellSystem00.ts" />
 
 namespace cellgame {
-    /** Cell設定 */
+    /** Koma 設定 */
     export var komas: IKoma[] = [];
     export var msgPatterns: string[] = [];
 
-    /** Cell 規定値設定 */
+    /** Koma 規定値集 */
+    export var komasArray : IKoma[][] = [];
+
+    /** Koma 規定値設定 */
     export var komas00 : IKoma[];
     export var komas01 : IKoma[];
     export var komas02 : IKoma[];
+
+    /** Message パターン集 */
+    export var msgPatternsArray : string[][] = [];
 
     /** Message パターン */
     export var msgPatterns00 : string[] = [];
@@ -218,6 +224,14 @@ namespace cellgame {
         msgPatterns02[18] = "　ＯＨ・・・・　";
         msgPatterns02[19] = "　ＳＩＧＨ・・　";
 
+        
+        komasArray[0] = komas00;
+        komasArray[1] = komas01;
+        komasArray[2] = komas02;
+        msgPatternsArray[0] = msgPatterns00;
+        msgPatternsArray[1] = msgPatterns01;
+        msgPatternsArray[2] = msgPatterns02;
+
     }
 
     /** Cell設定の選択 */
@@ -283,6 +297,17 @@ namespace cellgame {
         foreColor : string;
         backColor : string;
         isFlash : boolean;
+
+        /** タイトル文字 */
+        static titleCode : number = 11;
+
+        /** ゲームタイトル */
+        static gameTitle = (komas : IKoma[]) : string => {
+            return komas[Koma.titleCode].char
+            + komas[Koma.titleCode + 1].char
+            + komas[Koma.titleCode + 2].char
+            + komas[Koma.titleCode + 3].char;
+        }
 
         /** コンストラクタ */
         constructor(

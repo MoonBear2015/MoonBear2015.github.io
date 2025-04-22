@@ -625,4 +625,6 @@ var cellgame;
         }
     }
     cellgame.AllCellDisplay = AllCellDisplay;
+    /** ゲームタイトルの変更 */
+    cellgame.titleChange = (message) => message.replace(cellgame.TITLE, cellgame.Koma.gameTitle(cellgame.komas));
 })(cellgame || (cellgame = {}));
