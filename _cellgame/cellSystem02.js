@@ -11,8 +11,10 @@ var cellgame;
     class CellGameSystem02 extends cellgame.CellGameSystem00 {
         constructor() {
             super();
+            /** ゲームID */
+            this.gameId = "GAME02";
             /** ゲーム名 */
-            this.gameName = "士農工商 拾い";
+            this.gameName = "士農工商☆拾い";
             // game01 self
             /** 段位 */
             this.gameLevel = 0;

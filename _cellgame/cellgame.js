@@ -190,18 +190,27 @@ var cellgame;
         cellgame.STSVALUE[3] = elementGetter("sts03Value");
         cellgame.SELECTGAME = elementGetter("SelectGame");
         cellgame.SELECTCHAR = elementGetter("SelectChar");
-        // ゲームセレクターイベントの設定
+        // ゲームセレクターの設定
         if (cellgame.SELECTGAME != null) {
+            cellgame.SELECTGAME.options.length = 0;
+            for (let gamesystem of cellgame.gameSystems) {
+                if (cellgame.isNone(gamesystem))
+                    continue;
+                let option = document.createElement("option");
+                alert(gamesystem.gameId + " " + gamesystem.gameName);
+                option.value = gamesystem.gameId;
+                option.text = gamesystem.gameName;
+                cellgame.SELECTGAME.appendChild(option);
+            }
             cellgame.SELECTGAME.addEventListener("change", (event) => {
                 const target = event.target;
                 const selectedValue = target.value;
-                switch (selectedValue) {
-                    case "GAME01": {
-                        cellgame.selectGameNo = 1;
-                        break;
-                    }
-                    case "GAME02": {
-                        cellgame.selectGameNo = 2;
+                cellgame.selectGameNo = 0;
+                for (let i = 0; i < cellgame.gameSystems.length; i++) {
+                    if (cellgame.isNone(cellgame.gameSystems[i]))
+                        continue;
+                    if (cellgame.gameSystems[i].gameId == selectedValue) {
+                        cellgame.selectGameNo = i;
                         break;
                     }
                 }

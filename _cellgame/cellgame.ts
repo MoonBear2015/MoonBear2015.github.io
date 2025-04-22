@@ -361,26 +361,32 @@ namespace cellgame {
         STSVALUE[3] = elementGetter<HTMLDivElement>("sts03Value");
 
         SELECTGAME = elementGetter<HTMLSelectElement>("SelectGame");
+        
         SELECTCHAR = elementGetter<HTMLSelectElement>("SelectChar");
 
-        // ゲームセレクターイベントの設定
+        // ゲームセレクターの設定
         if (SELECTGAME != null) {
+            SELECTGAME.options.length = 0;
+            for(let gamesystem of gameSystems) {
+                if (isNone(gamesystem)) continue;
+                let option = document.createElement("option");
+                alert(gamesystem.gameId + " " + gamesystem.gameName);
+                option.value = gamesystem.gameId;
+                option.text = gamesystem.gameName;
+                SELECTGAME.appendChild(option);                
+            }
 
             SELECTGAME.addEventListener("change", (event) => {
                 const target = event.target as HTMLSelectElement;
                 const selectedValue = target.value;
-
-                switch(selectedValue) {
-                    case "GAME01" : {
-                        selectGameNo = 1;
-                        break;
-                    }
-                    case "GAME02" : {
-                        selectGameNo = 2;
+                selectGameNo = 0;
+                for(let i = 0; i < gameSystems.length; i++) {
+                    if (isNone(gameSystems[i])) continue;
+                    if (gameSystems[i].gameId == selectedValue) {
+                        selectGameNo = i;
                         break;
                     }
                 }
-
                 gameReset(); 
             });
         }

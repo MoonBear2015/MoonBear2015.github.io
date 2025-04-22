@@ -5,6 +5,8 @@ var cellgame;
     class CellGameSystem00 {
         /** コンストラクタ */
         constructor() {
+            /** ゲームID */
+            this.gameId = "GAME00";
             /** ゲーム名 */
             this.gameName = "骨";
             this.cellSize = 0;

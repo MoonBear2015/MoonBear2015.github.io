@@ -1,6 +1,9 @@
 namespace cellgame {
     /** セルゲームシステム 共通項 */
     export abstract class CellGameSystem00 implements ICellGameSystem {
+        /** ゲームID */
+        public gameId : string = "GAME00";
+        
         /** ゲーム名 */
         public gameName : string = "骨";
 

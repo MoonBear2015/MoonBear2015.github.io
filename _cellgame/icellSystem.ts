@@ -1,5 +1,8 @@
 namespace cellgame {
     export interface ICellGameSystem {
+        /** ゲームID */
+        gameId : string;
+        
         /** ゲーム名 */
         gameName : string;
 
