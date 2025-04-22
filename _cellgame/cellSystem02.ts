@@ -12,7 +12,7 @@ namespace cellgame {
         public gameId : string = "GAME02";
 
         /** ゲーム名 */
-        public gameName : string = "士農工商☆拾い";
+        public gameName : string = "@TITLE@☆拾い";
 
         // game01 self
         

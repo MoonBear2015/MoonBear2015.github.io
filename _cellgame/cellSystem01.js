@@ -14,7 +14,7 @@ var cellgame;
             /** ゲームID */
             this.gameId = "GAME01";
             /** ゲーム名 */
-            this.gameName = "　　士農工商　　";
+            this.gameName = "@TITLE@";
             // game01 self
             /** 段位 */
             this.gameLevel = 0;
@@ -644,13 +644,13 @@ var cellgame;
         /** 説明 */
         toComment() {
             let result = "";
-            result += "★ 士農工商 ★\n";
-            result += "士農工商を順に配置し、\n";
-            result += "士農工商で盤面を埋めて、\n";
-            result += "士農工商の順列を学ぶのだ。\n";
+            result += "★ @TITLE@ ★\n";
+            result += "@TITLE@を順に配置し、\n";
+            result += "@TITLE@で盤面を埋めて、\n";
+            result += "@TITLE@の順列を学ぶのだ。\n";
             result += "\n";
             result += this.toKomaHelp();
-            return result;
+            return cellgame.titleChange(result);
         }
     }
     cellgame.CellGameSystem01 = CellGameSystem01;

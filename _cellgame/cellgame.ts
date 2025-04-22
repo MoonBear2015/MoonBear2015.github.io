@@ -364,32 +364,6 @@ namespace cellgame {
         
         SELECTCHAR = elementGetter<HTMLSelectElement>("SelectChar");
 
-        // ゲームセレクターの設定
-        if (SELECTGAME != null) {
-            SELECTGAME.options.length = 0;
-            for(let gamesystem of gameSystems) {
-                if (isNone(gamesystem)) continue;
-                let option = document.createElement("option");
-                alert(gamesystem.gameId + " " + gamesystem.gameName);
-                option.value = gamesystem.gameId;
-                option.text = gamesystem.gameName;
-                SELECTGAME.appendChild(option);                
-            }
-
-            SELECTGAME.addEventListener("change", (event) => {
-                const target = event.target as HTMLSelectElement;
-                const selectedValue = target.value;
-                selectGameNo = 0;
-                for(let i = 0; i < gameSystems.length; i++) {
-                    if (isNone(gameSystems[i])) continue;
-                    if (gameSystems[i].gameId == selectedValue) {
-                        selectGameNo = i;
-                        break;
-                    }
-                }
-                gameReset(); 
-            });
-        }
         // 文字セレクターイベントの設定
         if (SELECTCHAR != null) {
 
@@ -411,8 +385,29 @@ namespace cellgame {
                     }
                 }
                 komasUpdate(selectCharNo);
+                gameSelectorSetting();
                 displayCall();
             });
+            
+            // ゲームセレクターの設定
+            if (SELECTGAME != null) {
+                gameSelectorSetting();
+
+                SELECTGAME.addEventListener("change", (event) => {
+                    const target = event.target as HTMLSelectElement;
+                    const selectedValue = target.value;
+                    selectGameNo = 0;
+                    for(let i = 0; i < gameSystems.length; i++) {
+                        if (isNone(gameSystems[i])) continue;
+                        if (gameSystems[i].gameId == selectedValue) {
+                            selectGameNo = i;
+                            break;
+                        }
+                    }
+                    gameReset(); 
+                });
+            }
+
         }
             
 
@@ -421,6 +416,22 @@ namespace cellgame {
         wasPageInit = true;
 
     }
+
+    /** ゲームセレクター設定 */
+    export function gameSelectorSetting() {
+        if (SELECTGAME == null) return;
+
+        SELECTGAME.options.length = 0;
+        for(let gamesystem of gameSystems) {
+            if (isNone(gamesystem)) continue;
+            let option = document.createElement("option");
+            option.value = gamesystem.gameId;
+            option.text = titleChange(gamesystem.gameName);
+            SELECTGAME.appendChild(option);                
+        }
+
+    }
+
 
     // cellSystemに移行    
 
@@ -867,7 +878,6 @@ namespace cellgame {
     }
 
     /** ゲームタイトルの変更 */
-    export const titleChange = (message: string): string => 
-        message.replace(TITLE, Koma.gameTitle(komas));
-
+    export const titleChange = (message: string): string =>
+        exReplace(message, TITLE, Koma.gameTitle(komas));        
 }

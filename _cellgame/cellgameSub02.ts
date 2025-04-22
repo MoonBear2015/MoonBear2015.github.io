@@ -6,7 +6,18 @@
 /// <reference path="cellSystem00.ts" />
 namespace cellgame {
 
+    export const REPLACE_CHAR = "@";
     export const TITLE = "@TITLE@";
+
+    /** 文字列置換 */
+    export const exReplace = (str : string, repFrom : string, repTo : string) : string => {
+        let result = str;
+        while(true) {
+            if (result.indexOf(REPLACE_CHAR) < 0) break;
+            result = result.replace(repFrom, repTo);
+        }
+        return result;
+    }
 
     /** 配列支援インターフェース */
     export interface ICellArray<T> {

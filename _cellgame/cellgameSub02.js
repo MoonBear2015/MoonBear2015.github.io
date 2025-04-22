@@ -7,7 +7,18 @@
 /// <reference path="cellSystem00.ts" />
 var cellgame;
 (function (cellgame) {
+    cellgame.REPLACE_CHAR = "@";
     cellgame.TITLE = "@TITLE@";
+    /** 文字列置換 */
+    cellgame.exReplace = (str, repFrom, repTo) => {
+        let result = str;
+        while (true) {
+            if (result.indexOf(cellgame.REPLACE_CHAR) < 0)
+                break;
+            result = result.replace(repFrom, repTo);
+        }
+        return result;
+    };
     /** 配列支援クラス */
     class CellArray {
         /** コンストラクタ */

@@ -190,33 +190,6 @@ var cellgame;
         cellgame.STSVALUE[3] = elementGetter("sts03Value");
         cellgame.SELECTGAME = elementGetter("SelectGame");
         cellgame.SELECTCHAR = elementGetter("SelectChar");
-        // ゲームセレクターの設定
-        if (cellgame.SELECTGAME != null) {
-            cellgame.SELECTGAME.options.length = 0;
-            for (let gamesystem of cellgame.gameSystems) {
-                if (cellgame.isNone(gamesystem))
-                    continue;
-                let option = document.createElement("option");
-                alert(gamesystem.gameId + " " + gamesystem.gameName);
-                option.value = gamesystem.gameId;
-                option.text = gamesystem.gameName;
-                cellgame.SELECTGAME.appendChild(option);
-            }
-            cellgame.SELECTGAME.addEventListener("change", (event) => {
-                const target = event.target;
-                const selectedValue = target.value;
-                cellgame.selectGameNo = 0;
-                for (let i = 0; i < cellgame.gameSystems.length; i++) {
-                    if (cellgame.isNone(cellgame.gameSystems[i]))
-                        continue;
-                    if (cellgame.gameSystems[i].gameId == selectedValue) {
-                        cellgame.selectGameNo = i;
-                        break;
-                    }
-                }
-                gameReset();
-            });
-        }
         // 文字セレクターイベントの設定
         if (cellgame.SELECTCHAR != null) {
             cellgame.SELECTCHAR.addEventListener("change", (event) => {
@@ -237,14 +210,48 @@ var cellgame;
                     }
                 }
                 cellgame.komasUpdate(cellgame.selectCharNo);
+                gameSelectorSetting();
                 displayCall();
             });
+            // ゲームセレクターの設定
+            if (cellgame.SELECTGAME != null) {
+                gameSelectorSetting();
+                cellgame.SELECTGAME.addEventListener("change", (event) => {
+                    const target = event.target;
+                    const selectedValue = target.value;
+                    cellgame.selectGameNo = 0;
+                    for (let i = 0; i < cellgame.gameSystems.length; i++) {
+                        if (cellgame.isNone(cellgame.gameSystems[i]))
+                            continue;
+                        if (cellgame.gameSystems[i].gameId == selectedValue) {
+                            cellgame.selectGameNo = i;
+                            break;
+                        }
+                    }
+                    gameReset();
+                });
+            }
         }
         if (cellgame.IsError)
             return;
         cellgame.wasPageInit = true;
     }
     cellgame.pageInit = pageInit;
+    /** ゲームセレクター設定 */
+    function gameSelectorSetting() {
+        if (cellgame.SELECTGAME == null)
+            return;
+        cellgame.SELECTGAME.options.length = 0;
+        for (let gamesystem of cellgame.gameSystems) {
+            if (cellgame.isNone(gamesystem))
+                continue;
+            let option = document.createElement("option");
+            option.value = gamesystem.gameId;
+            option.text = cellgame.titleChange(gamesystem.gameName);
+            cellgame.SELECTGAME.appendChild(option);
+        }
+    }
+    cellgame.gameSelectorSetting = gameSelectorSetting;
     // cellSystemに移行    
     // /** 番地の数 */
     // export const gCellLength = () : number => gCellWidth * gCellWidth;
@@ -626,5 +633,5 @@ var cellgame;
     }
     cellgame.AllCellDisplay = AllCellDisplay;
     /** ゲームタイトルの変更 */
-    cellgame.titleChange = (message) => message.replace(cellgame.TITLE, cellgame.Koma.gameTitle(cellgame.komas));
+    cellgame.titleChange = (message) => cellgame.exReplace(message, cellgame.TITLE, cellgame.Koma.gameTitle(cellgame.komas));
 })(cellgame || (cellgame = {}));
