@@ -82,6 +82,7 @@ namespace cellgame {
 
         /** 検索 -1:見つからない */
         search(item : T) : number;
+        
     }
     
     /** 配列支援クラス */

@@ -43,7 +43,7 @@ namespace cellgame {
         public boardCorner : Point = new Point(true);
 
         /** 駒の配置 */
-        public setkomas : IHand[] = [];
+        public komas : HandArray = new HandArray();
 
         /** 手 */
         public hands : IHand[] = [];
@@ -357,9 +357,32 @@ namespace cellgame {
             return;
         }
 
+        // そのセルが空きかどうか
+        public nearCheck = (nearPoint : Point) : booleah => {
+            // 外なら空き
+            if (nearPoint.x < 0 || nearPoint.x >= this.boardSize) return true;
+            if (nearPoint.y < 0 || nearPoint.y >= this.boardSize) return true;
+            let koma = this.board.cellGetter(nearPoint);
+            // 空き升なら空き
+            if (koma == 10) return true;
+            // でなければ空きでは無い
+            return false
+        } 
+
         /** ゲーム盤作成 設定済みレベルに応じて作成 */
         public boardCreate() : void {
             this.boardSizeCalc();
+
+            // 初期配置作成
+            this.komas = new HandArray();
+            this.board = new NumArray();
+            for(let i = 0; i < this.pearCount; i++) {
+                    
+                    let x = Math.floor((this.boardSize - size) / 2);
+                    let y = Math.floor((this.boardSize - size) / 2);
+                    return Point.New(x,y);
+            }
+
 
             this.boardPlacement();
 
@@ -372,13 +395,6 @@ namespace cellgame {
             this.hands = [];
             this.nowHandCount = -1;
 
-        }
-
-        /** ゲーム盤配置 */
-        public boardPlacement() : void {
-            this.boardReset();
-            // 初期配置作成
-            this.setkomas = [];
         }
 
         /** 選択箇所を作成（01専用）

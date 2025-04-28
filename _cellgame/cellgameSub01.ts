@@ -120,6 +120,9 @@ namespace cellgame {
             return true;
         }
 
+        /** 移動先の座業 */
+        public Move4To = (direction4s : number) : Point => Move4To(this,direction4s);
+
         public toString() : string {
             if (this.isUndefined) return "undefined";
             return " (" + this.x + "," + this.y + ")";
@@ -144,6 +147,10 @@ namespace cellgame {
         new Point(false,-1,0),  // 左 
         new Point(false,-1,-1)  // 左上
     ];
+
+    /** 座標移動先（4方向） */
+    export const Move4To = (point : Point,direction4 : number) : Point => 
+        Point.Add(point,Direction4s[direction4]);
 
     export class Colors {
         // ピンク

@@ -463,7 +463,7 @@ namespace cellgame {
             // this.nowCell = 11;
             // this.board.cellSetter(this.startPoint.x,this.startPoint.y,this.nowCell);
 
-            this.boardPlacement();
+            this.boardReset();
 
             this.selectCellSetter(this.startPoint);
             
@@ -476,10 +476,10 @@ namespace cellgame {
 
         }
 
-        /** ゲーム盤配置 */
-        public boardPlacement() : void {
-            this.boardReset();
-        }
+        // /** ゲーム盤配置 */
+        // public boardPlacement() : void {
+        //     this.boardReset();
+        // }
 
         /** 選択箇所を作成（01専用）
          * @param x : 横位置
