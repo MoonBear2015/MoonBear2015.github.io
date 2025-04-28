@@ -47,31 +47,37 @@ namespace cellgame {
         komas00[8] = new Koma(8,"　","灰被",Colors.White,Colors.Gray);
         komas00[9] = new Koma(9,"　","暗雲",Colors.White,Colors.DeepDarkGray);
 
-        komas00[10] = new Koma(10,"　","空き",Colors.White,Colors.Black);
-        komas00[11] = new Koma(11,"士","武士",Colors.White,Colors.DarkRed);
-        komas00[12] = new Koma(12,"農","農民",Colors.White,Colors.DarkOrange);
-        komas00[13] = new Koma(13,"工","職人",Colors.White,Colors.DarkBlue);
-        komas00[14] = new Koma(14,"商","商人",Colors.White,Colors.DarkGreen);
+        komas00[10] = new Koma(10,"　","空き",Colors.White,             Colors.Black);
+        komas00[11] = new Koma(11,"士","武士",Colors.White,             Colors.DarkRed);
+        komas00[12] = new Koma(12,"農","農民",Colors.White,             Colors.DarkOrange);
+        komas00[13] = new Koma(13,"工","職人",Colors.White,             Colors.DarkBlue);
+        komas00[14] = new Koma(14,"商","商人",Colors.White,             Colors.DarkGreen);
 
-        komas00[20] = new Koma(20,"　","空き:明滅",Colors.White,Colors.Black,true);
-        komas00[21] = new Koma(21,"士","武士:明滅",Colors.White,Colors.DarkRed,true);
-        komas00[22] = new Koma(22,"農","農民:明滅",Colors.White,Colors.DarkOrange,true);
-        komas00[23] = new Koma(23,"工","職人:明滅",Colors.White,Colors.DarkBlue,true);
-        komas00[24] = new Koma(24,"商","商人:明滅",Colors.White,Colors.DarkGreen,true);
+        komas00[20] = new Koma(20,"　","空き:明滅",Colors.White,        Colors.Black,true);
+        komas00[21] = new Koma(21,"士","武士:明滅",Colors.White,        Colors.DarkRed,true);
+        komas00[22] = new Koma(22,"農","農民:明滅",Colors.White,        Colors.DarkOrange,true);
+        komas00[23] = new Koma(23,"工","職人:明滅",Colors.White,        Colors.DarkBlue,true);
+        komas00[24] = new Koma(24,"商","商人:明滅",Colors.White,        Colors.DarkGreen,true);
 
-        komas00[30] = new Koma(30,"　","空き:反転",Colors.Black,Colors.White);
-        komas00[31] = new Koma(31,"士","武士:反転",Colors.DarkRed,Colors.White);
-        komas00[32] = new Koma(32,"農","農民:反転",Colors.DarkOrange,Colors.White);
-        komas00[33] = new Koma(33,"工","職人:反転",Colors.DarkBlue,Colors.White);
-        komas00[34] = new Koma(34,"商","商人:反転",Colors.DarkGreen,Colors.White);
+        komas00[30] = new Koma(30,"　","空き:反転",Colors.Black,        Colors.White);
+        komas00[31] = new Koma(31,"士","武士:反転",Colors.DarkRed,      Colors.White);
+        komas00[32] = new Koma(32,"農","農民:反転",Colors.DarkOrange,   Colors.White);
+        komas00[33] = new Koma(33,"工","職人:反転",Colors.DarkBlue,     Colors.White);
+        komas00[34] = new Koma(34,"商","商人:反転",Colors.DarkGreen,    Colors.White);
 
-        komas00[90] = new Koma(90,"了","了解",Colors.White,Colors.Black,true);
-        komas00[91] = new Koma(91,"否","否定",Colors.White,Colors.Red,true);
-        komas00[92] = new Koma(92,"再","再考",Colors.Black,Colors.Yellow,true);
-        komas00[93] = new Koma(93,"却","却下",Colors.Red,Colors.Black,true);
-        komas00[94] = new Koma(94,"戻","戻る",Colors.White,Colors.Black,false);
-        komas00[95] = new Koma(95,"進","進む",Colors.White,Colors.Black,false);
-        komas00[99] = new Koma(99,"説","説明",Colors.Black,Colors.White,false);
+        komas00[40] = new Koma(40,"　","空き:ネガ",Colors.White,        Colors.Black);
+        komas00[41] = new Koma(41,"士","武士:ネガ",Colors.LightPink,    Colors.Black);
+        komas00[42] = new Koma(42,"農","農民:ネガ",Colors.LightYellow,  Colors.Black);
+        komas00[43] = new Koma(43,"工","職人:ネガ",Colors.LightBlue,    Colors.Black);
+        komas00[44] = new Koma(44,"商","商人:ネガ",Colors.LightGreen,   Colors.Black);
+
+        komas00[90] = new Koma(90,"了","了解",Colors.White,             Colors.Black,true);
+        komas00[91] = new Koma(91,"否","否定",Colors.White,             Colors.Red,true);
+        komas00[92] = new Koma(92,"再","再考",Colors.Black,             Colors.Yellow,true);
+        komas00[93] = new Koma(93,"却","却下",Colors.Red,               Colors.Black,true);
+        komas00[94] = new Koma(94,"戻","戻る",Colors.White,             Colors.Black,false);
+        komas00[95] = new Koma(95,"進","進む",Colors.White,             Colors.Black,false);
+        komas00[99] = new Koma(99,"説","説明",Colors.Black,             Colors.White,false);
 
         komas00[100] = new Koma(100,"　","＊＊　コマ　＊＊",Colors.Black,Colors.White,false);
         
@@ -99,42 +105,51 @@ namespace cellgame {
         
         /** Cell 規定値 01 */
         komas01 = [];
-        komas01[0] = new Koma(0,"　","虚無",Colors.White,Colors.Black);
-        komas01[1] = new Koma(1,"　","赤壁",Colors.White,Colors.Red);
-        komas01[2] = new Koma(2,"　","新緑",Colors.White,Colors.Green);
-        komas01[3] = new Koma(3,"　","辛子",Colors.White,Colors.Yellow);
-        komas01[4] = new Koma(4,"　","青々",Colors.White,Colors.Blue);
-        komas01[5] = new Koma(5,"　","紫煙",Colors.White,Colors.Magenta);
-        komas01[6] = new Koma(6,"　","水面",Colors.White,Colors.Cyan);
-        komas01[7] = new Koma(7,"　","白塗",Colors.White,Colors.White);
-        komas01[8] = new Koma(8,"　","灰被",Colors.White,Colors.Gray);
-        komas01[9] = new Koma(9,"　","暗雲",Colors.White,Colors.DeepDarkGray);
+        komas01[0] = new Koma(0,"　","虚無",Colors.White,               Colors.Black);
+        komas01[1] = new Koma(1,"　","赤壁",Colors.White,               Colors.Red);
+        komas01[2] = new Koma(2,"　","新緑",Colors.White,               Colors.Green);
+        komas01[3] = new Koma(3,"　","辛子",Colors.White,               Colors.Yellow);
+        komas01[4] = new Koma(4,"　","青々",Colors.White,               Colors.Blue);
+        komas01[5] = new Koma(5,"　","紫煙",Colors.White,               Colors.Magenta);
+        komas01[6] = new Koma(6,"　","水面",Colors.White,               Colors.Cyan);
+        komas01[7] = new Koma(7,"　","白塗",Colors.White,               Colors.White);
+        komas01[8] = new Koma(8,"　","灰被",Colors.White,               Colors.Gray);
+        komas01[9] = new Koma(9,"　","暗雲",Colors.White,               Colors.DeepDarkGray);
+        komas01[9] = new Koma(9,"　","暗雲",Colors.White,               Colors.DeepDarkGray);
+        komas01[9] = new Koma(9,"　","暗雲",Colors.White,               Colors.DeepDarkGray);
+        komas01[9] = new Koma(9,"　","暗雲",Colors.White,               Colors.DeepDarkGray);
 
-        komas01[10] = new Koma(10,"　","空き",Colors.White,Colors.Black);
-        komas01[11] = new Koma(11,"侍","侍（士）",Colors.White,Colors.DarkRed);
-        komas01[12] = new Koma(12,"民","民（農）",Colors.White,Colors.DarkOrange);
-        komas01[13] = new Koma(13,"匠","匠（工）",Colors.White,Colors.DarkBlue);
-        komas01[14] = new Koma(14,"売","売人（商）",Colors.White,Colors.DarkGreen);
+        komas01[10] = new Koma(10,"　","空き",Colors.White,              Colors.Black);
+        komas01[11] = new Koma(11,"侍","侍（士）",Colors.White,          Colors.DarkRed);
+        komas01[12] = new Koma(12,"民","民（農）",Colors.White,          Colors.DarkOrange);
+        komas01[13] = new Koma(13,"匠","匠（工）",Colors.White,          Colors.DarkBlue);
+        komas01[14] = new Koma(14,"売","売人（商）",Colors.White,        Colors.DarkGreen);
 
-        komas01[20] = new Koma(20,"　","空き:明滅",Colors.White,Colors.Black,true);
-        komas01[21] = new Koma(21,"侍","侍（士）:明滅",Colors.White,Colors.DarkRed,true);
-        komas01[22] = new Koma(22,"民","民（農）:明滅",Colors.White,Colors.DarkOrange,true);
-        komas01[23] = new Koma(23,"匠","匠（工）:明滅",Colors.White,Colors.DarkBlue,true);
-        komas01[24] = new Koma(24,"売","売人（商）:明滅",Colors.White,Colors.DarkGreen,true);
+        komas01[20] = new Koma(20,"　","空き:明滅",Colors.White,          Colors.Black,true);
+        komas01[21] = new Koma(21,"侍","侍（士）:明滅",Colors.White,      Colors.DarkRed,true);
+        komas01[22] = new Koma(22,"民","民（農）:明滅",Colors.White,      Colors.DarkOrange,true);
+        komas01[23] = new Koma(23,"匠","匠（工）:明滅",Colors.White,      Colors.DarkBlue,true);
+        komas01[24] = new Koma(24,"売","売人（商）:明滅",Colors.White,    Colors.DarkGreen,true);
         
-        komas01[30] = new Koma(30,"　","空き 反転",Colors.Black,Colors.White);
-        komas01[31] = new Koma(31,"侍","侍（士） 反転",Colors.DarkRed,Colors.White);
-        komas01[32] = new Koma(32,"民","民（農） 反転",Colors.DarkOrange,Colors.White);
-        komas01[33] = new Koma(33,"匠","匠（工） 反転",Colors.DarkBlue,Colors.White);
-        komas01[34] = new Koma(34,"売","売人（商） 反転",Colors.DarkGreen,Colors.White);
+        komas01[30] = new Koma(30,"　","空き 反転",Colors.Black,                Colors.White);
+        komas01[31] = new Koma(31,"侍","侍（士） 反転",Colors.DarkRed,          Colors.White);
+        komas01[32] = new Koma(32,"民","民（農） 反転",Colors.DarkOrange,       Colors.White);
+        komas01[33] = new Koma(33,"匠","匠（工） 反転",Colors.DarkBlue,         Colors.White);
+        komas01[34] = new Koma(34,"売","売人（商） 反転",Colors.DarkGreen,      Colors.White);
+        
+        komas01[40] = new Koma(40,"　","空き ネガ",Colors.White,                 Colors.Black);
+        komas01[41] = new Koma(41,"侍","侍（士） ネガ",Colors.LightPink,         Colors.Black);
+        komas01[42] = new Koma(42,"民","民（農） ネガ",Colors.LightYellow,       Colors.Black);
+        komas01[43] = new Koma(43,"匠","匠（工） ネガ",Colors.LightBlue,         Colors.Black);
+        komas01[44] = new Koma(44,"売","売人（商） ネガ",Colors.LightGreen,      Colors.Black);
 
-        komas01[90] = new Koma(90,"了","了解",Colors.White,Colors.Black,true);
-        komas01[91] = new Koma(91,"否","否定",Colors.White,Colors.Red,true);
-        komas01[92] = new Koma(92,"再","再考",Colors.Black,Colors.Yellow,true);
-        komas01[93] = new Koma(93,"却","却下",Colors.Red,Colors.Black,true);
-        komas01[94] = new Koma(94,"戻","戻る",Colors.White,Colors.Black,false);
-        komas01[95] = new Koma(95,"進","進む",Colors.White,Colors.Black,false);
-        komas01[99] = new Koma(99,"説","説明",Colors.Black,Colors.White,false);
+        komas01[90] = new Koma(90,"了","了解",Colors.White,                     Colors.Black,true);
+        komas01[91] = new Koma(91,"否","否定",Colors.White,                     Colors.Red,true);
+        komas01[92] = new Koma(92,"再","再考",Colors.Black,                     Colors.Yellow,true);
+        komas01[93] = new Koma(93,"却","却下",Colors.Red,                       Colors.Black,true);
+        komas01[94] = new Koma(94,"戻","戻る",Colors.White,                     Colors.Black,false);
+        komas01[95] = new Koma(95,"進","進む",Colors.White,                     Colors.Black,false);
+        komas01[99] = new Koma(99,"説","説明",Colors.Black,                     Colors.White,false);
 
         komas01[100] = new Koma(100,"　","＊＊　駒　＊＊",Colors.Black,Colors.White,false);
 
@@ -163,34 +178,40 @@ namespace cellgame {
 
         /** Cell 規定値 02 */
         komas02 = [];
-        komas02[0] = new Koma(0,"　","虚無",Colors.White,Colors.Black);
-        komas02[1] = new Koma(1,"　","赤壁",Colors.White,Colors.Red);
-        komas02[2] = new Koma(2,"　","新緑",Colors.White,Colors.Green);
-        komas02[3] = new Koma(3,"　","辛子",Colors.White,Colors.Yellow);
-        komas02[4] = new Koma(4,"　","青々",Colors.White,Colors.Blue);
-        komas02[5] = new Koma(5,"　","紫煙",Colors.White,Colors.Magenta);
-        komas02[6] = new Koma(6,"　","水面",Colors.White,Colors.Cyan);
-        komas02[7] = new Koma(7,"　","白塗",Colors.White,Colors.White);
-        komas02[8] = new Koma(8,"　","灰被",Colors.White,Colors.Gray);
-        komas02[9] = new Koma(9,"　","暗雲",Colors.White,Colors.DeepDarkGray);
+        komas02[0] = new Koma(0,"　","虚無",Colors.White,               Colors.Black);
+        komas02[1] = new Koma(1,"　","赤壁",Colors.White,               Colors.Red);
+        komas02[2] = new Koma(2,"　","新緑",Colors.White,               Colors.Green);
+        komas02[3] = new Koma(3,"　","辛子",Colors.White,               Colors.Yellow);
+        komas02[4] = new Koma(4,"　","青々",Colors.White,               Colors.Blue);
+        komas02[5] = new Koma(5,"　","紫煙",Colors.White,               Colors.Magenta);
+        komas02[6] = new Koma(6,"　","水面",Colors.White,               Colors.Cyan);
+        komas02[7] = new Koma(7,"　","白塗",Colors.White,               Colors.White);
+        komas02[8] = new Koma(8,"　","灰被",Colors.White,               Colors.Gray);
+        komas02[9] = new Koma(9,"　","暗雲",Colors.White,               Colors.DeepDarkGray);
 
-        komas02[10] = new Koma(10,"　","*space*",Colors.White,Colors.Black);
-        komas02[11] = new Koma(11,"Ａ","Army（士）",Colors.White,Colors.DarkRed);
-        komas02[12] = new Koma(12,"Ｆ","Farming（農）",Colors.White,Colors.DarkOrange);
-        komas02[13] = new Koma(13,"Ｉ","Industrial（工）",Colors.White,Colors.DarkBlue);
-        komas02[14] = new Koma(14,"Ｃ","Commercial（商）",Colors.White,Colors.DarkGreen);
+        komas02[10] = new Koma(10,"　","*space*",Colors.White,          Colors.Black);
+        komas02[11] = new Koma(11,"Ａ","Army（士）",Colors.White,       Colors.DarkRed);
+        komas02[12] = new Koma(12,"Ｆ","Farming（農）",Colors.White,    Colors.DarkOrange);
+        komas02[13] = new Koma(13,"Ｉ","Industrial（工）",Colors.White, Colors.DarkBlue);
+        komas02[14] = new Koma(14,"Ｃ","Commercial（商）",Colors.White, Colors.DarkGreen);
 
-        komas02[20] = new Koma(20,"　","*space*:flash",Colors.White,Colors.Black,true);
-        komas02[21] = new Koma(21,"Ａ","Army（士）:flash",Colors.White,Colors.DarkRed,true);
-        komas02[22] = new Koma(22,"Ｆ","Farming（農）:flash",Colors.White,Colors.DarkOrange,true);
-        komas02[23] = new Koma(23,"Ｉ","Industrial（工）:flash",Colors.White,Colors.DarkBlue,true);
-        komas02[24] = new Koma(24,"Ｃ","Commercial（商）:flash",Colors.White,Colors.DarkGreen,true);
+        komas02[20] = new Koma(20,"　","*space*:flash",Colors.White,            Colors.Black,true);
+        komas02[21] = new Koma(21,"Ａ","Army（士）:flash",Colors.White,         Colors.DarkRed,true);
+        komas02[22] = new Koma(22,"Ｆ","Farming（農）:flash",Colors.White,      Colors.DarkOrange,true);
+        komas02[23] = new Koma(23,"Ｉ","Industrial（工）:flash",Colors.White,   Colors.DarkBlue,true);
+        komas02[24] = new Koma(24,"Ｃ","Commercial（商）:flash",Colors.White,   Colors.DarkGreen,true);
         
-        komas02[30] = new Koma(30,"　","*space* 反転",Colors.Black,Colors.White);
-        komas02[31] = new Koma(31,"Ａ","Army（士） 反転",Colors.DarkRed,Colors.White);
-        komas02[32] = new Koma(32,"Ｆ","Farming（農） 反転",Colors.DarkOrange,Colors.White);
-        komas02[33] = new Koma(33,"Ｉ","Industrial（工） 反転",Colors.DarkBlue,Colors.White);
-        komas02[34] = new Koma(34,"Ｃ","Commercial（商） 反転",Colors.DarkGreen,Colors.White);
+        komas02[30] = new Koma(30,"　","*space* 反転",Colors.Black,                 Colors.White);
+        komas02[31] = new Koma(31,"Ａ","Army（士） 反転",Colors.DarkRed,            Colors.White);
+        komas02[32] = new Koma(32,"Ｆ","Farming（農） 反転",Colors.DarkOrange,      Colors.White);
+        komas02[33] = new Koma(33,"Ｉ","Industrial（工） 反転",Colors.DarkBlue,     Colors.White);
+        komas02[34] = new Koma(34,"Ｃ","Commercial（商） 反転",Colors.DarkGreen,    Colors.White);
+        
+        komas02[40] = new Koma(40,"　","*space* ネガ",Colors.White,                 Colors.Black);
+        komas02[41] = new Koma(41,"Ａ","Army（士） ネガ",Colors.LightPink,          Colors.Black);
+        komas02[42] = new Koma(42,"Ｆ","Farming（農） ネガ",Colors.LightYellow,     Colors.Black);
+        komas02[43] = new Koma(43,"Ｉ","Industrial（工） ネガ",Colors.LightBlue,    Colors.Black);
+        komas02[44] = new Koma(44,"Ｃ","Commercial（商） ネガ",Colors.LightGreen,   Colors.Black);
 
         komas02[90] = new Koma(90,"ｙ","yes",Colors.White,Colors.Black,true);
         komas02[91] = new Koma(91,"ｎ","no",Colors.White,Colors.Red,true);
@@ -442,13 +463,16 @@ namespace cellgame {
 
         /** 貼り付け */
         Paste(hand : IHand) : void;
+
+        /** 突合 */
+        equal(hand : IHand) : boolean;
     }
 
     /**
      * class Hand
      * 手
      */
-    export class Hand {
+    export class Hand implements IHand {
         /** 手の座標 */    
         point : Point = Point.New(0,0);
         /** 手のコード */
@@ -469,6 +493,11 @@ namespace cellgame {
         public Paste(hand : IHand) : void {
             this.point.Paste(hand.point);
             this.code = hand.code;
+        }
+
+        /** 突合 */
+        public equal(hand : IHand) : boolean {            
+            return this.point.equal(hand.point) && this.code === hand.code;
         }
 
     }

@@ -234,4 +234,14 @@ namespace cellgame {
 
     }
 
+    /** 座標クラス配列支援クラス */
+    export class HandArray extends CellArray<IHand> implements ICellArray<IHand> {
+        /** item初期値 */
+        public itemNew = () => new Hand();
+        /** item比較 */
+        public itemEqual = (item1 : IHand, item2 : IHand) : boolean => item1.equal(item2);
+
+    }
+    
+
 }
