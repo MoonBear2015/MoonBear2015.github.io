@@ -358,8 +358,8 @@ namespace cellgame {
         }
 
         // そのセルが空きかどうか
-        public nearCheck = (nearPoint : Point) : booleah => {
-            // 外なら空き
+        public blankCheck = (nearPoint : Point) : boolean => {
+            // 外なら空きと扱う
             if (nearPoint.x < 0 || nearPoint.x >= this.boardSize) return true;
             if (nearPoint.y < 0 || nearPoint.y >= this.boardSize) return true;
             let koma = this.board.cellGetter(nearPoint);
@@ -367,7 +367,27 @@ namespace cellgame {
             if (koma == 10) return true;
             // でなければ空きでは無い
             return false
-        } 
+        }
+
+        // 外側のチェックを行う。左右に空きがないかをチェックする。上下はチェックしない。
+        public outerCheck = (checkPoint : Point) : boolean => {
+            let leftPoint = Point.New(checkPoint.x - 1,checkPoint.y);
+            let rightPoint = Point.New(checkPoint.x + 1,checkPoint.y);
+            if (this.blankCheck(leftPoint)) return true;
+            if (this.blankCheck(rightPoint)) return true;
+            return false;
+        }
+
+        // 外側の升を検索する。
+        public outerSearch = () : Point[] => {
+            let results : Point[] = [];
+            for(let y = 0; y < this.boardSize; y++) {
+                for(let x = 0; x < this.boardSize; x++) {
+                    let point = Point.New(x,y);
+                    
+
+
+        }
 
         /** ゲーム盤作成 設定済みレベルに応じて作成 */
         public boardCreate() : void {
