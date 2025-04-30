@@ -167,9 +167,6 @@ namespace cellgame {
             }
         }
 
-        /** 賭け点の単価 */
-        public betPoint = () : number => this.blockCount + 1;
-
         /**
          * 表示作成
          */
@@ -369,44 +366,70 @@ namespace cellgame {
             return false
         }
 
-        // 外側のチェックを行う。左右に空きがないかをチェックする。上下はチェックしない。
-        public outerCheck = (checkPoint : Point) : boolean => {
+        // 外側のチェックを行う。他の駒の隣で左右に空きがないかをチェックする。上下はチェックしない。
+        // 0:孤独 1:外側 2:内側
+        public outerCheck = (checkPoint : Point) : number => {
             let leftPoint = Point.New(checkPoint.x - 1,checkPoint.y);
             let rightPoint = Point.New(checkPoint.x + 1,checkPoint.y);
-            if (this.blankCheck(leftPoint)) return true;
-            if (this.blankCheck(rightPoint)) return true;
-            return false;
+            let blankCount = 0;
+            if (this.blankCheck(leftPoint)) blankCount++;
+            if (this.blankCheck(rightPoint)) blankCount++;
+            return blankCount;
         }
 
-        // 外側の升を検索する。
-        public outerSearch = () : Point[] => {
-            let results : Point[] = [];
+        // 外側、内側に該当するセルを検索する
+        public cellSearch = (blankCount : number,isBlank: boolean) : Point[] => {
+            let result : Point[] = [];
             for(let y = 0; y < this.boardSize; y++) {
                 for(let x = 0; x < this.boardSize; x++) {
                     let point = Point.New(x,y);
-                    
-
-
+                    let c = this.board.cellGetter(point);
+                    if (c != 10 && isBlank) continue;
+                    if (c == 10 && !isBlank) continue;
+                    let o = this.outerCheck(point);
+                    if (o == blankCount) {
+                        result.push(point);
+                    }
+                }
+            }
+            return result;
         }
 
         /** ゲーム盤作成 設定済みレベルに応じて作成 */
         public boardCreate() : void {
             this.boardSizeCalc();
 
-            // 初期配置作成
+            // ボード初期化
             this.komas = new HandArray();
             this.board = new NumArray();
+
+            // 配置作成
+            let setKoma = this.gameLevel % 4;
             for(let i = 0; i < this.pearCount; i++) {
-                    
-                    let x = Math.floor((this.boardSize - size) / 2);
-                    let y = Math.floor((this.boardSize - size) / 2);
-                    return Point.New(x,y);
+                for(let j = 0; j < 2; j++) {
+                    let outerPoints = this.cellSearch(1,true);
+                    let lonelyPoints = this.cellSearch(0,true);
+                    let innerPoints = this.cellSearch(2,false);
+                    if (outerPoints.length == 0 && lonelyPoints.length == 0) {
+                        this.BugLog("空きがありません。");
+                        return;
+                    }
+                    let putPoint = Point.New(0,0);
+                    if (outerPoints.length == 0) {
+                        let i = rnd_max(lonelyPoints.length - 1);
+                        putPoint = lonelyPoints[i].copy();
+                    } else {
+                        let i = rnd_max(outerPoints.length - 1);
+                        putPoint = outerPoints[i].copy();
+                    }
+                    this.board.cellSetter(putPoint,setKoma + 10);
+                    this.komas.items.push(new Hand(putPoint,setKoma + 10));
+                }
+                setKoma++;
+                if (setKoma > 3) setKoma = 0;
             }
 
-
-            this.boardPlacement();
-
-            this.selectCellSetter(this.startPoint);
+            this.selectCellSetter();
             
             this.isGameClear = false;
             this.isGameOver = false;
@@ -421,27 +444,17 @@ namespace cellgame {
          * @param x : 横位置
          * @param y : 縦位置
          */        
-        private selectCellSetter(boardPoint : Point) : void {
+        private selectCellSetter() : void {
             // 初期化
             for(let y0 = 0; y0 < this.boardSize; y0++) {
                 for(let x0 = 0; x0 < this.boardSize; x0++) {
                     let point0 = Point.New(x0,y0);
-                    let c = this.board.cellGetter(point0);
-                    if (c == 20) {
-                        this.board.cellSetter(point0,10);
+                    let k = this.board.cellGetter(point0);
+                    if (k == 10) continue;
+                    let c = this.outerCheck(point0);
+                    if (c == 0 || c == 1) {
+                        this.board.cellSetter(point0,k + 10);
                     }
-                }
-            }
-            // 設定
-            for(let d = 0; d < 4; d++) {
-                let xx = boardPoint.x + Direction4s[d].x;
-                let yy = boardPoint.y + Direction4s[d].y;
-                if (xx < 0 || xx >= this.boardSize) continue;
-                if (yy < 0 || yy >= this.boardSize) continue;
-                let pp = Point.New(xx,yy);
-                let c = this.board.cellGetter(pp);
-                if (c == 10) {
-                    this.board.cellSetter(pp,20);
                 }
             }
             this.boardToCellsAllSetter();
