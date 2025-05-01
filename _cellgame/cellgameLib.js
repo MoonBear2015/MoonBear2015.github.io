@@ -354,6 +354,10 @@ var cellgame;
             this.point.Paste(hand.point);
             this.code = hand.code;
         }
+        /** 突合 */
+        equal(hand) {
+            return this.point.equal(hand.point) && this.code === hand.code;
+        }
     }
     cellgame.Hand = Hand;
 })(cellgame || (cellgame = {}));

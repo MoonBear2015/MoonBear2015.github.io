@@ -19,15 +19,6 @@ namespace cellgame {
         /** 段位 */
         public gameLevel : number = 0;
 
-        /** 賭点 */
-        public gameBet : number = 0;
-
-        /** 賭点最大値 */
-        public gameBetMax : number = 0;
-
-        /** 賭点表示 */
-        public canDisplayBet : boolean = false;
-
         /** 得点 */
         public gamePoint : number = 0;
 
@@ -88,6 +79,7 @@ namespace cellgame {
             this.statusInit();
             this.gameLevel = 0;
             this.boardSize = 2;
+            this.pearCount = 1;
             this.cells.cellReset(6,0);
         }
 
@@ -110,16 +102,10 @@ namespace cellgame {
                     this.newHand = hand;
                     this.boardHandPush(hand);
                     this.isPlayStarted = true;
-                    this.gameBet += this.betPoint();
-                    if (this.gameBet > this.gameBetMax) {
-                        this.gameBetMax = this.gameBet;
-                        this.canDisplayBet = true;
-                    }
                     this.statusDisplayer();
                     return;
                 }
                 if (code == buttonCancel) {
-                    this.gamePoint -= this.gameBetMax;
                     this.canDisplayPoint = true;
                     this.gameStep = 1;
                     return;
@@ -131,7 +117,6 @@ namespace cellgame {
                 if (code == buttonBack) {
                     if (this.nowHandCount > -1) {
                         this.nowHandCount--;
-                        this.gameBet -= this.betPoint();
                         this.boardHandMove(this.nowHandCount);
                     }
                     return;
@@ -139,10 +124,6 @@ namespace cellgame {
                 if (code == buttonForward) {
                     if (this.nowHandCount < this.hands.length - 1) {
                         this.nowHandCount += 1;
-                        this.gameBet += this.betPoint();
-                        if (this.gameBet > this.gameBetMax) {
-                            this.gameBetMax = this.gameBet;
-                        }
                         this.boardHandMove(this.nowHandCount);
                     }
                     return;
@@ -152,14 +133,12 @@ namespace cellgame {
                 if (code == buttonOk) {
                     if (this.isGameClear) {
                         this.gameStep = 1;
-                        this.gamePoint += this.gameBetMax;
                         this.canDisplayPoint = true;
                         this.gameLevel++;
                         return;
                     }
                     if (this.isGameOver) {
                         this.gameStep = 1;
-                        this.gamePoint -= this.gameBetMax;
                         this.canDisplayPoint = true;
                         return;
                     }
@@ -196,8 +175,6 @@ namespace cellgame {
                         this.buttonSetter();
 
                         this.gameStep = 2;
-                        this.gameBet = 0;
-                        this.gameBetMax = 0;
                         this.isGamePlay = true;
                         break;
                     }
@@ -208,7 +185,8 @@ namespace cellgame {
                         this.messages = [];
                         this.buttonSetter();
                         if (!this.isPlayStarted) {
-                            this.messages.push(new Message("士農工商を拾え",this.messagePotision(),1,Colors.White,Colors.Black));
+                            let startMessage = titleChange("@TITLE@を拾え");
+                            this.messages.push(new Message(startMessage,this.messagePotision(),1,Colors.White,Colors.Black));
                         }
 
                         this.statusDisplayer();
@@ -328,9 +306,6 @@ namespace cellgame {
             this.gameLevel = 0;
             this.gamePoint = 0;
             this.canDisplayPoint = false;
-            this.gameBet = 0;
-            this.gameBetMax = 0;
-            this.canDisplayBet = false;
             
             this.boardSize = 2;
             this.pearCount = 1;
@@ -482,7 +457,7 @@ namespace cellgame {
             this.board.cellReset(this.boardSize,10);
 
 
-            this.selectCellSetter(this.startPoint);
+            this.selectCellSetter();
 
             this.boardToCellsAllSetter();
         }
@@ -535,7 +510,7 @@ namespace cellgame {
             this.hands.push(hand);
             // this.BugLog("手を追加しました。");
             this.newHand = hand;
-            this.selectCellSetter(this.ToBoardPoint(this.newHand.point));
+            this.selectCellSetter();
 
             return true;
         }
@@ -565,10 +540,10 @@ namespace cellgame {
                 }
                 this.newHand = this.hands[handNo];
                 this.nowCode = this.newHand.code;
-                this.selectCellSetter(this.ToBoardPoint(this.newHand.point));
+                this.selectCellSetter();
             } else {
                 this.nowCode = 11;
-                this.selectCellSetter(this.startPoint);
+                this.selectCellSetter();
             }
         }
 
@@ -632,16 +607,6 @@ namespace cellgame {
                 this.statusIsVisible[1] = false;
             }
 
-
-            if (this.canDisplayBet) {
-                this.statusName[2] = "賭点";
-                this.status[2] = this.gameBetMax;
-                this.statusNameIsVisible[2] = true;
-                this.statusIsVisible[2] = true;
-            } else {
-                this.statusNameIsVisible[2] = false;
-                this.statusIsVisible[2] = false;
-            }
             if (this.canDisplayPoint) {
                 this.statusName[3] = "得点";
                 this.status[3] = this.gamePoint;
@@ -653,15 +618,12 @@ namespace cellgame {
             }
 
         }
-        
-
 
         public toComment() : string {
             let result = "";
-            result +="★ 士農工商 ★\n";
-            result +="士農工商を順に配置し、\n";
-            result +="士農工商で盤面を埋めて、\n";
-            result +="士農工商の順列を学ぶのだ。\n";
+            result +="★ @TITLE@☆拾い ★\n";
+            result +="@TITLE@の二駒を外側から選び、\n";
+            result +="@TITLE@を順に拾え。\n";
             result +="\n";
             result +="却：盤面の却下\n";
             result +="戻：手を戻す\n";

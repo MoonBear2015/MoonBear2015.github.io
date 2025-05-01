@@ -88,6 +88,8 @@ var cellgame;
                     return false;
                 return true;
             };
+            /** 移動先の座業 */
+            this.Move4To = (direction4s) => cellgame.Move4To(this, direction4s);
             this.x = x;
             this.y = y;
             this.isUndefined = isUndefined;
@@ -134,6 +136,8 @@ var cellgame;
         new Point(false, -1, 0),
         new Point(false, -1, -1) // 左上
     ];
+    /** 座標移動先（4方向） */
+    cellgame.Move4To = (point, direction4) => Point.Add(point, cellgame.Direction4s[direction4]);
     class Colors {
     }
     // ピンク

@@ -152,4 +152,15 @@ var cellgame;
         }
     }
     cellgame.PointArray = PointArray;
+    /** 座標クラス配列支援クラス */
+    class HandArray extends CellArray {
+        constructor() {
+            super(...arguments);
+            /** item初期値 */
+            this.itemNew = () => new cellgame.Hand();
+            /** item比較 */
+            this.itemEqual = (item1, item2) => item1.equal(item2);
+        }
+    }
+    cellgame.HandArray = HandArray;
 })(cellgame || (cellgame = {}));

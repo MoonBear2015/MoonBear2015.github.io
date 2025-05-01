@@ -204,7 +204,8 @@ var cellgame;
                         this.messages = [];
                         this.buttonSetter();
                         if (!this.isPlayStarted) {
-                            this.messages.push(new cellgame.Message("士農工商を並べよ", this.messagePotision(), 1, cellgame.Colors.White, cellgame.Colors.Black));
+                            let startMessage = cellgame.titleChange("@TITLE@を並べよ");
+                            this.messages.push(new cellgame.Message(startMessage, this.messagePotision(), 1, cellgame.Colors.White, cellgame.Colors.Black));
                         }
                         this.statusDisplayer();
                         this.boardCheck();
@@ -418,7 +419,7 @@ var cellgame;
             }
             // this.nowCell = 11;
             // this.board.cellSetter(this.startPoint.x,this.startPoint.y,this.nowCell);
-            this.boardPlacement();
+            this.boardReset();
             this.selectCellSetter(this.startPoint);
             this.isGameClear = false;
             this.isGameOver = false;
@@ -426,10 +427,10 @@ var cellgame;
             this.hands = [];
             this.nowHandCount = -1;
         }
-        /** ゲーム盤配置 */
-        boardPlacement() {
-            this.boardReset();
-        }
+        // /** ゲーム盤配置 */
+        // public boardPlacement() : void {
+        //     this.boardReset();
+        // }
         /** 選択箇所を作成（01専用）
          * @param x : 横位置
          * @param y : 縦位置
