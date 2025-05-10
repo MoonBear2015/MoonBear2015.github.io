@@ -10,13 +10,19 @@ var cellgame;
             /** ゲーム名 */
             this.gameName = "骨";
             this.cellSize = 0;
-            this.backColor = cellgame.Colors.Black;
             this.cells = new cellgame.NumArray();
             this.messages = [];
             this.statusName = [];
             this.statusNameIsVisible = [];
             this.status = [];
             this.statusIsVisible = [];
+            /** このゲームでの空き駒 */
+            this.blankCode = 10;
+            /** 盤外の駒 */
+            this.backCode = 88;
+            /** 背景色 */
+            this.backColor = () => cellgame.komas[this.backCode].backColor;
+            /** ゲームの状態 */
             this.gameStep = 0;
             /** 勝利メッセージ返却 */
             this.msgWinSelector = () => cellgame.msgPatterns[cellgame.rnd(10)];

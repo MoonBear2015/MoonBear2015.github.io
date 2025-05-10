@@ -8,14 +8,23 @@ namespace cellgame {
         public gameName : string = "骨";
 
         public cellSize : number = 0;
-        public backColor : string = Colors.Black;
         public cells : ICellArray<number> = new NumArray();
         public messages : IMessage[] = [];
         public statusName : string[] = [];
         public statusNameIsVisible : boolean[] = [];
         public status : number[] = [];
         public statusIsVisible : boolean[] = [];
+        
+        /** このゲームでの空き駒 */
+        public blankCode : number = 10;
 
+        /** 盤外の駒 */
+        public backCode : number = 88;
+
+        /** 背景色 */
+        public backColor = () : string => komas[this.backCode].backColor;
+
+        /** ゲームの状態 */
         public gameStep : number = 0;
 
         /** コンストラクタ */

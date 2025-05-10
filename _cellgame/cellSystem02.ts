@@ -32,6 +32,22 @@ namespace cellgame {
         public board : ICellArray<number> = new NumArray();
         /** 画面に対するゲーム盤の位置 */
         public boardCorner : Point = new Point(true);
+        
+        /** このゲームでの空き駒 */
+        public blankCode : number = 82;
+
+        /** このゲームでの選択駒 */
+        public selectCode : number = 20;
+
+        /** 選択駒かどうかの判断 */
+        public isSelectCode=(code : number) : boolean => code == this.selectCode;
+
+        /** 盤外の駒 */
+        public backCode : number = 82;
+
+        /** 背景色 */
+        // public backColor = () : string => komas[this.backCode].backColor;
+
 
         /** 駒の配置 */
         public komas : HandArray = new HandArray();
@@ -65,9 +81,6 @@ namespace cellgame {
 
         /** コードのループ */
         public loopCodes : number[] = [11,12,13,14];
-
-        /** 背景色 */
-        public backColor: string = Colors.DarkBlue;
 
         constructor() {
             super();
@@ -317,7 +330,7 @@ namespace cellgame {
             this.isGamePlay = false;
             this.isPlayStarted = false;
 
-            this.board.cellReset(this.boardSize,10);
+            this.board.cellReset(this.boardSize,this.blankCode);
             this.hands = [];          
         }
 
@@ -330,13 +343,13 @@ namespace cellgame {
         }
 
         // そのセルが空きかどうか
-        public blankCheck = (nearPoint : Point) : boolean => {
+        public isBlankCell = (nearPoint : Point) : boolean => {
             // 外なら空きと扱う
             if (nearPoint.x < 0 || nearPoint.x >= this.boardSize) return true;
             if (nearPoint.y < 0 || nearPoint.y >= this.boardSize) return true;
             let koma = this.board.cellGetter(nearPoint);
-            // 空き升なら空き
-            if (koma == 10) return true;
+            // 空き駒なら空き
+            if (koma == this.blankCode) return true;
             // でなければ空きでは無い
             return false
         }
@@ -347,8 +360,8 @@ namespace cellgame {
             let leftPoint = Point.New(checkPoint.x - 1,checkPoint.y);
             let rightPoint = Point.New(checkPoint.x + 1,checkPoint.y);
             let blankCount = 0;
-            if (this.blankCheck(leftPoint)) blankCount++;
-            if (this.blankCheck(rightPoint)) blankCount++;
+            if (this.isBlankCell(leftPoint)) blankCount++;
+            if (this.isBlankCell(rightPoint)) blankCount++;
             return blankCount;
         }
 
@@ -359,8 +372,8 @@ namespace cellgame {
                 for(let x = 0; x < this.boardSize; x++) {
                     let point = Point.New(x,y);
                     let c = this.board.cellGetter(point);
-                    if (c != 10 && isBlank) continue;
-                    if (c == 10 && !isBlank) continue;
+                    if (c != this.blankCode && isBlank) continue;
+                    if (c == this.blankCode && !isBlank) continue;
                     let o = this.outerCheck(point);
                     if (o == blankCount) {
                         result.push(point);

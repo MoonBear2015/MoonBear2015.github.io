@@ -28,6 +28,16 @@ var cellgame;
             this.board = new cellgame.NumArray();
             /** 画面に対するゲーム盤の位置 */
             this.boardCorner = new cellgame.Point(true);
+            /** このゲームでの空き駒 */
+            this.blankCode = 82;
+            /** このゲームでの選択駒 */
+            this.selectCode = 20;
+            /** 選択駒かどうかの判断 */
+            this.isSelectCode = (code) => code == this.selectCode;
+            /** 盤外の駒 */
+            this.backCode = 82;
+            /** 背景色 */
+            // public backColor = () : string => komas[this.backCode].backColor;
             /** 駒の配置 */
             this.komas = new cellgame.HandArray();
             /** 手 */
@@ -52,8 +62,6 @@ var cellgame;
             this.isPlayStarted = false;
             /** コードのループ */
             this.loopCodes = [11, 12, 13, 14];
-            /** 背景色 */
-            this.backColor = cellgame.Colors.DarkBlue;
             /** 了ボタンの位置 */
             this.pointOk = () => cellgame.Point.New(Math.floor(this.cellSize / 2), this.cellSize - 1);
             /** 却ボタンの位置 */
@@ -63,15 +71,15 @@ var cellgame;
             /** 進ボタンの位置 */
             this.pointForward = () => cellgame.Point.New(this.cellSize - 1, this.cellSize - 1);
             // そのセルが空きかどうか
-            this.blankCheck = (nearPoint) => {
+            this.isBlankCell = (nearPoint) => {
                 // 外なら空きと扱う
                 if (nearPoint.x < 0 || nearPoint.x >= this.boardSize)
                     return true;
                 if (nearPoint.y < 0 || nearPoint.y >= this.boardSize)
                     return true;
                 let koma = this.board.cellGetter(nearPoint);
-                // 空き升なら空き
-                if (koma == 10)
+                // 空き駒なら空き
+                if (koma == this.blankCode)
                     return true;
                 // でなければ空きでは無い
                 return false;
@@ -82,9 +90,9 @@ var cellgame;
                 let leftPoint = cellgame.Point.New(checkPoint.x - 1, checkPoint.y);
                 let rightPoint = cellgame.Point.New(checkPoint.x + 1, checkPoint.y);
                 let blankCount = 0;
-                if (this.blankCheck(leftPoint))
+                if (this.isBlankCell(leftPoint))
                     blankCount++;
-                if (this.blankCheck(rightPoint))
+                if (this.isBlankCell(rightPoint))
                     blankCount++;
                 return blankCount;
             };
@@ -95,9 +103,9 @@ var cellgame;
                     for (let x = 0; x < this.boardSize; x++) {
                         let point = cellgame.Point.New(x, y);
                         let c = this.board.cellGetter(point);
-                        if (c != 10 && isBlank)
+                        if (c != this.blankCode && isBlank)
                             continue;
-                        if (c == 10 && !isBlank)
+                        if (c == this.blankCode && !isBlank)
                             continue;
                         let o = this.outerCheck(point);
                         if (o == blankCount) {
@@ -327,7 +335,7 @@ var cellgame;
             this.isGameClear = false;
             this.isGamePlay = false;
             this.isPlayStarted = false;
-            this.board.cellReset(this.boardSize, 10);
+            this.board.cellReset(this.boardSize, this.blankCode);
             this.hands = [];
         }
         /** ゲーム枠の大きさを計算 */

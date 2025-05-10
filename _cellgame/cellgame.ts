@@ -637,10 +637,10 @@ namespace cellgame {
         
         CalcGameSize(gameSystem.cellSize);
         
-        ctx.fillStyle = gameSystem.backColor;
+        ctx.fillStyle = gameSystem.backColor();
 
         ctx.fillRect(0, 0, CVSWIDTH, CVSHEIGHT);
-        ctx.fillStyle = gameSystem.backColor;
+        ctx.fillStyle = gameSystem.backColor();
         ctx.fillRect(gX2,gY2,gW2,gH2);
 
         AllCellDisplay();
@@ -791,6 +791,7 @@ namespace cellgame {
         }
         let a = gameSystem.cells.cellAddress(Point.New(x,y));
         let c = gameSystem.cells.items[a];
+        console.log("cellDisplay",x,y,a,c);
         cellTextDisplay(
             komas[c].char,
             komas[c].foreColor,

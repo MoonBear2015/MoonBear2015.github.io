@@ -6,8 +6,14 @@ namespace cellgame {
         /** ゲーム名 */
         gameName : string;
 
+        /** このゲームでの空き駒 */
+        blankCode : number;
+
+        /** 盤外の駒 */
+        backCode : number;
+
         /** 背景色 */
-        backColor : string;
+        backColor() : string;
 
         /** 升目の数（縦・横） */
         cellSize : number;
@@ -30,10 +36,7 @@ namespace cellgame {
         /** ステータス表示フラグ */
         statusIsVisible : boolean[];
         
-        /** 
-         * ゲームステップ : ゲームの現在の状態 
-         * ゲームスタート・ゲーム中のレベル・ゲームオーバーなど
-         * */
+        /** ゲームの状態 */
         gameStep : number;
         
         /** 初期化 */

@@ -442,9 +442,9 @@ var cellgame;
             return;
         }
         CalcGameSize(cellgame.gameSystem.cellSize);
-        ctx.fillStyle = cellgame.gameSystem.backColor;
+        ctx.fillStyle = cellgame.gameSystem.backColor();
         ctx.fillRect(0, 0, cellgame.CVSWIDTH, cellgame.CVSHEIGHT);
-        ctx.fillStyle = cellgame.gameSystem.backColor;
+        ctx.fillStyle = cellgame.gameSystem.backColor();
         ctx.fillRect(cellgame.gX2, cellgame.gY2, cellgame.gW2, cellgame.gH2);
         AllCellDisplay();
     }
@@ -563,6 +563,7 @@ var cellgame;
         }
         let a = cellgame.gameSystem.cells.cellAddress(cellgame.Point.New(x, y));
         let c = cellgame.gameSystem.cells.items[a];
+        console.log("cellDisplay", x, y, a, c);
         cellTextDisplay(cellgame.komas[c].char, cellgame.komas[c].foreColor, cellgame.komas[c].backColor, cellgame.gX3[a], cellgame.gY3[a], cellgame.gW3, cellgame.gH3, cellgame.komas[c].isFlash);
     }
     cellgame.cellDisplay = cellDisplay;
