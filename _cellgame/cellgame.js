@@ -563,7 +563,6 @@ var cellgame;
         }
         let a = cellgame.gameSystem.cells.cellAddress(cellgame.Point.New(x, y));
         let c = cellgame.gameSystem.cells.items[a];
-        console.log("cellDisplay", x, y, a, c);
         cellTextDisplay(cellgame.komas[c].char, cellgame.komas[c].foreColor, cellgame.komas[c].backColor, cellgame.gX3[a], cellgame.gY3[a], cellgame.gW3, cellgame.gH3, cellgame.komas[c].isFlash);
     }
     cellgame.cellDisplay = cellDisplay;

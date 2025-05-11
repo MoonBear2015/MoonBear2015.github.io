@@ -362,7 +362,6 @@ namespace cellgame {
             
             this.boardSize = 2;
 
-
             this.canFreePotision = false;
             this.haveBlock = false;
             this.blockCount = 0;

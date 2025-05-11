@@ -791,7 +791,6 @@ namespace cellgame {
         }
         let a = gameSystem.cells.cellAddress(Point.New(x,y));
         let c = gameSystem.cells.items[a];
-        console.log("cellDisplay",x,y,a,c);
         cellTextDisplay(
             komas[c].char,
             komas[c].foreColor,
