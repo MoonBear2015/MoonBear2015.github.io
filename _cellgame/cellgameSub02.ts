@@ -82,7 +82,33 @@ namespace cellgame {
 
         /** 検索 -1:見つからない */
         search(item : T) : number;
+
+        /** ロールバック可能な更新 */
+        pushToAddress(address : number, item : T) : void;
+
+        /** ロールバック可能な更新：Point指定 */
+        pushToPoint(point : Point, item : T) : void;
+
+        /** ロールバック */
+        rollBack() : void;
+
+        /** ロールバック用の記録 */
+        logItems : logItem<T>[]; // ログアイテム
         
+    }
+
+    /** ロールバックするための記録クラス */
+    export class logItem<T> {
+        public address : number = -1;
+        public beforeItem : T | null = null;;
+        public afterItem : T | null = null;;
+
+        /** コンストラクタ */
+        public constructor() {
+            this.address = -1;
+            this.beforeItem = null;
+            this.afterItem = null;
+        }
     }
     
     /** 配列支援クラス */
@@ -91,11 +117,15 @@ namespace cellgame {
         /** コンストラクタ */
         public constructor() {
             this.items = [];
+            this.logItems = [];
             this.cellWidth = 0;
         }
         
         /** 配列 */
         public items : T[] = [];
+        
+        /** ロールバック用の記録 */
+        public logItems : logItem<T>[] = []; // ログアイテム
 
         /** item初期値 */
         abstract itemNew() : T;
@@ -119,17 +149,6 @@ namespace cellgame {
                 this.items.push(value);
             }
         }
-
-        /** 四方セル設定
-         * @param point0 : 左上 point1 : 右下 code : 設定コード
-         */
-        // public cellBoxSetter(point0 : Point, point1 : Point,value : T) : void {
-        //     for(let y = point0.y; y <= point1.y; y++) {
-        //         for(let x = point0.x; x <= point1.x; x++) {
-        //             this.cellSetter(Point.New(x,y),value);
-        //         }
-        //     }
-        // }
 
         /** 四方セル設定
          * @param point0 : 左上 point1 : 右下 code : 設定コード
@@ -216,6 +235,28 @@ namespace cellgame {
             return result;
         }
 
+        /** ロールバック可能な更新 */
+        public pushToAddress(address : number, item : T) : void {
+            let log = new logItem<T>();
+            log.address = address;
+            log.beforeItem = this.items[address];
+            log.afterItem = item;
+            this.logItems.push(log);
+            this.items[address] = item;
+        }
+        
+        /** ロールバック可能な更新：ポイント指定 */
+        public pushToPoint = (point : Point, item : T) : void => 
+            this.pushToAddress(this.cellAddress(point), item);
+
+        /** ロールバック */
+        public rollBack = () : void => {
+            if (this.logItems.length == 0) return;
+            let log = this.logItems.pop();
+            if (log == null || log.beforeItem == null) return;
+            this.items[log.address] = log.beforeItem;
+        }
+
     }
 
     /** 数値型配列支援クラス */
@@ -243,6 +284,5 @@ namespace cellgame {
         public itemEqual = (item1 : IHand, item2 : IHand) : boolean => item1.equal(item2);
 
     }
-    
 
 }

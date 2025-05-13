@@ -42,6 +42,9 @@ namespace cellgame {
         /** このゲームでの予約駒 */
         public reserveCode : number = 10;
 
+        /** 升を封じる駒 */
+        public blockCode : number = 10;
+
         /** 選択駒かどうかの判断 */
         public isSelectCode=(code : number) : boolean => code == this.selectCode;
 
@@ -235,7 +238,6 @@ namespace cellgame {
                     {
                         this.buttonSetter();
                         this.isPlayStarted = false;
-                        this.lostCellSetter();
 
                         this.messages = [];
                         this.messages.push(new Message(this.msgLoseSelector(),this.messagePotision(),1,Colors.Black,Colors.Red,false));
@@ -336,8 +338,11 @@ namespace cellgame {
 
         /** ゲーム枠の大きさを計算 */
         private boardSizeCalc() : void {
+            // レベル＋1が駒の対の数
             this.pearCount = this.gameLevel + 2;
-            let a = Math.sqrt(this.pearCount * 2);
+            // 余裕を持って1.5倍の駒数分の升を用意する
+            // 駒数の平方根・切り上げを辺の長さとする
+            let a = Math.sqrt(this.pearCount * 3);
             let b = Math.ceil(a);
             this.boardSize = b;
             alert("pearCount:" + this.pearCount + " boardSize" + ":" + this.boardSize);
@@ -397,7 +402,7 @@ namespace cellgame {
             this.board.cellReset(this.boardSize,this.blankCode);
 
             // 配置作成
-            let setKoma = this.gameLevel % 4 + 1;
+            let setKoma = (this.gameLevel + 1) % 4 + 1;
             for(let i = 0; i < this.pearCount; i++) {
                 for(let j = 0; j < 2; j++) {
                     // 外側の升を検索する
@@ -423,14 +428,15 @@ namespace cellgame {
                     }
                     this.board.cellSetter(putPoint,setKoma + 10);
                     this.komas.items.push(new Hand(putPoint,setKoma + 10));
+                    // 二つ目に封じさせないために封じの仮駒を置く
                     if ( j == 0) {
-                        this.boardHandSetReserve(putPoint);
+                        this.boardHandSetBlock(putPoint);
                     } else {
-                        this.boardHandClearReserve
+                        this.boardHandClearBlock();
                     }
                 }
-                setKoma++;
-                if (setKoma > 4) setKoma = 1;
+                setKoma--;
+                if (setKoma < 1) setKoma = 4;
             }
             
             this.isGameClear = false;
@@ -442,56 +448,42 @@ namespace cellgame {
 
         }
 
-        private leftReserve : Point | null = null;
-        private rightReserve : Point | null = null;
+        private leftBlock : Point | null = null;
+        private rightBlock : Point | null = null;
 
-        /** 指定箇所の両サイドに予約駒を置く */
-        public boardHandSetReserve(point : Point) : void {
-            this.leftReserve = null;
-            this.rightReserve = null;
+        /** 指定箇所の両サイドを封じる */
+        public boardHandSetBlock(point : Point) : void {
+            this.leftBlock = null;
+            this.rightBlock = null;
 
             // 左
             let leftPoint = Point.New(point.x - 1,point.y);
             if (leftPoint.x >= 0) {
                 if (this.board.cellGetter(leftPoint) == this.blankCode) {
-                    this.board.cellSetter(leftPoint,this.reserveCode);
-                    this.leftReserve = leftPoint.copy();
+                    this.board.cellSetter(leftPoint,this.blockCode);
+                    this.leftBlock = leftPoint.copy();
                 }
             }
             // 右
             let rightPoint = Point.New(point.x + 1,point.y);
             if (rightPoint.x < this.boardSize) {
                 if (this.board.cellGetter(rightPoint) == this.blankCode) {
-                    this.board.cellSetter(rightPoint,this.reserveCode);
-                    this.rightReserve = rightPoint.copy();
+                    this.board.cellSetter(rightPoint,this.blockCode);
+                    this.rightBlock = rightPoint.copy();
                 }
             }
         }
 
-        /** 予約した駒を消す */
-        public boardHandClearReserve() : void {
-            if (this.leftReserve != null) {
-                this.board.cellSetter(this.leftReserve,this.blankCode);
+        /** 封じ駒を消す */
+        public boardHandClearBlock() : void {
+            if (this.leftBlock != null) {
+                this.board.cellSetter(this.leftBlock,this.blankCode);
             }
-            if (this.rightReserve != null) {
-                this.board.cellSetter(this.rightReserve,this.blankCode);
+            if (this.rightBlock != null) {
+                this.board.cellSetter(this.rightBlock,this.blankCode);
             }
-        }
-
-        /** 塗り残した箇所を特定
-         */
-        private lostCellSetter() : void {
-            // 塗り残しを赤く示す
-            for(let y0 = 0; y0 < this.boardSize; y0++) {
-                for(let x0 = 0; x0 < this.boardSize; x0++) {
-                    let point0 = Point.New(x0,y0);
-                    let c = this.board.cellGetter(point0);
-                    if (c == 20 || c == 10) {
-                        this.board.cellSetter(point0,1);
-                    }
-                }
-            }
-            this.boardToCellsAllSetter();
+            this.leftBlock = null;
+            this.rightBlock = null;
         }
 
         /** ゲームリセット そのレベル・ステージなどの初期化 */
@@ -588,39 +580,29 @@ namespace cellgame {
 
         /** ボードの初期化 */
         public boardClear() : void {
-            this.board.cellAllPaint(10);
+            this.board.cellAllPaint(this.blankCode);
         }
 
         /** ゲーム終了判定 */
         private boardCheck() : void {
             if (this.gameStep != 2) return;
 
-            /** 残りのセルを数える */
-            /** 選択肢の数 */
-            let count20 = 0;
-            /** 空きセルの数 */
-            let count10 = 0;
+            /** 残りの駒を数える */
+            /** 駒の数 */
+            let countKoma = 0;
             /** カウント */
             for(let y = 0; y < this.boardSize; y++) {
                 for(let x = 0; x < this.boardSize; x++) {
                     let c = this.board.cellGetter(Point.New(x,y));
-                    if (c == 20) {
-                        count20++;
-                    }
-                    if (c == 10) {
-                        count10++;
+                    if (c != this.blankCode) {
+                        countKoma++;
                     }
                 }
             }
-            /** 選択肢がなく、全てのセルが埋まっているなら、ゲームクリアー */
-            if (count20 == 0 && count10 == 0) {
+            /** もう駒が無いならゲームクリアー */
+            if (countKoma == 0) {
                 this.isGamePlay = false;
                 this.isGameClear = true;
-            }
-            /** 選択肢がなく、空きセルが残っているなら、ゲームオーバー */
-            if (count20 == 0 && count10 > 0) {
-                this.isGamePlay = false;
-                this.isGameOver = true;
             }
         }
 
