@@ -19,26 +19,33 @@ var cellgame;
         }
         return result;
     };
+    /** ロールバックするための記録クラス */
+    class logItem {
+        /** コンストラクタ */
+        constructor() {
+            this.address = -1;
+            this.beforeItem = null;
+            this.afterItem = null;
+            this.address = -1;
+            this.beforeItem = null;
+            this.afterItem = null;
+        }
+        ;
+        ;
+    }
+    cellgame.logItem = logItem;
     /** 配列支援クラス */
     class CellArray {
         /** コンストラクタ */
         constructor() {
             /** 配列 */
             this.items = [];
+            /** ロールバック用の記録 */
+            this.logItems = []; // ログアイテム
             /** 平方データを設定する際 */
             this.cellWidth = 0;
             /** 平方データ時の全件数 */
             this.cellCount = () => this.cellWidth * this.cellWidth;
-            /** 四方セル設定
-             * @param point0 : 左上 point1 : 右下 code : 設定コード
-             */
-            // public cellBoxSetter(point0 : Point, point1 : Point,value : T) : void {
-            //     for(let y = point0.y; y <= point1.y; y++) {
-            //         for(let x = point0.x; x <= point1.x; x++) {
-            //             this.cellSetter(Point.New(x,y),value);
-            //         }
-            //     }
-            // }
             /** 四方セル設定
              * @param point0 : 左上 point1 : 右下 code : 設定コード
              */
@@ -53,7 +60,19 @@ var cellgame;
             this.cellAddress = (point) => point.y * this.cellWidth + point.x;
             /** 番地の座標 */
             this.cellPoint = (address) => cellgame.pointCalc(address, this.cellWidth);
+            /** ロールバック可能な更新：ポイント指定 */
+            this.pushToPoint = (point, item) => this.pushToAddress(this.cellAddress(point), item);
+            /** ロールバック */
+            this.rollBack = () => {
+                if (this.logItems.length == 0)
+                    return;
+                let log = this.logItems.pop();
+                if (log == null || log.beforeItem == null)
+                    return;
+                this.items[log.address] = log.beforeItem;
+            };
             this.items = [];
+            this.logItems = [];
             this.cellWidth = 0;
         }
         /** item比較 */
@@ -127,6 +146,15 @@ var cellgame;
                 }
             }
             return result;
+        }
+        /** ロールバック可能な更新 */
+        pushToAddress(address, item) {
+            let log = new logItem();
+            log.address = address;
+            log.beforeItem = this.items[address];
+            log.afterItem = item;
+            this.logItems.push(log);
+            this.items[address] = item;
         }
     }
     cellgame.CellArray = CellArray;
