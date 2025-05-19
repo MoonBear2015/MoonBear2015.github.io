@@ -36,6 +36,10 @@ var cellgame;
             this.reserveCode = 10;
             /** 升を封じる駒 */
             this.blockCode = 10;
+            /** 選択した駒 */
+            this.selectedCode = 0;
+            /** 選択した駒の位置 */
+            this.selectedPoint = new cellgame.Point(true);
             /** 選択駒かどうかの判断 */
             this.isSelectCode = (code) => code == this.selectCode;
             /** 盤外の駒 */
@@ -157,14 +161,17 @@ var cellgame;
          */
         pointSelect(point) {
             let code = this.cells.cellGetter(point);
+            let boardPoint = this.ToBoardPoint(point);
             if (this.gameStep == 2) {
-                if (code == 20) {
-                    this.nowCode = this.codeLoop(this.nowCode, 1);
-                    let hand = new cellgame.Hand(point, this.nowCode);
-                    this.newHand = hand;
-                    this.boardHandPush(hand);
+                if (code >= 21 && code <= 24) {
                     this.isPlayStarted = true;
+                    this.selectedCode = code - 10;
+                    this.selectedPoint = boardPoint.copy();
+                    this.SelectCellClear();
+                    this.board.cellSetter(boardPoint, code + 20);
+                    this.boardToCellsCopy(boardPoint);
                     this.statusDisplayer();
+                    this.gameStep = 3;
                     return;
                 }
                 if (code == cellgame.buttonCancel) {
@@ -188,6 +195,36 @@ var cellgame;
                         this.nowHandCount += 1;
                         this.boardHandMove(this.nowHandCount);
                     }
+                    return;
+                }
+            }
+            if (this.gameStep == 3) {
+                let boardPoint = this.ToBoardPoint(point);
+                // 選択済み駒の場合、キャンセルとなる
+                if (code - 20 == this.selectedCode) {
+                    this.boardAndCellsSetter(boardPoint, code - 20);
+                    this.SelectCellClear();
+                    this.gameStep = 2;
+                    return;
+                }
+                // 選択候補の駒の場合、それぞれ消去する
+                if (code - 10 == this.selectedCode) {
+                    this.boardAndCellsSetter(this.selectedPoint, this.blankCode);
+                    this.boardAndCellsSetter(boardPoint, this.blankCode);
+                    this.SelectCellClear();
+                    this.gameStep = 2;
+                    return;
+                }
+                if (code == cellgame.buttonOk) {
+                    this.isGamePlay = false;
+                    this.isGameClear = true;
+                    this.gameStep = 4;
+                    return;
+                }
+                if (code == cellgame.buttonCancel) {
+                    this.isGamePlay = false;
+                    this.isGameClear = false;
+                    this.gameStep = 1;
                     return;
                 }
             }
@@ -262,11 +299,7 @@ var cellgame;
                 case 3:
                     {
                         this.buttonSetter();
-                        this.isPlayStarted = false;
-                        this.messages = [];
-                        this.messages.push(new cellgame.Message(this.msgWinSelector(), this.messagePotision(), 1, cellgame.Colors.White, cellgame.Colors.Black, true));
-                        this.okButtonSetter();
-                        this.gameStep = 4;
+                        this.SelectCellChanger(this.selectedCode);
                         break;
                     }
                 /** ゲームクリア 表示*/
