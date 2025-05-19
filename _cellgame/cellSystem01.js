@@ -127,7 +127,7 @@ var cellgame;
                     this.statusDisplayer();
                     return;
                 }
-                if (code == cellgame.buttonCancel) {
+                if (code == cellgame.buttonLost) {
                     this.gamePoint -= this.gameBetMax;
                     this.canDisplayPoint = true;
                     this.gameStep = 1;
@@ -267,7 +267,7 @@ var cellgame;
         }
         /** 却ボタン設定 flase:消去 */
         cancelButtonSetter(isDisplay = true) {
-            this.cells.cellSetter(this.pointCancel(), isDisplay ? cellgame.buttonCancel : this.backCode);
+            this.cells.cellSetter(this.pointCancel(), isDisplay ? cellgame.buttonLost : this.backCode);
         }
         /** 却・戻・進 ボタン設置 flase:消去 */
         controllButtonSetter(isDisplay = true) {

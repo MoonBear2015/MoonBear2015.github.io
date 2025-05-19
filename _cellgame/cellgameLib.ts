@@ -29,7 +29,7 @@ namespace cellgame {
     export const buttonOk : number = 90;
     export const buttonNo : number = 91;
     export const buttonRetry : number = 92;
-    export const buttonCancel : number = 93;
+    export const buttonLost : number = 93;
     export const buttonBack : number = 94;
     export const buttonForward : number = 95;
     export const buttonHelp : number = 99;
@@ -242,7 +242,7 @@ namespace cellgame {
         komas02[90] = new Koma(90,"ｙ","yes",Colors.White,Colors.Black,true);
         komas02[91] = new Koma(91,"ｎ","no",Colors.White,Colors.Red,true);
         komas02[92] = new Koma(92,"ｒ","retry",Colors.Black,Colors.Yellow,true);
-        komas02[93] = new Koma(93,"ｃ","cancel",Colors.Red,Colors.Black,true);
+        komas02[93] = new Koma(93,"ｌ","lost",Colors.Red,Colors.Black,true);
         komas02[94] = new Koma(94,"ｂ","back",Colors.White,Colors.Black,false);
         komas02[95] = new Koma(95,"ｆ","forward",Colors.White,Colors.Black,false);
         komas02[99] = new Koma(99,"？","help",Colors.Black,Colors.White,false);

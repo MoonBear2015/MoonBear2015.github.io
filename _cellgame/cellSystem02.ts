@@ -52,7 +52,46 @@ namespace cellgame {
         public selectedPoint : Point = new Point(true);
 
         /** 選択駒かどうかの判断 */
-        public isSelectCode=(code : number) : boolean => code == this.selectCode;
+        public isChoiseCode = (code : number) : boolean => code >= 21 && code <= 24;
+
+        /** 予約駒 */
+        public isReserveCode = (code : number) : boolean => code >= 41 && code <= 44;
+
+        /** 通常駒 */
+        public isNomalCode = (code : number) : boolean => code >= 11 && code <= 14;
+
+        /** 予約駒→通常 */
+        public ReserveToNomal = (code : number) : number => code - 30;
+        /** 選択→予約 */
+        public ChoiseToReserve = (code : number) : number => code + 20;
+        /** 選択→通常 */
+        public ChoiseToNomal = (code : number) : number => code - 10;
+        /** 通常→選択 */
+        public NomalToChoise = (code : number) : number => code + 10;
+
+        /** → 通常駒 */
+        public ToNomalCode = (code : number) : number => {
+            if (this.isChoiseCode(code)) return this.ChoiseToNomal(code);
+            if (this.isReserveCode(code)) return this.ReserveToNomal(code);
+            if (this.isNomalCode(code)) return code;
+            return code;
+        }
+
+        /** → 予約駒 */
+        public ToReserveCode = (code : number) : number => {
+            if (this.isChoiseCode(code)) return this.ChoiseToReserve(code);
+            if (this.isReserveCode(code)) return code;
+            if (this.isNomalCode(code)) return this.NomalToChoise(code);
+            return code;
+        }
+
+        /** → 選択駒 */
+        public ToChoiseCode = (code : number) : number => {
+            if (this.isChoiseCode(code)) return code;
+            if (this.isReserveCode(code)) return this.ReserveToNomal(code);
+            if (this.isNomalCode(code)) return this.NomalToChoise(code);
+            return code;
+        }   
 
         /** 盤外の駒 */
         public backCode : number = 82;
@@ -122,18 +161,18 @@ namespace cellgame {
             let code = this.cells.cellGetter(point);
             let boardPoint = this.ToBoardPoint(point);
             if (this.gameStep == 2) {
-                if (code >= 21 && code <= 24) {
+                if (this.isChoiseCode(code)) {
                     this.isPlayStarted = true;
-                    this.selectedCode = code - 10;
+                    this.selectedCode = this.ToNomalCode(code);
                     this.selectedPoint = boardPoint.copy();
                     this.SelectCellClear();
-                    this.board.cellSetter(boardPoint,code + 20);
+                    this.board.cellSetter(boardPoint,this.ToReserveCode(code));
                     this.boardToCellsCopy(boardPoint);
                     this.statusDisplayer();
                     this.gameStep = 3;
                     return;
                 }
-                if (code == buttonCancel) {
+                if (code == buttonLost) {
                     this.canDisplayPoint = true;
                     this.gameStep = 1;
                     return;
@@ -159,15 +198,16 @@ namespace cellgame {
             }
             if (this.gameStep == 3) {
                 let boardPoint = this.ToBoardPoint(point);
+                alert("code:" + code + " selectedCode:" + this.selectedCode);
                 // 選択済み駒の場合、キャンセルとなる
-                if (code - 20 == this.selectedCode) {
-                    this.boardAndCellsSetter(boardPoint,code - 20);
+                if (this.isReserveCode(code) && this.ToNomalCode(code) == this.selectedCode) {
+                    this.boardAndCellsSetter(boardPoint,this.ToNomalCode(code));
                     this.SelectCellClear();
                     this.gameStep = 2;
                     return;
                 }
                 // 選択候補の駒の場合、それぞれ消去する
-                if (code - 10 == this.selectedCode) {
+                if (this.isChoiseCode(code) && this.ToNomalCode(code) == this.selectedCode) {
                     this.boardAndCellsSetter(this.selectedPoint,this.blankCode);
                     this.boardAndCellsSetter(boardPoint,this.blankCode);
                     this.SelectCellClear();
@@ -180,7 +220,7 @@ namespace cellgame {
                     this.gameStep = 4;
                     return;
                 }
-                if (code == buttonCancel) {
+                if (code == buttonLost) {
                     this.isGamePlay = false;
                     this.isGameClear = false;
                     this.gameStep = 1;
@@ -325,7 +365,7 @@ namespace cellgame {
 
         /** 却ボタン設定 flase:消去 */
         private cancelButtonSetter(isDisplay : boolean = true) : void {
-            this.cells.cellSetter(this.pointCancel(),isDisplay ? buttonCancel : this.backCode);
+            this.cells.cellSetter(this.pointCancel(),isDisplay ? buttonLost : this.backCode);
         }
 
         /** 却・戻・進 ボタン設置 flase:消去 */
@@ -448,7 +488,6 @@ namespace cellgame {
 
         /** ゲーム盤作成 設定済みレベルに応じて作成 */
         public boardCreate() : void {
-            this.gameLevel++;
             this.boardSizeCalc();
 
             // ボード初期化
@@ -551,14 +590,14 @@ namespace cellgame {
             for(let i = 0; i < allPoints.length; i++) {
                 let koma = this.board.cellGetter(allPoints[i]);
                 if (selected == 0) {
-                    if (koma > 10 && koma < 20) {
-                        this.board.cellSetter(allPoints[i],koma + 10);
+                    if (this.isNomalCode(koma)) {
+                        this.board.cellSetter(allPoints[i],this.ToChoiseCode(koma));
                         this.boardToCellsCopy(allPoints[i]);
                         continue;
                     }
                 } else {
                     if (koma == selected) {
-                        this.board.cellSetter(allPoints[i],koma + 10);
+                        this.board.cellSetter(allPoints[i],this.ToChoiseCode(koma));
                         this.boardToCellsCopy(allPoints[i]);
                         continue;
                     }
@@ -572,16 +611,8 @@ namespace cellgame {
                 for(let x = 0; x < this.boardSize; x++) {
                     let point = Point.New(x,y);
                     let koma = this.board.cellGetter(point);
-                    if (koma > 20 && koma < 30) {
-                        this.board.cellSetter(point,koma - 10);
-                        this.boardToCellsCopy(point);
-                        continue;
-                    }
-                    if (koma > 30 && koma < 40) {
-                        this.board.cellSetter(point,koma - 20);
-                        this.boardToCellsCopy(point);
-                        continue;
-                    }
+                    this.board.cellSetter(point,this.ToNomalCode(koma));
+                    this.boardToCellsCopy(point);
                 }
             }
         }

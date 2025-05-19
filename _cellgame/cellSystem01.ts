@@ -142,7 +142,7 @@ namespace cellgame {
                     this.statusDisplayer();
                     return;
                 }
-                if (code == buttonCancel) {
+                if (code == buttonLost) {
                     this.gamePoint -= this.gameBetMax;
                     this.canDisplayPoint = true;
                     this.gameStep = 1;
@@ -309,7 +309,7 @@ namespace cellgame {
 
         /** 却ボタン設定 flase:消去 */
         private cancelButtonSetter(isDisplay : boolean = true) : void {
-            this.cells.cellSetter(this.pointCancel(),isDisplay ? buttonCancel : this.backCode);
+            this.cells.cellSetter(this.pointCancel(),isDisplay ? buttonLost : this.backCode);
         }
 
         /** 却・戻・進 ボタン設置 flase:消去 */
