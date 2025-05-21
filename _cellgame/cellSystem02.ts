@@ -198,7 +198,6 @@ namespace cellgame {
             }
             if (this.gameStep == 3) {
                 let boardPoint = this.ToBoardPoint(point);
-                alert("code:" + code + " selectedCode:" + this.selectedCode);
                 // 選択済み駒の場合、キャンセルとなる
                 if (this.isReserveCode(code) && this.ToNomalCode(code) == this.selectedCode) {
                     this.boardAndCellsSetter(boardPoint,this.ToNomalCode(code));
@@ -486,6 +485,8 @@ namespace cellgame {
             return result;
         }
 
+        
+
         /** ゲーム盤作成 設定済みレベルに応じて作成 */
         public boardCreate() : void {
             this.boardSizeCalc();
@@ -618,7 +619,6 @@ namespace cellgame {
         }
 
 
-
         /** ゲームリセット そのレベル・ステージなどの初期化 */
         public boardReset() : void {
             // ゲーム盤の初期化
@@ -717,7 +717,8 @@ namespace cellgame {
 
         /** ゲーム終了判定 */
         private boardCheck() : void {
-            if (this.gameStep != 2) return;
+            // プレイ中で無ければ判定無し
+            if (this.gameStep != 2 && this.gameStep != 3) return;
 
             /** 残りの駒を数える */
             /** 駒の数 */
