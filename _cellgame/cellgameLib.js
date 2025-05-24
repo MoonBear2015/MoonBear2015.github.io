@@ -242,6 +242,23 @@ var cellgame;
         cellgame.msgPatternsArray[2] = cellgame.msgPatterns02;
     }
     cellgame.komasInit = komasInit;
+    class GameStep {
+    }
+    /** 0:ゲームタイトル */
+    GameStep.Title = 0;
+    /** 10:ゲームスタート */
+    GameStep.Start = 10;
+    /** 20:ゲームプレイ */
+    GameStep.Play = 20;
+    /** 25:ゲームプレイ 次ステップ */
+    GameStep.PlayNext = 25;
+    /** 30:ゲームクリア */
+    GameStep.Clear = 30;
+    /** 40:ゲームオーバー */
+    GameStep.Over = 40;
+    /** 50:確認待ち */
+    GameStep.Wait = 50;
+    cellgame.GameStep = GameStep;
     /** Cell設定の選択 */
     function komasUpdate(set) {
         switch (set) {

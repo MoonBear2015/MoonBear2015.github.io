@@ -281,6 +281,24 @@ namespace cellgame {
 
     }
 
+    export class GameStep {
+        /** 0:ゲームタイトル */
+        static Title : number = 0;
+        /** 10:ゲームスタート */
+        static Start : number = 10;
+        /** 20:ゲームプレイ */
+        static Play : number = 20;
+        /** 25:ゲームプレイ 次ステップ */
+        static PlayNext : number = 25;
+        /** 30:ゲームクリア */
+        static Clear : number = 30;
+        /** 40:ゲームオーバー */
+        static Over : number = 40;
+        /** 50:確認待ち */
+        static Wait : number = 50;
+
+    }
+
     /** Cell設定の選択 */
     export function komasUpdate(set : number) {
         switch(set) {

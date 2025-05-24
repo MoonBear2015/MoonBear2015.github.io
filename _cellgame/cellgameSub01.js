@@ -7,6 +7,29 @@
 /// <reference path="cellSystem00.ts" />
 var cellgame;
 (function (cellgame) {
+    /** 汎用クラス */
+    class itm {
+        constructor(code = 0, name = "", isChecked = false) {
+            this.code = 0;
+            this.name = "";
+            this.isChecked = false;
+            this.code = code;
+            this.name = name;
+            this.isChecked = isChecked;
+        }
+    }
+    cellgame.itm = itm;
+    /** 汎用クラス配列 */
+    class itmArray extends cellgame.CellArray {
+        constructor() {
+            super(...arguments);
+            /** item初期値 */
+            this.itemNew = () => new itm();
+            /** item比較 */
+            this.itemEqual = (item1, item2) => item1.code === item2.code;
+        }
+    }
+    cellgame.itmArray = itmArray;
     /** 未設定判定 */
     function isNone(value) {
         return value === null || value === undefined;

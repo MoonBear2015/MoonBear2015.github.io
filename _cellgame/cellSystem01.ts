@@ -127,7 +127,7 @@ namespace cellgame {
          */
         public pointSelect(point : Point) : void {
             let code = this.cells.cellGetter(point);
-            if (this.gameStep == 2) {
+            if (this.gameStep == GameStep.Play) {
                 if (code == this.selectCode) {
                     this.nowCode = this.codeLoop(this.nowCode,1);
                     let hand = new Hand(point,this.nowCode);
@@ -145,7 +145,7 @@ namespace cellgame {
                 if (code == buttonLost) {
                     this.gamePoint -= this.gameBetMax;
                     this.canDisplayPoint = true;
-                    this.gameStep = 1;
+                    this.gameStep = GameStep.Start;
                     return;
                 }
                 if (code == buttonHelp) {
@@ -172,17 +172,17 @@ namespace cellgame {
                     return;
                 }
             }        
-            if (this.gameStep == 5) {
+            if (this.gameStep == GameStep.Wait) {
                 if (code == buttonOk) {
                     if (this.isGameClear) {
-                        this.gameStep = 1;
+                        this.gameStep = GameStep.Start;
                         this.gamePoint += this.gameBetMax;
                         this.canDisplayPoint = true;
                         this.gameLevel++;
                         return;
                     }
                     if (this.isGameOver) {
-                        this.gameStep = 1;
+                        this.gameStep = GameStep.Start;
                         this.gamePoint -= this.gameBetMax;
                         this.canDisplayPoint = true;
                         return;
@@ -200,14 +200,14 @@ namespace cellgame {
         public displayMaker() : void {
             switch(this.gameStep) {
                 /** ゲームタイトル */
-                case 0:
+                case GameStep.Title:
                     {
                         this.boardInit();
-                        this.gameStep = 1;
+                        this.gameStep = GameStep.Start;
                         break
                     }
                 /** ゲームスタート */
-                case 1:
+                case GameStep.Start:
                     {
                         this.boardCreate();
 
@@ -222,14 +222,14 @@ namespace cellgame {
                         this.boardToCellsAllSetter();
                         this.buttonSetter();
 
-                        this.gameStep = 2;
+                        this.gameStep = GameStep.Play;
                         this.gameBet = 0;
                         this.gameBetMax = 0;
                         this.isGamePlay = true;
                         break;
                     }
                 /** ゲームプレイ */
-                case 2:
+                case GameStep.Play:
                     {
                         if (!this.isGamePlay) break;
                         this.messages = [];
@@ -243,17 +243,17 @@ namespace cellgame {
 
                         this.boardCheck();
                         if (this.isGameClear) {
-                            this.gameStep = 3;
+                            this.gameStep = GameStep.Clear;
                             break;
                         }
                         if (this.isGameOver) {
-                            this.gameStep = 4;
+                            this.gameStep = GameStep.Over;
                             break;
                         }  
                         break;
                     }
                 /** ゲームクリア 表示*/
-                case 3:
+                case GameStep.Clear:
                     {
                         this.buttonSetter();
                         this.isPlayStarted = false;
@@ -261,11 +261,11 @@ namespace cellgame {
                         this.messages = [];
                         this.messages.push(new Message(this.msgWinSelector(),this.messagePotision(),1,Colors.White,Colors.Black,true));
                         this.okButtonSetter();
-                        this.gameStep = 5;
+                        this.gameStep = GameStep.Wait;
                         break;
                     }
                 /** ゲームオーバー 表示*/
-                case 4:
+                case GameStep.Over:
                     {
                         this.buttonSetter();
                         this.isPlayStarted = false;
@@ -274,11 +274,11 @@ namespace cellgame {
                         this.messages = [];
                         this.messages.push(new Message(this.msgLoseSelector(),this.messagePotision(),1,Colors.Black,Colors.Red,false));
                         this.okButtonSetter();
-                        this.gameStep = 5;
+                        this.gameStep = GameStep.Wait;
                         break;
                     }
                 /** 確認待ち */
-                case 5:
+                case GameStep.Wait:
                     {
                         break;
                     }
@@ -323,9 +323,9 @@ namespace cellgame {
             // 説ボタン設置
             this.cells.cellSetter(Point.New(0,0),buttonHelp);
             switch(this.gameStep) {
-                case 1:
+                case GameStep.Start:
                     break;
-                case 2:
+                case GameStep.Play:
                     // ok ボタン消去
                     this.okButtonSetter(false);
                     // 却ボタン設置
@@ -339,8 +339,8 @@ namespace cellgame {
                         this.controllButtonSetter(false);
                     }
                     break;
-                case 3:
-                case 4:
+                case GameStep.Clear:
+                case GameStep.Over:
                     // ok ボタン設置
                     this.okButtonSetter();
                     // 却・戻・進 ボタン消去
@@ -650,7 +650,7 @@ namespace cellgame {
 
         /** ゲーム終了判定 */
         private boardCheck() : void {
-            if (this.gameStep != 2) return;
+            if (this.gameStep != GameStep.Play) return;
 
             /** 残りのセルを数える */
             /** 選択肢の数 */
