@@ -191,4 +191,15 @@ var cellgame;
         }
     }
     cellgame.HandArray = HandArray;
+    /** 汎用クラス配列 */
+    class itmArray extends CellArray {
+        constructor() {
+            super(...arguments);
+            /** item初期値 */
+            this.itemNew = () => new cellgame.itm();
+            /** item比較 */
+            this.itemEqual = (item1, item2) => item1.code === item2.code;
+        }
+    }
+    cellgame.itmArray = itmArray;
 })(cellgame || (cellgame = {}));

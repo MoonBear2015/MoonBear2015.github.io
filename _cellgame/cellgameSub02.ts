@@ -285,4 +285,14 @@ namespace cellgame {
 
     }
 
+    
+    /** 汎用クラス配列 */
+    export class itmArray extends CellArray<itm> implements ICellArray<itm> {
+        /** item初期値 */
+        public itemNew =() => new itm();
+        /** item比較 */
+        public itemEqual = (item1 : itm, item2 : itm) : boolean => item1.code === item2.code;
+    }
+
+
 }
