@@ -192,14 +192,14 @@ var cellgame;
     }
     cellgame.HandArray = HandArray;
     /** 汎用クラス配列 */
-    class itmArray extends CellArray {
+    class ObjArray extends CellArray {
         constructor() {
             super(...arguments);
             /** item初期値 */
-            this.itemNew = () => new cellgame.itm();
+            this.itemNew = () => new cellgame.Obj();
             /** item比較 */
             this.itemEqual = (item1, item2) => item1.code === item2.code;
         }
     }
-    cellgame.itmArray = itmArray;
+    cellgame.ObjArray = ObjArray;
 })(cellgame || (cellgame = {}));

@@ -221,6 +221,8 @@ namespace cellgame {
                     this.boardAndCellsSetter(boardPoint,this.blankCode);
                     this.SelectCellClear();
                     this.gameStep = GameStep.Play;
+                    let counts = this.pearCounter();
+                    alert("ペア数：" + counts.pear + " ペア無し：" + counts.noPear);
                     return;
                 }
                 if (code == buttonOk) {
@@ -667,6 +669,54 @@ namespace cellgame {
         /** ボードから指定アドレスのみ転送 */
         public boardToCellsAddressCopy = (address : number) : void => this.boardToCellsCopy(this.board.cellPoint(address));
 
+        /** ボードの外側・孤独な駒を抽出する */
+        public boardOuterCodes = () : number[] => {
+            let outerPoints = this.cellSearch(1,false);
+            let lonelyPoints = this.cellSearch(0,false);
+            let points = outerPoints.concat(lonelyPoints);
+            let results : number[] = [];
+            for(let i = 0; i < points.length; i++) {
+                let code = this.board.cellGetter(points[i]);
+                results.push(this.ToNomalCode(code));
+            }
+            return results;
+        }
+
+
+        /** 駒のペアをカウントする */
+        public pearCounter = () : pearCounterType => {
+            let result : pearCounterType = {
+                pear: 0,
+                noPear: 0
+            }
+            let count = 0;
+            let codes = this.boardOuterCodes();
+            let codeArray = new ObjArray();
+            for(let i = 0; i < codes.length; i++) {
+                codeArray.items.push(new Obj(codes[i],"",false));
+            }
+            for(let i = 0; i < codeArray.items.length; i++) {
+                if (codeArray.items[i].isChecked) continue;
+                for(let j = 0; j < codeArray.items.length; j++) {
+                    if (i == j) continue;
+                    if (codeArray.items[j].isChecked) continue;
+                    if (codeArray.items[i].code == codeArray.items[j].code) {
+                        codeArray.items[i].isChecked = true;
+                        codeArray.items[j].isChecked = true;
+                        count++;
+                        break;
+                    }
+                }
+            }
+            result.pear = count;
+            for(let i = 0; i < codeArray.items.length; i++) {
+                if (!codeArray.items[i].isChecked) {
+                    result.noPear++;
+                }
+            }
+            return result;
+        }
+
         /** 手が有効であるかどうか */
         public boardHandCheck(hand : IHand) : boolean {
             if (this.cells.cellGetter(hand.point) != 20) return false;
@@ -808,5 +858,6 @@ namespace cellgame {
         }
     }
 
+    type pearCounterType = { pear : number, noPear : number}; 
     
 }

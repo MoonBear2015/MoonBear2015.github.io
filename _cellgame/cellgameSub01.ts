@@ -8,7 +8,7 @@
 namespace cellgame {
 
     /** 汎用クラス */
-    export class itm {
+    export class Obj {
         public code : number = 0;
         public name : string = "";
         public isChecked : boolean = false;
@@ -17,7 +17,6 @@ namespace cellgame {
             this.name = name;
             this.isChecked = isChecked;
         }
-
     }
 
     /** 未設定判定 */

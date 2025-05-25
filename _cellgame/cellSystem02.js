@@ -187,6 +187,54 @@ var cellgame;
             this.ToBoardPoint = (cellsPoint) => cellgame.Point.Sub(cellsPoint, this.boardCorner);
             /** ボードから指定アドレスのみ転送 */
             this.boardToCellsAddressCopy = (address) => this.boardToCellsCopy(this.board.cellPoint(address));
+            /** ボードの外側・孤独な駒を抽出する */
+            this.boardOuterCodes = () => {
+                let outerPoints = this.cellSearch(1, false);
+                let lonelyPoints = this.cellSearch(0, false);
+                let points = outerPoints.concat(lonelyPoints);
+                let results = [];
+                for (let i = 0; i < points.length; i++) {
+                    let code = this.board.cellGetter(points[i]);
+                    results.push(this.ToNomalCode(code));
+                }
+                return results;
+            };
+            /** 駒のペアをカウントする */
+            this.pearCounter = () => {
+                let result = {
+                    pear: 0,
+                    noPear: 0
+                };
+                let count = 0;
+                let codes = this.boardOuterCodes();
+                let codeArray = new cellgame.ObjArray();
+                for (let i = 0; i < codes.length; i++) {
+                    codeArray.items.push(new cellgame.Obj(codes[i], "", false));
+                }
+                for (let i = 0; i < codeArray.items.length; i++) {
+                    if (codeArray.items[i].isChecked)
+                        continue;
+                    for (let j = 0; j < codeArray.items.length; j++) {
+                        if (i == j)
+                            continue;
+                        if (codeArray.items[j].isChecked)
+                            continue;
+                        if (codeArray.items[i].code == codeArray.items[j].code) {
+                            codeArray.items[i].isChecked = true;
+                            codeArray.items[j].isChecked = true;
+                            count++;
+                            break;
+                        }
+                    }
+                }
+                result.pear = count;
+                for (let i = 0; i < codeArray.items.length; i++) {
+                    if (!codeArray.items[i].isChecked) {
+                        result.noPear++;
+                    }
+                }
+                return result;
+            };
             this.init();
         }
         /** 初期化 */
@@ -261,6 +309,8 @@ var cellgame;
                     this.boardAndCellsSetter(boardPoint, this.blankCode);
                     this.SelectCellClear();
                     this.gameStep = cellgame.GameStep.Play;
+                    let counts = this.pearCounter();
+                    alert("ペア数：" + counts.pear + " ペア無し：" + counts.noPear);
                     return;
                 }
                 if (code == cellgame.buttonOk) {

@@ -287,11 +287,11 @@ namespace cellgame {
 
     
     /** 汎用クラス配列 */
-    export class itmArray extends CellArray<itm> implements ICellArray<itm> {
+    export class ObjArray extends CellArray<Obj> implements ICellArray<Obj> {
         /** item初期値 */
-        public itemNew =() => new itm();
+        public itemNew =() => new Obj();
         /** item比較 */
-        public itemEqual = (item1 : itm, item2 : itm) : boolean => item1.code === item2.code;
+        public itemEqual = (item1 : Obj, item2 : Obj) : boolean => item1.code === item2.code;
     }
 
 

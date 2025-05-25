@@ -8,7 +8,7 @@
 var cellgame;
 (function (cellgame) {
     /** 汎用クラス */
-    class itm {
+    class Obj {
         constructor(code = 0, name = "", isChecked = false) {
             this.code = 0;
             this.name = "";
@@ -18,7 +18,7 @@ var cellgame;
             this.isChecked = isChecked;
         }
     }
-    cellgame.itm = itm;
+    cellgame.Obj = Obj;
     /** 未設定判定 */
     function isNone(value) {
         return value === null || value === undefined;

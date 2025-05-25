@@ -64,10 +64,12 @@ body {
     align-self: left;
 }
 #Selecter01 {
+    font-size: calc(8px + 1vmin);
     flex: 2;
     align-self: center;
 }
 #Selecter02 {
+    font-size: calc(8px + 1vmin);
     flex: 1;
     align-self: right;;
 }
