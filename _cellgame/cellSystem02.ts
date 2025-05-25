@@ -19,6 +19,16 @@ namespace cellgame {
         /** 段位 */
         public gameLevel : number = 0;
 
+        /** 連携 */
+        public gameCombo : number = 0;
+
+        /** 連携点表示 */
+        public canDisplayCombo : boolean = false;
+
+        /** 連携番号 */
+        public comboNo : number = 0;
+
+
         /** 得点 */
         public gamePoint : number = 0;
 
@@ -761,6 +771,17 @@ namespace cellgame {
                 this.statusNameIsVisible[1] = false;
                 this.statusIsVisible[1] = false;
             }
+
+            if (this.canDisplayCombo) {
+                this.statusName[2] = "賭点";
+                this.status[2] = this.gameCombo;
+                this.statusNameIsVisible[2] = true;
+                this.statusIsVisible[2] = true;
+            } else {
+                this.statusNameIsVisible[2] = false;
+                this.statusIsVisible[2] = false;
+            }
+
 
             if (this.canDisplayPoint) {
                 this.statusName[3] = "得点";

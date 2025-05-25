@@ -18,6 +18,12 @@ var cellgame;
             // game01 self
             /** 段位 */
             this.gameLevel = 0;
+            /** 連携 */
+            this.gameCombo = 0;
+            /** 連携点表示 */
+            this.canDisplayCombo = false;
+            /** 連携番号 */
+            this.comboNo = 0;
             /** 得点 */
             this.gamePoint = 0;
             /** 得点表示 */
@@ -689,6 +695,16 @@ var cellgame;
             else {
                 this.statusNameIsVisible[1] = false;
                 this.statusIsVisible[1] = false;
+            }
+            if (this.canDisplayCombo) {
+                this.statusName[2] = "賭点";
+                this.status[2] = this.gameCombo;
+                this.statusNameIsVisible[2] = true;
+                this.statusIsVisible[2] = true;
+            }
+            else {
+                this.statusNameIsVisible[2] = false;
+                this.statusIsVisible[2] = false;
             }
             if (this.canDisplayPoint) {
                 this.statusName[3] = "得点";
