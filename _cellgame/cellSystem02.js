@@ -22,8 +22,10 @@ var cellgame;
             this.gameCombo = 0;
             /** 連携点表示 */
             this.canDisplayCombo = false;
+            /** 連携数 */
+            this.comboCount = 0;
             /** 連携番号 */
-            this.comboNo = 0;
+            this.comboCode = 0;
             /** 得点 */
             this.gamePoint = 0;
             /** 得点表示 */
@@ -305,12 +307,13 @@ var cellgame;
                 }
                 // 選択候補の駒の場合、それぞれ消去する
                 if (this.isChoiseCode(code) && this.ToNomalCode(code) == this.selectedCode) {
+                    this.comboChecker(this.ToNomalCode(code));
+                    this.pointChecker(10);
                     this.boardAndCellsSetter(this.selectedPoint, this.blankCode);
                     this.boardAndCellsSetter(boardPoint, this.blankCode);
                     this.SelectCellClear();
                     this.gameStep = cellgame.GameStep.Play;
                     let counts = this.pearCounter();
-                    alert("ペア数：" + counts.pear + " ペア無し：" + counts.noPear);
                     return;
                 }
                 if (code == cellgame.buttonOk) {
@@ -365,6 +368,9 @@ var cellgame;
                         this.boardCorner = this.cells.cellCenterHoleMaker(this.boardSize, this.blankCode);
                         this.boardToCellsAllSetter();
                         this.buttonSetter();
+                        this.comboCode = 0;
+                        this.comboCount = 0;
+                        this.canDisplayCombo = false;
                         this.gameStep = cellgame.GameStep.Play;
                         this.isGamePlay = true;
                         break;
@@ -747,7 +753,7 @@ var cellgame;
                 this.statusIsVisible[1] = false;
             }
             if (this.canDisplayCombo) {
-                this.statusName[2] = "賭点";
+                this.statusName[2] = "連携";
                 this.status[2] = this.gameCombo;
                 this.statusNameIsVisible[2] = true;
                 this.statusIsVisible[2] = true;
@@ -765,6 +771,35 @@ var cellgame;
             else {
                 this.statusNameIsVisible[3] = false;
                 this.statusIsVisible[3] = false;
+            }
+        }
+        /** 連携点の処理 */
+        comboChecker(code) {
+            if (this.comboCode == 0) {
+                this.comboCode = code;
+                return;
+            }
+            let nextCode = this.comboCode + 1;
+            if (nextCode > 14)
+                nextCode = 11;
+            if (code == nextCode) {
+                this.comboCode = nextCode;
+                this.comboCount++;
+                this.canDisplayCombo = true;
+                this.gameCombo = 10 * (2 ** this.comboCount);
+            }
+            else {
+                this.comboCode = code;
+                this.comboCount = 0;
+            }
+        }
+        /** 得点処理 */
+        pointChecker(addPoint) {
+            this.gamePoint += addPoint;
+            if (this.gamePoint > 0) {
+                this.canDisplayPoint = true;
+                ;
+                return;
             }
         }
         toComment() {

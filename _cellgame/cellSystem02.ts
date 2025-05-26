@@ -25,9 +25,11 @@ namespace cellgame {
         /** 連携点表示 */
         public canDisplayCombo : boolean = false;
 
-        /** 連携番号 */
-        public comboNo : number = 0;
+        /** 連携数 */
+        public comboCount : number = 0;
 
+        /** 連携番号 */
+        public comboCode : number = 0;
 
         /** 得点 */
         public gamePoint : number = 0;
@@ -108,7 +110,6 @@ namespace cellgame {
 
         /** 背景色 */
         // public backColor = () : string => komas[this.backCode].backColor;
-
 
         /** 駒の配置 */
         public komas : HandArray = new HandArray();
@@ -217,12 +218,13 @@ namespace cellgame {
                 }
                 // 選択候補の駒の場合、それぞれ消去する
                 if (this.isChoiseCode(code) && this.ToNomalCode(code) == this.selectedCode) {
+                    this.comboChecker(this.ToNomalCode(code));
+                    this.pointChecker(10);
                     this.boardAndCellsSetter(this.selectedPoint,this.blankCode);
                     this.boardAndCellsSetter(boardPoint,this.blankCode);
                     this.SelectCellClear();
                     this.gameStep = GameStep.Play;
                     let counts = this.pearCounter();
-                    alert("ペア数：" + counts.pear + " ペア無し：" + counts.noPear);
                     return;
                 }
                 if (code == buttonOk) {
@@ -282,6 +284,10 @@ namespace cellgame {
 
                         this.boardToCellsAllSetter();
                         this.buttonSetter();
+
+                        this.comboCode = 0;
+                        this.comboCount = 0;
+                        this.canDisplayCombo = false;
 
                         this.gameStep = GameStep.Play;
                         this.isGamePlay = true;
@@ -823,7 +829,7 @@ namespace cellgame {
             }
 
             if (this.canDisplayCombo) {
-                this.statusName[2] = "賭点";
+                this.statusName[2] = "連携";
                 this.status[2] = this.gameCombo;
                 this.statusNameIsVisible[2] = true;
                 this.statusIsVisible[2] = true;
@@ -843,6 +849,34 @@ namespace cellgame {
                 this.statusIsVisible[3] = false;
             }
 
+        }
+
+        /** 連携点の処理 */
+        public comboChecker(code : number) : void {
+            if (this.comboCode == 0) {
+                this.comboCode = code;
+                return;
+            }
+            let nextCode = this.comboCode + 1;
+            if (nextCode > 14) nextCode = 11;
+            if (code == nextCode) {
+                this.comboCode = nextCode;
+                this.comboCount++;
+                this.canDisplayCombo = true;
+                this.gameCombo = 10 * (2 ** this.comboCount);
+            } else {
+                this.comboCode = code;
+                this.comboCount = 0;
+            }
+        }
+
+        /** 得点処理 */
+        public pointChecker(addPoint : number) : void {
+            this.gamePoint += addPoint;
+            if (this.gamePoint > 0) {
+                this.canDisplayPoint = true;;
+                return;                 
+            }
         }
 
         public toComment() : string {
