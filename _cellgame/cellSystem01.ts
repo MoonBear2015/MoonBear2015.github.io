@@ -97,8 +97,8 @@ namespace cellgame {
         /** プレイ開始されている状態 */
         public isPlayStarted : boolean = false;
 
-        /** コードのループ */
-        public loopCodes : number[] = [11,12,13,14];
+        // /** コードのループ */
+        // public loopCodes : number[] = [11,12,13,14];
 
         constructor() {
             super();

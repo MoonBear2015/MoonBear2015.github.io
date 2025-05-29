@@ -9,6 +9,8 @@ var cellgame;
 (function (cellgame) {
     /** セルゲームシステム ０２： */
     class CellGameSystem02 extends cellgame.CellGameSystem00 {
+        // /** コードのループ */
+        // public loopCodes : number[] = [11,12,13,14];
         constructor() {
             super();
             /** ゲームID */
@@ -118,8 +120,6 @@ var cellgame;
             this.isGamePlay = false;
             /** プレイ開始されている状態 */
             this.isPlayStarted = false;
-            /** コードのループ */
-            this.loopCodes = [11, 12, 13, 14];
             /** 了ボタンの位置 */
             this.pointOk = () => cellgame.Point.New(Math.floor(this.cellSize / 2), this.cellSize - 1);
             /** 却ボタンの位置 */
@@ -333,6 +333,7 @@ var cellgame;
                 if (code == cellgame.buttonOk) {
                     if (this.isGameClear) {
                         this.gameStep = cellgame.GameStep.Start;
+                        this.gamePoint += this.gameCombo;
                         this.canDisplayPoint = true;
                         this.gameLevel++;
                         return;
@@ -791,6 +792,8 @@ var cellgame;
             else {
                 this.comboCode = code;
                 this.comboCount = 0;
+                this.gameCombo = 0;
+                this.canDisplayCombo = false;
             }
         }
         /** 得点処理 */

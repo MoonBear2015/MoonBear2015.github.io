@@ -9,6 +9,8 @@ var cellgame;
 (function (cellgame) {
     /** セルゲームシステム ０１： */
     class CellGameSystem01 extends cellgame.CellGameSystem00 {
+        // /** コードのループ */
+        // public loopCodes : number[] = [11,12,13,14];
         constructor() {
             super();
             /** ゲームID */
@@ -72,8 +74,6 @@ var cellgame;
             this.isGamePlay = false;
             /** プレイ開始されている状態 */
             this.isPlayStarted = false;
-            /** コードのループ */
-            this.loopCodes = [11, 12, 13, 14];
             /** 賭け点の単価 */
             this.betPoint = () => this.blockCount + 1;
             /** 了ボタンの位置 */

@@ -141,8 +141,8 @@ namespace cellgame {
         /** プレイ開始されている状態 */
         public isPlayStarted : boolean = false;
 
-        /** コードのループ */
-        public loopCodes : number[] = [11,12,13,14];
+        // /** コードのループ */
+        // public loopCodes : number[] = [11,12,13,14];
 
         constructor() {
             super();
@@ -244,6 +244,7 @@ namespace cellgame {
                 if (code == buttonOk) {
                     if (this.isGameClear) {
                         this.gameStep = GameStep.Start;
+                        this.gamePoint += this.gameCombo;
                         this.canDisplayPoint = true;
                         this.gameLevel++;
                         return;
@@ -867,6 +868,8 @@ namespace cellgame {
             } else {
                 this.comboCode = code;
                 this.comboCount = 0;
+                this.gameCombo = 0;
+                this.canDisplayCombo = false;
             }
         }
 
