@@ -368,7 +368,7 @@ namespace cellgame {
         public pointOk = () => Point.New(Math.floor(this.cellSize / 2),this.cellSize - 1);
 
         /** 却ボタンの位置 */
-        public pointCancel = () => Point.New(this.cellSize - 1,0);
+        public pointLost = () => Point.New(this.cellSize - 1,0);
 
         /** 戻ボタンの位置 */ 
         public pointBack = () => Point.New(0,this.cellSize - 1);
@@ -383,8 +383,8 @@ namespace cellgame {
         }
 
         /** 却ボタン設定 flase:消去 */
-        private cancelButtonSetter(isDisplay : boolean = true) : void {
-            this.cells.cellSetter(this.pointCancel(),isDisplay ? buttonLost : this.backCode);
+        private lostButtonSetter(isDisplay : boolean = true) : void {
+            this.cells.cellSetter(this.pointLost(),isDisplay ? buttonLost : this.backCode);
         }
 
         /** 却・戻・進 ボタン設置 flase:消去 */
@@ -398,13 +398,14 @@ namespace cellgame {
             // 説ボタン設置
             this.cells.cellSetter(Point.New(0,0),buttonHelp);
             switch(this.gameStep) {
-                case 1:
+                case GameStep.Start:
                     break;
-                case 2:
+                case GameStep.Play:
+                case GameStep.PlayNext:    
                     // ok ボタン消去
                     this.okButtonSetter(false);
                     // 却ボタン設置
-                    this.cancelButtonSetter();
+                    this.lostButtonSetter();
 
                     if (this.isPlayStarted) {
                         // 却・戻・進 ボタン設置
@@ -414,8 +415,8 @@ namespace cellgame {
                         this.controllButtonSetter(false);
                     }
                     break;
-                case 3:
-                case 4:
+                case GameStep.Clear:
+                case GameStep.Over:
                     // ok ボタン設置
                     this.okButtonSetter();
                     // 却・戻・進 ボタン消去
@@ -445,14 +446,20 @@ namespace cellgame {
 
         /** ゲーム枠の大きさを計算 */
         private boardSizeCalc() : void {
+            let level = this.gameLevel;
+            if (level >= 8) {
+                level = 8;
+                this.isEndless = true;
+            } else {
+                this.isEndless = false;
+            }
             // レベル＋1が駒の対の数
-            this.pearCount = this.gameLevel + 2;
+            this.pearCount = level + 2;
             // 余裕を持って1.5倍の駒数分の升を用意する
             // 駒数の平方根・切り上げを辺の長さとする
             let a = Math.sqrt(this.pearCount * 3);
             let b = Math.ceil(a);
             this.boardSize = b;
-            this.isEndless = false;
             return;
         }
 
@@ -885,13 +892,11 @@ namespace cellgame {
         public toComment() : string {
             let result = "";
             result +="★ @TITLE@☆拾い ★\n";
-            result +="@TITLE@の二駒を外側から選び、\n";
+            result +="@TITLE@の二駒を左右外側から選び、\n";
             result +="@TITLE@を順に拾え。\n";
             result +="\n";
-            result +="却：盤面の却下\n";
-            result +="戻：手を戻す\n";
-            result +="進：手を進める\n";
-            return result;
+            result += this.toKomaHelp();
+            return titleChange(result);
         }
     }
 

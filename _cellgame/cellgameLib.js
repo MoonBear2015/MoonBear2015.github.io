@@ -18,12 +18,19 @@ var cellgame;
     cellgame.msgPatterns00 = [];
     cellgame.msgPatterns01 = [];
     cellgame.msgPatterns02 = [];
+    /** ボタン：了解 */
     cellgame.buttonOk = 90;
+    /** ボタン：拒否 */
     cellgame.buttonNo = 91;
+    /** ボタン：再考 */
     cellgame.buttonRetry = 92;
+    /** ボタン：却下 */
     cellgame.buttonLost = 93;
+    /** ボタン：戻す */
     cellgame.buttonBack = 94;
+    /** ボタン：進める */
     cellgame.buttonForward = 95;
+    /** ボタン：説明 */
     cellgame.buttonHelp = 99;
     function komasInit() {
         cellgame.komas00 = [];

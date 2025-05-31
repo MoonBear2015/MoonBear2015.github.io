@@ -26,12 +26,19 @@ namespace cellgame {
     export var msgPatterns01 : string[] = [];
     export var msgPatterns02 : string[] = [];
 
+    /** ボタン：了解 */
     export const buttonOk : number = 90;
+    /** ボタン：拒否 */
     export const buttonNo : number = 91;
+    /** ボタン：再考 */
     export const buttonRetry : number = 92;
+    /** ボタン：却下 */
     export const buttonLost : number = 93;
+    /** ボタン：戻す */
     export const buttonBack : number = 94;
+    /** ボタン：進める */
     export const buttonForward : number = 95;
+    /** ボタン：説明 */
     export const buttonHelp : number = 99;
 
     export function komasInit() {

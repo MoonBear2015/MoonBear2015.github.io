@@ -266,7 +266,7 @@ var cellgame;
             this.cells.cellSetter(this.pointOk(), isDisplay ? cellgame.buttonOk : this.backCode);
         }
         /** 却ボタン設定 flase:消去 */
-        cancelButtonSetter(isDisplay = true) {
+        lostButtonSetter(isDisplay = true) {
             this.cells.cellSetter(this.pointCancel(), isDisplay ? cellgame.buttonLost : this.backCode);
         }
         /** 却・戻・進 ボタン設置 flase:消去 */
@@ -285,7 +285,7 @@ var cellgame;
                     // ok ボタン消去
                     this.okButtonSetter(false);
                     // 却ボタン設置
-                    this.cancelButtonSetter();
+                    this.lostButtonSetter();
                     if (this.isPlayStarted) {
                         // 却・戻・進 ボタン設置
                         this.controllButtonSetter();
