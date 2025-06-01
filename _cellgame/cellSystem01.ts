@@ -588,7 +588,7 @@ namespace cellgame {
 
         /** 手が有効であるかどうか */
         public boardHandCheck(hand : IHand) : boolean {
-            if (this.cells.cellGetter(hand.point) != this.selectCode) return false;
+            if (this.cells.cellGetter(hand.point01) != this.selectCode) return false;
             return true;
         }
 
@@ -606,7 +606,7 @@ namespace cellgame {
             this.hands.push(hand);
             // this.BugLog("手を追加しました。");
             this.newHand = hand;
-            this.selectCellSetter(this.ToBoardPoint(this.newHand.point));
+            this.selectCellSetter(this.ToBoardPoint(this.newHand.point01));
 
             return true;
         }
@@ -615,7 +615,7 @@ namespace cellgame {
         private BugLog(str0 : string ) : void {
             let str : string = "[";
             for(let i = 0; i < this.hands.length; i++) {
-                str += this.hands[i].code + ",";
+                str += this.hands[i].code01 + ",";
             }
             str += "]";
             alert(str0 + " handCount:" + this.nowHandCount + " hands:" + this.hands.length + " " + str);
@@ -623,8 +623,8 @@ namespace cellgame {
 
         /** 手の反映 */
         public boardHandPaste(hand : IHand) : void {
-            let boardPoint = this.ToBoardPoint(hand.point);
-            this.boardAndCellsSetter(boardPoint,hand.code);
+            let boardPoint = this.ToBoardPoint(hand.point01);
+            this.boardAndCellsSetter(boardPoint,hand.code01);
         }
 
         /** 初手から指定の手まで進める */
@@ -635,8 +635,8 @@ namespace cellgame {
                     this.boardHandPaste(this.hands[i]);
                 }
                 this.newHand = this.hands[handNo];
-                this.nowCode = this.newHand.code;
-                this.selectCellSetter(this.ToBoardPoint(this.newHand.point));
+                this.nowCode = this.newHand.code01;
+                this.selectCellSetter(this.ToBoardPoint(this.newHand.point01));
             } else {
                 this.nowCode = 11;
                 this.selectCellSetter(this.startPoint);

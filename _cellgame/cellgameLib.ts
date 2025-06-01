@@ -506,11 +506,17 @@ namespace cellgame {
      */
     export interface IHand {
 
-        /** 手の座標 */
-        point : Point;
+        /** 手の座標:01 */
+        point01 : Point;
 
-        /** 手のコード */
-        code : number;
+        /** 手のコード:01 */
+        code01 : number;
+
+        /** 手の座標:02 */
+        point02 : Point;
+
+        /** 手のコード:02 */
+        code02 : number;
 
         /** 貼り付け */
         Paste(hand : IHand) : void;
@@ -524,14 +530,21 @@ namespace cellgame {
      * 手
      */
     export class Hand implements IHand {
-        /** 手の座標 */    
-        point : Point = Point.New(0,0);
-        /** 手のコード */
-        code : number = 0;
+        /** 手の座標:01 */    
+        point01 : Point = Point.New(0,0);
+        /** 手のコード:01 */
+        code01 : number = 0;
+        /** 手の座標:02 */    
+        point02 : Point = Point.New(0,0);
+        /** 手のコード:02 */
+        code02 : number = 0;
         /** コンストラクタ */
-        constructor(point : Point = Point.New(0,0), code : number = 0) {
-            this.point.Paste(point);
-            this.code = code;
+        constructor(point01 : Point = Point.New(0,0), code01 : number = 0,
+            point02 : Point = Point.New(0,0), code02 : number = 0) {
+            this.point01.Paste(point01);
+            this.code01 = code01;
+            this.point02.Paste(point02);
+            this.code02 = code02;
         }
         /** 複写 */
         static Copy(hand : IHand) : IHand {
@@ -542,16 +555,21 @@ namespace cellgame {
 
         /** 貼り付け */
         public Paste(hand : IHand) : void {
-            this.point.Paste(hand.point);
-            this.code = hand.code;
+            this.point01.Paste(hand.point01);
+            this.code01 = hand.code01;
+            this.point02.Paste(hand.point02);
+            this.code02 = hand.code02;
         }
 
         /** 突合 */
-        public equal(hand : IHand) : boolean {            
-            return this.point.equal(hand.point) && this.code === hand.code;
+        public equal(hand : IHand) : boolean {
+            if (!this.point01.equal(hand.point01) || this.code01 !== hand.code01) {
+                return false;
+            }        
+            if (!this.point02.equal(hand.point02) || this.code02 !== hand.code02) {
+                return false;
+            }
+            return true;
         }
-
     }
-
-
 }

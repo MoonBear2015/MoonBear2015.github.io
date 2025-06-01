@@ -42,6 +42,8 @@ namespace cellgame {
 
         /** ゲーム盤 */
         public board : ICellArray<number> = new NumArray();
+        /** ゲーム盤の初期状態 */
+        public boardStart : ICellArray<number> = new NumArray();
         /** 画面に対するゲーム盤の位置 */
         public boardCorner : Point = new Point(true);
         
@@ -107,12 +109,6 @@ namespace cellgame {
 
         /** 盤外の駒 */
         public backCode : number = 82;
-
-        /** 背景色 */
-        // public backColor = () : string => komas[this.backCode].backColor;
-
-        /** 駒の配置 */
-        public komas : HandArray = new HandArray();
 
         /** 手 */
         public hands : IHand[] = [];
@@ -219,7 +215,7 @@ namespace cellgame {
                 // 選択候補の駒の場合、それぞれ消去する
                 if (this.isChoiseCode(code) && this.ToNomalCode(code) == this.selectedCode) {
                     this.comboChecker(this.ToNomalCode(code));
-                    this.pointChecker(10);
+                    // this.pointChecker(10);
                     this.boardAndCellsSetter(this.selectedPoint,this.blankCode);
                     this.boardAndCellsSetter(boardPoint,this.blankCode);
                     this.SelectCellClear();
@@ -519,7 +515,6 @@ namespace cellgame {
             this.boardSizeCalc();
 
             // ボード初期化
-            this.komas = new HandArray();
             this.board = new NumArray();
             this.board.cellReset(this.boardSize,this.blankCode);
 
@@ -551,7 +546,6 @@ namespace cellgame {
                         }
                     }
                     this.board.cellSetter(putPoint,setKoma + 10);
-                    this.komas.items.push(new Hand(putPoint,setKoma + 10));
                     // 孤独な駒でなければ、二つ目に封じさせないために封じの仮駒を置く
                     if ( j == 0 && !isLonely) {
                         this.boardHandSetBlock(putPoint);
@@ -566,6 +560,19 @@ namespace cellgame {
             this.isGameClear = false;
             this.isGameOver = false;
             this.isGamePlay = false;
+
+            this.boardStart = new NumArray();
+            this.boardStart.cellReset(this.boardSize,this.blankCode);
+            for(let y = 0; y < this.boardSize; y++) {
+                for(let x = 0; x < this.boardSize; x++) {
+                    let point = Point.New(x,y);
+                    this.boardStart.cellSetter(point,this.board.cellGetter(point));
+                }
+            }
+
+            for(let i = 0; i < this.board.items.length; i++) {
+
+            }
 
             this.hands = [];
             this.nowHandCount = -1;
@@ -733,7 +740,7 @@ namespace cellgame {
 
         /** 手が有効であるかどうか */
         public boardHandCheck(hand : IHand) : boolean {
-            if (this.cells.cellGetter(hand.point) != 20) return false;
+            if (this.cells.cellGetter(hand.point01) != 20) return false;
             return true;
         }
 
@@ -759,7 +766,7 @@ namespace cellgame {
         private BugLog(str0 : string ) : void {
             let str : string = "[";
             for(let i = 0; i < this.hands.length; i++) {
-                str += this.hands[i].code + ",";
+                str += this.hands[i].code01 + ",";
             }
             str += "]";
             alert(str0 + " handCount:" + this.nowHandCount + " hands:" + this.hands.length + " " + str);
@@ -767,8 +774,8 @@ namespace cellgame {
 
         /** 手の反映 */
         public boardHandPaste(hand : IHand) : void {
-            let boardPoint = this.ToBoardPoint(hand.point);
-            this.boardAndCellsSetter(boardPoint,hand.code);
+            let boardPoint = this.ToBoardPoint(hand.point01);
+            this.boardAndCellsSetter(boardPoint,hand.code01);
         }
 
         /** 初手から指定の手まで進める */
@@ -779,7 +786,7 @@ namespace cellgame {
                     this.boardHandPaste(this.hands[i]);
                 }
                 this.newHand = this.hands[handNo];
-                this.nowCode = this.newHand.code;
+                this.nowCode = this.newHand.code01;
             } else {
                 this.nowCode = 11;
             }

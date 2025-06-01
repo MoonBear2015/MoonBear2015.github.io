@@ -382,13 +382,19 @@ var cellgame;
      */
     class Hand {
         /** コンストラクタ */
-        constructor(point = cellgame.Point.New(0, 0), code = 0) {
-            /** 手の座標 */
-            this.point = cellgame.Point.New(0, 0);
-            /** 手のコード */
-            this.code = 0;
-            this.point.Paste(point);
-            this.code = code;
+        constructor(point01 = cellgame.Point.New(0, 0), code01 = 0, point02 = cellgame.Point.New(0, 0), code02 = 0) {
+            /** 手の座標:01 */
+            this.point01 = cellgame.Point.New(0, 0);
+            /** 手のコード:01 */
+            this.code01 = 0;
+            /** 手の座標:02 */
+            this.point02 = cellgame.Point.New(0, 0);
+            /** 手のコード:02 */
+            this.code02 = 0;
+            this.point01.Paste(point01);
+            this.code01 = code01;
+            this.point02.Paste(point02);
+            this.code02 = code02;
         }
         /** 複写 */
         static Copy(hand) {
@@ -398,12 +404,20 @@ var cellgame;
         }
         /** 貼り付け */
         Paste(hand) {
-            this.point.Paste(hand.point);
-            this.code = hand.code;
+            this.point01.Paste(hand.point01);
+            this.code01 = hand.code01;
+            this.point02.Paste(hand.point02);
+            this.code02 = hand.code02;
         }
         /** 突合 */
         equal(hand) {
-            return this.point.equal(hand.point) && this.code === hand.code;
+            if (!this.point01.equal(hand.point01) || this.code01 !== hand.code01) {
+                return false;
+            }
+            if (!this.point02.equal(hand.point02) || this.code02 !== hand.code02) {
+                return false;
+            }
+            return true;
         }
     }
     cellgame.Hand = Hand;
