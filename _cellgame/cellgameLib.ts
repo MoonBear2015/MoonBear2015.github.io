@@ -571,5 +571,10 @@ namespace cellgame {
             }
             return true;
         }
+
+        public toString() : string {
+            return "Hand:(" + this.point01.toString() + "," + this.code01 + ")"
+                + " - (" + this.point02.toString() + "," + this.code02 + ")";
+        }
     }
 }

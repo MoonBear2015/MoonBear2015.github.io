@@ -419,6 +419,10 @@ var cellgame;
             }
             return true;
         }
+        toString() {
+            return "Hand:(" + this.point01.toString() + "," + this.code01 + ")"
+                + " - (" + this.point02.toString() + "," + this.code02 + ")";
+        }
     }
     cellgame.Hand = Hand;
 })(cellgame || (cellgame = {}));

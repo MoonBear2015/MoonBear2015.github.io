@@ -305,10 +305,12 @@ var cellgame;
                 }
                 // 選択候補の駒の場合、それぞれ消去する
                 if (this.isChoiseCode(code) && this.ToNomalCode(code) == this.selectedCode) {
-                    this.comboChecker(this.ToNomalCode(code));
-                    // this.pointChecker(10);
-                    this.boardAndCellsSetter(this.selectedPoint, this.blankCode);
-                    this.boardAndCellsSetter(boardPoint, this.blankCode);
+                    let newHand = new cellgame.Hand(this.selectedPoint.copy(), this.selectedCode, boardPoint.copy(), this.ToNomalCode(code));
+                    let flg = this.boardHandPush(newHand);
+                    if (!flg) {
+                        alert("手が無効です。");
+                        return;
+                    }
                     this.SelectCellClear();
                     this.gameStep = cellgame.GameStep.Play;
                     let counts = this.pearCounter();
@@ -565,6 +567,7 @@ var cellgame;
             this.isGameClear = false;
             this.isGameOver = false;
             this.isGamePlay = false;
+            // ゲーム盤の初期状態を保存
             this.boardStart = new cellgame.NumArray();
             this.boardStart.cellReset(this.boardSize, this.blankCode);
             for (let y = 0; y < this.boardSize; y++) {
@@ -572,8 +575,6 @@ var cellgame;
                     let point = cellgame.Point.New(x, y);
                     this.boardStart.cellSetter(point, this.board.cellGetter(point));
                 }
-            }
-            for (let i = 0; i < this.board.items.length; i++) {
             }
             this.hands = [];
             this.nowHandCount = -1;
@@ -669,7 +670,21 @@ var cellgame;
         }
         /** 手が有効であるかどうか */
         boardHandCheck(hand) {
-            if (this.cells.cellGetter(hand.point01) != 20)
+            if (hand.point01.x < 0 || hand.point01.x >= this.boardSize)
+                return false;
+            if (hand.point01.y < 0 || hand.point01.y >= this.boardSize)
+                return false;
+            if (hand.point02.x < 0 || hand.point02.x >= this.boardSize)
+                return false;
+            if (hand.point02.y < 0 || hand.point02.y >= this.boardSize)
+                return false;
+            if (!this.isNomalCode(hand.code01))
+                return false;
+            if (!this.isNomalCode(hand.code02))
+                return false;
+            if (this.ToNomalCode(this.board.cellGetter(hand.point01)) != hand.code01)
+                return false;
+            if (this.ToNomalCode(this.board.cellGetter(hand.point02)) != hand.code02)
                 return false;
             return true;
         }
@@ -701,8 +716,12 @@ var cellgame;
         }
         /** 手の反映 */
         boardHandPaste(hand) {
-            let boardPoint = this.ToBoardPoint(hand.point01);
-            this.boardAndCellsSetter(boardPoint, hand.code01);
+            if (!this.boardHandCheck(hand)) {
+                return;
+            }
+            this.comboChecker(this.ToNomalCode(hand.code01));
+            this.boardAndCellsSetter(hand.point01, this.blankCode);
+            this.boardAndCellsSetter(hand.point02, this.blankCode);
         }
         /** 初手から指定の手まで進める */
         boardHandMove(handNo) {
