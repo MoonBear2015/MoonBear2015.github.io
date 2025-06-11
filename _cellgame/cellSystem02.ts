@@ -167,6 +167,28 @@ namespace cellgame {
         public pointSelect(point : Point) : void {
             let code = this.cells.cellGetter(point);
             let boardPoint = this.ToBoardPoint(point);
+
+            if (code == buttonBack) {
+                if (this.nowHandCount > -1) {
+                    this.nowHandCount--;
+                    this.boardHandMove(this.nowHandCount);
+                    this.gameStep = GameStep.Play;
+                }
+                return;
+            }
+            if (code == buttonForward) {
+                if (this.nowHandCount < this.hands.length - 1) {
+                    this.nowHandCount += 1;
+                    this.boardHandMove(this.nowHandCount);
+                    this.gameStep = GameStep.Play;
+                }
+                return;
+            }
+            if (code == buttonHelp) {
+                alert(this.toComment());
+                return;
+            }
+
             if (this.gameStep == GameStep.Play) {
                 if (this.isChoiseCode(code)) {
                     this.isPlayStarted = true;
@@ -182,24 +204,6 @@ namespace cellgame {
                 if (code == buttonLost) {
                     this.canDisplayPoint = true;
                     this.gameStep = GameStep.Start;
-                    return;
-                }
-                if (code == buttonHelp) {
-                    alert(this.toComment());
-                    return;
-                }
-                if (code == buttonBack) {
-                    if (this.nowHandCount > -1) {
-                        this.nowHandCount--;
-                        this.boardHandMove(this.nowHandCount);
-                    }
-                    return;
-                }
-                if (code == buttonForward) {
-                    if (this.nowHandCount < this.hands.length - 1) {
-                        this.nowHandCount += 1;
-                        this.boardHandMove(this.nowHandCount);
-                    }
                     return;
                 }
             }
@@ -227,7 +231,6 @@ namespace cellgame {
                     }
                     this.SelectCellClear();
                     this.gameStep = GameStep.Play;
-                    let counts = this.pearCounter();
                     return;
                 }
                 if (code == buttonOk) {
@@ -278,6 +281,8 @@ namespace cellgame {
                     {
                         this.boardCreate();
 
+                        this.boardRestart();
+
                         this.statusDisplayer();
 
                         this.cellSize = this.boardSize + 4;
@@ -288,10 +293,6 @@ namespace cellgame {
 
                         this.boardToCellsAllSetter();
                         this.buttonSetter();
-
-                        this.comboCode = 0;
-                        this.comboCount = 0;
-                        this.canDisplayCombo = false;
 
                         this.gameStep = GameStep.Play;
                         this.isGamePlay = true;
@@ -563,10 +564,6 @@ namespace cellgame {
                 setKoma--;
                 if (setKoma < 1) setKoma = 4;
             }
-            
-            this.isGameClear = false;
-            this.isGameOver = false;
-            this.isGamePlay = false;
 
             // ゲーム盤の初期状態を保存
             this.boardStart = new NumArray();
@@ -578,6 +575,7 @@ namespace cellgame {
                 }
             }
 
+            // 指し手を初期化
             this.hands = [];
             this.nowHandCount = -1;
 
@@ -660,9 +658,32 @@ namespace cellgame {
         /** ゲームリセット そのレベル・ステージなどの初期化 */
         public boardReset() : void {
             // ゲーム盤の初期化
-            this.board.cellReset(this.boardSize,10);
-
+            this.board.cellReset(this.boardSize,this.blankCode);
             this.boardToCellsAllSetter();
+        }
+
+        /** ゲームを初期状態に戻す リセット処理込み */
+        public boardRestart() : void {
+            // ゲーム盤の初期化
+            this.board.cellReset(this.boardSize,this.blankCode);
+            // ゲーム盤の初期状態を復元
+            for(let y = 0; y < this.boardSize; y++) {
+                for(let x = 0; x < this.boardSize; x++) {
+                    let point = Point.New(x,y);
+                    let code = this.boardStart.cellGetter(point);
+                    this.board.cellSetter(point,code);
+                }
+            }
+            this.boardToCellsAllSetter();
+            this.isGamePlay = false;
+            this.isGameClear = false;
+            this.isGameOver = false;
+
+            // 連携点の初期化
+            this.comboCode = 0;
+            this.comboCount = 0;
+            this.canDisplayCombo = false;
+
         }
 
         //** ゲーム盤と画面セルの同時セット */
@@ -796,14 +817,14 @@ namespace cellgame {
         /** 初手から指定の手まで進める */
         public boardHandMove(handNo : number) : void {
             this.boardReset();
+            this.boardRestart();
+            this.isGamePlay = true;
+
             if (handNo >= 0) {
                 for(let i = 0; i <= handNo; i++) {
                     this.boardHandPaste(this.hands[i]);
                 }
                 this.newHand = this.hands[handNo];
-                this.nowCode = this.newHand.code01;
-            } else {
-                this.nowCode = 11;
             }
         }
 
