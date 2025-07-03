@@ -53,6 +53,9 @@ namespace cellgame {
         /** 選択駒かどうかの判断 */
         public isSelectCode=(code : number) : boolean => code == this.selectCode;
 
+        /** 邪魔な駒 */
+        public blockCode : number = 88;
+
         /** 盤外の駒 */
         public backCode : number = 88;
 
@@ -546,7 +549,7 @@ namespace cellgame {
             // ブロックの再現
             for(let i = 0; i < this.blockPoints.items.length; i++) {
                 let blockPoint = this.blockPoints.items[i];
-                this.board.cellSetter(blockPoint,this.blankCode);
+                this.board.cellSetter(blockPoint,this.blockCode);
             }
             // 初期位置の再現
             let boardPoint = this.startPoint;
