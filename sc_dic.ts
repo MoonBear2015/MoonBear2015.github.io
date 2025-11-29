@@ -6337,7 +6337,7 @@ const   itms_do = [
     ,
     new SctItm('|解散|かいさん|','DO/kaisan.jpg')
     ,
-    new SctItm('|開催|かいさん|','DO/event.jpg')
+    new SctItm('|開催|かいさい|','DO/event.jpg')
     ,
     // new SctItm('フィーバー','DO/fever.jpg')
     // ,

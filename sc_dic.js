@@ -4029,7 +4029,7 @@ const itms_do = [
     new SctItm('|合併|がっぺい|', 'DO/handshake.jpg'),
     new SctItm('|開国|かいこく|', 'DO/kaikoku.jpg'),
     new SctItm('|解散|かいさん|', 'DO/kaisan.jpg'),
-    new SctItm('|開催|かいさん|', 'DO/event.jpg'),
+    new SctItm('|開催|かいさい|', 'DO/event.jpg'),
     // new SctItm('フィーバー','DO/fever.jpg')
     // ,
     // new SctItm('大はしゃぎ','DO/fever.jpg')
